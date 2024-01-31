@@ -1,0 +1,34 @@
+.DS_Store
+node_modules
+vendor
+dist
+zip
+
+uat_dist
+prd_dist
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/*.zip
+/install_dist
+
+# build
+dev_dist
+
+# cache
+.eslintcache
+/vendor
+package-lock.json
+
