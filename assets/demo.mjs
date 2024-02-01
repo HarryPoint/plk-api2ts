@@ -1,17 +1,17 @@
 export default {
   swagger: "2.0",
   info: {
-    description: "服务名: masterdata-service",
+    description: "服务名: app-enterprise-web",
     version: "1.0",
-    title: "普朗克主数据服务(masterdata-service) API接口",
+    title: "普朗克企业后台(app-enterprise-web) API接口",
   },
-  host: "47.108.135.148:16700",
+  host: "47.108.139.107:16400",
   basePath: "/",
   schemes: [],
   consumes: ["*/*"],
   produces: ["*/*"],
   paths: {
-    "/masterdata-service/saleAssist/compute": {
+    "/app-enterprise-web/api/app/enterprise/saleAssist/compute": {
       post: {
         tags: ["02-01-02-销售交期应答辅助相关"],
         summary: "计算销售交期应答辅助",
@@ -29,21 +29,13 @@ export default {
               $ref: "#/definitions/销售交期应答辅助计算DTO",
             },
           },
-          {
-            name: "enterpriseId",
-            in: "query",
-            description: "enterpriseId",
-            required: true,
-            type: "integer",
-            format: "int64",
-          },
         ],
         responses: {
           200: {
             description: "OK",
             schema: {
-              originalRef: "JSONDEMO",
-              $ref: "#/definitions/JSONDEMO",
+              originalRef: "JSONResult«销售交期应答辅助返回VO»",
+              $ref: "#/definitions/JSONResult«销售交期应答辅助返回VO»",
             },
           },
           201: {
@@ -120,7 +112,7 @@ export default {
       },
       title: "销售交期应答辅助计算DTO",
     },
-    JSONDEMO: {
+    "JSONResult«销售交期应答辅助返回VO»": {
       type: "object",
       properties: {
         code: {
@@ -146,7 +138,7 @@ export default {
           description: "服务器结果返回时的 Unix timestamp,单位毫秒",
         },
       },
-      title: "JSONDEMO",
+      title: "JSONResult«销售交期应答辅助返回VO»",
     },
     销售交期应答辅助返回VO: {
       type: "object",

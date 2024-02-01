@@ -1,5 +1,5 @@
 // 销售交期应答辅助计算DTO
-export interface 销售交期应答辅助计算DTO {
+export interface ISalesDeliveryResponseHelpsCalculateDTO {
     // 物料id
     materialId: number;
     // 生产工艺路径id
@@ -19,23 +19,23 @@ export interface 销售交期应答辅助计算DTO {
     // 采购结束时间 yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00
     purchaseEndTime: string;
 }
-// JSONDEMO
-export interface JSONDEMO {
+// JSONResult«销售交期应答辅助返回VO»
+export interface IJSONResultSalesDeliveryResponseAssistedReturnToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 销售交期应答辅助返回VO;
+    data: ISalesDeliveryResponseIsAssistedBackToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售交期应答辅助返回VO
-export interface 销售交期应答辅助返回VO {
+export interface ISalesDeliveryResponseIsAssistedBackToVO {
     // 主物料信息
-    materialInfo: 销售交期应答辅助物料返回VO;
+    materialInfo: ISalesDeliveryResponseSupportMaterialReturnedToVO;
     // 子物料信息集
-    childMaterialInfos: 销售交期应答辅助物料返回VO[];
+    childMaterialInfos: ISalesDeliveryResponseSupportMaterialReturnedToVO[];
     // 预计整体交付时间
     leadTime: string;
     // 设计完成时间
@@ -44,7 +44,7 @@ export interface 销售交期应答辅助返回VO {
     purchaseCompleteTime: string;
 }
 // 销售交期应答辅助物料返回VO
-export interface 销售交期应答辅助物料返回VO {
+export interface ISalesDeliveryResponseSupportMaterialReturnedToVO {
     // id
     materialId: number;
     // 物料名称
@@ -64,5 +64,5 @@ export interface 销售交期应答辅助物料返回VO {
     // 产能信息异常描述
     capacityWarning: string;
     // 子物料信息集
-    childMaterialInfos: 销售交期应答辅助物料返回VO[];
+    childMaterialInfos: ISalesDeliveryResponseSupportMaterialReturnedToVO[];
 }
