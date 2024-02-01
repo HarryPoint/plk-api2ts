@@ -18,50 +18,58 @@ const definitionsFile = project.createSourceFile("src/definitions.ts", "", {
   overwrite: true,
 });
 
+const typeMap = {
+  string: "string",
+  integer: "number",
+  number: "number",
+  boolean: "boolean",
+  array: "[]",
+};
+
 const prefix = "#_";
 
 const definitionsMap = {};
 
+const transFormType = (define) => {
+  if (define.originalRef) {
+    return definitionsMap[define.originalRef].name;
+  }
+  const typeOrigin = typeMap[define.type];
+  if (typeOrigin === typeMap.array) {
+    return transFormType(define.items) + "[]";
+  }
+  return typeOrigin;
+};
+
+// 记录所有的定义
 for (let name in data.definitions) {
   const define = data.definitions[name];
   if (define.type === "object") {
-    // definitionsFile.addTypeAliases
-    definitionsFile.addStatements("// " + name);
-    const ins = definitionsFile.addInterface({
+    definitionsMap[name] = {
       name,
+      ins: null,
+      define,
+    };
+  }
+}
+
+// 生成所有的定义
+for (let name in definitionsMap) {
+  const item = definitionsMap[name];
+  const define = item.define;
+  if (define.type === "object") {
+    definitionsFile.addStatements("// " + item.name);
+    const ins = definitionsFile.addInterface({
+      name: item.name,
       isExported: true,
       properties: Object.keys(define.properties).map((key) => ({
         name: key,
-        type:
-          define.properties[key].type ||
-          `${prefix}${define.properties[key].$ref.split("/").pop()}`,
+        type: transFormType(define.properties[key]),
+        leadingTrivia: `// ${define.properties[key].description}`,
+        // trailingTrivia: `// ${define.properties[key].description}`,
       })),
     });
-    // console.log("----", ins.getName());
-    definitionsMap[name] = ins;
-  }
-}
-for (let key in definitionsMap) {
-  const ins = definitionsMap[key];
-  for (let prop of ins.getProperties()) {
-    const propText = prop.getType().getText();
-    if (propText.startsWith(prefix)) {
-      const defineName = propText.replace(prefix, "");
-      const targetIns = definitionsMap[defineName];
-      if (targetIns) {
-        // console.log("targetIns: ", targetIns);
-        // for(iote)
-        // console.log("(((", Object.keys(Object.getPrototypeOf(prop)));
-        prop.setType(targetIns.getName());
-      }
-      // console.log(
-      //   "propText: ",
-      //   propText,
-      //   defineName,
-      //   definitionsMap[defineName].getName()
-      // );
-      // prop.setType(definitionsMap[propText].getType());
-    }
+    definitionsMap[name].ins = ins;
   }
 }
 
