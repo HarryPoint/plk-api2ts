@@ -37,7 +37,7 @@ const readFiles = async (dir: string, project: Project) => {
   });
 };
 
-const main = async () => {
+const main = async (dir: string) => {
   const project = new Project({
     // Optionally specify compiler options, tsconfig.json, in-memory file system, and more here.
     // If you initialize with a tsconfig.json, then it will automatically populate the project
@@ -48,4 +48,4 @@ const main = async () => {
   await readFiles(dir, project);
   await project.save();
 };
-main();
+main(dir);
