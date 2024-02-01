@@ -13,16 +13,9 @@ const readFiles = async (dir: string, project: Project) => {
     const filePath = path.join(dir, file);
     const stat = await fs.statSync(filePath);
     if (stat.isFile()) {
-      // {
-      //   root: '/',
-      //   dir: '/Users/admin/plk/explore/ts-generator/openapi/masterdata-service/userProcess/{id}/productionPerson',
-      //   base: 'set.json',
-      //   ext: '.json',
-      //   name: 'set'
-      // }
       const info = path.parse(filePath);
       const data = await fs.readFileSync(filePath);
-      const swaggerData = data.toString();
+      const swaggerData = JSON.parse(data.toString());
       const tsPath = path.join(info.dir, `${info.name}.ts`);
       console.log("tsPath: ", tsPath);
       const definitionsFile = project.createSourceFile(tsPath, "", {

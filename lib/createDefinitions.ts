@@ -25,7 +25,6 @@ export const createDefinitions = async (
   data: any,
   option?: { translate?: boolean; prefix?: string }
 ) => {
-  // console.log("data-----: ", data);
   const { translate = true, prefix = "I" } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
 
@@ -46,7 +45,9 @@ export const createDefinitions = async (
   };
 
   // 记录所有的定义
+  // console.log("data.definitions: ", data.definitions);
   for (let name in data.definitions) {
+    console.log("name: ", name);
     const define = data.definitions[name];
     if (define.type === "object") {
       definitionsMap[name] = {
