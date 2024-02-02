@@ -1,5 +1,5 @@
 // JSONResult«List«生产处理类型状态二级联动VO»»
-export interface IJSONResultList生产处理类型状态二级联动VO {
+export interface IJSONResultListProductionProcessTypeStatusLevel2LinkageVO {
     // 返回码
     code: number;
     // 返回消息说明

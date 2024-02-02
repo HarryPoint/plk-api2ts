@@ -1,5 +1,5 @@
 // 宝晶应收账款分析报表搜索VO
-export interface I宝晶应收账款分析报表搜索VO {
+export interface IBaojingAccountsReceivableAnalysisReportSearchVO {
     // 当前页面
     pageNo: number;
     // 业务员id集
@@ -16,7 +16,7 @@ export interface I宝晶应收账款分析报表搜索VO {
     dateEnd: string;
 }
 // JSONResult«宝晶应收账款分析报表返回VO»
-export interface IJSONResult宝晶应收账款分析报表返回VO {
+export interface IJSONResultBaoJingAccountsReceivableAnalysisReportReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明

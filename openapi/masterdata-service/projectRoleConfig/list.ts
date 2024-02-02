@@ -1,5 +1,5 @@
 // 项目角色配置查询对象
-export interface I项目角色配置查询对象 {
+export interface IProjectRoleConfigureTheQueryObject {
     // 项目id
     projectId: number;
     // 项目角色id
@@ -8,7 +8,7 @@ export interface I项目角色配置查询对象 {
     codes: string[];
 }
 // JSONResult«List«项目角色配置返回对象»»
-export interface IJSONResultList项目角色配置返回对象 {
+export interface IJSONResultListProjectRoleConfigurationReturnObject {
     // 返回码
     code: number;
     // 返回消息说明

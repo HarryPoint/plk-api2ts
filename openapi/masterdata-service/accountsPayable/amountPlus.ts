@@ -1,5 +1,5 @@
 // 添加应付账款DTO
-export interface I添加应付账款DTO {
+export interface IAddAccountsPayableDTO {
     // 供应商id
     supplierId: number;
     // 业务员id

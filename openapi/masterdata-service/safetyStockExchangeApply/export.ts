@@ -1,5 +1,5 @@
 // 安全库存变更申请搜索VO
-export interface I安全库存变更申请搜索VO {
+export interface ISecurityStockChangeRequestSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小

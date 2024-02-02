@@ -1,5 +1,5 @@
 // 项目看板查询dto
-export interface I项目看板查询dto {
+export interface IProjectKanbanQueryDto {
     // 开始日期
     beginTime: string;
     // 结束日期
@@ -12,7 +12,7 @@ export interface I项目看板查询dto {
     excludeProjectIds: number[];
 }
 // JSONResult«项目质量目标统计响应对象»
-export interface IJSONResult项目质量目标统计响应对象 {
+export interface IJSONResultStatisticalResponseObjectForProjectQualityObjectives {
     // 返回码
     code: number;
     // 返回消息说明

@@ -1,5 +1,5 @@
 // 设备保养日历请求DTO
-export interface I设备保养日历请求DTO {
+export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备保养计划明细ids
     deviceMaintainDetailPlanIds: number[];
     // 当前页面
@@ -38,7 +38,7 @@ export interface I设备保养日历请求DTO {
     endPlanTaskStartDate: string;
 }
 // JSONResult«List«设备保养日历响应DTO»»
-export interface IJSONResultList设备保养日历响应DTO {
+export interface IJSONResultListDeviceMaintenanceCalendarResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明

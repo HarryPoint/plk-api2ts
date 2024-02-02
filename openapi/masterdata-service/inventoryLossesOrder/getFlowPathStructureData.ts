@@ -1,12 +1,12 @@
 // 流程结构搜索VO
-export interface I流程结构搜索VO {
+export interface IProcessStructureSearchVO {
     // 流程任务id
     flowPathTaskId: number;
     // 数据id
     id: number;
 }
 // JSONResult«表单结构VO»
-export interface IJSONResult表单结构VO {
+export interface IJSONResultFormStructureVO {
     // 返回码
     code: number;
     // 返回消息说明

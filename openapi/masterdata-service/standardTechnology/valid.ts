@@ -1,5 +1,5 @@
 // 标准工艺启用、停用请求对象
-export interface I标准工艺启用停用请求对象 {
+export interface IStandardProcessEnablesDeactivationOfRequestObjects {
     // 启用 Y 停用 N
     valid: string;
     // 是否 启用/停用 全部, Y 全部

@@ -1,5 +1,5 @@
 // JSONResult«批次号使用DTO»_1
-export interface IJSONResult批次号使用DTO_1 {
+export interface IJSONResultTheBatchNumberIsDTO1 {
     // 返回码
     code: number;
     // 返回消息说明

@@ -1,5 +1,5 @@
 // 添加应收账款DTO
-export interface I添加应收账款DTO {
+export interface IAddAccountsReceivableDTO {
     // 客户id
     customerId: number;
     // 业务员id

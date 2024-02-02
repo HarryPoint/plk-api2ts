@@ -1,5 +1,5 @@
 // 设置检验任务检验方式请求DTO
-export interface I设置检验任务检验方式请求DTO {
+export interface ISetTheCheckTaskCheckModeToRequestTheDTO {
     // 检验方式
     taskInspectionMethodType: string;
 }

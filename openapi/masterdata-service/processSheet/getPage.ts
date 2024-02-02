@@ -1,5 +1,5 @@
 // 工艺卡搜索VO
-export interface I工艺卡搜索VO {
+export interface ICraftCardSearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -18,7 +18,7 @@ export interface I工艺卡搜索VO {
     dataStatus: number;
 }
 // JSONResult«分页信息«工艺卡返回VO»»
-export interface IJSONResult分页信息工艺卡返回VO {
+export interface IJSONResultPagingInformationProcessCardReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明

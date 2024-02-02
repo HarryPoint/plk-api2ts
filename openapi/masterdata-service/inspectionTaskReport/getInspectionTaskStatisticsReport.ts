@@ -1,5 +1,5 @@
 // JSONResult«分页信息«任务量统计报表返回DTO»»
-export interface IJSONResult分页信息任务量统计报表返回DTO {
+export interface IJSONResultThePageInformationTaskVolumeStatisticsReportReturnsTheDTO {
     // 返回码
     code: number;
     // 返回消息说明

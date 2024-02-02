@@ -1,5 +1,5 @@
 // 分页_14
-export interface I分页_14 {
+export interface IPaging14 {
     // 模板名称 - 模糊查询
     templateName: string;
     // 当前页面
@@ -26,7 +26,7 @@ export interface I分页_14 {
     updateTimeBegin: string;
 }
 // JSONResult«分页信息«ReportTemplateQueryResponseDTO»»
-export interface IJSONResult分页信息ReportTemplateQueryResponseDTO {
+export interface IReportTemplateQueryResponseDTOJSONResultPagingInformation {
     // 返回码
     code: number;
     // 返回消息说明

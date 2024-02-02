@@ -1,5 +1,5 @@
 // 生产任务批量设置进料设备请求DTO
-export interface I生产任务批量设置进料设备请求DTO {
+export interface IProductionTaskBatchSetTheFeedDeviceRequestDTO {
     // 工序id
     processId: number;
     // 生产任务详情

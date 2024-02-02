@@ -1,5 +1,5 @@
 // 工序任务分配DTO
-export interface I工序任务分配DTO {
+export interface IProcessTaskAssignmentDTO {
     // 工序ids
     processIds: number[];
     // 是否分配  Y 分配 N 不分配

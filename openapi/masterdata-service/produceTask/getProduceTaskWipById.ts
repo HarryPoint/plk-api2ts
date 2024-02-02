@@ -1,5 +1,5 @@
 // JSONResult«生产任务WIP信息响应DTO»
-export interface IJSONResult生产任务WIP信息响应DTO {
+export interface IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation {
     // 返回码
     code: number;
     // 返回消息说明

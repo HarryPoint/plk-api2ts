@@ -1,5 +1,5 @@
 // JSONResult«分页信息«质量统计分析报表返回DTO»»
-export interface IJSONResult分页信息质量统计分析报表返回DTO {
+export interface IJSONResultThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO {
     // 返回码
     code: number;
     // 返回消息说明

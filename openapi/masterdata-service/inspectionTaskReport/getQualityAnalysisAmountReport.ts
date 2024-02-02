@@ -1,5 +1,5 @@
 // JSONResult«质量统计分析报表合计返回DTO»
-export interface IJSONResult质量统计分析报表合计返回DTO {
+export interface IJSONResultTotalQualityStatisticalAnalysisReportReturnedToDTO {
     // 返回码
     code: number;
     // 返回消息说明

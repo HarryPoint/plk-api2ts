@@ -1,5 +1,5 @@
 // 进出站详细搜索VO
-export interface I进出站详细搜索VO {
+export interface IEnterAndExitTheStationForDetailedVOSearch {
     // 任务id
     taskId: number;
     // 批次id
@@ -8,7 +8,7 @@ export interface I进出站详细搜索VO {
     wipRpId: number;
 }
 // JSONResult«进出站信息VO»
-export interface IJSONResult进出站信息VO {
+export interface IJSONResultInboundAndOutboundInformationVO {
     // 返回码
     code: number;
     // 返回消息说明

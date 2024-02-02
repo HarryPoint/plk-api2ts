@@ -1,5 +1,5 @@
 // 设备保养日历请求DTO
-export interface I设备保养日历请求DTO {
+export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备保养计划明细ids
     deviceMaintainDetailPlanIds: number[];
     // 当前页面

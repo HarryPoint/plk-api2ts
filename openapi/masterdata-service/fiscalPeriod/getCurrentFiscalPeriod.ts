@@ -1,5 +1,5 @@
 // JSONResult«期间响应对象»
-export interface IJSONResult期间响应对象 {
+export interface IResponseObjectDuringJSONResult {
     // 返回码
     code: number;
     // 返回消息说明

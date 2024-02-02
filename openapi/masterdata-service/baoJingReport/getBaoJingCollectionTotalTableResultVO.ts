@@ -1,5 +1,5 @@
 // 宝晶收款汇总分析报表搜索VO
-export interface I宝晶收款汇总分析报表搜索VO {
+export interface IBaojingCollectionSummaryAnalysisReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I宝晶收款汇总分析报表搜索VO {
     dateEnd: string;
 }
 // JSONResult«分页信息«宝晶收款汇总分析报表表格返回VO»»
-export interface IJSONResult分页信息宝晶收款汇总分析报表表格返回VO {
+export interface IJSONResultPageInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明

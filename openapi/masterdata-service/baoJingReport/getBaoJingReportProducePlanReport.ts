@@ -1,5 +1,5 @@
 // 宝晶生产任务甘特图查询对象
-export interface I宝晶生产任务甘特图查询对象 {
+export interface IBaojingProductionTaskGanttChartQueryObject {
     // 物料id
     materialIds: number[];
     // 部门id
@@ -14,7 +14,7 @@ export interface I宝晶生产任务甘特图查询对象 {
     endDeliveryDate: string;
 }
 // JSONResult«List«宝晶生产计划甘特图响应对象»»
-export interface IJSONResultList宝晶生产计划甘特图响应对象 {
+export interface IJSONResultListTreasureProductionPlanGanttChartResponseObject {
     // 返回码
     code: number;
     // 返回消息说明

@@ -1,5 +1,5 @@
 // JSONResult«分页信息«应付账款汇总表返回对象»»
-export interface IJSONResult分页信息应付账款汇总表返回对象 {
+export interface IJSONResultPagingInformationAccountsPayableSummaryTableReturnObject {
     // 返回码
     code: number;
     // 返回消息说明

@@ -30,9 +30,7 @@ export const createDefinitions = async (
 
   const transFormType = (define: any): string => {
     if (define.originalRef) {
-      // console.log("define.originalRef: ", define.originalRef);
       if (!definitionsMap[define.originalRef]) {
-        console.log("define.originalRef: ", define.originalRef);
         return define.originalRef;
       }
       return definitionsMap[define.originalRef].name;
@@ -47,7 +45,6 @@ export const createDefinitions = async (
   // 记录所有的定义
   // console.log("data.definitions: ", data.definitions);
   for (let name in data.definitions) {
-    console.log("name: ", name);
     const define = data.definitions[name];
     if (define.type === "object") {
       definitionsMap[name] = {
@@ -66,6 +63,7 @@ export const createDefinitions = async (
   // 所有的定义名称修正
   translateItemArr.forEach((item, index) => {
     item.name = `${prefix}${formatName(result[index])}`;
+    console.log("item.name: ", item.name);
   });
 
   // 生成所有的定义

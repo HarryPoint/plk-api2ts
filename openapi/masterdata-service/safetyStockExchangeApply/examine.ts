@@ -1,5 +1,5 @@
 // 安全库存变更申请审核DTO
-export interface I安全库存变更申请审核DTO {
+export interface ISecurityInventoryChangeRequestReviewDTO {
     // id
     id: number;
     // 审核类型

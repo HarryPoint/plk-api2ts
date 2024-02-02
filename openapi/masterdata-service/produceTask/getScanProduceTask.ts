@@ -1,5 +1,5 @@
 // 生产任务查询DTO(针对移动端)
-export interface I生产任务查询DTO针对移动端 {
+export interface IProductionTaskQueryDTOForMobileEnd {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -48,7 +48,7 @@ export interface I生产任务查询DTO针对移动端 {
     userId: number;
 }
 // JSONResult«List«生产任务响应DTO(针对移动端)»»
-export interface IJSONResultList生产任务响应DTO针对移动端 {
+export interface IJSONResultListProductionTaskResponseDTOForMobile {
     // 返回码
     code: number;
     // 返回消息说明

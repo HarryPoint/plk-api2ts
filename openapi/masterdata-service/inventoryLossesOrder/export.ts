@@ -1,5 +1,5 @@
 // 流程数据搜索VO
-export interface I流程数据搜索VO {
+export interface IProcessDataSearchVO {
     // undefined
     showFieldSerialNoList: string[];
     // 全局搜索

@@ -1,5 +1,5 @@
 // 财务期间查询请求
-export interface I财务期间查询请求 {
+export interface IFinancialPeriodQueryRequest {
     // 开始月份
     startMonth: string;
     // 当前页面

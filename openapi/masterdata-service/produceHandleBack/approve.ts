@@ -1,5 +1,5 @@
 // 生产处理返工批准请求对象
-export interface I生产处理返工批准请求对象 {
+export interface IProductionProcessesTheReworkApprovalRequestObject {
     // 生产处理id
     id: number;
     // 处理意见

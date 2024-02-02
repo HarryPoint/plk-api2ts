@@ -1,5 +1,5 @@
 // 生产任务设置进料设备请求DTO
-export interface I生产任务设置进料设备请求DTO {
+export interface ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO {
     // 生产任务id
     produceTaskId: number;
     // 设备ids

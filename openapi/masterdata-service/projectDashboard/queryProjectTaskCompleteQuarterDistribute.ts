@@ -1,5 +1,5 @@
 // JSONResult«List«项目任务季度分布响应对象»»
-export interface IJSONResultList项目任务季度分布响应对象 {
+export interface IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks {
     // 返回码
     code: number;
     // 返回消息说明

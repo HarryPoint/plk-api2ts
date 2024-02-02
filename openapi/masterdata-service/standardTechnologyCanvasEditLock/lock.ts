@@ -1,10 +1,10 @@
 // 工艺画布编辑锁定请求DTO
-export interface I工艺画布编辑锁定请求DTO {
+export interface ICraftCanvasEditLockRequestDTO {
     // 工艺id
     technologyId: number;
 }
 // JSONResult«工艺画布编辑锁定响应DTO»
-export interface IJSONResult工艺画布编辑锁定响应DTO {
+export interface IJSONResultProcessCanvasEditsLockResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明

@@ -1,5 +1,5 @@
 // JSONResult«List«班次返回VO»»
-export interface IJSONResultList班次返回VO {
+export interface IJSONResultListShiftsBackToVO {
     // 返回码
     code: number;
     // 返回消息说明
