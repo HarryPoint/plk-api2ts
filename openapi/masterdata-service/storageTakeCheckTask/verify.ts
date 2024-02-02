@@ -1,11 +1,29 @@
 // 盘点任务核对DTO
-export interface I盘点任务核对DTO {
+export interface ICheckTheDTOForInventoryTasks {
     // 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT)
     editType: string;
     // 任务id
     id: number;
     // 盘点核对详情
-    detailList: 盘点任务核对详情DTO[];
+    detailList: IInventoryTaskCheckDetailsDTO[];
+}
+// 盘点任务核对详情DTO
+export interface IInventoryTaskCheckDetailsDTO {
+    // 详情id
+    id: number;
+    // 核对数量
+    verifyQuantity: number;
+    // 差异原因
+    differenceReason: string;
+    // 序列号集
+    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
+}
+// 盘点任务盘点明细序列号DTO_1
+export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
+    // 序列号
+    serialNo: string;
+    // 备注
+    serialRemark: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -5,7 +5,7 @@ export interface I良品报废数据表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 时间筛选 - 开始 yyyy-MM-dd HH:mm:ss
     beginTime: string;
     // 时间筛选 - 结束 yyyy-MM-dd HH:mm:ss
@@ -14,6 +14,13 @@ export interface I良品报废数据表搜索VO {
     materialId: number;
     // 物料种类
     materialType: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

@@ -26,7 +26,25 @@ export interface IJSONResult批次号使用DTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 批次号使用DTO;
+    data: I批次号使用DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 批次号使用DTO
+export interface I批次号使用DTO {
+    // 异常批次号
+    lotSerialNoErrorList: I批次号使用异常DTO[];
+    // 批次号
+    lotSerialNoList: string[];
+    // 偏移量
+    offset: number;
+    // 错误信息
+    commonErrorInfo: string;
+}
+// 批次号使用异常DTO
+export interface I批次号使用异常DTO {
+    // 批次号
+    lotSerialNo: string;
+    // 异常信息集合
+    errorMsgList: string[];
 }

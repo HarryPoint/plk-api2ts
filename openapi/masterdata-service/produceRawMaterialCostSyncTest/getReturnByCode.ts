@@ -5,7 +5,31 @@ export interface IJSONResultProductionMaterialReturnOrderCostFetchBO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ProductionMaterialReturnOrderCostFetchBO;
+    data: IProductionMaterialReturnOrderCostFetchBO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// ProductionMaterialReturnOrderCostFetchBO
+export interface IProductionMaterialReturnOrderCostFetchBO {
+    // undefined
+    code: string;
+    // undefined
+    billDate: string;
+    // undefined
+    detailList: IProductionMaterialReturnOrderCostFetchDetailBO[];
+    // undefined
+    success: string;
+    // undefined
+    errorInfo: string;
+}
+// ProductionMaterialReturnOrderCostFetchDetailBO
+export interface IProductionMaterialReturnOrderCostFetchDetailBO {
+    // undefined
+    materialCode: string;
+    // undefined
+    materialReturnQuantity: number;
+    // undefined
+    unitCost: number;
+    // undefined
+    totalCost: number;
 }

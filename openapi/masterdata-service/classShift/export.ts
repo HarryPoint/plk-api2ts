@@ -1,5 +1,5 @@
 // 班次搜索VO
-export interface IShiftSearchVO {
+export interface I班次搜索VO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -7,11 +7,18 @@ export interface IShiftSearchVO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 名称
     name: string;
     // 状态
     dataStatus: number;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

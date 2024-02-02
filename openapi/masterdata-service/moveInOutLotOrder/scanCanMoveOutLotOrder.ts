@@ -12,7 +12,16 @@ export interface IJSONResult可出料批次响应dto {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 可出料批次响应dto;
+    data: I可出料批次响应dto;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 可出料批次响应dto
+export interface I可出料批次响应dto {
+    // 批次id
+    id: number;
+    // 批次号
+    lotOrderCode: string;
+    // 可出料数量
+    canOptQuantity: number;
 }

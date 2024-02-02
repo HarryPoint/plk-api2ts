@@ -11,9 +11,22 @@ export interface IProposalDashboardConfigRequestDTO {
     // 已完成目标值
     completeTargetValue: number;
     // 未完成项目数量的统计区间配置
-    unCompleteProjectDashboardStatisticsConfigList: ProposalDashboardStatisticsConfigRequestDTO[];
+    unCompleteProjectDashboardStatisticsConfigList: IProposalDashboardStatisticsConfigRequestDTO[];
     // 已完成项目数量的统计区间配置
-    completedProjectDashboardStatisticsConfigList: ProposalDashboardStatisticsConfigRequestDTO[];
+    completedProjectDashboardStatisticsConfigList: IProposalDashboardStatisticsConfigRequestDTO[];
+}
+// ProposalDashboardStatisticsConfigRequestDTO
+export interface IProposalDashboardStatisticsConfigRequestDTO {
+    // ID
+    id: number;
+    // 统计类型
+    type: string;
+    // 开始值 - 适用于数值区间、数值大于等于、数值大于
+    beginValue: number;
+    // 结束值
+    endValue: number;
+    // 项目归属的完成状态 - 未完成项目， 已完成项目
+    projectCompleteStatus: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

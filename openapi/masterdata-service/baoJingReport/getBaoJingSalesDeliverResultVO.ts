@@ -5,7 +5,7 @@ export interface I宝晶销售发货报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 客户id集
     customerIds: number[];
     // 产品名称
@@ -35,6 +35,13 @@ export interface I宝晶销售发货报表搜索VO {
     // 物料类型
     materialTypes: string[];
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«宝晶销售发货报表返回VO»
 export interface IJSONResult宝晶销售发货报表返回VO {
     // 返回码
@@ -42,7 +49,123 @@ export interface IJSONResult宝晶销售发货报表返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 宝晶销售发货报表返回VO;
+    data: I宝晶销售发货报表返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 宝晶销售发货报表返回VO
+export interface I宝晶销售发货报表返回VO {
+    // 数据表
+    tablePage: I分页信息宝晶销售发货报表表格返回VO;
+    // 产品维度
+    majorData: I宝晶销售发货报表图表返回VO[];
+    // 材质维度
+    texture: I宝晶销售发货报表图表返回VO[];
+    // 客户维度
+    customer: I宝晶销售发货报表图表返回VO[];
+    // 业务员维度
+    businessUser: I宝晶销售发货报表图表返回VO[];
+    // 送货量维度
+    delivery: I宝晶销售发货报表图表时间返回VO[];
+}
+// 分页信息«宝晶销售发货报表表格返回VO»
+export interface I分页信息宝晶销售发货报表表格返回VO {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I宝晶销售发货报表表格返回VO[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 宝晶销售发货报表表格返回VO
+export interface I宝晶销售发货报表表格返回VO {
+    // 发货日期
+    deliverDate: string;
+    // 单据编号
+    workOrderNo: string;
+    // 销售订单id
+    salesOrderId: number;
+    // 销售订单编号
+    salesOrderNo: string;
+    // 业务员id
+    businessUserId: number;
+    // 业务员名称
+    businessUserName: string;
+    // 客户id
+    customerId: number;
+    // 客户名称
+    customerName: string;
+    // 产品id
+    majorDataId: number;
+    // 产品名称
+    majorDataName: string;
+    // 产品编号
+    majorDataCode: string;
+    // 产品规格
+    majorDataSpec: string;
+    // 产品材质
+    majorDataTexture: string;
+    // 发货地点
+    deliveryBeginPlace: string;
+    // 交货地点
+    deliveryEndPlace: string;
+    // 承运人
+    contractor: string;
+    // 运单号
+    trackNo: string;
+    // 单据类型
+    orderType: string;
+    // 需求日期
+    demandDate: string;
+    // 需求数量
+    demandQuantity: number;
+    // 实际送达数量
+    actualQuantity: number;
+    // 包装方式
+    packingType: string;
+    // 备注
+    remark: string;
+    // 数据id
+    detailDataId: number;
+    // 包材数据列表
+    packagingMaterialValueList: IId值VO[];
+}
+// Id，值VO
+export interface IId值VO {
+    // id
+    id: number;
+    // 值
+    value: number;
+}
+// 宝晶销售发货报表图表返回VO
+export interface I宝晶销售发货报表图表返回VO {
+    // x轴名称
+    title: string;
+    // 数量
+    quantity: number;
+    // 比例
+    ratio: number;
+}
+// 宝晶销售发货报表图表时间返回VO
+export interface I宝晶销售发货报表图表时间返回VO {
+    // 时间
+    time: string;
+    // 数量
+    quantity: number;
+    // 比例
+    ratio: number;
 }

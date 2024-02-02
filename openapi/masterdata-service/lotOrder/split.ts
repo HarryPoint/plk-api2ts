@@ -5,9 +5,16 @@ export interface I批次订单拆分DTO {
     // 原批次数量
     sourceCount: number;
     // 拆分批次信息
-    lotOrders: 批次订单DTO[];
+    lotOrders: I批次订单DTO[];
     // 备注
     remark: string;
+}
+// 批次订单DTO
+export interface I批次订单DTO {
+    // 批次名称
+    lotName: string;
+    // 批次数量
+    lotCount: number;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

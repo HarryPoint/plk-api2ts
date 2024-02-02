@@ -12,7 +12,24 @@ export interface IJSONResultList环保S查询响应 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 环保S查询响应[];
+    data: I环保S查询响应[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 环保S查询响应
+export interface I环保S查询响应 {
+    // ID
+    id: number;
+    // 环保日期
+    environmentalProtectionDate: string;
+    // 发生事件数量
+    eventQuantity: number;
+    // 政府通报处罚数量
+    penaltyQuantity: number;
+    // 重大隐患处理率
+    dangerHandlerRate: string;
+    // 重大隐患处理数量
+    majorHazardQuantity: number;
+    // 是否有异常
+    isException: string;
 }

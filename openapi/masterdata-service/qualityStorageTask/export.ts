@@ -5,7 +5,7 @@ export interface I质检任务搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 检验日期查询开始时间
     completeStartTime: string;
     // 质检分类
@@ -26,6 +26,13 @@ export interface I质检任务搜索VO {
     qualityWarehouseId: number;
     // 物料id集
     materialIds: number[];
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

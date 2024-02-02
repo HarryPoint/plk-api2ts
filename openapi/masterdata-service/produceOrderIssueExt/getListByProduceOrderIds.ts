@@ -10,7 +10,24 @@ export interface IJSONResultList生产订单下发扩展信息VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 生产订单下发扩展信息VO[];
+    data: I生产订单下发扩展信息VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 生产订单下发扩展信息VO
+export interface I生产订单下发扩展信息VO {
+    // 生产订单id
+    produceOrderId: number;
+    // 下发人id
+    issueUserId: number;
+    // 下发人
+    issueUser: string;
+    // 下发时间
+    issueTime: string;
+    // 下发人id
+    planUserId: number;
+    // 计划人
+    planUser: string;
+    // 计划时间
+    planTime: string;
 }

@@ -11,13 +11,51 @@ export interface I标准工艺某一类别物料编辑请求对象 {
     // 是否是暂存 Y暂存 N发布
     isStaging: string;
     // 标准工艺节点编辑请求对象 发布时传递
-    nodeEditRequest: 标准工艺节点响应对象_1;
+    nodeEditRequest: I标准工艺节点响应对象_1;
     // 标准工艺画布快照 暂存时必须传递
     canvasSnapshot;
     // 条件组id(该工艺对应的条件组id)
     standardTechnologyConditionGroupId: number;
     // 条件来源应用编号
     conditionFromFlowPathCode: string;
+}
+// 标准工艺节点响应对象_1
+export interface I标准工艺节点响应对象_1 {
+    // 节点序列号
+    serialNo: string;
+    // 节点名称
+    name: string;
+    // 节点类型
+    type: string;
+    // 配置类型
+    configType: string;
+    // 分支类型 -- 只有分支节点才会有值
+    branchType: string;
+    // 节点数据 -- 不同的节点类型的数据格式不一样
+    nodeData;
+    // 下一节点
+    nextNode: I标准工艺节点响应对象_2;
+    // 分支节点列表
+    branches: I标准工艺节点响应对象_2[];
+}
+// 标准工艺节点响应对象_2
+export interface I标准工艺节点响应对象_2 {
+    // 节点序列号
+    serialNo: string;
+    // 节点名称
+    name: string;
+    // 节点类型
+    type: string;
+    // 配置类型
+    configType: string;
+    // 分支类型 -- 只有分支节点才会有值
+    branchType: string;
+    // 节点数据 -- 不同的节点类型的数据格式不一样
+    nodeData;
+    // 下一节点
+    nextNode: I标准工艺节点响应对象_2;
+    // 分支节点列表
+    branches: I标准工艺节点响应对象_2[];
 }
 // JSONResult«object»
 export interface IJSONResultobject {

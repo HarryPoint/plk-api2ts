@@ -11,7 +11,7 @@ export interface I编辑质检方案DTO {
     // 所属质检分类id
     qualityInspectionCategoryId: number;
     // 质检项清单
-    itemList: 质检方案质检项关联信息编辑DTO[];
+    itemList: I质检方案质检项关联信息编辑DTO[];
     // 版次号
     issueCode: string;
     // 备注
@@ -24,6 +24,23 @@ export interface I编辑质检方案DTO {
     qualityInspectionRatio: number;
     // 质检数量
     qualityInspectionQuantity: number;
+}
+// 质检方案质检项关联信息编辑DTO
+export interface I质检方案质检项关联信息编辑DTO {
+    // 关联id
+    id: number;
+    // 所属质检项id
+    qualityInspectionItemId: number;
+    // 数值质检标准
+    numberStandard: string;
+    // 比较数值
+    compareNumber: number;
+    // 下限
+    lowerLimit: number;
+    // 上限
+    upperLimit: number;
+    // 数值单位
+    numberUnit: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -16,7 +16,16 @@ export interface IJSONResultListAssociationFormScanQueryResponseDTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: AssociationFormScanQueryResponseDTO[];
+    data: IAssociationFormScanQueryResponseDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// AssociationFormScanQueryResponseDTO
+export interface IAssociationFormScanQueryResponseDTO {
+    // 表单记录ID
+    id: number;
+    // 表单记录编码
+    code: string;
+    // 显示字段值
+    showFieldValue: string;
 }

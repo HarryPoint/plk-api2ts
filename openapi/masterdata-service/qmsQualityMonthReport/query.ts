@@ -1,5 +1,5 @@
 // 质量月报响应DTO
-export interface I质量月报响应DTO {
+export interface IQualityMonthlyReportRespondsToDTO {
     // 月份
     month: number;
     // 进货损失 - 批产
@@ -199,9 +199,18 @@ export interface I质量月报响应DTO {
     // 成本质量损失率
     currentCostQualityLossRatio: number;
     // 未填报部门
-    notReportDepartments: Id Code Name 通用传输对象[];
+    notReportDepartments: IIdCodeNameGenericTransportObject[];
     // 上报状态
     reportStatus: string;
     // 上报状态描述
     reportStatusDesc: string;
+}
+// Id Code Name 通用传输对象
+export interface IIdCodeNameGenericTransportObject {
+    // id
+    id: number;
+    // code
+    code: string;
+    // name
+    name: string;
 }

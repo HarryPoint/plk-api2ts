@@ -5,7 +5,77 @@ export interface IJSONResult分页信息项目质量目标报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«项目质量目标报表响应对象»;
+    data: I分页信息项目质量目标报表响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«项目质量目标报表响应对象»
+export interface I分页信息项目质量目标报表响应对象 {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I项目质量目标报表响应对象[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 项目质量目标报表响应对象
+export interface I项目质量目标报表响应对象 {
+    // id
+    id: number;
+    // 名称
+    name: string;
+    // 编号
+    code: string;
+    // 项目id
+    projectId: number;
+    // 项目名称
+    projectName: string;
+    // 项目编号
+    projectCode: string;
+    // 项目类型id
+    projectTypeId: number;
+    // 项目类型名称
+    projectTypeName: string;
+    // 项目大类
+    projectCategory: string;
+    // 项目大类名称
+    projectCategoryName: string;
+    // 项目经理名称
+    projectManagerName: string;
+    // 是否超期
+    isOverdue: string;
+    // 超期天数(天)
+    overdueDay: number;
+    // 状态
+    status: string;
+    // 来源应用编号
+    fromAppCode: string;
+    // 来源应用id
+    fromAppId: number;
+    // undefined
+    projectManagerId: number;
+    // 负责人名称列表
+    responsibleNameList: string[];
+    // 开始日期
+    beginTime: string;
+    // 截至日期
+    endTime: string;
+    // 实际完成时间
+    actualCompleteTime: string;
+    // undefined
+    responsibleUserIds: undefined[];
 }

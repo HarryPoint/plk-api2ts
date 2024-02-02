@@ -1,5 +1,5 @@
 // 基础质量审核查询请求i
-export interface IBasicQualityAuditQueryRequestI {
+export interface I基础质量审核查询请求i {
     // 日期范围-起始
     dateRangeBegin: string;
     // 日期范围-结束

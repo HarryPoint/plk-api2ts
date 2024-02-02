@@ -9,7 +9,7 @@ export interface I宝晶报表报废相关搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 外部编码
     materialOutsideCode: string;
     // 日期-开始 yyyy-MM-dd HH:mm:ss
@@ -24,6 +24,13 @@ export interface I宝晶报表报废相关搜索VO {
     storehouseIds: number[];
     // 物料类型
     materialTypes: string[];
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

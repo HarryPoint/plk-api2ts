@@ -1,5 +1,5 @@
 // 工艺画布解除锁定请求DTO
-export interface ICraftCanvasUnlockRequestDTO {
+export interface I工艺画布解除锁定请求DTO {
     // 工艺id
     technologyId: number;
 }

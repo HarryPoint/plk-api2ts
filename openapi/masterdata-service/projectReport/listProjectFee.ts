@@ -20,7 +20,68 @@ export interface IJSONResultList项目费用报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目费用报表响应对象[];
+    data: I项目费用报表响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目费用报表响应对象
+export interface I项目费用报表响应对象 {
+    // id
+    id: number;
+    // 名称
+    name: string;
+    // 编号
+    code: string;
+    // 项目id
+    projectId: number;
+    // 项目名称
+    projectName: string;
+    // 项目编号
+    projectCode: string;
+    // 项目类型id
+    projectTypeId: number;
+    // 项目类型名称
+    projectTypeName: string;
+    // 项目大类
+    projectCategory: string;
+    // 项目大类名称
+    projectCategoryName: string;
+    // 项目经理名称
+    projectManagerName: string;
+    // 是否超期
+    isOverdue: string;
+    // 超期天数(天)
+    overdueDay: number;
+    // 状态
+    status: string;
+    // 来源应用编号
+    fromAppCode: string;
+    // 来源应用id
+    fromAppId: number;
+    // undefined
+    projectManagerId: number;
+    // 项目年度预算（元）
+    projectAnnualBudget: number;
+    // 执行年月
+    executeTime: string;
+    // 本月预算执行（元）
+    budgetExecute: number;
+    // 本月预算执行率
+    budgetExecuteRate: number;
+    // 月度资金计划（元）
+    monthFundPlan: number;
+    // 月度资金计划执行（元）
+    monthFundPlanExecute: number;
+    // 月度资金计划执行率
+    monthFundPlanExecuteRate: number;
+    // 填报人名称
+    reportUserName: string;
+    // 填报部门名称
+    reportDeptName: string;
+    // 填报时间
+    reportTime: string;
+    // undefined
+    reportUserId: number;
+    // undefined
+    reportDeptId: number;
 }

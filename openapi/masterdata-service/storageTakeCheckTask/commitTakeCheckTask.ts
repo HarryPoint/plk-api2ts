@@ -3,7 +3,25 @@ export interface I盘点任务提交DTO {
     // 任务id
     id: number;
     // 提交清单
-    list: 盘点任务提交清单DTO[];
+    list: I盘点任务提交清单DTO[];
+}
+// 盘点任务提交清单DTO
+export interface I盘点任务提交清单DTO {
+    // 盘点仓位id
+    warehouseId: number;
+    // 物料集
+    materialList: I盘点任务提交清单物料DTO[];
+}
+// 盘点任务提交清单物料DTO
+export interface I盘点任务提交清单物料DTO {
+    // 物料id
+    materialId: number;
+    // 盘点数量
+    quantity: number;
+    // 核对数量
+    verifyQuantity: number;
+    // 备注（差异原因
+    remark: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

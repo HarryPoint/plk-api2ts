@@ -6,7 +6,7 @@ export interface ISetExecutorDTO {
     refIdList: number[];
 }
 // JSONResult«string»_1
-export interface IJSONResultstring1 {
+export interface IJSONResultstring_1 {
     // 返回码
     code: number;
     // 返回消息说明

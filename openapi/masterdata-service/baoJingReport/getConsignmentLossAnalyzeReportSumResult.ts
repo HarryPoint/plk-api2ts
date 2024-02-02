@@ -9,7 +9,7 @@ export interface I寄售损耗分析报表搜索VO {
     // 日期开始时间 yyyy-MM-dd HH:mm:ss
     beginDate: string;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 日期结束时间 yyyy-MM-dd HH:mm:ss
     endDate: string;
     // 客户id
@@ -27,6 +27,13 @@ export interface I寄售损耗分析报表搜索VO {
     // 物料类型
     materialTypes: string[];
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«寄售损耗分析报表分页返回VO»
 export interface IJSONResult寄售损耗分析报表分页返回VO {
     // 返回码
@@ -34,7 +41,24 @@ export interface IJSONResult寄售损耗分析报表分页返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 寄售损耗分析报表分页返回VO_1;
+    data: I寄售损耗分析报表分页返回VO_1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 寄售损耗分析报表分页返回VO_1
+export interface I寄售损耗分析报表分页返回VO_1 {
+    // 期初数量
+    numOfBeginningPeriodSum: number;
+    // 送货数量
+    sendQtySum: number;
+    // 入库数量
+    inboundQtySum: number;
+    // 退货数量
+    returnQtySum: number;
+    // 损耗数量
+    numOfLossSum: number;
+    // 未结余量
+    remainingQtySum: number;
+    // 损耗率
+    lossRatioSum: number;
 }

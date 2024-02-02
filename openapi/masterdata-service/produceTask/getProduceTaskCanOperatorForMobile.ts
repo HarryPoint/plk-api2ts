@@ -1,11 +1,11 @@
 // 生产任务列表可批量操作项查询DTO(针对移动端)
-export interface I生产任务列表可批量操作项查询DTO针对移动端 {
+export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 任务类型
@@ -47,16 +47,51 @@ export interface I生产任务列表可批量操作项查询DTO针对移动端 {
     // 任务出站关键参数是否需要填写
     moveOutKeyParameterFillNeeds: string;
     // 生产订单字段搜索
-    produceOrderSearchList: 流程数据明细搜索VO[];
+    produceOrderSearchList: IProcessDataDetailsSearchVO[];
+}
+// 分页排序
+export interface IPagingSort {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
+// 流程数据明细搜索VO
+export interface IProcessDataDetailsSearchVO {
+    // 列code
+    code: string;
+    // 搜索类型
+    searchType: string;
+    // 搜索文本 - 针对文本搜索
+    text: string;
+    // 搜索起始值 - 针对范围搜索
+    limitBegin;
+    // 搜索结束值 - 针对范围搜索
+    limitEnd;
+    // 搜索选项值 - 针对选择搜索
+    selectors: undefined[];
+    // 表格编码
+    tableCode: string;
 }
 // JSONResult«生产任务列表可批量操作按钮返回DTO(针对移动端)»
-export interface IJSONResult生产任务列表可批量操作按钮返回DTO针对移动端 {
+export interface IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 生产任务列表可批量操作按钮返回DTO(针对移动端);
+    data: IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 生产任务列表可批量操作按钮返回DTO(针对移动端)
+export interface IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd {
+    // 可批量进料
+    canBatchMoveIn: string;
+    // 可批量出料
+    canBatchMoveOut: string;
+    // 可批量录入设备
+    canBatchRecordDevice: string;
+    // 可批量录入模具
+    canBatchRecordMold: string;
 }

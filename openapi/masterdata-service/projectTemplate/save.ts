@@ -11,7 +11,7 @@ export interface I项目模板编辑请求DTO {
     // 项目模板简介
     intro: string;
     // 项目字段列表
-    projectFields: Id Code Name 通用传输对象[];
+    projectFields: IIdCodeName通用传输对象[];
     // 项目团队是否勾选
     checkProjectTeam: string;
     // 项目成员是否勾选
@@ -21,9 +21,19 @@ export interface I项目模板编辑请求DTO {
     // 项目计划是否勾选
     checkProjectPlan: string;
     // 项目计划字段
-    projectPlanFields: Id Code Name 通用传输对象[];
+    projectPlanFields: IIdCodeName通用传输对象[];
     // 项目计划自定义字段是否勾选
     checkProjectPlanCustomField: string;
+}
+// Id Code Name 通用传输对象
+export interface IIdCodeName通用传输对象 {
+    // id
+    id: number;
+    // code
+    code: string;
+    // name
+    name: string;
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码
@@ -34,6 +44,4 @@ export interface IJSONResultobject {
     data;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
-}
-
 }

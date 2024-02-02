@@ -5,7 +5,7 @@ export interface I寄售入库分析报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 客户id
     customerId: number[];
     // 日期结束时间 yyyy-MM-dd HH:mm:ss
@@ -31,6 +31,13 @@ export interface I寄售入库分析报表搜索VO {
     // 物料类型
     materialTypes: string[];
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«寄售入库分析报表合计返回VO»
 export interface IJSONResult寄售入库分析报表合计返回VO {
     // 返回码
@@ -38,7 +45,18 @@ export interface IJSONResult寄售入库分析报表合计返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 寄售入库分析报表合计返回VO;
+    data: I寄售入库分析报表合计返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 寄售入库分析报表合计返回VO
+export interface I寄售入库分析报表合计返回VO {
+    // 入库数量合计
+    inboundQtySum: number;
+    // 损耗数量合计
+    numOfLossSum: number;
+    // 入库单价合计
+    inboundPriceSum: number;
+    // 入库金额合计
+    inboundAmountSum: number;
 }

@@ -12,7 +12,16 @@ export interface IJSONResult项目费用预算响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目费用预算响应对象;
+    data: I项目费用预算响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目费用预算响应对象
+export interface I项目费用预算响应对象 {
+    // 执行时间
+    executeTime: string;
+    // 最新项目年度预算（元）
+    lastProjectAnnualBudget: number;
+    // 当年预算执行合计（元）
+    totalBudgetExecute: number;
 }

@@ -5,7 +5,57 @@ export interface IJSONResult分页信息佣金与提成统计表帝丰定制响�
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«佣金与提成统计表（帝丰定制）响应对象»;
+    data: I分页信息佣金与提成统计表帝丰定制响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«佣金与提成统计表（帝丰定制）响应对象»
+export interface I分页信息佣金与提成统计表帝丰定制响应对象 {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I佣金与提成统计表帝丰定制响应对象[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 佣金与提成统计表（帝丰定制）响应对象
+export interface I佣金与提成统计表帝丰定制响应对象 {
+    // 业务员id
+    businessUserId: number;
+    // 业务员名称
+    businessUserName: string;
+    // 客户id
+    customerId: number;
+    // 客户名称
+    customerName: string;
+    // 其他应付单号
+    otherPayableCode: string;
+    // 挂账金额
+    registeredQuantity: string;
+    // 冲款金额
+    chargebackQuantity: string;
+    // 未付金额
+    unpaidQuantity: string;
+    // 销售出库单号
+    salesOutStorageOrderCode: string;
+    // 销售出库单id
+    salesOutStorageOrderId: number;
+    // 销售金额
+    saleQuantity: string;
+    // 已收金额
+    receivedQuantity: string;
 }

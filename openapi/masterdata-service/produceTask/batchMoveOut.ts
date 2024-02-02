@@ -3,11 +3,27 @@ export interface I任务批量操作DTO_4 {
     // 工序id
     processId: number;
     // 生产任务列表
-    produceTaskList: 任务批量操作DTO_3[];
+    produceTaskList: I任务批量操作DTO_3[];
     // 是否使用进出料信息，来作为实际出料的唯一依据
     isUseMaterialMoveInOrOutInfo: string;
     // undefined
     handleOtherAsync: string;
+}
+// 任务批量操作DTO_3
+export interface I任务批量操作DTO_3 {
+    // 生产任务id
+    taskId: number;
+    // 实际数量
+    actualQuantity: number;
+    // 批次订单id集
+    lotOrders: I任务批量操作DTO_2[];
+}
+// 任务批量操作DTO_2
+export interface I任务批量操作DTO_2 {
+    // 批次id
+    lotId: number;
+    // 实际数量
+    actualQuantity: number;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -7,7 +7,28 @@ export interface I物料编辑请求DTO {
     // 扩展参数
     extensionParam;
     // 物料批次设置
-    lotSetting: 物料批次设置编辑对象;
+    lotSetting: I物料批次设置编辑对象;
+}
+// 物料批次设置编辑对象
+export interface I物料批次设置编辑对象 {
+    // 物料id
+    materialId: number;
+    // 启用序列号
+    enableSerialNo: string;
+    // 序列号方案id
+    serialNoSchemeId: number;
+    // 启用批次
+    enableLot: string;
+    // 批次方案id
+    lotSchemeId: number;
+    // 启用质量追溯
+    enableQualityTraceability: string;
+    // 启用外部码
+    enableExternalCode: string;
+    // 外部码字段名称
+    externalCodeFieldName: string;
+    // 外部码长度
+    externalCodeLength: number;
 }
 // JSONResult«string»
 export interface IJSONResultstring {

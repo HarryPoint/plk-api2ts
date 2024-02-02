@@ -11,7 +11,7 @@ export interface I宝晶物料主数据库存搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 规格
     materialSpec: string;
     // 仓库id
@@ -36,6 +36,13 @@ export interface I宝晶物料主数据库存搜索VO {
     customerIdList: number[];
     // 仓位id
     warehouseIds: number[];
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

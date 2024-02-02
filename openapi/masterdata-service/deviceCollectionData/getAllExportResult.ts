@@ -20,7 +20,24 @@ export interface IJSONResultList设备数采统计报表导出VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 设备数采统计报表导出VO[];
+    data: I设备数采统计报表导出VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 设备数采统计报表导出VO
+export interface I设备数采统计报表导出VO {
+    // 设备名称
+    deviceName: string;
+    // 设备编号
+    deviceCode: string;
+    // 参数名称
+    paramName: string;
+    // 参数编号
+    paramCode: string;
+    // 时间
+    collectionTime: string;
+    // 数据值
+    result: string;
+    // 单位
+    unit: string;
 }

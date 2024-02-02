@@ -13,7 +13,45 @@ export interface I编辑设备数采方案DTO {
     // 备注
     remark: string;
     // 参数清单
-    paramList: 设备数采方案参数关联信息编辑DTO[];
+    paramList: I设备数采方案参数关联信息编辑DTO[];
+}
+// 设备数采方案参数关联信息编辑DTO
+export interface I设备数采方案参数关联信息编辑DTO {
+    // 关联id
+    id: number;
+    // 设备数采参数id
+    deviceCollectionParamId: number;
+    // 统计类型
+    statisticType: string;
+    // 实时数值对比标准
+    numberStandard: string;
+    // 实时比较数值
+    compareNumber: number;
+    // 实时下限
+    lowerLimit: number;
+    // 实时上限
+    upperLimit: number;
+    // 实时备注
+    remark: string;
+    // 统计范围配置项集
+    limits: I设备数采方案参数预警编辑DTO[];
+}
+// 设备数采方案参数预警编辑DTO
+export interface I设备数采方案参数预警编辑DTO {
+    // 关联id
+    id: number;
+    // 时间粒度
+    timeType: string;
+    // 数值对比标准
+    numberStandard: string;
+    // 比较数值
+    compareNumber: number;
+    // 下限
+    lowerLimit: number;
+    // 上限
+    upperLimit: number;
+    // 备注
+    remark: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

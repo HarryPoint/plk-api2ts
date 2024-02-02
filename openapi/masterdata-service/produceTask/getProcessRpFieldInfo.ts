@@ -14,7 +14,16 @@ export interface IJSONResultList工序对应字段详情VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 工序对应字段详情VO[];
+    data: I工序对应字段详情VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 工序对应字段详情VO
+export interface I工序对应字段详情VO {
+    // 关联字段code
+    fieldCode: string;
+    // 关联字段名称
+    fieldName: string;
+    // 值
+    value;
 }

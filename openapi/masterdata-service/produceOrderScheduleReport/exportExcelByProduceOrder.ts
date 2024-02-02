@@ -5,7 +5,7 @@ export interface I生产排产订单搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 生产订单编号
     produceOrderCode: string;
     // 父级订单编号
@@ -24,6 +24,13 @@ export interface I生产排产订单搜索VO {
     endTimeOfEndTime: string;
     // 计划结束日期查询开始时间
     startTimeOfEndTime: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

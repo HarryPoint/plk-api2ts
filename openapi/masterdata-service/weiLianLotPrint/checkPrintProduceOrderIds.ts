@@ -5,7 +5,18 @@ export interface IJSONResult维联批次打印模板响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 维联批次打印模板响应对象;
+    data: I维联批次打印模板响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 维联批次打印模板响应对象
+export interface I维联批次打印模板响应对象 {
+    // 没有配置打印模板的生产订单编号
+    notConfigPrintTemplateProduceOrderCodes: string[];
+    // 没有批次的生产订单编号
+    notLotProduceOrderCodes: string[];
+    // 不能生成一维码的生产订单编号
+    canNotGenerateBarcodeProduceOrderCodes: string[];
+    // 校验通过的生产订单编号
+    checkPassProduceOrderCodes: string[];
 }

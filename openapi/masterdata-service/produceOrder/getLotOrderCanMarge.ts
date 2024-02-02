@@ -10,7 +10,12 @@ export interface IJSONResult是否信息 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 是否信息;
+    data: I是否信息;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 是否信息
+export interface I是否信息 {
+    // 是否
+    whether: string;
 }

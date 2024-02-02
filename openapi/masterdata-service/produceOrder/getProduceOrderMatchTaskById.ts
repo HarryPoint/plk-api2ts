@@ -5,7 +5,43 @@ export interface IJSONResult生产订单匹配任务查询请求 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 生产订单匹配任务查询请求_1;
+    data: I生产订单匹配任务查询请求_1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 生产订单匹配任务查询请求_1
+export interface I生产订单匹配任务查询请求_1 {
+    // ID
+    id: number;
+    // 标准工艺匹配状态
+    status: string;
+    // 总数量
+    totalQuantity: number;
+    // 当前已处理数量
+    currentProcessedQuantity: number;
+    // 失败原因
+    failureReason: string;
+    // 匹配项
+    itemList: I生产订单匹配任务查询请求[];
+}
+// 生产订单匹配任务查询请求
+export interface I生产订单匹配任务查询请求 {
+    // ID
+    id: number;
+    // 任务ID
+    matchTaskId: number;
+    // 生产订单ID
+    produceOrderId: number;
+    // 生产订单编码
+    produceOrderCode: string;
+    // 标准工艺名称
+    standardTechnologyName: string;
+    // 标准工艺ID
+    standardTechnologyId: number;
+    // 状态
+    status: string;
+    // 错误原因
+    failureReason: string;
+    // 任务执行时间
+    taskExecutionTime: string;
 }

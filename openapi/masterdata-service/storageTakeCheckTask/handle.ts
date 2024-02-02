@@ -1,11 +1,33 @@
 // 盘点任务盘点处理DTO
-export interface I盘点任务盘点处理DTO {
+export interface IInventoryTaskInventoryProcessingDTO {
     // 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT)
     editType: string;
     // 任务id
     id: number;
     // 盘点明细
-    detailList: 盘点任务盘点处理详情DTO[];
+    detailList: IInventoryTaskInventoryProcessingDetailsDTO[];
+}
+// 盘点任务盘点处理详情DTO
+export interface IInventoryTaskInventoryProcessingDetailsDTO {
+    // 盘点仓位id
+    warehouseId: number;
+    // 物料id
+    materialId: number;
+    // 批次号
+    lotNo: string;
+    // 序列号集
+    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
+    // 盘点数量
+    quantity: number;
+    // 备注
+    remark: string;
+}
+// 盘点任务盘点明细序列号DTO_1
+export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
+    // 序列号
+    serialNo: string;
+    // 备注
+    serialRemark: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -5,7 +5,26 @@ export interface IJSONResultList维联批次打印模板响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 维联批次打印模板响应对象_1[];
+    data: I维联批次打印模板响应对象_1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 维联批次打印模板响应对象_1
+export interface I维联批次打印模板响应对象_1 {
+    // id
+    printTemplateId: number;
+    // 模板类型
+    type: string;
+    // 打印模板
+    printTemplate: string;
+    // 批次号
+    lotNo: string;
+    // 物料编号
+    materialCode: string;
+    // 批次数量
+    actualTotalCount: number;
+    // 条码值
+    universalCode: string;
+    // 打印次数
+    printCount: number;
 }

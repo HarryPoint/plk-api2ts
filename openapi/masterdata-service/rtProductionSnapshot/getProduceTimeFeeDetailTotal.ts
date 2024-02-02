@@ -5,7 +5,7 @@ export interface I工时工费报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 工序id集
     processIds: number[];
     // 生产订单号
@@ -25,6 +25,13 @@ export interface I工时工费报表搜索VO {
     // 生产任务编码
     produceTaskNo: string;
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«工时工费报表合计返回VO»
 export interface IJSONResult工时工费报表合计返回VO {
     // 返回码
@@ -32,7 +39,18 @@ export interface IJSONResult工时工费报表合计返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 工时工费报表合计返回VO;
+    data: I工时工费报表合计返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 工时工费报表合计返回VO
+export interface I工时工费报表合计返回VO {
+    // 合格产出数量
+    produceQuantity: number;
+    // 合格工费
+    produceFee: number;
+    // 返工数量
+    backQuantity: number;
+    // 返工工费
+    backFee: number;
 }

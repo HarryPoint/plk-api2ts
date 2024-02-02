@@ -5,7 +5,69 @@ export interface IJSONResultList项目任务响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目任务响应对象[];
+    data: I项目任务响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目任务响应对象
+export interface I项目任务响应对象 {
+    // 任务id
+    id: number;
+    // 任务编码
+    code: string;
+    // 任务名称
+    name: string;
+    // 任务负责人
+    leaderUserIds: undefined[];
+    // 任务负责人
+    leaderUserList: IIdCodeName通用传输对象[];
+    // 任务进度
+    taskProgress: number;
+    // 任务状态
+    taskStatus: string;
+    // 任务状态描述
+    taskStatusDesc: string;
+    // 是否超期
+    isOverdue: string;
+    // 任务类型id
+    projectTaskTypeId: number;
+    // 任务类型
+    projectTaskTypeName: string;
+    // 任务开始日期
+    planBeginTime: string;
+    // 任务截止日期
+    planEndTime: string;
+    // 上级任务id
+    parentId: number;
+    // 上级任务名称
+    parentName: string;
+    // 前置任务ids
+    preTaskIds: undefined[];
+    // 前置任务列表
+    preTaskList: IIdCodeName通用传输对象[];
+    // 项目阶段id
+    projectStageId: number;
+    // 项目阶段名称
+    projectStageName: string;
+    // 项目id
+    projectId: number;
+    // 项目名称
+    projectName: string;
+    // 交付物名称
+    deliverableName: string;
+    // 完成事项
+    completeItem: string;
+    // 问题与措施
+    issueAndMeasure: string;
+    // undefined
+    sort: number;
+}
+// Id Code Name 通用传输对象
+export interface IIdCodeName通用传输对象 {
+    // id
+    id: number;
+    // code
+    code: string;
+    // name
+    name: string;
 }

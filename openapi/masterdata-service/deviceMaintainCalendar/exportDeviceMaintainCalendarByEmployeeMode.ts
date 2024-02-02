@@ -1,5 +1,5 @@
 // 设备保养日历请求DTO
-export interface IEquipmentMaintenanceCalendarRequestDTO {
+export interface I设备保养日历请求DTO {
     // 设备保养计划明细ids
     deviceMaintainDetailPlanIds: number[];
     // 当前页面
@@ -9,7 +9,7 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备ids
     deviceIds: number[];
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 导出字段集
@@ -36,6 +36,13 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     beginPlanTaskStartDate: string;
     // 计划结束时间
     endPlanTaskStartDate: string;
+}
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

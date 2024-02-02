@@ -5,9 +5,16 @@ export interface I区域主数据选择列表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 名称/编号
     nameOrCode: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeName通用传输对象 {
@@ -16,7 +23,16 @@ export interface IJSONResultListIdCodeName通用传输对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: Id Code Name 通用传输对象[];
+    data: IIdCodeName通用传输对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// Id Code Name 通用传输对象
+export interface IIdCodeName通用传输对象 {
+    // id
+    id: number;
+    // code
+    code: string;
+    // name
+    name: string;
 }

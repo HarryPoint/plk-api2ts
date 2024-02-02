@@ -1,5 +1,5 @@
 // 标准工艺分类删除请求DTO
-export interface I标准工艺分类删除请求DTO {
+export interface IStandardProcessClassificationRemoveRequestDTO {
     // 分类id
     id: number;
 }

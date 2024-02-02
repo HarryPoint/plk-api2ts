@@ -1,7 +1,14 @@
 // 动态数据无状态删除请求对象
 export interface I动态数据无状态删除请求对象 {
     // 删除明细
-    removeDetails: 动态数据无状态删除明细请求对象[];
+    removeDetails: I动态数据无状态删除明细请求对象[];
+}
+// 动态数据无状态删除明细请求对象
+export interface I动态数据无状态删除明细请求对象 {
+    // 流程id
+    flowPathId: number;
+    // 动态数据id集合
+    formRecordIdList: number[];
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -12,7 +12,24 @@ export interface IJSONResultList进料bom消耗序列号响应DTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 进料bom消耗序列号响应DTO[];
+    data: I进料bom消耗序列号响应DTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 进料bom消耗序列号响应DTO
+export interface I进料bom消耗序列号响应DTO {
+    // 物料id
+    materialId: number;
+    // 物料名称
+    materialName: number;
+    // 物料编号
+    materialCode: number;
+    // 批次id
+    lotOrderId: number;
+    // 批次编号
+    lotOrderCode: number;
+    // 序列号id
+    serialNoId: number;
+    // 序列号编号
+    serialNoCode: number;
 }

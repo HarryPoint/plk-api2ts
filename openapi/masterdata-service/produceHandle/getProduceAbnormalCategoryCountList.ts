@@ -20,7 +20,16 @@ export interface IJSONResultList生产异常类型统计VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 生产异常类型统计VO[];
+    data: I生产异常类型统计VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 生产异常类型统计VO
+export interface I生产异常类型统计VO {
+    // 异常类型id
+    categoryId: number;
+    // 异常类型名
+    categoryName: string;
+    // 异常类型数量
+    quantity: number;
 }

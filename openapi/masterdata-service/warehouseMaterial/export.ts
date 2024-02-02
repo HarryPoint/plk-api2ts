@@ -7,7 +7,7 @@ export interface I物料主数据库存搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 物料id集
     materialIds: number[];
     // 编号
@@ -16,6 +16,13 @@ export interface I物料主数据库存搜索VO {
     materialSpec: string;
     // 仓库id
     storehouseIds: number[];
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

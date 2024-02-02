@@ -1,5 +1,5 @@
 // 项目任务导入请求DTO
-export interface I项目任务导入请求DTO {
+export interface IProjectTaskImportRequestDTO {
     // 项目计划id
     projectPlanId: number;
     // 导入文件id

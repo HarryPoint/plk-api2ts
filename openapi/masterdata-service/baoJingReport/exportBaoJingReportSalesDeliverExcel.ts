@@ -5,7 +5,7 @@ export interface I宝晶销售发货报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 客户id集
     customerIds: number[];
     // 产品名称
@@ -34,6 +34,13 @@ export interface I宝晶销售发货报表搜索VO {
     businessUserIdList: number[];
     // 物料类型
     materialTypes: string[];
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

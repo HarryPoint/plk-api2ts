@@ -20,7 +20,18 @@ export interface IJSONResultListFormCascadeQueryResultVO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: FormCascadeQueryResultVO[];
+    data: IFormCascadeQueryResultVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// FormCascadeQueryResultVO
+export interface IFormCascadeQueryResultVO {
+    // id
+    id: number;
+    // 显示名称/显示分组名称/处理人名称
+    name: string;
+    // 编码
+    code: string;
+    // 子集
+    children: IFormCascadeQueryResultVO[];
 }

@@ -5,7 +5,7 @@ export interface I生产成本核算分页请求对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 计划开始时间查询结束时间
@@ -69,6 +69,13 @@ export interface I生产成本核算分页请求对象 {
     // 期末在产品 - 总成本 - 结束总成本
     endEndPeriodInProduceTotalCost: number;
 }
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
 // JSONResult«分页信息«生产成本核算分页响应对象»»
 export interface IJSONResult分页信息生产成本核算分页响应对象 {
     // 返回码
@@ -76,7 +83,73 @@ export interface IJSONResult分页信息生产成本核算分页响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«生产成本核算分页响应对象»;
+    data: I分页信息生产成本核算分页响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«生产成本核算分页响应对象»
+export interface I分页信息生产成本核算分页响应对象 {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I生产成本核算分页响应对象[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 生产成本核算分页响应对象
+export interface I生产成本核算分页响应对象 {
+    // 所属期间id
+    fiscalPeriodId: number;
+    // 所属期间
+    fiscalPeriodDate: string;
+    // 生产订单编号
+    produceOrderCode: string;
+    // 销售订单编号
+    salesOrderCode: string;
+    // 计划开始时间
+    planBeginTime: string;
+    // 物料id
+    materialId: number;
+    // 物料名称
+    materialName: string;
+    // 物料编号
+    materialCode: string;
+    // 物料规格
+    materialSpec: string;
+    // 期初在产品 - 数量
+    beginPeriodInProduceQuantity: number;
+    // 期初在产品 - 总成本
+    beginPeriodInProduceTotalCost: number;
+    // 本期投产 - 数量
+    currentPeriodDeliveryQuantity: number;
+    // 本期投产 - 材料成本
+    currentPeriodDeliveryMaterialCost: number;
+    // 本期投产 - 费用
+    currentPeriodDeliveryFee: number;
+    // 本期投产 - 总成本
+    currentPeriodDeliveryTotalCost: number;
+    // 本期完工 - 数量
+    currentPeriodCompleteQuantity: number;
+    // 本期完工 - 单位成本
+    currentPeriodCompleteUnitCost: number;
+    // 本期完工 - 总成本
+    currentPeriodCompleteTotalCost: number;
+    // 期末在产品 - 数量
+    endPeriodInProduceQuantity: number;
+    // 期末在产品 - 总成本
+    endPeriodInProduceTotalCost: number;
 }

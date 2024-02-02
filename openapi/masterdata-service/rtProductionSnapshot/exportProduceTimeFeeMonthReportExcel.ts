@@ -5,7 +5,7 @@ export interface I工时工费月度报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 员工id集
     userIds: number[];
     // 班组id集
@@ -14,6 +14,13 @@ export interface I工时工费月度报表搜索VO {
     beginTime: string;
     // 查询结束日期 yyyy-MM-dd HH:mm:ss
     endTime: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

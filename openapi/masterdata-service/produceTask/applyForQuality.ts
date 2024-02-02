@@ -7,7 +7,14 @@ export interface I质检申请DTO {
     // wip状态记录id
     wipRpId: number;
     // 成品物料信息
-    finishedMaterial: 成品物料填写DTO;
+    finishedMaterial: I成品物料填写DTO;
+}
+// 成品物料填写DTO
+export interface I成品物料填写DTO {
+    // 实际数(质检数)
+    actualQuantity: number;
+    // 再次申请质检数
+    applyQualityAgainQuantity: number;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

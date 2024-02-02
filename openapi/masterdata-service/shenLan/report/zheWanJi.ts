@@ -9,7 +9,7 @@ export interface I深蓝报表查询条件 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 设备名称
     deviceName: string;
     // 报警信息
@@ -19,6 +19,13 @@ export interface I深蓝报表查询条件 {
     // 当前刀具
     currentKnife: string;
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«List«深蓝折弯机报表»»
 export interface IJSONResultList深蓝折弯机报表 {
     // 返回码
@@ -26,7 +33,20 @@ export interface IJSONResultList深蓝折弯机报表 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 深蓝折弯机报表[];
+    data: I深蓝折弯机报表[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 深蓝折弯机报表
+export interface I深蓝折弯机报表 {
+    // 日期
+    date: string;
+    // 设备名称
+    deviceName: string;
+    // 运行信号
+    runSignal: string;
+    // 产能统计
+    produceStatics: string;
+    // 报警信号
+    warnInfo: string;
 }

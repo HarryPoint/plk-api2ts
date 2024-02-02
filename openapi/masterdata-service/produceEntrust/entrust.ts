@@ -1,5 +1,5 @@
 // 生产委外加工提交DTO
-export interface I生产委外加工提交DTO {
+export interface IProductionOutsourcingSubmitDTO {
     // 生产任务id
     produceTaskId: number;
     // 批次id

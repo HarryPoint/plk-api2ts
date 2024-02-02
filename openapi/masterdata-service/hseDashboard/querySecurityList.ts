@@ -12,7 +12,24 @@ export interface IJSONResultList安全查询响应 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 安全查询响应[];
+    data: I安全查询响应[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 安全查询响应
+export interface I安全查询响应 {
+    // ID
+    id: number;
+    // 安全日期
+    securityDate: string;
+    // 轻伤及以上事故数
+    accidentsQuantity: number;
+    // 新增职业病人数
+    careerDiseaseQuantity: number;
+    // 重大隐患处理率
+    dangerHandlerRate: string;
+    // 重大隐患处理数量
+    majorHazardQuantity: number;
+    // 是否有异常
+    isException: string;
 }

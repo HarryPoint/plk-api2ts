@@ -5,7 +5,7 @@ export interface I采购到货统计报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 采购订单编号
     purchaseOrderNo: string;
     // 最新到货日期结束时间 yyyy-MM-dd HH:mm:ss
@@ -31,6 +31,13 @@ export interface I采购到货统计报表搜索VO {
     // 物料类型
     materialTypes: string[];
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«分页信息«采购到货统计报表返回VO»»
 export interface IJSONResult分页信息采购到货统计报表返回VO {
     // 返回码
@@ -38,7 +45,73 @@ export interface IJSONResult分页信息采购到货统计报表返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«采购到货统计报表返回VO»;
+    data: I分页信息采购到货统计报表返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«采购到货统计报表返回VO»
+export interface I分页信息采购到货统计报表返回VO {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I采购到货统计报表返回VO[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 采购到货统计报表返回VO
+export interface I采购到货统计报表返回VO {
+    // 采购订单编号
+    purchaseOrderNo: string;
+    // 供应商
+    supplier: string;
+    // 物料编号
+    majorDataCode: string;
+    // 物料名称
+    majorDataName: string;
+    // 规格型号
+    spec: string;
+    // 物料材质
+    texture: string;
+    // 要求到货日期
+    requiredArriveDate: string;
+    // 要求到货日期字符串
+    requiredArriveDateStr: string;
+    // 最新到货日期
+    lastArrivedDate: string;
+    // 最新到货日期字符串
+    lastArrivedDateStr: string;
+    // 订单数量
+    orderNum: number;
+    // 订单金额
+    orderAmount: number;
+    // 已到货数量
+    arrivedQty: number;
+    // 未到货数量
+    waitQty: number;
+    // 入库数量
+    inboundQty: number;
+    // 入库金额
+    inboundAmount: number;
+    // 未入库数量
+    notInboundQty: number;
+    // 未入库金额
+    notInboundAmount: number;
+    // 单据类型
+    orderType: string;
+    // 采购类型
+    purchaseType: string;
 }

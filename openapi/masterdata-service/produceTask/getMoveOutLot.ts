@@ -5,7 +5,47 @@ export interface IJSONResultListwip可进出料响应dto {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: wip可进出料响应dto[];
+    data: Iwip可进出料响应dto[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// wip可进出料响应dto
+export interface Iwip可进出料响应dto {
+    // 批次id -- 有批次时有值
+    lotOrderId: number;
+    // 批次名称  -- 有批次时有值
+    lotName: string;
+    // 批次号  -- 有批次时有值
+    lotNo: string;
+    // 原始数量 -- 有批次时为批次原始数量，无批次时为任务计划量
+    totalQuantity: number;
+    // wip库存创建时间 - 进料批次的的首次来料时间
+    wmRpCreateTime: string;
+    // 可委外数量
+    canEntrustQuantity: number;
+    // 可操作数量
+    canOptQuantity: number;
+    // wip状态信息集
+    wipQuantityStatusList: IWip数量状态信息响应对象[];
+}
+// Wip数量状态信息响应对象
+export interface IWip数量状态信息响应对象 {
+    // wip状态记录id
+    wipRpId: number;
+    // 数量
+    quantity: number;
+    // wip数量状态
+    quantityStatus: string;
+    // wip数量状态描述
+    quantityStatusDesc: string;
+    // 是否可用
+    canUse: string;
+    // wip库存创建时间 - 进料批次的的首次来料时间
+    wmRpCreateTime: string;
+    // 可委外数量
+    canEntrustQuantity: number;
+    // 可操作数量
+    canOptQuantity: number;
+    // 是否锁定
+    isLock: string;
 }

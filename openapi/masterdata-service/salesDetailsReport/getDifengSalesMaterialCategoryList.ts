@@ -10,7 +10,14 @@ export interface IJSONResultList名称编码响应DTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 名称编码响应 DTO[];
+    data: I名称编码响应DTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 名称编码响应 DTO
+export interface I名称编码响应DTO {
+    // 名称
+    name: string;
+    // 编号
+    code: string;
 }

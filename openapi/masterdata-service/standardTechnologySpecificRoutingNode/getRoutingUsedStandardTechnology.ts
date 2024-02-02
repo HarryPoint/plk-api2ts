@@ -12,7 +12,16 @@ export interface IJSONResultList工艺路径占用的标准工艺响应 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 工艺路径占用的标准工艺响应[];
+    data: I工艺路径占用的标准工艺响应[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 工艺路径占用的标准工艺响应
+export interface I工艺路径占用的标准工艺响应 {
+    // 标准工艺id
+    standardTechnologyId: number;
+    // 标准工艺名称
+    standardTechnologyName: string;
+    // 所属分类名称
+    standardTechnologyCategoryName: string;
 }

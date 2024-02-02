@@ -1,5 +1,5 @@
 // 生产处理返工添加请求对象
-export interface IProductionProcessesReworkAddingRequestObjects {
+export interface I生产处理返工添加请求对象 {
     // 生产任务id
     produceTaskId: number;
     // 返工类型id

@@ -5,7 +5,7 @@ export interface I生产任务导出DTO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 对应工序id
     processIds: number[];
     // 任务号
@@ -45,7 +45,31 @@ export interface I生产任务导出DTO {
     // 可操作项
     canOpItem: string;
     // 生产订单字段搜索
-    produceOrderSearchList: 流程数据明细搜索VO[];
+    produceOrderSearchList: I流程数据明细搜索VO[];
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
+// 流程数据明细搜索VO
+export interface I流程数据明细搜索VO {
+    // 列code
+    code: string;
+    // 搜索类型
+    searchType: string;
+    // 搜索文本 - 针对文本搜索
+    text: string;
+    // 搜索起始值 - 针对范围搜索
+    limitBegin;
+    // 搜索结束值 - 针对范围搜索
+    limitEnd;
+    // 搜索选项值 - 针对选择搜索
+    selectors: undefined[];
+    // 表格编码
+    tableCode: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

@@ -12,7 +12,12 @@ export interface IJSONResultDataLinkageCalcResponseDTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: DataLinkageCalcResponseDTO;
+    data: IDataLinkageCalcResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// DataLinkageCalcResponseDTO
+export interface IDataLinkageCalcResponseDTO {
+    // 默认值
+    defaultValue: string;
 }

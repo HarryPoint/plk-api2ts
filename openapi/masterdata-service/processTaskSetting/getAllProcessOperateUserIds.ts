@@ -7,9 +7,16 @@ export interface I工序操作人员id搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 员工类型
     userType: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«List«long»»
 export interface IJSONResultListlong {

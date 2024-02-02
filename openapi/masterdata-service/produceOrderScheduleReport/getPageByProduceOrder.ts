@@ -5,7 +5,7 @@ export interface I生产排产订单搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 生产订单编号
     produceOrderCode: string;
     // 父级订单编号
@@ -25,6 +25,13 @@ export interface I生产排产订单搜索VO {
     // 计划结束日期查询开始时间
     startTimeOfEndTime: string;
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«分页信息«排产订单报表VO(生产订单维度)»»
 export interface IJSONResult分页信息排产订单报表VO生产订单维度 {
     // 返回码
@@ -32,7 +39,101 @@ export interface IJSONResult分页信息排产订单报表VO生产订单维度 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«排产订单报表VO(生产订单维度)»;
+    data: I分页信息排产订单报表VO生产订单维度;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«排产订单报表VO(生产订单维度)»
+export interface I分页信息排产订单报表VO生产订单维度 {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I排产订单报表VO生产订单维度[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 排产订单报表VO(生产订单维度)
+export interface I排产订单报表VO生产订单维度 {
+    // 生产订单id
+    id: number;
+    // 生产订单号
+    code: string;
+    // 对应物料id
+    materialId: number;
+    // 对应物料名称
+    materialName: string;
+    // 计划交付日期
+    deliveryDate: string;
+    // 优先级
+    priorityLevel: number;
+    // 对应标准工艺路径id
+    routingId: number;
+    // 工艺路径
+    routingName: string;
+    // 交付数量
+    totalCount: number;
+    // 排产状态描述
+    planStatusDesc: string;
+    // 排产方式描述
+    planTypeDesc: string;
+    // 订单计划开始日期
+    beginTime: string;
+    // 订单计划结束时间
+    endTime: string;
+    // 计划产量列表
+    orderDayPlanQuantityList: IIdcodename值VO[];
+    // 工序完成进度列表
+    routingStepCompleteProgressList: IIdcodename值VO[];
+    // 工序步骤计划列表
+    routingStepPlanList: I排产订单报表工序步骤计划VO[];
+}
+// Id，code, name, 值VO
+export interface IIdcodename值VO {
+    // id
+    id: number;
+    // 编号
+    code: string;
+    // 名称
+    name: string;
+    // 值
+    value: number;
+}
+// 排产订单报表工序步骤计划VO
+export interface I排产订单报表工序步骤计划VO {
+    // 工艺路径步骤id
+    routingStepId: number;
+    // 工序编号
+    processCode: string;
+    // 工序名称
+    processName: string;
+    // 生产数量 -- 产能
+    capacityProduceQuantity: number;
+    // 生产时间 -- 产能
+    capacityProduceTime: number;
+    // 时间单位 -- 产能
+    capacityTimeType: string;
+    // 时间单位 -- 准备耗时
+    readyTimeUnit: string;
+    // 准备耗时 -- 准备耗时
+    readyTime: number;
+    // 计划开始时间
+    beginTime: string;
+    // 计划结束时间
+    endTime: string;
+    // 计划产量列表
+    routingStepPlanDayQuantityList: IIdcodename值VO[];
 }

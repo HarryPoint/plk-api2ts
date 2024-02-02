@@ -5,7 +5,7 @@ export interface I流程关联表单搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 非通用：查询表单编码， 即 当flowPathFormFieldId = null时，可以 flowPathCode、fieldSerialNo联合使用来查询关联表单数据
     flowPathCode: string;
     // 通用：模糊搜索值
@@ -25,6 +25,13 @@ export interface I流程关联表单搜索VO {
     // 通用：精确匹配的值列表。1、精确匹配的字段优先是matchingFieldSerialNo。  2、再第一项不成立的时候，搜索的表.列。是关联表单显示字段的字段名、以及关联表单影响的列
     matchingValueList: string[];
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«流程关联表单查询返回VO»
 export interface IJSONResult流程关联表单查询返回VO {
     // 返回码
@@ -32,7 +39,47 @@ export interface IJSONResult流程关联表单查询返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 流程关联表单查询返回VO;
+    data: I流程关联表单查询返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 流程关联表单查询返回VO
+export interface I流程关联表单查询返回VO {
+    // 选择框样式
+    style: string;
+    // 关联表单选项显示字段code
+    formRpSelectorShowFieldCode: string;
+    // 关联表单选项显示字段Serial No
+    formRpSelectorShowFieldSerialNo: string;
+    // 字段列表
+    fieldList: I流程关联表单表头查询返回VO[];
+    // 数据列表
+    dataList: IMapstringstring[];
+}
+// 流程关联表单表头查询返回VO
+export interface I流程关联表单表头查询返回VO {
+    // code
+    code: string;
+    // 名称
+    name: string;
+    // 序列号
+    serialNo: string;
+    // 选项集
+    selectorList: IFormFieldOption[];
+    // 表单类型
+    formFieldType: string;
+    // 日期类型
+    dateType: string;
+}
+// FormFieldOption
+export interface IFormFieldOption {
+    // undefined
+    name: string;
+    // undefined
+    code: string;
+    // undefined
+    color: string;
+}
+// Map«string,string»
+export interface IMapstringstring {
 }

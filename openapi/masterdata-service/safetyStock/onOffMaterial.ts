@@ -1,5 +1,5 @@
 // 安全库存物料开关预警
-export interface ISafetyStockMaterialSwitchWarning {
+export interface I安全库存物料开关预警 {
     // 设置类型
     type: string;
     // 对应业务id

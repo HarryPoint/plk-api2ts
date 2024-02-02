@@ -1,5 +1,5 @@
 // 项目概况查询dto
-export interface I项目概况查询dto {
+export interface IProjectOverviewQueryDto {
     // 项目id
     projectId: number;
     // 开始日期
@@ -10,13 +10,22 @@ export interface I项目概况查询dto {
     limit: number;
 }
 // JSONResult«List«项目任务类型分布响应对象»»
-export interface IJSONResultList项目任务类型分布响应对象 {
+export interface IJSONResultListProjectTaskTypeDistributedResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目任务类型分布响应对象[];
+    data: ITheProjectTaskTypeDistributesTheResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目任务类型分布响应对象
+export interface ITheProjectTaskTypeDistributesTheResponseObject {
+    // 项目任务类型名称
+    projectTaskTypeName: string;
+    // 项目任务类型id
+    projectTaskTypeId: number;
+    // 分布数量
+    distributeQuantity: number;
 }

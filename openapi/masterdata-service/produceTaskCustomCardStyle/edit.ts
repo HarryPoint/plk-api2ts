@@ -1,7 +1,22 @@
 // 生产任务自定义卡片样式编辑list对象DTO
 export interface I生产任务自定义卡片样式编辑list对象DTO {
     // undefined
-    customCardStyleList: 生产任务自定义卡片样式编辑对象DTO[];
+    customCardStyleList: I生产任务自定义卡片样式编辑对象DTO[];
+}
+// 生产任务自定义卡片样式编辑对象DTO
+export interface I生产任务自定义卡片样式编辑对象DTO {
+    // 字段名称
+    formFieldName: string;
+    // 字段code
+    formFieldCode: string;
+    // 字段类型
+    formFieldType: string;
+    // 字段表
+    formFieldTable: string;
+    // 显示位置
+    displayPosition: string;
+    // 扩展元数据
+    metaData: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

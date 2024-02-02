@@ -24,7 +24,28 @@ export interface IJSONResultListStorageTakeCheckTaskResponseDTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: StorageTakeCheckTaskResponseDTO[];
+    data: IStorageTakeCheckTaskResponseDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// StorageTakeCheckTaskResponseDTO
+export interface IStorageTakeCheckTaskResponseDTO {
+    // id
+    id: number;
+    // 所属企业id
+    enterpriseId: number;
+    // 盘点仓库id
+    storehouseId: number;
+    // 盘点范围
+    scopeType: string;
+    // 任务号
+    taskNo: string;
+    // 处理人id
+    handleUserId: number;
+    // 计划开始时间
+    planBeginTime: string;
+    // 完成时间
+    completeTime: string;
+    // 状态
+    status: string;
 }

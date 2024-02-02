@@ -5,7 +5,7 @@ export interface I库存流水搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 业务主数据id（eg:物料id）
     masterDataIdList: number[];
     // 流程id(工单类型)
@@ -61,6 +61,13 @@ export interface I库存流水搜索VO {
     // 库存更新时间-开始 yyyy-MM-dd HH:mm:ss
     updateTimeBegin: string;
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«分页信息«库存流水返回VO»»
 export interface IJSONResult分页信息库存流水返回VO {
     // 返回码
@@ -68,7 +75,136 @@ export interface IJSONResult分页信息库存流水返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«库存流水返回VO»;
+    data: I分页信息库存流水返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«库存流水返回VO»
+export interface I分页信息库存流水返回VO {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I库存流水返回VO[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 库存流水返回VO
+export interface I库存流水返回VO {
+    // id
+    id: number;
+    // 所属业务主数据id
+    masterDataId: number;
+    // 所属物料名称
+    materialName: string;
+    // 所属物料编号
+    materialCode: string;
+    // 所属物料规格型号
+    materialSpec: string;
+    // 所属物料单位
+    materialUnit: string;
+    // 流水类型
+    flowType: string;
+    // 流水类型描述
+    flowTypeDesc: string;
+    // 操作区域id
+    opAreaId: number;
+    // 操作区域名称
+    opAreaName: string;
+    // 操作仓库id
+    opStorehouseId: number;
+    // 仓库名称
+    opStorehouseName: string;
+    // 操作库类型
+    opWarehouseType: string;
+    // 操作仓位id
+    opWarehouseId: number;
+    // 操作仓位层级，从高至低排列
+    warehouseList: IId名称编号VO[];
+    // 对应工单id
+    workOrderId: number;
+    // 对应工单数据id
+    workOrderDataId: number;
+    // 业务id
+    businessId: number;
+    // 业务编号(工单编号)
+    businessNo: string;
+    // 对应流程id
+    flowPathId: number;
+    // 对应流程版本id
+    flowPathVersionId: number;
+    // 对应流程名称
+    flowPathName: string;
+    // 对应流程编号
+    flowPathCode: string;
+    // 批次号
+    lotNo: string;
+    // 数量
+    quantity: number;
+    // 库存剩余总数
+    storageTotalCount: number;
+    // 库存剩余锁定数
+    storageLockCount: number;
+    // 库存剩余可使用数
+    storageUseCount: number;
+    // 操作人ID
+    operatorUserId: number;
+    // 操作人姓名
+    operatorUserName: string;
+    // 单据日期
+    billDate: string;
+    // 单据名称
+    billName: string;
+    // 发入数量
+    inQuantity: number;
+    // 发出数量
+    outQuantity: number;
+    // 流程进度
+    processStatus: string;
+    // 业务状态
+    businessStatus: string;
+    // 业务状态描述
+    businessStatusDesc: string;
+    // 单位ID
+    unitId: number;
+    // 单位名称
+    unitName: string;
+    // 单据创建人
+    billCreateUserId: number;
+    // 单据创建人名称
+    billCreateUserName: string;
+    // 单据创建部门ID
+    billCreateDeptId: number;
+    // 单据创建部门名称
+    billCreateDeptName: string;
+    // undefined
+    billCreateTime: string;
+    // 库存更新部门ID
+    updateDeptId: number;
+    // 库存更新部门名称
+    updateDeptName: string;
+    // 库存更新时间
+    updateTime: string;
+}
+// Id，名称，编号VO
+export interface IId名称编号VO {
+    // id
+    id: number;
+    // 名称
+    name: string;
+    // 编号
+    code: string;
 }

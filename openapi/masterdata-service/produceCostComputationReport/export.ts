@@ -5,7 +5,7 @@ export interface I生产成本核算分页请求对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 计划开始时间查询结束时间
@@ -68,6 +68,13 @@ export interface I生产成本核算分页请求对象 {
     endEndPeriodInProduceQuantity: number;
     // 期末在产品 - 总成本 - 结束总成本
     endEndPeriodInProduceTotalCost: number;
+}
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

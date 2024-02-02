@@ -1,5 +1,5 @@
 // 宝晶生产任务甘特图查询对象
-export interface IBaojingProductionTaskGanttChartQueryObject {
+export interface I宝晶生产任务甘特图查询对象 {
     // 物料id
     materialIds: number[];
     // 部门id
@@ -14,13 +14,74 @@ export interface IBaojingProductionTaskGanttChartQueryObject {
     endDeliveryDate: string;
 }
 // JSONResult«List«宝晶生产计划甘特图响应对象»»
-export interface IJSONResultListTreasureProductionPlanGanttChartResponseObject {
+export interface IJSONResultList宝晶生产计划甘特图响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 宝晶生产计划甘特图响应对象[];
+    data: I宝晶生产计划甘特图响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 宝晶生产计划甘特图响应对象
+export interface I宝晶生产计划甘特图响应对象 {
+    // 部门id
+    departmentId: number;
+    // 部门名称
+    departmentName: string;
+    // 计划数
+    planQuantity: number;
+    // 完成数
+    warehousingQuantity: number;
+    // 未生产数
+    unWarehousingQuantity: number;
+    // 完工率
+    completionRate: number;
+    // 生产计划
+    producePlans: I宝晶生产计划响应对象[];
+}
+// 宝晶生产计划响应对象
+export interface I宝晶生产计划响应对象 {
+    // key
+    key: string;
+    // 物料id
+    materialId: number;
+    // 物料名称
+    materialName: string;
+    // 物料规格
+    materialSpec: string;
+    // 部门id
+    departmentId: number;
+    // 部门名称
+    departmentName: string;
+    // 计划数
+    planQuantity: number;
+    // 完成数
+    warehousingQuantity: number;
+    // 未生产数
+    unWarehousingQuantity: number;
+    // 完工率
+    completionRate: number;
+    // 计划开始日期
+    planStartDate: string;
+    // 计划结束日期
+    planEndDate: string;
+    // 交货日期
+    deliveryDate: string;
+    // 计划生产明细
+    details: I宝晶生产计划详情响应对象[];
+}
+// 宝晶生产计划详情响应对象
+export interface I宝晶生产计划详情响应对象 {
+    // 计划数
+    planQuantity: number;
+    // 完成数
+    warehousingQuantity: number;
+    // 未生产数
+    unWarehousingQuantity: number;
+    // 完工率
+    completionRate: number;
+    // 日期
+    date: string;
 }

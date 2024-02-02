@@ -12,7 +12,14 @@ export interface IJSONResult安全库存设置返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 安全库存设置返回VO;
+    data: I安全库存设置返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 安全库存设置返回VO
+export interface I安全库存设置返回VO {
+    // 是否开启预警
+    isWarning: string;
+    // 计数方式
+    computeType: string;
 }

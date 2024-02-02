@@ -3,9 +3,18 @@ export interface I生产任务批量设置进料模具请求DTO {
     // 工序id
     processId: number;
     // 生产任务详情
-    produceTaskDetails: 生产任务批量设置进料模具任务详情请求DTO[];
+    produceTaskDetails: I生产任务批量设置进料模具任务详情请求DTO[];
     // 模具ids
     moldIds: number[];
+}
+// 生产任务批量设置进料模具任务详情请求DTO
+export interface I生产任务批量设置进料模具任务详情请求DTO {
+    // 生产任务id
+    produceTaskId: number;
+    // 批次ids
+    lotIds: number[];
+    // undefined
+    produceTechnologyMoldIds: number[];
 }
 // JSONResult«object»
 export interface IJSONResultobject {

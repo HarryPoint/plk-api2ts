@@ -7,7 +7,7 @@ export interface I宝晶报表库存相关搜索DTO {
     // 物料规格
     majorDataSpec: string;
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 外部编码
@@ -32,6 +32,13 @@ export interface I宝晶报表库存相关搜索DTO {
     billNames: string[];
     // 保管员
     materialCurators: string[];
+}
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

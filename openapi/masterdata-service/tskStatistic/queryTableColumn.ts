@@ -5,7 +5,10 @@ export interface IJSONResultListTskStatisticReportTableColumnBO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: TskStatisticReportTableColumnBO[];
+    data: ITskStatisticReportTableColumnBO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// TskStatisticReportTableColumnBO
+export interface ITskStatisticReportTableColumnBO {
 }

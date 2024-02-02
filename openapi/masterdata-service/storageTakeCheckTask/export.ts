@@ -5,7 +5,7 @@ export interface I仓库盘点任务分页查询对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 任务编号
     taskNo: string;
     // 盘点仓库id
@@ -24,6 +24,13 @@ export interface I仓库盘点任务分页查询对象 {
     status: string;
     // 完成结束时间 yyyy-MM-dd HH:mm:ss
     completeEndTime: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

@@ -7,7 +7,7 @@ export interface I工序完成明细表查询 {
     // 工序ids
     processIds: number[];
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 配置号
     configNo: string;
     // 汇总聚合维度字段集
@@ -42,6 +42,13 @@ export interface I工序完成明细表查询 {
     isQueryByCalendar: boolean;
     // 排班日期集合
     calendarDayList: LocalDate[];
+}
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

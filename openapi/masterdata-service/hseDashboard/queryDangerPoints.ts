@@ -12,7 +12,16 @@ export interface IJSONResultList危险点查询响应 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 危险点查询响应[];
+    data: I危险点查询响应[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 危险点查询响应
+export interface I危险点查询响应 {
+    // 危险点等级Key
+    dangerPointLevelKey: string;
+    // 危险点等级名称
+    dangerPointLevelName: string;
+    // 危险点数量
+    dangerPointQuantity: number;
 }

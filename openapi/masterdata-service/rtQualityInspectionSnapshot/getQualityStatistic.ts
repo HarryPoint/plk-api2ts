@@ -20,7 +20,40 @@ export interface IJSONResultList用户质检统计返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 用户质检统计返回VO[];
+    data: I用户质检统计返回VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 用户质检统计返回VO
+export interface I用户质检统计返回VO {
+    // 所属员工id
+    userId: number;
+    // 物料id
+    materialId: number;
+    // 物料名称
+    materialName: string;
+    // 物料编号
+    materialCode: string;
+    // 物料单位
+    materialUnit: string;
+    // 工序id
+    processId: number;
+    // 工序名称
+    processName: string;
+    // 工序编号
+    processCode: string;
+    // 总质检个数
+    totalQuantity: number;
+    // 合格数
+    passQuantity: number;
+    // 合格数占比
+    passQuantityRatio: number;
+    // 让步接收数
+    concessionQuantity: number;
+    // 让步接收数占比
+    concessionQuantityRatio: number;
+    // 不合格数
+    notPassQuantity: number;
+    // 不合格数占比
+    notPassQuantityRatio: number;
 }

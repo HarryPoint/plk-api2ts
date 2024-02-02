@@ -9,7 +9,7 @@ export interface I分页 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 客户名称，模糊匹配
     name: string;
     // 客户来源，精确匹配
@@ -19,6 +19,13 @@ export interface I分页 {
     // 开始时间截至， yyyy-MM-dd HH:mm:ss
     createTimeEnd: string;
 }
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
+}
 // JSONResult«分页信息«PublicCustomerOutputVO»»
 export interface IJSONResult分页信息PublicCustomerOutputVO {
     // 返回码
@@ -26,7 +33,57 @@ export interface IJSONResult分页信息PublicCustomerOutputVO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«PublicCustomerOutputVO»;
+    data: I分页信息PublicCustomerOutputVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«PublicCustomerOutputVO»
+export interface I分页信息PublicCustomerOutputVO {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: IPublicCustomerOutputVO[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// PublicCustomerOutputVO
+export interface IPublicCustomerOutputVO {
+    // 客户ID
+    id: number;
+    // 客户编码
+    code: string;
+    // 客户名称
+    name: string;
+    // 客户地址
+    address: string;
+    // 客户地址-行政区划编码
+    addressRegionCode: string;
+    // 客户地址-详细地址
+    addressDetailAddress: string;
+    // 客户状体
+    customerStatus: string;
+    // 客户级别
+    customerType: string;
+    // 客户来源
+    customerSource: string;
+    // 创建人ID
+    createUserId: number;
+    // 创建用户名
+    createUserName: string;
+    // 创建时间
+    createTime: string;
 }

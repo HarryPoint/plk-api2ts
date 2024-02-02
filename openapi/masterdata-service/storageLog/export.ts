@@ -5,7 +5,7 @@ export interface I库存流水搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 业务主数据id（eg:物料id）
     masterDataIdList: number[];
     // 流程id(工单类型)
@@ -60,6 +60,13 @@ export interface I库存流水搜索VO {
     updateDeptIdList: number[];
     // 库存更新时间-开始 yyyy-MM-dd HH:mm:ss
     updateTimeBegin: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

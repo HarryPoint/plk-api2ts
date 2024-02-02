@@ -7,7 +7,7 @@ export interface I工序完成明细表查询 {
     // 工序ids
     processIds: number[];
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 配置号
     configNo: string;
     // 汇总聚合维度字段集
@@ -43,6 +43,13 @@ export interface I工序完成明细表查询 {
     // 排班日期集合
     calendarDayList: LocalDate[];
 }
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
 // JSONResult«工序完成明细表合计响应dto»
 export interface IJSONResult工序完成明细表合计响应dto {
     // 返回码
@@ -50,7 +57,16 @@ export interface IJSONResult工序完成明细表合计响应dto {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 工序完成明细表合计响应dto;
+    data: I工序完成明细表合计响应dto;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 工序完成明细表合计响应dto
+export interface I工序完成明细表合计响应dto {
+    // 当日计划量
+    totalPlanProduceNum: number;
+    // 当日计划完工量
+    totalCurPlanCompleteNum: number;
+    // 实际完工量
+    totalRealProduceNum: number;
 }

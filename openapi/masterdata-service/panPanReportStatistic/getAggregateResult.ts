@@ -16,7 +16,18 @@ export interface IJSONResult盼盼上报统计汇总响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 盼盼上报统计汇总响应对象;
+    data: I盼盼上报统计汇总响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 盼盼上报统计汇总响应对象
+export interface I盼盼上报统计汇总响应对象 {
+    // 计划数
+    totalPlanQuantity: number;
+    // 出料数
+    totalProduceQuantity: number;
+    // 返工数
+    totalBackQuantity: number;
+    // 报废个数
+    totalScrapQuantity: number;
 }

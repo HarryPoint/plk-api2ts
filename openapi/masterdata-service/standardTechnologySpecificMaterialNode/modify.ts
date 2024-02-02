@@ -15,7 +15,16 @@ export interface I标准工艺具体物料节点修改请求对象 {
     // 消耗数量(针对所属上级bom而言的消耗数量)
     totalConsumeCount: number;
     // BOM明细
-    bomDetailList: 标准工艺具体物料节点修改bom详情请求对象[];
+    bomDetailList: I标准工艺具体物料节点修改bom详情请求对象[];
+}
+// 标准工艺具体物料节点修改bom详情请求对象
+export interface I标准工艺具体物料节点修改bom详情请求对象 {
+    // bom明细id, 新增加的行传递空, 编辑的行传递明细id
+    bomDetailId: number;
+    // 子物料id
+    id: number;
+    // 消耗数量 消耗数量必须大于0
+    totalConsumeCount: number;
 }
 // JSONResult«物料BOM编辑响应对象»
 export interface IJSONResult物料BOM编辑响应对象 {
@@ -24,7 +33,37 @@ export interface IJSONResult物料BOM编辑响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 物料BOM编辑响应对象;
+    data: I物料BOM编辑响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 物料BOM编辑响应对象
+export interface I物料BOM编辑响应对象 {
+    // bom id
+    id: number;
+    // bom code
+    code: string;
+    // 子物料列表
+    childMaterialList: I物料bom详情响应对象[];
+}
+// 物料bom详情响应对象
+export interface I物料bom详情响应对象 {
+    // 物料BOM详情id
+    materialBomDetailId: number;
+    // 所属物料bom id
+    materialBomId: number;
+    // 子物料id
+    id: number;
+    // 子物料名称
+    name: string;
+    // 子物料编号
+    code: string;
+    // 子物料类型
+    type: string;
+    // 子物料类型名称
+    typeName: string;
+    // 物料单位
+    unit: string;
+    // 消耗数量
+    totalConsumeCount: number;
 }

@@ -1,5 +1,5 @@
 // 生产委外指定加工DTO
-export interface I生产委外指定加工DTO {
+export interface IProductionOutsourcingDesignatedProcessingDTO {
     // 委外记录id
     id: number;
     // 投料步骤id

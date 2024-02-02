@@ -5,7 +5,7 @@ export interface I生产任务查询DTO针对移动端 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 任务类型
@@ -41,11 +41,35 @@ export interface I生产任务查询DTO针对移动端 {
     // 任务出站关键参数是否需要填写
     moveOutKeyParameterFillNeeds: string;
     // 生产订单字段搜索
-    produceOrderSearchList: 流程数据明细搜索VO[];
+    produceOrderSearchList: I流程数据明细搜索VO[];
     // 查询类型
     queryType: string;
     // undefined
     userId: number;
+}
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
+// 流程数据明细搜索VO
+export interface I流程数据明细搜索VO {
+    // 列code
+    code: string;
+    // 搜索类型
+    searchType: string;
+    // 搜索文本 - 针对文本搜索
+    text: string;
+    // 搜索起始值 - 针对范围搜索
+    limitBegin;
+    // 搜索结束值 - 针对范围搜索
+    limitEnd;
+    // 搜索选项值 - 针对选择搜索
+    selectors: undefined[];
+    // 表格编码
+    tableCode: string;
 }
 // JSONResult«生产任务状态数量返回(针对移动端)»
 export interface IJSONResult生产任务状态数量返回针对移动端 {
@@ -54,7 +78,16 @@ export interface IJSONResult生产任务状态数量返回针对移动端 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 生产任务状态数量返回(针对移动端);
+    data: I生产任务状态数量返回针对移动端;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 生产任务状态数量返回(针对移动端)
+export interface I生产任务状态数量返回针对移动端 {
+    // 待处理数量
+    waitQuantity: number;
+    // 生产中数量
+    produceQuantity: number;
+    // 已关闭数量
+    closeQuantity: number;
 }

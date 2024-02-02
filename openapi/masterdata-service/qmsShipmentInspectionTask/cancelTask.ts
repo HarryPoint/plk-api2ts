@@ -1,5 +1,5 @@
 // 检验任务取消请求DTO
-export interface IVerifyTaskCancellationRequestDTO {
+export interface I检验任务取消请求DTO {
     // 流程id
     flowPathId: number;
     // 任务id

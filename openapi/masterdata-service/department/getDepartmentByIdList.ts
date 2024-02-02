@@ -10,7 +10,22 @@ export interface IJSONResultList部门VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 部门VO[];
+    data: I部门VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 部门VO
+export interface I部门VO {
+    // id
+    id: number;
+    // 部门名
+    name: string;
+    // 部门编码
+    code: string;
+    // 父级组织结构id
+    parentId: number;
+    // 父级组织结构编码
+    parentCode: string;
+    // 排序
+    sort: number;
 }

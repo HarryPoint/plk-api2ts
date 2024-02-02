@@ -12,7 +12,45 @@ export interface IJSONResultList工厂日历排期班次关系VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 工厂日历排期班次关系VO_1[];
+    data: I工厂日历排期班次关系VO_1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 工厂日历排期班次关系VO_1
+export interface I工厂日历排期班次关系VO_1 {
+    // 日程安排日期
+    scheduleDate: string;
+    // 对应班次信息集
+    classShifts: I工厂日历排期班次关系VO[];
+}
+// 工厂日历排期班次关系VO
+export interface I工厂日历排期班次关系VO {
+    // id
+    id: number;
+    // 数据状态 0停用，1启用，-1已删除
+    dataStatus: number;
+    // 创建员工id
+    createUserId: number;
+    // 创建部门id
+    createDeptId: number;
+    // 创建时间
+    createTime: string;
+    // 修改账户id
+    updateUserId: number;
+    // 修改部门id
+    updateDeptId: number;
+    // 更新时间
+    updateTime: string;
+    // 所属企业id
+    enterpriseId: number;
+    // 班次名称
+    name: string;
+    // 班次编号
+    code: string;
+    // 开始时间
+    beginTime: string;
+    // 结束时间
+    endTime: string;
+    // 结束时间类型
+    endTimeType: string;
 }

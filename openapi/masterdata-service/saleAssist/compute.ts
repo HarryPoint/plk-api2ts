@@ -26,7 +26,43 @@ export interface IJSONResult销售交期应答辅助返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 销售交期应答辅助返回VO;
+    data: I销售交期应答辅助返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 销售交期应答辅助返回VO
+export interface I销售交期应答辅助返回VO {
+    // 主物料信息
+    materialInfo: I销售交期应答辅助物料返回VO;
+    // 子物料信息集
+    childMaterialInfos: I销售交期应答辅助物料返回VO[];
+    // 预计整体交付时间
+    leadTime: string;
+    // 设计完成时间
+    designCompleteTime: string;
+    // 采购完成时间
+    purchaseCompleteTime: string;
+}
+// 销售交期应答辅助物料返回VO
+export interface I销售交期应答辅助物料返回VO {
+    // id
+    materialId: number;
+    // 物料名称
+    materialName: string;
+    // 物料编号
+    materialCode: string;
+    // 工艺路径id
+    routingId: number;
+    // 物料库存数
+    materialStorageCount: number;
+    // 需求数量
+    demandCount: number;
+    // 余量， 注：如果是正数，则显示 余量：xxx，  如果是负数，则显示 还需：xxx
+    allowanceCount: number;
+    // 是否完整配置了产能信息
+    isSetCapacity: string;
+    // 产能信息异常描述
+    capacityWarning: string;
+    // 子物料信息集
+    childMaterialInfos: I销售交期应答辅助物料返回VO[];
 }

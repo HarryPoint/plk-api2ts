@@ -7,7 +7,7 @@ export interface I项目阶段任务查询对象 {
     // 项目id集
     projectIds: number[];
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 项目计划id
     projectPlanId: number;
     // 汇总聚合维度字段集
@@ -109,6 +109,13 @@ export interface I项目阶段任务查询对象 {
     // 项目状态
     projectStatus: string;
 }
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
 // JSONResult«List«项目基础查询响应对象»»
 export interface IJSONResultList项目基础查询响应对象 {
     // 返回码
@@ -116,7 +123,20 @@ export interface IJSONResultList项目基础查询响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目基础查询响应对象[];
+    data: I项目基础查询响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目基础查询响应对象
+export interface I项目基础查询响应对象 {
+    // 项目id
+    id: number;
+    // 项目名称
+    name: string;
+    // 项目编号
+    code: string;
+    // 项目类型
+    projectTypeName: string;
+    // 项目经理
+    projectManagerName: string;
 }

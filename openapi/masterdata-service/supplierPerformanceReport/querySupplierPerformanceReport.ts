@@ -5,7 +5,57 @@ export interface IJSONResult分页信息质量绩效评价表报表返回DTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«质量绩效评价表报表返回DTO»;
+    data: I分页信息质量绩效评价表报表返回DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«质量绩效评价表报表返回DTO»
+export interface I分页信息质量绩效评价表报表返回DTO {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I质量绩效评价表报表返回DTO[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 质量绩效评价表报表返回DTO
+export interface I质量绩效评价表报表返回DTO {
+    // 供应商名称
+    supplierName: string;
+    // 入厂验收质量Q1扣分
+    q1DeductPoints: number;
+    // 交付使用质量Q2扣分
+    q2DeductPoints: number;
+    // 试验试车质量Q3扣分
+    q3DeductPoints: number;
+    // 外厂使用质量Q4扣分
+    q4DeductPoints: number;
+    // Q1得分
+    q1Points: number;
+    // Q2得分
+    q2Points: number;
+    // Q3得分
+    q3Points: number;
+    // Q4得分
+    q4Points: number;
+    // 总扣分
+    totalDeductPoints: number;
+    // q3數量
+    q3Count: number;
+    // 总得分
+    totalPoints: number;
 }

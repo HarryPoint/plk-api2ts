@@ -1,7 +1,20 @@
 // 自定义筛选项编辑list对象DTO
 export interface I自定义筛选项编辑list对象DTO {
     // undefined
-    customFilterList: 自定义筛选项编辑对象DTO[];
+    customFilterList: I自定义筛选项编辑对象DTO[];
+}
+// 自定义筛选项编辑对象DTO
+export interface I自定义筛选项编辑对象DTO {
+    // 筛选应用code
+    filterApplicationCode: string;
+    // 字段名称
+    formFieldName: string;
+    // 字段code
+    formFieldCode: string;
+    // 字段序列号
+    formFieldSerialNo: string;
+    // 是否动态表字段
+    isDynamicFormField: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

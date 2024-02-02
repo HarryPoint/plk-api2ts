@@ -34,7 +34,57 @@ export interface IJSONResultList项目甘特图响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目甘特图响应对象[];
+    data: I项目甘特图响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目甘特图响应对象
+export interface I项目甘特图响应对象 {
+    // 项目id
+    projectId: number;
+    // 项目名称
+    projectName: string;
+    // 项目状态
+    projectStatus: string;
+    // 项目状态描述
+    projectStatusDesc: string;
+    // 项目负责人id
+    projectLeaderId: number;
+    // 项目负责人名称
+    projectLeaderName: string;
+    // 项目类型
+    projectType: string;
+    // 项目类型描述
+    projectTypeDesc: string;
+    // 开始日期
+    projectStartDate: string;
+    // 截止日期
+    projectEndDate: string;
+    // 项目任务列表
+    projectTaskGanttList: I项目任务甘特图响应对象[];
+}
+// 项目任务甘特图响应对象
+export interface I项目任务甘特图响应对象 {
+    // 项目任务id
+    projectTaskId: number;
+    // 上级任务id
+    parentId: number;
+    // 项目任务名称
+    projectTaskName: string;
+    // 项目任务优先级
+    priority: string;
+    // 项目任务优先级描述
+    priorityDesc: string;
+    // 项目任务状态
+    projectTaskStatus: string;
+    // 项目任务状态描述
+    projectTaskStatusDesc: string;
+    // 项目任务执行人id
+    projectTaskLeaderUserId: number;
+    // 项目任务执行人名称
+    projectTaskLeaderUserName: string;
+    // 项目任务开始日期
+    beginTime: string;
+    // 项目任务截止日期
+    endTime: string;
 }

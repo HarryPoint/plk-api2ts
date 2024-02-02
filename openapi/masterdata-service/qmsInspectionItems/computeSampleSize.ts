@@ -14,7 +14,32 @@ export interface IJSONResult检验项计算响应DTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 检验项计算响应DTO;
+    data: I检验项计算响应DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 检验项计算响应DTO
+export interface I检验项计算响应DTO {
+    // undefined
+    qmsSamplingStandardsId: number;
+    // undefined
+    batchRangeStartValue: number;
+    // undefined
+    batchRangeEndValue: number;
+    // undefined
+    samplingStandardsLevel: string;
+    // undefined
+    samplingStandardsCharacterCode: string;
+    // undefined
+    sampleSize: number;
+    // undefined
+    samplingStandardsAql: string;
+    // undefined
+    percentage: number;
+    // undefined
+    ac: number;
+    // undefined
+    re: number;
+    // undefined
+    inspectionSampleSize: number;
 }

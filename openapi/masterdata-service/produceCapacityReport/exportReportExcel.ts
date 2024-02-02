@@ -7,7 +7,7 @@ export interface I产能利用率报表查询DTO {
     // 工序id列表
     processIdList: number[];
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 日期 -- 开始时间
     beginTime: string;
     // 天数
@@ -20,6 +20,13 @@ export interface I产能利用率报表查询DTO {
     panPanProduceOrderCompleteType: string;
     // 是否按天数过滤
     isFilterByDayCount: boolean;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

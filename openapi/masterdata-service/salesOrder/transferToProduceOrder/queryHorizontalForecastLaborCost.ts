@@ -26,7 +26,62 @@ export interface IJSONResult预测工费 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 预测工费;
+    data: I预测工费;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 预测工费
+export interface I预测工费 {
+    // 工序列表
+    processList: IId名称编号VO[];
+    // 订单项列表
+    orderItemList: I预测工费水平订单项[];
+    // 汇总工费列表
+    summaryLaborCostList: IProcessLaborCostVO[];
+}
+// Id，名称，编号VO
+export interface IId名称编号VO {
+    // id
+    id: number;
+    // 名称
+    name: string;
+    // 编号
+    code: string;
+}
+// 预测工费水平订单项
+export interface I预测工费水平订单项 {
+    // 销售订单ID
+    salesOrderId: number;
+    // 销售订单编码
+    salesOrderCode: string;
+    // 主物料
+    masterMaterial: IForecastMaterialInfo;
+    // 子物料
+    childMaterial: IForecastMaterialInfo;
+    // 生产交付数量
+    deliveryQuantity: number;
+    // BOM名词
+    bomName: string;
+    // BOM 升级
+    bomLevel: number;
+    // 预测工费列表
+    processLaborCostList: IProcessLaborCostVO[];
+}
+// ForecastMaterialInfo
+export interface IForecastMaterialInfo {
+    // 物料ID
+    materialId: number;
+    // 物料编码
+    materialCode: string;
+    // 物料名称
+    materialName: string;
+}
+// ProcessLaborCostVO
+export interface IProcessLaborCostVO {
+    // undefined
+    processId: number;
+    // undefined
+    processCode: string;
+    // undefined
+    laborCost: number;
 }

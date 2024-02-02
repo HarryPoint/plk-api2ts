@@ -3,7 +3,21 @@ export interface IFileCategoryPermissionSaveRequestDTO {
     // 文件分类ID
     fileCategoryId: number;
     // 权限列表
-    permissionList: FileCategoryPermissionEditRequestDTO[];
+    permissionList: IFileCategoryPermissionEditRequestDTO[];
+}
+// FileCategoryPermissionEditRequestDTO
+export interface IFileCategoryPermissionEditRequestDTO {
+    // 权限类型
+    permissionTypeList: string[];
+    // 组织列表
+    organizations: IFileCategoryOrganizationEditRequestDTO[];
+}
+// FileCategoryOrganizationEditRequestDTO
+export interface IFileCategoryOrganizationEditRequestDTO {
+    // 组织
+    organization: string;
+    // 文件组织ID
+    organizationId: number;
 }
 // JSONResult«string»_1
 export interface IJSONResultstring_1 {

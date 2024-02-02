@@ -7,7 +7,7 @@ export interface I宝晶报表库存相关搜索DTO {
     // 物料规格
     majorDataSpec: string;
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 外部编码
@@ -33,6 +33,13 @@ export interface I宝晶报表库存相关搜索DTO {
     // 保管员
     materialCurators: string[];
 }
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
 // JSONResult«宝晶报表(成品日报表)合计返回VO»
 export interface IJSONResult宝晶报表成品日报表合计返回VO {
     // 返回码
@@ -40,7 +47,36 @@ export interface IJSONResult宝晶报表成品日报表合计返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 宝晶报表(成品日报表)合计返回VO;
+    data: I宝晶报表成品日报表合计返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 宝晶报表(成品日报表)合计返回VO
+export interface I宝晶报表成品日报表合计返回VO {
+    // 期初-成品数
+    beginProduceQuantity: number;
+    // 期初-半成品数
+    beginRawQuantity: number;
+    // 期初-待处理数
+    beginWaitQuantity: number;
+    // 入库-成品数
+    inProduceQuantity: number;
+    // 入库-半成品数
+    inRawQuantity: number;
+    // 入库-待处理数
+    inWaitQuantity: number;
+    // 出库-成品数
+    outProduceQuantity: number;
+    // 出库-半成品数
+    outRawQuantity: number;
+    // 出库-待处理数
+    outWaitQuantity: number;
+    // 报废数
+    scrapQuantity: number;
+    // 期末-成品数
+    endProduceQuantity: number;
+    // 期末-半成品数
+    endRawQuantity: number;
+    // 期末-待处理数
+    endWaitQuantity: number;
 }

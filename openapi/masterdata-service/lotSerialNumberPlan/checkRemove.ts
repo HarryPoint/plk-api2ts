@@ -10,7 +10,16 @@ export interface IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: LotSerialNumberPlanRemoveCheckResponseDTO;
+    data: ILotSerialNumberPlanRemoveCheckResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// LotSerialNumberPlanRemoveCheckResponseDTO
+export interface ILotSerialNumberPlanRemoveCheckResponseDTO {
+    // 允许删除的ID列表
+    allowDeletionIdList: number[];
+    // 不允许删除的ID列表
+    notAllowDeletionIdList: number[];
+    // 已使用的ID列表
+    usedIdList: number[];
 }

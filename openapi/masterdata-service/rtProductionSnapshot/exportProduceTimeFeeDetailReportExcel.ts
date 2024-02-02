@@ -5,7 +5,7 @@ export interface I工时工费报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 工序id集
     processIds: number[];
     // 生产订单号
@@ -24,6 +24,13 @@ export interface I工时工费报表搜索VO {
     salesOrderCode: string;
     // 生产任务编码
     produceTaskNo: string;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

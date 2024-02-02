@@ -1,7 +1,7 @@
 // 仓库盘点任务批次编辑DTO
 export interface I仓库盘点任务批次编辑DTO {
     // 任务列表
-    taskList: 仓库盘点任务编辑DTO[];
+    taskList: I仓库盘点任务编辑DTO[];
     // 计划开始时间，yyyy-MM-dd HH:mm:ss
     planBeginTime: string;
     // 盘点范围
@@ -9,7 +9,23 @@ export interface I仓库盘点任务批次编辑DTO {
     // 物料大类列表，盘点范围为物料类型时必填
     handleMaterialTypes: string[];
     // 指定仓库仓位id集，盘点范围为指定仓位时必填，只传最底层仓位
-    warehouseList: 仓库盘点任务仓位编辑DTO[];
+    warehouseList: I仓库盘点任务仓位编辑DTO[];
+}
+// 仓库盘点任务编辑DTO
+export interface I仓库盘点任务编辑DTO {
+    // 盘点单号
+    taskNo: string;
+    // 盘点仓库id
+    storehouseId: number;
+    // 处理人id集
+    handleUserIds: number[];
+}
+// 仓库盘点任务仓位编辑DTO
+export interface I仓库盘点任务仓位编辑DTO {
+    // 仓库id
+    storehouseId: number;
+    // 仓位id
+    warehouseId: number;
 }
 // JSONResult«string»
 export interface IJSONResultstring {

@@ -1,5 +1,5 @@
 // 设备保养日历请求DTO
-export interface IEquipmentMaintenanceCalendarRequestDTO {
+export interface I设备保养日历请求DTO {
     // 设备保养计划明细ids
     deviceMaintainDetailPlanIds: number[];
     // 当前页面
@@ -9,7 +9,7 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备ids
     deviceIds: number[];
     // 排序字段集
-    orders: 分页排序[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 导出字段集
@@ -37,14 +37,91 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 计划结束时间
     endPlanTaskStartDate: string;
 }
+// 分页排序
+export interface I分页排序 {
+    // 需要进行排序的字段
+    column: string;
+    // 是否正序排列，默认Y
+    isAsc: string;
+}
 // JSONResult«分页信息«设备保养日历-人员模式响应DTO»»
-export interface IJSONResultPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO {
+export interface IJSONResult分页信息设备保养日历人员模式响应DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 分页信息«设备保养日历-人员模式响应DTO»;
+    data: I分页信息设备保养日历人员模式响应DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 分页信息«设备保养日历-人员模式响应DTO»
+export interface I分页信息设备保养日历人员模式响应DTO {
+    // 当前页码
+    pageNo: number;
+    // 分页大小
+    pageSize: number;
+    // 总页数
+    totalPage: number;
+    // 总的记录数
+    totalCount: number;
+    // 分页列表
+    list: I设备保养日历人员模式响应DTO[];
+    // 最后页页码
+    lastPage: number;
+    // 是否有上一页
+    hasPreviousPage: string;
+    // 是否有下一页
+    hasNextPage: string;
+    // 上一页页码
+    previousPage: number;
+    // 下一页页码
+    nextPage: number;
+}
+// 设备保养日历-人员模式响应DTO
+export interface I设备保养日历人员模式响应DTO {
+    // 人员名称
+    employeeName: string;
+    // 班组
+    classGroupName: string;
+    // 部门
+    departmentName: string;
+    // 明细详情
+    details: I设备保养日历人员模式详情响应DTO[];
+}
+// 设备保养日历-人员模式详情响应DTO
+export interface I设备保养日历人员模式详情响应DTO {
+    // 天
+    day: string;
+    // 时间详情
+    dayDetails: I设备保养日历人员模式详情时间响应DTO[];
+}
+// 设备保养日历-人员模式详情时间响应DTO
+export interface I设备保养日历人员模式详情时间响应DTO {
+    // 保养任务id
+    taskId: number;
+    // 设备保养计划id
+    deviceMaintainPlanId: number;
+    // 设备保养计划明细id
+    deviceMaintainDetailPlanId: number;
+    // 设备编号
+    deviceCode: string;
+    // 设备名称
+    deviceName: string;
+    // 保养类型
+    maintainType: string;
+    // 计划开始时间
+    planTaskStartDate: string;
+    // 计划结束时间
+    planTaskEndDate: string;
+    // 任务开始时间
+    taskStartDate: string;
+    // 任务结束时间
+    taskEndDate: string;
+    // 任务状态
+    taskStatus: string;
+    // 是否执行人
+    isExecutor: string;
+    // 查询状态
+    queryStatus: string;
 }

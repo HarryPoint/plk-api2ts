@@ -14,7 +14,24 @@ export interface IJSONResult物料齐套查询响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 物料齐套查询响应对象;
+    data: I物料齐套查询响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 物料齐套查询响应对象
+export interface I物料齐套查询响应对象 {
+    // 物料id
+    materialId: number;
+    // bomId
+    bomId: number;
+    // 物料名称
+    materialName: string;
+    // 库存数量
+    storageUseCount: number;
+    // 需求数量
+    needCount: number;
+    // 差异数量
+    diffCount: number;
+    // 明细
+    children: I物料齐套查询响应对象[];
 }

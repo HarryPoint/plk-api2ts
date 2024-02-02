@@ -16,7 +16,16 @@ export interface IJSONResult项目费用统计响应对象_1 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目费用统计响应对象_1;
+    data: I项目费用统计响应对象_1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目费用统计响应对象_1
+export interface I项目费用统计响应对象_1 {
+    // 名称
+    name: string;
+    // 预算执行率
+    budgetExecuteRate: number;
+    // 资金计划执行率
+    fundPlanExecuteRate: number;
 }

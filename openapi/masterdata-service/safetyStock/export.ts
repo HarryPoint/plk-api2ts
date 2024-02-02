@@ -7,7 +7,7 @@ export interface I安全库存搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: I分页排序VO[];
     // 物料名称
     name: string;
     // 库存预警类型
@@ -16,6 +16,13 @@ export interface I安全库存搜索VO {
     type: string;
     // 对应业务id
     businessId: number;
+}
+// 分页排序VO
+export interface I分页排序VO {
+    // undefined
+    column: string;
+    // undefined
+    isAsc: string;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

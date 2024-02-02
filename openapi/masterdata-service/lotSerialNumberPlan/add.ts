@@ -7,7 +7,40 @@ export interface ILotSerialNumberPlanAddRequestDTO {
     // 方案类型
     planType: string;
     // 规则列表
-    ruleList: LotSerialNumberPlanRuleAddRequestDTO[];
+    ruleList: ILotSerialNumberPlanRuleAddRequestDTO[];
+}
+// LotSerialNumberPlanRuleAddRequestDTO
+export interface ILotSerialNumberPlanRuleAddRequestDTO {
+    // 规则类型
+    type: string;
+    // 日期类型
+    dateFormat: string;
+    // 应用引擎ID
+    flowPathId: number;
+    // 应用引擎编码
+    flowPathCode: string;
+    // 字段编码
+    flowPathFormFiledCode: string;
+    // 字段序列号
+    flowPathFormFiledSerialNo: string;
+    // 值提取方法
+    valueExtractMethod: string;
+    // 起始Index
+    startIndex: number;
+    // 结束Index
+    endIndex: number;
+    // 字符常量
+    fixValue: string;
+    // 规则长度 - 用于流水
+    ruleLength: number;
+    // 起始值 - 用于流水
+    startValue: number;
+    // 步长值 - 用于流水
+    stepValue: number;
+    // 方案ID
+    lotSerialNumberPlanId: number;
+    // 排序
+    sort: number;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

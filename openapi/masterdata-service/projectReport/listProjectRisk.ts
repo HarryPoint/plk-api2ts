@@ -20,7 +20,66 @@ export interface IJSONResultList项目风险报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 项目风险报表响应对象[];
+    data: I项目风险报表响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 项目风险报表响应对象
+export interface I项目风险报表响应对象 {
+    // id
+    id: number;
+    // 名称
+    name: string;
+    // 编号
+    code: string;
+    // 项目id
+    projectId: number;
+    // 处理人名称列表
+    handleUserNameList: string[];
+    // 项目名称
+    projectName: string;
+    // 项目编号
+    projectCode: string;
+    // 项目类型id
+    projectTypeId: number;
+    // 项目类型名称
+    projectTypeName: string;
+    // 项目大类
+    projectCategory: string;
+    // 项目大类名称
+    projectCategoryName: string;
+    // 项目经理名称
+    projectManagerName: string;
+    // 是否超期
+    isOverdue: string;
+    // 超期天数(天)
+    overdueDay: number;
+    // 状态
+    status: string;
+    // 来源应用编号
+    fromAppCode: string;
+    // 来源应用id
+    fromAppId: number;
+    // undefined
+    projectManagerId: number;
+    // 风险类型名称
+    projectRiskTypeName: string;
+    // 风险标识名称
+    projectRiskFlagName: string;
+    // 风险等级
+    level: string;
+    // 责任单位
+    responsibleDeptName: string;
+    // 要求完成时间
+    requireCompleteTime: string;
+    // 实际完成时间
+    actualCompleteTime: string;
+    // undefined
+    projectRiskTypeId: number;
+    // undefined
+    projectRiskFlagId: number;
+    // undefined
+    responsibleDeptId: number;
+    // undefined
+    handleUserIds: undefined[];
 }

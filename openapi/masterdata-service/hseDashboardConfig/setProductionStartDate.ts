@@ -1,10 +1,10 @@
 // 生产开始日期-设置请求
-export interface I生产开始日期设置请求 {
+export interface IProductionStartDateSetRequest {
     // 生产开始日期
     productionStartDate: string;
 }
 // JSONResult«string»_1
-export interface IJSONResultstring_1 {
+export interface IJSONResultstring1 {
     // 返回码
     code: number;
     // 返回消息说明

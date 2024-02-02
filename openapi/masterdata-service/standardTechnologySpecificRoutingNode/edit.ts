@@ -13,7 +13,14 @@ export interface I标准工艺具体工艺路径节点编辑请求对象 {
     // 工艺路径名称
     routingName: string;
     // 工艺路径详情列表
-    detailList: 标准工艺具体工艺路径节点详情编辑请求对象[];
+    detailList: I标准工艺具体工艺路径节点详情编辑请求对象[];
+}
+// 标准工艺具体工艺路径节点详情编辑请求对象
+export interface I标准工艺具体工艺路径节点详情编辑请求对象 {
+    // 工艺路径步骤id, 新增时传递为null, 修改时传递id
+    routingStepId: number;
+    // 所属工序id
+    processId: number;
 }
 // JSONResult«工艺路径节点编辑响应对象»
 export interface IJSONResult工艺路径节点编辑响应对象 {
@@ -22,7 +29,25 @@ export interface IJSONResult工艺路径节点编辑响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: 工艺路径节点编辑响应对象;
+    data: I工艺路径节点编辑响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
+// 工艺路径节点编辑响应对象
+export interface I工艺路径节点编辑响应对象 {
+    // 工艺路径id
+    routingId: number;
+    // 工艺路径编号
+    routingCode: string;
+    // 工艺路径名称
+    routingName: string;
+    // 工艺路径详情列表
+    detailList: I工艺路径节点详情编辑响应对象[];
+}
+// 工艺路径节点详情编辑响应对象
+export interface I工艺路径节点详情编辑响应对象 {
+    // 工艺步骤id
+    routingStepId: number;
+    // 工序id
+    processId: number;
 }
