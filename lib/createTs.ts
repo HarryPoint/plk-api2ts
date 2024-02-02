@@ -15,8 +15,6 @@ const readFiles = async (dir: string, project: Project) => {
     const info = path.parse(filePath);
     if (stat.isFile() && info.ext === ".json") {
       const data = await fs.readFileSync(filePath);
-      console.log("filePath: ", filePath);
-      console.log("data: ", data.toString());
       const swaggerData = JSON.parse(data.toString());
       const tsPath = path.join(info.dir, `${info.name}.ts`);
       const definitionsFile = project.createSourceFile(tsPath, "", {
