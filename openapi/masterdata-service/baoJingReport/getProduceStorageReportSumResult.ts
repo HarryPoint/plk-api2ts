@@ -1,5 +1,5 @@
-// 宝晶报表(库存)相关搜索VO
-export interface I宝晶报表库存相关搜索VO {
+// 宝晶报表(库存)相关搜索DTO
+export interface I宝晶报表库存相关搜索DTO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,21 +7,25 @@ export interface I宝晶报表库存相关搜索VO {
     // 物料规格
     majorDataSpec: string;
     // 排序字段集
-    orders: 分页排序VO[];
+    orders: 分页排序[];
+    // 汇总聚合维度字段集
+    groupBys: string[];
     // 外部编码
     materialOutsideCode: string;
+    // 导出字段集
+    exportFields: string[];
+    // 日期-结束 yyyy-MM-dd HH:mm:ss
+    endDate: string;
     // 物料id集
     majorDataIds: number[];
     // 物料名称
     majorDataName: string;
-    // 日期-结束 yyyy-MM-dd HH:mm:ss
-    endDate: string;
+    // 业务员ids
+    businessUserIds: number[];
     // 区域id
     areaIds: number[];
     // 日期-开始 yyyy-MM-dd HH:mm:ss
     beginDate: string;
-    // 业务员ids
-    businessUserIds: number[];
     // 物料类型
     materialTypes: string[];
     // 单据名称
