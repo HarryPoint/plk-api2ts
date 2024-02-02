@@ -1,0 +1,148 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/rtProductionSnapshot/getFpyRateReportMajorData": {
+      "post": {
+        "tags": [
+          "生产快照相关"
+        ],
+        "summary": "按物料分组统计直通率信息",
+        "operationId": "getFpyRateReportMajorDataUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "产出类报表搜索VO",
+              "$ref": "#/definitions/产出类报表搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«产出类折线图返回VO«直通报表返回VO»»",
+              "$ref": "#/definitions/JSONResult«产出类折线图返回VO«直通报表返回VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "70"
+      }
+    }
+  },
+  "definitions": {
+    "产出类报表搜索VO": {
+      "type": "object",
+      "properties": {
+        "classGroupIds": {
+          "type": "array",
+          "description": "班组id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "materialIds": {
+          "type": "array",
+          "description": "物料id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "processIds": {
+          "type": "array",
+          "description": "工序id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "beginTime": {
+          "type": "string",
+          "description": "日期筛选 - 开始 yyyy-MM-dd HH:mm:ss"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "日期筛选 - 结束 yyyy-MM-dd HH:mm:ss"
+        },
+        "timeType": {
+          "type": "string",
+          "description": "查询时间维度类型",
+          "enum": [
+            "  HOUR-时",
+            "  DAY-日",
+            "  MONTH-月",
+            "  YEAR-年"
+          ]
+        }
+      },
+      "title": "产出类报表搜索VO"
+    },
+    "JSONResult«产出类折线图返回VO«直通报表返回VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "产出类折线图返回VO«直通报表返回VO»",
+          "$ref": "#/definitions/产出类折线图返回VO«直通报表返回VO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«产出类折线图返回VO«直通报表返回VO»»"
+    }
+  }
+}

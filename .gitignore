@@ -31,5 +31,4 @@ dev_dist
 .eslintcache
 /vendor
 package-lock.json
-openapi
 

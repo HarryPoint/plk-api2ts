@@ -1,0 +1,115 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/standardTechnologySpecificMaterialNode/getBomUsedStandardTechnology": {
+      "post": {
+        "tags": [
+          "标准工艺具体物料节点相关"
+        ],
+        "summary": "获取bom占用的标准工艺列表",
+        "operationId": "getBomUsedStandardTechnologyUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "queryRequest",
+            "description": "queryRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "bom占用的标准工艺查询对象",
+              "$ref": "#/definitions/bom占用的标准工艺查询对象"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«bom占用的标准工艺响应»»",
+              "$ref": "#/definitions/JSONResult«List«bom占用的标准工艺响应»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "bom占用的标准工艺查询对象": {
+      "type": "object",
+      "required": [
+        "bomId"
+      ],
+      "properties": {
+        "bomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "bomId"
+        },
+        "standardTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前的标准工艺id, 创建标准工艺阶段 传递null, 编辑标准工艺阶段 传递编辑的标准工艺id"
+        }
+      },
+      "title": "bom占用的标准工艺查询对象"
+    },
+    "JSONResult«List«bom占用的标准工艺响应»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "bom占用的标准工艺响应",
+            "$ref": "#/definitions/bom占用的标准工艺响应"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«bom占用的标准工艺响应»»"
+    }
+  }
+}

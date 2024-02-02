@@ -1,0 +1,127 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/produceOrder/split": {
+      "post": {
+        "tags": [
+          "生产订单相关"
+        ],
+        "summary": "拆分批次",
+        "description": "<p style='color:red'>注意：拆分时，当前批次总数量要取批次详情里面的actualTotalCount(实际剩余数量)来计算和展示</br>显示该按钮需要满足：<br/>1、status != 'CANCEL' && 'CLOSE' </p>",
+        "operationId": "splitUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "lotOrderSplit",
+            "description": "lotOrderSplit",
+            "required": true,
+            "schema": {
+              "originalRef": "批次订单拆分DTO",
+              "$ref": "#/definitions/批次订单拆分DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "140"
+      }
+    }
+  },
+  "definitions": {
+    "批次订单拆分DTO": {
+      "type": "object",
+      "properties": {
+        "wipRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "wipRpId"
+        },
+        "sourceCount": {
+          "type": "number",
+          "description": "原批次数量"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "拆分批次信息",
+          "items": {
+            "originalRef": "批次订单DTO",
+            "$ref": "#/definitions/批次订单DTO"
+          }
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "批次订单拆分DTO"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}

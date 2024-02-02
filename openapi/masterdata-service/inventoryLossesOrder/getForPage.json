@@ -1,0 +1,137 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/inventoryLossesOrder/getForPage": {
+      "post": {
+        "tags": [
+          "盘亏单相关"
+        ],
+        "summary": "分页查询数据",
+        "operationId": "getForPageUsingPOST_5",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "流程数据基础搜索VO",
+              "$ref": "#/definitions/流程数据基础搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«分页信息«JSONObject»»",
+              "$ref": "#/definitions/JSONResult«分页信息«JSONObject»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "流程数据基础搜索VO": {
+      "type": "object",
+      "properties": {
+        "allSearch": {
+          "type": "string",
+          "description": "全局搜索"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "dataSearchList": {
+          "type": "array",
+          "description": "字段搜索",
+          "items": {
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
+          }
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "tableColumnCode": {
+          "type": "string",
+          "description": "明细表表code，传值后，将会查询明细表数据"
+        },
+        "currentFormDataGrouping": {
+          "description": "当前的表单分组",
+          "originalRef": "表单数据分组DTO",
+          "$ref": "#/definitions/表单数据分组DTO"
+        }
+      },
+      "title": "流程数据基础搜索VO"
+    },
+    "JSONResult«分页信息«JSONObject»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "分页信息«JSONObject»",
+          "$ref": "#/definitions/分页信息«JSONObject»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«JSONObject»»"
+    }
+  }
+}

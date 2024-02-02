@@ -1,0 +1,75 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/projectMemberModification/viewAddExtendParam": {
+      "post": {
+        "tags": [
+          "项目成员变更相关"
+        ],
+        "summary": "预览项目成员变更单扩展参数（只为了看文档）",
+        "operationId": "viewAddExtendParamUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "extendParam",
+            "description": "extendParam",
+            "required": true,
+            "schema": {
+              "originalRef": "项目成员变更单扩展参数请求",
+              "$ref": "#/definitions/项目成员变更单扩展参数请求"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "项目成员变更单扩展参数请求": {
+      "type": "object",
+      "properties": {
+        "fromDataList": {
+          "type": "array",
+          "description": "表单数据列表",
+          "items": {
+            "originalRef": "项目变更表单扩展参数编辑请求",
+            "$ref": "#/definitions/项目变更表单扩展参数编辑请求"
+          }
+        }
+      },
+      "title": "项目成员变更单扩展参数请求"
+    }
+  }
+}

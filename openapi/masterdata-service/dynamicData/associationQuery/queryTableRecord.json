@@ -1,0 +1,128 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/dynamicData/associationQuery/queryTableRecord": {
+      "post": {
+        "tags": [
+          "动态数据相关"
+        ],
+        "summary": "关联查询-查询表格记录",
+        "operationId": "queryAssociationFormTableRecordUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "input",
+            "description": "input",
+            "required": true,
+            "schema": {
+              "originalRef": "分页_2",
+              "$ref": "#/definitions/分页_2"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«AssociationFormTypeFieldTableRecordOutputVO»",
+              "$ref": "#/definitions/JSONResult«AssociationFormTypeFieldTableRecordOutputVO»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "60"
+      }
+    }
+  },
+  "definitions": {
+    "分页_2": {
+      "type": "object",
+      "properties": {
+        "currentFormData": {
+          "type": "object",
+          "description": "当前表单数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "flowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "表单字段ID"
+        }
+      },
+      "title": "分页_2"
+    },
+    "JSONResult«AssociationFormTypeFieldTableRecordOutputVO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "AssociationFormTypeFieldTableRecordOutputVO",
+          "$ref": "#/definitions/AssociationFormTypeFieldTableRecordOutputVO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«AssociationFormTypeFieldTableRecordOutputVO»"
+    }
+  }
+}

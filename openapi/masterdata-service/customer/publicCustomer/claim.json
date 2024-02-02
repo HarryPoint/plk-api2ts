@@ -1,0 +1,110 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/customer/publicCustomer/claim": {
+      "post": {
+        "tags": [
+          "客户相关"
+        ],
+        "summary": "客户认领",
+        "operationId": "claimCustomerUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "input",
+            "description": "input",
+            "required": true,
+            "schema": {
+              "originalRef": "CustomerClaimInputVO",
+              "$ref": "#/definitions/CustomerClaimInputVO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«boolean»",
+              "$ref": "#/definitions/JSONResult«boolean»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "CustomerClaimInputVO": {
+      "type": "object",
+      "properties": {
+        "customerIdList": {
+          "type": "array",
+          "description": "客户ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "用户ID"
+        }
+      },
+      "title": "CustomerClaimInputVO"
+    },
+    "JSONResult«boolean»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "boolean",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«boolean»"
+    }
+  }
+}

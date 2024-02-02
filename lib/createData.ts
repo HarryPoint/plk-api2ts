@@ -38,6 +38,21 @@ const fetchData = async (
     }
     return result;
   };
+
+  const createDefinitions = (
+    target: any,
+    prevDefines: Record<string, any> = {}
+  ) => {
+    return findOriginalRef(target).reduce((pre, next) => {
+      if (pre.hasOwnProperty(next)) {
+        return pre;
+      }
+      return {
+        ...pre,
+        [next]: _.cloneDeep(data.definitions[next]),
+      };
+    }, prevDefines);
+  };
   const openJsonArr = _.toPairs(data.paths).map(([path, pathItem]) => {
     return [
       path,
@@ -46,12 +61,7 @@ const fetchData = async (
         paths: {
           [path]: pathItem,
         },
-        definitions: findOriginalRef(pathItem).reduce((pre, next) => {
-          return {
-            ...pre,
-            [next]: _.cloneDeep(data.definitions[next]),
-          };
-        }, {} as Record<string, any>),
+        definitions: createDefinitions(pathItem),
       },
     ] as [string, any];
   });

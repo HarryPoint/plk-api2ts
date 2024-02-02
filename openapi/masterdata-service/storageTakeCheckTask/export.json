@@ -1,0 +1,181 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/storageTakeCheckTask/export": {
+      "post": {
+        "tags": [
+          "仓库盘点任务相关"
+        ],
+        "summary": "导出",
+        "operationId": "exportUsingPOST_32",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "仓库盘点任务分页查询对象",
+              "$ref": "#/definitions/仓库盘点任务分页查询对象"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "仓库盘点任务分页查询对象": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务编号"
+        },
+        "storehouseIds": {
+          "type": "array",
+          "description": "盘点仓库id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "materialIds": {
+          "type": "array",
+          "description": "物料id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "completeBeginTime": {
+          "type": "string",
+          "description": "完成开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "handleUserIds": {
+          "type": "array",
+          "description": "处理人id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "planBeginTime": {
+          "type": "string",
+          "description": "计划开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "planEndTime": {
+          "type": "string",
+          "description": "计划结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待盘点",
+            "  HANDLING-盘点中",
+            "  WAIT_VERIFY-待核对",
+            "  WAIT_EXAMINE-待盈亏处理",
+            "  COMPLETE-已完成",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "completeEndTime": {
+          "type": "string",
+          "description": "完成结束时间 yyyy-MM-dd HH:mm:ss"
+        }
+      },
+      "title": "仓库盘点任务分页查询对象"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

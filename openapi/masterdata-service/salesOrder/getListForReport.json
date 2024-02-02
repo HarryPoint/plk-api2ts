@@ -1,0 +1,172 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/salesOrder/getListForReport": {
+      "post": {
+        "tags": [
+          "销售订单相关"
+        ],
+        "summary": "查询销售订单报表数据",
+        "operationId": "getListForReportUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "订单进度统计查询VO",
+              "$ref": "#/definitions/订单进度统计查询VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«销售订单VO»»",
+              "$ref": "#/definitions/JSONResult«List«销售订单VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "86"
+      }
+    }
+  },
+  "definitions": {
+    "订单进度统计查询VO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "deliveryDateBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交付日期 - 开始 yyyy-MM-dd HH:mm:ss"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编号"
+        },
+        "materialIds": {
+          "type": "array",
+          "description": "物料id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "customerIds": {
+          "type": "array",
+          "description": "客户id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "deliveryDateEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交付日期 - 结束 yyyy-MM-dd HH:mm:ss"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "salesOrderStatus": {
+          "type": "string",
+          "description": "销售订单状态",
+          "enum": [
+            "  CREATED-未转生产订单",
+            "  CONVERTING-部分已转",
+            "  CONVERED-已转生产订单",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        }
+      },
+      "title": "订单进度统计查询VO"
+    },
+    "JSONResult«List«销售订单VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "销售订单VO",
+            "$ref": "#/definitions/销售订单VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«销售订单VO»»"
+    }
+  }
+}

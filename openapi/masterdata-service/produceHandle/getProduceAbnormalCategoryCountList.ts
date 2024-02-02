@@ -1,0 +1,26 @@
+// 生产异常类型统计VO_1
+export interface I生产异常类型统计VO_1 {
+    // 所属分类
+    type: string;
+    // 处理状态
+    status: string;
+    // 业务类型
+    businessType: string;
+    // 所属物料ids
+    materialIds: number[];
+    // 开始时间
+    startTime: string;
+    // 结束时间
+    endTime: string;
+}
+// JSONResult«List«生产异常类型统计VO»»
+export interface IJSONResultList生产异常类型统计VO {
+    // 返回码
+    code: number;
+    // 返回消息说明
+    msg: string;
+    // 响应结果
+    data: 生产异常类型统计VO[];
+    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    ts: number;
+}

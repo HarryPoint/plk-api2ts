@@ -1,0 +1,38 @@
+// 生产处理分页查询的对象
+export interface I生产处理分页查询的对象 {
+    // 当前页面
+    pageNo: number;
+    // 生产订单号
+    produceOrderCode: string;
+    // 分页大小
+    pageSize: number;
+    // 排序字段集
+    orders: 分页排序VO[];
+    // 异常分类
+    type: string;
+    // 提交人id
+    createUserId: number;
+    // 生产异常类型id
+    produceAbnormalCategoryId: number;
+    // 状态
+    status: string;
+    // 操作开始时间 yyyy-MM-dd HH:mm:ss
+    beginTime: string;
+    // 批次号
+    lotNo: string;
+    // 操作结束时间 yyyy-MM-dd HH:mm:ss
+    endTime: string;
+    // 处理人id
+    handleUserId: number;
+}
+// JSONResult«分页信息«生产处理分页响应对象»»
+export interface IJSONResult分页信息生产处理分页响应对象 {
+    // 返回码
+    code: number;
+    // 返回消息说明
+    msg: string;
+    // 响应结果
+    data: 分页信息«生产处理分页响应对象»;
+    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    ts: number;
+}

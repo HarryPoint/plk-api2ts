@@ -1,0 +1,119 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/calendar/getFactoryCalendarScheduleClass": {
+      "post": {
+        "tags": [
+          "工厂日历相关"
+        ],
+        "summary": "获取工厂日历排期班次关系集",
+        "operationId": "getFactoryCalendarScheduleClassUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "dateLimit",
+            "description": "dateLimit",
+            "required": true,
+            "schema": {
+              "originalRef": "日期范围查询 DTO",
+              "$ref": "#/definitions/日期范围查询 DTO"
+            }
+          },
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«工厂日历排期班次关系VO»»",
+              "$ref": "#/definitions/JSONResult«List«工厂日历排期班次关系VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "90"
+      }
+    }
+  },
+  "definitions": {
+    "日期范围查询 DTO": {
+      "type": "object",
+      "properties": {
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "结束时间 yyyy-MM-dd HH:mm:ss"
+        }
+      },
+      "title": "日期范围查询 DTO"
+    },
+    "JSONResult«List«工厂日历排期班次关系VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "工厂日历排期班次关系VO_1",
+            "$ref": "#/definitions/工厂日历排期班次关系VO_1"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«工厂日历排期班次关系VO»»"
+    }
+  }
+}

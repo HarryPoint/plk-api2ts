@@ -1,0 +1,182 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/baoJingWarehouseMaterial/getMaterialPlace": {
+      "post": {
+        "tags": [
+          "宝晶即时库存查询相关"
+        ],
+        "summary": "查询物料库存分布信息",
+        "operationId": "getMaterialPlaceUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "宝晶物料主数据库存分布搜索VO",
+              "$ref": "#/definitions/宝晶物料主数据库存分布搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«宝晶物料库存分布返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«宝晶物料库存分布返回VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "宝晶物料主数据库存分布搜索VO": {
+      "type": "object",
+      "properties": {
+        "materialIds": {
+          "type": "array",
+          "description": "物料id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "编号"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "storehouseIds": {
+          "type": "array",
+          "description": "仓库id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "warehouseIdList": {
+          "type": "array",
+          "description": "仓位id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "规格"
+        },
+        "storehousePurposeList": {
+          "type": "array",
+          "description": "仓库用途",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warehousePurposeList": {
+          "type": "array",
+          "description": "仓位用途",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "宝晶物料主数据库存分布搜索VO"
+    },
+    "JSONResult«List«宝晶物料库存分布返回VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "宝晶物料库存分布返回VO",
+            "$ref": "#/definitions/宝晶物料库存分布返回VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«宝晶物料库存分布返回VO»»"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/moveInOutBomConsume/scanMoveInBomConsumeMaterial": {
+      "post": {
+        "tags": [
+          "进出料bom消耗相关"
+        ],
+        "summary": "扫码进料bom消耗物料",
+        "operationId": "scanMoveInBomConsumeMaterialUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "moveInBomConsumeScanRequest",
+            "description": "moveInBomConsumeScanRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "进料bom消耗扫描请求DTO",
+              "$ref": "#/definitions/进料bom消耗扫描请求DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«进料bom消耗物料扫描响应DTO»",
+              "$ref": "#/definitions/JSONResult«进料bom消耗物料扫描响应DTO»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "80"
+      }
+    }
+  },
+  "definitions": {
+    "进料bom消耗扫描请求DTO": {
+      "type": "object",
+      "required": [
+        "code",
+        "produceTaskId"
+      ],
+      "properties": {
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "进料bom消耗扫描请求DTO"
+    },
+    "JSONResult«进料bom消耗物料扫描响应DTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "进料bom消耗物料扫描响应DTO",
+          "$ref": "#/definitions/进料bom消耗物料扫描响应DTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«进料bom消耗物料扫描响应DTO»"
+    }
+  }
+}
