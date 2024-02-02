@@ -93,6 +93,25 @@
       },
       "title": "表单填充请求"
     },
+    "表单填充项下标": {
+      "type": "object",
+      "properties": {
+        "sourceDataIdList": {
+          "type": "array",
+          "description": "源数据ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "detailRowIndex": {
+          "type": "integer",
+          "format": "int32",
+          "description": "明细行下标, 从 0 开始。"
+        }
+      },
+      "title": "表单填充项下标"
+    },
     "JSONResult«List«JSONObject»»": {
       "type": "object",
       "properties": {
@@ -123,6 +142,13 @@
         }
       },
       "title": "JSONResult«List«JSONObject»»"
+    },
+    "JSONObject": {
+      "type": "object",
+      "title": "JSONObject",
+      "additionalProperties": {
+        "type": "object"
+      }
     }
   }
 }

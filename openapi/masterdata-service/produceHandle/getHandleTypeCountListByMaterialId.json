@@ -107,6 +107,24 @@
         }
       },
       "title": "JSONResult«生产处理统计VO»"
+    },
+    "生产处理统计VO": {
+      "type": "object",
+      "properties": {
+        "backQuantity": {
+          "type": "number",
+          "description": "返工数量"
+        },
+        "holdPauseQuantity": {
+          "type": "number",
+          "description": "暂扣数量"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        }
+      },
+      "title": "生产处理统计VO"
     }
   }
 }

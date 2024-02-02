@@ -116,6 +116,22 @@
       },
       "title": "设备数采数据详单搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«设备数采明细报表导出VO»»": {
       "type": "object",
       "properties": {
@@ -146,6 +162,68 @@
         }
       },
       "title": "JSONResult«List«设备数采明细报表导出VO»»"
+    },
+    "设备数采明细报表导出VO": {
+      "type": "object",
+      "properties": {
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "collectTime": {
+          "type": "string",
+          "description": "数据提交时间"
+        },
+        "reqUsername": {
+          "type": "string",
+          "description": "请求员工姓名"
+        },
+        "dataStatus": {
+          "type": "string",
+          "description": "数据状态"
+        },
+        "paramName": {
+          "type": "string",
+          "description": "设备数采参数名称"
+        },
+        "paramCode": {
+          "type": "string",
+          "description": "设备数采参数编号"
+        },
+        "paramUnit": {
+          "type": "string",
+          "description": "设备数采参数单位"
+        },
+        "result": {
+          "type": "number",
+          "description": "结果"
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "errorType": {
+          "type": "string",
+          "description": "异常类型",
+          "enum": [
+            "  UPPER-超上限",
+            "  LOWER-超下限"
+          ]
+        },
+        "errorResult": {
+          "type": "number",
+          "description": "异常值"
+        }
+      },
+      "title": "设备数采明细报表导出VO"
     }
   }
 }

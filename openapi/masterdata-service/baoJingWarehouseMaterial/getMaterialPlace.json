@@ -147,6 +147,22 @@
       },
       "title": "宝晶物料主数据库存分布搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«宝晶物料库存分布返回VO»»": {
       "type": "object",
       "properties": {
@@ -177,6 +193,79 @@
         }
       },
       "title": "JSONResult«List«宝晶物料库存分布返回VO»»"
+    },
+    "宝晶物料库存分布返回VO": {
+      "type": "object",
+      "properties": {
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "区域id"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "areaCode": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料类型code"
+        },
+        "materialTypeName": {
+          "type": "string",
+          "description": "物料类型"
+        },
+        "materialCurator": {
+          "type": "string",
+          "description": "物料保管员"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "storehousePurpose": {
+          "type": "string",
+          "description": "仓库用途"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "warehouseCode": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "宝晶物料库存分布返回VO"
     }
   }
 }

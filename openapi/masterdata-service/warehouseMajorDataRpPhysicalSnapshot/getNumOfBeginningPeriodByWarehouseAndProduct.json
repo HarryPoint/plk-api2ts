@@ -109,6 +109,63 @@
         }
       },
       "title": "JSONResult«仓位物料库存关联VO»"
+    },
+    "仓位物料库存关联VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "snapshotDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "快照日期"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属物料主数据id"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属仓库id"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属仓位id"
+        },
+        "warehouseType": {
+          "type": "string",
+          "description": "仓位类型",
+          "enum": [
+            "  PHYSICAL-实体仓",
+            "  LINE_SIDE-线边仓",
+            "  WIP-WIP"
+          ]
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "仓位物料库存关联VO"
     }
   }
 }

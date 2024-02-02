@@ -107,6 +107,74 @@
       },
       "title": "流程表单Code或Name搜索VO"
     },
+    "流程数据明细搜索VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "searchType"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "列code"
+        },
+        "searchType": {
+          "type": "string",
+          "description": "搜索类型",
+          "enum": [
+            "NONE",
+            "EQ",
+            "LIKE",
+            "RANGE",
+            "SELECTOR",
+            "IS_NULL",
+            "NOT_NULL",
+            "NE",
+            "REGEXP"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "搜索文本 - 针对文本搜索"
+        },
+        "limitBegin": {
+          "type": "object",
+          "description": "搜索起始值 - 针对范围搜索"
+        },
+        "limitEnd": {
+          "type": "object",
+          "description": "搜索结束值 - 针对范围搜索"
+        },
+        "selectors": {
+          "type": "array",
+          "description": "搜索选项值 - 针对选择搜索",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tableCode": {
+          "type": "string",
+          "description": "表格编码"
+        }
+      },
+      "title": "流程数据明细搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«JSONObject»»": {
       "type": "object",
       "properties": {
@@ -137,6 +205,13 @@
         }
       },
       "title": "JSONResult«List«JSONObject»»"
+    },
+    "JSONObject": {
+      "type": "object",
+      "title": "JSONObject",
+      "additionalProperties": {
+        "type": "object"
+      }
     }
   }
 }

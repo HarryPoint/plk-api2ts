@@ -157,6 +157,22 @@
       },
       "title": "寄售损耗分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«寄售损耗分析报表返回VO»": {
       "type": "object",
       "properties": {
@@ -184,6 +200,190 @@
         }
       },
       "title": "JSONResult«寄售损耗分析报表返回VO»"
+    },
+    "寄售损耗分析报表返回VO": {
+      "type": "object",
+      "properties": {
+        "tablePage": {
+          "description": "数据表",
+          "originalRef": "分页信息«寄售损耗分析报表分页返回VO»",
+          "$ref": "#/definitions/分页信息«寄售损耗分析报表分页返回VO»"
+        },
+        "productDimension": {
+          "type": "array",
+          "description": "未提数量",
+          "items": {
+            "originalRef": "寄售损耗分析图表数据返回VO",
+            "$ref": "#/definitions/寄售损耗分析图表数据返回VO"
+          }
+        }
+      },
+      "title": "寄售损耗分析报表返回VO"
+    },
+    "分页信息«寄售损耗分析报表分页返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "寄售损耗分析报表分页返回VO",
+            "$ref": "#/definitions/寄售损耗分析报表分页返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«寄售损耗分析报表分页返回VO»"
+    },
+    "寄售损耗分析报表分页返回VO": {
+      "type": "object",
+      "properties": {
+        "customerIdsJson": {
+          "type": "string",
+          "description": "客户ids json"
+        },
+        "salesDeliveryIdsJson": {
+          "type": "array",
+          "description": "销售发货子表ids json",
+          "items": {
+            "type": "object"
+          }
+        },
+        "customerIds": {
+          "type": "array",
+          "description": "客户ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "客户id"
+        },
+        "salesDeliveryIds": {
+          "type": "array",
+          "description": "销售发货子表ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "customer": {
+          "type": "string",
+          "description": "客户"
+        },
+        "warehouse": {
+          "type": "string",
+          "description": "仓库"
+        },
+        "productNo": {
+          "type": "string",
+          "description": "产品编码"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "productSpec": {
+          "type": "string",
+          "description": "规格型号"
+        },
+        "numOfBeginningPeriod": {
+          "type": "number",
+          "description": "期初数量"
+        },
+        "sendQty": {
+          "type": "number",
+          "description": "送货数量"
+        },
+        "inboundQty": {
+          "type": "number",
+          "description": "入库数量"
+        },
+        "numOfLoss": {
+          "type": "number",
+          "description": "损耗数量"
+        },
+        "returnQty": {
+          "type": "number",
+          "description": "退货数量"
+        },
+        "remainingQty": {
+          "type": "number",
+          "description": "未结余量"
+        },
+        "lossRatio": {
+          "type": "number",
+          "description": "损耗率"
+        }
+      },
+      "title": "寄售损耗分析报表分页返回VO"
+    },
+    "寄售损耗分析图表数据返回VO": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "纵轴"
+        },
+        "remainingQty": {
+          "type": "number",
+          "description": "未结数量"
+        }
+      },
+      "title": "寄售损耗分析图表数据返回VO"
     }
   }
 }

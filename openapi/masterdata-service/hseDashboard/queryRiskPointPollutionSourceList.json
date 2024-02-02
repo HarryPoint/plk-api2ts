@@ -107,6 +107,29 @@
         }
       },
       "title": "JSONResult«List«风险点污染源查询响应»»"
+    },
+    "风险点污染源查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "year": {
+          "type": "string",
+          "description": "年份"
+        },
+        "riskPointQuantity": {
+          "type": "number",
+          "description": "风险点数量"
+        },
+        "pollutionSourceQuantity": {
+          "type": "number",
+          "description": "污染源数量"
+        }
+      },
+      "title": "风险点污染源查询响应"
     }
   }
 }

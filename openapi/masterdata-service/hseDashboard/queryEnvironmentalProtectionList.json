@@ -107,6 +107,45 @@
         }
       },
       "title": "JSONResult«List«环保S查询响应»»"
+    },
+    "环保S查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "environmentalProtectionDate": {
+          "type": "string",
+          "description": "环保日期"
+        },
+        "eventQuantity": {
+          "type": "number",
+          "description": "发生事件数量"
+        },
+        "penaltyQuantity": {
+          "type": "number",
+          "description": "政府通报处罚数量"
+        },
+        "dangerHandlerRate": {
+          "type": "string",
+          "description": "重大隐患处理率"
+        },
+        "majorHazardQuantity": {
+          "type": "number",
+          "description": "重大隐患处理数量"
+        },
+        "isException": {
+          "type": "string",
+          "description": "是否有异常",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "环保S查询响应"
     }
   }
 }

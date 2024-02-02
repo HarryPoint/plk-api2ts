@@ -100,6 +100,56 @@
       },
       "title": "盘点任务盘点处理DTO"
     },
+    "盘点任务盘点处理详情DTO": {
+      "type": "object",
+      "properties": {
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点仓位id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "serialNos": {
+          "type": "array",
+          "description": "序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO_1",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1"
+          }
+        },
+        "quantity": {
+          "type": "number",
+          "description": "盘点数量"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点处理详情DTO"
+    },
+    "盘点任务盘点明细序列号DTO_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO_1"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

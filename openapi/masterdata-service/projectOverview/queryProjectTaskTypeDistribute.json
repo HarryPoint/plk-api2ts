@@ -120,6 +120,26 @@
         }
       },
       "title": "JSONResult«List«项目任务类型分布响应对象»»"
+    },
+    "项目任务类型分布响应对象": {
+      "type": "object",
+      "properties": {
+        "projectTaskTypeName": {
+          "type": "string",
+          "description": "项目任务类型名称"
+        },
+        "projectTaskTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务类型id"
+        },
+        "distributeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分布数量"
+        }
+      },
+      "title": "项目任务类型分布响应对象"
     }
   }
 }

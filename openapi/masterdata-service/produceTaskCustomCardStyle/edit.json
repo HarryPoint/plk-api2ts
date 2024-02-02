@@ -73,6 +73,66 @@
       },
       "title": "生产任务自定义卡片样式编辑list对象DTO"
     },
+    "生产任务自定义卡片样式编辑对象DTO": {
+      "type": "object",
+      "properties": {
+        "formFieldName": {
+          "type": "string",
+          "description": "字段名称"
+        },
+        "formFieldCode": {
+          "type": "string",
+          "description": "字段code"
+        },
+        "formFieldType": {
+          "type": "string",
+          "description": "字段类型",
+          "enum": [
+            "  INPUT_TEXT-单行文字",
+            "  TEXTAREA-多行文字",
+            "  NUMBER-数字",
+            "  DATE-日期",
+            "  SELECTOR-单选",
+            "  CHECKBOX-多选",
+            "  IMAGE_UPLOAD-图片上传",
+            "  FILE_UPLOAD-附件上传",
+            "  TABLE-表格",
+            "  FORM_RP-关联表单",
+            "  FORM_RP_MULTI-关联表单多选",
+            "  CODE-流水号",
+            "  ADDRESS-地址",
+            "  POSITION-定位",
+            "  EMAIL-电子邮箱",
+            "  MOBILE-手机号码",
+            "  ID_CARD-身份证号码",
+            "  RICH_TEXT-富文本",
+            "  ASSOCIATION_QUERY-关联查询",
+            "  DESC_TEXT-说明文字",
+            "  SPLIT_LINE-分隔符",
+            "  LOT_NO-批次号",
+            "  SERIAL_NO-序列号",
+            "  FORMULA-自定义公式"
+          ]
+        },
+        "formFieldTable": {
+          "type": "string",
+          "description": "字段表",
+          "enum": [
+            "  PRODUCE_ORDER-生产订单表",
+            "  PRODUCE_TASK-生产任务表"
+          ]
+        },
+        "displayPosition": {
+          "type": "string",
+          "description": "显示位置"
+        },
+        "metaData": {
+          "type": "string",
+          "description": "扩展元数据"
+        }
+      },
+      "title": "生产任务自定义卡片样式编辑对象DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

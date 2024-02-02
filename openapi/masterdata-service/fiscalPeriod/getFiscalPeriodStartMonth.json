@@ -70,6 +70,17 @@
         }
       },
       "title": "JSONResult«设置期间开始月份Response»"
+    },
+    "设置期间开始月份Response": {
+      "type": "object",
+      "properties": {
+        "startMonth": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ID"
+        }
+      },
+      "title": "设置期间开始月份Response"
     }
   }
 }

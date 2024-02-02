@@ -101,6 +101,25 @@
         }
       },
       "title": "JSONResult«List«Id Code Name 通用传输对象»»"
+    },
+    "Id Code Name 通用传输对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "code"
+        },
+        "name": {
+          "type": "string",
+          "description": "name"
+        }
+      },
+      "title": "Id Code Name 通用传输对象"
     }
   }
 }

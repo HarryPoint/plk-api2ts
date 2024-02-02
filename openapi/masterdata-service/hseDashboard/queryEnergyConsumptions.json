@@ -107,6 +107,29 @@
         }
       },
       "title": "JSONResult«List«能源消耗查询响应»»"
+    },
+    "能源消耗查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "year": {
+          "type": "string",
+          "description": "年份"
+        },
+        "totalEnergyConsumption": {
+          "type": "number",
+          "description": "能源消耗总量（万吨标煤）"
+        },
+        "comprehensiveEnergyConsumption": {
+          "type": "number",
+          "description": "万元产值综合耗能（吨/万元）"
+        }
+      },
+      "title": "能源消耗查询响应"
     }
   }
 }

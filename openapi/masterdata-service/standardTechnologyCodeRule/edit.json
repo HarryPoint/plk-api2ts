@@ -88,6 +88,66 @@
       },
       "title": "标准工艺编码规则请求 DTO"
     },
+    "标准工艺编码规则明细请求 DTO": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "type": {
+          "type": "string",
+          "description": "类型",
+          "enum": [
+            "  PRODUCE_ORDER-生产订单",
+            "  MATERIAL-物料",
+            "  SERIAL_NO-流水号",
+            "  DATE-日期",
+            "  FIX-固定值"
+          ]
+        },
+        "flowPathTableColumnCode": {
+          "type": "string",
+          "description": "应用表格列code - 类型是应用时有值"
+        },
+        "serialNoDigit": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流水号位数 - 类型是流水号时有值"
+        },
+        "serialNoStartValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流水号起始值 - 类型是流水号时有值"
+        },
+        "serialNoStepValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流水号步长值 - 类型是流水号时有值"
+        },
+        "dateFormat": {
+          "type": "string",
+          "description": "日期格式 - 类型是日期时有值",
+          "enum": [
+            "  YEAR-年",
+            "  YEAR_MONTH-年月",
+            "  YEAR_MONTH_DAY-年月日",
+            "  MONTH-月",
+            "  MONTH_DAY-月日",
+            "  DAY-日"
+          ]
+        },
+        "fixValue": {
+          "type": "string",
+          "description": "固定值 - 类型是固定值时有值"
+        }
+      },
+      "title": "标准工艺编码规则明细请求 DTO"
+    },
     "JSONResult«id信息»": {
       "type": "object",
       "properties": {
@@ -115,6 +175,17 @@
         }
       },
       "title": "JSONResult«id信息»"
+    },
+    "id信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        }
+      },
+      "title": "id信息"
     }
   }
 }

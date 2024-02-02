@@ -112,6 +112,45 @@
         }
       },
       "title": "JSONResult«List«生产订单下发扩展信息VO»»"
+    },
+    "生产订单下发扩展信息VO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "issueUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下发人id"
+        },
+        "issueUser": {
+          "type": "string",
+          "description": "下发人"
+        },
+        "issueTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "下发时间"
+        },
+        "planUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下发人id"
+        },
+        "planUser": {
+          "type": "string",
+          "description": "计划人"
+        },
+        "planTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划时间"
+        }
+      },
+      "title": "生产订单下发扩展信息VO"
     }
   }
 }

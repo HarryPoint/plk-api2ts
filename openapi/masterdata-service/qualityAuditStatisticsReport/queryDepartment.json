@@ -104,6 +104,93 @@
         }
       },
       "title": "JSONResult«不符合项统计-部门»"
+    },
+    "不符合项统计-部门": {
+      "type": "object",
+      "properties": {
+        "titleList": {
+          "type": "array",
+          "description": "不符合项数量,不符合项目占比标题列表",
+          "items": {
+            "originalRef": "审核类型标题",
+            "$ref": "#/definitions/审核类型标题"
+          }
+        },
+        "itemList": {
+          "type": "array",
+          "description": "部门统计数量",
+          "items": {
+            "originalRef": "生产部门统计项目",
+            "$ref": "#/definitions/生产部门统计项目"
+          }
+        }
+      },
+      "title": "不符合项统计-部门"
+    },
+    "审核类型标题": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "标题的Key"
+        },
+        "name": {
+          "type": "string",
+          "description": "标题的名称"
+        }
+      },
+      "title": "审核类型标题"
+    },
+    "生产部门统计项目": {
+      "type": "object",
+      "properties": {
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门ID"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "nonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "不符合项数量"
+        },
+        "dynamicIndicates": {
+          "type": "object",
+          "description": "不符合项数量、不符合项目指标的占比",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "unRectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未整改数量"
+        },
+        "rectificationRate": {
+          "type": "number",
+          "description": "整改率"
+        },
+        "internalAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "不符合项分布 - 内部审核不符合项数量"
+        },
+        "externalAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "不符合项分布 - 外部审核不符合项数量"
+        },
+        "specialAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "不符合项分布 - 专项审核不符合项数量"
+        }
+      },
+      "title": "生产部门统计项目"
     }
   }
 }

@@ -97,6 +97,60 @@
         }
       },
       "title": "JSONResult«List«异常标签返回VO»»"
+    },
+    "异常标签返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "type": {
+          "type": "string",
+          "description": "所属分类",
+          "enum": [
+            "  SCRAP-报废",
+            "  HOLD-扣留",
+            "  HOLD_PAUSE-暂扣",
+            "  REPORT-上报反馈",
+            "  BACK-返工",
+            "  CANCEL_TASK-撤销任务"
+          ]
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "所属分类"
+        },
+        "name": {
+          "type": "string",
+          "description": "标签名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "标签编号"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "是否启用"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        }
+      },
+      "title": "异常标签返回VO"
     }
   }
 }

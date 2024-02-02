@@ -107,6 +107,24 @@
         }
       },
       "title": "JSONResult«List«危险点查询响应»»"
+    },
+    "危险点查询响应": {
+      "type": "object",
+      "properties": {
+        "dangerPointLevelKey": {
+          "type": "string",
+          "description": "危险点等级Key"
+        },
+        "dangerPointLevelName": {
+          "type": "string",
+          "description": "危险点等级名称"
+        },
+        "dangerPointQuantity": {
+          "type": "number",
+          "description": "危险点数量"
+        }
+      },
+      "title": "危险点查询响应"
     }
   }
 }

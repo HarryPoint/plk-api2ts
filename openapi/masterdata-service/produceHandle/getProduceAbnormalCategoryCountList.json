@@ -162,6 +162,25 @@
         }
       },
       "title": "JSONResult«List«生产异常类型统计VO»»"
+    },
+    "生产异常类型统计VO": {
+      "type": "object",
+      "properties": {
+        "categoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "异常类型id"
+        },
+        "categoryName": {
+          "type": "string",
+          "description": "异常类型名"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "异常类型数量"
+        }
+      },
+      "title": "生产异常类型统计VO"
     }
   }
 }

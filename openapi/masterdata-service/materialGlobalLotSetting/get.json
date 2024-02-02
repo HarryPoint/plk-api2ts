@@ -79,6 +79,52 @@
         }
       },
       "title": "JSONResult«物料全局批次设置编辑响应对象»"
+    },
+    "物料全局批次设置编辑响应对象": {
+      "type": "object",
+      "properties": {
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "lotOutRule": {
+          "type": "string",
+          "description": "物料批次出库规则",
+          "enum": [
+            "  BATCH_ORDER_FIFO-按批次顺序先进先出",
+            "  MANUAL_SELECTION-手动选择"
+          ]
+        },
+        "enableQualityTraceability": {
+          "type": "string",
+          "description": "启用质量追溯",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableExternalCode": {
+          "type": "string",
+          "description": "启用外部码",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "物料全局批次设置编辑响应对象"
     }
   }
 }

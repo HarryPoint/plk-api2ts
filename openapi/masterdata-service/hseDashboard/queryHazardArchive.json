@@ -104,6 +104,32 @@
         }
       },
       "title": "JSONResult«职业危害档案查询响应»"
+    },
+    "职业危害档案查询响应": {
+      "type": "object",
+      "properties": {
+        "newOccupationalDiseaseQuantity": {
+          "type": "number",
+          "description": "新增职业病数量"
+        },
+        "occupationContraindicationQuantity": {
+          "type": "number",
+          "description": "职业禁忌症数量"
+        },
+        "preJobPhysicalExamination": {
+          "type": "number",
+          "description": "岗前体检"
+        },
+        "inJobPhysicalExamination": {
+          "type": "number",
+          "description": "岗中体检"
+        },
+        "postJobPhysicalExamination": {
+          "type": "number",
+          "description": "离岗体检"
+        }
+      },
+      "title": "职业危害档案查询响应"
     }
   }
 }

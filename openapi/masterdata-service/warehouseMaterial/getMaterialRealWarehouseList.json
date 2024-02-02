@@ -132,6 +132,42 @@
         }
       },
       "title": "JSONResult«List«物料实时库从返回VO»»"
+    },
+    "物料实时库从返回VO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "storageTotalQuantity": {
+          "type": "number",
+          "description": "库存总数量"
+        },
+        "storageLockQuantity": {
+          "type": "number",
+          "description": "库存锁定数量"
+        },
+        "storageUseQuantity": {
+          "type": "number",
+          "description": "库存可用数量"
+        }
+      },
+      "title": "物料实时库从返回VO"
     }
   }
 }

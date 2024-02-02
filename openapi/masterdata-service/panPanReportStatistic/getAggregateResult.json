@@ -122,6 +122,28 @@
         }
       },
       "title": "JSONResult«盼盼上报统计汇总响应对象»"
+    },
+    "盼盼上报统计汇总响应对象": {
+      "type": "object",
+      "properties": {
+        "totalPlanQuantity": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "出料数"
+        },
+        "totalBackQuantity": {
+          "type": "number",
+          "description": "返工数"
+        },
+        "totalScrapQuantity": {
+          "type": "number",
+          "description": "报废个数"
+        }
+      },
+      "title": "盼盼上报统计汇总响应对象"
     }
   }
 }

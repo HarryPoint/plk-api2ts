@@ -95,6 +95,39 @@
       },
       "title": "日历排班VO"
     },
+    "日历排班天数VO": {
+      "type": "object",
+      "properties": {
+        "scheduleDayDetails": {
+          "type": "array",
+          "description": "排班明细",
+          "items": {
+            "originalRef": "日历排班天数明细VO",
+            "$ref": "#/definitions/日历排班天数明细VO"
+          }
+        }
+      },
+      "title": "日历排班天数VO"
+    },
+    "日历排班天数明细VO": {
+      "type": "object",
+      "properties": {
+        "classGroupIdList": {
+          "type": "array",
+          "description": "班组id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "classShiftId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班次id"
+        }
+      },
+      "title": "日历排班天数明细VO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

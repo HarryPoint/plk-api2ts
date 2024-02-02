@@ -79,6 +79,58 @@
         }
       },
       "title": "JSONResult«物料收发单据列表响应对象»"
+    },
+    "物料收发单据列表响应对象": {
+      "type": "object",
+      "properties": {
+        "billHeadCode": {
+          "type": "array",
+          "description": "列表单据",
+          "items": {
+            "originalRef": "物料收发单据列表单据响应对象",
+            "$ref": "#/definitions/物料收发单据列表单据响应对象"
+          }
+        },
+        "billSelectCode": {
+          "type": "array",
+          "description": "选择单据",
+          "items": {
+            "originalRef": "物料收发单据列表单据响应对象",
+            "$ref": "#/definitions/物料收发单据列表单据响应对象"
+          }
+        }
+      },
+      "title": "物料收发单据列表响应对象"
+    },
+    "物料收发单据列表单据响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "code"
+        },
+        "name": {
+          "type": "string",
+          "description": "单据名称"
+        },
+        "storageLogType": {
+          "type": "string",
+          "description": "出入库类型",
+          "enum": [
+            "  IN-入库",
+            "  OUT-出库",
+            "  CHECK-盘点",
+            "  LOCK-库存锁定",
+            "  SCRAP-报废"
+          ]
+        }
+      },
+      "title": "物料收发单据列表单据响应对象"
     }
   }
 }

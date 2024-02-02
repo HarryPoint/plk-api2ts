@@ -104,6 +104,57 @@
         }
       },
       "title": "JSONResult«质量月报部门设置响应DTO»"
+    },
+    "质量月报部门设置响应DTO": {
+      "type": "object",
+      "properties": {
+        "yearBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "年份开始时间"
+        },
+        "yearEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "年份结束时间"
+        },
+        "departmentIds": {
+          "type": "array",
+          "description": "部门id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "departments": {
+          "type": "array",
+          "description": "部门集合",
+          "items": {
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
+          }
+        }
+      },
+      "title": "质量月报部门设置响应DTO"
+    },
+    "Id Code Name 通用传输对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "code"
+        },
+        "name": {
+          "type": "string",
+          "description": "name"
+        }
+      },
+      "title": "Id Code Name 通用传输对象"
     }
   }
 }

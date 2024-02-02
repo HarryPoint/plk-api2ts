@@ -96,6 +96,20 @@
       },
       "title": "批次订单拆分DTO"
     },
+    "批次订单DTO": {
+      "type": "object",
+      "properties": {
+        "lotName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "lotCount": {
+          "type": "number",
+          "description": "批次数量"
+        }
+      },
+      "title": "批次订单DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

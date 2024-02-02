@@ -90,6 +90,30 @@
         }
       },
       "title": "JSONResult«List«生产订单详情 - 操作日志VO»»"
+    },
+    "生产订单详情 - 操作日志VO": {
+      "type": "object",
+      "properties": {
+        "operateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "操作人id"
+        },
+        "operateUsername": {
+          "type": "string",
+          "description": "操作人名称"
+        },
+        "operateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "操作时间"
+        },
+        "operateContent": {
+          "type": "string",
+          "description": "操作内容"
+        }
+      },
+      "title": "生产订单详情 - 操作日志VO"
     }
   }
 }

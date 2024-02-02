@@ -82,6 +82,68 @@
         }
       },
       "title": "JSONResult«List«区域仓库仓位树返回VO»»"
+    },
+    "区域仓库仓位树返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "children": {
+          "type": "array",
+          "description": "子区域",
+          "items": {
+            "originalRef": "区域仓库仓位树返回VO",
+            "$ref": "#/definitions/区域仓库仓位树返回VO"
+          }
+        },
+        "warehouseStorehouseTree": {
+          "type": "array",
+          "description": "仓库-仓位树",
+          "items": {
+            "originalRef": "仓库仓位树返回VO",
+            "$ref": "#/definitions/仓库仓位树返回VO"
+          }
+        }
+      },
+      "title": "区域仓库仓位树返回VO"
+    },
+    "仓库仓位树返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "仓库/仓位名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "仓库/仓位编号"
+        },
+        "children": {
+          "type": "array",
+          "description": "子仓库/仓位",
+          "items": {
+            "originalRef": "仓库仓位树返回VO",
+            "$ref": "#/definitions/仓库仓位树返回VO"
+          }
+        }
+      },
+      "title": "仓库仓位树返回VO"
     }
   }
 }

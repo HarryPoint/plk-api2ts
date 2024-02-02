@@ -125,6 +125,24 @@
         }
       },
       "title": "JSONResult«List«项目费用统计响应对象»»"
+    },
+    "项目费用统计响应对象_1": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "budgetExecuteRate": {
+          "type": "number",
+          "description": "预算执行率"
+        },
+        "fundPlanExecuteRate": {
+          "type": "number",
+          "description": "资金计划执行率"
+        }
+      },
+      "title": "项目费用统计响应对象_1"
     }
   }
 }

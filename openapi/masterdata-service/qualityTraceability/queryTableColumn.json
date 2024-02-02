@@ -73,6 +73,10 @@
         }
       },
       "title": "JSONResult«List«QualityTraceabilityReportTableColumnBO»»"
+    },
+    "QualityTraceabilityReportTableColumnBO": {
+      "type": "object",
+      "title": "QualityTraceabilityReportTableColumnBO"
     }
   }
 }

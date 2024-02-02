@@ -82,6 +82,20 @@
         }
       },
       "title": "JSONResult«List«质量绩效评价表返回DTO»»_1"
+    },
+    "质量绩效评价表返回DTO_1": {
+      "type": "object",
+      "properties": {
+        "totalDeductPoints": {
+          "type": "number",
+          "description": "总扣分"
+        },
+        "supplierName": {
+          "type": "string",
+          "description": "供应商名称"
+        }
+      },
+      "title": "质量绩效评价表返回DTO_1"
     }
   }
 }

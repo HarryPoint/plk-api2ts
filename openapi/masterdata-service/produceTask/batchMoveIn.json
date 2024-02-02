@@ -105,6 +105,47 @@
       },
       "title": "任务批量操作DTO_4"
     },
+    "任务批量操作DTO_3": {
+      "type": "object",
+      "required": [
+        "taskId"
+      ],
+      "properties": {
+        "taskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数量"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "批次订单id集",
+          "items": {
+            "originalRef": "任务批量操作DTO_2",
+            "$ref": "#/definitions/任务批量操作DTO_2"
+          }
+        }
+      },
+      "title": "任务批量操作DTO_3"
+    },
+    "任务批量操作DTO_2": {
+      "type": "object",
+      "properties": {
+        "lotId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数量"
+        }
+      },
+      "title": "任务批量操作DTO_2"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

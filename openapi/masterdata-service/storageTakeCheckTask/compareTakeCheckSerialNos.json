@@ -92,6 +92,20 @@
       },
       "title": "盘点序列号比较请求DTO"
     },
+    "盘点任务盘点明细序列号DTO_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO_1"
+    },
     "JSONResult«盘点序列号比较结果DTO»": {
       "type": "object",
       "properties": {
@@ -119,6 +133,72 @@
         }
       },
       "title": "JSONResult«盘点序列号比较结果DTO»"
+    },
+    "盘点序列号比较结果DTO": {
+      "type": "object",
+      "properties": {
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "serialNos": {
+          "type": "array",
+          "description": "序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        },
+        "profitSerialNos": {
+          "type": "array",
+          "description": "盘盈序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        },
+        "lossSerialNos": {
+          "type": "array",
+          "description": "盘亏序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        },
+        "pickSerialNos": {
+          "type": "array",
+          "description": "序列号集合",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        }
+      },
+      "title": "盘点序列号比较结果DTO"
+    },
+    "盘点任务盘点明细序列号DTO": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO"
     }
   }
 }

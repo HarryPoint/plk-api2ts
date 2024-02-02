@@ -133,6 +133,143 @@
         }
       },
       "title": "JSONResult«List«宝晶生产计划甘特图响应对象»»"
+    },
+    "宝晶生产计划甘特图响应对象": {
+      "type": "object",
+      "properties": {
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门id"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "warehousingQuantity": {
+          "type": "number",
+          "description": "完成数"
+        },
+        "unWarehousingQuantity": {
+          "type": "number",
+          "description": "未生产数"
+        },
+        "completionRate": {
+          "type": "number",
+          "description": "完工率"
+        },
+        "producePlans": {
+          "type": "array",
+          "description": "生产计划",
+          "items": {
+            "originalRef": "宝晶生产计划响应对象",
+            "$ref": "#/definitions/宝晶生产计划响应对象"
+          }
+        }
+      },
+      "title": "宝晶生产计划甘特图响应对象"
+    },
+    "宝晶生产计划响应对象": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "key"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门id"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "warehousingQuantity": {
+          "type": "number",
+          "description": "完成数"
+        },
+        "unWarehousingQuantity": {
+          "type": "number",
+          "description": "未生产数"
+        },
+        "completionRate": {
+          "type": "number",
+          "description": "完工率"
+        },
+        "planStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始日期"
+        },
+        "planEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束日期"
+        },
+        "deliveryDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交货日期"
+        },
+        "details": {
+          "type": "array",
+          "description": "计划生产明细",
+          "items": {
+            "originalRef": "宝晶生产计划详情响应对象",
+            "$ref": "#/definitions/宝晶生产计划详情响应对象"
+          }
+        }
+      },
+      "title": "宝晶生产计划响应对象"
+    },
+    "宝晶生产计划详情响应对象": {
+      "type": "object",
+      "properties": {
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "warehousingQuantity": {
+          "type": "number",
+          "description": "完成数"
+        },
+        "unWarehousingQuantity": {
+          "type": "number",
+          "description": "未生产数"
+        },
+        "completionRate": {
+          "type": "number",
+          "description": "完工率"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "日期"
+        }
+      },
+      "title": "宝晶生产计划详情响应对象"
     }
   }
 }

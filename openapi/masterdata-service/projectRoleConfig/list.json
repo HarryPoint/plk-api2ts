@@ -117,6 +117,24 @@
         }
       },
       "title": "JSONResult«List«项目角色配置返回对象»»"
+    },
+    "项目角色配置返回对象": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "配置code"
+        },
+        "name": {
+          "type": "string",
+          "description": "配置名称"
+        },
+        "configValue": {
+          "type": "string",
+          "description": "配置值"
+        }
+      },
+      "title": "项目角色配置返回对象"
     }
   }
 }

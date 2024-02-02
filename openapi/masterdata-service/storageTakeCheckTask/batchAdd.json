@@ -114,6 +114,49 @@
       },
       "title": "仓库盘点任务批次编辑DTO"
     },
+    "仓库盘点任务编辑DTO": {
+      "type": "object",
+      "required": [
+        "handleUserIds",
+        "storehouseId"
+      ],
+      "properties": {
+        "taskNo": {
+          "type": "string",
+          "description": "盘点单号"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点仓库id"
+        },
+        "handleUserIds": {
+          "type": "array",
+          "description": "处理人id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "仓库盘点任务编辑DTO"
+    },
+    "仓库盘点任务仓位编辑DTO": {
+      "type": "object",
+      "properties": {
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        }
+      },
+      "title": "仓库盘点任务仓位编辑DTO"
+    },
     "JSONResult«string»": {
       "type": "object",
       "properties": {

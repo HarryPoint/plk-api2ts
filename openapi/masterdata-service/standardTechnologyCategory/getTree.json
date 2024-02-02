@@ -73,6 +73,39 @@
         }
       },
       "title": "JSONResult«List«标准工艺分类树响应DTO»»"
+    },
+    "标准工艺分类树响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分类id"
+        },
+        "name": {
+          "type": "string",
+          "description": "分类名称"
+        },
+        "parentCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父级分类id"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        },
+        "childCategoryList": {
+          "type": "array",
+          "description": "子分类列表",
+          "items": {
+            "originalRef": "标准工艺分类树响应DTO",
+            "$ref": "#/definitions/标准工艺分类树响应DTO"
+          }
+        }
+      },
+      "title": "标准工艺分类树响应DTO"
     }
   }
 }

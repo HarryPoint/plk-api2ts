@@ -69,6 +69,132 @@
         }
       },
       "title": "JSONResult«ProposalDashboardConfigResponseDTO»"
+    },
+    "ProposalDashboardConfigResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "proposalDepartmentIdList": {
+          "type": "array",
+          "description": "建议部门ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "proposalDepartmentList": {
+          "type": "array",
+          "description": "建议部门 ID => Name",
+          "items": {
+            "originalRef": "基础数据",
+            "$ref": "#/definitions/基础数据"
+          }
+        },
+        "projectDepartmentIdList": {
+          "type": "array",
+          "description": "项目部门ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "projectDepartmentList": {
+          "type": "array",
+          "description": "项目部门 ID => Name",
+          "items": {
+            "originalRef": "基础数据",
+            "$ref": "#/definitions/基础数据"
+          }
+        },
+        "unCompleteTargetValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未完成目标值"
+        },
+        "completeTargetValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成目标值"
+        },
+        "unCompleteProjectDashboardStatisticsConfigList": {
+          "type": "array",
+          "description": "未完成项目数量的统计区间配置",
+          "items": {
+            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO",
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO"
+          }
+        },
+        "completedProjectDashboardStatisticsConfigList": {
+          "type": "array",
+          "description": "已完成项目数量的统计区间配置",
+          "items": {
+            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO",
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO"
+          }
+        }
+      },
+      "title": "ProposalDashboardConfigResponseDTO"
+    },
+    "基础数据": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        }
+      },
+      "title": "基础数据"
+    },
+    "ProposalDashboardStatisticsConfigResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "type": {
+          "type": "string",
+          "description": "统计类型",
+          "enum": [
+            "  RANGE-数值区间",
+            "  GE-数值大于等于",
+            "  GT-数值大于"
+          ]
+        },
+        "beginValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "开始值 - 适用于数值区间、数值大于等于、数值大于"
+        },
+        "endValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "结束值"
+        },
+        "projectCompleteStatus": {
+          "type": "string",
+          "description": "项目归属的完成状态 - 未完成项目， 已完成项目",
+          "enum": [
+            "  UN_COMPLETED-未完成",
+            "  COMPLETED-已完成"
+          ]
+        }
+      },
+      "title": "ProposalDashboardStatisticsConfigResponseDTO"
     }
   }
 }

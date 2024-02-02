@@ -70,6 +70,49 @@
         }
       },
       "title": "JSONResult«CumulativeProposalIndicatorsResponseDTO»"
+    },
+    "CumulativeProposalIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "proposalTotalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "本月/今年提案总数（不论是否通过）"
+        },
+        "approvedProposalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "本月/今年提案总数（审核通过）"
+        },
+        "proposalEmployeeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "本月/今年提案数大于0的数量"
+        },
+        "proposalEmployeePlanQuantity": {
+          "type": "number",
+          "description": "本月/今年计划提员工案数"
+        },
+        "proposalRate": {
+          "type": "number",
+          "description": "本月/今年参与率"
+        },
+        "employeeTotalQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "全公司员工总数（已启用）"
+        },
+        "avgProposalQuantity": {
+          "type": "number",
+          "description": "平均提案数"
+        },
+        "projectCompleteQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目完成数量"
+        }
+      },
+      "title": "CumulativeProposalIndicatorsResponseDTO"
     }
   }
 }

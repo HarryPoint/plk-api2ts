@@ -80,6 +80,91 @@
         }
       },
       "title": "JSONResult«文件分类明细响应DTO»"
+    },
+    "文件分类明细响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "分类名称"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上级ID"
+        },
+        "permissionList": {
+          "type": "array",
+          "description": "权限列表",
+          "items": {
+            "originalRef": "FileCategoryPermissionResponseDTO",
+            "$ref": "#/definitions/FileCategoryPermissionResponseDTO"
+          }
+        }
+      },
+      "title": "文件分类明细响应DTO"
+    },
+    "FileCategoryPermissionResponseDTO": {
+      "type": "object",
+      "properties": {
+        "permissionTypeList": {
+          "type": "array",
+          "description": "权限类型",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CATEGORY_EDIT",
+              "CATEGORY_MOVE",
+              "CATEGORY_REMOVE",
+              "UPLOAD_FILE",
+              "CATEGORY_VIEW",
+              "FILE_RENAME",
+              "FILE_DOWNLOAD",
+              "FILE_MOVE",
+              "FILE_REMOVE"
+            ]
+          }
+        },
+        "organizations": {
+          "type": "array",
+          "description": "组织列表",
+          "items": {
+            "originalRef": "FileCategoryOrganizationResponseDTO",
+            "$ref": "#/definitions/FileCategoryOrganizationResponseDTO"
+          }
+        }
+      },
+      "title": "FileCategoryPermissionResponseDTO"
+    },
+    "FileCategoryOrganizationResponseDTO": {
+      "type": "object",
+      "properties": {
+        "organization": {
+          "type": "string",
+          "description": "组织",
+          "enum": [
+            "  USER-用户",
+            "  DEPARTMENT-部门",
+            "  ROLE-角色",
+            "  ALL-所有人"
+          ]
+        },
+        "organizationId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件组织ID"
+        },
+        "organizationName": {
+          "type": "string",
+          "description": "组织名称"
+        }
+      },
+      "title": "FileCategoryOrganizationResponseDTO"
     }
   }
 }

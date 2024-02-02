@@ -113,6 +113,57 @@
         }
       },
       "title": "JSONResult«List«工艺路径信息对象»»"
+    },
+    "工艺路径信息对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺路径编号"
+        },
+        "routingStepList": {
+          "type": "array",
+          "description": "工艺步骤列表",
+          "items": {
+            "originalRef": "工艺步骤信息对象",
+            "$ref": "#/definitions/工艺步骤信息对象"
+          }
+        }
+      },
+      "title": "工艺路径信息对象"
+    },
+    "工艺步骤信息对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序步骤id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        }
+      },
+      "title": "工艺步骤信息对象"
     }
   }
 }

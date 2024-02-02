@@ -89,6 +89,59 @@
         }
       },
       "title": "JSONResult«List«工序选择返回VO»»"
+    },
+    "工序选择返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "区域id"
+        },
+        "area": {
+          "description": "区域",
+          "originalRef": "区域VO_1",
+          "$ref": "#/definitions/区域VO_1"
+        }
+      },
+      "title": "工序选择返回VO"
+    },
+    "区域VO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父级id"
+        }
+      },
+      "title": "区域VO_1"
     }
   }
 }

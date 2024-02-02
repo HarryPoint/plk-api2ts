@@ -82,6 +82,25 @@
         }
       },
       "title": "JSONResult«List«维联批次打印模板绑定物料响应对象»»"
+    },
+    "维联批次打印模板绑定物料响应对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        }
+      },
+      "title": "维联批次打印模板绑定物料响应对象"
     }
   }
 }

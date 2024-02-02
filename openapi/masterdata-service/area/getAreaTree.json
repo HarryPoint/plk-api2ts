@@ -82,6 +82,52 @@
         }
       },
       "title": "JSONResult«List«区域树返回VO»»"
+    },
+    "区域树返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "状态"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "children": {
+          "type": "array",
+          "description": "区域子集",
+          "items": {
+            "originalRef": "区域树返回VO",
+            "$ref": "#/definitions/区域树返回VO"
+          }
+        }
+      },
+      "title": "区域树返回VO"
     }
   }
 }

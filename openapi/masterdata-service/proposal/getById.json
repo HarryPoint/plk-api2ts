@@ -85,6 +85,71 @@
         }
       },
       "title": "JSONResult«ProposalResponseDTO»"
+    },
+    "ProposalResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "建议名称"
+        },
+        "improvementCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善类别ID"
+        },
+        "improvementCategoryName": {
+          "type": "string",
+          "description": "改善类别名称"
+        },
+        "improvementDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善部门"
+        },
+        "improvementDeptLeaderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善部门负责人"
+        },
+        "createDeptLeaderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "提议部门负责人"
+        },
+        "problemDesc": {
+          "type": "string",
+          "description": "问题描述"
+        },
+        "solution": {
+          "type": "string",
+          "description": "解决方案"
+        },
+        "savingCost": {
+          "type": "string",
+          "description": "可增加的收益或节约成本估算"
+        },
+        "remark": {
+          "type": "string",
+          "description": "其他说明"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "ProposalResponseDTO"
     }
   }
 }

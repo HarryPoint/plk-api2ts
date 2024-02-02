@@ -111,6 +111,22 @@
       },
       "title": "深蓝报表查询条件"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«深蓝折弯机报表»»": {
       "type": "object",
       "properties": {
@@ -141,6 +157,33 @@
         }
       },
       "title": "JSONResult«List«深蓝折弯机报表»»"
+    },
+    "深蓝折弯机报表": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "日期"
+        },
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "runSignal": {
+          "type": "string",
+          "description": "运行信号"
+        },
+        "produceStatics": {
+          "type": "string",
+          "description": "产能统计"
+        },
+        "warnInfo": {
+          "type": "string",
+          "description": "报警信号"
+        }
+      },
+      "title": "深蓝折弯机报表"
     }
   }
 }

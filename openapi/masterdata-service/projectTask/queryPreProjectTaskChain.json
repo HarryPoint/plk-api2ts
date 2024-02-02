@@ -83,6 +83,32 @@
         }
       },
       "title": "JSONResult«List«项目任务链路节点»»"
+    },
+    "项目任务链路节点": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "任务id"
+        },
+        "name": {
+          "type": "string",
+          "description": "任务名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "任务编号"
+        },
+        "preTaskIds": {
+          "type": "array",
+          "description": "前置任务",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "项目任务链路节点"
     }
   }
 }

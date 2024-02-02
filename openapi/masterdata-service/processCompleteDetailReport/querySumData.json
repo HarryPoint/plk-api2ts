@@ -199,6 +199,24 @@
       },
       "title": "工序完成明细表查询"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
     "JSONResult«工序完成明细表合计响应dto»": {
       "type": "object",
       "properties": {
@@ -226,6 +244,24 @@
         }
       },
       "title": "JSONResult«工序完成明细表合计响应dto»"
+    },
+    "工序完成明细表合计响应dto": {
+      "type": "object",
+      "properties": {
+        "totalPlanProduceNum": {
+          "type": "number",
+          "description": "当日计划量"
+        },
+        "totalCurPlanCompleteNum": {
+          "type": "number",
+          "description": "当日计划完工量"
+        },
+        "totalRealProduceNum": {
+          "type": "number",
+          "description": "实际完工量"
+        }
+      },
+      "title": "工序完成明细表合计响应dto"
     }
   }
 }

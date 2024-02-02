@@ -89,6 +89,28 @@
         }
       },
       "title": "JSONResult«List«大屏检验计划执行类别统计返回»»"
+    },
+    "大屏检验计划执行类别统计返回": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "类别"
+        },
+        "handlingQuantity": {
+          "type": "number",
+          "description": "进行中任务量"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "已完成任务量"
+        },
+        "overdueQuantity": {
+          "type": "number",
+          "description": "超期任务量"
+        }
+      },
+      "title": "大屏检验计划执行类别统计返回"
     }
   }
 }

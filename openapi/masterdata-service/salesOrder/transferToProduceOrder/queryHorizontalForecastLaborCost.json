@@ -139,6 +139,141 @@
         }
       },
       "title": "JSONResult«预测工费»"
+    },
+    "预测工费": {
+      "type": "object",
+      "properties": {
+        "processList": {
+          "type": "array",
+          "description": "工序列表",
+          "items": {
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
+          }
+        },
+        "orderItemList": {
+          "type": "array",
+          "description": "订单项列表",
+          "items": {
+            "originalRef": "预测工费水平订单项",
+            "$ref": "#/definitions/预测工费水平订单项"
+          }
+        },
+        "summaryLaborCostList": {
+          "type": "array",
+          "description": "汇总工费列表",
+          "items": {
+            "originalRef": "ProcessLaborCostVO",
+            "$ref": "#/definitions/ProcessLaborCostVO"
+          }
+        }
+      },
+      "title": "预测工费"
+    },
+    "Id，名称，编号VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "Id，名称，编号VO"
+    },
+    "预测工费水平订单项": {
+      "type": "object",
+      "properties": {
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单ID"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编码"
+        },
+        "masterMaterial": {
+          "description": "主物料",
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
+        },
+        "childMaterial": {
+          "description": "子物料",
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
+        },
+        "deliveryQuantity": {
+          "type": "number",
+          "description": "生产交付数量"
+        },
+        "bomName": {
+          "type": "string",
+          "description": "BOM名词"
+        },
+        "bomLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "BOM 升级"
+        },
+        "processLaborCostList": {
+          "type": "array",
+          "description": "预测工费列表",
+          "items": {
+            "originalRef": "ProcessLaborCostVO",
+            "$ref": "#/definitions/ProcessLaborCostVO"
+          }
+        }
+      },
+      "title": "预测工费水平订单项"
+    },
+    "ForecastMaterialInfo": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料ID"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        }
+      },
+      "title": "ForecastMaterialInfo"
+    },
+    "ProcessLaborCostVO": {
+      "type": "object",
+      "properties": {
+        "processId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "processCode": {
+          "type": "string"
+        },
+        "laborCost": {
+          "type": "number"
+        }
+      },
+      "title": "ProcessLaborCostVO"
     }
   }
 }

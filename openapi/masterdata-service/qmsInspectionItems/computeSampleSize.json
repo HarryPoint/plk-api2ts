@@ -111,6 +111,46 @@
         }
       },
       "title": "JSONResult«检验项计算响应DTO»"
+    },
+    "检验项计算响应DTO": {
+      "type": "object",
+      "properties": {
+        "qmsSamplingStandardsId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "batchRangeStartValue": {
+          "type": "number"
+        },
+        "batchRangeEndValue": {
+          "type": "number"
+        },
+        "samplingStandardsLevel": {
+          "type": "string"
+        },
+        "samplingStandardsCharacterCode": {
+          "type": "string"
+        },
+        "sampleSize": {
+          "type": "number"
+        },
+        "samplingStandardsAql": {
+          "type": "string"
+        },
+        "percentage": {
+          "type": "number"
+        },
+        "ac": {
+          "type": "number"
+        },
+        "re": {
+          "type": "number"
+        },
+        "inspectionSampleSize": {
+          "type": "number"
+        }
+      },
+      "title": "检验项计算响应DTO"
     }
   }
 }

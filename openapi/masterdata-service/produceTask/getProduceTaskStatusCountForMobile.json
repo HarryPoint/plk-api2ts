@@ -233,6 +233,76 @@
       },
       "title": "生产任务查询DTO(针对移动端)"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
+    "流程数据明细搜索VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "searchType"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "列code"
+        },
+        "searchType": {
+          "type": "string",
+          "description": "搜索类型",
+          "enum": [
+            "NONE",
+            "EQ",
+            "LIKE",
+            "RANGE",
+            "SELECTOR",
+            "IS_NULL",
+            "NOT_NULL",
+            "NE",
+            "REGEXP"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "搜索文本 - 针对文本搜索"
+        },
+        "limitBegin": {
+          "type": "object",
+          "description": "搜索起始值 - 针对范围搜索"
+        },
+        "limitEnd": {
+          "type": "object",
+          "description": "搜索结束值 - 针对范围搜索"
+        },
+        "selectors": {
+          "type": "array",
+          "description": "搜索选项值 - 针对选择搜索",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tableCode": {
+          "type": "string",
+          "description": "表格编码"
+        }
+      },
+      "title": "流程数据明细搜索VO"
+    },
     "JSONResult«生产任务状态数量返回(针对移动端)»": {
       "type": "object",
       "properties": {
@@ -260,6 +330,27 @@
         }
       },
       "title": "JSONResult«生产任务状态数量返回(针对移动端)»"
+    },
+    "生产任务状态数量返回(针对移动端)": {
+      "type": "object",
+      "properties": {
+        "waitQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "待处理数量"
+        },
+        "produceQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产中数量"
+        },
+        "closeQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "已关闭数量"
+        }
+      },
+      "title": "生产任务状态数量返回(针对移动端)"
     }
   }
 }

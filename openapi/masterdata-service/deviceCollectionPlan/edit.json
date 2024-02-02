@@ -123,6 +123,116 @@
       },
       "title": "编辑设备数采方案 DTO"
     },
+    "设备数采方案参数关联信息编辑DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联id"
+        },
+        "deviceCollectionParamId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备数采参数id"
+        },
+        "statisticType": {
+          "type": "string",
+          "description": "统计类型",
+          "enum": [
+            "  AVG-平均值",
+            "  SUM-求和",
+            "  MAX-最大值",
+            "  MIN-最小值",
+            "  SUBTRACT-取前后数据差值"
+          ]
+        },
+        "numberStandard": {
+          "type": "string",
+          "description": "实时数值对比标准",
+          "enum": [
+            "  BETWEEN-数值区间",
+            "  GT-数值大于",
+            "  GE-数值大于等于",
+            "  LT-数值小于",
+            "  LE-数值小于等于"
+          ]
+        },
+        "compareNumber": {
+          "type": "number",
+          "description": "实时比较数值"
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "实时下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "实时上限"
+        },
+        "remark": {
+          "type": "string",
+          "description": "实时备注"
+        },
+        "limits": {
+          "type": "array",
+          "description": "统计范围配置项集",
+          "items": {
+            "originalRef": "设备数采方案参数预警编辑DTO",
+            "$ref": "#/definitions/设备数采方案参数预警编辑DTO"
+          }
+        }
+      },
+      "title": "设备数采方案参数关联信息编辑DTO"
+    },
+    "设备数采方案参数预警编辑DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联id"
+        },
+        "timeType": {
+          "type": "string",
+          "description": "时间粒度",
+          "enum": [
+            "  ALL-全部",
+            "  HOUR-时",
+            "  DAY-日",
+            "  MONTH-月"
+          ]
+        },
+        "numberStandard": {
+          "type": "string",
+          "description": "数值对比标准",
+          "enum": [
+            "  BETWEEN-数值区间",
+            "  GT-数值大于",
+            "  GE-数值大于等于",
+            "  LT-数值小于",
+            "  LE-数值小于等于"
+          ]
+        },
+        "compareNumber": {
+          "type": "number",
+          "description": "比较数值"
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "设备数采方案参数预警编辑DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

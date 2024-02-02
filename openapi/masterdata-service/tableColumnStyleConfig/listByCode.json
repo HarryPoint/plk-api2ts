@@ -89,6 +89,53 @@
         }
       },
       "title": "JSONResult«List«列表列样式配置VO»»"
+    },
+    "列表列样式配置VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编码"
+        },
+        "type": {
+          "type": "string",
+          "description": "类型",
+          "enum": [
+            "  SYSTEM-系统",
+            "  PERSON-个人"
+          ]
+        },
+        "config": {
+          "type": "object",
+          "description": "列配置JSON",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        },
+        "isCurrentUserChoose": {
+          "type": "string",
+          "description": "是否是当前用户选中的",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "列表列样式配置VO"
     }
   }
 }

@@ -90,6 +90,50 @@
         }
       },
       "title": "JSONResult«List«维联批次打印模板响应对象»»"
+    },
+    "维联批次打印模板响应对象_1": {
+      "type": "object",
+      "properties": {
+        "printTemplateId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "type": {
+          "type": "string",
+          "description": "模板类型",
+          "enum": [
+            "  BARCODE-一维码",
+            "  QRCODE-二维码"
+          ]
+        },
+        "printTemplate": {
+          "type": "string",
+          "description": "打印模板"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "actualTotalCount": {
+          "type": "number",
+          "description": "批次数量"
+        },
+        "universalCode": {
+          "type": "string",
+          "description": "条码值"
+        },
+        "printCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "打印次数"
+        }
+      },
+      "title": "维联批次打印模板响应对象_1"
     }
   }
 }

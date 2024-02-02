@@ -113,6 +113,22 @@
       },
       "title": "物料产出搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«物料产出VO»»": {
       "type": "object",
       "properties": {
@@ -143,6 +159,21 @@
         }
       },
       "title": "JSONResult«List«物料产出VO»»"
+    },
+    "物料产出VO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "物料产出(出站总数量)"
+        }
+      },
+      "title": "物料产出VO"
     }
   }
 }

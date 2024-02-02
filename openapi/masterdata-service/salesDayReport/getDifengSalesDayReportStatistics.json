@@ -88,6 +88,24 @@
         }
       },
       "title": "JSONResult«销售日报表统计返回对象»"
+    },
+    "销售日报表统计返回对象": {
+      "type": "object",
+      "properties": {
+        "salesQuantity": {
+          "type": "number",
+          "description": "销售数量"
+        },
+        "salesAmount": {
+          "type": "number",
+          "description": "销售金额"
+        },
+        "salesIntegral": {
+          "type": "number",
+          "description": "销售积分"
+        }
+      },
+      "title": "销售日报表统计返回对象"
     }
   }
 }

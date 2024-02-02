@@ -87,6 +87,54 @@
       },
       "title": "质检任务完成 DTO"
     },
+    "质检结果物料信息 DTO": {
+      "type": "object",
+      "properties": {
+        "qualityInspectionResultType": {
+          "type": "string",
+          "description": "质检结果类型",
+          "enum": [
+            "  PASS-合格",
+            "  NOT_PASS-不合格",
+            "  CONCESSION-让步接收"
+          ]
+        },
+        "qualityTaskMaterialItems": {
+          "type": "array",
+          "description": "每项物料填的质检结果集",
+          "items": {
+            "originalRef": "质检结果 DTO",
+            "$ref": "#/definitions/质检结果 DTO"
+          }
+        }
+      },
+      "title": "质检结果物料信息 DTO"
+    },
+    "质检结果 DTO": {
+      "type": "object",
+      "properties": {
+        "qualityInspectionPlanItemRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "质检方案质检项关联id"
+        },
+        "qualityInspectionValues": {
+          "type": "array",
+          "description": "质检值，所选的情况下传多个，其他都只传一个",
+          "items": {
+            "type": "string"
+          }
+        },
+        "uploadImageKeys": {
+          "type": "array",
+          "description": "上传图片key集合",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "质检结果 DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

@@ -88,6 +88,146 @@
         }
       },
       "title": "JSONResult«流程任务返回VO»"
+    },
+    "流程任务返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "type": {
+          "type": "string",
+          "description": "任务类型",
+          "enum": [
+            "  EXECUTE-执行任务",
+            "  APPROVAL-审批任务"
+          ]
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "flowPathWorkOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程工单id"
+        },
+        "flowPathWorkOrderCode": {
+          "type": "string",
+          "description": "所属流程工单编号"
+        },
+        "workOrderCreateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "流程工单发起人id"
+        },
+        "workOrderCreateCombinationId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工单发起部门id"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程id"
+        },
+        "flowPathVersionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程版本id"
+        },
+        "flowPathVersionRank": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流程版本号"
+        },
+        "flowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "流程节点id"
+        },
+        "actualBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际开始时间"
+        },
+        "handleUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "执行人id"
+        },
+        "handleTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "处理时间 - 状态为已处理、已关闭时有值"
+        },
+        "totalTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总耗时秒"
+        },
+        "timeoutBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "超时开始时间"
+        },
+        "totalTimeoutTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总超时秒"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  HANDLED-已处理",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "approvalStatus": {
+          "type": "string",
+          "description": "审批状态",
+          "enum": [
+            "  PASS-同意",
+            "  REFUSE-拒绝",
+            "  BACK-回退"
+          ]
+        },
+        "executeStatus": {
+          "type": "string",
+          "description": "执行状态",
+          "enum": [
+            "  HANDLE-正常执行",
+            "  BACK-回退"
+          ]
+        },
+        "acceptStatus": {
+          "type": "string",
+          "description": "接受状态",
+          "enum": [
+            "  ACCEPTED-已接受",
+            "  WAIT_ACCEPT-待接受"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "审批意见/执行情况"
+        },
+        "acceptTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务接受时间"
+        }
+      },
+      "title": "流程任务返回VO"
     }
   }
 }

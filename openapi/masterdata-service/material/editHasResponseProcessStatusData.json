@@ -98,6 +98,68 @@
       },
       "title": "物料编辑请求DTO"
     },
+    "物料批次设置编辑对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "serialNoSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "序列号方案id"
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "lotSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次方案id"
+        },
+        "enableQualityTraceability": {
+          "type": "string",
+          "description": "启用质量追溯",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableExternalCode": {
+          "type": "string",
+          "description": "启用外部码",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "externalCodeFieldName": {
+          "type": "string",
+          "description": "外部码字段名称"
+        },
+        "externalCodeLength": {
+          "type": "integer",
+          "format": "int64",
+          "description": "外部码长度"
+        }
+      },
+      "title": "物料批次设置编辑对象"
+    },
     "JSONResult«物料编辑响应信息»": {
       "type": "object",
       "properties": {
@@ -125,6 +187,36 @@
         }
       },
       "title": "JSONResult«物料编辑响应信息»"
+    },
+    "物料编辑响应信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "processStatus": {
+          "type": "string",
+          "description": "流程状态",
+          "enum": [
+            "  HANDLING-进行中",
+            "  COMPLETE-已完成",
+            "  NOT_PASS-未通过",
+            "  STAGING-暂存",
+            "  INVALID-作废/停用"
+          ]
+        }
+      },
+      "title": "物料编辑响应信息"
     }
   }
 }

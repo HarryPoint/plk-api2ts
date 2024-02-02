@@ -78,6 +78,82 @@
         }
       },
       "title": "JSONResult«项目任务导入记录查询响应»"
+    },
+    "项目任务导入记录查询响应": {
+      "type": "object",
+      "properties": {
+        "importFileId": {
+          "type": "string",
+          "description": "导入文件id"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "projectPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目计划id"
+        },
+        "importStatus": {
+          "type": "string",
+          "description": "导入状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  IMPORTING-导入中",
+            "  COMPLETE-已完成",
+            "  IMPORT_FAIL-导入失败"
+          ]
+        },
+        "totalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总数"
+        },
+        "successQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "成功条数"
+        },
+        "failedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "失败条数"
+        },
+        "progress": {
+          "type": "number",
+          "description": "进度"
+        },
+        "failedMessageList": {
+          "type": "array",
+          "description": "行数据失败信息列表",
+          "items": {
+            "originalRef": "项目任务导入记录错误信息查询响应",
+            "$ref": "#/definitions/项目任务导入记录错误信息查询响应"
+          }
+        },
+        "failedMessage": {
+          "type": "string",
+          "description": "系统失败信息"
+        }
+      },
+      "title": "项目任务导入记录查询响应"
+    },
+    "项目任务导入记录错误信息查询响应": {
+      "type": "object",
+      "properties": {
+        "rowNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "行下标"
+        },
+        "failedMessage": {
+          "type": "string",
+          "description": "失败信息"
+        }
+      },
+      "title": "项目任务导入记录错误信息查询响应"
     }
   }
 }

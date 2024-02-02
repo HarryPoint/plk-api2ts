@@ -90,6 +90,21 @@
         }
       },
       "title": "JSONResult«List«生产订单返回VO»»"
+    },
+    "生产订单返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        }
+      },
+      "title": "生产订单返回VO"
     }
   }
 }

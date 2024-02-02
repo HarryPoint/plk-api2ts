@@ -131,6 +131,40 @@
       },
       "title": "西偌帕斯大屏设置DTO"
     },
+    "西偌帕斯大屏计划数设置DTO": {
+      "type": "object",
+      "properties": {
+        "scheduleDate": {
+          "type": "string",
+          "description": "日程安排日期 yyyy-MM-dd"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数"
+        }
+      },
+      "title": "西偌帕斯大屏计划数设置DTO"
+    },
+    "西偌帕斯工序目标值大屏设置DTO": {
+      "type": "object",
+      "required": [
+        "processId",
+        "produceTargetQuantity"
+      ],
+      "properties": {
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "produceTargetQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "产出目标数"
+        }
+      },
+      "title": "西偌帕斯工序目标值大屏设置DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

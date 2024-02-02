@@ -79,6 +79,161 @@
         }
       },
       "title": "JSONResult«深蓝车间看板响应VO»"
+    },
+    "深蓝车间看板响应VO": {
+      "type": "object",
+      "properties": {
+        "productionOverview": {
+          "description": "生产概览-左上",
+          "originalRef": "车间生产概览统计响应VO",
+          "$ref": "#/definitions/车间生产概览统计响应VO"
+        },
+        "completeRates": {
+          "type": "array",
+          "description": "订单完工率-右上",
+          "items": {
+            "originalRef": "车间及时入库率响应VO",
+            "$ref": "#/definitions/车间及时入库率响应VO"
+          }
+        },
+        "dayPlans": {
+          "type": "array",
+          "description": "日计划及生产进度-右下",
+          "items": {
+            "originalRef": "车间日计划及生产进度响应VO",
+            "$ref": "#/definitions/车间日计划及生产进度响应VO"
+          }
+        },
+        "workCenters": {
+          "type": "array",
+          "description": "工作中心看板-左下",
+          "items": {
+            "originalRef": "工作中心生产进度响应VO",
+            "$ref": "#/definitions/工作中心生产进度响应VO"
+          }
+        }
+      },
+      "title": "深蓝车间看板响应VO"
+    },
+    "车间生产概览统计响应VO": {
+      "type": "object",
+      "properties": {
+        "produceOrderQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "生产订单总数"
+        },
+        "runningQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已开工数量"
+        },
+        "planCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当日计划完工"
+        },
+        "actualQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当日实际完工"
+        },
+        "completeRatio": {
+          "type": "number",
+          "description": "达成率"
+        }
+      },
+      "title": "车间生产概览统计响应VO"
+    },
+    "车间及时入库率响应VO": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "日期"
+        },
+        "dayCompleteCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当日完成数量"
+        },
+        "dayPlanCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当日计划数量"
+        },
+        "completeRate": {
+          "type": "number",
+          "description": "完工率"
+        }
+      },
+      "title": "车间及时入库率响应VO"
+    },
+    "车间日计划及生产进度响应VO": {
+      "type": "object",
+      "properties": {
+        "produceOrderNo": {
+          "type": "string",
+          "description": "订单号"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "订单数量"
+        },
+        "currentCount": {
+          "type": "number",
+          "description": "完工数量"
+        },
+        "completePercentage": {
+          "type": "number",
+          "description": "完成度"
+        }
+      },
+      "title": "车间日计划及生产进度响应VO"
+    },
+    "工作中心生产进度响应VO": {
+      "type": "object",
+      "properties": {
+        "produceOrderNo": {
+          "type": "string",
+          "description": "订单号"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "工作中心名称"
+        },
+        "currentProcess": {
+          "type": "string",
+          "description": "当前工序"
+        },
+        "completeProcess": {
+          "type": "string",
+          "description": "完工工序"
+        },
+        "completeProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "完工工序id"
+        },
+        "currentProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前工序id"
+        },
+        "currentRoutingStep": {
+          "type": "number",
+          "description": "当前工序步骤"
+        },
+        "finalRoutingStep": {
+          "type": "number",
+          "description": "总工序步骤"
+        }
+      },
+      "title": "工作中心生产进度响应VO"
     }
   }
 }

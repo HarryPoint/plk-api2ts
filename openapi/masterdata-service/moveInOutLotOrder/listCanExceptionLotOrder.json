@@ -109,6 +109,25 @@
         }
       },
       "title": "JSONResult«List«可异常处理批次响应dto»»"
+    },
+    "可异常处理批次响应dto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotOrderCode": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "canOptQuantity": {
+          "type": "number",
+          "description": "可异常处理数量"
+        }
+      },
+      "title": "可异常处理批次响应dto"
     }
   }
 }

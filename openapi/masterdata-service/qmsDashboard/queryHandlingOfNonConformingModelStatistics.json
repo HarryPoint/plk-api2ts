@@ -89,6 +89,20 @@
         }
       },
       "title": "JSONResult«List«大屏不合格品统计按项目返回»»"
+    },
+    "大屏不合格品统计按项目返回": {
+      "type": "object",
+      "properties": {
+        "model": {
+          "type": "string",
+          "description": "型号"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        }
+      },
+      "title": "大屏不合格品统计按项目返回"
     }
   }
 }

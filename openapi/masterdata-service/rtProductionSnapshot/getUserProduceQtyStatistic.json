@@ -144,6 +144,32 @@
         }
       },
       "title": "JSONResult«用户生产合计统计返回VO»"
+    },
+    "用户生产合计统计返回VO": {
+      "type": "object",
+      "properties": {
+        "totalProduceMoveInQuantity": {
+          "type": "number",
+          "description": "总进料个数"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "总合格产出个数"
+        },
+        "totalBackQuantity": {
+          "type": "number",
+          "description": "总返工个数"
+        },
+        "totalScrapQuantity": {
+          "type": "number",
+          "description": "总报废个数"
+        },
+        "totalHoldPauseQuantity": {
+          "type": "number",
+          "description": "总暂扣品个数"
+        }
+      },
+      "title": "用户生产合计统计返回VO"
     }
   }
 }

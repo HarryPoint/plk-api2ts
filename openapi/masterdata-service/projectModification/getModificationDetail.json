@@ -82,6 +82,70 @@
         }
       },
       "title": "JSONResult«List«项目变更单字段响应参数»»"
+    },
+    "项目变更单字段响应参数": {
+      "type": "object",
+      "properties": {
+        "fieldCode": {
+          "type": "string",
+          "description": "字段编号"
+        },
+        "operateType": {
+          "type": "string",
+          "description": "操作类型",
+          "enum": [
+            "  ADD-新增",
+            "  MODIFY-修改",
+            "  DELETE-删除",
+            "  RECORD-记录值"
+          ]
+        },
+        "oldValue": {
+          "type": "string",
+          "description": "旧值"
+        },
+        "newValue": {
+          "type": "string",
+          "description": "新值"
+        },
+        "childList": {
+          "type": "array",
+          "description": "子表数据列表",
+          "items": {
+            "originalRef": "项目变更单子表字段扩展参数请求",
+            "$ref": "#/definitions/项目变更单子表字段扩展参数请求"
+          }
+        }
+      },
+      "title": "项目变更单字段响应参数"
+    },
+    "项目变更单子表字段扩展参数请求": {
+      "type": "object",
+      "properties": {
+        "dataId": {
+          "type": "string",
+          "description": "行数据id"
+        },
+        "operateType": {
+          "type": "string",
+          "description": "操作类型",
+          "enum": [
+            "  ADD-新增",
+            "  MODIFY-修改",
+            "  DELETE-删除",
+            "  RECORD-记录值"
+          ]
+        },
+        "columnData": {
+          "type": "array",
+          "description": "列数据",
+          "items": {
+            "originalRef": "项目变更单字段响应参数",
+            "$ref": "#/definitions/项目变更单字段响应参数"
+          }
+        }
+      },
+      "title": "项目变更单子表字段扩展参数请求"
     }
   }
 }

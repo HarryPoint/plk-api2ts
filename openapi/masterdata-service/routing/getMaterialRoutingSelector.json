@@ -91,6 +91,51 @@
         }
       },
       "title": "JSONResult«List«工艺路径选择VO»»"
+    },
+    "工艺路径选择VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺路径编号"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否物料默认",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料bomId"
+        },
+        "materialBomName": {
+          "type": "string",
+          "description": "物料bom名称"
+        },
+        "materialBomCode": {
+          "type": "string",
+          "description": "物料bom编号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料ID"
+        }
+      },
+      "title": "工艺路径选择VO"
     }
   }
 }

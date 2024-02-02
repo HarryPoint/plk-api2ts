@@ -122,6 +122,183 @@
         }
       },
       "title": "JSONResult«生产结存物料统计报表返回VO»"
+    },
+    "生产结存物料统计报表返回VO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "reportResults": {
+          "type": "array",
+          "description": "报表返回数据集",
+          "items": {
+            "originalRef": "生产结存统计报表返回VO",
+            "$ref": "#/definitions/生产结存统计报表返回VO"
+          }
+        }
+      },
+      "title": "生产结存物料统计报表返回VO"
+    },
+    "生产结存统计报表返回VO": {
+      "type": "object",
+      "properties": {
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "preDayFinishBalanceQuantity": {
+          "type": "number",
+          "description": "前日结存成品数"
+        },
+        "preDaySemiBalanceQuantity": {
+          "type": "number",
+          "description": "前日结存半成品数"
+        },
+        "preDayBackBalanceQuantity": {
+          "type": "number",
+          "description": "前日结存返工品数"
+        },
+        "totalReceiveQuantity": {
+          "type": "number",
+          "description": "接收数合计"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "产出数合计"
+        },
+        "totalRollOutProduceQuantity": {
+          "type": "number",
+          "description": "转出数 - 合格转出合计"
+        },
+        "totalRollOutBackQuantity": {
+          "type": "number",
+          "description": "转出数 - 返工转出合计"
+        },
+        "totalRollOutProduceEntrustQuantity": {
+          "type": "number",
+          "description": "转出数 - 委外转出合计"
+        },
+        "finishBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存成品数"
+        },
+        "semiBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存半成品数"
+        },
+        "backBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存返工品数"
+        },
+        "scrapBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存不良品数"
+        },
+        "yieldRate": {
+          "type": "number",
+          "description": "当天结存良品率"
+        },
+        "dateList": {
+          "type": "array",
+          "description": "日期信息集",
+          "items": {
+            "originalRef": "生产结存统计日期报表返回VO",
+            "$ref": "#/definitions/生产结存统计日期报表返回VO"
+          }
+        }
+      },
+      "title": "生产结存统计报表返回VO"
+    },
+    "生产结存统计日期报表返回VO": {
+      "type": "object",
+      "properties": {
+        "produceDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期"
+        },
+        "preDayFinishBalanceQuantity": {
+          "type": "number",
+          "description": "前日结存成品数"
+        },
+        "preDaySemiBalanceQuantity": {
+          "type": "number",
+          "description": "前日结存半成品数"
+        },
+        "preDayBackBalanceQuantity": {
+          "type": "number",
+          "description": "前日结存返工品数"
+        },
+        "receiveQuantity": {
+          "type": "number",
+          "description": "接收数"
+        },
+        "produceQuantity": {
+          "type": "number",
+          "description": "产出数"
+        },
+        "rollOutQuantity": {
+          "type": "number",
+          "description": "转出数"
+        },
+        "rollOutProduceQuantity": {
+          "type": "number",
+          "description": "转出数 - 合格转出"
+        },
+        "rollOutBackQuantity": {
+          "type": "number",
+          "description": "转出数 - 返工转出"
+        },
+        "rollOutProduceEntrustQuantity": {
+          "type": "number",
+          "description": "转出数 - 委外转出"
+        },
+        "finishBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存成品数"
+        },
+        "semiBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存半成品数"
+        },
+        "backBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存返工品数"
+        },
+        "scrapBalanceQuantity": {
+          "type": "number",
+          "description": "当天结存不良品数"
+        },
+        "yieldRate": {
+          "type": "number",
+          "description": "当天结存良品率"
+        }
+      },
+      "title": "生产结存统计日期报表返回VO"
     }
   }
 }

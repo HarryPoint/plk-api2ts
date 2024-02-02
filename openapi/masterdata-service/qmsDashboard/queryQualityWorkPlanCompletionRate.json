@@ -82,6 +82,20 @@
         }
       },
       "title": "JSONResult«List«质量工作计划完成率返回DTO»»"
+    },
+    "质量工作计划完成率返回DTO": {
+      "type": "object",
+      "properties": {
+        "departmentName": {
+          "type": "string",
+          "description": "责任部门"
+        },
+        "completionRate": {
+          "type": "number",
+          "description": "完成率"
+        }
+      },
+      "title": "质量工作计划完成率返回DTO"
     }
   }
 }

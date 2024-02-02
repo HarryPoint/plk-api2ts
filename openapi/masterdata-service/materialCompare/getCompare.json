@@ -112,6 +112,103 @@
         }
       },
       "title": "JSONResult«List«物料主数据比对返回VO»»"
+    },
+    "物料主数据比对返回VO": {
+      "type": "object",
+      "properties": {
+        "compareMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "比对物料id"
+        },
+        "compareMaterialName": {
+          "type": "string",
+          "description": "比对物料名"
+        },
+        "compareMaterialCode": {
+          "type": "string",
+          "description": "比对物料编号"
+        },
+        "compareMaterialIssueCode": {
+          "type": "string",
+          "description": "比对物料版次号"
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "比对物料状态描述"
+        },
+        "details": {
+          "type": "array",
+          "description": "比对内容集",
+          "items": {
+            "originalRef": "物料主数据比对详情返回VO",
+            "$ref": "#/definitions/物料主数据比对详情返回VO"
+          }
+        }
+      },
+      "title": "物料主数据比对返回VO"
+    },
+    "物料主数据比对详情返回VO": {
+      "type": "object",
+      "properties": {
+        "bomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应bomId"
+        },
+        "bomName": {
+          "type": "string",
+          "description": "对应bom名称"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "计算消耗"
+        },
+        "routings": {
+          "type": "array",
+          "description": "对应工艺路径集",
+          "items": {
+            "originalRef": "生产工艺路径基础信息VO",
+            "$ref": "#/definitions/生产工艺路径基础信息VO"
+          }
+        }
+      },
+      "title": "物料主数据比对详情返回VO"
+    },
+    "生产工艺路径基础信息VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否默认",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isValid": {
+          "type": "string",
+          "description": "是否可用",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "生产工艺路径基础信息VO"
     }
   }
 }

@@ -90,6 +90,63 @@
         }
       },
       "title": "JSONResult«List«生产任务选择信息返回VO»»"
+    },
+    "生产任务选择信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "对应工序编号"
+        },
+        "classShiftId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应班次id"
+        },
+        "classShiftName": {
+          "type": "string",
+          "description": "对应班次名称"
+        },
+        "classShiftCode": {
+          "type": "string",
+          "description": "对应班次编号"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  PRODUCE-生产中",
+            "  PAUSE-暂停中",
+            "  STOP-停止",
+            "  CLOSE-已关闭",
+            "  CANCEL-已取消"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        }
+      },
+      "title": "生产任务选择信息返回VO"
     }
   }
 }

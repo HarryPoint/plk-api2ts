@@ -88,6 +88,75 @@
         }
       },
       "title": "JSONResult«List«KaizenProjectResponseDTO»»"
+    },
+    "KaizenProjectResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "项目编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "type": {
+          "type": "string",
+          "description": "项目类型"
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "项目类型描述"
+        },
+        "projectLeaderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目负责人"
+        },
+        "projectLeaderName": {
+          "type": "string",
+          "description": "项目负责人名称"
+        },
+        "projectStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目开始日期"
+        },
+        "projectEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目截止日期"
+        },
+        "projectStatus": {
+          "type": "string",
+          "description": "项目状态",
+          "enum": [
+            "  DRAFT-草稿",
+            "  IN_PROGRESS-进行中",
+            "  COMPLETED-已完成",
+            "  CANCELED-已取消"
+          ]
+        },
+        "projectStatusDesc": {
+          "type": "string",
+          "description": "项目状态描述"
+        },
+        "proposalId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联合理化建议"
+        },
+        "projectIntroduction": {
+          "type": "string",
+          "description": "项目简介"
+        }
+      },
+      "title": "KaizenProjectResponseDTO"
     }
   }
 }

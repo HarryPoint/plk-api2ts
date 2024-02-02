@@ -122,6 +122,77 @@
         }
       },
       "title": "JSONResult«项目风险统计响应对象»"
+    },
+    "项目风险统计响应对象": {
+      "type": "object",
+      "properties": {
+        "totalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "风险总数量"
+        },
+        "completeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成数量"
+        },
+        "overdueQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超期数量"
+        },
+        "lowQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "低风险数量"
+        },
+        "midQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "中风险数量"
+        },
+        "highQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "高风险数量"
+        },
+        "unCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未完成数量"
+        },
+        "lowCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "低风险完成数量"
+        },
+        "midCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "中风险完成数量"
+        },
+        "highCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "高风险完成数量"
+        },
+        "lowUnCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "低风险未完成数量"
+        },
+        "midUnCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "中风险未完成数量"
+        },
+        "highUnCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "高风险未完成数量"
+        }
+      },
+      "title": "项目风险统计响应对象"
     }
   }
 }

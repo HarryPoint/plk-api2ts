@@ -121,6 +121,126 @@
       },
       "title": "标准工艺某一类别物料编辑请求对象"
     },
+    "标准工艺节点响应对象_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "节点序列号"
+        },
+        "name": {
+          "type": "string",
+          "description": "节点名称"
+        },
+        "type": {
+          "type": "string",
+          "description": "节点类型",
+          "enum": [
+            "  MATERIAL-物料",
+            "  ROUTING-工艺路径",
+            "  CONDITION-条件",
+            "  BRANCH-分支"
+          ]
+        },
+        "configType": {
+          "type": "string",
+          "description": "配置类型",
+          "enum": [
+            "  SPECIFIC-具体",
+            "  CONFIGURED-配置"
+          ]
+        },
+        "branchType": {
+          "type": "string",
+          "description": "分支类型 -- 只有分支节点才会有值",
+          "enum": [
+            "  BOM-BOM",
+            "  CONDITION-条件"
+          ]
+        },
+        "nodeData": {
+          "type": "object",
+          "description": "节点数据 -- 不同的节点类型的数据格式不一样",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "nextNode": {
+          "description": "下一节点",
+          "originalRef": "标准工艺节点响应对象_2",
+          "$ref": "#/definitions/标准工艺节点响应对象_2"
+        },
+        "branches": {
+          "type": "array",
+          "description": "分支节点列表",
+          "items": {
+            "originalRef": "标准工艺节点响应对象_2",
+            "$ref": "#/definitions/标准工艺节点响应对象_2"
+          }
+        }
+      },
+      "title": "标准工艺节点响应对象_1"
+    },
+    "标准工艺节点响应对象_2": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "节点序列号"
+        },
+        "name": {
+          "type": "string",
+          "description": "节点名称"
+        },
+        "type": {
+          "type": "string",
+          "description": "节点类型",
+          "enum": [
+            "  MATERIAL-物料",
+            "  ROUTING-工艺路径",
+            "  CONDITION-条件",
+            "  BRANCH-分支"
+          ]
+        },
+        "configType": {
+          "type": "string",
+          "description": "配置类型",
+          "enum": [
+            "  SPECIFIC-具体",
+            "  CONFIGURED-配置"
+          ]
+        },
+        "branchType": {
+          "type": "string",
+          "description": "分支类型 -- 只有分支节点才会有值",
+          "enum": [
+            "  BOM-BOM",
+            "  CONDITION-条件"
+          ]
+        },
+        "nodeData": {
+          "type": "object",
+          "description": "节点数据 -- 不同的节点类型的数据格式不一样",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "nextNode": {
+          "description": "下一节点",
+          "originalRef": "标准工艺节点响应对象_2",
+          "$ref": "#/definitions/标准工艺节点响应对象_2"
+        },
+        "branches": {
+          "type": "array",
+          "description": "分支节点列表",
+          "items": {
+            "originalRef": "标准工艺节点响应对象_2",
+            "$ref": "#/definitions/标准工艺节点响应对象_2"
+          }
+        }
+      },
+      "title": "标准工艺节点响应对象_2"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

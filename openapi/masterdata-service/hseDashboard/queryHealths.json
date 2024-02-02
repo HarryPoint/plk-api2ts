@@ -107,6 +107,37 @@
         }
       },
       "title": "JSONResult«List«健康H查询响应»»"
+    },
+    "健康H查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "healthDate": {
+          "type": "string",
+          "description": "健康日期"
+        },
+        "accidentsQuantity": {
+          "type": "number",
+          "description": "轻伤及以上事故数"
+        },
+        "careerDiseaseQuantity": {
+          "type": "number",
+          "description": "新增职业病人数"
+        },
+        "isException": {
+          "type": "string",
+          "description": "是否有异常",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "健康H查询响应"
     }
   }
 }

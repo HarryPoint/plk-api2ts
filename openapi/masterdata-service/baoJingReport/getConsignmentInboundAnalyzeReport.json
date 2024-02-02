@@ -165,6 +165,22 @@
       },
       "title": "寄售入库分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«寄售入库分析报表返回VO»": {
       "type": "object",
       "properties": {
@@ -192,6 +208,191 @@
         }
       },
       "title": "JSONResult«寄售入库分析报表返回VO»"
+    },
+    "寄售入库分析报表返回VO_1": {
+      "type": "object",
+      "properties": {
+        "tablePage": {
+          "description": "数据表",
+          "originalRef": "分页信息«寄售入库分析报表返回VO»",
+          "$ref": "#/definitions/分页信息«寄售入库分析报表返回VO»"
+        },
+        "productDimension": {
+          "type": "array",
+          "description": "产品维度",
+          "items": {
+            "originalRef": "寄售入库分析图表数据返回VO",
+            "$ref": "#/definitions/寄售入库分析图表数据返回VO"
+          }
+        },
+        "customerDimension": {
+          "type": "array",
+          "description": "客户维度",
+          "items": {
+            "originalRef": "寄售入库分析图表数据返回VO",
+            "$ref": "#/definitions/寄售入库分析图表数据返回VO"
+          }
+        },
+        "businessManDimension": {
+          "type": "array",
+          "description": "业务员维度",
+          "items": {
+            "originalRef": "寄售入库分析图表数据返回VO",
+            "$ref": "#/definitions/寄售入库分析图表数据返回VO"
+          }
+        }
+      },
+      "title": "寄售入库分析报表返回VO_1"
+    },
+    "分页信息«寄售入库分析报表返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "寄售入库分析报表返回VO",
+            "$ref": "#/definitions/寄售入库分析报表返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«寄售入库分析报表返回VO»"
+    },
+    "寄售入库分析报表返回VO": {
+      "type": "object",
+      "properties": {
+        "workOrderNo": {
+          "type": "string",
+          "description": "单据编号"
+        },
+        "salesOrderNo": {
+          "type": "string",
+          "description": "销售订单编号"
+        },
+        "customer": {
+          "type": "string",
+          "description": "客户"
+        },
+        "businessMan": {
+          "type": "string",
+          "description": "业务员"
+        },
+        "inboundDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "入库日期"
+        },
+        "inboundType": {
+          "type": "string",
+          "description": "入库类型"
+        },
+        "inboundPrice": {
+          "type": "number",
+          "description": "入库单价"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "productSpec": {
+          "type": "string",
+          "description": "规格型号"
+        },
+        "warehouse": {
+          "type": "string",
+          "description": "仓库"
+        },
+        "inboundQty": {
+          "type": "number",
+          "description": "入库数量"
+        },
+        "numOfLoss": {
+          "type": "number",
+          "description": "损耗数量"
+        },
+        "inboundAmount": {
+          "type": "number",
+          "description": "入库金额"
+        },
+        "productNo": {
+          "type": "string",
+          "description": "产品编号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "寄售入库分析报表返回VO"
+    },
+    "寄售入库分析图表数据返回VO": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "纵轴"
+        },
+        "inboundAmount": {
+          "type": "number",
+          "description": "入库金额"
+        },
+        "inboundQty": {
+          "type": "number",
+          "description": "入库数量"
+        }
+      },
+      "title": "寄售入库分析图表数据返回VO"
     }
   }
 }

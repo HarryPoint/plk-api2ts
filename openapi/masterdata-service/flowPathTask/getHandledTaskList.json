@@ -286,6 +286,63 @@
         }
       },
       "title": "JSONResult«List«流程任务处理结果VO»»"
+    },
+    "流程任务处理结果VO": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "任务类型",
+          "enum": [
+            "  EXECUTE-执行任务",
+            "  APPROVAL-审批任务"
+          ]
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "flowPathNodeName": {
+          "type": "string",
+          "description": "所属流程节点名称"
+        },
+        "handleUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "处理人id"
+        },
+        "handleUserName": {
+          "type": "string",
+          "description": "处理人名称"
+        },
+        "handleTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "处理时间"
+        },
+        "approvalStatus": {
+          "type": "string",
+          "description": "审批状态",
+          "enum": [
+            "  PASS-同意",
+            "  REFUSE-拒绝",
+            "  BACK-回退"
+          ]
+        },
+        "executeStatus": {
+          "type": "string",
+          "description": "执行状态",
+          "enum": [
+            "  HANDLE-正常执行",
+            "  BACK-回退"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "审批意见/执行情况"
+        }
+      },
+      "title": "流程任务处理结果VO"
     }
   }
 }

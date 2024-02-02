@@ -93,6 +93,13 @@
       },
       "title": "主数据基础编辑 DTO_2"
     },
+    "JSONObject": {
+      "type": "object",
+      "title": "JSONObject",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
     "JSONResult«long»": {
       "type": "object",
       "properties": {

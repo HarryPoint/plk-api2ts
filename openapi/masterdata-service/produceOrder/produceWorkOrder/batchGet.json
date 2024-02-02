@@ -93,6 +93,152 @@
         }
       },
       "title": "JSONResult«List«ProduceWorkOrderVO»»"
+    },
+    "ProduceWorkOrderVO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单ID"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划生产数量"
+        },
+        "produceOrderNo": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "salesOrderNo": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开工日期"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划完工日期"
+        },
+        "isEmergentOrder": {
+          "type": "string",
+          "description": "是否急单",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "orderType": {
+          "type": "string",
+          "description": "订单类型",
+          "enum": [
+            "  CONTRACT-合同生产",
+            "  STANDBY-备库生产",
+            "  REWORK-返工生产",
+            "  TEST-新产品实验生产",
+            "  VIRTUAL-虚拟订单",
+            "  OTHER-其他订单",
+            "  SCRAP_SUPPLEMENT-报废补单"
+          ]
+        },
+        "orderTypeDesc": {
+          "type": "string",
+          "description": "订单类型描述"
+        },
+        "processList": {
+          "type": "array",
+          "description": "工序信息",
+          "items": {
+            "originalRef": "ProduceWorkOrderProcessVO",
+            "$ref": "#/definitions/ProduceWorkOrderProcessVO"
+          }
+        },
+        "produceCustomInfo": {
+          "type": "array",
+          "description": "生产相关信息",
+          "items": {
+            "originalRef": "ProduceWorkOrderCustomFieldDataVO",
+            "$ref": "#/definitions/ProduceWorkOrderCustomFieldDataVO"
+          }
+        }
+      },
+      "title": "ProduceWorkOrderVO"
+    },
+    "ProduceWorkOrderProcessVO": {
+      "type": "object",
+      "properties": {
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务ID"
+        },
+        "produceTaskNo": {
+          "type": "string",
+          "description": "生产任务号"
+        },
+        "areaCode": {
+          "type": "string",
+          "description": "区域编码"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编码"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "taskIssueTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务下发时间"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划完成时间"
+        }
+      },
+      "title": "ProduceWorkOrderProcessVO"
+    },
+    "ProduceWorkOrderCustomFieldDataVO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "自定义字段编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "自定义字段名称"
+        },
+        "value": {
+          "type": "string",
+          "description": "值"
+        }
+      },
+      "title": "ProduceWorkOrderCustomFieldDataVO"
     }
   }
 }

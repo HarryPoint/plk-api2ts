@@ -91,6 +91,36 @@
       },
       "title": "生产任务批量设置进料模具请求DTO"
     },
+    "生产任务批量设置进料模具任务详情请求DTO": {
+      "type": "object",
+      "required": [
+        "lotIds",
+        "produceTaskId"
+      ],
+      "properties": {
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "lotIds": {
+          "type": "array",
+          "description": "批次ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "produceTechnologyMoldIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "生产任务批量设置进料模具任务详情请求DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

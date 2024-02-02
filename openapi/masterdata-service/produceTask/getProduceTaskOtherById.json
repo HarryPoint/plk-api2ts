@@ -86,6 +86,95 @@
         }
       },
       "title": "JSONResult«生产任务其他信息VO»"
+    },
+    "生产任务其他信息VO": {
+      "type": "object",
+      "properties": {
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "优先级"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "成品物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "成品物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "成品物料编号"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "对应工序编号"
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应标准工艺路径id"
+        },
+        "routingName": {
+          "type": "string",
+          "description": "对应工艺路径名称"
+        },
+        "routingCode": {
+          "type": "string",
+          "description": "对应工艺路径编号"
+        },
+        "totalScrapCount": {
+          "type": "number",
+          "description": "累积报废数量"
+        },
+        "holdCount": {
+          "type": "number",
+          "description": "扣留数量"
+        },
+        "totalBackCount": {
+          "type": "number",
+          "description": "返工数量"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "issuingTaskTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "下发任务时间"
+        }
+      },
+      "title": "生产任务其他信息VO"
     }
   }
 }

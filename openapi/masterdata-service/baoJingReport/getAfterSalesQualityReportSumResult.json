@@ -169,6 +169,22 @@
       },
       "title": "售后质量分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«售后质量分析返回VO»_1": {
       "type": "object",
       "properties": {
@@ -196,6 +212,17 @@
         }
       },
       "title": "JSONResult«售后质量分析返回VO»_1"
+    },
+    "售后质量分析返回VO_2": {
+      "type": "object",
+      "properties": {
+        "quantitySum": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数量"
+        }
+      },
+      "title": "售后质量分析返回VO_2"
     }
   }
 }

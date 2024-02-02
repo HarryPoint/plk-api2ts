@@ -93,6 +93,91 @@
         }
       },
       "title": "JSONResult«List«ProcessFlowCardDTO»»"
+    },
+    "ProcessFlowCardDTO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "produceOrderCode": {
+          "type": "string"
+        },
+        "salesOrderCode": {
+          "type": "string"
+        },
+        "totalProduceOrderQuantity": {
+          "type": "number"
+        },
+        "standardSpecifications": {
+          "type": "string"
+        },
+        "customerName": {
+          "type": "string"
+        },
+        "textureOfMaterial": {
+          "type": "string"
+        },
+        "deliveryDate": {
+          "type": "string"
+        },
+        "blankingSize": {
+          "type": "string"
+        },
+        "blankingWight": {
+          "type": "string"
+        },
+        "heatNo": {
+          "type": "string"
+        },
+        "machinedDimensions": {
+          "type": "string"
+        },
+        "forgingDimensions": {
+          "type": "string"
+        },
+        "heatTreatment": {
+          "type": "string"
+        },
+        "roughCar": {
+          "type": "string"
+        },
+        "flawDetection": {
+          "type": "string"
+        },
+        "fineTurning": {
+          "type": "string"
+        },
+        "readyTime": {
+          "type": "string"
+        },
+        "machiningTime": {
+          "type": "string"
+        },
+        "drill": {
+          "type": "string"
+        },
+        "sign": {
+          "type": "string"
+        },
+        "orderNo": {
+          "type": "string"
+        },
+        "createUserName": {
+          "type": "string"
+        },
+        "serialNo": {
+          "type": "string"
+        },
+        "customNumber": {
+          "type": "string"
+        },
+        "isEmergentOrder": {
+          "type": "string"
+        }
+      },
+      "title": "ProcessFlowCardDTO"
     }
   }
 }

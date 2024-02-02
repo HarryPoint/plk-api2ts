@@ -93,6 +93,78 @@
         }
       },
       "title": "JSONResult«ProcessDeprecatedVO»"
+    },
+    "ProcessDeprecatedVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属区域id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "readyTime": {
+          "type": "number",
+          "description": "准备时间"
+        },
+        "readyTimeUnit": {
+          "type": "string",
+          "description": "准备时间单位",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "produceTime": {
+          "type": "number",
+          "description": "生产时间"
+        },
+        "produceTimeUnit": {
+          "type": "string",
+          "description": "生产时间单位",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "produceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "产出数量"
+        },
+        "readyPrice": {
+          "type": "number",
+          "description": "准备工费（元）"
+        },
+        "producePrice": {
+          "type": "number",
+          "description": "合格产出工费（元）"
+        },
+        "backProducePrice": {
+          "type": "number",
+          "description": "返工产出工费（元）"
+        }
+      },
+      "title": "ProcessDeprecatedVO"
     }
   }
 }

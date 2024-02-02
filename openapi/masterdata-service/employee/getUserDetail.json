@@ -79,6 +79,120 @@
         }
       },
       "title": "JSONResult«用户详细VO»"
+    },
+    "用户详细VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "员工工号"
+        },
+        "name": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属部门id"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "departmentCode": {
+          "type": "string",
+          "description": "部门编码"
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属账号id"
+        },
+        "mobilePhone": {
+          "type": "string",
+          "description": "手机号码"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班组id"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "班组名称"
+        },
+        "classGroupCode": {
+          "type": "string",
+          "description": "班组编码"
+        },
+        "entryTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "入职日期"
+        },
+        "dimissionTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "离职日期"
+        },
+        "birthday": {
+          "type": "string",
+          "format": "date-time",
+          "description": "出生日期"
+        },
+        "gender": {
+          "type": "string",
+          "description": "性别",
+          "enum": [
+            "  MAN-男",
+            "  WOMAN-女"
+          ]
+        },
+        "educational": {
+          "type": "string",
+          "description": "学历",
+          "enum": [
+            "  PRIMARY-小学",
+            "  JUNIOR-初中",
+            "  HIGH-高中",
+            "  COLLEGE-大专",
+            "  UNDERGRADUATE-本科",
+            "  POSTGRADUATE-研究生",
+            "  INTERMEDIATE_TECHNICAL-中技",
+            "  MASTER-硕士",
+            "  TECHNICAL_SECONDARY-中专"
+          ]
+        },
+        "nativePlace": {
+          "type": "string",
+          "description": "籍贯"
+        },
+        "positionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "任职职位id"
+        },
+        "positionName": {
+          "type": "string",
+          "description": "职位名称"
+        },
+        "positionCode": {
+          "type": "string",
+          "description": "职位编码"
+        },
+        "positionDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任职开始日期"
+        }
+      },
+      "title": "用户详细VO"
     }
   }
 }

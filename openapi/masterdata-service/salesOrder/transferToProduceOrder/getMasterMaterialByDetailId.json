@@ -80,6 +80,165 @@
         }
       },
       "title": "JSONResult«转生产订单主物料信息»"
+    },
+    "转生产订单主物料信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "详情id"
+        },
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单id"
+        },
+        "salesOrderName": {
+          "type": "string",
+          "description": "销售订单名称"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "主物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "主物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "主物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "主物料规格"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "主物料单位"
+        },
+        "totalSalesQuantity": {
+          "type": "number",
+          "description": "总销售数量"
+        },
+        "materialStorageCount": {
+          "type": "number",
+          "description": "主物料库存"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "交付数量"
+        },
+        "convertCount": {
+          "type": "number",
+          "description": "已转换数量"
+        },
+        "notConvertCount": {
+          "type": "number",
+          "description": "未转换数量"
+        },
+        "deliveryDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交货日期"
+        },
+        "level": {
+          "type": "integer",
+          "format": "int32",
+          "description": "层级"
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "优先级"
+        },
+        "isEmergentOrder": {
+          "type": "string",
+          "description": "是否紧急订单",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "standardTechnologyOptionalList": {
+          "type": "array",
+          "description": "标准生产工艺可选列表",
+          "items": {
+            "originalRef": "StandardTechnologyDTO",
+            "$ref": "#/definitions/StandardTechnologyDTO"
+          }
+        },
+        "selectedStandardTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "已选择标准工艺ID"
+        },
+        "serialNoSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "序列号方案id"
+        },
+        "lotSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次方案id"
+        },
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableQualityTraceability": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "转生产订单主物料信息"
+    },
+    "StandardTechnologyDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "标准工艺名称"
+        },
+        "standardTechnologyCategoryName": {
+          "type": "string",
+          "description": "标准工艺所属分类名称"
+        },
+        "standardTechnologyCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺所属分类ID"
+        }
+      },
+      "title": "StandardTechnologyDTO"
     }
   }
 }

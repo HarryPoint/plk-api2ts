@@ -82,6 +82,30 @@
         }
       },
       "title": "JSONResult«List«设备选择返回VO - 针对数采方案»»"
+    },
+    "设备选择返回VO - 针对数采方案": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceCollectionPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备数采方案id，如果该参数有值，则不能被选择"
+        }
+      },
+      "title": "设备选择返回VO - 针对数采方案"
     }
   }
 }

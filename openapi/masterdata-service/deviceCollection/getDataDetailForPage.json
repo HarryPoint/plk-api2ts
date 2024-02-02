@@ -116,6 +116,22 @@
       },
       "title": "设备数采数据详单搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«设备数采数据详单返回VO»": {
       "type": "object",
       "properties": {
@@ -143,6 +159,275 @@
         }
       },
       "title": "JSONResult«设备数采数据详单返回VO»"
+    },
+    "设备数采数据详单返回VO": {
+      "type": "object",
+      "properties": {
+        "dataPages": {
+          "description": "分页信息",
+          "originalRef": "分页信息«设备数采数据详单分页信息返回VO»",
+          "$ref": "#/definitions/分页信息«设备数采数据详单分页信息返回VO»"
+        },
+        "deviceInfo": {
+          "description": "设备信息",
+          "originalRef": "设备数采状态信息VO",
+          "$ref": "#/definitions/设备数采状态信息VO"
+        }
+      },
+      "title": "设备数采数据详单返回VO"
+    },
+    "分页信息«设备数采数据详单分页信息返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "设备数采数据详单分页信息返回VO",
+            "$ref": "#/definitions/设备数采数据详单分页信息返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«设备数采数据详单分页信息返回VO»"
+    },
+    "设备数采数据详单分页信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "collectTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据提交时间"
+        },
+        "reqUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "请求员工id"
+        },
+        "reqUsername": {
+          "type": "string",
+          "description": "请求员工姓名"
+        },
+        "deviceOnlineStatus": {
+          "type": "string",
+          "description": "在线状态",
+          "enum": [
+            "  ONLINE-在线",
+            "  OFFLINE-离线"
+          ]
+        },
+        "deviceStatus": {
+          "type": "string",
+          "description": "设备状态",
+          "enum": [
+            "  DS1-正常运行",
+            "  DS2-降速运行",
+            "  DS3-故障停机",
+            "  DS4-保养",
+            "  DS5-空闲待用",
+            "  DS6-换型",
+            "  DS7-关机",
+            "  DS8-空运"
+          ]
+        },
+        "extData": {
+          "type": "object",
+          "description": "拓展数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "details": {
+          "type": "array",
+          "description": "详情",
+          "items": {
+            "originalRef": "设备数采数据明细返回VO",
+            "$ref": "#/definitions/设备数采数据明细返回VO"
+          }
+        },
+        "hasError": {
+          "type": "string",
+          "description": "是否有异常",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "设备数采数据详单分页信息返回VO"
+    },
+    "设备数采数据明细返回VO": {
+      "type": "object",
+      "properties": {
+        "deviceCollectionParamId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备数采参数id"
+        },
+        "deviceCollectionParamName": {
+          "type": "string",
+          "description": "设备数采参数名称"
+        },
+        "deviceCollectionParamCode": {
+          "type": "string",
+          "description": "设备数采参数编号"
+        },
+        "deviceCollectionParamUnit": {
+          "type": "string",
+          "description": "设备数采参数单位"
+        },
+        "result": {
+          "type": "number",
+          "description": "结果"
+        },
+        "unit": {
+          "type": "string",
+          "description": "单位"
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "errorType": {
+          "type": "string",
+          "description": "异常类型",
+          "enum": [
+            "  UPPER-超上限",
+            "  LOWER-超下限"
+          ]
+        },
+        "errorResult": {
+          "type": "number",
+          "description": "异常值"
+        }
+      },
+      "title": "设备数采数据明细返回VO"
+    },
+    "设备数采状态信息VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceCollectionPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备数采方案id"
+        },
+        "deviceCollectionPlanName": {
+          "type": "string",
+          "description": "设备数采方案名称"
+        },
+        "deviceCollectionPlanCode": {
+          "type": "string",
+          "description": "设备数采方案编号"
+        },
+        "onlineStatus": {
+          "type": "string",
+          "description": "在线状态",
+          "enum": [
+            "  ONLINE-在线",
+            "  OFFLINE-离线"
+          ]
+        },
+        "onlineStatusDesc": {
+          "type": "string",
+          "description": "在线状态描述"
+        },
+        "status": {
+          "type": "string",
+          "description": "设备状态",
+          "enum": [
+            "  DS1-正常运行",
+            "  DS2-降速运行",
+            "  DS3-故障停机",
+            "  DS4-保养",
+            "  DS5-空闲待用",
+            "  DS6-换型",
+            "  DS7-关机",
+            "  DS8-空运"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "设备状态描述"
+        },
+        "lastApiTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最后通讯时间"
+        }
+      },
+      "title": "设备数采状态信息VO"
     }
   }
 }

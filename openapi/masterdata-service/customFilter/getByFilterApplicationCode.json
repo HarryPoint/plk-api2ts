@@ -81,6 +81,41 @@
         }
       },
       "title": "JSONResult«List«自定义筛选项返回对象DTO»»"
+    },
+    "自定义筛选项返回对象DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "filterApplicationCode": {
+          "type": "string",
+          "description": "筛选应用code"
+        },
+        "formFieldName": {
+          "type": "string",
+          "description": "字段名称"
+        },
+        "formFieldCode": {
+          "type": "string",
+          "description": "字段code"
+        },
+        "formFieldSerialNo": {
+          "type": "string",
+          "description": "字段序列号"
+        },
+        "isDynamicFormField": {
+          "type": "string",
+          "description": "是否动态表字段",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "自定义筛选项返回对象DTO"
     }
   }
 }

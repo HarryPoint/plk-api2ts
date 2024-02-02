@@ -82,6 +82,36 @@
         }
       },
       "title": "JSONResult«List«项目任务季度分布响应对象»»"
+    },
+    "项目任务季度分布响应对象": {
+      "type": "object",
+      "properties": {
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "季度开始日期"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "季度结束日期"
+        },
+        "totalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "任务总数量"
+        },
+        "completeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成数量"
+        },
+        "completeRate": {
+          "type": "number",
+          "description": "完成率"
+        }
+      },
+      "title": "项目任务季度分布响应对象"
     }
   }
 }

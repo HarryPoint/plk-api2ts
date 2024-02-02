@@ -180,6 +180,68 @@
         }
       },
       "title": "JSONResult«List«StorageTakeCheckTaskResponseDTO»»"
+    },
+    "StorageTakeCheckTaskResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点仓库id"
+        },
+        "scopeType": {
+          "type": "string",
+          "description": "盘点范围",
+          "enum": [
+            "  APPOINT-指定仓位",
+            "  MATERIAL_TYPE-物料类型",
+            "  ALL-全部物料"
+          ]
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "handleUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "处理人id"
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "completeTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "完成时间"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待盘点",
+            "  HANDLING-盘点中",
+            "  WAIT_VERIFY-待核对",
+            "  WAIT_EXAMINE-待盈亏处理",
+            "  COMPLETE-已完成",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        }
+      },
+      "title": "StorageTakeCheckTaskResponseDTO"
     }
   }
 }

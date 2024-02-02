@@ -95,6 +95,67 @@
         }
       },
       "title": "JSONResult«外部财务凭证响应对象»"
+    },
+    "外部财务凭证响应对象": {
+      "type": "object",
+      "properties": {
+        "voucherNo": {
+          "type": "string",
+          "description": "凭证号"
+        },
+        "voucherType": {
+          "type": "string",
+          "description": "凭证字号"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期"
+        },
+        "voucherPeriod": {
+          "type": "string",
+          "description": "凭证期间"
+        },
+        "debitEntryTotalAmount": {
+          "type": "string",
+          "description": "借方合计"
+        },
+        "creditEntryTotalAmount": {
+          "type": "string",
+          "description": "贷方合计"
+        },
+        "details": {
+          "type": "array",
+          "description": "明细",
+          "items": {
+            "originalRef": "外部财务凭证详情响应对象",
+            "$ref": "#/definitions/外部财务凭证详情响应对象"
+          }
+        }
+      },
+      "title": "外部财务凭证响应对象"
+    },
+    "外部财务凭证详情响应对象": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "摘要"
+        },
+        "accountName": {
+          "type": "string",
+          "description": "科目"
+        },
+        "debitEntry": {
+          "type": "string",
+          "description": "借方"
+        },
+        "creditEntry": {
+          "type": "string",
+          "description": "贷方"
+        }
+      },
+      "title": "外部财务凭证详情响应对象"
     }
   }
 }

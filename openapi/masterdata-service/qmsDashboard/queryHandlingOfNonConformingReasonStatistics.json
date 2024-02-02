@@ -89,6 +89,20 @@
         }
       },
       "title": "JSONResult«List«大屏不合格品统计按原因响应DTO»»"
+    },
+    "大屏不合格品统计按原因响应DTO": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "description": "原因"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        }
+      },
+      "title": "大屏不合格品统计按原因响应DTO"
     }
   }
 }

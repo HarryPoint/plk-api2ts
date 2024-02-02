@@ -86,6 +86,75 @@
         }
       },
       "title": "JSONResult«仓位VO»"
+    },
+    "仓位VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属仓库id"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父级id"
+        },
+        "name": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否默认仓位 - 针对整个工厂唯一默认有一个仓位，非仓库下自动创建的默认仓位",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "仓位类型",
+          "enum": [
+            "  PHYSICAL-实体仓",
+            "  LINE_SIDE-线边仓",
+            "  WIP-WIP"
+          ]
+        },
+        "wipType": {
+          "type": "string",
+          "description": "WIP类型 - WIP时有值",
+          "enum": [
+            "  BEFORE-在制前",
+            "  IN-在制中"
+          ]
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属工艺路径id - WIP时有值"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属区域id"
+        }
+      },
+      "title": "仓位VO"
     }
   }
 }

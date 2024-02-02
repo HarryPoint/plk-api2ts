@@ -133,6 +133,24 @@
         }
       },
       "title": "JSONResult«安全库存物料库存配置信息返回VO»"
+    },
+    "安全库存物料库存配置信息返回VO": {
+      "type": "object",
+      "properties": {
+        "lowerLimit": {
+          "type": "number",
+          "description": "安全库存下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "安全库存上限"
+        },
+        "purchaseLowerLimit": {
+          "type": "number",
+          "description": "采购触发下限"
+        }
+      },
+      "title": "安全库存物料库存配置信息返回VO"
     }
   }
 }

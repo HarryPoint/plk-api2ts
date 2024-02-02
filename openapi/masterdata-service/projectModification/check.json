@@ -79,6 +79,25 @@
         }
       },
       "title": "JSONResult«项目变更信息校验结果»"
+    },
+    "项目变更信息校验结果": {
+      "type": "object",
+      "properties": {
+        "projectName": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "modificationCode": {
+          "type": "string",
+          "description": "变更单单号"
+        },
+        "modificationId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "变更单id"
+        }
+      },
+      "title": "项目变更信息校验结果"
     }
   }
 }

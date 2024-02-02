@@ -76,6 +76,39 @@
         }
       },
       "title": "JSONResult«期间响应对象»"
+    },
+    "期间响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "期间Id"
+        },
+        "period": {
+          "type": "string",
+          "description": "期间"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "开始日期"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "结束日期"
+        },
+        "isCurrentFiscalPeriod": {
+          "type": "string",
+          "description": "是否当前期间",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "期间响应对象"
     }
   }
 }

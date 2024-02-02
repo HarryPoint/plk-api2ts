@@ -104,6 +104,79 @@
         }
       },
       "title": "JSONResult«不符合项统计-条款号»"
+    },
+    "不符合项统计-条款号": {
+      "type": "object",
+      "properties": {
+        "titleList": {
+          "type": "array",
+          "description": "各部门不符合项分布情况的标题",
+          "items": {
+            "originalRef": "审核类型标题",
+            "$ref": "#/definitions/审核类型标题"
+          }
+        },
+        "itemList": {
+          "type": "array",
+          "description": "条款项列表",
+          "items": {
+            "originalRef": "QualityAuditClauseNumberQueryItemResponseDTO",
+            "$ref": "#/definitions/QualityAuditClauseNumberQueryItemResponseDTO"
+          }
+        }
+      },
+      "title": "不符合项统计-条款号"
+    },
+    "审核类型标题": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "标题的Key"
+        },
+        "name": {
+          "type": "string",
+          "description": "标题的名称"
+        }
+      },
+      "title": "审核类型标题"
+    },
+    "QualityAuditClauseNumberQueryItemResponseDTO": {
+      "type": "object",
+      "properties": {
+        "clauseNumberId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "条款号ID"
+        },
+        "clauseNumber": {
+          "type": "string",
+          "description": "条款号"
+        },
+        "nonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "不符合项数量"
+        },
+        "unRectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未整改数量"
+        },
+        "rectificationRate": {
+          "type": "number",
+          "description": "整改率"
+        },
+        "dynamicIndicates": {
+          "type": "object",
+          "description": "各部门不符合项分布情况",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "title": "QualityAuditClauseNumberQueryItemResponseDTO"
     }
   }
 }

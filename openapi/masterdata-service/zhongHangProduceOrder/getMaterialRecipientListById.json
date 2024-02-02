@@ -91,6 +91,116 @@
         }
       },
       "title": "JSONResult«List«生产订单物料领用响应dto»»"
+    },
+    "生产订单物料领用响应dto": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编号"
+        },
+        "masterMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产物料id"
+        },
+        "masterMaterialName": {
+          "type": "string",
+          "description": "生产物料名称"
+        },
+        "masterMaterialCode": {
+          "type": "string",
+          "description": "生产物料编号"
+        },
+        "masterMaterialUnitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产物料单位id"
+        },
+        "masterMaterialUnitName": {
+          "type": "string",
+          "description": "生产物料单位名称"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "计划生产数量"
+        },
+        "childMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "子物料id"
+        },
+        "childMaterialName": {
+          "type": "string",
+          "description": "子物料名称"
+        },
+        "childMaterialCode": {
+          "type": "string",
+          "description": "子物料编号"
+        },
+        "childMaterialSpec": {
+          "type": "string",
+          "description": "规格型号"
+        },
+        "childMaterialUnitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "子物料单位id"
+        },
+        "childMaterialUnitName": {
+          "type": "string",
+          "description": "子物料单位名称"
+        },
+        "curWarehouseCount": {
+          "type": "number",
+          "description": "当前库存"
+        },
+        "needCount": {
+          "type": "number",
+          "description": "所需物料数量"
+        },
+        "waitRecipientCount": {
+          "type": "number",
+          "description": "待领数量"
+        },
+        "recipientCount": {
+          "type": "number",
+          "description": "已领数量"
+        },
+        "diffCount": {
+          "type": "number",
+          "description": "差异数量"
+        },
+        "recipientOrderList": {
+          "type": "array",
+          "description": "关联领用单列表",
+          "items": {
+            "originalRef": "生产订单物料领用明细响应dto",
+            "$ref": "#/definitions/生产订单物料领用明细响应dto"
+          }
+        }
+      },
+      "title": "生产订单物料领用响应dto"
+    },
+    "生产订单物料领用明细响应dto": {
+      "type": "object",
+      "properties": {
+        "recipientOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "领用单id"
+        },
+        "recipientOrderCode": {
+          "type": "string",
+          "description": "领用单编号"
+        }
+      },
+      "title": "生产订单物料领用明细响应dto"
     }
   }
 }

@@ -98,6 +98,33 @@
         }
       },
       "title": "JSONResult«List«直通报表返回VO»»"
+    },
+    "直通报表返回VO": {
+      "type": "object",
+      "properties": {
+        "dataTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据时间（时间戳），根据当前选中的时间粒度去转换时间"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "所有工序报废"
+        },
+        "completeProduceQuantity": {
+          "type": "number",
+          "description": "最后工序合格产出"
+        },
+        "fpyRatio": {
+          "type": "number",
+          "description": "直通率"
+        },
+        "fpyRatioScale2": {
+          "type": "number",
+          "description": "直通率-大屏展示"
+        }
+      },
+      "title": "直通报表返回VO"
     }
   }
 }

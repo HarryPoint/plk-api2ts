@@ -100,6 +100,47 @@
       },
       "title": "盘点任务核对DTO"
     },
+    "盘点任务核对详情DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "详情id"
+        },
+        "verifyQuantity": {
+          "type": "number",
+          "description": "核对数量"
+        },
+        "differenceReason": {
+          "type": "string",
+          "description": "差异原因"
+        },
+        "serialNos": {
+          "type": "array",
+          "description": "序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO_1",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1"
+          }
+        }
+      },
+      "title": "盘点任务核对详情DTO"
+    },
+    "盘点任务盘点明细序列号DTO_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO_1"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

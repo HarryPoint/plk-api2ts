@@ -82,6 +82,25 @@
         }
       },
       "title": "JSONResult«List«质检方案选择VO»»"
+    },
+    "质检方案选择VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "质检方案名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "质检方案编号"
+        }
+      },
+      "title": "质检方案选择VO"
     }
   }
 }

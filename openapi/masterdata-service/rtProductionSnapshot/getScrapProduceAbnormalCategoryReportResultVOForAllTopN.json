@@ -106,6 +106,21 @@
         }
       },
       "title": "JSONResult«List«报废类型统计返回VO»»"
+    },
+    "报废类型统计返回VO": {
+      "type": "object",
+      "properties": {
+        "produceAbnormalCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "异常分类id"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        }
+      },
+      "title": "报废类型统计返回VO"
     }
   }
 }

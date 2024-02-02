@@ -147,6 +147,40 @@
         }
       },
       "title": "JSONResult«List«设备数采统计报表导出VO»»"
+    },
+    "设备数采统计报表导出VO": {
+      "type": "object",
+      "properties": {
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "paramName": {
+          "type": "string",
+          "description": "参数名称"
+        },
+        "paramCode": {
+          "type": "string",
+          "description": "参数编号"
+        },
+        "collectionTime": {
+          "type": "string",
+          "description": "时间"
+        },
+        "result": {
+          "type": "string",
+          "description": "数据值"
+        },
+        "unit": {
+          "type": "string",
+          "description": "单位"
+        }
+      },
+      "title": "设备数采统计报表导出VO"
     }
   }
 }

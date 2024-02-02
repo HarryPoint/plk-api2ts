@@ -89,6 +89,35 @@
         }
       },
       "title": "JSONResult«List«工艺路径步骤选择VO»»"
+    },
+    "工艺路径步骤选择VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "routingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "对应步骤"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "对应工序编号"
+        }
+      },
+      "title": "工艺路径步骤选择VO"
     }
   }
 }

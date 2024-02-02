@@ -101,6 +101,83 @@
         }
       },
       "title": "JSONResult«List«基础VO»»_2"
+    },
+    "基础VO_2": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数据状态 0停用，1启用，-1已删除"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建员工id"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门id"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "修改账户id"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "修改部门id"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺路径编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属主物料id"
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属主物料bomid"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否默认",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "基础VO_2"
     }
   }
 }

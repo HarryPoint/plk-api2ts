@@ -90,6 +90,35 @@
         }
       },
       "title": "JSONResult«List«质量追溯未打开生产订单响应对象»»"
+    },
+    "质量追溯未打开生产订单响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "orderStatus": {
+          "type": "string",
+          "description": "订单状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  PLAN-已排产",
+            "  ISSUE-已下发",
+            "  PRODUCE-生产中",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭",
+            "  PART_COMPLETE-部分完成",
+            "  COMPLETE-已完成"
+          ]
+        }
+      },
+      "title": "质量追溯未打开生产订单响应对象"
     }
   }
 }

@@ -89,6 +89,60 @@
         }
       },
       "title": "JSONResult«List«仓位树返回VO»»"
+    },
+    "仓位树返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "状态(是否可用)"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "children": {
+          "type": "array",
+          "description": "子仓位",
+          "items": {
+            "originalRef": "仓位树返回VO",
+            "$ref": "#/definitions/仓位树返回VO"
+          }
+        }
+      },
+      "title": "仓位树返回VO"
     }
   }
 }

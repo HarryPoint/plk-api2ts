@@ -112,6 +112,26 @@
         }
       },
       "title": "JSONResult«List«生产计划订单日产量 VO»»"
+    },
+    "生产计划订单日产量 VO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "scheduleDate": {
+          "type": "string",
+          "format": "date",
+          "description": "排期日期"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "产量"
+        }
+      },
+      "title": "生产计划订单日产量 VO"
     }
   }
 }

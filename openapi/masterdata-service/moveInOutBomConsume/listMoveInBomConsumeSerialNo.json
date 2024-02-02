@@ -109,6 +109,47 @@
         }
       },
       "title": "JSONResult«List«进料bom消耗序列号响应DTO»»"
+    },
+    "进料bom消耗序列号响应DTO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料编号"
+        },
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotOrderCode": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次编号"
+        },
+        "serialNoId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "序列号id"
+        },
+        "serialNoCode": {
+          "type": "integer",
+          "format": "int64",
+          "description": "序列号编号"
+        }
+      },
+      "title": "进料bom消耗序列号响应DTO"
     }
   }
 }

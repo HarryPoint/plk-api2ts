@@ -89,6 +89,39 @@
         }
       },
       "title": "JSONResult«List«委外加工明细返回VO»»"
+    },
+    "委外加工明细返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返回投料数量"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        }
+      },
+      "title": "委外加工明细返回VO"
     }
   }
 }

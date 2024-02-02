@@ -128,6 +128,28 @@
         }
       },
       "title": "JSONResult«安全库存设置返回VO»"
+    },
+    "安全库存设置返回VO": {
+      "type": "object",
+      "properties": {
+        "isWarning": {
+          "type": "string",
+          "description": "是否开启预警",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "computeType": {
+          "type": "string",
+          "description": "计数方式",
+          "enum": [
+            "  TOTAL-按总库存计算",
+            "  CAN_USE-按可用库存计算"
+          ]
+        }
+      },
+      "title": "安全库存设置返回VO"
     }
   }
 }

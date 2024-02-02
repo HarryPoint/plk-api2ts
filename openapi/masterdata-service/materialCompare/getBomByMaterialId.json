@@ -90,6 +90,34 @@
         }
       },
       "title": "JSONResult«List«MaterialBomBaseVo»»"
+    },
+    "MaterialBomBaseVo": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料ID"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        }
+      },
+      "title": "MaterialBomBaseVo"
     }
   }
 }

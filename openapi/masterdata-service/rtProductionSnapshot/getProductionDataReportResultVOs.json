@@ -124,6 +124,22 @@
       },
       "title": "产出数据报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«产出数据统计返回VO»»": {
       "type": "object",
       "properties": {
@@ -154,6 +170,60 @@
         }
       },
       "title": "JSONResult«List«产出数据统计返回VO»»"
+    },
+    "产出数据统计返回VO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "allQuantity": {
+          "type": "number",
+          "description": "所有工序产出数"
+        },
+        "processList": {
+          "type": "array",
+          "description": "工序产出信息集",
+          "items": {
+            "originalRef": "工序产出统计报表返回VO",
+            "$ref": "#/definitions/工序产出统计报表返回VO"
+          }
+        }
+      },
+      "title": "产出数据统计返回VO"
+    },
+    "工序产出统计报表返回VO": {
+      "type": "object",
+      "properties": {
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "produceQuantity": {
+          "type": "number",
+          "description": "工序产出数"
+        }
+      },
+      "title": "工序产出统计报表返回VO"
     }
   }
 }

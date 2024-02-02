@@ -95,6 +95,48 @@
       },
       "title": "盘点任务提交DTO"
     },
+    "盘点任务提交清单DTO": {
+      "type": "object",
+      "properties": {
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点仓位id"
+        },
+        "materialList": {
+          "type": "array",
+          "description": "物料集",
+          "items": {
+            "originalRef": "盘点任务提交清单物料DTO",
+            "$ref": "#/definitions/盘点任务提交清单物料DTO"
+          }
+        }
+      },
+      "title": "盘点任务提交清单DTO"
+    },
+    "盘点任务提交清单物料DTO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "盘点数量"
+        },
+        "verifyQuantity": {
+          "type": "number",
+          "description": "核对数量"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注（差异原因"
+        }
+      },
+      "title": "盘点任务提交清单物料DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

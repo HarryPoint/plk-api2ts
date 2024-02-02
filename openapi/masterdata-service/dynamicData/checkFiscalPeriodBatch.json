@@ -114,6 +114,38 @@
         }
       },
       "title": "JSONResult«List«FiscalPeriodCheckResponseDTO»»"
+    },
+    "FiscalPeriodCheckResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "单据ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "单据编码"
+        },
+        "billDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "单据日期"
+        },
+        "balanceStatus": {
+          "type": "string",
+          "description": "结存状态 - 如果没有区间则返回空、如果区间存在则返回实际值",
+          "enum": [
+            "  UNBALANCED-未结存",
+            "  BALANCED-已结存"
+          ]
+        },
+        "period": {
+          "type": "string",
+          "description": "期间/所属期间- 如果没有区间则返回空、如果区间存在则返回实际值"
+        }
+      },
+      "title": "FiscalPeriodCheckResponseDTO"
     }
   }
 }

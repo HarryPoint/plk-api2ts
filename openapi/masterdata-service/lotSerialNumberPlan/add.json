@@ -91,6 +91,99 @@
       },
       "title": "LotSerialNumberPlanAddRequestDTO"
     },
+    "LotSerialNumberPlanRuleAddRequestDTO": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "规则类型",
+          "enum": [
+            "  FIXED-固定值",
+            "  DATE-日期",
+            "  AUTO_NUMBER-自动计数",
+            "  FLOW_PATH_FIELD-引用字段",
+            "  ID36-ID的36进制"
+          ]
+        },
+        "dateFormat": {
+          "type": "string",
+          "description": "日期类型",
+          "enum": [
+            "  YEAR-年",
+            "  YEAR_MONTH-年月",
+            "  YEAR_MONTH_DAY-年月日",
+            "  MONTH-月",
+            "  MONTH_DAY-月日",
+            "  DAY-日"
+          ]
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用引擎ID"
+        },
+        "flowPathCode": {
+          "type": "string",
+          "description": "应用引擎编码"
+        },
+        "flowPathFormFiledCode": {
+          "type": "string",
+          "description": "字段编码"
+        },
+        "flowPathFormFiledSerialNo": {
+          "type": "string",
+          "description": "字段序列号"
+        },
+        "valueExtractMethod": {
+          "type": "string",
+          "description": "值提取方法",
+          "enum": [
+            "  COMPLETE-完全取值",
+            "  PART-截断取值"
+          ]
+        },
+        "startIndex": {
+          "type": "integer",
+          "format": "int32",
+          "description": "起始Index"
+        },
+        "endIndex": {
+          "type": "integer",
+          "format": "int32",
+          "description": "结束Index"
+        },
+        "fixValue": {
+          "type": "string",
+          "description": "字符常量"
+        },
+        "ruleLength": {
+          "type": "integer",
+          "format": "int32",
+          "description": "规则长度 - 用于流水"
+        },
+        "startValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "起始值 - 用于流水"
+        },
+        "stepValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "步长值 - 用于流水"
+        },
+        "lotSerialNumberPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "方案ID"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        }
+      },
+      "title": "LotSerialNumberPlanRuleAddRequestDTO"
+    },
     "JSONResult«long»": {
       "type": "object",
       "properties": {

@@ -142,6 +142,76 @@
         }
       },
       "title": "JSONResult«List«预测工费»»"
+    },
+    "预测工费_2": {
+      "type": "object",
+      "properties": {
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单ID"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编码"
+        },
+        "masterMaterial": {
+          "description": "主物料",
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
+        },
+        "childMaterial": {
+          "description": "子物料",
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序ID"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "deliveryQuantity": {
+          "type": "number",
+          "description": "生产交付数量"
+        },
+        "laborCost": {
+          "type": "number",
+          "description": "工费"
+        },
+        "bomName": {
+          "type": "string",
+          "description": "BOM名词"
+        },
+        "bomLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "BOM 升级"
+        }
+      },
+      "title": "预测工费_2"
+    },
+    "ForecastMaterialInfo": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料ID"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        }
+      },
+      "title": "ForecastMaterialInfo"
     }
   }
 }

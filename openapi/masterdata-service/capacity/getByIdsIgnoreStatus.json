@@ -104,6 +104,25 @@
         }
       },
       "title": "JSONResult«List«产能下拉选择列表搜索响应对象»»"
+    },
+    "产能下拉选择列表搜索响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "产能下拉选择列表搜索响应对象"
     }
   }
 }

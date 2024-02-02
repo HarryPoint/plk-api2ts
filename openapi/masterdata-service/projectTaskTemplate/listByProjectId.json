@@ -82,6 +82,43 @@
         }
       },
       "title": "JSONResult«List«项目任务模板响应DTO»»"
+    },
+    "项目任务模板响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务模板id"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否是通用模板",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "模板名称"
+        },
+        "appCode": {
+          "type": "string",
+          "description": "应用编号"
+        },
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用id"
+        }
+      },
+      "title": "项目任务模板响应DTO"
     }
   }
 }

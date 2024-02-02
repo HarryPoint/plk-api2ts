@@ -79,6 +79,39 @@
         }
       },
       "title": "JSONResult«宝晶销售发货报表包材表头响应对象»"
+    },
+    "宝晶销售发货报表包材表头响应对象": {
+      "type": "object",
+      "properties": {
+        "packagingMaterialHeaders": {
+          "type": "array",
+          "description": "包材表头",
+          "items": {
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
+          }
+        }
+      },
+      "title": "宝晶销售发货报表包材表头响应对象"
+    },
+    "Id Code Name 通用传输对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "code"
+        },
+        "name": {
+          "type": "string",
+          "description": "name"
+        }
+      },
+      "title": "Id Code Name 通用传输对象"
     }
   }
 }

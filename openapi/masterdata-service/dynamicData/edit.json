@@ -120,6 +120,19 @@
         }
       },
       "title": "JSONResult«DynamicFormSaveResultBO»"
+    },
+    "DynamicFormSaveResultBO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string"
+        }
+      },
+      "title": "DynamicFormSaveResultBO"
     }
   }
 }

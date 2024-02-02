@@ -199,6 +199,24 @@
       },
       "title": "工序完成明细表查询"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
     "JSONResult«long»": {
       "type": "object",
       "properties": {

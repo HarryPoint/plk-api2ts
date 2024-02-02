@@ -79,6 +79,44 @@
         }
       },
       "title": "JSONResult«项目计划应用响应对象»"
+    },
+    "项目计划应用响应对象": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用id"
+        },
+        "appCode": {
+          "type": "string",
+          "description": "应用code"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目计划id"
+        },
+        "code": {
+          "type": "string",
+          "description": "项目计划编号"
+        },
+        "flowStatus": {
+          "type": "string",
+          "description": "任务流程状态"
+        },
+        "dataStatus": {
+          "type": "string",
+          "description": "数据状态",
+          "enum": [
+            "  INVALID-停用",
+            "  VALID-启用",
+            "  STAGING-暂存",
+            "  DELETED-已删除"
+          ]
+        }
+      },
+      "title": "项目计划应用响应对象"
     }
   }
 }

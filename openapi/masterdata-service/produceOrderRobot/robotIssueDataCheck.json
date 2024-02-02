@@ -105,6 +105,57 @@
         }
       },
       "title": "JSONResult«生产订单自动排产下发任务数据校验返回DTO»"
+    },
+    "生产订单自动排产下发任务数据校验返回DTO": {
+      "type": "object",
+      "properties": {
+        "producePlanStartTimeFormFieldName": {
+          "type": "string",
+          "description": "排产开始时间订单流程表单字段名称"
+        },
+        "producePlanEndTimeFormFieldName": {
+          "type": "string",
+          "description": "排产结束时间订单流程表单字段名称"
+        },
+        "dataCheckItems": {
+          "type": "array",
+          "description": "数据校验明细",
+          "items": {
+            "originalRef": "生产订单自动排产下发任务数据校验明细返回DTO",
+            "$ref": "#/definitions/生产订单自动排产下发任务数据校验明细返回DTO"
+          }
+        }
+      },
+      "title": "生产订单自动排产下发任务数据校验返回DTO"
+    },
+    "生产订单自动排产下发任务数据校验明细返回DTO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编号"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "failType": {
+          "type": "string",
+          "description": "校验失败错误类型",
+          "enum": [
+            "  PRODUCE_PLAN_START_TIME_IS_NULL-排产开始时间为空",
+            "  PRODUCE_PLAN_END_TIME_IS_NULL-排产结束时间为空",
+            "  PRODUCE_PLAN_START_AND_END_TIME_IS_NULL-排产开始时间和结束时间都为空",
+            "  PRODUCE_PLAN_START_GT_END_TIME-排产开始时间大于排产结束时间"
+          ]
+        }
+      },
+      "title": "生产订单自动排产下发任务数据校验明细返回DTO"
     }
   }
 }

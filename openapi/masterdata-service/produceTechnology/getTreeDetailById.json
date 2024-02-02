@@ -88,6 +88,79 @@
         }
       },
       "title": "JSONResult«生产工艺树状响应对象»"
+    },
+    "生产工艺树状响应对象": {
+      "type": "object",
+      "properties": {
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺id"
+        },
+        "produceTechnologyName": {
+          "type": "string",
+          "description": "生产工艺名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id(该工艺对应的物料id)"
+        },
+        "nodeResponse": {
+          "description": "生产工艺节点响应对象",
+          "originalRef": "生产工艺节点响应对象",
+          "$ref": "#/definitions/生产工艺节点响应对象"
+        },
+        "hasRouting": {
+          "type": "boolean",
+          "description": "整个结构是否有工艺路径"
+        }
+      },
+      "title": "生产工艺树状响应对象"
+    },
+    "生产工艺节点响应对象": {
+      "type": "object",
+      "properties": {
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺id"
+        },
+        "type": {
+          "type": "string",
+          "description": "节点类型",
+          "enum": [
+            "  MATERIAL-物料",
+            "  ROUTING-工艺路径",
+            "  BRANCH-分支"
+          ]
+        },
+        "nodeData": {
+          "type": "object",
+          "description": "节点数据 -- 不同的节点类型的数据格式不一样",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "nextNode": {
+          "description": "下一节点",
+          "originalRef": "生产工艺节点响应对象",
+          "$ref": "#/definitions/生产工艺节点响应对象"
+        },
+        "branches": {
+          "type": "array",
+          "description": "分支节点列表",
+          "items": {
+            "originalRef": "生产工艺节点响应对象",
+            "$ref": "#/definitions/生产工艺节点响应对象"
+          }
+        },
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        }
+      },
+      "title": "生产工艺节点响应对象"
     }
   }
 }

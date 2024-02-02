@@ -86,6 +86,89 @@
         }
       },
       "title": "JSONResult«销售订单关闭信息返回VO»"
+    },
+    "销售订单关闭信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "hasNotCloseProduceOrder": {
+          "type": "string",
+          "description": "是否存在未关闭的生产订单",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasWaitProduceHandle": {
+          "type": "string",
+          "description": "是否存在未处理的审批事件",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasSurplusProduceEntrust": {
+          "type": "string",
+          "description": "是否存在未处理完的委外订单",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "details": {
+          "type": "array",
+          "description": "明细",
+          "items": {
+            "originalRef": "销售订单明细关闭信息返回VO",
+            "$ref": "#/definitions/销售订单明细关闭信息返回VO"
+          }
+        }
+      },
+      "title": "销售订单关闭信息返回VO"
+    },
+    "销售订单明细关闭信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "对应物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料编号"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "总销售数量(销售订单需求数量)"
+        },
+        "totalProduceCount": {
+          "type": "number",
+          "description": "总合格产出数量(产出完成)"
+        },
+        "notConvertCount": {
+          "type": "number",
+          "description": "未转换数量"
+        }
+      },
+      "title": "销售订单明细关闭信息返回VO"
     }
   }
 }

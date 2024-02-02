@@ -104,6 +104,63 @@
         }
       },
       "title": "JSONResult«改进项统计查询响应»"
+    },
+    "改进项统计查询响应": {
+      "type": "object",
+      "properties": {
+        "improvementItemsQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "改进项数量"
+        },
+        "unRectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未整改数量"
+        },
+        "rectificationRate": {
+          "type": "number",
+          "description": "整改率"
+        },
+        "departmentIndicates": {
+          "type": "array",
+          "description": "部门指标 - XX部门该井数量、XX部门未整改数量、XX部门整改率标题",
+          "items": {
+            "originalRef": "部门级别的指标",
+            "$ref": "#/definitions/部门级别的指标"
+          }
+        }
+      },
+      "title": "改进项统计查询响应"
+    },
+    "部门级别的指标": {
+      "type": "object",
+      "properties": {
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门ID"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "improvementItemsQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "改进项数量"
+        },
+        "unRectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未整改数量"
+        },
+        "rectificationRate": {
+          "type": "number",
+          "description": "整改率"
+        }
+      },
+      "title": "部门级别的指标"
     }
   }
 }

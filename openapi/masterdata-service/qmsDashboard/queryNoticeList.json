@@ -73,6 +73,21 @@
         }
       },
       "title": "JSONResult«List«通告栏»»"
+    },
+    "通告栏": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "content": {
+          "type": "string",
+          "description": "通知内容"
+        }
+      },
+      "title": "通告栏"
     }
   }
 }

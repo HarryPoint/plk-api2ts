@@ -79,6 +79,54 @@
         }
       },
       "title": "JSONResult«ProductionMaterialReturnOrderCostFetchBO»"
+    },
+    "ProductionMaterialReturnOrderCostFetchBO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "billDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "detailList": {
+          "type": "array",
+          "items": {
+            "originalRef": "ProductionMaterialReturnOrderCostFetchDetailBO",
+            "$ref": "#/definitions/ProductionMaterialReturnOrderCostFetchDetailBO"
+          }
+        },
+        "success": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        },
+        "errorInfo": {
+          "type": "string"
+        }
+      },
+      "title": "ProductionMaterialReturnOrderCostFetchBO"
+    },
+    "ProductionMaterialReturnOrderCostFetchDetailBO": {
+      "type": "object",
+      "properties": {
+        "materialCode": {
+          "type": "string"
+        },
+        "materialReturnQuantity": {
+          "type": "number"
+        },
+        "unitCost": {
+          "type": "number"
+        },
+        "totalCost": {
+          "type": "number"
+        }
+      },
+      "title": "ProductionMaterialReturnOrderCostFetchDetailBO"
     }
   }
 }

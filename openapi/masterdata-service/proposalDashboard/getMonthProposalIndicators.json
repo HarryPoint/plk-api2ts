@@ -70,6 +70,49 @@
         }
       },
       "title": "JSONResult«MonthProposalIndicatorsResponseDTO»"
+    },
+    "MonthProposalIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "monthProposalIndicatorsList": {
+          "type": "array",
+          "description": "改善提案有效数量和员工参与率月目标",
+          "items": {
+            "originalRef": "MonthProposalIndicatorsItemResponseDTO",
+            "$ref": "#/definitions/MonthProposalIndicatorsItemResponseDTO"
+          }
+        }
+      },
+      "title": "MonthProposalIndicatorsResponseDTO"
+    },
+    "MonthProposalIndicatorsItemResponseDTO": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "integer",
+          "format": "int32",
+          "description": "月份"
+        },
+        "proposalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "提案有效数量"
+        },
+        "employeeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "全公司提案数大于0的员工总数"
+        },
+        "currentMonthPlanQuantity": {
+          "type": "number",
+          "description": "月目标 = 全公司改善提案参与人数年目标/12"
+        },
+        "currentMonthEmployeeRate": {
+          "type": "number",
+          "description": "当月员工参与率"
+        }
+      },
+      "title": "MonthProposalIndicatorsItemResponseDTO"
     }
   }
 }

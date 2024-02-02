@@ -70,6 +70,29 @@
         }
       },
       "title": "JSONResult«EnterpriseIndicatorsResponseDTO»"
+    },
+    "EnterpriseIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "proposalQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "全公式提案数量"
+        },
+        "proposalPlanQuantity": {
+          "type": "number",
+          "description": "（部门年改善提案数量目标/12*当前月份）"
+        },
+        "proposalCompleteRate": {
+          "type": "number",
+          "description": "全公司提案完成率"
+        },
+        "projectCompleteAvg": {
+          "type": "number",
+          "description": "全公司已完成平均L/T"
+        }
+      },
+      "title": "EnterpriseIndicatorsResponseDTO"
     }
   }
 }

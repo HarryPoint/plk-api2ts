@@ -90,6 +90,34 @@
         }
       },
       "title": "JSONResult«List«物料主数据Bom详情选择基础信息DTO»»"
+    },
+    "物料主数据Bom详情选择基础信息DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "Bom详情id"
+        },
+        "childMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "子物料id"
+        },
+        "childMaterialName": {
+          "type": "string",
+          "description": "子物料名称"
+        },
+        "childMaterialCode": {
+          "type": "string",
+          "description": "子物料编号"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "消耗数量"
+        }
+      },
+      "title": "物料主数据Bom详情选择基础信息DTO"
     }
   }
 }

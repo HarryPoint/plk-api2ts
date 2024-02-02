@@ -122,6 +122,85 @@
       },
       "title": "深蓝大屏设置DTO"
     },
+    "深蓝生产大屏合格率数据设置编辑DTO": {
+      "type": "object",
+      "properties": {
+        "dayTotalQuantity": {
+          "type": "number",
+          "description": "今日总产量 - 手动修改值"
+        },
+        "dayProduceQuantity": {
+          "type": "number",
+          "description": "今日合格产量 - 手动修改值"
+        },
+        "monthTotalQuantity": {
+          "type": "number",
+          "description": "过去12个月总产量 - 手动修改值"
+        },
+        "monthProduceQuantity": {
+          "type": "number",
+          "description": "过去12个月合格产量 - 手动修改值"
+        },
+        "yearTotalQuantity": {
+          "type": "number",
+          "description": "过去10年总产量 - 手动修改值"
+        },
+        "yearProduceQuantity": {
+          "type": "number",
+          "description": "过去10年合格产量 - 手动修改值"
+        }
+      },
+      "title": "深蓝生产大屏合格率数据设置编辑DTO"
+    },
+    "深蓝生产大屏产出设置编辑DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "materialGroupCode": {
+          "type": "string",
+          "description": "物料分组编码"
+        },
+        "month12Details": {
+          "type": "array",
+          "description": "过去12个月明细",
+          "items": {
+            "originalRef": "深蓝生产大屏产出设置明细编辑DTO",
+            "$ref": "#/definitions/深蓝生产大屏产出设置明细编辑DTO"
+          }
+        },
+        "year10Details": {
+          "type": "array",
+          "description": "过去10年明细",
+          "items": {
+            "originalRef": "深蓝生产大屏产出设置明细编辑DTO",
+            "$ref": "#/definitions/深蓝生产大屏产出设置明细编辑DTO"
+          }
+        }
+      },
+      "title": "深蓝生产大屏产出设置编辑DTO"
+    },
+    "深蓝生产大屏产出设置明细编辑DTO": {
+      "type": "object",
+      "properties": {
+        "scheduleDate": {
+          "type": "string",
+          "description": "日期 - 过去12个月格式传 yyyy-MM  过去10年格式传 yyyy"
+        },
+        "handQuantity": {
+          "type": "number",
+          "description": "手动修改值"
+        },
+        "handAmount": {
+          "type": "number",
+          "description": "手动修改金额"
+        }
+      },
+      "title": "深蓝生产大屏产出设置明细编辑DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

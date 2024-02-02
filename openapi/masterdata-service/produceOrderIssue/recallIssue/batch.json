@@ -109,6 +109,20 @@
         }
       },
       "title": "JSONResult«生产订单下发结果DTO»"
+    },
+    "生产订单下发结果DTO": {
+      "type": "object",
+      "properties": {
+        "succeedQuantity": {
+          "type": "number",
+          "description": "成功条数"
+        },
+        "failedQuantity": {
+          "type": "number",
+          "description": "失败条数"
+        }
+      },
+      "title": "生产订单下发结果DTO"
     }
   }
 }

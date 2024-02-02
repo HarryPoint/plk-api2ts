@@ -91,6 +91,68 @@
         }
       },
       "title": "JSONResult«List«年度质量目标管理统计返回DTO»»"
+    },
+    "年度质量目标管理统计返回DTO": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "string",
+          "format": "date-time",
+          "description": "年"
+        },
+        "quarters": {
+          "type": "string",
+          "description": "季度"
+        },
+        "items": {
+          "type": "array",
+          "description": "项明细",
+          "items": {
+            "originalRef": "年度质量目标管理统计项返回DTO",
+            "$ref": "#/definitions/年度质量目标管理统计项返回DTO"
+          }
+        }
+      },
+      "title": "年度质量目标管理统计返回DTO"
+    },
+    "年度质量目标管理统计项返回DTO": {
+      "type": "object",
+      "properties": {
+        "qmsTargetItemId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "目标项id"
+        },
+        "qmsTargetItemName": {
+          "type": "string",
+          "description": "目标项"
+        },
+        "category": {
+          "type": "string",
+          "description": "分类"
+        },
+        "resultValue": {
+          "type": "string",
+          "description": "当期结果值"
+        },
+        "dataType": {
+          "type": "string",
+          "description": "数据类型"
+        },
+        "details": {
+          "type": "array",
+          "description": "明细",
+          "items": {
+            "originalRef": "年度质量目标管理统计项明细返回DTO",
+            "$ref": "#/definitions/年度质量目标管理统计项明细返回DTO"
+          }
+        }
+      },
+      "title": "年度质量目标管理统计项返回DTO"
+    },
+    "年度质量目标管理统计项明细返回DTO": {
+      "type": "object",
+      "title": "年度质量目标管理统计项明细返回DTO"
     }
   }
 }

@@ -88,6 +88,28 @@
         }
       },
       "title": "JSONResult«质量统计分析报表合计返回DTO»"
+    },
+    "质量统计分析报表合计返回DTO": {
+      "type": "object",
+      "properties": {
+        "inspectionApplyQuantity": {
+          "type": "number",
+          "description": "报检数量"
+        },
+        "inspectionQuantity": {
+          "type": "number",
+          "description": "交检总数"
+        },
+        "qualifiedQuantity": {
+          "type": "number",
+          "description": "交检合格数"
+        },
+        "unQualifiedQuantity": {
+          "type": "number",
+          "description": "交检不合格数"
+        }
+      },
+      "title": "质量统计分析报表合计返回DTO"
     }
   }
 }

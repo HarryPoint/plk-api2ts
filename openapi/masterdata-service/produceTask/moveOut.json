@@ -116,6 +116,141 @@
       },
       "title": "进出站信息DTO"
     },
+    "成品物料填写请求DTO": {
+      "type": "object",
+      "properties": {
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数(质检数)"
+        },
+        "applyQualityAgainQuantity": {
+          "type": "number",
+          "description": "再次申请质检数"
+        },
+        "optTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "操作时间"
+        }
+      },
+      "title": "成品物料填写请求DTO"
+    },
+    "BOM消耗请求DTO": {
+      "type": "object",
+      "required": [
+        "actualQuantity",
+        "id",
+        "materialId"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺路径步骤bom明细关联id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "进料批次列表",
+          "items": {
+            "originalRef": "bom消耗批次订单请求对象",
+            "$ref": "#/definitions/bom消耗批次订单请求对象"
+          }
+        },
+        "externalCodeList": {
+          "type": "array",
+          "description": "进料外部码列表",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "BOM消耗请求DTO"
+    },
+    "bom消耗批次订单请求对象": {
+      "type": "object",
+      "required": [
+        "actualQuantity",
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次订单id"
+        },
+        "lotNo": {
+          "type": "string"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数"
+        },
+        "serialNoIds": {
+          "type": "array",
+          "description": "序列号ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "bom消耗批次订单请求对象"
+    },
+    "进出站工艺卡填写": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关键参数id"
+        },
+        "keyParameterDetailList": {
+          "type": "array",
+          "description": "录入集合 - 带录入信息",
+          "items": {
+            "originalRef": "关键参数明细填写信息",
+            "$ref": "#/definitions/关键参数明细填写信息"
+          }
+        }
+      },
+      "title": "进出站工艺卡填写"
+    },
+    "关键参数明细填写信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "inputValue": {
+          "type": "string",
+          "description": "录入值 - 明细录入类型不是图片时，有值"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传key集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "关键参数明细填写信息"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

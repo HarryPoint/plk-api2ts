@@ -114,6 +114,259 @@
         }
       },
       "title": "JSONResult«List«生产子物料信息»»"
+    },
+    "生产子物料信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单详情ID"
+        },
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单id"
+        },
+        "salesOrderName": {
+          "type": "string",
+          "description": "销售订单名称"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "主物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "主物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "主物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "主物料规格"
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料BOM-ID"
+        },
+        "materialBomCode": {
+          "type": "string",
+          "description": "物料BOM编码"
+        },
+        "materialBomName": {
+          "type": "string",
+          "description": "物料BOM名称"
+        },
+        "deliveryQuantity": {
+          "type": "number",
+          "description": "交付数量"
+        },
+        "level": {
+          "type": "integer",
+          "format": "int32",
+          "description": "层级"
+        },
+        "standardTechnologySpecificRoutingNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺路径具体物料节点ID"
+        },
+        "needProduceSubMaterials": {
+          "type": "array",
+          "description": "子物料生产信息集",
+          "items": {
+            "originalRef": "子物料生产信息VO",
+            "$ref": "#/definitions/子物料生产信息VO"
+          }
+        },
+        "serialNoSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "序列号方案id"
+        },
+        "lotSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次方案id"
+        },
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableQualityTraceability": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "生产子物料信息"
+    },
+    "子物料生产信息VO": {
+      "type": "object",
+      "properties": {
+        "standardTechnologyNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "子物料生产信息指向的标准工艺节点ID（用于后续标准用户输入的生产信息应该给到那个子订单）"
+        },
+        "materialBomDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料bom明细id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "materialStorageCount": {
+          "type": "number",
+          "description": "物料库存数"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "物料计算消耗数量"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "总生产数量"
+        },
+        "demandQuantity": {
+          "type": "number",
+          "description": "需求数量"
+        },
+        "level": {
+          "type": "integer",
+          "format": "int32",
+          "description": "层级"
+        },
+        "parentMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父级物料id"
+        },
+        "parentMaterialName": {
+          "type": "string",
+          "description": "父级物料名称"
+        },
+        "parentMaterialCode": {
+          "type": "string",
+          "description": "父级物料编号"
+        },
+        "parentMaterialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父级物料bomId"
+        },
+        "parentMaterialBomName": {
+          "type": "string",
+          "description": "父级物料bom名称"
+        },
+        "parentMaterialBomCode": {
+          "type": "string",
+          "description": "父级物料bom编号"
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "优先级"
+        },
+        "routingName": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径ID"
+        },
+        "standardTechnologySpecificRoutingNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺路径具体物料节点ID"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "serialNoSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "序列号方案id"
+        },
+        "lotSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次方案id"
+        },
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableQualityTraceability": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "子物料生产信息VO"
     }
   }
 }

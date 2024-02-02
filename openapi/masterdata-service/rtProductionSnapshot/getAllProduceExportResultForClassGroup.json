@@ -146,6 +146,52 @@
         }
       },
       "title": "JSONResult«List«产出报表导出VO»»"
+    },
+    "产出报表导出VO": {
+      "type": "object",
+      "properties": {
+        "groupName": {
+          "type": "string",
+          "description": "数据分组名称"
+        },
+        "groupCode": {
+          "type": "string",
+          "description": "数据分组编号"
+        },
+        "classGroupList": {
+          "type": "string",
+          "description": "班组信息集"
+        },
+        "processList": {
+          "type": "string",
+          "description": "工序信息集"
+        },
+        "majorDataList": {
+          "type": "string",
+          "description": "物料信息集"
+        },
+        "dataTime": {
+          "type": "string",
+          "description": "数据时间"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "总产出"
+        },
+        "produceQuantity": {
+          "type": "number",
+          "description": "产出数量"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返工产出"
+        }
+      },
+      "title": "产出报表导出VO"
     }
   }
 }

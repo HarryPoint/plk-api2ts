@@ -80,6 +80,42 @@
         }
       },
       "title": "JSONResult«文件对象明细响应DTO»"
+    },
+    "文件对象明细响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "文件名"
+        },
+        "fileCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件分类ID"
+        },
+        "fileSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件大小"
+        },
+        "fileForm": {
+          "type": "string",
+          "description": "文件来源"
+        },
+        "fileKeys": {
+          "type": "array",
+          "description": "文件Key",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "文件对象明细响应DTO"
     }
   }
 }

@@ -101,6 +101,29 @@
         }
       },
       "title": "JSONResult«工艺画布编辑锁定响应DTO»"
+    },
+    "工艺画布编辑锁定响应DTO": {
+      "type": "object",
+      "properties": {
+        "technologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺id"
+        },
+        "lockSuccess": {
+          "type": "string",
+          "description": "锁定结果 Y:锁定成功可以编辑、N:锁定失败不能编辑",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "lockUser": {
+          "type": "string",
+          "description": "锁定用户"
+        }
+      },
+      "title": "工艺画布编辑锁定响应DTO"
     }
   }
 }

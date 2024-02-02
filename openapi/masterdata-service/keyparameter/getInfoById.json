@@ -78,6 +78,141 @@
         }
       },
       "title": "JSONResult«关键参数信息响应对象»"
+    },
+    "关键参数信息响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "processRp": {
+          "type": "array",
+          "description": "关联工序",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "materialRp": {
+          "type": "array",
+          "description": "关联物料",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "parameterDetailList": {
+          "type": "array",
+          "description": "关键参数集合",
+          "items": {
+            "originalRef": "关键参数信息详情响应对象",
+            "$ref": "#/definitions/关键参数信息详情响应对象"
+          }
+        }
+      },
+      "title": "关键参数信息响应对象"
+    },
+    "关联下拉响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "showFieldValue": {
+          "type": "string",
+          "description": "显示字段名称"
+        }
+      },
+      "title": "关联下拉响应对象"
+    },
+    "关键参数信息详情响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "字段id"
+        },
+        "name": {
+          "type": "string",
+          "description": "字段名称"
+        },
+        "remark": {
+          "type": "string",
+          "description": "帮助提示"
+        },
+        "inputType": {
+          "type": "string",
+          "description": "字段类型",
+          "enum": [
+            "  TEXT-文本",
+            "  SELECTOR-单选框",
+            "  CHECKBOX-多选框",
+            "  NUMBER-数值",
+            "  IMAGE-上传图片"
+          ]
+        },
+        "textType": {
+          "type": "string",
+          "description": "文本类型",
+          "enum": [
+            "  INPUT-输入",
+            "  COMPARE-比较"
+          ]
+        },
+        "textCompareValue": {
+          "type": "string",
+          "description": "文本比较值，多个英文逗号,分割"
+        },
+        "textCompareValueList": {
+          "type": "array",
+          "description": "文本比较值集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "numberUnit": {
+          "type": "string",
+          "description": "数值单位"
+        },
+        "imageTotalCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "图片最大上传量"
+        },
+        "selector": {
+          "type": "string",
+          "description": "选项集，多个英文逗号,分割"
+        },
+        "selectorList": {
+          "type": "array",
+          "description": "选项集",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "关键参数信息详情响应对象"
     }
   }
 }

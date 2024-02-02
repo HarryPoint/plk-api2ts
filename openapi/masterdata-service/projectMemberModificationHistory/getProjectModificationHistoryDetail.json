@@ -79,6 +79,26 @@
         }
       },
       "title": "JSONResult«项目成员变更信息版本记录»"
+    },
+    "项目成员变更信息版本记录": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "modificationId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "dataSnapshot": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "项目成员变更信息版本记录"
     }
   }
 }

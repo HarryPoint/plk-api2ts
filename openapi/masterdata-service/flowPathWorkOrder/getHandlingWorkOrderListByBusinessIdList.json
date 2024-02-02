@@ -111,6 +111,83 @@
         }
       },
       "title": "JSONResult«List«流程工单VO»»"
+    },
+    "流程工单VO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string"
+        },
+        "businessId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "businessCode": {
+          "type": "string"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathVersionId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathVersionRank": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "currentFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "HANDLING",
+            "COMPLETE",
+            "NOT_PASS",
+            "STAGING",
+            "INVALID"
+          ]
+        },
+        "processStatus": {
+          "type": "string"
+        },
+        "completeTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "totalTime": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "totalTimeoutTime": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "currentTotalTaskCount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "currentTotalTimeoutTaskCount": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "流程工单VO_1"
     }
   }
 }

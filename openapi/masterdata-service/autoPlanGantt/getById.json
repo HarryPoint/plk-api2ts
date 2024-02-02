@@ -79,6 +79,67 @@
         }
       },
       "title": "JSONResult«ProducePlanAutoScheduleOutputVO»"
+    },
+    "ProducePlanAutoScheduleOutputVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "producePlanId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "scheduleType": {
+          "type": "string",
+          "enum": [
+            "OCCUPY_PROCESS",
+            "OCCUPY_TIME",
+            "PROCESS",
+            "ORDER"
+          ]
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "routingStepId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "routingStep": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "occupyReason": {
+          "type": "string"
+        },
+        "isLock": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "ProducePlanAutoScheduleOutputVO"
     }
   }
 }

@@ -94,6 +94,34 @@
         }
       },
       "title": "JSONResult«List«ProduceTechnologyMaterialBomDTO»»"
+    },
+    "ProduceTechnologyMaterialBomDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "ProduceTechnologyMaterialBomDTO"
     }
   }
 }

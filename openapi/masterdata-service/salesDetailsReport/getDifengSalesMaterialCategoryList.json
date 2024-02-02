@@ -101,6 +101,24 @@
         }
       },
       "title": "JSONResult«List«名称编码响应 DTO»»"
+    },
+    "名称编码响应 DTO": {
+      "type": "object",
+      "required": [
+        "code",
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "名称编码响应 DTO"
     }
   }
 }

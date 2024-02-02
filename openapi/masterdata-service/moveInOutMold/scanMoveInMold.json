@@ -107,6 +107,33 @@
         }
       },
       "title": "JSONResult«进料模具响应DTO»"
+    },
+    "进料模具响应DTO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "模具id"
+        },
+        "name": {
+          "type": "string",
+          "description": "模具名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "模具编号"
+        },
+        "produceTechnologyMoldId": {
+          "type": "array",
+          "description": "生产工艺模具id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "进料模具响应DTO_1"
     }
   }
 }

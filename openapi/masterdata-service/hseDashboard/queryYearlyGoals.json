@@ -107,6 +107,28 @@
         }
       },
       "title": "JSONResult«List«年度目标查询响应»»"
+    },
+    "年度目标查询响应": {
+      "type": "object",
+      "properties": {
+        "serialNumber": {
+          "type": "string",
+          "description": "序号"
+        },
+        "controlTargetName": {
+          "type": "string",
+          "description": "控制目标名称"
+        },
+        "targetValue": {
+          "type": "string",
+          "description": "目标"
+        },
+        "currentValue": {
+          "type": "string",
+          "description": "当前"
+        }
+      },
+      "title": "年度目标查询响应"
     }
   }
 }

@@ -135,6 +135,22 @@
       },
       "title": "产能利用率报表查询DTO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«产能利用率报表工厂日历VO»»": {
       "type": "object",
       "properties": {
@@ -165,6 +181,25 @@
         }
       },
       "title": "JSONResult«List«产能利用率报表工厂日历VO»»"
+    },
+    "产能利用率报表工厂日历VO": {
+      "type": "object",
+      "properties": {
+        "scheduleDate": {
+          "type": "string",
+          "format": "date",
+          "description": "日程安排日期"
+        },
+        "workTimeQuantity": {
+          "type": "number",
+          "description": "日程安排日期对应的工时统计（每个班次的时间*该班次相关的班组人数）"
+        },
+        "workUserQuantity": {
+          "type": "number",
+          "description": "日程安排日期对应的班组人员统计"
+        }
+      },
+      "title": "产能利用率报表工厂日历VO"
     }
   }
 }

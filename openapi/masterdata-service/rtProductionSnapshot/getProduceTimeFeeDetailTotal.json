@@ -146,6 +146,22 @@
       },
       "title": "工时工费报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«工时工费报表合计返回VO»": {
       "type": "object",
       "properties": {
@@ -173,6 +189,28 @@
         }
       },
       "title": "JSONResult«工时工费报表合计返回VO»"
+    },
+    "工时工费报表合计返回VO": {
+      "type": "object",
+      "properties": {
+        "produceQuantity": {
+          "type": "number",
+          "description": "合格产出数量"
+        },
+        "produceFee": {
+          "type": "number",
+          "description": "合格工费"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返工数量"
+        },
+        "backFee": {
+          "type": "number",
+          "description": "返工工费"
+        }
+      },
+      "title": "工时工费报表合计返回VO"
     }
   }
 }

@@ -82,6 +82,48 @@
         }
       },
       "title": "JSONResult«List«质量目标返回DTO»»"
+    },
+    "质量目标返回DTO": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "质量目标"
+        },
+        "targetType": {
+          "type": "string",
+          "description": "目标值类型",
+          "enum": [
+            "  QUALITATIVE_OBJECTIVE-定性目标",
+            "  QUANTITATIVE_OBJECTIVE-定量目标"
+          ]
+        },
+        "qualitativeTargetValue": {
+          "type": "string",
+          "description": "定性目标值"
+        },
+        "quantifyTargetValue": {
+          "type": "string",
+          "description": "定量目标值"
+        },
+        "q1": {
+          "type": "string",
+          "description": "q1实际值"
+        },
+        "q2": {
+          "type": "string",
+          "description": "q2实际值"
+        },
+        "q3": {
+          "type": "string",
+          "description": "q3实际值"
+        },
+        "q4": {
+          "type": "string",
+          "description": "q4实际值"
+        }
+      },
+      "title": "质量目标返回DTO"
     }
   }
 }

@@ -91,6 +91,21 @@
         }
       },
       "title": "JSONResult«List«标准工艺下拉响应对象»»"
+    },
+    "标准工艺下拉响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        }
+      },
+      "title": "标准工艺下拉响应对象"
     }
   }
 }

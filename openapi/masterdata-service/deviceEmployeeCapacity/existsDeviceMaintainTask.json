@@ -105,6 +105,16 @@
         }
       },
       "title": "JSONResult«List«设备人员能力是否存在任务响应DTO»»"
+    },
+    "设备人员能力是否存在任务响应DTO": {
+      "type": "object",
+      "properties": {
+        "employeeName": {
+          "type": "string",
+          "description": "员工名称"
+        }
+      },
+      "title": "设备人员能力是否存在任务响应DTO"
     }
   }
 }

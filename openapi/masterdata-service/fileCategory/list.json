@@ -73,6 +73,39 @@
         }
       },
       "title": "JSONResult«List«FileCategoryListQueryResponseDTO»»"
+    },
+    "FileCategoryListQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "分类名称"
+        },
+        "userPermissionList": {
+          "type": "array",
+          "description": "用户权限列表",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CATEGORY_EDIT",
+              "CATEGORY_MOVE",
+              "CATEGORY_REMOVE",
+              "UPLOAD_FILE",
+              "CATEGORY_VIEW",
+              "FILE_RENAME",
+              "FILE_DOWNLOAD",
+              "FILE_MOVE",
+              "FILE_REMOVE"
+            ]
+          }
+        }
+      },
+      "title": "FileCategoryListQueryResponseDTO"
     }
   }
 }

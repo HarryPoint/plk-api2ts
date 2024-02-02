@@ -103,6 +103,45 @@
         }
       },
       "title": "JSONResult«AccountsReceivableSnapshotVO»"
+    },
+    "AccountsReceivableSnapshotVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "snapshotDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "快照日期"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "客户id"
+        },
+        "businessUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属业务员id"
+        },
+        "amountReceivable": {
+          "type": "number",
+          "description": "应收金额"
+        },
+        "amountReceived": {
+          "type": "number",
+          "description": "已收金额"
+        }
+      },
+      "title": "AccountsReceivableSnapshotVO"
     }
   }
 }

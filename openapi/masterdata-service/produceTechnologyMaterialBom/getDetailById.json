@@ -80,6 +80,134 @@
         }
       },
       "title": "JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»"
+    },
+    "ProduceTechnologyMaterialBomInfoResponseDTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺ID"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "所属物料名称"
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料BOMid"
+        },
+        "name": {
+          "type": "string",
+          "description": "bom名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "bom编号"
+        },
+        "produceTechnologyMaterialBomDetailList": {
+          "type": "array",
+          "description": "生产工艺物料BOM明细",
+          "items": {
+            "originalRef": "生产工艺物料Bom明细节点响应对象",
+            "$ref": "#/definitions/生产工艺物料Bom明细节点响应对象"
+          }
+        }
+      },
+      "title": "ProduceTechnologyMaterialBomInfoResponseDTO"
+    },
+    "生产工艺物料Bom明细节点响应对象": {
+      "type": "object",
+      "properties": {
+        "produceTechnologyMaterialBomDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺物料bom明细id"
+        },
+        "childMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "子物料id"
+        },
+        "childMaterialType": {
+          "type": "string",
+          "description": "子物料种类"
+        },
+        "childMaterialName": {
+          "type": "string",
+          "description": "子物料名称"
+        },
+        "childMaterialCode": {
+          "type": "string",
+          "description": "子物料编号"
+        },
+        "childMaterialUnit": {
+          "type": "string",
+          "description": "子物料单位"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "消耗数量"
+        }
+      },
+      "title": "生产工艺物料Bom明细节点响应对象"
     }
   }
 }

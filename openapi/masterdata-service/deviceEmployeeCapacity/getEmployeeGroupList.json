@@ -135,6 +135,84 @@
         }
       },
       "title": "JSONResult«List«设备人员能力分组响应DTO»»"
+    },
+    "设备人员能力分组响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "人员能力id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "employeeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "人员id"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班组id"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门id"
+        },
+        "employeeName": {
+          "type": "string",
+          "description": "人员名称"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "班组"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门"
+        },
+        "items": {
+          "type": "array",
+          "description": "人员",
+          "items": {
+            "originalRef": "设备人员能力分组项响应DTO",
+            "$ref": "#/definitions/设备人员能力分组项响应DTO"
+          }
+        }
+      },
+      "title": "设备人员能力分组响应DTO"
+    },
+    "设备人员能力分组项响应DTO": {
+      "type": "object",
+      "properties": {
+        "detailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "人员能力明细id"
+        },
+        "deviceTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备类型id"
+        },
+        "deviceTypeName": {
+          "type": "string",
+          "description": "设备类型"
+        },
+        "maintainLevel": {
+          "type": "string",
+          "description": "维修能力"
+        },
+        "canMaintain": {
+          "type": "string",
+          "description": "保养能力"
+        }
+      },
+      "title": "设备人员能力分组项响应DTO"
     }
   }
 }

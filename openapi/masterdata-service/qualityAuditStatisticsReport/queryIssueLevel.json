@@ -107,6 +107,47 @@
         }
       },
       "title": "JSONResult«List«问题等级查询响应»»"
+    },
+    "问题等级查询响应": {
+      "type": "object",
+      "properties": {
+        "issueLevel": {
+          "type": "string",
+          "description": "问题等级"
+        },
+        "issueLevelName": {
+          "type": "string",
+          "description": "问题等级名称"
+        },
+        "nonConformanceQuantity": {
+          "type": "number",
+          "description": "不符合项数量"
+        },
+        "unRectifiedQuantity": {
+          "type": "number",
+          "description": "未整改数量"
+        },
+        "rectificationRate": {
+          "type": "number",
+          "description": "整改率"
+        },
+        "internalAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "内部审核不符合项数量"
+        },
+        "externalAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "外部审核不符合项数量"
+        },
+        "specialAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "专项审核不符合项数量"
+        }
+      },
+      "title": "问题等级查询响应"
     }
   }
 }

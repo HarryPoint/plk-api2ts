@@ -143,6 +143,145 @@
         }
       },
       "title": "JSONResult«产出类折线图返回VO«直通报表返回VO»»"
+    },
+    "产出类折线图返回VO«直通报表返回VO»": {
+      "type": "object",
+      "properties": {
+        "groupList": {
+          "type": "array",
+          "description": "分组数据",
+          "items": {
+            "originalRef": "产出类折线图分组返回VO«直通报表返回VO»",
+            "$ref": "#/definitions/产出类折线图分组返回VO«直通报表返回VO»"
+          }
+        },
+        "classGroupList": {
+          "type": "array",
+          "description": "查询班组集",
+          "items": {
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
+          }
+        },
+        "processList": {
+          "type": "array",
+          "description": "查询工序集",
+          "items": {
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
+          }
+        },
+        "majorDataList": {
+          "type": "array",
+          "description": "查询物料集",
+          "items": {
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
+          }
+        },
+        "isConsistent": {
+          "type": "string",
+          "description": "是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "actualBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际查询时间 - 开始"
+        },
+        "actualEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际查询时间 - 结束"
+        },
+        "actualDataCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "实际数据条数"
+        }
+      },
+      "title": "产出类折线图返回VO«直通报表返回VO»"
+    },
+    "产出类折线图分组返回VO«直通报表返回VO»": {
+      "type": "object",
+      "properties": {
+        "groupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "数据分组id"
+        },
+        "groupName": {
+          "type": "string",
+          "description": "数据分组名称"
+        },
+        "groupCode": {
+          "type": "string",
+          "description": "数据分组编号"
+        },
+        "pointList": {
+          "type": "array",
+          "description": "详细点数据",
+          "items": {
+            "originalRef": "直通报表返回VO",
+            "$ref": "#/definitions/直通报表返回VO"
+          }
+        }
+      },
+      "title": "产出类折线图分组返回VO«直通报表返回VO»"
+    },
+    "直通报表返回VO": {
+      "type": "object",
+      "properties": {
+        "dataTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据时间（时间戳），根据当前选中的时间粒度去转换时间"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "所有工序报废"
+        },
+        "completeProduceQuantity": {
+          "type": "number",
+          "description": "最后工序合格产出"
+        },
+        "fpyRatio": {
+          "type": "number",
+          "description": "直通率"
+        },
+        "fpyRatioScale2": {
+          "type": "number",
+          "description": "直通率-大屏展示"
+        }
+      },
+      "title": "直通报表返回VO"
+    },
+    "Id，名称，编号VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "Id，名称，编号VO"
     }
   }
 }

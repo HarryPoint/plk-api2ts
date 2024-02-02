@@ -113,6 +113,52 @@
         }
       },
       "title": "JSONResult«List«生产任务分组批次订单响应DTO(针对移动端)»»"
+    },
+    "生产任务分组批次订单响应DTO(针对移动端)": {
+      "type": "object",
+      "properties": {
+        "taskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "任务id"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "批次",
+          "items": {
+            "originalRef": "生产任务分组批次明细响应DTO(针对移动端)",
+            "$ref": "#/definitions/生产任务分组批次明细响应DTO(针对移动端)"
+          }
+        }
+      },
+      "title": "生产任务分组批次订单响应DTO(针对移动端)"
+    },
+    "生产任务分组批次明细响应DTO(针对移动端)": {
+      "type": "object",
+      "properties": {
+        "lotId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "批次总数量"
+        },
+        "canMoveInQuantity": {
+          "type": "number",
+          "description": "批次可进料数量"
+        },
+        "canMoveOutQuantity": {
+          "type": "number",
+          "description": "批次可出料数量"
+        }
+      },
+      "title": "生产任务分组批次明细响应DTO(针对移动端)"
     }
   }
 }

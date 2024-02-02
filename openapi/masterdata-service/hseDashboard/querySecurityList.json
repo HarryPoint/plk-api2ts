@@ -107,6 +107,45 @@
         }
       },
       "title": "JSONResult«List«安全查询响应»»"
+    },
+    "安全查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "securityDate": {
+          "type": "string",
+          "description": "安全日期"
+        },
+        "accidentsQuantity": {
+          "type": "number",
+          "description": "轻伤及以上事故数"
+        },
+        "careerDiseaseQuantity": {
+          "type": "number",
+          "description": "新增职业病人数"
+        },
+        "dangerHandlerRate": {
+          "type": "string",
+          "description": "重大隐患处理率"
+        },
+        "majorHazardQuantity": {
+          "type": "number",
+          "description": "重大隐患处理数量"
+        },
+        "isException": {
+          "type": "string",
+          "description": "是否有异常",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "安全查询响应"
     }
   }
 }

@@ -173,6 +173,24 @@
       },
       "title": "宝晶报表(库存)相关搜索DTO"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
     "JSONResult«宝晶报表(原材料日报表)相关返回VO»": {
       "type": "object",
       "properties": {
@@ -200,6 +218,28 @@
         }
       },
       "title": "JSONResult«宝晶报表(原材料日报表)相关返回VO»"
+    },
+    "宝晶报表(原材料日报表)相关返回VO_1": {
+      "type": "object",
+      "properties": {
+        "beginQuantity": {
+          "type": "number",
+          "description": "期初数"
+        },
+        "inQuantity": {
+          "type": "number",
+          "description": "入库数"
+        },
+        "outQuantity": {
+          "type": "number",
+          "description": "出库数"
+        },
+        "endQuantity": {
+          "type": "number",
+          "description": "期末数"
+        }
+      },
+      "title": "宝晶报表(原材料日报表)相关返回VO_1"
     }
   }
 }

@@ -98,6 +98,126 @@
         }
       },
       "title": "JSONResult«List«流程工单VO»»_1"
+    },
+    "流程工单VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数据状态 0停用，1启用，-1已删除"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建员工id"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门id"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "修改账户id"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "修改部门id"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "workOrderCode": {
+          "type": "string",
+          "description": "工单号"
+        },
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "业务数据id"
+        },
+        "businessCode": {
+          "type": "string",
+          "description": "所属数据code"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程id"
+        },
+        "flowPathVersionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程版本id"
+        },
+        "flowPathVersionRank": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流程版本号"
+        },
+        "currentFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前所在节点id"
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  HANDLING-进行中",
+            "  COMPLETE-已完成",
+            "  NOT_PASS-未通过",
+            "  STAGING-暂存",
+            "  INVALID-作废/停用"
+          ]
+        },
+        "completeTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "完成时间"
+        },
+        "totalTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总耗时秒"
+        },
+        "totalTimeoutTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总超时秒"
+        },
+        "currentTotalTaskCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前总任务数量 - 即当前流转的任务总量"
+        },
+        "currentTotalTimeoutTaskCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前总超时任务数量"
+        }
+      },
+      "title": "流程工单VO"
     }
   }
 }

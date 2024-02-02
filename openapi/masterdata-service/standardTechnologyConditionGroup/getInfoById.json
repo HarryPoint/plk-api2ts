@@ -79,6 +79,79 @@
         }
       },
       "title": "JSONResult«标准工艺条件组响应DTO»"
+    },
+    "标准工艺条件组响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "条件组名称"
+        },
+        "conditionList": {
+          "type": "array",
+          "description": "标准工艺条件",
+          "items": {
+            "originalRef": "标准工艺条件响应DTO",
+            "$ref": "#/definitions/标准工艺条件响应DTO"
+          }
+        }
+      },
+      "title": "标准工艺条件组响应DTO"
+    },
+    "标准工艺条件响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "fromFlowPathCode": {
+          "type": "string",
+          "description": "来源应用编号"
+        },
+        "fromFieldCode": {
+          "type": "string",
+          "description": "来源字段编号"
+        },
+        "fromFieldSerialNo": {
+          "type": "string",
+          "description": "来源字段序列号"
+        },
+        "compareType": {
+          "type": "string",
+          "description": "判断方式",
+          "enum": [
+            "  EQ-等于",
+            "  NE-不等于",
+            "  CONTAIN-包含",
+            "  NOT_CONTAIN-不包含"
+          ]
+        },
+        "compareValue": {
+          "type": "string",
+          "description": "判断的值"
+        },
+        "joinType": {
+          "type": "string",
+          "description": "连接类型",
+          "enum": [
+            "  AND-且",
+            "  OR-或"
+          ]
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        }
+      },
+      "title": "标准工艺条件响应DTO"
     }
   }
 }

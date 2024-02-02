@@ -117,6 +117,51 @@
         }
       },
       "title": "JSONResult«项目质量问题统计响应对象»"
+    },
+    "项目质量问题统计响应对象": {
+      "type": "object",
+      "properties": {
+        "totalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总数量"
+        },
+        "unCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未完成数量"
+        },
+        "completeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成数量"
+        },
+        "overdueCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超期完成数量"
+        },
+        "overdueUnCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超期未完成数量"
+        },
+        "normalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "正常进行数量"
+        },
+        "onTimeCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "按期完成数量"
+        },
+        "completeRate": {
+          "type": "number",
+          "description": "完成率"
+        }
+      },
+      "title": "项目质量问题统计响应对象"
     }
   }
 }

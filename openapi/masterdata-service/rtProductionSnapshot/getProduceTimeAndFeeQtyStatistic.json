@@ -144,6 +144,20 @@
         }
       },
       "title": "JSONResult«工时工费统计返回VO»"
+    },
+    "工时工费统计返回VO": {
+      "type": "object",
+      "properties": {
+        "totalTime": {
+          "type": "number",
+          "description": "总参考工时"
+        },
+        "totalFee": {
+          "type": "number",
+          "description": "总参考工费"
+        }
+      },
+      "title": "工时工费统计返回VO"
     }
   }
 }

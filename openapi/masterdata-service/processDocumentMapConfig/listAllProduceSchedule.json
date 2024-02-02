@@ -82,6 +82,38 @@
         }
       },
       "title": "JSONResult«List«生产排期VO»»"
+    },
+    "生产排期VO": {
+      "type": "object",
+      "properties": {
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "生产开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "生产结束时间"
+        },
+        "produceMaterialIdList": {
+          "type": "array",
+          "description": "生产物料ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "produceAreaIdList": {
+          "type": "array",
+          "description": "生产区域ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "生产排期VO"
     }
   }
 }

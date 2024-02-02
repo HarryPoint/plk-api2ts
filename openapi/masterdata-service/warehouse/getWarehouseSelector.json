@@ -90,6 +90,38 @@
         }
       },
       "title": "JSONResult«List«物料主数据仓位返回VO»»"
+    },
+    "物料主数据仓位返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "code": {
+          "type": "string",
+          "description": "仓位编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        }
+      },
+      "title": "物料主数据仓位返回VO"
     }
   }
 }

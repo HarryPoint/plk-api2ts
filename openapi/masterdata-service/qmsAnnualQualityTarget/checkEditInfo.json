@@ -89,6 +89,61 @@
       },
       "title": "年度质量目标编辑校验DTO"
     },
+    "年度质量目标明细编辑DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "qmsAnnualQualityTargetId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属年度质量目标id"
+        },
+        "qmsTargetItemId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属目标项"
+        },
+        "targetType": {
+          "type": "string",
+          "description": "目标类型",
+          "enum": [
+            "  QUALITATIVE_OBJECTIVE-定性目标",
+            "  QUANTITATIVE_OBJECTIVE-定量目标"
+          ]
+        },
+        "qualitativeTargetValue": {
+          "type": "string",
+          "description": "定性目标值"
+        },
+        "quantifyTargetValue": {
+          "type": "string",
+          "description": "定量目标值"
+        },
+        "formula": {
+          "type": "string",
+          "description": "计算公式"
+        },
+        "monitorRate": {
+          "type": "string",
+          "description": "监视频率"
+        },
+        "detailStatus": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  AUDITING-审核中",
+            "  COMPLETE-已完成",
+            "  NOT_PASS-未通过",
+            "  INVALID-作废"
+          ]
+        }
+      },
+      "title": "年度质量目标明细编辑DTO"
+    },
     "JSONResult«年度质量目标编辑校验返回DTO»": {
       "type": "object",
       "properties": {
@@ -116,6 +171,28 @@
         }
       },
       "title": "JSONResult«年度质量目标编辑校验返回DTO»"
+    },
+    "年度质量目标编辑校验返回DTO": {
+      "type": "object",
+      "properties": {
+        "canSubmit": {
+          "type": "string",
+          "description": "能否提交",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "checkFailType": {
+          "type": "string",
+          "description": "失败类型",
+          "enum": [
+            "  YEAR_EXIST-年份已存在",
+            "  QUALITY_WORK_PLAN_EXIT-存在关联质量工作计划"
+          ]
+        }
+      },
+      "title": "年度质量目标编辑校验返回DTO"
     }
   }
 }

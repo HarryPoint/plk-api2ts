@@ -101,6 +101,46 @@
         }
       },
       "title": "JSONResult«List«物料主数据基础信息返回VO»»"
+    },
+    "物料主数据基础信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "name": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "unit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "issueCode": {
+          "type": "string",
+          "description": "版次号"
+        },
+        "spec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "unitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "计量单位id"
+        },
+        "storageUseQuantity": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "物料主数据基础信息返回VO"
     }
   }
 }

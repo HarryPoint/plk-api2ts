@@ -89,6 +89,43 @@
         }
       },
       "title": "JSONResult«List«设备数采选择VO»»"
+    },
+    "设备数采选择VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "id",
+        "name",
+        "unit"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "dataType": {
+          "type": "string",
+          "description": "数据类型(number数字 text文本)"
+        },
+        "unitType": {
+          "type": "string",
+          "description": "单位类型(quantity数量 time时间)"
+        },
+        "unit": {
+          "type": "string",
+          "description": "单位"
+        }
+      },
+      "title": "设备数采选择VO"
     }
   }
 }

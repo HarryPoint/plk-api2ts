@@ -86,6 +86,20 @@
         }
       },
       "title": "JSONResult«大屏不合格品统计按审理情况响应DTO»"
+    },
+    "大屏不合格品统计按审理情况响应DTO": {
+      "type": "object",
+      "properties": {
+        "handlingQuantity": {
+          "type": "number",
+          "description": "未关闭数量"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "已关闭数量"
+        }
+      },
+      "title": "大屏不合格品统计按审理情况响应DTO"
     }
   }
 }

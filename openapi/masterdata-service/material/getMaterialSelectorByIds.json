@@ -113,6 +113,57 @@
         }
       },
       "title": "JSONResult«List«物料主数据选择返回VO»»"
+    },
+    "物料主数据选择返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "name": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "type": {
+          "type": "string",
+          "description": "物料类型"
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "物料类型描述"
+        },
+        "unit": {
+          "type": "string",
+          "description": "单位"
+        },
+        "spec": {
+          "type": "string",
+          "description": "规格"
+        },
+        "issueCode": {
+          "type": "string",
+          "description": "版次号"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        },
+        "hasBom": {
+          "type": "string",
+          "description": "是否有bom",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "物料主数据选择返回VO"
     }
   }
 }

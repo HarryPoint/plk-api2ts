@@ -171,6 +171,22 @@
       },
       "title": "宝晶销售发货报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«宝晶销售发货报表表格统计返回VO»": {
       "type": "object",
       "properties": {
@@ -198,6 +214,16 @@
         }
       },
       "title": "JSONResult«宝晶销售发货报表表格统计返回VO»"
+    },
+    "宝晶销售发货报表表格统计返回VO": {
+      "type": "object",
+      "properties": {
+        "actualQuantitySum": {
+          "type": "number",
+          "description": "发货数量总计"
+        }
+      },
+      "title": "宝晶销售发货报表表格统计返回VO"
     }
   }
 }

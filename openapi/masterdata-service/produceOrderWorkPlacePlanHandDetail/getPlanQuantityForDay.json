@@ -98,6 +98,21 @@
         }
       },
       "title": "JSONResult«List«计划返回VO»»"
+    },
+    "计划返回VO": {
+      "type": "object",
+      "properties": {
+        "dataTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据时间（时间戳），根据当前选中的时间粒度去转换时间"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数"
+        }
+      },
+      "title": "计划返回VO"
     }
   }
 }

@@ -87,6 +87,35 @@
         }
       },
       "title": "JSONResult«区域VO»"
+    },
+    "区域VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "name": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父级id"
+        }
+      },
+      "title": "区域VO"
     }
   }
 }

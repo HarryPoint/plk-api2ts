@@ -86,6 +86,28 @@
         }
       },
       "title": "JSONResult«大屏不合格品统计内外场响应DTO»"
+    },
+    "大屏不合格品统计内外场响应DTO": {
+      "type": "object",
+      "properties": {
+        "internalQuantity": {
+          "type": "number",
+          "description": "内场数量"
+        },
+        "internalRatio": {
+          "type": "number",
+          "description": "内场占比"
+        },
+        "externalQuantity": {
+          "type": "number",
+          "description": "外场数量"
+        },
+        "externalRatio": {
+          "type": "number",
+          "description": "外场占比"
+        }
+      },
+      "title": "大屏不合格品统计内外场响应DTO"
     }
   }
 }

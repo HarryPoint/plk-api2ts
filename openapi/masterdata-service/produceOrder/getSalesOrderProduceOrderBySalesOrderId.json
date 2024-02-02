@@ -90,6 +90,78 @@
         }
       },
       "title": "JSONResult«List«销售订单 - 生产订单返回VO»»"
+    },
+    "销售订单 - 生产订单返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "对应物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "对应物料规格"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "对应物料单位"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "总生产数量"
+        },
+        "currentCount": {
+          "type": "number",
+          "description": "当前生产数量"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "orderStatus": {
+          "type": "string",
+          "description": "订单状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  PLAN-已排产",
+            "  ISSUE-已下发",
+            "  PRODUCE-生产中",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭",
+            "  PART_COMPLETE-部分完成",
+            "  COMPLETE-已完成"
+          ]
+        },
+        "orderStatusDesc": {
+          "type": "string",
+          "description": "订单状态描述"
+        }
+      },
+      "title": "销售订单 - 生产订单返回VO"
     }
   }
 }

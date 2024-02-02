@@ -82,6 +82,85 @@
         }
       },
       "title": "JSONResult«List«工艺文档VO»»"
+    },
+    "工艺文档VO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "文档编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "文档名称"
+        },
+        "displayModuleEnum": {
+          "type": "string",
+          "description": "展示模块",
+          "enum": [
+            "  BAD_PRODUCT-不良品示例",
+            "  PACKAGE_WORK-包装作业指导书",
+            "  PRODUCE_WORK-生产作业指导书"
+          ]
+        },
+        "isDisplayEnum": {
+          "type": "string",
+          "description": "是否在大屏上展示",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "displayModule": {
+          "type": "string",
+          "description": "展示模块 -- 字符串"
+        },
+        "isDisplay": {
+          "type": "string",
+          "description": "是否在大屏上展示 -- 字符串"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        },
+        "applyMaterialIdList": {
+          "type": "array",
+          "description": "适用物料ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "applyMaterialNameList": {
+          "type": "array",
+          "description": "适用物料名称列表",
+          "items": {
+            "type": "string"
+          }
+        },
+        "applyAreaIdList": {
+          "type": "array",
+          "description": "适用车间ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "applyProcessIdList": {
+          "type": "array",
+          "description": "适用工序ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "content": {
+          "type": "string",
+          "description": "文档内容"
+        }
+      },
+      "title": "工艺文档VO"
     }
   }
 }

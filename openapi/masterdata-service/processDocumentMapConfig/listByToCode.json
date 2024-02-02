@@ -89,6 +89,36 @@
         }
       },
       "title": "JSONResult«List«工艺文档映射配置VO»»"
+    },
+    "工艺文档映射配置VO": {
+      "type": "object",
+      "properties": {
+        "fromFlowPathCode": {
+          "type": "string",
+          "description": "来源应用编码"
+        },
+        "fromFieldCode": {
+          "type": "string",
+          "description": "来源字段编码"
+        },
+        "fromFieldSerialNo": {
+          "type": "string",
+          "description": "来源字段序列号"
+        },
+        "toCode": {
+          "type": "string",
+          "description": "映射到应用编码"
+        },
+        "toFieldCode": {
+          "type": "string",
+          "description": "映射到字段编码"
+        },
+        "toFieldSerialNo": {
+          "type": "string",
+          "description": "映射到字段序列号"
+        }
+      },
+      "title": "工艺文档映射配置VO"
     }
   }
 }

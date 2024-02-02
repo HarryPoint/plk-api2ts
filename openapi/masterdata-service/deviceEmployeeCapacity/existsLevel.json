@@ -79,6 +79,20 @@
         }
       },
       "title": "JSONResult«设备人员能力等级是否存在响应DTO»"
+    },
+    "设备人员能力等级是否存在响应DTO": {
+      "type": "object",
+      "properties": {
+        "isExist": {
+          "type": "string",
+          "description": "是否存在",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "设备人员能力等级是否存在响应DTO"
     }
   }
 }

@@ -108,6 +108,25 @@
       },
       "title": "标准工艺具体工艺路径节点编辑请求对象"
     },
+    "标准工艺具体工艺路径节点详情编辑请求对象": {
+      "type": "object",
+      "required": [
+        "processId"
+      ],
+      "properties": {
+        "routingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径步骤id, 新增时传递为null, 修改时传递id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属工序id"
+        }
+      },
+      "title": "标准工艺具体工艺路径节点详情编辑请求对象"
+    },
     "JSONResult«工艺路径节点编辑响应对象»": {
       "type": "object",
       "properties": {
@@ -135,6 +154,49 @@
         }
       },
       "title": "JSONResult«工艺路径节点编辑响应对象»"
+    },
+    "工艺路径节点编辑响应对象": {
+      "type": "object",
+      "properties": {
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径id"
+        },
+        "routingCode": {
+          "type": "string",
+          "description": "工艺路径编号"
+        },
+        "routingName": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "detailList": {
+          "type": "array",
+          "description": "工艺路径详情列表",
+          "items": {
+            "originalRef": "工艺路径节点详情编辑响应对象",
+            "$ref": "#/definitions/工艺路径节点详情编辑响应对象"
+          }
+        }
+      },
+      "title": "工艺路径节点编辑响应对象"
+    },
+    "工艺路径节点详情编辑响应对象": {
+      "type": "object",
+      "properties": {
+        "routingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺步骤id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        }
+      },
+      "title": "工艺路径节点详情编辑响应对象"
     }
   }
 }

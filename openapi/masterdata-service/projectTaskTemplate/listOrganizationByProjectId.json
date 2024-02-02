@@ -82,6 +82,73 @@
         }
       },
       "title": "JSONResult«List«项目任务模板组织响应DTO»»"
+    },
+    "项目任务模板组织响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务模板id"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否是通用模板",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "模板名称"
+        },
+        "appCode": {
+          "type": "string",
+          "description": "应用编号"
+        },
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用id"
+        },
+        "fields": {
+          "type": "array",
+          "description": "组织字段集",
+          "items": {
+            "originalRef": "项目任务模板组织字段响应DTO",
+            "$ref": "#/definitions/项目任务模板组织字段响应DTO"
+          }
+        }
+      },
+      "title": "项目任务模板组织响应DTO"
+    },
+    "项目任务模板组织字段响应DTO": {
+      "type": "object",
+      "properties": {
+        "appFieldSerialNo": {
+          "type": "string",
+          "description": "应用字段序列号"
+        },
+        "appFieldName": {
+          "type": "string",
+          "description": "应用字段名"
+        },
+        "isTableField": {
+          "type": "string",
+          "description": "是否是表格内字段",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "项目任务模板组织字段响应DTO"
     }
   }
 }

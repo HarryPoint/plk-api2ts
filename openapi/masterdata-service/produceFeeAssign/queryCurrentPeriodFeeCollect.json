@@ -73,6 +73,44 @@
         }
       },
       "title": "JSONResult«List«费用归集明细响应DTO»»"
+    },
+    "费用归集明细响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "费用归集明细id"
+        },
+        "produceFeeTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "费用类型id"
+        },
+        "produceFeeCode": {
+          "type": "string",
+          "description": "费用编码"
+        },
+        "produceFeeName": {
+          "type": "string",
+          "description": "费用名称"
+        },
+        "fee": {
+          "type": "number",
+          "description": "费用金额"
+        },
+        "periodDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "所属期间"
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "指定生产订单"
+        }
+      },
+      "title": "费用归集明细响应DTO"
     }
   }
 }

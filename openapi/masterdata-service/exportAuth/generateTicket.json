@@ -183,6 +183,16 @@
         }
       },
       "title": "JSONResult«导出ticket信息»"
+    },
+    "导出ticket信息": {
+      "type": "object",
+      "properties": {
+        "ticket": {
+          "type": "string",
+          "description": "导出凭证ticket"
+        }
+      },
+      "title": "导出ticket信息"
     }
   }
 }

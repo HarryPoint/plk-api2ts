@@ -88,6 +88,16 @@
         }
       },
       "title": "JSONResult«不合格报表合计返回DTO»"
+    },
+    "不合格报表合计返回DTO": {
+      "type": "object",
+      "properties": {
+        "quantityOfNonConformance": {
+          "type": "number",
+          "description": "不合格数量"
+        }
+      },
+      "title": "不合格报表合计返回DTO"
     }
   }
 }

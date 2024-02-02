@@ -122,6 +122,36 @@
         }
       },
       "title": "JSONResult«项目费用统计响应对象»"
+    },
+    "项目费用统计响应对象": {
+      "type": "object",
+      "properties": {
+        "projectAnnualBudget": {
+          "type": "number",
+          "description": "项目预算（元）"
+        },
+        "budgetExecute": {
+          "type": "number",
+          "description": "预算执行（元）"
+        },
+        "budgetExecuteRate": {
+          "type": "number",
+          "description": "预算执行率"
+        },
+        "monthFundPlan": {
+          "type": "number",
+          "description": "资金计划（元）"
+        },
+        "monthFundPlanExecute": {
+          "type": "number",
+          "description": "资金计划执行（元）"
+        },
+        "fundPlanExecuteRate": {
+          "type": "number",
+          "description": "资金计划执行率"
+        }
+      },
+      "title": "项目费用统计响应对象"
     }
   }
 }

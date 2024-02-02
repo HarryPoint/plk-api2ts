@@ -93,6 +93,47 @@
         }
       },
       "title": "JSONResult«List«ProducePrintTagVO»»"
+    },
+    "ProducePrintTagVO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单ID"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编码"
+        },
+        "printFieldDataList": {
+          "type": "array",
+          "description": "打印信息列表",
+          "items": {
+            "originalRef": "ProducePrintTagFieldDataVO",
+            "$ref": "#/definitions/ProducePrintTagFieldDataVO"
+          }
+        }
+      },
+      "title": "ProducePrintTagVO"
+    },
+    "ProducePrintTagFieldDataVO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "自定义字段编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "自定义字段名称"
+        },
+        "value": {
+          "type": "string",
+          "description": "值"
+        }
+      },
+      "title": "ProducePrintTagFieldDataVO"
     }
   }
 }

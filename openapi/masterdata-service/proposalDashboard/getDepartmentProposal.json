@@ -70,6 +70,84 @@
         }
       },
       "title": "JSONResult«DepartmentProposalDashboardResponseDTO»"
+    },
+    "DepartmentProposalDashboardResponseDTO": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "format": "int32",
+          "description": "年份"
+        },
+        "departmentYearTargetSettingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门年目标设置ID"
+        },
+        "departmentProposalIndicatorsList": {
+          "type": "array",
+          "description": "部门提案指标",
+          "items": {
+            "originalRef": "DepartmentProposalIndicatorsResponseDTO",
+            "$ref": "#/definitions/DepartmentProposalIndicatorsResponseDTO"
+          }
+        }
+      },
+      "title": "DepartmentProposalDashboardResponseDTO"
+    },
+    "DepartmentProposalIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门ID"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "proposalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "提案数量"
+        },
+        "completeProjectQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "完成数量"
+        },
+        "userQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "员工参与数量"
+        },
+        "proposalPlanQuantity": {
+          "type": "number",
+          "description": "（部门年改善提案数量目标/12*当前月份）"
+        },
+        "proposalImplementationQuantity": {
+          "type": "number",
+          "description": "（部门改善实施年目标/12*当前月份）"
+        },
+        "participantsQuantity": {
+          "type": "number",
+          "description": "（部门改善提案参与人数目标/12*当前月份）"
+        },
+        "proposalCompleteRate": {
+          "type": "number",
+          "description": "提案完成率 (小数，未乘以 * 100%)"
+        },
+        "proposalImplementationRate": {
+          "type": "number",
+          "description": "实际实施率(小数，未乘以 * 100%)"
+        },
+        "participantsQuantityRate": {
+          "type": "number",
+          "description": "员工参与率(小数，未乘以 * 100%)"
+        }
+      },
+      "title": "DepartmentProposalIndicatorsResponseDTO"
     }
   }
 }

@@ -130,6 +130,55 @@
         }
       },
       "title": "JSONResult«List«检验任务检验记录查询响应DTO»»"
+    },
+    "检验任务检验记录查询响应DTO": {
+      "type": "object",
+      "properties": {
+        "partNumber": {
+          "type": "string",
+          "description": "零件号"
+        },
+        "inspectionResultsOfIndividualParts": {
+          "type": "string",
+          "description": "零件检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        },
+        "descriptionOfNonconformities": {
+          "type": "string",
+          "description": "不合格情况描述"
+        },
+        "qmsInspectionItemsId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验项id"
+        },
+        "inspectionItemsName": {
+          "type": "string",
+          "description": "检验项名称"
+        },
+        "inspectionStandardValue": {
+          "type": "string",
+          "description": "标准值"
+        },
+        "inspectionActualValue": {
+          "type": "string",
+          "description": "实测值"
+        },
+        "inspectionResult": {
+          "type": "string",
+          "description": "检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        }
+      },
+      "title": "检验任务检验记录查询响应DTO"
     }
   }
 }

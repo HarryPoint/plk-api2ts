@@ -165,6 +165,22 @@
       },
       "title": "寄售入库分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«寄售入库分析报表合计返回VO»": {
       "type": "object",
       "properties": {
@@ -192,6 +208,28 @@
         }
       },
       "title": "JSONResult«寄售入库分析报表合计返回VO»"
+    },
+    "寄售入库分析报表合计返回VO": {
+      "type": "object",
+      "properties": {
+        "inboundQtySum": {
+          "type": "number",
+          "description": "入库数量合计"
+        },
+        "numOfLossSum": {
+          "type": "number",
+          "description": "损耗数量合计"
+        },
+        "inboundPriceSum": {
+          "type": "number",
+          "description": "入库单价合计"
+        },
+        "inboundAmountSum": {
+          "type": "number",
+          "description": "入库金额合计"
+        }
+      },
+      "title": "寄售入库分析报表合计返回VO"
     }
   }
 }

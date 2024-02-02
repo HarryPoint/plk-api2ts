@@ -88,6 +88,52 @@
         }
       },
       "title": "JSONResult«应付账款汇总表返回对象»"
+    },
+    "应付账款汇总表返回对象": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "供应商编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "供应商名称"
+        },
+        "beginPrepaidAmount": {
+          "type": "number",
+          "description": "期初预付款"
+        },
+        "beginAccountsPayableAmount": {
+          "type": "number",
+          "description": "期初应付款"
+        },
+        "prepaidAmount": {
+          "type": "number",
+          "description": "本期预付款"
+        },
+        "accountsPayableAmount": {
+          "type": "number",
+          "description": "本期应付款"
+        },
+        "paymentPrepaidAmount": {
+          "type": "number",
+          "description": "本期已用预付款"
+        },
+        "paymentAmount": {
+          "type": "number",
+          "description": "本期已付款"
+        },
+        "endPrepaidAmount": {
+          "type": "number",
+          "description": "期末预付款"
+        },
+        "endAccountsPayableAmount": {
+          "type": "number",
+          "description": "期末应付款"
+        }
+      },
+      "title": "应付账款汇总表返回对象"
     }
   }
 }

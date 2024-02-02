@@ -109,6 +109,20 @@
         }
       },
       "title": "JSONResult«是否信息»"
+    },
+    "是否信息": {
+      "type": "object",
+      "properties": {
+        "whether": {
+          "type": "string",
+          "description": "是否",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "是否信息"
     }
   }
 }

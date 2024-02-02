@@ -93,6 +93,44 @@
         }
       },
       "title": "JSONResult«List«UserProcessVo»»"
+    },
+    "UserProcessVo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "executorType": {
+          "type": "string",
+          "enum": [
+            "USER",
+            "ROLE",
+            "DEPARTMENT",
+            "CLASS_GROUP",
+            "SYS_CONTROL"
+          ]
+        },
+        "refId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "PRODUCE",
+            "QUALITY"
+          ]
+        },
+        "refName": {
+          "type": "string"
+        }
+      },
+      "title": "UserProcessVo"
     }
   }
 }

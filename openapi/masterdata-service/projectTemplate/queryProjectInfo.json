@@ -88,6 +88,51 @@
         }
       },
       "title": "JSONResult«项目模板项目信息响应DTO»"
+    },
+    "项目模板项目信息响应DTO": {
+      "type": "object",
+      "properties": {
+        "projectTemplateId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目模板id"
+        },
+        "projectData": {
+          "type": "object",
+          "description": "项目数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "projectExtractDataFields": {
+          "type": "array",
+          "description": "项目取值字段",
+          "items": {
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
+          }
+        }
+      },
+      "title": "项目模板项目信息响应DTO"
+    },
+    "Id Code Name 通用传输对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "code"
+        },
+        "name": {
+          "type": "string",
+          "description": "name"
+        }
+      },
+      "title": "Id Code Name 通用传输对象"
     }
   }
 }

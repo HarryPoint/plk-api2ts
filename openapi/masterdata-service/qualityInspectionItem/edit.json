@@ -140,6 +140,16 @@
       },
       "title": "编辑质检分类 DTO_1"
     },
+    "质检项选择项编辑DTO": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "选择项名称"
+        }
+      },
+      "title": "质检项选择项编辑DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

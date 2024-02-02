@@ -70,6 +70,43 @@
         }
       },
       "title": "JSONResult«EmployeeScoreIndicatorsResponseDTO»"
+    },
+    "EmployeeScoreIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "indicatorsList": {
+          "type": "array",
+          "description": "指标列表",
+          "items": {
+            "originalRef": "EmployeeScoreIndicatorsItemResponseDTO",
+            "$ref": "#/definitions/EmployeeScoreIndicatorsItemResponseDTO"
+          }
+        }
+      },
+      "title": "EmployeeScoreIndicatorsResponseDTO"
+    },
+    "EmployeeScoreIndicatorsItemResponseDTO": {
+      "type": "object",
+      "properties": {
+        "employeeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "员工ID"
+        },
+        "employeeName": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "avatar": {
+          "type": "string",
+          "description": "用户头像的文件Key"
+        },
+        "score": {
+          "type": "number",
+          "description": "用户成绩"
+        }
+      },
+      "title": "EmployeeScoreIndicatorsItemResponseDTO"
     }
   }
 }

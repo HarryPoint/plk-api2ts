@@ -94,6 +94,49 @@
         }
       },
       "title": "JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»"
+    },
+    "WarehouseMaterialRpQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属区域id"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属仓库id"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属仓位id"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "WarehouseMaterialRpQueryResponseDTO"
     }
   }
 }

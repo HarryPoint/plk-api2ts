@@ -89,6 +89,113 @@
         }
       },
       "title": "JSONResult«List«Wip批次信息VO»»"
+    },
+    "Wip批次信息VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "批次原始数量"
+        },
+        "wmRpCreateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "wip库存创建时间 - 进料批次的的首次来料时间"
+        },
+        "canEntrustQuantity": {
+          "type": "number",
+          "description": "可委外数量"
+        },
+        "canOptQuantity": {
+          "type": "number",
+          "description": "可操作数量"
+        },
+        "wips": {
+          "type": "array",
+          "description": "wip状态信息集",
+          "items": {
+            "originalRef": "Wip数量状态信息VO",
+            "$ref": "#/definitions/Wip数量状态信息VO"
+          }
+        }
+      },
+      "title": "Wip批次信息VO"
+    },
+    "Wip数量状态信息VO": {
+      "type": "object",
+      "properties": {
+        "wipRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "wip状态记录id"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        },
+        "quantityStatus": {
+          "type": "string",
+          "description": "wip数量状态",
+          "enum": [
+            "  NORMAL-正常",
+            "  WAIT_INSPECTION-等待质检",
+            "  INSPECTION_PASS-质检合格",
+            "  INSPECTION_CONCESSION-质检让步接收",
+            "  INSPECTION_NOT_PASS-质检不合格",
+            "  APPLY_BACK-等待返工审批",
+            "  APPLY_SCRAP-等待报废审批",
+            "  HOLD-等待扣留审批",
+            "  ENTRUST_BACK-委外返回"
+          ]
+        },
+        "quantityStatusDesc": {
+          "type": "string",
+          "description": "wip数量状态描述"
+        },
+        "canUse": {
+          "type": "string",
+          "description": "是否可用",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "wmRpCreateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "wip库存创建时间 - 进料批次的的首次来料时间"
+        },
+        "canEntrustQuantity": {
+          "type": "number",
+          "description": "可委外数量"
+        },
+        "canOptQuantity": {
+          "type": "number",
+          "description": "可操作数量"
+        },
+        "isLock": {
+          "type": "string",
+          "description": "是否锁定",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "Wip数量状态信息VO"
     }
   }
 }

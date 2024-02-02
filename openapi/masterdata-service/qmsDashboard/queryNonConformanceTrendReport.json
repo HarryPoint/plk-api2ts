@@ -70,6 +70,69 @@
         }
       },
       "title": "JSONResult«不符合项目趋势报告»"
+    },
+    "不符合项目趋势报告": {
+      "type": "object",
+      "properties": {
+        "internalAudit": {
+          "description": "内审",
+          "originalRef": "不符合项查询响应",
+          "$ref": "#/definitions/不符合项查询响应"
+        },
+        "externalAudit": {
+          "description": "外审",
+          "originalRef": "不符合项查询响应",
+          "$ref": "#/definitions/不符合项查询响应"
+        },
+        "specialAudit": {
+          "description": "专审",
+          "originalRef": "不符合项查询响应",
+          "$ref": "#/definitions/不符合项查询响应"
+        }
+      },
+      "title": "不符合项目趋势报告"
+    },
+    "不符合项查询响应": {
+      "type": "object",
+      "properties": {
+        "clauseNoList": {
+          "type": "array",
+          "items": {
+            "originalRef": "条款号查询响应",
+            "$ref": "#/definitions/条款号查询响应"
+          }
+        },
+        "lastYear": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "currentYear": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "title": "不符合项查询响应"
+    },
+    "条款号查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "clauseNo": {
+          "type": "string",
+          "description": "条款号"
+        }
+      },
+      "title": "条款号查询响应"
     }
   }
 }

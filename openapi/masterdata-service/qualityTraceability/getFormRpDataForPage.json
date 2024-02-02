@@ -135,6 +135,22 @@
       },
       "title": "流程关联表单搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«流程关联表单查询返回VO»": {
       "type": "object",
       "properties": {
@@ -162,6 +178,134 @@
         }
       },
       "title": "JSONResult«流程关联表单查询返回VO»"
+    },
+    "流程关联表单查询返回VO": {
+      "type": "object",
+      "properties": {
+        "style": {
+          "type": "string",
+          "description": "选择框样式",
+          "enum": [
+            "  ADVANCED-高级",
+            "  CASCADE-级联"
+          ]
+        },
+        "formRpSelectorShowFieldCode": {
+          "type": "string",
+          "description": "关联表单选项显示字段code"
+        },
+        "formRpSelectorShowFieldSerialNo": {
+          "type": "string",
+          "description": "关联表单选项显示字段Serial No"
+        },
+        "fieldList": {
+          "type": "array",
+          "description": "字段列表",
+          "items": {
+            "originalRef": "流程关联表单表头查询返回VO",
+            "$ref": "#/definitions/流程关联表单表头查询返回VO"
+          }
+        },
+        "dataList": {
+          "type": "array",
+          "description": "数据列表",
+          "items": {
+            "originalRef": "Map«string,string»",
+            "$ref": "#/definitions/Map«string,string»"
+          }
+        }
+      },
+      "title": "流程关联表单查询返回VO"
+    },
+    "流程关联表单表头查询返回VO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "code"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "selectorList": {
+          "type": "array",
+          "description": "选项集",
+          "items": {
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
+          }
+        },
+        "formFieldType": {
+          "type": "string",
+          "description": "表单类型",
+          "enum": [
+            "  INPUT_TEXT-单行文字",
+            "  TEXTAREA-多行文字",
+            "  NUMBER-数字",
+            "  DATE-日期",
+            "  SELECTOR-单选",
+            "  CHECKBOX-多选",
+            "  IMAGE_UPLOAD-图片上传",
+            "  FILE_UPLOAD-附件上传",
+            "  TABLE-表格",
+            "  FORM_RP-关联表单",
+            "  FORM_RP_MULTI-关联表单多选",
+            "  CODE-流水号",
+            "  ADDRESS-地址",
+            "  POSITION-定位",
+            "  EMAIL-电子邮箱",
+            "  MOBILE-手机号码",
+            "  ID_CARD-身份证号码",
+            "  RICH_TEXT-富文本",
+            "  ASSOCIATION_QUERY-关联查询",
+            "  DESC_TEXT-说明文字",
+            "  SPLIT_LINE-分隔符",
+            "  LOT_NO-批次号",
+            "  SERIAL_NO-序列号",
+            "  FORMULA-自定义公式"
+          ]
+        },
+        "dateType": {
+          "type": "string",
+          "description": "日期类型",
+          "enum": [
+            "  DAY-年-月-日",
+            "  MIN-年-月-日 时:分",
+            "  SECOND-年-月-日 时:分:秒",
+            "  HOUR_MIN-时:分",
+            "  MONTH-年-月",
+            "  YEAR-年"
+          ]
+        }
+      },
+      "title": "流程关联表单表头查询返回VO"
+    },
+    "FormFieldOption": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        }
+      },
+      "title": "FormFieldOption"
+    },
+    "Map«string,string»": {
+      "type": "object",
+      "title": "Map«string,string»",
+      "additionalProperties": {
+        "type": "string"
+      }
     }
   }
 }

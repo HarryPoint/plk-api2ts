@@ -110,6 +110,25 @@
         }
       },
       "title": "JSONResult«List«bom占用的标准工艺响应»»"
+    },
+    "bom占用的标准工艺响应": {
+      "type": "object",
+      "properties": {
+        "standardTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺id"
+        },
+        "standardTechnologyName": {
+          "type": "string",
+          "description": "标准工艺名称"
+        },
+        "standardTechnologyCategoryName": {
+          "type": "string",
+          "description": "所属分类名称"
+        }
+      },
+      "title": "bom占用的标准工艺响应"
     }
   }
 }

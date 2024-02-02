@@ -73,6 +73,10 @@
         }
       },
       "title": "JSONResult«List«TskStatisticReportTableColumnBO»»"
+    },
+    "TskStatisticReportTableColumnBO": {
+      "type": "object",
+      "title": "TskStatisticReportTableColumnBO"
     }
   }
 }

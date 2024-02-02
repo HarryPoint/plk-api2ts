@@ -82,6 +82,74 @@
         }
       },
       "title": "JSONResult«List«项目模板响应DTO»»"
+    },
+    "项目模板响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目模板id"
+        },
+        "name": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "projectCategory": {
+          "type": "string",
+          "description": "项目大类"
+        },
+        "intro": {
+          "type": "string",
+          "description": "项目模板简介"
+        },
+        "projectName": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "projectTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目类型id"
+        },
+        "projectManagerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目经理id"
+        },
+        "mainDutyDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "主责部门"
+        },
+        "projectBeginDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目开始日期"
+        },
+        "projectEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目结束日期"
+        },
+        "projectGoal": {
+          "type": "string",
+          "description": "项目目的"
+        },
+        "projectLocationRegionCode": {
+          "type": "string",
+          "description": "项目地址区域编码"
+        },
+        "projectLocationDetailAddress": {
+          "type": "string",
+          "description": "项目地址明细地址"
+        },
+        "projectIntro": {
+          "type": "string",
+          "description": "项目简介"
+        }
+      },
+      "title": "项目模板响应DTO"
     }
   }
 }

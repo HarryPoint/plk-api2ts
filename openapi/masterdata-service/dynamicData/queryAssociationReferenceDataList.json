@@ -111,6 +111,56 @@
         }
       },
       "title": "JSONResult«List«FormReferencingQueryResponseDTO»»"
+    },
+    "FormReferencingQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "associationRefAppName": {
+          "type": "string",
+          "description": "表单应用的APP名称"
+        },
+        "associationRefAppCode": {
+          "type": "string",
+          "description": "表单应用的APP编码"
+        },
+        "associationRefAppId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "表单应用的APP的ID"
+        },
+        "associationRefFormRecordCode": {
+          "type": "string",
+          "description": "关联引用的表单记录编码"
+        },
+        "associationRefFormRecordId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联引用的表单记录ID"
+        },
+        "associationRefFormBillData": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关联引用的表单的单据日期"
+        },
+        "currentFormRecordId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前表单ID"
+        },
+        "currentFormRecordCode": {
+          "type": "string",
+          "description": "当前表单编码"
+        },
+        "billType": {
+          "type": "string",
+          "description": "单据类型",
+          "enum": [
+            "  DYNAMIC_FORM-动态表单",
+            "  STORAGE_TAKE_CHECK_TASK-盘点单"
+          ]
+        }
+      },
+      "title": "FormReferencingQueryResponseDTO"
     }
   }
 }

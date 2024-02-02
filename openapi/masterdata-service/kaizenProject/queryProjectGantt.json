@@ -194,6 +194,137 @@
         }
       },
       "title": "JSONResult«List«项目甘特图响应对象»»"
+    },
+    "项目甘特图响应对象": {
+      "type": "object",
+      "properties": {
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "projectName": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "projectStatus": {
+          "type": "string",
+          "description": "项目状态",
+          "enum": [
+            "  DRAFT-草稿",
+            "  IN_PROGRESS-进行中",
+            "  COMPLETED-已完成",
+            "  CANCELED-已取消"
+          ]
+        },
+        "projectStatusDesc": {
+          "type": "string",
+          "description": "项目状态描述"
+        },
+        "projectLeaderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目负责人id"
+        },
+        "projectLeaderName": {
+          "type": "string",
+          "description": "项目负责人名称"
+        },
+        "projectType": {
+          "type": "string",
+          "description": "项目类型"
+        },
+        "projectTypeDesc": {
+          "type": "string",
+          "description": "项目类型描述"
+        },
+        "projectStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "开始日期"
+        },
+        "projectEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "截止日期"
+        },
+        "projectTaskGanttList": {
+          "type": "array",
+          "description": "项目任务列表",
+          "items": {
+            "originalRef": "项目任务甘特图响应对象",
+            "$ref": "#/definitions/项目任务甘特图响应对象"
+          }
+        }
+      },
+      "title": "项目甘特图响应对象"
+    },
+    "项目任务甘特图响应对象": {
+      "type": "object",
+      "properties": {
+        "projectTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务id"
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上级任务id"
+        },
+        "projectTaskName": {
+          "type": "string",
+          "description": "项目任务名称"
+        },
+        "priority": {
+          "type": "string",
+          "description": "项目任务优先级",
+          "enum": [
+            "  LOW-较低",
+            "  NORMAL-普通",
+            "  EMERGENCY-紧急",
+            "  EXTREME_EMERGENCY-非常紧急"
+          ]
+        },
+        "priorityDesc": {
+          "type": "string",
+          "description": "项目任务优先级描述"
+        },
+        "projectTaskStatus": {
+          "type": "string",
+          "description": "项目任务状态",
+          "enum": [
+            "  WAIT-未开始",
+            "  HANDLING-进行中",
+            "  COMPLETE-已完成",
+            "  CANCELED-已取消"
+          ]
+        },
+        "projectTaskStatusDesc": {
+          "type": "string",
+          "description": "项目任务状态描述"
+        },
+        "projectTaskLeaderUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务执行人id"
+        },
+        "projectTaskLeaderUserName": {
+          "type": "string",
+          "description": "项目任务执行人名称"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目任务开始日期"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目任务截止日期"
+        }
+      },
+      "title": "项目任务甘特图响应对象"
     }
   }
 }

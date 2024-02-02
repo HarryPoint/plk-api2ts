@@ -147,6 +147,107 @@
         }
       },
       "title": "JSONResult«List«用户生产统计返回VO»»"
+    },
+    "用户生产统计返回VO": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属员工id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编码"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "总合格产出个数"
+        },
+        "totalProduceMoveInQuantity": {
+          "type": "number",
+          "description": "总生产进料个数"
+        },
+        "totalBackQuantity": {
+          "type": "number",
+          "description": "总返工个数"
+        },
+        "totalScrapQuantity": {
+          "type": "number",
+          "description": "总报废个数"
+        },
+        "totalHoldPauseQuantity": {
+          "type": "number",
+          "description": "总暂扣品个数"
+        },
+        "produceFee": {
+          "type": "number",
+          "description": "合格产出参考工费"
+        },
+        "produceTaskTime": {
+          "type": "number",
+          "description": "合格产出参考工时"
+        },
+        "backFee": {
+          "type": "number",
+          "description": "返工产出参考工费"
+        },
+        "backTaskTime": {
+          "type": "number",
+          "description": "返工产出参考工时"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "记录时间"
+        },
+        "type": {
+          "type": "string",
+          "description": "快照类型",
+          "enum": [
+            "  PRODUCE-合格产出",
+            "  SCRAP-报废",
+            "  BACK-返工产出",
+            "  ENTRUST-委外",
+            "  PRODUCE_MOVE_IN-生产进料",
+            "  BACK_MOVE_IN-返工进料",
+            "  BACK_APPROVE-返工审批",
+            "  HOLD_BACK-扣留返工",
+            "  HOLD_PAUSE_BACK-暂扣返工"
+          ]
+        }
+      },
+      "title": "用户生产统计返回VO"
     }
   }
 }

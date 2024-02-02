@@ -118,6 +118,22 @@
       },
       "title": "宝晶应收账款分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«宝晶应收账款分析报表返回VO»": {
       "type": "object",
       "properties": {
@@ -145,6 +161,112 @@
         }
       },
       "title": "JSONResult«宝晶应收账款分析报表返回VO»"
+    },
+    "宝晶应收账款分析报表返回VO": {
+      "type": "object",
+      "properties": {
+        "tables": {
+          "type": "array",
+          "description": "数据表",
+          "items": {
+            "originalRef": "宝晶应收账款分析报表表格返回VO",
+            "$ref": "#/definitions/宝晶应收账款分析报表表格返回VO"
+          }
+        },
+        "businessUser": {
+          "type": "array",
+          "description": "业务员维度",
+          "items": {
+            "originalRef": "宝晶应收账款分析报表图表返回VO",
+            "$ref": "#/definitions/宝晶应收账款分析报表图表返回VO"
+          }
+        },
+        "trendChart": {
+          "type": "array",
+          "description": "趋势图维度",
+          "items": {
+            "originalRef": "宝晶应收账款分析报表图表含时间返回VO",
+            "$ref": "#/definitions/宝晶应收账款分析报表图表含时间返回VO"
+          }
+        }
+      },
+      "title": "宝晶应收账款分析报表返回VO"
+    },
+    "宝晶应收账款分析报表表格返回VO": {
+      "type": "object",
+      "properties": {
+        "businessUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "业务员id"
+        },
+        "businessUserName": {
+          "type": "string",
+          "description": "业务员名称"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "客户id"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "客户名称"
+        },
+        "beginAmount": {
+          "type": "number",
+          "description": "期初金额"
+        },
+        "moveInAmount": {
+          "type": "number",
+          "description": "入库总额"
+        },
+        "receivedAmount": {
+          "type": "number",
+          "description": "已收金额"
+        },
+        "otherLossAmount": {
+          "type": "number",
+          "description": "其他损益"
+        },
+        "receivableBalance": {
+          "type": "number",
+          "description": "应收余额"
+        },
+        "dateTime": {
+          "type": "string",
+          "description": "日期"
+        }
+      },
+      "title": "宝晶应收账款分析报表表格返回VO"
+    },
+    "宝晶应收账款分析报表图表返回VO": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "x轴名称"
+        },
+        "amount": {
+          "type": "number",
+          "description": "应收余额"
+        }
+      },
+      "title": "宝晶应收账款分析报表图表返回VO"
+    },
+    "宝晶应收账款分析报表图表含时间返回VO": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "string",
+          "description": "时间"
+        },
+        "receivableBalance": {
+          "type": "number",
+          "description": "应收余额"
+        }
+      },
+      "title": "宝晶应收账款分析报表图表含时间返回VO"
     }
   }
 }

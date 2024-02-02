@@ -89,6 +89,46 @@
         }
       },
       "title": "JSONResult«List«生产工艺路径步骤工序响应 DTO»»"
+    },
+    "生产工艺路径步骤工序响应 DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径步骤id"
+        },
+        "routingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "对应步骤"
+        },
+        "process": {
+          "description": "工序",
+          "originalRef": "工序响应 DTO",
+          "$ref": "#/definitions/工序响应 DTO"
+        }
+      },
+      "title": "生产工艺路径步骤工序响应 DTO"
+    },
+    "工序响应 DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "工序响应 DTO"
     }
   }
 }

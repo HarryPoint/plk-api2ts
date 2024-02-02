@@ -147,6 +147,75 @@
         }
       },
       "title": "JSONResult«List«用户质检统计返回VO»»"
+    },
+    "用户质检统计返回VO": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属员工id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "totalQuantity": {
+          "type": "number",
+          "description": "总质检个数"
+        },
+        "passQuantity": {
+          "type": "number",
+          "description": "合格数"
+        },
+        "passQuantityRatio": {
+          "type": "number",
+          "description": "合格数占比"
+        },
+        "concessionQuantity": {
+          "type": "number",
+          "description": "让步接收数"
+        },
+        "concessionQuantityRatio": {
+          "type": "number",
+          "description": "让步接收数占比"
+        },
+        "notPassQuantity": {
+          "type": "number",
+          "description": "不合格数"
+        },
+        "notPassQuantityRatio": {
+          "type": "number",
+          "description": "不合格数占比"
+        }
+      },
+      "title": "用户质检统计返回VO"
     }
   }
 }

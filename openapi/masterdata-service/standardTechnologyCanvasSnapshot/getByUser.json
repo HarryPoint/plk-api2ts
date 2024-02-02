@@ -101,6 +101,24 @@
         }
       },
       "title": "JSONResult«工艺画布快照获取响应DTO»"
+    },
+    "工艺画布快照获取响应DTO": {
+      "type": "object",
+      "properties": {
+        "technologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺id"
+        },
+        "canvasSnapshot": {
+          "type": "object",
+          "description": "快照保存json数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "工艺画布快照获取响应DTO"
     }
   }
 }

@@ -143,6 +143,78 @@
         }
       },
       "title": "JSONResult«产出数据报表搜索VO»"
+    },
+    "产出数据报表搜索VO": {
+      "type": "object",
+      "properties": {
+        "majorDataIds": {
+          "type": "array",
+          "description": "物料id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "processIds": {
+          "type": "array",
+          "description": "工序id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "userIds": {
+          "type": "array",
+          "description": "员工id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "beginTime": {
+          "type": "string",
+          "description": "日期筛选 - 开始"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "日期筛选 - 结束"
+        }
+      },
+      "title": "产出数据报表搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
     }
   }
 }

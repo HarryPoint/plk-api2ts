@@ -110,6 +110,46 @@
         }
       },
       "title": "JSONResult«物料齐套查询响应对象»"
+    },
+    "物料齐套查询响应对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "bomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "bomId"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存数量"
+        },
+        "needCount": {
+          "type": "number",
+          "description": "需求数量"
+        },
+        "diffCount": {
+          "type": "number",
+          "description": "差异数量"
+        },
+        "children": {
+          "type": "array",
+          "description": "明细",
+          "items": {
+            "originalRef": "物料齐套查询响应对象",
+            "$ref": "#/definitions/物料齐套查询响应对象"
+          }
+        }
+      },
+      "title": "物料齐套查询响应对象"
     }
   }
 }

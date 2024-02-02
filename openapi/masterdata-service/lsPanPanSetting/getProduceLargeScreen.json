@@ -76,6 +76,292 @@
         }
       },
       "title": "JSONResult«盼盼生产大屏响应DTO»"
+    },
+    "盼盼生产大屏响应DTO": {
+      "type": "object",
+      "properties": {
+        "todayProduce": {
+          "description": "当日生产概览",
+          "originalRef": "盼盼生产大屏当日生产响应DTO_1",
+          "$ref": "#/definitions/盼盼生产大屏当日生产响应DTO_1"
+        },
+        "thisMonthProduce": {
+          "description": "当月生产数据",
+          "originalRef": "盼盼生产大屏当日生产响应DTO",
+          "$ref": "#/definitions/盼盼生产大屏当日生产响应DTO"
+        },
+        "overdueOrders": {
+          "type": "array",
+          "description": "延期订单跟踪",
+          "items": {
+            "originalRef": "盼盼生产大屏延期订单响应DTO",
+            "$ref": "#/definitions/盼盼生产大屏延期订单响应DTO"
+          }
+        },
+        "emergencyOrders": {
+          "type": "array",
+          "description": "加急订单跟踪",
+          "items": {
+            "originalRef": "盼盼生产大屏加急订单响应DTO",
+            "$ref": "#/definitions/盼盼生产大屏加急订单响应DTO"
+          }
+        },
+        "capacities": {
+          "type": "array",
+          "description": "7天各工序产能分析",
+          "items": {
+            "originalRef": "盼盼生产大屏7天工序产能响应DTO",
+            "$ref": "#/definitions/盼盼生产大屏7天工序产能响应DTO"
+          }
+        }
+      },
+      "title": "盼盼生产大屏响应DTO"
+    },
+    "盼盼生产大屏当日生产响应DTO_1": {
+      "type": "object",
+      "properties": {
+        "planPlanQuantity": {
+          "type": "number",
+          "description": "计划排产量"
+        },
+        "inProduceQuantity": {
+          "type": "number",
+          "description": "在制量"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "实际完工量"
+        },
+        "produceProgress": {
+          "type": "number",
+          "description": "生产进度"
+        },
+        "todayProcesses": {
+          "type": "array",
+          "description": "当日各工序完工率",
+          "items": {
+            "originalRef": "盼盼生产大屏当日工序生产响应DTO",
+            "$ref": "#/definitions/盼盼生产大屏当日工序生产响应DTO"
+          }
+        }
+      },
+      "title": "盼盼生产大屏当日生产响应DTO_1"
+    },
+    "盼盼生产大屏当日工序生产响应DTO": {
+      "type": "object",
+      "properties": {
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "completeRatio": {
+          "type": "number",
+          "description": "工序完工率"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "完工数量"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数量"
+        }
+      },
+      "title": "盼盼生产大屏当日工序生产响应DTO"
+    },
+    "盼盼生产大屏当日生产响应DTO": {
+      "type": "object",
+      "properties": {
+        "orderCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "本月订单数量"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "本月计划数量"
+        },
+        "completeOrderCount": {
+          "type": "number",
+          "description": "本月完工数量"
+        },
+        "completeRatio": {
+          "type": "number",
+          "description": "本月计划完工率"
+        }
+      },
+      "title": "盼盼生产大屏当日生产响应DTO"
+    },
+    "盼盼生产大屏延期订单响应DTO": {
+      "type": "object",
+      "properties": {
+        "configNo": {
+          "type": "string",
+          "description": "配置"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "生产数量"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "已完成数量"
+        },
+        "produceProgress": {
+          "type": "number",
+          "description": "完成进度"
+        },
+        "overdueDayCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "延期天数"
+        },
+        "overdueReason": {
+          "type": "string",
+          "description": "延期原因"
+        },
+        "overdueProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "延期工序id"
+        },
+        "overdueProcessName": {
+          "type": "string",
+          "description": "延期工序名称"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "订单编码"
+        },
+        "orderStatus": {
+          "type": "string",
+          "description": "订单状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  PLAN-已排产",
+            "  ISSUE-已下发",
+            "  PRODUCE-生产中",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭",
+            "  PART_COMPLETE-部分完成",
+            "  COMPLETE-已完成"
+          ]
+        },
+        "isMaster": {
+          "type": "string",
+          "description": "是否主订单",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "createDate": {
+          "type": "string",
+          "description": "投产日期"
+        }
+      },
+      "title": "盼盼生产大屏延期订单响应DTO"
+    },
+    "盼盼生产大屏加急订单响应DTO": {
+      "type": "object",
+      "properties": {
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编码"
+        },
+        "parentProduceOrderCode": {
+          "type": "string",
+          "description": "父级生产订单编码"
+        },
+        "configNo": {
+          "type": "string",
+          "description": "配置"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "planCompleteDate": {
+          "type": "string",
+          "description": "计划完成日期"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "生产数量"
+        },
+        "remainDayCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "剩余工作日"
+        },
+        "createDate": {
+          "type": "string",
+          "description": "投产日期"
+        },
+        "currentProcess": {
+          "type": "string",
+          "description": "现在工序"
+        }
+      },
+      "title": "盼盼生产大屏加急订单响应DTO"
+    },
+    "盼盼生产大屏7天工序产能响应DTO": {
+      "type": "object",
+      "properties": {
+        "processName": {
+          "type": "string",
+          "description": "工序"
+        },
+        "orderCount": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "inProduceQuantity": {
+          "type": "number",
+          "description": "在制数"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "产出数"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返工数"
+        },
+        "backRatio": {
+          "type": "number",
+          "description": "返工率"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数"
+        },
+        "goodProductRatio": {
+          "type": "number",
+          "description": "良品率"
+        },
+        "overdueQuantity": {
+          "type": "number",
+          "description": "延期数"
+        },
+        "overdueRatio": {
+          "type": "number",
+          "description": "延期率"
+        },
+        "totalCapacity": {
+          "type": "number",
+          "description": "累计产能（计划完成率）"
+        },
+        "capacityRatio": {
+          "type": "number",
+          "description": "产能利用率"
+        }
+      },
+      "title": "盼盼生产大屏7天工序产能响应DTO"
     }
   }
 }

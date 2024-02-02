@@ -89,6 +89,18 @@
         }
       },
       "title": "JSONResult«List«ProductionStockReturnSerialNoQueryResponseDTO»»"
+    },
+    "ProductionStockReturnSerialNoQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string"
+        },
+        "serialRemark": {
+          "type": "string"
+        }
+      },
+      "title": "ProductionStockReturnSerialNoQueryResponseDTO"
     }
   }
 }

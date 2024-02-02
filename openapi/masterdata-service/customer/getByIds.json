@@ -101,6 +101,51 @@
         }
       },
       "title": "JSONResult«List«客户VO»»"
+    },
+    "客户VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "companyPhone": {
+          "type": "string",
+          "description": "公司电话"
+        },
+        "fax": {
+          "type": "string",
+          "description": "传真"
+        },
+        "unifiedSocialCreditCode": {
+          "type": "string",
+          "description": "统一社会信用代码"
+        },
+        "bankId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "银行id"
+        },
+        "bankAccount": {
+          "type": "string",
+          "description": "开户账号"
+        }
+      },
+      "title": "客户VO"
     }
   }
 }

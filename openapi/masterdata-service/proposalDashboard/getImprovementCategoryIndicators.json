@@ -70,6 +70,40 @@
         }
       },
       "title": "JSONResult«ImprovementCategoryIndicatorsResponseDTO»"
+    },
+    "ImprovementCategoryIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "indicatorsList": {
+          "type": "array",
+          "description": "改善类别列表",
+          "items": {
+            "originalRef": "ImprovementCategoryIndicatorsItemResponseDTO",
+            "$ref": "#/definitions/ImprovementCategoryIndicatorsItemResponseDTO"
+          }
+        }
+      },
+      "title": "ImprovementCategoryIndicatorsResponseDTO"
+    },
+    "ImprovementCategoryIndicatorsItemResponseDTO": {
+      "type": "object",
+      "properties": {
+        "improvementCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善类别ID"
+        },
+        "improvementCategoryName": {
+          "type": "string",
+          "description": "改善类别名称"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "改善类别数量"
+        }
+      },
+      "title": "ImprovementCategoryIndicatorsItemResponseDTO"
     }
   }
 }

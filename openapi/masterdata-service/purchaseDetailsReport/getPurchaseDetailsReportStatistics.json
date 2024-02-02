@@ -88,6 +88,24 @@
         }
       },
       "title": "JSONResult«采购明细表统计返回对象»"
+    },
+    "采购明细表统计返回对象": {
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        },
+        "amountWithTax": {
+          "type": "number",
+          "description": "含税金额"
+        },
+        "amountWithDiscountedTax": {
+          "type": "number",
+          "description": "采购金额"
+        }
+      },
+      "title": "采购明细表统计返回对象"
     }
   }
 }

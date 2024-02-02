@@ -117,6 +117,81 @@
       },
       "title": "进出站信息DTO_1"
     },
+    "成品物料填写DTO": {
+      "type": "object",
+      "properties": {
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数(质检数)"
+        },
+        "applyQualityAgainQuantity": {
+          "type": "number",
+          "description": "再次申请质检数"
+        }
+      },
+      "title": "成品物料填写DTO"
+    },
+    "BOM物料填写DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺路径步骤bom明细关联id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数"
+        }
+      },
+      "title": "BOM物料填写DTO"
+    },
+    "进出站工艺卡填写": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关键参数id"
+        },
+        "keyParameterDetailList": {
+          "type": "array",
+          "description": "录入集合 - 带录入信息",
+          "items": {
+            "originalRef": "关键参数明细填写信息",
+            "$ref": "#/definitions/关键参数明细填写信息"
+          }
+        }
+      },
+      "title": "进出站工艺卡填写"
+    },
+    "关键参数明细填写信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "inputValue": {
+          "type": "string",
+          "description": "录入值 - 明细录入类型不是图片时，有值"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传key集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "关键参数明细填写信息"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

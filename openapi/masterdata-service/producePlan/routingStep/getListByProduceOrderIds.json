@@ -112,6 +112,85 @@
         }
       },
       "title": "JSONResult«List«生产计划工艺路径步骤排产  VO»»"
+    },
+    "生产计划工艺路径步骤排产  VO": {
+      "type": "object",
+      "properties": {
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceTechnologyRoutingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径id"
+        },
+        "produceTechnologyRoutingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "工艺路径步骤"
+        },
+        "produceTechnologyRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径步骤id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始日期"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束日期"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "capacityProduceQuantity": {
+          "type": "number",
+          "description": "生产数量 -- 产能"
+        },
+        "capacityProduceTime": {
+          "type": "number",
+          "description": "生产时间 -- 产能"
+        },
+        "capacityTimeType": {
+          "type": "string",
+          "description": "时间单位 -- 产能",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "readyTimeUnit": {
+          "type": "string",
+          "description": "时间单位 -- 准备耗时",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "readyTime": {
+          "type": "number",
+          "description": "准备耗时 -- 准备耗时"
+        }
+      },
+      "title": "生产计划工艺路径步骤排产  VO"
     }
   }
 }

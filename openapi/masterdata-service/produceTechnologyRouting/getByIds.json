@@ -94,6 +94,96 @@
         }
       },
       "title": "JSONResult«List«ProduceTechnologyRoutingResponseDTO»»"
+    },
+    "ProduceTechnologyRoutingResponseDTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺id"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属工艺路径id"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺路径编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联物料id"
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联BOM id"
+        },
+        "produceTechnologyMaterialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属生产工艺物料BOMid"
+        }
+      },
+      "title": "ProduceTechnologyRoutingResponseDTO"
     }
   }
 }

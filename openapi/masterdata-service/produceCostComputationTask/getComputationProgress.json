@@ -79,6 +79,31 @@
         }
       },
       "title": "JSONResult«生产成本核算进度响应对象DTO»"
+    },
+    "生产成本核算进度响应对象DTO": {
+      "type": "object",
+      "properties": {
+        "totalCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总数"
+        },
+        "successCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "成功数量"
+        },
+        "failedCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "失败数量"
+        },
+        "failedReason": {
+          "type": "string",
+          "description": "失败原因"
+        }
+      },
+      "title": "生产成本核算进度响应对象DTO"
     }
   }
 }

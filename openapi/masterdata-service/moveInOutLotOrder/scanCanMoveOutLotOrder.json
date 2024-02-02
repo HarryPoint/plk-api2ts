@@ -107,6 +107,25 @@
         }
       },
       "title": "JSONResult«可出料批次响应dto»"
+    },
+    "可出料批次响应dto": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotOrderCode": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "canOptQuantity": {
+          "type": "number",
+          "description": "可出料数量"
+        }
+      },
+      "title": "可出料批次响应dto"
     }
   }
 }

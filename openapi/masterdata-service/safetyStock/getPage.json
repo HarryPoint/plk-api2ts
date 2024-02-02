@@ -129,6 +129,22 @@
       },
       "title": "安全库存搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«分页信息«安全库存返回VO»»": {
       "type": "object",
       "properties": {
@@ -156,6 +172,144 @@
         }
       },
       "title": "JSONResult«分页信息«安全库存返回VO»»"
+    },
+    "分页信息«安全库存返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "安全库存返回VO",
+            "$ref": "#/definitions/安全库存返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«安全库存返回VO»"
+    },
+    "安全库存返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "name": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "spec": {
+          "type": "string",
+          "description": "规格"
+        },
+        "unit": {
+          "type": "string",
+          "description": "单位"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        },
+        "isWarning": {
+          "type": "string",
+          "description": "是否开启预警",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "warningType": {
+          "type": "string",
+          "description": "库存预警类型",
+          "enum": [
+            "  NORMAL-正常",
+            "  CLOSE_WARNING-已关闭预警",
+            "  UPPER-已超上限",
+            "  LOWER-已超下限"
+          ]
+        },
+        "warningTypeDesc": {
+          "type": "string",
+          "description": "库存预警类型描述"
+        },
+        "safetyStock": {
+          "type": "number",
+          "description": "安全库存数-采购触发下限"
+        },
+        "maxStock": {
+          "type": "number",
+          "description": "最大库存数"
+        },
+        "minStock": {
+          "type": "number",
+          "description": "最小库存数"
+        }
+      },
+      "title": "安全库存返回VO"
     }
   }
 }

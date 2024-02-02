@@ -79,6 +79,21 @@
         }
       },
       "title": "JSONResult«项目阶段应用响应对象»"
+    },
+    "项目阶段应用响应对象": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用id"
+        },
+        "appCode": {
+          "type": "string",
+          "description": "应用code"
+        }
+      },
+      "title": "项目阶段应用响应对象"
     }
   }
 }

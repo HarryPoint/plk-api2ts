@@ -72,6 +72,30 @@
         }
       },
       "title": "JSONResult«List«Id，名称，编号VO»»"
+    },
+    "Id，名称，编号VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "Id，名称，编号VO"
     }
   }
 }

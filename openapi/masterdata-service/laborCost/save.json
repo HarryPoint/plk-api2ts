@@ -139,6 +139,68 @@
         }
       },
       "title": "JSONResult«工费响应对象»"
+    },
+    "工费响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "processRp": {
+          "type": "array",
+          "description": "关联工序",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "materialRp": {
+          "type": "array",
+          "description": "关联物料",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "producePrice": {
+          "type": "number",
+          "description": "合格产出工费单价（元）"
+        },
+        "backProducePrice": {
+          "type": "number",
+          "description": "返工产出工费单价（元）"
+        },
+        "readyPrice": {
+          "type": "number",
+          "description": "准备工费（元）"
+        }
+      },
+      "title": "工费响应对象"
+    },
+    "关联下拉响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "showFieldValue": {
+          "type": "string",
+          "description": "显示字段名称"
+        }
+      },
+      "title": "关联下拉响应对象"
     }
   }
 }

@@ -104,6 +104,25 @@
         }
       },
       "title": "JSONResult«项目费用预算响应对象»"
+    },
+    "项目费用预算响应对象": {
+      "type": "object",
+      "properties": {
+        "executeTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "执行时间"
+        },
+        "lastProjectAnnualBudget": {
+          "type": "number",
+          "description": "最新项目年度预算（元）"
+        },
+        "totalBudgetExecute": {
+          "type": "number",
+          "description": "当年预算执行合计（元）"
+        }
+      },
+      "title": "项目费用预算响应对象"
     }
   }
 }

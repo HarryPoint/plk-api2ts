@@ -116,6 +116,53 @@
         }
       },
       "title": "JSONResult«List«生产订单最后一道工序VO»»"
+    },
+    "生产订单最后一道工序VO": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "produceTechnologyRoutingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单的工艺路径id"
+        },
+        "endProduceTechnologyRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单的生产工艺工艺路径最后一个工艺步骤id"
+        },
+        "endProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后一个工艺步骤对应的工序id"
+        }
+      },
+      "title": "生产订单最后一道工序VO"
     }
   }
 }

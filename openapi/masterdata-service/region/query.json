@@ -72,6 +72,56 @@
         }
       },
       "title": "JSONResult«List«RegionVo»»"
+    },
+    "RegionVo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "行政区划编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "行政区划名称"
+        },
+        "pinYin": {
+          "type": "array",
+          "description": "行政区域名称拼英 [\"bei\", \"jing\"]",
+          "items": {
+            "type": "object"
+          }
+        },
+        "location": {
+          "type": "object",
+          "description": "行政区域位置",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "parentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上级行政区域ID"
+        },
+        "parentCode": {
+          "type": "string",
+          "description": "上级行政区域编码"
+        },
+        "children": {
+          "type": "array",
+          "description": "下级行政区域",
+          "items": {
+            "originalRef": "RegionVo",
+            "$ref": "#/definitions/RegionVo"
+          }
+        }
+      },
+      "title": "RegionVo"
     }
   }
 }

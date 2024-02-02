@@ -70,6 +70,21 @@
         }
       },
       "title": "JSONResult«设置检验任务检验方式响应DTO»"
+    },
+    "设置检验任务检验方式响应DTO": {
+      "type": "object",
+      "properties": {
+        "taskInspectionMethodType": {
+          "type": "string",
+          "description": "检验方式",
+          "enum": [
+            "  SINGLE-个检验",
+            "  BATCH-批检验",
+            "  MATERIAL-物料检"
+          ]
+        }
+      },
+      "title": "设置检验任务检验方式响应DTO"
     }
   }
 }

@@ -190,6 +190,22 @@
       },
       "title": "宝晶物料主数据库存搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«宝晶物料库存统计VO»": {
       "type": "object",
       "properties": {
@@ -217,6 +233,175 @@
         }
       },
       "title": "JSONResult«宝晶物料库存统计VO»"
+    },
+    "宝晶物料库存统计VO": {
+      "type": "object",
+      "properties": {
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        },
+        "materialStorages": {
+          "description": "物料库存分页",
+          "originalRef": "分页信息«宝晶物料主数据库存返回VO»",
+          "$ref": "#/definitions/分页信息«宝晶物料主数据库存返回VO»"
+        }
+      },
+      "title": "宝晶物料库存统计VO"
+    },
+    "分页信息«宝晶物料主数据库存返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "宝晶物料主数据库存返回VO",
+            "$ref": "#/definitions/宝晶物料主数据库存返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«宝晶物料主数据库存返回VO»"
+    },
+    "宝晶物料主数据库存返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "name": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "spec": {
+          "type": "string",
+          "description": "规格"
+        },
+        "type": {
+          "type": "string",
+          "description": "物料种类code"
+        },
+        "typeName": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "unit": {
+          "type": "string",
+          "description": "单位"
+        },
+        "materialOutsideCode": {
+          "type": "string",
+          "description": "外部编码"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        },
+        "materialCurator": {
+          "type": "string",
+          "description": "保管员"
+        },
+        "materialTexture": {
+          "type": "string",
+          "description": "材质"
+        },
+        "materialTechnology": {
+          "type": "string",
+          "description": "工艺"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "客户id"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "客户名称"
+        },
+        "businessUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "业务员id"
+        },
+        "businessUserName": {
+          "type": "string",
+          "description": "业务员名称"
+        }
+      },
+      "title": "宝晶物料主数据库存返回VO"
     }
   }
 }

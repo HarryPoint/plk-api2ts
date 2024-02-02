@@ -107,6 +107,32 @@
         }
       },
       "title": "JSONResult«List«三维信息查询响应»»"
+    },
+    "三维信息查询响应": {
+      "type": "object",
+      "properties": {
+        "violationKey": {
+          "type": "string",
+          "description": "违规Key"
+        },
+        "violationName": {
+          "type": "string",
+          "description": "违规名称"
+        },
+        "rectificationQuantity": {
+          "type": "number",
+          "description": "整改完成数量"
+        },
+        "violationQuantity": {
+          "type": "number",
+          "description": "违规数量"
+        },
+        "rectificationCompletionRare": {
+          "type": "number",
+          "description": "整改完成率 = 整改完成数量 / 违规数量"
+        }
+      },
+      "title": "三维信息查询响应"
     }
   }
 }

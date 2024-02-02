@@ -157,6 +157,22 @@
       },
       "title": "寄售损耗分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«寄售损耗分析报表分页返回VO»": {
       "type": "object",
       "properties": {
@@ -184,6 +200,40 @@
         }
       },
       "title": "JSONResult«寄售损耗分析报表分页返回VO»"
+    },
+    "寄售损耗分析报表分页返回VO_1": {
+      "type": "object",
+      "properties": {
+        "numOfBeginningPeriodSum": {
+          "type": "number",
+          "description": "期初数量"
+        },
+        "sendQtySum": {
+          "type": "number",
+          "description": "送货数量"
+        },
+        "inboundQtySum": {
+          "type": "number",
+          "description": "入库数量"
+        },
+        "returnQtySum": {
+          "type": "number",
+          "description": "退货数量"
+        },
+        "numOfLossSum": {
+          "type": "number",
+          "description": "损耗数量"
+        },
+        "remainingQtySum": {
+          "type": "number",
+          "description": "未结余量"
+        },
+        "lossRatioSum": {
+          "type": "number",
+          "description": "损耗率"
+        }
+      },
+      "title": "寄售损耗分析报表分页返回VO_1"
     }
   }
 }

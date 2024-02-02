@@ -144,6 +144,22 @@
       },
       "title": "宝晶报表(报废)相关搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«宝晶报表(报废)相关返回VO»": {
       "type": "object",
       "properties": {
@@ -171,6 +187,16 @@
         }
       },
       "title": "JSONResult«宝晶报表(报废)相关返回VO»"
+    },
+    "宝晶报表(报废)相关返回VO_1": {
+      "type": "object",
+      "properties": {
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        }
+      },
+      "title": "宝晶报表(报废)相关返回VO_1"
     }
   }
 }

@@ -83,6 +83,63 @@
         }
       },
       "title": "JSONResult«List«上一次进料录入bom消耗响应DTO»»"
+    },
+    "上一次进料录入bom消耗响应DTO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "对应物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料编号"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "单位消耗"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "物料实际消耗数"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "批次信息",
+          "items": {
+            "originalRef": "上一次进料录入bom消耗批次响应DTO",
+            "$ref": "#/definitions/上一次进料录入bom消耗批次响应DTO"
+          }
+        },
+        "externalCodes": {
+          "type": "array",
+          "description": "外部码",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "上一次进料录入bom消耗响应DTO"
+    },
+    "上一次进料录入bom消耗批次响应DTO": {
+      "type": "object",
+      "properties": {
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotOrderCode": {
+          "type": "string",
+          "description": "批次编号"
+        }
+      },
+      "title": "上一次进料录入bom消耗批次响应DTO"
     }
   }
 }

@@ -93,6 +93,66 @@
         }
       },
       "title": "JSONResult«List«SalesStatisticsItemOutputVO»»"
+    },
+    "SalesStatisticsItemOutputVO": {
+      "type": "object",
+      "properties": {
+        "salesUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售用户ID"
+        },
+        "salesUserName": {
+          "type": "string",
+          "description": "销售用户名"
+        },
+        "confirmRequireQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "需求确认数量"
+        },
+        "schemeQuotationQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "方案报价数量"
+        },
+        "businessNegotiationQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "商务谈判数量"
+        },
+        "contractSigningQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "合同签订数量"
+        },
+        "paymentReturnQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "回款数量"
+        },
+        "afterServiceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "售后服务数量"
+        },
+        "inputOrderQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "输单数量"
+        },
+        "invalidQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "无效数量"
+        },
+        "total": {
+          "type": "integer",
+          "format": "int32",
+          "description": "合计"
+        }
+      },
+      "title": "SalesStatisticsItemOutputVO"
     }
   }
 }

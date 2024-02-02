@@ -115,6 +115,13 @@
         }
       },
       "title": "JSONResult«List«JSONObject»»"
+    },
+    "JSONObject": {
+      "type": "object",
+      "title": "JSONObject",
+      "additionalProperties": {
+        "type": "object"
+      }
     }
   }
 }

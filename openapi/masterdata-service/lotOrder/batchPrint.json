@@ -101,6 +101,54 @@
         }
       },
       "title": "JSONResult«List«批次订单打印信息返回VO»»"
+    },
+    "批次订单打印信息返回VO": {
+      "type": "object",
+      "properties": {
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "对应生产订单号"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "对应销售订单号"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "数量"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "printDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "打印日期"
+        },
+        "lotNoQrCode": {
+          "type": "string",
+          "description": "批次号二维码"
+        }
+      },
+      "title": "批次订单打印信息返回VO"
     }
   }
 }

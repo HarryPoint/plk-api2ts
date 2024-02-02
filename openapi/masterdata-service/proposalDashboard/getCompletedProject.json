@@ -70,6 +70,68 @@
         }
       },
       "title": "JSONResult«CompleteProjectResponseDTO»"
+    },
+    "CompleteProjectResponseDTO": {
+      "type": "object",
+      "properties": {
+        "projectTargetValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "项目目标值"
+        },
+        "projectIndicatorsRangeConfigList": {
+          "type": "array",
+          "description": "项目指标区间配置",
+          "items": {
+            "originalRef": "ProjectIndicatorsRangeConfigResponseDTO",
+            "$ref": "#/definitions/ProjectIndicatorsRangeConfigResponseDTO"
+          }
+        },
+        "departmentProjectIndicatorsList": {
+          "type": "array",
+          "description": "部门的各个项目指标",
+          "items": {
+            "originalRef": "DepartmentProjectIndicatorsResponseDTO",
+            "$ref": "#/definitions/DepartmentProjectIndicatorsResponseDTO"
+          }
+        }
+      },
+      "title": "CompleteProjectResponseDTO"
+    },
+    "ProjectIndicatorsRangeConfigResponseDTO": {
+      "type": "object",
+      "properties": {
+        "indicatorsKey": {
+          "type": "string",
+          "description": "指标Key -> 项目指标Key"
+        },
+        "indicatorsName": {
+          "type": "string",
+          "description": "指标名称"
+        }
+      },
+      "title": "ProjectIndicatorsRangeConfigResponseDTO"
+    },
+    "DepartmentProjectIndicatorsResponseDTO": {
+      "type": "object",
+      "properties": {
+        "departmentId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "departmentName": {
+          "type": "string"
+        },
+        "indicatorsToProjectQuantityMap": {
+          "type": "object",
+          "description": "指标Key => Project Quantity Map",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "title": "DepartmentProjectIndicatorsResponseDTO"
     }
   }
 }

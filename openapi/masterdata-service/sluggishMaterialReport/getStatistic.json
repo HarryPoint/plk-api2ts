@@ -88,6 +88,16 @@
         }
       },
       "title": "JSONResult«呆滞物料报表查询合计响应对象»"
+    },
+    "呆滞物料报表查询合计响应对象": {
+      "type": "object",
+      "properties": {
+        "totalQuantity": {
+          "type": "number",
+          "description": "总数量"
+        }
+      },
+      "title": "呆滞物料报表查询合计响应对象"
     }
   }
 }

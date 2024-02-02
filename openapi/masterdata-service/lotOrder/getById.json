@@ -86,6 +86,213 @@
         }
       },
       "title": "JSONResult«批次订单返回VO»"
+    },
+    "批次订单返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "lotName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "originalLotNo": {
+          "type": "string",
+          "description": "来源批次号"
+        },
+        "produceOrderId": {
+          "type": "string",
+          "description": "对应生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "对应生产订单号"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "对应销售订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "对应物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "对应物料规格"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "对应物料单位"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "总数量"
+        },
+        "currentCount": {
+          "type": "number",
+          "description": "当前生产数量"
+        },
+        "scrapTotalCount": {
+          "type": "number",
+          "description": "总报废数量"
+        },
+        "actualTotalCount": {
+          "type": "number",
+          "description": "实际剩余数量"
+        },
+        "changeTotalCount": {
+          "type": "number",
+          "description": "拆出数量"
+        },
+        "produceTechnologyRoutingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺路径id"
+        },
+        "produceTechnologyRoutingName": {
+          "type": "string",
+          "description": "生产工艺路径名称"
+        },
+        "produceTechnologyRoutingCode": {
+          "type": "string",
+          "description": "生产工艺路径编号"
+        },
+        "lastFlowType": {
+          "type": "string",
+          "description": "当前流水类型(界面上的当前生产状态)",
+          "enum": [
+            "  CREATED-创建",
+            "  ISSUE-下发",
+            "  MOVE_IN-进料",
+            "  MOVE_OUT-出料",
+            "  SCRAP-报废",
+            "  HOLD_PAUSE-暂扣",
+            "  HOLD-扣留",
+            "  RELEASE-放行",
+            "  BACK-返工",
+            "  MARGE-合并",
+            "  SPLIT-拆分",
+            "  TRANSFER-转移",
+            "  CHANGE_ROUTING-切换工艺路径",
+            "  ENTRUST-委外加工"
+          ]
+        },
+        "lastFlowTypeDesc": {
+          "type": "string",
+          "description": "当前流水类型描述"
+        },
+        "lastProduceRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前对应工艺路径步骤id"
+        },
+        "lastProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前对应工序id"
+        },
+        "lastProcessName": {
+          "type": "string",
+          "description": "当前对应工序名称"
+        },
+        "lastProcessCode": {
+          "type": "string",
+          "description": "当前对应工序编号"
+        },
+        "lastRoutingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前工艺步骤 - 用于展示工艺进度条"
+        },
+        "totalStepCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总工艺数 - 用于展示工艺进度条"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  CREATED-待生产",
+            "  ISSUE-已下发",
+            "  PRODUCE-生产中",
+            "  HOLD-扣留中",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "sourceList": {
+          "type": "array",
+          "description": "来源集",
+          "items": {
+            "originalRef": "批次订单来源返回VO",
+            "$ref": "#/definitions/批次订单来源返回VO"
+          }
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "lotOrderQrcode": {
+          "type": "string",
+          "description": "批次订单二维码值"
+        }
+      },
+      "title": "批次订单返回VO"
+    },
+    "批次订单来源返回VO": {
+      "type": "object",
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "description": "来源类型",
+          "enum": [
+            "  MAJOR_DATA-物料",
+            "  MARGE-合并",
+            "  SPLIT-拆分",
+            "  TRANSFER-转移"
+          ]
+        },
+        "sourceTypeDesc": {
+          "type": "string",
+          "description": "来源类型描述"
+        },
+        "sourceLotNo": {
+          "type": "string",
+          "description": "来源批次单号"
+        }
+      },
+      "title": "批次订单来源返回VO"
     }
   }
 }

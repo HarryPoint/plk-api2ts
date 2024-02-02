@@ -73,6 +73,47 @@
         }
       },
       "title": "JSONResult«List«设备DTO»»"
+    },
+    "设备DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "firm": {
+          "type": "string",
+          "description": "设备厂商"
+        },
+        "enteringDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "入厂日期"
+        },
+        "leaveDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "出厂日期"
+        },
+        "leaveCode": {
+          "type": "string",
+          "description": "设备出厂编号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "设备DTO"
     }
   }
 }

@@ -90,6 +90,93 @@
         }
       },
       "title": "JSONResult«List«生产订单详情 - 生产任务VO»»"
+    },
+    "生产订单详情 - 生产任务VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "issueTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务下发时间"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "对应工序编号"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "planProduceQuantity": {
+          "type": "number",
+          "description": "计划生产数量 - 任务进度分母"
+        },
+        "currentCompleteQuantity": {
+          "type": "number",
+          "description": "当前完成数量 - 任务进度分子(合格数量)"
+        },
+        "supplementCompleteQuantity": {
+          "type": "number",
+          "description": "任务进度分子(补单数量)"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  PRODUCE-生产中",
+            "  PAUSE-暂停中",
+            "  STOP-停止",
+            "  CLOSE-已关闭",
+            "  CANCEL-已取消"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "moveInQuantity": {
+          "type": "number",
+          "description": "进料数量"
+        },
+        "moveOutQuantity": {
+          "type": "number",
+          "description": "出料数量"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返工数量"
+        }
+      },
+      "title": "生产订单详情 - 生产任务VO"
     }
   }
 }

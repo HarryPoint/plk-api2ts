@@ -90,6 +90,37 @@
         }
       },
       "title": "JSONResult«批次号使用DTO»_1"
+    },
+    "批次号使用DTO_1": {
+      "type": "object",
+      "properties": {
+        "lotSerialNoErrorList": {
+          "type": "array",
+          "description": "异常批次号",
+          "items": {
+            "originalRef": "批次号使用异常DTO",
+            "$ref": "#/definitions/批次号使用异常DTO"
+          }
+        }
+      },
+      "title": "批次号使用DTO_1"
+    },
+    "批次号使用异常DTO": {
+      "type": "object",
+      "properties": {
+        "lotSerialNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "errorMsgList": {
+          "type": "array",
+          "description": "异常信息集合",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "批次号使用异常DTO"
     }
   }
 }

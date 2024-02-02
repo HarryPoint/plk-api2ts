@@ -102,6 +102,36 @@
         }
       },
       "title": "JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO»"
+    },
+    "LotSerialNumberPlanRemoveCheckResponseDTO": {
+      "type": "object",
+      "properties": {
+        "allowDeletionIdList": {
+          "type": "array",
+          "description": "允许删除的ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "notAllowDeletionIdList": {
+          "type": "array",
+          "description": "不允许删除的ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "usedIdList": {
+          "type": "array",
+          "description": "已使用的ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "LotSerialNumberPlanRemoveCheckResponseDTO"
     }
   }
 }

@@ -104,6 +104,47 @@
         }
       },
       "title": "JSONResult«List«仓位系统应用库存序列号分页返回对象»»"
+    },
+    "仓位系统应用库存序列号分页返回对象": {
+      "type": "object",
+      "properties": {
+        "warehouseSystemApplicationId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位系统应用关联数据id(eg：物料id)"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "序列号备注"
+        }
+      },
+      "title": "仓位系统应用库存序列号分页返回对象"
     }
   }
 }

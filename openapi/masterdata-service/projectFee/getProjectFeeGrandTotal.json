@@ -104,6 +104,40 @@
         }
       },
       "title": "JSONResult«项目费用累计响应对象»"
+    },
+    "项目费用累计响应对象": {
+      "type": "object",
+      "properties": {
+        "totalBudget": {
+          "type": "number",
+          "description": "累计预算"
+        },
+        "totalBudgetExecute": {
+          "type": "number",
+          "description": "累计预算执行"
+        },
+        "totalBudgetExecuteRate": {
+          "type": "number",
+          "description": "累计预算执行率"
+        },
+        "totalFundPlan": {
+          "type": "number",
+          "description": "累计资金计划（元）"
+        },
+        "totalFundPlanExecute": {
+          "type": "number",
+          "description": "累计资金计划执行（元）"
+        },
+        "totalFundPlanExecuteRate": {
+          "type": "number",
+          "description": "累计资金计划执行率"
+        },
+        "monthFundPlan": {
+          "type": "number",
+          "description": "月度资金计划"
+        }
+      },
+      "title": "项目费用累计响应对象"
     }
   }
 }

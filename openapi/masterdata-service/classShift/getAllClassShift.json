@@ -82,6 +82,62 @@
         }
       },
       "title": "JSONResult«List«班次返回VO»»"
+    },
+    "班次返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "班次名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "班次编号"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "开始时间"
+        },
+        "endTimeType": {
+          "type": "string",
+          "description": "班次结束时间类型",
+          "enum": [
+            "  TODAY-当日",
+            "  NEXT-次日"
+          ]
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "结束时间"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "状态"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        }
+      },
+      "title": "班次返回VO"
     }
   }
 }

@@ -135,6 +135,50 @@
         }
       },
       "title": "JSONResult«List«批次订单流水基本信息响应DTO»»"
+    },
+    "批次订单流水基本信息响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "flowType": {
+          "type": "string",
+          "description": "流水类型",
+          "enum": [
+            "  CREATED-创建",
+            "  ISSUE-下发",
+            "  MOVE_IN-进料",
+            "  MOVE_OUT-出料",
+            "  SCRAP-报废",
+            "  HOLD_PAUSE-暂扣",
+            "  HOLD-扣留",
+            "  RELEASE-放行",
+            "  BACK-返工",
+            "  MARGE-合并",
+            "  SPLIT-拆分",
+            "  TRANSFER-转移",
+            "  CHANGE_ROUTING-切换工艺路径",
+            "  ENTRUST-委外加工"
+          ]
+        },
+        "flowTypeDesc": {
+          "type": "string",
+          "description": "当前流水类型描述"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "操作时间"
+        },
+        "remark": {
+          "type": "string",
+          "description": "描述"
+        }
+      },
+      "title": "批次订单流水基本信息响应DTO"
     }
   }
 }

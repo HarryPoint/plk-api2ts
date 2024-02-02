@@ -87,6 +87,40 @@
         }
       },
       "title": "JSONResult«维联批次打印模板响应对象»"
+    },
+    "维联批次打印模板响应对象": {
+      "type": "object",
+      "properties": {
+        "notConfigPrintTemplateProduceOrderCodes": {
+          "type": "array",
+          "description": "没有配置打印模板的生产订单编号",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notLotProduceOrderCodes": {
+          "type": "array",
+          "description": "没有批次的生产订单编号",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canNotGenerateBarcodeProduceOrderCodes": {
+          "type": "array",
+          "description": "不能生成一维码的生产订单编号",
+          "items": {
+            "type": "string"
+          }
+        },
+        "checkPassProduceOrderCodes": {
+          "type": "array",
+          "description": "校验通过的生产订单编号",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "维联批次打印模板响应对象"
     }
   }
 }

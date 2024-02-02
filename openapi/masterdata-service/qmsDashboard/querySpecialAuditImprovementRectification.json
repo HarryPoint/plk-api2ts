@@ -104,6 +104,65 @@
         }
       },
       "title": "JSONResult«改进整改率»"
+    },
+    "改进整改率": {
+      "type": "object",
+      "properties": {
+        "titleDefineList": {
+          "type": "array",
+          "description": "标题列表",
+          "items": {
+            "originalRef": "TitleDefineQueryResponseDTO",
+            "$ref": "#/definitions/TitleDefineQueryResponseDTO"
+          }
+        },
+        "totalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总数"
+        },
+        "notRectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未整改总数"
+        },
+        "rectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已整改总数"
+        },
+        "singleItemTotalQuantityMap": {
+          "type": "object",
+          "description": "不符合程度-单项值总数",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "singleItemNotRectifiedTotalQuantityMap": {
+          "type": "object",
+          "description": "不符合程度-单项值未整改数",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "title": "改进整改率"
+    },
+    "TitleDefineQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "key"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        }
+      },
+      "title": "TitleDefineQueryResponseDTO"
     }
   }
 }

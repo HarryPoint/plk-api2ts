@@ -173,6 +173,24 @@
       },
       "title": "宝晶报表(库存)相关搜索DTO"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
     "JSONResult«宝晶报表(成品日报表)合计返回VO»": {
       "type": "object",
       "properties": {
@@ -200,6 +218,64 @@
         }
       },
       "title": "JSONResult«宝晶报表(成品日报表)合计返回VO»"
+    },
+    "宝晶报表(成品日报表)合计返回VO": {
+      "type": "object",
+      "properties": {
+        "beginProduceQuantity": {
+          "type": "number",
+          "description": "期初-成品数"
+        },
+        "beginRawQuantity": {
+          "type": "number",
+          "description": "期初-半成品数"
+        },
+        "beginWaitQuantity": {
+          "type": "number",
+          "description": "期初-待处理数"
+        },
+        "inProduceQuantity": {
+          "type": "number",
+          "description": "入库-成品数"
+        },
+        "inRawQuantity": {
+          "type": "number",
+          "description": "入库-半成品数"
+        },
+        "inWaitQuantity": {
+          "type": "number",
+          "description": "入库-待处理数"
+        },
+        "outProduceQuantity": {
+          "type": "number",
+          "description": "出库-成品数"
+        },
+        "outRawQuantity": {
+          "type": "number",
+          "description": "出库-半成品数"
+        },
+        "outWaitQuantity": {
+          "type": "number",
+          "description": "出库-待处理数"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数"
+        },
+        "endProduceQuantity": {
+          "type": "number",
+          "description": "期末-成品数"
+        },
+        "endRawQuantity": {
+          "type": "number",
+          "description": "期末-半成品数"
+        },
+        "endWaitQuantity": {
+          "type": "number",
+          "description": "期末-待处理数"
+        }
+      },
+      "title": "宝晶报表(成品日报表)合计返回VO"
     }
   }
 }

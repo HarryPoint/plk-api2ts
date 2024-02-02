@@ -83,6 +83,187 @@
       },
       "title": "批量转到生产订单"
     },
+    "销售订单转生产订单子物料生产信息DTO": {
+      "type": "object",
+      "required": [
+        "endTime",
+        "level",
+        "orderType",
+        "priorityLevel"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "详情id"
+        },
+        "produceTotalCount": {
+          "type": "number",
+          "description": "生产交付数量"
+        },
+        "orderType": {
+          "type": "string",
+          "description": "订单类型",
+          "enum": [
+            "  CONTRACT-合同生产",
+            "  STANDBY-备库生产",
+            "  REWORK-返工生产",
+            "  TEST-新产品实验生产",
+            "  VIRTUAL-虚拟订单",
+            "  OTHER-其他订单",
+            "  SCRAP_SUPPLEMENT-报废补单"
+          ]
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "订单优先级，数值越大优先级越高"
+        },
+        "beginTime": {
+          "type": "string",
+          "description": "计划开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "计划结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "level": {
+          "type": "integer",
+          "format": "int32",
+          "description": "层级"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "对应批次订单集合",
+          "items": {
+            "originalRef": "批次编辑DTO",
+            "$ref": "#/definitions/批次编辑DTO"
+          }
+        },
+        "childMaterialProduces": {
+          "type": "array",
+          "description": "子物料生产信息",
+          "items": {
+            "originalRef": "子生产订单配置请求",
+            "$ref": "#/definitions/子生产订单配置请求"
+          }
+        },
+        "notNeedProduceMaterialStandardTechnologyNodeIdList": {
+          "type": "array",
+          "description": "不需要生产物料的-标准工艺节点ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "placeOrderDepartmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下单业务部门id"
+        },
+        "placeOrderDepartmentCode": {
+          "type": "string",
+          "description": "下单业务部门编码"
+        },
+        "placeOrderDepartmentName": {
+          "type": "string",
+          "description": "下单业务部门名称"
+        },
+        "isEmergentOrder": {
+          "type": "string",
+          "description": "是否紧急的单子",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "deliveryDate": {
+          "type": "string",
+          "description": "交付日期 yyyy-MM-dd HH:mm:ss"
+        },
+        "standardTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺ID"
+        },
+        "productionLineId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "产线"
+        }
+      },
+      "title": "销售订单转生产订单子物料生产信息DTO"
+    },
+    "批次编辑DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "lotName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "总数量"
+        }
+      },
+      "title": "批次编辑DTO"
+    },
+    "子生产订单配置请求": {
+      "type": "object",
+      "required": [
+        "endTime",
+        "lotOrders",
+        "priorityLevel",
+        "totalCount"
+      ],
+      "properties": {
+        "standardTechnologyNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "标准工艺路径，节点ID"
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "订单优先级，数值越大优先级越高"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "总生产数量"
+        },
+        "beginTime": {
+          "type": "string",
+          "description": "计划开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "计划结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "productionLineId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "产线"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "批次信息列表",
+          "items": {
+            "originalRef": "批次编辑DTO",
+            "$ref": "#/definitions/批次编辑DTO"
+          }
+        }
+      },
+      "title": "子生产订单配置请求"
+    },
     "JSONResult«销售订单转生产订单返回DTO»": {
       "type": "object",
       "properties": {
@@ -110,6 +291,25 @@
         }
       },
       "title": "JSONResult«销售订单转生产订单返回DTO»"
+    },
+    "销售订单转生产订单返回DTO": {
+      "type": "object",
+      "properties": {
+        "matchTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "匹配任务id"
+        },
+        "produceOrderIds": {
+          "type": "array",
+          "description": "生产订单ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "销售订单转生产订单返回DTO"
     }
   }
 }

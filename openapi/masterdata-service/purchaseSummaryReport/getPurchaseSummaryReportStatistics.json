@@ -88,6 +88,20 @@
         }
       },
       "title": "JSONResult«采购汇总报表合计返回对象»"
+    },
+    "采购汇总报表合计返回对象": {
+      "type": "object",
+      "properties": {
+        "purchaseQuantity": {
+          "type": "number",
+          "description": "采购数量"
+        },
+        "purchaseAmount": {
+          "type": "number",
+          "description": "采购金额"
+        }
+      },
+      "title": "采购汇总报表合计返回对象"
     }
   }
 }

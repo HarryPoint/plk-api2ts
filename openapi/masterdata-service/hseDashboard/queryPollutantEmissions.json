@@ -107,6 +107,20 @@
         }
       },
       "title": "JSONResult«List«污染物查询响应»»"
+    },
+    "污染物查询响应": {
+      "type": "object",
+      "properties": {
+        "pollutantEmissionCategory": {
+          "type": "string",
+          "description": "污染物排放类别"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        }
+      },
+      "title": "污染物查询响应"
     }
   }
 }

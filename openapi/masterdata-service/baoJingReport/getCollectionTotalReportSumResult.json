@@ -130,6 +130,22 @@
       },
       "title": "宝晶收款汇总分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«宝晶收款汇总分析报表表格返回VO»": {
       "type": "object",
       "properties": {
@@ -157,6 +173,24 @@
         }
       },
       "title": "JSONResult«宝晶收款汇总分析报表表格返回VO»"
+    },
+    "宝晶收款汇总分析报表表格返回VO_1": {
+      "type": "object",
+      "properties": {
+        "receivableAmountSum": {
+          "type": "number",
+          "description": "应收金额"
+        },
+        "receivedAmountSum": {
+          "type": "number",
+          "description": "已收金额"
+        },
+        "receivableBalanceSum": {
+          "type": "number",
+          "description": "应收余额"
+        }
+      },
+      "title": "宝晶收款汇总分析报表表格返回VO_1"
     }
   }
 }

@@ -112,6 +112,128 @@
         }
       },
       "title": "JSONResult«进料扫描响应对象DTO»"
+    },
+    "进料扫描响应对象DTO": {
+      "type": "object",
+      "properties": {
+        "moveInDevice": {
+          "description": "进料设备",
+          "originalRef": "进料设备响应DTO_1",
+          "$ref": "#/definitions/进料设备响应DTO_1"
+        },
+        "moveInMold": {
+          "description": "进料模具",
+          "originalRef": "进料模具响应DTO_1",
+          "$ref": "#/definitions/进料模具响应DTO_1"
+        },
+        "moveInMaterial": {
+          "description": "所需物料",
+          "originalRef": "进料bom消耗物料扫描响应DTO",
+          "$ref": "#/definitions/进料bom消耗物料扫描响应DTO"
+        },
+        "externalCodeResult": {
+          "description": "外部码",
+          "originalRef": "进料bom消耗物料外部码扫描响应DTO",
+          "$ref": "#/definitions/进料bom消耗物料外部码扫描响应DTO"
+        }
+      },
+      "title": "进料扫描响应对象DTO"
+    },
+    "进料设备响应DTO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备id"
+        },
+        "name": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "produceTechnologyDeviceId": {
+          "type": "array",
+          "description": "生产工艺设备id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "进料设备响应DTO_1"
+    },
+    "进料模具响应DTO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "模具id"
+        },
+        "name": {
+          "type": "string",
+          "description": "模具名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "模具编号"
+        },
+        "produceTechnologyMoldId": {
+          "type": "array",
+          "description": "生产工艺模具id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "进料模具响应DTO_1"
+    },
+    "进料bom消耗物料扫描响应DTO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        }
+      },
+      "title": "进料bom消耗物料扫描响应DTO"
+    },
+    "进料bom消耗物料外部码扫描响应DTO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "externalCode": {
+          "type": "string",
+          "description": "外部码"
+        }
+      },
+      "title": "进料bom消耗物料外部码扫描响应DTO"
     }
   }
 }

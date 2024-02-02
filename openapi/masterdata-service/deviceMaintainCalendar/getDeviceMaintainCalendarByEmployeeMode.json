@@ -197,6 +197,24 @@
       },
       "title": "设备保养日历请求DTO"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
     "JSONResult«分页信息«设备保养日历-人员模式响应DTO»»": {
       "type": "object",
       "properties": {
@@ -224,6 +242,205 @@
         }
       },
       "title": "JSONResult«分页信息«设备保养日历-人员模式响应DTO»»"
+    },
+    "分页信息«设备保养日历-人员模式响应DTO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "设备保养日历-人员模式响应DTO",
+            "$ref": "#/definitions/设备保养日历-人员模式响应DTO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«设备保养日历-人员模式响应DTO»"
+    },
+    "设备保养日历-人员模式响应DTO": {
+      "type": "object",
+      "properties": {
+        "employeeName": {
+          "type": "string",
+          "description": "人员名称"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "班组"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门"
+        },
+        "details": {
+          "type": "array",
+          "description": "明细详情",
+          "items": {
+            "originalRef": "设备保养日历-人员模式详情响应DTO",
+            "$ref": "#/definitions/设备保养日历-人员模式详情响应DTO"
+          }
+        }
+      },
+      "title": "设备保养日历-人员模式响应DTO"
+    },
+    "设备保养日历-人员模式详情响应DTO": {
+      "type": "object",
+      "properties": {
+        "day": {
+          "type": "string",
+          "format": "date",
+          "description": "天"
+        },
+        "dayDetails": {
+          "type": "array",
+          "description": "时间详情",
+          "items": {
+            "originalRef": "设备保养日历-人员模式详情时间响应DTO",
+            "$ref": "#/definitions/设备保养日历-人员模式详情时间响应DTO"
+          }
+        }
+      },
+      "title": "设备保养日历-人员模式详情响应DTO"
+    },
+    "设备保养日历-人员模式详情时间响应DTO": {
+      "type": "object",
+      "properties": {
+        "taskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "保养任务id"
+        },
+        "deviceMaintainPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备保养计划id"
+        },
+        "deviceMaintainDetailPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备保养计划明细id"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "maintainType": {
+          "type": "string",
+          "description": "保养类型",
+          "enum": [
+            "  YEAR-年",
+            "  HALF_YEAR-半年",
+            "  QUARTER-季度",
+            "  MONTH-月"
+          ]
+        },
+        "planTaskStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "planTaskEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "taskStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务开始时间"
+        },
+        "taskEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务结束时间"
+        },
+        "taskStatus": {
+          "type": "string",
+          "description": "任务状态",
+          "enum": [
+            "  WAIT-待执行",
+            "  HANDLING-进行中",
+            "  CANCEL-已取消",
+            "  COMPLETE-已完成"
+          ]
+        },
+        "isExecutor": {
+          "type": "string",
+          "description": "是否执行人",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "queryStatus": {
+          "type": "string",
+          "description": "查询状态",
+          "enum": [
+            "  PLAN-保养计划",
+            "  WAIT-待执行任务",
+            "  HANDLING-进行中任务",
+            "  CANCEL-已取消任务",
+            "  COMPLETE-已完成任务",
+            "  OVERDUE-超期任务"
+          ]
+        }
+      },
+      "title": "设备保养日历-人员模式详情时间响应DTO"
     }
   }
 }

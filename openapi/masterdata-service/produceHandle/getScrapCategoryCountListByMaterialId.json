@@ -110,6 +110,25 @@
         }
       },
       "title": "JSONResult«List«Id，值VO»»"
+    },
+    "Id，值VO": {
+      "type": "object",
+      "required": [
+        "id",
+        "value"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "value": {
+          "type": "number",
+          "description": "值"
+        }
+      },
+      "title": "Id，值VO"
     }
   }
 }

@@ -112,6 +112,82 @@
         }
       },
       "title": "JSONResult«List«仓位树详情返回VO»»"
+    },
+    "仓位树详情返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "区域id"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "areaCode": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "库存数量"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "状态(是否可用)"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "children": {
+          "type": "array",
+          "description": "子仓位",
+          "items": {
+            "originalRef": "仓位树详情返回VO",
+            "$ref": "#/definitions/仓位树详情返回VO"
+          }
+        }
+      },
+      "title": "仓位树详情返回VO"
     }
   }
 }

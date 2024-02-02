@@ -109,6 +109,33 @@
         }
       },
       "title": "JSONResult«List«进料设备响应DTO»»"
+    },
+    "进料设备响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备id"
+        },
+        "name": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "produceTechnologyDeviceId": {
+          "type": "array",
+          "description": "生产工艺设备id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "进料设备响应DTO"
     }
   }
 }

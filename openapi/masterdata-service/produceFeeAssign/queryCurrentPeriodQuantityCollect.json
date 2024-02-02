@@ -73,6 +73,103 @@
         }
       },
       "title": "JSONResult«List«完工及产成品归集分页响应对象»»"
+    },
+    "完工及产成品归集分页响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编号"
+        },
+        "stockInStatus": {
+          "type": "string",
+          "description": "入库状态",
+          "enum": [
+            "  NONE-未入库",
+            "  PARTIAL_STOCK_IN-部分入库",
+            "  FULL_STOCK_IN-完全入库"
+          ]
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开工日期"
+        },
+        "planEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划完工日期"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "materialUnitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料单位id"
+        },
+        "materialUnitName": {
+          "type": "string",
+          "description": "物料单位名称"
+        },
+        "materialUnitCode": {
+          "type": "string",
+          "description": "物料单位编号"
+        },
+        "planProduceQuantity": {
+          "type": "number",
+          "description": "计划生产数量"
+        },
+        "beginPeriodInProduceQuantity": {
+          "type": "number",
+          "description": "期初在产数量"
+        },
+        "currentPeriodDeliveryQuantity": {
+          "type": "number",
+          "description": "本期投产数量"
+        },
+        "currentPeriodCompleteQuantity": {
+          "type": "number",
+          "description": "本期完工数量"
+        },
+        "endPeriodInProduceQuantity": {
+          "type": "number",
+          "description": "期末在产数量"
+        },
+        "rawMaterialTotalCost": {
+          "type": "number",
+          "description": "本期原材料总成本 = (领料总成本 - 退料总成本)"
+        },
+        "currentPeriodRawMaterialTotalCost": {
+          "type": "number",
+          "description": "本期完工原材料成本 = 本期原材料总成本 * (本期完工数量/计划生产数量)"
+        }
+      },
+      "title": "完工及产成品归集分页响应对象"
     }
   }
 }

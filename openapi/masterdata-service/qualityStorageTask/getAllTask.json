@@ -95,6 +95,147 @@
         }
       },
       "title": "JSONResult«List«销售模块返回VO»»"
+    },
+    "销售模块返回VO": {
+      "type": "object",
+      "properties": {
+        "modelType": {
+          "type": "string",
+          "description": "模块类型",
+          "enum": [
+            "  QUALITY_TASK-质检任务",
+            "  PROCESS-工序检"
+          ]
+        },
+        "modelName": {
+          "type": "string",
+          "description": "模块名称"
+        },
+        "taskList": {
+          "type": "array",
+          "description": "任务集",
+          "items": {
+            "originalRef": "质检模块任务返回VO",
+            "$ref": "#/definitions/质检模块任务返回VO"
+          }
+        },
+        "taskTotalCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "存在的任务数"
+        }
+      },
+      "title": "销售模块返回VO"
+    },
+    "质检模块任务返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "任务id"
+        },
+        "taskName": {
+          "type": "string",
+          "description": "任务名称"
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务编号"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划质检时间/送检时间"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "对应物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料编号"
+        },
+        "materialIssueCode": {
+          "type": "string",
+          "description": "对应物料版次号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "对应物料单位"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "对应物料规格"
+        },
+        "totalInspectionQuantity": {
+          "type": "number",
+          "description": "总质检数"
+        },
+        "waitInspectionQuantity": {
+          "type": "number",
+          "description": "待检数"
+        },
+        "inspectionQuantity": {
+          "type": "number",
+          "description": "已检数"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待质检",
+            "  COMPLETE-已完成",
+            "  CANCEL-已撤销",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "statusName": {
+          "type": "string",
+          "description": "状态名称"
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "送检人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "送检人姓名"
+        },
+        "createUserCode": {
+          "type": "string",
+          "description": "送检人工号"
+        },
+        "position": {
+          "type": "string",
+          "description": "位置"
+        }
+      },
+      "title": "质检模块任务返回VO"
     }
   }
 }

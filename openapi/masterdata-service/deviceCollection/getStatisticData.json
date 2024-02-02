@@ -144,6 +144,118 @@
         }
       },
       "title": "JSONResult«设备数采参数统计查询返回VO»"
+    },
+    "设备数采参数统计查询返回VO": {
+      "type": "object",
+      "properties": {
+        "isConsistent": {
+          "type": "string",
+          "description": "是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "actualBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际查询时间 - 开始"
+        },
+        "actualEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际查询时间 - 结束"
+        },
+        "actualDataCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "实际数据条数"
+        },
+        "paramList": {
+          "type": "array",
+          "description": "参数信息集",
+          "items": {
+            "originalRef": "设备数采参数统计返回VO",
+            "$ref": "#/definitions/设备数采参数统计返回VO"
+          }
+        }
+      },
+      "title": "设备数采参数统计查询返回VO"
+    },
+    "设备数采参数统计返回VO": {
+      "type": "object",
+      "properties": {
+        "paramName": {
+          "type": "string",
+          "description": "参数名称"
+        },
+        "paramCode": {
+          "type": "string",
+          "description": "参数编号"
+        },
+        "paramUnitType": {
+          "type": "string",
+          "description": "参数单位类型"
+        },
+        "paramUnit": {
+          "type": "string",
+          "description": "参数单位"
+        },
+        "deviceList": {
+          "type": "array",
+          "description": "设备信息集",
+          "items": {
+            "originalRef": "设备数采统计返回VO",
+            "$ref": "#/definitions/设备数采统计返回VO"
+          }
+        }
+      },
+      "title": "设备数采参数统计返回VO"
+    },
+    "设备数采统计返回VO": {
+      "type": "object",
+      "properties": {
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "deviceNo": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "list": {
+          "type": "array",
+          "description": "详细数据",
+          "items": {
+            "originalRef": "设备数采统计明细返回VO",
+            "$ref": "#/definitions/设备数采统计明细返回VO"
+          }
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限，如果为空，则说明没有下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限，如果为空，则说明没有上限"
+        }
+      },
+      "title": "设备数采统计返回VO"
+    },
+    "设备数采统计明细返回VO": {
+      "type": "object",
+      "properties": {
+        "dataValue": {
+          "type": "number",
+          "description": "数据值"
+        },
+        "collectTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据采集时间"
+        }
+      },
+      "title": "设备数采统计明细返回VO"
     }
   }
 }

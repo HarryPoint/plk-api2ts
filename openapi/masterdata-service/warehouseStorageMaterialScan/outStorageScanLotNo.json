@@ -113,6 +113,108 @@
         }
       },
       "title": "JSONResult«List«物料出库扫码批次号分组返回对象»»"
+    },
+    "物料出库扫码批次号分组返回对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "details": {
+          "type": "array",
+          "description": "明细数据",
+          "items": {
+            "originalRef": "物料出库扫码批次号返回对象",
+            "$ref": "#/definitions/物料出库扫码批次号返回对象"
+          }
+        }
+      },
+      "title": "物料出库扫码批次号分组返回对象"
+    },
+    "物料出库扫码批次号返回对象": {
+      "type": "object",
+      "properties": {
+        "warehouseMaterialRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "库存id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "materialUnitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料单位id"
+        },
+        "materialUnitName": {
+          "type": "string",
+          "description": "物料单位名称"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseCode": {
+          "type": "string",
+          "description": "仓位code"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "物料出库扫码批次号返回对象"
     }
   }
 }

@@ -72,6 +72,18 @@
         }
       },
       "title": "JSONResult«List«CodeName»»"
+    },
+    "CodeName": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "CodeName"
     }
   }
 }

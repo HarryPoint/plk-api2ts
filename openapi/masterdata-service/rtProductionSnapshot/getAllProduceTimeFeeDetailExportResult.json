@@ -146,6 +146,22 @@
       },
       "title": "工时工费报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«工时工费报表返回VO»»": {
       "type": "object",
       "properties": {
@@ -176,6 +192,108 @@
         }
       },
       "title": "JSONResult«List«工时工费报表返回VO»»"
+    },
+    "工时工费报表返回VO": {
+      "type": "object",
+      "properties": {
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "员工id"
+        },
+        "username": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班组id"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "班组名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编号"
+        },
+        "produceOrderTotalCount": {
+          "type": "number",
+          "description": "订单数量(工单数量)"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "produceQuantity": {
+          "type": "number",
+          "description": "合格产出数量"
+        },
+        "produceFee": {
+          "type": "number",
+          "description": "合格产出工费"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返工数量"
+        },
+        "backFee": {
+          "type": "number",
+          "description": "返工产出工费"
+        },
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单id"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编号"
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "produceTaskNo": {
+          "type": "string",
+          "description": "生产任务编码"
+        }
+      },
+      "title": "工时工费报表返回VO"
     }
   }
 }

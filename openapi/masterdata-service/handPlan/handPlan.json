@@ -112,6 +112,117 @@
       },
       "title": "生产订单手动排产DTO"
     },
+    "生产订单手动排产明细订单维度DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "dayQuantities": {
+          "type": "array",
+          "description": "按日排产明细",
+          "items": {
+            "originalRef": "生产订单手动排产按日排产DTO",
+            "$ref": "#/definitions/生产订单手动排产按日排产DTO"
+          }
+        },
+        "classShiftQuantities": {
+          "type": "array",
+          "description": "按班次排产明细",
+          "items": {
+            "originalRef": "生产订单手动排产按班次排产DTO",
+            "$ref": "#/definitions/生产订单手动排产按班次排产DTO"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "description": "步骤产量集",
+          "items": {
+            "originalRef": "生产订单手动排产明细步骤产量DTO",
+            "$ref": "#/definitions/生产订单手动排产明细步骤产量DTO"
+          }
+        }
+      },
+      "title": "生产订单手动排产明细订单维度DTO"
+    },
+    "生产订单手动排产按日排产DTO": {
+      "type": "object",
+      "properties": {
+        "scheduleDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "产量"
+        }
+      },
+      "title": "生产订单手动排产按日排产DTO"
+    },
+    "生产订单手动排产按班次排产DTO": {
+      "type": "object",
+      "properties": {
+        "scheduleDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期 yyyy-MM-dd"
+        },
+        "classShifts": {
+          "type": "array",
+          "description": "班次产量集",
+          "items": {
+            "originalRef": "班次产量DTO",
+            "$ref": "#/definitions/班次产量DTO"
+          }
+        }
+      },
+      "title": "生产订单手动排产按班次排产DTO"
+    },
+    "班次产量DTO": {
+      "type": "object",
+      "properties": {
+        "classShiftId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班次id"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "产量"
+        }
+      },
+      "title": "班次产量DTO"
+    },
+    "生产订单手动排产明细步骤产量DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "步骤id"
+        },
+        "dayQuantities": {
+          "type": "array",
+          "description": "按日排产明细",
+          "items": {
+            "originalRef": "生产订单手动排产按日排产DTO",
+            "$ref": "#/definitions/生产订单手动排产按日排产DTO"
+          }
+        },
+        "classShiftQuantities": {
+          "type": "array",
+          "description": "按班次排产明细",
+          "items": {
+            "originalRef": "生产订单手动排产按班次排产DTO",
+            "$ref": "#/definitions/生产订单手动排产按班次排产DTO"
+          }
+        }
+      },
+      "title": "生产订单手动排产明细步骤产量DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

@@ -78,6 +78,85 @@
         }
       },
       "title": "JSONResult«ThirdApiResponseDTO»"
+    },
+    "ThirdApiResponseDTO": {
+      "type": "object",
+      "properties": {
+        "requestInfo": {
+          "originalRef": "ThirdApiRequestInfoResponseDTO",
+          "$ref": "#/definitions/ThirdApiRequestInfoResponseDTO"
+        },
+        "responseInfo": {
+          "originalRef": "ThirdApiResponseInfoResponseDTO",
+          "$ref": "#/definitions/ThirdApiResponseInfoResponseDTO"
+        }
+      },
+      "title": "ThirdApiResponseDTO"
+    },
+    "ThirdApiRequestInfoResponseDTO": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "params": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "body": {
+          "type": "string"
+        }
+      },
+      "title": "ThirdApiRequestInfoResponseDTO"
+    },
+    "ThirdApiResponseInfoResponseDTO": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        },
+        "errorInfo": {
+          "type": "string"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "responseCode": {
+          "type": "string"
+        },
+        "responseMsg": {
+          "type": "string"
+        },
+        "responseBody": {
+          "type": "string"
+        },
+        "responseDataObj": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "responseDataArray": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "ThirdApiResponseInfoResponseDTO"
     }
   }
 }

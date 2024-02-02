@@ -78,6 +78,25 @@
         }
       },
       "title": "JSONResult«导出ticket信息»_1"
+    },
+    "导出ticket信息_1": {
+      "type": "object",
+      "properties": {
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "enterpriseCode": {
+          "type": "string",
+          "description": "所属企业编码"
+        },
+        "searchInfo": {
+          "type": "string",
+          "description": "所属企业编码"
+        }
+      },
+      "title": "导出ticket信息_1"
     }
   }
 }

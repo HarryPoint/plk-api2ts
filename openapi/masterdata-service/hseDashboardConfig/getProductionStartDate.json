@@ -70,6 +70,17 @@
         }
       },
       "title": "JSONResult«生产开始日期-查询响应»"
+    },
+    "生产开始日期-查询响应": {
+      "type": "object",
+      "properties": {
+        "productionStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "生产开始日期"
+        }
+      },
+      "title": "生产开始日期-查询响应"
     }
   }
 }

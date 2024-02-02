@@ -73,6 +73,53 @@
         }
       },
       "title": "JSONResult«List«项目门户响应对象»»"
+    },
+    "项目门户响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "code": {
+          "type": "string",
+          "description": "项目编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "projectStatus": {
+          "type": "string",
+          "description": "项目状态",
+          "enum": [
+            "  DRAFT-草稿",
+            "  IN_APPROVE-审批中",
+            "  APPROVAL_DENIED-审批拒绝",
+            "  IN_PROGRESS-进行中",
+            "  COMPLETE-已完成",
+            "  END-已终止"
+          ]
+        },
+        "projectTypeName": {
+          "type": "string",
+          "description": "项目类型名称"
+        },
+        "projectManagerName": {
+          "type": "string",
+          "description": "项目经理名称"
+        },
+        "projectTypeId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "projectManagerId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "项目门户响应对象"
     }
   }
 }

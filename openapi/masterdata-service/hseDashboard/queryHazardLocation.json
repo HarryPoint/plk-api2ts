@@ -104,6 +104,32 @@
         }
       },
       "title": "JSONResult«职业危害场所查询响应»"
+    },
+    "职业危害场所查询响应": {
+      "type": "object",
+      "properties": {
+        "hazardLocationQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "职业危害场所数量/流程状态未已完成的总数"
+        },
+        "hazardFactorsQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "职业危害因素数量"
+        },
+        "exceededQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超标的数量"
+        },
+        "withinQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未超标的数量"
+        }
+      },
+      "title": "职业危害场所查询响应"
     }
   }
 }

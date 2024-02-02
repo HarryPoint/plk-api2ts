@@ -86,6 +86,36 @@
         }
       },
       "title": "JSONResult«大屏不合格品统计按级别返回»"
+    },
+    "大屏不合格品统计按级别返回": {
+      "type": "object",
+      "properties": {
+        "quantityOfCategoryOne": {
+          "type": "number",
+          "description": "I的数量"
+        },
+        "quantityOfCategoryTwo": {
+          "type": "number",
+          "description": "II的数量"
+        },
+        "quantityOfCategoryThree": {
+          "type": "number",
+          "description": "III的数量"
+        },
+        "percentageOfCategoryOne": {
+          "type": "number",
+          "description": "I的占比"
+        },
+        "percentageOfCategoryTwo": {
+          "type": "number",
+          "description": "II的占比"
+        },
+        "percentageOfCategoryThree": {
+          "type": "number",
+          "description": "III的占比"
+        }
+      },
+      "title": "大屏不合格品统计按级别返回"
     }
   }
 }

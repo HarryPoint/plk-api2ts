@@ -82,6 +82,38 @@
         }
       },
       "title": "JSONResult«List«生产成本核算单据状态校验响应DTO»»"
+    },
+    "生产成本核算单据状态校验响应DTO": {
+      "type": "object",
+      "properties": {
+        "billId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "单据id"
+        },
+        "billCode": {
+          "type": "string",
+          "description": "单据编号"
+        },
+        "handleUserNames": {
+          "type": "array",
+          "description": "当前处理人",
+          "items": {
+            "type": "string"
+          }
+        },
+        "todoId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "待办id"
+        },
+        "flowPathTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "待办对应的流程任务id"
+        }
+      },
+      "title": "生产成本核算单据状态校验响应DTO"
     }
   }
 }

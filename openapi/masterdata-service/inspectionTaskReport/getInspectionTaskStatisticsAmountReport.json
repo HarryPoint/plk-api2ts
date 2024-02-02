@@ -88,6 +88,32 @@
         }
       },
       "title": "JSONResult«任务量统计报表合计返回DTO»"
+    },
+    "任务量统计报表合计返回DTO": {
+      "type": "object",
+      "properties": {
+        "amountQuantity": {
+          "type": "number",
+          "description": "总任务量"
+        },
+        "waitQuantity": {
+          "type": "number",
+          "description": "待执行任务量"
+        },
+        "handlingQuantity": {
+          "type": "number",
+          "description": "进行中任务量"
+        },
+        "completeQuantity": {
+          "type": "number",
+          "description": "已完成任务量"
+        },
+        "overdueQuantity": {
+          "type": "number",
+          "description": "超期任务量"
+        }
+      },
+      "title": "任务量统计报表合计返回DTO"
     }
   }
 }

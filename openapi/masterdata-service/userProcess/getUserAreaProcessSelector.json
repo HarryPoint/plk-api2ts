@@ -93,6 +93,62 @@
         }
       },
       "title": "JSONResult«List«区域工序选择返回VO»»_1"
+    },
+    "区域工序选择返回VO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "processList": {
+          "type": "array",
+          "description": "工序集合",
+          "items": {
+            "originalRef": "工序返回VO - 包含任务信息",
+            "$ref": "#/definitions/工序返回VO - 包含任务信息"
+          }
+        }
+      },
+      "title": "区域工序选择返回VO_1"
+    },
+    "工序返回VO - 包含任务信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "taskCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成任务数"
+        },
+        "taskTotalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "任务总数"
+        }
+      },
+      "title": "工序返回VO - 包含任务信息"
     }
   }
 }

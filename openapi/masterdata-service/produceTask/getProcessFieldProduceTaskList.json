@@ -137,6 +137,22 @@
       },
       "title": "任务汇总表(基于工序字段)搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«List«任务汇总表(基于工序字段)明细信息VO»»": {
       "type": "object",
       "properties": {
@@ -167,6 +183,67 @@
         }
       },
       "title": "JSONResult«List«任务汇总表(基于工序字段)明细信息VO»»"
+    },
+    "任务汇总表(基于工序字段)明细信息VO": {
+      "type": "object",
+      "properties": {
+        "produceTaskId": {
+          "type": "string",
+          "description": "生产任务id"
+        },
+        "planTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划生产日期"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编号"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        },
+        "fieldValueList": {
+          "type": "array",
+          "description": "动态字段值列表",
+          "items": {
+            "originalRef": "工序字段值VO",
+            "$ref": "#/definitions/工序字段值VO"
+          }
+        },
+        "produceTaskStatus": {
+          "type": "string",
+          "description": "生产任务状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  PRODUCE-生产中",
+            "  PAUSE-暂停中",
+            "  STOP-停止",
+            "  CLOSE-已关闭",
+            "  CANCEL-已取消"
+          ]
+        }
+      },
+      "title": "任务汇总表(基于工序字段)明细信息VO"
+    },
+    "工序字段值VO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "字段编号"
+        },
+        "value": {
+          "type": "string",
+          "description": "字段值"
+        }
+      },
+      "title": "工序字段值VO"
     }
   }
 }

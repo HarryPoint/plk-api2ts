@@ -80,6 +80,176 @@
         }
       },
       "title": "JSONResult«生产工艺工艺卡信息返回DTO»"
+    },
+    "生产工艺工艺卡信息返回DTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺id"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "textList": {
+          "type": "array",
+          "description": "描述集合",
+          "items": {
+            "originalRef": "生产工艺工艺卡明细返回DTO",
+            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO"
+          }
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺卡名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺卡编号"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "fileList": {
+          "type": "array",
+          "description": "文件集合",
+          "items": {
+            "originalRef": "生产工艺工艺卡明细返回DTO",
+            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO"
+          }
+        },
+        "processFlowPathRpDatas": {
+          "type": "array",
+          "description": "工序对应字段信息",
+          "items": {
+            "originalRef": "工序对应字段详情VO",
+            "$ref": "#/definitions/工序对应字段详情VO"
+          }
+        }
+      },
+      "title": "生产工艺工艺卡信息返回DTO"
+    },
+    "生产工艺工艺卡明细返回DTO": {
+      "type": "object",
+      "required": [
+        "code",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "type": {
+          "type": "string",
+          "description": "明细类型",
+          "enum": [
+            "  FILE-文件",
+            "  TEXT-描述",
+            "  INPUT-录入"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "明细名称/标题"
+        },
+        "code": {
+          "type": "string",
+          "description": "明细编号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "描述内容/备注"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "文件名称"
+        },
+        "fileKey": {
+          "type": "string",
+          "description": "文件key"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": "文件完整url"
+        }
+      },
+      "title": "生产工艺工艺卡明细返回DTO"
+    },
+    "工序对应字段详情VO": {
+      "type": "object",
+      "properties": {
+        "fieldCode": {
+          "type": "string",
+          "description": "关联字段code"
+        },
+        "fieldName": {
+          "type": "string",
+          "description": "关联字段名称"
+        },
+        "value": {
+          "type": "object",
+          "description": "值"
+        }
+      },
+      "title": "工序对应字段详情VO"
     }
   }
 }

@@ -149,6 +149,96 @@
         }
       },
       "title": "JSONResult«销售交期应答辅助返回VO»"
+    },
+    "销售交期应答辅助返回VO": {
+      "type": "object",
+      "properties": {
+        "materialInfo": {
+          "description": "主物料信息",
+          "originalRef": "销售交期应答辅助物料返回VO",
+          "$ref": "#/definitions/销售交期应答辅助物料返回VO"
+        },
+        "childMaterialInfos": {
+          "type": "array",
+          "description": "子物料信息集",
+          "items": {
+            "originalRef": "销售交期应答辅助物料返回VO",
+            "$ref": "#/definitions/销售交期应答辅助物料返回VO"
+          }
+        },
+        "leadTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "预计整体交付时间"
+        },
+        "designCompleteTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "设计完成时间"
+        },
+        "purchaseCompleteTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "采购完成时间"
+        }
+      },
+      "title": "销售交期应答辅助返回VO"
+    },
+    "销售交期应答辅助物料返回VO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径id"
+        },
+        "materialStorageCount": {
+          "type": "number",
+          "description": "物料库存数"
+        },
+        "demandCount": {
+          "type": "number",
+          "description": "需求数量"
+        },
+        "allowanceCount": {
+          "type": "number",
+          "description": "余量， 注：如果是正数，则显示 余量：xxx，  如果是负数，则显示 还需：xxx"
+        },
+        "isSetCapacity": {
+          "type": "string",
+          "description": "是否完整配置了产能信息",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "capacityWarning": {
+          "type": "string",
+          "description": "产能信息异常描述"
+        },
+        "childMaterialInfos": {
+          "type": "array",
+          "description": "子物料信息集",
+          "items": {
+            "originalRef": "销售交期应答辅助物料返回VO",
+            "$ref": "#/definitions/销售交期应答辅助物料返回VO"
+          }
+        }
+      },
+      "title": "销售交期应答辅助物料返回VO"
     }
   }
 }

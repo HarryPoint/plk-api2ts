@@ -88,6 +88,65 @@
         }
       },
       "title": "JSONResult«List«ProposalScoreResponseDTO»»"
+    },
+    "ProposalScoreResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "评分编码"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目ID"
+        },
+        "proposalId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "合理化建议ID"
+        },
+        "preliminaryEvaluationScore": {
+          "type": "number",
+          "description": "初评者的得分"
+        },
+        "preliminaryEvaluationUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "初评人员"
+        },
+        "preliminaryEvaluationUserName": {
+          "type": "string",
+          "description": "初评人员名称"
+        },
+        "preliminaryEvaluationOpinions": {
+          "type": "string",
+          "description": "初评意见"
+        },
+        "reEvaluationScore": {
+          "type": "number",
+          "description": "复评得分"
+        },
+        "reEvaluationUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "复评人员"
+        },
+        "reEvaluationUserName": {
+          "type": "string",
+          "description": "复评人员名称"
+        },
+        "reEvaluationOpinions": {
+          "type": "string",
+          "description": "复评意见"
+        }
+      },
+      "title": "ProposalScoreResponseDTO"
     }
   }
 }

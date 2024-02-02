@@ -115,6 +115,146 @@
         }
       },
       "title": "JSONResult«设备数采实时数据返回VO»"
+    },
+    "设备数采实时数据返回VO": {
+      "type": "object",
+      "properties": {
+        "deviceInfo": {
+          "description": "设备信息",
+          "originalRef": "设备数采状态信息VO",
+          "$ref": "#/definitions/设备数采状态信息VO"
+        },
+        "params": {
+          "type": "array",
+          "description": "参数集",
+          "items": {
+            "originalRef": "设备数采实时数据参数返回VO",
+            "$ref": "#/definitions/设备数采实时数据参数返回VO"
+          }
+        }
+      },
+      "title": "设备数采实时数据返回VO"
+    },
+    "设备数采状态信息VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceCollectionPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备数采方案id"
+        },
+        "deviceCollectionPlanName": {
+          "type": "string",
+          "description": "设备数采方案名称"
+        },
+        "deviceCollectionPlanCode": {
+          "type": "string",
+          "description": "设备数采方案编号"
+        },
+        "onlineStatus": {
+          "type": "string",
+          "description": "在线状态",
+          "enum": [
+            "  ONLINE-在线",
+            "  OFFLINE-离线"
+          ]
+        },
+        "onlineStatusDesc": {
+          "type": "string",
+          "description": "在线状态描述"
+        },
+        "status": {
+          "type": "string",
+          "description": "设备状态",
+          "enum": [
+            "  DS1-正常运行",
+            "  DS2-降速运行",
+            "  DS3-故障停机",
+            "  DS4-保养",
+            "  DS5-空闲待用",
+            "  DS6-换型",
+            "  DS7-关机",
+            "  DS8-空运"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "设备状态描述"
+        },
+        "lastApiTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最后通讯时间"
+        }
+      },
+      "title": "设备数采状态信息VO"
+    },
+    "设备数采实时数据参数返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "参数id"
+        },
+        "name": {
+          "type": "string",
+          "description": "参数名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "参数编号"
+        },
+        "unit": {
+          "type": "string",
+          "description": "参数单位"
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "realTimeDatas": {
+          "type": "array",
+          "description": "最新50条实时数据",
+          "items": {
+            "originalRef": "设备数采数据返回VO",
+            "$ref": "#/definitions/设备数采数据返回VO"
+          }
+        }
+      },
+      "title": "设备数采实时数据参数返回VO"
+    },
+    "设备数采数据返回VO": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "时间"
+        },
+        "result": {
+          "type": "number",
+          "description": "结果值"
+        }
+      },
+      "title": "设备数采数据返回VO"
     }
   }
 }

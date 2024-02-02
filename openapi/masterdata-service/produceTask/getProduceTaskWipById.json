@@ -86,6 +86,67 @@
         }
       },
       "title": "JSONResult«生产任务WIP信息响应DTO»"
+    },
+    "生产任务WIP信息响应DTO": {
+      "type": "object",
+      "properties": {
+        "wipBeforeQuantity": {
+          "type": "number",
+          "description": "在制前WIP数"
+        },
+        "wipBeforeLots": {
+          "type": "array",
+          "description": "在制前WIP信息",
+          "items": {
+            "originalRef": "生产任务WIP批次信息VO",
+            "$ref": "#/definitions/生产任务WIP批次信息VO"
+          }
+        },
+        "wipAfterQuantity": {
+          "type": "number",
+          "description": "在制中WIP数"
+        },
+        "wipAfterLots": {
+          "type": "array",
+          "description": "在制中WIP信息",
+          "items": {
+            "originalRef": "生产任务WIP批次信息VO",
+            "$ref": "#/definitions/生产任务WIP批次信息VO"
+          }
+        }
+      },
+      "title": "生产任务WIP信息响应DTO"
+    },
+    "生产任务WIP批次信息VO": {
+      "type": "object",
+      "properties": {
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotOrderName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "lotOrderNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "总数量"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "锁定数量"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "可使用数量"
+        }
+      },
+      "title": "生产任务WIP批次信息VO"
     }
   }
 }

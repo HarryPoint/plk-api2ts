@@ -101,6 +101,43 @@
         }
       },
       "title": "JSONResult«List«设备人员能力未设置人员响应DTO»»"
+    },
+    "设备人员能力未设置人员响应DTO": {
+      "type": "object",
+      "properties": {
+        "employeeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "员工id"
+        },
+        "employeeCode": {
+          "type": "string",
+          "description": "员工code"
+        },
+        "employeeName": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "部门id"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "部门名称"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班组id"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "班组名称"
+        }
+      },
+      "title": "设备人员能力未设置人员响应DTO"
     }
   }
 }

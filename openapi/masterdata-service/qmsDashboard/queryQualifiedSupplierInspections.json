@@ -73,6 +73,28 @@
         }
       },
       "title": "JSONResult«List«供应商交检合格率查询响应»»"
+    },
+    "供应商交检合格率查询响应": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "string",
+          "description": "月份"
+        },
+        "qualifiedQuantity": {
+          "type": "number",
+          "description": "合格数量"
+        },
+        "inspectionQuantity": {
+          "type": "number",
+          "description": "交检总数量"
+        },
+        "passRate": {
+          "type": "number",
+          "description": "合格率"
+        }
+      },
+      "title": "供应商交检合格率查询响应"
     }
   }
 }

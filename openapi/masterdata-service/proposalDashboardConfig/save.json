@@ -121,6 +121,44 @@
       },
       "title": "ProposalDashboardConfigRequestDTO"
     },
+    "ProposalDashboardStatisticsConfigRequestDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "type": {
+          "type": "string",
+          "description": "统计类型",
+          "enum": [
+            "  RANGE-数值区间",
+            "  GE-数值大于等于",
+            "  GT-数值大于"
+          ]
+        },
+        "beginValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "开始值 - 适用于数值区间、数值大于等于、数值大于"
+        },
+        "endValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "结束值"
+        },
+        "projectCompleteStatus": {
+          "type": "string",
+          "description": "项目归属的完成状态 - 未完成项目， 已完成项目",
+          "enum": [
+            "  UN_COMPLETED-未完成",
+            "  COMPLETED-已完成"
+          ]
+        }
+      },
+      "title": "ProposalDashboardStatisticsConfigRequestDTO"
+    },
     "JSONResult«long»": {
       "type": "object",
       "properties": {

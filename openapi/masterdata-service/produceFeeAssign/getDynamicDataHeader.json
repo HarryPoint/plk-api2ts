@@ -73,6 +73,25 @@
         }
       },
       "title": "JSONResult«List«生产成本分配动态表头响应对象»»"
+    },
+    "生产成本分配动态表头响应对象": {
+      "type": "object",
+      "properties": {
+        "produceFeeTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "费用类型id"
+        },
+        "produceFeeTypeCode": {
+          "type": "string",
+          "description": "费用类型code"
+        },
+        "produceFeeTypeName": {
+          "type": "string",
+          "description": "费用类型name"
+        }
+      },
+      "title": "生产成本分配动态表头响应对象"
     }
   }
 }

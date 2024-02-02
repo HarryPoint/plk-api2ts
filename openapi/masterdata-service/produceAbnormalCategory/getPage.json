@@ -117,6 +117,22 @@
       },
       "title": "异常类型搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«分页信息«异常类型返回VO»»": {
       "type": "object",
       "properties": {
@@ -144,6 +160,125 @@
         }
       },
       "title": "JSONResult«分页信息«异常类型返回VO»»"
+    },
+    "分页信息«异常类型返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "异常类型返回VO",
+            "$ref": "#/definitions/异常类型返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«异常类型返回VO»"
+    },
+    "异常类型返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "type": {
+          "type": "string",
+          "description": "所属分类",
+          "enum": [
+            "  SCRAP-报废",
+            "  HOLD-扣留",
+            "  HOLD_PAUSE-暂扣",
+            "  REPORT-上报反馈",
+            "  BACK-返工",
+            "  CANCEL_TASK-撤销任务"
+          ]
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "所属分类"
+        },
+        "name": {
+          "type": "string",
+          "description": "类型名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "类型编号"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数据状态"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人姓名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        }
+      },
+      "title": "异常类型返回VO"
     }
   }
 }

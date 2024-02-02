@@ -95,6 +95,129 @@
       },
       "title": "盘点导入明细列表DTO"
     },
+    "仓库盘点仓位清单导入DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点详情id"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "warehouseCode": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "areaCode": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "materialTypeDesc": {
+          "type": "string",
+          "description": "物料种类描述"
+        },
+        "originalQuantity": {
+          "type": "number",
+          "description": "原始数量(账面库存)"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "盘点数量"
+        },
+        "verifyQuantity": {
+          "type": "number",
+          "description": "核对数量"
+        },
+        "verifyDiffQuantity": {
+          "type": "number",
+          "description": "核对调整数量"
+        },
+        "checkQuantity": {
+          "type": "number",
+          "description": "盘点结果(盈亏数量)"
+        },
+        "differenceReason": {
+          "type": "string",
+          "description": "差异原因"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "serialNos": {
+          "type": "array",
+          "description": "序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO_1",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1"
+          }
+        }
+      },
+      "title": "仓库盘点仓位清单导入DTO"
+    },
+    "盘点任务盘点明细序列号DTO_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO_1"
+    },
     "JSONResult«List«仓库盘点仓位清单返回DTO»»": {
       "type": "object",
       "properties": {
@@ -125,6 +248,177 @@
         }
       },
       "title": "JSONResult«List«仓库盘点仓位清单返回DTO»»"
+    },
+    "仓库盘点仓位清单返回DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点详情id"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "warehouseCode": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "areaCode": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "materialTypeDesc": {
+          "type": "string",
+          "description": "物料种类描述"
+        },
+        "originalQuantity": {
+          "type": "number",
+          "description": "原始数量(账面库存)"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "盘点数量"
+        },
+        "verifyQuantity": {
+          "type": "number",
+          "description": "核对数量"
+        },
+        "verifyDiffQuantity": {
+          "type": "number",
+          "description": "核对调整数量"
+        },
+        "checkQuantity": {
+          "type": "number",
+          "description": "盘点结果(盈亏数量)"
+        },
+        "differenceReason": {
+          "type": "string",
+          "description": "差异原因"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasWarehouseMaterial": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "serialNos": {
+          "type": "array",
+          "description": "序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        },
+        "pickSerialNos": {
+          "type": "array",
+          "description": "匹配序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        },
+        "profitSerialNos": {
+          "type": "array",
+          "description": "盘盈序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        },
+        "lossSerialNos": {
+          "type": "array",
+          "description": "盘亏序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+          }
+        }
+      },
+      "title": "仓库盘点仓位清单返回DTO"
+    },
+    "盘点任务盘点明细序列号DTO": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO"
     }
   }
 }

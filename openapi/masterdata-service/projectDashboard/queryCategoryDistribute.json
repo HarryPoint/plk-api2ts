@@ -125,6 +125,25 @@
         }
       },
       "title": "JSONResult«List«项目大类分布响应对象»»"
+    },
+    "项目大类分布响应对象": {
+      "type": "object",
+      "properties": {
+        "projectCategoryName": {
+          "type": "string",
+          "description": "项目大类名称"
+        },
+        "projectCategory": {
+          "type": "string",
+          "description": "项目大类编号"
+        },
+        "distributeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分布数量"
+        }
+      },
+      "title": "项目大类分布响应对象"
     }
   }
 }

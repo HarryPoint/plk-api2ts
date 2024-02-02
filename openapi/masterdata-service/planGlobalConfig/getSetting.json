@@ -85,6 +85,122 @@
         }
       },
       "title": "JSONResult«排产参数VO»"
+    },
+    "排产参数VO": {
+      "type": "object",
+      "properties": {
+        "planTypeValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排产方式值"
+        },
+        "ascFactorValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "正排考虑因素值"
+        },
+        "descFactorValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "倒排考虑因素值"
+        },
+        "enableDayCapacity": {
+          "type": "string",
+          "description": "是否开启日产能配置",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "capacityDayQuantity": {
+          "type": "number",
+          "description": "日产能数量"
+        },
+        "dayWorkHours": {
+          "type": "number",
+          "description": "每日工作小时数"
+        },
+        "enableLockDay": {
+          "type": "string",
+          "description": "是否开启锁定天数",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "lockDay": {
+          "type": "integer",
+          "format": "int32",
+          "description": "锁定天数"
+        },
+        "isShowForecastLaborCost": {
+          "type": "string",
+          "description": "是否展示预估工费、默认不展示",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isGtPlannedQuantity": {
+          "type": "string",
+          "description": "进出料数量是否大于计划数量",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isAutoMoveIn": {
+          "type": "string",
+          "description": "是否自动进料",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isRobotIssue": {
+          "type": "string",
+          "description": "是否自动下发任务",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "producePlanType": {
+          "type": "string",
+          "description": "排产方式",
+          "enum": [
+            "  NOT_PLAN-未排产",
+            "  AUTO-自动排产",
+            "  HAND-手动排产",
+            "  VAGUE-模糊排产"
+          ]
+        },
+        "producePlanStartTimeFormFieldCode": {
+          "type": "string",
+          "description": "排产开始时间订单流程表单字段code"
+        },
+        "producePlanStartTimeFormFieldSerialNo": {
+          "type": "string",
+          "description": "排产开始时间订单流程表单字段序列号"
+        },
+        "producePlanEndTimeFormFieldCode": {
+          "type": "string",
+          "description": "排产结束时间订单流程表单字段code"
+        },
+        "producePlanEndTimeFormFieldSerialNo": {
+          "type": "string",
+          "description": "排产结束时间订单流程表单字段序列号"
+        },
+        "isBeforeStorageIssuanceMaterial": {
+          "type": "string",
+          "description": "是否入库前先领料",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "排产参数VO"
     }
   }
 }

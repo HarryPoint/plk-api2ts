@@ -42,15 +42,17 @@ const fetchData = async (
   const createDefinitions = (
     target: any,
     prevDefines: Record<string, any> = {}
-  ) => {
+  ): Record<string, any> => {
     return findOriginalRef(target).reduce((pre, next) => {
       if (pre.hasOwnProperty(next)) {
         return pre;
       }
-      return {
+      const nextDefine = _.cloneDeep(data.definitions[next]);
+      pre = {
         ...pre,
         [next]: _.cloneDeep(data.definitions[next]),
       };
+      return createDefinitions(nextDefine, pre);
     }, prevDefines);
   };
   const openJsonArr = _.toPairs(data.paths).map(([path, pathItem]) => {

@@ -125,6 +125,58 @@
         }
       },
       "title": "JSONResult«List«盼盼上报统计响应对象»»"
+    },
+    "盼盼上报统计响应对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "totalPlanQuantity": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "出料数"
+        },
+        "totalBackQuantity": {
+          "type": "number",
+          "description": "返工数"
+        },
+        "totalScrapQuantity": {
+          "type": "number",
+          "description": "报废个数"
+        }
+      },
+      "title": "盼盼上报统计响应对象"
     }
   }
 }

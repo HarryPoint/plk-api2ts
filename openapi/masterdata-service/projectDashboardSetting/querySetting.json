@@ -76,6 +76,37 @@
         }
       },
       "title": "JSONResult«项目大屏设置保存请求dto»"
+    },
+    "项目大屏设置保存请求dto": {
+      "type": "object",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "description": "统计范围",
+          "enum": [
+            "  ALL-全部项目",
+            "  SPECIFY_PROJECT_TYPE-指定项目类型",
+            "  EXCLUDE_PROJECT-指定不统计的项目"
+          ]
+        },
+        "projectTypeIds": {
+          "type": "array",
+          "description": "项目类型ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "excludeProjectIds": {
+          "type": "array",
+          "description": "排除的项目ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "项目大屏设置保存请求dto"
     }
   }
 }

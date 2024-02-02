@@ -80,6 +80,101 @@
         }
       },
       "title": "JSONResult«ProduceTechnologyCapacityResponseDTO»"
+    },
+    "ProduceTechnologyCapacityResponseDTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "产能编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "产能名称"
+        },
+        "readyTime": {
+          "type": "number",
+          "description": "准备耗时"
+        },
+        "readyTimeUnit": {
+          "type": "string",
+          "description": "准备时间单位",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "capacityProduceTime": {
+          "type": "number",
+          "description": "生产耗时"
+        },
+        "capacityTimeType": {
+          "type": "string",
+          "description": "生产时间单位",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "capacityProduceQuantity": {
+          "type": "number",
+          "description": "产出数量"
+        }
+      },
+      "title": "ProduceTechnologyCapacityResponseDTO"
     }
   }
 }

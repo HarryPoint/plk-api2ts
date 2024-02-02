@@ -100,6 +100,20 @@
       },
       "title": "质检申请DTO"
     },
+    "成品物料填写DTO": {
+      "type": "object",
+      "properties": {
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数(质检数)"
+        },
+        "applyQualityAgainQuantity": {
+          "type": "number",
+          "description": "再次申请质检数"
+        }
+      },
+      "title": "成品物料填写DTO"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

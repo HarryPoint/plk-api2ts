@@ -120,6 +120,40 @@
         }
       },
       "title": "JSONResult«List«项目大事记响应对象»»"
+    },
+    "项目大事记响应对象": {
+      "type": "object",
+      "properties": {
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "content": {
+          "type": "string",
+          "description": "大事记内容"
+        },
+        "projectMemorabiliaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目大事记id"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "fromAppCode": {
+          "type": "string",
+          "description": "来源应用编号"
+        },
+        "fromAppId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "来源应用id"
+        }
+      },
+      "title": "项目大事记响应对象"
     }
   }
 }

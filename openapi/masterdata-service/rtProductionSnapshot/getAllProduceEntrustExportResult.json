@@ -146,6 +146,40 @@
         }
       },
       "title": "JSONResult«List«委外报表导出VO»»"
+    },
+    "委外报表导出VO": {
+      "type": "object",
+      "properties": {
+        "groupName": {
+          "type": "string",
+          "description": "数据分组名称"
+        },
+        "groupCode": {
+          "type": "string",
+          "description": "数据分组编号"
+        },
+        "dataTime": {
+          "type": "string",
+          "description": "数据时间"
+        },
+        "produceEntrustQuantity": {
+          "type": "number",
+          "description": "委外总数(委外发出)"
+        },
+        "produceEntrustBackTotalQuantity": {
+          "type": "number",
+          "description": "委外返回数量(委外返回)"
+        },
+        "produceEntrustBackQuantity": {
+          "type": "number",
+          "description": "委外返回数量(委外合格返回)"
+        },
+        "produceEntrustScrapQuantity": {
+          "type": "number",
+          "description": "委外报废数量(委外报废)"
+        }
+      },
+      "title": "委外报表导出VO"
     }
   }
 }

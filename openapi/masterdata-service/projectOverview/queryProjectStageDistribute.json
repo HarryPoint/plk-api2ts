@@ -120,6 +120,90 @@
         }
       },
       "title": "JSONResult«List«项目阶段分布响应对象»»"
+    },
+    "项目阶段分布响应对象": {
+      "type": "object",
+      "properties": {
+        "projectStageName": {
+          "type": "string",
+          "description": "项目阶段名称"
+        },
+        "projectStageId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目阶段id"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "项目阶段排序"
+        },
+        "projectTaskList": {
+          "type": "array",
+          "description": "项目任务列表",
+          "items": {
+            "originalRef": "项目阶段任务分布响应对象",
+            "$ref": "#/definitions/项目阶段任务分布响应对象"
+          }
+        }
+      },
+      "title": "项目阶段分布响应对象"
+    },
+    "项目阶段任务分布响应对象": {
+      "type": "object",
+      "properties": {
+        "projectTaskTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务类型id"
+        },
+        "projectTaskTypeCode": {
+          "type": "string",
+          "description": "项目任务类型编号"
+        },
+        "projectTaskTypeName": {
+          "type": "string",
+          "description": "项目任务类型名称"
+        },
+        "projectTaskName": {
+          "type": "string",
+          "description": "项目任务名称"
+        },
+        "projectTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务id"
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "项目任务开始日期"
+        },
+        "taskStatus": {
+          "type": "string",
+          "description": "项目任务状态",
+          "enum": [
+            "  DRAFT-草稿",
+            "  UN_ISSUE-未下发",
+            "  UN_RECEIVE-未接受",
+            "  UN_START-未开始",
+            "  HANDLING-进行中",
+            "  COMPLETE-已完成",
+            "  NOT_PASS-未通过",
+            "  CANCEL-已取消"
+          ]
+        },
+        "fromAppCode": {
+          "type": "string",
+          "description": "来源应用编号"
+        },
+        "fromAppId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "来源应用id"
+        }
+      },
+      "title": "项目阶段任务分布响应对象"
     }
   }
 }

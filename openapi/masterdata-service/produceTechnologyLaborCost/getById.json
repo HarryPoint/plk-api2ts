@@ -80,6 +80,98 @@
         }
       },
       "title": "JSONResult«ProduceTechnologyLaborCostResponseDTO»"
+    },
+    "ProduceTechnologyLaborCostResponseDTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "produceTechnologyId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺id"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "produceTechnologyRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属工艺路径步骤id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工费名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工费编号"
+        },
+        "producePrice": {
+          "type": "number",
+          "description": "合格产出工费单价"
+        },
+        "backProducePrice": {
+          "type": "number",
+          "description": "返工产出工费单价"
+        },
+        "readyPrice": {
+          "type": "number",
+          "description": "准备工费"
+        },
+        "laborCostId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联工费id"
+        }
+      },
+      "title": "ProduceTechnologyLaborCostResponseDTO"
     }
   }
 }

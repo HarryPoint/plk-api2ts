@@ -82,6 +82,25 @@
       },
       "title": "动态数据无状态删除请求对象"
     },
+    "动态数据无状态删除明细请求对象": {
+      "type": "object",
+      "properties": {
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "流程id"
+        },
+        "formRecordIdList": {
+          "type": "array",
+          "description": "动态数据id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "动态数据无状态删除明细请求对象"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

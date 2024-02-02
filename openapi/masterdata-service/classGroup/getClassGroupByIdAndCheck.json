@@ -87,6 +87,30 @@
         }
       },
       "title": "JSONResult«班组VO»"
+    },
+    "班组VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "班组名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "班组编号"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上级部门id"
+        }
+      },
+      "title": "班组VO"
     }
   }
 }

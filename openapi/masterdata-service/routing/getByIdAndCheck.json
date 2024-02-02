@@ -88,6 +88,48 @@
         }
       },
       "title": "JSONResult«RoutingDeprecatedVO»"
+    },
+    "RoutingDeprecatedVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺路径编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属主物料id"
+        },
+        "materialBomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属主物料bomid"
+        },
+        "isDefault": {
+          "type": "string",
+          "description": "是否默认",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "RoutingDeprecatedVO"
     }
   }
 }

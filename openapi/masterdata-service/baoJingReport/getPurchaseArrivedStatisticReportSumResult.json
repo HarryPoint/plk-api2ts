@@ -155,6 +155,22 @@
       },
       "title": "采购到货统计报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«采购到货统计报表返回VO»": {
       "type": "object",
       "properties": {
@@ -182,6 +198,45 @@
         }
       },
       "title": "JSONResult«采购到货统计报表返回VO»"
+    },
+    "采购到货统计报表返回VO_1": {
+      "type": "object",
+      "properties": {
+        "orderNum": {
+          "type": "integer",
+          "format": "int32",
+          "description": "订单数量"
+        },
+        "orderAmount": {
+          "type": "number",
+          "description": "订单金额"
+        },
+        "arrivedQty": {
+          "type": "number",
+          "description": "已到货数量"
+        },
+        "waitQty": {
+          "type": "number",
+          "description": "未到货数量"
+        },
+        "inboundQty": {
+          "type": "number",
+          "description": "入库数量"
+        },
+        "inboundAmount": {
+          "type": "number",
+          "description": "入库金额"
+        },
+        "notInboundQty": {
+          "type": "number",
+          "description": "未入库数量"
+        },
+        "notInboundAmount": {
+          "type": "number",
+          "description": "未入库金额"
+        }
+      },
+      "title": "采购到货统计报表返回VO_1"
     }
   }
 }

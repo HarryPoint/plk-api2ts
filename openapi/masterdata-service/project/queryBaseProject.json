@@ -413,6 +413,24 @@
       },
       "title": "项目阶段任务查询对象"
     },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
     "JSONResult«List«项目基础查询响应对象»»": {
       "type": "object",
       "properties": {
@@ -443,6 +461,33 @@
         }
       },
       "title": "JSONResult«List«项目基础查询响应对象»»"
+    },
+    "项目基础查询响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "name": {
+          "type": "string",
+          "description": "项目名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "项目编号"
+        },
+        "projectTypeName": {
+          "type": "string",
+          "description": "项目类型"
+        },
+        "projectManagerName": {
+          "type": "string",
+          "description": "项目经理"
+        }
+      },
+      "title": "项目基础查询响应对象"
     }
   }
 }

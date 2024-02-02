@@ -110,6 +110,25 @@
         }
       },
       "title": "JSONResult«List«工费下拉选择列表搜索响应DTO»»"
+    },
+    "工费下拉选择列表搜索响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        }
+      },
+      "title": "工费下拉选择列表搜索响应DTO"
     }
   }
 }

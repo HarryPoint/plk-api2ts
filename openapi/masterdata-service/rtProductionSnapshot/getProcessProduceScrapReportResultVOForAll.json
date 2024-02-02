@@ -117,6 +117,33 @@
         }
       },
       "title": "JSONResult«List«工序产出报废统计返回VO»»"
+    },
+    "工序产出报废统计返回VO": {
+      "type": "object",
+      "properties": {
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "produceQuantity": {
+          "type": "number",
+          "description": "工序产出数"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数"
+        }
+      },
+      "title": "工序产出报废统计返回VO"
     }
   }
 }

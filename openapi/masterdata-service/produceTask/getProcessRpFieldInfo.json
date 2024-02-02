@@ -119,6 +119,24 @@
         }
       },
       "title": "JSONResult«List«工序对应字段详情VO»»"
+    },
+    "工序对应字段详情VO": {
+      "type": "object",
+      "properties": {
+        "fieldCode": {
+          "type": "string",
+          "description": "关联字段code"
+        },
+        "fieldName": {
+          "type": "string",
+          "description": "关联字段名称"
+        },
+        "value": {
+          "type": "object",
+          "description": "值"
+        }
+      },
+      "title": "工序对应字段详情VO"
     }
   }
 }

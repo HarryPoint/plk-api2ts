@@ -88,6 +88,24 @@
         }
       },
       "title": "JSONResult«物料库存维度查询响应对象»"
+    },
+    "物料库存维度查询响应对象": {
+      "type": "object",
+      "properties": {
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "物料库存维度查询响应对象"
     }
   }
 }

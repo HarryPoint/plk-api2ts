@@ -87,6 +87,70 @@
         }
       },
       "title": "JSONResult«员工账户VO»"
+    },
+    "员工账户VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "员工工号"
+        },
+        "name": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属部门id"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "所属部门名称"
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属账号id"
+        },
+        "positionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "职位id"
+        },
+        "positionName": {
+          "type": "string",
+          "description": "职位名称"
+        },
+        "mobilePhone": {
+          "type": "string",
+          "description": "手机号码"
+        },
+        "expireTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "过期时间"
+        },
+        "lastLoginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最后登录时间"
+        },
+        "roleIds": {
+          "type": "array",
+          "description": "所属角色id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "员工账户VO"
     }
   }
 }

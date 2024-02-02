@@ -100,6 +100,25 @@
         }
       },
       "title": "JSONResult«List«单位返回VO»»"
+    },
+    "单位返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "单位名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "单位编码"
+        }
+      },
+      "title": "单位返回VO"
     }
   }
 }

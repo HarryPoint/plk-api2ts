@@ -88,6 +88,32 @@
         }
       },
       "title": "JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»"
+    },
+    "佣金与提成统计表（帝丰定制）合计响应对象": {
+      "type": "object",
+      "properties": {
+        "registeredQuantity": {
+          "type": "string",
+          "description": "挂账金额"
+        },
+        "chargebackQuantity": {
+          "type": "string",
+          "description": "冲款金额"
+        },
+        "unpaidQuantity": {
+          "type": "string",
+          "description": "未付金额"
+        },
+        "saleQuantity": {
+          "type": "string",
+          "description": "销售金额"
+        },
+        "receivedQuantity": {
+          "type": "string",
+          "description": "已收金额"
+        }
+      },
+      "title": "佣金与提成统计表（帝丰定制）合计响应对象"
     }
   }
 }

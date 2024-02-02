@@ -103,6 +103,33 @@
         }
       },
       "title": "JSONResult«ViewMetadataQueryResponseDTO»"
+    },
+    "ViewMetadataQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "appCode": {
+          "type": "string",
+          "description": "应用编码"
+        },
+        "instanceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "实例ID"
+        },
+        "meta": {
+          "type": "object",
+          "description": "元数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "ViewMetadataQueryResponseDTO"
     }
   }
 }

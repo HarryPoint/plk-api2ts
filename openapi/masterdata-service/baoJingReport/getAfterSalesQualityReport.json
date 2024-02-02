@@ -169,6 +169,22 @@
       },
       "title": "售后质量分析报表搜索VO"
     },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
     "JSONResult«售后质量分析返回VO»": {
       "type": "object",
       "properties": {
@@ -196,6 +212,206 @@
         }
       },
       "title": "JSONResult«售后质量分析返回VO»"
+    },
+    "售后质量分析返回VO_1": {
+      "type": "object",
+      "properties": {
+        "tablePage": {
+          "description": "数据表",
+          "originalRef": "分页信息«售后质量分析返回VO»",
+          "$ref": "#/definitions/分页信息«售后质量分析返回VO»"
+        },
+        "customerDimension": {
+          "type": "array",
+          "description": "客户维度",
+          "items": {
+            "originalRef": "售后质量分析图表数据返回VO",
+            "$ref": "#/definitions/售后质量分析图表数据返回VO"
+          }
+        },
+        "chartsOfAccident": {
+          "type": "array",
+          "description": "趋势图",
+          "items": {
+            "originalRef": "售后质量分析图表数据返回VO",
+            "$ref": "#/definitions/售后质量分析图表数据返回VO"
+          }
+        }
+      },
+      "title": "售后质量分析返回VO_1"
+    },
+    "分页信息«售后质量分析返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "售后质量分析返回VO",
+            "$ref": "#/definitions/售后质量分析返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«售后质量分析返回VO»"
+    },
+    "售后质量分析返回VO": {
+      "type": "object",
+      "properties": {
+        "customer": {
+          "type": "string",
+          "description": "客户"
+        },
+        "businessMan": {
+          "type": "string",
+          "description": "业务员"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "productIds": {
+          "type": "string",
+          "description": "产品id集合"
+        },
+        "fillingDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "灌装日期"
+        },
+        "fillingDateStr": {
+          "type": "string",
+          "description": "灌装日期"
+        },
+        "productionDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "生产日期"
+        },
+        "fillingLine": {
+          "type": "string",
+          "description": "灌装线"
+        },
+        "responsibleUnit": {
+          "type": "string",
+          "description": "责任单位"
+        },
+        "accidentDesc": {
+          "type": "string",
+          "description": "事故描述"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数量"
+        },
+        "picUrls": {
+          "type": "array",
+          "description": "图片",
+          "items": {
+            "originalRef": "附件 VO",
+            "$ref": "#/definitions/附件 VO"
+          }
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "售后质量分析返回VO"
+    },
+    "附件 VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件id"
+        },
+        "fileKey": {
+          "type": "string",
+          "description": "文件key"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": "文件完整路径"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "文件名"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件大小"
+        }
+      },
+      "title": "附件 VO"
+    },
+    "售后质量分析图表数据返回VO": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "轴标"
+        },
+        "numOfAccidents": {
+          "type": "integer",
+          "format": "int64",
+          "description": "事故次数"
+        }
+      },
+      "title": "售后质量分析图表数据返回VO"
     }
   }
 }

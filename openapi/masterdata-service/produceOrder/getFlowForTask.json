@@ -131,6 +131,228 @@
         }
       },
       "title": "JSONResult«List«生产处理基础信息响应DTO»»"
+    },
+    "生产处理基础信息响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属生产任务id"
+        },
+        "produceTaskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "businessType": {
+          "type": "string",
+          "description": "业务类型",
+          "enum": [
+            "  IN_OUT-进出站",
+            "  QUALITY-质检",
+            "  ABNORMAL-异常",
+            "  SYSTEM-系统"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "异常分类",
+          "enum": [
+            "  SCRAP-报废",
+            "  HOLD-扣留",
+            "  HOLD_PAUSE-暂扣",
+            "  REPORT-上报反馈",
+            "  BACK-返工",
+            "  MOVE_IN-进料",
+            "  MOVE_OUT-出料",
+            "  QUALITY_APPLY-申请质检",
+            "  TASK_ISSUE-任务下发",
+            "  PRODUCE_ENTRUST-委外加工",
+            "  TASK_ASSIGN-任务分配"
+          ]
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "异常分类描述"
+        },
+        "moveInOutRecordId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属进出站记录id"
+        },
+        "produceAbnormalName": {
+          "type": "string",
+          "description": "生产异常类型名称"
+        },
+        "produceAbnormalCode": {
+          "type": "string",
+          "description": "生产异常类型编号"
+        },
+        "abnormalQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        },
+        "lotName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "produceEntrustId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应生产委外id"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  CREATED-待处理",
+            "  SURE-已确认",
+            "  IGNORE-已忽略",
+            "  RELEASE-放行",
+            "  BACK-返工",
+            "  HANDING-处理中",
+            "  ALL_HANDLE-处理完成",
+            "  APPROVAL-批准",
+            "  REFUSE-拒绝",
+            "  REVOKE-撤销",
+            "  COMPLETE-完成",
+            "  CANCEL-取消"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "imageKeys": {
+          "type": "string",
+          "description": "图片上传key集合"
+        },
+        "imageUrls": {
+          "type": "array",
+          "description": "图片Url集合",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inputList": {
+          "type": "array",
+          "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
+          "items": {
+            "originalRef": "进出站关键参数明细响应DTO",
+            "$ref": "#/definitions/进出站关键参数明细响应DTO"
+          }
+        },
+        "desc": {
+          "type": "string",
+          "description": "异常描述"
+        },
+        "handleUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "处理人id"
+        },
+        "handleUsername": {
+          "type": "string",
+          "description": "处理人"
+        },
+        "handleTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "处理时间"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编码"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "生产处理基础信息响应DTO"
+    },
+    "进出站关键参数明细响应DTO": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "name": {
+          "type": "string",
+          "description": "明细名称/标题"
+        },
+        "inputType": {
+          "type": "string",
+          "description": "录入类型",
+          "enum": [
+            "  TEXT-文本",
+            "  SELECTOR-单选框",
+            "  CHECKBOX-多选框",
+            "  NUMBER-数值",
+            "  IMAGE-上传图片"
+          ]
+        },
+        "inputValue": {
+          "type": "string",
+          "description": "录入值 - 明细录入类型不是图片时，有值"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传key集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imageUrls": {
+          "type": "array",
+          "description": "图片Url集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "进出站关键参数明细响应DTO"
     }
   }
 }

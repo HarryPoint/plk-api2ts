@@ -101,6 +101,44 @@
         }
       },
       "title": "JSONResult«List«不合格品处理方式响应对象»»"
+    },
+    "不合格品处理方式响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "handingMethod": {
+          "type": "string",
+          "description": "处理方式"
+        },
+        "useValidationTypes": {
+          "type": "string",
+          "description": "适用检验类型",
+          "enum": [
+            "  CUSTOMER_COMPLAIN-客户投诉",
+            "  INCOMING_INSPECTION-来料检",
+            "  FIRST_INSPECTION-首检",
+            "  PATROL_INSPECTION-巡检",
+            "  PROCESS_INSPECTION-工序检",
+            "  PRODUCT_INSPECTION-成品检",
+            "  SHIPMENT_INSPECTION-出货检",
+            "  EXPERIMENT-试验",
+            "  OTHER-其它"
+          ]
+        },
+        "useValidationTypesDesc": {
+          "type": "string",
+          "description": "适用检验类型描述"
+        }
+      },
+      "title": "不合格品处理方式响应对象"
     }
   }
 }
