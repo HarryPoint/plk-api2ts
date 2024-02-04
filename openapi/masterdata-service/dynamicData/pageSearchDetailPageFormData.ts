@@ -1,5 +1,5 @@
 // 流程数据基础搜索VO_1
-export interface I流程数据基础搜索VO_1 {
+export interface IProcessDataBasicSearchVO1 {
     // 全局搜索
     allSearch: string;
     // 当前页面

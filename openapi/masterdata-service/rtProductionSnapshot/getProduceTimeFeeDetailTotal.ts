@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«工时工费报表合计返回VO»
-export interface IJSONResult工时工费报表合计返回VO {
+export interface IJSONResultTotalLaborCostReportReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工时工费报表合计返回VO;
+    data: ITheTotalReportOfTimeAndExpenseIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工时工费报表合计返回VO
-export interface I工时工费报表合计返回VO {
+export interface ITheTotalReportOfTimeAndExpenseIsReturnedToVO {
     // 合格产出数量
     produceQuantity: number;
     // 合格工费

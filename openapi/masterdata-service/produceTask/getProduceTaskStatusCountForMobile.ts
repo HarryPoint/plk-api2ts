@@ -72,18 +72,18 @@ export interface IProcessDataDetailsSearchVO {
     tableCode: string;
 }
 // JSONResult«生产任务状态数量返回(针对移动端)»
-export interface IJSONResult生产任务状态数量返回针对移动端 {
+export interface IJSONResultNumberOfProductionTaskStatesReturnedForTheMobileEnd {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产任务状态数量返回针对移动端;
+    data: INumberOfProductionTaskStatesReturnedForTheMobileEnd;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务状态数量返回(针对移动端)
-export interface I生产任务状态数量返回针对移动端 {
+export interface INumberOfProductionTaskStatesReturnedForTheMobileEnd {
     // 待处理数量
     waitQuantity: number;
     // 生产中数量

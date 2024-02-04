@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«工时工费报表返回VO»»
-export interface IJSONResult分页信息工时工费报表返回VO {
+export interface IJSONResultPagingInformationTheLaborCostReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息工时工费报表返回VO;
+    data: IPageInformationTheTimeSpentReportReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工时工费报表返回VO»
-export interface I分页信息工时工费报表返回VO {
+export interface IPageInformationTheTimeSpentReportReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小

@@ -1,16 +1,16 @@
 // JSONResult«List«生产任务导出表格列DTO»»
-export interface IJSONResultList生产任务导出表格列DTO {
+export interface IJSONResultListTableColumnDTOForExportingProductionTasks {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产任务导出表格列DTO[];
+    data: IProductionTaskExportTableColumnDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务导出表格列DTO
-export interface I生产任务导出表格列DTO {
+export interface IProductionTaskExportTableColumnDTO {
     // id
     id: number;
     // 企业id

@@ -1,5 +1,5 @@
 // JSONResult«List«Id，名称VO»»
-export interface IJSONResultListId名称VO {
+export interface IJSONResultListIdNameVO {
     // 返回码
     code: number;
     // 返回消息说明

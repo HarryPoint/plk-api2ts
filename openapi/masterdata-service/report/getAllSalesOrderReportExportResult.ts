@@ -1,5 +1,5 @@
 // 订单进度统计查询VO
-export interface I订单进度统计查询VO {
+export interface IOrderProgressStatisticsQueryVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -29,7 +29,7 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«List«订单进度统计导出VO»»
-export interface IJSONResultList订单进度统计导出VO {
+export interface IJSONResultListExportOrderProgressStatisticsVO {
     // 返回码
     code: number;
     // 返回消息说明

@@ -1,5 +1,5 @@
 // 设备数采数据上传
-export interface I设备数采数据上传 {
+export interface IDeviceDataAcquisitionDataUpload {
     // 数据采集时间 格式：yyyy-MM-dd HH:mm:ss
     collectTime: string;
     // 设备编号

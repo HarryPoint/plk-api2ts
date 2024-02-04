@@ -14,18 +14,18 @@ export interface IItemNameNumberPublicQueryObject {
     statusList: string[];
 }
 // JSONResult«List«项目成员统计响应对象»»
-export interface IJSONResultList项目成员统计响应对象 {
+export interface ITheJSONResultListProjectMemberCountsTheResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目成员统计响应对象[];
+    data: IProjectMembersCountResponseObjects[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目成员统计响应对象
-export interface I项目成员统计响应对象 {
+export interface IProjectMembersCountResponseObjects {
     // 项目成员id
     id: number;
     // 项目成员名称

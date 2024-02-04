@@ -14,7 +14,7 @@ export interface IItemNameNumberPublicQueryObject {
     statusList: string[];
 }
 // JSONResult«List«项目领导批示报表响应对象»»
-export interface IJSONResultList项目领导批示报表响应对象 {
+export interface IJSONResultListProjectLeadCommandReportResponseObject {
     // 返回码
     code: number;
     // 返回消息说明

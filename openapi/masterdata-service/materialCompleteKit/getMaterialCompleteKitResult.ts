@@ -1,5 +1,5 @@
 // 物料齐套查询请求对象
-export interface I物料齐套查询请求对象 {
+export interface IMaterialSetQueryRequestObject {
     // 物料id
     materialId: number;
     // 标准工艺id
@@ -8,18 +8,18 @@ export interface I物料齐套查询请求对象 {
     needCount: number;
 }
 // JSONResult«物料齐套查询响应对象»
-export interface IJSONResult物料齐套查询响应对象 {
+export interface IJSONResultQueryResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I物料齐套查询响应对象;
+    data: IMaterialAssemblyQueryResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 物料齐套查询响应对象
-export interface I物料齐套查询响应对象 {
+export interface IMaterialAssemblyQueryResponseObject {
     // 物料id
     materialId: number;
     // bomId
@@ -33,5 +33,5 @@ export interface I物料齐套查询响应对象 {
     // 差异数量
     diffCount: number;
     // 明细
-    children: I物料齐套查询响应对象[];
+    children: IMaterialAssemblyQueryResponseObject[];
 }

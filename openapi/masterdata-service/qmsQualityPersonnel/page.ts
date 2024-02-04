@@ -1,5 +1,5 @@
 // 质量人员下拉分页查询对象
-export interface I质量人员下拉分页查询对象 {
+export interface IQualityPersonnelDropDownPageQueryObjects {
     // 编号或名称
     codeOrName: string;
     // 当前页面
@@ -21,18 +21,18 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«分页信息«质量人员下拉响应DTO»»
-export interface IJSONResult分页信息质量人员下拉响应DTO {
+export interface IJSONResultPagingInformationQualityPersonnelDropdownResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质量人员下拉响应DTO;
+    data: IPagingInformationQualityPersonnelDropDownResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质量人员下拉响应DTO»
-export interface I分页信息质量人员下拉响应DTO {
+export interface IPagingInformationQualityPersonnelDropDownResponseDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -42,7 +42,7 @@ export interface I分页信息质量人员下拉响应DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质量人员下拉响应DTO[];
+    list: IQualityPersonnelDropDownResponseDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -55,7 +55,7 @@ export interface I分页信息质量人员下拉响应DTO {
     nextPage: number;
 }
 // 质量人员下拉响应DTO
-export interface I质量人员下拉响应DTO {
+export interface IQualityPersonnelDropDownResponseDTO {
     // id
     id: number;
     // 员工编号

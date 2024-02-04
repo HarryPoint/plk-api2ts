@@ -1,5 +1,5 @@
 // 批量查询表单数据请求
-export interface I批量查询表单数据请求 {
+export interface IBatchQueryFormDataRequests {
     // 应用ID
     flowPathId: number;
     // 表单记录ID列表

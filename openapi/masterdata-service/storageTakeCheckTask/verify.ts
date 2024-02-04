@@ -16,10 +16,10 @@ export interface I盘点任务核对详情DTO {
     // 差异原因
     differenceReason: string;
     // 序列号集
-    serialNos: I盘点任务盘点明细序列号DTO_1[];
+    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
 }
 // 盘点任务盘点明细序列号DTO_1
-export interface I盘点任务盘点明细序列号DTO_1 {
+export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
     // 序列号
     serialNo: string;
     // 备注

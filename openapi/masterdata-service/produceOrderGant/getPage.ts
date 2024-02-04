@@ -1,5 +1,5 @@
 // 生产订单甘特图搜索VO
-export interface I生产订单甘特图搜索VO {
+export interface IProductionOrdersGanttChartSearchVO {
     // 当前页面
     pageNo: number;
     // 生产订单号
@@ -35,27 +35,27 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«生产订单甘特返回VO»
-export interface IJSONResult生产订单甘特返回VO {
+export interface IJSONResultProductionOrderGanttReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单甘特返回VO_1;
+    data: IProductionOrderGanttReturnedToVO1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单甘特返回VO_1
-export interface I生产订单甘特返回VO_1 {
+export interface IProductionOrderGanttReturnedToVO1 {
     // 甘特图开始时间
     gantBeginDateTime: string;
     // 甘特图结束时间
     gantEndDateTime: string;
     // 生产订单分页列表数据
-    tablePage: I分页信息生产订单甘特返回VO;
+    tablePage: IPageInformationProductionOrderGanttReturnsVO;
 }
 // 分页信息«生产订单甘特返回VO»
-export interface I分页信息生产订单甘特返回VO {
+export interface IPageInformationProductionOrderGanttReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -65,7 +65,7 @@ export interface I分页信息生产订单甘特返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I生产订单甘特返回VO[];
+    list: IProductionOrderGanttReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -78,7 +78,7 @@ export interface I分页信息生产订单甘特返回VO {
     nextPage: number;
 }
 // 生产订单甘特返回VO
-export interface I生产订单甘特返回VO {
+export interface IProductionOrderGanttReturnedToVO {
     // id
     id: number;
     // 生产部门id

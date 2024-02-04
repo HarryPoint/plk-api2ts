@@ -1,5 +1,5 @@
 // 查询用户上报数据DTO
-export interface I查询用户上报数据DTO {
+export interface IExampleQueryTheDataDTOReportedByAUser {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -17,18 +17,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»»
-export interface IJSONResult分页信息设备数采人工上报数据详单分页信息返回VO {
+export interface IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息设备数采人工上报数据详单分页信息返回VO;
+    data: IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«设备数采人工上报数据详单分页信息返回VO»
-export interface I分页信息设备数采人工上报数据详单分页信息返回VO {
+export interface IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -38,7 +38,7 @@ export interface I分页信息设备数采人工上报数据详单分页信息�
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I设备数采人工上报数据详单分页信息返回VO[];
+    list: IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -51,7 +51,7 @@ export interface I分页信息设备数采人工上报数据详单分页信息�
     nextPage: number;
 }
 // 设备数采人工上报数据详单分页信息返回VO
-export interface I设备数采人工上报数据详单分页信息返回VO {
+export interface IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO {
     // id
     id: number;
     // 数据提交时间

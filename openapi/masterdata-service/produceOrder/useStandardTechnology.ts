@@ -1,21 +1,21 @@
 // 标准工艺使用请求
-export interface I标准工艺使用请求 {
+export interface IStandardProcessUseRequest {
     // 生产订单和标准工艺关联关系列表
-    itemList: I生产订单和标准工艺关系请求[];
+    itemList: IProductionOrdersAndStandardProcessRelationshipRequests[];
 }
 // 生产订单和标准工艺关系请求
-export interface I生产订单和标准工艺关系请求 {
+export interface IProductionOrdersAndStandardProcessRelationshipRequests {
     // 生产订单ID
     produceOrderId: number;
     // 标准工艺ID
     standardTechnologyId: number;
     // 子物料生产订单配置请求
-    childMaterialProduceOrderConfigList: I子生产订单配置请求[];
+    childMaterialProduceOrderConfigList: ISubProductionOrderConfigurationRequest[];
     // 不需要生产子物料的生产工艺节点ID
     notProduceChildMaterialStandardTechnologyNodeIdList: number[];
 }
 // 子生产订单配置请求
-export interface I子生产订单配置请求 {
+export interface ISubProductionOrderConfigurationRequest {
     // 标准工艺路径，节点ID
     standardTechnologyNodeId: number;
     // 订单优先级，数值越大优先级越高
@@ -29,10 +29,10 @@ export interface I子生产订单配置请求 {
     // 产线
     productionLineId: number;
     // 批次信息列表
-    lotOrders: I批次编辑DTO[];
+    lotOrders: IBatchEditDTO[];
 }
 // 批次编辑DTO
-export interface I批次编辑DTO {
+export interface IBatchEditDTO {
     // id
     id: number;
     // 批次号

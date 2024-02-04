@@ -1,5 +1,5 @@
 // 项目大屏设置保存请求dto_1
-export interface I项目大屏设置保存请求dto_1 {
+export interface IProjectLargeScreenSettingsSaveRequestDto1 {
     // 统计范围
     scope: string;
     // 项目类型ids

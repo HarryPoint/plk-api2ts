@@ -14,20 +14,20 @@ export interface IOutputClassReportSearchVO {
     timeType: string;
 }
 // JSONResult«产出类折线图返回VO«委外产出报表返回VO»»
-export interface IJSONResult产出类折线图返回VO委外产出报表返回VO {
+export interface IJSONResultOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I产出类折线图返回VO委外产出报表返回VO;
+    data: IOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出类折线图返回VO«委外产出报表返回VO»
-export interface I产出类折线图返回VO委外产出报表返回VO {
+export interface IOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO {
     // 分组数据
-    groupList: I产出类折线图分组返回VO委外产出报表返回VO[];
+    groupList: IOutputLineChartGroupReturnsVOOutsourcedOutputReportReturnsVO[];
     // 查询班组集
     classGroupList: IIdNameNumberVO[];
     // 查询工序集
@@ -44,7 +44,7 @@ export interface I产出类折线图返回VO委外产出报表返回VO {
     actualDataCount: number;
 }
 // 产出类折线图分组返回VO«委外产出报表返回VO»
-export interface I产出类折线图分组返回VO委外产出报表返回VO {
+export interface IOutputLineChartGroupReturnsVOOutsourcedOutputReportReturnsVO {
     // 数据分组id
     groupId: number;
     // 数据分组名称
@@ -52,10 +52,10 @@ export interface I产出类折线图分组返回VO委外产出报表返回VO {
     // 数据分组编号
     groupCode: string;
     // 详细点数据
-    pointList: I委外产出报表返回VO[];
+    pointList: ITheOutsourcingOutputReportIsReturnedToVO[];
 }
 // 委外产出报表返回VO
-export interface I委外产出报表返回VO {
+export interface ITheOutsourcingOutputReportIsReturnedToVO {
     // 数据时间（时间戳），根据当前选中的时间粒度去转换时间
     dataTime: string;
     // 委外总数(委外发出)

@@ -1,5 +1,5 @@
 // 良品报废数据表搜索VO
-export interface I良品报废数据表搜索VO {
+export interface IScrapDataSheetSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小

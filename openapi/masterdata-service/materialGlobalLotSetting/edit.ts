@@ -1,5 +1,5 @@
 // 物料全局批次设置编辑对象
-export interface I物料全局批次设置编辑对象 {
+export interface IMaterialsBureauBatchSetEditObject {
     // 启用序列号
     enableSerialNo: string;
     // 启用批次

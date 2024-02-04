@@ -1,5 +1,5 @@
 // JSONResult«List«进料设备响应DTO»»_1
-export interface IJSONResultList进料设备响应DTO_1 {
+export interface IJSONResultListTheFeedDeviceRespondsToDTO1 {
     // 返回码
     code: number;
     // 返回消息说明

@@ -6,18 +6,18 @@ export interface IFormReferencingQueryRequestDTO {
     formRecordIdList: number[];
 }
 // JSONResult«List«库存基础数据关联数据查询响应»»
-export interface IJSONResultList库存基础数据关联数据查询响应 {
+export interface IJSONResultListInventoryBasicDataAssociationDataQueryResponse {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I库存基础数据关联数据查询响应[];
+    data: IInventoryBasicDataAssociatedDataQueryResponse[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 库存基础数据关联数据查询响应
-export interface I库存基础数据关联数据查询响应 {
+export interface IInventoryBasicDataAssociatedDataQueryResponse {
     // 数据id
     id: number;
     // 数据编码

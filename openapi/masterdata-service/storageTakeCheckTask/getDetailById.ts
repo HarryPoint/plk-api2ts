@@ -149,16 +149,16 @@ export interface I仓库盘点仓位清单返回DTO {
     // 启用序列号
     hasWarehouseMaterial: string;
     // 序列号集
-    serialNos: I盘点任务盘点明细序列号DTO[];
+    serialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     // 匹配序列号集
-    pickSerialNos: I盘点任务盘点明细序列号DTO[];
+    pickSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     // 盘盈序列号集
-    profitSerialNos: I盘点任务盘点明细序列号DTO[];
+    profitSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     // 盘亏序列号集
-    lossSerialNos: I盘点任务盘点明细序列号DTO[];
+    lossSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
 }
 // 盘点任务盘点明细序列号DTO
-export interface I盘点任务盘点明细序列号DTO {
+export interface IInventoryTaskInventoryDetailsSerialNumberDTO {
     // 序列号
     serialNo: string;
     // 备注

@@ -1,5 +1,5 @@
 // 项目大事记大屏查询dto
-export interface I项目大事记大屏查询dto {
+export interface IProjectEventsLargeScreenQueryDto {
     // 项目大类
     projectCategory: string;
     // 查询条数

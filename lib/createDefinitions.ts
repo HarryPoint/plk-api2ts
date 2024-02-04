@@ -63,7 +63,7 @@ export const createDefinitions = async (
   // 所有的定义名称修正
   translateItemArr.forEach((item, index) => {
     item.name = `${prefix}${formatName(result[index])}`;
-    console.log("item.name: ", item.name);
+    // console.log("item.name: ", item.name);
   });
 
   // 生成所有的定义

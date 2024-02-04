@@ -1,16 +1,16 @@
 // JSONResult«List«项目任务季度分布响应对象»»
-export interface IJSONResultList项目任务季度分布响应对象 {
+export interface IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务季度分布响应对象[];
+    data: IQuarterlyDistributedResponseObjectsForProjectTasks[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务季度分布响应对象
-export interface I项目任务季度分布响应对象 {
+export interface IQuarterlyDistributedResponseObjectsForProjectTasks {
     // 季度开始日期
     beginTime: string;
     // 季度结束日期

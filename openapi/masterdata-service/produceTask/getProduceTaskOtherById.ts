@@ -1,16 +1,16 @@
 // JSONResult«生产任务其他信息VO»
-export interface IJSONResult生产任务其他信息VO {
+export interface IJSONResultOtherInformationAboutTheProductionTaskVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产任务其他信息VO;
+    data: IProductionTaskAdditionalInformationVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务其他信息VO
-export interface I生产任务其他信息VO {
+export interface IProductionTaskAdditionalInformationVO {
     // 任务号
     taskNo: string;
     // 优先级

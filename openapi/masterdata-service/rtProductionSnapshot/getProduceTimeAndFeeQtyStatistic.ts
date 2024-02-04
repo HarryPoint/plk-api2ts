@@ -14,18 +14,18 @@ export interface IUserProductionStatisticsSearchVO {
     produceOrderCode: string;
 }
 // JSONResult«工时工费统计返回VO»
-export interface IJSONResult工时工费统计返回VO {
+export interface IJSONResultStatisticsOnLaborCostReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工时工费统计返回VO;
+    data: IStatisticsOnTimeSpentAreReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工时工费统计返回VO
-export interface I工时工费统计返回VO {
+export interface IStatisticsOnTimeSpentAreReturnedToVO {
     // 总参考工时
     totalTime: number;
     // 总参考工费

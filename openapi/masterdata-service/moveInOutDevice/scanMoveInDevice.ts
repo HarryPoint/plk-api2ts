@@ -1,5 +1,5 @@
 // 进料设备扫描请求DTO
-export interface I进料设备扫描请求DTO {
+export interface IFeedDeviceScanRequestDTO {
     // 生产任务id
     produceTaskId: number;
     // 生产任务ids
@@ -8,7 +8,7 @@ export interface I进料设备扫描请求DTO {
     code: string;
 }
 // JSONResult«进料设备响应DTO»
-export interface IJSONResult进料设备响应DTO {
+export interface IJSONResultFeedDeviceRespondsToDTO {
     // 返回码
     code: number;
     // 返回消息说明

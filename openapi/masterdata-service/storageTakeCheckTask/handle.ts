@@ -16,14 +16,14 @@ export interface I盘点任务盘点处理详情DTO {
     // 批次号
     lotNo: string;
     // 序列号集
-    serialNos: I盘点任务盘点明细序列号DTO_1[];
+    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
     // 盘点数量
     quantity: number;
     // 备注
     remark: string;
 }
 // 盘点任务盘点明细序列号DTO_1
-export interface I盘点任务盘点明细序列号DTO_1 {
+export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
     // 序列号
     serialNo: string;
     // 备注

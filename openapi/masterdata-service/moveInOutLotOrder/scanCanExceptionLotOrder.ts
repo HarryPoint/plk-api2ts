@@ -1,12 +1,12 @@
 // 可进出料批次扫描查询dto
-export interface I可进出料批次扫描查询dto {
+export interface IDtoCanBeCheckedByBatchScanning {
     // 生产任务id
     produceTaskId: number;
     // 编号
     code: string;
 }
 // JSONResult«可异常处理批次响应dto»
-export interface IJSONResult可异常处理批次响应dto {
+export interface IJSONResultHandlesBatchResponseDtosAbnormally {
     // 返回码
     code: number;
     // 返回消息说明

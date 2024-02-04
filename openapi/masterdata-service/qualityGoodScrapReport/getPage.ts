@@ -1,5 +1,5 @@
 // 良品报废数据表搜索VO
-export interface I良品报废数据表搜索VO {
+export interface IScrapDataSheetSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -23,18 +23,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«良品报废数据表结果VO»»
-export interface IJSONResult分页信息良品报废数据表结果VO {
+export interface IJSONResultPagingInformationGoodScrapDataTableResultVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息良品报废数据表结果VO;
+    data: IPagingInformationGoodScrapDataTableResultsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«良品报废数据表结果VO»
-export interface I分页信息良品报废数据表结果VO {
+export interface IPagingInformationGoodScrapDataTableResultsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface I分页信息良品报废数据表结果VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I良品报废数据表结果VO[];
+    list: IGoodProductScrapDataTableResultsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface I分页信息良品报废数据表结果VO {
     nextPage: number;
 }
 // 良品报废数据表结果VO
-export interface I良品报废数据表结果VO {
+export interface IGoodProductScrapDataTableResultsVO {
     // 物料id
     materialId: number;
     // 物料编码

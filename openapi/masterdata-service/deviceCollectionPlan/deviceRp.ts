@@ -1,5 +1,5 @@
 // 设备数采方案应用设备关联信息编辑DTO
-export interface I设备数采方案应用设备关联信息编辑DTO {
+export interface IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation {
     // 方案id
     id: number;
     // 设备id集

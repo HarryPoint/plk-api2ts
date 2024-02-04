@@ -97,6 +97,8 @@ export const translate = async (input: string | string[]) => {
         ...translateCacheData,
         ...apiTransMap,
       };
+    } else {
+      console.log("inputArr-error: ", data, inputArr);
     }
     return inputArr.map((item) => translateCacheData[item] || item);
   };

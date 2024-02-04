@@ -1,16 +1,16 @@
 // JSONResult«List«设备数采选择VO»»
-export interface IJSONResultList设备数采选择VO {
+export interface IJSONResultListDeviceDataCollectionSelectVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备数采选择VO[];
+    data: IVOIsSelectedForDeviceDataAcquisition[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备数采选择VO
-export interface I设备数采选择VO {
+export interface IVOIsSelectedForDeviceDataAcquisition {
     // id
     id: number;
     // 名称
