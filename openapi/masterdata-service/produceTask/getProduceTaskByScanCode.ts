@@ -1,11 +1,11 @@
 // 生产任务扫码查询DTO(针对移动端)
-export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
+export interface I生产任务扫码查询DTO针对移动端 {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSort[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 任务类型
@@ -47,17 +47,17 @@ export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
     // 任务出站关键参数是否需要填写
     moveOutKeyParameterFillNeeds: string;
     // 生产订单字段搜索
-    produceOrderSearchList: IProcessDataDetailsSearchVO[];
+    produceOrderSearchList: I流程数据明细搜索VO[];
 }
 // 分页排序
-export interface IPagingSort {
+export interface I分页排序 {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // 流程数据明细搜索VO
-export interface IProcessDataDetailsSearchVO {
+export interface I流程数据明细搜索VO {
     // 列code
     code: string;
     // 搜索类型
@@ -74,18 +74,18 @@ export interface IProcessDataDetailsSearchVO {
     tableCode: string;
 }
 // JSONResult«生产任务扫码响应DTO(针对移动端)»
-export interface IJSONResultProductionTaskScanResponseDTOForMobileTerminals {
+export interface IJSONResult生产任务扫码响应DTO针对移动端 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IProductionTaskCodeScanResponseDTOForMobileTerminals;
+    data: I生产任务扫码响应DTO针对移动端;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务扫码响应DTO(针对移动端)
-export interface IProductionTaskCodeScanResponseDTOForMobileTerminals {
+export interface I生产任务扫码响应DTO针对移动端 {
     // 扫描编号
     scanNo: string;
     // 识别任务号
@@ -97,10 +97,10 @@ export interface IProductionTaskCodeScanResponseDTOForMobileTerminals {
     // 扫描失败类型
     scanFailType: string;
     // 任务列表
-    produceTasks: IProductionTaskResponseDTOForMobile[];
+    produceTasks: I生产任务响应DTO针对移动端[];
 }
 // 生产任务响应DTO(针对移动端)
-export interface IProductionTaskResponseDTOForMobile {
+export interface I生产任务响应DTO针对移动端 {
     // id
     id: number;
     // 任务号
@@ -210,14 +210,14 @@ export interface IProductionTaskResponseDTOForMobile {
     // 生产订单
     produceOrder;
     // 批次信息
-    lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
+    lotOrders: I生产任务批次响应DTO针对移动端[];
     // 批次数量
     lotOrderNumber: number;
     // 当前步骤配置信息 - 用于前端判断各种情况逻辑
-    stepSetInfo: IProductionProcessPathStepSettingsReturnVO;
+    stepSetInfo: I生产工艺路径步骤设置返回VO;
 }
 // 生产任务批次响应DTO(针对移动端)
-export interface IProductionTaskBatchResponseDTOForMobileEnd {
+export interface I生产任务批次响应DTO针对移动端 {
     // 批次id
     lotId: number;
     // 批次号
@@ -226,7 +226,7 @@ export interface IProductionTaskBatchResponseDTOForMobileEnd {
     totalCount: number;
 }
 // 生产工艺路径步骤设置返回VO
-export interface IProductionProcessPathStepSettingsReturnVO {
+export interface I生产工艺路径步骤设置返回VO {
     // id
     id: number;
     // 进出站方式

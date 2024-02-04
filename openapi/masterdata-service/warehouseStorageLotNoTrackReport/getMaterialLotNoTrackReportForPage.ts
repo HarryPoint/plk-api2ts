@@ -1,16 +1,16 @@
 // JSONResult«分页信息«物料批次跟踪分页响应对象»»
-export interface IJSONResult分页信息物料批次跟踪分页响应对象 {
+export interface IJSONResultPagingInformationMaterialBatchTrackingPagingResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息物料批次跟踪分页响应对象;
+    data: IPagingInformationMaterialBatchTracksPagingResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«物料批次跟踪分页响应对象»
-export interface I分页信息物料批次跟踪分页响应对象 {
+export interface IPagingInformationMaterialBatchTracksPagingResponseObjects {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息物料批次跟踪分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I物料批次跟踪分页响应对象[];
+    list: IMaterialBatchTrackingPagingResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息物料批次跟踪分页响应对象 {
     nextPage: number;
 }
 // 物料批次跟踪分页响应对象
-export interface I物料批次跟踪分页响应对象 {
+export interface IMaterialBatchTrackingPagingResponseObject {
     // 流程应用code
     masterDataFlowPathCode: string;
     // 所属主数据id (eg:物料id)

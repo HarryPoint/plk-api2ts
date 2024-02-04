@@ -1,11 +1,11 @@
 // 生产排产订单搜索VO
-export interface I生产排产订单搜索VO {
+export interface IProductionSchedulingOrderSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编号
     produceOrderCode: string;
     // 父级订单编号
@@ -26,7 +26,7 @@ export interface I生产排产订单搜索VO {
     startTimeOfEndTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

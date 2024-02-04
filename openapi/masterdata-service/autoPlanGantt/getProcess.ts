@@ -1,5 +1,5 @@
 // 甘特图搜索VO
-export interface I甘特图搜索VO {
+export interface IGanttChartSearchVO {
     // 开始日期 yyyy-MM-dd
     beginDate: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface I甘特图搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编码
     produceOrderCode: string;
     // 工艺路径ID列表
@@ -22,32 +22,32 @@ export interface I甘特图搜索VO {
     orderStatusList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«工序甘特图返回VO»
-export interface IJSONResult工序甘特图返回VO {
+export interface IJSONResultProcedureGanttChartReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工序甘特图返回VO;
+    data: IProcedureGanttChartReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工序甘特图返回VO
-export interface I工序甘特图返回VO {
+export interface IProcedureGanttChartReturnsVO {
     // 全局时间占用集
-    timeOccupies: I占用返回VO[];
+    timeOccupies: IOccupiedReturnVO[];
     // 工序分页信息
-    process: I分页信息工序排期返回VO;
+    process: IPagingInformationOperationScheduleReturnsVO;
 }
 // 占用返回VO
-export interface I占用返回VO {
+export interface IOccupiedReturnVO {
     // 排期id
     id: number;
     // 占用工序
@@ -66,7 +66,7 @@ export interface I占用返回VO {
     scheduleType: string;
 }
 // 分页信息«工序排期返回VO»
-export interface I分页信息工序排期返回VO {
+export interface IPagingInformationOperationScheduleReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -76,7 +76,7 @@ export interface I分页信息工序排期返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I工序排期返回VO[];
+    list: ITheOperationIsScheduledToReturnToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -89,7 +89,7 @@ export interface I分页信息工序排期返回VO {
     nextPage: number;
 }
 // 工序排期返回VO
-export interface I工序排期返回VO {
+export interface ITheOperationIsScheduledToReturnToVO {
     // 工序id
     processId: number;
     // 工序名称
@@ -97,12 +97,12 @@ export interface I工序排期返回VO {
     // 工序编号
     processCode: string;
     // 占用时间集
-    occupyTimes: I占用返回VO[];
+    occupyTimes: IOccupiedReturnVO[];
     // 订单集
-    produceOrderTimes: I生产订单时间返回VO[];
+    produceOrderTimes: IProductionOrderTimeBackToVO[];
 }
 // 生产订单时间返回VO
-export interface I生产订单时间返回VO {
+export interface IProductionOrderTimeBackToVO {
     // 排期id
     scheduleId: number;
     // 生产订单id

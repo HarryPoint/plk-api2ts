@@ -1,5 +1,5 @@
 // 排班新增DTO
-export interface I排班新增DTO {
+export interface IScheduleNewDtos {
     // 排班日期 yyyy-MM-dd
     scheduleDate: string;
     // 班次id

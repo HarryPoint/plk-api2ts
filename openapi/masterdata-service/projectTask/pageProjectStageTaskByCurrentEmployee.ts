@@ -1,16 +1,16 @@
 // JSONResult«分页信息«项目 项目-阶段-任务响应对象»»
-export interface IJSONResult分页信息项目项目阶段任务响应对象 {
+export interface IJSONResultPageInformationProjectProjectPhaseTaskResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息项目项目阶段任务响应对象;
+    data: IPageInformationItemProjectPhaseTaskResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«项目 项目-阶段-任务响应对象»
-export interface I分页信息项目项目阶段任务响应对象 {
+export interface IPageInformationItemProjectPhaseTaskResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息项目项目阶段任务响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I项目项目阶段任务响应对象[];
+    list: IProjectProjectPhaseTaskResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息项目项目阶段任务响应对象 {
     nextPage: number;
 }
 // 项目 项目-阶段-任务响应对象
-export interface I项目项目阶段任务响应对象 {
+export interface IProjectProjectPhaseTaskResponseObject {
     // 项目id
     projectId: number;
     // 项目名称
@@ -49,10 +49,10 @@ export interface I项目项目阶段任务响应对象 {
     // 项目应用id
     flowPathId: number;
     // 阶段任务集
-    projectStageTasks: I项目任务响应对象_5[];
+    projectStageTasks: IProjectTaskResponseObject5[];
 }
 // 项目任务响应对象_5
-export interface I项目任务响应对象_5 {
+export interface IProjectTaskResponseObject5 {
     // 项目id
     projectId: number;
     // 项目名称
@@ -72,10 +72,10 @@ export interface I项目任务响应对象_5 {
     // 项目阶段排序
     projectStageSort: number;
     // 下级任务列表
-    children: I项目任务响应对象_9[];
+    children: IProjectTaskResponseObject9[];
 }
 // 项目任务响应对象_9
-export interface I项目任务响应对象_9 {
+export interface IProjectTaskResponseObject9 {
     // 任务id
     id: number;
     // 任务名称
@@ -89,7 +89,7 @@ export interface I项目任务响应对象_9 {
     // 任务状态
     taskStatus: string;
     // 前置任务列表
-    preTaskList: I项目任务前置任务响应对象[];
+    preTaskList: IProjectTaskPreTaskResponseObject[];
     // 任务开始日期
     planBeginTime: string;
     // 任务截止日期
@@ -125,7 +125,7 @@ export interface I项目任务响应对象_9 {
     // 来源应用id
     fromAppId: number;
     // 下级任务列表
-    children: I项目任务响应对象_9[];
+    children: IProjectTaskResponseObject9[];
     // 当前登录员工所属待办id
     currentEmployeeTodoId: number;
     // 当前登录员工所属待办状态
@@ -174,7 +174,7 @@ export interface I项目任务响应对象_9 {
     processStatus: string;
 }
 // 项目任务前置任务响应对象
-export interface I项目任务前置任务响应对象 {
+export interface IProjectTaskPreTaskResponseObject {
     // 任务id
     id: number;
     // 任务名称

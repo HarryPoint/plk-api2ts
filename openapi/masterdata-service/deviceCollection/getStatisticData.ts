@@ -1,5 +1,5 @@
 // 设备统计数据搜索VO
-export interface I设备统计数据搜索VO {
+export interface IDeviceStatisticsSearchVO {
     // 设备id集
     deviceIds: number[];
     // 查询参数id集
@@ -14,18 +14,18 @@ export interface I设备统计数据搜索VO {
     deviceParamUnitTimeType: string;
 }
 // JSONResult«设备数采参数统计查询返回VO»
-export interface IJSONResult设备数采参数统计查询返回VO {
+export interface IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStatisticsQuery {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备数采参数统计查询返回VO;
+    data: IVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备数采参数统计查询返回VO
-export interface I设备数采参数统计查询返回VO {
+export interface IVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery {
     // 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息
     isConsistent: string;
     // 实际查询时间 - 开始
@@ -35,10 +35,10 @@ export interface I设备数采参数统计查询返回VO {
     // 实际数据条数
     actualDataCount: number;
     // 参数信息集
-    paramList: I设备数采参数统计返回VO[];
+    paramList: IDeviceDataAcquisitionParameterStatisticsReturnVO[];
 }
 // 设备数采参数统计返回VO
-export interface I设备数采参数统计返回VO {
+export interface IDeviceDataAcquisitionParameterStatisticsReturnVO {
     // 参数名称
     paramName: string;
     // 参数编号
@@ -48,23 +48,23 @@ export interface I设备数采参数统计返回VO {
     // 参数单位
     paramUnit: string;
     // 设备信息集
-    deviceList: I设备数采统计返回VO[];
+    deviceList: IDeviceDataCollectionStatisticsReturnVO[];
 }
 // 设备数采统计返回VO
-export interface I设备数采统计返回VO {
+export interface IDeviceDataCollectionStatisticsReturnVO {
     // 设备名称
     deviceName: string;
     // 设备编号
     deviceNo: string;
     // 详细数据
-    list: I设备数采统计明细返回VO[];
+    list: ITheDeviceDataCollectionStatisticsDetailsAreReturnedToVO[];
     // 下限，如果为空，则说明没有下限
     lowerLimit: number;
     // 上限，如果为空，则说明没有上限
     upperLimit: number;
 }
 // 设备数采统计明细返回VO
-export interface I设备数采统计明细返回VO {
+export interface ITheDeviceDataCollectionStatisticsDetailsAreReturnedToVO {
     // 数据值
     dataValue: number;
     // 数据采集时间

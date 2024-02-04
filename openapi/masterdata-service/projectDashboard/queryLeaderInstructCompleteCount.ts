@@ -1,5 +1,5 @@
 // 项目看板查询dto
-export interface IProjectKanbanQueryDto {
+export interface I项目看板查询dto {
     // 开始日期
     beginTime: string;
     // 结束日期
@@ -12,18 +12,18 @@ export interface IProjectKanbanQueryDto {
     excludeProjectIds: number[];
 }
 // JSONResult«领导批示统计响应对象»
-export interface IJSONResultLeaderInstructionsStatisticalResponseObjects {
+export interface IJSONResult领导批示统计响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ILeaderIndicatesStatisticalResponseObjects;
+    data: I领导批示统计响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 领导批示统计响应对象
-export interface ILeaderIndicatesStatisticalResponseObjects {
+export interface I领导批示统计响应对象 {
     // 总数量
     totalQuantity: number;
     // 未完成数量

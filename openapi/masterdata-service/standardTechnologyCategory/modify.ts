@@ -1,5 +1,5 @@
 // 标准工艺分类修改请求DTO
-export interface IStandardProcessClassificationModificationRequestDTO {
+export interface I标准工艺分类修改请求DTO {
     // 父级分类id, 当添加到第一级时,传递空;
     parentCategoryId: number;
     // 分类id

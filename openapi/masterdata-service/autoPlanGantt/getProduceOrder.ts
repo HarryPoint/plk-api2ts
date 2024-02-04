@@ -1,5 +1,5 @@
 // 甘特图搜索VO
-export interface I甘特图搜索VO {
+export interface IGanttChartSearchVO {
     // 开始日期 yyyy-MM-dd
     beginDate: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface I甘特图搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编码
     produceOrderCode: string;
     // 工艺路径ID列表
@@ -22,32 +22,32 @@ export interface I甘特图搜索VO {
     orderStatusList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«生产订单自动排产甘特图返回VO»
-export interface IJSONResult生产订单自动排产甘特图返回VO {
+export interface IJSONResultProductionOrderAutomaticSchedulingGanttChartReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单自动排产甘特图返回VO;
+    data: IProductionOrdersAutomaticallyScheduleGanttChartBackToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单自动排产甘特图返回VO
-export interface I生产订单自动排产甘特图返回VO {
+export interface IProductionOrdersAutomaticallyScheduleGanttChartBackToVO {
     // 全局时间占用集
-    timeOccupies: I占用返回VO[];
+    timeOccupies: IOccupiedReturnVO[];
     // 生产订单分页信息
-    produceOrders: I分页信息生产订单自动排产排期返回VO;
+    produceOrders: IPageInformationAutomaticProductionOrderSchedulingReturnsVO;
 }
 // 占用返回VO
-export interface I占用返回VO {
+export interface IOccupiedReturnVO {
     // 排期id
     id: number;
     // 占用工序
@@ -66,7 +66,7 @@ export interface I占用返回VO {
     scheduleType: string;
 }
 // 分页信息«生产订单自动排产排期返回VO»
-export interface I分页信息生产订单自动排产排期返回VO {
+export interface IPageInformationAutomaticProductionOrderSchedulingReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -76,7 +76,7 @@ export interface I分页信息生产订单自动排产排期返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I生产订单自动排产排期返回VO[];
+    list: IProductionOrdersAreAutomaticallyScheduledBackToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -89,7 +89,7 @@ export interface I分页信息生产订单自动排产排期返回VO {
     nextPage: number;
 }
 // 生产订单自动排产排期返回VO
-export interface I生产订单自动排产排期返回VO {
+export interface IProductionOrdersAreAutomaticallyScheduledBackToVO {
     // 生产订单id
     produceOrderId: number;
     // 生产订单号
@@ -109,12 +109,12 @@ export interface I生产订单自动排产排期返回VO {
     // 生产订单状态
     orderStatus: string;
     // 工序占用时间集
-    occupyTimes: I占用返回VO[];
+    occupyTimes: IOccupiedReturnVO[];
     // 工序排期时间集
-    processTimes: I工序时间返回VO[];
+    processTimes: IProcedureTimeReturnsToVO[];
 }
 // 工序时间返回VO
-export interface I工序时间返回VO {
+export interface IProcedureTimeReturnsToVO {
     // 排期id
     scheduleId: number;
     // 生产订单ID

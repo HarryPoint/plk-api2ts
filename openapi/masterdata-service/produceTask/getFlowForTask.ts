@@ -1,5 +1,5 @@
 // 生产处理查询VO - 针对生产订单
-export interface IProductionProcessingQueryVOForProductionOrders {
+export interface I生产处理查询VO针对生产订单 {
     // 生产订单id
     produceOrderId: number;
     // 生产任务id
@@ -8,18 +8,18 @@ export interface IProductionProcessingQueryVOForProductionOrders {
     type: string;
 }
 // JSONResult«List«生产处理基础信息响应DTO»»
-export interface IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation {
+export interface IJSONResultList生产处理基础信息响应DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IProductionProcessingBasicInformationRespondsToDTO[];
+    data: I生产处理基础信息响应DTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产处理基础信息响应DTO
-export interface IProductionProcessingBasicInformationRespondsToDTO {
+export interface I生产处理基础信息响应DTO {
     // id
     id: number;
     // 所属生产任务id
@@ -63,7 +63,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     // 图片Url集合
     imageUrls: string[];
     // 工艺卡录入信息 - 仅已进出站有工艺卡信息时有值
-    inputList: IKeyParametersInAndOutOfTheStationDetailResponseDTO[];
+    inputList: I进出站关键参数明细响应DTO[];
     // 异常描述
     desc: string;
     // 处理人id
@@ -82,7 +82,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     materialId: number;
 }
 // 进出站关键参数明细响应DTO
-export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
+export interface I进出站关键参数明细响应DTO {
     // 明细id
     id: number;
     // 明细名称/标题

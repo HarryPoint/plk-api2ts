@@ -1,16 +1,16 @@
 // JSONResult«生产处理基础信息详情返回VO»
-export interface IJSONResult生产处理基础信息详情返回VO {
+export interface IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产处理基础信息详情返回VO;
+    data: IProductionProcessingBasicInformationDetailsReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产处理基础信息详情返回VO
-export interface I生产处理基础信息详情返回VO {
+export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     // id
     id: number;
     // 所属生产任务id
@@ -54,7 +54,7 @@ export interface I生产处理基础信息详情返回VO {
     // 图片Url集合
     imageUrls: string[];
     // 工艺卡录入信息 - 仅已进出站有工艺卡信息时有值
-    inputList: I工艺卡明细返回VO含填写的信息[];
+    inputList: IProcessCardDetailsReturnVOWithInformationFilledIn[];
     // 异常描述
     desc: string;
     // 处理人id
@@ -115,7 +115,7 @@ export interface I生产处理基础信息详情返回VO {
     handleRemark: string;
 }
 // 工艺卡明细返回VO(含填写的信息)
-export interface I工艺卡明细返回VO含填写的信息 {
+export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     // 明细id
     id: number;
     // 明细类型

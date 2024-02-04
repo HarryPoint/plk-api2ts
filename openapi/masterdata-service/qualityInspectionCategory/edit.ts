@@ -1,5 +1,5 @@
 // 编辑质检分类 DTO
-export interface IEditTheQualityInspectionClassificationDTO {
+export interface I编辑质检分类DTO {
     // id，如果不传就是新增
     id: number;
     // 质检分类名

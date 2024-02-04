@@ -1,16 +1,16 @@
 // JSONResult«分页信息«质量统计分析报表返回DTO»»
-export interface IJSONResult分页信息质量统计分析报表返回DTO {
+export interface IJSONResultThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质量统计分析报表返回DTO;
+    data: IThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质量统计分析报表返回DTO»
-export interface I分页信息质量统计分析报表返回DTO {
+export interface IThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息质量统计分析报表返回DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质量统计分析报表返回DTO[];
+    list: IQualityStatisticalAnalysisReportReturnedToDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息质量统计分析报表返回DTO {
     nextPage: number;
 }
 // 质量统计分析报表返回DTO
-export interface I质量统计分析报表返回DTO {
+export interface IQualityStatisticalAnalysisReportReturnedToDTO {
     // 年
     year: string;
     // 月

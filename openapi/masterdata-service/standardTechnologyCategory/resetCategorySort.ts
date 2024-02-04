@@ -1,5 +1,5 @@
 // 标准工艺分类排序请求DTO
-export interface IStandardProcessClassificationSortRequestDTO {
+export interface I标准工艺分类排序请求DTO {
     // 父级分类id, 当移动到第一级时,传递空;
     parentCategoryId: number;
     // 分类id

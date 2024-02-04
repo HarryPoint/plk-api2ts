@@ -1,23 +1,23 @@
 // JSONResult«导出信息«WIP统计报表返回VO»»
-export interface IJSONResult导出信息WIP统计报表返回VO {
+export interface IJSONResultExportInformationWIPStatisticsReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息WIP统计报表返回VO;
+    data: IExportInformationWIPStatisticsReportReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«WIP统计报表返回VO»
-export interface I导出信息WIP统计报表返回VO {
+export interface IExportInformationWIPStatisticsReportReturnsVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: IWIP统计报表返回VO[];
+    itemList: ITheWIPStatisticsReportReturnsVO[];
 }
 // WIP统计报表返回VO
-export interface IWIP统计报表返回VO {
+export interface ITheWIPStatisticsReportReturnsVO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -25,12 +25,12 @@ export interface IWIP统计报表返回VO {
     // 物料编号
     materialCode: string;
     // 所有工序库存信息
-    allProcessWarehouse: IWIP库存统计报表返回VO;
+    allProcessWarehouse: IWIPInventoryStatisticsReportReturnsVO;
     // 工序信息集
-    processList: IWIP工序统计报表返回VO[];
+    processList: IWIPProcessStatisticsReportReturnsVO[];
 }
 // WIP库存统计报表返回VO
-export interface IWIP库存统计报表返回VO {
+export interface IWIPInventoryStatisticsReportReturnsVO {
     // 总数
     totalQuantity: number;
     // 正常总数
@@ -51,7 +51,7 @@ export interface IWIP库存统计报表返回VO {
     inExceptionQuantity: number;
 }
 // WIP工序统计报表返回VO
-export interface IWIP工序统计报表返回VO {
+export interface IWIPProcessStatisticsReportReturnsVO {
     // 工序id
     processId: number;
     // 工序名称
@@ -59,5 +59,5 @@ export interface IWIP工序统计报表返回VO {
     // 工序编号
     processCode: string;
     // 工序库存集
-    warehouse: IWIP库存统计报表返回VO;
+    warehouse: IWIPInventoryStatisticsReportReturnsVO;
 }

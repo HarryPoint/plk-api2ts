@@ -1,5 +1,5 @@
 // 编辑质检方案 DTO
-export interface I编辑质检方案DTO {
+export interface IEditTheQualityInspectionSchemeDTO {
     // id，如果不传就是新增
     id: number;
     // 质检方案名
@@ -11,7 +11,7 @@ export interface I编辑质检方案DTO {
     // 所属质检分类id
     qualityInspectionCategoryId: number;
     // 质检项清单
-    itemList: I质检方案质检项关联信息编辑DTO[];
+    itemList: IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO[];
     // 版次号
     issueCode: string;
     // 备注
@@ -26,7 +26,7 @@ export interface I编辑质检方案DTO {
     qualityInspectionQuantity: number;
 }
 // 质检方案质检项关联信息编辑DTO
-export interface I质检方案质检项关联信息编辑DTO {
+export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO {
     // 关联id
     id: number;
     // 所属质检项id

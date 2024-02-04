@@ -1,19 +1,19 @@
 // 日历排班VO
-export interface I日历排班VO {
+export interface ICalendarSchedulingVO {
     // 排班天数集
-    scheduleDays: I日历排班天数VO[];
+    scheduleDays: ICalendarSchedulingDaysVO[];
     // 开始日期 yyyy-MM-dd
     beginDate: string;
     // 循环天数
     loopDay: number;
 }
 // 日历排班天数VO
-export interface I日历排班天数VO {
+export interface ICalendarSchedulingDaysVO {
     // 排班明细
-    scheduleDayDetails: I日历排班天数明细VO[];
+    scheduleDayDetails: ICalendarScheduleDaysDetailsVO[];
 }
 // 日历排班天数明细VO
-export interface I日历排班天数明细VO {
+export interface ICalendarScheduleDaysDetailsVO {
     // 班组id集合
     classGroupIdList: number[];
     // 班次id

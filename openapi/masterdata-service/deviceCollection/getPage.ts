@@ -1,5 +1,5 @@
 // 设备数据概览搜索VO
-export interface I设备数据概览搜索VO {
+export interface IDeviceDataOverviewSearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -9,7 +9,7 @@ export interface I设备数据概览搜索VO {
     // 设备厂商
     firm: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 设备型号
     deviceType: string;
     // 名称
@@ -22,25 +22,25 @@ export interface I设备数据概览搜索VO {
     onlineStatus: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«设备数据概览返回VO»»
-export interface IJSONResult分页信息设备数据概览返回VO {
+export interface IJSONResultPagingInformationDeviceDataOverviewReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息设备数据概览返回VO;
+    data: IPageInformationDeviceDataOverviewReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«设备数据概览返回VO»
-export interface I分页信息设备数据概览返回VO {
+export interface IPageInformationDeviceDataOverviewReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -50,7 +50,7 @@ export interface I分页信息设备数据概览返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I设备数据概览返回VO[];
+    list: IDeviceDataOverviewBackToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -63,7 +63,7 @@ export interface I分页信息设备数据概览返回VO {
     nextPage: number;
 }
 // 设备数据概览返回VO
-export interface I设备数据概览返回VO {
+export interface IDeviceDataOverviewBackToVO {
     // id
     id: number;
     // 设备名称

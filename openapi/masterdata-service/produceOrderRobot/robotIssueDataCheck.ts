@@ -1,30 +1,30 @@
 // 生产订单自动排产下发任务数据校验请求DTO
-export interface IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO {
+export interface I生产订单自动排产下发任务数据校验请求DTO {
     // 生产订单ids
     produceOrderIds: number[];
 }
 // JSONResult«生产订单自动排产下发任务数据校验返回DTO»
-export interface IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO {
+export interface IJSONResult生产订单自动排产下发任务数据校验返回DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO;
+    data: I生产订单自动排产下发任务数据校验返回DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单自动排产下发任务数据校验返回DTO
-export interface IAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO {
+export interface I生产订单自动排产下发任务数据校验返回DTO {
     // 排产开始时间订单流程表单字段名称
     producePlanStartTimeFormFieldName: string;
     // 排产结束时间订单流程表单字段名称
     producePlanEndTimeFormFieldName: string;
     // 数据校验明细
-    dataCheckItems: IAutomaticProductionOrderSchedulingTaskDataVerificationDetailsAreReturnedToTheDTO[];
+    dataCheckItems: I生产订单自动排产下发任务数据校验明细返回DTO[];
 }
 // 生产订单自动排产下发任务数据校验明细返回DTO
-export interface IAutomaticProductionOrderSchedulingTaskDataVerificationDetailsAreReturnedToTheDTO {
+export interface I生产订单自动排产下发任务数据校验明细返回DTO {
     // 生产订单id
     produceOrderId: number;
     // 生产订单编号

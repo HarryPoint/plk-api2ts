@@ -24,25 +24,25 @@ export interface IStandardTechnologyMatchResponseDTO {
 // StandardTechnologyMatchItemResponseDTO
 export interface IStandardTechnologyMatchItemResponseDTO {
     // 生产订单ID
-    produceOrder: I单据;
+    produceOrder: IReceipt;
     // 物料
-    material: I基础数据;
+    material: IBasicData;
     // 匹配的生产工艺列表
     standardTechnologyList: IStandardTechnologyDTO[];
     // 当前物料最近匹配的标准工艺ID
     currentMaterialRecentlyMatchedStandardTechnologyId: number;
     // 订单批次信息
-    lotOrderList: I批次信息VO[];
+    lotOrderList: IBatchInformationVO[];
 }
 // 单据
-export interface I单据 {
+export interface IReceipt {
     // undefined
     id: number;
     // undefined
     code: string;
 }
 // 基础数据
-export interface I基础数据 {
+export interface IBasicData {
     // ID
     id: number;
     // 编码
@@ -62,7 +62,7 @@ export interface IStandardTechnologyDTO {
     standardTechnologyCategoryId: number;
 }
 // 批次信息VO
-export interface I批次信息VO {
+export interface IBatchInformationVO {
     // id
     id: number;
     // 批次名称

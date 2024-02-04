@@ -1,5 +1,5 @@
 // 工序完成明细表查询
-export interface I工序完成明细表查询 {
+export interface IProcedureCompletionListQuery {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I工序完成明细表查询 {
     // 工序ids
     processIds: number[];
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 配置号
     configNo: string;
     // 汇总聚合维度字段集
@@ -44,7 +44,7 @@ export interface I工序完成明细表查询 {
     calendarDayList: LocalDate[];
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y

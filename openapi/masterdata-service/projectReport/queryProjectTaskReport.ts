@@ -1,16 +1,16 @@
 // JSONResult«分页信息«项目任务报表响应对象»»
-export interface IJSONResultPagingInformationProjectTaskReportResponseObject {
+export interface IJSONResult分页信息项目任务报表响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPageInformationItemTaskReportResponseObject;
+    data: I分页信息项目任务报表响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«项目任务报表响应对象»
-export interface IPageInformationItemTaskReportResponseObject {
+export interface I分页信息项目任务报表响应对象 {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface IPageInformationItemTaskReportResponseObject {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IProjectTaskReportResponseObject[];
+    list: I项目任务报表响应对象[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface IPageInformationItemTaskReportResponseObject {
     nextPage: number;
 }
 // 项目任务报表响应对象
-export interface IProjectTaskReportResponseObject {
+export interface I项目任务报表响应对象 {
     // id
     id: number;
     // 名称

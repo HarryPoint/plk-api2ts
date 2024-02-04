@@ -1,23 +1,23 @@
 // JSONResult«物料收发单据列表响应对象»
-export interface IJSONResult物料收发单据列表响应对象 {
+export interface IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I物料收发单据列表响应对象;
+    data: IMaterialReceiptAndReceiptListResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 物料收发单据列表响应对象
-export interface I物料收发单据列表响应对象 {
+export interface IMaterialReceiptAndReceiptListResponseObject {
     // 列表单据
-    billHeadCode: I物料收发单据列表单据响应对象[];
+    billHeadCode: IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject[];
     // 选择单据
-    billSelectCode: I物料收发单据列表单据响应对象[];
+    billSelectCode: IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject[];
 }
 // 物料收发单据列表单据响应对象
-export interface I物料收发单据列表单据响应对象 {
+export interface IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject {
     // id
     id: number;
     // code

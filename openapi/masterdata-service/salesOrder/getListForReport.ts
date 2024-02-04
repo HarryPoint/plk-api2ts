@@ -1,11 +1,11 @@
 // 订单进度统计查询VO
-export interface I订单进度统计查询VO {
+export interface IOrderProgressStatisticsQueryVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 交付日期 - 开始 yyyy-MM-dd HH:mm:ss
     deliveryDateBegin: string;
     // 销售订单编号
@@ -22,25 +22,25 @@ export interface I订单进度统计查询VO {
     salesOrderStatus: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«List«销售订单VO»»
-export interface IJSONResultList销售订单VO {
+export interface IJSONResultListSalesOrderVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I销售订单VO[];
+    data: ISalesOrderVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售订单VO
-export interface I销售订单VO {
+export interface ISalesOrderVO {
     // id
     id: number;
     // 创建时间

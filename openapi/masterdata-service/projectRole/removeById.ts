@@ -1,5 +1,5 @@
 // id信息
-export interface IIdInformation {
+export interface Iid信息 {
     // id
     id: number;
 }

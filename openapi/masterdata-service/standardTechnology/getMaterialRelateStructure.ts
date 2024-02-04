@@ -1,16 +1,16 @@
 // JSONResult«具体物料数据结构响应对象»
-export interface IJSONResult具体物料数据结构响应对象 {
+export interface IJSONResultSpecificMaterialDataStructureResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I具体物料数据结构响应对象_1;
+    data: ITheConcreteMaterialDataStructureRespondsToObject1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 具体物料数据结构响应对象_1
-export interface I具体物料数据结构响应对象_1 {
+export interface ITheConcreteMaterialDataStructureRespondsToObject1 {
     // 主物料id
     materialId: number;
     // 主物料名称
@@ -22,12 +22,12 @@ export interface I具体物料数据结构响应对象_1 {
     // 主物料单位
     materialUnit: string;
     // 物料BOM
-    materialBomStructure: I具体物料数据结构响应对象;
+    materialBomStructure: IConcreteMaterialDataStructureResponseObject;
     // 工艺路径
-    materialRoutingStructure: I具体物料数关联工艺路径数据结构响应对象;
+    materialRoutingStructure: ISpecificMaterialNumberAssociatedProcessPathDataStructureResponseObject;
 }
 // 具体物料数据结构响应对象
-export interface I具体物料数据结构响应对象 {
+export interface IConcreteMaterialDataStructureResponseObject {
     // bomId
     bomId: number;
     // BOM名称
@@ -37,10 +37,10 @@ export interface I具体物料数据结构响应对象 {
     // 消耗数量
     totalConsumeCount: number;
     // Bom物料明细
-    bomDetailList: I标准工艺具体物料bom详情对象[];
+    bomDetailList: IStandardProcessSpecificMaterialBomDetailObject[];
 }
 // 标准工艺具体物料bom详情对象
-export interface I标准工艺具体物料bom详情对象 {
+export interface IStandardProcessSpecificMaterialBomDetailObject {
     // bom明细id
     bomDetailId: number;
     // 子物料id
@@ -56,10 +56,10 @@ export interface I标准工艺具体物料bom详情对象 {
     // 消耗数量
     totalConsumeCount: number;
     // 子物料信息
-    childMaterialStructure: I具体物料数据结构响应对象_1;
+    childMaterialStructure: ITheConcreteMaterialDataStructureRespondsToObject1;
 }
 // 具体物料数关联工艺路径数据结构响应对象
-export interface I具体物料数关联工艺路径数据结构响应对象 {
+export interface ISpecificMaterialNumberAssociatedProcessPathDataStructureResponseObject {
     // 工艺路径id
     routingId: number;
     // 工艺路径名称
@@ -67,10 +67,10 @@ export interface I具体物料数关联工艺路径数据结构响应对象 {
     // 工艺路径编码
     routingCode: string;
     // 工艺路径步骤集合
-    materialRoutingStepList: I具体物料数关联工艺路径步骤数据结构响应对象[];
+    materialRoutingStepList: ISpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject[];
 }
 // 具体物料数关联工艺路径步骤数据结构响应对象
-export interface I具体物料数关联工艺路径步骤数据结构响应对象 {
+export interface ISpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject {
     // 工艺路径步骤id
     routingStepId: number;
     // 工序id
@@ -80,18 +80,18 @@ export interface I具体物料数关联工艺路径步骤数据结构响应对�
     // 工序编码
     processCode: string;
     // 工艺卡
-    processSheet: I标准工艺具体工艺卡详情对象_1;
+    processSheet: IStandardProcessSpecificProcessCardDetailsObject1;
     // 关键参数
-    keyParameter: I关键参数信息响应对象;
+    keyParameter: IKeyParameterInformationResponseObject;
     // 产能
-    capacity: I产能响应对象;
+    capacity: IProductivityResponseObject;
     // 工费
-    laborCost: I工费响应对象;
+    laborCost: ICostResponseObject;
     // 进出站确认类型
     bomConsumeSureType: string;
 }
 // 标准工艺具体工艺卡详情对象_1
-export interface I标准工艺具体工艺卡详情对象_1 {
+export interface IStandardProcessSpecificProcessCardDetailsObject1 {
     // 工艺卡id
     processSheetId: number;
     // 工艺卡名称
@@ -99,10 +99,10 @@ export interface I标准工艺具体工艺卡详情对象_1 {
     // 工艺卡编号
     code: string;
     // 工艺卡明细
-    processSheetDetailStructureList: I标准工艺具体工艺卡详情对象[];
+    processSheetDetailStructureList: IStandardProcessSpecificProcessCardDetailsObject[];
 }
 // 标准工艺具体工艺卡详情对象
-export interface I标准工艺具体工艺卡详情对象 {
+export interface IStandardProcessSpecificProcessCardDetailsObject {
     // 明细id
     id: number;
     // 明细类型
@@ -137,7 +137,7 @@ export interface I标准工艺具体工艺卡详情对象 {
     selectorList: string[];
 }
 // 关键参数信息响应对象
-export interface I关键参数信息响应对象 {
+export interface IKeyParameterInformationResponseObject {
     // id
     id: number;
     // 编号
@@ -145,21 +145,21 @@ export interface I关键参数信息响应对象 {
     // 名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 关键参数集合
-    parameterDetailList: I关键参数信息详情响应对象[];
+    parameterDetailList: IKeyParameterDetailsResponseObject[];
 }
 // 关联下拉响应对象
-export interface I关联下拉响应对象 {
+export interface IAssociatedDropDownResponseObjects {
     // id
     id: number;
     // 显示字段名称
     showFieldValue: string;
 }
 // 关键参数信息详情响应对象
-export interface I关键参数信息详情响应对象 {
+export interface IKeyParameterDetailsResponseObject {
     // 字段id
     id: number;
     // 字段名称
@@ -188,7 +188,7 @@ export interface I关键参数信息详情响应对象 {
     selectorList: string[];
 }
 // 产能响应对象
-export interface I产能响应对象 {
+export interface IProductivityResponseObject {
     // id
     id: number;
     // 编号
@@ -196,9 +196,9 @@ export interface I产能响应对象 {
     // 名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 准备耗时
     readyTime: number;
     // 准备时间单位
@@ -211,7 +211,7 @@ export interface I产能响应对象 {
     capacityProduceQuantity: number;
 }
 // 工费响应对象
-export interface I工费响应对象 {
+export interface ICostResponseObject {
     // id
     id: number;
     // 编号
@@ -219,9 +219,9 @@ export interface I工费响应对象 {
     // 名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 合格产出工费单价（元）
     producePrice: number;
     // 返工产出工费单价（元）

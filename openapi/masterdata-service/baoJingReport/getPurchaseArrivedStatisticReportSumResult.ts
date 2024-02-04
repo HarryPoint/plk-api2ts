@@ -1,11 +1,11 @@
 // 采购到货统计报表搜索VO
-export interface IPurchaseArrivalStatisticsReportSearchVO {
+export interface I采购到货统计报表搜索VO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 采购订单编号
     purchaseOrderNo: string;
     // 最新到货日期结束时间 yyyy-MM-dd HH:mm:ss
@@ -32,25 +32,25 @@ export interface IPurchaseArrivalStatisticsReportSearchVO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«采购到货统计报表返回VO»
-export interface IJSONResultPurchasedArrivalStatisticsReportReturnedToVO {
+export interface IJSONResult采购到货统计报表返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPurchaseArrivalStatisticsReportReturnedToVO1;
+    data: I采购到货统计报表返回VO_1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 采购到货统计报表返回VO_1
-export interface IPurchaseArrivalStatisticsReportReturnedToVO1 {
+export interface I采购到货统计报表返回VO_1 {
     // 订单数量
     orderNum: number;
     // 订单金额

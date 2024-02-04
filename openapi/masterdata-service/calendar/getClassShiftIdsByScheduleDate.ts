@@ -1,5 +1,5 @@
 // 排班日期DTO
-export interface I排班日期DTO {
+export interface ISchedulingDateDTO {
     // 排班日期 yyyy-MM-dd
     scheduleDate: string;
 }

@@ -1,5 +1,5 @@
 // 项目概况查询dto
-export interface IProjectOverviewQueryDto {
+export interface I项目概况查询dto {
     // 项目id
     projectId: number;
     // 开始日期
@@ -10,18 +10,18 @@ export interface IProjectOverviewQueryDto {
     limit: number;
 }
 // JSONResult«项目风险统计响应对象»
-export interface IJSONResultProjectRiskStatisticsResponseObject {
+export interface IJSONResult项目风险统计响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IProjectRiskStatisticalResponseObject;
+    data: I项目风险统计响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目风险统计响应对象
-export interface IProjectRiskStatisticalResponseObject {
+export interface I项目风险统计响应对象 {
     // 风险总数量
     totalQuantity: number;
     // 已完成数量

@@ -1,16 +1,16 @@
 // JSONResult«List«项目任务响应对象»»
-export interface IJSONResultList项目任务响应对象 {
+export interface IJSONResultListProjectTaskResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务响应对象[];
+    data: IProjectTaskResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务响应对象
-export interface I项目任务响应对象 {
+export interface IProjectTaskResponseObject {
     // 任务id
     id: number;
     // 任务编码
@@ -20,7 +20,7 @@ export interface I项目任务响应对象 {
     // 任务负责人
     leaderUserIds: undefined[];
     // 任务负责人
-    leaderUserList: IIdCodeName通用传输对象[];
+    leaderUserList: IIdCodeNameGenericTransportObject[];
     // 任务进度
     taskProgress: number;
     // 任务状态
@@ -44,7 +44,7 @@ export interface I项目任务响应对象 {
     // 前置任务ids
     preTaskIds: undefined[];
     // 前置任务列表
-    preTaskList: IIdCodeName通用传输对象[];
+    preTaskList: IIdCodeNameGenericTransportObject[];
     // 项目阶段id
     projectStageId: number;
     // 项目阶段名称
@@ -63,7 +63,7 @@ export interface I项目任务响应对象 {
     sort: number;
 }
 // Id Code Name 通用传输对象
-export interface IIdCodeName通用传输对象 {
+export interface IIdCodeNameGenericTransportObject {
     // id
     id: number;
     // code

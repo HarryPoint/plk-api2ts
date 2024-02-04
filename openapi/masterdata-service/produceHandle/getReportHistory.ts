@@ -1,5 +1,5 @@
 // 生产处理查询VO
-export interface I生产处理查询VO {
+export interface IProductionProcessingQueryVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I生产处理查询VO {
     // 类型
     types: string[];
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 任务id
     taskId: number;
     // 上报类型/上报标签 检索关键字
@@ -18,25 +18,25 @@ export interface I生产处理查询VO {
     endTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«生产处理基础信息响应DTO»»
-export interface IJSONResult分页信息生产处理基础信息响应DTO {
+export interface IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息生产处理基础信息响应DTO;
+    data: IPageInformationProductionProcessesBasicInformationInResponseToDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«生产处理基础信息响应DTO»
-export interface I分页信息生产处理基础信息响应DTO {
+export interface IPageInformationProductionProcessesBasicInformationInResponseToDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface I分页信息生产处理基础信息响应DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I生产处理基础信息响应DTO[];
+    list: IProductionProcessingBasicInformationRespondsToDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface I分页信息生产处理基础信息响应DTO {
     nextPage: number;
 }
 // 生产处理基础信息响应DTO
-export interface I生产处理基础信息响应DTO {
+export interface IProductionProcessingBasicInformationRespondsToDTO {
     // id
     id: number;
     // 所属生产任务id
@@ -103,7 +103,7 @@ export interface I生产处理基础信息响应DTO {
     // 图片Url集合
     imageUrls: string[];
     // 工艺卡录入信息 - 仅已进出站有工艺卡信息时有值
-    inputList: I进出站关键参数明细响应DTO[];
+    inputList: IKeyParametersInAndOutOfTheStationDetailResponseDTO[];
     // 异常描述
     desc: string;
     // 处理人id
@@ -122,7 +122,7 @@ export interface I生产处理基础信息响应DTO {
     materialId: number;
 }
 // 进出站关键参数明细响应DTO
-export interface I进出站关键参数明细响应DTO {
+export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     // 明细id
     id: number;
     // 明细名称/标题

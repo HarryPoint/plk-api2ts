@@ -12,14 +12,14 @@ export interface IJSONResultProduceProgressStatisticTableHeadDTO {
 // ProduceProgressStatisticTableHeadDTO
 export interface IProduceProgressStatisticTableHeadDTO {
     // 生产订单表列
-    produceOrderTableColumnList: ITheProcessTableListsVO[];
+    produceOrderTableColumnList: I流程表格列VO[];
     // 订单统计表列
     orderStatisticsTableColumnList: IStatisticsTableColumnDTO[];
     // 工序表列
     processTableColumnList: IProcessTableColumnDTO[];
 }
 // 流程表格列VO
-export interface ITheProcessTableListsVO {
+export interface I流程表格列VO {
     // id
     id: number;
     // 企业id
@@ -43,9 +43,9 @@ export interface ITheProcessTableListsVO {
     // 表格类型
     flowPathFormFieldTableType: string;
     // 表格内字段集
-    tableCustomFormFields: ITheProcessTableListsVO[];
+    tableCustomFormFields: I流程表格列VO[];
     // 编码字段编码规则集
-    numberRuleDetails: IProcessFormFieldEncodingRuleDetailsVO[];
+    numberRuleDetails: I流程表单字段编码规则明细VO[];
     // 选项集
     selectorList: IFormFieldOption[];
     // 序号值
@@ -128,7 +128,7 @@ export interface ITheProcessTableListsVO {
     processorShowFieldCode: string;
 }
 // 流程表单字段编码规则明细VO
-export interface IProcessFormFieldEncodingRuleDetailsVO {
+export interface I流程表单字段编码规则明细VO {
     // id
     id: number;
     // 设置类型

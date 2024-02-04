@@ -1,16 +1,16 @@
 // JSONResult«外部财务凭证响应对象»
-export interface IJSONResultExternalFinancialCertificateResponseObject {
+export interface IJSONResult外部财务凭证响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IExternalFinancialCertificateResponseObject;
+    data: I外部财务凭证响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 外部财务凭证响应对象
-export interface IExternalFinancialCertificateResponseObject {
+export interface I外部财务凭证响应对象 {
     // 凭证号
     voucherNo: string;
     // 凭证字号
@@ -24,10 +24,10 @@ export interface IExternalFinancialCertificateResponseObject {
     // 贷方合计
     creditEntryTotalAmount: string;
     // 明细
-    details: IExternalFinancialCertificateDetailsResponseObject[];
+    details: I外部财务凭证详情响应对象[];
 }
 // 外部财务凭证详情响应对象
-export interface IExternalFinancialCertificateDetailsResponseObject {
+export interface I外部财务凭证详情响应对象 {
     // 摘要
     summary: string;
     // 科目

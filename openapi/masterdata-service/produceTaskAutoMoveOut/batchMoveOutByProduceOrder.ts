@@ -1,5 +1,5 @@
 // 生产任务自动出料上传数据DTO
-export interface I生产任务自动出料上传数据DTO {
+export interface IProductionTaskAutomaticDischargeUploadDataDTO {
     // 标记id,(eg RFID)
     tagId: string;
     // 生产订单编号

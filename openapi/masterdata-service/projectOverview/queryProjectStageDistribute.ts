@@ -1,5 +1,5 @@
 // 项目概况查询dto
-export interface IProjectOverviewQueryDto {
+export interface I项目概况查询dto {
     // 项目id
     projectId: number;
     // 开始日期
@@ -10,18 +10,18 @@ export interface IProjectOverviewQueryDto {
     limit: number;
 }
 // JSONResult«List«项目阶段分布响应对象»»
-export interface IJSONResultListProjectPhaseDistributesResponseObjects {
+export interface IJSONResultList项目阶段分布响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ITheProjectPhaseDistributesTheResponseObjects[];
+    data: I项目阶段分布响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目阶段分布响应对象
-export interface ITheProjectPhaseDistributesTheResponseObjects {
+export interface I项目阶段分布响应对象 {
     // 项目阶段名称
     projectStageName: string;
     // 项目阶段id
@@ -29,10 +29,10 @@ export interface ITheProjectPhaseDistributesTheResponseObjects {
     // 项目阶段排序
     sort: number;
     // 项目任务列表
-    projectTaskList: IProjectPhaseTasksDistributeResponseObjects[];
+    projectTaskList: I项目阶段任务分布响应对象[];
 }
 // 项目阶段任务分布响应对象
-export interface IProjectPhaseTasksDistributeResponseObjects {
+export interface I项目阶段任务分布响应对象 {
     // 项目任务类型id
     projectTaskTypeId: number;
     // 项目任务类型编号

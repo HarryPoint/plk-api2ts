@@ -1,5 +1,5 @@
 // 安全库存搜索VO
-export interface I安全库存搜索VO {
+export interface ISecurityInventorySearchVO {
     // 当前页面
     pageNo: number;
     // 物料编号
@@ -7,7 +7,7 @@ export interface I安全库存搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 物料名称
     name: string;
     // 库存预警类型
@@ -18,7 +18,7 @@ export interface I安全库存搜索VO {
     businessId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

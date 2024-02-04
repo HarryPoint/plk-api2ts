@@ -1,16 +1,16 @@
 // JSONResult«List«生产订单»»
-export interface IJSONResultList生产订单 {
+export interface IJSONResultListProductionOrder {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单[];
+    data: IProductionOrder[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单
-export interface I生产订单 {
+export interface IProductionOrder {
     // id
     id: number;
     // 所属企业id

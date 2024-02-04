@@ -1,5 +1,5 @@
 // id集合信息
-export interface IIdCollectionInformation {
+export interface Iid集合信息 {
     // id集合
     ids: number[];
 }

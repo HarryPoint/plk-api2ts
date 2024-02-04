@@ -1,16 +1,16 @@
 // JSONResult«质量统计分析报表合计返回DTO»
-export interface IJSONResult质量统计分析报表合计返回DTO {
+export interface IJSONResultTotalQualityStatisticalAnalysisReportReturnedToDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I质量统计分析报表合计返回DTO;
+    data: IQualityStatisticalAnalysisReportTotalReturnToDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质量统计分析报表合计返回DTO
-export interface I质量统计分析报表合计返回DTO {
+export interface IQualityStatisticalAnalysisReportTotalReturnToDTO {
     // 报检数量
     inspectionApplyQuantity: number;
     // 交检总数

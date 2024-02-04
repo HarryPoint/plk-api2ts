@@ -1,5 +1,5 @@
 // 工序完成明细表查询
-export interface I工序完成明细表查询 {
+export interface IProcedureCompletionListQuery {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I工序完成明细表查询 {
     // 工序ids
     processIds: number[];
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 配置号
     configNo: string;
     // 汇总聚合维度字段集
@@ -44,25 +44,25 @@ export interface I工序完成明细表查询 {
     calendarDayList: LocalDate[];
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // JSONResult«工序完成明细表合计响应dto»
-export interface IJSONResult工序完成明细表合计响应dto {
+export interface IJSONResultProcessCompletionDetailsTotalResponseDto {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工序完成明细表合计响应dto;
+    data: IProcessCompletionDetailsTotalResponseDto;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工序完成明细表合计响应dto
-export interface I工序完成明细表合计响应dto {
+export interface IProcessCompletionDetailsTotalResponseDto {
     // 当日计划量
     totalPlanProduceNum: number;
     // 当日计划完工量

@@ -16,11 +16,11 @@ export interface IProposalDashboardConfigResponseDTO {
     // 建议部门ID列表
     proposalDepartmentIdList: number[];
     // 建议部门 ID => Name
-    proposalDepartmentList: I基础数据[];
+    proposalDepartmentList: IBasicData[];
     // 项目部门ID列表
     projectDepartmentIdList: number[];
     // 项目部门 ID => Name
-    projectDepartmentList: I基础数据[];
+    projectDepartmentList: IBasicData[];
     // 未完成目标值
     unCompleteTargetValue: number;
     // 已完成目标值
@@ -31,7 +31,7 @@ export interface IProposalDashboardConfigResponseDTO {
     completedProjectDashboardStatisticsConfigList: IProposalDashboardStatisticsConfigResponseDTO[];
 }
 // 基础数据
-export interface I基础数据 {
+export interface IBasicData {
     // ID
     id: number;
     // 编码

@@ -1,11 +1,11 @@
 // 生产任务分配查询VO -- 针对mobile
-export interface I生产任务分配查询VO针对mobile {
+export interface IProductionTaskAssignmentQueryVOForMobile {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 任务类型
     types: string[];
     // 工序id
@@ -40,25 +40,25 @@ export interface I生产任务分配查询VO针对mobile {
     planProduceMaxQuantity: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«生产任务分配VO -- 针对mobile»»
-export interface IJSONResult分页信息生产任务分配VO针对mobile {
+export interface IJSONResultPageInformationProductionTaskAssignmentVOForMobile {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息生产任务分配VO针对mobile;
+    data: IPagingInformationProductionTaskAssignmentVOForMobile;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«生产任务分配VO -- 针对mobile»
-export interface I分页信息生产任务分配VO针对mobile {
+export interface IPagingInformationProductionTaskAssignmentVOForMobile {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -68,7 +68,7 @@ export interface I分页信息生产任务分配VO针对mobile {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I生产任务分配VO针对mobile[];
+    list: IProductionTaskAssignmentVOForMobile[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -81,7 +81,7 @@ export interface I分页信息生产任务分配VO针对mobile {
     nextPage: number;
 }
 // 生产任务分配VO -- 针对mobile
-export interface I生产任务分配VO针对mobile {
+export interface IProductionTaskAssignmentVOForMobile {
     // id
     id: number;
     // 任务号
@@ -177,20 +177,20 @@ export interface I生产任务分配VO针对mobile {
     // 任务出站关键参数是否需要填写
     moveOutKeyParameterFillNeeds: string;
     // 操作员列表
-    assignUserList: IId名称编号VO[];
+    assignUserList: IIdNameNumberVO[];
     // 是否已分配
     isAssign: string;
     // 生产订单
     produceOrder;
     // 批次信息
-    lotOrders: I生产任务批次响应DTO针对移动端[];
+    lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
     // 批次数量
     lotOrderNumber: number;
     // 当前步骤配置信息 - 用于前端判断各种情况逻辑
-    stepSetInfo: I生产工艺路径步骤设置返回VO;
+    stepSetInfo: IProductionProcessPathStepSettingsReturnVO;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称
@@ -199,7 +199,7 @@ export interface IId名称编号VO {
     code: string;
 }
 // 生产任务批次响应DTO(针对移动端)
-export interface I生产任务批次响应DTO针对移动端 {
+export interface IProductionTaskBatchResponseDTOForMobileEnd {
     // 批次id
     lotId: number;
     // 批次号
@@ -208,7 +208,7 @@ export interface I生产任务批次响应DTO针对移动端 {
     totalCount: number;
 }
 // 生产工艺路径步骤设置返回VO
-export interface I生产工艺路径步骤设置返回VO {
+export interface IProductionProcessPathStepSettingsReturnVO {
     // id
     id: number;
     // 进出站方式

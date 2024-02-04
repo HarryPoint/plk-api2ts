@@ -1,5 +1,5 @@
 // 生产异常类型统计VO_1
-export interface I生产异常类型统计VO_1 {
+export interface IProductionExceptionTypeStatisticsVO1 {
     // 所属分类
     type: string;
     // 处理状态
@@ -14,18 +14,18 @@ export interface I生产异常类型统计VO_1 {
     endTime: string;
 }
 // JSONResult«List«生产异常类型统计VO»»
-export interface IJSONResultList生产异常类型统计VO {
+export interface IJSONResultListProductionExceptionTypeStatisticsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产异常类型统计VO[];
+    data: IProductionExceptionTypeStatisticsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产异常类型统计VO
-export interface I生产异常类型统计VO {
+export interface IProductionExceptionTypeStatisticsVO {
     // 异常类型id
     categoryId: number;
     // 异常类型名

@@ -1,36 +1,36 @@
 // 用户主数据选择列表搜索VO
-export interface ISearchVOWithTheHomeOwnerDataSelectionList {
+export interface I用户主数据选择列表搜索VO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 用户名称/编号
     nameOrCode: string;
     // 员工ID列表
     idList: number[];
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«List«员工响应对象»»
-export interface IJSONResultListEmployeeResponseObject {
+export interface IJSONResultList员工响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IEmployeeResponseObject[];
+    data: I员工响应对象[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 员工响应对象
-export interface IEmployeeResponseObject {
+export interface I员工响应对象 {
     // 创建用户ID
     createUserId: number;
     // 创建用户名

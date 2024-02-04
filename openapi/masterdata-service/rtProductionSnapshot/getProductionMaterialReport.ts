@@ -1,5 +1,5 @@
 // 产出类报表搜索VO
-export interface IOutputClassReportSearchVO {
+export interface I产出类报表搜索VO {
     // 班组id集
     classGroupIds: number[];
     // 物料id集
@@ -14,26 +14,26 @@ export interface IOutputClassReportSearchVO {
     timeType: string;
 }
 // JSONResult«产出类折线图返回VO«产出报表返回VO»»
-export interface IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO {
+export interface IJSONResult产出类折线图返回VO产出报表返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IOutputLineChartReturnsVOOutputReportReturnsVO;
+    data: I产出类折线图返回VO产出报表返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出类折线图返回VO«产出报表返回VO»
-export interface IOutputLineChartReturnsVOOutputReportReturnsVO {
+export interface I产出类折线图返回VO产出报表返回VO {
     // 分组数据
-    groupList: IOutputLineChartGroupReturnsVOOutputReportReturnsVO[];
+    groupList: I产出类折线图分组返回VO产出报表返回VO[];
     // 查询班组集
-    classGroupList: IIdNameNumberVO[];
+    classGroupList: IId名称编号VO[];
     // 查询工序集
-    processList: IIdNameNumberVO[];
+    processList: IId名称编号VO[];
     // 查询物料集
-    majorDataList: IIdNameNumberVO[];
+    majorDataList: IId名称编号VO[];
     // 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息
     isConsistent: string;
     // 实际查询时间 - 开始
@@ -44,7 +44,7 @@ export interface IOutputLineChartReturnsVOOutputReportReturnsVO {
     actualDataCount: number;
 }
 // 产出类折线图分组返回VO«产出报表返回VO»
-export interface IOutputLineChartGroupReturnsVOOutputReportReturnsVO {
+export interface I产出类折线图分组返回VO产出报表返回VO {
     // 数据分组id
     groupId: number;
     // 数据分组名称
@@ -52,10 +52,10 @@ export interface IOutputLineChartGroupReturnsVOOutputReportReturnsVO {
     // 数据分组编号
     groupCode: string;
     // 详细点数据
-    pointList: ITheOutputReportReturnsVO[];
+    pointList: I产出报表返回VO[];
 }
 // 产出报表返回VO
-export interface ITheOutputReportReturnsVO {
+export interface I产出报表返回VO {
     // 数据时间（时间戳），根据当前选中的时间粒度去转换时间
     dataTime: string;
     // 总产出
@@ -68,7 +68,7 @@ export interface ITheOutputReportReturnsVO {
     backQuantity: number;
 }
 // Id，名称，编号VO
-export interface IIdNameNumberVO {
+export interface IId名称编号VO {
     // id
     id: number;
     // 名称

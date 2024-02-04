@@ -1,5 +1,5 @@
 // WIP统计报表搜索VO
-export interface IWIP统计报表搜索VO {
+export interface IWIPStatisticsReportSearchForVO {
     // 当前页面
     pageNo: number;
     // 工序id集
@@ -7,30 +7,30 @@ export interface IWIP统计报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 物料id集
     materialIds: number[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«WIP统计报表返回VO»»
-export interface IJSONResult分页信息WIP统计报表返回VO {
+export interface IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息WIP统计报表返回VO;
+    data: IPageInformationTheWIPStatisticsReportReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«WIP统计报表返回VO»
-export interface I分页信息WIP统计报表返回VO {
+export interface IPageInformationTheWIPStatisticsReportReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -40,7 +40,7 @@ export interface I分页信息WIP统计报表返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IWIP统计报表返回VO[];
+    list: ITheWIPStatisticsReportReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -53,7 +53,7 @@ export interface I分页信息WIP统计报表返回VO {
     nextPage: number;
 }
 // WIP统计报表返回VO
-export interface IWIP统计报表返回VO {
+export interface ITheWIPStatisticsReportReturnsVO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -61,12 +61,12 @@ export interface IWIP统计报表返回VO {
     // 物料编号
     materialCode: string;
     // 所有工序库存信息
-    allProcessWarehouse: IWIP库存统计报表返回VO;
+    allProcessWarehouse: IWIPInventoryStatisticsReportReturnsVO;
     // 工序信息集
-    processList: IWIP工序统计报表返回VO[];
+    processList: IWIPProcessStatisticsReportReturnsVO[];
 }
 // WIP库存统计报表返回VO
-export interface IWIP库存统计报表返回VO {
+export interface IWIPInventoryStatisticsReportReturnsVO {
     // 总数
     totalQuantity: number;
     // 正常总数
@@ -87,7 +87,7 @@ export interface IWIP库存统计报表返回VO {
     inExceptionQuantity: number;
 }
 // WIP工序统计报表返回VO
-export interface IWIP工序统计报表返回VO {
+export interface IWIPProcessStatisticsReportReturnsVO {
     // 工序id
     processId: number;
     // 工序名称
@@ -95,5 +95,5 @@ export interface IWIP工序统计报表返回VO {
     // 工序编号
     processCode: string;
     // 工序库存集
-    warehouse: IWIP库存统计报表返回VO;
+    warehouse: IWIPInventoryStatisticsReportReturnsVO;
 }

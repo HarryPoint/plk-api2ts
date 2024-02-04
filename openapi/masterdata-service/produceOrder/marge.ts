@@ -1,5 +1,5 @@
 // 批次订单合并DTO
-export interface I批次订单合并DTO {
+export interface IBatchOrderConsolidationDTO {
     // wip状态记录id集
     wipRpIds: number[];
     // 备注

@@ -1,5 +1,5 @@
 // 变更甘特图计划DTO
-export interface IChangeGanttChartPlanDTO {
+export interface I变更甘特图计划DTO {
     // 排期类型
     scheduleType: string;
     // 排期id

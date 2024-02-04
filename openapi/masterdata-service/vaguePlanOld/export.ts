@@ -1,5 +1,5 @@
 // 生产订单搜索VO
-export interface IProductionOrderSearchVO {
+export interface I生产订单搜索VO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface IProductionOrderSearchVO {
     // 订单类型
     orderType: string;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 生产订单号
     produceOrderCode: string;
     // 计划开始时间, yyyy-MM-dd HH:mm:ss
@@ -30,7 +30,7 @@ export interface IProductionOrderSearchVO {
     createEndTime: string;
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined

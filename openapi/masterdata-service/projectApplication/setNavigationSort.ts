@@ -1,5 +1,5 @@
 // 项目应用导航排序请求对象
-export interface I项目应用导航排序请求对象 {
+export interface IProjectApplicationNavigationSortRequestObjects {
     // undefined
     projectId: number;
     // undefined

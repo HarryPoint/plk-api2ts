@@ -1,5 +1,5 @@
 // 流程任务转交DTO
-export interface I流程任务转交DTO {
+export interface IProcessTasksAreTransferredToTheDTO {
     // 任务ID
     id: number;
     // 表单数据

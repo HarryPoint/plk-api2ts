@@ -1,16 +1,16 @@
 // JSONResult«List«项目任务模板组织响应DTO»»
-export interface IJSONResultList项目任务模板组织响应DTO {
+export interface ITheJSONResultListProjectTaskTemplateOrganizesTheResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务模板组织响应DTO[];
+    data: IProjectTaskTemplateOrganizationRespondsToTheDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务模板组织响应DTO
-export interface I项目任务模板组织响应DTO {
+export interface IProjectTaskTemplateOrganizationRespondsToTheDTO {
     // 项目任务模板id
     id: number;
     // 项目id
@@ -24,10 +24,10 @@ export interface I项目任务模板组织响应DTO {
     // 应用id
     appId: number;
     // 组织字段集
-    fields: I项目任务模板组织字段响应DTO[];
+    fields: ITheProjectTaskTemplateOrganizesTheFieldResponseDTO[];
 }
 // 项目任务模板组织字段响应DTO
-export interface I项目任务模板组织字段响应DTO {
+export interface ITheProjectTaskTemplateOrganizesTheFieldResponseDTO {
     // 应用字段序列号
     appFieldSerialNo: string;
     // 应用字段名

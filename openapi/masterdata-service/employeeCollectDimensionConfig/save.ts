@@ -1,5 +1,5 @@
 // 用户聚合维度配置请求
-export interface IUserAggregationDimensionConfigurationRequest {
+export interface I用户聚合维度配置请求 {
     // 编码
     code: string;
     // 列配置JSON

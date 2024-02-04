@@ -1,5 +1,5 @@
 // 设备数采通讯参数编辑DTO
-export interface IDeviceDataAcquisitionCommunicationParametersEditDTO {
+export interface I设备数采通讯参数编辑DTO {
     // id
     id: number;
     // 设备名称

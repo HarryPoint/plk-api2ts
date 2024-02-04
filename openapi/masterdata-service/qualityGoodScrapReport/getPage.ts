@@ -1,11 +1,11 @@
 // 良品报废数据表搜索VO
-export interface IScrapDataSheetSearchVO {
+export interface I良品报废数据表搜索VO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 时间筛选 - 开始 yyyy-MM-dd HH:mm:ss
     beginTime: string;
     // 时间筛选 - 结束 yyyy-MM-dd HH:mm:ss
@@ -16,25 +16,25 @@ export interface IScrapDataSheetSearchVO {
     materialType: string;
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«良品报废数据表结果VO»»
-export interface IJSONResultPagingInformationGoodScrapDataTableResultVO {
+export interface IJSONResult分页信息良品报废数据表结果VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPagingInformationGoodScrapDataTableResultsVO;
+    data: I分页信息良品报废数据表结果VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«良品报废数据表结果VO»
-export interface IPagingInformationGoodScrapDataTableResultsVO {
+export interface I分页信息良品报废数据表结果VO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface IPagingInformationGoodScrapDataTableResultsVO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IGoodProductScrapDataTableResultsVO[];
+    list: I良品报废数据表结果VO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface IPagingInformationGoodScrapDataTableResultsVO {
     nextPage: number;
 }
 // 良品报废数据表结果VO
-export interface IGoodProductScrapDataTableResultsVO {
+export interface I良品报废数据表结果VO {
     // 物料id
     materialId: number;
     // 物料编码
@@ -85,10 +85,10 @@ export interface IGoodProductScrapDataTableResultsVO {
     // 报废数量
     scrapQuantity: number;
     // 报废类型数据
-    scrapValueList: IIdValueVO[];
+    scrapValueList: IId值VO[];
 }
 // Id，值VO
-export interface IIdValueVO {
+export interface IId值VO {
     // id
     id: number;
     // 值

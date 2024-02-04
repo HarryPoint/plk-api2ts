@@ -1,5 +1,5 @@
 // 宝晶生产任务甘特图查询对象
-export interface IBaojingProductionTaskGanttChartQueryObject {
+export interface I宝晶生产任务甘特图查询对象 {
     // 物料id
     materialIds: number[];
     // 部门id

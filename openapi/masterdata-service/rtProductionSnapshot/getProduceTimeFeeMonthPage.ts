@@ -1,11 +1,11 @@
 // 工时工费月度报表搜索VO
-export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
+export interface I工时工费月度报表搜索VO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 员工id集
     userIds: number[];
     // 班组id集
@@ -16,25 +16,25 @@ export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     endTime: string;
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«工时工费月度汇总报表返回VO»»
-export interface IJSONResultPageInformationMonthlySummaryReportOfLaborTimeIsReturnedToVO {
+export interface IJSONResult分页信息工时工费月度汇总报表返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO;
+    data: I分页信息工时工费月度汇总报表返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工时工费月度汇总报表返回VO»
-export interface IPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO {
+export interface I分页信息工时工费月度汇总报表返回VO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface IPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IMonthlySummaryReportOfManHourPaymentIsReturnedToVO[];
+    list: I工时工费月度汇总报表返回VO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface IPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO {
     nextPage: number;
 }
 // 工时工费月度汇总报表返回VO
-export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
+export interface I工时工费月度汇总报表返回VO {
     // 月份
     month: string;
     // 员工id

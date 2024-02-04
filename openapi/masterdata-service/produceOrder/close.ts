@@ -1,5 +1,5 @@
 // 生产订单关闭 DTO
-export interface IProductionOrderClosedDTO {
+export interface I生产订单关闭DTO {
     // 生产订单id
     produceOrderId: number;
     // 登录密码

@@ -1,19 +1,19 @@
 // 质检任务完成 DTO
-export interface I质检任务完成DTO {
+export interface ITheDTOCompletesTheInspectionTask {
     // 质检任务id
     id: number;
     // 质检物料结果集
-    planItemResults: I质检结果物料信息DTO[];
+    planItemResults: IQualityInspectionResultMaterialInformationDTO[];
 }
 // 质检结果物料信息 DTO
-export interface I质检结果物料信息DTO {
+export interface IQualityInspectionResultMaterialInformationDTO {
     // 质检结果类型
     qualityInspectionResultType: string;
     // 每项物料填的质检结果集
-    qualityTaskMaterialItems: I质检结果DTO[];
+    qualityTaskMaterialItems: IQualityInspectionResultDTO[];
 }
 // 质检结果 DTO
-export interface I质检结果DTO {
+export interface IQualityInspectionResultDTO {
     // 质检方案质检项关联id
     qualityInspectionPlanItemRpId: number;
     // 质检值，所选的情况下传多个，其他都只传一个

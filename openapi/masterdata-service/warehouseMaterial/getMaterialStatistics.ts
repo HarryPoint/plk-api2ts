@@ -1,5 +1,5 @@
 // 物料主数据库存搜索VO
-export interface IMaterialMasterDataInventorySearchVO {
+export interface I物料主数据库存搜索VO {
     // 当前页面
     pageNo: number;
     // 物料名称
@@ -7,7 +7,7 @@ export interface IMaterialMasterDataInventorySearchVO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 物料id集
     materialIds: number[];
     // 编号
@@ -18,25 +18,25 @@ export interface IMaterialMasterDataInventorySearchVO {
     storehouseIds: number[];
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«物料库存统计VO»
-export interface IJSONResultMaterialInventoryStatisticsVO {
+export interface IJSONResult物料库存统计VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IMaterialInventoryStatisticsVO;
+    data: I物料库存统计VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 物料库存统计VO
-export interface IMaterialInventoryStatisticsVO {
+export interface I物料库存统计VO {
     // 库存总数
     storageTotalCount: number;
     // 库存锁定数
@@ -44,10 +44,10 @@ export interface IMaterialInventoryStatisticsVO {
     // 库存可使用数
     storageUseCount: number;
     // 物料库存分页
-    materialStorages: IPagingInformationMaterialMasterDataInventoryReturnsVO;
+    materialStorages: I分页信息物料主数据库存返回VO;
 }
 // 分页信息«物料主数据库存返回VO»
-export interface IPagingInformationMaterialMasterDataInventoryReturnsVO {
+export interface I分页信息物料主数据库存返回VO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -57,7 +57,7 @@ export interface IPagingInformationMaterialMasterDataInventoryReturnsVO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IMaterialMasterDataInventoryReturnedToVO[];
+    list: I物料主数据库存返回VO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -70,7 +70,7 @@ export interface IPagingInformationMaterialMasterDataInventoryReturnsVO {
     nextPage: number;
 }
 // 物料主数据库存返回VO
-export interface IMaterialMasterDataInventoryReturnedToVO {
+export interface I物料主数据库存返回VO {
     // 物料id
     id: number;
     // 物料名称

@@ -1,22 +1,22 @@
 // 深蓝大屏设置DTO
-export interface I深蓝大屏设置DTO {
+export interface IDarkBlueLargeScreenSetsTheDTO {
     // 大屏左侧质检合格率工序id
     leftQualityPassRatioProcessId: number;
     // 大屏左侧质检数据
-    leftQualityPassRatios: I深蓝生产大屏合格率数据设置编辑DTO;
+    leftQualityPassRatios: IDeepBlueProductionLargeScreenPassRateDataSetEditDTO;
     // 大屏右侧质检合格率工序id
     rightQualityPassRatioProcessId: number;
     // 大屏右侧质检数据
-    rightQualityPassRatios: I深蓝生产大屏合格率数据设置编辑DTO;
+    rightQualityPassRatios: IDeepBlueProductionLargeScreenPassRateDataSetEditDTO;
     // 大屏中部数据类型
     centerProductionType: string;
     // 大屏中部业务对象集
-    centerBusinessList: I深蓝生产大屏产出设置编辑DTO[];
+    centerBusinessList: IDeepBlueProductionLargeScreenOutputSettingsEditDTO[];
     // 每日清零时间 HH:mm
     everydayResetTime: string;
 }
 // 深蓝生产大屏合格率数据设置编辑DTO
-export interface I深蓝生产大屏合格率数据设置编辑DTO {
+export interface IDeepBlueProductionLargeScreenPassRateDataSetEditDTO {
     // 今日总产量 - 手动修改值
     dayTotalQuantity: number;
     // 今日合格产量 - 手动修改值
@@ -31,18 +31,18 @@ export interface I深蓝生产大屏合格率数据设置编辑DTO {
     yearProduceQuantity: number;
 }
 // 深蓝生产大屏产出设置编辑DTO
-export interface I深蓝生产大屏产出设置编辑DTO {
+export interface IDeepBlueProductionLargeScreenOutputSettingsEditDTO {
     // id
     id: number;
     // 物料分组编码
     materialGroupCode: string;
     // 过去12个月明细
-    month12Details: I深蓝生产大屏产出设置明细编辑DTO[];
+    month12Details: IDeepBlueProductionLargeScreenOutputSettingDetailsEditDTO[];
     // 过去10年明细
-    year10Details: I深蓝生产大屏产出设置明细编辑DTO[];
+    year10Details: IDeepBlueProductionLargeScreenOutputSettingDetailsEditDTO[];
 }
 // 深蓝生产大屏产出设置明细编辑DTO
-export interface I深蓝生产大屏产出设置明细编辑DTO {
+export interface IDeepBlueProductionLargeScreenOutputSettingDetailsEditDTO {
     // 日期 - 过去12个月格式传 yyyy-MM  过去10年格式传 yyyy
     scheduleDate: string;
     // 手动修改值

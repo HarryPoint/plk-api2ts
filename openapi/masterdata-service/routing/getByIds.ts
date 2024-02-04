@@ -1,16 +1,16 @@
 // JSONResult«List«基础VO»»_2
-export interface IJSONResultListBaseVO2 {
+export interface IJSONResultList基础VO_2 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IBasicVO2[];
+    data: I基础VO_2[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 基础VO_2
-export interface IBasicVO2 {
+export interface I基础VO_2 {
     // id
     id: number;
     // 数据状态 0停用，1启用，-1已删除

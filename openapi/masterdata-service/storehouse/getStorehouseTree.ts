@@ -1,16 +1,16 @@
 // JSONResult«List«仓库区域树返回VO»»
-export interface IJSONResultList仓库区域树返回VO {
+export interface ITheJSONResultListRepositoryAreaTreeReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓库区域树返回VO[];
+    data: ITheWarehouseAreaTreeReturnsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓库区域树返回VO
-export interface I仓库区域树返回VO {
+export interface ITheWarehouseAreaTreeReturnsVO {
     // 区域id
     id: number;
     // 区域名称
@@ -18,12 +18,12 @@ export interface I仓库区域树返回VO {
     // 区域编号
     code: string;
     // 下级区域集
-    areaChildren: I仓库区域树返回VO[];
+    areaChildren: ITheWarehouseAreaTreeReturnsVO[];
     // 仓库集
-    storehouseChildren: I仓库树返回VO[];
+    storehouseChildren: ITheWarehouseTreeReturnsVO[];
 }
 // 仓库树返回VO
-export interface I仓库树返回VO {
+export interface ITheWarehouseTreeReturnsVO {
     // id
     id: number;
     // 仓库名称
@@ -35,10 +35,10 @@ export interface I仓库树返回VO {
     // 仓库类型描述
     typeDesc: string;
     // 仓位集
-    warehouseChildren: I仓位树返回VO[];
+    warehouseChildren: IPositionTreeReturnsVO[];
 }
 // 仓位树返回VO
-export interface I仓位树返回VO {
+export interface IPositionTreeReturnsVO {
     // id
     id: number;
     // 仓位名称
@@ -58,5 +58,5 @@ export interface I仓位树返回VO {
     // 仓库名称
     storehouseName: string;
     // 子仓位
-    children: I仓位树返回VO[];
+    children: IPositionTreeReturnsVO[];
 }

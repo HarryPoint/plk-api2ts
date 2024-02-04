@@ -1,20 +1,20 @@
 // 进出站信息DTO
-export interface IInboundAndOutboundInformationDTO {
+export interface I进出站信息DTO {
     // 进出站记录id - 如果是从进出站记录里面点进来的，则必传
     moveInOutRecordId: number;
     // 生产任务id
     produceTaskId: number;
     // 成品物料填写信息列表
-    finishedMaterialInputList: IFinishedMaterialFillRequestDTO[];
+    finishedMaterialInputList: I成品物料填写请求DTO[];
     // BOM消耗列表
-    bomMaterials: IBOMConsumptionRequestDTO[];
+    bomMaterials: IBOM消耗请求DTO[];
     // 关键参数信息填写
-    keyParametersInfo: IEntryAndExitProcessCardFilling;
+    keyParametersInfo: I进出站工艺卡填写;
     // undefined
     handleOtherAsync: string;
 }
 // 成品物料填写请求DTO
-export interface IFinishedMaterialFillRequestDTO {
+export interface I成品物料填写请求DTO {
     // 批次id
     lotOrderId: number;
     // 实际数(质检数)
@@ -25,7 +25,7 @@ export interface IFinishedMaterialFillRequestDTO {
     optTime: string;
 }
 // BOM消耗请求DTO
-export interface IBOMConsumptionRequestDTO {
+export interface IBOM消耗请求DTO {
     // 生产工艺路径步骤bom明细关联id
     id: number;
     // 对应物料id
@@ -33,12 +33,12 @@ export interface IBOMConsumptionRequestDTO {
     // 实际数
     actualQuantity: number;
     // 进料批次列表
-    lotOrders: IBomConsumesTheBatchOrderRequestObject[];
+    lotOrders: Ibom消耗批次订单请求对象[];
     // 进料外部码列表
     externalCodeList: string[];
 }
 // bom消耗批次订单请求对象
-export interface IBomConsumesTheBatchOrderRequestObject {
+export interface Ibom消耗批次订单请求对象 {
     // 批次订单id
     id: number;
     // undefined
@@ -49,14 +49,14 @@ export interface IBomConsumesTheBatchOrderRequestObject {
     serialNoIds: number[];
 }
 // 进出站工艺卡填写
-export interface IEntryAndExitProcessCardFilling {
+export interface I进出站工艺卡填写 {
     // 关键参数id
     id: number;
     // 录入集合 - 带录入信息
-    keyParameterDetailList: IDetailsOnKeyParameters[];
+    keyParameterDetailList: I关键参数明细填写信息[];
 }
 // 关键参数明细填写信息
-export interface IDetailsOnKeyParameters {
+export interface I关键参数明细填写信息 {
     // 明细id
     id: number;
     // 录入值 - 明细录入类型不是图片时，有值

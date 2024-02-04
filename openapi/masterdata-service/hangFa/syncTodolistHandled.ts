@@ -1,5 +1,5 @@
 // 金蝶待办动作请求
-export interface I金蝶待办动作请求 {
+export interface IKingdeeBacklogActionRequest {
     // 待办id
     id: string;
 }

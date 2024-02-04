@@ -1,16 +1,16 @@
 // JSONResult«List«批次订单打印信息返回VO»»
-export interface IJSONResultListBatchOrderPrintInformationIsReturnedToVO {
+export interface IJSONResultList批次订单打印信息返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IBatchOrderPrintingInformationIsReturnedToVO[];
+    data: I批次订单打印信息返回VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 批次订单打印信息返回VO
-export interface IBatchOrderPrintingInformationIsReturnedToVO {
+export interface I批次订单打印信息返回VO {
     // 批次号
     lotNo: string;
     // 对应生产订单号

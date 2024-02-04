@@ -1,5 +1,5 @@
 // 深蓝报表查询条件
-export interface IQueryConditionsOfTheDarkBlueReport {
+export interface I深蓝报表查询条件 {
     // 日期
     date: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface IQueryConditionsOfTheDarkBlueReport {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 设备名称
     deviceName: string;
     // 报警信息
@@ -20,25 +20,25 @@ export interface IQueryConditionsOfTheDarkBlueReport {
     currentKnife: string;
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«List«转塔或者1到7号机报表»»
-export interface IJSONResultListTurretOrUnit1To7Report {
+export interface IJSONResultList转塔或者1到7号机报表 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ITurretOrEngine1Through7Report[];
+    data: I转塔或者1到7号机报表[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 转塔或者1到7号机报表
-export interface ITurretOrEngine1Through7Report {
+export interface I转塔或者1到7号机报表 {
     // 日期
     date: string;
     // 设备名称

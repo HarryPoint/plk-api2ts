@@ -1,5 +1,5 @@
 // 添加占用DTO
-export interface I添加占用DTO {
+export interface ITheOccupiedDTOWasAdded {
     // 占用类型
     occupyType: string;
     // 占用工序id

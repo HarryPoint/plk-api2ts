@@ -1,23 +1,23 @@
 // JSONResult«导出信息«采购到货统计报表返回VO»»
-export interface IJSONResult导出信息采购到货统计报表返回VO {
+export interface IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息采购到货统计报表返回VO;
+    data: IExportInformationPurchaseArrivalStatisticsReportReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«采购到货统计报表返回VO»
-export interface I导出信息采购到货统计报表返回VO {
+export interface IExportInformationPurchaseArrivalStatisticsReportReturnToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I采购到货统计报表返回VO[];
+    itemList: IPurchaseArrivalStatisticsReportReturnedToVO[];
 }
 // 采购到货统计报表返回VO
-export interface I采购到货统计报表返回VO {
+export interface IPurchaseArrivalStatisticsReportReturnedToVO {
     // 采购订单编号
     purchaseOrderNo: string;
     // 供应商

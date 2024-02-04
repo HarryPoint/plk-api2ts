@@ -1,10 +1,10 @@
 // 生产任务自定义卡片样式编辑list对象DTO
-export interface I生产任务自定义卡片样式编辑list对象DTO {
+export interface IProductionTaskCustomCardStyleEditListObjectDTO {
     // undefined
-    customCardStyleList: I生产任务自定义卡片样式编辑对象DTO[];
+    customCardStyleList: IProductionTaskCustomCardStyleEditObjectDTO[];
 }
 // 生产任务自定义卡片样式编辑对象DTO
-export interface I生产任务自定义卡片样式编辑对象DTO {
+export interface IProductionTaskCustomCardStyleEditObjectDTO {
     // 字段名称
     formFieldName: string;
     // 字段code

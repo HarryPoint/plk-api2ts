@@ -1,16 +1,16 @@
 // JSONResult«分页信息«任务量统计报表返回DTO»»
-export interface IJSONResult分页信息任务量统计报表返回DTO {
+export interface IJSONResultThePageInformationTaskVolumeStatisticsReportReturnsTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息任务量统计报表返回DTO;
+    data: IThePageInformationTaskVolumeStatisticsReportReturnsTheDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«任务量统计报表返回DTO»
-export interface I分页信息任务量统计报表返回DTO {
+export interface IThePageInformationTaskVolumeStatisticsReportReturnsTheDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息任务量统计报表返回DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I任务量统计报表返回DTO[];
+    list: ITaskVolumeStatisticsReportReturnsTheDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息任务量统计报表返回DTO {
     nextPage: number;
 }
 // 任务量统计报表返回DTO
-export interface I任务量统计报表返回DTO {
+export interface ITaskVolumeStatisticsReportReturnsTheDTO {
     // 年
     year: string;
     // 月

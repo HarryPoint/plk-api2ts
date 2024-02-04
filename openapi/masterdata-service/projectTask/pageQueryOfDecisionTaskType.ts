@@ -1,11 +1,11 @@
 // 项目任务分页查询响应_1
-export interface I项目任务分页查询响应_1 {
+export interface IItemTaskPagingQueryResponse1 {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 导出字段集
@@ -16,25 +16,25 @@ export interface I项目任务分页查询响应_1 {
     systemType: string;
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // JSONResult«分页信息«项目任务分页查询响应»»
-export interface IJSONResult分页信息项目任务分页查询响应 {
+export interface IJSONResultPageInformationItemTaskPageQueryResponse {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息项目任务分页查询响应;
+    data: IPageInformationItemTaskPageQueryResponse;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«项目任务分页查询响应»
-export interface I分页信息项目任务分页查询响应 {
+export interface IPageInformationItemTaskPageQueryResponse {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface I分页信息项目任务分页查询响应 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I项目任务分页查询响应[];
+    list: IProjectTaskPagingQueryResponse[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface I分页信息项目任务分页查询响应 {
     nextPage: number;
 }
 // 项目任务分页查询响应
-export interface I项目任务分页查询响应 {
+export interface IProjectTaskPagingQueryResponse {
     // Id
     id: number;
     // 任务名称
@@ -91,10 +91,10 @@ export interface I项目任务分页查询响应 {
     // 修改任务ID列表
     modifyTaskIdList: undefined[];
     // 修改任务列表
-    modifyTaskList: IId名称VO[];
+    modifyTaskList: IIdNameVO[];
 }
 // Id，名称VO
-export interface IId名称VO {
+export interface IIdNameVO {
     // id
     id: number;
     // 名称

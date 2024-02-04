@@ -1,5 +1,5 @@
 // 质量月报部门设置编辑DTO
-export interface IQualityMonthlyReportDepartmentSetUpEditorDTO {
+export interface I质量月报部门设置编辑DTO {
     // 部门id集合
     departmentIds: number[];
 }

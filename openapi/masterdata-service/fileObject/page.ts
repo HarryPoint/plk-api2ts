@@ -1,5 +1,5 @@
 // 文件对象分页查询请求DTO
-export interface IFileObjectPagingQueryRequestDTO {
+export interface I文件对象分页查询请求DTO {
     // 当前页面
     pageNo: number;
     // 文件来源
@@ -7,7 +7,7 @@ export interface IFileObjectPagingQueryRequestDTO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSort[];
+    orders: I分页排序[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 创建用户ID列表
@@ -24,25 +24,25 @@ export interface IFileObjectPagingQueryRequestDTO {
     createTimeEnd: string;
 }
 // 分页排序
-export interface IPagingSort {
+export interface I分页排序 {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // JSONResult«分页信息«文件对象分页查询响应DTO»»
-export interface IJSONResultPagingInformationFileObjectPagingQueryResponseDTO {
+export interface IJSONResult分页信息文件对象分页查询响应DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPageInformationFileObjectPageQueryResponseDTO;
+    data: I分页信息文件对象分页查询响应DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«文件对象分页查询响应DTO»
-export interface IPageInformationFileObjectPageQueryResponseDTO {
+export interface I分页信息文件对象分页查询响应DTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -52,7 +52,7 @@ export interface IPageInformationFileObjectPageQueryResponseDTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IFileObjectPagingQueryResponseDTO[];
+    list: I文件对象分页查询响应DTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -65,7 +65,7 @@ export interface IPageInformationFileObjectPageQueryResponseDTO {
     nextPage: number;
 }
 // 文件对象分页查询响应DTO
-export interface IFileObjectPagingQueryResponseDTO {
+export interface I文件对象分页查询响应DTO {
     // 创建用户ID
     createUserId: number;
     // 创建用户名

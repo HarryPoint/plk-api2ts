@@ -1,25 +1,25 @@
 // JSONResult«标准工艺编码规则响应 DTO»
-export interface IJSONResult标准工艺编码规则响应DTO {
+export interface IJSONResultStandardProcessCodingRulesRespondToDtos {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I标准工艺编码规则响应DTO;
+    data: IStandardProcessCodingRulesRespondToDtos;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 标准工艺编码规则响应 DTO
-export interface I标准工艺编码规则响应DTO {
+export interface IStandardProcessCodingRulesRespondToDtos {
     // id
     id: number;
     // 名称
     name: string;
     // 规则明细
-    details: I标准工艺编码规则明细响应DTO[];
+    details: IStandardProcessCodingRulesDetailResponseDTO[];
 }
 // 标准工艺编码规则明细响应 DTO
-export interface I标准工艺编码规则明细响应DTO {
+export interface IStandardProcessCodingRulesDetailResponseDTO {
     // id
     id: number;
     // 类型

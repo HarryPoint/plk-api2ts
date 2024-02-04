@@ -1,11 +1,11 @@
 // 生产任务导出DTO
-export interface I生产任务导出DTO {
+export interface IExportTheDTOOfAProductionTask {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 对应工序id
     processIds: number[];
     // 任务号
@@ -45,17 +45,17 @@ export interface I生产任务导出DTO {
     // 可操作项
     canOpItem: string;
     // 生产订单字段搜索
-    produceOrderSearchList: I流程数据明细搜索VO[];
+    produceOrderSearchList: IProcessDataDetailsSearchVO[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // 流程数据明细搜索VO
-export interface I流程数据明细搜索VO {
+export interface IProcessDataDetailsSearchVO {
     // 列code
     code: string;
     // 搜索类型

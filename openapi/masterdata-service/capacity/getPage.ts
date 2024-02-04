@@ -1,5 +1,5 @@
 // 产能分页查询对象
-export interface ICapacityPagingQueryObject {
+export interface I产能分页查询对象 {
     // 编号
     code: string;
     // 当前页面
@@ -7,7 +7,7 @@ export interface ICapacityPagingQueryObject {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: IPagingSortVO[];
+    orders: I分页排序VO[];
     // 所属工序id
     processId: number;
     // 名称 -- 模糊查询
@@ -18,25 +18,25 @@ export interface ICapacityPagingQueryObject {
     dataStatus: number;
 }
 // 分页排序VO
-export interface IPagingSortVO {
+export interface I分页排序VO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«产能分页响应对象»»
-export interface IJSONResultPagingInformationCapacityPagingResponseObject {
+export interface IJSONResult分页信息产能分页响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPagingInformationProducesPagingResponseObjects;
+    data: I分页信息产能分页响应对象;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«产能分页响应对象»
-export interface IPagingInformationProducesPagingResponseObjects {
+export interface I分页信息产能分页响应对象 {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface IPagingInformationProducesPagingResponseObjects {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: ICapacityPageResponseObject[];
+    list: I产能分页响应对象[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface IPagingInformationProducesPagingResponseObjects {
     nextPage: number;
 }
 // 产能分页响应对象
-export interface ICapacityPageResponseObject {
+export interface I产能分页响应对象 {
     // 创建用户ID
     createUserId: number;
     // 创建用户名
@@ -87,9 +87,9 @@ export interface ICapacityPageResponseObject {
     // 名称
     name: string;
     // 关联工序
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp: I关联下拉响应对象[];
     // 关联物料
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp: I关联下拉响应对象[];
     // 准备耗时
     readyTime: number;
     // 准备时间单位
@@ -104,7 +104,7 @@ export interface ICapacityPageResponseObject {
     dataStatus: number;
 }
 // 关联下拉响应对象
-export interface IAssociatedDropDownResponseObjects {
+export interface I关联下拉响应对象 {
     // id
     id: number;
     // 显示字段名称

@@ -1,5 +1,5 @@
 // 项目任务模板名称重复校验请求DTO
-export interface I项目任务模板名称重复校验请求DTO {
+export interface IProjectTaskTemplateNameDuplicateVerificationRequestDTO {
     // 项目id
     projectId: number;
     // 应用流程id
@@ -8,7 +8,7 @@ export interface I项目任务模板名称重复校验请求DTO {
     flowPathName: string;
 }
 // JSONResult«string»_1
-export interface IJSONResultstring_1 {
+export interface IJSONResultstring1 {
     // 返回码
     code: number;
     // 返回消息说明

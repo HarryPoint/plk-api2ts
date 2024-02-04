@@ -1,21 +1,21 @@
 // 标准工艺画布复制请求对象
-export interface I标准工艺画布复制请求对象 {
+export interface IStandardProcessCanvasCopyRequestObject {
     // 标准工艺id
     standardTechnologyId: number;
 }
 // JSONResult«标准工艺画布响应对象»
-export interface IJSONResult标准工艺画布响应对象 {
+export interface IJSONResultStandardProcessCanvasResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I标准工艺画布响应对象;
+    data: IStandardProcessCanvasResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 标准工艺画布响应对象
-export interface I标准工艺画布响应对象 {
+export interface IStandardProcessCanvasResponseObject {
     // 标准工艺id
     standardTechnologyId: number;
     // 标准工艺名称
@@ -37,12 +37,12 @@ export interface I标准工艺画布响应对象 {
     // 条件来源应用名称(该标准工艺里面的条件字段 只有一个来源)
     conditionFromFlowPathName: string;
     // 标准工艺节点响应对象
-    nodeResponse: I标准工艺节点响应对象;
+    nodeResponse: IStandardProcessNodeResponseObject;
     // 标准工艺画布快照 草稿状态时有值
     canvasSnapshot;
 }
 // 标准工艺节点响应对象
-export interface I标准工艺节点响应对象 {
+export interface IStandardProcessNodeResponseObject {
     // 标准工艺id
     standardTechnologyId: number;
     // 节点id
@@ -66,7 +66,7 @@ export interface I标准工艺节点响应对象 {
     // 节点数据 -- 不同的节点类型的数据格式不一样
     nodeData;
     // 下一节点
-    nextNode: I标准工艺节点响应对象;
+    nextNode: IStandardProcessNodeResponseObject;
     // 分支节点列表
-    branches: I标准工艺节点响应对象[];
+    branches: IStandardProcessNodeResponseObject[];
 }

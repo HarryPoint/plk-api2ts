@@ -1,16 +1,16 @@
 // JSONResult«List«项目任务响应对象»»_3
-export interface IJSONResultList项目任务响应对象_3 {
+export interface IJSONResultListProjectTaskResponseObject3 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务响应对象_10[];
+    data: IProjectTaskResponseObject10[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务响应对象_10
-export interface I项目任务响应对象_10 {
+export interface IProjectTaskResponseObject10 {
     // 项目id
     projectId: number;
     // 项目名称
@@ -30,10 +30,10 @@ export interface I项目任务响应对象_10 {
     // 项目阶段排序
     projectStageSort: number;
     // 下级任务列表
-    children: I项目任务响应对象_9[];
+    children: IProjectTaskResponseObject9[];
 }
 // 项目任务响应对象_9
-export interface I项目任务响应对象_9 {
+export interface IProjectTaskResponseObject9 {
     // 任务id
     id: number;
     // 任务名称
@@ -47,7 +47,7 @@ export interface I项目任务响应对象_9 {
     // 任务状态
     taskStatus: string;
     // 前置任务列表
-    preTaskList: I项目任务前置任务响应对象[];
+    preTaskList: IProjectTaskPreTaskResponseObject[];
     // 任务开始日期
     planBeginTime: string;
     // 任务截止日期
@@ -83,7 +83,7 @@ export interface I项目任务响应对象_9 {
     // 来源应用id
     fromAppId: number;
     // 下级任务列表
-    children: I项目任务响应对象_9[];
+    children: IProjectTaskResponseObject9[];
     // 当前登录员工所属待办id
     currentEmployeeTodoId: number;
     // 当前登录员工所属待办状态
@@ -132,7 +132,7 @@ export interface I项目任务响应对象_9 {
     processStatus: string;
 }
 // 项目任务前置任务响应对象
-export interface I项目任务前置任务响应对象 {
+export interface IProjectTaskPreTaskResponseObject {
     // 任务id
     id: number;
     // 任务名称

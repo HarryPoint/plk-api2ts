@@ -1,32 +1,32 @@
 // 任务批量操作DTO_1
-export interface ITaskBatchOperationDTO1 {
+export interface I任务批量操作DTO_1 {
     // 工序id
     processId: number;
     // 生产任务查询列表
-    produceTaskDetails: ITaskBatchOperationDtos[];
+    produceTaskDetails: I任务批量操作DTO[];
     // 查询类型
     queryType: string;
 }
 // 任务批量操作DTO
-export interface ITaskBatchOperationDtos {
+export interface I任务批量操作DTO {
     // 生产任务id
     produceTaskId: number;
     // 批次订单id集
     lotIds: number[];
 }
 // JSONResult«批量操作任务返回信息DTO»
-export interface IJSONResultIndicatesTheDTOReturnedFromABatchOperationTask {
+export interface IJSONResult批量操作任务返回信息DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IBatchOperationTaskReturnInformationDTO;
+    data: I批量操作任务返回信息DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 批量操作任务返回信息DTO
-export interface IBatchOperationTaskReturnInformationDTO {
+export interface I批量操作任务返回信息DTO {
     // 工序id
     processId: number;
     // 工序名称
@@ -46,10 +46,10 @@ export interface IBatchOperationTaskReturnInformationDTO {
     // 可进料数/可出料数
     canOptQuantity: number;
     // 物料数据
-    materials: IBatchOperationTaskMaterialResponseDTO[];
+    materials: I批量操作任务物料响应DTO[];
 }
 // 批量操作任务物料响应DTO
-export interface IBatchOperationTaskMaterialResponseDTO {
+export interface I批量操作任务物料响应DTO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -78,10 +78,10 @@ export interface IBatchOpTaskMoveInOutResponseDTO {
     // 需生产数量
     needProduceQuantity: number;
     // 批次订单列表
-    lotOrders: IBatchOperationTaskBatchOrderResponseDTO[];
+    lotOrders: I批量操作任务批次订单响应DTO[];
 }
 // 批量操作任务批次订单响应DTO
-export interface IBatchOperationTaskBatchOrderResponseDTO {
+export interface I批量操作任务批次订单响应DTO {
     // 批次id
     lotId: number;
     // 批次号

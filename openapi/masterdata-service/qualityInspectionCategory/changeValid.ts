@@ -1,5 +1,5 @@
 // 启用or停用VO
-export interface IEnableOrDisableVO {
+export interface I启用or停用VO {
     // id
     id: number;
     // 状态

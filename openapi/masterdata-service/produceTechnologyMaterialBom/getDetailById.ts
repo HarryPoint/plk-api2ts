@@ -46,10 +46,10 @@ export interface IProduceTechnologyMaterialBomInfoResponseDTO {
     // bom编号
     code: string;
     // 生产工艺物料BOM明细
-    produceTechnologyMaterialBomDetailList: IProductionProcessMaterialBomDetailNodeResponseObject[];
+    produceTechnologyMaterialBomDetailList: I生产工艺物料Bom明细节点响应对象[];
 }
 // 生产工艺物料Bom明细节点响应对象
-export interface IProductionProcessMaterialBomDetailNodeResponseObject {
+export interface I生产工艺物料Bom明细节点响应对象 {
     // 生产工艺物料bom明细id
     produceTechnologyMaterialBomDetailId: number;
     // 子物料id
