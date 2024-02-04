@@ -5,6 +5,7 @@ import path from "path";
 
 type IServiceMap = {
   "masterdata-service": string;
+  "plk-uaa-service": string;
 };
 
 type IServiceKey = keyof IServiceMap;
@@ -12,13 +13,14 @@ type IServiceKey = keyof IServiceMap;
 const apiMap: Record<string, IServiceMap> = {
   dev: {
     "masterdata-service": "http://47.108.135.148:16700",
+    "plk-uaa-service": "http://47.108.139.107:18100",
   },
 };
 type IPlatformKey = keyof typeof apiMap;
 
 const fetchData = async (
   platform: IPlatformKey = "dev",
-  service: IServiceKey = "masterdata-service"
+  service: IServiceKey = "plk-uaa-service"
 ) => {
   const apiUri = apiMap?.[platform]?.[service];
   if (!apiUri) {
