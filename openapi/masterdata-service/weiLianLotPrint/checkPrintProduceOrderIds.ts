@@ -1,16 +1,16 @@
 // JSONResult«维联批次打印模板响应对象»
-export interface IJSONResult维联批次打印模板响应对象 {
+export interface IJSONResultVirtualizedBatchPrintTemplateResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I维联批次打印模板响应对象;
+    data: IVTLBatchPrintsTemplateResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 维联批次打印模板响应对象
-export interface I维联批次打印模板响应对象 {
+export interface IVTLBatchPrintsTemplateResponseObjects {
     // 没有配置打印模板的生产订单编号
     notConfigPrintTemplateProduceOrderCodes: string[];
     // 没有批次的生产订单编号

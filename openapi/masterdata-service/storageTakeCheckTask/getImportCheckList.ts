@@ -1,14 +1,14 @@
 // 盘点导入明细列表DTO
-export interface I盘点导入明细列表DTO {
+export interface IImportDetailsListDTOForInventory {
     // taskId
     taskId: number;
     // 页面提交数据
-    submitCheckList: I仓库盘点仓位清单导入DTO[];
+    submitCheckList: IImportTheWarehouseInventoryListIntoDTO[];
     // 导入盘点明细数据
-    importCheckList: I仓库盘点仓位清单导入DTO[];
+    importCheckList: IImportTheWarehouseInventoryListIntoDTO[];
 }
 // 仓库盘点仓位清单导入DTO
-export interface I仓库盘点仓位清单导入DTO {
+export interface IImportTheWarehouseInventoryListIntoDTO {
     // 盘点详情id
     id: number;
     // 仓位id
@@ -66,18 +66,18 @@ export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
     serialRemark: string;
 }
 // JSONResult«List«仓库盘点仓位清单返回DTO»»
-export interface IJSONResultList仓库盘点仓位清单返回DTO {
+export interface IJSONResultListReturnTheWarehouseInventoryListToTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓库盘点仓位清单返回DTO[];
+    data: IWarehouseInventoryListReturnedToDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓库盘点仓位清单返回DTO
-export interface I仓库盘点仓位清单返回DTO {
+export interface IWarehouseInventoryListReturnedToDTO {
     // 盘点详情id
     id: number;
     // 仓位id

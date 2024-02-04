@@ -1,5 +1,5 @@
 // 进出站信息DTO_1
-export interface I进出站信息DTO_1 {
+export interface IInboundAndOutboundInformationDTO1 {
     // 进出站记录id - 如果是从进出站记录里面点进来的，则必传
     moveInOutRecordId: number;
     // 生产任务id
@@ -11,9 +11,9 @@ export interface I进出站信息DTO_1 {
     // 成品物料信息
     finishedMaterial: IFillInTheDTOForFinishedMaterials;
     // BOM物料信息列表
-    bomMaterials: IBOM物料填写DTO[];
+    bomMaterials: IBOMEnterTheDTOForTheMaterial[];
     // 关键参数信息填写
-    keyParametersInfo: I进出站工艺卡填写;
+    keyParametersInfo: IEntryAndExitProcessCardFilling;
 }
 // 成品物料填写DTO
 export interface IFillInTheDTOForFinishedMaterials {
@@ -23,7 +23,7 @@ export interface IFillInTheDTOForFinishedMaterials {
     applyQualityAgainQuantity: number;
 }
 // BOM物料填写DTO
-export interface IBOM物料填写DTO {
+export interface IBOMEnterTheDTOForTheMaterial {
     // 生产工艺路径步骤bom明细关联id
     id: number;
     // 对应物料id
@@ -32,14 +32,14 @@ export interface IBOM物料填写DTO {
     actualQuantity: number;
 }
 // 进出站工艺卡填写
-export interface I进出站工艺卡填写 {
+export interface IEntryAndExitProcessCardFilling {
     // 关键参数id
     id: number;
     // 录入集合 - 带录入信息
-    keyParameterDetailList: I关键参数明细填写信息[];
+    keyParameterDetailList: IDetailsOnKeyParameters[];
 }
 // 关键参数明细填写信息
-export interface I关键参数明细填写信息 {
+export interface IDetailsOnKeyParameters {
     // 明细id
     id: number;
     // 录入值 - 明细录入类型不是图片时，有值

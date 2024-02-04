@@ -1,16 +1,16 @@
 // JSONResult«List«生产订单物料领用响应dto»»
-export interface IJSONResultList生产订单物料领用响应dto {
+export interface IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单物料领用响应dto[];
+    data: IProductionOrderMaterialRequisitionResponseDto[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单物料领用响应dto
-export interface I生产订单物料领用响应dto {
+export interface IProductionOrderMaterialRequisitionResponseDto {
     // 生产订单id
     produceOrderId: number;
     // 生产订单编号
@@ -50,10 +50,10 @@ export interface I生产订单物料领用响应dto {
     // 差异数量
     diffCount: number;
     // 关联领用单列表
-    recipientOrderList: I生产订单物料领用明细响应dto[];
+    recipientOrderList: IProductionOrderMaterialRequisitionDetailsRespondToDto[];
 }
 // 生产订单物料领用明细响应dto
-export interface I生产订单物料领用明细响应dto {
+export interface IProductionOrderMaterialRequisitionDetailsRespondToDto {
     // 领用单id
     recipientOrderId: number;
     // 领用单编号

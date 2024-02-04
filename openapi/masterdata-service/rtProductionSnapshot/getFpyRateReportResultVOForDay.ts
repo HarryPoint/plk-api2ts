@@ -1,5 +1,5 @@
 // JSONResult«List«直通报表返回VO»»
-export interface IJSONResultList直通报表返回VO {
+export interface IJSONResultListReturnVOToThePassthroughReport {
     // 返回码
     code: number;
     // 返回消息说明

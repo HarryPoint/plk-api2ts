@@ -1,5 +1,5 @@
 // 仓库盘点任务分页查询对象
-export interface I仓库盘点任务分页查询对象 {
+export interface IWarehouseInventoryTasksPageQueryObjects {
     // 当前页面
     pageNo: number;
     // 分页大小

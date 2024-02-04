@@ -1,25 +1,25 @@
 // JSONResult«仓库盘点任务详情返回DTO»
-export interface IJSONResult仓库盘点任务详情返回DTO {
+export interface IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓库盘点任务详情返回DTO;
+    data: IReturnToDTOForWarehouseInventoryTaskDetails;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓库盘点任务详情返回DTO
-export interface I仓库盘点任务详情返回DTO {
+export interface IReturnToDTOForWarehouseInventoryTaskDetails {
     // id
     id: number;
     // 任务基本信息
-    taskInfo: I仓库盘点任务返回DTO;
+    taskInfo: IWarehouseInventoryTaskReturnedToDTO;
     // 物料盘点清单
-    checkList: I仓库盘点仓位清单返回DTO[];
+    checkList: IWarehouseInventoryListReturnedToDTO[];
 }
 // 仓库盘点任务返回DTO
-export interface I仓库盘点任务返回DTO {
+export interface IWarehouseInventoryTaskReturnedToDTO {
     // id
     id: number;
     // 盘点单号
@@ -95,7 +95,7 @@ export interface IIdNameNumberVO {
     code: string;
 }
 // 仓库盘点仓位清单返回DTO
-export interface I仓库盘点仓位清单返回DTO {
+export interface IWarehouseInventoryListReturnedToDTO {
     // 盘点详情id
     id: number;
     // 仓位id

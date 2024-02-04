@@ -29,18 +29,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«订单进度统计响应VO»»
-export interface IJSONResult分页信息订单进度统计响应VO {
+export interface IJSONResultPageInformationOrderProgressStatisticsResponseVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息订单进度统计响应VO;
+    data: IPageInformationOrderProgressStatisticsResponseVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«订单进度统计响应VO»
-export interface I分页信息订单进度统计响应VO {
+export interface IPageInformationOrderProgressStatisticsResponseVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -50,7 +50,7 @@ export interface I分页信息订单进度统计响应VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I订单进度统计响应VO[];
+    list: IOrderProgressStatisticsRespondToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -63,7 +63,7 @@ export interface I分页信息订单进度统计响应VO {
     nextPage: number;
 }
 // 订单进度统计响应VO
-export interface I订单进度统计响应VO {
+export interface IOrderProgressStatisticsRespondToVO {
     // 销售订单编号-（销售订单维度
     salesOrderCode: string;
     // 客户id-（销售订单维度

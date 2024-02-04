@@ -1,16 +1,16 @@
 // JSONResult«仓库盘点任务明细执行端返回DTO»
-export interface IJSONResult仓库盘点任务明细执行端返回DTO {
+export interface IJSONResultReturnsTheDTOFromTheExecutingEndOfTheWarehouseInventoryTaskDetails {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓库盘点任务明细执行端返回DTO;
+    data: ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓库盘点任务明细执行端返回DTO
-export interface I仓库盘点任务明细执行端返回DTO {
+export interface ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails {
     // id
     id: number;
     // 任务号
@@ -34,10 +34,10 @@ export interface I仓库盘点任务明细执行端返回DTO {
     // 状态描述
     statusDesc: string;
     // 默认盘点清单
-    list: I仓库盘点任务清单执行端返回VO[];
+    list: ITheExecutionEndOfTheWarehouseInventoryTaskListReturnsVO[];
 }
 // 仓库盘点任务清单执行端返回VO
-export interface I仓库盘点任务清单执行端返回VO {
+export interface ITheExecutionEndOfTheWarehouseInventoryTaskListReturnsVO {
     // 盘点仓位id
     warehouseId: number;
     // 盘点仓位名称
@@ -47,7 +47,7 @@ export interface I仓库盘点任务清单执行端返回VO {
     // 仓位层级，从高至低排列
     warehouseList: IIdNameNumberVO[];
     // 物料集
-    materialList: I仓库盘点任务清单物料执行端返回DTO[];
+    materialList: IWarehouseInventoryTaskListReturnTheMaterialExecutionEndToTheDTO[];
 }
 // Id，名称，编号VO
 export interface IIdNameNumberVO {
@@ -59,7 +59,7 @@ export interface IIdNameNumberVO {
     code: string;
 }
 // 仓库盘点任务清单物料执行端返回DTO
-export interface I仓库盘点任务清单物料执行端返回DTO {
+export interface IWarehouseInventoryTaskListReturnTheMaterialExecutionEndToTheDTO {
     // 物料id
     materialId: number;
     // 物料名称

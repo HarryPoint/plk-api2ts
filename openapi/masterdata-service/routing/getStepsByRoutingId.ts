@@ -1,16 +1,16 @@
 // JSONResult«List«工艺路径详情步骤VO»»
-export interface IJSONResultList工艺路径详情步骤VO {
+export interface IJSONResultListProcessPathDetailsStepVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工艺路径详情步骤VO[];
+    data: IProcessPathDetailsStepsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工艺路径详情步骤VO
-export interface I工艺路径详情步骤VO {
+export interface IProcessPathDetailsStepsVO {
     // 工艺路径步骤id
     id: number;
     // 工艺路径步骤
@@ -54,7 +54,7 @@ export interface I工艺路径详情步骤VO {
     // 步骤对应bom详情
     stepBomDetails: IProcessPathDetailsStepBomDetailsReturnToVO[];
     // 质检方案集
-    plans: I质检方案明细返回VO[];
+    plans: ITheDetailsOfTheInspectionSchemeAreReturnedToVO[];
     // 产能-生产时间
     capacityProduceTime: number;
     // 产能-时间类型
@@ -80,7 +80,7 @@ export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     totalConsumeCount: number;
 }
 // 质检方案明细返回VO
-export interface I质检方案明细返回VO {
+export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     // id
     id: number;
     // 质检方案名称
@@ -96,7 +96,7 @@ export interface I质检方案明细返回VO {
     // 适用物料集合
     materialList: IMaterialMasterDataBasicInformationIsReturnedToVO[];
     // 质检项
-    itemList: I质检方案质检项关联信息返回VO[];
+    itemList: IQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO[];
     // 版次号
     issueCode: string;
     // 附件文件id
@@ -146,7 +146,7 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     storageUseQuantity: number;
 }
 // 质检方案质检项关联信息返回VO
-export interface I质检方案质检项关联信息返回VO {
+export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO {
     // 关联id
     id: number;
     // 所属质检方案

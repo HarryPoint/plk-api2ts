@@ -1,16 +1,16 @@
 // JSONResult«List«Wip批次信息VO»»
-export interface IJSONResultListWip批次信息VO {
+export interface IJSONResultListWipBatchInformationVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IWip批次信息VO[];
+    data: IWipBatchInformationVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // Wip批次信息VO
-export interface IWip批次信息VO {
+export interface IWipBatchInformationVO {
     // 批次id
     id: number;
     // 批次名称
@@ -26,10 +26,10 @@ export interface IWip批次信息VO {
     // 可操作数量
     canOptQuantity: number;
     // wip状态信息集
-    wips: IWip数量状态信息VO[];
+    wips: IWipQuantityStatusVO[];
 }
 // Wip数量状态信息VO
-export interface IWip数量状态信息VO {
+export interface IWipQuantityStatusVO {
     // wip状态记录id
     wipRpId: number;
     // 数量

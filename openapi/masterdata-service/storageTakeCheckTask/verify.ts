@@ -1,14 +1,14 @@
 // 盘点任务核对DTO
-export interface I盘点任务核对DTO {
+export interface ICheckTheDTOForInventoryTasks {
     // 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT)
     editType: string;
     // 任务id
     id: number;
     // 盘点核对详情
-    detailList: I盘点任务核对详情DTO[];
+    detailList: IInventoryTaskCheckDetailsDTO[];
 }
 // 盘点任务核对详情DTO
-export interface I盘点任务核对详情DTO {
+export interface IInventoryTaskCheckDetailsDTO {
     // 详情id
     id: number;
     // 核对数量

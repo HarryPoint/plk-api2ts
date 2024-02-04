@@ -1,5 +1,5 @@
 // 质检方案搜索VO
-export interface I质检方案搜索VO {
+export interface IInspectionSolutionSearchVO {
     // 当前页面
     pageNo: number;
     // 编号

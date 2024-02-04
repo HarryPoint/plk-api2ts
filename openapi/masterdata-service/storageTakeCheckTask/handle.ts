@@ -1,14 +1,14 @@
 // 盘点任务盘点处理DTO
-export interface I盘点任务盘点处理DTO {
+export interface IInventoryTaskInventoryProcessingDTO {
     // 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT)
     editType: string;
     // 任务id
     id: number;
     // 盘点明细
-    detailList: I盘点任务盘点处理详情DTO[];
+    detailList: IInventoryTaskInventoryProcessingDetailsDTO[];
 }
 // 盘点任务盘点处理详情DTO
-export interface I盘点任务盘点处理详情DTO {
+export interface IInventoryTaskInventoryProcessingDetailsDTO {
     // 盘点仓位id
     warehouseId: number;
     // 物料id

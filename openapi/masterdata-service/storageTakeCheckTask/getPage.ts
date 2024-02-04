@@ -1,5 +1,5 @@
 // 仓库盘点任务分页查询对象
-export interface I仓库盘点任务分页查询对象 {
+export interface IWarehouseInventoryTasksPageQueryObjects {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«仓库盘点任务返回DTO»»
-export interface IJSONResult分页信息仓库盘点任务返回DTO {
+export interface IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息仓库盘点任务返回DTO;
+    data: IThePageInformationWarehouseInventoryTaskReturnsTheDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«仓库盘点任务返回DTO»
-export interface I分页信息仓库盘点任务返回DTO {
+export interface IThePageInformationWarehouseInventoryTaskReturnsTheDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -54,7 +54,7 @@ export interface I分页信息仓库盘点任务返回DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I仓库盘点任务返回DTO[];
+    list: IWarehouseInventoryTaskReturnedToDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -67,7 +67,7 @@ export interface I分页信息仓库盘点任务返回DTO {
     nextPage: number;
 }
 // 仓库盘点任务返回DTO
-export interface I仓库盘点任务返回DTO {
+export interface IWarehouseInventoryTaskReturnedToDTO {
     // id
     id: number;
     // 盘点单号

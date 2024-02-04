@@ -1,16 +1,16 @@
 // JSONResult«分页信息«物料收发汇总分页响应对象»»
-export interface IJSONResult分页信息物料收发汇总分页响应对象 {
+export interface IJSONResultPageInformationPageResponseObjectForReceivingAndReceivingMaterials {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息物料收发汇总分页响应对象;
+    data: IPageInformationSummaryPageResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«物料收发汇总分页响应对象»
-export interface I分页信息物料收发汇总分页响应对象 {
+export interface IPageInformationSummaryPageResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息物料收发汇总分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I物料收发汇总分页响应对象[];
+    list: IMaterialsReceivingAndReceivingSummaryPageResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息物料收发汇总分页响应对象 {
     nextPage: number;
 }
 // 物料收发汇总分页响应对象
-export interface I物料收发汇总分页响应对象 {
+export interface IMaterialsReceivingAndReceivingSummaryPageResponseObject {
     // 所属主数据id (eg:物料id)
     masterDataId: number;
     // 物料code
@@ -59,10 +59,10 @@ export interface I物料收发汇总分页响应对象 {
     // 出库合计
     outTotalQuantity: number;
     // 单据入库出库明细
-    billItems: I物料收发汇总单据项响应对象[];
+    billItems: IMaterialReceiptAndReceiptSummaryDocumentItemResponseObject[];
 }
 // 物料收发汇总单据项响应对象
-export interface I物料收发汇总单据项响应对象 {
+export interface IMaterialReceiptAndReceiptSummaryDocumentItemResponseObject {
     // 单据流程code
     billFlowPathCode: string;
     // 出入库数量

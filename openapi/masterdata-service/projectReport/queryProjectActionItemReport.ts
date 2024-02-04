@@ -1,16 +1,16 @@
 // JSONResult«分页信息«项目行动项报表响应对象»»
-export interface IJSONResult分页信息项目行动项报表响应对象 {
+export interface IJSONResultPageInformationItemActionItemReportResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息项目行动项报表响应对象;
+    data: IPageInformationItemActionItemReportResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«项目行动项报表响应对象»
-export interface I分页信息项目行动项报表响应对象 {
+export interface IPageInformationItemActionItemReportResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小

@@ -14,20 +14,20 @@ export interface IOutputClassReportSearchVO {
     timeType: string;
 }
 // JSONResult«产出类折线图返回VO«object»»
-export interface IJSONResult产出类折线图返回VOobject {
+export interface IJSONResultProducesALineChartAndReturnsAVOobject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I产出类折线图返回VOobject;
+    data: IOutputLineChartReturnsVOobject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出类折线图返回VO«object»
-export interface I产出类折线图返回VOobject {
+export interface IOutputLineChartReturnsVOobject {
     // 分组数据
-    groupList: I产出类折线图分组返回VOobject[];
+    groupList: IOutputLineChartsGroupedToReturnVOobject[];
     // 查询班组集
     classGroupList: IIdNameNumberVO[];
     // 查询工序集
@@ -44,7 +44,7 @@ export interface I产出类折线图返回VOobject {
     actualDataCount: number;
 }
 // 产出类折线图分组返回VO«object»
-export interface I产出类折线图分组返回VOobject {
+export interface IOutputLineChartsGroupedToReturnVOobject {
     // 数据分组id
     groupId: number;
     // 数据分组名称

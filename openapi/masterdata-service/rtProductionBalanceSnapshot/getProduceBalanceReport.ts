@@ -1,5 +1,5 @@
 // 生产结存统计报表搜索VO
-export interface I生产结存统计报表搜索VO {
+export interface IProductionBalanceStatisticsReportSearchVO {
     // 工序id集
     processIds: number[];
     // 物料id
@@ -10,18 +10,18 @@ export interface I生产结存统计报表搜索VO {
     endDate: string;
 }
 // JSONResult«生产结存物料统计报表返回VO»
-export interface IJSONResult生产结存物料统计报表返回VO {
+export interface IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产结存物料统计报表返回VO;
+    data: IProductionBalanceMaterialStatisticsReportReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产结存物料统计报表返回VO
-export interface I生产结存物料统计报表返回VO {
+export interface IProductionBalanceMaterialStatisticsReportReturnedToVO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -31,10 +31,10 @@ export interface I生产结存物料统计报表返回VO {
     // 物料规格
     materialSpec: string;
     // 报表返回数据集
-    reportResults: I生产结存统计报表返回VO[];
+    reportResults: ITheProductionBalanceStatisticsReportIsReturnedToVO[];
 }
 // 生产结存统计报表返回VO
-export interface I生产结存统计报表返回VO {
+export interface ITheProductionBalanceStatisticsReportIsReturnedToVO {
     // 工序id
     processId: number;
     // 工序名称
@@ -68,10 +68,10 @@ export interface I生产结存统计报表返回VO {
     // 当天结存良品率
     yieldRate: number;
     // 日期信息集
-    dateList: I生产结存统计日期报表返回VO[];
+    dateList: IProductionBalanceStatisticsDateReportReturnsVO[];
 }
 // 生产结存统计日期报表返回VO
-export interface I生产结存统计日期报表返回VO {
+export interface IProductionBalanceStatisticsDateReportReturnsVO {
     // 日期
     produceDate: string;
     // 前日结存成品数

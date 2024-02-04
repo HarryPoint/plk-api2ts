@@ -1,5 +1,5 @@
 // JSONResult«List«销售订单详情返回VO»»
-export interface IJSONResultList销售订单详情返回VO {
+export interface IJSONResultListSalesOrderDetailsReturnToVO {
     // 返回码
     code: number;
     // 返回消息说明

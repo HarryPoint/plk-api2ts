@@ -1,16 +1,16 @@
 // JSONResult«List«转生产订单主物料信息»»
-export interface IJSONResultList转生产订单主物料信息 {
+export interface IJSONResultListInformationAboutTheMainMaterialsOfAProductionOrder {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I转生产订单主物料信息[];
+    data: ITransferProductionOrderMainMaterialInformation[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 转生产订单主物料信息
-export interface I转生产订单主物料信息 {
+export interface ITransferProductionOrderMainMaterialInformation {
     // 详情id
     id: number;
     // 销售订单id

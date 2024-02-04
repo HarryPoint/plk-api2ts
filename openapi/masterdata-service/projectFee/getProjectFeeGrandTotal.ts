@@ -1,23 +1,23 @@
 // 项目费用预算查询对象
-export interface I项目费用预算查询对象 {
+export interface IProjectCostBudgetQueryObject {
     // 项目id
     projectId: number;
     // 执行时间 yyyy-MM-dd HH:mm:ss
     executeTime: string;
 }
 // JSONResult«项目费用累计响应对象»
-export interface IJSONResult项目费用累计响应对象 {
+export interface IJSONResultProjectCostAccumulationResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目费用累计响应对象;
+    data: IProjectCostCumulativeResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目费用累计响应对象
-export interface I项目费用累计响应对象 {
+export interface IProjectCostCumulativeResponseObject {
     // 累计预算
     totalBudget: number;
     // 累计预算执行

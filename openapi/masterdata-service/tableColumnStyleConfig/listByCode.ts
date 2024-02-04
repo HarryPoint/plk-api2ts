@@ -1,16 +1,16 @@
 // JSONResult«List«列表列样式配置VO»»
-export interface IJSONResultList列表列样式配置VO {
+export interface IJSONResultListListColumnStyleConfigurationVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I列表列样式配置VO[];
+    data: IListColumnStyleConfigurationVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 列表列样式配置VO
-export interface I列表列样式配置VO {
+export interface IListColumnStyleConfigurationVO {
     // id
     id: number;
     // 名称

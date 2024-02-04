@@ -1,5 +1,5 @@
 // 工艺卡信息编辑DTO
-export interface I工艺卡信息编辑DTO {
+export interface IProcessCardInformationEditsDTO {
     // id
     id: number;
     // 工艺卡名称
@@ -11,12 +11,12 @@ export interface I工艺卡信息编辑DTO {
     // 工序ids
     processIds: number[];
     // 文件集合
-    fileList: I工艺卡明细文件编辑DTO[];
+    fileList: IProcessCardDetailsFileEditDTO[];
     // 描述集合
-    textList: I工艺卡明细描述编辑DTO[];
+    textList: IProcessCardDetailDescriptionEditDTO[];
 }
 // 工艺卡明细文件编辑DTO
-export interface I工艺卡明细文件编辑DTO {
+export interface IProcessCardDetailsFileEditDTO {
     // 明细id
     id: number;
     // 文件名称
@@ -25,7 +25,7 @@ export interface I工艺卡明细文件编辑DTO {
     fileKey: string;
 }
 // 工艺卡明细描述编辑DTO
-export interface I工艺卡明细描述编辑DTO {
+export interface IProcessCardDetailDescriptionEditDTO {
     // 明细id
     id: number;
     // 标题

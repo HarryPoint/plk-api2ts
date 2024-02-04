@@ -14,7 +14,7 @@ export interface IOutputClassReportSearchVO {
     timeType: string;
 }
 // JSONResult«产出数据报表搜索VO»
-export interface IJSONResult产出数据报表搜索VO {
+export interface IJSONResultOutputDataReportSearchVO {
     // 返回码
     code: number;
     // 返回消息说明

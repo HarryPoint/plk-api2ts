@@ -1,5 +1,5 @@
 // 仓库盘点任务审批DTO
-export interface I仓库盘点任务审批DTO {
+export interface IWarehouseInventoryTaskApprovalDTO {
     // 任务id
     id: number;
     // 审批类型

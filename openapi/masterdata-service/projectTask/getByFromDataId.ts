@@ -1,16 +1,16 @@
 // JSONResult«项目任务响应对象»
-export interface IJSONResult项目任务响应对象 {
+export interface IJSONResultProjectTaskResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务响应对象_6;
+    data: IProjectTaskResponseObject6;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务响应对象_6
-export interface I项目任务响应对象_6 {
+export interface IProjectTaskResponseObject6 {
     // 任务id
     id: number;
     // 任务名称

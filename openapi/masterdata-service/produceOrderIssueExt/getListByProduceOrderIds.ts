@@ -1,21 +1,21 @@
 // 生产订单下发扩展信息查询VO
-export interface I生产订单下发扩展信息查询VO {
+export interface IProductionOrderDeliveryExtendedInformationQueryVO {
     // 生产订单ids
     produceOrderIds: number[];
 }
 // JSONResult«List«生产订单下发扩展信息VO»»
-export interface IJSONResultList生产订单下发扩展信息VO {
+export interface IJSONResultListExtendedInformationVOForProductionOrderDelivery {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单下发扩展信息VO[];
+    data: IProductionOrderDeliveryExtendedMessageVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单下发扩展信息VO
-export interface I生产订单下发扩展信息VO {
+export interface IProductionOrderDeliveryExtendedMessageVO {
     // 生产订单id
     produceOrderId: number;
     // 下发人id

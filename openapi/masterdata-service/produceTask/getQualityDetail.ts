@@ -1,5 +1,5 @@
 // 进出站详细搜索VO
-export interface I进出站详细搜索VO {
+export interface IEnterAndExitTheStationForDetailedVOSearch {
     // 任务id
     taskId: number;
     // 批次id

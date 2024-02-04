@@ -1,5 +1,5 @@
 // 预测工费_1
-export interface I预测工费_1 {
+export interface IForecastLaborCost1 {
     // 主物料ID
     masterMaterialId: number;
     // 子物料ID
@@ -20,22 +20,22 @@ export interface I预测工费_1 {
     standardTechnologySpecificRoutingNodeId: number;
 }
 // JSONResult«预测工费»
-export interface IJSONResult预测工费 {
+export interface IJSONResultPredictedLaborCost {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I预测工费;
+    data: IForecastedLaborCost;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 预测工费
-export interface I预测工费 {
+export interface IForecastedLaborCost {
     // 工序列表
     processList: IIdNameNumberVO[];
     // 订单项列表
-    orderItemList: I预测工费水平订单项[];
+    orderItemList: IForecastLaborLevelOrderItems[];
     // 汇总工费列表
     summaryLaborCostList: IProcessLaborCostVO[];
 }
@@ -49,7 +49,7 @@ export interface IIdNameNumberVO {
     code: string;
 }
 // 预测工费水平订单项
-export interface I预测工费水平订单项 {
+export interface IForecastLaborLevelOrderItems {
     // 销售订单ID
     salesOrderId: number;
     // 销售订单编码

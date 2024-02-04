@@ -1,5 +1,5 @@
 // 质检方案搜索VO
-export interface I质检方案搜索VO {
+export interface IInspectionSolutionSearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -25,18 +25,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«质检方案返回VO»»
-export interface IJSONResult分页信息质检方案返回VO {
+export interface IJSONResultPagingInformationVOIsReturned {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质检方案返回VO;
+    data: IPagingInformationTheInspectionSchemeReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质检方案返回VO»
-export interface I分页信息质检方案返回VO {
+export interface IPagingInformationTheInspectionSchemeReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface I分页信息质检方案返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质检方案返回VO[];
+    list: ITheInspectionSolutionReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface I分页信息质检方案返回VO {
     nextPage: number;
 }
 // 质检方案返回VO
-export interface I质检方案返回VO {
+export interface ITheInspectionSolutionReturnsVO {
     // id
     id: number;
     // 质检方案名称
