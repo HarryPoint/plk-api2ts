@@ -1,0 +1,990 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16500",
+  "info": {
+    "description": "服务名: flow-service",
+    "version": "1.0",
+    "title": "普朗克流程服务(flow-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/flow-service/flowPathNode/getById": {
+      "get": {
+        "tags": [
+          "流程节点相关"
+        ],
+        "summary": "查询节点-用于流程执行",
+        "operationId": "getByIdUsingGET_5",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«流程节点DTO»",
+              "originalRef": "JSONResult«流程节点DTO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "70"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«流程节点DTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/流程节点DTO",
+          "originalRef": "流程节点DTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«流程节点DTO»"
+    },
+    "流程节点DTO": {
+      "type": "object",
+      "required": [
+        "isCustomBeginningContent"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程id"
+        },
+        "flowPathVersionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程版本id"
+        },
+        "flowPathVersionRank": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流程版本号"
+        },
+        "businessType": {
+          "type": "string",
+          "description": "节点业务类型",
+          "enum": [
+            "  EXEC-执行",
+            "  CONDI-条件"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "节点类型",
+          "enum": [
+            "  EXECUTE-执行节点",
+            "  APPROVAL-审批节点",
+            "  BRANCHES-分支节点",
+            "  CHILD-子分支节点"
+          ]
+        },
+        "previousFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "前节点id"
+        },
+        "nextFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "后节点id"
+        },
+        "parentFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "父节点id - 子节点有值"
+        },
+        "branchesFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属分支节点id - 子分支下的所有流程节点均属于当前子分支"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "名称"
+        },
+        "serialNo": {
+          "type": "string",
+          "description": "序号值"
+        },
+        "approvalType": {
+          "type": "string",
+          "description": "审批类型",
+          "enum": [
+            "  ONE-一位负责人通过或者拒绝即可",
+            "  ALL-需所有负责人通过，任意一位拒绝将无法通过"
+          ]
+        },
+        "isBack": {
+          "type": "string",
+          "description": "是否允许回退",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "backType": {
+          "type": "string",
+          "description": "回退类型",
+          "enum": [
+            "  ANY-之前所有节点",
+            "  PREVIOUS-返回上一节点",
+            "  APPOINT-返回指定节点"
+          ]
+        },
+        "backFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "回退流程节点id - 返回指定节点时有值"
+        },
+        "backFlowPathNodeSerialNo": {
+          "type": "string",
+          "description": "回退流程节点序列值 - 返回指定节点时有值"
+        },
+        "isFirst": {
+          "type": "string",
+          "description": "是否是首节点",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "level": {
+          "type": "integer",
+          "format": "int32",
+          "description": "节点级别 - 节点的深度"
+        },
+        "step": {
+          "type": "integer",
+          "format": "int32",
+          "description": "节点步骤 - 节点横向步骤"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序 - 节点纵向步骤"
+        },
+        "isCustomSubmitContent": {
+          "type": "string",
+          "description": "是否自定义提交按钮文案",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customSubmitContent": {
+          "type": "string",
+          "description": "自定义提交按钮文案"
+        },
+        "enabledTimeout": {
+          "type": "string",
+          "description": "是否开启超时设置",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "launchType": {
+          "type": "string",
+          "description": "节点启动方式",
+          "enum": [
+            "  MANUAL_OPERATION-手动",
+            "  AUTOMATIC-自动"
+          ]
+        },
+        "executeType": {
+          "type": "string",
+          "description": "执行类型",
+          "enum": [
+            "  ONE-只需一位执行人提交流程",
+            "  ALL-需所有执行人提交流程"
+          ]
+        },
+        "isCustomAcceptContent": {
+          "type": "string",
+          "description": "是否自定义接受按钮文案",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customAcceptContent": {
+          "type": "string",
+          "description": "自定义接受按钮文案"
+        },
+        "isShowAcceptButton": {
+          "type": "string",
+          "description": "是否显示流程接受按钮",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isCustomPassApprovalContent": {
+          "type": "string",
+          "description": "是否自定义同意按钮文案",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customPassApprovalContent": {
+          "type": "string",
+          "description": "自定义同意按钮文案"
+        },
+        "isCustomRefuseApprovalContent": {
+          "type": "string",
+          "description": "是否自定义拒绝按钮文案",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customRefuseApprovalContent": {
+          "type": "string",
+          "description": "自定义拒绝按钮文案"
+        },
+        "isShowRefuseButton": {
+          "type": "string",
+          "description": "是否显示流程拒绝按钮",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isCustomBackContent": {
+          "type": "string",
+          "description": "是否自定义回退按钮文案",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customBackContent": {
+          "type": "string",
+          "description": "自定义回退按钮文案"
+        },
+        "isShowBackButton": {
+          "type": "string",
+          "description": "是否显示流程回退按钮",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "approverFrom": {
+          "type": "string",
+          "description": "审批人来自",
+          "enum": [
+            "  CURRENT_NODE_ASSIGNMENT-当前节点指定",
+            "  PREVIOUS_NODE_ASSIGNMENT-上一个节点指定"
+          ]
+        },
+        "enabledTransfer": {
+          "type": "string",
+          "description": "是否启用转交",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customTransferContent": {
+          "type": "string",
+          "description": "自定义转交按钮文案"
+        },
+        "transferScopeType": {
+          "type": "string",
+          "description": "转交人员范围",
+          "enum": [
+            "  CLASSIFIED-指定范围",
+            "  ALL-不限范围"
+          ]
+        },
+        "permissionList": {
+          "type": "array",
+          "description": "字段权限列表",
+          "items": {
+            "$ref": "#/definitions/FlowPathNodeFormFieldPermissionsRpTreeVO",
+            "originalRef": "FlowPathNodeFormFieldPermissionsRpTreeVO"
+          }
+        },
+        "messageConfigList": {
+          "type": "array",
+          "description": "消息配置列表",
+          "items": {
+            "$ref": "#/definitions/流程节点编辑DTO",
+            "originalRef": "流程节点编辑DTO"
+          }
+        },
+        "timeoutConfigList": {
+          "type": "array",
+          "description": "超时配置",
+          "items": {
+            "$ref": "#/definitions/流程节点超时配置针对编辑返回VO",
+            "originalRef": "流程节点超时配置针对编辑返回VO"
+          }
+        },
+        "leaderUsers": {
+          "type": "array",
+          "description": "负责人集",
+          "items": {
+            "$ref": "#/definitions/流程节点执行人VO",
+            "originalRef": "流程节点执行人VO"
+          }
+        },
+        "carbonCopyUsers": {
+          "type": "array",
+          "description": "抄送人集",
+          "items": {
+            "$ref": "#/definitions/流程节点执行人VO",
+            "originalRef": "流程节点执行人VO"
+          }
+        },
+        "transferUsers": {
+          "type": "array",
+          "description": "转交人集",
+          "items": {
+            "$ref": "#/definitions/流程节点执行人VO",
+            "originalRef": "流程节点执行人VO"
+          }
+        },
+        "previousNodeAssignmentRange": {
+          "type": "string",
+          "description": "上一节点限制指定范围",
+          "enum": [
+            "  NO_LIMIT-不限制",
+            "  LIMIT-指定限制"
+          ]
+        },
+        "previousNodeUserOptions": {
+          "type": "array",
+          "description": "上个节点用户选项列表",
+          "items": {
+            "$ref": "#/definitions/流程节点执行人VO",
+            "originalRef": "流程节点执行人VO"
+          }
+        },
+        "isEnabledAcceptTimeout": {
+          "type": "string",
+          "description": "是否启用接受超时",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "nextNode": {
+          "description": "下节点信息",
+          "$ref": "#/definitions/流程节点DTO",
+          "originalRef": "流程节点DTO"
+        },
+        "branches": {
+          "type": "array",
+          "description": "分支子节点",
+          "items": {
+            "$ref": "#/definitions/流程节点DTO",
+            "originalRef": "流程节点DTO"
+          }
+        },
+        "condiGroups": {
+          "type": "array",
+          "description": "条件组集",
+          "items": {
+            "$ref": "#/definitions/流程节点条件组针对编辑返回VO_1",
+            "originalRef": "流程节点条件组针对编辑返回VO_1"
+          }
+        },
+        "isCustomBeginningContent": {
+          "type": "string",
+          "description": "是否自定义流程开始按钮文案",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customBeginningContent": {
+          "type": "string",
+          "description": "自定义流程开始按钮文案"
+        },
+        "isShowBeginningButton": {
+          "type": "string",
+          "description": "是否显示开始按钮",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isEnabledBeginningTimeout": {
+          "type": "string",
+          "description": "是否启用流程开始超时",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableFormStaging": {
+          "type": "string",
+          "description": "是否启用表单暂存",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "customFormStagingContent": {
+          "type": "string",
+          "description": "自定义表单暂存文本"
+        }
+      },
+      "title": "流程节点DTO"
+    },
+    "FlowPathNodeFormFieldPermissionsRpTreeVO": {
+      "type": "object",
+      "required": [
+        "flowPathFormFieldSerialNo"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathNodeId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathFormFieldSerialNo": {
+          "type": "string",
+          "description": "表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用"
+        },
+        "flowPathFormFieldName": {
+          "type": "string",
+          "description": "表单字段名称"
+        },
+        "flowPathFormFieldCode": {
+          "type": "string"
+        },
+        "flowPathFormFieldType": {
+          "type": "string",
+          "enum": [
+            "INPUT_TEXT",
+            "TEXTAREA",
+            "NUMBER",
+            "DATE",
+            "SELECTOR",
+            "CHECKBOX",
+            "IMAGE_UPLOAD",
+            "FILE_UPLOAD",
+            "TABLE",
+            "FORM_RP",
+            "FORM_RP_MULTI",
+            "CODE",
+            "ADDRESS",
+            "POSITION",
+            "EMAIL",
+            "MOBILE",
+            "ID_CARD",
+            "RICH_TEXT",
+            "ASSOCIATION_QUERY",
+            "DESC_TEXT",
+            "SPLIT_LINE",
+            "LOT_NO",
+            "SERIAL_NO",
+            "FORMULA"
+          ]
+        },
+        "parentFlowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "parentFlowPathFormFieldCode": {
+          "type": "string"
+        },
+        "isTableField": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        },
+        "parentFlowPathNodeFormFieldPermissionsRpId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "permissionsType": {
+          "type": "string",
+          "enum": [
+            "EDIT",
+            "READONLY",
+            "HIDDEN"
+          ]
+        },
+        "tableFormFieldPermissionsRp": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FlowPathNodeFormFieldPermissionsRpTreeVO",
+            "originalRef": "FlowPathNodeFormFieldPermissionsRpTreeVO"
+          }
+        }
+      },
+      "title": "FlowPathNodeFormFieldPermissionsRpTreeVO"
+    },
+    "流程节点编辑DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "triggerTiming": {
+          "type": "string",
+          "description": "消息触发时机",
+          "enum": [
+            "  APPROVER_COMMIT_AFTER-处理人提交后",
+            "  PROCESS_NODE_COMPLETED-处理节点完成后",
+            "  COMMIT_TIMEOUT_BEFORE-提交超时前",
+            "  COMMIT_TIMEOUT_AFTER-提交超时后",
+            "  ACCEPTANCE_AFTER-接受后",
+            "  ACCEPTANCE_TIMEOUT_BEFORE-接受超时前",
+            "  ACCEPTANCE_TIMEOUT_AFTER-接受超时后",
+            "  BEGINNING_AFTER-开始后",
+            "  BEGINNING_TIMEOUT_BEFORE-开始超时前",
+            "  BEGINNING_TIMEOUT_AFTER-开始超时后",
+            "  RETURN_AFTER-退回后",
+            "  APPROVER_APPROVAL_AFTER-审批人同意后",
+            "  APPROVAL_NODE_COMPLETED-审批人节点完成后",
+            "  APPROVER_APPROVAL_REJECTED-审批人拒绝后",
+            "  TRANSFER_AFTER-转交后"
+          ]
+        },
+        "messageConfigIdList": {
+          "type": "array",
+          "description": "消息配置ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "isEnabledMessageNotification": {
+          "type": "string",
+          "description": "是否启用消息通知",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "refId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "引用的ID。比如超时配置"
+        }
+      },
+      "title": "流程节点编辑DTO"
+    },
+    "流程节点超时配置针对编辑返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "stepType": {
+          "type": "string",
+          "description": "超时的步骤类型",
+          "enum": [
+            "  COMMITTED-提交",
+            "  ACCEPT-接受",
+            "  BEGINNING-开始"
+          ]
+        },
+        "timeoutType": {
+          "type": "string",
+          "description": "超时类型",
+          "enum": [
+            "  CUSTOM-自定义",
+            "  FORM_FIELD-来自流程表单"
+          ]
+        },
+        "timeoutTimeValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超时值 - 超时类型为自定义时有值"
+        },
+        "timeoutTimeType": {
+          "type": "string",
+          "description": "超时值类型 - 超时类型为自定义时有值",
+          "enum": [
+            "  DAY-天",
+            "  HOUR-小时",
+            "  MINUTE-分钟"
+          ]
+        },
+        "timeoutFlowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "超时表单字段id"
+        },
+        "timeoutFlowPathFormFieldSerialNo": {
+          "type": "string",
+          "description": "超时表单字段序列值"
+        },
+        "earlyWarningHandleType": {
+          "type": "string",
+          "description": "预警处理方式",
+          "enum": [
+            "  NOT_HANDLE-不做任何处理",
+            "  SEND-提前发送预警通知"
+          ]
+        },
+        "earlyWarningTimeValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "预警超时前发送通知 超时值"
+        },
+        "earlyWarningTimeType": {
+          "type": "string",
+          "description": "预警超时前发送通知 超时值类型",
+          "enum": [
+            "  DAY-天",
+            "  HOUR-小时",
+            "  MINUTE-分钟"
+          ]
+        },
+        "earlyWarningUsers": {
+          "type": "array",
+          "description": "预警提醒人集",
+          "items": {
+            "$ref": "#/definitions/流程节点执行人VO",
+            "originalRef": "流程节点执行人VO"
+          }
+        },
+        "earlyWarningSendType": {
+          "type": "string",
+          "description": "预警提醒方式",
+          "enum": [
+            "  MESSAGE-应用内消息"
+          ]
+        },
+        "timeoutHandleType": {
+          "type": "string",
+          "description": "超时处理方式",
+          "enum": [
+            "  NOT_HANDLE-不做任何处理",
+            "  AUTO-自动提交"
+          ]
+        },
+        "timeoutAfterSendType": {
+          "type": "string",
+          "description": "超时后通知类型",
+          "enum": [
+            "  NOT_SEND-不做任何处理",
+            "  AUTO-自动通知"
+          ]
+        },
+        "timeoutUsers": {
+          "type": "array",
+          "description": "超时提醒人集",
+          "items": {
+            "$ref": "#/definitions/流程节点执行人VO",
+            "originalRef": "流程节点执行人VO"
+          }
+        },
+        "timeoutSendType": {
+          "type": "string",
+          "description": "超时通知方式",
+          "enum": [
+            "  MESSAGE-应用内消息"
+          ]
+        },
+        "messageConfigList": {
+          "type": "array",
+          "description": "消息配置列表",
+          "items": {
+            "$ref": "#/definitions/流程节点编辑DTO",
+            "originalRef": "流程节点编辑DTO"
+          }
+        }
+      },
+      "title": "流程节点超时配置针对编辑返回VO"
+    },
+    "流程节点执行人VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "executorId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "执行人id"
+        },
+        "executorType": {
+          "type": "string",
+          "description": "执行人类型",
+          "enum": [
+            "  USER-员工",
+            "  ROLE-角色",
+            "  DEPARTMENT-部门",
+            "  CLASS_GROUP-班组",
+            "  SYS_CONTROL-系统控件"
+          ]
+        },
+        "executorSysType": {
+          "type": "string",
+          "description": "执行人系统控件类型",
+          "enum": [
+            "  CREATE_BY-创建人",
+            "  CREATE_DEPARTMENT-创建部门",
+            "  FLOW_PATH_TASK_PLAN-任务方案"
+          ]
+        },
+        "organizationFieldSerialNo": {
+          "type": "string",
+          "description": "组织字段序列 - 即动态控件"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "flowPathId"
+        },
+        "flowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "节点ID"
+        }
+      },
+      "title": "流程节点执行人VO"
+    },
+    "流程节点条件组针对编辑返回VO_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "conditions": {
+          "type": "array",
+          "description": "条件集",
+          "items": {
+            "$ref": "#/definitions/FlowPathNodeCondiVO",
+            "originalRef": "FlowPathNodeCondiVO"
+          }
+        }
+      },
+      "title": "流程节点条件组针对编辑返回VO_1"
+    },
+    "FlowPathNodeCondiVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "DEFAULT",
+            "FORM_FIELD"
+          ]
+        },
+        "defaultCondi": {
+          "type": "string",
+          "enum": [
+            "HANDLE_USER"
+          ]
+        },
+        "flowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathFormFieldCode": {
+          "type": "string"
+        },
+        "flowPathFormFieldSerialNo": {
+          "type": "string"
+        },
+        "flowPathFormFieldType": {
+          "type": "string",
+          "enum": [
+            "INPUT_TEXT",
+            "TEXTAREA",
+            "NUMBER",
+            "DATE",
+            "SELECTOR",
+            "CHECKBOX",
+            "IMAGE_UPLOAD",
+            "FILE_UPLOAD",
+            "TABLE",
+            "FORM_RP",
+            "FORM_RP_MULTI",
+            "CODE",
+            "ADDRESS",
+            "POSITION",
+            "EMAIL",
+            "MOBILE",
+            "ID_CARD",
+            "RICH_TEXT",
+            "ASSOCIATION_QUERY",
+            "DESC_TEXT",
+            "SPLIT_LINE",
+            "LOT_NO",
+            "SERIAL_NO",
+            "FORMULA"
+          ]
+        },
+        "compareMode": {
+          "type": "string",
+          "enum": [
+            "EQ",
+            "NE",
+            "GT",
+            "GE",
+            "LT",
+            "LE",
+            "IN",
+            "NOT_IN",
+            "IS_NULL",
+            "NOT_NULL",
+            "RANGE",
+            "NOT_RANGE",
+            "DYNAMIC_RANGE",
+            "CONTAINER",
+            "NOT_CONTAINER",
+            "REGEXP",
+            "NOT_REGEXP",
+            "JSON_ARRAY_EQ",
+            "JSON_ARRAY_NE",
+            "JSON_ARRAY_IN",
+            "JSON_ARRAY_NOT_IN",
+            "JSON_ARRAY_CONTAINER",
+            "JSON_ARRAY_NOT_CONTAINER",
+            "JSON_IS_NULL",
+            "JSON_NOT_NULL"
+          ]
+        },
+        "compareTargetFromSource": {
+          "type": "string",
+          "enum": [
+            "FORM_RP",
+            "CURRENT",
+            "CUSTOM",
+            "CUSTOM_DATE"
+          ]
+        },
+        "targetFieldId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "targetFieldSerialNo": {
+          "type": "string"
+        },
+        "targetFieldCode": {
+          "type": "string"
+        },
+        "compareValue": {
+          "type": "string"
+        },
+        "selectCompareValue": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dateDynamicRange": {
+          "type": "string",
+          "enum": [
+            "YESTERDAY",
+            "TODAY",
+            "LAST_WEEK",
+            "THIS_WEEK",
+            "LAST_MONTH",
+            "THIS_MONTH",
+            "LAST_YEAR",
+            "THIS_YEAR"
+          ]
+        },
+        "frontendMeta": {
+          "type": "string"
+        }
+      },
+      "title": "FlowPathNodeCondiVO"
+    }
+  }
+}

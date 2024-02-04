@@ -1,0 +1,182 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16500",
+  "info": {
+    "description": "服务名: flow-service",
+    "version": "1.0",
+    "title": "普朗克流程服务(flow-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/flow-service/flowPath/formRpFill/query": {
+      "post": {
+        "tags": [
+          "流程相关"
+        ],
+        "summary": "根据条件搜索填充规则",
+        "operationId": "queryFormRpFillByConditionUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "condition",
+            "description": "condition",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FlowPathFormFieldFormRpQueryConditionVo",
+              "originalRef": "FlowPathFormFieldFormRpQueryConditionVo"
+            }
+          },
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«List«FlowPathFormFieldFormRpFillVo»»",
+              "originalRef": "JSONResult«List«FlowPathFormFieldFormRpFillVo»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "150"
+      }
+    }
+  },
+  "definitions": {
+    "FlowPathFormFieldFormRpQueryConditionVo": {
+      "type": "object",
+      "properties": {
+        "flowPathIdList": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "fillWayList": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "LAST",
+              "CONCAT",
+              "SUM"
+            ]
+          }
+        }
+      },
+      "title": "FlowPathFormFieldFormRpQueryConditionVo"
+    },
+    "JSONResult«List«FlowPathFormFieldFormRpFillVo»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "$ref": "#/definitions/FlowPathFormFieldFormRpFillVo",
+            "originalRef": "FlowPathFormFieldFormRpFillVo"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«FlowPathFormFieldFormRpFillVo»»"
+    },
+    "FlowPathFormFieldFormRpFillVo": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathVersionId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "flowPathVersionRank": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "flowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "columnSerialNo": {
+          "type": "string"
+        },
+        "secondarySourceFieldSerialNo": {
+          "type": "string"
+        },
+        "secondarySourceFieldCode": {
+          "type": "string"
+        },
+        "fillFormFieldSerialNo": {
+          "type": "string"
+        },
+        "fillWay": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "LAST",
+            "CONCAT",
+            "SUM"
+          ]
+        },
+        "isDisableEdited": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "FlowPathFormFieldFormRpFillVo"
+    }
+  }
+}

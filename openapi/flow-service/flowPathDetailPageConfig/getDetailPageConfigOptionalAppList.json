@@ -1,0 +1,124 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16500",
+  "info": {
+    "description": "服务名: flow-service",
+    "version": "1.0",
+    "title": "普朗克流程服务(flow-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/flow-service/flowPathDetailPageConfig/getDetailPageConfigOptionalAppList": {
+      "get": {
+        "tags": [
+          "详细页面配置-相关"
+        ],
+        "summary": "查询详情页面配置.可选APP列表.应用引擎编辑使用",
+        "operationId": "getDetailPageConfigOptionalAppListUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«FlowPathDetailPageConfigOptionalAppResponseDTO»",
+              "originalRef": "JSONResult«FlowPathDetailPageConfigOptionalAppResponseDTO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "130"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«FlowPathDetailPageConfigOptionalAppResponseDTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/FlowPathDetailPageConfigOptionalAppResponseDTO",
+          "originalRef": "FlowPathDetailPageConfigOptionalAppResponseDTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«FlowPathDetailPageConfigOptionalAppResponseDTO»"
+    },
+    "FlowPathDetailPageConfigOptionalAppResponseDTO": {
+      "type": "object",
+      "properties": {
+        "appList": {
+          "type": "array",
+          "description": "app列表",
+          "items": {
+            "$ref": "#/definitions/FlowPathBaseVO",
+            "originalRef": "FlowPathBaseVO"
+          }
+        }
+      },
+      "title": "FlowPathDetailPageConfigOptionalAppResponseDTO"
+    },
+    "FlowPathBaseVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "BILL",
+            "DATA",
+            "TREE_DATA",
+            "PAGE"
+          ]
+        }
+      },
+      "title": "FlowPathBaseVO"
+    }
+  }
+}

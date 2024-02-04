@@ -1,0 +1,181 @@
+{
+  "basePath": "/",
+  "host": "47.108.135.148:16500",
+  "info": {
+    "description": "服务名: flow-service",
+    "version": "1.0",
+    "title": "普朗克流程服务(flow-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleListByBusinessType": {
+      "get": {
+        "tags": [
+          "流程表单字段编码相关"
+        ],
+        "summary": "通过业务类型，字段编号获取字段编码规则",
+        "operationId": "getNumberRuleListByBusinessTypeUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "businessType",
+            "in": "query",
+            "description": "businessType",
+            "required": true,
+            "type": "string",
+            "enum": [
+              "PRODUCE_TASK",
+              "STORAGE_TAKE_CHECK_TASK"
+            ]
+          },
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«List«流程表单字段编码规则明细VO»»",
+              "originalRef": "JSONResult«List«流程表单字段编码规则明细VO»»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "40"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«List«流程表单字段编码规则明细VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "$ref": "#/definitions/流程表单字段编码规则明细VO",
+            "originalRef": "流程表单字段编码规则明细VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«流程表单字段编码规则明细VO»»"
+    },
+    "流程表单字段编码规则明细VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "type": {
+          "type": "string",
+          "description": "设置类型",
+          "enum": [
+            "  FIXED-固定值",
+            "  DATE-日期",
+            "  AUTO_NUMBER-自动计数",
+            "  FLOW_PATH_FIELD-引用字段",
+            "  ID36-ID的36进制"
+          ]
+        },
+        "dateFormat": {
+          "type": "string",
+          "description": "日期格式 - 用于日期",
+          "enum": [
+            "  YEAR-年",
+            "  YEAR_MONTH-年月",
+            "  YEAR_MONTH_DAY-年月日",
+            "  MONTH-月",
+            "  MONTH_DAY-月日",
+            "  DAY-日"
+          ]
+        },
+        "fixValue": {
+          "type": "string",
+          "description": "固定值 - 用于固定值"
+        },
+        "ruleLength": {
+          "type": "integer",
+          "format": "int32",
+          "description": "位数 - 用于流水"
+        },
+        "startValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "初始值 - 用于流水"
+        },
+        "stepValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "递增值 - 用于流水"
+        },
+        "isCodeAccording": {
+          "type": "string",
+          "description": "是否是编码依据 - 仅能配置一项为编码依据",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "flowPathCode": {
+          "type": "string",
+          "description": "所属流程表单code -- 针对引用字段类型"
+        },
+        "flowPathFormFiledSerialNo": {
+          "type": "string",
+          "description": "所属流程表单字段序列值 -- 针对引用字段类型"
+        },
+        "flowPathFormFiledCode": {
+          "type": "string",
+          "description": "所属流程表单字段序列值 -- 针对引用字段类型"
+        },
+        "flowPathFormFieldCodeNumberRuleId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "规则ID"
+        },
+        "sort": {
+          "type": "integer",
+          "format": "int32",
+          "description": "排序"
+        }
+      },
+      "title": "流程表单字段编码规则明细VO"
+    }
+  }
+}

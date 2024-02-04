@@ -5,6 +5,7 @@ const dir = path.join(__dirname, "..", argv.dir);
 type IServiceMap = {
   "masterdata-service": string;
   "plk-uaa-service": string;
+  "flow-service": string;
 };
 
 type IServiceKey = keyof IServiceMap;
@@ -13,6 +14,7 @@ const apiMap: Record<string, IServiceMap> = {
   dev: {
     "masterdata-service": "http://47.108.135.148:16700",
     "plk-uaa-service": "http://47.108.135.148:18100",
+    "flow-service": "http://47.108.135.148:16500",
   },
 };
 
