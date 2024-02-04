@@ -1,5 +1,5 @@
 // 项目名称编号公共查询对象
-export interface I项目名称编号公共查询对象 {
+export interface IItemNameNumberPublicQueryObject {
     // 名称or编号
     nameOrCode: string;
     // 条数

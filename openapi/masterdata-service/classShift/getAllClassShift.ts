@@ -1,16 +1,16 @@
 // JSONResult«List«班次返回VO»»
-export interface IJSONResultList班次返回VO {
+export interface IJSONResultListShiftsBackToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I班次返回VO[];
+    data: IShiftBackVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 班次返回VO
-export interface I班次返回VO {
+export interface IShiftBackVO {
     // id
     id: number;
     // 班次名称

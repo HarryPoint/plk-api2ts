@@ -1,5 +1,5 @@
 // JSONResult«List«进料模具响应DTO»»_1
-export interface IJSONResultList进料模具响应DTO_1 {
+export interface IJSONResultListFeedMoldResponseDTO1 {
     // 返回码
     code: number;
     // 返回消息说明

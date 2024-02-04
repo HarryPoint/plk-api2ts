@@ -51,18 +51,18 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«工序完成明细表合计响应dto»
-export interface IJSONResult工序完成明细表合计响应dto {
+export interface IJSONResultProcessCompletionDetailsTotalResponseDto {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工序完成明细表合计响应dto;
+    data: IProcessCompletionDetailsTotalResponseDto;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工序完成明细表合计响应dto
-export interface I工序完成明细表合计响应dto {
+export interface IProcessCompletionDetailsTotalResponseDto {
     // 当日计划量
     totalPlanProduceNum: number;
     // 当日计划完工量

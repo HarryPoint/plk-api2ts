@@ -1,5 +1,5 @@
 // 生产任务列表可批量操作项查询DTO(针对移动端)
-export interface I生产任务列表可批量操作项查询DTO针对移动端 {
+export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -74,18 +74,18 @@ export interface IProcessDataDetailsSearchVO {
     tableCode: string;
 }
 // JSONResult«生产任务列表可批量操作按钮返回DTO(针对移动端)»
-export interface IJSONResult生产任务列表可批量操作按钮返回DTO针对移动端 {
+export interface IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产任务列表可批量操作按钮返回DTO针对移动端;
+    data: IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务列表可批量操作按钮返回DTO(针对移动端)
-export interface I生产任务列表可批量操作按钮返回DTO针对移动端 {
+export interface IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd {
     // 可批量进料
     canBatchMoveIn: string;
     // 可批量出料

@@ -1,5 +1,5 @@
 // 生产任务从消息来的搜索VO
-export interface I生产任务从消息来的搜索VO {
+export interface IProduceTasksFromMessagesToSearchVO {
     // 生产订单id
     produceOrderId: number;
     // 生产工艺路径步骤id

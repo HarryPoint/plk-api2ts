@@ -4,18 +4,18 @@ export interface INameNumberDTO {
     nameOrCode: string;
 }
 // JSONResult«List«名称编码响应 DTO»»
-export interface IJSONResultList名称编码响应DTO {
+export interface IJSONResultListNameEncodesTheResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I名称编码响应DTO[];
+    data: INameEncodingResponseDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 名称编码响应 DTO
-export interface I名称编码响应DTO {
+export interface INameEncodingResponseDTO {
     // 名称
     name: string;
     // 编号

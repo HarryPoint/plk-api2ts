@@ -1,5 +1,5 @@
 // 生产任务搜索VO
-export interface I生产任务搜索VO {
+export interface IProductionTaskSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小

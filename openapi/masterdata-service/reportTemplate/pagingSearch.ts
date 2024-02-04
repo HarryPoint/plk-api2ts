@@ -1,5 +1,5 @@
 // 分页_14
-export interface I分页_14 {
+export interface IPaging14 {
     // 模板名称 - 模糊查询
     templateName: string;
     // 当前页面
@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«ReportTemplateQueryResponseDTO»»
-export interface IJSONResult分页信息ReportTemplateQueryResponseDTO {
+export interface IReportTemplateQueryResponseDTOJSONResultPagingInformation {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息ReportTemplateQueryResponseDTO;
+    data: IThePagingInformationReportTemplateQueryResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«ReportTemplateQueryResponseDTO»
-export interface I分页信息ReportTemplateQueryResponseDTO {
+export interface IThePagingInformationReportTemplateQueryResponseDTO {
     // 当前页码
     pageNo: number;
     // 分页大小

@@ -1,5 +1,5 @@
 // 生产任务扫码查询DTO(针对移动端)
-export interface I生产任务扫码查询DTO针对移动端 {
+export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -74,18 +74,18 @@ export interface IProcessDataDetailsSearchVO {
     tableCode: string;
 }
 // JSONResult«生产任务扫码响应DTO(针对移动端)»
-export interface IJSONResult生产任务扫码响应DTO针对移动端 {
+export interface IJSONResultProductionTaskScanResponseDTOForMobileTerminals {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产任务扫码响应DTO针对移动端;
+    data: IProductionTaskCodeScanResponseDTOForMobileTerminals;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务扫码响应DTO(针对移动端)
-export interface I生产任务扫码响应DTO针对移动端 {
+export interface IProductionTaskCodeScanResponseDTOForMobileTerminals {
     // 扫描编号
     scanNo: string;
     // 识别任务号

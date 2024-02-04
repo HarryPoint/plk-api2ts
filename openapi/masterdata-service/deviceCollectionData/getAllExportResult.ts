@@ -14,18 +14,18 @@ export interface IDeviceStatisticsSearchVO {
     deviceParamUnitTimeType: string;
 }
 // JSONResult«List«设备数采统计报表导出VO»»
-export interface IJSONResultList设备数采统计报表导出VO {
+export interface IJSONResultListExportDeviceDataCollectionStatisticsReportVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备数采统计报表导出VO[];
+    data: IExportDeviceDataCollectionStatisticsReportVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备数采统计报表导出VO
-export interface I设备数采统计报表导出VO {
+export interface IExportDeviceDataCollectionStatisticsReportVO {
     // 设备名称
     deviceName: string;
     // 设备编号

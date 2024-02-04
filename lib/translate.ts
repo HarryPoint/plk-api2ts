@@ -18,6 +18,12 @@ type IParams = {
   appSecret: string;
 };
 
+type ITranslateItem = {
+  query: string;
+  translation: string;
+  type: string;
+};
+
 const createSign = ({ appKey, input, salt, curTime, appSecret }: IParams) => {
   let str = input;
   const len = input.length;
@@ -70,38 +76,33 @@ export const translate = async (input: string | string[]) => {
         ) || {};
     }
   } catch (err) {}
-  // console.log("translateCacheData: ", translateCacheData);
-  const chunkResArr = await Promise.all(
-    chunkArr.map(async (inputArr) => {
-      const newInputArr = inputArr.filter((item) => !translateCacheData[item]);
-      const { data } = await fetchApi(newInputArr);
-      // console.log("data: ", data);
-      if (data.translateResults) {
-        const apiTransMap = (
-          data.translateResults as {
-            query: string;
-            translation: string;
-            type: string;
-          }[]
-        )
-          .map((item, index) => ({
-            [newInputArr[index]]: _.words(item.translation)
-              .map((word) => _.upperFirst(word))
-              .join(""),
-          }))
-          .reduce(
-            (pre, next) => ({ ...pre, ...next }),
-            {} as Record<string, string>
-          );
-        console.log("apiTransMap: ", apiTransMap);
-        translateCacheData = {
-          ...translateCacheData,
-          ...apiTransMap,
-        };
-      }
-      return inputArr.map((item) => translateCacheData[item] || item);
-    })
-  );
+  const chunkResArr: string[][] = [];
+  const translateFn = async (inputArr: string[]) => {
+    const newInputArr = inputArr.filter((item) => !translateCacheData[item]);
+    const { data } = await fetchApi(newInputArr);
+    // console.log("data: ", data);
+    if (data.translateResults) {
+      const apiTransMap = (data.translateResults as ITranslateItem[])
+        .map((item, index) => ({
+          [newInputArr[index]]: _.words(item.translation)
+            .map((word) => _.upperFirst(word))
+            .join(""),
+        }))
+        .reduce(
+          (pre, next) => ({ ...pre, ...next }),
+          {} as Record<string, string>
+        );
+      console.log("apiTransMap: ", apiTransMap);
+      translateCacheData = {
+        ...translateCacheData,
+        ...apiTransMap,
+      };
+    }
+    return inputArr.map((item) => translateCacheData[item] || item);
+  };
+  for (let chunkItem of chunkArr) {
+    chunkResArr.push(await translateFn(chunkItem));
+  }
   fs.writeFileSync(
     config.translateCache,
     JSON.stringify(translateCacheData, null, 2)

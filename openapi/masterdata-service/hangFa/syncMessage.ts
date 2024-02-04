@@ -1,5 +1,5 @@
 // 金蝶消息发送请求
-export interface I金蝶消息发送请求 {
+export interface IKingdeeMessageSendRequest {
     // 消息id
     id: string;
     // 标题

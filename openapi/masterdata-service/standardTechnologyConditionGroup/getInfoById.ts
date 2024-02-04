@@ -1,25 +1,25 @@
 // JSONResult«标准工艺条件组响应DTO»
-export interface IJSONResult标准工艺条件组响应DTO {
+export interface IJSONResultStandardProcessConditionGroupRespondsToDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I标准工艺条件组响应DTO;
+    data: IStandardProcessConditionsGroupRespondsToDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 标准工艺条件组响应DTO
-export interface I标准工艺条件组响应DTO {
+export interface IStandardProcessConditionsGroupRespondsToDTO {
     // id
     id: number;
     // 条件组名称
     name: string;
     // 标准工艺条件
-    conditionList: I标准工艺条件响应DTO[];
+    conditionList: IStandardProcessConditionsRespondToDTO[];
 }
 // 标准工艺条件响应DTO
-export interface I标准工艺条件响应DTO {
+export interface IStandardProcessConditionsRespondToDTO {
     // id
     id: number;
     // 来源应用编号

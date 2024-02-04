@@ -1,5 +1,5 @@
 // JSONResult«List«项目应用返回对象»»
-export interface IJSONResultList项目应用返回对象 {
+export interface ITheJSONResultListProjectAppliesTheReturnObject {
     // 返回码
     code: number;
     // 返回消息说明

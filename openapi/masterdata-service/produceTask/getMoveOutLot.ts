@@ -1,16 +1,16 @@
 // JSONResult«List«wip可进出料响应dto»»
-export interface IJSONResultListwip可进出料响应dto {
+export interface IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: Iwip可进出料响应dto[];
+    data: IWipCanRespondToDto[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // wip可进出料响应dto
-export interface Iwip可进出料响应dto {
+export interface IWipCanRespondToDto {
     // 批次id -- 有批次时有值
     lotOrderId: number;
     // 批次名称  -- 有批次时有值
@@ -26,10 +26,10 @@ export interface Iwip可进出料响应dto {
     // 可操作数量
     canOptQuantity: number;
     // wip状态信息集
-    wipQuantityStatusList: IWip数量状态信息响应对象[];
+    wipQuantityStatusList: IWipQuantityStatusInformationResponseObject[];
 }
 // Wip数量状态信息响应对象
-export interface IWip数量状态信息响应对象 {
+export interface IWipQuantityStatusInformationResponseObject {
     // wip状态记录id
     wipRpId: number;
     // 数量

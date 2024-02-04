@@ -5,12 +5,12 @@ export interface IJSONResult应付账款汇总表返回对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I应付账款汇总表返回对象;
+    data: IAccountsPayableSummaryReturnObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 应付账款汇总表返回对象
-export interface I应付账款汇总表返回对象 {
+export interface IAccountsPayableSummaryReturnObject {
     // 供应商编号
     code: string;
     // 供应商名称

@@ -1,5 +1,5 @@
 // 库位树查询VO
-export interface I库位树查询VO {
+export interface IDatabaseBitTreeQueryVO {
     // 仓库id
     storehouseId: number;
     // 库位ids

@@ -1,5 +1,5 @@
 // 班次搜索VO
-export interface I班次搜索VO {
+export interface IShiftSearchVO {
     // 当前页面
     pageNo: number;
     // 编号

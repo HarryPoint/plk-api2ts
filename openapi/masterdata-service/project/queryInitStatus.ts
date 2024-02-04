@@ -1,5 +1,5 @@
 // JSONResult«string»_2
-export interface IJSONResultstring_2 {
+export interface IJSONResultstring2 {
     // 返回码
     code: number;
     // 返回消息说明

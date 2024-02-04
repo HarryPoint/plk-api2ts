@@ -1,5 +1,5 @@
 // 仓库流程出入库DTO
-export interface I仓库流程出入库DTO {
+export interface IWarehouseProcessInboundAndOutboundDTO {
     // 物料id
     materialId: number;
     // 入库仓位id

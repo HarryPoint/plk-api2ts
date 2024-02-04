@@ -1,5 +1,5 @@
 // 项目名称编号公共查询对象
-export interface I项目名称编号公共查询对象 {
+export interface IItemNameNumberPublicQueryObject {
     // 名称or编号
     nameOrCode: string;
     // 条数
@@ -14,18 +14,18 @@ export interface I项目名称编号公共查询对象 {
     statusList: string[];
 }
 // JSONResult«List«项目行动项报表响应对象»»
-export interface IJSONResultList项目行动项报表响应对象 {
+export interface IJSONResultListProjectActionItemReportResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目行动项报表响应对象[];
+    data: IProjectActionItemReportResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目行动项报表响应对象
-export interface I项目行动项报表响应对象 {
+export interface IProjectActionItemReportResponseObject {
     // id
     id: number;
     // 名称

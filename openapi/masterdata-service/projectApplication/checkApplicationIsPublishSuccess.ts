@@ -1,5 +1,5 @@
 // 应用是否发布成功校验请求对象
-export interface I应用是否发布成功校验请求对象 {
+export interface IVerifyWhetherTheApplicationSuccessfullyAdvertisesTheRequestObject {
     // 项目id
     projectId: number;
     // 应用流程id

@@ -1,5 +1,5 @@
 // 主表id查询VO
-export interface I主表id查询VO {
+export interface IPrimaryTableIdQueryVO {
     // 流程编码
     flowPathCode: string;
     // 过滤字段序列号

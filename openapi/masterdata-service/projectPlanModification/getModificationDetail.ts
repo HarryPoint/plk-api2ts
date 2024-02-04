@@ -1,23 +1,23 @@
 // JSONResult«项目计划变更响应对象»
-export interface IJSONResult项目计划变更响应对象 {
+export interface IJSONResultProjectPlanChangeResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目计划变更响应对象;
+    data: ITheProjectPlanChangesTheResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目计划变更响应对象
-export interface I项目计划变更响应对象 {
+export interface ITheProjectPlanChangesTheResponseObject {
     // 项目阶段响应列表
-    projectStageList: I项目阶段变更单响应参数[];
+    projectStageList: IChangeOrderResponseParametersInProjectPhase[];
     // 项目任务响应列表
-    projectTaskList: I项目任务变更单响应参数[];
+    projectTaskList: IProjectTaskChangeOrderResponseParameters[];
 }
 // 项目阶段变更单响应参数
-export interface I项目阶段变更单响应参数 {
+export interface IChangeOrderResponseParametersInProjectPhase {
     // 名称
     name: string;
     // 表单操作类型
@@ -52,7 +52,7 @@ export interface IItemChangeListFieldExtensionParameterRequest {
     columnData: IItemChangeOrderFieldResponseParameter[];
 }
 // 项目任务变更单响应参数
-export interface I项目任务变更单响应参数 {
+export interface IProjectTaskChangeOrderResponseParameters {
     // 编号
     code: string;
     // 名称

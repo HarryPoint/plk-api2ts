@@ -1,5 +1,5 @@
 // 金蝶待办创建请求
-export interface I金蝶待办创建请求 {
+export interface IKingdeeBacklogCreateRequest {
     // 待办id，需保证唯一
     id: string;
     // 标题

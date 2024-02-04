@@ -1,5 +1,5 @@
 // 班次编辑DTO
-export interface I班次编辑DTO {
+export interface IShiftEditorDTO {
     // id
     id: number;
     // 班次名称

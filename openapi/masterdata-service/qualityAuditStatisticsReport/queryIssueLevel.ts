@@ -6,18 +6,18 @@ export interface IBasicQualityAuditQueryRequestI {
     dateRangeEnd: string;
 }
 // JSONResult«List«问题等级查询响应»»
-export interface IJSONResultList问题等级查询响应 {
+export interface IJSONResultListProblemLevelQueryResponse {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I问题等级查询响应[];
+    data: IQuestionLevelQueryResponse[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 问题等级查询响应
-export interface I问题等级查询响应 {
+export interface IQuestionLevelQueryResponse {
     // 问题等级
     issueLevel: string;
     // 问题等级名称

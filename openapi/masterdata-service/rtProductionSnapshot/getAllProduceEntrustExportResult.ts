@@ -20,12 +20,12 @@ export interface IJSONResultList委外报表导出VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I委外报表导出VO[];
+    data: IOutsourcingReportExportVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 委外报表导出VO
-export interface I委外报表导出VO {
+export interface IOutsourcingReportExportVO {
     // 数据分组名称
     groupName: string;
     // 数据分组编号

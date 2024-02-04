@@ -1,5 +1,5 @@
 // 标准工艺具体物料节点新增请求对象
-export interface I标准工艺具体物料节点新增请求对象 {
+export interface ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardProcess {
     // 当前的标准工艺id, 创建标准工艺阶段 传递null, 编辑标准工艺阶段 传递编辑的标准工艺id
     standardTechnologyId: number;
     // 主物料id
@@ -13,10 +13,10 @@ export interface I标准工艺具体物料节点新增请求对象 {
     // 消耗数量(针对所属上级bom而言的消耗数量)
     totalConsumeCount: number;
     // BOM明细
-    bomDetailList: I标准工艺具体物料节点新增bom详情请求对象[];
+    bomDetailList: IAddARequestObjectForBomDetailsToTheMaterialNodeOfTheStandardProcess[];
 }
 // 标准工艺具体物料节点新增bom详情请求对象
-export interface I标准工艺具体物料节点新增bom详情请求对象 {
+export interface IAddARequestObjectForBomDetailsToTheMaterialNodeOfTheStandardProcess {
     // 子物料id
     id: number;
     // 消耗数量

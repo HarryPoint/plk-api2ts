@@ -1,5 +1,5 @@
 // 批次订单流水搜索VO
-export interface I批次订单流水搜索VO {
+export interface IBatchOrderHistorySearchVO {
     // 生产订单id
     produceOrderId: number;
     // 批次订单id
@@ -8,18 +8,18 @@ export interface I批次订单流水搜索VO {
     flowType: string;
 }
 // JSONResult«List«批次订单流水明细信息响应DTO»»
-export interface IJSONResultList批次订单流水明细信息响应DTO {
+export interface IJSONResultListBatchOrderDetailedInformationRespondsToDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I批次订单流水明细信息响应DTO[];
+    data: IBatchOrderFlowDetailsRespondToDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 批次订单流水明细信息响应DTO
-export interface I批次订单流水明细信息响应DTO {
+export interface IBatchOrderFlowDetailsRespondToDTO {
     // id
     id: number;
     // 流水类型

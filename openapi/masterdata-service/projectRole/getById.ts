@@ -6,18 +6,18 @@ export interface IProcessStructureSearchVO {
     id: number;
 }
 // JSONResult«项目角色编辑响应DTO»
-export interface IJSONResult项目角色编辑响应DTO {
+export interface IJSONResultProjectRoleEditsResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目角色编辑响应DTO;
+    data: IProjectRoleEditsRespondToDtos;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目角色编辑响应DTO
-export interface I项目角色编辑响应DTO {
+export interface IProjectRoleEditsRespondToDtos {
     // 数据
     data;
     // 流程id
@@ -37,7 +37,7 @@ export interface I项目角色编辑响应DTO {
     // 勾选的权限码集
     permissionCodes: string[];
     // 路由对应的数据权限集
-    dataAuths: I企业数据权限响应[];
+    dataAuths: IEnterpriseDataPermissionResponse[];
     // 应用级别
     applicationLevel: string;
     // 服务对象ID
@@ -45,7 +45,7 @@ export interface I项目角色编辑响应DTO {
     // 服务业务ID
     serviceBusinessId: number;
     // 配置集
-    configs: I项目角色配置返回对象[];
+    configs: ITheProjectRoleConfigurationReturnsTheObject[];
 }
 // 表单结构VO
 export interface IFormStructureVO {
@@ -382,28 +382,28 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     meta;
 }
 // 企业数据权限响应
-export interface I企业数据权限响应 {
+export interface IEnterpriseDataPermissionResponse {
     // 路由code
     routerCode: string;
     // 数据权限集
-    dataAuthList: I企业数据权限列表响应[];
+    dataAuthList: IEnterpriseDataPermissionListResponse[];
 }
 // 企业数据权限列表响应
-export interface I企业数据权限列表响应 {
+export interface IEnterpriseDataPermissionListResponse {
     // 数据权限类型
     dataAuthType: string;
     // 数据权限对应的字段列表(只针对表单字段类型)
-    roleDataAuthFieldList: I角色数据权限字段响应DTO[];
+    roleDataAuthFieldList: ITheRoleDataPermissionFieldRespondsToTheDTO[];
 }
 // 角色数据权限字段响应DTO
-export interface I角色数据权限字段响应DTO {
+export interface ITheRoleDataPermissionFieldRespondsToTheDTO {
     // 流程表单字段序列号
     appFieldSerialNo: string;
     // 流程表单字段名
     appFieldName: string;
 }
 // 项目角色配置返回对象
-export interface I项目角色配置返回对象 {
+export interface ITheProjectRoleConfigurationReturnsTheObject {
     // 配置code
     code: string;
     // 配置名称

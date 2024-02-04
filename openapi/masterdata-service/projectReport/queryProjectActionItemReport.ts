@@ -20,7 +20,7 @@ export interface I分页信息项目行动项报表响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I项目行动项报表响应对象[];
+    list: IProjectActionItemReportResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息项目行动项报表响应对象 {
     nextPage: number;
 }
 // 项目行动项报表响应对象
-export interface I项目行动项报表响应对象 {
+export interface IProjectActionItemReportResponseObject {
     // id
     id: number;
     // 名称

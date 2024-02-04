@@ -1,5 +1,5 @@
 // 生产处理暂扣添加请求对象
-export interface I生产处理暂扣添加请求对象 {
+export interface ITheProductionProcessingWithholdAddsTheRequestObject {
     // 生产任务id
     produceTaskId: number;
     // 返工类型id

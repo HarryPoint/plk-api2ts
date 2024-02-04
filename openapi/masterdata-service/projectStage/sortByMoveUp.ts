@@ -1,5 +1,5 @@
 // 项目阶段排序请求对象
-export interface I项目阶段排序请求对象 {
+export interface IProjectPhaseSortRequestObjects {
     // 项目计划id
     projectPlanId: number;
     // 移动项目阶段id

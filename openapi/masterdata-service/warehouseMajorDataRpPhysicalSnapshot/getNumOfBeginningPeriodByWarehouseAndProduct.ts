@@ -1,16 +1,16 @@
 // JSONResult«仓位物料库存关联VO»
-export interface IJSONResult仓位物料库存关联VO {
+export interface IJSONResultWarehouseMaterialInventoryAssociatedVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓位物料库存关联VO;
+    data: IPositionMaterialInventoryAssociatedWithVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓位物料库存关联VO
-export interface I仓位物料库存关联VO {
+export interface IPositionMaterialInventoryAssociatedWithVO {
     // id
     id: number;
     // 所属企业id
