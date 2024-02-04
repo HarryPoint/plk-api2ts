@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "enterpriseQuery",
             "required": true,
             "schema": {
-              "originalRef": "产品订单企业查询请求对象",
-              "$ref": "#/definitions/产品订单企业查询请求对象"
+              "$ref": "#/definitions/产品订单企业查询请求对象",
+              "originalRef": "产品订单企业查询请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«企业名称编号响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«企业名称编号响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«企业名称编号响应对象»»",
+              "originalRef": "JSONResult«List«企业名称编号响应对象»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "企业名称编号响应对象",
-            "$ref": "#/definitions/企业名称编号响应对象"
+            "$ref": "#/definitions/企业名称编号响应对象",
+            "originalRef": "企业名称编号响应对象"
           }
         },
         "ts": {

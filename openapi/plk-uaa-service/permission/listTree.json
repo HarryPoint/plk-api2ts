@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "权限查询",
-              "$ref": "#/definitions/权限查询"
+              "$ref": "#/definitions/权限查询",
+              "originalRef": "权限查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«权限树响应 DTO»»",
-              "$ref": "#/definitions/JSONResult«List«权限树响应 DTO»»"
+              "$ref": "#/definitions/JSONResult«List«权限树响应 DTO»»",
+              "originalRef": "JSONResult«List«权限树响应 DTO»»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "权限树响应 DTO",
-            "$ref": "#/definitions/权限树响应 DTO"
+            "$ref": "#/definitions/权限树响应 DTO",
+            "originalRef": "权限树响应 DTO"
           }
         },
         "ts": {
@@ -323,8 +323,8 @@
           "type": "array",
           "description": "子集",
           "items": {
-            "originalRef": "权限树响应 DTO",
-            "$ref": "#/definitions/权限树响应 DTO"
+            "$ref": "#/definitions/权限树响应 DTO",
+            "originalRef": "权限树响应 DTO"
           }
         }
       },

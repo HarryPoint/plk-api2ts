@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "loginInfo",
             "required": true,
             "schema": {
-              "originalRef": "单点登录请求 DTO",
-              "$ref": "#/definitions/单点登录请求 DTO"
+              "$ref": "#/definitions/单点登录请求 DTO",
+              "originalRef": "单点登录请求 DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«登录响应 DTO»",
-              "$ref": "#/definitions/JSONResult«登录响应 DTO»"
+              "$ref": "#/definitions/JSONResult«登录响应 DTO»",
+              "originalRef": "JSONResult«登录响应 DTO»"
             }
           },
           "201": {
@@ -118,8 +118,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "登录响应 DTO",
-          "$ref": "#/definitions/登录响应 DTO"
+          "$ref": "#/definitions/登录响应 DTO",
+          "originalRef": "登录响应 DTO"
         },
         "ts": {
           "type": "integer",

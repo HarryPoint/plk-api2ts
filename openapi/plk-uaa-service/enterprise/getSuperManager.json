@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«超级管理员用户响应 DTO»",
-              "$ref": "#/definitions/JSONResult«超级管理员用户响应 DTO»"
+              "$ref": "#/definitions/JSONResult«超级管理员用户响应 DTO»",
+              "originalRef": "JSONResult«超级管理员用户响应 DTO»"
             }
           },
           "201": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "超级管理员用户响应 DTO",
-          "$ref": "#/definitions/超级管理员用户响应 DTO"
+          "$ref": "#/definitions/超级管理员用户响应 DTO",
+          "originalRef": "超级管理员用户响应 DTO"
         },
         "ts": {
           "type": "integer",

@@ -4,26 +4,7 @@ import _ from "lodash";
 import path from "path";
 import config from "./config";
 
-type IServiceMap = {
-  "masterdata-service": string;
-  "plk-uaa-service": string;
-};
-
-type IServiceKey = keyof IServiceMap;
-
-const apiMap: Record<string, IServiceMap> = {
-  dev: {
-    "masterdata-service": "http://47.108.135.148:16700",
-    "plk-uaa-service": "http://47.108.139.107:18100",
-  },
-};
-type IPlatformKey = keyof typeof apiMap;
-
-const fetchData = async (
-  platform: IPlatformKey = "dev",
-  service: IServiceKey = "masterdata-service"
-) => {
-  const apiUri = apiMap?.[platform]?.[service];
+const fetchData = async (apiUri: string, prefix: string = "./") => {
   if (!apiUri) {
     throw new Error("apiUri not found");
   }
@@ -74,10 +55,11 @@ const fetchData = async (
     const pathArr = pathStr.split("/");
     const outputFolder = path.join(
       config.dir,
+      prefix,
       pathArr.slice(0, pathArr.length - 1).join("/")
     );
     console.log("outputFolder: ", outputFolder);
-    const filePath = path.join(config.dir, `${pathStr}.json`);
+    const filePath = path.join(config.dir, prefix, `${pathStr}.json`);
     // 创建输出目录
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });
@@ -86,4 +68,11 @@ const fetchData = async (
   });
 };
 
-fetchData();
+const main = async () => {
+  for (const key in config.serviceMap) {
+    const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
+    await fetchData(apiUri, config.serviceNameToPath ? key : "./");
+  }
+};
+
+main();

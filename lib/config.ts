@@ -24,4 +24,6 @@ export default {
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
   serviceMap: apiMap.dev,
+  // 接口服务目录
+  serviceNameToPath: false,
 };

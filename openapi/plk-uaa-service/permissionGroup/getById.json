@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "idDTO",
             "required": true,
             "schema": {
-              "originalRef": "Id 信息",
-              "$ref": "#/definitions/Id 信息"
+              "$ref": "#/definitions/Id 信息",
+              "originalRef": "Id 信息"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«权限组及权限响应 DTO»",
-              "$ref": "#/definitions/JSONResult«权限组及权限响应 DTO»"
+              "$ref": "#/definitions/JSONResult«权限组及权限响应 DTO»",
+              "originalRef": "JSONResult«权限组及权限响应 DTO»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "权限组及权限响应 DTO",
-          "$ref": "#/definitions/权限组及权限响应 DTO"
+          "$ref": "#/definitions/权限组及权限响应 DTO",
+          "originalRef": "权限组及权限响应 DTO"
         },
         "ts": {
           "type": "integer",

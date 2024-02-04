@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "idDto",
             "required": true,
             "schema": {
-              "originalRef": "id集 信息",
-              "$ref": "#/definitions/id集 信息"
+              "$ref": "#/definitions/id集 信息",
+              "originalRef": "id集 信息"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«角色及用户id信息响应»»",
-              "$ref": "#/definitions/JSONResult«List«角色及用户id信息响应»»"
+              "$ref": "#/definitions/JSONResult«List«角色及用户id信息响应»»",
+              "originalRef": "JSONResult«List«角色及用户id信息响应»»"
             }
           },
           "201": {
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "角色及用户id信息响应",
-            "$ref": "#/definitions/角色及用户id信息响应"
+            "$ref": "#/definitions/角色及用户id信息响应",
+            "originalRef": "角色及用户id信息响应"
           }
         },
         "ts": {
@@ -149,6 +149,14 @@
           "type": "integer",
           "format": "int64",
           "description": "用户id"
+        },
+        "applicationLevel": {
+          "type": "string",
+          "description": "应用级别",
+          "enum": [
+            "  PROJECT_MANAGER-项目管理",
+            "  ENTERPRISE-企业"
+          ]
         }
       },
       "title": "角色及用户id信息响应"

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -25,8 +25,8 @@
             "description": "idsDto",
             "required": true,
             "schema": {
-              "originalRef": "id集 信息",
-              "$ref": "#/definitions/id集 信息"
+              "$ref": "#/definitions/id集 信息",
+              "originalRef": "id集 信息"
             }
           }
         ],
@@ -34,8 +34,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«角色信息响应»»",
-              "$ref": "#/definitions/JSONResult«List«角色信息响应»»"
+              "$ref": "#/definitions/JSONResult«List«角色信息响应»»",
+              "originalRef": "JSONResult«List«角色信息响应»»"
             }
           },
           "401": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "角色信息响应",
-            "$ref": "#/definitions/角色信息响应"
+            "$ref": "#/definitions/角色信息响应",
+            "originalRef": "角色信息响应"
           }
         },
         "ts": {

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«long»»",
-              "$ref": "#/definitions/JSONResult«List«long»»"
+              "$ref": "#/definitions/JSONResult«List«long»»",
+              "originalRef": "JSONResult«List«long»»"
             }
           },
           "401": {

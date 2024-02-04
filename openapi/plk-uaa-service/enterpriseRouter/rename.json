@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "renameRequest",
             "required": true,
             "schema": {
-              "originalRef": "企业路由重命名请求 DTO",
-              "$ref": "#/definitions/企业路由重命名请求 DTO"
+              "$ref": "#/definitions/企业路由重命名请求 DTO",
+              "originalRef": "企业路由重命名请求 DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -63,6 +63,11 @@
   "definitions": {
     "企业路由重命名请求 DTO": {
       "type": "object",
+      "required": [
+        "clientGroupCode",
+        "id",
+        "newName"
+      ],
       "properties": {
         "id": {
           "type": "integer",
@@ -72,6 +77,10 @@
         "newName": {
           "type": "string",
           "description": "新名称"
+        },
+        "clientGroupCode": {
+          "type": "string",
+          "description": "客户端组编码"
         }
       },
       "title": "企业路由重命名请求 DTO"
