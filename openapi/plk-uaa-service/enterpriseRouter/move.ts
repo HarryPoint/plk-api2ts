@@ -4,6 +4,8 @@ export interface IEnterpriseRoutingMobileRequestDTO {
     id: number;
     // 移动到父级id
     parentId: number;
+    // 客户端组编码
+    clientGroupCode: string;
     // 移动到父级id下的所有子集id顺序列表
     childIds: number[];
 }

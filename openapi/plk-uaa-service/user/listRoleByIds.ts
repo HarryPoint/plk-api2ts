@@ -30,4 +30,6 @@ export interface IRoleAndUserIdInformationResponse {
     description: string;
     // 用户id
     userId: number;
+    // 应用级别
+    applicationLevel: string;
 }

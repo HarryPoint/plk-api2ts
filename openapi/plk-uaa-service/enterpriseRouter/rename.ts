@@ -4,6 +4,8 @@ export interface IEnterpriseRouteRenamingRequestDTO {
     id: number;
     // 新名称
     newName: string;
+    // 客户端组编码
+    clientGroupCode: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {
