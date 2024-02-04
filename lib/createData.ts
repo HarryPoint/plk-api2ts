@@ -2,6 +2,7 @@ import axios from "axios";
 import fs from "fs";
 import _ from "lodash";
 import path from "path";
+import config from "./config";
 
 type IServiceMap = {
   "masterdata-service": string;
@@ -20,7 +21,7 @@ type IPlatformKey = keyof typeof apiMap;
 
 const fetchData = async (
   platform: IPlatformKey = "dev",
-  service: IServiceKey = "plk-uaa-service"
+  service: IServiceKey = "masterdata-service"
 ) => {
   const apiUri = apiMap?.[platform]?.[service];
   if (!apiUri) {
@@ -72,13 +73,11 @@ const fetchData = async (
   openJsonArr.forEach(([pathStr, jsonData]) => {
     const pathArr = pathStr.split("/");
     const outputFolder = path.join(
-      __dirname,
-      "..",
-      "openapi",
+      config.dir,
       pathArr.slice(0, pathArr.length - 1).join("/")
     );
     console.log("outputFolder: ", outputFolder);
-    const filePath = path.join(__dirname, "..", "openapi", `${pathStr}.json`);
+    const filePath = path.join(config.dir, `${pathStr}.json`);
     // 创建输出目录
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });

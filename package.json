@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch-data": "ts-node ./lib/createData.ts",
+    "fetch-data": "ts-node ./lib/createData.ts --dir=./openapi",
     "create-ts": "ts-node ./lib/createTs.ts --dir=./openapi"
   },
   "keywords": [],

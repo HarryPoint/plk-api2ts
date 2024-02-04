@@ -5,10 +5,10 @@ import _ from "lodash";
 import qs from "qs";
 import config from "./config";
 
-const apiUri = "https://openapi.youdao.com/v2/api";
-const appKey = "4a8802ec639e5e84";
-const appSecret = "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19";
-const chunkSize = 100;
+const apiUri = config.translateApiUri;
+const appKey = config.translateAppKey;
+const appSecret = config.translateAppSecret;
+const chunkSize = config.translateChunkSize;
 
 type IParams = {
   appKey: string;
