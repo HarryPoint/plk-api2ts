@@ -1,5 +1,5 @@
 // 保养计划明细保养开始时间编辑DTO
-export interface I保养计划明细保养开始时间编辑DTO {
+export interface IMaintenancePlanDetailsMaintenanceStartTimeEditDTO {
     // id
     id: number;
     // 保养开始时间

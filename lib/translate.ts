@@ -79,26 +79,30 @@ export const translate = async (input: string | string[]) => {
   const chunkResArr: string[][] = [];
   const translateFn = async (inputArr: string[]) => {
     const newInputArr = inputArr.filter((item) => !translateCacheData[item]);
-    const { data } = await fetchApi(newInputArr);
-    // console.log("data: ", data);
-    if (data.translateResults) {
-      const apiTransMap = (data.translateResults as ITranslateItem[])
-        .map((item, index) => ({
-          [newInputArr[index]]: _.words(item.translation)
-            .map((word) => _.upperFirst(word))
-            .join(""),
-        }))
-        .reduce(
-          (pre, next) => ({ ...pre, ...next }),
-          {} as Record<string, string>
-        );
-      console.log("apiTransMap: ", apiTransMap);
-      translateCacheData = {
-        ...translateCacheData,
-        ...apiTransMap,
-      };
-    } else {
-      console.log("inputArr-error: ", data, inputArr);
+    if (newInputArr.length) {
+      const { data } = await fetchApi(newInputArr);
+      // console.log("data: ", data);
+      if (data.translateResults) {
+        const apiTransMap = (data.translateResults as ITranslateItem[])
+          .map((item, index) => ({
+            [newInputArr[index]]: _.words(item.translation)
+              .map((word) => _.upperFirst(word))
+              .join(""),
+          }))
+          .reduce(
+            (pre, next) => ({ ...pre, ...next }),
+            {} as Record<string, string>
+          );
+        translateCacheData = {
+          ...translateCacheData,
+          ...apiTransMap,
+        };
+        console.log("await start", newInputArr);
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        console.log("await end", newInputArr);
+      } else {
+        console.log("inputArr-error: ", data, newInputArr);
+      }
     }
     return inputArr.map((item) => translateCacheData[item] || item);
   };

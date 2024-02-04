@@ -1,5 +1,5 @@
 // JSONResult«保养计划响应DTO»
-export interface IJSONResult保养计划响应DTO {
+export interface IJSONResultMaintenancePlanRespondsToDTO {
     // 返回码
     code: number;
     // 返回消息说明

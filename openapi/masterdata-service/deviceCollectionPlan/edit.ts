@@ -1,5 +1,5 @@
 // 编辑设备数采方案 DTO
-export interface I编辑设备数采方案DTO {
+export interface IEditDeviceDataAcquisitionSchemeDTO {
     // id，如果不传就是新增
     id: number;
     // 名称
@@ -13,10 +13,10 @@ export interface I编辑设备数采方案DTO {
     // 备注
     remark: string;
     // 参数清单
-    paramList: I设备数采方案参数关联信息编辑DTO[];
+    paramList: IDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO[];
 }
 // 设备数采方案参数关联信息编辑DTO
-export interface I设备数采方案参数关联信息编辑DTO {
+export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO {
     // 关联id
     id: number;
     // 设备数采参数id
@@ -34,10 +34,10 @@ export interface I设备数采方案参数关联信息编辑DTO {
     // 实时备注
     remark: string;
     // 统计范围配置项集
-    limits: I设备数采方案参数预警编辑DTO[];
+    limits: IDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO[];
 }
 // 设备数采方案参数预警编辑DTO
-export interface I设备数采方案参数预警编辑DTO {
+export interface IDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO {
     // 关联id
     id: number;
     // 时间粒度

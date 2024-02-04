@@ -34,18 +34,18 @@ export interface I工艺卡明细描述编辑DTO {
     remark: string;
 }
 // JSONResult«工艺卡信息返回VO»
-export interface IJSONResult工艺卡信息返回VO {
+export interface IJSONResultProcessCardInformationIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工艺卡信息返回VO;
+    data: IProcessCardInformationIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工艺卡信息返回VO
-export interface I工艺卡信息返回VO {
+export interface IProcessCardInformationIsReturnedToVO {
     // id
     id: number;
     // 工艺卡名称
@@ -57,14 +57,14 @@ export interface I工艺卡信息返回VO {
     // 工序ids
     processIds: number[];
     // 文件集合
-    fileList: I工艺卡明细返回VO[];
+    fileList: IProcessCardDetailsReturnedToVO[];
     // 描述集合
-    textList: I工艺卡明细返回VO[];
+    textList: IProcessCardDetailsReturnedToVO[];
     // 录入集合
-    inputList: I工艺卡明细返回VO[];
+    inputList: IProcessCardDetailsReturnedToVO[];
 }
 // 工艺卡明细返回VO
-export interface I工艺卡明细返回VO {
+export interface IProcessCardDetailsReturnedToVO {
     // 明细id
     id: number;
     // 明细类型

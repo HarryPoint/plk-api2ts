@@ -1,16 +1,16 @@
 // JSONResult«设备数采方案明细返回VO»
-export interface IJSONResult设备数采方案明细返回VO {
+export interface IJSONResultTheDeviceDataCollectionSchemeDetailsAreReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备数采方案明细返回VO;
+    data: IDeviceDataCollectionSchemeDetailsAreReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备数采方案明细返回VO
-export interface I设备数采方案明细返回VO {
+export interface IDeviceDataCollectionSchemeDetailsAreReturnedToVO {
     // id
     id: number;
     // 方案名称
@@ -22,7 +22,7 @@ export interface I设备数采方案明细返回VO {
     // 设备集合
     deviceList: IIdNameNumberVO[];
     // 参数项
-    paramList: I设备数采方案参数关联信息返回VO[];
+    paramList: IDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO[];
     // 备注
     remark: string;
     // 状态
@@ -44,7 +44,7 @@ export interface IIdNameNumberVO {
     code: string;
 }
 // 设备数采方案参数关联信息返回VO
-export interface I设备数采方案参数关联信息返回VO {
+export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO {
     // 关联id
     id: number;
     // 设备数采方案id
@@ -76,10 +76,10 @@ export interface I设备数采方案参数关联信息返回VO {
     // 统计类型描述
     statisticTypeDesc: string;
     // 统计范围配置项集
-    limits: I设备数采方案参数预警返回VO[];
+    limits: IDeviceDataAcquisitionSchemeParameterWarningReturnVO[];
 }
 // 设备数采方案参数预警返回VO
-export interface I设备数采方案参数预警返回VO {
+export interface IDeviceDataAcquisitionSchemeParameterWarningReturnVO {
     // 预警id
     id: number;
     // 时间粒度

@@ -1,5 +1,5 @@
 // JSONResult«List«文件分类明细响应DTO»»_2
-export interface IJSONResultList文件分类明细响应DTO_2 {
+export interface IJSONResultListFileClassificationDetailsResponseDTO2 {
     // 返回码
     code: number;
     // 返回消息说明
