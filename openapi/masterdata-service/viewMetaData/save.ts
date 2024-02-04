@@ -5,7 +5,7 @@ export interface IViewMetadataSaveRequestDTO {
     // 实例ID
     instanceId: number;
     // 元数据
-    meta;
+    meta: any;
 }
 // JSONResult«long»
 export interface IJSONResultlong {

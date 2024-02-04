@@ -39,7 +39,7 @@ export interface IQualityAuditTypeValueResponse {
     // 不符合项数量
     nonConformanceQuantity: number;
     // 不符合项 - 动态指标。 key - 为 titleList[].key。指标为表格的值
-    dynamicIndicators;
+    dynamicIndicators: any;
     // 不符合项 - 未整改数量
     nonConformanceUnRectifiedQuantity: number;
     // 不符合项 - 整改率

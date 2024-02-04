@@ -30,11 +30,11 @@ export interface IProcessDataDetailsSearchVO {
     // 搜索文本 - 针对文本搜索
     text: string;
     // 搜索起始值 - 针对范围搜索
-    limitBegin;
+    limitBegin: any;
     // 搜索结束值 - 针对范围搜索
-    limitEnd;
+    limitEnd: any;
     // 搜索选项值 - 针对选择搜索
-    selectors: undefined[];
+    selectors: any[];
     // 表格编码
     tableCode: string;
 }
@@ -101,7 +101,7 @@ export interface IDynamicExpansionDataIndicatesWhetherVOEmployeesAreAllowedToLog
     // 拓展数据
     ext: IWhetherTheEmployeeIsAllowedToLogInToTheDTO;
     // 动态数据
-    data;
+    data: any;
 }
 // 员工是否允许登录DTO
 export interface IWhetherTheEmployeeIsAllowedToLogInToTheDTO {

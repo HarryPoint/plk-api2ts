@@ -90,9 +90,9 @@ export interface IProjectTaskResponseObject6 {
     // 当前节点
     processStatusName: string;
     // undefined
-    leaderUserIds: undefined[];
+    leaderUserIds: any[];
     // undefined
-    preTaskIds: undefined[];
+    preTaskIds: any[];
     // undefined
     projectTaskTypeId: number;
     // undefined
@@ -198,9 +198,9 @@ export interface IProjectTaskResponseObject9 {
     // 当前节点
     processStatusName: string;
     // undefined
-    leaderUserIds: undefined[];
+    leaderUserIds: any[];
     // undefined
-    preTaskIds: undefined[];
+    preTaskIds: any[];
     // undefined
     projectTaskTypeId: number;
     // undefined

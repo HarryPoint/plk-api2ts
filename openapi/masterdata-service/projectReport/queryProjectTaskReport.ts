@@ -97,9 +97,9 @@ export interface IProjectTaskReportResponseObject {
     // undefined
     projectTaskTypeId: number;
     // undefined
-    leaderUserIds: undefined[];
+    leaderUserIds: any[];
     // undefined
-    preTaskIds: undefined[];
+    preTaskIds: any[];
     // undefined
     priority: string;
 }

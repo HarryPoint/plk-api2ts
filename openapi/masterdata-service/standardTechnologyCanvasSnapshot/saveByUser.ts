@@ -3,7 +3,7 @@ export interface IProcessCanvasSnapshotAcquisitionRequestDTO1 {
     // 工艺id - 新增场景传值-1
     technologyId: number;
     // 快照保存json数据
-    canvasSnapshot;
+    canvasSnapshot: any;
 }
 // JSONResult«object»
 export interface IJSONResultobject {
@@ -12,7 +12,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data;
+    data: any;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

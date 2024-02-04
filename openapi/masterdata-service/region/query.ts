@@ -18,9 +18,9 @@ export interface IRegionVo {
     // 行政区划名称
     name: string;
     // 行政区域名称拼英 ["bei", "jing"]
-    pinYin: undefined[];
+    pinYin: any[];
     // 行政区域位置
-    location;
+    location: any;
     // 上级行政区域ID
     parentId: number;
     // 上级行政区域编码

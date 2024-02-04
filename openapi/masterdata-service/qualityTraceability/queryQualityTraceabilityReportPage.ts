@@ -20,11 +20,11 @@ export interface IProcessDataDetailsSearchVO {
     // 搜索文本 - 针对文本搜索
     text: string;
     // 搜索起始值 - 针对范围搜索
-    limitBegin;
+    limitBegin: any;
     // 搜索结束值 - 针对范围搜索
-    limitEnd;
+    limitEnd: any;
     // 搜索选项值 - 针对选择搜索
-    selectors: undefined[];
+    selectors: any[];
     // 表格编码
     tableCode: string;
 }
@@ -78,21 +78,21 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     // 批次操作时间
     lotNoOptDateTime: string;
     // 工序
-    processId: undefined[];
+    processId: any[];
     // 操作类型
     optType: string;
     // 操作员
-    optEmployeeId: undefined[];
+    optEmployeeId: any[];
     // 操作时间
     optDateTime: string;
     // 生产物料
-    materialId: undefined[];
+    materialId: any[];
     // 操作数量
     optQuantity: number;
     // 生产设备
-    deviceList: undefined[];
+    deviceList: any[];
     // 生产模具
-    moldList: undefined[];
+    moldList: any[];
     // 进料BOM消耗确认
     bomConsumeList: IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO[];
     // 任务编号
@@ -105,7 +105,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
 // 质量追溯进料BOM消耗确认报表响应DTO
 export interface IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO {
     // 消耗物料
-    consumeMaterialId: undefined[];
+    consumeMaterialId: any[];
     // 消耗数量
     consumeQuantity: number;
     // 外部码

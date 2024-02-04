@@ -22,5 +22,5 @@ export interface IFileObjectDetailResponseDTO {
     // 文件来源
     fileForm: string;
     // 文件Key
-    fileKeys: undefined[];
+    fileKeys: any[];
 }

@@ -63,11 +63,11 @@ export interface IProcessDataDetailsSearchVO {
     // 搜索文本 - 针对文本搜索
     text: string;
     // 搜索起始值 - 针对范围搜索
-    limitBegin;
+    limitBegin: any;
     // 搜索结束值 - 针对范围搜索
-    limitEnd;
+    limitEnd: any;
     // 搜索选项值 - 针对选择搜索
-    selectors: undefined[];
+    selectors: any[];
     // 表格编码
     tableCode: string;
 }
@@ -191,7 +191,7 @@ export interface IProductionTaskResponseDTOForMobile {
     // 创建时间
     createTime: string;
     // 生产订单
-    produceOrder;
+    produceOrder: any;
     // 批次信息
     lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
     // 批次数量

@@ -3,7 +3,7 @@ export interface IDataLinkageCalcRequestDTO {
     // 表单字段ID
     flowPathFormFieldId: number;
     // 表单记录ID
-    fromRecord;
+    fromRecord: any;
 }
 // JSONResult«DataLinkageCalcResponseDTO»
 export interface IJSONResultDataLinkageCalcResponseDTO {

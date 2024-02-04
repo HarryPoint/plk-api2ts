@@ -78,7 +78,7 @@ export interface IDeviceDataCollectionCDRPageInformationIsReturnedToVO {
     // 设备状态
     deviceStatus: string;
     // 拓展数据
-    extData;
+    extData: any;
     // 详情
     details: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
     // 是否有异常

@@ -99,7 +99,7 @@ export interface IFileObjectPagingQueryResponseDTO {
     // 文件来源
     fileForm: string;
     // 文件Key
-    fileKeys: undefined[];
+    fileKeys: any[];
     // 权限列表
     permissionTypeList: string[];
 }

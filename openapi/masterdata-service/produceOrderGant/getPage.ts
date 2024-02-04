@@ -136,7 +136,7 @@ export interface IProductionOrderGanttReturnedToVO {
     // 关闭时间
     closeTime: string;
     // 其他拓展参数
-    extData;
+    extData: any;
     // 对应物料id
     materialId: number;
     // 对应物料名称

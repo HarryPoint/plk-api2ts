@@ -7,9 +7,9 @@ export interface IDynamicFormDataUpdateRequestDTO {
     // undefined
     detailTableCode: string;
     // undefined
-    tableColumnSerialToValueListMap;
+    tableColumnSerialToValueListMap: any;
     // undefined
-    idFieldSerialNoToValueListMap;
+    idFieldSerialNoToValueListMap: any;
     // undefined
     isUpdateDetailTable: string;
 }
@@ -20,7 +20,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data;
+    data: any;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

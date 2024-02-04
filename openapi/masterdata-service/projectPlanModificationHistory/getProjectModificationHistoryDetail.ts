@@ -16,5 +16,5 @@ export interface IProjectPlanChangeInformationVersionRecord {
     // undefined
     modificationId: number;
     // undefined
-    dataSnapshot: undefined[];
+    dataSnapshot: any[];
 }

@@ -5,7 +5,7 @@ export interface IFormCascadeQueryConditionVO {
     // 当前表单字段ID
     flowPathFormFieldId: number;
     // 当前表单选择的数据
-    submitFieldsJsonObject;
+    submitFieldsJsonObject: any;
     // 来自表单过滤条件
     fromFormFilterCondition: string;
     // 应用编码

@@ -89,5 +89,5 @@ export interface IProduceMaterialReturnQueryResponseDTO {
     // 退料数量
     materialReturnQuantity: number;
     // 序列号列表
-    serialNoList: undefined[];
+    serialNoList: any[];
 }

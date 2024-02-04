@@ -148,15 +148,15 @@ export interface IProcessFormFieldEditDTO {
     // 选择框样式
     style: string;
     // 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}]
-    formRpShowFields: undefined[];
+    formRpShowFields: any[];
     // 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}]
-    formRpMultiGroupFields: undefined[];
+    formRpMultiGroupFields: any[];
     // 前端配置拓展字段
-    meta;
+    meta: any;
     // 组织类型
     organizationType: string;
     // 表格字段列表
-    actualFields: undefined[];
+    actualFields: any[];
     // 是否自动获取位置
     isAutoGetLocation: string;
     // 地址类型
@@ -309,9 +309,9 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: undefined[];
+    formulaFormFieldSerialNos: any[];
     // 前端配置拓展字段
-    meta;
+    meta: any;
 }
 // 流程节点编辑DTO_4
 export interface IProcessNodeEditDTO4 {
@@ -670,7 +670,7 @@ export interface IProcessEventOperationSettingsEditTheDTO {
     // 固定值
     fixedValue: string;
     // 前端配置拓展字段
-    meta;
+    meta: any;
     // 禁用编辑，不填或者N代表不禁止。Y代表禁止不能编辑
     isDisableEdit: string;
 }

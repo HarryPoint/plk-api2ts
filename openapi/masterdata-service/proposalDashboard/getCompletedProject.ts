@@ -32,5 +32,5 @@ export interface IDepartmentProjectIndicatorsResponseDTO {
     // undefined
     departmentName: string;
     // 指标Key => Project Quantity Map
-    indicatorsToProjectQuantityMap;
+    indicatorsToProjectQuantityMap: any;
 }

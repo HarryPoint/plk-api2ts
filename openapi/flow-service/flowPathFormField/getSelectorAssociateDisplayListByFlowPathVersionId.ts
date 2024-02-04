@@ -20,5 +20,5 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     // 下拉选项的code
     selectorItemCode: string;
     // 关联显示字段的序列号集合
-    associateDisplayFieldSerialNos: undefined[];
+    associateDisplayFieldSerialNos: any[];
 }

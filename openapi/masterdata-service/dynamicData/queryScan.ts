@@ -7,7 +7,7 @@ export interface IAssociationFormScanQueryRequestDTO {
     // 编码列表
     codeList: string[];
     // 表单数据
-    formData;
+    formData: any;
 }
 // JSONResult«List«AssociationFormScanQueryResponseDTO»»
 export interface IJSONResultListAssociationFormScanQueryResponseDTO {

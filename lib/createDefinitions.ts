@@ -7,6 +7,7 @@ const typeMap = {
   number: "number",
   boolean: "boolean",
   array: "[]",
+  object: "{}",
 };
 
 // 去除所有的特殊字符
@@ -38,6 +39,9 @@ export const createDefinitions = async (
     const typeOrigin = typeMap[define.type as keyof typeof typeMap];
     if (typeOrigin === typeMap.array) {
       return transFormType(define.items) + "[]";
+    }
+    if (typeOrigin === typeMap.object) {
+      return "any";
     }
     return typeOrigin;
   };

@@ -137,7 +137,7 @@ export interface IProductionTaskResponseDTOForMobile {
     // 创建时间
     createTime: string;
     // 生产订单
-    produceOrder;
+    produceOrder: any;
     // 批次信息
     lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
     // 批次数量

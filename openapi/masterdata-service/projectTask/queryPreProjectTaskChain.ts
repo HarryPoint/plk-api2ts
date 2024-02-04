@@ -18,5 +18,5 @@ export interface IProjectTaskLinkNode {
     // 任务编号
     code: string;
     // 前置任务
-    preTaskIds: undefined[];
+    preTaskIds: any[];
 }

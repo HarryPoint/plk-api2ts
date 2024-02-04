@@ -1,11 +1,11 @@
 // 主数据基础编辑 DTO_1
 export interface IMasterDataBaseEditDTO1 {
     // 编辑数据
-    data;
+    data: any;
     // 流程任务id - 新增/重新编辑业务，要设置为null
     flowPathTaskId: number;
     // 扩展参数
-    extensionParam;
+    extensionParam: any;
     // 上级任务ID
     parentId: number;
 }

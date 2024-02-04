@@ -23,9 +23,9 @@ export interface IQueryResponseOfNonMatchItems {
     // undefined
     clauseNoList: ITermsNumberQueryResponse[];
     // undefined
-    lastYear;
+    lastYear: any;
     // undefined
-    currentYear;
+    currentYear: any;
 }
 // 条款号查询响应
 export interface ITermsNumberQueryResponse {

@@ -9,7 +9,7 @@ export interface IDeviceDataAcquisitionDataUpload {
     // 设备状态
     status: string;
     // 自定义参数，json对象，参数的编号为key键，参数值为value值
-    ext;
+    ext: any;
 }
 // JSONResult«object»
 export interface IJSONResultobject {
@@ -18,7 +18,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data;
+    data: any;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

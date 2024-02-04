@@ -50,7 +50,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     // 报检数量
     inspectionApplyQuantity: number;
     // 三检制选择
-    threeInspectionSystems: undefined[];
+    threeInspectionSystems: any[];
     // 自检员
     selfInspectionEmployeeIds: number[];
     // 互检员
@@ -94,7 +94,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     // 检验方案id
     qmsInspectionSchemeId: number;
     // 检验员
-    inspectionEmployeeIds: undefined[];
+    inspectionEmployeeIds: any[];
     // 检验员
     inspectionEmployees: IAssociateFormDataVO[];
     // 分配状态

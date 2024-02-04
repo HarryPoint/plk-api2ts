@@ -33,7 +33,7 @@ export interface IUserDynamicDataResponseDTO {
     // 表单结构
     structures: IFormStructureVO[];
     // 数据
-    data;
+    data: any;
     // 是否允许登录
     isAllowLogin: string;
     // 角色集
@@ -159,9 +159,9 @@ export interface IProcessFormVO {
     // 选择框样式
     style: string;
     // 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}]
-    formRpShowFields: undefined[];
+    formRpShowFields: any[];
     // 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}]
-    formRpMultiGroupFields: undefined[];
+    formRpMultiGroupFields: any[];
     // 排序
     sort: number;
     // 父级流程表单id
@@ -169,11 +169,11 @@ export interface IProcessFormVO {
     // 父级流程表单编码
     parentFlowPathFormFieldCode: string;
     // 前端配置拓展字段
-    meta;
+    meta: any;
     // 组织类型
     organizationType: string;
     // 表格字段列表
-    actualFields: undefined[];
+    actualFields: any[];
     // 是否自动获取位置
     isAutoGetLocation: string;
     // 地址类型
@@ -278,7 +278,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     // 下拉选项的code
     selectorItemCode: string;
     // 关联显示字段的序列号集合
-    associateDisplayFieldSerialNos: undefined[];
+    associateDisplayFieldSerialNos: any[];
 }
 // 流程表单关联表单筛选条件组VO
 export interface IProcessFormsAssociateFormFilterGroupVO {
@@ -371,9 +371,9 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: undefined[];
+    formulaFormFieldSerialNos: any[];
     // 前端配置拓展字段
-    meta;
+    meta: any;
 }
 // 角色信息响应
 export interface IRoleMessageResponse {

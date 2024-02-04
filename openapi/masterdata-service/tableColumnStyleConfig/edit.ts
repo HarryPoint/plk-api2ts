@@ -9,7 +9,7 @@ export interface IListColumnStyleConfigurationEditDTO {
     // 类型
     type: string;
     // 列配置JSON
-    config;
+    config: any;
 }
 // JSONResult«列表列样式配置编辑DTO»
 export interface IJSONResultListColumnStyleConfigurationEditDTO {

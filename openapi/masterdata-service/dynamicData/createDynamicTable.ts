@@ -3,7 +3,7 @@ export interface IFlowPathBaseParentFormFieldMapVO {
     // undefined
     flowPathBase: IFlowPathBaseVO;
     // undefined
-    parentMap;
+    parentMap: any;
 }
 // FlowPathBaseVO
 export interface IFlowPathBaseVO {
@@ -73,7 +73,7 @@ export interface IProcessFormVO1 {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: undefined[];
+    formulaFormFieldSerialNos: any[];
     // 编码规则
     codeNumberRules: IProcessFormFieldEncodingRuleDetailsVO[];
     // 是否必填
@@ -121,9 +121,9 @@ export interface IProcessFormVO1 {
     // 选择框样式
     style: string;
     // 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}]
-    formRpShowFields: undefined[];
+    formRpShowFields: any[];
     // 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}]
-    formRpMultiGroupFields: undefined[];
+    formRpMultiGroupFields: any[];
     // 排序
     sort: number;
     // 父级流程表单id
@@ -131,11 +131,11 @@ export interface IProcessFormVO1 {
     // 父级流程表单编码
     parentFlowPathFormFieldCode: string;
     // 前端配置拓展字段
-    meta;
+    meta: any;
     // 组织类型
     organizationType: string;
     // 表格字段列表
-    actualFields: undefined[];
+    actualFields: any[];
     // 是否自动获取位置
     isAutoGetLocation: string;
     // 地址类型
@@ -231,7 +231,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     // 下拉选项的code
     selectorItemCode: string;
     // 关联显示字段的序列号集合
-    associateDisplayFieldSerialNos: undefined[];
+    associateDisplayFieldSerialNos: any[];
 }
 // 流程表单关联表单筛选条件组VO
 export interface IProcessFormsAssociateFormFilterGroupVO {
@@ -324,9 +324,9 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: undefined[];
+    formulaFormFieldSerialNos: any[];
     // 前端配置拓展字段
-    meta;
+    meta: any;
 }
 // JSONResult«object»
 export interface IJSONResultobject {
@@ -335,7 +335,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data;
+    data: any;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

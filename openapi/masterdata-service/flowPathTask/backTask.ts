@@ -5,7 +5,7 @@ export interface IRollbackTheDTOOfAFlowTask {
     // 审批意见/执行情况
     notes: string;
     // 表单数据
-    data;
+    data: any;
     // 回退节点id
     backFlowPathNodeId: number;
     // 下个节点执行员工ID列表
@@ -18,7 +18,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data;
+    data: any;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

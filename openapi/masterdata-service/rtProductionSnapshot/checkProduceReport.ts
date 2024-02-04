@@ -52,7 +52,7 @@ export interface IOutputLineChartsGroupedToReturnVOobject {
     // 数据分组编号
     groupCode: string;
     // 详细点数据
-    pointList: undefined[];
+    pointList: any[];
 }
 // Id，名称，编号VO
 export interface IIdNameNumberVO {

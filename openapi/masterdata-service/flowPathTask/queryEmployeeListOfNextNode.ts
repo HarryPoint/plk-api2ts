@@ -17,7 +17,7 @@ export interface IPageBreaks4 {
     // 名称或编码
     nameOrCode: string;
     // 动态表单记录
-    dynamicFormRecord;
+    dynamicFormRecord: any;
 }
 // 分页排序
 export interface IPagingSort {

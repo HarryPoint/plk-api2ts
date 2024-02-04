@@ -25,5 +25,5 @@ export interface IViewMetadataQueryResponseDTO {
     // 实例ID
     instanceId: number;
     // 元数据
-    meta;
+    meta: any;
 }

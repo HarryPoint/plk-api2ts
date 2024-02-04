@@ -9,7 +9,7 @@ export interface ISubtableDataQueryVO {
     // 过滤字段序列号
     filterFieldCode: string;
     // 过滤字段值
-    filterFieldValue;
+    filterFieldValue: any;
 }
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {

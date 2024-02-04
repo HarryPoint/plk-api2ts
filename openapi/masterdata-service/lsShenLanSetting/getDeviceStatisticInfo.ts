@@ -12,7 +12,7 @@ export interface IJSONResultDarkBlueDeviceStatisticalResponseVO {
 // 深蓝设备统计响应VO
 export interface IDeepBlueDeviceStatisticalResponseVO {
     // 左、中、右-设备运行信息
-    deviceRunInfos;
+    deviceRunInfos: any;
     // 报警信息-右上
     alarmInfos: IDeepBlueAlarmStatisticsVO[];
     // 今日生产情况-右下

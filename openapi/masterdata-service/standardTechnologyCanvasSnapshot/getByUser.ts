@@ -19,5 +19,5 @@ export interface IProcessCanvasSnapshotToGetResponseDTO {
     // 工艺id
     technologyId: number;
     // 快照保存json数据
-    canvasSnapshot;
+    canvasSnapshot: any;
 }

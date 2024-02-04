@@ -5,7 +5,7 @@ export interface IReportTemplateAddRequestDTO {
     // 报表类型
     report: string;
     // 导出参数
-    exportParam;
+    exportParam: any;
     // 开始时间字段编码
     beginTimeFieldCode: string;
     // 结束时间字段编码

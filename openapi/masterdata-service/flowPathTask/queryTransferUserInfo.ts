@@ -7,7 +7,7 @@ export interface IProcessTasksAreTransferredToPersonnelToInquireDTO {
     // 用户名称/编号
     nameOrCode: string;
     // 提交数据
-    data;
+    data: any;
     // 所属流程工单id
     flowPathWorkOrderId: number;
 }

@@ -3,7 +3,7 @@ export interface IFlowPathTaskProcessRequestDTO {
     // 任务ID
     id: number;
     // 表单数据
-    data;
+    data: any;
 }
 // JSONResult«string»_1
 export interface IJSONResultstring1 {

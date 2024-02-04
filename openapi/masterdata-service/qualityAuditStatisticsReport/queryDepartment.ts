@@ -39,7 +39,7 @@ export interface IProductionDepartmentStatisticsProject {
     // 不符合项数量
     nonConformanceQuantity: number;
     // 不符合项数量、不符合项目指标的占比
-    dynamicIndicates;
+    dynamicIndicates: any;
     // 未整改数量
     unRectifiedQuantity: number;
     // 整改率

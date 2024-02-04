@@ -5,7 +5,7 @@ export interface IPrimaryTableIdQueryVO {
     // 过滤字段序列号
     filterFieldCode: string;
     // 过滤字段值
-    filterFieldValue;
+    filterFieldValue: any;
 }
 // JSONResult«List«long»»
 export interface IJSONResultListlong {

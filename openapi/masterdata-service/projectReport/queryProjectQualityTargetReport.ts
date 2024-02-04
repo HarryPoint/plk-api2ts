@@ -77,5 +77,5 @@ export interface IProjectQualityObjectiveReportResponseObject {
     // 实际完成时间
     actualCompleteTime: string;
     // undefined
-    responsibleUserIds: undefined[];
+    responsibleUserIds: any[];
 }

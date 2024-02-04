@@ -29,7 +29,7 @@ export interface IProcedureCompletionListQuery {
     // 生产任务编号
     taskNo: string;
     // 报工人员集合
-    reportUserList: undefined[];
+    reportUserList: any[];
     // 当日计划量
     planProduceNumRange: number[];
     // 当日计划完工量
