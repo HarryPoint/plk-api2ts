@@ -1,23 +1,23 @@
 // JSONResult«导出信息«订单进度统计导出VO»»
-export interface IJSONResultExportOrderProgressStatisticsExportVO {
+export interface IJSONResult导出信息订单进度统计导出VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IExportInformationOrderProgressStatisticsExportVO;
+    data: I导出信息订单进度统计导出VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«订单进度统计导出VO»
-export interface IExportInformationOrderProgressStatisticsExportVO {
+export interface I导出信息订单进度统计导出VO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: IOrderProgressStatisticsAreDerivedVO2[];
+    itemList: I订单进度统计导出VO_2[];
 }
 // 订单进度统计导出VO_2
-export interface IOrderProgressStatisticsAreDerivedVO2 {
+export interface I订单进度统计导出VO_2 {
     // 销售订单编号
     salesOrderCode: string;
     // 客户名称
@@ -27,14 +27,14 @@ export interface IOrderProgressStatisticsAreDerivedVO2 {
     // 销售订单状态字符串
     salesOrderStatusDesc: string;
     // 销售订单明细
-    salesOrderDetails: IOrderProgressStatisticsAreExportedVO1[];
+    salesOrderDetails: I订单进度统计导出VO_1[];
     // 销售订单中生产订单数量
     produceOrderCount: number;
     // 销售订单创建时间
     salesOrderCreateTime: string;
 }
 // 订单进度统计导出VO_1
-export interface IOrderProgressStatisticsAreExportedVO1 {
+export interface I订单进度统计导出VO_1 {
     // 物料id
     materialId: number;
     // 物料编码
@@ -80,10 +80,10 @@ export interface IOrderProgressStatisticsAreExportedVO1 {
     // 已排产数量
     totalPlanQuantity: number;
     // 生产订单
-    produceOrders: IOrderProgressStatisticsAreExportedToVO[];
+    produceOrders: I订单进度统计导出VO[];
 }
 // 订单进度统计导出VO
-export interface IOrderProgressStatisticsAreExportedToVO {
+export interface I订单进度统计导出VO {
     // 生产订单编号
     produceOrderCode: string;
     // 生产物料id

@@ -1,5 +1,5 @@
 // 批次扣留DTO
-export interface I批次扣留DTO {
+export interface IBatchWithholdDTO {
     // 批次id
     id: number;
     // 生产任务id

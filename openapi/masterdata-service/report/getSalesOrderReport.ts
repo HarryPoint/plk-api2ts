@@ -5,7 +5,7 @@ export interface I订单进度统计查询VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 交付日期 - 开始 yyyy-MM-dd HH:mm:ss
     deliveryDateBegin: string;
     // 销售订单编号
@@ -22,7 +22,7 @@ export interface I订单进度统计查询VO {
     salesOrderStatus: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

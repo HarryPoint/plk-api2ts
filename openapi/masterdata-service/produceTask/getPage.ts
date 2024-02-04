@@ -5,7 +5,7 @@ export interface I生产任务搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 对应工序id
     processIds: number[];
     // 任务号
@@ -43,17 +43,17 @@ export interface I生产任务搜索VO {
     // 可操作项
     canOpItem: string;
     // 生产订单字段搜索
-    produceOrderSearchList: I流程数据明细搜索VO[];
+    produceOrderSearchList: IProcessDataDetailsSearchVO[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // 流程数据明细搜索VO
-export interface I流程数据明细搜索VO {
+export interface IProcessDataDetailsSearchVO {
     // 列code
     code: string;
     // 搜索类型
@@ -70,18 +70,18 @@ export interface I流程数据明细搜索VO {
     tableCode: string;
 }
 // JSONResult«分页信息«JSONObject»»
-export interface IJSONResult分页信息JSONObject {
+export interface IJSONResultPagingInformationJSONObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息JSONObject;
+    data: IPagingInformationJSONObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«JSONObject»
-export interface I分页信息JSONObject {
+export interface IPagingInformationJSONObject {
     // 当前页码
     pageNo: number;
     // 分页大小

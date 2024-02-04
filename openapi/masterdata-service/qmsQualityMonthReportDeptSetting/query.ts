@@ -25,10 +25,10 @@ export interface I质量月报部门设置响应DTO {
     // 部门id集合
     departmentIds: number[];
     // 部门集合
-    departments: IIdCodeName通用传输对象[];
+    departments: IIdCodeNameGenericTransportObject[];
 }
 // Id Code Name 通用传输对象
-export interface IIdCodeName通用传输对象 {
+export interface IIdCodeNameGenericTransportObject {
     // id
     id: number;
     // code

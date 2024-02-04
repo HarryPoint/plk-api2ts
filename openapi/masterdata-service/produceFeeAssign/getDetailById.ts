@@ -18,14 +18,14 @@ export interface I生产成本分配响应对象 {
     // 单据日期
     billDate: string;
     // 当前期间
-    fiscalPeriod: I期间响应对象;
+    fiscalPeriod: IDurationResponseObject;
     // 分配信息
     produceFeeAssignDetailList: I生产成本分配明细响应对象[];
     // 费用信息
     produceFeeCollectDetailList: I费用归集明细响应DTO[];
 }
 // 期间响应对象
-export interface I期间响应对象 {
+export interface IDurationResponseObject {
     // 期间Id
     id: number;
     // 期间

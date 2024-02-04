@@ -26,7 +26,7 @@ export interface I项目任务规则编辑请求DTO {
     modifyTaskIdList: number[];
 }
 // JSONResult«string»_1
-export interface IJSONResultstring_1 {
+export interface IJSONResultstring1 {
     // 返回码
     code: number;
     // 返回消息说明

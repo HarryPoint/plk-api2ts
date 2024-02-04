@@ -1,5 +1,5 @@
 // 产能利用率报表查询DTO
-export interface I产能利用率报表查询DTO {
+export interface ICapacityUtilizationReportQueryingDtos {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I产能利用率报表查询DTO {
     // 工序id列表
     processIdList: number[];
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 日期 -- 开始时间
     beginTime: string;
     // 天数
@@ -22,7 +22,7 @@ export interface I产能利用率报表查询DTO {
     isFilterByDayCount: boolean;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

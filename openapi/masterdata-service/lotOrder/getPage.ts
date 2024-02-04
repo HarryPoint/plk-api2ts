@@ -7,7 +7,7 @@ export interface I批次订单搜索VO {
     // 生产订单号
     produceOrderCode: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 当前流水类型(界面上的批次当前生产状态)
     lastFlowType: string;
     // 批次订单号
@@ -28,7 +28,7 @@ export interface I批次订单搜索VO {
     status: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

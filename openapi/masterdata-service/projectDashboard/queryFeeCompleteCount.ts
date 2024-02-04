@@ -1,5 +1,5 @@
 // 项目看板查询dto
-export interface I项目看板查询dto {
+export interface IProjectKanbanQueryDto {
     // 开始日期
     beginTime: string;
     // 结束日期
@@ -12,18 +12,18 @@ export interface I项目看板查询dto {
     excludeProjectIds: number[];
 }
 // JSONResult«项目费用统计响应对象»
-export interface IJSONResult项目费用统计响应对象 {
+export interface IJSONResultProjectCostStatisticsResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目费用统计响应对象;
+    data: IProjectCostStatisticsResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目费用统计响应对象
-export interface I项目费用统计响应对象 {
+export interface IProjectCostStatisticsResponseObject {
     // 项目预算（元）
     projectAnnualBudget: number;
     // 预算执行（元）

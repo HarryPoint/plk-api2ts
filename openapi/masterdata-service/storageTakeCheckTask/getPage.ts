@@ -5,7 +5,7 @@ export interface I仓库盘点任务分页查询对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 任务编号
     taskNo: string;
     // 盘点仓库id
@@ -26,7 +26,7 @@ export interface I仓库盘点任务分页查询对象 {
     completeEndTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -123,7 +123,7 @@ export interface I仓库盘点任务返回DTO {
     // 审核完成时间
     examineTime: string;
     // 指定仓位数组(指定仓位类型时有值)
-    warehouseList: IId名称编号VO[];
+    warehouseList: IIdNameNumberVO[];
     // 盘盈单编号
     inventoryProfitOrderCode: string;
     // 盘亏单编号
@@ -134,7 +134,7 @@ export interface I仓库盘点任务返回DTO {
     inventoryLossOrderId: number;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

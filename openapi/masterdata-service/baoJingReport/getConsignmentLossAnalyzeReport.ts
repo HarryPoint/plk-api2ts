@@ -1,5 +1,5 @@
 // 寄售损耗分析报表搜索VO
-export interface I寄售损耗分析报表搜索VO {
+export interface IConsignmentLossAnalysisReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -9,7 +9,7 @@ export interface I寄售损耗分析报表搜索VO {
     // 日期开始时间 yyyy-MM-dd HH:mm:ss
     beginDate: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 日期结束时间 yyyy-MM-dd HH:mm:ss
     endDate: string;
     // 客户id
@@ -28,32 +28,32 @@ export interface I寄售损耗分析报表搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«寄售损耗分析报表返回VO»
-export interface IJSONResult寄售损耗分析报表返回VO {
+export interface IJSONResultConsignmentLossAnalysisReportReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I寄售损耗分析报表返回VO;
+    data: IConsignmentLossAnalysisReportReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 寄售损耗分析报表返回VO
-export interface I寄售损耗分析报表返回VO {
+export interface IConsignmentLossAnalysisReportReturnedToVO {
     // 数据表
-    tablePage: I分页信息寄售损耗分析报表分页返回VO;
+    tablePage: IPageInformationConsignmentLossAnalysisReportPageReturnsVO;
     // 未提数量
-    productDimension: I寄售损耗分析图表数据返回VO[];
+    productDimension: IConsignmentLossAnalysisChartDataReturnedToVO[];
 }
 // 分页信息«寄售损耗分析报表分页返回VO»
-export interface I分页信息寄售损耗分析报表分页返回VO {
+export interface IPageInformationConsignmentLossAnalysisReportPageReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -63,7 +63,7 @@ export interface I分页信息寄售损耗分析报表分页返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I寄售损耗分析报表分页返回VO[];
+    list: IConsignmentLossAnalysisReportPagingReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -76,7 +76,7 @@ export interface I分页信息寄售损耗分析报表分页返回VO {
     nextPage: number;
 }
 // 寄售损耗分析报表分页返回VO
-export interface I寄售损耗分析报表分页返回VO {
+export interface IConsignmentLossAnalysisReportPagingReturnsVO {
     // 客户ids json
     customerIdsJson: string;
     // 销售发货子表ids json
@@ -113,7 +113,7 @@ export interface I寄售损耗分析报表分页返回VO {
     lossRatio: number;
 }
 // 寄售损耗分析图表数据返回VO
-export interface I寄售损耗分析图表数据返回VO {
+export interface IConsignmentLossAnalysisChartDataReturnedToVO {
     // 纵轴
     title: string;
     // 未结数量

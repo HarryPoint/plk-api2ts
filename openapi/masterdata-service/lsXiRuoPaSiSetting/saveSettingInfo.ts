@@ -1,25 +1,25 @@
 // 西偌帕斯大屏设置DTO
-export interface ISilopusBigScreenSetUpTheDTO {
+export interface I西偌帕斯大屏设置DTO {
     // 主要物料id集
     majorDataIds: number[];
     // 主要工序id集
     processIds: number[];
     // 计划设置集
-    planSettings: ISilopusLargeScreenProjectNumberSetDTO[];
+    planSettings: I西偌帕斯大屏计划数设置DTO[];
     // 工序目标值设置集
-    processTargetSettings: ISilopusProcessTargetValueLargeScreenSetDTO[];
+    processTargetSettings: I西偌帕斯工序目标值大屏设置DTO[];
     // 报废数据前五统计时间类型
     scrapStatisticsTime: string;
 }
 // 西偌帕斯大屏计划数设置DTO
-export interface ISilopusLargeScreenProjectNumberSetDTO {
+export interface I西偌帕斯大屏计划数设置DTO {
     // 日程安排日期 yyyy-MM-dd
     scheduleDate: string;
     // 计划数
     planQuantity: number;
 }
 // 西偌帕斯工序目标值大屏设置DTO
-export interface ISilopusProcessTargetValueLargeScreenSetDTO {
+export interface I西偌帕斯工序目标值大屏设置DTO {
     // 工序id
     processId: number;
     // 产出目标数

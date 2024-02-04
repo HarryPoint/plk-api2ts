@@ -33,7 +33,7 @@ export interface I进出料信息响应对象 {
     // 关键参数信息
     keyParametersInfo: IProduceTechnologyKeyParameterResponseDTO;
     // 当前步骤配置信息 - 用于前端判断各种情况逻辑
-    stepSetInfo: I生产工艺路径步骤设置返回VO;
+    stepSetInfo: IProductionProcessPathStepSettingsReturnVO;
 }
 // 上下工序信息响应DTO
 export interface I上下工序信息响应DTO {
@@ -213,7 +213,7 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     imageUrls: string[];
 }
 // 生产工艺路径步骤设置返回VO
-export interface I生产工艺路径步骤设置返回VO {
+export interface IProductionProcessPathStepSettingsReturnVO {
     // id
     id: number;
     // 进出站方式

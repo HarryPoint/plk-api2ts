@@ -1,5 +1,5 @@
 // 关键参数保存DTO
-export interface I关键参数保存DTO {
+export interface IKeyParametersSaveTheDTO {
     // id
     id: number;
     // 编号
@@ -11,10 +11,10 @@ export interface I关键参数保存DTO {
     // 关联工序
     processIds: number[];
     // 关键参数集合
-    parameterDetailList: I关键参数明细保存DTO[];
+    parameterDetailList: ISaveTheDTOForKeyParameterDetails[];
 }
 // 关键参数明细保存DTO
-export interface I关键参数明细保存DTO {
+export interface ISaveTheDTOForKeyParameterDetails {
     // 字段id
     id: number;
     // 字段名称
@@ -39,18 +39,18 @@ export interface I关键参数明细保存DTO {
     selector: string;
 }
 // JSONResult«关键参数信息响应对象»
-export interface IJSONResult关键参数信息响应对象 {
+export interface IJSONResultKeyParameterInformationResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I关键参数信息响应对象;
+    data: IKeyParameterInformationResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 关键参数信息响应对象
-export interface I关键参数信息响应对象 {
+export interface IKeyParameterInformationResponseObject {
     // id
     id: number;
     // 编号
@@ -58,21 +58,21 @@ export interface I关键参数信息响应对象 {
     // 名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 关键参数集合
-    parameterDetailList: I关键参数信息详情响应对象[];
+    parameterDetailList: IKeyParameterDetailsResponseObject[];
 }
 // 关联下拉响应对象
-export interface I关联下拉响应对象 {
+export interface IAssociatedDropDownResponseObjects {
     // id
     id: number;
     // 显示字段名称
     showFieldValue: string;
 }
 // 关键参数信息详情响应对象
-export interface I关键参数信息详情响应对象 {
+export interface IKeyParameterDetailsResponseObject {
     // 字段id
     id: number;
     // 字段名称

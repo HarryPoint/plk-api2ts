@@ -1,5 +1,5 @@
 // 工序完成明细表查询
-export interface IProcedureCompletionListQuery {
+export interface I工序完成明细表查询 {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -51,18 +51,18 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«分页信息«工序完成明细表响应dto»»
-export interface IJSONResultPagingInformationOperationCompletionDetailTableResponseDto {
+export interface IJSONResult分页信息工序完成明细表响应dto {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IPageInformationProcessCompletionDetailTableResponseDto;
+    data: I分页信息工序完成明细表响应dto;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工序完成明细表响应dto»
-export interface IPageInformationProcessCompletionDetailTableResponseDto {
+export interface I分页信息工序完成明细表响应dto {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -72,7 +72,7 @@ export interface IPageInformationProcessCompletionDetailTableResponseDto {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IProcessCompletionDetailsRespondToDto[];
+    list: I工序完成明细表响应dto[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -85,7 +85,7 @@ export interface IPageInformationProcessCompletionDetailTableResponseDto {
     nextPage: number;
 }
 // 工序完成明细表响应dto
-export interface IProcessCompletionDetailsRespondToDto {
+export interface I工序完成明细表响应dto {
     // 日期
     day: string;
     // 生产工序id
@@ -99,8 +99,8 @@ export interface IProcessCompletionDetailsRespondToDto {
     // 实际完工量
     realProduceNum: number;
     // 生产订单列表
-    produceOrderList: IProcessCompletionDetailsProductionOrderResponseDto[];
+    produceOrderList: I工序完成明细表生产订单响应dto[];
 }
 // 工序完成明细表生产订单响应dto
-export interface IProcessCompletionDetailsProductionOrderResponseDto {
+export interface I工序完成明细表生产订单响应dto {
 }

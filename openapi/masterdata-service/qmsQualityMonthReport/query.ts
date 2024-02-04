@@ -199,14 +199,14 @@ export interface I质量月报响应DTO {
     // 成本质量损失率
     currentCostQualityLossRatio: number;
     // 未填报部门
-    notReportDepartments: IIdCodeName通用传输对象[];
+    notReportDepartments: IIdCodeNameGenericTransportObject[];
     // 上报状态
     reportStatus: string;
     // 上报状态描述
     reportStatusDesc: string;
 }
 // Id Code Name 通用传输对象
-export interface IIdCodeName通用传输对象 {
+export interface IIdCodeNameGenericTransportObject {
     // id
     id: number;
     // code

@@ -1,10 +1,10 @@
 // 动态数据无状态删除请求对象
-export interface I动态数据无状态删除请求对象 {
+export interface IDynamicDataStatelessDeleteRequestObject {
     // 删除明细
-    removeDetails: I动态数据无状态删除明细请求对象[];
+    removeDetails: IDynamicDataStatelessDeletionOfDetailedRequestObjects[];
 }
 // 动态数据无状态删除明细请求对象
-export interface I动态数据无状态删除明细请求对象 {
+export interface IDynamicDataStatelessDeletionOfDetailedRequestObjects {
     // 流程id
     flowPathId: number;
     // 动态数据id集合

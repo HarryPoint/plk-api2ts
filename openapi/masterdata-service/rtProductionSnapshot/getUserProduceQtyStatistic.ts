@@ -1,5 +1,5 @@
 // 用户生产统计搜索VO
-export interface I用户生产统计搜索VO {
+export interface IUserProductionStatisticsSearchVO {
     // 查询开始时间 yyyy-MM-dd HH:mm:ss
     beginTime: string;
     // 查询结束时间 yyyy-MM-dd HH:mm:ss
@@ -14,18 +14,18 @@ export interface I用户生产统计搜索VO {
     produceOrderCode: string;
 }
 // JSONResult«用户生产合计统计返回VO»
-export interface IJSONResult用户生产合计统计返回VO {
+export interface IJSONResultTotalUserProductionStatisticsReturnVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I用户生产合计统计返回VO;
+    data: IUserProductionTotalStatisticsAreReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 用户生产合计统计返回VO
-export interface I用户生产合计统计返回VO {
+export interface IUserProductionTotalStatisticsAreReturnedToVO {
     // 总进料个数
     totalProduceMoveInQuantity: number;
     // 总合格产出个数

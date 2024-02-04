@@ -1,34 +1,34 @@
 // 仓位树返回VO_1
-export interface I仓位树返回VO_1 {
+export interface IPositionTreeReturnsVO1 {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // undefined
     nameOrCodeMatch: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«仓位查询DTO»»
-export interface IJSONResult分页信息仓位查询DTO {
+export interface IJSONResultDTOForPagingInformationLocationQuery {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息仓位查询DTO;
+    data: IPageInformationLocationQueryDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«仓位查询DTO»
-export interface I分页信息仓位查询DTO {
+export interface IPageInformationLocationQueryDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -38,7 +38,7 @@ export interface I分页信息仓位查询DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I仓位查询DTO[];
+    list: IPositionQueryDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -51,7 +51,7 @@ export interface I分页信息仓位查询DTO {
     nextPage: number;
 }
 // 仓位查询DTO
-export interface I仓位查询DTO {
+export interface IPositionQueryDTO {
     // id
     id: number;
     // 仓位名称

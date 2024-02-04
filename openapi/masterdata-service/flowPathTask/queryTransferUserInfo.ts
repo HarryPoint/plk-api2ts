@@ -1,5 +1,5 @@
 // 流程任务转交人员查询DTO
-export interface I流程任务转交人员查询DTO {
+export interface IProcessTasksAreTransferredToPersonnelToInquireDTO {
     // 流程id
     flowPathId: number;
     // 流程节点id
@@ -12,18 +12,18 @@ export interface I流程任务转交人员查询DTO {
     flowPathWorkOrderId: number;
 }
 // JSONResult«List«员工响应对象»»
-export interface IJSONResultList员工响应对象 {
+export interface IJSONResultListEmployeeResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I员工响应对象[];
+    data: IEmployeeResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 员工响应对象
-export interface I员工响应对象 {
+export interface IEmployeeResponseObject {
     // 创建用户ID
     createUserId: number;
     // 创建用户名

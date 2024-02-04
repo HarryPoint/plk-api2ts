@@ -1,16 +1,16 @@
 // JSONResult«List«工序字段对应表详情VO»»
-export interface IJSONResultList工序字段对应表详情VO {
+export interface ITheJSONResultListOperationFieldCorrespondsToTheTableDetailsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工序字段对应表详情VO[];
+    data: IProcedureFieldsCorrespondToTableDetailsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工序字段对应表详情VO
-export interface I工序字段对应表详情VO {
+export interface IProcedureFieldsCorrespondToTableDetailsVO {
     // id
     id: number;
     // 工序id
@@ -22,10 +22,10 @@ export interface I工序字段对应表详情VO {
     // 系统流程类型
     flowPathSystemType: string;
     // 关联字段列表
-    fieldList: I工序字段对应表字段详情VO[];
+    fieldList: IProcedureFieldsCorrespondToTableFieldDetailsVO[];
 }
 // 工序字段对应表字段详情VO
-export interface I工序字段对应表字段详情VO {
+export interface IProcedureFieldsCorrespondToTableFieldDetailsVO {
     // 流程表格列表id
     flowPathTableColumnId: number;
     // 是否表格字段

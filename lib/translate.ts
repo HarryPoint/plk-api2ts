@@ -1,12 +1,14 @@
 import axios from "axios";
 import CryptoJS from "crypto-js";
+import fs from "fs";
 import _ from "lodash";
 import qs from "qs";
+import config from "./config";
 
 const apiUri = "https://openapi.youdao.com/v2/api";
 const appKey = "4a8802ec639e5e84";
 const appSecret = "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19";
-const chunkSize = 50;
+const chunkSize = 100;
 
 type IParams = {
   appKey: string;
@@ -58,19 +60,51 @@ const fetchApi = async (input: string[]) => {
 export const translate = async (input: string | string[]) => {
   const inputArr = Array.isArray(input) ? input : [input];
   const chunkArr = _.chunk(inputArr, chunkSize);
+  let translateCacheData: Record<string, string> = {};
+  try {
+    const stat = fs.statSync(config.translateCache);
+    if (stat.isFile()) {
+      translateCacheData =
+        JSON.parse(
+          fs.readFileSync(config.translateCache, "utf-8").toString()
+        ) || {};
+    }
+  } catch (err) {}
+  // console.log("translateCacheData: ", translateCacheData);
   const chunkResArr = await Promise.all(
-    chunkArr.map(async () => await fetchApi(inputArr))
-  );
-  return _.flatten(
-    chunkResArr.map(({ data }, index) => {
+    chunkArr.map(async (inputArr) => {
+      const newInputArr = inputArr.filter((item) => !translateCacheData[item]);
+      const { data } = await fetchApi(newInputArr);
+      // console.log("data: ", data);
       if (data.translateResults) {
-        return data.translateResults.map((item: any) =>
-          _.words(item.translation)
-            .map((word) => _.upperFirst(word))
-            .join("")
-        );
+        const apiTransMap = (
+          data.translateResults as {
+            query: string;
+            translation: string;
+            type: string;
+          }[]
+        )
+          .map((item, index) => ({
+            [newInputArr[index]]: _.words(item.translation)
+              .map((word) => _.upperFirst(word))
+              .join(""),
+          }))
+          .reduce(
+            (pre, next) => ({ ...pre, ...next }),
+            {} as Record<string, string>
+          );
+        console.log("apiTransMap: ", apiTransMap);
+        translateCacheData = {
+          ...translateCacheData,
+          ...apiTransMap,
+        };
       }
-      return chunkArr[index];
+      return inputArr.map((item) => translateCacheData[item] || item);
     })
   );
+  fs.writeFileSync(
+    config.translateCache,
+    JSON.stringify(translateCacheData, null, 2)
+  );
+  return _.flatten(chunkResArr);
 };

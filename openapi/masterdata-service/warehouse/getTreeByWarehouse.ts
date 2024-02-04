@@ -1,16 +1,16 @@
 // JSONResult«List«仓位树返回VO»»
-export interface IJSONResultList仓位树返回VO {
+export interface IJSONResultListPositionTreeReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓位树返回VO[];
+    data: IPositionTreeReturnsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓位树返回VO
-export interface I仓位树返回VO {
+export interface IPositionTreeReturnsVO {
     // id
     id: number;
     // 仓位名称
@@ -30,5 +30,5 @@ export interface I仓位树返回VO {
     // 仓库名称
     storehouseName: string;
     // 子仓位
-    children: I仓位树返回VO[];
+    children: IPositionTreeReturnsVO[];
 }

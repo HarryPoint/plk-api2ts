@@ -1,16 +1,16 @@
 // JSONResult«List«项目模板响应DTO»»
-export interface IJSONResultList项目模板响应DTO {
+export interface IJSONResultListProjectTemplateRespondsToTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目模板响应DTO[];
+    data: IProjectTemplatesRespondToDtos[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目模板响应DTO
-export interface I项目模板响应DTO {
+export interface IProjectTemplatesRespondToDtos {
     // 项目模板id
     id: number;
     // 项目名称

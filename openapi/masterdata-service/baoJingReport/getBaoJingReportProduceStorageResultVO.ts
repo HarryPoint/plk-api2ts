@@ -1,5 +1,5 @@
 // 宝晶报表(库存)相关搜索DTO
-export interface I宝晶报表库存相关搜索DTO {
+export interface IBaojingReportInventoryRelatedSearchDTO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I宝晶报表库存相关搜索DTO {
     // 物料规格
     majorDataSpec: string;
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 外部编码
@@ -34,25 +34,25 @@ export interface I宝晶报表库存相关搜索DTO {
     materialCurators: string[];
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // JSONResult«分页信息«宝晶报表(成品日报表)响应对象»»
-export interface IJSONResult分页信息宝晶报表成品日报表响应对象 {
+export interface IJSONResultPageInformationBaojingReportProductDailyReportResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息宝晶报表成品日报表响应对象;
+    data: IPageInformationBaojingReportProductDailyReportResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«宝晶报表(成品日报表)响应对象»
-export interface I分页信息宝晶报表成品日报表响应对象 {
+export interface IPageInformationBaojingReportProductDailyReportResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -62,7 +62,7 @@ export interface I分页信息宝晶报表成品日报表响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I宝晶报表成品日报表响应对象[];
+    list: IBaojingReportFinishedDailyReportResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -75,7 +75,7 @@ export interface I分页信息宝晶报表成品日报表响应对象 {
     nextPage: number;
 }
 // 宝晶报表(成品日报表)响应对象
-export interface I宝晶报表成品日报表响应对象 {
+export interface IBaojingReportFinishedDailyReportResponseObject {
     // 物料id
     majorDataId: number;
     // 物料编号

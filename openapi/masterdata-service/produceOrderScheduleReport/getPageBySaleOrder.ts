@@ -1,11 +1,11 @@
 // 生产排产订单搜索VO
-export interface I生产排产订单搜索VO {
+export interface IProductionSchedulingOrderSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编号
     produceOrderCode: string;
     // 父级订单编号
@@ -26,25 +26,25 @@ export interface I生产排产订单搜索VO {
     startTimeOfEndTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«排产订单报表VO(销售单维度)»»
-export interface IJSONResult分页信息排产订单报表VO销售单维度 {
+export interface IJSONResultPageInformationSchedulingOrderReportVOSalesSingleDimension {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息排产订单报表VO销售单维度;
+    data: IPageInformationSchedulingOrderReportVOSalesSingleDimension;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«排产订单报表VO(销售单维度)»
-export interface I分页信息排产订单报表VO销售单维度 {
+export interface IPageInformationSchedulingOrderReportVOSalesSingleDimension {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -54,7 +54,7 @@ export interface I分页信息排产订单报表VO销售单维度 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I排产订单报表VO销售单维度[];
+    list: IProductionSchedulingOrderReportVOSalesSingleDimension[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -67,7 +67,7 @@ export interface I分页信息排产订单报表VO销售单维度 {
     nextPage: number;
 }
 // 排产订单报表VO(销售单维度)
-export interface I排产订单报表VO销售单维度 {
+export interface IProductionSchedulingOrderReportVOSalesSingleDimension {
     // 生产订单id
     id: number;
     // 销售单id
@@ -97,11 +97,11 @@ export interface I排产订单报表VO销售单维度 {
     // 订单计划结束时间
     endTime: string;
     // 计划产量列表
-    orderDayPlanQuantityList: IIdcodename值VO[];
+    orderDayPlanQuantityList: IIdcodenameIndicatesTheValueVO[];
     // 工序完成进度列表
-    routingStepCompleteProgressList: IIdcodename值VO[];
+    routingStepCompleteProgressList: IIdcodenameIndicatesTheValueVO[];
     // 工序步骤计划列表
-    routingStepPlanList: I排产订单报表工序步骤计划VO[];
+    routingStepPlanList: IProductionSchedulingOrderReportProcessStepPlanVO[];
     // 销售订单号
     salesOrderCode: string;
     // 销售单详情id
@@ -110,7 +110,7 @@ export interface I排产订单报表VO销售单维度 {
     salesOrderMaterialName: string;
 }
 // Id，code, name, 值VO
-export interface IIdcodename值VO {
+export interface IIdcodenameIndicatesTheValueVO {
     // id
     id: number;
     // 编号
@@ -121,7 +121,7 @@ export interface IIdcodename值VO {
     value: number;
 }
 // 排产订单报表工序步骤计划VO
-export interface I排产订单报表工序步骤计划VO {
+export interface IProductionSchedulingOrderReportProcessStepPlanVO {
     // 工艺路径步骤id
     routingStepId: number;
     // 工序编号
@@ -143,5 +143,5 @@ export interface I排产订单报表工序步骤计划VO {
     // 计划结束时间
     endTime: string;
     // 计划产量列表
-    routingStepPlanDayQuantityList: IIdcodename值VO[];
+    routingStepPlanDayQuantityList: IIdcodenameIndicatesTheValueVO[];
 }

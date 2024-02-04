@@ -7,7 +7,7 @@ export interface I产能分页查询对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 所属工序id
     processId: number;
     // 名称 -- 模糊查询
@@ -18,7 +18,7 @@ export interface I产能分页查询对象 {
     dataStatus: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

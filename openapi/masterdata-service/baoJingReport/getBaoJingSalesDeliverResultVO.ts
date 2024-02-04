@@ -1,11 +1,11 @@
 // 宝晶销售发货报表搜索VO
-export interface I宝晶销售发货报表搜索VO {
+export interface IBaojingSalesDeliveryReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 客户id集
     customerIds: number[];
     // 产品名称
@@ -36,40 +36,40 @@ export interface I宝晶销售发货报表搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«宝晶销售发货报表返回VO»
-export interface IJSONResult宝晶销售发货报表返回VO {
+export interface IJSONResultBaojingSalesDeliveryReportReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶销售发货报表返回VO;
+    data: IBaojingSalesDeliveryReportReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶销售发货报表返回VO
-export interface I宝晶销售发货报表返回VO {
+export interface IBaojingSalesDeliveryReportReturnedToVO {
     // 数据表
-    tablePage: I分页信息宝晶销售发货报表表格返回VO;
+    tablePage: IPaginationInformationBaojingSalesDeliveryReportFormReturnsToVO;
     // 产品维度
-    majorData: I宝晶销售发货报表图表返回VO[];
+    majorData: IBaojingSalesDeliveryReportChartReturnedToVO[];
     // 材质维度
-    texture: I宝晶销售发货报表图表返回VO[];
+    texture: IBaojingSalesDeliveryReportChartReturnedToVO[];
     // 客户维度
-    customer: I宝晶销售发货报表图表返回VO[];
+    customer: IBaojingSalesDeliveryReportChartReturnedToVO[];
     // 业务员维度
-    businessUser: I宝晶销售发货报表图表返回VO[];
+    businessUser: IBaojingSalesDeliveryReportChartReturnedToVO[];
     // 送货量维度
-    delivery: I宝晶销售发货报表图表时间返回VO[];
+    delivery: IBaojingSalesDeliveryReportChartTimeReturnVO[];
 }
 // 分页信息«宝晶销售发货报表表格返回VO»
-export interface I分页信息宝晶销售发货报表表格返回VO {
+export interface IPaginationInformationBaojingSalesDeliveryReportFormReturnsToVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -79,7 +79,7 @@ export interface I分页信息宝晶销售发货报表表格返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I宝晶销售发货报表表格返回VO[];
+    list: IBaojingSalesDeliveryReportFormReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -92,7 +92,7 @@ export interface I分页信息宝晶销售发货报表表格返回VO {
     nextPage: number;
 }
 // 宝晶销售发货报表表格返回VO
-export interface I宝晶销售发货报表表格返回VO {
+export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     // 发货日期
     deliverDate: string;
     // 单据编号
@@ -142,17 +142,17 @@ export interface I宝晶销售发货报表表格返回VO {
     // 数据id
     detailDataId: number;
     // 包材数据列表
-    packagingMaterialValueList: IId值VO[];
+    packagingMaterialValueList: IIdValueVO[];
 }
 // Id，值VO
-export interface IId值VO {
+export interface IIdValueVO {
     // id
     id: number;
     // 值
     value: number;
 }
 // 宝晶销售发货报表图表返回VO
-export interface I宝晶销售发货报表图表返回VO {
+export interface IBaojingSalesDeliveryReportChartReturnedToVO {
     // x轴名称
     title: string;
     // 数量
@@ -161,7 +161,7 @@ export interface I宝晶销售发货报表图表返回VO {
     ratio: number;
 }
 // 宝晶销售发货报表图表时间返回VO
-export interface I宝晶销售发货报表图表时间返回VO {
+export interface IBaojingSalesDeliveryReportChartTimeReturnVO {
     // 时间
     time: string;
     // 数量

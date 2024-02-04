@@ -1,23 +1,23 @@
 // JSONResult«导出信息«寄售入库分析报表返回VO»»
-export interface IJSONResult导出信息寄售入库分析报表返回VO {
+export interface IJSONResultExportInformationConsignmentInboundAnalysisReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息寄售入库分析报表返回VO;
+    data: IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«寄售入库分析报表返回VO»
-export interface I导出信息寄售入库分析报表返回VO {
+export interface IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I寄售入库分析报表返回VO[];
+    itemList: IConsignmentInboundAnalysisReportReturnedToVO[];
 }
 // 寄售入库分析报表返回VO
-export interface I寄售入库分析报表返回VO {
+export interface IConsignmentInboundAnalysisReportReturnedToVO {
     // 单据编号
     workOrderNo: string;
     // 销售订单编号

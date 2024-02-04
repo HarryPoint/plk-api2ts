@@ -5,32 +5,32 @@ export interface I用户主数据选择列表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 用户名称/编号
     nameOrCode: string;
     // 员工ID列表
     idList: number[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«List«员工响应对象»»
-export interface IJSONResultList员工响应对象 {
+export interface IJSONResultListEmployeeResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I员工响应对象[];
+    data: IEmployeeResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 员工响应对象
-export interface I员工响应对象 {
+export interface IEmployeeResponseObject {
     // 创建用户ID
     createUserId: number;
     // 创建用户名

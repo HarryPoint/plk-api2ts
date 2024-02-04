@@ -1,16 +1,16 @@
 // JSONResult«List«项目任务甘特图阶段响应对象»»
-export interface IJSONResultList项目任务甘特图阶段响应对象 {
+export interface IJSONResultListProjectTaskGanttChartPhaseResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务甘特图阶段响应对象[];
+    data: IProjectTaskGanttChartPhaseResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务甘特图阶段响应对象
-export interface I项目任务甘特图阶段响应对象 {
+export interface IProjectTaskGanttChartPhaseResponseObject {
     // 项目id
     projectId: number;
     // 项目名称
@@ -30,10 +30,10 @@ export interface I项目任务甘特图阶段响应对象 {
     // 项目阶段排序
     projectStageSort: number;
     // 下级任务列表
-    children: I项目任务甘特图任务响应对象[];
+    children: IProjectTaskGanttChartTaskResponseObject[];
 }
 // 项目任务甘特图任务响应对象
-export interface I项目任务甘特图任务响应对象 {
+export interface IProjectTaskGanttChartTaskResponseObject {
     // 任务id
     id: number;
     // 任务名称
@@ -67,7 +67,7 @@ export interface I项目任务甘特图任务响应对象 {
     // 超期天数(天)
     overdueDay: number;
     // 前置任务列表
-    preTaskList: I项目任务前置任务响应对象[];
+    preTaskList: IProjectTaskPreTaskResponseObject[];
     // 上级任务id
     parentId: number;
     // 上级任务名称
@@ -109,10 +109,10 @@ export interface I项目任务甘特图任务响应对象 {
     // 更新时间
     updateTime: string;
     // 下级任务列表
-    children: I项目任务甘特图任务响应对象[];
+    children: IProjectTaskGanttChartTaskResponseObject[];
 }
 // 项目任务前置任务响应对象
-export interface I项目任务前置任务响应对象 {
+export interface IProjectTaskPreTaskResponseObject {
     // 任务id
     id: number;
     // 任务名称

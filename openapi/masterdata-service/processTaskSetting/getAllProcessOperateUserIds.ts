@@ -1,5 +1,5 @@
 // 工序操作人员id搜索VO
-export interface I工序操作人员id搜索VO {
+export interface IProcessOperatorIdSearchVO {
     // 当前页面
     pageNo: number;
     // 工序id
@@ -7,12 +7,12 @@ export interface I工序操作人员id搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 员工类型
     userType: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

@@ -1,5 +1,5 @@
 // 设备统计数据搜索VO
-export interface I设备统计数据搜索VO {
+export interface IDeviceStatisticsSearchVO {
     // 设备id集
     deviceIds: number[];
     // 查询参数id集

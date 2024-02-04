@@ -1,5 +1,5 @@
 // 质检任务针对员工端搜索VO_1
-export interface ITheInspectionTaskSearchesForVO1OnTheEmployee {
+export interface I质检任务针对员工端搜索VO_1 {
     // 当前页面
     pageNo: number;
     // 任务状态
@@ -25,18 +25,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«质检任务返回VO»»
-export interface IJSONResultThePageInformationInspectionTaskReturnsVO {
+export interface IJSONResult分页信息质检任务返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IThePageInformationInspectionTaskReturnsVO;
+    data: I分页信息质检任务返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质检任务返回VO»
-export interface IThePageInformationInspectionTaskReturnsVO {
+export interface I分页信息质检任务返回VO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface IThePageInformationInspectionTaskReturnsVO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: ITheInspectionTaskReturnsVO[];
+    list: I质检任务返回VO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface IThePageInformationInspectionTaskReturnsVO {
     nextPage: number;
 }
 // 质检任务返回VO
-export interface ITheInspectionTaskReturnsVO {
+export interface I质检任务返回VO {
     // id
     id: number;
     // 发起部门id

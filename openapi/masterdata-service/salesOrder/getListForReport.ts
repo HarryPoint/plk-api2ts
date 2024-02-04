@@ -1,5 +1,5 @@
 // 订单进度统计查询VO
-export interface IOrderProgressStatisticsQueryVO {
+export interface I订单进度统计查询VO {
     // 当前页面
     pageNo: number;
     // 分页大小

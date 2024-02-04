@@ -1,11 +1,11 @@
 // 寄售入库分析报表搜索VO
-export interface I寄售入库分析报表搜索VO {
+export interface IConsignmentInboundAnalysisReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 客户id
     customerId: number[];
     // 日期结束时间 yyyy-MM-dd HH:mm:ss
@@ -32,7 +32,7 @@ export interface I寄售入库分析报表搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -71,7 +71,7 @@ export interface I分页信息寄售入库分析报表返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I寄售入库分析报表返回VO[];
+    list: IConsignmentInboundAnalysisReportReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -84,7 +84,7 @@ export interface I分页信息寄售入库分析报表返回VO {
     nextPage: number;
 }
 // 寄售入库分析报表返回VO
-export interface I寄售入库分析报表返回VO {
+export interface IConsignmentInboundAnalysisReportReturnedToVO {
     // 单据编号
     workOrderNo: string;
     // 销售订单编号

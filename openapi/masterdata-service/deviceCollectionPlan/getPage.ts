@@ -9,14 +9,14 @@ export interface I设备数据方案搜索VO {
     // 设备id集
     deviceIds: number[];
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 名称
     name: string;
     // 状态
     dataStatus: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -67,9 +67,9 @@ export interface I设备数采方案返回VO {
     // 版次号
     issueCode: string;
     // 设备集合
-    deviceList: IId名称编号VO[];
+    deviceList: IIdNameNumberVO[];
     // 参数
-    paramList: IId名称编号VO[];
+    paramList: IIdNameNumberVO[];
     // 备注
     remark: string;
     // 状态
@@ -82,7 +82,7 @@ export interface I设备数采方案返回VO {
     createTime: string;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

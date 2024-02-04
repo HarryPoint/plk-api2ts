@@ -5,12 +5,12 @@ export interface IJSONResultList销售订单详情返回VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I销售订单详情返回VO[];
+    data: ISalesOrderDetailsBackToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售订单详情返回VO
-export interface I销售订单详情返回VO {
+export interface ISalesOrderDetailsBackToVO {
     // 详情id
     id: number;
     // 销售订单id
@@ -60,12 +60,12 @@ export interface I销售订单详情返回VO {
     // 未转换数量
     notConvertQuantity: number;
     // 子物料生产信息
-    childMaterialProduces: I子物料生产信息VO_1[];
+    childMaterialProduces: ISubMaterialProductionInformationVO1[];
     // 生产所需其他物料
-    produceOtherMaterials: I生产所需其他物料信息VO[];
+    produceOtherMaterials: IOtherMaterialInformationRequiredForProductionVO[];
 }
 // 子物料生产信息VO_1
-export interface I子物料生产信息VO_1 {
+export interface ISubMaterialProductionInformationVO1 {
     // 物料bom明细id
     materialBomDetailId: number;
     // 物料id
@@ -101,10 +101,10 @@ export interface I子物料生产信息VO_1 {
     // 优先级
     priorityLevel: number;
     // 子物料工艺路径选择集合, 默认选中 isDefault = Y的
-    routingSelector: I工艺路径选择VO[];
+    routingSelector: IProcessPathSelectionVO[];
 }
 // 工艺路径选择VO
-export interface I工艺路径选择VO {
+export interface IProcessPathSelectionVO {
     // id
     id: number;
     // 工艺路径名称
@@ -123,7 +123,7 @@ export interface I工艺路径选择VO {
     materialId: number;
 }
 // 生产所需其他物料信息VO
-export interface I生产所需其他物料信息VO {
+export interface IOtherMaterialInformationRequiredForProductionVO {
     // 物料bom明细id
     materialBomDetailId: number;
     // 物料id
@@ -159,9 +159,9 @@ export interface I生产所需其他物料信息VO {
     // 优先级
     priorityLevel: number;
     // 子物料工艺路径选择集合, 默认选中 isDefault = Y的
-    routingSelector: I工艺路径选择VO[];
+    routingSelector: IProcessPathSelectionVO[];
     // 替换物料集
-    changeMajorDatas: I子物料生产信息VO_1[];
+    changeMajorDatas: ISubMaterialProductionInformationVO1[];
     // 原物料信息 - 用于重置物料
-    sourceMajorData: I生产所需其他物料信息VO;
+    sourceMajorData: IOtherMaterialInformationRequiredForProductionVO;
 }

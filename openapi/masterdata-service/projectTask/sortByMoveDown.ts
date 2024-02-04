@@ -1,5 +1,5 @@
 // 项目任务排序请求对象
-export interface I项目任务排序请求对象 {
+export interface IProjectTaskSortRequestObject {
     // 项目计划id
     projectPlanId: number;
     // 移动任务id

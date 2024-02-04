@@ -1,12 +1,12 @@
 // 设备人员能力批量编辑DTO
-export interface I设备人员能力批量编辑DTO {
+export interface IEquipmentPersonnelAbilityToBatchEditDtos {
     // 编辑项列表
-    edits: I设备人员能力编辑DTO[];
+    edits: IEquipmentPersonnelAbilityToEditDTO[];
     // 删除项列表
     deleteIds: number[];
 }
 // 设备人员能力编辑DTO
-export interface I设备人员能力编辑DTO {
+export interface IEquipmentPersonnelAbilityToEditDTO {
     // 人员能力id
     id: number;
     // 编号
@@ -18,10 +18,10 @@ export interface I设备人员能力编辑DTO {
     // 部门id
     departmentId: number;
     // 编辑能力明细
-    detailEdits: I设备人员能力明细编辑DTO[];
+    detailEdits: IEquipmentPersonnelCapabilityDetailsEditDTO[];
 }
 // 设备人员能力明细编辑DTO
-export interface I设备人员能力明细编辑DTO {
+export interface IEquipmentPersonnelCapabilityDetailsEditDTO {
     // 人员能力明细id
     detailId: number;
     // 设备类型id

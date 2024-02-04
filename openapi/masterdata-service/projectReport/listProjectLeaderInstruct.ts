@@ -20,12 +20,12 @@ export interface IJSONResultList项目领导批示报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目领导批示报表响应对象[];
+    data: IProjectLeadIndicatesReportResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目领导批示报表响应对象
-export interface I项目领导批示报表响应对象 {
+export interface IProjectLeadIndicatesReportResponseObject {
     // id
     id: number;
     // 名称

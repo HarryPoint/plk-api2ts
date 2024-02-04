@@ -1,5 +1,5 @@
 // 流程数据基础搜索VO_2
-export interface I流程数据基础搜索VO_2 {
+export interface IProcessDataBaseSearchVO2 {
     // 显示字段序列号
     showFieldSerialNoList: string[];
     // 全局搜索
@@ -7,18 +7,18 @@ export interface I流程数据基础搜索VO_2 {
     // 当前页面
     pageNo: number;
     // 字段搜索
-    dataSearchList: I流程数据明细搜索VO[];
+    dataSearchList: IProcessDataDetailsSearchVO[];
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 明细表表code，传值后，将会查询明细表数据
     tableColumnCode: string;
     // 当前的表单分组
-    currentFormDataGrouping: I表单数据分组DTO;
+    currentFormDataGrouping: IFormDataGroupingDTO;
 }
 // 流程数据明细搜索VO
-export interface I流程数据明细搜索VO {
+export interface IProcessDataDetailsSearchVO {
     // 列code
     code: string;
     // 搜索类型
@@ -35,14 +35,14 @@ export interface I流程数据明细搜索VO {
     tableCode: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // 表单数据分组DTO
-export interface I表单数据分组DTO {
+export interface IFormDataGroupingDTO {
     // 分组字段序列
     groupingFieldSerialNo: string;
     // 分组字段编码
@@ -52,7 +52,7 @@ export interface I表单数据分组DTO {
     // 分组名称
     groupingName: string;
     // 下级分组
-    children: I表单数据分组DTO[];
+    children: IFormDataGroupingDTO[];
     // 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N
     cascadeFormData: string;
     // 多级基础数据上级ID

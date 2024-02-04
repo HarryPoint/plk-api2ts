@@ -20,12 +20,12 @@ export interface IJSONResultList项目质量问题报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目质量问题报表响应对象[];
+    data: IProjectQualityProblemReportResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目质量问题报表响应对象
-export interface I项目质量问题报表响应对象 {
+export interface IProjectQualityProblemReportResponseObject {
     // id
     id: number;
     // 名称

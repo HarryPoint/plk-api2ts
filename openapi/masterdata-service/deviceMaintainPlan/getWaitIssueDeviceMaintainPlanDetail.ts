@@ -1,5 +1,5 @@
 // 保养计划明细待下发响应DTO
-export interface IMaintenancePlanDetailsToBeDeliveredResponseDTO {
+export interface I保养计划明细待下发响应DTO {
     // id
     id: number;
     // 设备保养计划id

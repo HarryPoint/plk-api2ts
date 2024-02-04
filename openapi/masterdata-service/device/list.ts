@@ -1,16 +1,16 @@
 // JSONResult«List«设备DTO»»
-export interface IJSONResultList设备DTO {
+export interface IJSONResultListDeviceDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备DTO[];
+    data: IDeviceDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备DTO
-export interface I设备DTO {
+export interface IDeviceDTO {
     // id
     id: number;
     // 设备名称

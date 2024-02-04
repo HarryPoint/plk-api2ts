@@ -14,10 +14,10 @@ export interface I导出信息宝晶应收账款分析报表表格返回VO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I宝晶应收账款分析报表表格返回VO[];
+    itemList: IBaojingAccountsReceivableAnalysisReportFormReturnedToVO[];
 }
 // 宝晶应收账款分析报表表格返回VO
-export interface I宝晶应收账款分析报表表格返回VO {
+export interface IBaojingAccountsReceivableAnalysisReportFormReturnedToVO {
     // 业务员id
     businessUserId: number;
     // 业务员名称

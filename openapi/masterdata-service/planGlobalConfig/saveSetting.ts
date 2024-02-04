@@ -1,5 +1,5 @@
 // 排产参数DTO
-export interface I排产参数DTO {
+export interface ISchedulingParametersDTO {
     // 排产方式值
     planTypeValue: number;
     // 正排考虑因素值

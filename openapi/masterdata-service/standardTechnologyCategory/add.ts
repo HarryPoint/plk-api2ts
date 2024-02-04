@@ -1,5 +1,5 @@
 // 标准工艺分类新增请求DTO
-export interface I标准工艺分类新增请求DTO {
+export interface INewRequestDTOForStandardProcessClassification {
     // 父级分类id
     parentCategoryId: number;
     // 分类名称

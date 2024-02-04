@@ -20,12 +20,12 @@ export interface IJSONResultList项目费用报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目费用报表响应对象[];
+    data: IProjectExpenseReportResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目费用报表响应对象
-export interface I项目费用报表响应对象 {
+export interface IProjectExpenseReportResponseObject {
     // id
     id: number;
     // 名称

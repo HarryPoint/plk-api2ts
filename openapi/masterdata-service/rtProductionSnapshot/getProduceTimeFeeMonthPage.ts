@@ -5,7 +5,7 @@ export interface I工时工费月度报表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 员工id集
     userIds: number[];
     // 班组id集
@@ -16,7 +16,7 @@ export interface I工时工费月度报表搜索VO {
     endTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

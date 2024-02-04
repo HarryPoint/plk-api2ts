@@ -1,5 +1,5 @@
 // 工序字段对应表编辑DTO
-export interface I工序字段对应表编辑DTO {
+export interface IProcedureFieldsCorrespondToTableEditDTO {
     // id
     id: number;
     // 编号

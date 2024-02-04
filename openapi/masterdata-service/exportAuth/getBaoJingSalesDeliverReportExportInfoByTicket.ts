@@ -1,23 +1,23 @@
 // JSONResult«导出信息«宝晶销售发货报表表格返回VO»»
-export interface IJSONResult导出信息宝晶销售发货报表表格返回VO {
+export interface IJSONResultExportInformationBaojingSalesDeliveryReportFormReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息宝晶销售发货报表表格返回VO;
+    data: IExportInformationBaojingSalesDeliveryReportFormReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«宝晶销售发货报表表格返回VO»
-export interface I导出信息宝晶销售发货报表表格返回VO {
+export interface IExportInformationBaojingSalesDeliveryReportFormReturnToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I宝晶销售发货报表表格返回VO[];
+    itemList: IBaojingSalesDeliveryReportFormReturnedToVO[];
 }
 // 宝晶销售发货报表表格返回VO
-export interface I宝晶销售发货报表表格返回VO {
+export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     // 发货日期
     deliverDate: string;
     // 单据编号
@@ -67,10 +67,10 @@ export interface I宝晶销售发货报表表格返回VO {
     // 数据id
     detailDataId: number;
     // 包材数据列表
-    packagingMaterialValueList: IId值VO[];
+    packagingMaterialValueList: IIdValueVO[];
 }
 // Id，值VO
-export interface IId值VO {
+export interface IIdValueVO {
     // id
     id: number;
     // 值

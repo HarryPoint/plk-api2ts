@@ -6,18 +6,18 @@ export interface IImprovementRecificationQueryRequestDTO {
     dateRangeEnd: string;
 }
 // JSONResult«改进整改率»
-export interface IJSONResult改进整改率 {
+export interface IJSONResultImprovesTheRectificationRate {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I改进整改率;
+    data: IImproveTheRectificationRate;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 改进整改率
-export interface I改进整改率 {
+export interface IImproveTheRectificationRate {
     // 标题列表
     titleDefineList: ITitleDefineQueryResponseDTO[];
     // 总数

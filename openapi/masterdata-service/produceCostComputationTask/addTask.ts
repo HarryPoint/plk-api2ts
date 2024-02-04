@@ -1,5 +1,5 @@
 // 生产成本核算任务添加请求对象
-export interface I生产成本核算任务添加请求对象 {
+export interface IProductionCostingTaskAddsRequestObject {
     // 财务期间id
     fiscalPeriodId: number;
 }

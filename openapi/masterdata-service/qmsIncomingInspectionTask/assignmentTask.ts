@@ -1,5 +1,5 @@
 // 检验任务分配请求DTO
-export interface I检验任务分配请求DTO {
+export interface IVerifyTaskAssignmentRequestDTO {
     // 流程id
     flowPathId: number;
     // 任务id

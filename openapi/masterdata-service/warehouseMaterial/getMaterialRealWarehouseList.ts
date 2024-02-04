@@ -1,5 +1,5 @@
 // 物料实时库存查询返回VO
-export interface I物料实时库存查询返回VO {
+export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     // 物料ids
     materialIds: number[];
     // 仓库ids
@@ -8,18 +8,18 @@ export interface I物料实时库存查询返回VO {
     warehouseTypes: string[];
 }
 // JSONResult«List«物料实时库从返回VO»»
-export interface IJSONResultList物料实时库从返回VO {
+export interface IJSONResultListMaterialRealTimeLibraryFromVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I物料实时库从返回VO[];
+    data: IMaterialRealTimeLibraryFromBackToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 物料实时库从返回VO
-export interface I物料实时库从返回VO {
+export interface IMaterialRealTimeLibraryFromBackToVO {
     // 物料id
     materialId: number;
     // 物料名称

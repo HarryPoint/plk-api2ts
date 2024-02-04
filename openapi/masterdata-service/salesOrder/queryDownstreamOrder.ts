@@ -4,18 +4,18 @@ export interface IIdCollectionInformation {
     ids: number[];
 }
 // JSONResult«List«关联单据响应»»
-export interface IJSONResultListAssociatesTheDocumentResponse {
+export interface IJSONResultList关联单据响应 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IAssociatedDocumentResponse[];
+    data: I关联单据响应[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 关联单据响应
-export interface IAssociatedDocumentResponse {
+export interface I关联单据响应 {
     // 单据id
     id: number;
     // 单据编号

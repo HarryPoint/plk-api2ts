@@ -1,20 +1,21 @@
 import fs from "fs";
 import path from "path";
 import { Project } from "ts-morph";
+import config from "./config";
 import { createDefinitions } from "./createDefinitions";
 
-const argv = require("yargs").argv;
-
-const dir = path.join(__dirname, "..", argv.dir);
-
 const readFiles = async (dir: string, project: Project) => {
-  const files = await fs.readdirSync(dir);
+  const files = fs.readdirSync(dir);
   for (let file of files) {
     const filePath = path.join(dir, file);
-    const stat = await fs.statSync(filePath);
+    const stat = fs.statSync(filePath);
     const info = path.parse(filePath);
-    if (stat.isFile() && info.ext === ".json") {
-      const data = await fs.readFileSync(filePath);
+    if (
+      stat.isFile() &&
+      info.ext === ".json" &&
+      filePath !== config.translateCache
+    ) {
+      const data = fs.readFileSync(filePath);
       const swaggerData = JSON.parse(data.toString());
       const tsPath = path.join(info.dir, `${info.name}.ts`);
       const definitionsFile = project.createSourceFile(tsPath, "", {
@@ -40,4 +41,4 @@ const main = async (dir: string) => {
   await readFiles(dir, project);
   await project.save();
 };
-main(dir);
+main(config.dir);

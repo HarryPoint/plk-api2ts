@@ -11,7 +11,7 @@ export interface I宝晶物料主数据库存分布搜索VO {
     // 编号
     materialCode: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 物料id
     materialId: number;
     // 仓库id
@@ -26,7 +26,7 @@ export interface I宝晶物料主数据库存分布搜索VO {
     warehousePurposeList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

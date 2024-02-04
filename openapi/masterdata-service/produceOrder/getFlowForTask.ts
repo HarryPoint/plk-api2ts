@@ -14,12 +14,12 @@ export interface IJSONResultList生产处理基础信息响应DTO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产处理基础信息响应DTO[];
+    data: IProductionProcessingBasicInformationRespondsToDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产处理基础信息响应DTO
-export interface I生产处理基础信息响应DTO {
+export interface IProductionProcessingBasicInformationRespondsToDTO {
     // id
     id: number;
     // 所属生产任务id
@@ -63,7 +63,7 @@ export interface I生产处理基础信息响应DTO {
     // 图片Url集合
     imageUrls: string[];
     // 工艺卡录入信息 - 仅已进出站有工艺卡信息时有值
-    inputList: I进出站关键参数明细响应DTO[];
+    inputList: IKeyParametersInAndOutOfTheStationDetailResponseDTO[];
     // 异常描述
     desc: string;
     // 处理人id
@@ -82,7 +82,7 @@ export interface I生产处理基础信息响应DTO {
     materialId: number;
 }
 // 进出站关键参数明细响应DTO
-export interface I进出站关键参数明细响应DTO {
+export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     // 明细id
     id: number;
     // 明细名称/标题

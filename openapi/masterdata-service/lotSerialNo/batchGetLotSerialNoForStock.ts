@@ -1,5 +1,5 @@
 // 批次/序列号申请DTO
-export interface IBatchSerialNumberRequestDTO {
+export interface I批次序列号申请DTO {
     // 批次/序列号方案id
     lotSerialNumPlanId: number;
     // 需申请数量
@@ -20,20 +20,20 @@ export interface IBatchSerialNumberRequestDTO {
     continuousApplyQuantity: number;
 }
 // JSONResult«批次号使用DTO»
-export interface IJSONResultBatchNumberUsesDTO {
+export interface IJSONResult批次号使用DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ITheBatchNumberUsesDTO;
+    data: I批次号使用DTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 批次号使用DTO
-export interface ITheBatchNumberUsesDTO {
+export interface I批次号使用DTO {
     // 异常批次号
-    lotSerialNoErrorList: ITheBatchNumberUsesAnAbnormalDTO[];
+    lotSerialNoErrorList: I批次号使用异常DTO[];
     // 批次号
     lotSerialNoList: string[];
     // 偏移量
@@ -42,7 +42,7 @@ export interface ITheBatchNumberUsesDTO {
     commonErrorInfo: string;
 }
 // 批次号使用异常DTO
-export interface ITheBatchNumberUsesAnAbnormalDTO {
+export interface I批次号使用异常DTO {
     // 批次号
     lotSerialNo: string;
     // 异常信息集合

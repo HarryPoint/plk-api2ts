@@ -1,5 +1,5 @@
 // 财务期间结存请求
-export interface I财务期间结存请求 {
+export interface IFinancialPeriodBalanceRequest {
     // ID
     id: number;
 }

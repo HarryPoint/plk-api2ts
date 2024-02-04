@@ -9,7 +9,7 @@ export interface I设备保养日历请求DTO {
     // 设备ids
     deviceIds: number[];
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 导出字段集
@@ -38,7 +38,7 @@ export interface I设备保养日历请求DTO {
     endPlanTaskStartDate: string;
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y

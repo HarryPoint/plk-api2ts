@@ -1,5 +1,5 @@
 // 计划开始结束日期查询DTO
-export interface IScheduleStartEndDateQueryTheDTO {
+export interface I计划开始结束日期查询DTO {
     // planId
     planId: number;
     // 计划开始日期
@@ -8,18 +8,18 @@ export interface IScheduleStartEndDateQueryTheDTO {
     planEndDate: string;
 }
 // JSONResult«List«保养计划响应DTO»»
-export interface IJSONResultListMaintenancePlanRespondsToTheDTO {
+export interface IJSONResultList保养计划响应DTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IMaintenancePlanRespondsToDTO[];
+    data: I保养计划响应DTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 保养计划响应DTO
-export interface IMaintenancePlanRespondsToDTO {
+export interface I保养计划响应DTO {
     // id
     id: number;
     // 编号
@@ -37,10 +37,10 @@ export interface IMaintenancePlanRespondsToDTO {
     // 备注
     remark: string;
     // 计划明细
-    planDetailList: IMaintenancePlanDetailsRespondToDTO[];
+    planDetailList: I保养计划明细响应DTO[];
 }
 // 保养计划明细响应DTO
-export interface IMaintenancePlanDetailsRespondToDTO {
+export interface I保养计划明细响应DTO {
     // 设备id
     deviceId: number;
     // 设备编号
@@ -62,10 +62,10 @@ export interface IMaintenancePlanDetailsRespondToDTO {
     // 所属区域
     areaName: string;
     // 保养明细
-    planDetails: IMaintenancePlanDetailsRespondToDTO[];
+    planDetails: I保养计划明细项响应DTO[];
 }
 // 保养计划明细项响应DTO
-export interface IMaintenancePlanDetailsRespondToDTO {
+export interface I保养计划明细项响应DTO {
     // 保养类型
     maintainType: string;
     // 保养方案id
@@ -73,10 +73,10 @@ export interface IMaintenancePlanDetailsRespondToDTO {
     // 保养方案名称
     maintainSchemeName: string;
     // 保养时间
-    times: IMaintenancePlanDetailsTimeResponseDTO[];
+    times: I保养计划明细项时间响应DTO[];
 }
 // 保养计划明细项时间响应DTO
-export interface IMaintenancePlanDetailsTimeResponseDTO {
+export interface I保养计划明细项时间响应DTO {
     // id
     id: number;
     // 设备保养计划id

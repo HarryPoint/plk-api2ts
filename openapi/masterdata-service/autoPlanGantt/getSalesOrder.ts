@@ -1,5 +1,5 @@
 // 甘特图搜索VO
-export interface I甘特图搜索VO {
+export interface IGanttChartSearchVO {
     // 开始日期 yyyy-MM-dd
     beginDate: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface I甘特图搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编码
     produceOrderCode: string;
     // 工艺路径ID列表
@@ -22,32 +22,32 @@ export interface I甘特图搜索VO {
     orderStatusList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«销售订单甘特图返回VO»
-export interface IJSONResult销售订单甘特图返回VO {
+export interface IJSONResultSalesOrdersGanttChartBackToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I销售订单甘特图返回VO;
+    data: ISalesOrdersGanttChartBackToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售订单甘特图返回VO
-export interface I销售订单甘特图返回VO {
+export interface ISalesOrdersGanttChartBackToVO {
     // 全局时间占用集
-    timeOccupies: I占用返回VO[];
+    timeOccupies: IOccupiedReturnVO[];
     // 销售订单分页信息
-    salesOrders: I分页信息销售订单排期返回VO;
+    salesOrders: IPageInformationSalesOrderSchedulingReturnsToVO;
 }
 // 占用返回VO
-export interface I占用返回VO {
+export interface IOccupiedReturnVO {
     // 排期id
     id: number;
     // 占用工序
@@ -66,7 +66,7 @@ export interface I占用返回VO {
     scheduleType: string;
 }
 // 分页信息«销售订单排期返回VO»
-export interface I分页信息销售订单排期返回VO {
+export interface IPageInformationSalesOrderSchedulingReturnsToVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -76,7 +76,7 @@ export interface I分页信息销售订单排期返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I销售订单排期返回VO[];
+    list: ISalesOrdersAreScheduledBackToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -89,7 +89,7 @@ export interface I分页信息销售订单排期返回VO {
     nextPage: number;
 }
 // 销售订单排期返回VO
-export interface I销售订单排期返回VO {
+export interface ISalesOrdersAreScheduledBackToVO {
     // 销售订单id
     salesOrderId: number;
     // 销售订单名称
@@ -97,10 +97,10 @@ export interface I销售订单排期返回VO {
     // 销售订单编号
     salesOrderCode: string;
     // 销售订单明细集
-    details: I销售订单明细排期返回VO[];
+    details: ISalesOrderDetailsAreScheduledBackToVO[];
 }
 // 销售订单明细排期返回VO
-export interface I销售订单明细排期返回VO {
+export interface ISalesOrderDetailsAreScheduledBackToVO {
     // 销售订单明细id
     salesOrderDetailId: number;
     // 物料id
@@ -114,10 +114,10 @@ export interface I销售订单明细排期返回VO {
     // 销售订单ID
     salesOrderId: number;
     // 生产订单集
-    produceOrderTimes: I生产订单时间返回VO[];
+    produceOrderTimes: IProductionOrderTimeBackToVO[];
 }
 // 生产订单时间返回VO
-export interface I生产订单时间返回VO {
+export interface IProductionOrderTimeBackToVO {
     // 排期id
     scheduleId: number;
     // 生产订单id

@@ -1,16 +1,16 @@
 // JSONResult«List«员工VO»»
-export interface IJSONResultList员工VO {
+export interface IJSONResultListEmployeeVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I员工VO[];
+    data: IEmployeeVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 员工VO
-export interface I员工VO {
+export interface IEmployeeVO {
     // id
     id: number;
     // 员工工号

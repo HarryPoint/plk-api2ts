@@ -1,5 +1,5 @@
 // 工时工费报表搜索VO
-export interface IHourlyLaborRateReportSearchVO {
+export interface I工时工费报表搜索VO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«List«工时工费报表返回VO»»
-export interface IJSONResultListTheLaborCostReportReturnsToVO {
+export interface IJSONResultList工时工费报表返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ITheManHourReportReturnsToVO[];
+    data: I工时工费报表返回VO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工时工费报表返回VO
-export interface ITheManHourReportReturnsToVO {
+export interface I工时工费报表返回VO {
     // 创建时间
     createTime: string;
     // 员工id

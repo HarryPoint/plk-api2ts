@@ -9,10 +9,10 @@ export interface I工序任务搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -63,10 +63,10 @@ export interface I工序任务设置VO {
     // 是否需要分配
     isAssign: string;
     // 默认操作人员列表
-    defaultUserList: IId名称编号VO[];
+    defaultUserList: IIdNameNumberVO[];
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

@@ -1,5 +1,5 @@
 // 生产任务变更状态DTO
-export interface I生产任务变更状态DTO {
+export interface ITheProductionTaskChangesTheStatusDTO {
     // id
     id: number;
     // 状态

@@ -1,10 +1,10 @@
 // 自定义筛选项编辑list对象DTO
-export interface I自定义筛选项编辑list对象DTO {
+export interface ICustomFiltersEditTheListObjectDTO {
     // undefined
-    customFilterList: I自定义筛选项编辑对象DTO[];
+    customFilterList: ICustomFilterEditObjectDTO[];
 }
 // 自定义筛选项编辑对象DTO
-export interface I自定义筛选项编辑对象DTO {
+export interface ICustomFilterEditObjectDTO {
     // 筛选应用code
     filterApplicationCode: string;
     // 字段名称

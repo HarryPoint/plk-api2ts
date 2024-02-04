@@ -1,16 +1,16 @@
 // JSONResult«部门VO»
-export interface IJSONResult部门VO {
+export interface IJSONResultDepartmentVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I部门VO;
+    data: IDepartmentVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 部门VO
-export interface I部门VO {
+export interface IDepartmentVO {
     // id
     id: number;
     // 部门名

@@ -1,23 +1,23 @@
 // JSONResult«导出信息«宝晶报表(报废)相关返回VO»»
-export interface IJSONResult导出信息宝晶报表报废相关返回VO {
+export interface IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息宝晶报表报废相关返回VO;
+    data: IExportInformationBaojingReportScrapRelatedReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«宝晶报表(报废)相关返回VO»
-export interface I导出信息宝晶报表报废相关返回VO {
+export interface IExportInformationBaojingReportScrapRelatedReturnToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I宝晶报表报废相关返回VO[];
+    itemList: IBaojingReportScrapRelatedReturnToVO[];
 }
 // 宝晶报表(报废)相关返回VO
-export interface I宝晶报表报废相关返回VO {
+export interface IBaojingReportScrapRelatedReturnToVO {
     // 报废类型
     scrapType: string;
     // 物料id

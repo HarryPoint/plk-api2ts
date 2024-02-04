@@ -1,5 +1,5 @@
 // 准备期编辑DTO
-export interface I准备期编辑DTO {
+export interface IPreparatoryPeriodEditorDTO {
     // id
     id: number;
     // 所属工序id

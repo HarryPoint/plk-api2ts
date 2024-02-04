@@ -8,18 +8,18 @@ export interface I进出站详细搜索VO {
     wipRpId: number;
 }
 // JSONResult«进出站信息VO»
-export interface IJSONResult进出站信息VO {
+export interface IJSONResultInboundAndOutboundInformationVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I进出站信息VO;
+    data: IEntryAndExitInformationVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 进出站信息VO
-export interface I进出站信息VO {
+export interface IEntryAndExitInformationVO {
     // 进出站记录id
     moveInOutRecordId: number;
     // 任务id
@@ -35,18 +35,18 @@ export interface I进出站信息VO {
     // wip状态记录id
     wipRpId: number;
     // 工序信息
-    processInfo: I上下工序信息VO;
+    processInfo: IUpperAndLowerProcessInformationVO;
     // 成品物料信息
-    finishedMaterial: I成品物料信息VO;
+    finishedMaterial: IFinishedMaterialInformationVO;
     // BOM物料信息列表
-    bomMaterials: I进出站Bom物料确认信息VO[];
+    bomMaterials: IBomBOMMaterialConfirmationVO[];
     // 关键参数信息
     keyParametersInfo: IProduceTechnologyKeyParameterResponseDTO;
     // 当前步骤配置信息 - 用于前端判断各种情况逻辑
-    stepSetInfo: I生产工艺路径步骤设置返回VO;
+    stepSetInfo: IProductionProcessPathStepSettingsReturnVO;
 }
 // 上下工序信息VO
-export interface I上下工序信息VO {
+export interface IUpperAndLowerProcessInformationVO {
     // 工艺路径步骤
     routingStep: number;
     // 对应上工序步骤
@@ -73,7 +73,7 @@ export interface I上下工序信息VO {
     nextProcessCode: string;
 }
 // 成品物料信息VO
-export interface I成品物料信息VO {
+export interface IFinishedMaterialInformationVO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -92,7 +92,7 @@ export interface I成品物料信息VO {
     inspectionNotPassQuantity: number;
 }
 // 进出站Bom物料确认信息VO
-export interface I进出站Bom物料确认信息VO {
+export interface IBomBOMMaterialConfirmationVO {
     // 生产工艺路径步骤bom明细关联id
     id: number;
     // 对应物料id
@@ -217,7 +217,7 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     imageUrls: string[];
 }
 // 生产工艺路径步骤设置返回VO
-export interface I生产工艺路径步骤设置返回VO {
+export interface IProductionProcessPathStepSettingsReturnVO {
     // id
     id: number;
     // 进出站方式

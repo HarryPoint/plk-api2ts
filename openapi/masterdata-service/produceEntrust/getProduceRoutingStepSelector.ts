@@ -1,16 +1,16 @@
 // JSONResult«List«工艺路径步骤选择VO»»
-export interface IJSONResultList工艺路径步骤选择VO {
+export interface IJSONResultListProcessPathStepsSelectVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工艺路径步骤选择VO[];
+    data: IProcessPathStepSelectVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工艺路径步骤选择VO
-export interface I工艺路径步骤选择VO {
+export interface IProcessPathStepSelectVO {
     // id
     id: number;
     // 对应步骤

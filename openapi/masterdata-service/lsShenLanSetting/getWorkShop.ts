@@ -1,27 +1,27 @@
 // JSONResult«深蓝车间看板响应VO»
-export interface IJSONResult深蓝车间看板响应VO {
+export interface IJSONResultDarkBlueWorkshopKanbanRespondsToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I深蓝车间看板响应VO;
+    data: IDeepBlueWorkshopKanbanRespondsToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 深蓝车间看板响应VO
-export interface I深蓝车间看板响应VO {
+export interface IDeepBlueWorkshopKanbanRespondsToVO {
     // 生产概览-左上
-    productionOverview: I车间生产概览统计响应VO;
+    productionOverview: IWorkshopProductionOverviewStatisticalResponseVO;
     // 订单完工率-右上
-    completeRates: I车间及时入库率响应VO[];
+    completeRates: IWorkshopTimelyInventoryRateRespondsToVO[];
     // 日计划及生产进度-右下
-    dayPlans: I车间日计划及生产进度响应VO[];
+    dayPlans: IWorkshopDailyPlanAndProductionScheduleRespondToVO[];
     // 工作中心看板-左下
-    workCenters: I工作中心生产进度响应VO[];
+    workCenters: IWorkCenterProductionScheduleRespondsToVO[];
 }
 // 车间生产概览统计响应VO
-export interface I车间生产概览统计响应VO {
+export interface IWorkshopProductionOverviewStatisticalResponseVO {
     // 生产订单总数
     produceOrderQuantity: number;
     // 已开工数量
@@ -34,7 +34,7 @@ export interface I车间生产概览统计响应VO {
     completeRatio: number;
 }
 // 车间及时入库率响应VO
-export interface I车间及时入库率响应VO {
+export interface IWorkshopTimelyInventoryRateRespondsToVO {
     // 日期
     date: string;
     // 当日完成数量
@@ -45,7 +45,7 @@ export interface I车间及时入库率响应VO {
     completeRate: number;
 }
 // 车间日计划及生产进度响应VO
-export interface I车间日计划及生产进度响应VO {
+export interface IWorkshopDailyPlanAndProductionScheduleRespondToVO {
     // 订单号
     produceOrderNo: string;
     // 产品名称
@@ -58,7 +58,7 @@ export interface I车间日计划及生产进度响应VO {
     completePercentage: number;
 }
 // 工作中心生产进度响应VO
-export interface I工作中心生产进度响应VO {
+export interface IWorkCenterProductionScheduleRespondsToVO {
     // 订单号
     produceOrderNo: string;
     // 工作中心名称

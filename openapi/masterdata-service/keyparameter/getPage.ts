@@ -1,5 +1,5 @@
 // 关键参数分页查询对象
-export interface I关键参数分页查询对象 {
+export interface IKeyParameterPageQueryObject {
     // 编号
     code: string;
     // 当前页面
@@ -7,7 +7,7 @@ export interface I关键参数分页查询对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 所属工序id
     processId: number;
     // 名称 -- 模糊查询
@@ -18,25 +18,25 @@ export interface I关键参数分页查询对象 {
     dataStatus: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«关键参数分页响应对象»»
-export interface IJSONResult分页信息关键参数分页响应对象 {
+export interface IJSONResultPagingInformationKeyParameterPagingResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息关键参数分页响应对象;
+    data: IPageInformationKeyParameterPageResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«关键参数分页响应对象»
-export interface I分页信息关键参数分页响应对象 {
+export interface IPageInformationKeyParameterPageResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface I分页信息关键参数分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I关键参数分页响应对象[];
+    list: IKeyParameterPagingResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface I分页信息关键参数分页响应对象 {
     nextPage: number;
 }
 // 关键参数分页响应对象
-export interface I关键参数分页响应对象 {
+export interface IKeyParameterPagingResponseObject {
     // 创建用户ID
     createUserId: number;
     // 创建用户名
@@ -87,14 +87,14 @@ export interface I关键参数分页响应对象 {
     // 关键参数名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 状态
     dataStatus: number;
 }
 // 关联下拉响应对象
-export interface I关联下拉响应对象 {
+export interface IAssociatedDropDownResponseObjects {
     // id
     id: number;
     // 显示字段名称

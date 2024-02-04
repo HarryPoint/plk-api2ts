@@ -1,5 +1,5 @@
 // 工序完成明细表查询
-export interface IProcedureCompletionListQuery {
+export interface I工序完成明细表查询 {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -51,18 +51,18 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«工序完成明细表合计响应dto»
-export interface IJSONResultProcessCompletionDetailsTotalResponseDto {
+export interface IJSONResult工序完成明细表合计响应dto {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IProcessCompletionDetailsTotalResponseDto;
+    data: I工序完成明细表合计响应dto;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工序完成明细表合计响应dto
-export interface IProcessCompletionDetailsTotalResponseDto {
+export interface I工序完成明细表合计响应dto {
     // 当日计划量
     totalPlanProduceNum: number;
     // 当日计划完工量

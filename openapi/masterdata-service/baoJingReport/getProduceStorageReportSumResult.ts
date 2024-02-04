@@ -1,5 +1,5 @@
 // 宝晶报表(库存)相关搜索DTO
-export interface I宝晶报表库存相关搜索DTO {
+export interface IBaojingReportInventoryRelatedSearchDTO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I宝晶报表库存相关搜索DTO {
     // 物料规格
     majorDataSpec: string;
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 外部编码
@@ -34,25 +34,25 @@ export interface I宝晶报表库存相关搜索DTO {
     materialCurators: string[];
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // JSONResult«宝晶报表(成品日报表)合计返回VO»
-export interface IJSONResult宝晶报表成品日报表合计返回VO {
+export interface IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶报表成品日报表合计返回VO;
+    data: IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶报表(成品日报表)合计返回VO
-export interface I宝晶报表成品日报表合计返回VO {
+export interface IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO {
     // 期初-成品数
     beginProduceQuantity: number;
     // 期初-半成品数

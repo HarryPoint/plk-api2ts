@@ -5,7 +5,7 @@ export interface I设备数采数据详单搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 设备id
     deviceId: number;
     // 是否有异常
@@ -16,7 +16,7 @@ export interface I设备数采数据详单搜索VO {
     endTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

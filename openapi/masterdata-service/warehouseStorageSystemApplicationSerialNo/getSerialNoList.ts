@@ -9,7 +9,7 @@ export interface I仓位系统应用库存序列号分页查询对象 {
     // 批次号
     lotNo: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 仓库id
     storehouseIds: number[];
     // 仓位id
@@ -18,7 +18,7 @@ export interface I仓位系统应用库存序列号分页查询对象 {
     serialNo: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

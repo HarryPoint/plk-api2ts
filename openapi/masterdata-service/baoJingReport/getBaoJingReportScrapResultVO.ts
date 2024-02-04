@@ -1,5 +1,5 @@
 // 宝晶报表(报废)相关搜索VO
-export interface I宝晶报表报废相关搜索VO {
+export interface IBaojingReportScrapRelatedSearchVO {
     // 当前页面
     pageNo: number;
     // 报废类型集
@@ -9,7 +9,7 @@ export interface I宝晶报表报废相关搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 外部编码
     materialOutsideCode: string;
     // 日期-开始 yyyy-MM-dd HH:mm:ss
@@ -26,25 +26,25 @@ export interface I宝晶报表报废相关搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«宝晶报表(报废)相关返回VO»»
-export interface IJSONResult分页信息宝晶报表报废相关返回VO {
+export interface IJSONResultPageInformationBaoJingReportScrapRelatedReturnVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息宝晶报表报废相关返回VO;
+    data: IPageInformationBaojingReportScrapRelatedReturnVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«宝晶报表(报废)相关返回VO»
-export interface I分页信息宝晶报表报废相关返回VO {
+export interface IPageInformationBaojingReportScrapRelatedReturnVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -54,7 +54,7 @@ export interface I分页信息宝晶报表报废相关返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I宝晶报表报废相关返回VO[];
+    list: IBaojingReportScrapRelatedReturnToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -67,7 +67,7 @@ export interface I分页信息宝晶报表报废相关返回VO {
     nextPage: number;
 }
 // 宝晶报表(报废)相关返回VO
-export interface I宝晶报表报废相关返回VO {
+export interface IBaojingReportScrapRelatedReturnToVO {
     // 报废类型
     scrapType: string;
     // 物料id

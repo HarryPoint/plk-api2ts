@@ -1,5 +1,5 @@
 // 准备期查询VO
-export interface I准备期查询VO {
+export interface IPreparationPeriodQueryVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -7,7 +7,7 @@ export interface I准备期查询VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 工序id
     processId: number;
     // 名称
@@ -16,7 +16,7 @@ export interface I准备期查询VO {
     ruleType: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

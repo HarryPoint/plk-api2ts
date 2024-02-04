@@ -34,9 +34,9 @@ export interface I生产任务导出表格列DTO {
     // 表格类型
     flowPathFormFieldTableType: string;
     // 表格内字段集
-    tableCustomFormFields: I流程表格列VO[];
+    tableCustomFormFields: ITheProcessTableListsVO[];
     // 编码字段编码规则集
-    numberRuleDetails: I流程表单字段编码规则明细VO[];
+    numberRuleDetails: IProcessFormFieldEncodingRuleDetailsVO[];
     // 选项集
     selectorList: IFormFieldOption[];
     // 序号值
@@ -121,7 +121,7 @@ export interface I生产任务导出表格列DTO {
     exportCode: string;
 }
 // 流程表格列VO
-export interface I流程表格列VO {
+export interface ITheProcessTableListsVO {
     // id
     id: number;
     // 企业id
@@ -145,9 +145,9 @@ export interface I流程表格列VO {
     // 表格类型
     flowPathFormFieldTableType: string;
     // 表格内字段集
-    tableCustomFormFields: I流程表格列VO[];
+    tableCustomFormFields: ITheProcessTableListsVO[];
     // 编码字段编码规则集
-    numberRuleDetails: I流程表单字段编码规则明细VO[];
+    numberRuleDetails: IProcessFormFieldEncodingRuleDetailsVO[];
     // 选项集
     selectorList: IFormFieldOption[];
     // 序号值
@@ -230,7 +230,7 @@ export interface I流程表格列VO {
     processorShowFieldCode: string;
 }
 // 流程表单字段编码规则明细VO
-export interface I流程表单字段编码规则明细VO {
+export interface IProcessFormFieldEncodingRuleDetailsVO {
     // id
     id: number;
     // 设置类型

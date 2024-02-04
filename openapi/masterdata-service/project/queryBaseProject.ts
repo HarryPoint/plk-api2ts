@@ -7,7 +7,7 @@ export interface I项目阶段任务查询对象 {
     // 项目id集
     projectIds: number[];
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 项目计划id
     projectPlanId: number;
     // 汇总聚合维度字段集
@@ -110,7 +110,7 @@ export interface I项目阶段任务查询对象 {
     projectStatus: string;
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y

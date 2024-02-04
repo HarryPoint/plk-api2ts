@@ -1,16 +1,16 @@
 // JSONResult«分页信息«销售明细表返回对象»»
-export interface IJSONResult分页信息销售明细表返回对象 {
+export interface IJSONResultPageInformationSalesListReturnedObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息销售明细表返回对象;
+    data: IPageInformationSalesDetailsReturnObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«销售明细表返回对象»
-export interface I分页信息销售明细表返回对象 {
+export interface IPageInformationSalesDetailsReturnObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息销售明细表返回对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I销售明细表返回对象[];
+    list: ISalesDetailReturnObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息销售明细表返回对象 {
     nextPage: number;
 }
 // 销售明细表返回对象
-export interface I销售明细表返回对象 {
+export interface ISalesDetailReturnObject {
     // 单据编号
     code: string;
     // 单据日期

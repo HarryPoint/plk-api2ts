@@ -5,7 +5,7 @@ export interface I仓库盘点任务分页查询对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 任务编号
     taskNo: string;
     // 盘点仓库id
@@ -26,7 +26,7 @@ export interface I仓库盘点任务分页查询对象 {
     completeEndTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

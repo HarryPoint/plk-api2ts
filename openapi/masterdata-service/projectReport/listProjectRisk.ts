@@ -20,12 +20,12 @@ export interface IJSONResultList项目风险报表响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目风险报表响应对象[];
+    data: IProjectRiskReportResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目风险报表响应对象
-export interface I项目风险报表响应对象 {
+export interface IProjectRiskReportResponseObject {
     // id
     id: number;
     // 名称

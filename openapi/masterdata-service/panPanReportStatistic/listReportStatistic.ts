@@ -1,5 +1,5 @@
 // 盼盼上报统计查询对象
-export interface I盼盼上报统计查询对象 {
+export interface IPanpanReportsStatisticsToQueryObjects {
     // 查询开始时间 yyyy-MM-dd HH:mm:ss
     beginTime: string;
     // 查询结束时间 yyyy-MM-dd HH:mm:ss
@@ -10,18 +10,18 @@ export interface I盼盼上报统计查询对象 {
     processIds: number[];
 }
 // JSONResult«List«盼盼上报统计响应对象»»
-export interface IJSONResultList盼盼上报统计响应对象 {
+export interface IJSONResultListIndicatesTheResponseObjectForPanpanToReportStatistics {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I盼盼上报统计响应对象[];
+    data: IPanpanReportsStatisticsOnResponseObjects[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 盼盼上报统计响应对象
-export interface I盼盼上报统计响应对象 {
+export interface IPanpanReportsStatisticsOnResponseObjects {
     // 物料id
     materialId: number;
     // 物料名称

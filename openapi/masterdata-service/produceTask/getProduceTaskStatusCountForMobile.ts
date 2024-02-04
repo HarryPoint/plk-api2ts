@@ -1,11 +1,11 @@
 // 生产任务查询DTO(针对移动端)
-export interface I生产任务查询DTO针对移动端 {
+export interface IProductionTaskQueryDTOForMobileEnd {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 任务类型
@@ -41,21 +41,21 @@ export interface I生产任务查询DTO针对移动端 {
     // 任务出站关键参数是否需要填写
     moveOutKeyParameterFillNeeds: string;
     // 生产订单字段搜索
-    produceOrderSearchList: I流程数据明细搜索VO[];
+    produceOrderSearchList: IProcessDataDetailsSearchVO[];
     // 查询类型
     queryType: string;
     // undefined
     userId: number;
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // 流程数据明细搜索VO
-export interface I流程数据明细搜索VO {
+export interface IProcessDataDetailsSearchVO {
     // 列code
     code: string;
     // 搜索类型

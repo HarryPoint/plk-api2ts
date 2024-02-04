@@ -45,12 +45,12 @@ export interface I仓库盘点任务清单执行端返回VO {
     // 盘点仓位编号
     warehouseCode: string;
     // 仓位层级，从高至低排列
-    warehouseList: IId名称编号VO[];
+    warehouseList: IIdNameNumberVO[];
     // 物料集
     materialList: I仓库盘点任务清单物料执行端返回DTO[];
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

@@ -1,23 +1,23 @@
 // JSONResult«导出信息«售后质量分析返回VO»»
-export interface IJSONResult导出信息售后质量分析返回VO {
+export interface IJSONResultExportInformationAfterSalesQualityAnalysisReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息售后质量分析返回VO;
+    data: IExportInformationAfterSalesQualityAnalysisReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«售后质量分析返回VO»
-export interface I导出信息售后质量分析返回VO {
+export interface IExportInformationAfterSalesQualityAnalysisReturnToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I售后质量分析返回VO[];
+    itemList: IAfterSalesQualityAnalysisReturnedToVO[];
 }
 // 售后质量分析返回VO
-export interface I售后质量分析返回VO {
+export interface IAfterSalesQualityAnalysisReturnedToVO {
     // 客户
     customer: string;
     // 业务员
@@ -41,12 +41,12 @@ export interface I售后质量分析返回VO {
     // 数量
     quantity: number;
     // 图片
-    picUrls: I附件VO[];
+    picUrls: IAnnexVO[];
     // 备注
     remark: string;
 }
 // 附件 VO
-export interface I附件VO {
+export interface IAnnexVO {
     // 文件id
     id: number;
     // 文件key

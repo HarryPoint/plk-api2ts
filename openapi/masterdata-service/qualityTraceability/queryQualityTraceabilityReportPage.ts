@@ -1,7 +1,7 @@
 // 质量追溯报表查询DTO
 export interface I质量追溯报表查询DTO {
     // 字段搜索
-    dataSearchList: I流程数据明细搜索VO[];
+    dataSearchList: IProcessDataDetailsSearchVO[];
     // 当前页面
     pageNo: number;
     // 显示字段序列号
@@ -9,10 +9,10 @@ export interface I质量追溯报表查询DTO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
 }
 // 流程数据明细搜索VO
-export interface I流程数据明细搜索VO {
+export interface IProcessDataDetailsSearchVO {
     // 列code
     code: string;
     // 搜索类型
@@ -29,7 +29,7 @@ export interface I流程数据明细搜索VO {
     tableCode: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

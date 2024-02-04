@@ -1,14 +1,14 @@
 // 表单填充请求
-export interface I表单填充请求 {
+export interface IFormFillRequest {
     // 关联字段ID
     associatedFieldId: number;
     // 填充数据项
-    itemList: I表单填充项下标[];
+    itemList: IFormFillItemSubscript[];
     // undefined
     formRecord;
 }
 // 表单填充项下标
-export interface I表单填充项下标 {
+export interface IFormFillItemSubscript {
     // 源数据ID列表
     sourceDataIdList: number[];
     // 明细行下标, 从 0 开始。

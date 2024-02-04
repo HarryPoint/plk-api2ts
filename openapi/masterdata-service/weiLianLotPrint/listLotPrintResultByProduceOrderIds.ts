@@ -1,16 +1,16 @@
 // JSONResult«List«维联批次打印模板响应对象»»
-export interface IJSONResultListPrintsTemplateResponseObjectsForTheVTLBatch {
+export interface IJSONResultList维联批次打印模板响应对象 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IVivBatchPrintTemplateResponseObject1[];
+    data: I维联批次打印模板响应对象_1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 维联批次打印模板响应对象_1
-export interface IVivBatchPrintTemplateResponseObject1 {
+export interface I维联批次打印模板响应对象_1 {
     // id
     printTemplateId: number;
     // 模板类型

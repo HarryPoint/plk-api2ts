@@ -1,11 +1,11 @@
 // 库存流水搜索VO
-export interface I库存流水搜索VO {
+export interface IInventoryFlowSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 业务主数据id（eg:物料id）
     masterDataIdList: number[];
     // 流程id(工单类型)
@@ -62,25 +62,25 @@ export interface I库存流水搜索VO {
     updateTimeBegin: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«库存流水返回VO»»
-export interface IJSONResult分页信息库存流水返回VO {
+export interface IJSONResultPagingInformationInventoryReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息库存流水返回VO;
+    data: IPagingInformationInventoryFlowReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«库存流水返回VO»
-export interface I分页信息库存流水返回VO {
+export interface IPagingInformationInventoryFlowReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -90,7 +90,7 @@ export interface I分页信息库存流水返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I库存流水返回VO[];
+    list: IStockFlowBackToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -103,7 +103,7 @@ export interface I分页信息库存流水返回VO {
     nextPage: number;
 }
 // 库存流水返回VO
-export interface I库存流水返回VO {
+export interface IStockFlowBackToVO {
     // id
     id: number;
     // 所属业务主数据id
@@ -133,7 +133,7 @@ export interface I库存流水返回VO {
     // 操作仓位id
     opWarehouseId: number;
     // 操作仓位层级，从高至低排列
-    warehouseList: IId名称编号VO[];
+    warehouseList: IIdNameNumberVO[];
     // 对应工单id
     workOrderId: number;
     // 对应工单数据id
@@ -200,7 +200,7 @@ export interface I库存流水返回VO {
     updateTime: string;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

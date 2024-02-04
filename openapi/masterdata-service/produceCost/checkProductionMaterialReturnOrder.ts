@@ -1,16 +1,16 @@
 // JSONResult«List«生产成本核算单据状态校验响应DTO»»
-export interface IJSONResultList生产成本核算单据状态校验响应DTO {
+export interface IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产成本核算单据状态校验响应DTO[];
+    data: IProductionCostAccountingDocumentStatusCheckResponseDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产成本核算单据状态校验响应DTO
-export interface I生产成本核算单据状态校验响应DTO {
+export interface IProductionCostAccountingDocumentStatusCheckResponseDTO {
     // 单据id
     billId: number;
     // 单据编号

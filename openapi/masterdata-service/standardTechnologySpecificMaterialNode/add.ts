@@ -23,27 +23,27 @@ export interface I标准工艺具体物料节点新增bom详情请求对象 {
     totalConsumeCount: number;
 }
 // JSONResult«物料BOM编辑响应对象»
-export interface IJSONResult物料BOM编辑响应对象 {
+export interface IJSONResultMaterialBOMEditResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I物料BOM编辑响应对象;
+    data: IMaterialBOMEditResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 物料BOM编辑响应对象
-export interface I物料BOM编辑响应对象 {
+export interface IMaterialBOMEditResponseObject {
     // bom id
     id: number;
     // bom code
     code: string;
     // 子物料列表
-    childMaterialList: I物料bom详情响应对象[];
+    childMaterialList: IBomDetailsResponseObject[];
 }
 // 物料bom详情响应对象
-export interface I物料bom详情响应对象 {
+export interface IBomDetailsResponseObject {
     // 物料BOM详情id
     materialBomDetailId: number;
     // 所属物料bom id

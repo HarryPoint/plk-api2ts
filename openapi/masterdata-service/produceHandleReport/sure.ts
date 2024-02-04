@@ -1,5 +1,5 @@
 // 上报反馈处理变更状态DTO
-export interface I上报反馈处理变更状态DTO {
+export interface IReportTheDTOToHandleTheChangeStatus {
     // 生产处理id
     id: number;
     // 处理意见

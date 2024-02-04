@@ -1,11 +1,11 @@
 // 库存流水搜索VO
-export interface I库存流水搜索VO {
+export interface IInventoryFlowSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 业务主数据id（eg:物料id）
     masterDataIdList: number[];
     // 流程id(工单类型)
@@ -62,7 +62,7 @@ export interface I库存流水搜索VO {
     updateTimeBegin: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

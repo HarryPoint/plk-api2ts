@@ -1,5 +1,5 @@
 // 批次转移到其他生产订单DTO
-export interface IBatchTransferToOtherProductionOrderDTO {
+export interface I批次转移到其他生产订单DTO {
     // wipRpId
     wipRpId: number;
     // 转移生产订单id

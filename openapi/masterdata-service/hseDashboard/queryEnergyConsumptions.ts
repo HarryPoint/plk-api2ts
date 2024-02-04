@@ -1,23 +1,23 @@
 // 能源消耗查询请求
-export interface IEnergyConsumptionQueryRequest {
+export interface I能源消耗查询请求 {
     // 查询日期的开始
     dateRangeBegin: string;
     // 查询日期的结束
     dateRangeEnd: string;
 }
 // JSONResult«List«能源消耗查询响应»»
-export interface IJSONResultListEnergyConsumptionQueryResponse {
+export interface IJSONResultList能源消耗查询响应 {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IEnergyConsumptionQueryResponse[];
+    data: I能源消耗查询响应[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 能源消耗查询响应
-export interface IEnergyConsumptionQueryResponse {
+export interface I能源消耗查询响应 {
     // ID
     id: number;
     // 年份

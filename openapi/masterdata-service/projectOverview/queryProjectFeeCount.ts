@@ -1,5 +1,5 @@
 // 项目概况查询dto
-export interface I项目概况查询dto {
+export interface IProjectOverviewQueryDto {
     // 项目id
     projectId: number;
     // 开始日期

@@ -1,16 +1,16 @@
 // 批次订单拆分DTO
-export interface IBatchOrderSplitDTO {
+export interface I批次订单拆分DTO {
     // wipRpId
     wipRpId: number;
     // 原批次数量
     sourceCount: number;
     // 拆分批次信息
-    lotOrders: IBatchOrderDTO[];
+    lotOrders: I批次订单DTO[];
     // 备注
     remark: string;
 }
 // 批次订单DTO
-export interface IBatchOrderDTO {
+export interface I批次订单DTO {
     // 批次名称
     lotName: string;
     // 批次数量

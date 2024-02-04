@@ -1,16 +1,16 @@
 // JSONResult«List«员工基础响应 DTO»»
-export interface IJSONResultList员工基础响应DTO {
+export interface IJSONResultListEmployeeBaseResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I员工基础响应DTO[];
+    data: IEmployeeBaseRespondsToDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 员工基础响应 DTO
-export interface I员工基础响应DTO {
+export interface IEmployeeBaseRespondsToDTO {
     // id
     id: number;
     // 员工工号

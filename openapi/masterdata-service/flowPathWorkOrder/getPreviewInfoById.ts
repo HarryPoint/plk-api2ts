@@ -1,16 +1,16 @@
 // JSONResult«流程工单预览信息返回VO»
-export interface IJSONResult流程工单预览信息返回VO {
+export interface IJSONResultProcessOrderPreviewInformationIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程工单预览信息返回VO;
+    data: IProcessTicketPreviewInformationIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程工单预览信息返回VO
-export interface I流程工单预览信息返回VO {
+export interface IProcessTicketPreviewInformationIsReturnedToVO {
     // id
     id: number;
     // 工单号

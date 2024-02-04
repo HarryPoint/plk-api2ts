@@ -1,5 +1,5 @@
 // 工费保存DTO
-export interface I工费保存DTO {
+export interface ILaborCostsSaveDTO {
     // id
     id: number;
     // 编号

@@ -1,5 +1,5 @@
 // 异常类型搜索VO
-export interface I异常类型搜索VO {
+export interface IExceptionTypeSearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -7,7 +7,7 @@ export interface I异常类型搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 名称
     name: string;
     // 类型
@@ -16,25 +16,25 @@ export interface I异常类型搜索VO {
     dataStatus: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«异常类型返回VO»»
-export interface IJSONResult分页信息异常类型返回VO {
+export interface IJSONResultPagingInformationExceptionTypeVOIsReturned {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息异常类型返回VO;
+    data: IPagingInformationExceptionTypeIsReturnedVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«异常类型返回VO»
-export interface I分页信息异常类型返回VO {
+export interface IPagingInformationExceptionTypeIsReturnedVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface I分页信息异常类型返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I异常类型返回VO[];
+    list: IExceptionTypeReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface I分页信息异常类型返回VO {
     nextPage: number;
 }
 // 异常类型返回VO
-export interface I异常类型返回VO {
+export interface IExceptionTypeReturnsVO {
     // id
     id: number;
     // 所属分类

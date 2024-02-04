@@ -1,11 +1,11 @@
 // 宝晶销售发货报表搜索VO
-export interface I宝晶销售发货报表搜索VO {
+export interface IBaojingSalesDeliveryReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 客户id集
     customerIds: number[];
     // 产品名称
@@ -36,25 +36,25 @@ export interface I宝晶销售发货报表搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«宝晶销售发货报表表格统计返回VO»
-export interface IJSONResult宝晶销售发货报表表格统计返回VO {
+export interface IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶销售发货报表表格统计返回VO;
+    data: IBaojingSalesDeliveryReportFormStatisticsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶销售发货报表表格统计返回VO
-export interface I宝晶销售发货报表表格统计返回VO {
+export interface IBaojingSalesDeliveryReportFormStatisticsReturnedToVO {
     // 发货数量总计
     actualQuantitySum: number;
 }

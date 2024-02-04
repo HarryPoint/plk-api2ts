@@ -1,5 +1,5 @@
 // 项目甘特图查询对象
-export interface I项目甘特图查询对象 {
+export interface IProjectGanttChartQueryObject {
     // 项目名称
     projectName: string;
     // 项目任务名称

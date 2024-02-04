@@ -39,10 +39,10 @@ export interface I物料bom响应对象 {
     // 是否是默认BOM
     isDefault: string;
     // 子物料列表
-    childMaterialList: I物料bom详情响应对象[];
+    childMaterialList: IBomDetailsResponseObject[];
 }
 // 物料bom详情响应对象
-export interface I物料bom详情响应对象 {
+export interface IBomDetailsResponseObject {
     // 物料BOM详情id
     materialBomDetailId: number;
     // 所属物料bom id

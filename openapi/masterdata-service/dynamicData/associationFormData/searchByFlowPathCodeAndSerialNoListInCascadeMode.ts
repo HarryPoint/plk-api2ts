@@ -1,5 +1,5 @@
 // 分页_3
-export interface I分页_3 {
+export interface IPaging3 {
     // 关联表单编码
     flowPathCode: string;
     // 当前页面
@@ -9,14 +9,14 @@ export interface I分页_3 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 显示字段编码
     showFieldCode: string;
     // 全局搜索关键字
     globalSearch: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

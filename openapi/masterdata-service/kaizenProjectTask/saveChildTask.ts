@@ -1,5 +1,5 @@
 // 主数据基础编辑 DTO_1
-export interface I主数据基础编辑DTO_1 {
+export interface IMasterDataBaseEditDTO1 {
     // 编辑数据
     data;
     // 流程任务id - 新增/重新编辑业务，要设置为null

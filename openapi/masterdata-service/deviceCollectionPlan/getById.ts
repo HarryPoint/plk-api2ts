@@ -20,7 +20,7 @@ export interface I设备数采方案明细返回VO {
     // 版次号
     issueCode: string;
     // 设备集合
-    deviceList: IId名称编号VO[];
+    deviceList: IIdNameNumberVO[];
     // 参数项
     paramList: I设备数采方案参数关联信息返回VO[];
     // 备注
@@ -35,7 +35,7 @@ export interface I设备数采方案明细返回VO {
     createTime: string;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

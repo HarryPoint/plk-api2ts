@@ -96,7 +96,7 @@ export interface I首检检验任务响应对象 {
     // undefined
     inspectionEmployeeIds: undefined[];
     // undefined
-    inspectionEmployees: I关联表单数据VO[];
+    inspectionEmployees: IAssociateFormDataVO[];
     // undefined
     isAssignment: string;
     // undefined
@@ -119,7 +119,7 @@ export interface I首检检验任务响应对象 {
     selfRecords: I首检检验检验自检记录响应对象[];
 }
 // 关联表单数据VO
-export interface I关联表单数据VO {
+export interface IAssociateFormDataVO {
     // id
     id: number;
     // 关联表单显示值

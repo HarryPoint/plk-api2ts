@@ -1,5 +1,5 @@
 // 上报反馈处理DTO
-export interface I上报反馈处理DTO {
+export interface IReportTheFeedbackProcessingDTO {
     // 生产任务id，任务外的上报反馈可不传
     produceTaskId: number;
     // 生产异常类型id

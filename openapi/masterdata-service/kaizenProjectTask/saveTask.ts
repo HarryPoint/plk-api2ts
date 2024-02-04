@@ -1,5 +1,5 @@
 // 主数据基础编辑 DTO_2
-export interface I主数据基础编辑DTO_2 {
+export interface IMasterDataBaseEditDTO2 {
     // 子任务列表
     childTaskList: IJSONObject[];
     // 编辑数据

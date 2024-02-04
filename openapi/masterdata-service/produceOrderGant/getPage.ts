@@ -7,7 +7,7 @@ export interface I生产订单甘特图搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 计划开始时间, yyyy-MM-dd HH:mm:ss
     workingBeginTime: string;
     // 计划结束时间, yyyy-MM-dd HH:mm:ss
@@ -28,7 +28,7 @@ export interface I生产订单甘特图搜索VO {
     planStatus: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

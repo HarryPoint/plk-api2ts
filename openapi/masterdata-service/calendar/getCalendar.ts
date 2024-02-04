@@ -1,5 +1,5 @@
 // 工厂日历搜索VO_1
-export interface IFactoryCalendarSearchVO1 {
+export interface I工厂日历搜索VO_1 {
     // 月份 yyyy-MM, 如果月份不为空则优先按照月份查询，如果为空，则按照开始日期-结束日期查询
     month: string;
     // 开始日期 yyyy-MM-dd, 如果月份不为空则优先按照月份查询，如果为空，则按照开始日期-结束日期查询
@@ -8,25 +8,25 @@ export interface IFactoryCalendarSearchVO1 {
     endDate: string;
 }
 // JSONResult«工厂日历返回VO»
-export interface IJSONResultFactoryCalendarReturnsVO {
+export interface IJSONResult工厂日历返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IFactoryCalendarReturnsVO;
+    data: I工厂日历返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工厂日历返回VO
-export interface IFactoryCalendarReturnsVO {
+export interface I工厂日历返回VO {
     // 排班的最后一天
     endScheduleDay: string;
     // 工厂日历详情返回VO
-    calendarDetailList: IFactoryCalendarDetailsBackToVO[];
+    calendarDetailList: I工厂日历详情返回VO[];
 }
 // 工厂日历详情返回VO
-export interface IFactoryCalendarDetailsBackToVO {
+export interface I工厂日历详情返回VO {
     // 工厂日历id
     id: number;
     // 日程安排日期
@@ -34,10 +34,10 @@ export interface IFactoryCalendarDetailsBackToVO {
     // 创建时间
     createTime: string;
     // 对应班组班次集
-    groupShifts: ICalendarShiftInformationReturnedToVO[];
+    groupShifts: I日历班次信息返回VO[];
 }
 // 日历班次信息返回VO
-export interface ICalendarShiftInformationReturnedToVO {
+export interface I日历班次信息返回VO {
     // 工厂日历与班组班次关联id
     id: number;
     // 班次id
@@ -51,7 +51,7 @@ export interface ICalendarShiftInformationReturnedToVO {
     // 班次结束时间
     classShiftEndTime: ILocalTime;
     // 班组列表信息
-    classGroupList: ICalendarGroupInformationIsReturnedToVO[];
+    classGroupList: I日历班组信息返回VO[];
 }
 // LocalTime
 export interface ILocalTime {
@@ -65,7 +65,7 @@ export interface ILocalTime {
     nano: number;
 }
 // 日历班组信息返回VO
-export interface ICalendarGroupInformationIsReturnedToVO {
+export interface I日历班组信息返回VO {
     // 班组id
     classGroupId: number;
     // 班组名称

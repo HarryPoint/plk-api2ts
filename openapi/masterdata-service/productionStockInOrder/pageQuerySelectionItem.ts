@@ -1,11 +1,11 @@
 // 分页_13
-export interface I分页_13 {
+export interface IPaging13 {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产批次列表
     productionLotNoList: string[];
     // 生产订单编号匹配
@@ -16,25 +16,25 @@ export interface I分页_13 {
     isBeforeStorageIssuanceMaterial: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»_1
-export interface IJSONResult分页信息ProduceOrderSelectionItemQueryResponseDTO_1 {
+export interface IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息ProduceOrderSelectionItemQueryResponseDTO_1;
+    data: IThePagingInformationProduceOrderSelectionItemQueryResponseDTO1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«ProduceOrderSelectionItemQueryResponseDTO»_1
-export interface I分页信息ProduceOrderSelectionItemQueryResponseDTO_1 {
+export interface IThePagingInformationProduceOrderSelectionItemQueryResponseDTO1 {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface I分页信息ProduceOrderSelectionItemQueryResponseDTO_1 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: IProduceOrderSelectionItemQueryResponseDTO_1[];
+    list: IProduceOrderSelectionItemQueryResponseDTO1[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface I分页信息ProduceOrderSelectionItemQueryResponseDTO_1 {
     nextPage: number;
 }
 // ProduceOrderSelectionItemQueryResponseDTO_1
-export interface IProduceOrderSelectionItemQueryResponseDTO_1 {
+export interface IProduceOrderSelectionItemQueryResponseDTO1 {
     // 生产订单ID
     produceOrderId: string;
     // 生产订单编码

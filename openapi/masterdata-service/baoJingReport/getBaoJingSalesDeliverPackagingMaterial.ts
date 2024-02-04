@@ -1,21 +1,21 @@
 // JSONResult«宝晶销售发货报表包材表头响应对象»
-export interface IJSONResult宝晶销售发货报表包材表头响应对象 {
+export interface IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶销售发货报表包材表头响应对象;
+    data: IBaojingSalesDeliveryReportPackageHeadResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶销售发货报表包材表头响应对象
-export interface I宝晶销售发货报表包材表头响应对象 {
+export interface IBaojingSalesDeliveryReportPackageHeadResponseObject {
     // 包材表头
-    packagingMaterialHeaders: IIdCodeName通用传输对象[];
+    packagingMaterialHeaders: IIdCodeNameGenericTransportObject[];
 }
 // Id Code Name 通用传输对象
-export interface IIdCodeName通用传输对象 {
+export interface IIdCodeNameGenericTransportObject {
     // id
     id: number;
     // code

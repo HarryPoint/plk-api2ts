@@ -1,5 +1,5 @@
 // 项目任务规则新增请求DTO
-export interface I项目任务规则新增请求DTO {
+export interface IProjectTaskRulesAddRequestDTO {
     // 项目任务ID
     projectTaskId: number;
     // 任务类型

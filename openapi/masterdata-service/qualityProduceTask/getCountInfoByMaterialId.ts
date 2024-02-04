@@ -1,16 +1,16 @@
 // JSONResult«质检物料校验信息VO»
-export interface IJSONResult质检物料校验信息VO {
+export interface IJSONResultCheckInformationVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I质检物料校验信息VO;
+    data: IQcMaterialVerificationInformationVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质检物料校验信息VO
-export interface I质检物料校验信息VO {
+export interface IQcMaterialVerificationInformationVO {
     // 质检任务信息
     qualityProduceTask: IQualityProduceTaskVO;
     // 仓库质检任务信息
@@ -163,7 +163,7 @@ export interface IQualityStorageTaskVO {
     taskType: string;
 }
 // 质检方案质检项idVO
-export interface I质检方案质检项idVO {
+export interface IQualityInspectionSolutionQualityInspectionItemIdVO {
     // undefined
     qualityPlanId: number;
     // undefined

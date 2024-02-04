@@ -1,5 +1,5 @@
 // JSONResult«Map«long,生产计划生产订单关联VO»»
-export interface IJSONResultMaplong生产计划生产订单关联VO {
+export interface IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO {
     // 返回码
     code: number;
     // 返回消息说明
@@ -10,7 +10,7 @@ export interface IJSONResultMaplong生产计划生产订单关联VO {
     ts: number;
 }
 // 生产计划生产订单关联VO
-export interface I生产计划生产订单关联VO {
+export interface IProductionPlanProductionOrderAssociatedWithVO {
     // id
     id: number;
     // 数据状态 0停用，1启用，-1已删除
@@ -34,12 +34,12 @@ export interface I生产计划生产订单关联VO {
     // 生产计划id
     producePlanId: number;
     // 生产计划
-    producePlan: I生产计划VO;
+    producePlan: IProductionScheduleVO;
     // 生产订单id
     produceOrderId: number;
 }
 // 生产计划VO
-export interface I生产计划VO {
+export interface IProductionScheduleVO {
     // id
     id: number;
     // 数据状态 0停用，1启用，-1已删除

@@ -1,11 +1,11 @@
 // 项目阶段任务查询对象_1
-export interface I项目阶段任务查询对象_1 {
+export interface IProjectPhaseTaskQueryObject1 {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 任务编号
@@ -100,25 +100,25 @@ export interface I项目阶段任务查询对象_1 {
     fromAppIds: number[];
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y
     isAsc: string;
 }
 // JSONResult«List«项目任务基础查询响应对象»»
-export interface IJSONResultList项目任务基础查询响应对象 {
+export interface IJSONResultListProjectTaskBaseQueryResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目任务基础查询响应对象[];
+    data: IProjectTaskBaseQueryResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目任务基础查询响应对象
-export interface I项目任务基础查询响应对象 {
+export interface IProjectTaskBaseQueryResponseObject {
     // 任务id
     id: number;
     // 任务名称

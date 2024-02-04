@@ -1,5 +1,5 @@
 // 质量追溯报表查询DTO
-export interface IQualityTraceabilityReportQueryDTO {
+export interface I质量追溯报表查询DTO {
     // 字段搜索
     dataSearchList: IProcessDataDetailsSearchVO[];
     // 当前页面

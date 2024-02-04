@@ -1,30 +1,30 @@
 // 子物料生产信息查询请求DTO
-export interface I子物料生产信息查询请求DTO {
+export interface ISubMaterialProductionInformationQueryRequestDTO {
     // 标准工艺ID
     standardTechnologyId: number;
     // 生产订单ID
     produceOrderId: number;
 }
 // JSONResult«子生产订单信息查询响应»
-export interface IJSONResult子生产订单信息查询响应 {
+export interface IJSONResultChildProductionOrderInformationQueryResponse {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I子生产订单信息查询响应;
+    data: ISubProductionOrderInformationQueryResponse;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 子生产订单信息查询响应
-export interface I子生产订单信息查询响应 {
+export interface ISubProductionOrderInformationQueryResponse {
     // 子物料生产信息集
-    childMaterialProduces: I子物料生产信息VO[];
+    childMaterialProduces: ISubMaterialProductionInformationVO[];
     // 生产所需要的其他物料信息
-    produceOtherMaterials: I物料主数据基础信息返回VO[];
+    produceOtherMaterials: IMaterialMasterDataBasicInformationIsReturnedToVO[];
 }
 // 子物料生产信息VO
-export interface I子物料生产信息VO {
+export interface ISubMaterialProductionInformationVO {
     // 子物料生产信息指向的标准工艺节点ID（用于后续标准用户输入的生产信息应该给到那个子订单）
     standardTechnologyNodeId: number;
     // 物料bom明细id
@@ -83,7 +83,7 @@ export interface I子物料生产信息VO {
     enableQualityTraceability: string;
 }
 // 物料主数据基础信息返回VO
-export interface I物料主数据基础信息返回VO {
+export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     // 物料id
     id: number;
     // 物料名称

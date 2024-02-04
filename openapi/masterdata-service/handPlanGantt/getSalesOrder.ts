@@ -1,5 +1,5 @@
 // 甘特图搜索VO
-export interface I甘特图搜索VO {
+export interface IGanttChartSearchVO {
     // 开始日期 yyyy-MM-dd
     beginDate: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface I甘特图搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编码
     produceOrderCode: string;
     // 工艺路径ID列表
@@ -22,25 +22,25 @@ export interface I甘特图搜索VO {
     orderStatusList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«销售订单手动排产甘特图返回VO»»
-export interface IJSONResult分页信息销售订单手动排产甘特图返回VO {
+export interface IJSONResultPageInformationSalesOrderManualSchedulingGanttChartReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息销售订单手动排产甘特图返回VO;
+    data: IPaginationInformationSalesOrdersManualSchedulingGanttChartReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«销售订单手动排产甘特图返回VO»
-export interface I分页信息销售订单手动排产甘特图返回VO {
+export interface IPaginationInformationSalesOrdersManualSchedulingGanttChartReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -50,7 +50,7 @@ export interface I分页信息销售订单手动排产甘特图返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I销售订单手动排产甘特图返回VO[];
+    list: ISalesOrderManualSchedulingGanttChartBackToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -63,16 +63,16 @@ export interface I分页信息销售订单手动排产甘特图返回VO {
     nextPage: number;
 }
 // 销售订单手动排产甘特图返回VO
-export interface I销售订单手动排产甘特图返回VO {
+export interface ISalesOrderManualSchedulingGanttChartBackToVO {
     // 销售订单id
     salesOrderId: number;
     // 销售订单号
     salesOrderCode: string;
     // 销售订单明细
-    details: I手动排产销售订单明细甘特图返回VO[];
+    details: IManualSchedulingSalesOrderDetailsGanttChartBackToVO[];
 }
 // 手动排产销售订单明细甘特图返回VO
-export interface I手动排产销售订单明细甘特图返回VO {
+export interface IManualSchedulingSalesOrderDetailsGanttChartBackToVO {
     // 销售订单id
     salesOrderId: number;
     // 销售明细id
@@ -86,10 +86,10 @@ export interface I手动排产销售订单明细甘特图返回VO {
     // 交付日期
     deliveryDate: string;
     // 生产订单集
-    produceOrders: I生产订单手动排产甘特图返回VO[];
+    produceOrders: IProductionOrderManualSchedulingGanttChartBackToVO[];
 }
 // 生产订单手动排产甘特图返回VO
-export interface I生产订单手动排产甘特图返回VO {
+export interface IProductionOrderManualSchedulingGanttChartBackToVO {
     // 生产订单id
     produceOrderId: number;
     // 生产订单号

@@ -1,21 +1,21 @@
 // id集合信息
-export interface Iid集合信息 {
+export interface IIdCollectionInformation {
     // id集合
     ids: number[];
 }
 // JSONResult«List«部门VO»»
-export interface IJSONResultList部门VO {
+export interface IJSONResultListDepartmentVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I部门VO[];
+    data: IDepartmentVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 部门VO
-export interface I部门VO {
+export interface IDepartmentVO {
     // id
     id: number;
     // 部门名

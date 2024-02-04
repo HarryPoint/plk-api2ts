@@ -1,5 +1,5 @@
 // 产出类报表搜索VO
-export interface IOutputClassReportSearchVO {
+export interface I产出类报表搜索VO {
     // 班组id集
     classGroupIds: number[];
     // 物料id集
@@ -14,20 +14,20 @@ export interface IOutputClassReportSearchVO {
     timeType: string;
 }
 // JSONResult«产出类折线图返回VO«直通报表返回VO»»
-export interface IJSONResultOutputLineChartReturnsVOPassthroughReportReturnsVO {
+export interface IJSONResult产出类折线图返回VO直通报表返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IOutputLineChartReturnVODirectReportReturnVO;
+    data: I产出类折线图返回VO直通报表返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出类折线图返回VO«直通报表返回VO»
-export interface IOutputLineChartReturnVODirectReportReturnVO {
+export interface I产出类折线图返回VO直通报表返回VO {
     // 分组数据
-    groupList: IOutputLineChartGroupReturnVOPassThroughReportReturnVO[];
+    groupList: I产出类折线图分组返回VO直通报表返回VO[];
     // 查询班组集
     classGroupList: IIdNameNumberVO[];
     // 查询工序集
@@ -44,7 +44,7 @@ export interface IOutputLineChartReturnVODirectReportReturnVO {
     actualDataCount: number;
 }
 // 产出类折线图分组返回VO«直通报表返回VO»
-export interface IOutputLineChartGroupReturnVOPassThroughReportReturnVO {
+export interface I产出类折线图分组返回VO直通报表返回VO {
     // 数据分组id
     groupId: number;
     // 数据分组名称
@@ -52,10 +52,10 @@ export interface IOutputLineChartGroupReturnVOPassThroughReportReturnVO {
     // 数据分组编号
     groupCode: string;
     // 详细点数据
-    pointList: IThePassThroughReportReturnsVO[];
+    pointList: I直通报表返回VO[];
 }
 // 直通报表返回VO
-export interface IThePassThroughReportReturnsVO {
+export interface I直通报表返回VO {
     // 数据时间（时间戳），根据当前选中的时间粒度去转换时间
     dataTime: string;
     // 所有工序报废

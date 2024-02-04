@@ -1,5 +1,5 @@
 // 销售订单关闭 DTO
-export interface I销售订单关闭DTO {
+export interface ISalesOrdersCloseTheDTO {
     // 销售订单id
     salesOrderId: number;
     // 登录密码

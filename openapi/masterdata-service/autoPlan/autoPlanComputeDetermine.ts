@@ -1,5 +1,5 @@
 // 生产订单自动排产计算结果确定DTO
-export interface I生产订单自动排产计算结果确定DTO {
+export interface IProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO {
     // 排产计划单名称
     planName: string;
     // 排产方式
@@ -11,10 +11,10 @@ export interface I生产订单自动排产计算结果确定DTO {
     // 排产结束时间 yyyy-MM-dd HH:mm:ss（要传计算时的值）
     endTime: string;
     // 生产订单计划时间集
-    produceOrderPlanTimes: I生产订单自动排产计划时间DTO[];
+    produceOrderPlanTimes: IAutomaticProductionOrderSchedulingTimeDTO[];
 }
 // 生产订单自动排产计划时间DTO
-export interface I生产订单自动排产计划时间DTO {
+export interface IAutomaticProductionOrderSchedulingTimeDTO {
     // 订单id
     id: number;
     // 订单号
@@ -24,10 +24,10 @@ export interface I生产订单自动排产计划时间DTO {
     // 计划结束时间 yyyy-MM-dd HH:mm:ss
     endTime: string;
     // 步骤计划集
-    steps: I生产订单自动排产计划步骤时间DTO[];
+    steps: IProductionOrderAutomaticSchedulingStepTimeDTO[];
 }
 // 生产订单自动排产计划步骤时间DTO
-export interface I生产订单自动排产计划步骤时间DTO {
+export interface IProductionOrderAutomaticSchedulingStepTimeDTO {
     // 步骤id
     id: number;
     // 工序id

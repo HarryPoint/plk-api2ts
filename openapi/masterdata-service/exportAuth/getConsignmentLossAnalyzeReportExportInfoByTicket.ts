@@ -1,23 +1,23 @@
 // JSONResult«导出信息«寄售损耗分析报表分页返回VO»»
-export interface IJSONResult导出信息寄售损耗分析报表分页返回VO {
+export interface IJSONResultExportInformationConsignmentLossAnalysisReportPaginatedReturnVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息寄售损耗分析报表分页返回VO;
+    data: IExportInformationConsignmentLossAnalysisReportPagingBackToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«寄售损耗分析报表分页返回VO»
-export interface I导出信息寄售损耗分析报表分页返回VO {
+export interface IExportInformationConsignmentLossAnalysisReportPagingBackToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I寄售损耗分析报表分页返回VO[];
+    itemList: IConsignmentLossAnalysisReportPagingReturnsVO[];
 }
 // 寄售损耗分析报表分页返回VO
-export interface I寄售损耗分析报表分页返回VO {
+export interface IConsignmentLossAnalysisReportPagingReturnsVO {
     // 客户ids json
     customerIdsJson: string;
     // 销售发货子表ids json

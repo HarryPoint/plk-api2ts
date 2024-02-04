@@ -1,5 +1,5 @@
 // 生产订单自动排产DTO
-export interface I生产订单自动排产DTO {
+export interface IAutomaticProductionOrderSchedulingDTO {
     // 待排产订单id集
     waitProduceOrderIds: number[];
     // 是否正向排产
@@ -14,33 +14,33 @@ export interface I生产订单自动排产DTO {
     endTime: string;
 }
 // JSONResult«排产计算结果VO»
-export interface IJSONResult排产计算结果VO {
+export interface IJSONResultSchedulingResultVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I排产计算结果VO;
+    data: ICalculationResultOfSchedulingVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 排产计算结果VO
-export interface I排产计算结果VO {
+export interface ICalculationResultOfSchedulingVO {
     // 正向排产结果分析
-    ascAnalysis: I排产计算结果分析VO;
+    ascAnalysis: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
     // 倒序排产结果分析
-    descAnalysis: I排产计算结果分析VO;
+    descAnalysis: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
     // 正向排产结果
-    ascList: I未排产生产订单返回VO[];
+    ascList: IUnscheduledProductionOrdersAreReturnedToVO[];
     // 倒序排产结果
-    descList: I未排产生产订单返回VO[];
+    descList: IUnscheduledProductionOrdersAreReturnedToVO[];
     // 正向顺延订单
-    ascPostponeList: I未排产生产订单返回VO[];
+    ascPostponeList: IUnscheduledProductionOrdersAreReturnedToVO[];
     // 倒序顺延订单
-    descPostponeList: I未排产生产订单返回VO[];
+    descPostponeList: IUnscheduledProductionOrdersAreReturnedToVO[];
 }
 // 排产计算结果分析VO
-export interface I排产计算结果分析VO {
+export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
     // 排产方式
     autoPlanType: string;
     // 是否按期交付
@@ -59,7 +59,7 @@ export interface I排产计算结果分析VO {
     canPlusDays: LocalDateTime[];
 }
 // 未排产生产订单返回VO
-export interface I未排产生产订单返回VO {
+export interface IUnscheduledProductionOrdersAreReturnedToVO {
     // id
     id: number;
     // 是否加急
@@ -107,10 +107,10 @@ export interface I未排产生产订单返回VO {
     // 排产状态描述
     planStatusDesc: string;
     // 步骤集
-    steps: I未排产订单步骤返回VO[];
+    steps: IUnscheduledProductionOrderStepReturnToVO[];
 }
 // 未排产订单步骤返回VO
-export interface I未排产订单步骤返回VO {
+export interface IUnscheduledProductionOrderStepReturnToVO {
     // id
     id: number;
     // 工序id

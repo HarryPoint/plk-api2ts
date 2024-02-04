@@ -1,5 +1,5 @@
 // 宝晶收款汇总分析报表搜索VO
-export interface I宝晶收款汇总分析报表搜索VO {
+export interface IBaojingCollectionSummaryAnalysisReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I宝晶收款汇总分析报表搜索VO {
     // 业务员id集
     businessUserIds: number[];
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 客户id集
     customerIds: number[];
     // 日期-开始 yyyy-MM-dd HH:mm:ss
@@ -20,7 +20,7 @@ export interface I宝晶收款汇总分析报表搜索VO {
     dateEnd: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

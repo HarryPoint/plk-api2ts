@@ -1,5 +1,5 @@
 // 标准工艺修改分类请求对象_1
-export interface I标准工艺修改分类请求对象_1 {
+export interface IStandardProcessModificationClassificationRequestObject1 {
     // 是否删除全部
     removeAll: string;
     // 标准工艺ids

@@ -1,16 +1,16 @@
 // JSONResult«员工账户VO»
-export interface IJSONResult员工账户VO {
+export interface IJSONResultEmployeeAccountVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I员工账户VO;
+    data: IEmployeeAccountVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 员工账户VO
-export interface I员工账户VO {
+export interface IEmployeeAccountVO {
     // id
     id: number;
     // 员工工号

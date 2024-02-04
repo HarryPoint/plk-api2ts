@@ -1,5 +1,5 @@
 // 员工超管新增请求DTO
-export interface I员工超管新增请求DTO {
+export interface INewRequestDTOForEmployeeOvermanagement {
     // 员工姓名
     name: string;
     // 登录密码

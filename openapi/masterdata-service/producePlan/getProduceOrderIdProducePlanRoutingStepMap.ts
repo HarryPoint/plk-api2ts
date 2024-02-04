@@ -1,5 +1,5 @@
 // JSONResult«Map«long,List«生产计划工艺路径步骤排产  VO»»»
-export interface IJSONResultMaplongList生产计划工艺路径步骤排产VO {
+export interface IJSONResultMaplongListProductionPlanProcessPathStepScheduleProductionVO {
     // 返回码
     code: number;
     // 返回消息说明
@@ -10,7 +10,7 @@ export interface IJSONResultMaplongList生产计划工艺路径步骤排产VO {
     ts: number;
 }
 // 生产计划工艺路径步骤排产  VO
-export interface I生产计划工艺路径步骤排产VO {
+export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     // 生产订单id
     produceOrderId: number;
     // 工艺路径id

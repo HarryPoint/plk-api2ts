@@ -72,7 +72,7 @@ export interface I流程任务明细返回VO {
     // 创建部门
     createDeptName: string;
     // 工单信息
-    workOrder: I流程工单预览信息返回VO;
+    workOrder: IProcessTicketPreviewInformationIsReturnedToVO;
     // 是否自定义提交按钮文案
     isCustomSubmitContent: string;
     // 是否允许回退
@@ -80,7 +80,7 @@ export interface I流程任务明细返回VO {
     // 回退类型
     backType: string;
     // 审批回退节点选择集
-    backFlowPathNodeSelector: IId名称编号VO[];
+    backFlowPathNodeSelector: IIdNameNumberVO[];
     // 是否自定义接受按钮文案
     isCustomAcceptContent: string;
     // 自定义接受按钮文案
@@ -114,7 +114,7 @@ export interface I工单明细数据返回信息VO {
     value;
 }
 // 流程工单预览信息返回VO
-export interface I流程工单预览信息返回VO {
+export interface IProcessTicketPreviewInformationIsReturnedToVO {
     // id
     id: number;
     // 工单号
@@ -151,7 +151,7 @@ export interface I流程工单预览信息返回VO {
     businessCode: string;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

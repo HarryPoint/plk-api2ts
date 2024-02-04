@@ -1,5 +1,5 @@
 // 生产处理分页查询的对象
-export interface I生产处理分页查询的对象 {
+export interface IProduceObjectsThatHandlePagingQueries {
     // 当前页面
     pageNo: number;
     // 生产订单号
@@ -7,7 +7,7 @@ export interface I生产处理分页查询的对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 异常分类
     type: string;
     // 提交人id
@@ -26,7 +26,7 @@ export interface I生产处理分页查询的对象 {
     handleUserId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

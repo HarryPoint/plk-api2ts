@@ -1,5 +1,5 @@
 // 维联批次打印模板绑定物料请求对象
-export interface ITheViVBatchPrintTemplateBindsTheMaterialRequestObject {
+export interface I维联批次打印模板绑定物料请求对象 {
     // 打印模板id
     printTemplateId: number;
     // 物料ids

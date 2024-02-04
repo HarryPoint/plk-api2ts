@@ -1,16 +1,16 @@
 // JSONResult«排产参数VO»
-export interface IJSONResult排产参数VO {
+export interface IJSONResultSchedulingParameterVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I排产参数VO;
+    data: ISchedulingParametersVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 排产参数VO
-export interface I排产参数VO {
+export interface ISchedulingParametersVO {
     // 排产方式值
     planTypeValue: number;
     // 正排考虑因素值

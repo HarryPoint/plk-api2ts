@@ -1,5 +1,5 @@
 // 用户生产统计搜索VO
-export interface I用户生产统计搜索VO {
+export interface IUserProductionStatisticsSearchVO {
     // 查询开始时间 yyyy-MM-dd HH:mm:ss
     beginTime: string;
     // 查询结束时间 yyyy-MM-dd HH:mm:ss

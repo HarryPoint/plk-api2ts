@@ -1,5 +1,5 @@
 // 流程任务提交DTO
-export interface I流程任务提交DTO {
+export interface IProcessTaskSubmitDTO {
     // 任务ID
     id: number;
     // 表单数据

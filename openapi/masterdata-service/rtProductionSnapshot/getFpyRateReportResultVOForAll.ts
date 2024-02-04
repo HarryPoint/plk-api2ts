@@ -1,16 +1,16 @@
 // JSONResult«直通报表返回VO»
-export interface IJSONResultPassthroughReportReturnsVO {
+export interface IJSONResult直通报表返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IThePassThroughReportReturnsVO;
+    data: I直通报表返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 直通报表返回VO
-export interface IThePassThroughReportReturnsVO {
+export interface I直通报表返回VO {
     // 数据时间（时间戳），根据当前选中的时间粒度去转换时间
     dataTime: string;
     // 所有工序报废

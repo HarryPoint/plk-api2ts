@@ -1,5 +1,5 @@
 // 生产处理
-export interface I生产处理 {
+export interface IProductionTreatment {
     // 生产任务id，任务外的上报反馈可不传
     produceTaskId: number;
     // 生产异常类型id

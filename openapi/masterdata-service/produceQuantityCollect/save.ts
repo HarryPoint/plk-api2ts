@@ -1,5 +1,5 @@
 // 完工及产成品归集保存请求对象
-export interface I完工及产成品归集保存请求对象 {
+export interface ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject {
     // 财务期间id
     fiscalPeriodId: number;
 }

@@ -1,5 +1,5 @@
 // 物料主数据库存搜索VO
-export interface I物料主数据库存搜索VO {
+export interface IMaterialMasterDataInventorySearchVO {
     // 当前页面
     pageNo: number;
     // 物料名称
@@ -7,7 +7,7 @@ export interface I物料主数据库存搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 物料id集
     materialIds: number[];
     // 编号
@@ -18,7 +18,7 @@ export interface I物料主数据库存搜索VO {
     storehouseIds: number[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

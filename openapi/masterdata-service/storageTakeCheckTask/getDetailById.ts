@@ -75,7 +75,7 @@ export interface I仓库盘点任务返回DTO {
     // 审核完成时间
     examineTime: string;
     // 指定仓位数组(指定仓位类型时有值)
-    warehouseList: IId名称编号VO[];
+    warehouseList: IIdNameNumberVO[];
     // 盘盈单编号
     inventoryProfitOrderCode: string;
     // 盘亏单编号
@@ -86,7 +86,7 @@ export interface I仓库盘点任务返回DTO {
     inventoryLossOrderId: number;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

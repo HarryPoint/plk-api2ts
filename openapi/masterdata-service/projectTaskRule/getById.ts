@@ -36,12 +36,12 @@ export interface I项目任务规则明细响应DTO {
     // 修改任务ID列表
     modifyTaskIdList: number[];
     // 修改任务列表
-    modifyTaskList: IId名称VO[];
+    modifyTaskList: IIdNameVO[];
     // 最终评审或决策结果
     finalReviewOrReviewResult: string;
 }
 // Id，名称VO
-export interface IId名称VO {
+export interface IIdNameVO {
     // id
     id: number;
     // 名称

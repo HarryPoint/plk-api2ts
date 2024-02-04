@@ -1,5 +1,5 @@
 // 工艺画布快照获取请求DTO_1
-export interface I工艺画布快照获取请求DTO_1 {
+export interface IProcessCanvasSnapshotAcquisitionRequestDTO1 {
     // 工艺id - 新增场景传值-1
     technologyId: number;
     // 快照保存json数据

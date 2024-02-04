@@ -4,7 +4,7 @@ export interface ILotSerialNumberPlanBatchRemoveRequestDTO {
     idList: number[];
 }
 // JSONResult«string»_1
-export interface IJSONResultstring_1 {
+export interface IJSONResultstring1 {
     // 返回码
     code: number;
     // 返回消息说明

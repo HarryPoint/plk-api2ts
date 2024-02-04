@@ -1,27 +1,27 @@
 // JSONResult«List«销售模块返回VO»»
-export interface IJSONResultList销售模块返回VO {
+export interface ITheJSONResultListSalesModuleReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I销售模块返回VO[];
+    data: ITheSalesModuleReturnsToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售模块返回VO
-export interface I销售模块返回VO {
+export interface ITheSalesModuleReturnsToVO {
     // 模块类型
     modelType: string;
     // 模块名称
     modelName: string;
     // 任务集
-    taskList: I质检模块任务返回VO[];
+    taskList: ITheInspectionModuleTaskReturnsVO[];
     // 存在的任务数
     taskTotalCount: number;
 }
 // 质检模块任务返回VO
-export interface I质检模块任务返回VO {
+export interface ITheInspectionModuleTaskReturnsVO {
     // 任务id
     id: number;
     // 任务名称

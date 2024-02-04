@@ -5,7 +5,7 @@ export interface I流程关联表单搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 非通用：查询表单编码， 即 当flowPathFormFieldId = null时，可以 flowPathCode、fieldSerialNo联合使用来查询关联表单数据
     flowPathCode: string;
     // 通用：模糊搜索值
@@ -26,7 +26,7 @@ export interface I流程关联表单搜索VO {
     matchingValueList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

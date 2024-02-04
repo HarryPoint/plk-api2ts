@@ -1,5 +1,5 @@
 // 质检任务针对员工端搜索VO
-export interface I质检任务针对员工端搜索VO {
+export interface ITheInspectionTaskSearchesForVOOnTheEmployeeEnd {
     // 当前页面
     pageNo: number;
     // 任务状态
@@ -7,7 +7,7 @@ export interface I质检任务针对员工端搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 工序id
     processId: number;
     // 开始时间 yyyy-MM-dd HH:mm:ss
@@ -20,25 +20,25 @@ export interface I质检任务针对员工端搜索VO {
     materialId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«质检任务针对员工返回VO»»
-export interface IJSONResult分页信息质检任务针对员工返回VO {
+export interface IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质检任务针对员工返回VO;
+    data: IPagingInformationTheInspectionTaskReturnsVOForTheEmployee;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质检任务针对员工返回VO»
-export interface I分页信息质检任务针对员工返回VO {
+export interface IPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -48,7 +48,7 @@ export interface I分页信息质检任务针对员工返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质检任务针对员工返回VO[];
+    list: ITheInspectionTaskIsReturnedToVOForTheEmployee[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -61,7 +61,7 @@ export interface I分页信息质检任务针对员工返回VO {
     nextPage: number;
 }
 // 质检任务针对员工返回VO
-export interface I质检任务针对员工返回VO {
+export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     // id
     id: number;
     // 任务号

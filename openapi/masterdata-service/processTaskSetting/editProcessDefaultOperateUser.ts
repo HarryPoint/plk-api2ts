@@ -1,5 +1,5 @@
 // 工序任务设置默认操作员编辑DTO
-export interface I工序任务设置默认操作员编辑DTO {
+export interface IProcedureTaskSettingDefaultOperatorEditsDTO {
     // 员工类型
     userType: string;
     // 工序id

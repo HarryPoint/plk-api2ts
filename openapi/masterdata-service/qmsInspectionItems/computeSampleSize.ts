@@ -1,5 +1,5 @@
 // 检验项计算DTO
-export interface I检验项计算DTO {
+export interface ICheckItemCalculatesDTO {
     // 抽样标准id
     qmsSamplingStandardsId: number;
     // 检验方式
@@ -8,18 +8,18 @@ export interface I检验项计算DTO {
     sampleSize: number;
 }
 // JSONResult«检验项计算响应DTO»
-export interface IJSONResult检验项计算响应DTO {
+export interface ITheJSONResultCheckItemCalculatesTheResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I检验项计算响应DTO;
+    data: ITheTestItemCalculatesTheResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 检验项计算响应DTO
-export interface I检验项计算响应DTO {
+export interface ITheTestItemCalculatesTheResponseDTO {
     // undefined
     qmsSamplingStandardsId: number;
     // undefined

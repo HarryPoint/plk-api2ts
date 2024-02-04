@@ -1,5 +1,5 @@
 // 分页_5
-export interface I分页_5 {
+export interface IPaging5 {
     // 编码匹配
     codeMatch: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface I分页_5 {
     // 创建用户ID列表
     createUserIdList: number[];
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 方案名称匹配
     nameMatch: string;
     // 类型列表
@@ -20,25 +20,25 @@ export interface I分页_5 {
     createTimeEnd: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«LotSerialNumberPlanPageQueryResponseDTO»»
-export interface IJSONResult分页信息LotSerialNumberPlanPageQueryResponseDTO {
+export interface ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInformation {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息LotSerialNumberPlanPageQueryResponseDTO;
+    data: IThePagingInformationLotSerialNumberPlanPageQueryResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«LotSerialNumberPlanPageQueryResponseDTO»
-export interface I分页信息LotSerialNumberPlanPageQueryResponseDTO {
+export interface IThePagingInformationLotSerialNumberPlanPageQueryResponseDTO {
     // 当前页码
     pageNo: number;
     // 分页大小

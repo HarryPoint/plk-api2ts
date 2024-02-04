@@ -1,5 +1,5 @@
 // 财务期间查询请求
-export interface I财务期间查询请求 {
+export interface IFinancialPeriodQueryRequest {
     // 开始月份
     startMonth: string;
     // 当前页面
@@ -9,7 +9,7 @@ export interface I财务期间查询请求 {
     // 开始日期 - begin
     startDateBegin: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 结束日期 - end
     endDateEnd: string;
     // 期间
@@ -26,7 +26,7 @@ export interface I财务期间查询请求 {
     balanceStatusList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

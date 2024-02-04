@@ -1,16 +1,16 @@
 // JSONResult«质检生产大屏质检生产信息返回VO»
-export interface IJSONResult质检生产大屏质检生产信息返回VO {
+export interface IJSONResultLargeScreenInspectionProductionInformationVOIsReturned {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I质检生产大屏质检生产信息返回VO;
+    data: IInspectionProductionLargeScreenInspectionProductionInformationIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质检生产大屏质检生产信息返回VO
-export interface I质检生产大屏质检生产信息返回VO {
+export interface IInspectionProductionLargeScreenInspectionProductionInformationIsReturnedToVO {
     // 大屏左侧质检合格率工序id
     leftQualityPassRatioProcessId: number;
     // 大屏左侧质检合格率工序名称
@@ -48,20 +48,20 @@ export interface I质检生产大屏质检生产信息返回VO {
     // 大屏右侧过去10年合格数量(合格数量+让步合格数量)
     right10YPassQuantity: number;
     // 大屏中部过去12个月产出
-    center12MProduction: I产出类折线图返回VO产出金额报表返回VO;
+    center12MProduction: IOutputLineChartReturnsVOOutputAmountReportReturnsVO;
     // 大屏中部过去10年产出
-    center10YProduction: I产出类折线图返回VO产出金额报表返回VO;
+    center10YProduction: IOutputLineChartReturnsVOOutputAmountReportReturnsVO;
 }
 // 产出类折线图返回VO«产出金额报表返回VO»
-export interface I产出类折线图返回VO产出金额报表返回VO {
+export interface IOutputLineChartReturnsVOOutputAmountReportReturnsVO {
     // 分组数据
-    groupList: I产出类折线图分组返回VO产出金额报表返回VO[];
+    groupList: IOutputLineChartGroupReturnsVOOutputAmountReportReturnsVO[];
     // 查询班组集
-    classGroupList: IId名称编号VO[];
+    classGroupList: IIdNameNumberVO[];
     // 查询工序集
-    processList: IId名称编号VO[];
+    processList: IIdNameNumberVO[];
     // 查询物料集
-    majorDataList: IId名称编号VO[];
+    majorDataList: IIdNameNumberVO[];
     // 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息
     isConsistent: string;
     // 实际查询时间 - 开始
@@ -72,7 +72,7 @@ export interface I产出类折线图返回VO产出金额报表返回VO {
     actualDataCount: number;
 }
 // 产出类折线图分组返回VO«产出金额报表返回VO»
-export interface I产出类折线图分组返回VO产出金额报表返回VO {
+export interface IOutputLineChartGroupReturnsVOOutputAmountReportReturnsVO {
     // 数据分组id
     groupId: number;
     // 数据分组名称
@@ -80,10 +80,10 @@ export interface I产出类折线图分组返回VO产出金额报表返回VO {
     // 数据分组编号
     groupCode: string;
     // 详细点数据
-    pointList: I产出金额报表返回VO[];
+    pointList: ITheOutputAmountReportIsReturnedToVO[];
 }
 // 产出金额报表返回VO
-export interface I产出金额报表返回VO {
+export interface ITheOutputAmountReportIsReturnedToVO {
     // 数据时间（时间戳），根据当前选中的时间粒度去转换时间
     dataTime: string;
     // 产出数量
@@ -94,7 +94,7 @@ export interface I产出金额报表返回VO {
     produceMajorDataAmount: number;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

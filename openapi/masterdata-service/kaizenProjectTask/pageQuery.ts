@@ -1,5 +1,5 @@
 // 分页信息
-export interface I分页信息 {
+export interface IPagingInformation {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -30,18 +30,18 @@ export interface I分页信息 {
     createTimeAsc: string;
 }
 // JSONResult«分页信息«KaizenProjectTaskResponseDTO»»
-export interface IJSONResult分页信息KaizenProjectTaskResponseDTO {
+export interface IKaizenProjectTaskResponseDTOJSONResultPagingInformation {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息KaizenProjectTaskResponseDTO;
+    data: IThePagingInformationKaizenProjectTaskResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«KaizenProjectTaskResponseDTO»
-export interface I分页信息KaizenProjectTaskResponseDTO {
+export interface IThePagingInformationKaizenProjectTaskResponseDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -74,9 +74,9 @@ export interface IKaizenProjectTaskResponseDTO {
     // 项目任务状态
     projectTaskStatus: string;
     // 关联项目
-    projectId: I关联表单数据VO;
+    projectId: IAssociateFormDataVO;
     // 执行人
-    leaderUserId: I关联表单数据VO;
+    leaderUserId: IAssociateFormDataVO;
     // 上级ID
     parentId: number;
     // 开始时间
@@ -88,14 +88,14 @@ export interface IKaizenProjectTaskResponseDTO {
     // 备注
     remark: string;
     // 创建用户ID
-    createUserId: I关联表单数据VO;
+    createUserId: IAssociateFormDataVO;
     // 创建时间
     createTime: string;
     // 下级任务列表
     childTaskList: IKaizenProjectTaskResponseDTO[];
 }
 // 关联表单数据VO
-export interface I关联表单数据VO {
+export interface IAssociateFormDataVO {
     // id
     id: number;
     // 关联表单显示值

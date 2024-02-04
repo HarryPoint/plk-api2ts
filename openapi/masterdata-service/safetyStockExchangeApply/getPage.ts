@@ -5,14 +5,14 @@ export interface I安全库存变更申请搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 设置类型
     type: string;
     // 对应业务id
     businessId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -71,7 +71,7 @@ export interface I安全库存变更申请返回VO {
     // 采购触发下限
     purchaseLowerLimit: number;
     // 通知人集
-    sendUsers: IId名称编号VO[];
+    sendUsers: IIdNameNumberVO[];
     // 通知类型
     sendType: string;
     // 通知类型描述
@@ -90,7 +90,7 @@ export interface I安全库存变更申请返回VO {
     createTime: string;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

@@ -1,23 +1,23 @@
 // JSONResult«导出信息«产出报表导出VO»»
-export interface IJSONResultExportInformationOutputReportExportVO {
+export interface IJSONResult导出信息产出报表导出VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IExportInformationOutputReportExportVO;
+    data: I导出信息产出报表导出VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«产出报表导出VO»
-export interface IExportInformationOutputReportExportVO {
+export interface I导出信息产出报表导出VO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: IOutputReportExportVO[];
+    itemList: I产出报表导出VO[];
 }
 // 产出报表导出VO
-export interface IOutputReportExportVO {
+export interface I产出报表导出VO {
     // 数据分组名称
     groupName: string;
     // 数据分组编号

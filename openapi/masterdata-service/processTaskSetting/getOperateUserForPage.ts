@@ -7,7 +7,7 @@ export interface I工序操作人员搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 员工类型
     userType: string;
     // 员工id集合
@@ -18,7 +18,7 @@ export interface I工序操作人员搜索VO {
     classGroupIds: number[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

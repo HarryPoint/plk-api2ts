@@ -1,5 +1,5 @@
 // 生产处理分页查询的对象
-export interface I生产处理分页查询的对象 {
+export interface IProduceObjectsThatHandlePagingQueries {
     // 当前页面
     pageNo: number;
     // 生产订单号
@@ -7,7 +7,7 @@ export interface I生产处理分页查询的对象 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 异常分类
     type: string;
     // 提交人id
@@ -26,25 +26,25 @@ export interface I生产处理分页查询的对象 {
     handleUserId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«生产处理分页响应对象»»
-export interface IJSONResult分页信息生产处理分页响应对象 {
+export interface IJSONResultPagingInformationProductionHandlesPagingResponseObjects {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息生产处理分页响应对象;
+    data: IPagingInformationProductionHandlesPagingResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«生产处理分页响应对象»
-export interface I分页信息生产处理分页响应对象 {
+export interface IPagingInformationProductionHandlesPagingResponseObjects {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -54,7 +54,7 @@ export interface I分页信息生产处理分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I生产处理分页响应对象[];
+    list: IProductionHandlesPagingResponseObjects[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -67,7 +67,7 @@ export interface I分页信息生产处理分页响应对象 {
     nextPage: number;
 }
 // 生产处理分页响应对象
-export interface I生产处理分页响应对象 {
+export interface IProductionHandlesPagingResponseObjects {
     // id
     id: number;
     // 所属生产任务id

@@ -34,12 +34,12 @@ export interface I标准工艺节点响应对象_1 {
     // 节点数据 -- 不同的节点类型的数据格式不一样
     nodeData;
     // 下一节点
-    nextNode: I标准工艺节点响应对象_2;
+    nextNode: IStandardProcessNodeRespondsToObject2;
     // 分支节点列表
-    branches: I标准工艺节点响应对象_2[];
+    branches: IStandardProcessNodeRespondsToObject2[];
 }
 // 标准工艺节点响应对象_2
-export interface I标准工艺节点响应对象_2 {
+export interface IStandardProcessNodeRespondsToObject2 {
     // 节点序列号
     serialNo: string;
     // 节点名称
@@ -53,9 +53,9 @@ export interface I标准工艺节点响应对象_2 {
     // 节点数据 -- 不同的节点类型的数据格式不一样
     nodeData;
     // 下一节点
-    nextNode: I标准工艺节点响应对象_2;
+    nextNode: IStandardProcessNodeRespondsToObject2;
     // 分支节点列表
-    branches: I标准工艺节点响应对象_2[];
+    branches: IStandardProcessNodeRespondsToObject2[];
 }
 // JSONResult«object»
 export interface IJSONResultobject {

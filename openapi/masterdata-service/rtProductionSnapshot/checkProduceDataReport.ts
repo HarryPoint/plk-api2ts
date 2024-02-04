@@ -35,7 +35,7 @@ export interface I产出数据报表搜索VO {
     // 工序id集
     processIds: number[];
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 员工id集
     userIds: number[];
     // 日期筛选 - 开始
@@ -44,7 +44,7 @@ export interface I产出数据报表搜索VO {
     endTime: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

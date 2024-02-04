@@ -1,23 +1,23 @@
 // 进出站记录搜索VO
-export interface I进出站记录搜索VO {
+export interface IEntryAndExitRecordsSearchVO {
     // 任务id
     produceTaskId: number;
     // 进出站记录状态
     statusList: string[];
 }
 // JSONResult«List«进出站记录返回VO»»
-export interface IJSONResultList进出站记录返回VO {
+export interface IJSONResultListInboundAndOutboundRecordsReturnVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I进出站记录返回VO[];
+    data: IInboundAndOutboundLogsReturnToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 进出站记录返回VO
-export interface I进出站记录返回VO {
+export interface IInboundAndOutboundLogsReturnToVO {
     // 记录id
     id: number;
     // 进出站类型

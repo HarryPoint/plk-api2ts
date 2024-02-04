@@ -27,10 +27,10 @@ export interface I项目阶段变更单响应参数 {
     // 数据id
     dataId: string;
     // 字段数据列表
-    fieldDataList: I项目变更单字段响应参数[];
+    fieldDataList: IItemChangeOrderFieldResponseParameter[];
 }
 // 项目变更单字段响应参数
-export interface I项目变更单字段响应参数 {
+export interface IItemChangeOrderFieldResponseParameter {
     // 字段编号
     fieldCode: string;
     // 操作类型
@@ -40,16 +40,16 @@ export interface I项目变更单字段响应参数 {
     // 新值
     newValue: string;
     // 子表数据列表
-    childList: I项目变更单子表字段扩展参数请求[];
+    childList: IItemChangeListFieldExtensionParameterRequest[];
 }
 // 项目变更单子表字段扩展参数请求
-export interface I项目变更单子表字段扩展参数请求 {
+export interface IItemChangeListFieldExtensionParameterRequest {
     // 行数据id
     dataId: string;
     // 操作类型
     operateType: string;
     // 列数据
-    columnData: I项目变更单字段响应参数[];
+    columnData: IItemChangeOrderFieldResponseParameter[];
 }
 // 项目任务变更单响应参数
 export interface I项目任务变更单响应参数 {
@@ -68,5 +68,5 @@ export interface I项目任务变更单响应参数 {
     // 应用id
     appId: number;
     // 字段数据列表
-    fieldDataList: I项目变更单字段响应参数[];
+    fieldDataList: IItemChangeOrderFieldResponseParameter[];
 }

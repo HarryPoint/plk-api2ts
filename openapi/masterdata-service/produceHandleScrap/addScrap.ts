@@ -1,5 +1,5 @@
 // 生产报废处理
-export interface I生产报废处理 {
+export interface IProductionScrapTreatment {
     // 生产任务id
     produceTaskId: number;
     // 生产异常类型id

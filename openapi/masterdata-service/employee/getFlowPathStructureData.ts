@@ -1,23 +1,23 @@
 // 流程结构搜索VO
-export interface I流程结构搜索VO {
+export interface IProcessStructureSearchVO {
     // 流程任务id
     flowPathTaskId: number;
     // 数据id
     id: number;
 }
 // JSONResult«用户动态数据响应DTO»
-export interface IJSONResult用户动态数据响应DTO {
+export interface IJSONResultUserDynamicDataResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I用户动态数据响应DTO;
+    data: IUserDynamicDataResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 用户动态数据响应DTO
-export interface I用户动态数据响应DTO {
+export interface IUserDynamicDataResponseDTO {
     // 流程id
     flowPathId: number;
     // 流程版本
@@ -31,31 +31,31 @@ export interface I用户动态数据响应DTO {
     // 流程工单id
     flowPathWorkOrderId: number;
     // 表单结构
-    structures: I表单结构VO[];
+    structures: IFormStructureVO[];
     // 数据
     data;
     // 是否允许登录
     isAllowLogin: string;
     // 角色集
-    roles: I角色信息响应[];
+    roles: IRoleMessageResponse[];
     // 用户手机号
     userTelephone: string;
 }
 // 表单结构VO
-export interface I表单结构VO {
+export interface IFormStructureVO {
     // 节点表单关联id
     flowPathNodeFormFieldPermissionsRpId: number;
     // 所属表单字段id
     flowPathFormFieldId: number;
     // 表单字段信息
-    formField: I流程表单VO;
+    formField: IProcessFormVO;
     // 权限类型
     permissionsType: string;
     // 表格内字段结构集
-    tableStructure: I表单结构VO[];
+    tableStructure: IFormStructureVO[];
 }
 // 流程表单VO
-export interface I流程表单VO {
+export interface IProcessFormVO {
     // id
     id: number;
     // 所属流程id
@@ -111,9 +111,9 @@ export interface I流程表单VO {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: I流程表单公式字段返回VO[];
+    formulaFormFieldSerialNos: ITheProcessFormFormulaFieldReturnsVO[];
     // 编码规则
-    codeNumberRules: I流程表单字段编码规则明细VO[];
+    codeNumberRules: IProcessFormFieldEncodingRuleDetailsVO[];
     // 是否必填
     isMust: string;
     // 允许扫码
@@ -133,9 +133,9 @@ export interface I流程表单VO {
     // 选项集
     selectorList: IFormFieldOption[];
     // 选项集字典
-    selectorDictionaryList: I流程表单字段关联字典选项集VO[];
+    selectorDictionaryList: IProcessFormFieldAssociationDictionaryOptionSetVO[];
     // 下拉选项关联显示列表
-    selectorAssociateDisplayList: I流程表单字段下拉选项关联显示VO[];
+    selectorAssociateDisplayList: ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO[];
     // 选项值来源
     selectorOptionSource: string;
     // 选项值来源业务编码
@@ -151,11 +151,11 @@ export interface I流程表单VO {
     // 关联表单选项显示字段Serial No
     formRpSelectorShowFieldSerialNo: string;
     // 关联表单筛选条件组集
-    formRpFilterGroups: I流程表单关联表单筛选条件组VO[];
+    formRpFilterGroups: IProcessFormsAssociateFormFilterGroupVO[];
     // 关联表单填充规则集
-    formRpFills: I流程表单关联表单填充VO[];
+    formRpFills: IProcessFormAssociatedFormFillVO[];
     // 表格自定义字段集
-    tableCustomFormFields: I流程表单VO[];
+    tableCustomFormFields: IProcessFormVO[];
     // 选择框样式
     style: string;
     // 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}]
@@ -204,7 +204,7 @@ export interface I流程表单VO {
     processorShowFieldCode: string;
 }
 // 流程表单公式字段返回VO
-export interface I流程表单公式字段返回VO {
+export interface ITheProcessFormFormulaFieldReturnsVO {
     // 类型
     type: string;
     // 计算公式用到的表单序号值
@@ -213,7 +213,7 @@ export interface I流程表单公式字段返回VO {
     funType: string;
 }
 // 流程表单字段编码规则明细VO
-export interface I流程表单字段编码规则明细VO {
+export interface IProcessFormFieldEncodingRuleDetailsVO {
     // id
     id: number;
     // 设置类型
@@ -251,7 +251,7 @@ export interface IFormFieldOption {
     color: string;
 }
 // 流程表单字段关联字典选项集VO
-export interface I流程表单字段关联字典选项集VO {
+export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
     // undefined
     color: string;
     // undefined
@@ -268,7 +268,7 @@ export interface I流程表单字段关联字典选项集VO {
     isCanDelete: string;
 }
 // 流程表单字段下拉选项关联显示VO
-export interface I流程表单字段下拉选项关联显示VO {
+export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     // 所属流程表单字段id
     flowPathFormFieldId: number;
     // 所属流程表单字段编号
@@ -281,13 +281,13 @@ export interface I流程表单字段下拉选项关联显示VO {
     associateDisplayFieldSerialNos: undefined[];
 }
 // 流程表单关联表单筛选条件组VO
-export interface I流程表单关联表单筛选条件组VO {
+export interface IProcessFormsAssociateFormFilterGroupVO {
     // id
     id: number;
     // 条件组名称
     name: string;
     // 条件集
-    filters: I流程表单关联表单筛选条件VO[];
+    filters: IProcessFormsAssociateFormFilterVO[];
     // 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组
     isSystemDefault: string;
     // 数据联动ID
@@ -296,7 +296,7 @@ export interface I流程表单关联表单筛选条件组VO {
     flowPathFormFieldId: number;
 }
 // 流程表单关联表单筛选条件VO
-export interface I流程表单关联表单筛选条件VO {
+export interface IProcessFormsAssociateFormFilterVO {
     // id
     id: string;
     // 被判断的字段序号值
@@ -327,7 +327,7 @@ export interface I流程表单关联表单筛选条件VO {
     isDisableEdit: string;
 }
 // 流程表单关联表单填充VO
-export interface I流程表单关联表单填充VO {
+export interface IProcessFormAssociatedFormFillVO {
     // id
     id: number;
     // 所属流程表单字段id
@@ -360,7 +360,7 @@ export interface IFlowPathFormFieldDataLinkageVO {
     // 数据来源字段序列号（取值字段的序列号）
     sourceFieldSerialNo: string;
     // 筛选条件组集
-    filterGroups: I流程表单关联表单筛选条件组VO[];
+    filterGroups: IProcessFormsAssociateFormFilterGroupVO[];
 }
 // FlowPathFormFieldValueLimitRuleEditDTO
 export interface IFlowPathFormFieldValueLimitRuleEditDTO {
@@ -376,7 +376,7 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     meta;
 }
 // 角色信息响应
-export interface I角色信息响应 {
+export interface IRoleMessageResponse {
     // id
     id: number;
     // 编码

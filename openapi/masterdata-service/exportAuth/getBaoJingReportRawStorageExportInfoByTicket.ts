@@ -1,23 +1,23 @@
 // JSONResult«导出信息«宝晶报表(原材料日报表)相关返回VO»»
-export interface IJSONResult导出信息宝晶报表原材料日报表相关返回VO {
+export interface IJSONResultExportInformationBaojingReportDailyReportOfRawMaterialsReturnToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息宝晶报表原材料日报表相关返回VO;
+    data: IExportInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«宝晶报表(原材料日报表)相关返回VO»
-export interface I导出信息宝晶报表原材料日报表相关返回VO {
+export interface IExportInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I宝晶报表原材料日报表相关返回VO[];
+    itemList: IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO[];
 }
 // 宝晶报表(原材料日报表)相关返回VO
-export interface I宝晶报表原材料日报表相关返回VO {
+export interface IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO {
     // 物料id
     majorDataId: number;
     // 物料编号

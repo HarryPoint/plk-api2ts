@@ -1,16 +1,16 @@
 // JSONResult«List«区域树返回VO»»
-export interface IJSONResultList区域树返回VO {
+export interface ITheJSONResultListAreaTreeReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I区域树返回VO[];
+    data: IAreaTreeReturnsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 区域树返回VO
-export interface I区域树返回VO {
+export interface IAreaTreeReturnsVO {
     // id
     id: number;
     // 区域名称
@@ -26,5 +26,5 @@ export interface I区域树返回VO {
     // 创建时间
     createTime: string;
     // 区域子集
-    children: I区域树返回VO[];
+    children: IAreaTreeReturnsVO[];
 }

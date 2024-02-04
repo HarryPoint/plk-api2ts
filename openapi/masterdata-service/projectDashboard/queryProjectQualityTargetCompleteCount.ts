@@ -1,5 +1,5 @@
 // 项目看板查询dto
-export interface I项目看板查询dto {
+export interface IProjectKanbanQueryDto {
     // 开始日期
     beginTime: string;
     // 结束日期

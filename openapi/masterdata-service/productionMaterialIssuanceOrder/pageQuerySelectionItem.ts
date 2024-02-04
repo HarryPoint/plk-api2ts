@@ -1,11 +1,11 @@
 // 分页_12
-export interface I分页_12 {
+export interface IPaging12 {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单编号匹配
     produceOrderCodeMatch: string;
     // 生产物料ID
@@ -14,25 +14,25 @@ export interface I分页_12 {
     materialIdList: number[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»
-export interface IJSONResult分页信息ProduceOrderSelectionItemQueryResponseDTO {
+export interface IProduceOrderSelectionItemQueryResponseDTOJSONResultPagingInformation {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息ProduceOrderSelectionItemQueryResponseDTO;
+    data: IThePagingInformationProduceOrderSelectionItemQueryResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«ProduceOrderSelectionItemQueryResponseDTO»
-export interface I分页信息ProduceOrderSelectionItemQueryResponseDTO {
+export interface IThePagingInformationProduceOrderSelectionItemQueryResponseDTO {
     // 当前页码
     pageNo: number;
     // 分页大小

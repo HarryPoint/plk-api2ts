@@ -1,16 +1,16 @@
 // JSONResult«销售订单VO»
-export interface IJSONResult销售订单VO {
+export interface IJSONResultSalesOrderVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I销售订单VO;
+    data: ISalesOrderVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售订单VO
-export interface I销售订单VO {
+export interface ISalesOrderVO {
     // id
     id: number;
     // 创建时间

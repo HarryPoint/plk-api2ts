@@ -7,7 +7,7 @@ export interface I文件对象分页查询请求DTO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序[];
+    orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
     // 创建用户ID列表
@@ -24,7 +24,7 @@ export interface I文件对象分页查询请求DTO {
     createTimeEnd: string;
 }
 // 分页排序
-export interface I分页排序 {
+export interface IPagingSort {
     // 需要进行排序的字段
     column: string;
     // 是否正序排列，默认Y

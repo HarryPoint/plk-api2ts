@@ -1,5 +1,5 @@
 // JSONResult«List«项目任务响应对象»»_3
-export interface IJSONResultListProjectTaskResponseObject3 {
+export interface IJSONResultList项目任务响应对象_3 {
     // 返回码
     code: number;
     // 返回消息说明

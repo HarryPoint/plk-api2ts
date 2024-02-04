@@ -1,20 +1,20 @@
 // JSONResult«盼盼生产大屏设置响应DTO»
-export interface IJSONResult盼盼生产大屏设置响应DTO {
+export interface IJSONResultPanpanProductionLargeScreenSettingsResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I盼盼生产大屏设置响应DTO;
+    data: IPanpanProductionLargeScreenSettingsResponseDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 盼盼生产大屏设置响应DTO
-export interface I盼盼生产大屏设置响应DTO {
+export interface IPanpanProductionLargeScreenSettingsResponseDTO {
     // 延期订单判断值（小时）
     overdueTime: number;
     // 大屏展示工序id集
-    processIds: IId名称编号VO[];
+    processIds: IIdNameNumberVO[];
     // 延期订单判断类型
     produceOrderOverdueType: string;
     // 开始时间月份类型
@@ -31,7 +31,7 @@ export interface I盼盼生产大屏设置响应DTO {
     thisMonthOrderCount: number;
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

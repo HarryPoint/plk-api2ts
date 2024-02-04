@@ -1,5 +1,5 @@
 // 质检申请DTO
-export interface I质检申请DTO {
+export interface IApplyForTheDTO {
     // 生产任务id
     produceTaskId: number;
     // 批次id
@@ -7,10 +7,10 @@ export interface I质检申请DTO {
     // wip状态记录id
     wipRpId: number;
     // 成品物料信息
-    finishedMaterial: I成品物料填写DTO;
+    finishedMaterial: IFillInTheDTOForFinishedMaterials;
 }
 // 成品物料填写DTO
-export interface I成品物料填写DTO {
+export interface IFillInTheDTOForFinishedMaterials {
     // 实际数(质检数)
     actualQuantity: number;
     // 再次申请质检数

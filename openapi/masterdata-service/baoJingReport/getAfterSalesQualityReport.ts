@@ -1,5 +1,5 @@
 // 售后质量分析报表搜索VO
-export interface I售后质量分析报表搜索VO {
+export interface IAfterSalesQualityAnalysisReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -7,7 +7,7 @@ export interface I售后质量分析报表搜索VO {
     // 灌装日期开始时间 yyyy-MM-dd HH:mm:ss
     fillingBeginDate: string;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 灌装日期结束时间 yyyy-MM-dd HH:mm:ss
     fillingEndDate: string;
     // 客户id
@@ -34,34 +34,34 @@ export interface I售后质量分析报表搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«售后质量分析返回VO»
-export interface IJSONResult售后质量分析返回VO {
+export interface IJSONResultAfterSalesQualityAnalysisReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I售后质量分析返回VO_1;
+    data: IAfterSalesQualityAnalysisReturnsVO1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 售后质量分析返回VO_1
-export interface I售后质量分析返回VO_1 {
+export interface IAfterSalesQualityAnalysisReturnsVO1 {
     // 数据表
-    tablePage: I分页信息售后质量分析返回VO;
+    tablePage: IPagingInformationAfterSalesQualityAnalysisReturnsVO;
     // 客户维度
-    customerDimension: I售后质量分析图表数据返回VO[];
+    customerDimension: IAfterSalesQualityAnalysisChartDataReturnedToVO[];
     // 趋势图
-    chartsOfAccident: I售后质量分析图表数据返回VO[];
+    chartsOfAccident: IAfterSalesQualityAnalysisChartDataReturnedToVO[];
 }
 // 分页信息«售后质量分析返回VO»
-export interface I分页信息售后质量分析返回VO {
+export interface IPagingInformationAfterSalesQualityAnalysisReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -71,7 +71,7 @@ export interface I分页信息售后质量分析返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I售后质量分析返回VO[];
+    list: IAfterSalesQualityAnalysisReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -84,7 +84,7 @@ export interface I分页信息售后质量分析返回VO {
     nextPage: number;
 }
 // 售后质量分析返回VO
-export interface I售后质量分析返回VO {
+export interface IAfterSalesQualityAnalysisReturnedToVO {
     // 客户
     customer: string;
     // 业务员
@@ -108,12 +108,12 @@ export interface I售后质量分析返回VO {
     // 数量
     quantity: number;
     // 图片
-    picUrls: I附件VO[];
+    picUrls: IAnnexVO[];
     // 备注
     remark: string;
 }
 // 附件 VO
-export interface I附件VO {
+export interface IAnnexVO {
     // 文件id
     id: number;
     // 文件key
@@ -126,7 +126,7 @@ export interface I附件VO {
     size: number;
 }
 // 售后质量分析图表数据返回VO
-export interface I售后质量分析图表数据返回VO {
+export interface IAfterSalesQualityAnalysisChartDataReturnedToVO {
     // 轴标
     title: string;
     // 事故次数

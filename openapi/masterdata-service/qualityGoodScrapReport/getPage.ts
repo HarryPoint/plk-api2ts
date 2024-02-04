@@ -5,7 +5,7 @@ export interface I良品报废数据表搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 时间筛选 - 开始 yyyy-MM-dd HH:mm:ss
     beginTime: string;
     // 时间筛选 - 结束 yyyy-MM-dd HH:mm:ss
@@ -16,7 +16,7 @@ export interface I良品报废数据表搜索VO {
     materialType: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -85,10 +85,10 @@ export interface I良品报废数据表结果VO {
     // 报废数量
     scrapQuantity: number;
     // 报废类型数据
-    scrapValueList: IId值VO[];
+    scrapValueList: IIdValueVO[];
 }
 // Id，值VO
-export interface IId值VO {
+export interface IIdValueVO {
     // id
     id: number;
     // 值

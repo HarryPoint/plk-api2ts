@@ -1,5 +1,5 @@
 // 批量启用or停用VO
-export interface I批量启用or停用VO {
+export interface IEnableOrDisableVOInBatches {
     // id集合
     ids: number[];
     // 状态

@@ -1,5 +1,5 @@
 // 项目概况查询dto
-export interface I项目概况查询dto {
+export interface IProjectOverviewQueryDto {
     // 项目id
     projectId: number;
     // 开始日期
@@ -10,16 +10,16 @@ export interface I项目概况查询dto {
     limit: number;
 }
 // JSONResult«List«项目角色统计响应对象»»
-export interface IJSONResultList项目角色统计响应对象 {
+export interface IJSONResultListProjectRoleStatisticsResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目角色统计响应对象[];
+    data: IProjectRoleStatisticsResponseObjects[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目角色统计响应对象
-export interface I项目角色统计响应对象 {
+export interface IProjectRoleStatisticsResponseObjects {
 }

@@ -1,16 +1,16 @@
 // JSONResult«生产工艺工艺卡信息返回DTO»
-export interface IJSONResult生产工艺工艺卡信息返回DTO {
+export interface IJSONResultProcessCardInformationIsReturnedToTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产工艺工艺卡信息返回DTO;
+    data: IProductionProcessProcessCardInformationIsReturnedToDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产工艺工艺卡信息返回DTO
-export interface I生产工艺工艺卡信息返回DTO {
+export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
     // 创建用户ID
     createUserId: number;
     // 创建用户名
@@ -28,7 +28,7 @@ export interface I生产工艺工艺卡信息返回DTO {
     // 创建时间
     createTime: string;
     // 描述集合
-    textList: I生产工艺工艺卡明细返回DTO[];
+    textList: IProductionProcessProcessCardDetailsReturnedToDTO[];
     // 更新用户ID
     updateUserId: number;
     // 更新用户名称
@@ -46,12 +46,12 @@ export interface I生产工艺工艺卡信息返回DTO {
     // 物料id
     materialId: number;
     // 文件集合
-    fileList: I生产工艺工艺卡明细返回DTO[];
+    fileList: IProductionProcessProcessCardDetailsReturnedToDTO[];
     // 工序对应字段信息
-    processFlowPathRpDatas: I工序对应字段详情VO[];
+    processFlowPathRpDatas: IOperationsCorrespondToFieldDetailsVO[];
 }
 // 生产工艺工艺卡明细返回DTO
-export interface I生产工艺工艺卡明细返回DTO {
+export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     // 明细id
     id: number;
     // 明细类型
@@ -70,7 +70,7 @@ export interface I生产工艺工艺卡明细返回DTO {
     fileUrl: string;
 }
 // 工序对应字段详情VO
-export interface I工序对应字段详情VO {
+export interface IOperationsCorrespondToFieldDetailsVO {
     // 关联字段code
     fieldCode: string;
     // 关联字段名称

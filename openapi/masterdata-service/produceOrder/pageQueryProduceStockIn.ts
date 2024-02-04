@@ -5,7 +5,7 @@ export interface I分页_9 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 生产订单ID
     produceOrderId: number;
     // 生产物料ID
@@ -14,7 +14,7 @@ export interface I分页_9 {
     lotNoList: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

@@ -1,5 +1,5 @@
 // 物料编辑请求DTO
-export interface IMaterialEditorRequestDTO {
+export interface I物料编辑请求DTO {
     // 编辑数据
     data;
     // 流程任务id - 新增/重新编辑业务，要设置为null
@@ -7,10 +7,10 @@ export interface IMaterialEditorRequestDTO {
     // 扩展参数
     extensionParam;
     // 物料批次设置
-    lotSetting: IMaterialBatchSetEditObject;
+    lotSetting: I物料批次设置编辑对象;
 }
 // 物料批次设置编辑对象
-export interface IMaterialBatchSetEditObject {
+export interface I物料批次设置编辑对象 {
     // 物料id
     materialId: number;
     // 启用序列号

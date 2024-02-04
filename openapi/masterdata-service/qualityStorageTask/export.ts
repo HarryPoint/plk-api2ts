@@ -1,11 +1,11 @@
 // 质检任务搜索VO
-export interface I质检任务搜索VO {
+export interface IInspectionTaskSearchesForVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 检验日期查询开始时间
     completeStartTime: string;
     // 质检分类
@@ -28,7 +28,7 @@ export interface I质检任务搜索VO {
     materialIds: number[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

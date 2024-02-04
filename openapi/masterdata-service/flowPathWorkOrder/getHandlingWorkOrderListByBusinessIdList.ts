@@ -6,18 +6,18 @@ export interface IHandlingWorkOrderQueryRequest {
     businessIdList: number[];
 }
 // JSONResult«List«流程工单VO»»
-export interface IJSONResultList流程工单VO {
+export interface IJSONResultListProcessWorkorderVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程工单VO_1[];
+    data: IProcessWorkOrderVO1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程工单VO_1
-export interface I流程工单VO_1 {
+export interface IProcessWorkOrderVO1 {
     // undefined
     id: number;
     // undefined

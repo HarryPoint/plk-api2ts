@@ -1,11 +1,11 @@
 // 宝晶销售发货报表搜索VO
-export interface I宝晶销售发货报表搜索VO {
+export interface IBaojingSalesDeliveryReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 客户id集
     customerIds: number[];
     // 产品名称
@@ -36,7 +36,7 @@ export interface I宝晶销售发货报表搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

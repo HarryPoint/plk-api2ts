@@ -7,7 +7,7 @@ export interface I质检方案搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 名称
     name: string;
     // 状态(是否可用)
@@ -18,7 +18,7 @@ export interface I质检方案搜索VO {
     materialId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
@@ -73,9 +73,9 @@ export interface I质检方案返回VO {
     // 质检分类编号
     qualityInspectionCategoryCode: string;
     // 物料集合
-    materialList: I物料主数据基础信息返回VO[];
+    materialList: IMaterialMasterDataBasicInformationIsReturnedToVO[];
     // 质检项
-    itemList: IId名称VO[];
+    itemList: IIdNameVO[];
     // 版次号
     issueCode: string;
     // 附件文件id
@@ -100,7 +100,7 @@ export interface I质检方案返回VO {
     typeDesc: string;
 }
 // 物料主数据基础信息返回VO
-export interface I物料主数据基础信息返回VO {
+export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     // 物料id
     id: number;
     // 物料名称
@@ -119,7 +119,7 @@ export interface I物料主数据基础信息返回VO {
     storageUseQuantity: number;
 }
 // Id，名称VO
-export interface IId名称VO {
+export interface IIdNameVO {
     // id
     id: number;
     // 名称

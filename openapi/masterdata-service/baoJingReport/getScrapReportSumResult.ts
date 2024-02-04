@@ -1,5 +1,5 @@
 // 宝晶报表(报废)相关搜索VO
-export interface I宝晶报表报废相关搜索VO {
+export interface IBaojingReportScrapRelatedSearchVO {
     // 当前页面
     pageNo: number;
     // 报废类型集
@@ -9,7 +9,7 @@ export interface I宝晶报表报废相关搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 外部编码
     materialOutsideCode: string;
     // 日期-开始 yyyy-MM-dd HH:mm:ss
@@ -26,7 +26,7 @@ export interface I宝晶报表报废相关搜索VO {
     materialTypes: string[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

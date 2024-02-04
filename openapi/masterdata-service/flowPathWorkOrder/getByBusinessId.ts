@@ -1,16 +1,16 @@
 // JSONResult«流程工单VO»
-export interface IJSONResult流程工单VO {
+export interface IJSONResultProcessWorkOrderVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程工单VO;
+    data: IProcessWorkOrderVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程工单VO
-export interface I流程工单VO {
+export interface IProcessWorkOrderVO {
     // id
     id: number;
     // 数据状态 0停用，1启用，-1已删除

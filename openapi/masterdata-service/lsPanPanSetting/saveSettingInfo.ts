@@ -1,5 +1,5 @@
 // 盼盼大屏设置DTO
-export interface I盼盼大屏设置DTO {
+export interface IPanpanLargeScreenSetDTO {
     // 延期订单判断值（小时）
     overdueTime: number;
     // 大屏展示工序id集

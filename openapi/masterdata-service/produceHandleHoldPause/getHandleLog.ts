@@ -1,25 +1,25 @@
 // JSONResult«List«生产处理暂扣处理记录响应对象»»
-export interface IJSONResultList生产处理暂扣处理记录响应对象 {
+export interface IJSONResultListProducesTheResponseObjectForTheSuspenseProcessingRecord {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产处理暂扣处理记录响应对象[];
+    data: IProductionProcessingWithholdProcessingRecordResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产处理暂扣处理记录响应对象
-export interface I生产处理暂扣处理记录响应对象 {
+export interface IProductionProcessingWithholdProcessingRecordResponseObject {
     // 生产处理id
     id: number;
     // 创建时间
     createTime: string;
     // 明细
-    detailList: I生产处理暂扣处理记录详情响应对象[];
+    detailList: IProductionProcessingWithholdProcessingRecordDetailsResponseObject[];
 }
 // 生产处理暂扣处理记录详情响应对象
-export interface I生产处理暂扣处理记录详情响应对象 {
+export interface IProductionProcessingWithholdProcessingRecordDetailsResponseObject {
     // 生产处理id
     id: number;
     // 创建时间

@@ -1,16 +1,16 @@
 // JSONResult«仓位VO»
-export interface IJSONResult仓位VO {
+export interface IJSONResultPositionVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I仓位VO;
+    data: IPositionVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓位VO
-export interface I仓位VO {
+export interface IPositionVO {
     // id
     id: number;
     // 所属企业id

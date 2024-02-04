@@ -1,16 +1,16 @@
 // JSONResult«质检方案明细返回VO»
-export interface IJSONResultCheckSolutionDetailsAreReturnedToVO {
+export interface IJSONResult质检方案明细返回VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: ITheDetailsOfTheInspectionSchemeAreReturnedToVO;
+    data: I质检方案明细返回VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质检方案明细返回VO
-export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
+export interface I质检方案明细返回VO {
     // id
     id: number;
     // 质检方案名称
@@ -26,7 +26,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     // 适用物料集合
     materialList: IMaterialMasterDataBasicInformationIsReturnedToVO[];
     // 质检项
-    itemList: IQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO[];
+    itemList: I质检方案质检项关联信息返回VO[];
     // 版次号
     issueCode: string;
     // 附件文件id
@@ -76,7 +76,7 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     storageUseQuantity: number;
 }
 // 质检方案质检项关联信息返回VO
-export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO {
+export interface I质检方案质检项关联信息返回VO {
     // 关联id
     id: number;
     // 所属质检方案

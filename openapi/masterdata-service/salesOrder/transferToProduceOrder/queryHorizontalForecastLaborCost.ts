@@ -33,14 +33,14 @@ export interface IJSONResult预测工费 {
 // 预测工费
 export interface I预测工费 {
     // 工序列表
-    processList: IId名称编号VO[];
+    processList: IIdNameNumberVO[];
     // 订单项列表
     orderItemList: I预测工费水平订单项[];
     // 汇总工费列表
     summaryLaborCostList: IProcessLaborCostVO[];
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

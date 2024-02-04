@@ -1,5 +1,5 @@
 // 生产处理暂扣报废请求对象
-export interface I生产处理暂扣报废请求对象 {
+export interface IProductionProcessesWithholdScrapRequestObjects {
     // 生产处理id
     id: number;
     // 返工类型id

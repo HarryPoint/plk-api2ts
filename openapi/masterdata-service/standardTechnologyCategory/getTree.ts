@@ -1,16 +1,16 @@
 // JSONResult«List«标准工艺分类树响应DTO»»
-export interface IJSONResultList标准工艺分类树响应DTO {
+export interface IJSONResultListStandardProcessClassificationTreeRespondsToDtos {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I标准工艺分类树响应DTO[];
+    data: IStandardProcessClassificationTreeRespondsToDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 标准工艺分类树响应DTO
-export interface I标准工艺分类树响应DTO {
+export interface IStandardProcessClassificationTreeRespondsToDTO {
     // 分类id
     id: number;
     // 分类名称
@@ -20,5 +20,5 @@ export interface I标准工艺分类树响应DTO {
     // 排序
     sort: number;
     // 子分类列表
-    childCategoryList: I标准工艺分类树响应DTO[];
+    childCategoryList: IStandardProcessClassificationTreeRespondsToDTO[];
 }

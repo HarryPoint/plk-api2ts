@@ -1,16 +1,16 @@
 // JSONResult«List«异常标签返回VO»»
-export interface IJSONResultList异常标签返回VO {
+export interface ITheJSONResultListExceptionTagReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I异常标签返回VO[];
+    data: ITheExceptionTagReturnsVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 异常标签返回VO
-export interface I异常标签返回VO {
+export interface ITheExceptionTagReturnsVO {
     // id
     id: number;
     // 所属分类

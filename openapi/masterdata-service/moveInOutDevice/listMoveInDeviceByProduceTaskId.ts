@@ -5,12 +5,12 @@ export interface IJSONResultList进料设备响应DTO_1 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I进料设备响应DTO_1[];
+    data: ITheFeedDeviceRespondsToDTO1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 进料设备响应DTO_1
-export interface I进料设备响应DTO_1 {
+export interface ITheFeedDeviceRespondsToDTO1 {
     // 设备id
     id: number;
     // 设备名称

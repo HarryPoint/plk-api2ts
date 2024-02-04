@@ -14,12 +14,12 @@ export interface IJSONResultList生产任务响应DTO针对移动端 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产任务响应DTO针对移动端[];
+    data: IProductionTaskResponseDTOForMobile[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产任务响应DTO(针对移动端)
-export interface I生产任务响应DTO针对移动端 {
+export interface IProductionTaskResponseDTOForMobile {
     // id
     id: number;
     // 任务号
@@ -129,14 +129,14 @@ export interface I生产任务响应DTO针对移动端 {
     // 生产订单
     produceOrder;
     // 批次信息
-    lotOrders: I生产任务批次响应DTO针对移动端[];
+    lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
     // 批次数量
     lotOrderNumber: number;
     // 当前步骤配置信息 - 用于前端判断各种情况逻辑
-    stepSetInfo: I生产工艺路径步骤设置返回VO;
+    stepSetInfo: IProductionProcessPathStepSettingsReturnVO;
 }
 // 生产任务批次响应DTO(针对移动端)
-export interface I生产任务批次响应DTO针对移动端 {
+export interface IProductionTaskBatchResponseDTOForMobileEnd {
     // 批次id
     lotId: number;
     // 批次号
@@ -145,7 +145,7 @@ export interface I生产任务批次响应DTO针对移动端 {
     totalCount: number;
 }
 // 生产工艺路径步骤设置返回VO
-export interface I生产工艺路径步骤设置返回VO {
+export interface IProductionProcessPathStepSettingsReturnVO {
     // id
     id: number;
     // 进出站方式

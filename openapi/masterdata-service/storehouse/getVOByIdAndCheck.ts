@@ -1,16 +1,16 @@
 // JSONResult«仓库VO»
-export interface IJSONResultWarehouseVO {
+export interface IJSONResult仓库VO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: IWarehouseVO;
+    data: I仓库VO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 仓库VO
-export interface IWarehouseVO {
+export interface I仓库VO {
     // id
     id: number;
     // 所属企业id

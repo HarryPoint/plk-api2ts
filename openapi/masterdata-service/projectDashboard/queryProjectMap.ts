@@ -1,5 +1,5 @@
 // 项目看板查询dto
-export interface I项目看板查询dto {
+export interface IProjectKanbanQueryDto {
     // 开始日期
     beginTime: string;
     // 结束日期
@@ -31,10 +31,10 @@ export interface I项目地图响应对象 {
     // 项目数量
     projectQuantity: number;
     // 项目列表
-    projectList: IIdCodeName通用传输对象[];
+    projectList: IIdCodeNameGenericTransportObject[];
 }
 // Id Code Name 通用传输对象
-export interface IIdCodeName通用传输对象 {
+export interface IIdCodeNameGenericTransportObject {
     // id
     id: number;
     // code

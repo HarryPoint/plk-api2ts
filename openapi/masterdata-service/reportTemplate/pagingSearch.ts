@@ -11,7 +11,7 @@ export interface I分页_14 {
     // 创建用户ID
     createUserId: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 模板状态 - 精确匹配, -1 删除， 1 有效， 2.暂存，0 停用
     status: number;
     // 更新用户ID
@@ -26,7 +26,7 @@ export interface I分页_14 {
     updateTimeBegin: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

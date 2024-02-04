@@ -9,14 +9,14 @@ export interface I进出站信息DTO_1 {
     // wip状态记录id
     wipRpId: number;
     // 成品物料信息
-    finishedMaterial: I成品物料填写DTO;
+    finishedMaterial: IFillInTheDTOForFinishedMaterials;
     // BOM物料信息列表
     bomMaterials: IBOM物料填写DTO[];
     // 关键参数信息填写
     keyParametersInfo: I进出站工艺卡填写;
 }
 // 成品物料填写DTO
-export interface I成品物料填写DTO {
+export interface IFillInTheDTOForFinishedMaterials {
     // 实际数(质检数)
     actualQuantity: number;
     // 再次申请质检数

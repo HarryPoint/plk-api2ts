@@ -1,5 +1,5 @@
 // 异常类型搜索VO
-export interface I异常类型搜索VO {
+export interface IExceptionTypeSearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -7,7 +7,7 @@ export interface I异常类型搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 名称
     name: string;
     // 类型
@@ -16,7 +16,7 @@ export interface I异常类型搜索VO {
     dataStatus: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

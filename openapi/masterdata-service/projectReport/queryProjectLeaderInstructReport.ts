@@ -1,16 +1,16 @@
 // JSONResult«分页信息«项目领导批示报表响应对象»»
-export interface IJSONResult分页信息项目领导批示报表响应对象 {
+export interface IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息项目领导批示报表响应对象;
+    data: IPageInformationItemLeaderIndicatesTheReportResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«项目领导批示报表响应对象»
-export interface I分页信息项目领导批示报表响应对象 {
+export interface IPageInformationItemLeaderIndicatesTheReportResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息项目领导批示报表响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I项目领导批示报表响应对象[];
+    list: IProjectLeadIndicatesReportResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息项目领导批示报表响应对象 {
     nextPage: number;
 }
 // 项目领导批示报表响应对象
-export interface I项目领导批示报表响应对象 {
+export interface IProjectLeadIndicatesReportResponseObject {
     // id
     id: number;
     // 名称

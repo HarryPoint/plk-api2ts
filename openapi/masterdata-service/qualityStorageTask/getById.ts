@@ -1,16 +1,16 @@
 // JSONResult«质检任务明细返回VO»
-export interface IJSONResult质检任务明细返回VO {
+export interface IJSONResultInspectionTaskDetailsAreReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I质检任务明细返回VO;
+    data: ICheckTaskDetailsAreReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质检任务明细返回VO
-export interface I质检任务明细返回VO {
+export interface ICheckTaskDetailsAreReturnedToVO {
     // id
     id: number;
     // 所属企业id
@@ -78,11 +78,11 @@ export interface I质检任务明细返回VO {
     // 取消时间
     cancelTime: string;
     // 质检方案质检项填写信息
-    planItemInput: I质检任务质检方案质检项填写返回VO;
+    planItemInput: IQualityInspectionTaskQualityInspectionSolutionQualityInspectionItemReturnToVO;
     // 质检任务关闭信息 - 状态是已关闭（已撤销）时有值
-    closeInfo: I质检任务关闭信息返回VO;
+    closeInfo: ITheInspectionTaskShutdownInformationIsReturnedToVO;
     // 质检结果明细 - 状态是已完成时有值
-    planItemResults: I质检任务质检物料明细返回VO[];
+    planItemResults: ICheckItemDetailsAreReturnedToVO[];
     // 任务类型
     taskType: string;
     // 任务类型名称
@@ -101,14 +101,14 @@ export interface I质检任务明细返回VO {
     applyUsername: string;
 }
 // 质检任务质检方案质检项填写返回VO
-export interface I质检任务质检方案质检项填写返回VO {
+export interface IQualityInspectionTaskQualityInspectionSolutionQualityInspectionItemReturnToVO {
     // 质检方案集
-    plans: I质检任务质检方案返回VO[];
+    plans: IInspectionTaskInspectionSolutionReturnToVO[];
     // 质检项集
-    items: I质检任务质检项返回VO[];
+    items: IInspectionTaskTheInspectionItemIsReturnedToVO[];
 }
 // 质检任务质检方案返回VO
-export interface I质检任务质检方案返回VO {
+export interface IInspectionTaskInspectionSolutionReturnToVO {
     // 质检方案id
     id: number;
     // 质检方案名称
@@ -135,7 +135,7 @@ export interface I质检任务质检方案返回VO {
     attachedFileName: string;
 }
 // 质检任务质检项返回VO
-export interface I质检任务质检项返回VO {
+export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     // 质检方案质检项关联id
     qualityInspectionPlanItemRpId: number;
     // 质检方案id
@@ -161,7 +161,7 @@ export interface I质检任务质检项返回VO {
     // 选择方式
     selectType: string;
     // 选择项
-    selectorList: I质检项选择项返回VO[];
+    selectorList: ITheInspectionItemOptionReturnsVO[];
     // 数值质检标准
     numberStandard: string;
     // 数值质检标准描述
@@ -178,12 +178,12 @@ export interface I质检任务质检项返回VO {
     standardDesc: string;
 }
 // 质检项选择项返回VO
-export interface I质检项选择项返回VO {
+export interface ITheInspectionItemOptionReturnsVO {
     // 选择项名称
     name: string;
 }
 // 质检任务关闭信息返回VO
-export interface I质检任务关闭信息返回VO {
+export interface ITheInspectionTaskShutdownInformationIsReturnedToVO {
     // 所属质检任务id
     qualityStorageTaskId: number;
     // 关闭时间
@@ -198,7 +198,7 @@ export interface I质检任务关闭信息返回VO {
     handleRemark: string;
 }
 // 质检任务质检物料明细返回VO
-export interface I质检任务质检物料明细返回VO {
+export interface ICheckItemDetailsAreReturnedToVO {
     // 质检任务质检物料明细id
     id: number;
     // 质检结果类型
@@ -206,10 +206,10 @@ export interface I质检任务质检物料明细返回VO {
     // 质检结果类型名称
     qualityInspectionResultTypeName: string;
     // 质检项集
-    qualityTaskMaterialItems: I质检任务质检物料质检项明细VO[];
+    qualityTaskMaterialItems: IQcTaskQCMaterialQCItemDetailsVO[];
 }
 // 质检任务质检物料质检项明细VO
-export interface I质检任务质检物料质检项明细VO {
+export interface IQcTaskQCMaterialQCItemDetailsVO {
     // 质检方案质检项关联id
     qualityInspectionPlanItemRpId: number;
     // 质检方式

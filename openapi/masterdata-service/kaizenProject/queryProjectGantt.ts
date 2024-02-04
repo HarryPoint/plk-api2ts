@@ -1,5 +1,5 @@
 // 项目甘特图查询对象
-export interface I项目甘特图查询对象 {
+export interface IProjectGanttChartQueryObject {
     // 项目名称
     projectName: string;
     // 项目任务名称
@@ -28,18 +28,18 @@ export interface I项目甘特图查询对象 {
     projectIdList: number[];
 }
 // JSONResult«List«项目甘特图响应对象»»
-export interface IJSONResultList项目甘特图响应对象 {
+export interface IJSONResultListProjectGanttChartResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目甘特图响应对象[];
+    data: IProjectGanttChartResponseObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目甘特图响应对象
-export interface I项目甘特图响应对象 {
+export interface IProjectGanttChartResponseObject {
     // 项目id
     projectId: number;
     // 项目名称
@@ -61,10 +61,10 @@ export interface I项目甘特图响应对象 {
     // 截止日期
     projectEndDate: string;
     // 项目任务列表
-    projectTaskGanttList: I项目任务甘特图响应对象[];
+    projectTaskGanttList: IProjectTaskGanttChartResponseObject[];
 }
 // 项目任务甘特图响应对象
-export interface I项目任务甘特图响应对象 {
+export interface IProjectTaskGanttChartResponseObject {
     // 项目任务id
     projectTaskId: number;
     // 上级任务id

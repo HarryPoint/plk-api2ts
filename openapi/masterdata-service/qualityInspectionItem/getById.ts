@@ -36,10 +36,10 @@ export interface I质检项详细返回VO {
     // 附件文件名
     attachedFileName: string;
     // 选项内容集合
-    selectors: I质检项选择项返回VO[];
+    selectors: ITheInspectionItemOptionReturnsVO[];
 }
 // 质检项选择项返回VO
-export interface I质检项选择项返回VO {
+export interface ITheInspectionItemOptionReturnsVO {
     // 选择项名称
     name: string;
 }

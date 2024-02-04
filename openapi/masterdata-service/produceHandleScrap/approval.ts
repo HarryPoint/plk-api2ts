@@ -1,5 +1,5 @@
 // 生产处理报废变更状态DTO
-export interface I生产处理报废变更状态DTO {
+export interface IProductionProcessingScrapChangeStatusDTO {
     // 生产处理id
     id: number;
     // 处理意见

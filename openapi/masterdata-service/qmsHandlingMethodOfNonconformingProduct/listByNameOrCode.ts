@@ -1,5 +1,5 @@
 // 名称、编号DTO
-export interface I名称编号DTO {
+export interface INameNumberDTO {
     // 名称or编号
     nameOrCode: string;
 }

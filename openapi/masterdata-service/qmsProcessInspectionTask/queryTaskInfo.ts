@@ -1,16 +1,16 @@
 // JSONResult«工序检检验任务响应对象»
-export interface IJSONResult工序检检验任务响应对象 {
+export interface IJSONResultProcessCheckTaskResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工序检检验任务响应对象;
+    data: IProcessCheckCheckTaskResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工序检检验任务响应对象
-export interface I工序检检验任务响应对象 {
+export interface IProcessCheckCheckTaskResponseObject {
     // id
     id: number;
     // 任务编号
@@ -96,7 +96,7 @@ export interface I工序检检验任务响应对象 {
     // 检验员
     inspectionEmployeeIds: undefined[];
     // 检验员
-    inspectionEmployees: I关联表单数据VO[];
+    inspectionEmployees: IAssociateFormDataVO[];
     // 分配状态
     isAssignment: string;
     // 检验截止日期
@@ -112,14 +112,14 @@ export interface I工序检检验任务响应对象 {
     // 超期天数
     overdueDay: number;
     // 互检记录
-    mutualRecords: I工序检检验任务互检记录响应对象[];
+    mutualRecords: IProcessCheckCheckTaskMutualCheckRecordResponseObject[];
     // 专检记录
-    selfRecords: I首检自检记录响应对象[];
+    selfRecords: IFirstCheckSelfCheckRecordResponseObject[];
     // 自检记录
-    specialRecords: I工序检检验专检记录响应对象[];
+    specialRecords: IProcessInspectionInspectionSpecialInspectionRecordResponseObject[];
 }
 // 关联表单数据VO
-export interface I关联表单数据VO {
+export interface IAssociateFormDataVO {
     // id
     id: number;
     // 关联表单显示值
@@ -132,7 +132,7 @@ export interface I关联表单数据VO {
     masterDataId: number;
 }
 // 工序检检验任务互检记录响应对象
-export interface I工序检检验任务互检记录响应对象 {
+export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     // id
     id: number;
     // 零件号
@@ -151,7 +151,7 @@ export interface I工序检检验任务互检记录响应对象 {
     inspectionResult: string;
 }
 // 首检自检记录响应对象
-export interface I首检自检记录响应对象 {
+export interface IFirstCheckSelfCheckRecordResponseObject {
     // id
     id: number;
     // 零件号
@@ -170,7 +170,7 @@ export interface I首检自检记录响应对象 {
     inspectionResult: string;
 }
 // 工序检检验专检记录响应对象
-export interface I工序检检验专检记录响应对象 {
+export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObject {
     // id
     id: number;
     // 零件号

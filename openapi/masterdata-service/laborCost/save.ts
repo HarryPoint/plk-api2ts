@@ -1,5 +1,5 @@
 // 工费保存DTO
-export interface I工费保存DTO {
+export interface ILaborCostsSaveDTO {
     // id
     id: number;
     // 编号
@@ -37,9 +37,9 @@ export interface I工费响应对象 {
     // 名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 合格产出工费单价（元）
     producePrice: number;
     // 返工产出工费单价（元）
@@ -48,7 +48,7 @@ export interface I工费响应对象 {
     readyPrice: number;
 }
 // 关联下拉响应对象
-export interface I关联下拉响应对象 {
+export interface IAssociatedDropDownResponseObjects {
     // id
     id: number;
     // 显示字段名称

@@ -1,5 +1,5 @@
 // 编辑质检任务 DTO
-export interface I编辑质检任务DTO {
+export interface IEditTheInspectionTaskDTO {
     // id，如果不传就是新增
     id: number;
     // 任务号

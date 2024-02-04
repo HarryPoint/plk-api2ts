@@ -1,16 +1,16 @@
 // JSONResult«List«质检生产大屏订单完成进度返回VO»»
-export interface IJSONResultList质检生产大屏订单完成进度返回VO {
+export interface IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I质检生产大屏订单完成进度返回VO[];
+    data: IQcProductionLargeScreenOrderCompletionProgressReturnToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质检生产大屏订单完成进度返回VO
-export interface I质检生产大屏订单完成进度返回VO {
+export interface IQcProductionLargeScreenOrderCompletionProgressReturnToVO {
     // id(销售订单明细id)
     id: number;
     // 销售订单id

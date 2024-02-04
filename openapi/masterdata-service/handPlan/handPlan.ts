@@ -1,5 +1,5 @@
 // 生产订单手动排产DTO
-export interface I生产订单手动排产DTO {
+export interface IManualDTOSchedulingOfProductionOrders {
     // 排产计划单名称
     planName: string;
     // 排产维度
@@ -11,48 +11,48 @@ export interface I生产订单手动排产DTO {
     // 排产结束日期 yyyy-MM-dd HH:mm:ss
     endTime: string;
     // 排产明细订单维度
-    orders: I生产订单手动排产明细订单维度DTO[];
+    orders: IManualProductionOrderSchedulingDetailsOrderDimensionsDTO[];
 }
 // 生产订单手动排产明细订单维度DTO
-export interface I生产订单手动排产明细订单维度DTO {
+export interface IManualProductionOrderSchedulingDetailsOrderDimensionsDTO {
     // 生产订单id
     id: number;
     // 按日排产明细
-    dayQuantities: I生产订单手动排产按日排产DTO[];
+    dayQuantities: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
     // 按班次排产明细
-    classShiftQuantities: I生产订单手动排产按班次排产DTO[];
+    classShiftQuantities: IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift[];
     // 步骤产量集
-    steps: I生产订单手动排产明细步骤产量DTO[];
+    steps: IProductionOrderManualSchedulingDetailStepOutputDTO[];
 }
 // 生产订单手动排产按日排产DTO
-export interface I生产订单手动排产按日排产DTO {
+export interface IManualSchedulingOfProductionOrdersDTOSchedulingDaily {
     // 日期
     scheduleDate: string;
     // 产量
     quantity: number;
 }
 // 生产订单手动排产按班次排产DTO
-export interface I生产订单手动排产按班次排产DTO {
+export interface IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift {
     // 日期 yyyy-MM-dd
     scheduleDate: string;
     // 班次产量集
-    classShifts: I班次产量DTO[];
+    classShifts: IProductionDTOPerShift[];
 }
 // 班次产量DTO
-export interface I班次产量DTO {
+export interface IProductionDTOPerShift {
     // 班次id
     classShiftId: number;
     // 产量
     quantity: number;
 }
 // 生产订单手动排产明细步骤产量DTO
-export interface I生产订单手动排产明细步骤产量DTO {
+export interface IProductionOrderManualSchedulingDetailStepOutputDTO {
     // 步骤id
     id: number;
     // 按日排产明细
-    dayQuantities: I生产订单手动排产按日排产DTO[];
+    dayQuantities: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
     // 按班次排产明细
-    classShiftQuantities: I生产订单手动排产按班次排产DTO[];
+    classShiftQuantities: IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift[];
 }
 // JSONResult«object»
 export interface IJSONResultobject {

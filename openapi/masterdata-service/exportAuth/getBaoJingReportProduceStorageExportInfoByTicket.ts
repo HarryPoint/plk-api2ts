@@ -14,10 +14,10 @@ export interface I导出信息宝晶报表成品日报表响应对象 {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I宝晶报表成品日报表响应对象[];
+    itemList: IBaojingReportFinishedDailyReportResponseObject[];
 }
 // 宝晶报表(成品日报表)响应对象
-export interface I宝晶报表成品日报表响应对象 {
+export interface IBaojingReportFinishedDailyReportResponseObject {
     // 物料id
     majorDataId: number;
     // 物料编号

@@ -1,5 +1,5 @@
 // 生产订单变更优先级DTO
-export interface I生产订单变更优先级DTO {
+export interface IProductionOrderChangePriorityDTO {
     // 生产订单id
     produceOrderId: number;
     // 订单优先级

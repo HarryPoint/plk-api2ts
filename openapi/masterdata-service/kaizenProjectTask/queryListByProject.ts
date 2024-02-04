@@ -20,9 +20,9 @@ export interface IKaizenProjectTaskResponseDTO {
     // 项目任务状态
     projectTaskStatus: string;
     // 关联项目
-    projectId: I关联表单数据VO;
+    projectId: IAssociateFormDataVO;
     // 执行人
-    leaderUserId: I关联表单数据VO;
+    leaderUserId: IAssociateFormDataVO;
     // 上级ID
     parentId: number;
     // 开始时间
@@ -34,14 +34,14 @@ export interface IKaizenProjectTaskResponseDTO {
     // 备注
     remark: string;
     // 创建用户ID
-    createUserId: I关联表单数据VO;
+    createUserId: IAssociateFormDataVO;
     // 创建时间
     createTime: string;
     // 下级任务列表
     childTaskList: IKaizenProjectTaskResponseDTO[];
 }
 // 关联表单数据VO
-export interface I关联表单数据VO {
+export interface IAssociateFormDataVO {
     // id
     id: number;
     // 关联表单显示值

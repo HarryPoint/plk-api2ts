@@ -1,5 +1,5 @@
 // 项目任务模板用户添加请求DTO
-export interface I项目任务模板用户添加请求DTO {
+export interface IProjectTaskTemplateUserAddsRequestDTO {
     // 项目id
     projectId: number;
     // 项目任务模板id

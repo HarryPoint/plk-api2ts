@@ -29,11 +29,11 @@ export interface I产出类折线图返回VOobject {
     // 分组数据
     groupList: I产出类折线图分组返回VOobject[];
     // 查询班组集
-    classGroupList: IId名称编号VO[];
+    classGroupList: IIdNameNumberVO[];
     // 查询工序集
-    processList: IId名称编号VO[];
+    processList: IIdNameNumberVO[];
     // 查询物料集
-    majorDataList: IId名称编号VO[];
+    majorDataList: IIdNameNumberVO[];
     // 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息
     isConsistent: string;
     // 实际查询时间 - 开始
@@ -55,7 +55,7 @@ export interface I产出类折线图分组返回VOobject {
     pointList: undefined[];
 }
 // Id，名称，编号VO
-export interface IId名称编号VO {
+export interface IIdNameNumberVO {
     // id
     id: number;
     // 名称

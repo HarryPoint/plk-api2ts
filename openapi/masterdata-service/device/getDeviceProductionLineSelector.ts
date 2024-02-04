@@ -1,5 +1,5 @@
 // 设备产线选择请求DTO
-export interface I设备产线选择请求DTO {
+export interface IDeviceProductionLineSelectsRequestDTO {
     // 搜索参数
     searchValue: string;
     // 设备ids
@@ -14,18 +14,18 @@ export interface I设备产线选择请求DTO {
     dataStatusList: number[];
 }
 // JSONResult«List«设备产线选择响应DTO»»
-export interface IJSONResultList设备产线选择响应DTO {
+export interface IJSONResultListSelectResponseDtosForTheDeviceProductionLine {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备产线选择响应DTO[];
+    data: ITheEquipmentProductionLineSelectsResponseDTO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备产线选择响应DTO
-export interface I设备产线选择响应DTO {
+export interface ITheEquipmentProductionLineSelectsResponseDTO {
     // 设备id
     id: number;
     // 设备code

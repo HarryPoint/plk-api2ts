@@ -1,32 +1,32 @@
 // 工厂日历搜索VO
-export interface I工厂日历搜索VO {
+export interface IFactoryCalendarSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«排班记录返回VO»»
-export interface IJSONResult分页信息排班记录返回VO {
+export interface IJSONResultPagingInformationSchedulingRecordReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息排班记录返回VO;
+    data: IPagingInformationSchedulingRecordReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«排班记录返回VO»
-export interface I分页信息排班记录返回VO {
+export interface IPagingInformationSchedulingRecordReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -36,7 +36,7 @@ export interface I分页信息排班记录返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I排班记录返回VO[];
+    list: ITheSchedulingRecordIsReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -49,7 +49,7 @@ export interface I分页信息排班记录返回VO {
     nextPage: number;
 }
 // 排班记录返回VO
-export interface I排班记录返回VO {
+export interface ITheSchedulingRecordIsReturnedToVO {
     // id
     id: number;
     // 开始日期
@@ -57,7 +57,7 @@ export interface I排班记录返回VO {
     // 循环天数
     loopDay: number;
     // 排班天数集
-    scheduleDays: I排班基数返回VO[];
+    scheduleDays: ISchedulingBaseReturnsVO[];
     // 创建人id
     createUserId: number;
     // 创建人姓名
@@ -66,14 +66,14 @@ export interface I排班记录返回VO {
     createTime: string;
 }
 // 排班基数返回VO
-export interface I排班基数返回VO {
+export interface ISchedulingBaseReturnsVO {
     // id
     id: number;
     // 排班循环配置
-    scheduleDayDetails: I排班基数明细返回VO[];
+    scheduleDayDetails: IScheduleBaseDetailsAreReturnedToVO[];
 }
 // 排班基数明细返回VO
-export interface I排班基数明细返回VO {
+export interface IScheduleBaseDetailsAreReturnedToVO {
     // id
     id: number;
     // 班次id
@@ -87,7 +87,7 @@ export interface I排班基数明细返回VO {
     // 班次结束时间
     classShiftEndTime: ILocalTime;
     // 班组列表信息
-    classGroupList: I排班基数明细班组返回VO[];
+    classGroupList: ISchedulingBaseDetailGroupReturnsVO[];
 }
 // LocalTime
 export interface ILocalTime {
@@ -101,7 +101,7 @@ export interface ILocalTime {
     nano: number;
 }
 // 排班基数明细班组返回VO
-export interface I排班基数明细班组返回VO {
+export interface ISchedulingBaseDetailGroupReturnsVO {
     // 班组id
     classGroupId: number;
     // 班组名称

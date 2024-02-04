@@ -1,5 +1,5 @@
 // 公共待办数据查询
-export interface I公共待办数据查询 {
+export interface IPublicBacklogDataQuery {
     // 编码
     code: string;
     // 创建时间--开始时间

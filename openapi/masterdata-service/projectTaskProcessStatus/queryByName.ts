@@ -1,5 +1,5 @@
 // 项目名称编号公共查询对象_1
-export interface I项目名称编号公共查询对象_1 {
+export interface IItemNameNumberPublicQueryObject1 {
     // 项目id
     projectId: number;
     // 项目计划id

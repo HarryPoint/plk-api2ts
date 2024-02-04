@@ -1,5 +1,5 @@
 // 产能保存DTO
-export interface I产能保存DTO {
+export interface ICapacityPreservationDTO {
     // id
     id: number;
     // 编号

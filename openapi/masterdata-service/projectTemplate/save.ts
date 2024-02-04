@@ -11,7 +11,7 @@ export interface I项目模板编辑请求DTO {
     // 项目模板简介
     intro: string;
     // 项目字段列表
-    projectFields: IIdCodeName通用传输对象[];
+    projectFields: IIdCodeNameGenericTransportObject[];
     // 项目团队是否勾选
     checkProjectTeam: string;
     // 项目成员是否勾选
@@ -21,12 +21,12 @@ export interface I项目模板编辑请求DTO {
     // 项目计划是否勾选
     checkProjectPlan: string;
     // 项目计划字段
-    projectPlanFields: IIdCodeName通用传输对象[];
+    projectPlanFields: IIdCodeNameGenericTransportObject[];
     // 项目计划自定义字段是否勾选
     checkProjectPlanCustomField: string;
 }
 // Id Code Name 通用传输对象
-export interface IIdCodeName通用传输对象 {
+export interface IIdCodeNameGenericTransportObject {
     // id
     id: number;
     // code

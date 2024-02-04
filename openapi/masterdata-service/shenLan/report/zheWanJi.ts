@@ -9,7 +9,7 @@ export interface I深蓝报表查询条件 {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 设备名称
     deviceName: string;
     // 报警信息
@@ -20,7 +20,7 @@ export interface I深蓝报表查询条件 {
     currentKnife: string;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined

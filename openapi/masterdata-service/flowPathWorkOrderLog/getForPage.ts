@@ -1,5 +1,5 @@
 // 工单日志搜索VO
-export interface I工单日志搜索VO {
+export interface IJobLogSearchVO {
     // 当前页面
     pageNo: number;
     // 业务流程ID
@@ -7,7 +7,7 @@ export interface I工单日志搜索VO {
     // 分页大小
     pageSize: number;
     // 排序字段集
-    orders: I分页排序VO[];
+    orders: IPagingSortVO[];
     // 工单id
     id: number;
     // 业务流程系统类型
@@ -16,25 +16,25 @@ export interface I工单日志搜索VO {
     businessDataId: number;
 }
 // 分页排序VO
-export interface I分页排序VO {
+export interface IPagingSortVO {
     // undefined
     column: string;
     // undefined
     isAsc: string;
 }
 // JSONResult«分页信息«工单日志返回VO»»
-export interface IJSONResult分页信息工单日志返回VO {
+export interface IJSONResultThePageInformationWorkOrderLogReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息工单日志返回VO;
+    data: IThePageInformationTicketLogReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工单日志返回VO»
-export interface I分页信息工单日志返回VO {
+export interface IThePageInformationTicketLogReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface I分页信息工单日志返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I工单日志返回VO[];
+    list: ITheTicketLogReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface I分页信息工单日志返回VO {
     nextPage: number;
 }
 // 工单日志返回VO
-export interface I工单日志返回VO {
+export interface ITheTicketLogReturnsVO {
     // id
     id: number;
     // 所属流程工单id
@@ -73,16 +73,16 @@ export interface I工单日志返回VO {
     // 创建时间
     createTime: string;
     // 抄送人
-    carbonCopyUsers: I待办抄送人VO[];
+    carbonCopyUsers: ICcToVO[];
     // 执行人
-    handleUsers: I待办抄送人VO_1[];
+    handleUsers: IToBeCopiedToVO1[];
     // 流程任务id
     flowPathTaskId: number;
     // 执行意见
     notes: string;
 }
 // 待办抄送人VO
-export interface I待办抄送人VO {
+export interface ICcToVO {
     // 抄送人id
     userId: number;
     // 抄送人姓名
@@ -91,7 +91,7 @@ export interface I待办抄送人VO {
     isRead: string;
 }
 // 待办抄送人VO_1
-export interface I待办抄送人VO_1 {
+export interface IToBeCopiedToVO1 {
     // 操作人
     userId: number;
     // 操作人姓名
@@ -111,7 +111,7 @@ export interface I待办抄送人VO_1 {
     // 日志状态描述
     logStatusDesc: string;
     // 下个节点执行人列表
-    nextNodeExecutorList: I下个节点执行人[];
+    nextNodeExecutorList: INextNodeExecutor[];
     // 转交给用户id
     transferToUserId: number;
     // 转交给用户名称
@@ -122,7 +122,7 @@ export interface I待办抄送人VO_1 {
     transferFromUserName: string;
 }
 // 下个节点执行人
-export interface I下个节点执行人 {
+export interface INextNodeExecutor {
     // 抄送人id
     userId: number;
     // 抄送人姓名

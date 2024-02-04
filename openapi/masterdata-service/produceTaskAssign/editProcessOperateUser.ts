@@ -1,5 +1,5 @@
 // 工序操作员编辑DTO
-export interface I工序操作员编辑DTO {
+export interface IProcessOperatorsEditTheDTO {
     // 员工类型
     userType: string;
     // 工序id

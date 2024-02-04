@@ -1,5 +1,5 @@
 // 设备数采通讯状态DTO
-export interface I设备数采通讯状态DTO {
+export interface IDeviceDataAcquisitionCommunicationStatusDTO {
     // id
     id: number;
     // 通讯开关状态
