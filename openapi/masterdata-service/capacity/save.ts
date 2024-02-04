@@ -41,9 +41,9 @@ export interface I产能响应对象 {
     // 名称
     name: string;
     // 关联工序
-    processRp: I关联下拉响应对象[];
+    processRp: IAssociatedDropDownResponseObjects[];
     // 关联物料
-    materialRp: I关联下拉响应对象[];
+    materialRp: IAssociatedDropDownResponseObjects[];
     // 准备耗时
     readyTime: number;
     // 准备时间单位
@@ -56,7 +56,7 @@ export interface I产能响应对象 {
     capacityProduceQuantity: number;
 }
 // 关联下拉响应对象
-export interface I关联下拉响应对象 {
+export interface IAssociatedDropDownResponseObjects {
     // id
     id: number;
     // 显示字段名称

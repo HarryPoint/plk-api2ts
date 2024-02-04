@@ -1,31 +1,31 @@
 // JSONResult«生产订单详情VO»
-export interface IJSONResult生产订单详情VO {
+export interface IJSONResultProductionOrderDetailsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单详情VO;
+    data: IProductionOrderDetailsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单详情VO
-export interface I生产订单详情VO {
+export interface IProductionOrderDetailsVO {
     // 补单数量
     supplementCompleteQuantity: number;
     // 未补单数量
     unSupplementCompleteQuantity: number;
     // 排产信息
-    planInfoList: I生产订单详情排产VO[];
+    planInfoList: IProductionOrderDetailsProductionVO[];
     // 物料信息
-    materialInfo: I生产订单详情物料信息VO;
+    materialInfo: IProductionOrderDetailsMaterialInformationVO;
     // 子物料生产信息
-    childMaterialList: I生产订单详情物料信息VO[];
+    childMaterialList: IProductionOrderDetailsMaterialInformationVO[];
     // 报废补单明细
-    produceOrderSupplementList: I生产订单详情补单VO[];
+    produceOrderSupplementList: IProductionOrderDetailsSupplementVO[];
 }
 // 生产订单详情 - 排产VO
-export interface I生产订单详情排产VO {
+export interface IProductionOrderDetailsProductionVO {
     // 排产类型
     planType: string;
     // 计划开始时间
@@ -52,7 +52,7 @@ export interface I生产订单详情排产VO {
     produceOrderId: number;
 }
 // 生产订单详情 - 物料信息VO
-export interface I生产订单详情物料信息VO {
+export interface IProductionOrderDetailsMaterialInformationVO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -96,7 +96,7 @@ export interface I生产订单详情物料信息VO {
     // 生产订单编号
     produceOrderCode: string;
     // 子物料信息
-    childMaterialList: I生产订单详情物料信息VO[];
+    childMaterialList: IProductionOrderDetailsMaterialInformationVO[];
     // 生产工艺id
     produceTechnologyId: number;
     // 生产工艺名称
@@ -117,7 +117,7 @@ export interface I生产订单详情物料信息VO {
     enableQualityTraceability: string;
 }
 // 生产订单详情 - 补单VO
-export interface I生产订单详情补单VO {
+export interface IProductionOrderDetailsSupplementVO {
     // id
     id: number;
     // 报废补单订单编号

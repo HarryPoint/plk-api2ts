@@ -1,5 +1,5 @@
 // 项目变更单扩展参数请求
-export interface I项目变更单扩展参数请求 {
+export interface IItemChangeOrderExtensionParameterRequest {
     // 字段数据列表
     fieldDataList: IItemChangeSingleFieldExtensionParameterRequest[];
 }

@@ -1,5 +1,5 @@
 // 批次报废DTO
-export interface I批次报废DTO {
+export interface IBatchScrapDTO {
     // wipRpId
     wipRpId: number;
     // 生产异常类型id

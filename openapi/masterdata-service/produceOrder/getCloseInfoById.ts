@@ -1,16 +1,16 @@
 // JSONResult«生产订单关闭信息返回VO»
-export interface IJSONResult生产订单关闭信息返回VO {
+export interface IJSONResultProductionOrderClosureInformationIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单关闭信息返回VO;
+    data: IProductionOrderClosureInformationIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单关闭信息返回VO
-export interface I生产订单关闭信息返回VO {
+export interface IProductionOrderClosureInformationIsReturnedToVO {
     // id
     id: number;
     // 生产订单号

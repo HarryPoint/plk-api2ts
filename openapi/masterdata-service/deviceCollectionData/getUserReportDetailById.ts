@@ -34,10 +34,10 @@ export interface I设备数采数据人工上报详单返回VO {
     // 设备状态描述
     statusDesc: string;
     // 详情
-    details: I设备数采数据明细返回VO[];
+    details: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
 }
 // 设备数采数据明细返回VO
-export interface I设备数采数据明细返回VO {
+export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     // 设备数采参数id
     deviceCollectionParamId: number;
     // 设备数采参数名称

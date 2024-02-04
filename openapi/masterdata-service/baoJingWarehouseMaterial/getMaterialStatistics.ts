@@ -1,5 +1,5 @@
 // 宝晶物料主数据库存搜索VO
-export interface I宝晶物料主数据库存搜索VO {
+export interface IBaojingMaterialMasterDataInventorySearchVO {
     // 物料id集
     materialIds: number[];
     // 外部编码
@@ -45,18 +45,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«宝晶物料库存统计VO»
-export interface IJSONResult宝晶物料库存统计VO {
+export interface IJSONResultBaojingMaterialInventoryStatisticsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶物料库存统计VO;
+    data: IBaojingMaterialInventoryStatisticsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶物料库存统计VO
-export interface I宝晶物料库存统计VO {
+export interface IBaojingMaterialInventoryStatisticsVO {
     // 库存总数
     storageTotalCount: number;
     // 库存锁定数
@@ -64,10 +64,10 @@ export interface I宝晶物料库存统计VO {
     // 库存可使用数
     storageUseCount: number;
     // 物料库存分页
-    materialStorages: I分页信息宝晶物料主数据库存返回VO;
+    materialStorages: IPagingInformationBaojingMaterialMasterDataInventoryReturnedToVO;
 }
 // 分页信息«宝晶物料主数据库存返回VO»
-export interface I分页信息宝晶物料主数据库存返回VO {
+export interface IPagingInformationBaojingMaterialMasterDataInventoryReturnedToVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -77,7 +77,7 @@ export interface I分页信息宝晶物料主数据库存返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I宝晶物料主数据库存返回VO[];
+    list: IBaojingMaterialMasterDataInventoryReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -90,7 +90,7 @@ export interface I分页信息宝晶物料主数据库存返回VO {
     nextPage: number;
 }
 // 宝晶物料主数据库存返回VO
-export interface I宝晶物料主数据库存返回VO {
+export interface IBaojingMaterialMasterDataInventoryReturnedToVO {
     // 物料id
     id: number;
     // 物料名称

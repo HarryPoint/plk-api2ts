@@ -1,16 +1,16 @@
 // JSONResult«首检检验任务响应对象»
-export interface IJSONResult首检检验任务响应对象 {
+export interface IJSONResultFirstCheckChecksTheTaskResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I首检检验任务响应对象;
+    data: ITheFirstCheckChecksTheTaskResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 首检检验任务响应对象
-export interface I首检检验任务响应对象 {
+export interface ITheFirstCheckChecksTheTaskResponseObject {
     // id
     id: number;
     // undefined
@@ -112,11 +112,11 @@ export interface I首检检验任务响应对象 {
     // undefined
     overdueDay: number;
     // undefined
-    mutualRecords: I首检检验任务互检记录响应对象[];
+    mutualRecords: IFirstCheckCheckTaskMutualCheckRecordResponseObject[];
     // undefined
-    specialRecords: I首检检验专检记录响应对象[];
+    specialRecords: IFirstCheckCheckSpecialCheckRecordResponseObject[];
     // undefined
-    selfRecords: I首检检验检验自检记录响应对象[];
+    selfRecords: IFirstCheckCheckSelfCheckRecordResponseObject[];
 }
 // 关联表单数据VO
 export interface IAssociateFormDataVO {
@@ -132,7 +132,7 @@ export interface IAssociateFormDataVO {
     masterDataId: number;
 }
 // 首检检验任务互检记录响应对象
-export interface I首检检验任务互检记录响应对象 {
+export interface IFirstCheckCheckTaskMutualCheckRecordResponseObject {
     // id
     id: number;
     // undefined
@@ -151,7 +151,7 @@ export interface I首检检验任务互检记录响应对象 {
     inspectionResult: string;
 }
 // 首检检验专检记录响应对象
-export interface I首检检验专检记录响应对象 {
+export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
     // undefined
     id: number;
     // undefined
@@ -170,7 +170,7 @@ export interface I首检检验专检记录响应对象 {
     inspectionResult: string;
 }
 // 首检检验检验自检记录响应对象
-export interface I首检检验检验自检记录响应对象 {
+export interface IFirstCheckCheckSelfCheckRecordResponseObject {
     // undefined
     id: number;
     // undefined

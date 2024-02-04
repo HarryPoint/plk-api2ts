@@ -1,23 +1,23 @@
 // JSONResult«导出信息«设备数采明细报表导出VO»»
-export interface IJSONResult导出信息设备数采明细报表导出VO {
+export interface IJSONResultExportInformationDeviceDataCollectionDetailsExportVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息设备数采明细报表导出VO;
+    data: IExportInformationExportDetailedDeviceDataCollectionReportVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«设备数采明细报表导出VO»
-export interface I导出信息设备数采明细报表导出VO {
+export interface IExportInformationExportDetailedDeviceDataCollectionReportVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I设备数采明细报表导出VO[];
+    itemList: IExportDetailedDeviceDataCollectionReportVO[];
 }
 // 设备数采明细报表导出VO
-export interface I设备数采明细报表导出VO {
+export interface IExportDetailedDeviceDataCollectionReportVO {
     // 设备名称
     deviceName: string;
     // 设备编号

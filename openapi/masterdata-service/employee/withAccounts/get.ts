@@ -1,5 +1,5 @@
 // 用户主数据选择列表搜索VO
-export interface I用户主数据选择列表搜索VO {
+export interface ISearchVOWithTheHomeOwnerDataSelectionList {
     // 当前页面
     pageNo: number;
     // 分页大小

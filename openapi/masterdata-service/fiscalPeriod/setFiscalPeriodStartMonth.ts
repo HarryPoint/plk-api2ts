@@ -1,5 +1,5 @@
 // 设置期间开始月份Request
-export interface I设置期间开始月份Request {
+export interface ISetTheStartMonthRequestDuringThePeriod {
     // ID
     startMonth: string;
 }

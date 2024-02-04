@@ -27,7 +27,7 @@ export interface IJSONResult产出类折线图返回VO直通报表返回VO {
 // 产出类折线图返回VO«直通报表返回VO»
 export interface I产出类折线图返回VO直通报表返回VO {
     // 分组数据
-    groupList: I产出类折线图分组返回VO直通报表返回VO[];
+    groupList: IOutputLineChartGroupReturnVOPassThroughReportReturnVO[];
     // 查询班组集
     classGroupList: IIdNameNumberVO[];
     // 查询工序集
@@ -44,7 +44,7 @@ export interface I产出类折线图返回VO直通报表返回VO {
     actualDataCount: number;
 }
 // 产出类折线图分组返回VO«直通报表返回VO»
-export interface I产出类折线图分组返回VO直通报表返回VO {
+export interface IOutputLineChartGroupReturnVOPassThroughReportReturnVO {
     // 数据分组id
     groupId: number;
     // 数据分组名称
@@ -52,10 +52,10 @@ export interface I产出类折线图分组返回VO直通报表返回VO {
     // 数据分组编号
     groupCode: string;
     // 详细点数据
-    pointList: I直通报表返回VO[];
+    pointList: IThePassThroughReportReturnsVO[];
 }
 // 直通报表返回VO
-export interface I直通报表返回VO {
+export interface IThePassThroughReportReturnsVO {
     // 数据时间（时间戳），根据当前选中的时间粒度去转换时间
     dataTime: string;
     // 所有工序报废

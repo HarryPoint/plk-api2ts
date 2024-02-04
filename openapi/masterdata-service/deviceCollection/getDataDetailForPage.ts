@@ -1,5 +1,5 @@
 // 设备数采数据详单搜索VO
-export interface I设备数采数据详单搜索VO {
+export interface IDeviceDataAcquisitionDataListSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -23,25 +23,25 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«设备数采数据详单返回VO»
-export interface IJSONResult设备数采数据详单返回VO {
+export interface IJSONResultTheDeviceDataCollectionDetailsAreReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备数采数据详单返回VO;
+    data: ITheDeviceDataCollectionDetailListIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备数采数据详单返回VO
-export interface I设备数采数据详单返回VO {
+export interface ITheDeviceDataCollectionDetailListIsReturnedToVO {
     // 分页信息
-    dataPages: I分页信息设备数采数据详单分页信息返回VO;
+    dataPages: IPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO;
     // 设备信息
-    deviceInfo: I设备数采状态信息VO;
+    deviceInfo: IDeviceDataAcquisitionStatusMessageVO;
 }
 // 分页信息«设备数采数据详单分页信息返回VO»
-export interface I分页信息设备数采数据详单分页信息返回VO {
+export interface IPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -51,7 +51,7 @@ export interface I分页信息设备数采数据详单分页信息返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I设备数采数据详单分页信息返回VO[];
+    list: IDeviceDataCollectionCDRPageInformationIsReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -64,7 +64,7 @@ export interface I分页信息设备数采数据详单分页信息返回VO {
     nextPage: number;
 }
 // 设备数采数据详单分页信息返回VO
-export interface I设备数采数据详单分页信息返回VO {
+export interface IDeviceDataCollectionCDRPageInformationIsReturnedToVO {
     // id
     id: number;
     // 数据提交时间
@@ -80,12 +80,12 @@ export interface I设备数采数据详单分页信息返回VO {
     // 拓展数据
     extData;
     // 详情
-    details: I设备数采数据明细返回VO[];
+    details: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
     // 是否有异常
     hasError: string;
 }
 // 设备数采数据明细返回VO
-export interface I设备数采数据明细返回VO {
+export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     // 设备数采参数id
     deviceCollectionParamId: number;
     // 设备数采参数名称
@@ -108,7 +108,7 @@ export interface I设备数采数据明细返回VO {
     errorResult: number;
 }
 // 设备数采状态信息VO
-export interface I设备数采状态信息VO {
+export interface IDeviceDataAcquisitionStatusMessageVO {
     // id
     id: number;
     // 设备名称

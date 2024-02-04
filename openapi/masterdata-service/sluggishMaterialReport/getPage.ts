@@ -1,16 +1,16 @@
 // JSONResult«分页信息«呆滞物料报表查询明细响应对象»»
-export interface IJSONResult分页信息呆滞物料报表查询明细响应对象 {
+export interface IJSONResultPageInformationDullMaterialsReportQueryDetailsResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息呆滞物料报表查询明细响应对象;
+    data: IPageInformationDullMaterialsReportQueryDetailsResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«呆滞物料报表查询明细响应对象»
-export interface I分页信息呆滞物料报表查询明细响应对象 {
+export interface IPageInformationDullMaterialsReportQueryDetailsResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息呆滞物料报表查询明细响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I呆滞物料报表查询明细响应对象[];
+    list: IDullMaterialReportQueryDetailsResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息呆滞物料报表查询明细响应对象 {
     nextPage: number;
 }
 // 呆滞物料报表查询明细响应对象
-export interface I呆滞物料报表查询明细响应对象 {
+export interface IDullMaterialReportQueryDetailsResponseObject {
     // 物料编号
     materialCode: string;
     // 物料名称

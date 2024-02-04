@@ -1,5 +1,5 @@
 // 工序操作人员搜索VO
-export interface I工序操作人员搜索VO {
+export interface IProcessOperatorSearchesVO {
     // 当前页面
     pageNo: number;
     // 工序id
@@ -25,18 +25,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«工序操作人员VO»»
-export interface IJSONResult分页信息工序操作人员VO {
+export interface IJSONResultPagingInformationProcessOperatorVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息工序操作人员VO;
+    data: IPagingInformationProcessOperatorVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工序操作人员VO»
-export interface I分页信息工序操作人员VO {
+export interface IPagingInformationProcessOperatorVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface I分页信息工序操作人员VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I工序操作人员VO[];
+    list: IProcessOperatorVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface I分页信息工序操作人员VO {
     nextPage: number;
 }
 // 工序操作人员VO
-export interface I工序操作人员VO {
+export interface IProcessOperatorVO {
     // 员工id
     userId: number;
     // 员工编号

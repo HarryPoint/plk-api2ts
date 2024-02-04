@@ -1,5 +1,5 @@
 // 工序任务搜索VO
-export interface I工序任务搜索VO {
+export interface IProcessTaskSearchVO {
     // 工序id集合
     processIds: number[];
     // 是否需要分配
@@ -19,18 +19,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«工序任务设置VO»»
-export interface IJSONResult分页信息工序任务设置VO {
+export interface IJSONResultPagingInformationProcedureTaskSetVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息工序任务设置VO;
+    data: IPagingInformationProcedureTaskSetVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工序任务设置VO»
-export interface I分页信息工序任务设置VO {
+export interface IPagingInformationProcedureTaskSetVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -40,7 +40,7 @@ export interface I分页信息工序任务设置VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I工序任务设置VO[];
+    list: IProcedureTaskSetVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -53,7 +53,7 @@ export interface I分页信息工序任务设置VO {
     nextPage: number;
 }
 // 工序任务设置VO
-export interface I工序任务设置VO {
+export interface IProcedureTaskSetVO {
     // 工序id
     processId: number;
     // 工序名称

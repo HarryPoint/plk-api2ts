@@ -1,5 +1,5 @@
 // 生产费用分配编辑DTO
-export interface I生产费用分配编辑DTO {
+export interface IProductionExpensesAllocationEditDTO {
     // id
     id: number;
     // 单据编号
@@ -11,14 +11,14 @@ export interface I生产费用分配编辑DTO {
     // 数量归集id
     produceQuantityCollectIds: number[];
     // 分配信息
-    produceFeeAssignDetailList: I生产费用分配明细编辑DTO[];
+    produceFeeAssignDetailList: IProductionExpenseAllocationDetailsEditDTO[];
     // 费用信息
-    produceFeeCollectDetailList: I费用归集明细响应DTO_1[];
+    produceFeeCollectDetailList: ICostCollectionDetailResponseDTO1[];
     // undefined
     isDeleted: string;
 }
 // 生产费用分配明细编辑DTO
-export interface I生产费用分配明细编辑DTO {
+export interface IProductionExpenseAllocationDetailsEditDTO {
     // id
     id: number;
     // 生产费用分配id
@@ -52,14 +52,14 @@ export interface I生产费用分配明细编辑DTO {
     // 分配比例
     assignRatio: number;
     // 动态费用分配信息
-    produceFeeAssignDynamicData: I生产成本分配动态数据[];
+    produceFeeAssignDynamicData: IProductionCostAllocationDynamicData[];
     // 费用合计
     totalFee: number;
     // undefined
     isDeleted: string;
 }
 // 生产成本分配动态数据
-export interface I生产成本分配动态数据 {
+export interface IProductionCostAllocationDynamicData {
     // 费用类型id
     produceFeeTypeId: number;
     // 费用类型code
@@ -68,7 +68,7 @@ export interface I生产成本分配动态数据 {
     produceFee: number;
 }
 // 费用归集明细响应DTO_1
-export interface I费用归集明细响应DTO_1 {
+export interface ICostCollectionDetailResponseDTO1 {
     // 费用归集明细id
     id: number;
     // 费用类型id

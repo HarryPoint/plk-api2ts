@@ -1,5 +1,5 @@
 // 标准工艺某一类别物料编辑请求对象
-export interface I标准工艺某一类别物料编辑请求对象 {
+export interface IStandardProcessEditRequestObjectForAClassOfMaterial {
     // 标准工艺id, 新增时传递为空
     standardTechnologyId: number;
     // 标准工艺名称
@@ -11,7 +11,7 @@ export interface I标准工艺某一类别物料编辑请求对象 {
     // 是否是暂存 Y暂存 N发布
     isStaging: string;
     // 标准工艺节点编辑请求对象 发布时传递
-    nodeEditRequest: I标准工艺节点响应对象_1;
+    nodeEditRequest: IStandardProcessNodeRespondsToObject1;
     // 标准工艺画布快照 暂存时必须传递
     canvasSnapshot;
     // 条件组id(该工艺对应的条件组id)
@@ -20,7 +20,7 @@ export interface I标准工艺某一类别物料编辑请求对象 {
     conditionFromFlowPathCode: string;
 }
 // 标准工艺节点响应对象_1
-export interface I标准工艺节点响应对象_1 {
+export interface IStandardProcessNodeRespondsToObject1 {
     // 节点序列号
     serialNo: string;
     // 节点名称

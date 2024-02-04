@@ -1,5 +1,5 @@
 // 项目模板编辑请求DTO
-export interface I项目模板编辑请求DTO {
+export interface IProjectTemplateEditRequestDTO {
     // 项目id
     projectId: number;
     // 项目模板id

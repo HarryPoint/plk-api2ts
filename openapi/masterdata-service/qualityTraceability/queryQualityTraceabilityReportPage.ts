@@ -1,5 +1,5 @@
 // 质量追溯报表查询DTO
-export interface I质量追溯报表查询DTO {
+export interface IQualityTraceabilityReportQueryDTO {
     // 字段搜索
     dataSearchList: IProcessDataDetailsSearchVO[];
     // 当前页面
@@ -36,18 +36,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«质量追溯报表响应DTO»»
-export interface IJSONResult分页信息质量追溯报表响应DTO {
+export interface IJSONResultPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质量追溯报表响应DTO;
+    data: IPagingInformationQualityTraceabilityReportRespondsToTheDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质量追溯报表响应DTO»
-export interface I分页信息质量追溯报表响应DTO {
+export interface IPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -57,7 +57,7 @@ export interface I分页信息质量追溯报表响应DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质量追溯报表响应DTO[];
+    list: IQualityTraceabilityReportRespondsToDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -70,7 +70,7 @@ export interface I分页信息质量追溯报表响应DTO {
     nextPage: number;
 }
 // 质量追溯报表响应DTO
-export interface I质量追溯报表响应DTO {
+export interface IQualityTraceabilityReportRespondsToDTO {
     // 批次
     lotNo: string;
     // 原批次
@@ -94,7 +94,7 @@ export interface I质量追溯报表响应DTO {
     // 生产模具
     moldList: undefined[];
     // 进料BOM消耗确认
-    bomConsumeList: I质量追溯进料BOM消耗确认报表响应DTO[];
+    bomConsumeList: IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO[];
     // 任务编号
     produceTaskNo: string;
     // 任务状态
@@ -103,7 +103,7 @@ export interface I质量追溯报表响应DTO {
     produceOrderCode: string;
 }
 // 质量追溯进料BOM消耗确认报表响应DTO
-export interface I质量追溯进料BOM消耗确认报表响应DTO {
+export interface IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO {
     // 消耗物料
     consumeMaterialId: undefined[];
     // 消耗数量

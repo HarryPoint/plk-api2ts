@@ -1,5 +1,5 @@
 // TSK报表查询DTO_1
-export interface ITSK报表查询DTO_1 {
+export interface ITSKReportQueryDTO1 {
     // 字段搜索
     dataSearchList: IProcessDataDetailsSearchVO[];
     // 当前页面

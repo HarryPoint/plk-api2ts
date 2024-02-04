@@ -1,5 +1,5 @@
 // 生产异常类型编辑DTO
-export interface I生产异常类型编辑DTO {
+export interface IEditTheDTOForProductionExceptionTypes {
     // id
     id: number;
     // 所属分类

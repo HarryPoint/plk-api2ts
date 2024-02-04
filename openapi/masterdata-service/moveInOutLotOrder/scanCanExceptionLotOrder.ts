@@ -12,12 +12,12 @@ export interface IJSONResult可异常处理批次响应dto {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I可异常处理批次响应dto;
+    data: IBatchResponseDtosCanBeHandledAbnormally;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 可异常处理批次响应dto
-export interface I可异常处理批次响应dto {
+export interface IBatchResponseDtosCanBeHandledAbnormally {
     // 批次id
     id: number;
     // 批次号

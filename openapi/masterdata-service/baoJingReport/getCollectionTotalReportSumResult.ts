@@ -27,18 +27,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«宝晶收款汇总分析报表表格返回VO»
-export interface IJSONResult宝晶收款汇总分析报表表格返回VO {
+export interface IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶收款汇总分析报表表格返回VO_1;
+    data: IBaojingCollectionSummaryAnalysisReportFormReturnedToVO1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶收款汇总分析报表表格返回VO_1
-export interface I宝晶收款汇总分析报表表格返回VO_1 {
+export interface IBaojingCollectionSummaryAnalysisReportFormReturnedToVO1 {
     // 应收金额
     receivableAmountSum: number;
     // 已收金额

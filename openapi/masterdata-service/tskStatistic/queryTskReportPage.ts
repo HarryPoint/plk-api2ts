@@ -1,5 +1,5 @@
 // TSK报表查询DTO_1
-export interface ITSK报表查询DTO_1 {
+export interface ITSKReportQueryDTO1 {
     // 字段搜索
     dataSearchList: IProcessDataDetailsSearchVO[];
     // 当前页面
@@ -27,18 +27,18 @@ export interface IProcessDataDetailsSearchVO {
     tableCode: string;
 }
 // JSONResult«分页信息«TSK报表查询DTO»»
-export interface IJSONResult分页信息TSK报表查询DTO {
+export interface IJSONResultPageInformationTSKReportQueryDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息TSK报表查询DTO;
+    data: IPageInformationTSKReportQueryingDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«TSK报表查询DTO»
-export interface I分页信息TSK报表查询DTO {
+export interface IPageInformationTSKReportQueryingDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -48,7 +48,7 @@ export interface I分页信息TSK报表查询DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: ITSK报表查询DTO[];
+    list: ITSKReportQueryingDtos[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -61,5 +61,5 @@ export interface I分页信息TSK报表查询DTO {
     nextPage: number;
 }
 // TSK报表查询DTO
-export interface ITSK报表查询DTO {
+export interface ITSKReportQueryingDtos {
 }

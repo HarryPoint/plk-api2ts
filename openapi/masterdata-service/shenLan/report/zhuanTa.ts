@@ -1,5 +1,5 @@
 // 深蓝报表查询条件
-export interface I深蓝报表查询条件 {
+export interface IQueryConditionsOfTheDarkBlueReport {
     // 日期
     date: string;
     // 当前页面
@@ -27,18 +27,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«List«转塔或者1到7号机报表»»
-export interface IJSONResultList转塔或者1到7号机报表 {
+export interface IJSONResultListTurretOrUnit1To7Report {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I转塔或者1到7号机报表[];
+    data: ITurretOrEngine1Through7Report[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 转塔或者1到7号机报表
-export interface I转塔或者1到7号机报表 {
+export interface ITurretOrEngine1Through7Report {
     // 日期
     date: string;
     // 设备名称

@@ -1,16 +1,16 @@
 // JSONResult«分页信息«完工及产成品归集分页响应对象»»
-export interface IJSONResult分页信息完工及产成品归集分页响应对象 {
+export interface IJSONResultCollectsPagingResponseObjectsForCompletedPagingInformationAndFinishedProducts {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息完工及产成品归集分页响应对象;
+    data: IPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«完工及产成品归集分页响应对象»
-export interface I分页信息完工及产成品归集分页响应对象 {
+export interface IPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息完工及产成品归集分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I完工及产成品归集分页响应对象[];
+    list: ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息完工及产成品归集分页响应对象 {
     nextPage: number;
 }
 // 完工及产成品归集分页响应对象
-export interface I完工及产成品归集分页响应对象 {
+export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     // id
     id: number;
     // 生产订单id

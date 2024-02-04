@@ -86,7 +86,7 @@ export interface I具体物料数关联工艺路径步骤数据结构响应对�
     // 产能
     capacity: I产能响应对象;
     // 工费
-    laborCost: I工费响应对象;
+    laborCost: ICostResponseObject;
     // 进出站确认类型
     bomConsumeSureType: string;
 }
@@ -211,7 +211,7 @@ export interface I产能响应对象 {
     capacityProduceQuantity: number;
 }
 // 工费响应对象
-export interface I工费响应对象 {
+export interface ICostResponseObject {
     // id
     id: number;
     // 编号

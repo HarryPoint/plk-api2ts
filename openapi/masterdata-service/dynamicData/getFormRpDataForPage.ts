@@ -1,5 +1,5 @@
 // 流程关联表单搜索VO
-export interface I流程关联表单搜索VO {
+export interface IProcessAssociationFormSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«流程关联表单查询返回VO»
-export interface IJSONResult流程关联表单查询返回VO {
+export interface IJSONResultProcessAssociationFormQueryReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程关联表单查询返回VO;
+    data: ITheProcessAssociationFormQueryReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程关联表单查询返回VO
-export interface I流程关联表单查询返回VO {
+export interface ITheProcessAssociationFormQueryReturnsVO {
     // 选择框样式
     style: string;
     // 关联表单选项显示字段code
@@ -52,12 +52,12 @@ export interface I流程关联表单查询返回VO {
     // 关联表单选项显示字段Serial No
     formRpSelectorShowFieldSerialNo: string;
     // 字段列表
-    fieldList: I流程关联表单表头查询返回VO[];
+    fieldList: ITheProcessAssociationFormHeaderQueryReturnsVO[];
     // 数据列表
     dataList: IMapstringstring[];
 }
 // 流程关联表单表头查询返回VO
-export interface I流程关联表单表头查询返回VO {
+export interface ITheProcessAssociationFormHeaderQueryReturnsVO {
     // code
     code: string;
     // 名称

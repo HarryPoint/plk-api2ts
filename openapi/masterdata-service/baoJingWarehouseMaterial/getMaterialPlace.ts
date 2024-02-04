@@ -1,5 +1,5 @@
 // 宝晶物料主数据库存分布搜索VO
-export interface I宝晶物料主数据库存分布搜索VO {
+export interface IBaojingMaterialMasterDataInventoryDistributionSearchVO {
     // 物料id集
     materialIds: number[];
     // 当前页面
@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«List«宝晶物料库存分布返回VO»»
-export interface IJSONResultList宝晶物料库存分布返回VO {
+export interface IJSONResultListReturnTheInventoryDistributionToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶物料库存分布返回VO[];
+    data: IBaojingMaterialInventoryDistributionReturnedToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶物料库存分布返回VO
-export interface I宝晶物料库存分布返回VO {
+export interface IBaojingMaterialInventoryDistributionReturnedToVO {
     // 区域id
     areaId: number;
     // 区域名称

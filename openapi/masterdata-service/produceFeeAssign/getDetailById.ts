@@ -1,16 +1,16 @@
 // JSONResult«生产成本分配响应对象»
-export interface IJSONResult生产成本分配响应对象 {
+export interface IJSONResultProductionCostAllocationResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产成本分配响应对象;
+    data: IProductionCostAllocatesResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产成本分配响应对象
-export interface I生产成本分配响应对象 {
+export interface IProductionCostAllocatesResponseObjects {
     // id
     id: number;
     // 单据编号
@@ -20,9 +20,9 @@ export interface I生产成本分配响应对象 {
     // 当前期间
     fiscalPeriod: IDurationResponseObject;
     // 分配信息
-    produceFeeAssignDetailList: I生产成本分配明细响应对象[];
+    produceFeeAssignDetailList: IProductionCostAllocationDetailResponseObject[];
     // 费用信息
-    produceFeeCollectDetailList: I费用归集明细响应DTO[];
+    produceFeeCollectDetailList: IExpenseCollectionDetailsRespondToDTO[];
 }
 // 期间响应对象
 export interface IDurationResponseObject {
@@ -38,7 +38,7 @@ export interface IDurationResponseObject {
     isCurrentFiscalPeriod: string;
 }
 // 生产成本分配明细响应对象
-export interface I生产成本分配明细响应对象 {
+export interface IProductionCostAllocationDetailResponseObject {
     // id
     id: number;
     // 生产费用分配id
@@ -80,12 +80,12 @@ export interface I生产成本分配明细响应对象 {
     // 分配比例
     assignRatio: number;
     // 动态费用分配信息
-    produceFeeAssignDynamicData: I生产成本分配动态数据[];
+    produceFeeAssignDynamicData: IProductionCostAllocationDynamicData[];
     // 费用合计
     totalFee: number;
 }
 // 生产成本分配动态数据
-export interface I生产成本分配动态数据 {
+export interface IProductionCostAllocationDynamicData {
     // 费用类型id
     produceFeeTypeId: number;
     // 费用类型code
@@ -94,7 +94,7 @@ export interface I生产成本分配动态数据 {
     produceFee: number;
 }
 // 费用归集明细响应DTO
-export interface I费用归集明细响应DTO {
+export interface IExpenseCollectionDetailsRespondToDTO {
     // 费用归集明细id
     id: number;
     // 费用类型id

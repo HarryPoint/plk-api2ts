@@ -1,5 +1,5 @@
 // 质量月报响应DTO
-export interface I质量月报响应DTO {
+export interface IQualityMonthlyReportRespondsToDTO {
     // 月份
     month: number;
     // 进货损失 - 批产

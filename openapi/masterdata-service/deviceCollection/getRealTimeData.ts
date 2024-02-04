@@ -1,30 +1,30 @@
 // 设备实时数据搜索VO
-export interface I设备实时数据搜索VO {
+export interface IDeviceRealTimeDataSearchVO {
     // 设备id
     deviceId: number;
     // 查询参数id集
     paramIds: number[];
 }
 // JSONResult«设备数采实时数据返回VO»
-export interface IJSONResult设备数采实时数据返回VO {
+export interface IJSONResultDeviceDataCollectionRealTimeDataIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备数采实时数据返回VO;
+    data: IDeviceDataAcquisitionRealTimeDataReturnVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备数采实时数据返回VO
-export interface I设备数采实时数据返回VO {
+export interface IDeviceDataAcquisitionRealTimeDataReturnVO {
     // 设备信息
-    deviceInfo: I设备数采状态信息VO;
+    deviceInfo: IDeviceDataAcquisitionStatusMessageVO;
     // 参数集
-    params: I设备数采实时数据参数返回VO[];
+    params: IDeviceDataAcquisitionRealTimeDataParametersReturnVO[];
 }
 // 设备数采状态信息VO
-export interface I设备数采状态信息VO {
+export interface IDeviceDataAcquisitionStatusMessageVO {
     // id
     id: number;
     // 设备名称
@@ -49,7 +49,7 @@ export interface I设备数采状态信息VO {
     lastApiTime: string;
 }
 // 设备数采实时数据参数返回VO
-export interface I设备数采实时数据参数返回VO {
+export interface IDeviceDataAcquisitionRealTimeDataParametersReturnVO {
     // 参数id
     id: number;
     // 参数名称
@@ -63,10 +63,10 @@ export interface I设备数采实时数据参数返回VO {
     // 上限
     upperLimit: number;
     // 最新50条实时数据
-    realTimeDatas: I设备数采数据返回VO[];
+    realTimeDatas: IDeviceDataAcquisitionDataIsReturnedToVO[];
 }
 // 设备数采数据返回VO
-export interface I设备数采数据返回VO {
+export interface IDeviceDataAcquisitionDataIsReturnedToVO {
     // 时间
     time: string;
     // 结果值

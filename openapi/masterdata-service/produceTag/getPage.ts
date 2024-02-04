@@ -1,5 +1,5 @@
 // 异常标签搜索VO
-export interface I异常标签搜索VO {
+export interface IExceptionTagSearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -23,18 +23,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«异常标签返回VO»»
-export interface IJSONResult分页信息异常标签返回VO {
+export interface IJSONResultPagingInformationExceptionLabelReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息异常标签返回VO;
+    data: IPagingInformationExceptionLabelReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«异常标签返回VO»
-export interface I分页信息异常标签返回VO {
+export interface IPagingInformationExceptionLabelReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -44,7 +44,7 @@ export interface I分页信息异常标签返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I异常标签返回VO[];
+    list: ITheExceptionTagReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -57,7 +57,7 @@ export interface I分页信息异常标签返回VO {
     nextPage: number;
 }
 // 异常标签返回VO
-export interface I异常标签返回VO {
+export interface ITheExceptionTagReturnsVO {
     // id
     id: number;
     // 所属分类

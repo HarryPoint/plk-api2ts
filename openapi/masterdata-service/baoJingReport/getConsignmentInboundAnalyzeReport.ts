@@ -39,29 +39,29 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«寄售入库分析报表返回VO»
-export interface IJSONResult寄售入库分析报表返回VO {
+export interface IJSONResultConsignmentInboundAnalysisReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I寄售入库分析报表返回VO_1;
+    data: IConsignmentInboundAnalysisReportIsReturnedToVO1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 寄售入库分析报表返回VO_1
-export interface I寄售入库分析报表返回VO_1 {
+export interface IConsignmentInboundAnalysisReportIsReturnedToVO1 {
     // 数据表
-    tablePage: I分页信息寄售入库分析报表返回VO;
+    tablePage: IPageInformationConsignmentInboundAnalysisReportReturnsVO;
     // 产品维度
-    productDimension: I寄售入库分析图表数据返回VO[];
+    productDimension: IConsignmentInboundAnalysisChartDataReturnedToVO[];
     // 客户维度
-    customerDimension: I寄售入库分析图表数据返回VO[];
+    customerDimension: IConsignmentInboundAnalysisChartDataReturnedToVO[];
     // 业务员维度
-    businessManDimension: I寄售入库分析图表数据返回VO[];
+    businessManDimension: IConsignmentInboundAnalysisChartDataReturnedToVO[];
 }
 // 分页信息«寄售入库分析报表返回VO»
-export interface I分页信息寄售入库分析报表返回VO {
+export interface IPageInformationConsignmentInboundAnalysisReportReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -117,7 +117,7 @@ export interface IConsignmentInboundAnalysisReportReturnedToVO {
     remark: string;
 }
 // 寄售入库分析图表数据返回VO
-export interface I寄售入库分析图表数据返回VO {
+export interface IConsignmentInboundAnalysisChartDataReturnedToVO {
     // 纵轴
     title: string;
     // 入库金额

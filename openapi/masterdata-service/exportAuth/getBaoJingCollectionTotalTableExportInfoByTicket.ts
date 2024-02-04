@@ -1,16 +1,16 @@
 // JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»
-export interface IJSONResult导出信息宝晶收款汇总分析报表表格返回VO {
+export interface IJSONResultExportInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息宝晶收款汇总分析报表表格返回VO;
+    data: IExportInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«宝晶收款汇总分析报表表格返回VO»
-export interface I导出信息宝晶收款汇总分析报表表格返回VO {
+export interface IExportInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO {
     // 导出类型
     exportType: string;
     // 数据

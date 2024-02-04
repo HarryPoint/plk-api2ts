@@ -1,5 +1,5 @@
 // 子表数据查询VO
-export interface I子表数据查询VO {
+export interface ISubtableDataQueryVO {
     // 流程编码
     flowPathCode: string;
     // 表格编码

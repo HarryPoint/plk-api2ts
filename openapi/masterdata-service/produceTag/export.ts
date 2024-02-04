@@ -1,5 +1,5 @@
 // 异常标签搜索VO
-export interface I异常标签搜索VO {
+export interface IExceptionTagSearchVO {
     // 当前页面
     pageNo: number;
     // 编号

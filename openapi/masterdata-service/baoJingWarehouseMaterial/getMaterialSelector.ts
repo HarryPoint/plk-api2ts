@@ -1,5 +1,5 @@
 // 宝晶报表物料选择查询
-export interface I宝晶报表物料选择查询 {
+export interface IBaojingReportMaterialSelectionQuery {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -21,18 +21,18 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«分页信息«宝晶报表物料选择响应»»
-export interface IJSONResult分页信息宝晶报表物料选择响应 {
+export interface IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息宝晶报表物料选择响应;
+    data: IPageInformationTreasureReportMaterialSelectionResponse;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«宝晶报表物料选择响应»
-export interface I分页信息宝晶报表物料选择响应 {
+export interface IPageInformationTreasureReportMaterialSelectionResponse {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -42,7 +42,7 @@ export interface I分页信息宝晶报表物料选择响应 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I宝晶报表物料选择响应[];
+    list: IBaojingReportMaterialSelectionResponse[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -55,7 +55,7 @@ export interface I分页信息宝晶报表物料选择响应 {
     nextPage: number;
 }
 // 宝晶报表物料选择响应
-export interface I宝晶报表物料选择响应 {
+export interface IBaojingReportMaterialSelectionResponse {
     // 物料id
     materialId: number;
     // 物料编码

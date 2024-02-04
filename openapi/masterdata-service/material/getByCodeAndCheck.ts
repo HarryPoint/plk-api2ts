@@ -1,16 +1,16 @@
 // JSONResult«物料主数据基础信息返回VO»
-export interface IJSONResult物料主数据基础信息返回VO {
+export interface IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I物料主数据基础信息返回VO;
+    data: IMaterialMasterDataBasicInformationIsReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 物料主数据基础信息返回VO
-export interface I物料主数据基础信息返回VO {
+export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     // 物料id
     id: number;
     // 物料名称

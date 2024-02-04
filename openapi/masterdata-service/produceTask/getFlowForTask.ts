@@ -1,5 +1,5 @@
 // 生产处理查询VO - 针对生产订单
-export interface I生产处理查询VO针对生产订单 {
+export interface IProductionProcessingQueryVOForProductionOrders {
     // 生产订单id
     produceOrderId: number;
     // 生产任务id
@@ -8,7 +8,7 @@ export interface I生产处理查询VO针对生产订单 {
     type: string;
 }
 // JSONResult«List«生产处理基础信息响应DTO»»
-export interface IJSONResultList生产处理基础信息响应DTO {
+export interface IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation {
     // 返回码
     code: number;
     // 返回消息说明

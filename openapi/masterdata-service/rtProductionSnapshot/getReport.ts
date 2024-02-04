@@ -1,5 +1,5 @@
 // 产出类报表搜索VO
-export interface I产出类报表搜索VO {
+export interface IOutputClassReportSearchVO {
     // 班组id集
     classGroupIds: number[];
     // 物料id集
@@ -14,18 +14,18 @@ export interface I产出类报表搜索VO {
     timeType: string;
 }
 // JSONResult«List«产出数据统计返回VO»»
-export interface IJSONResultList产出数据统计返回VO {
+export interface IJSONResultListReturnsTheOutputDataStatisticsToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I产出数据统计返回VO[];
+    data: IOutputDataStatisticsAreReturnedToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出数据统计返回VO
-export interface I产出数据统计返回VO {
+export interface IOutputDataStatisticsAreReturnedToVO {
     // 物料id
     materialId: number;
     // 物料名称
@@ -35,10 +35,10 @@ export interface I产出数据统计返回VO {
     // 所有工序产出数
     allQuantity: number;
     // 工序产出信息集
-    processList: I工序产出统计报表返回VO[];
+    processList: ITheProcessOutputStatisticsReportIsReturnedToVO[];
 }
 // 工序产出统计报表返回VO
-export interface I工序产出统计报表返回VO {
+export interface ITheProcessOutputStatisticsReportIsReturnedToVO {
     // 工序id
     processId: number;
     // 工序名称

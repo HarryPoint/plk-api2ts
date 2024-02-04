@@ -1,5 +1,5 @@
 // 宝晶物料主数据库存搜索VO
-export interface I宝晶物料主数据库存搜索VO {
+export interface IBaojingMaterialMasterDataInventorySearchVO {
     // 物料id集
     materialIds: number[];
     // 外部编码

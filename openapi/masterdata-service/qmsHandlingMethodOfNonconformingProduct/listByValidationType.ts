@@ -1,16 +1,16 @@
 // JSONResult«List«不合格品处理方式响应对象»»
-export interface IJSONResultList不合格品处理方式响应对象 {
+export interface IJSONResultListResponseObjectForHandlingNonconformingItems {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I不合格品处理方式响应对象[];
+    data: ITheNonconformingProductHandlingModeRespondsToTheObject[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 不合格品处理方式响应对象
-export interface I不合格品处理方式响应对象 {
+export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
     // id
     id: number;
     // 编号

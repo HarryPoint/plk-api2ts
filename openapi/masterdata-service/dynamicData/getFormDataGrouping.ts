@@ -1,5 +1,5 @@
 // JSONResult«List«表单数据分组DTO»»
-export interface IJSONResultList表单数据分组DTO {
+export interface IJSONResultListFormDataGroupingDTO {
     // 返回码
     code: number;
     // 返回消息说明

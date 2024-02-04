@@ -1,5 +1,5 @@
 // 生产标签编辑DTO
-export interface I生产标签编辑DTO {
+export interface IProductionLabelEditingDTO {
     // id
     id: number;
     // 所属分类

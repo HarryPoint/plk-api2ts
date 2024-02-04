@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«宝晶报表(报废)相关返回VO»
-export interface IJSONResult宝晶报表报废相关返回VO {
+export interface IJSONResultReportScrapRelatedReturnVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I宝晶报表报废相关返回VO_1;
+    data: IBaojingReportScrapRelatedReturnToVO1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 宝晶报表(报废)相关返回VO_1
-export interface I宝晶报表报废相关返回VO_1 {
+export interface IBaojingReportScrapRelatedReturnToVO1 {
     // 报废数量
     scrapQuantity: number;
 }

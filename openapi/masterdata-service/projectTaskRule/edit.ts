@@ -1,5 +1,5 @@
 // 项目任务规则编辑请求DTO
-export interface I项目任务规则编辑请求DTO {
+export interface IProjectTaskRuleEditRequestDTO {
     // ID
     id: number;
     // 项目任务ID

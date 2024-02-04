@@ -1,5 +1,5 @@
 // 工费分页查询对象DTO
-export interface I工费分页查询对象DTO {
+export interface ILaborPageQueryObjectDtos {
     // 编号
     code: string;
     // 当前页面
@@ -25,18 +25,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«工费分页响应对象»»
-export interface IJSONResult分页信息工费分页响应对象 {
+export interface IJSONResultPagingInformationPagingResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息工费分页响应对象;
+    data: IPagingInformationPagingResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«工费分页响应对象»
-export interface I分页信息工费分页响应对象 {
+export interface IPagingInformationPagingResponseObject {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -46,7 +46,7 @@ export interface I分页信息工费分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I工费分页响应对象[];
+    list: IWorkPageResponseObject[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -59,7 +59,7 @@ export interface I分页信息工费分页响应对象 {
     nextPage: number;
 }
 // 工费分页响应对象
-export interface I工费分页响应对象 {
+export interface IWorkPageResponseObject {
     // 创建用户ID
     createUserId: number;
     // 创建用户名

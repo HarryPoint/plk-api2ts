@@ -1,5 +1,5 @@
 // TSK测试数据
-export interface ITSK测试数据 {
+export interface ITSKTestData {
 }
 // JSONResult«object»
 export interface IJSONResultobject {

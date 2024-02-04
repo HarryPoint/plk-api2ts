@@ -1,5 +1,5 @@
 // 深蓝报表查询条件
-export interface I深蓝报表查询条件 {
+export interface IQueryConditionsOfTheDarkBlueReport {
     // 日期
     date: string;
     // 当前页面
@@ -27,18 +27,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«List«深蓝折弯机报表»»
-export interface IJSONResultList深蓝折弯机报表 {
+export interface IJSONResultListDarkBluePressReport {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I深蓝折弯机报表[];
+    data: IDarkBlueBendingMachineReport[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 深蓝折弯机报表
-export interface I深蓝折弯机报表 {
+export interface IDarkBlueBendingMachineReport {
     // 日期
     date: string;
     // 设备名称
