@@ -52,7 +52,7 @@ export interface I工艺路径详情步骤VO {
     // 所属出站工艺卡编号
     processSheetAfterCode: string;
     // 步骤对应bom详情
-    stepBomDetails: I工艺路径详情步骤Bom明细返回VO[];
+    stepBomDetails: IProcessPathDetailsStepBomDetailsReturnToVO[];
     // 质检方案集
     plans: I质检方案明细返回VO[];
     // 产能-生产时间
@@ -65,7 +65,7 @@ export interface I工艺路径详情步骤VO {
     readyPrice: number;
 }
 // 工艺路径详情步骤Bom明细返回VO
-export interface I工艺路径详情步骤Bom明细返回VO {
+export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     // id
     id: number;
     // 所属主物料bom明细id

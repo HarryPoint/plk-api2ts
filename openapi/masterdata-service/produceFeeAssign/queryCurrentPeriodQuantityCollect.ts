@@ -1,16 +1,16 @@
 // JSONResult«List«完工及产成品归集分页响应对象»»
-export interface IJSONResultList完工及产成品归集分页响应对象 {
+export interface IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I完工及产成品归集分页响应对象[];
+    data: ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 完工及产成品归集分页响应对象
-export interface I完工及产成品归集分页响应对象 {
+export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     // id
     id: number;
     // 生产订单id

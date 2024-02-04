@@ -1,5 +1,5 @@
 // 产出类报表搜索VO
-export interface I产出类报表搜索VO {
+export interface IOutputClassReportSearchVO {
     // 班组id集
     classGroupIds: number[];
     // 物料id集

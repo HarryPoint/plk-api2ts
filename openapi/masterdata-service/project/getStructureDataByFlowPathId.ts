@@ -1,5 +1,5 @@
 // 项目动态表单记录查询
-export interface I项目动态表单记录查询 {
+export interface IProjectDynamicFormRecordQuery {
     // 项目ID
     projectId: number;
     // 系统类型

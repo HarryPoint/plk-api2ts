@@ -10,18 +10,18 @@ export interface IProjectOverviewQueryDto {
     limit: number;
 }
 // JSONResult«项目质量问题统计响应对象»
-export interface IJSONResult项目质量问题统计响应对象 {
+export interface IJSONResultStatisticalResponseObjectForProjectQualityProblems {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目质量问题统计响应对象;
+    data: IProjectQualityProblemStatisticalResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目质量问题统计响应对象
-export interface I项目质量问题统计响应对象 {
+export interface IProjectQualityProblemStatisticalResponseObject {
     // 总数量
     totalQuantity: number;
     // 未完成数量

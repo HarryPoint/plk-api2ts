@@ -1,16 +1,16 @@
 // JSONResult«流程任务返回VO»
-export interface IJSONResult流程任务返回VO {
+export interface IJSONResultProcessTaskReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程任务返回VO;
+    data: ITheProcessTaskReturnsToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程任务返回VO
-export interface I流程任务返回VO {
+export interface ITheProcessTaskReturnsToVO {
     // id
     id: number;
     // 所属企业id

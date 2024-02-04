@@ -1,5 +1,5 @@
 // 产出类报表搜索VO
-export interface I产出类报表搜索VO {
+export interface IOutputClassReportSearchVO {
     // 班组id集
     classGroupIds: number[];
     // 物料id集
@@ -20,12 +20,12 @@ export interface IJSONResult产出数据报表搜索VO {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I产出数据报表搜索VO;
+    data: IOutputDataReportSearchVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出数据报表搜索VO
-export interface I产出数据报表搜索VO {
+export interface IOutputDataReportSearchVO {
     // 物料id集
     majorDataIds: number[];
     // 当前页面

@@ -12,18 +12,18 @@ export interface IProjectKanbanQueryDto {
     excludeProjectIds: number[];
 }
 // JSONResult«项目行动项统计响应对象»
-export interface IJSONResult项目行动项统计响应对象 {
+export interface IJSONResultProjectActionItemStatisticsResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目行动项统计响应对象;
+    data: IItemActionItemStatisticsResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目行动项统计响应对象
-export interface I项目行动项统计响应对象 {
+export interface IItemActionItemStatisticsResponseObject {
     // 总数量
     totalQuantity: number;
     // 未完成数量

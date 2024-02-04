@@ -1,5 +1,5 @@
 // 工时工费月度报表搜索VO
-export interface I工时工费月度报表搜索VO {
+export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -23,18 +23,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«List«工时工费月度汇总报表返回VO»»
-export interface IJSONResultList工时工费月度汇总报表返回VO {
+export interface IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I工时工费月度汇总报表返回VO[];
+    data: IMonthlySummaryReportOfManHourPaymentIsReturnedToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 工时工费月度汇总报表返回VO
-export interface I工时工费月度汇总报表返回VO {
+export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
     // 月份
     month: string;
     // 员工id

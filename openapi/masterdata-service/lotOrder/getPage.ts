@@ -56,7 +56,7 @@ export interface I分页信息批次订单返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I批次订单返回VO[];
+    list: IBatchOrderIsReturnedToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -69,7 +69,7 @@ export interface I分页信息批次订单返回VO {
     nextPage: number;
 }
 // 批次订单返回VO
-export interface I批次订单返回VO {
+export interface IBatchOrderIsReturnedToVO {
     // id
     id: number;
     // 批次名称
@@ -131,7 +131,7 @@ export interface I批次订单返回VO {
     // 状态描述
     statusDesc: string;
     // 来源集
-    sourceList: I批次订单来源返回VO[];
+    sourceList: IBatchOrderSourceReturnedToVO[];
     // 创建人id
     createUserId: number;
     // 创建人姓名
@@ -142,7 +142,7 @@ export interface I批次订单返回VO {
     lotOrderQrcode: string;
 }
 // 批次订单来源返回VO
-export interface I批次订单来源返回VO {
+export interface IBatchOrderSourceReturnedToVO {
     // 来源类型
     sourceType: string;
     // 来源类型描述

@@ -1,23 +1,23 @@
 // JSONResult«导出信息«工时工费报表返回VO»»
-export interface IJSONResult导出信息工时工费报表返回VO {
+export interface IJSONResultExportInformationTimeReportReturnsToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I导出信息工时工费报表返回VO;
+    data: IExportInformationTimeReportReturnToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 导出信息«工时工费报表返回VO»
-export interface I导出信息工时工费报表返回VO {
+export interface IExportInformationTimeReportReturnToVO {
     // 导出类型
     exportType: string;
     // 数据
-    itemList: I工时工费报表返回VO[];
+    itemList: ITheManHourReportReturnsToVO[];
 }
 // 工时工费报表返回VO
-export interface I工时工费报表返回VO {
+export interface ITheManHourReportReturnsToVO {
     // 创建时间
     createTime: string;
     // 员工id

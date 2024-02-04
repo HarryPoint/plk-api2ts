@@ -1,21 +1,21 @@
 // 进出料信息查询DTO
-export interface I进出料信息查询DTO {
+export interface IQueryDTOForIncomingAndOutgoingMaterialInformation {
     // 任务id
     taskId: number;
 }
 // JSONResult«进出料信息响应对象»
-export interface IJSONResult进出料信息响应对象 {
+export interface IJSONResultIncomingAndOutgoingMaterialInformationResponseObject {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I进出料信息响应对象;
+    data: IIncomingAndOutgoingMaterialInformationResponseObject;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 进出料信息响应对象
-export interface I进出料信息响应对象 {
+export interface IIncomingAndOutgoingMaterialInformationResponseObject {
     // 进出站记录id
     moveInOutRecordId: number;
     // 任务id
@@ -25,18 +25,18 @@ export interface I进出料信息响应对象 {
     // 生产订单号
     produceOrderCode: string;
     // 工序信息
-    processInfo: I上下工序信息响应DTO;
+    processInfo: IUpperAndLowerProcessInformationRespondsToTheDTO;
     // 进出站bom消耗列表
-    bomMaterials: I进出bom消耗响应DTO[];
+    bomMaterials: IIncomingAndOutgoingBomConsumptionRespondsToDTO[];
     // 成品物料信息
-    finishedMaterial: I成品物料信息响应DTO;
+    finishedMaterial: IFinishedMaterialInformationRespondsToDTO;
     // 关键参数信息
     keyParametersInfo: IProduceTechnologyKeyParameterResponseDTO;
     // 当前步骤配置信息 - 用于前端判断各种情况逻辑
     stepSetInfo: IProductionProcessPathStepSettingsReturnVO;
 }
 // 上下工序信息响应DTO
-export interface I上下工序信息响应DTO {
+export interface IUpperAndLowerProcessInformationRespondsToTheDTO {
     // 工艺路径步骤
     routingStep: number;
     // 对应上工序步骤
@@ -63,7 +63,7 @@ export interface I上下工序信息响应DTO {
     nextProcessCode: string;
 }
 // 进出bom消耗响应DTO
-export interface I进出bom消耗响应DTO {
+export interface IIncomingAndOutgoingBomConsumptionRespondsToDTO {
     // 生产工艺路径步骤bom明细关联id
     id: number;
     // 对应物料id
@@ -92,7 +92,7 @@ export interface I进出bom消耗响应DTO {
     externalCodeLength: number;
 }
 // 成品物料信息响应DTO
-export interface I成品物料信息响应DTO {
+export interface IFinishedMaterialInformationRespondsToDTO {
     // 物料id
     materialId: number;
     // 物料名称

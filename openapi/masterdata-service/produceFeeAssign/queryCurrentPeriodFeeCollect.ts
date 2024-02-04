@@ -1,5 +1,5 @@
 // JSONResult«List«费用归集明细响应DTO»»
-export interface IJSONResultList费用归集明细响应DTO {
+export interface IJSONResultListDetailedResponseDTOForCostCollection {
     // 返回码
     code: number;
     // 返回消息说明

@@ -84,7 +84,7 @@ export interface I具体物料数关联工艺路径步骤数据结构响应对�
     // 关键参数
     keyParameter: IKeyParameterInformationResponseObject;
     // 产能
-    capacity: I产能响应对象;
+    capacity: IProductivityResponseObject;
     // 工费
     laborCost: ICostResponseObject;
     // 进出站确认类型
@@ -188,7 +188,7 @@ export interface IKeyParameterDetailsResponseObject {
     selectorList: string[];
 }
 // 产能响应对象
-export interface I产能响应对象 {
+export interface IProductivityResponseObject {
     // id
     id: number;
     // 编号

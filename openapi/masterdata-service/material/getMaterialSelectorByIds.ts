@@ -4,7 +4,7 @@ export interface IIdCollectionInformation {
     ids: number[];
 }
 // JSONResult«List«物料主数据选择返回VO»»
-export interface IJSONResultList物料主数据选择返回VO {
+export interface IJSONResultListReturnVOToTheMaterialMasterDataSelection {
     // 返回码
     code: number;
     // 返回消息说明

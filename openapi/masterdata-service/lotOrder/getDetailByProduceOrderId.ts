@@ -1,16 +1,16 @@
 // JSONResult«List«批次订单返回VO»»
-export interface IJSONResultList批次订单返回VO {
+export interface IJSONResultListBatchOrderReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I批次订单返回VO[];
+    data: IBatchOrderIsReturnedToVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 批次订单返回VO
-export interface I批次订单返回VO {
+export interface IBatchOrderIsReturnedToVO {
     // id
     id: number;
     // 批次名称
@@ -72,7 +72,7 @@ export interface I批次订单返回VO {
     // 状态描述
     statusDesc: string;
     // 来源集
-    sourceList: I批次订单来源返回VO[];
+    sourceList: IBatchOrderSourceReturnedToVO[];
     // 创建人id
     createUserId: number;
     // 创建人姓名
@@ -83,7 +83,7 @@ export interface I批次订单返回VO {
     lotOrderQrcode: string;
 }
 // 批次订单来源返回VO
-export interface I批次订单来源返回VO {
+export interface IBatchOrderSourceReturnedToVO {
     // 来源类型
     sourceType: string;
     // 来源类型描述

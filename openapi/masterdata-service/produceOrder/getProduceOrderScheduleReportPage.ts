@@ -33,18 +33,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«报表生产订单返回VO»»
-export interface IJSONResult分页信息报表生产订单返回VO {
+export interface IJSONResultPagingInformationReportProductionOrderReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息报表生产订单返回VO;
+    data: IPageInformationReportProductionOrderReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«报表生产订单返回VO»
-export interface I分页信息报表生产订单返回VO {
+export interface IPageInformationReportProductionOrderReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -54,7 +54,7 @@ export interface I分页信息报表生产订单返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I报表生产订单返回VO[];
+    list: IReportProductionOrdersBackToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -67,7 +67,7 @@ export interface I分页信息报表生产订单返回VO {
     nextPage: number;
 }
 // 报表生产订单返回VO
-export interface I报表生产订单返回VO {
+export interface IReportProductionOrdersBackToVO {
     // id
     id: number;
     // 生产订单号

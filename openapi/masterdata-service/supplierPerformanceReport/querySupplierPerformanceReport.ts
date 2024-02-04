@@ -1,16 +1,16 @@
 // JSONResult«分页信息«质量绩效评价表报表返回DTO»»
-export interface IJSONResult分页信息质量绩效评价表报表返回DTO {
+export interface IJSONResultThePageInformationQualityPerformanceEvaluationReportReturnsTheDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质量绩效评价表报表返回DTO;
+    data: IPageInformationQualityPerformanceEvaluationFormReportReturnedToDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质量绩效评价表报表返回DTO»
-export interface I分页信息质量绩效评价表报表返回DTO {
+export interface IPageInformationQualityPerformanceEvaluationFormReportReturnedToDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息质量绩效评价表报表返回DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质量绩效评价表报表返回DTO[];
+    list: IQualityPerformanceEvaluationFormReturnToDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息质量绩效评价表报表返回DTO {
     nextPage: number;
 }
 // 质量绩效评价表报表返回DTO
-export interface I质量绩效评价表报表返回DTO {
+export interface IQualityPerformanceEvaluationFormReturnToDTO {
     // 供应商名称
     supplierName: string;
     // 入厂验收质量Q1扣分

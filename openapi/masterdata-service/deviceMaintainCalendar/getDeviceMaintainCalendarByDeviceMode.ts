@@ -1,5 +1,5 @@
 // 设备保养日历请求DTO
-export interface I设备保养日历请求DTO {
+export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备保养计划明细ids
     deviceMaintainDetailPlanIds: number[];
     // 当前页面
@@ -45,18 +45,18 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«分页信息«设备保养日历-设备模式响应DTO»»
-export interface IJSONResult分页信息设备保养日历设备模式响应DTO {
+export interface IJSONResultPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息设备保养日历设备模式响应DTO;
+    data: IPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«设备保养日历-设备模式响应DTO»
-export interface I分页信息设备保养日历设备模式响应DTO {
+export interface IPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -66,7 +66,7 @@ export interface I分页信息设备保养日历设备模式响应DTO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I设备保养日历设备模式响应DTO[];
+    list: IDeviceMaintenanceCalendarDeviceModeRespondsToDTO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -79,7 +79,7 @@ export interface I分页信息设备保养日历设备模式响应DTO {
     nextPage: number;
 }
 // 设备保养日历-设备模式响应DTO
-export interface I设备保养日历设备模式响应DTO {
+export interface IDeviceMaintenanceCalendarDeviceModeRespondsToDTO {
     // 设备编号
     deviceCode: string;
     // 设备名称
@@ -91,17 +91,17 @@ export interface I设备保养日历设备模式响应DTO {
     // 区域
     areaName: string;
     // 明细详情
-    details: I设备保养日历设备模式详情响应DTO[];
+    details: IDeviceMaintenanceCalendarDeviceModeDetailsRespondToDTO[];
 }
 // 设备保养日历-设备模式详情响应DTO
-export interface I设备保养日历设备模式详情响应DTO {
+export interface IDeviceMaintenanceCalendarDeviceModeDetailsRespondToDTO {
     // 保养类型
     maintainType: string;
     // 时间详情
-    timeDetails: I设备保养日历设备模式详情时间响应DTO[];
+    timeDetails: IDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO[];
 }
 // 设备保养日历-设备模式详情时间响应DTO
-export interface I设备保养日历设备模式详情时间响应DTO {
+export interface IDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO {
     // 保养任务id
     taskId: number;
     // 设备保养计划id

@@ -1,16 +1,16 @@
 // JSONResult«生产订单匹配任务查询请求»
-export interface IJSONResult生产订单匹配任务查询请求 {
+export interface IJSONResultQueryRequestForProductionOrderMatchingTasks {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I生产订单匹配任务查询请求_1;
+    data: IProductionOrderMatchingTaskQueryRequest1;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 生产订单匹配任务查询请求_1
-export interface I生产订单匹配任务查询请求_1 {
+export interface IProductionOrderMatchingTaskQueryRequest1 {
     // ID
     id: number;
     // 标准工艺匹配状态
@@ -22,10 +22,10 @@ export interface I生产订单匹配任务查询请求_1 {
     // 失败原因
     failureReason: string;
     // 匹配项
-    itemList: I生产订单匹配任务查询请求[];
+    itemList: IProductionOrderMatchingTaskQueryRequest[];
 }
 // 生产订单匹配任务查询请求
-export interface I生产订单匹配任务查询请求 {
+export interface IProductionOrderMatchingTaskQueryRequest {
     // ID
     id: number;
     // 任务ID

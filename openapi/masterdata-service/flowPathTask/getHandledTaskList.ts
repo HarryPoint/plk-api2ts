@@ -1,23 +1,23 @@
 // 流程任务处理结果查询VO
-export interface I流程任务处理结果查询VO {
+export interface IProcessTaskResultQueryVO {
     // 业务流程系统类型
     flowPathSystemType: string;
     // 业务数据ID列表
     businessDataId: number;
 }
 // JSONResult«List«流程任务处理结果VO»»
-export interface IJSONResultList流程任务处理结果VO {
+export interface IJSONResultListProcessTaskResultVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程任务处理结果VO[];
+    data: IProcessTaskProcessingResultVO[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程任务处理结果VO
-export interface I流程任务处理结果VO {
+export interface IProcessTaskProcessingResultVO {
     // 任务类型
     type: string;
     // 任务号

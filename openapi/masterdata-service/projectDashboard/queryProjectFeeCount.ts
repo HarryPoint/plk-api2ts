@@ -18,12 +18,12 @@ export interface IJSONResultList项目费用统计响应对象 {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目费用统计响应对象_1[];
+    data: IProjectCostStatisticsResponseObject1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目费用统计响应对象_1
-export interface I项目费用统计响应对象_1 {
+export interface IProjectCostStatisticsResponseObject1 {
     // 名称
     name: string;
     // 预算执行率

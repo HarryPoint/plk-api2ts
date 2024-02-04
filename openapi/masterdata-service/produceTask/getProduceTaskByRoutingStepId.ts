@@ -8,7 +8,7 @@ export interface I生产任务从消息来的搜索VO {
     type: string;
 }
 // JSONResult«List«生产任务响应DTO(针对移动端)»»
-export interface IJSONResultList生产任务响应DTO针对移动端 {
+export interface IJSONResultListProductionTaskResponseDTOForMobile {
     // 返回码
     code: number;
     // 返回消息说明

@@ -1,5 +1,5 @@
 // 仓库主数据选择列表搜索VO
-export interface I仓库主数据选择列表搜索VO {
+export interface IWarehouseMasterDataSelectionListSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小

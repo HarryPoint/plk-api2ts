@@ -1,5 +1,5 @@
 // JSONResult«List«流程工单VO»»_1
-export interface IJSONResultList流程工单VO_1 {
+export interface IJSONResultListProcessWorkOrderVO1 {
     // 返回码
     code: number;
     // 返回消息说明

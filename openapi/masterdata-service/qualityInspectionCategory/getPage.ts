@@ -1,5 +1,5 @@
 // 质检分类搜索VO
-export interface I质检分类搜索VO {
+export interface IInspectionCategorySearchVO {
     // 当前页面
     pageNo: number;
     // 编号
@@ -21,18 +21,18 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«质检分类返回VO»»
-export interface IJSONResult分页信息质检分类返回VO {
+export interface IJSONResultThePageInformationIsReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息质检分类返回VO;
+    data: IPagingInformationInspectionClassificationReturnsVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«质检分类返回VO»
-export interface I分页信息质检分类返回VO {
+export interface IPagingInformationInspectionClassificationReturnsVO {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -42,7 +42,7 @@ export interface I分页信息质检分类返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I质检分类返回VO[];
+    list: ITheInspectionClassificationReturnsVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -55,7 +55,7 @@ export interface I分页信息质检分类返回VO {
     nextPage: number;
 }
 // 质检分类返回VO
-export interface I质检分类返回VO {
+export interface ITheInspectionClassificationReturnsVO {
     // id
     id: number;
     // 质检分类名称

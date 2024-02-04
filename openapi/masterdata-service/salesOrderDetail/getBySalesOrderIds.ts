@@ -1,16 +1,16 @@
 // JSONResult«List«销售订单明细»»
-export interface IJSONResultList销售订单明细 {
+export interface IJSONResultListSalesOrderDetails {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I销售订单明细[];
+    data: ISalesOrderDetail[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 销售订单明细
-export interface I销售订单明细 {
+export interface ISalesOrderDetail {
     // id
     id: number;
     // 所属企业id

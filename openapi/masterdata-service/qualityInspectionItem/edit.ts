@@ -1,5 +1,5 @@
 // 编辑质检分类 DTO_1
-export interface I编辑质检分类DTO_1 {
+export interface IEditTheQualityInspectionClassificationDTO1 {
     // id，如果不传就是新增
     id: number;
     // 质检分类名
@@ -13,14 +13,14 @@ export interface I编辑质检分类DTO_1 {
     // 选择方式
     selectType: string;
     // 选项内容集合
-    selectors: I质检项选择项编辑DTO[];
+    selectors: IQualityInspectionItemEditDTO[];
     // 备注
     remark: string;
     // 附件文件key
     attachedFileKey: string;
 }
 // 质检项选择项编辑DTO
-export interface I质检项选择项编辑DTO {
+export interface IQualityInspectionItemEditDTO {
     // 选择项名称
     name: string;
 }

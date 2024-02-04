@@ -1,5 +1,5 @@
 // 质检项搜索VO
-export interface I质检项搜索VO {
+export interface ICheckItemSearchVO {
     // 当前页面
     pageNo: number;
     // 编号

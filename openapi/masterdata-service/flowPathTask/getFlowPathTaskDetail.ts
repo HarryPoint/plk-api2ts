@@ -1,16 +1,16 @@
 // JSONResult«流程任务明细返回VO»
-export interface IJSONResult流程任务明细返回VO {
+export interface IJSONResultProcessTaskDetailsAreReturnedToVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I流程任务明细返回VO;
+    data: IProcessTaskDetailsAreReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 流程任务明细返回VO
-export interface I流程任务明细返回VO {
+export interface IProcessTaskDetailsAreReturnedToVO {
     // id
     id: number;
     // 任务类型
@@ -68,7 +68,7 @@ export interface I流程任务明细返回VO {
     // 任务状态描述
     modelTaskStatusDesc: string;
     // 自定义字段
-    customValues: I工单明细数据返回信息VO[];
+    customValues: IWorkOrderDetailsReturnInformationVO[];
     // 创建部门
     createDeptName: string;
     // 工单信息
@@ -107,7 +107,7 @@ export interface I流程任务明细返回VO {
     notes: string;
 }
 // 工单明细数据返回信息VO
-export interface I工单明细数据返回信息VO {
+export interface IWorkOrderDetailsReturnInformationVO {
     // 列code
     code: string;
     // 列值

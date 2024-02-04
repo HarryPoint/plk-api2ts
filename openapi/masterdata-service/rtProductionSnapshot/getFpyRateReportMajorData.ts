@@ -1,5 +1,5 @@
 // 产出类报表搜索VO
-export interface I产出类报表搜索VO {
+export interface IOutputClassReportSearchVO {
     // 班组id集
     classGroupIds: number[];
     // 物料id集
@@ -14,18 +14,18 @@ export interface I产出类报表搜索VO {
     timeType: string;
 }
 // JSONResult«产出类折线图返回VO«直通报表返回VO»»
-export interface IJSONResult产出类折线图返回VO直通报表返回VO {
+export interface IJSONResultOutputLineChartReturnsVOPassthroughReportReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I产出类折线图返回VO直通报表返回VO;
+    data: IOutputLineChartReturnVODirectReportReturnVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 产出类折线图返回VO«直通报表返回VO»
-export interface I产出类折线图返回VO直通报表返回VO {
+export interface IOutputLineChartReturnVODirectReportReturnVO {
     // 分组数据
     groupList: IOutputLineChartGroupReturnVOPassThroughReportReturnVO[];
     // 查询班组集

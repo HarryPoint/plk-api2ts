@@ -1,16 +1,16 @@
 // JSONResult«质检项详细返回VO»
-export interface IJSONResult质检项详细返回VO {
+export interface IJSONResultCheckItemDetailsVOIsReturned {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I质检项详细返回VO;
+    data: ICheckItemDetailsAreReturnedToVO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 质检项详细返回VO
-export interface I质检项详细返回VO {
+export interface ICheckItemDetailsAreReturnedToVO {
     // id
     id: number;
     // 质检项名称

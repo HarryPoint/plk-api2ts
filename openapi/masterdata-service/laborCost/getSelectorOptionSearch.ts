@@ -1,5 +1,5 @@
 // 工费下拉选择列表搜索DTO
-export interface I工费下拉选择列表搜索DTO {
+export interface ITheLaborCostDropDownListIsUsedToSearchForDtos {
     // 物料id
     materialId: number;
     // 工序id

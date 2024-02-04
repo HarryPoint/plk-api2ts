@@ -1,5 +1,5 @@
 // JSONResult«List«批次信息VO»»
-export interface IJSONResultList批次信息VO {
+export interface IJSONResultListBatchInformationVO {
     // 返回码
     code: number;
     // 返回消息说明

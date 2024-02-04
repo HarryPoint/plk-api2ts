@@ -1,5 +1,5 @@
 // 工时工费月度报表搜索VO
-export interface I工时工费月度报表搜索VO {
+export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小

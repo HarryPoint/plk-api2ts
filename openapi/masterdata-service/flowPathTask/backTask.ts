@@ -1,5 +1,5 @@
 // 流程任务回退DTO
-export interface I流程任务回退DTO {
+export interface IRollbackTheDTOOfAFlowTask {
     // 任务ID
     id: number;
     // 审批意见/执行情况

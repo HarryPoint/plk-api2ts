@@ -1,16 +1,16 @@
 // JSONResult«分页信息«生产成本分配分页响应对象»»
-export interface IJSONResult分页信息生产成本分配分页响应对象 {
+export interface IJSONResultPagingInformationTheProductionCostAssignsPagingResponseObjects {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I分页信息生产成本分配分页响应对象;
+    data: IPagingInformationTheProductionCostAllocatesPagingResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 分页信息«生产成本分配分页响应对象»
-export interface I分页信息生产成本分配分页响应对象 {
+export interface IPagingInformationTheProductionCostAllocatesPagingResponseObjects {
     // 当前页码
     pageNo: number;
     // 分页大小
@@ -20,7 +20,7 @@ export interface I分页信息生产成本分配分页响应对象 {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I生产成本分配分页响应对象[];
+    list: IProductionCostAllocatesPagingResponseObjects[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -33,7 +33,7 @@ export interface I分页信息生产成本分配分页响应对象 {
     nextPage: number;
 }
 // 生产成本分配分页响应对象
-export interface I生产成本分配分页响应对象 {
+export interface IProductionCostAllocatesPagingResponseObjects {
     // 费用分配id
     produceFeeAssignId: number;
     // 单据编号
@@ -81,12 +81,12 @@ export interface I生产成本分配分页响应对象 {
     // 费用动态数据
     produceFeeAssignDynamicData: undefined[];
     // 费用动态数据
-    produceFeeAssignPageDynamicDataList: I生产成本分配动态数据分页响应对象[];
+    produceFeeAssignPageDynamicDataList: IProductionCostAllocatesDynamicDataPagingResponseObjects[];
     // 费用合计
     totalFee: number;
 }
 // 生产成本分配动态数据分页响应对象
-export interface I生产成本分配动态数据分页响应对象 {
+export interface IProductionCostAllocatesDynamicDataPagingResponseObjects {
     // 费用类型code
     produceFeeTypeCode: string;
     // 费用

@@ -1,5 +1,5 @@
 // 年度质量目标编辑校验DTO
-export interface I年度质量目标编辑校验DTO {
+export interface IAnnualQualityObjectivesEditAndVerifyDTO {
     // id
     id: number;
     // 编号
@@ -7,10 +7,10 @@ export interface I年度质量目标编辑校验DTO {
     // 年份
     year: string;
     // 明细数据
-    details: I年度质量目标明细编辑DTO[];
+    details: IEditDTOForDetailedAnnualQualityObjectives[];
 }
 // 年度质量目标明细编辑DTO
-export interface I年度质量目标明细编辑DTO {
+export interface IEditDTOForDetailedAnnualQualityObjectives {
     // id
     id: number;
     // 所属年度质量目标id
@@ -31,18 +31,18 @@ export interface I年度质量目标明细编辑DTO {
     detailStatus: string;
 }
 // JSONResult«年度质量目标编辑校验返回DTO»
-export interface IJSONResult年度质量目标编辑校验返回DTO {
+export interface IJSONResultAnnualQualityTargetEditCheckReturnsDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I年度质量目标编辑校验返回DTO;
+    data: IAnnualQualityObjectiveEditCheckReturnsDTO;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 年度质量目标编辑校验返回DTO
-export interface I年度质量目标编辑校验返回DTO {
+export interface IAnnualQualityObjectiveEditCheckReturnsDTO {
     // 能否提交
     canSubmit: string;
     // 失败类型

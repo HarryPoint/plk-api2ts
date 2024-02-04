@@ -25,7 +25,7 @@ export interface IPagingSortVO {
     isAsc: string;
 }
 // JSONResult«分页信息«物料主数据库存返回VO»»
-export interface IJSONResult分页信息物料主数据库存返回VO {
+export interface IJSONResultPagingInformationMaterialMasterDataInventoryReturnsVO {
     // 返回码
     code: number;
     // 返回消息说明

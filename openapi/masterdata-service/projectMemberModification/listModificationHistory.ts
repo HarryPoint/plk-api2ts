@@ -1,16 +1,16 @@
 // JSONResult«List«项目成员变更信息»»
-export interface IJSONResultList项目成员变更信息 {
+export interface IJSONResultListProjectMemberChangeInformation {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目成员变更信息[];
+    data: IProjectMemberChangeInformation[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目成员变更信息
-export interface I项目成员变更信息 {
+export interface IProjectMemberChangeInformation {
     // id
     id: number;
     // 来源应用编号

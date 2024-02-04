@@ -1,5 +1,5 @@
 // 列表列样式系统配置编辑DTO
-export interface I列表列样式系统配置编辑DTO {
+export interface IListColumnStyleSystemConfigurationEditDTO {
     // 编码
     code: string;
     // 配置JSON

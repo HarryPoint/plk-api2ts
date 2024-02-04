@@ -1,5 +1,5 @@
 // 工序完成明细表查询
-export interface I工序完成明细表查询 {
+export interface IProcedureCompletionListQuery {
     // 当前页面
     pageNo: number;
     // 分页大小

@@ -94,7 +94,7 @@ export interface IProduceTaskVO {
     // 关闭原因
     closeRemark: string;
     // 对应物料bom库存详情
-    materialBomDetails: I工艺路径详情步骤Bom明细返回VO[];
+    materialBomDetails: IProcessPathDetailsStepBomDetailsReturnToVO[];
     // undefined
     canMoveInQuantity: number;
     // undefined
@@ -107,7 +107,7 @@ export interface IProduceTaskVO {
     moveOutKeyParameterFillNeeds: string;
 }
 // 工艺路径详情步骤Bom明细返回VO
-export interface I工艺路径详情步骤Bom明细返回VO {
+export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     // id
     id: number;
     // 所属主物料bom明细id

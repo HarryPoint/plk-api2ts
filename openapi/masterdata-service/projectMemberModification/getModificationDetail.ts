@@ -1,16 +1,16 @@
 // JSONResult«List«项目成员变更单响应参数»»
-export interface IJSONResultList项目成员变更单响应参数 {
+export interface IJSONResultListProjectMemberChangeOrderResponseParameters {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I项目成员变更单响应参数[];
+    data: IItemMemberChangeOrderResponseParameter[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 项目成员变更单响应参数
-export interface I项目成员变更单响应参数 {
+export interface IItemMemberChangeOrderResponseParameter {
     // 成员编号
     code: string;
     // 成员姓名

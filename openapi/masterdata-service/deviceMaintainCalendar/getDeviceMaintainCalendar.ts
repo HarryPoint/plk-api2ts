@@ -1,5 +1,5 @@
 // 设备保养日历请求DTO
-export interface I设备保养日历请求DTO {
+export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备保养计划明细ids
     deviceMaintainDetailPlanIds: number[];
     // 当前页面
@@ -45,25 +45,25 @@ export interface IPagingSort {
     isAsc: string;
 }
 // JSONResult«List«设备保养日历响应DTO»»
-export interface IJSONResultList设备保养日历响应DTO {
+export interface IJSONResultListDeviceMaintenanceCalendarResponseDTO {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I设备保养日历响应DTO_1[];
+    data: IEquipmentMaintenanceCalendarRespondsToDTO1[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 设备保养日历响应DTO_1
-export interface I设备保养日历响应DTO_1 {
+export interface IEquipmentMaintenanceCalendarRespondsToDTO1 {
     // 天
     day: string;
     // 天详情
-    dayDetails: I设备保养日历响应DTO[];
+    dayDetails: IEquipmentMaintenanceCalendarRespondsToDTO[];
 }
 // 设备保养日历响应DTO
-export interface I设备保养日历响应DTO {
+export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     // 保养任务id
     taskId: number;
     // 设备保养计划id
@@ -101,12 +101,12 @@ export interface I设备保养日历响应DTO {
     // 查询状态
     queryStatus: string;
     // 保养内容
-    maintainDetails: I保养内容返回DTO[];
+    maintainDetails: IMaintenanceContentReturnedToDTO[];
     // 消耗备件
-    maintainPartsDetails: I保养消耗备件返回DTO[];
+    maintainPartsDetails: IMaintenanceSparePartsReturnedToDTO[];
 }
 // 保养内容返回DTO
-export interface I保养内容返回DTO {
+export interface IMaintenanceContentReturnedToDTO {
     // 保养项目
     maintainName: string;
     // 具体描述
@@ -119,7 +119,7 @@ export interface I保养内容返回DTO {
     remark: string;
 }
 // 保养消耗备件返回DTO
-export interface I保养消耗备件返回DTO {
+export interface IMaintenanceSparePartsReturnedToDTO {
     // 备件id
     devicePartsId: number;
     // 备件名称

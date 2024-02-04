@@ -1,5 +1,5 @@
 // 工时工费报表搜索VO
-export interface I工时工费报表搜索VO {
+export interface IHourlyLaborRateReportSearchVO {
     // 当前页面
     pageNo: number;
     // 分页大小
@@ -54,7 +54,7 @@ export interface I分页信息工时工费报表返回VO {
     // 总的记录数
     totalCount: number;
     // 分页列表
-    list: I工时工费报表返回VO[];
+    list: ITheManHourReportReturnsToVO[];
     // 最后页页码
     lastPage: number;
     // 是否有上一页
@@ -67,7 +67,7 @@ export interface I分页信息工时工费报表返回VO {
     nextPage: number;
 }
 // 工时工费报表返回VO
-export interface I工时工费报表返回VO {
+export interface ITheManHourReportReturnsToVO {
     // 创建时间
     createTime: string;
     // 员工id

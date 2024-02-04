@@ -12,18 +12,18 @@ export interface IProjectKanbanQueryDto {
     excludeProjectIds: number[];
 }
 // JSONResult«领导批示统计响应对象»
-export interface IJSONResult领导批示统计响应对象 {
+export interface IJSONResultLeaderInstructionsStatisticalResponseObjects {
     // 返回码
     code: number;
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: I领导批示统计响应对象;
+    data: ILeaderIndicatesStatisticalResponseObjects;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }
 // 领导批示统计响应对象
-export interface I领导批示统计响应对象 {
+export interface ILeaderIndicatesStatisticalResponseObjects {
     // 总数量
     totalQuantity: number;
     // 未完成数量
