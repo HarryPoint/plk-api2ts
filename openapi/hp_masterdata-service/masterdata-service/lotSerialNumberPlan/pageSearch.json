@@ -1,0 +1,311 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/lotSerialNumberPlan/pageSearch": {
+      "post": {
+        "tags": [
+          "批次方案相关"
+        ],
+        "summary": "分页查询",
+        "operationId": "pageSearchUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/分页_5",
+              "originalRef": "分页_5"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«分页信息«LotSerialNumberPlanPageQueryResponseDTO»»",
+              "originalRef": "JSONResult«分页信息«LotSerialNumberPlanPageQueryResponseDTO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "50"
+      }
+    }
+  },
+  "definitions": {
+    "分页_5": {
+      "type": "object",
+      "properties": {
+        "codeMatch": {
+          "type": "string",
+          "description": "编码匹配"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "createUserIdList": {
+          "type": "array",
+          "description": "创建用户ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
+          }
+        },
+        "nameMatch": {
+          "type": "string",
+          "description": "方案名称匹配"
+        },
+        "planTypeList": {
+          "type": "array",
+          "description": "类型列表",
+          "items": {
+            "type": "string",
+            "enum": [
+              "SERIAL_NO",
+              "BATCH_NO"
+            ]
+          }
+        },
+        "createTimeBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间范围的开始"
+        },
+        "createTimeEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间范围的结束"
+        }
+      },
+      "title": "分页_5"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«分页信息«LotSerialNumberPlanPageQueryResponseDTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/分页信息«LotSerialNumberPlanPageQueryResponseDTO»",
+          "originalRef": "分页信息«LotSerialNumberPlanPageQueryResponseDTO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«LotSerialNumberPlanPageQueryResponseDTO»»"
+    },
+    "分页信息«LotSerialNumberPlanPageQueryResponseDTO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "$ref": "#/definitions/LotSerialNumberPlanPageQueryResponseDTO",
+            "originalRef": "LotSerialNumberPlanPageQueryResponseDTO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«LotSerialNumberPlanPageQueryResponseDTO»"
+    },
+    "LotSerialNumberPlanPageQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string",
+          "description": "编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "方案名称"
+        },
+        "planType": {
+          "type": "string",
+          "description": "类型",
+          "enum": [
+            "  SERIAL_NO-序列号",
+            "  BATCH_NO-批次号"
+          ]
+        },
+        "ruleDesc": {
+          "type": "string",
+          "description": "规则描述"
+        }
+      },
+      "title": "LotSerialNumberPlanPageQueryResponseDTO"
+    }
+  }
+}

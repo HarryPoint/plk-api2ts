@@ -1,0 +1,212 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/supplierPerformanceReport/querySupplierPerformanceReport": {
+      "post": {
+        "tags": [
+          "供应商绩效评价报表相关"
+        ],
+        "summary": "供应商绩效评价报表",
+        "operationId": "querySupplierPerformanceReportUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "QuerySupplierPerformanceReport",
+            "description": "jsonObject",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/QuerySupplierPerformanceReport",
+              "originalRef": "QuerySupplierPerformanceReport"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«分页信息«质量绩效评价表报表返回DTO»»",
+              "originalRef": "JSONResult«分页信息«质量绩效评价表报表返回DTO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«分页信息«质量绩效评价表报表返回DTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/分页信息«质量绩效评价表报表返回DTO»",
+          "originalRef": "分页信息«质量绩效评价表报表返回DTO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«质量绩效评价表报表返回DTO»»"
+    },
+    "分页信息«质量绩效评价表报表返回DTO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "$ref": "#/definitions/质量绩效评价表报表返回DTO",
+            "originalRef": "质量绩效评价表报表返回DTO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«质量绩效评价表报表返回DTO»"
+    },
+    "质量绩效评价表报表返回DTO": {
+      "type": "object",
+      "properties": {
+        "supplierName": {
+          "type": "string",
+          "description": "供应商名称"
+        },
+        "q1DeductPoints": {
+          "type": "number",
+          "description": "入厂验收质量Q1扣分"
+        },
+        "q2DeductPoints": {
+          "type": "number",
+          "description": "交付使用质量Q2扣分"
+        },
+        "q3DeductPoints": {
+          "type": "number",
+          "description": "试验试车质量Q3扣分"
+        },
+        "q4DeductPoints": {
+          "type": "number",
+          "description": "外厂使用质量Q4扣分"
+        },
+        "q1Points": {
+          "type": "number",
+          "description": "Q1得分"
+        },
+        "q2Points": {
+          "type": "number",
+          "description": "Q2得分"
+        },
+        "q3Points": {
+          "type": "number",
+          "description": "Q3得分"
+        },
+        "q4Points": {
+          "type": "number",
+          "description": "Q4得分"
+        },
+        "totalDeductPoints": {
+          "type": "number",
+          "description": "总扣分"
+        },
+        "q3Count": {
+          "type": "number",
+          "description": "q3數量"
+        },
+        "totalPoints": {
+          "type": "number",
+          "description": "总得分"
+        }
+      },
+      "title": "质量绩效评价表报表返回DTO"
+    }
+  }
+}

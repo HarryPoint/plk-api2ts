@@ -1,0 +1,331 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/businessChance/pagingSearchCustomerStatistics": {
+      "post": {
+        "tags": [
+          "crm-商机销售统计相关"
+        ],
+        "summary": "分页查询客户情况统计",
+        "operationId": "pagingSearchCustomerStatisticsUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "customerStatisticsInput",
+            "description": "customerStatisticsInput",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/客户情况统计输入条件",
+              "originalRef": "客户情况统计输入条件"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«分页信息«客户情况统计»»",
+              "originalRef": "JSONResult«分页信息«客户情况统计»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "客户情况统计输入条件": {
+      "type": "object",
+      "properties": {
+        "customerIdList": {
+          "type": "array",
+          "description": "客户ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
+          }
+        },
+        "salesOrderIdList": {
+          "type": "array",
+          "description": "跟进ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "客户情况统计输入条件"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«分页信息«客户情况统计»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/分页信息«客户情况统计»",
+          "originalRef": "分页信息«客户情况统计»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«客户情况统计»»"
+    },
+    "分页信息«客户情况统计»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "$ref": "#/definitions/客户情况统计",
+            "originalRef": "客户情况统计"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«客户情况统计»"
+    },
+    "客户情况统计": {
+      "type": "object",
+      "properties": {
+        "businessChanceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "商机ID"
+        },
+        "salesUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "根据人ID"
+        },
+        "saleUserName": {
+          "type": "string",
+          "description": "根据人名称"
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "客户ID"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "客户名称"
+        },
+        "businessChanceName": {
+          "type": "string",
+          "description": "商机名称"
+        },
+        "businessChanceCreateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建商机时间"
+        },
+        "confirmRequireTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "需求确认时间"
+        },
+        "historyConfirmRequireTimeList": {
+          "type": "array",
+          "description": "历史需求确认时间集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "schemeQuotationTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "方案报价时间"
+        },
+        "businessNegotiationTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "商务谈判时间"
+        },
+        "historyBusinessNegotiationTimeList": {
+          "type": "array",
+          "description": "历史商务谈判时间集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "contractSigningTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "合同签订时间"
+        },
+        "paymentReturnTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "回款时间"
+        },
+        "afterServiceTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "售后服务时间"
+        },
+        "historyAfterServiceTimeList": {
+          "type": "array",
+          "description": "历史售后服务时间集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "inputOrderTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "输单时间"
+        },
+        "historyInputOrderTimeList": {
+          "type": "array",
+          "description": "历史输单时间集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "invalidTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "无效时间"
+        },
+        "historyInvalidTimeList": {
+          "type": "array",
+          "description": "历史无效时间集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "客户情况统计"
+    }
+  }
+}

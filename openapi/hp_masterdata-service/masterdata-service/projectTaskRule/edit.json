@@ -1,0 +1,177 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/projectTaskRule/edit": {
+      "post": {
+        "tags": [
+          "项目任务规则相关"
+        ],
+        "summary": "新增项目任务规则",
+        "operationId": "editUsingPOST_14",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/项目任务规则编辑请求DTO",
+              "originalRef": "项目任务规则编辑请求DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "helin",
+        "x-order": "50"
+      }
+    }
+  },
+  "definitions": {
+    "项目任务规则编辑请求DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "projectTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目任务ID"
+        },
+        "taskType": {
+          "type": "string",
+          "description": "任务类型",
+          "enum": [
+            "  REVIEW_TASK-评审任务",
+            "  DECISION_TASK-决策任务",
+            "  GENERAL_TASK-通用任务"
+          ]
+        },
+        "notPassCompareType": {
+          "type": "string",
+          "description": "不通过比较类型",
+          "enum": [
+            "  GT-大于",
+            "  GE-大于等于"
+          ]
+        },
+        "notPassRuleValue": {
+          "type": "number",
+          "description": "不通过的临界值"
+        },
+        "passCompareType": {
+          "type": "string",
+          "description": "通过的比较类型",
+          "enum": [
+            "  GT-大于",
+            "  GE-大于等于"
+          ]
+        },
+        "passRuleValue": {
+          "type": "number",
+          "description": "通过比较值"
+        },
+        "takeRiskPassCompareType": {
+          "type": "string",
+          "description": "带风险通过的比较类型",
+          "enum": [
+            "  GT-大于",
+            "  GE-大于等于"
+          ]
+        },
+        "takeRiskPassRuleValue": {
+          "type": "number",
+          "description": "带风险通过比较值"
+        },
+        "modifyCompareType": {
+          "type": "string",
+          "description": "修改比较类型",
+          "enum": [
+            "  GT-大于",
+            "  GE-大于等于"
+          ]
+        },
+        "modifyRuleValue": {
+          "type": "number",
+          "description": "修改规则值"
+        },
+        "modifyTaskIdList": {
+          "type": "array",
+          "description": "修改任务ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "项目任务规则编辑请求DTO"
+    },
+    "JSONResult«string»_1": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "string",
+          "description": "响应结果",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«string»_1"
+    }
+  }
+}

@@ -2721,5 +2721,15 @@
   "JSONResultTodoProcessorQueryResponseDTO": "JSONResultTodoProcessorQueryResponseDTO",
   "TodoProcessorQueryResponseDTO": "TodoProcessorQueryResponseDTO",
   "TodoProcessorDTO": "TodoProcessorDTO",
-  "ToDoListUpdateSyncRequestDTO": "ToDoListUpdateSyncRequestDTO"
+  "ToDoListUpdateSyncRequestDTO": "ToDoListUpdateSyncRequestDTO",
+  "JSONResultList项目计划响应对象": "TheJSONResultListProjectPlansTheResponseObject",
+  "项目计划响应对象": "ProjectPlanResponseObject",
+  "项目计划应用响应对象_1": "TheProjectPlansToApplyResponseObject1",
+  "项目阶段编号查询对象": "ProjectPhaseNumberQueryObject",
+  "JSONResultList项目阶段响应对象": "JSONResultListProjectPhaseResponseObject",
+  "项目阶段响应对象": "ProjectPhaseResponseObject",
+  "项目任务名称编号查询对象": "ItemTaskNameNumberQueryObject",
+  "QualifiedSupplierInspectionCategoryQueryRequestDTO": "QualifiedSupplierInspectionCategoryQueryRequestDTO",
+  "JSONResultList供应商交检合格率类别查询响应": "JSONResultListResponseToTheSupplierDeliveryQualificationRateCategoryQuery",
+  "供应商交检合格率类别查询响应": "SupplierDeliveryQualifiedRateCategoryQueryResponse"
 }

@@ -1,0 +1,357 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/salesOrder/getListForReport": {
+      "post": {
+        "tags": [
+          "销售订单相关"
+        ],
+        "summary": "查询销售订单报表数据",
+        "operationId": "getListForReportUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/订单进度统计查询VO",
+              "originalRef": "订单进度统计查询VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«List«销售订单VO»»",
+              "originalRef": "JSONResult«List«销售订单VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "86"
+      }
+    }
+  },
+  "definitions": {
+    "订单进度统计查询VO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
+          }
+        },
+        "deliveryDateBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交付日期 - 开始 yyyy-MM-dd HH:mm:ss"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编号"
+        },
+        "materialIds": {
+          "type": "array",
+          "description": "物料id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "customerIds": {
+          "type": "array",
+          "description": "客户id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "deliveryDateEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交付日期 - 结束 yyyy-MM-dd HH:mm:ss"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "salesOrderStatus": {
+          "type": "string",
+          "description": "销售订单状态",
+          "enum": [
+            "  CREATED-未转生产订单",
+            "  CONVERTING-部分已转",
+            "  CONVERED-已转生产订单",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        }
+      },
+      "title": "订单进度统计查询VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«List«销售订单VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "$ref": "#/definitions/销售订单VO",
+            "originalRef": "销售订单VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«销售订单VO»»"
+    },
+    "销售订单VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "name": {
+          "type": "string",
+          "description": "销售订单名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "orderType": {
+          "type": "string",
+          "description": "订单类型",
+          "enum": [
+            "  DIRECT-直售",
+            "  CONSIGN-寄售",
+            "  OTHER-其他"
+          ]
+        },
+        "customerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "客户id"
+        },
+        "contractNo": {
+          "type": "string",
+          "description": "合同号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "placeOrderTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "下单日期(销售日期)"
+        },
+        "placeOrderDepartmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下单业务部门id"
+        },
+        "businessUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "业务员id"
+        },
+        "receivingAddress": {
+          "type": "string",
+          "description": "收货地址"
+        },
+        "customerContactsName": {
+          "type": "string",
+          "description": "客户联系人名称"
+        },
+        "customerContactsPhone": {
+          "type": "string",
+          "description": "客户联系人手机"
+        },
+        "attachedFileKeys": {
+          "type": "string",
+          "description": "附件"
+        },
+        "isConvertProduceOrder": {
+          "type": "string",
+          "description": "是否完全转为生产订单",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "handleStatus": {
+          "type": "string",
+          "description": "销售订单状态",
+          "enum": [
+            "  CREATED-未转生产订单",
+            "  CONVERTING-部分已转",
+            "  CONVERED-已转生产订单",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "produceStatus": {
+          "type": "string",
+          "description": "销售订单生产状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  PRODUCE-生产中",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "closeUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关闭人"
+        },
+        "closeTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "关闭时间"
+        },
+        "closeRemark": {
+          "type": "string",
+          "description": "关闭原因"
+        },
+        "deliveryQuantity": {
+          "type": "number",
+          "description": "发货数量"
+        },
+        "notDeliveryQuantity": {
+          "type": "number",
+          "description": "未发货数量"
+        },
+        "storageOutQuantity": {
+          "type": "number",
+          "description": "出库数量"
+        },
+        "notStorageOutQuantity": {
+          "type": "number",
+          "description": "未出库数量"
+        },
+        "returnQuantity": {
+          "type": "number",
+          "description": "退货数量"
+        },
+        "notReturnQuantity": {
+          "type": "number",
+          "description": "未退货数量"
+        },
+        "receivableAmount": {
+          "type": "number",
+          "description": "应收金额"
+        },
+        "receivedAmount": {
+          "type": "number",
+          "description": "已收金额"
+        },
+        "refundableAmount": {
+          "type": "number",
+          "description": "应退金额"
+        },
+        "returnedAmount": {
+          "type": "number",
+          "description": "已退金额"
+        },
+        "receivableBalance": {
+          "type": "number",
+          "description": "应收余额"
+        }
+      },
+      "title": "销售订单VO"
+    }
+  }
+}

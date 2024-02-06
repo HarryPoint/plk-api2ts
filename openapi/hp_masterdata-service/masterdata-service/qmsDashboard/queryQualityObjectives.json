@@ -1,0 +1,129 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/qmsDashboard/queryQualityObjectives": {
+      "get": {
+        "tags": [
+          "QMS大屏相关"
+        ],
+        "summary": "查询质量目标",
+        "operationId": "queryQualityObjectivesUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "quarter",
+            "in": "query",
+            "description": "quarter",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«List«质量目标返回DTO»»",
+              "originalRef": "JSONResult«List«质量目标返回DTO»»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "1"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«List«质量目标返回DTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "$ref": "#/definitions/质量目标返回DTO",
+            "originalRef": "质量目标返回DTO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«质量目标返回DTO»»"
+    },
+    "质量目标返回DTO": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "质量目标"
+        },
+        "targetType": {
+          "type": "string",
+          "description": "目标值类型",
+          "enum": [
+            "  QUALITATIVE_OBJECTIVE-定性目标",
+            "  QUANTITATIVE_OBJECTIVE-定量目标"
+          ]
+        },
+        "qualitativeTargetValue": {
+          "type": "string",
+          "description": "定性目标值"
+        },
+        "quantifyTargetValue": {
+          "type": "string",
+          "description": "定量目标值"
+        },
+        "q1": {
+          "type": "string",
+          "description": "q1实际值"
+        },
+        "q2": {
+          "type": "string",
+          "description": "q2实际值"
+        },
+        "q3": {
+          "type": "string",
+          "description": "q3实际值"
+        },
+        "q4": {
+          "type": "string",
+          "description": "q4实际值"
+        }
+      },
+      "title": "质量目标返回DTO"
+    }
+  }
+}

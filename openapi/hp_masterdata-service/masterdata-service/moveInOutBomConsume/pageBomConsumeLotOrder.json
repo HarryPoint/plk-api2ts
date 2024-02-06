@@ -1,0 +1,255 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/moveInOutBomConsume/pageBomConsumeLotOrder": {
+      "get": {
+        "tags": [
+          "进出料bom消耗相关"
+        ],
+        "summary": "分页查询进料Bom消耗批次订单信息",
+        "operationId": "pageBomConsumeLotOrderUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "moveInBomConsumeLotOrderPageQuery",
+            "description": "moveInBomConsumeLotOrderPageQuery",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/进料bom消耗批次分页查询对象",
+              "originalRef": "进料bom消耗批次分页查询对象"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«分页信息«进料bom消耗批次响应DTO»»",
+              "originalRef": "JSONResult«分页信息«进料bom消耗批次响应DTO»»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "50"
+      }
+    }
+  },
+  "definitions": {
+    "进料bom消耗批次分页查询对象": {
+      "type": "object",
+      "required": [
+        "produceTaskId"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "批次号、物料编号"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
+          }
+        },
+        "groupBys": {
+          "type": "array",
+          "description": "汇总聚合维度字段集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exportFields": {
+          "type": "array",
+          "description": "导出字段集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "materialIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "进料bom消耗批次分页查询对象"
+    },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
+    "JSONResult«分页信息«进料bom消耗批次响应DTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/分页信息«进料bom消耗批次响应DTO»",
+          "originalRef": "分页信息«进料bom消耗批次响应DTO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«进料bom消耗批次响应DTO»»"
+    },
+    "分页信息«进料bom消耗批次响应DTO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "$ref": "#/definitions/进料bom消耗批次响应DTO",
+            "originalRef": "进料bom消耗批次响应DTO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«进料bom消耗批次响应DTO»"
+    },
+    "进料bom消耗批次响应DTO": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotOrderCode": {
+          "type": "string",
+          "description": "批次编号"
+        }
+      },
+      "title": "进料bom消耗批次响应DTO"
+    }
+  }
+}

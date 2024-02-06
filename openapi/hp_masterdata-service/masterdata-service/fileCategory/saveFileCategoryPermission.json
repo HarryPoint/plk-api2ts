@@ -1,0 +1,168 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/fileCategory/saveFileCategoryPermission": {
+      "post": {
+        "tags": [
+          "文件分类相关"
+        ],
+        "summary": "保存文件分类权限",
+        "operationId": "saveFileCategoryPermissionUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FileCategoryPermissionSaveRequestDTO",
+              "originalRef": "FileCategoryPermissionSaveRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "helin",
+        "x-order": "140"
+      }
+    }
+  },
+  "definitions": {
+    "FileCategoryPermissionSaveRequestDTO": {
+      "type": "object",
+      "properties": {
+        "fileCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件分类ID"
+        },
+        "permissionList": {
+          "type": "array",
+          "description": "权限列表",
+          "items": {
+            "$ref": "#/definitions/FileCategoryPermissionEditRequestDTO",
+            "originalRef": "FileCategoryPermissionEditRequestDTO"
+          }
+        }
+      },
+      "title": "FileCategoryPermissionSaveRequestDTO"
+    },
+    "FileCategoryPermissionEditRequestDTO": {
+      "type": "object",
+      "properties": {
+        "permissionTypeList": {
+          "type": "array",
+          "description": "权限类型",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CATEGORY_EDIT",
+              "CATEGORY_MOVE",
+              "CATEGORY_REMOVE",
+              "UPLOAD_FILE",
+              "CATEGORY_VIEW",
+              "FILE_RENAME",
+              "FILE_DOWNLOAD",
+              "FILE_MOVE",
+              "FILE_REMOVE"
+            ]
+          }
+        },
+        "organizations": {
+          "type": "array",
+          "description": "组织列表",
+          "items": {
+            "$ref": "#/definitions/FileCategoryOrganizationEditRequestDTO",
+            "originalRef": "FileCategoryOrganizationEditRequestDTO"
+          }
+        }
+      },
+      "title": "FileCategoryPermissionEditRequestDTO"
+    },
+    "FileCategoryOrganizationEditRequestDTO": {
+      "type": "object",
+      "properties": {
+        "organization": {
+          "type": "string",
+          "description": "组织",
+          "enum": [
+            "  USER-用户",
+            "  DEPARTMENT-部门",
+            "  ROLE-角色",
+            "  ALL-所有人"
+          ]
+        },
+        "organizationId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件组织ID"
+        }
+      },
+      "title": "FileCategoryOrganizationEditRequestDTO"
+    },
+    "JSONResult«string»_1": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "string",
+          "description": "响应结果",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«string»_1"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/qualityAuditStatisticsReport/queryIssueLevel": {
+      "post": {
+        "tags": [
+          "质量审核统计表"
+        ],
+        "summary": "不符合项统计 - 问题等级",
+        "operationId": "queryIssueLevelUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/基础质量审核查询请求i",
+              "originalRef": "基础质量审核查询请求i"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«List«问题等级查询响应»»",
+              "originalRef": "JSONResult«List«问题等级查询响应»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "helin",
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "基础质量审核查询请求i": {
+      "type": "object",
+      "properties": {
+        "dateRangeBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期范围-起始"
+        },
+        "dateRangeEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期范围-结束"
+        }
+      },
+      "title": "基础质量审核查询请求i"
+    },
+    "JSONResult«List«问题等级查询响应»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "$ref": "#/definitions/问题等级查询响应",
+            "originalRef": "问题等级查询响应"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«问题等级查询响应»»"
+    },
+    "问题等级查询响应": {
+      "type": "object",
+      "properties": {
+        "issueLevel": {
+          "type": "string",
+          "description": "问题等级"
+        },
+        "issueLevelName": {
+          "type": "string",
+          "description": "问题等级名称"
+        },
+        "nonConformanceQuantity": {
+          "type": "number",
+          "description": "不符合项数量"
+        },
+        "unRectifiedQuantity": {
+          "type": "number",
+          "description": "未整改数量"
+        },
+        "rectificationRate": {
+          "type": "number",
+          "description": "整改率"
+        },
+        "internalAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "内部审核不符合项数量"
+        },
+        "externalAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "外部审核不符合项数量"
+        },
+        "specialAuditNonConformanceQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "专项审核不符合项数量"
+        }
+      },
+      "title": "问题等级查询响应"
+    }
+  }
+}

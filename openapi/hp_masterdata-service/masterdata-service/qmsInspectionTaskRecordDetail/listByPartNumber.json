@@ -1,0 +1,184 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/qmsInspectionTaskRecordDetail/listByPartNumber": {
+      "post": {
+        "tags": [
+          "检验任务检验记录相关"
+        ],
+        "summary": "通过零件号查询检验任务检验记录",
+        "operationId": "listByPartNumberUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "queryRequest",
+            "description": "queryRequest",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/检验任务检验记录查询请求DTO",
+              "originalRef": "检验任务检验记录查询请求DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«List«检验任务检验记录查询响应DTO»»",
+              "originalRef": "JSONResult«List«检验任务检验记录查询响应DTO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "检验任务检验记录查询请求DTO": {
+      "type": "object",
+      "properties": {
+        "businessType": {
+          "type": "string",
+          "description": "业务类型",
+          "enum": [
+            "  CUSTOMER_COMPLAIN-客户投诉",
+            "  INCOMING_INSPECTION-来料检",
+            "  FIRST_INSPECTION-首检",
+            "  PATROL_INSPECTION-巡检",
+            "  PROCESS_INSPECTION-工序检",
+            "  PRODUCT_INSPECTION-成品检",
+            "  SHIPMENT_INSPECTION-出货检",
+            "  EXPERIMENT-试验",
+            "  OTHER-其它"
+          ]
+        },
+        "inspectionTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验任务id"
+        },
+        "partNumber": {
+          "type": "string",
+          "description": "零件号"
+        },
+        "threeInspectionSystem": {
+          "type": "string",
+          "description": "三检制类型",
+          "enum": [
+            "  SELF_INSPECTION-自检",
+            "  MUTUAL_INSPECTION-互检",
+            "  SPECIAL_INSPECTION-专检"
+          ]
+        }
+      },
+      "title": "检验任务检验记录查询请求DTO"
+    },
+    "JSONResult«List«检验任务检验记录查询响应DTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "$ref": "#/definitions/检验任务检验记录查询响应DTO",
+            "originalRef": "检验任务检验记录查询响应DTO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«检验任务检验记录查询响应DTO»»"
+    },
+    "检验任务检验记录查询响应DTO": {
+      "type": "object",
+      "properties": {
+        "partNumber": {
+          "type": "string",
+          "description": "零件号"
+        },
+        "inspectionResultsOfIndividualParts": {
+          "type": "string",
+          "description": "零件检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        },
+        "descriptionOfNonconformities": {
+          "type": "string",
+          "description": "不合格情况描述"
+        },
+        "qmsInspectionItemsId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验项id"
+        },
+        "inspectionItemsName": {
+          "type": "string",
+          "description": "检验项名称"
+        },
+        "inspectionStandardValue": {
+          "type": "string",
+          "description": "标准值"
+        },
+        "inspectionActualValue": {
+          "type": "string",
+          "description": "实测值"
+        },
+        "inspectionResult": {
+          "type": "string",
+          "description": "检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        }
+      },
+      "title": "检验任务检验记录查询响应DTO"
+    }
+  }
+}

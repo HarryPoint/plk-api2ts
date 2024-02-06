@@ -7,9 +7,8 @@ type IServiceMap = {
   "plk-uaa-service": string;
   "flow-service": string;
   "todo-service": string;
+  "hp_masterdata-service": string;
 };
-
-type IServiceKey = keyof IServiceMap;
 
 const apiMap: Record<string, IServiceMap> = {
   dev: {
@@ -17,6 +16,7 @@ const apiMap: Record<string, IServiceMap> = {
     "plk-uaa-service": "http://47.108.135.148:18100",
     "flow-service": "http://47.108.135.148:16500",
     "todo-service": "http://47.108.139.107:16600",
+    "hp_masterdata-service": "http://192.168.111.94:16700",
   },
 };
 
@@ -29,5 +29,5 @@ export default {
   translateChunkSize: 100,
   serviceMap: apiMap.dev,
   // 接口服务目录
-  serviceNameToPath: false,
+  serviceNameToPath: true,
 };

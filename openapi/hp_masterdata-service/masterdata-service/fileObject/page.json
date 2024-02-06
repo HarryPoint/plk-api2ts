@@ -1,0 +1,352 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/fileObject/page": {
+      "post": {
+        "tags": [
+          "文件对象相关"
+        ],
+        "summary": "分页查询文件对象",
+        "operationId": "pageUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/文件对象分页查询请求DTO",
+              "originalRef": "文件对象分页查询请求DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«分页信息«文件对象分页查询响应DTO»»",
+              "originalRef": "JSONResult«分页信息«文件对象分页查询响应DTO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "helin",
+        "x-order": "70"
+      }
+    }
+  },
+  "definitions": {
+    "文件对象分页查询请求DTO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "fileForm": {
+          "type": "string",
+          "description": "文件来源"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
+          }
+        },
+        "groupBys": {
+          "type": "array",
+          "description": "汇总聚合维度字段集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "createUserIds": {
+          "type": "array",
+          "description": "创建用户ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "exportFields": {
+          "type": "array",
+          "description": "导出字段集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string",
+          "description": "文件名"
+        },
+        "fileCategoryIdList": {
+          "type": "array",
+          "description": "文件分类ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "createTimeBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间-开始"
+        },
+        "createTimeEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间-开始"
+        }
+      },
+      "title": "文件对象分页查询请求DTO"
+    },
+    "分页排序": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string",
+          "description": "需要进行排序的字段"
+        },
+        "isAsc": {
+          "type": "string",
+          "description": "是否正序排列，默认Y",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "分页排序"
+    },
+    "JSONResult«分页信息«文件对象分页查询响应DTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "$ref": "#/definitions/分页信息«文件对象分页查询响应DTO»",
+          "originalRef": "分页信息«文件对象分页查询响应DTO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«文件对象分页查询响应DTO»»"
+    },
+    "分页信息«文件对象分页查询响应DTO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "$ref": "#/definitions/文件对象分页查询响应DTO",
+            "originalRef": "文件对象分页查询响应DTO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«文件对象分页查询响应DTO»"
+    },
+    "文件对象分页查询响应DTO": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "name": {
+          "type": "string",
+          "description": "文件名"
+        },
+        "fileCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件分类ID"
+        },
+        "fileCategoryName": {
+          "type": "string",
+          "description": "文件分类名称"
+        },
+        "fileSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件大小"
+        },
+        "fileForm": {
+          "type": "string",
+          "description": "文件来源"
+        },
+        "fileKeys": {
+          "type": "array",
+          "description": "文件Key",
+          "items": {
+            "type": "object"
+          }
+        },
+        "permissionTypeList": {
+          "type": "array",
+          "description": "权限列表",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CATEGORY_EDIT",
+              "CATEGORY_MOVE",
+              "CATEGORY_REMOVE",
+              "UPLOAD_FILE",
+              "CATEGORY_VIEW",
+              "FILE_RENAME",
+              "FILE_DOWNLOAD",
+              "FILE_MOVE",
+              "FILE_REMOVE"
+            ]
+          }
+        }
+      },
+      "title": "文件对象分页查询响应DTO"
+    }
+  }
+}

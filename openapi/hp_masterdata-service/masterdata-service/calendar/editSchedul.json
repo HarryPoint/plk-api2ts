@@ -1,0 +1,159 @@
+{
+  "basePath": "/",
+  "host": "192.168.111.94:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/calendar/editSchedul": {
+      "post": {
+        "tags": [
+          "工厂日历相关"
+        ],
+        "summary": "保存并开始执行排班",
+        "operationId": "editSchedulUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "calendarSchedule",
+            "description": "calendarSchedule",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/日历排班VO",
+              "originalRef": "日历排班VO"
+            }
+          },
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "日历排班VO": {
+      "type": "object",
+      "required": [
+        "beginDate",
+        "loopDay"
+      ],
+      "properties": {
+        "scheduleDays": {
+          "type": "array",
+          "description": "排班天数集",
+          "items": {
+            "$ref": "#/definitions/日历排班天数VO",
+            "originalRef": "日历排班天数VO"
+          }
+        },
+        "beginDate": {
+          "type": "string",
+          "description": "开始日期 yyyy-MM-dd"
+        },
+        "loopDay": {
+          "type": "integer",
+          "format": "int32",
+          "description": "循环天数"
+        }
+      },
+      "title": "日历排班VO"
+    },
+    "日历排班天数VO": {
+      "type": "object",
+      "properties": {
+        "scheduleDayDetails": {
+          "type": "array",
+          "description": "排班明细",
+          "items": {
+            "$ref": "#/definitions/日历排班天数明细VO",
+            "originalRef": "日历排班天数明细VO"
+          }
+        }
+      },
+      "title": "日历排班天数VO"
+    },
+    "日历排班天数明细VO": {
+      "type": "object",
+      "properties": {
+        "classGroupIdList": {
+          "type": "array",
+          "description": "班组id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "classShiftId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班次id"
+        }
+      },
+      "title": "日历排班天数明细VO"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}
