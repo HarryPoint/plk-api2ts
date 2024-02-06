@@ -1,3 +1,12 @@
+// qms大屏时间区间请求
+export interface IQmsLargeScreenTimeIntervalRequest {
+    // 查询日期的开始
+    dateRangeBegin: string;
+    // 查询日期的结束
+    dateRangeEnd: string;
+    // 查询日期区间类型
+    dateRangeType: string;
+}
 // JSONResult«List«供应商交检合格率查询响应»»
 export interface IJSONResultListResponseToTheSupplierDeliveryQualificationRateQuery {
     // 返回码
@@ -11,8 +20,8 @@ export interface IJSONResultListResponseToTheSupplierDeliveryQualificationRateQu
 }
 // 供应商交检合格率查询响应
 export interface ISupplierDeliveryQualifiedRateQueryResponse {
-    // 月份
-    month: string;
+    // 横坐标
+    abscissa: string;
     // 合格数量
     qualifiedQuantity: number;
     // 交检总数量

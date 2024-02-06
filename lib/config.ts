@@ -6,6 +6,7 @@ type IServiceMap = {
   "masterdata-service": string;
   "plk-uaa-service": string;
   "flow-service": string;
+  "todo-service": string;
 };
 
 type IServiceKey = keyof IServiceMap;
@@ -15,6 +16,7 @@ const apiMap: Record<string, IServiceMap> = {
     "masterdata-service": "http://47.108.135.148:16700",
     "plk-uaa-service": "http://47.108.135.148:18100",
     "flow-service": "http://47.108.135.148:16500",
+    "todo-service": "http://47.108.139.107:16600",
   },
 };
 

@@ -1,3 +1,8 @@
+// NonConformanceTrendReportRequestDTO
+export interface INonConformanceTrendReportRequestDTO {
+    // 当前的时间
+    currentYear: string;
+}
 // JSONResult«不符合项目趋势报告»
 export interface IJSONResultDoesNotMatchTheProjectTrendReport {
     // 返回码

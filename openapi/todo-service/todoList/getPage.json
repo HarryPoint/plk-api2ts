@@ -1,0 +1,1068 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16600",
+  "info": {
+    "description": "服务名: todo-service",
+    "version": "1.0",
+    "title": "普朗克待办服务(todo-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/todo-service/todoList/getPage": {
+      "post": {
+        "tags": [
+          "待办相关"
+        ],
+        "summary": "分页查询待办",
+        "description": "<p style='color:red'>详情不同类型查询调的接口不一样(持续更新)：<br/>注：详情接口的对应的id传当前接口返回的 businessId（对应业务id） <br/>1、type == FLOW_TASK 查询详情调：'查询我的研发任务详情' <br/>2、type == FLOW_APPROVAL 查询详情调：'查询我的审批任务详情' <br/></p>",
+        "operationId": "getPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "search",
+            "description": "search",
+            "required": true,
+            "schema": {
+              "originalRef": "待办事项搜索VO",
+              "$ref": "#/definitions/待办事项搜索VO"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«分页信息«待办事项返回VO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«待办事项返回VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "待办事项搜索VO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "createBeginTime": {
+          "type": "string",
+          "description": "创建时间 - 开始 yyyy-MM-dd HH:mm:ss"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "queryStatus": {
+          "type": "string",
+          "description": "查询状态",
+          "enum": [
+            "  NOT_HANDLE-待处理",
+            "  OVERDUE-已逾期",
+            "  HANDLED-已完成",
+            "  CREATED_BY_ME-我发起的",
+            "  CARBON_COPY_TO_ME-抄送我的",
+            "  NOT_READ-未读",
+            "  IN_PROGRESS-进行中的",
+            "  COMPLETE-已完成",
+            "  FAILED-未通过"
+          ]
+        },
+        "createEndTime": {
+          "type": "string",
+          "description": "创建时间 - 结束 yyyy-MM-dd HH:mm:ss"
+        },
+        "taskStatus": {
+          "type": "array",
+          "description": "任务状态查询集合",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nameOrCode": {
+          "type": "string",
+          "description": "应用名称或单据编号"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用ID"
+        },
+        "flowPathIdList": {
+          "type": "array",
+          "description": "应用ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "ignoreFlowPathIdList": {
+          "type": "array",
+          "description": "忽略应用ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "待办事项搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«分页信息«待办事项返回VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "分页信息«待办事项返回VO»",
+          "$ref": "#/definitions/分页信息«待办事项返回VO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«待办事项返回VO»»"
+    },
+    "分页信息«待办事项返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "待办事项返回VO",
+            "$ref": "#/definitions/待办事项返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«待办事项返回VO»"
+    },
+    "待办事项返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属用户id"
+        },
+        "flowPathName": {
+          "type": "string",
+          "description": "单据名称"
+        },
+        "flowPathNodeName": {
+          "type": "string",
+          "description": "节点名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "待办编号"
+        },
+        "type": {
+          "type": "string",
+          "description": "类型",
+          "enum": [
+            "  HANDLE_BY_ME-由我处理",
+            "  CARBON_COPY_TO_ME-抄送给我"
+          ]
+        },
+        "flowPathWorkOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "单据id"
+        },
+        "flowPathWorkOrderCode": {
+          "type": "string",
+          "description": "单据编号"
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务开始时间"
+        },
+        "planEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "预计结束时间（截止时间）"
+        },
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应业务id"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  NOT_HANDLE-待处理",
+            "  NOT_READ-未读",
+            "  HANDLED-已完成",
+            "  READ-已读"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "flowPathNodeHandleStatus": {
+          "type": "string",
+          "description": "节点处理状态描述"
+        },
+        "completeTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "完成时间"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人名称"
+        },
+        "customValues": {
+          "type": "array",
+          "description": "自定义字段",
+          "items": {
+            "originalRef": "工单明细数据返回信息VO",
+            "$ref": "#/definitions/工单明细数据返回信息VO"
+          }
+        },
+        "currentHandleUsers": {
+          "type": "array",
+          "description": "当前处理人集合",
+          "items": {
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
+          }
+        },
+        "isTimeout": {
+          "type": "string",
+          "description": "是否超时",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "businessType": {
+          "type": "string",
+          "description": "待办业务类型",
+          "enum": [
+            "  TODO-待办",
+            "  PRODUCE_TASK-生产任务",
+            "  QUALITY_PRODUCE_TASK-生产质检任务",
+            "  QUALITY_STORAGE_TASK-库存质检任务",
+            "  STORAGE_TAKE_CHECK_TASK-盘点任务"
+          ]
+        },
+        "produceTaskIsBack": {
+          "type": "string",
+          "description": "生产任务是否为返工",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "currentCompleteQuantity": {
+          "type": "number",
+          "description": "当前完成数量"
+        },
+        "planQuantity": {
+          "type": "number",
+          "description": "计划数量"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "storageTakeCheckScope": {
+          "type": "string",
+          "description": "盘点范围"
+        },
+        "canRedirect": {
+          "type": "string",
+          "description": "是否能跳转",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "webPath": {
+          "type": "string",
+          "description": "pc端跳转路径"
+        },
+        "mobilePath": {
+          "type": "string",
+          "description": "移动端跳转路径"
+        },
+        "produceTaskStatus": {
+          "type": "string",
+          "description": "生产任务状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  PRODUCE-生产中",
+            "  PAUSE-暂停中",
+            "  STOP-停止",
+            "  CLOSE-已关闭",
+            "  CANCEL-已取消"
+          ]
+        },
+        "produceTaskStatusDesc": {
+          "type": "string",
+          "description": "生产任务状态描述"
+        },
+        "qualityTaskStatus": {
+          "type": "string",
+          "description": "质检任务状态",
+          "enum": [
+            "  WAIT-待质检",
+            "  COMPLETE-已完成",
+            "  CANCEL-已撤销",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "qualityTaskStatusDesc": {
+          "type": "string",
+          "description": "质检任务状态描述"
+        },
+        "flowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程节点id"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "流程id"
+        },
+        "produceTask": {
+          "description": "produceTask",
+          "originalRef": "生产任务针对待办返回DTO",
+          "$ref": "#/definitions/生产任务针对待办返回DTO"
+        },
+        "title": {
+          "type": "string",
+          "description": "标题"
+        },
+        "tableHeaderList": {
+          "type": "array",
+          "description": "表头",
+          "items": {
+            "originalRef": "TableHeaderDTO",
+            "$ref": "#/definitions/TableHeaderDTO"
+          }
+        },
+        "tableDataList": {
+          "type": "array",
+          "description": "表数据",
+          "items": {
+            "originalRef": "TableDataDTO",
+            "$ref": "#/definitions/TableDataDTO"
+          }
+        }
+      },
+      "title": "待办事项返回VO"
+    },
+    "工单明细数据返回信息VO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "列code"
+        },
+        "value": {
+          "type": "object",
+          "description": "列值"
+        }
+      },
+      "title": "工单明细数据返回信息VO"
+    },
+    "流程节点执行人VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "executorId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "执行人id"
+        },
+        "executorType": {
+          "type": "string",
+          "description": "执行人类型",
+          "enum": [
+            "  USER-员工",
+            "  ROLE-角色",
+            "  DEPARTMENT-部门",
+            "  CLASS_GROUP-班组",
+            "  SYS_CONTROL-系统控件"
+          ]
+        },
+        "executorSysType": {
+          "type": "string",
+          "description": "执行人系统控件类型",
+          "enum": [
+            "  CREATE_BY-创建人",
+            "  CREATE_DEPARTMENT-创建部门",
+            "  FLOW_PATH_TASK_PLAN-任务方案"
+          ]
+        },
+        "organizationFieldSerialNo": {
+          "type": "string",
+          "description": "组织字段序列 - 即动态控件"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "flowPathId"
+        },
+        "flowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "节点ID"
+        }
+      },
+      "title": "流程节点执行人VO"
+    },
+    "生产任务针对待办返回DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "type": {
+          "type": "string",
+          "description": "任务类型",
+          "enum": [
+            "  PRODUCE-生产任务",
+            "  BACK-返工任务"
+          ]
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "任务类型描述"
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "对应物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "对应物料单位"
+        },
+        "produceTechnologyRoutingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工艺路径id"
+        },
+        "produceTechnologyRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工艺路径步骤id"
+        },
+        "routingName": {
+          "type": "string",
+          "description": "对应生产工艺路径名称"
+        },
+        "routingCode": {
+          "type": "string",
+          "description": "对应生产工艺路径编号"
+        },
+        "routingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "工艺路径步骤"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "对应工序编号"
+        },
+        "lastProduceTechnologyRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应前生产工艺路径步骤id"
+        },
+        "lastRoutingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "对应上工序步骤"
+        },
+        "lastProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应上工序id"
+        },
+        "lastProcessName": {
+          "type": "string",
+          "description": "对应上工序名称"
+        },
+        "lastProcessCode": {
+          "type": "string",
+          "description": "对应上工序编号"
+        },
+        "classShiftId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应班次id"
+        },
+        "classShiftName": {
+          "type": "string",
+          "description": "对应班次名称"
+        },
+        "classShiftCode": {
+          "type": "string",
+          "description": "对应班次编号"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应班组id"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "对应班组名称"
+        },
+        "classGroupCode": {
+          "type": "string",
+          "description": "对应班组编号"
+        },
+        "planProduceQuantity": {
+          "type": "number",
+          "description": "计划生产数量"
+        },
+        "currentCompleteQuantity": {
+          "type": "number",
+          "description": "当前完成数量"
+        },
+        "currentProduceQuantity": {
+          "type": "number",
+          "description": "当前生产数量"
+        },
+        "currentScrapQuantity": {
+          "type": "number",
+          "description": "当前报废数量"
+        },
+        "canUseQuantity": {
+          "type": "number",
+          "description": "可用数量"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "actualBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际开始时间"
+        },
+        "actualEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际结束时间"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  PRODUCE-生产中",
+            "  PAUSE-暂停中",
+            "  STOP-停止",
+            "  CLOSE-已关闭",
+            "  CANCEL-已取消"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "任务优先级"
+        },
+        "isWip": {
+          "type": "string",
+          "description": "当前任务WIP是否有物料",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "canOpItemList": {
+          "type": "array",
+          "description": "可操作项列表",
+          "items": {
+            "type": "string"
+          }
+        },
+        "moveInKeyParameterFillNeeds": {
+          "type": "string",
+          "description": "任务进站关键参数是否需要填写",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "moveOutKeyParameterFillNeeds": {
+          "type": "string",
+          "description": "任务出站关键参数是否需要填写",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "currentMoveInQuantity": {
+          "type": "number",
+          "description": "当前进料总数"
+        },
+        "needMoveInQuantity": {
+          "type": "number",
+          "description": "当前还需进料数"
+        },
+        "canMoveInQuantity": {
+          "type": "number",
+          "description": "可进料数量"
+        },
+        "canMoveOutQuantity": {
+          "type": "number",
+          "description": "可出料数量"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "produceOrder": {
+          "type": "object",
+          "description": "生产订单",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "批次信息",
+          "items": {
+            "originalRef": "生产任务批次响应DTO(针对移动端)",
+            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)"
+          }
+        },
+        "lotOrderNumber": {
+          "type": "number",
+          "description": "批次数量"
+        },
+        "stepSetInfo": {
+          "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
+          "originalRef": "生产工艺路径步骤设置返回VO",
+          "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
+        }
+      },
+      "title": "生产任务针对待办返回DTO"
+    },
+    "生产任务批次响应DTO(针对移动端)": {
+      "type": "object",
+      "properties": {
+        "lotId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "批次总数量"
+        }
+      },
+      "title": "生产任务批次响应DTO(针对移动端)"
+    },
+    "生产工艺路径步骤设置返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "inOutType": {
+          "type": "string",
+          "description": "进出站方式",
+          "enum": [
+            "  PART-部分进出",
+            "  ALL-整进整出"
+          ]
+        },
+        "allowDirectExit": {
+          "type": "string",
+          "description": "是否允许直接出站",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "needConfirmMoveInQuantity": {
+          "type": "string",
+          "description": "进料时是否需要确认进料数量",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "autoBringOutLastMold": {
+          "type": "string",
+          "description": "进料时是否自动带入上一次录入模具信息",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "autoBringOutLastDevice": {
+          "type": "string",
+          "description": "进料时是否自动带入上一次录入模具信息",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "autoBringOutLastBomConsume": {
+          "type": "string",
+          "description": "进料时是否自动带入上一次录入消耗物料信息",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "allowSplitLot": {
+          "type": "string",
+          "description": "进料时是否允许拆分批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "forcedSplitLot": {
+          "type": "string",
+          "description": "是否强制拆分批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableQualityTraceability": {
+          "type": "string",
+          "description": "启用质量追溯",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableLot": {
+          "type": "string",
+          "description": "启用批次",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableSerialNo": {
+          "type": "string",
+          "description": "启用序列号",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableExternalCode": {
+          "type": "string",
+          "description": "启用外部码",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "externalCodeFieldName": {
+          "type": "string",
+          "description": "外部码字段名称"
+        },
+        "externalCodeLength": {
+          "type": "integer",
+          "format": "int64",
+          "description": "外部码长度"
+        },
+        "enableDevice": {
+          "type": "string",
+          "description": "是否有设备",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableMold": {
+          "type": "string",
+          "description": "是否有模具",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableMoveInBomConsume": {
+          "type": "string",
+          "description": "是否有进料bom消耗",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableMoveOutBomConsume": {
+          "type": "string",
+          "description": "是否有出料bom消耗",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableMoveInKeyParameter": {
+          "type": "string",
+          "description": "是否有进站关键参数",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "enableMoveOutKeyParameter": {
+          "type": "string",
+          "description": "是否有出站关键参数",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isGtPlannedQuantity": {
+          "type": "string",
+          "description": "进出料数量是否大于计划数量",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "生产工艺路径步骤设置返回VO"
+    },
+    "TableHeaderDTO": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "TableHeaderDTO"
+    },
+    "TableDataDTO": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string"
+        },
+        "showValue": {
+          "type": "string"
+        }
+      },
+      "title": "TableDataDTO"
+    }
+  }
+}

@@ -1,3 +1,12 @@
+// qms大屏时间区间请求
+export interface IQmsLargeScreenTimeIntervalRequest {
+    // 查询日期的开始
+    dateRangeBegin: string;
+    // 查询日期的结束
+    dateRangeEnd: string;
+    // 查询日期区间类型
+    dateRangeType: string;
+}
 // JSONResult«List«质量绩效评价表返回DTO»»_1
 export interface IJSONResultListQualityPerformanceEvaluationTableReturnsDTO1 {
     // 返回码

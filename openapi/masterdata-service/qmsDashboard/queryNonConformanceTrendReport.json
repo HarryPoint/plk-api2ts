@@ -9,14 +9,29 @@
   "swagger": "2.0",
   "paths": {
     "/masterdata-service/qmsDashboard/queryNonConformanceTrendReport": {
-      "get": {
+      "post": {
         "tags": [
           "QMS大屏相关"
         ],
         "summary": "持续改进 - 不符合项专项趋势",
-        "operationId": "queryNonConformanceTrendReportUsingGET",
+        "operationId": "queryNonConformanceTrendReportUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "NonConformanceTrendReportRequestDTO",
+              "$ref": "#/definitions/NonConformanceTrendReportRequestDTO"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -25,6 +40,9 @@
               "originalRef": "JSONResult«不符合项目趋势报告»",
               "$ref": "#/definitions/JSONResult«不符合项目趋势报告»"
             }
+          },
+          "201": {
+            "description": "Created"
           },
           "401": {
             "description": "Unauthorized"
@@ -43,6 +61,17 @@
     }
   },
   "definitions": {
+    "NonConformanceTrendReportRequestDTO": {
+      "type": "object",
+      "properties": {
+        "currentYear": {
+          "type": "string",
+          "format": "date-time",
+          "description": "当前的时间"
+        }
+      },
+      "title": "NonConformanceTrendReportRequestDTO"
+    },
     "JSONResult«不符合项目趋势报告»": {
       "type": "object",
       "properties": {

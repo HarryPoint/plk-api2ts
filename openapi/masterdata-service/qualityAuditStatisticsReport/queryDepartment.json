@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "基础质量审核查询请求i",
-              "$ref": "#/definitions/基础质量审核查询请求i"
+              "originalRef": "基础质量审核查询请求",
+              "$ref": "#/definitions/基础质量审核查询请求"
             }
           }
         ],
@@ -61,7 +61,7 @@
     }
   },
   "definitions": {
-    "基础质量审核查询请求i": {
+    "基础质量审核查询请求": {
       "type": "object",
       "properties": {
         "dateRangeBegin": {
@@ -75,7 +75,7 @@
           "description": "日期范围-结束"
         }
       },
-      "title": "基础质量审核查询请求i"
+      "title": "基础质量审核查询请求"
     },
     "JSONResult«不符合项统计-部门»": {
       "type": "object",

@@ -9,22 +9,28 @@
   "swagger": "2.0",
   "paths": {
     "/masterdata-service/qmsDashboard/querySupplierPerformance": {
-      "get": {
+      "post": {
         "tags": [
           "QMS大屏相关"
         ],
         "summary": "查询供应商绩效",
-        "operationId": "querySupplierPerformanceUsingGET",
+        "operationId": "querySupplierPerformanceUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "*/*"
         ],
         "parameters": [
           {
-            "name": "quarter",
-            "in": "query",
-            "description": "quarter",
+            "in": "body",
+            "name": "dateRangeRequest",
+            "description": "dateRangeRequest",
             "required": true,
-            "type": "string"
+            "schema": {
+              "originalRef": "qms大屏时间区间请求",
+              "$ref": "#/definitions/qms大屏时间区间请求"
+            }
           }
         ],
         "responses": {
@@ -34,6 +40,9 @@
               "originalRef": "JSONResult«List«质量绩效评价表返回DTO»»_1",
               "$ref": "#/definitions/JSONResult«List«质量绩效评价表返回DTO»»_1"
             }
+          },
+          "201": {
+            "description": "Created"
           },
           "401": {
             "description": "Unauthorized"
@@ -52,6 +61,29 @@
     }
   },
   "definitions": {
+    "qms大屏时间区间请求": {
+      "type": "object",
+      "properties": {
+        "dateRangeBegin": {
+          "type": "string",
+          "description": "查询日期的开始"
+        },
+        "dateRangeEnd": {
+          "type": "string",
+          "description": "查询日期的结束"
+        },
+        "dateRangeType": {
+          "type": "string",
+          "description": "查询日期区间类型",
+          "enum": [
+            "  YEAR-年",
+            "  QUARTER-季度",
+            "  MONTH-月"
+          ]
+        }
+      },
+      "title": "qms大屏时间区间请求"
+    },
     "JSONResult«List«质量绩效评价表返回DTO»»_1": {
       "type": "object",
       "properties": {
