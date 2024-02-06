@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«工艺卡信息返回VO»",
-              "$ref": "#/definitions/JSONResult«工艺卡信息返回VO»"
+              "$ref": "#/definitions/JSONResult«工艺卡信息返回VO»",
+              "originalRef": "JSONResult«工艺卡信息返回VO»"
             }
           },
           "401": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "工艺卡信息返回VO",
-          "$ref": "#/definitions/工艺卡信息返回VO"
+          "$ref": "#/definitions/工艺卡信息返回VO",
+          "originalRef": "工艺卡信息返回VO"
         },
         "ts": {
           "type": "integer",
@@ -123,24 +123,24 @@
           "type": "array",
           "description": "文件集合",
           "items": {
-            "originalRef": "工艺卡明细返回VO",
-            "$ref": "#/definitions/工艺卡明细返回VO"
+            "$ref": "#/definitions/工艺卡明细返回VO",
+            "originalRef": "工艺卡明细返回VO"
           }
         },
         "textList": {
           "type": "array",
           "description": "描述集合",
           "items": {
-            "originalRef": "工艺卡明细返回VO",
-            "$ref": "#/definitions/工艺卡明细返回VO"
+            "$ref": "#/definitions/工艺卡明细返回VO",
+            "originalRef": "工艺卡明细返回VO"
           }
         },
         "inputList": {
           "type": "array",
           "description": "录入集合",
           "items": {
-            "originalRef": "工艺卡明细返回VO",
-            "$ref": "#/definitions/工艺卡明细返回VO"
+            "$ref": "#/definitions/工艺卡明细返回VO",
+            "originalRef": "工艺卡明细返回VO"
           }
         }
       },

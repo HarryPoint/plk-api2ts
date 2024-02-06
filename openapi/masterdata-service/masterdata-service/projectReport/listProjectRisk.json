@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "项目名称编号公共查询对象",
-              "$ref": "#/definitions/项目名称编号公共查询对象"
+              "$ref": "#/definitions/项目名称编号公共查询对象",
+              "originalRef": "项目名称编号公共查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目风险报表响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目风险报表响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«项目风险报表响应对象»»",
+              "originalRef": "JSONResult«List«项目风险报表响应对象»»"
             }
           },
           "201": {
@@ -121,8 +121,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目风险报表响应对象",
-            "$ref": "#/definitions/项目风险报表响应对象"
+            "$ref": "#/definitions/项目风险报表响应对象",
+            "originalRef": "项目风险报表响应对象"
           }
         },
         "ts": {

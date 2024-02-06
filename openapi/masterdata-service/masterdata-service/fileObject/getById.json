@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«文件对象明细响应DTO»",
-              "$ref": "#/definitions/JSONResult«文件对象明细响应DTO»"
+              "$ref": "#/definitions/JSONResult«文件对象明细响应DTO»",
+              "originalRef": "JSONResult«文件对象明细响应DTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "文件对象明细响应DTO",
-          "$ref": "#/definitions/文件对象明细响应DTO"
+          "$ref": "#/definitions/文件对象明细响应DTO",
+          "originalRef": "文件对象明细响应DTO"
         },
         "ts": {
           "type": "integer",

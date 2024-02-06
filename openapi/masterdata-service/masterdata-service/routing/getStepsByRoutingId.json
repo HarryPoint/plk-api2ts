@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«工艺路径详情步骤VO»»",
-              "$ref": "#/definitions/JSONResult«List«工艺路径详情步骤VO»»"
+              "$ref": "#/definitions/JSONResult«List«工艺路径详情步骤VO»»",
+              "originalRef": "JSONResult«List«工艺路径详情步骤VO»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "工艺路径详情步骤VO",
-            "$ref": "#/definitions/工艺路径详情步骤VO"
+            "$ref": "#/definitions/工艺路径详情步骤VO",
+            "originalRef": "工艺路径详情步骤VO"
           }
         },
         "ts": {
@@ -200,16 +200,16 @@
           "type": "array",
           "description": "步骤对应bom详情",
           "items": {
-            "originalRef": "工艺路径详情步骤Bom明细返回VO",
-            "$ref": "#/definitions/工艺路径详情步骤Bom明细返回VO"
+            "$ref": "#/definitions/工艺路径详情步骤Bom明细返回VO",
+            "originalRef": "工艺路径详情步骤Bom明细返回VO"
           }
         },
         "plans": {
           "type": "array",
           "description": "质检方案集",
           "items": {
-            "originalRef": "质检方案明细返回VO",
-            "$ref": "#/definitions/质检方案明细返回VO"
+            "$ref": "#/definitions/质检方案明细返回VO",
+            "originalRef": "质检方案明细返回VO"
           }
         },
         "capacityProduceTime": {
@@ -302,16 +302,16 @@
           "type": "array",
           "description": "适用物料集合",
           "items": {
-            "originalRef": "物料主数据基础信息返回VO",
-            "$ref": "#/definitions/物料主数据基础信息返回VO"
+            "$ref": "#/definitions/物料主数据基础信息返回VO",
+            "originalRef": "物料主数据基础信息返回VO"
           }
         },
         "itemList": {
           "type": "array",
           "description": "质检项",
           "items": {
-            "originalRef": "质检方案质检项关联信息返回VO",
-            "$ref": "#/definitions/质检方案质检项关联信息返回VO"
+            "$ref": "#/definitions/质检方案质检项关联信息返回VO",
+            "originalRef": "质检方案质检项关联信息返回VO"
           }
         },
         "issueCode": {
@@ -476,8 +476,8 @@
           "type": "array",
           "description": "选择项",
           "items": {
-            "originalRef": "质检项选择项返回VO",
-            "$ref": "#/definitions/质检项选择项返回VO"
+            "$ref": "#/definitions/质检项选择项返回VO",
+            "originalRef": "质检项选择项返回VO"
           }
         },
         "numberStandard": {

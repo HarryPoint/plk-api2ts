@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«仓库盘点任务详情返回DTO»",
-              "$ref": "#/definitions/JSONResult«仓库盘点任务详情返回DTO»"
+              "$ref": "#/definitions/JSONResult«仓库盘点任务详情返回DTO»",
+              "originalRef": "JSONResult«仓库盘点任务详情返回DTO»"
             }
           },
           "401": {
@@ -82,8 +82,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "仓库盘点任务详情返回DTO",
-          "$ref": "#/definitions/仓库盘点任务详情返回DTO"
+          "$ref": "#/definitions/仓库盘点任务详情返回DTO",
+          "originalRef": "仓库盘点任务详情返回DTO"
         },
         "ts": {
           "type": "integer",
@@ -104,15 +104,15 @@
         },
         "taskInfo": {
           "description": "任务基本信息",
-          "originalRef": "仓库盘点任务返回DTO",
-          "$ref": "#/definitions/仓库盘点任务返回DTO"
+          "$ref": "#/definitions/仓库盘点任务返回DTO",
+          "originalRef": "仓库盘点任务返回DTO"
         },
         "checkList": {
           "type": "array",
           "description": "物料盘点清单",
           "items": {
-            "originalRef": "仓库盘点仓位清单返回DTO",
-            "$ref": "#/definitions/仓库盘点仓位清单返回DTO"
+            "$ref": "#/definitions/仓库盘点仓位清单返回DTO",
+            "originalRef": "仓库盘点仓位清单返回DTO"
           }
         }
       },
@@ -272,8 +272,8 @@
           "type": "array",
           "description": "指定仓位数组(指定仓位类型时有值)",
           "items": {
-            "originalRef": "Id，名称，编号VO",
-            "$ref": "#/definitions/Id，名称，编号VO"
+            "$ref": "#/definitions/Id，名称，编号VO",
+            "originalRef": "Id，名称，编号VO"
           }
         },
         "inventoryProfitOrderCode": {
@@ -447,32 +447,32 @@
           "type": "array",
           "description": "序列号集",
           "items": {
-            "originalRef": "盘点任务盘点明细序列号DTO",
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
+            "originalRef": "盘点任务盘点明细序列号DTO"
           }
         },
         "pickSerialNos": {
           "type": "array",
           "description": "匹配序列号集",
           "items": {
-            "originalRef": "盘点任务盘点明细序列号DTO",
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
+            "originalRef": "盘点任务盘点明细序列号DTO"
           }
         },
         "profitSerialNos": {
           "type": "array",
           "description": "盘盈序列号集",
           "items": {
-            "originalRef": "盘点任务盘点明细序列号DTO",
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
+            "originalRef": "盘点任务盘点明细序列号DTO"
           }
         },
         "lossSerialNos": {
           "type": "array",
           "description": "盘亏序列号集",
           "items": {
-            "originalRef": "盘点任务盘点明细序列号DTO",
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
+            "originalRef": "盘点任务盘点明细序列号DTO"
           }
         }
       },

@@ -28,8 +28,8 @@
             "description": "dateLimit",
             "required": true,
             "schema": {
-              "originalRef": "日期范围查询 DTO",
-              "$ref": "#/definitions/日期范围查询 DTO"
+              "$ref": "#/definitions/日期范围查询 DTO",
+              "originalRef": "日期范围查询 DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«工厂日历排期班次关系VO»»",
-              "$ref": "#/definitions/JSONResult«List«工厂日历排期班次关系VO»»"
+              "$ref": "#/definitions/JSONResult«List«工厂日历排期班次关系VO»»",
+              "originalRef": "JSONResult«List«工厂日历排期班次关系VO»»"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "工厂日历排期班次关系VO_1",
-            "$ref": "#/definitions/工厂日历排期班次关系VO_1"
+            "$ref": "#/definitions/工厂日历排期班次关系VO_1",
+            "originalRef": "工厂日历排期班次关系VO_1"
           }
         },
         "ts": {
@@ -127,8 +127,8 @@
           "type": "array",
           "description": "对应班次信息集",
           "items": {
-            "originalRef": "工厂日历排期班次关系VO",
-            "$ref": "#/definitions/工厂日历排期班次关系VO"
+            "$ref": "#/definitions/工厂日历排期班次关系VO",
+            "originalRef": "工厂日历排期班次关系VO"
           }
         }
       },

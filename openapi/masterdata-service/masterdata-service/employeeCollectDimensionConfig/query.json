@@ -28,8 +28,8 @@
             "description": "employeeCollectDimensionConfigQuery",
             "required": true,
             "schema": {
-              "originalRef": "用户聚合维度配置查询_1",
-              "$ref": "#/definitions/用户聚合维度配置查询_1"
+              "$ref": "#/definitions/用户聚合维度配置查询_1",
+              "originalRef": "用户聚合维度配置查询_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«用户聚合维度配置查询»",
-              "$ref": "#/definitions/JSONResult«用户聚合维度配置查询»"
+              "$ref": "#/definitions/JSONResult«用户聚合维度配置查询»",
+              "originalRef": "JSONResult«用户聚合维度配置查询»"
             }
           },
           "201": {
@@ -87,8 +87,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "用户聚合维度配置查询",
-          "$ref": "#/definitions/用户聚合维度配置查询"
+          "$ref": "#/definitions/用户聚合维度配置查询",
+          "originalRef": "用户聚合维度配置查询"
         },
         "ts": {
           "type": "integer",

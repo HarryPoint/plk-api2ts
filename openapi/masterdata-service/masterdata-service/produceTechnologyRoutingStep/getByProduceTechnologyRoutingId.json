@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»",
+              "originalRef": "JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "ProduceTechnologyRoutingStepResponseDTO",
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepResponseDTO"
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepResponseDTO",
+            "originalRef": "ProduceTechnologyRoutingStepResponseDTO"
           }
         },
         "ts": {
@@ -226,8 +226,8 @@
           "type": "array",
           "description": "物料消耗",
           "items": {
-            "originalRef": "ProduceTechnologyRoutingStepBomDetailResponseDTO",
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepBomDetailResponseDTO"
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepBomDetailResponseDTO",
+            "originalRef": "ProduceTechnologyRoutingStepBomDetailResponseDTO"
           }
         }
       },

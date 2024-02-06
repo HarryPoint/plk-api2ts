@@ -36,8 +36,8 @@
             "description": "handPlan",
             "required": true,
             "schema": {
-              "originalRef": "生产订单手动排产DTO",
-              "$ref": "#/definitions/生产订单手动排产DTO"
+              "$ref": "#/definitions/生产订单手动排产DTO",
+              "originalRef": "生产订单手动排产DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -105,8 +105,8 @@
           "type": "array",
           "description": "排产明细订单维度",
           "items": {
-            "originalRef": "生产订单手动排产明细订单维度DTO",
-            "$ref": "#/definitions/生产订单手动排产明细订单维度DTO"
+            "$ref": "#/definitions/生产订单手动排产明细订单维度DTO",
+            "originalRef": "生产订单手动排产明细订单维度DTO"
           }
         }
       },
@@ -124,24 +124,24 @@
           "type": "array",
           "description": "按日排产明细",
           "items": {
-            "originalRef": "生产订单手动排产按日排产DTO",
-            "$ref": "#/definitions/生产订单手动排产按日排产DTO"
+            "$ref": "#/definitions/生产订单手动排产按日排产DTO",
+            "originalRef": "生产订单手动排产按日排产DTO"
           }
         },
         "classShiftQuantities": {
           "type": "array",
           "description": "按班次排产明细",
           "items": {
-            "originalRef": "生产订单手动排产按班次排产DTO",
-            "$ref": "#/definitions/生产订单手动排产按班次排产DTO"
+            "$ref": "#/definitions/生产订单手动排产按班次排产DTO",
+            "originalRef": "生产订单手动排产按班次排产DTO"
           }
         },
         "steps": {
           "type": "array",
           "description": "步骤产量集",
           "items": {
-            "originalRef": "生产订单手动排产明细步骤产量DTO",
-            "$ref": "#/definitions/生产订单手动排产明细步骤产量DTO"
+            "$ref": "#/definitions/生产订单手动排产明细步骤产量DTO",
+            "originalRef": "生产订单手动排产明细步骤产量DTO"
           }
         }
       },
@@ -174,8 +174,8 @@
           "type": "array",
           "description": "班次产量集",
           "items": {
-            "originalRef": "班次产量DTO",
-            "$ref": "#/definitions/班次产量DTO"
+            "$ref": "#/definitions/班次产量DTO",
+            "originalRef": "班次产量DTO"
           }
         }
       },
@@ -208,16 +208,16 @@
           "type": "array",
           "description": "按日排产明细",
           "items": {
-            "originalRef": "生产订单手动排产按日排产DTO",
-            "$ref": "#/definitions/生产订单手动排产按日排产DTO"
+            "$ref": "#/definitions/生产订单手动排产按日排产DTO",
+            "originalRef": "生产订单手动排产按日排产DTO"
           }
         },
         "classShiftQuantities": {
           "type": "array",
           "description": "按班次排产明细",
           "items": {
-            "originalRef": "生产订单手动排产按班次排产DTO",
-            "$ref": "#/definitions/生产订单手动排产按班次排产DTO"
+            "$ref": "#/definitions/生产订单手动排产按班次排产DTO",
+            "originalRef": "生产订单手动排产按班次排产DTO"
           }
         }
       },

@@ -28,8 +28,8 @@
             "description": "categoryCountSearchVO",
             "required": true,
             "schema": {
-              "originalRef": "生产异常类型统计VO_1",
-              "$ref": "#/definitions/生产异常类型统计VO_1"
+              "$ref": "#/definitions/生产异常类型统计VO_1",
+              "originalRef": "生产异常类型统计VO_1"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«生产异常类型统计VO»»",
-              "$ref": "#/definitions/JSONResult«List«生产异常类型统计VO»»"
+              "$ref": "#/definitions/JSONResult«List«生产异常类型统计VO»»",
+              "originalRef": "JSONResult«List«生产异常类型统计VO»»"
             }
           },
           "201": {
@@ -150,8 +150,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "生产异常类型统计VO",
-            "$ref": "#/definitions/生产异常类型统计VO"
+            "$ref": "#/definitions/生产异常类型统计VO",
+            "originalRef": "生产异常类型统计VO"
           }
         },
         "ts": {

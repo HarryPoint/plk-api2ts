@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«物料全局批次设置编辑响应对象»",
-              "$ref": "#/definitions/JSONResult«物料全局批次设置编辑响应对象»"
+              "$ref": "#/definitions/JSONResult«物料全局批次设置编辑响应对象»",
+              "originalRef": "JSONResult«物料全局批次设置编辑响应对象»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "物料全局批次设置编辑响应对象",
-          "$ref": "#/definitions/物料全局批次设置编辑响应对象"
+          "$ref": "#/definitions/物料全局批次设置编辑响应对象",
+          "originalRef": "物料全局批次设置编辑响应对象"
         },
         "ts": {
           "type": "integer",

@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产开始日期-查询响应»",
-              "$ref": "#/definitions/JSONResult«生产开始日期-查询响应»"
+              "$ref": "#/definitions/JSONResult«生产开始日期-查询响应»",
+              "originalRef": "JSONResult«生产开始日期-查询响应»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产开始日期-查询响应",
-          "$ref": "#/definitions/生产开始日期-查询响应"
+          "$ref": "#/definitions/生产开始日期-查询响应",
+          "originalRef": "生产开始日期-查询响应"
         },
         "ts": {
           "type": "integer",

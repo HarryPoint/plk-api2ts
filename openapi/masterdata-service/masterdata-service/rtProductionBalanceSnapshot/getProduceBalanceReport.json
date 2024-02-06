@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "生产结存统计报表搜索VO",
-              "$ref": "#/definitions/生产结存统计报表搜索VO"
+              "$ref": "#/definitions/生产结存统计报表搜索VO",
+              "originalRef": "生产结存统计报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产结存物料统计报表返回VO»",
-              "$ref": "#/definitions/JSONResult«生产结存物料统计报表返回VO»"
+              "$ref": "#/definitions/JSONResult«生产结存物料统计报表返回VO»",
+              "originalRef": "JSONResult«生产结存物料统计报表返回VO»"
             }
           },
           "201": {
@@ -111,8 +111,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产结存物料统计报表返回VO",
-          "$ref": "#/definitions/生产结存物料统计报表返回VO"
+          "$ref": "#/definitions/生产结存物料统计报表返回VO",
+          "originalRef": "生产结存物料统计报表返回VO"
         },
         "ts": {
           "type": "integer",
@@ -147,8 +147,8 @@
           "type": "array",
           "description": "报表返回数据集",
           "items": {
-            "originalRef": "生产结存统计报表返回VO",
-            "$ref": "#/definitions/生产结存统计报表返回VO"
+            "$ref": "#/definitions/生产结存统计报表返回VO",
+            "originalRef": "生产结存统计报表返回VO"
           }
         }
       },
@@ -226,8 +226,8 @@
           "type": "array",
           "description": "日期信息集",
           "items": {
-            "originalRef": "生产结存统计日期报表返回VO",
-            "$ref": "#/definitions/生产结存统计日期报表返回VO"
+            "$ref": "#/definitions/生产结存统计日期报表返回VO",
+            "originalRef": "生产结存统计日期报表返回VO"
           }
         }
       },

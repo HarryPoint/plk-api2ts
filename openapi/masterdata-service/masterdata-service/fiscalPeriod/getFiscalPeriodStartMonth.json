@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设置期间开始月份Response»",
-              "$ref": "#/definitions/JSONResult«设置期间开始月份Response»"
+              "$ref": "#/definitions/JSONResult«设置期间开始月份Response»",
+              "originalRef": "JSONResult«设置期间开始月份Response»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设置期间开始月份Response",
-          "$ref": "#/definitions/设置期间开始月份Response"
+          "$ref": "#/definitions/设置期间开始月份Response",
+          "originalRef": "设置期间开始月份Response"
         },
         "ts": {
           "type": "integer",

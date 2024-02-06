@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产工艺工艺卡信息返回DTO»",
-              "$ref": "#/definitions/JSONResult«生产工艺工艺卡信息返回DTO»"
+              "$ref": "#/definitions/JSONResult«生产工艺工艺卡信息返回DTO»",
+              "originalRef": "JSONResult«生产工艺工艺卡信息返回DTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产工艺工艺卡信息返回DTO",
-          "$ref": "#/definitions/生产工艺工艺卡信息返回DTO"
+          "$ref": "#/definitions/生产工艺工艺卡信息返回DTO",
+          "originalRef": "生产工艺工艺卡信息返回DTO"
         },
         "ts": {
           "type": "integer",
@@ -125,8 +125,8 @@
           "type": "array",
           "description": "描述集合",
           "items": {
-            "originalRef": "生产工艺工艺卡明细返回DTO",
-            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO"
+            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO",
+            "originalRef": "生产工艺工艺卡明细返回DTO"
           }
         },
         "updateUserId": {
@@ -170,16 +170,16 @@
           "type": "array",
           "description": "文件集合",
           "items": {
-            "originalRef": "生产工艺工艺卡明细返回DTO",
-            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO"
+            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO",
+            "originalRef": "生产工艺工艺卡明细返回DTO"
           }
         },
         "processFlowPathRpDatas": {
           "type": "array",
           "description": "工序对应字段信息",
           "items": {
-            "originalRef": "工序对应字段详情VO",
-            "$ref": "#/definitions/工序对应字段详情VO"
+            "$ref": "#/definitions/工序对应字段详情VO",
+            "originalRef": "工序对应字段详情VO"
           }
         }
       },

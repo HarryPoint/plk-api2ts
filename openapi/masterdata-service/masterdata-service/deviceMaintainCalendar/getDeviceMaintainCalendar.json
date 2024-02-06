@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "设备保养日历请求DTO",
-              "$ref": "#/definitions/设备保养日历请求DTO"
+              "$ref": "#/definitions/设备保养日历请求DTO",
+              "originalRef": "设备保养日历请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«设备保养日历响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«设备保养日历响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«设备保养日历响应DTO»»",
+              "originalRef": "JSONResult«List«设备保养日历响应DTO»»"
             }
           },
           "201": {
@@ -94,8 +94,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -233,8 +233,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "设备保养日历响应DTO_1",
-            "$ref": "#/definitions/设备保养日历响应DTO_1"
+            "$ref": "#/definitions/设备保养日历响应DTO_1",
+            "originalRef": "设备保养日历响应DTO_1"
           }
         },
         "ts": {
@@ -258,8 +258,8 @@
           "type": "array",
           "description": "天详情",
           "items": {
-            "originalRef": "设备保养日历响应DTO",
-            "$ref": "#/definitions/设备保养日历响应DTO"
+            "$ref": "#/definitions/设备保养日历响应DTO",
+            "originalRef": "设备保养日历响应DTO"
           }
         }
       },
@@ -378,16 +378,16 @@
           "type": "array",
           "description": "保养内容",
           "items": {
-            "originalRef": "保养内容返回DTO",
-            "$ref": "#/definitions/保养内容返回DTO"
+            "$ref": "#/definitions/保养内容返回DTO",
+            "originalRef": "保养内容返回DTO"
           }
         },
         "maintainPartsDetails": {
           "type": "array",
           "description": "消耗备件",
           "items": {
-            "originalRef": "保养消耗备件返回DTO",
-            "$ref": "#/definitions/保养消耗备件返回DTO"
+            "$ref": "#/definitions/保养消耗备件返回DTO",
+            "originalRef": "保养消耗备件返回DTO"
           }
         }
       },

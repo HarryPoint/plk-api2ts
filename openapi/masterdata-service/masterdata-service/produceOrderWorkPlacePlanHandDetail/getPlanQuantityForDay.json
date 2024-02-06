@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«计划返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«计划返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«计划返回VO»»",
+              "originalRef": "JSONResult«List«计划返回VO»»"
             }
           },
           "401": {
@@ -86,8 +86,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "计划返回VO",
-            "$ref": "#/definitions/计划返回VO"
+            "$ref": "#/definitions/计划返回VO",
+            "originalRef": "计划返回VO"
           }
         },
         "ts": {

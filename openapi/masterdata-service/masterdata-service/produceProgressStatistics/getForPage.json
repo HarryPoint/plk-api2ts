@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "流程数据基础搜索VO",
-              "$ref": "#/definitions/流程数据基础搜索VO"
+              "$ref": "#/definitions/流程数据基础搜索VO",
+              "originalRef": "流程数据基础搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«ProduceOrderStatisticsItemDTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«ProduceOrderStatisticsItemDTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«ProduceOrderStatisticsItemDTO»»",
+              "originalRef": "JSONResult«分页信息«ProduceOrderStatisticsItemDTO»»"
             }
           },
           "201": {
@@ -76,8 +76,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         },
         "pageSize": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "tableColumnCode": {
@@ -99,8 +99,8 @@
         },
         "currentFormDataGrouping": {
           "description": "当前的表单分组",
-          "originalRef": "表单数据分组DTO",
-          "$ref": "#/definitions/表单数据分组DTO"
+          "$ref": "#/definitions/表单数据分组DTO",
+          "originalRef": "表单数据分组DTO"
         }
       },
       "title": "流程数据基础搜索VO"
@@ -196,8 +196,8 @@
           "type": "array",
           "description": "下级分组",
           "items": {
-            "originalRef": "表单数据分组DTO",
-            "$ref": "#/definitions/表单数据分组DTO"
+            "$ref": "#/definitions/表单数据分组DTO",
+            "originalRef": "表单数据分组DTO"
           }
         },
         "cascadeFormData": {
@@ -232,8 +232,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«ProduceOrderStatisticsItemDTO»",
-          "$ref": "#/definitions/分页信息«ProduceOrderStatisticsItemDTO»"
+          "$ref": "#/definitions/分页信息«ProduceOrderStatisticsItemDTO»",
+          "originalRef": "分页信息«ProduceOrderStatisticsItemDTO»"
         },
         "ts": {
           "type": "integer",
@@ -271,8 +271,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "ProduceOrderStatisticsItemDTO",
-            "$ref": "#/definitions/ProduceOrderStatisticsItemDTO"
+            "$ref": "#/definitions/ProduceOrderStatisticsItemDTO",
+            "originalRef": "ProduceOrderStatisticsItemDTO"
           }
         },
         "lastPage": {
@@ -326,15 +326,15 @@
         },
         "produceOrderStatisticsData": {
           "description": "统计数据",
-          "originalRef": "ProduceOrderStatisticsInfoDTO",
-          "$ref": "#/definitions/ProduceOrderStatisticsInfoDTO"
+          "$ref": "#/definitions/ProduceOrderStatisticsInfoDTO",
+          "originalRef": "ProduceOrderStatisticsInfoDTO"
         },
         "processStatisticsDataList": {
           "type": "array",
           "description": "工序统计数据列表",
           "items": {
-            "originalRef": "ProcessStatisticsDataDTO",
-            "$ref": "#/definitions/ProcessStatisticsDataDTO"
+            "$ref": "#/definitions/ProcessStatisticsDataDTO",
+            "originalRef": "ProcessStatisticsDataDTO"
           }
         }
       },

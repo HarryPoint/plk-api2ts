@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«质量人员下拉响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«质量人员下拉响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«质量人员下拉响应DTO»»",
+              "originalRef": "JSONResult«List«质量人员下拉响应DTO»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "质量人员下拉响应DTO",
-            "$ref": "#/definitions/质量人员下拉响应DTO"
+            "$ref": "#/definitions/质量人员下拉响应DTO",
+            "originalRef": "质量人员下拉响应DTO"
           }
         },
         "ts": {

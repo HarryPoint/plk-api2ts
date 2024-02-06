@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»",
-              "$ref": "#/definitions/JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»"
+              "$ref": "#/definitions/JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»",
+              "originalRef": "JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ProductionMaterialIssuanceOrderCostFetchBO",
-          "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchBO"
+          "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchBO",
+          "originalRef": "ProductionMaterialIssuanceOrderCostFetchBO"
         },
         "ts": {
           "type": "integer",
@@ -93,8 +93,8 @@
         "detailList": {
           "type": "array",
           "items": {
-            "originalRef": "ProductionMaterialIssuanceOrderCostFetchDetailBO",
-            "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchDetailBO"
+            "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchDetailBO",
+            "originalRef": "ProductionMaterialIssuanceOrderCostFetchDetailBO"
           }
         },
         "success": {

@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产任务其他信息VO»",
-              "$ref": "#/definitions/JSONResult«生产任务其他信息VO»"
+              "$ref": "#/definitions/JSONResult«生产任务其他信息VO»",
+              "originalRef": "JSONResult«生产任务其他信息VO»"
             }
           },
           "401": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产任务其他信息VO",
-          "$ref": "#/definitions/生产任务其他信息VO"
+          "$ref": "#/definitions/生产任务其他信息VO",
+          "originalRef": "生产任务其他信息VO"
         },
         "ts": {
           "type": "integer",

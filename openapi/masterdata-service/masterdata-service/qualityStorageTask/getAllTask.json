@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«销售模块返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«销售模块返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«销售模块返回VO»»",
+              "originalRef": "JSONResult«List«销售模块返回VO»»"
             }
           },
           "401": {
@@ -83,8 +83,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "销售模块返回VO",
-            "$ref": "#/definitions/销售模块返回VO"
+            "$ref": "#/definitions/销售模块返回VO",
+            "originalRef": "销售模块返回VO"
           }
         },
         "ts": {
@@ -115,8 +115,8 @@
           "type": "array",
           "description": "任务集",
           "items": {
-            "originalRef": "质检模块任务返回VO",
-            "$ref": "#/definitions/质检模块任务返回VO"
+            "$ref": "#/definitions/质检模块任务返回VO",
+            "originalRef": "质检模块任务返回VO"
           }
         },
         "taskTotalCount": {

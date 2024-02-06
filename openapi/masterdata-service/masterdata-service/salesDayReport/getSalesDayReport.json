@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "GetSalesDayReport",
-              "$ref": "#/definitions/GetSalesDayReport"
+              "$ref": "#/definitions/GetSalesDayReport",
+              "originalRef": "GetSalesDayReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«销售日报表返回对象»»",
-              "$ref": "#/definitions/JSONResult«分页信息«销售日报表返回对象»»"
+              "$ref": "#/definitions/JSONResult«分页信息«销售日报表返回对象»»",
+              "originalRef": "JSONResult«分页信息«销售日报表返回对象»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«销售日报表返回对象»",
-          "$ref": "#/definitions/分页信息«销售日报表返回对象»"
+          "$ref": "#/definitions/分页信息«销售日报表返回对象»",
+          "originalRef": "分页信息«销售日报表返回对象»"
         },
         "ts": {
           "type": "integer",
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "销售日报表返回对象",
-            "$ref": "#/definitions/销售日报表返回对象"
+            "$ref": "#/definitions/销售日报表返回对象",
+            "originalRef": "销售日报表返回对象"
           }
         },
         "lastPage": {

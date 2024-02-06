@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«EnterpriseIndicatorsResponseDTO»",
-              "$ref": "#/definitions/JSONResult«EnterpriseIndicatorsResponseDTO»"
+              "$ref": "#/definitions/JSONResult«EnterpriseIndicatorsResponseDTO»",
+              "originalRef": "JSONResult«EnterpriseIndicatorsResponseDTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "EnterpriseIndicatorsResponseDTO",
-          "$ref": "#/definitions/EnterpriseIndicatorsResponseDTO"
+          "$ref": "#/definitions/EnterpriseIndicatorsResponseDTO",
+          "originalRef": "EnterpriseIndicatorsResponseDTO"
         },
         "ts": {
           "type": "integer",

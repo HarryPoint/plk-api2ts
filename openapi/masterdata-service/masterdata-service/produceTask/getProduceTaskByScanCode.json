@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "生产任务扫码查询DTO(针对移动端)",
-              "$ref": "#/definitions/生产任务扫码查询DTO(针对移动端)"
+              "$ref": "#/definitions/生产任务扫码查询DTO(针对移动端)",
+              "originalRef": "生产任务扫码查询DTO(针对移动端)"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产任务扫码响应DTO(针对移动端)»",
-              "$ref": "#/definitions/JSONResult«生产任务扫码响应DTO(针对移动端)»"
+              "$ref": "#/definitions/JSONResult«生产任务扫码响应DTO(针对移动端)»",
+              "originalRef": "JSONResult«生产任务扫码响应DTO(针对移动端)»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -242,8 +242,8 @@
           "type": "array",
           "description": "生产订单字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         }
       },
@@ -335,8 +335,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产任务扫码响应DTO(针对移动端)",
-          "$ref": "#/definitions/生产任务扫码响应DTO(针对移动端)"
+          "$ref": "#/definitions/生产任务扫码响应DTO(针对移动端)",
+          "originalRef": "生产任务扫码响应DTO(针对移动端)"
         },
         "ts": {
           "type": "integer",
@@ -393,8 +393,8 @@
           "type": "array",
           "description": "任务列表",
           "items": {
-            "originalRef": "生产任务响应DTO(针对移动端)",
-            "$ref": "#/definitions/生产任务响应DTO(针对移动端)"
+            "$ref": "#/definitions/生产任务响应DTO(针对移动端)",
+            "originalRef": "生产任务响应DTO(针对移动端)"
           }
         }
       },
@@ -676,8 +676,8 @@
           "type": "array",
           "description": "批次信息",
           "items": {
-            "originalRef": "生产任务批次响应DTO(针对移动端)",
-            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)"
+            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)",
+            "originalRef": "生产任务批次响应DTO(针对移动端)"
           }
         },
         "lotOrderNumber": {
@@ -686,8 +686,8 @@
         },
         "stepSetInfo": {
           "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
-          "originalRef": "生产工艺路径步骤设置返回VO",
-          "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
+          "$ref": "#/definitions/生产工艺路径步骤设置返回VO",
+          "originalRef": "生产工艺路径步骤设置返回VO"
         }
       },
       "title": "生产任务响应DTO(针对移动端)"

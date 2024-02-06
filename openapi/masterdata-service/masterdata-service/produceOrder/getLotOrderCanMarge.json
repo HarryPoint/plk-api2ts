@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "批次订单校验能否合并搜索VO",
-              "$ref": "#/definitions/批次订单校验能否合并搜索VO"
+              "$ref": "#/definitions/批次订单校验能否合并搜索VO",
+              "originalRef": "批次订单校验能否合并搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«是否信息»",
-              "$ref": "#/definitions/JSONResult«是否信息»"
+              "$ref": "#/definitions/JSONResult«是否信息»",
+              "originalRef": "JSONResult«是否信息»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "是否信息",
-          "$ref": "#/definitions/是否信息"
+          "$ref": "#/definitions/是否信息",
+          "originalRef": "是否信息"
         },
         "ts": {
           "type": "integer",

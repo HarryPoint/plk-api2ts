@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "设备保养日历详情请求DTO",
-              "$ref": "#/definitions/设备保养日历详情请求DTO"
+              "$ref": "#/definitions/设备保养日历详情请求DTO",
+              "originalRef": "设备保养日历详情请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设备保养日历响应DTO»",
-              "$ref": "#/definitions/JSONResult«设备保养日历响应DTO»"
+              "$ref": "#/definitions/JSONResult«设备保养日历响应DTO»",
+              "originalRef": "JSONResult«设备保养日历响应DTO»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设备保养日历响应DTO_1",
-          "$ref": "#/definitions/设备保养日历响应DTO_1"
+          "$ref": "#/definitions/设备保养日历响应DTO_1",
+          "originalRef": "设备保养日历响应DTO_1"
         },
         "ts": {
           "type": "integer",
@@ -117,8 +117,8 @@
           "type": "array",
           "description": "天详情",
           "items": {
-            "originalRef": "设备保养日历响应DTO",
-            "$ref": "#/definitions/设备保养日历响应DTO"
+            "$ref": "#/definitions/设备保养日历响应DTO",
+            "originalRef": "设备保养日历响应DTO"
           }
         }
       },
@@ -237,16 +237,16 @@
           "type": "array",
           "description": "保养内容",
           "items": {
-            "originalRef": "保养内容返回DTO",
-            "$ref": "#/definitions/保养内容返回DTO"
+            "$ref": "#/definitions/保养内容返回DTO",
+            "originalRef": "保养内容返回DTO"
           }
         },
         "maintainPartsDetails": {
           "type": "array",
           "description": "消耗备件",
           "items": {
-            "originalRef": "保养消耗备件返回DTO",
-            "$ref": "#/definitions/保养消耗备件返回DTO"
+            "$ref": "#/definitions/保养消耗备件返回DTO",
+            "originalRef": "保养消耗备件返回DTO"
           }
         }
       },

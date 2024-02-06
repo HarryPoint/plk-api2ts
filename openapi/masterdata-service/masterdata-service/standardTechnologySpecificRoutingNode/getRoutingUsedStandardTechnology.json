@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "originalRef": "工艺路径占用的标准工艺查询对象",
-              "$ref": "#/definitions/工艺路径占用的标准工艺查询对象"
+              "$ref": "#/definitions/工艺路径占用的标准工艺查询对象",
+              "originalRef": "工艺路径占用的标准工艺查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«工艺路径占用的标准工艺响应»»",
-              "$ref": "#/definitions/JSONResult«List«工艺路径占用的标准工艺响应»»"
+              "$ref": "#/definitions/JSONResult«List«工艺路径占用的标准工艺响应»»",
+              "originalRef": "JSONResult«List«工艺路径占用的标准工艺响应»»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "工艺路径占用的标准工艺响应",
-            "$ref": "#/definitions/工艺路径占用的标准工艺响应"
+            "$ref": "#/definitions/工艺路径占用的标准工艺响应",
+            "originalRef": "工艺路径占用的标准工艺响应"
           }
         },
         "ts": {

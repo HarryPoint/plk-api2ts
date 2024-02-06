@@ -28,8 +28,8 @@
             "description": "queryDTO",
             "required": true,
             "schema": {
-              "originalRef": "产能利用率报表查询DTO",
-              "$ref": "#/definitions/产能利用率报表查询DTO"
+              "$ref": "#/definitions/产能利用率报表查询DTO",
+              "originalRef": "产能利用率报表查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«产能利用率报表VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«产能利用率报表VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«产能利用率报表VO»»",
+              "originalRef": "JSONResult«分页信息«产能利用率报表VO»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "beginTime": {
@@ -159,8 +159,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«产能利用率报表VO»",
-          "$ref": "#/definitions/分页信息«产能利用率报表VO»"
+          "$ref": "#/definitions/分页信息«产能利用率报表VO»",
+          "originalRef": "分页信息«产能利用率报表VO»"
         },
         "ts": {
           "type": "integer",
@@ -198,8 +198,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "产能利用率报表VO",
-            "$ref": "#/definitions/产能利用率报表VO"
+            "$ref": "#/definitions/产能利用率报表VO",
+            "originalRef": "产能利用率报表VO"
           }
         },
         "lastPage": {

@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«直通报表返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«直通报表返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«直通报表返回VO»»",
+              "originalRef": "JSONResult«List«直通报表返回VO»»"
             }
           },
           "401": {
@@ -86,8 +86,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "直通报表返回VO",
-            "$ref": "#/definitions/直通报表返回VO"
+            "$ref": "#/definitions/直通报表返回VO",
+            "originalRef": "直通报表返回VO"
           }
         },
         "ts": {

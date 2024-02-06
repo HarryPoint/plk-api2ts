@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«仓库区域树返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«仓库区域树返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«仓库区域树返回VO»»",
+              "originalRef": "JSONResult«List«仓库区域树返回VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "仓库区域树返回VO",
-            "$ref": "#/definitions/仓库区域树返回VO"
+            "$ref": "#/definitions/仓库区域树返回VO",
+            "originalRef": "仓库区域树返回VO"
           }
         },
         "ts": {
@@ -103,16 +103,16 @@
           "type": "array",
           "description": "下级区域集",
           "items": {
-            "originalRef": "仓库区域树返回VO",
-            "$ref": "#/definitions/仓库区域树返回VO"
+            "$ref": "#/definitions/仓库区域树返回VO",
+            "originalRef": "仓库区域树返回VO"
           }
         },
         "storehouseChildren": {
           "type": "array",
           "description": "仓库集",
           "items": {
-            "originalRef": "仓库树返回VO",
-            "$ref": "#/definitions/仓库树返回VO"
+            "$ref": "#/definitions/仓库树返回VO",
+            "originalRef": "仓库树返回VO"
           }
         }
       },
@@ -151,8 +151,8 @@
           "type": "array",
           "description": "仓位集",
           "items": {
-            "originalRef": "仓位树返回VO",
-            "$ref": "#/definitions/仓位树返回VO"
+            "$ref": "#/definitions/仓位树返回VO",
+            "originalRef": "仓位树返回VO"
           }
         }
       },
@@ -205,8 +205,8 @@
           "type": "array",
           "description": "子仓位",
           "items": {
-            "originalRef": "仓位树返回VO",
-            "$ref": "#/definitions/仓位树返回VO"
+            "$ref": "#/definitions/仓位树返回VO",
+            "originalRef": "仓位树返回VO"
           }
         }
       },

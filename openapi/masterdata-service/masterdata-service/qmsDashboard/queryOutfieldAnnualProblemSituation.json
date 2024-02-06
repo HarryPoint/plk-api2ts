@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«年度问题查询情况»",
-              "$ref": "#/definitions/JSONResult«年度问题查询情况»"
+              "$ref": "#/definitions/JSONResult«年度问题查询情况»",
+              "originalRef": "JSONResult«年度问题查询情况»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "年度问题查询情况",
-          "$ref": "#/definitions/年度问题查询情况"
+          "$ref": "#/definitions/年度问题查询情况",
+          "originalRef": "年度问题查询情况"
         },
         "ts": {
           "type": "integer",

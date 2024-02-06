@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "物料实时库存查询返回VO",
-              "$ref": "#/definitions/物料实时库存查询返回VO"
+              "$ref": "#/definitions/物料实时库存查询返回VO",
+              "originalRef": "物料实时库存查询返回VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«物料实时库从返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«物料实时库从返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«物料实时库从返回VO»»",
+              "originalRef": "JSONResult«List«物料实时库从返回VO»»"
             }
           },
           "201": {
@@ -120,8 +120,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "物料实时库从返回VO",
-            "$ref": "#/definitions/物料实时库从返回VO"
+            "$ref": "#/definitions/物料实时库从返回VO",
+            "originalRef": "物料实时库从返回VO"
           }
         },
         "ts": {

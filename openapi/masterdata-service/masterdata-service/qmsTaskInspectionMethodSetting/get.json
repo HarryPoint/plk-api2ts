@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设置检验任务检验方式响应DTO»",
-              "$ref": "#/definitions/JSONResult«设置检验任务检验方式响应DTO»"
+              "$ref": "#/definitions/JSONResult«设置检验任务检验方式响应DTO»",
+              "originalRef": "JSONResult«设置检验任务检验方式响应DTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设置检验任务检验方式响应DTO",
-          "$ref": "#/definitions/设置检验任务检验方式响应DTO"
+          "$ref": "#/definitions/设置检验任务检验方式响应DTO",
+          "originalRef": "设置检验任务检验方式响应DTO"
         },
         "ts": {
           "type": "integer",

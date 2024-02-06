@@ -28,8 +28,8 @@
             "description": "transfer",
             "required": true,
             "schema": {
-              "originalRef": "流程任务转交DTO",
-              "$ref": "#/definitions/流程任务转交DTO"
+              "$ref": "#/definitions/流程任务转交DTO",
+              "originalRef": "流程任务转交DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

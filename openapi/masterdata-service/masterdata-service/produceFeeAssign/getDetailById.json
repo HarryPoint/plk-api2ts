@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产成本分配响应对象»",
-              "$ref": "#/definitions/JSONResult«生产成本分配响应对象»"
+              "$ref": "#/definitions/JSONResult«生产成本分配响应对象»",
+              "originalRef": "JSONResult«生产成本分配响应对象»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产成本分配响应对象",
-          "$ref": "#/definitions/生产成本分配响应对象"
+          "$ref": "#/definitions/生产成本分配响应对象",
+          "originalRef": "生产成本分配响应对象"
         },
         "ts": {
           "type": "integer",
@@ -100,23 +100,23 @@
         },
         "fiscalPeriod": {
           "description": "当前期间",
-          "originalRef": "期间响应对象",
-          "$ref": "#/definitions/期间响应对象"
+          "$ref": "#/definitions/期间响应对象",
+          "originalRef": "期间响应对象"
         },
         "produceFeeAssignDetailList": {
           "type": "array",
           "description": "分配信息",
           "items": {
-            "originalRef": "生产成本分配明细响应对象",
-            "$ref": "#/definitions/生产成本分配明细响应对象"
+            "$ref": "#/definitions/生产成本分配明细响应对象",
+            "originalRef": "生产成本分配明细响应对象"
           }
         },
         "produceFeeCollectDetailList": {
           "type": "array",
           "description": "费用信息",
           "items": {
-            "originalRef": "费用归集明细响应DTO",
-            "$ref": "#/definitions/费用归集明细响应DTO"
+            "$ref": "#/definitions/费用归集明细响应DTO",
+            "originalRef": "费用归集明细响应DTO"
           }
         }
       },
@@ -252,8 +252,8 @@
           "type": "array",
           "description": "动态费用分配信息",
           "items": {
-            "originalRef": "生产成本分配动态数据",
-            "$ref": "#/definitions/生产成本分配动态数据"
+            "$ref": "#/definitions/生产成本分配动态数据",
+            "originalRef": "生产成本分配动态数据"
           }
         },
         "totalFee": {

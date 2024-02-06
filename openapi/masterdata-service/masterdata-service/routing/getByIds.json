@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«基础VO»»_2",
-              "$ref": "#/definitions/JSONResult«List«基础VO»»_2"
+              "$ref": "#/definitions/JSONResult«List«基础VO»»_2",
+              "originalRef": "JSONResult«List«基础VO»»_2"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "基础VO_2",
-            "$ref": "#/definitions/基础VO_2"
+            "$ref": "#/definitions/基础VO_2",
+            "originalRef": "基础VO_2"
           }
         },
         "ts": {

@@ -28,8 +28,8 @@
             "description": "addRequest",
             "required": true,
             "schema": {
-              "originalRef": "项目任务模板用户添加请求DTO",
-              "$ref": "#/definitions/项目任务模板用户添加请求DTO"
+              "$ref": "#/definitions/项目任务模板用户添加请求DTO",
+              "originalRef": "项目任务模板用户添加请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

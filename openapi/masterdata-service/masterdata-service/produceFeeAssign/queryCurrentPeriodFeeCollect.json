@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«费用归集明细响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«费用归集明细响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«费用归集明细响应DTO»»",
+              "originalRef": "JSONResult«List«费用归集明细响应DTO»»"
             }
           },
           "401": {
@@ -61,8 +61,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "费用归集明细响应DTO",
-            "$ref": "#/definitions/费用归集明细响应DTO"
+            "$ref": "#/definitions/费用归集明细响应DTO",
+            "originalRef": "费用归集明细响应DTO"
           }
         },
         "ts": {

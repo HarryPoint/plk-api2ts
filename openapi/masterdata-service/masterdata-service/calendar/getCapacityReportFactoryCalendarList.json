@@ -36,8 +36,8 @@
             "description": "queryDTO",
             "required": true,
             "schema": {
-              "originalRef": "产能利用率报表查询DTO",
-              "$ref": "#/definitions/产能利用率报表查询DTO"
+              "$ref": "#/definitions/产能利用率报表查询DTO",
+              "originalRef": "产能利用率报表查询DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«产能利用率报表工厂日历VO»»",
-              "$ref": "#/definitions/JSONResult«List«产能利用率报表工厂日历VO»»"
+              "$ref": "#/definitions/JSONResult«List«产能利用率报表工厂日历VO»»",
+              "originalRef": "JSONResult«List«产能利用率报表工厂日历VO»»"
             }
           },
           "201": {
@@ -97,8 +97,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "beginTime": {
@@ -169,8 +169,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "产能利用率报表工厂日历VO",
-            "$ref": "#/definitions/产能利用率报表工厂日历VO"
+            "$ref": "#/definitions/产能利用率报表工厂日历VO",
+            "originalRef": "产能利用率报表工厂日历VO"
           }
         },
         "ts": {

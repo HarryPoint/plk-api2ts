@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "项目概况查询dto",
-              "$ref": "#/definitions/项目概况查询dto"
+              "$ref": "#/definitions/项目概况查询dto",
+              "originalRef": "项目概况查询dto"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«项目质量问题统计响应对象»",
-              "$ref": "#/definitions/JSONResult«项目质量问题统计响应对象»"
+              "$ref": "#/definitions/JSONResult«项目质量问题统计响应对象»",
+              "originalRef": "JSONResult«项目质量问题统计响应对象»"
             }
           },
           "201": {
@@ -106,8 +106,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "项目质量问题统计响应对象",
-          "$ref": "#/definitions/项目质量问题统计响应对象"
+          "$ref": "#/definitions/项目质量问题统计响应对象",
+          "originalRef": "项目质量问题统计响应对象"
         },
         "ts": {
           "type": "integer",

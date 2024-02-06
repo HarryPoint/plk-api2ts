@@ -25,8 +25,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«项目大屏设置保存请求dto»",
-              "$ref": "#/definitions/JSONResult«项目大屏设置保存请求dto»"
+              "$ref": "#/definitions/JSONResult«项目大屏设置保存请求dto»",
+              "originalRef": "JSONResult«项目大屏设置保存请求dto»"
             }
           },
           "201": {
@@ -65,8 +65,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "项目大屏设置保存请求dto",
-          "$ref": "#/definitions/项目大屏设置保存请求dto"
+          "$ref": "#/definitions/项目大屏设置保存请求dto",
+          "originalRef": "项目大屏设置保存请求dto"
         },
         "ts": {
           "type": "integer",

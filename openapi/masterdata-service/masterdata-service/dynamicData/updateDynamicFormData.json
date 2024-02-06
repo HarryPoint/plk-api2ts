@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "originalRef": "DynamicFormDataUpdateRequestDTO",
-                "$ref": "#/definitions/DynamicFormDataUpdateRequestDTO"
+                "$ref": "#/definitions/DynamicFormDataUpdateRequestDTO",
+                "originalRef": "DynamicFormDataUpdateRequestDTO"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

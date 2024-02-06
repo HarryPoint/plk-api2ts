@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "originalRef": "变更甘特图计划DTO",
-                "$ref": "#/definitions/变更甘特图计划DTO"
+                "$ref": "#/definitions/变更甘特图计划DTO",
+                "originalRef": "变更甘特图计划DTO"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

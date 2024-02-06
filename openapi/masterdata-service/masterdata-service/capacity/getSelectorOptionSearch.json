@@ -28,8 +28,8 @@
             "description": "searchRequest",
             "required": true,
             "schema": {
-              "originalRef": "产能下拉选择列表搜索DTO",
-              "$ref": "#/definitions/产能下拉选择列表搜索DTO"
+              "$ref": "#/definitions/产能下拉选择列表搜索DTO",
+              "originalRef": "产能下拉选择列表搜索DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«产能下拉选择列表搜索响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«产能下拉选择列表搜索响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«产能下拉选择列表搜索响应对象»»",
+              "originalRef": "JSONResult«List«产能下拉选择列表搜索响应对象»»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "产能下拉选择列表搜索响应对象",
-            "$ref": "#/definitions/产能下拉选择列表搜索响应对象"
+            "$ref": "#/definitions/产能下拉选择列表搜索响应对象",
+            "originalRef": "产能下拉选择列表搜索响应对象"
           }
         },
         "ts": {

@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«AccountsReceivableVO»",
-              "$ref": "#/definitions/JSONResult«AccountsReceivableVO»"
+              "$ref": "#/definitions/JSONResult«AccountsReceivableVO»",
+              "originalRef": "JSONResult«AccountsReceivableVO»"
             }
           },
           "401": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "AccountsReceivableVO",
-          "$ref": "#/definitions/AccountsReceivableVO"
+          "$ref": "#/definitions/AccountsReceivableVO",
+          "originalRef": "AccountsReceivableVO"
         },
         "ts": {
           "type": "integer",

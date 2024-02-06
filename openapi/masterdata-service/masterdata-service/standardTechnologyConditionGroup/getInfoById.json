@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«标准工艺条件组响应DTO»",
-              "$ref": "#/definitions/JSONResult«标准工艺条件组响应DTO»"
+              "$ref": "#/definitions/JSONResult«标准工艺条件组响应DTO»",
+              "originalRef": "JSONResult«标准工艺条件组响应DTO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "标准工艺条件组响应DTO",
-          "$ref": "#/definitions/标准工艺条件组响应DTO"
+          "$ref": "#/definitions/标准工艺条件组响应DTO",
+          "originalRef": "标准工艺条件组响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "标准工艺条件",
           "items": {
-            "originalRef": "标准工艺条件响应DTO",
-            "$ref": "#/definitions/标准工艺条件响应DTO"
+            "$ref": "#/definitions/标准工艺条件响应DTO",
+            "originalRef": "标准工艺条件响应DTO"
           }
         }
       },

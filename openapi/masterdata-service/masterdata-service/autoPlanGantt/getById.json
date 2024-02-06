@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ProducePlanAutoScheduleOutputVO»",
-              "$ref": "#/definitions/JSONResult«ProducePlanAutoScheduleOutputVO»"
+              "$ref": "#/definitions/JSONResult«ProducePlanAutoScheduleOutputVO»",
+              "originalRef": "JSONResult«ProducePlanAutoScheduleOutputVO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ProducePlanAutoScheduleOutputVO",
-          "$ref": "#/definitions/ProducePlanAutoScheduleOutputVO"
+          "$ref": "#/definitions/ProducePlanAutoScheduleOutputVO",
+          "originalRef": "ProducePlanAutoScheduleOutputVO"
         },
         "ts": {
           "type": "integer",

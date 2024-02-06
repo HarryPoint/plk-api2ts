@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "项目应用请求对象",
-              "$ref": "#/definitions/项目应用请求对象"
+              "$ref": "#/definitions/项目应用请求对象",
+              "originalRef": "项目应用请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«项目应用返回对象»",
-              "$ref": "#/definitions/JSONResult«项目应用返回对象»"
+              "$ref": "#/definitions/JSONResult«项目应用返回对象»",
+              "originalRef": "JSONResult«项目应用返回对象»"
             }
           },
           "201": {
@@ -268,8 +268,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "项目应用返回对象",
-          "$ref": "#/definitions/项目应用返回对象"
+          "$ref": "#/definitions/项目应用返回对象",
+          "originalRef": "项目应用返回对象"
         },
         "ts": {
           "type": "integer",

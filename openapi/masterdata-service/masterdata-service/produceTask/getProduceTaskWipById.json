@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产任务WIP信息响应DTO»",
-              "$ref": "#/definitions/JSONResult«生产任务WIP信息响应DTO»"
+              "$ref": "#/definitions/JSONResult«生产任务WIP信息响应DTO»",
+              "originalRef": "JSONResult«生产任务WIP信息响应DTO»"
             }
           },
           "401": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产任务WIP信息响应DTO",
-          "$ref": "#/definitions/生产任务WIP信息响应DTO"
+          "$ref": "#/definitions/生产任务WIP信息响应DTO",
+          "originalRef": "生产任务WIP信息响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "在制前WIP信息",
           "items": {
-            "originalRef": "生产任务WIP批次信息VO",
-            "$ref": "#/definitions/生产任务WIP批次信息VO"
+            "$ref": "#/definitions/生产任务WIP批次信息VO",
+            "originalRef": "生产任务WIP批次信息VO"
           }
         },
         "wipAfterQuantity": {
@@ -110,8 +110,8 @@
           "type": "array",
           "description": "在制中WIP信息",
           "items": {
-            "originalRef": "生产任务WIP批次信息VO",
-            "$ref": "#/definitions/生产任务WIP批次信息VO"
+            "$ref": "#/definitions/生产任务WIP批次信息VO",
+            "originalRef": "生产任务WIP批次信息VO"
           }
         }
       },

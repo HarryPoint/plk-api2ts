@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«仓位树返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«仓位树返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«仓位树返回VO»»",
+              "originalRef": "JSONResult«List«仓位树返回VO»»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "仓位树返回VO",
-            "$ref": "#/definitions/仓位树返回VO"
+            "$ref": "#/definitions/仓位树返回VO",
+            "originalRef": "仓位树返回VO"
           }
         },
         "ts": {
@@ -137,8 +137,8 @@
           "type": "array",
           "description": "子仓位",
           "items": {
-            "originalRef": "仓位树返回VO",
-            "$ref": "#/definitions/仓位树返回VO"
+            "$ref": "#/definitions/仓位树返回VO",
+            "originalRef": "仓位树返回VO"
           }
         }
       },

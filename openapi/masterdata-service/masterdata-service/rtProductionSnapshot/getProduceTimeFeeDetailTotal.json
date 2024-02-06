@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "工时工费报表搜索VO",
-              "$ref": "#/definitions/工时工费报表搜索VO"
+              "$ref": "#/definitions/工时工费报表搜索VO",
+              "originalRef": "工时工费报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«工时工费报表合计返回VO»",
-              "$ref": "#/definitions/JSONResult«工时工费报表合计返回VO»"
+              "$ref": "#/definitions/JSONResult«工时工费报表合计返回VO»",
+              "originalRef": "JSONResult«工时工费报表合计返回VO»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "processIds": {
@@ -178,8 +178,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "工时工费报表合计返回VO",
-          "$ref": "#/definitions/工时工费报表合计返回VO"
+          "$ref": "#/definitions/工时工费报表合计返回VO",
+          "originalRef": "工时工费报表合计返回VO"
         },
         "ts": {
           "type": "integer",

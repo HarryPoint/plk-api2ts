@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "项目概况查询dto",
-              "$ref": "#/definitions/项目概况查询dto"
+              "$ref": "#/definitions/项目概况查询dto",
+              "originalRef": "项目概况查询dto"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目大事记响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目大事记响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«项目大事记响应对象»»",
+              "originalRef": "JSONResult«List«项目大事记响应对象»»"
             }
           },
           "201": {
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目大事记响应对象",
-            "$ref": "#/definitions/项目大事记响应对象"
+            "$ref": "#/definitions/项目大事记响应对象",
+            "originalRef": "项目大事记响应对象"
           }
         },
         "ts": {

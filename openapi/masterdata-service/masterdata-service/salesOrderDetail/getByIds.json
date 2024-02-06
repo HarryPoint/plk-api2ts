@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«销售订单详情返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«销售订单详情返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«销售订单详情返回VO»»",
+              "originalRef": "JSONResult«List«销售订单详情返回VO»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "销售订单详情返回VO",
-            "$ref": "#/definitions/销售订单详情返回VO"
+            "$ref": "#/definitions/销售订单详情返回VO",
+            "originalRef": "销售订单详情返回VO"
           }
         },
         "ts": {
@@ -213,16 +213,16 @@
           "type": "array",
           "description": "子物料生产信息",
           "items": {
-            "originalRef": "子物料生产信息VO_1",
-            "$ref": "#/definitions/子物料生产信息VO_1"
+            "$ref": "#/definitions/子物料生产信息VO_1",
+            "originalRef": "子物料生产信息VO_1"
           }
         },
         "produceOtherMaterials": {
           "type": "array",
           "description": "生产所需其他物料",
           "items": {
-            "originalRef": "生产所需其他物料信息VO",
-            "$ref": "#/definitions/生产所需其他物料信息VO"
+            "$ref": "#/definitions/生产所需其他物料信息VO",
+            "originalRef": "生产所需其他物料信息VO"
           }
         }
       },
@@ -309,8 +309,8 @@
           "type": "array",
           "description": "子物料工艺路径选择集合, 默认选中 isDefault = Y的",
           "items": {
-            "originalRef": "工艺路径选择VO",
-            "$ref": "#/definitions/工艺路径选择VO"
+            "$ref": "#/definitions/工艺路径选择VO",
+            "originalRef": "工艺路径选择VO"
           }
         }
       },
@@ -442,22 +442,22 @@
           "type": "array",
           "description": "子物料工艺路径选择集合, 默认选中 isDefault = Y的",
           "items": {
-            "originalRef": "工艺路径选择VO",
-            "$ref": "#/definitions/工艺路径选择VO"
+            "$ref": "#/definitions/工艺路径选择VO",
+            "originalRef": "工艺路径选择VO"
           }
         },
         "changeMajorDatas": {
           "type": "array",
           "description": "替换物料集",
           "items": {
-            "originalRef": "子物料生产信息VO_1",
-            "$ref": "#/definitions/子物料生产信息VO_1"
+            "$ref": "#/definitions/子物料生产信息VO_1",
+            "originalRef": "子物料生产信息VO_1"
           }
         },
         "sourceMajorData": {
           "description": "原物料信息 - 用于重置物料",
-          "originalRef": "生产所需其他物料信息VO",
-          "$ref": "#/definitions/生产所需其他物料信息VO"
+          "$ref": "#/definitions/生产所需其他物料信息VO",
+          "originalRef": "生产所需其他物料信息VO"
         }
       },
       "title": "生产所需其他物料信息VO"

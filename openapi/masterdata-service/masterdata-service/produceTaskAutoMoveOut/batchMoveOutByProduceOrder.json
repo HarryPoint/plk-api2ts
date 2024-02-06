@@ -37,8 +37,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "originalRef": "生产任务自动出料上传数据DTO",
-                "$ref": "#/definitions/生产任务自动出料上传数据DTO"
+                "$ref": "#/definitions/生产任务自动出料上传数据DTO",
+                "originalRef": "生产任务自动出料上传数据DTO"
               }
             }
           },
@@ -55,8 +55,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

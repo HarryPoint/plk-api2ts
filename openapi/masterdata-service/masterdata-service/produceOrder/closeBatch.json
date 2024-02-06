@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "ProduceOrderBatchCloseRequestDTO",
-              "$ref": "#/definitions/ProduceOrderBatchCloseRequestDTO"
+              "$ref": "#/definitions/ProduceOrderBatchCloseRequestDTO",
+              "originalRef": "ProduceOrderBatchCloseRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

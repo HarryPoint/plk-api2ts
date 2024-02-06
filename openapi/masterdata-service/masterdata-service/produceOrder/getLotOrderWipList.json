@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "批次订单Wip搜索VO",
-              "$ref": "#/definitions/批次订单Wip搜索VO"
+              "$ref": "#/definitions/批次订单Wip搜索VO",
+              "originalRef": "批次订单Wip搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«批次Wip信息返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«批次Wip信息返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«批次Wip信息返回VO»»",
+              "originalRef": "JSONResult«List«批次Wip信息返回VO»»"
             }
           },
           "201": {
@@ -110,8 +110,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "批次Wip信息返回VO",
-            "$ref": "#/definitions/批次Wip信息返回VO"
+            "$ref": "#/definitions/批次Wip信息返回VO",
+            "originalRef": "批次Wip信息返回VO"
           }
         },
         "ts": {
@@ -143,8 +143,8 @@
           "type": "array",
           "description": "批次Wip明细",
           "items": {
-            "originalRef": "批次Wip明细返回VO",
-            "$ref": "#/definitions/批次Wip明细返回VO"
+            "$ref": "#/definitions/批次Wip明细返回VO",
+            "originalRef": "批次Wip明细返回VO"
           }
         }
       },

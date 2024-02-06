@@ -28,8 +28,8 @@
             "description": "tskStatisticReportQuery",
             "required": true,
             "schema": {
-              "originalRef": "TSK报表查询DTO_1",
-              "$ref": "#/definitions/TSK报表查询DTO_1"
+              "$ref": "#/definitions/TSK报表查询DTO_1",
+              "originalRef": "TSK报表查询DTO_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -68,8 +68,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         },
         "pageNo": {

@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "设备数采数据详单搜索VO",
-              "$ref": "#/definitions/设备数采数据详单搜索VO"
+              "$ref": "#/definitions/设备数采数据详单搜索VO",
+              "originalRef": "设备数采数据详单搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设备数采数据详单返回VO»",
-              "$ref": "#/definitions/JSONResult«设备数采数据详单返回VO»"
+              "$ref": "#/definitions/JSONResult«设备数采数据详单返回VO»",
+              "originalRef": "JSONResult«设备数采数据详单返回VO»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "deviceId": {
@@ -148,8 +148,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设备数采数据详单返回VO",
-          "$ref": "#/definitions/设备数采数据详单返回VO"
+          "$ref": "#/definitions/设备数采数据详单返回VO",
+          "originalRef": "设备数采数据详单返回VO"
         },
         "ts": {
           "type": "integer",
@@ -165,13 +165,13 @@
       "properties": {
         "dataPages": {
           "description": "分页信息",
-          "originalRef": "分页信息«设备数采数据详单分页信息返回VO»",
-          "$ref": "#/definitions/分页信息«设备数采数据详单分页信息返回VO»"
+          "$ref": "#/definitions/分页信息«设备数采数据详单分页信息返回VO»",
+          "originalRef": "分页信息«设备数采数据详单分页信息返回VO»"
         },
         "deviceInfo": {
           "description": "设备信息",
-          "originalRef": "设备数采状态信息VO",
-          "$ref": "#/definitions/设备数采状态信息VO"
+          "$ref": "#/definitions/设备数采状态信息VO",
+          "originalRef": "设备数采状态信息VO"
         }
       },
       "title": "设备数采数据详单返回VO"
@@ -203,8 +203,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "设备数采数据详单分页信息返回VO",
-            "$ref": "#/definitions/设备数采数据详单分页信息返回VO"
+            "$ref": "#/definitions/设备数采数据详单分页信息返回VO",
+            "originalRef": "设备数采数据详单分页信息返回VO"
           }
         },
         "lastPage": {
@@ -296,8 +296,8 @@
           "type": "array",
           "description": "详情",
           "items": {
-            "originalRef": "设备数采数据明细返回VO",
-            "$ref": "#/definitions/设备数采数据明细返回VO"
+            "$ref": "#/definitions/设备数采数据明细返回VO",
+            "originalRef": "设备数采数据明细返回VO"
           }
         },
         "hasError": {

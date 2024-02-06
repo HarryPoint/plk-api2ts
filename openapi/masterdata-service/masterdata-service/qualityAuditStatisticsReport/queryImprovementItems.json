@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "基础质量审核查询请求",
-              "$ref": "#/definitions/基础质量审核查询请求"
+              "$ref": "#/definitions/基础质量审核查询请求",
+              "originalRef": "基础质量审核查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«改进项统计查询响应»",
-              "$ref": "#/definitions/JSONResult«改进项统计查询响应»"
+              "$ref": "#/definitions/JSONResult«改进项统计查询响应»",
+              "originalRef": "JSONResult«改进项统计查询响应»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "改进项统计查询响应",
-          "$ref": "#/definitions/改进项统计查询响应"
+          "$ref": "#/definitions/改进项统计查询响应",
+          "originalRef": "改进项统计查询响应"
         },
         "ts": {
           "type": "integer",
@@ -126,8 +126,8 @@
           "type": "array",
           "description": "部门指标 - XX部门该井数量、XX部门未整改数量、XX部门整改率标题",
           "items": {
-            "originalRef": "部门级别的指标",
-            "$ref": "#/definitions/部门级别的指标"
+            "$ref": "#/definitions/部门级别的指标",
+            "originalRef": "部门级别的指标"
           }
         }
       },

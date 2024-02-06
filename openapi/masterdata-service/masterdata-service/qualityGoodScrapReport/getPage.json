@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "良品报废数据表搜索VO",
-              "$ref": "#/definitions/良品报废数据表搜索VO"
+              "$ref": "#/definitions/良品报废数据表搜索VO",
+              "originalRef": "良品报废数据表搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«良品报废数据表结果VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«良品报废数据表结果VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«良品报废数据表结果VO»»",
+              "originalRef": "JSONResult«分页信息«良品报废数据表结果VO»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "beginTime": {
@@ -135,8 +135,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«良品报废数据表结果VO»",
-          "$ref": "#/definitions/分页信息«良品报废数据表结果VO»"
+          "$ref": "#/definitions/分页信息«良品报废数据表结果VO»",
+          "originalRef": "分页信息«良品报废数据表结果VO»"
         },
         "ts": {
           "type": "integer",
@@ -174,8 +174,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "良品报废数据表结果VO",
-            "$ref": "#/definitions/良品报废数据表结果VO"
+            "$ref": "#/definitions/良品报废数据表结果VO",
+            "originalRef": "良品报废数据表结果VO"
           }
         },
         "lastPage": {
@@ -272,8 +272,8 @@
           "type": "array",
           "description": "报废类型数据",
           "items": {
-            "originalRef": "Id，值VO",
-            "$ref": "#/definitions/Id，值VO"
+            "$ref": "#/definitions/Id，值VO",
+            "originalRef": "Id，值VO"
           }
         }
       },

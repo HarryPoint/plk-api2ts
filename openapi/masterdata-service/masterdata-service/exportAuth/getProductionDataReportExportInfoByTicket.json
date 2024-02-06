@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«导出信息«产出数据统计返回VO»»",
-              "$ref": "#/definitions/JSONResult«导出信息«产出数据统计返回VO»»"
+              "$ref": "#/definitions/JSONResult«导出信息«产出数据统计返回VO»»",
+              "originalRef": "JSONResult«导出信息«产出数据统计返回VO»»"
             }
           },
           "401": {
@@ -67,8 +67,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "导出信息«产出数据统计返回VO»",
-          "$ref": "#/definitions/导出信息«产出数据统计返回VO»"
+          "$ref": "#/definitions/导出信息«产出数据统计返回VO»",
+          "originalRef": "导出信息«产出数据统计返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "数据",
           "items": {
-            "originalRef": "产出数据统计返回VO",
-            "$ref": "#/definitions/产出数据统计返回VO"
+            "$ref": "#/definitions/产出数据统计返回VO",
+            "originalRef": "产出数据统计返回VO"
           }
         }
       },
@@ -190,8 +190,8 @@
           "type": "array",
           "description": "工序产出信息集",
           "items": {
-            "originalRef": "工序产出统计报表返回VO",
-            "$ref": "#/definitions/工序产出统计报表返回VO"
+            "$ref": "#/definitions/工序产出统计报表返回VO",
+            "originalRef": "工序产出统计报表返回VO"
           }
         }
       },

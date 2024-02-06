@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ImprovementCategoryIndicatorsResponseDTO»",
-              "$ref": "#/definitions/JSONResult«ImprovementCategoryIndicatorsResponseDTO»"
+              "$ref": "#/definitions/JSONResult«ImprovementCategoryIndicatorsResponseDTO»",
+              "originalRef": "JSONResult«ImprovementCategoryIndicatorsResponseDTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ImprovementCategoryIndicatorsResponseDTO",
-          "$ref": "#/definitions/ImprovementCategoryIndicatorsResponseDTO"
+          "$ref": "#/definitions/ImprovementCategoryIndicatorsResponseDTO",
+          "originalRef": "ImprovementCategoryIndicatorsResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "改善类别列表",
           "items": {
-            "originalRef": "ImprovementCategoryIndicatorsItemResponseDTO",
-            "$ref": "#/definitions/ImprovementCategoryIndicatorsItemResponseDTO"
+            "$ref": "#/definitions/ImprovementCategoryIndicatorsItemResponseDTO",
+            "originalRef": "ImprovementCategoryIndicatorsItemResponseDTO"
           }
         }
       },

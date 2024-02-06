@@ -28,8 +28,8 @@
             "description": "groupQueryRequest",
             "required": true,
             "schema": {
-              "originalRef": "设备人员能力分组查询DTO",
-              "$ref": "#/definitions/设备人员能力分组查询DTO"
+              "$ref": "#/definitions/设备人员能力分组查询DTO",
+              "originalRef": "设备人员能力分组查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«设备人员能力分组响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«设备人员能力分组响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«设备人员能力分组响应DTO»»",
+              "originalRef": "JSONResult«List«设备人员能力分组响应DTO»»"
             }
           },
           "201": {
@@ -123,8 +123,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "设备人员能力分组响应DTO",
-            "$ref": "#/definitions/设备人员能力分组响应DTO"
+            "$ref": "#/definitions/设备人员能力分组响应DTO",
+            "originalRef": "设备人员能力分组响应DTO"
           }
         },
         "ts": {
@@ -179,8 +179,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "originalRef": "设备人员能力分组项响应DTO",
-            "$ref": "#/definitions/设备人员能力分组项响应DTO"
+            "$ref": "#/definitions/设备人员能力分组项响应DTO",
+            "originalRef": "设备人员能力分组项响应DTO"
           }
         }
       },

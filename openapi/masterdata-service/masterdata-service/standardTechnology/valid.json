@@ -28,8 +28,8 @@
             "description": "validRequest",
             "required": true,
             "schema": {
-              "originalRef": "标准工艺启用、停用请求对象",
-              "$ref": "#/definitions/标准工艺启用、停用请求对象"
+              "$ref": "#/definitions/标准工艺启用、停用请求对象",
+              "originalRef": "标准工艺启用、停用请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

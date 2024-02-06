@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«直通报表返回VO»",
-              "$ref": "#/definitions/JSONResult«直通报表返回VO»"
+              "$ref": "#/definitions/JSONResult«直通报表返回VO»",
+              "originalRef": "JSONResult«直通报表返回VO»"
             }
           },
           "401": {
@@ -84,8 +84,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "直通报表返回VO",
-          "$ref": "#/definitions/直通报表返回VO"
+          "$ref": "#/definitions/直通报表返回VO",
+          "originalRef": "直通报表返回VO"
         },
         "ts": {
           "type": "integer",

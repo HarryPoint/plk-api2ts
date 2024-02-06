@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«流程工单VO»",
-              "$ref": "#/definitions/JSONResult«流程工单VO»"
+              "$ref": "#/definitions/JSONResult«流程工单VO»",
+              "originalRef": "JSONResult«流程工单VO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "流程工单VO",
-          "$ref": "#/definitions/流程工单VO"
+          "$ref": "#/definitions/流程工单VO",
+          "originalRef": "流程工单VO"
         },
         "ts": {
           "type": "integer",

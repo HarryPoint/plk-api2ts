@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "公共待办数据查询",
-              "$ref": "#/definitions/公共待办数据查询"
+              "$ref": "#/definitions/公共待办数据查询",
+              "originalRef": "公共待办数据查询"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«QualityStorageTaskVO»»",
-              "$ref": "#/definitions/JSONResult«List«QualityStorageTaskVO»»"
+              "$ref": "#/definitions/JSONResult«List«QualityStorageTaskVO»»",
+              "originalRef": "JSONResult«List«QualityStorageTaskVO»»"
             }
           },
           "201": {
@@ -168,8 +168,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "QualityStorageTaskVO",
-            "$ref": "#/definitions/QualityStorageTaskVO"
+            "$ref": "#/definitions/QualityStorageTaskVO",
+            "originalRef": "QualityStorageTaskVO"
           }
         },
         "ts": {

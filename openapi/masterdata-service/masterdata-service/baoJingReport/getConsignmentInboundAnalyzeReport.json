@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "寄售入库分析报表搜索VO",
-              "$ref": "#/definitions/寄售入库分析报表搜索VO"
+              "$ref": "#/definitions/寄售入库分析报表搜索VO",
+              "originalRef": "寄售入库分析报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«寄售入库分析报表返回VO»",
-              "$ref": "#/definitions/JSONResult«寄售入库分析报表返回VO»"
+              "$ref": "#/definitions/JSONResult«寄售入库分析报表返回VO»",
+              "originalRef": "JSONResult«寄售入库分析报表返回VO»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "customerId": {
@@ -197,8 +197,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "寄售入库分析报表返回VO_1",
-          "$ref": "#/definitions/寄售入库分析报表返回VO_1"
+          "$ref": "#/definitions/寄售入库分析报表返回VO_1",
+          "originalRef": "寄售入库分析报表返回VO_1"
         },
         "ts": {
           "type": "integer",
@@ -214,31 +214,31 @@
       "properties": {
         "tablePage": {
           "description": "数据表",
-          "originalRef": "分页信息«寄售入库分析报表返回VO»",
-          "$ref": "#/definitions/分页信息«寄售入库分析报表返回VO»"
+          "$ref": "#/definitions/分页信息«寄售入库分析报表返回VO»",
+          "originalRef": "分页信息«寄售入库分析报表返回VO»"
         },
         "productDimension": {
           "type": "array",
           "description": "产品维度",
           "items": {
-            "originalRef": "寄售入库分析图表数据返回VO",
-            "$ref": "#/definitions/寄售入库分析图表数据返回VO"
+            "$ref": "#/definitions/寄售入库分析图表数据返回VO",
+            "originalRef": "寄售入库分析图表数据返回VO"
           }
         },
         "customerDimension": {
           "type": "array",
           "description": "客户维度",
           "items": {
-            "originalRef": "寄售入库分析图表数据返回VO",
-            "$ref": "#/definitions/寄售入库分析图表数据返回VO"
+            "$ref": "#/definitions/寄售入库分析图表数据返回VO",
+            "originalRef": "寄售入库分析图表数据返回VO"
           }
         },
         "businessManDimension": {
           "type": "array",
           "description": "业务员维度",
           "items": {
-            "originalRef": "寄售入库分析图表数据返回VO",
-            "$ref": "#/definitions/寄售入库分析图表数据返回VO"
+            "$ref": "#/definitions/寄售入库分析图表数据返回VO",
+            "originalRef": "寄售入库分析图表数据返回VO"
           }
         }
       },
@@ -271,8 +271,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "寄售入库分析报表返回VO",
-            "$ref": "#/definitions/寄售入库分析报表返回VO"
+            "$ref": "#/definitions/寄售入库分析报表返回VO",
+            "originalRef": "寄售入库分析报表返回VO"
           }
         },
         "lastPage": {

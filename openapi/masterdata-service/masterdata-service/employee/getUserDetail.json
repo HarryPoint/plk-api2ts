@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«用户详细VO»",
-              "$ref": "#/definitions/JSONResult«用户详细VO»"
+              "$ref": "#/definitions/JSONResult«用户详细VO»",
+              "originalRef": "JSONResult«用户详细VO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "用户详细VO",
-          "$ref": "#/definitions/用户详细VO"
+          "$ref": "#/definitions/用户详细VO",
+          "originalRef": "用户详细VO"
         },
         "ts": {
           "type": "integer",

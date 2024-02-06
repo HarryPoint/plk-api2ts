@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«生产任务自定义卡片样式响应对象DTO»»",
-              "$ref": "#/definitions/JSONResult«List«生产任务自定义卡片样式响应对象DTO»»"
+              "$ref": "#/definitions/JSONResult«List«生产任务自定义卡片样式响应对象DTO»»",
+              "originalRef": "JSONResult«List«生产任务自定义卡片样式响应对象DTO»»"
             }
           },
           "401": {
@@ -60,8 +60,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "生产任务自定义卡片样式响应对象DTO",
-            "$ref": "#/definitions/生产任务自定义卡片样式响应对象DTO"
+            "$ref": "#/definitions/生产任务自定义卡片样式响应对象DTO",
+            "originalRef": "生产任务自定义卡片样式响应对象DTO"
           }
         },
         "ts": {

@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "ImprovementRecificationQueryRequestDTO",
-              "$ref": "#/definitions/ImprovementRecificationQueryRequestDTO"
+              "$ref": "#/definitions/ImprovementRecificationQueryRequestDTO",
+              "originalRef": "ImprovementRecificationQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«改进整改率»",
-              "$ref": "#/definitions/JSONResult«改进整改率»"
+              "$ref": "#/definitions/JSONResult«改进整改率»",
+              "originalRef": "JSONResult«改进整改率»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "改进整改率",
-          "$ref": "#/definitions/改进整改率"
+          "$ref": "#/definitions/改进整改率",
+          "originalRef": "改进整改率"
         },
         "ts": {
           "type": "integer",
@@ -112,8 +112,8 @@
           "type": "array",
           "description": "标题列表",
           "items": {
-            "originalRef": "TitleDefineQueryResponseDTO",
-            "$ref": "#/definitions/TitleDefineQueryResponseDTO"
+            "$ref": "#/definitions/TitleDefineQueryResponseDTO",
+            "originalRef": "TitleDefineQueryResponseDTO"
           }
         },
         "totalQuantity": {

@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "专项工作查询请求_1",
-              "$ref": "#/definitions/专项工作查询请求_1"
+              "$ref": "#/definitions/专项工作查询请求_1",
+              "originalRef": "专项工作查询请求_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«专项工作查询请求»»",
-              "$ref": "#/definitions/JSONResult«分页信息«专项工作查询请求»»"
+              "$ref": "#/definitions/JSONResult«分页信息«专项工作查询请求»»",
+              "originalRef": "JSONResult«分页信息«专项工作查询请求»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -133,8 +133,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«专项工作查询请求»",
-          "$ref": "#/definitions/分页信息«专项工作查询请求»"
+          "$ref": "#/definitions/分页信息«专项工作查询请求»",
+          "originalRef": "分页信息«专项工作查询请求»"
         },
         "ts": {
           "type": "integer",
@@ -172,8 +172,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "专项工作查询请求",
-            "$ref": "#/definitions/专项工作查询请求"
+            "$ref": "#/definitions/专项工作查询请求",
+            "originalRef": "专项工作查询请求"
           }
         },
         "lastPage": {

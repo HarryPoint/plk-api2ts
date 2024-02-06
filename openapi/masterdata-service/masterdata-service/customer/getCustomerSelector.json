@@ -28,8 +28,8 @@
             "description": "customerSelectorSearchDTO",
             "required": true,
             "schema": {
-              "originalRef": "客户选择列表搜索",
-              "$ref": "#/definitions/客户选择列表搜索"
+              "$ref": "#/definitions/客户选择列表搜索",
+              "originalRef": "客户选择列表搜索"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«Id Code Name 通用传输对象»»",
-              "$ref": "#/definitions/JSONResult«分页信息«Id Code Name 通用传输对象»»"
+              "$ref": "#/definitions/JSONResult«分页信息«Id Code Name 通用传输对象»»",
+              "originalRef": "JSONResult«分页信息«Id Code Name 通用传输对象»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -137,8 +137,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«Id Code Name 通用传输对象»",
-          "$ref": "#/definitions/分页信息«Id Code Name 通用传输对象»"
+          "$ref": "#/definitions/分页信息«Id Code Name 通用传输对象»",
+          "originalRef": "分页信息«Id Code Name 通用传输对象»"
         },
         "ts": {
           "type": "integer",
@@ -176,8 +176,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
+            "$ref": "#/definitions/Id Code Name 通用传输对象",
+            "originalRef": "Id Code Name 通用传输对象"
           }
         },
         "lastPage": {

@@ -28,8 +28,8 @@
             "description": "dataEdit",
             "required": true,
             "schema": {
-              "originalRef": "主数据基础编辑 DTO",
-              "$ref": "#/definitions/主数据基础编辑 DTO"
+              "$ref": "#/definitions/主数据基础编辑 DTO",
+              "originalRef": "主数据基础编辑 DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«DynamicFormSaveResultBO»",
-              "$ref": "#/definitions/JSONResult«DynamicFormSaveResultBO»"
+              "$ref": "#/definitions/JSONResult«DynamicFormSaveResultBO»",
+              "originalRef": "JSONResult«DynamicFormSaveResultBO»"
             }
           },
           "201": {
@@ -109,8 +109,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "DynamicFormSaveResultBO",
-          "$ref": "#/definitions/DynamicFormSaveResultBO"
+          "$ref": "#/definitions/DynamicFormSaveResultBO",
+          "originalRef": "DynamicFormSaveResultBO"
         },
         "ts": {
           "type": "integer",

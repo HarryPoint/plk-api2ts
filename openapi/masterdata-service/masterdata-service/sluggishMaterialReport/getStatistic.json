@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "GetStatistic",
-              "$ref": "#/definitions/GetStatistic"
+              "$ref": "#/definitions/GetStatistic",
+              "originalRef": "GetStatistic"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«呆滞物料报表查询合计响应对象»",
-              "$ref": "#/definitions/JSONResult«呆滞物料报表查询合计响应对象»"
+              "$ref": "#/definitions/JSONResult«呆滞物料报表查询合计响应对象»",
+              "originalRef": "JSONResult«呆滞物料报表查询合计响应对象»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "呆滞物料报表查询合计响应对象",
-          "$ref": "#/definitions/呆滞物料报表查询合计响应对象"
+          "$ref": "#/definitions/呆滞物料报表查询合计响应对象",
+          "originalRef": "呆滞物料报表查询合计响应对象"
         },
         "ts": {
           "type": "integer",

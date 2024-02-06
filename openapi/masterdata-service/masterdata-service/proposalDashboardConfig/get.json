@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ProposalDashboardConfigResponseDTO»",
-              "$ref": "#/definitions/JSONResult«ProposalDashboardConfigResponseDTO»"
+              "$ref": "#/definitions/JSONResult«ProposalDashboardConfigResponseDTO»",
+              "originalRef": "JSONResult«ProposalDashboardConfigResponseDTO»"
             }
           },
           "401": {
@@ -58,8 +58,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ProposalDashboardConfigResponseDTO",
-          "$ref": "#/definitions/ProposalDashboardConfigResponseDTO"
+          "$ref": "#/definitions/ProposalDashboardConfigResponseDTO",
+          "originalRef": "ProposalDashboardConfigResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "建议部门 ID => Name",
           "items": {
-            "originalRef": "基础数据",
-            "$ref": "#/definitions/基础数据"
+            "$ref": "#/definitions/基础数据",
+            "originalRef": "基础数据"
           }
         },
         "projectDepartmentIdList": {
@@ -106,8 +106,8 @@
           "type": "array",
           "description": "项目部门 ID => Name",
           "items": {
-            "originalRef": "基础数据",
-            "$ref": "#/definitions/基础数据"
+            "$ref": "#/definitions/基础数据",
+            "originalRef": "基础数据"
           }
         },
         "unCompleteTargetValue": {
@@ -124,16 +124,16 @@
           "type": "array",
           "description": "未完成项目数量的统计区间配置",
           "items": {
-            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO",
-            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO"
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO",
+            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO"
           }
         },
         "completedProjectDashboardStatisticsConfigList": {
           "type": "array",
           "description": "已完成项目数量的统计区间配置",
           "items": {
-            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO",
-            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO"
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO",
+            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO"
           }
         }
       },

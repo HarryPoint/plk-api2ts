@@ -43,8 +43,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«工序选择返回VO»»_1",
-              "$ref": "#/definitions/JSONResult«List«工序选择返回VO»»_1"
+              "$ref": "#/definitions/JSONResult«List«工序选择返回VO»»_1",
+              "originalRef": "JSONResult«List«工序选择返回VO»»_1"
             }
           },
           "401": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "工序选择返回VO_1",
-            "$ref": "#/definitions/工序选择返回VO_1"
+            "$ref": "#/definitions/工序选择返回VO_1",
+            "originalRef": "工序选择返回VO_1"
           }
         },
         "ts": {

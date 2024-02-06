@@ -36,8 +36,8 @@
             "description": "qualityApplyDTO",
             "required": true,
             "schema": {
-              "originalRef": "质检申请DTO",
-              "$ref": "#/definitions/质检申请DTO"
+              "$ref": "#/definitions/质检申请DTO",
+              "originalRef": "质检申请DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -94,8 +94,8 @@
         },
         "finishedMaterial": {
           "description": "成品物料信息",
-          "originalRef": "成品物料填写DTO",
-          "$ref": "#/definitions/成品物料填写DTO"
+          "$ref": "#/definitions/成品物料填写DTO",
+          "originalRef": "成品物料填写DTO"
         }
       },
       "title": "质检申请DTO"

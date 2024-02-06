@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "分页_11",
-              "$ref": "#/definitions/分页_11"
+              "$ref": "#/definitions/分页_11",
+              "originalRef": "分页_11"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«ProductionStockReturnQueryResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«ProductionStockReturnQueryResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«ProductionStockReturnQueryResponseDTO»»",
+              "originalRef": "JSONResult«分页信息«ProductionStockReturnQueryResponseDTO»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "produceOrderId": {
@@ -122,8 +122,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«ProductionStockReturnQueryResponseDTO»",
-          "$ref": "#/definitions/分页信息«ProductionStockReturnQueryResponseDTO»"
+          "$ref": "#/definitions/分页信息«ProductionStockReturnQueryResponseDTO»",
+          "originalRef": "分页信息«ProductionStockReturnQueryResponseDTO»"
         },
         "ts": {
           "type": "integer",
@@ -161,8 +161,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "ProductionStockReturnQueryResponseDTO",
-            "$ref": "#/definitions/ProductionStockReturnQueryResponseDTO"
+            "$ref": "#/definitions/ProductionStockReturnQueryResponseDTO",
+            "originalRef": "ProductionStockReturnQueryResponseDTO"
           }
         },
         "lastPage": {

@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«ProduceTechnologyRoutingStepCapacityResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyRoutingStepCapacityResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyRoutingStepCapacityResponseDTO»»",
+              "originalRef": "JSONResult«List«ProduceTechnologyRoutingStepCapacityResponseDTO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "ProduceTechnologyRoutingStepCapacityResponseDTO",
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepCapacityResponseDTO"
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepCapacityResponseDTO",
+            "originalRef": "ProduceTechnologyRoutingStepCapacityResponseDTO"
           }
         },
         "ts": {
@@ -180,8 +180,8 @@
         },
         "capacity": {
           "description": "所属生产工艺产能",
-          "originalRef": "ProduceTechnologyCapacityResponseDTO",
-          "$ref": "#/definitions/ProduceTechnologyCapacityResponseDTO"
+          "$ref": "#/definitions/ProduceTechnologyCapacityResponseDTO",
+          "originalRef": "ProduceTechnologyCapacityResponseDTO"
         },
         "produceTechnologyLaborCostId": {
           "type": "integer",

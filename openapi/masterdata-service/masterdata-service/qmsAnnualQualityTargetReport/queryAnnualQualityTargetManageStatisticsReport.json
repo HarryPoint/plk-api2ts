@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "QueryAnnualQualityTargetManageStatisticsReport",
-              "$ref": "#/definitions/QueryAnnualQualityTargetManageStatisticsReport"
+              "$ref": "#/definitions/QueryAnnualQualityTargetManageStatisticsReport",
+              "originalRef": "QueryAnnualQualityTargetManageStatisticsReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«年度质量目标管理统计返回DTO»»",
-              "$ref": "#/definitions/JSONResult«List«年度质量目标管理统计返回DTO»»"
+              "$ref": "#/definitions/JSONResult«List«年度质量目标管理统计返回DTO»»",
+              "originalRef": "JSONResult«List«年度质量目标管理统计返回DTO»»"
             }
           },
           "201": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "年度质量目标管理统计返回DTO",
-            "$ref": "#/definitions/年度质量目标管理统计返回DTO"
+            "$ref": "#/definitions/年度质量目标管理统计返回DTO",
+            "originalRef": "年度质量目标管理统计返回DTO"
           }
         },
         "ts": {
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "项明细",
           "items": {
-            "originalRef": "年度质量目标管理统计项返回DTO",
-            "$ref": "#/definitions/年度质量目标管理统计项返回DTO"
+            "$ref": "#/definitions/年度质量目标管理统计项返回DTO",
+            "originalRef": "年度质量目标管理统计项返回DTO"
           }
         }
       },
@@ -143,8 +143,8 @@
           "type": "array",
           "description": "明细",
           "items": {
-            "originalRef": "年度质量目标管理统计项明细返回DTO",
-            "$ref": "#/definitions/年度质量目标管理统计项明细返回DTO"
+            "$ref": "#/definitions/年度质量目标管理统计项明细返回DTO",
+            "originalRef": "年度质量目标管理统计项明细返回DTO"
           }
         }
       },

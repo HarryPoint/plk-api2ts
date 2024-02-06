@@ -28,8 +28,8 @@
             "description": "customCardStyleEditListRequest",
             "required": true,
             "schema": {
-              "originalRef": "生产任务自定义卡片样式编辑list对象DTO",
-              "$ref": "#/definitions/生产任务自定义卡片样式编辑list对象DTO"
+              "$ref": "#/definitions/生产任务自定义卡片样式编辑list对象DTO",
+              "originalRef": "生产任务自定义卡片样式编辑list对象DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -66,8 +66,8 @@
         "customCardStyleList": {
           "type": "array",
           "items": {
-            "originalRef": "生产任务自定义卡片样式编辑对象DTO",
-            "$ref": "#/definitions/生产任务自定义卡片样式编辑对象DTO"
+            "$ref": "#/definitions/生产任务自定义卡片样式编辑对象DTO",
+            "originalRef": "生产任务自定义卡片样式编辑对象DTO"
           }
         }
       },

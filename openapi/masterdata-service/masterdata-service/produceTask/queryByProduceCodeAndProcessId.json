@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«ProduceTaskVO»»",
-              "$ref": "#/definitions/JSONResult«List«ProduceTaskVO»»"
+              "$ref": "#/definitions/JSONResult«List«ProduceTaskVO»»",
+              "originalRef": "JSONResult«List«ProduceTaskVO»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "ProduceTaskVO",
-            "$ref": "#/definitions/ProduceTaskVO"
+            "$ref": "#/definitions/ProduceTaskVO",
+            "originalRef": "ProduceTaskVO"
           }
         },
         "ts": {
@@ -306,8 +306,8 @@
           "type": "array",
           "description": "对应物料bom库存详情",
           "items": {
-            "originalRef": "工艺路径详情步骤Bom明细返回VO",
-            "$ref": "#/definitions/工艺路径详情步骤Bom明细返回VO"
+            "$ref": "#/definitions/工艺路径详情步骤Bom明细返回VO",
+            "originalRef": "工艺路径详情步骤Bom明细返回VO"
           }
         },
         "canMoveInQuantity": {

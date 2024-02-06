@@ -37,8 +37,8 @@
             "description": "examine",
             "required": true,
             "schema": {
-              "originalRef": "安全库存变更申请审核DTO",
-              "$ref": "#/definitions/安全库存变更申请审核DTO"
+              "$ref": "#/definitions/安全库存变更申请审核DTO",
+              "originalRef": "安全库存变更申请审核DTO"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

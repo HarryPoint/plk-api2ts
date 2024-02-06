@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«标准工艺下拉响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«标准工艺下拉响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«标准工艺下拉响应对象»»",
+              "originalRef": "JSONResult«List«标准工艺下拉响应对象»»"
             }
           },
           "401": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "标准工艺下拉响应对象",
-            "$ref": "#/definitions/标准工艺下拉响应对象"
+            "$ref": "#/definitions/标准工艺下拉响应对象",
+            "originalRef": "标准工艺下拉响应对象"
           }
         },
         "ts": {

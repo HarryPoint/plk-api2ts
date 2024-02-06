@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "设备统计数据搜索VO",
-              "$ref": "#/definitions/设备统计数据搜索VO"
+              "$ref": "#/definitions/设备统计数据搜索VO",
+              "originalRef": "设备统计数据搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设备数采参数统计查询返回VO»",
-              "$ref": "#/definitions/JSONResult«设备数采参数统计查询返回VO»"
+              "$ref": "#/definitions/JSONResult«设备数采参数统计查询返回VO»",
+              "originalRef": "JSONResult«设备数采参数统计查询返回VO»"
             }
           },
           "201": {
@@ -133,8 +133,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设备数采参数统计查询返回VO",
-          "$ref": "#/definitions/设备数采参数统计查询返回VO"
+          "$ref": "#/definitions/设备数采参数统计查询返回VO",
+          "originalRef": "设备数采参数统计查询返回VO"
         },
         "ts": {
           "type": "integer",
@@ -175,8 +175,8 @@
           "type": "array",
           "description": "参数信息集",
           "items": {
-            "originalRef": "设备数采参数统计返回VO",
-            "$ref": "#/definitions/设备数采参数统计返回VO"
+            "$ref": "#/definitions/设备数采参数统计返回VO",
+            "originalRef": "设备数采参数统计返回VO"
           }
         }
       },
@@ -205,8 +205,8 @@
           "type": "array",
           "description": "设备信息集",
           "items": {
-            "originalRef": "设备数采统计返回VO",
-            "$ref": "#/definitions/设备数采统计返回VO"
+            "$ref": "#/definitions/设备数采统计返回VO",
+            "originalRef": "设备数采统计返回VO"
           }
         }
       },
@@ -227,8 +227,8 @@
           "type": "array",
           "description": "详细数据",
           "items": {
-            "originalRef": "设备数采统计明细返回VO",
-            "$ref": "#/definitions/设备数采统计明细返回VO"
+            "$ref": "#/definitions/设备数采统计明细返回VO",
+            "originalRef": "设备数采统计明细返回VO"
           }
         },
         "lowerLimit": {

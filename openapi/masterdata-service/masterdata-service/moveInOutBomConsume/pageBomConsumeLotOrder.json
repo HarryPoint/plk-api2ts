@@ -25,8 +25,8 @@
             "description": "moveInBomConsumeLotOrderPageQuery",
             "required": true,
             "schema": {
-              "originalRef": "进料bom消耗批次分页查询对象",
-              "$ref": "#/definitions/进料bom消耗批次分页查询对象"
+              "$ref": "#/definitions/进料bom消耗批次分页查询对象",
+              "originalRef": "进料bom消耗批次分页查询对象"
             }
           }
         ],
@@ -34,8 +34,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«进料bom消耗批次响应DTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«进料bom消耗批次响应DTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«进料bom消耗批次响应DTO»»",
+              "originalRef": "JSONResult«分页信息«进料bom消耗批次响应DTO»»"
             }
           },
           "401": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -146,8 +146,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«进料bom消耗批次响应DTO»",
-          "$ref": "#/definitions/分页信息«进料bom消耗批次响应DTO»"
+          "$ref": "#/definitions/分页信息«进料bom消耗批次响应DTO»",
+          "originalRef": "分页信息«进料bom消耗批次响应DTO»"
         },
         "ts": {
           "type": "integer",
@@ -185,8 +185,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "进料bom消耗批次响应DTO",
-            "$ref": "#/definitions/进料bom消耗批次响应DTO"
+            "$ref": "#/definitions/进料bom消耗批次响应DTO",
+            "originalRef": "进料bom消耗批次响应DTO"
           }
         },
         "lastPage": {

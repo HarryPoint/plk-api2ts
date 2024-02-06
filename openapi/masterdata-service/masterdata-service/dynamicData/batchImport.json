@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "originalRef": "主数据基础编辑 DTO",
-                "$ref": "#/definitions/主数据基础编辑 DTO"
+                "$ref": "#/definitions/主数据基础编辑 DTO",
+                "originalRef": "主数据基础编辑 DTO"
               }
             }
           },
@@ -56,8 +56,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«string»»",
-              "$ref": "#/definitions/JSONResult«List«string»»"
+              "$ref": "#/definitions/JSONResult«List«string»»",
+              "originalRef": "JSONResult«List«string»»"
             }
           },
           "201": {

@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«Map«string,string»»",
-              "$ref": "#/definitions/JSONResult«Map«string,string»»"
+              "$ref": "#/definitions/JSONResult«Map«string,string»»",
+              "originalRef": "JSONResult«Map«string,string»»"
             }
           },
           "201": {

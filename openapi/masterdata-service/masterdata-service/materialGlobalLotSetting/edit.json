@@ -28,8 +28,8 @@
             "description": "editRequest",
             "required": true,
             "schema": {
-              "originalRef": "物料全局批次设置编辑对象",
-              "$ref": "#/definitions/物料全局批次设置编辑对象"
+              "$ref": "#/definitions/物料全局批次设置编辑对象",
+              "originalRef": "物料全局批次设置编辑对象"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

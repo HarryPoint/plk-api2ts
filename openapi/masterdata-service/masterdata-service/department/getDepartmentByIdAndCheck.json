@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«部门VO»",
-              "$ref": "#/definitions/JSONResult«部门VO»"
+              "$ref": "#/definitions/JSONResult«部门VO»",
+              "originalRef": "JSONResult«部门VO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "部门VO",
-          "$ref": "#/definitions/部门VO"
+          "$ref": "#/definitions/部门VO",
+          "originalRef": "部门VO"
         },
         "ts": {
           "type": "integer",

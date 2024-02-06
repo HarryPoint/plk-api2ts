@@ -28,8 +28,8 @@
             "description": "backDTO",
             "required": true,
             "schema": {
-              "originalRef": "生产委外指定加工DTO",
-              "$ref": "#/definitions/生产委外指定加工DTO"
+              "$ref": "#/definitions/生产委外指定加工DTO",
+              "originalRef": "生产委外指定加工DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

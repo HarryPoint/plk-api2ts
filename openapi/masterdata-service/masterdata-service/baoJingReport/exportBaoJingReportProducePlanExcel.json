@@ -28,8 +28,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "宝晶生产任务甘特图查询对象",
-              "$ref": "#/definitions/宝晶生产任务甘特图查询对象"
+              "$ref": "#/definitions/宝晶生产任务甘特图查询对象",
+              "originalRef": "宝晶生产任务甘特图查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {

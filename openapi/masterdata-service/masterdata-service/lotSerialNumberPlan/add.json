@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "LotSerialNumberPlanAddRequestDTO",
-              "$ref": "#/definitions/LotSerialNumberPlanAddRequestDTO"
+              "$ref": "#/definitions/LotSerialNumberPlanAddRequestDTO",
+              "originalRef": "LotSerialNumberPlanAddRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -84,8 +84,8 @@
           "type": "array",
           "description": "规则列表",
           "items": {
-            "originalRef": "LotSerialNumberPlanRuleAddRequestDTO",
-            "$ref": "#/definitions/LotSerialNumberPlanRuleAddRequestDTO"
+            "$ref": "#/definitions/LotSerialNumberPlanRuleAddRequestDTO",
+            "originalRef": "LotSerialNumberPlanRuleAddRequestDTO"
           }
         }
       },

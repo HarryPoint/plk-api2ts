@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«转生产订单主物料信息»",
-              "$ref": "#/definitions/JSONResult«转生产订单主物料信息»"
+              "$ref": "#/definitions/JSONResult«转生产订单主物料信息»",
+              "originalRef": "JSONResult«转生产订单主物料信息»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "转生产订单主物料信息",
-          "$ref": "#/definitions/转生产订单主物料信息"
+          "$ref": "#/definitions/转生产订单主物料信息",
+          "originalRef": "转生产订单主物料信息"
         },
         "ts": {
           "type": "integer",
@@ -170,8 +170,8 @@
           "type": "array",
           "description": "标准生产工艺可选列表",
           "items": {
-            "originalRef": "StandardTechnologyDTO",
-            "$ref": "#/definitions/StandardTechnologyDTO"
+            "$ref": "#/definitions/StandardTechnologyDTO",
+            "originalRef": "StandardTechnologyDTO"
           }
         },
         "selectedStandardTechnologyId": {

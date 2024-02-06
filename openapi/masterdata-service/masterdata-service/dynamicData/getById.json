@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«JSONObject»",
-              "$ref": "#/definitions/JSONResult«JSONObject»"
+              "$ref": "#/definitions/JSONResult«JSONObject»",
+              "originalRef": "JSONResult«JSONObject»"
             }
           },
           "401": {

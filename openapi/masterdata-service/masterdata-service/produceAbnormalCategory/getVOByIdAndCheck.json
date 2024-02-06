@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产异常类型VO»",
-              "$ref": "#/definitions/JSONResult«生产异常类型VO»"
+              "$ref": "#/definitions/JSONResult«生产异常类型VO»",
+              "originalRef": "JSONResult«生产异常类型VO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产异常类型VO",
-          "$ref": "#/definitions/生产异常类型VO"
+          "$ref": "#/definitions/生产异常类型VO",
+          "originalRef": "生产异常类型VO"
         },
         "ts": {
           "type": "integer",

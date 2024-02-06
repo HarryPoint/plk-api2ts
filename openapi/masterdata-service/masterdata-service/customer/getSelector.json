@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«客户选择返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«客户选择返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«客户选择返回VO»»",
+              "originalRef": "JSONResult«List«客户选择返回VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "客户选择返回VO",
-            "$ref": "#/definitions/客户选择返回VO"
+            "$ref": "#/definitions/客户选择返回VO",
+            "originalRef": "客户选择返回VO"
           }
         },
         "ts": {

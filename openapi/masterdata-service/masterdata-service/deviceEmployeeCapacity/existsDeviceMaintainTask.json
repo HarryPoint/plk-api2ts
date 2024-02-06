@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "设备人员能力是否存在任务请求DTO",
-              "$ref": "#/definitions/设备人员能力是否存在任务请求DTO"
+              "$ref": "#/definitions/设备人员能力是否存在任务请求DTO",
+              "originalRef": "设备人员能力是否存在任务请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«设备人员能力是否存在任务响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«设备人员能力是否存在任务响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«设备人员能力是否存在任务响应DTO»»",
+              "originalRef": "JSONResult«List«设备人员能力是否存在任务响应DTO»»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "设备人员能力是否存在任务响应DTO",
-            "$ref": "#/definitions/设备人员能力是否存在任务响应DTO"
+            "$ref": "#/definitions/设备人员能力是否存在任务响应DTO",
+            "originalRef": "设备人员能力是否存在任务响应DTO"
           }
         },
         "ts": {

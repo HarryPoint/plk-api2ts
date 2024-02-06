@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«员工VO»»",
-              "$ref": "#/definitions/JSONResult«List«员工VO»»"
+              "$ref": "#/definitions/JSONResult«List«员工VO»»",
+              "originalRef": "JSONResult«List«员工VO»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "员工VO",
-            "$ref": "#/definitions/员工VO"
+            "$ref": "#/definitions/员工VO",
+            "originalRef": "员工VO"
           }
         },
         "ts": {

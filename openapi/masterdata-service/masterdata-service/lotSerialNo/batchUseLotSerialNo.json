@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«批次号使用DTO»_1",
-              "$ref": "#/definitions/JSONResult«批次号使用DTO»_1"
+              "$ref": "#/definitions/JSONResult«批次号使用DTO»_1",
+              "originalRef": "JSONResult«批次号使用DTO»_1"
             }
           },
           "201": {
@@ -79,8 +79,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "批次号使用DTO_1",
-          "$ref": "#/definitions/批次号使用DTO_1"
+          "$ref": "#/definitions/批次号使用DTO_1",
+          "originalRef": "批次号使用DTO_1"
         },
         "ts": {
           "type": "integer",
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "异常批次号",
           "items": {
-            "originalRef": "批次号使用异常DTO",
-            "$ref": "#/definitions/批次号使用异常DTO"
+            "$ref": "#/definitions/批次号使用异常DTO",
+            "originalRef": "批次号使用异常DTO"
           }
         }
       },

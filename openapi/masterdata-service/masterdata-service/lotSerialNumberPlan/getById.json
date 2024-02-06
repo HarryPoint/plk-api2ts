@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«LotSerialNumberPlanDTO»",
-              "$ref": "#/definitions/JSONResult«LotSerialNumberPlanDTO»"
+              "$ref": "#/definitions/JSONResult«LotSerialNumberPlanDTO»",
+              "originalRef": "JSONResult«LotSerialNumberPlanDTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "LotSerialNumberPlanDTO",
-          "$ref": "#/definitions/LotSerialNumberPlanDTO"
+          "$ref": "#/definitions/LotSerialNumberPlanDTO",
+          "originalRef": "LotSerialNumberPlanDTO"
         },
         "ts": {
           "type": "integer",
@@ -109,8 +109,8 @@
           "type": "array",
           "description": "规则列表",
           "items": {
-            "originalRef": "LotSerialNumberPlanRuleDTO",
-            "$ref": "#/definitions/LotSerialNumberPlanRuleDTO"
+            "$ref": "#/definitions/LotSerialNumberPlanRuleDTO",
+            "originalRef": "LotSerialNumberPlanRuleDTO"
           }
         }
       },

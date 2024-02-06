@@ -37,8 +37,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "安全库存物料库存配置信息搜索VO",
-              "$ref": "#/definitions/安全库存物料库存配置信息搜索VO"
+              "$ref": "#/definitions/安全库存物料库存配置信息搜索VO",
+              "originalRef": "安全库存物料库存配置信息搜索VO"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«安全库存物料库存配置信息返回VO»",
-              "$ref": "#/definitions/JSONResult«安全库存物料库存配置信息返回VO»"
+              "$ref": "#/definitions/JSONResult«安全库存物料库存配置信息返回VO»",
+              "originalRef": "JSONResult«安全库存物料库存配置信息返回VO»"
             }
           },
           "201": {
@@ -122,8 +122,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "安全库存物料库存配置信息返回VO",
-          "$ref": "#/definitions/安全库存物料库存配置信息返回VO"
+          "$ref": "#/definitions/安全库存物料库存配置信息返回VO",
+          "originalRef": "安全库存物料库存配置信息返回VO"
         },
         "ts": {
           "type": "integer",

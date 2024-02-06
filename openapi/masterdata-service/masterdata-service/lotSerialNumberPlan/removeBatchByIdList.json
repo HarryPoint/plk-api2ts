@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "LotSerialNumberPlanBatchRemoveRequestDTO",
-              "$ref": "#/definitions/LotSerialNumberPlanBatchRemoveRequestDTO"
+              "$ref": "#/definitions/LotSerialNumberPlanBatchRemoveRequestDTO",
+              "originalRef": "LotSerialNumberPlanBatchRemoveRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»_1",
-              "$ref": "#/definitions/JSONResult«string»_1"
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
             }
           },
           "201": {

@@ -28,8 +28,8 @@
             "description": "dateRangeRequest",
             "required": true,
             "schema": {
-              "originalRef": "qms大屏时间区间请求",
-              "$ref": "#/definitions/qms大屏时间区间请求"
+              "$ref": "#/definitions/qms大屏时间区间请求",
+              "originalRef": "qms大屏时间区间请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«质量绩效评价表返回DTO»»",
-              "$ref": "#/definitions/JSONResult«List«质量绩效评价表返回DTO»»"
+              "$ref": "#/definitions/JSONResult«List«质量绩效评价表返回DTO»»",
+              "originalRef": "JSONResult«List«质量绩效评价表返回DTO»»"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "质量绩效评价表返回DTO",
-            "$ref": "#/definitions/质量绩效评价表返回DTO"
+            "$ref": "#/definitions/质量绩效评价表返回DTO",
+            "originalRef": "质量绩效评价表返回DTO"
           }
         },
         "ts": {

@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "基础质量审核查询请求",
-              "$ref": "#/definitions/基础质量审核查询请求"
+              "$ref": "#/definitions/基础质量审核查询请求",
+              "originalRef": "基础质量审核查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«不符合项统计-部门»",
-              "$ref": "#/definitions/JSONResult«不符合项统计-部门»"
+              "$ref": "#/definitions/JSONResult«不符合项统计-部门»",
+              "originalRef": "JSONResult«不符合项统计-部门»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "不符合项统计-部门",
-          "$ref": "#/definitions/不符合项统计-部门"
+          "$ref": "#/definitions/不符合项统计-部门",
+          "originalRef": "不符合项统计-部门"
         },
         "ts": {
           "type": "integer",
@@ -112,16 +112,16 @@
           "type": "array",
           "description": "不符合项数量,不符合项目占比标题列表",
           "items": {
-            "originalRef": "审核类型标题",
-            "$ref": "#/definitions/审核类型标题"
+            "$ref": "#/definitions/审核类型标题",
+            "originalRef": "审核类型标题"
           }
         },
         "itemList": {
           "type": "array",
           "description": "部门统计数量",
           "items": {
-            "originalRef": "生产部门统计项目",
-            "$ref": "#/definitions/生产部门统计项目"
+            "$ref": "#/definitions/生产部门统计项目",
+            "originalRef": "生产部门统计项目"
           }
         }
       },

@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«销售订单明细»»",
-              "$ref": "#/definitions/JSONResult«List«销售订单明细»»"
+              "$ref": "#/definitions/JSONResult«List«销售订单明细»»",
+              "originalRef": "JSONResult«List«销售订单明细»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "销售订单明细",
-            "$ref": "#/definitions/销售订单明细"
+            "$ref": "#/definitions/销售订单明细",
+            "originalRef": "销售订单明细"
           }
         },
         "ts": {

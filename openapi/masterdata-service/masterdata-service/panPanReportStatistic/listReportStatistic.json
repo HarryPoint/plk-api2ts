@@ -28,8 +28,8 @@
             "description": "reportStatisticQuery",
             "required": true,
             "schema": {
-              "originalRef": "盼盼上报统计查询对象",
-              "$ref": "#/definitions/盼盼上报统计查询对象"
+              "$ref": "#/definitions/盼盼上报统计查询对象",
+              "originalRef": "盼盼上报统计查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«盼盼上报统计响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«盼盼上报统计响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«盼盼上报统计响应对象»»",
+              "originalRef": "JSONResult«List«盼盼上报统计响应对象»»"
             }
           },
           "201": {
@@ -113,8 +113,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "盼盼上报统计响应对象",
-            "$ref": "#/definitions/盼盼上报统计响应对象"
+            "$ref": "#/definitions/盼盼上报统计响应对象",
+            "originalRef": "盼盼上报统计响应对象"
           }
         },
         "ts": {

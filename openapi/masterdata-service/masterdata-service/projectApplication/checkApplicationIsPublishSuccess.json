@@ -28,8 +28,8 @@
             "description": "checkRequest",
             "required": true,
             "schema": {
-              "originalRef": "应用是否发布成功校验请求对象",
-              "$ref": "#/definitions/应用是否发布成功校验请求对象"
+              "$ref": "#/definitions/应用是否发布成功校验请求对象",
+              "originalRef": "应用是否发布成功校验请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»_1",
-              "$ref": "#/definitions/JSONResult«string»_1"
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
             }
           },
           "201": {

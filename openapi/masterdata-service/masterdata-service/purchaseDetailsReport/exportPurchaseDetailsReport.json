@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "ExportPurchaseDetailsReport",
-              "$ref": "#/definitions/ExportPurchaseDetailsReport"
+              "$ref": "#/definitions/ExportPurchaseDetailsReport",
+              "originalRef": "ExportPurchaseDetailsReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {

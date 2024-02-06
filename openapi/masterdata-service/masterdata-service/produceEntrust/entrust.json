@@ -36,8 +36,8 @@
             "description": "entrust",
             "required": true,
             "schema": {
-              "originalRef": "生产委外加工提交DTO",
-              "$ref": "#/definitions/生产委外加工提交DTO"
+              "$ref": "#/definitions/生产委外加工提交DTO",
+              "originalRef": "生产委外加工提交DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

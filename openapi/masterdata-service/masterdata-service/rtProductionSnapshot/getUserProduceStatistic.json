@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "用户生产统计搜索VO",
-              "$ref": "#/definitions/用户生产统计搜索VO"
+              "$ref": "#/definitions/用户生产统计搜索VO",
+              "originalRef": "用户生产统计搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«用户生产统计返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«用户生产统计返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«用户生产统计返回VO»»",
+              "originalRef": "JSONResult«List«用户生产统计返回VO»»"
             }
           },
           "201": {
@@ -135,8 +135,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "用户生产统计返回VO",
-            "$ref": "#/definitions/用户生产统计返回VO"
+            "$ref": "#/definitions/用户生产统计返回VO",
+            "originalRef": "用户生产统计返回VO"
           }
         },
         "ts": {

@@ -36,8 +36,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "生产订单搜索VO",
-              "$ref": "#/definitions/生产订单搜索VO"
+              "$ref": "#/definitions/生产订单搜索VO",
+              "originalRef": "生产订单搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "produceOrderCode": {

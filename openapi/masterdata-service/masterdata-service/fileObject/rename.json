@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "FileObjectRenameRequestDTO",
-              "$ref": "#/definitions/FileObjectRenameRequestDTO"
+              "$ref": "#/definitions/FileObjectRenameRequestDTO",
+              "originalRef": "FileObjectRenameRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»_1",
-              "$ref": "#/definitions/JSONResult«string»_1"
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
             }
           },
           "201": {

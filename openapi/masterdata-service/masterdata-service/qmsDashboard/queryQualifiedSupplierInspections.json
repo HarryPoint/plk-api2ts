@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "qms大屏时间区间请求",
-              "$ref": "#/definitions/qms大屏时间区间请求"
+              "$ref": "#/definitions/qms大屏时间区间请求",
+              "originalRef": "qms大屏时间区间请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«供应商交检合格率查询响应»»",
-              "$ref": "#/definitions/JSONResult«List«供应商交检合格率查询响应»»"
+              "$ref": "#/definitions/JSONResult«List«供应商交检合格率查询响应»»",
+              "originalRef": "JSONResult«List«供应商交检合格率查询响应»»"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "供应商交检合格率查询响应",
-            "$ref": "#/definitions/供应商交检合格率查询响应"
+            "$ref": "#/definitions/供应商交检合格率查询响应",
+            "originalRef": "供应商交检合格率查询响应"
           }
         },
         "ts": {

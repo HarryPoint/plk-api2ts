@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "NonConformanceTrendReportRequestDTO",
-              "$ref": "#/definitions/NonConformanceTrendReportRequestDTO"
+              "$ref": "#/definitions/NonConformanceTrendReportRequestDTO",
+              "originalRef": "NonConformanceTrendReportRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«不符合项目趋势报告»",
-              "$ref": "#/definitions/JSONResult«不符合项目趋势报告»"
+              "$ref": "#/definitions/JSONResult«不符合项目趋势报告»",
+              "originalRef": "JSONResult«不符合项目趋势报告»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "不符合项目趋势报告",
-          "$ref": "#/definitions/不符合项目趋势报告"
+          "$ref": "#/definitions/不符合项目趋势报告",
+          "originalRef": "不符合项目趋势报告"
         },
         "ts": {
           "type": "integer",
@@ -105,18 +105,18 @@
       "properties": {
         "internalAudit": {
           "description": "内审",
-          "originalRef": "不符合项查询响应",
-          "$ref": "#/definitions/不符合项查询响应"
+          "$ref": "#/definitions/不符合项查询响应",
+          "originalRef": "不符合项查询响应"
         },
         "externalAudit": {
           "description": "外审",
-          "originalRef": "不符合项查询响应",
-          "$ref": "#/definitions/不符合项查询响应"
+          "$ref": "#/definitions/不符合项查询响应",
+          "originalRef": "不符合项查询响应"
         },
         "specialAudit": {
           "description": "专审",
-          "originalRef": "不符合项查询响应",
-          "$ref": "#/definitions/不符合项查询响应"
+          "$ref": "#/definitions/不符合项查询响应",
+          "originalRef": "不符合项查询响应"
         }
       },
       "title": "不符合项目趋势报告"
@@ -127,8 +127,8 @@
         "clauseNoList": {
           "type": "array",
           "items": {
-            "originalRef": "条款号查询响应",
-            "$ref": "#/definitions/条款号查询响应"
+            "$ref": "#/definitions/条款号查询响应",
+            "originalRef": "条款号查询响应"
           }
         },
         "lastYear": {

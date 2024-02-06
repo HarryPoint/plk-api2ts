@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«设备数采方案参数关联信息返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«设备数采方案参数关联信息返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«设备数采方案参数关联信息返回VO»»",
+              "originalRef": "JSONResult«List«设备数采方案参数关联信息返回VO»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "设备数采方案参数关联信息返回VO",
-            "$ref": "#/definitions/设备数采方案参数关联信息返回VO"
+            "$ref": "#/definitions/设备数采方案参数关联信息返回VO",
+            "originalRef": "设备数采方案参数关联信息返回VO"
           }
         },
         "ts": {
@@ -175,8 +175,8 @@
           "type": "array",
           "description": "统计范围配置项集",
           "items": {
-            "originalRef": "设备数采方案参数预警返回VO",
-            "$ref": "#/definitions/设备数采方案参数预警返回VO"
+            "$ref": "#/definitions/设备数采方案参数预警返回VO",
+            "originalRef": "设备数采方案参数预警返回VO"
           }
         }
       },

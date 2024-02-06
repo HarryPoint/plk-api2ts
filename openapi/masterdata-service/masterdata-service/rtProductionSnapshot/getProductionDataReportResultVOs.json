@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "产出数据报表搜索VO",
-              "$ref": "#/definitions/产出数据报表搜索VO"
+              "$ref": "#/definitions/产出数据报表搜索VO",
+              "originalRef": "产出数据报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«产出数据统计返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«产出数据统计返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«产出数据统计返回VO»»",
+              "originalRef": "JSONResult«List«产出数据统计返回VO»»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "userIds": {
@@ -158,8 +158,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "产出数据统计返回VO",
-            "$ref": "#/definitions/产出数据统计返回VO"
+            "$ref": "#/definitions/产出数据统计返回VO",
+            "originalRef": "产出数据统计返回VO"
           }
         },
         "ts": {
@@ -195,8 +195,8 @@
           "type": "array",
           "description": "工序产出信息集",
           "items": {
-            "originalRef": "工序产出统计报表返回VO",
-            "$ref": "#/definitions/工序产出统计报表返回VO"
+            "$ref": "#/definitions/工序产出统计报表返回VO",
+            "originalRef": "工序产出统计报表返回VO"
           }
         }
       },

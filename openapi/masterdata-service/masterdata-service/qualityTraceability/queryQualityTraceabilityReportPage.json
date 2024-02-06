@@ -28,8 +28,8 @@
             "description": "qualityTraceabilityReportRequest",
             "required": true,
             "schema": {
-              "originalRef": "质量追溯报表查询DTO",
-              "$ref": "#/definitions/质量追溯报表查询DTO"
+              "$ref": "#/definitions/质量追溯报表查询DTO",
+              "originalRef": "质量追溯报表查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«质量追溯报表响应DTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«质量追溯报表响应DTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«质量追溯报表响应DTO»»",
+              "originalRef": "JSONResult«分页信息«质量追溯报表响应DTO»»"
             }
           },
           "201": {
@@ -68,8 +68,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         },
         "pageNo": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         }
       },
@@ -184,8 +184,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«质量追溯报表响应DTO»",
-          "$ref": "#/definitions/分页信息«质量追溯报表响应DTO»"
+          "$ref": "#/definitions/分页信息«质量追溯报表响应DTO»",
+          "originalRef": "分页信息«质量追溯报表响应DTO»"
         },
         "ts": {
           "type": "integer",
@@ -223,8 +223,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "质量追溯报表响应DTO",
-            "$ref": "#/definitions/质量追溯报表响应DTO"
+            "$ref": "#/definitions/质量追溯报表响应DTO",
+            "originalRef": "质量追溯报表响应DTO"
           }
         },
         "lastPage": {
@@ -333,8 +333,8 @@
           "type": "array",
           "description": "进料BOM消耗确认",
           "items": {
-            "originalRef": "质量追溯进料BOM消耗确认报表响应DTO",
-            "$ref": "#/definitions/质量追溯进料BOM消耗确认报表响应DTO"
+            "$ref": "#/definitions/质量追溯进料BOM消耗确认报表响应DTO",
+            "originalRef": "质量追溯进料BOM消耗确认报表响应DTO"
           }
         },
         "produceTaskNo": {

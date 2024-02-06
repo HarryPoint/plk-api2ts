@@ -28,8 +28,8 @@
             "description": "savaRequest",
             "required": true,
             "schema": {
-              "originalRef": "产能保存DTO",
-              "$ref": "#/definitions/产能保存DTO"
+              "$ref": "#/definitions/产能保存DTO",
+              "originalRef": "产能保存DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«产能响应对象»",
-              "$ref": "#/definitions/JSONResult«产能响应对象»"
+              "$ref": "#/definitions/JSONResult«产能响应对象»",
+              "originalRef": "JSONResult«产能响应对象»"
             }
           },
           "201": {
@@ -146,8 +146,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "产能响应对象",
-          "$ref": "#/definitions/产能响应对象"
+          "$ref": "#/definitions/产能响应对象",
+          "originalRef": "产能响应对象"
         },
         "ts": {
           "type": "integer",
@@ -178,16 +178,16 @@
           "type": "array",
           "description": "关联工序",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "materialRp": {
           "type": "array",
           "description": "关联物料",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "readyTime": {

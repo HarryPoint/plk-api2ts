@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ProduceTechnologyLaborCostResponseDTO»",
-              "$ref": "#/definitions/JSONResult«ProduceTechnologyLaborCostResponseDTO»"
+              "$ref": "#/definitions/JSONResult«ProduceTechnologyLaborCostResponseDTO»",
+              "originalRef": "JSONResult«ProduceTechnologyLaborCostResponseDTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ProduceTechnologyLaborCostResponseDTO",
-          "$ref": "#/definitions/ProduceTechnologyLaborCostResponseDTO"
+          "$ref": "#/definitions/ProduceTechnologyLaborCostResponseDTO",
+          "originalRef": "ProduceTechnologyLaborCostResponseDTO"
         },
         "ts": {
           "type": "integer",

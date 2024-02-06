@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«bigdecimal»",
-              "$ref": "#/definitions/JSONResult«bigdecimal»"
+              "$ref": "#/definitions/JSONResult«bigdecimal»",
+              "originalRef": "JSONResult«bigdecimal»"
             }
           },
           "401": {

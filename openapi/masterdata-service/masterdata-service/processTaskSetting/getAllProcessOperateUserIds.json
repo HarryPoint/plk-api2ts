@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "工序操作人员id搜索VO",
-              "$ref": "#/definitions/工序操作人员id搜索VO"
+              "$ref": "#/definitions/工序操作人员id搜索VO",
+              "originalRef": "工序操作人员id搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«long»»",
-              "$ref": "#/definitions/JSONResult«List«long»»"
+              "$ref": "#/definitions/JSONResult«List«long»»",
+              "originalRef": "JSONResult«List«long»»"
             }
           },
           "201": {
@@ -94,8 +94,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "userType": {

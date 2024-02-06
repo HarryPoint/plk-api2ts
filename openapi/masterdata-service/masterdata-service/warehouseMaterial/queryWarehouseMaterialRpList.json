@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "originalRef": "WarehouseMaterialRpQueryRequestDTO",
-                "$ref": "#/definitions/WarehouseMaterialRpQueryRequestDTO"
+                "$ref": "#/definitions/WarehouseMaterialRpQueryRequestDTO",
+                "originalRef": "WarehouseMaterialRpQueryRequestDTO"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»",
+              "originalRef": "JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "WarehouseMaterialRpQueryResponseDTO",
-            "$ref": "#/definitions/WarehouseMaterialRpQueryResponseDTO"
+            "$ref": "#/definitions/WarehouseMaterialRpQueryResponseDTO",
+            "originalRef": "WarehouseMaterialRpQueryResponseDTO"
           }
         },
         "ts": {

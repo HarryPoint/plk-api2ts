@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "工单日志搜索VO",
-              "$ref": "#/definitions/工单日志搜索VO"
+              "$ref": "#/definitions/工单日志搜索VO",
+              "originalRef": "工单日志搜索VO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«工单日志返回VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«工单日志返回VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«工单日志返回VO»»",
+              "originalRef": "JSONResult«分页信息«工单日志返回VO»»"
             }
           },
           "201": {
@@ -99,8 +99,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "id": {
@@ -324,8 +324,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«工单日志返回VO»",
-          "$ref": "#/definitions/分页信息«工单日志返回VO»"
+          "$ref": "#/definitions/分页信息«工单日志返回VO»",
+          "originalRef": "分页信息«工单日志返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -363,8 +363,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "工单日志返回VO",
-            "$ref": "#/definitions/工单日志返回VO"
+            "$ref": "#/definitions/工单日志返回VO",
+            "originalRef": "工单日志返回VO"
           }
         },
         "lastPage": {
@@ -444,16 +444,16 @@
           "type": "array",
           "description": "抄送人",
           "items": {
-            "originalRef": "待办抄送人VO",
-            "$ref": "#/definitions/待办抄送人VO"
+            "$ref": "#/definitions/待办抄送人VO",
+            "originalRef": "待办抄送人VO"
           }
         },
         "handleUsers": {
           "type": "array",
           "description": "执行人",
           "items": {
-            "originalRef": "待办抄送人VO_1",
-            "$ref": "#/definitions/待办抄送人VO_1"
+            "$ref": "#/definitions/待办抄送人VO_1",
+            "originalRef": "待办抄送人VO_1"
           }
         },
         "flowPathTaskId": {
@@ -551,8 +551,8 @@
           "type": "array",
           "description": "下个节点执行人列表",
           "items": {
-            "originalRef": "下个节点执行人",
-            "$ref": "#/definitions/下个节点执行人"
+            "$ref": "#/definitions/下个节点执行人",
+            "originalRef": "下个节点执行人"
           }
         },
         "transferToUserId": {

@@ -28,8 +28,8 @@
             "description": "specificMaterialNodeModifyRequest",
             "required": true,
             "schema": {
-              "originalRef": "标准工艺具体物料节点修改请求对象",
-              "$ref": "#/definitions/标准工艺具体物料节点修改请求对象"
+              "$ref": "#/definitions/标准工艺具体物料节点修改请求对象",
+              "originalRef": "标准工艺具体物料节点修改请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«物料BOM编辑响应对象»",
-              "$ref": "#/definitions/JSONResult«物料BOM编辑响应对象»"
+              "$ref": "#/definitions/JSONResult«物料BOM编辑响应对象»",
+              "originalRef": "JSONResult«物料BOM编辑响应对象»"
             }
           },
           "201": {
@@ -106,8 +106,8 @@
           "type": "array",
           "description": "BOM明细",
           "items": {
-            "originalRef": "标准工艺具体物料节点修改bom详情请求对象",
-            "$ref": "#/definitions/标准工艺具体物料节点修改bom详情请求对象"
+            "$ref": "#/definitions/标准工艺具体物料节点修改bom详情请求对象",
+            "originalRef": "标准工艺具体物料节点修改bom详情请求对象"
           }
         }
       },
@@ -155,8 +155,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "物料BOM编辑响应对象",
-          "$ref": "#/definitions/物料BOM编辑响应对象"
+          "$ref": "#/definitions/物料BOM编辑响应对象",
+          "originalRef": "物料BOM编辑响应对象"
         },
         "ts": {
           "type": "integer",
@@ -183,8 +183,8 @@
           "type": "array",
           "description": "子物料列表",
           "items": {
-            "originalRef": "物料bom详情响应对象",
-            "$ref": "#/definitions/物料bom详情响应对象"
+            "$ref": "#/definitions/物料bom详情响应对象",
+            "originalRef": "物料bom详情响应对象"
           }
         }
       },

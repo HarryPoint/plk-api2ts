@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«导出信息«宝晶应收账款分析报表表格返回VO»»",
-              "$ref": "#/definitions/JSONResult«导出信息«宝晶应收账款分析报表表格返回VO»»"
+              "$ref": "#/definitions/JSONResult«导出信息«宝晶应收账款分析报表表格返回VO»»",
+              "originalRef": "JSONResult«导出信息«宝晶应收账款分析报表表格返回VO»»"
             }
           },
           "401": {
@@ -67,8 +67,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "导出信息«宝晶应收账款分析报表表格返回VO»",
-          "$ref": "#/definitions/导出信息«宝晶应收账款分析报表表格返回VO»"
+          "$ref": "#/definitions/导出信息«宝晶应收账款分析报表表格返回VO»",
+          "originalRef": "导出信息«宝晶应收账款分析报表表格返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "数据",
           "items": {
-            "originalRef": "宝晶应收账款分析报表表格返回VO",
-            "$ref": "#/definitions/宝晶应收账款分析报表表格返回VO"
+            "$ref": "#/definitions/宝晶应收账款分析报表表格返回VO",
+            "originalRef": "宝晶应收账款分析报表表格返回VO"
           }
         }
       },

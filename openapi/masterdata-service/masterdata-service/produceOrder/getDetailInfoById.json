@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产订单详情VO»",
-              "$ref": "#/definitions/JSONResult«生产订单详情VO»"
+              "$ref": "#/definitions/JSONResult«生产订单详情VO»",
+              "originalRef": "JSONResult«生产订单详情VO»"
             }
           },
           "401": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产订单详情VO",
-          "$ref": "#/definitions/生产订单详情VO"
+          "$ref": "#/definitions/生产订单详情VO",
+          "originalRef": "生产订单详情VO"
         },
         "ts": {
           "type": "integer",
@@ -102,29 +102,29 @@
           "type": "array",
           "description": "排产信息",
           "items": {
-            "originalRef": "生产订单详情 - 排产VO",
-            "$ref": "#/definitions/生产订单详情 - 排产VO"
+            "$ref": "#/definitions/生产订单详情 - 排产VO",
+            "originalRef": "生产订单详情 - 排产VO"
           }
         },
         "materialInfo": {
           "description": "物料信息",
-          "originalRef": "生产订单详情 - 物料信息VO",
-          "$ref": "#/definitions/生产订单详情 - 物料信息VO"
+          "$ref": "#/definitions/生产订单详情 - 物料信息VO",
+          "originalRef": "生产订单详情 - 物料信息VO"
         },
         "childMaterialList": {
           "type": "array",
           "description": "子物料生产信息",
           "items": {
-            "originalRef": "生产订单详情 - 物料信息VO",
-            "$ref": "#/definitions/生产订单详情 - 物料信息VO"
+            "$ref": "#/definitions/生产订单详情 - 物料信息VO",
+            "originalRef": "生产订单详情 - 物料信息VO"
           }
         },
         "produceOrderSupplementList": {
           "type": "array",
           "description": "报废补单明细",
           "items": {
-            "originalRef": "生产订单详情 - 补单VO",
-            "$ref": "#/definitions/生产订单详情 - 补单VO"
+            "$ref": "#/definitions/生产订单详情 - 补单VO",
+            "originalRef": "生产订单详情 - 补单VO"
           }
         }
       },
@@ -305,8 +305,8 @@
           "type": "array",
           "description": "子物料信息",
           "items": {
-            "originalRef": "生产订单详情 - 物料信息VO",
-            "$ref": "#/definitions/生产订单详情 - 物料信息VO"
+            "$ref": "#/definitions/生产订单详情 - 物料信息VO",
+            "originalRef": "生产订单详情 - 物料信息VO"
           }
         },
         "produceTechnologyId": {

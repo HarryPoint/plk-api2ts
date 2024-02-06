@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ProduceTechnologyRoutingInfoResponseDTO»",
-              "$ref": "#/definitions/JSONResult«ProduceTechnologyRoutingInfoResponseDTO»"
+              "$ref": "#/definitions/JSONResult«ProduceTechnologyRoutingInfoResponseDTO»",
+              "originalRef": "JSONResult«ProduceTechnologyRoutingInfoResponseDTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ProduceTechnologyRoutingInfoResponseDTO",
-          "$ref": "#/definitions/ProduceTechnologyRoutingInfoResponseDTO"
+          "$ref": "#/definitions/ProduceTechnologyRoutingInfoResponseDTO",
+          "originalRef": "ProduceTechnologyRoutingInfoResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -172,8 +172,8 @@
           "type": "array",
           "description": "生产工艺工艺路径步骤",
           "items": {
-            "originalRef": "ProduceTechnologyRoutingStepResponseDTO",
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepResponseDTO"
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepResponseDTO",
+            "originalRef": "ProduceTechnologyRoutingStepResponseDTO"
           }
         }
       },
@@ -322,8 +322,8 @@
           "type": "array",
           "description": "物料消耗",
           "items": {
-            "originalRef": "ProduceTechnologyRoutingStepBomDetailResponseDTO",
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepBomDetailResponseDTO"
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepBomDetailResponseDTO",
+            "originalRef": "ProduceTechnologyRoutingStepBomDetailResponseDTO"
           }
         }
       },

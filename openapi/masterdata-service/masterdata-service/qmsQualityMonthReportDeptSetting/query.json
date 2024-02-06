@@ -28,8 +28,8 @@
             "description": "deptSettingEditRequest",
             "required": true,
             "schema": {
-              "originalRef": "质量月报部门设置查询DTO",
-              "$ref": "#/definitions/质量月报部门设置查询DTO"
+              "$ref": "#/definitions/质量月报部门设置查询DTO",
+              "originalRef": "质量月报部门设置查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«质量月报部门设置响应DTO»",
-              "$ref": "#/definitions/JSONResult«质量月报部门设置响应DTO»"
+              "$ref": "#/definitions/JSONResult«质量月报部门设置响应DTO»",
+              "originalRef": "JSONResult«质量月报部门设置响应DTO»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "质量月报部门设置响应DTO",
-          "$ref": "#/definitions/质量月报部门设置响应DTO"
+          "$ref": "#/definitions/质量月报部门设置响应DTO",
+          "originalRef": "质量月报部门设置响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -130,8 +130,8 @@
           "type": "array",
           "description": "部门集合",
           "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
+            "$ref": "#/definitions/Id Code Name 通用传输对象",
+            "originalRef": "Id Code Name 通用传输对象"
           }
         }
       },

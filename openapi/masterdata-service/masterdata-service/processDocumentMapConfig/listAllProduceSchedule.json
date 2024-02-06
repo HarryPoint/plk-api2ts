@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«生产排期VO»»",
-              "$ref": "#/definitions/JSONResult«List«生产排期VO»»"
+              "$ref": "#/definitions/JSONResult«List«生产排期VO»»",
+              "originalRef": "JSONResult«List«生产排期VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "生产排期VO",
-            "$ref": "#/definitions/生产排期VO"
+            "$ref": "#/definitions/生产排期VO",
+            "originalRef": "生产排期VO"
           }
         },
         "ts": {

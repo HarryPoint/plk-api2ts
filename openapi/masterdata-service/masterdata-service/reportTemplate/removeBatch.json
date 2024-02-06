@@ -28,8 +28,8 @@
             "description": "removeRequest",
             "required": true,
             "schema": {
-              "originalRef": "ReportTemplateRemoveRequestDTO",
-              "$ref": "#/definitions/ReportTemplateRemoveRequestDTO"
+              "$ref": "#/definitions/ReportTemplateRemoveRequestDTO",
+              "originalRef": "ReportTemplateRemoveRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»_1",
-              "$ref": "#/definitions/JSONResult«string»_1"
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
             }
           },
           "201": {

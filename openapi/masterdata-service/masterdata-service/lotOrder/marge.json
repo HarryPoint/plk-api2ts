@@ -36,8 +36,8 @@
             "description": "lotOrderMarge",
             "required": true,
             "schema": {
-              "originalRef": "批次订单合并DTO",
-              "$ref": "#/definitions/批次订单合并DTO"
+              "$ref": "#/definitions/批次订单合并DTO",
+              "originalRef": "批次订单合并DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«Map«long,生产计划生产订单关联VO»»",
-              "$ref": "#/definitions/JSONResult«Map«long,生产计划生产订单关联VO»»"
+              "$ref": "#/definitions/JSONResult«Map«long,生产计划生产订单关联VO»»",
+              "originalRef": "JSONResult«Map«long,生产计划生产订单关联VO»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "object",
           "description": "响应结果",
           "additionalProperties": {
-            "originalRef": "生产计划生产订单关联VO",
-            "$ref": "#/definitions/生产计划生产订单关联VO"
+            "$ref": "#/definitions/生产计划生产订单关联VO",
+            "originalRef": "生产计划生产订单关联VO"
           }
         },
         "ts": {
@@ -165,8 +165,8 @@
         },
         "producePlan": {
           "description": "生产计划",
-          "originalRef": "生产计划VO",
-          "$ref": "#/definitions/生产计划VO"
+          "$ref": "#/definitions/生产计划VO",
+          "originalRef": "生产计划VO"
         },
         "produceOrderId": {
           "type": "integer",

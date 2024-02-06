@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目应用返回对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目应用返回对象»»"
+              "$ref": "#/definitions/JSONResult«List«项目应用返回对象»»",
+              "originalRef": "JSONResult«List«项目应用返回对象»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目应用返回对象",
-            "$ref": "#/definitions/项目应用返回对象"
+            "$ref": "#/definitions/项目应用返回对象",
+            "originalRef": "项目应用返回对象"
           }
         },
         "ts": {

@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "开放api请求搜索VO",
-              "$ref": "#/definitions/开放api请求搜索VO"
+              "$ref": "#/definitions/开放api请求搜索VO",
+              "originalRef": "开放api请求搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«开放api请求日志返回VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«开放api请求日志返回VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«开放api请求日志返回VO»»",
+              "originalRef": "JSONResult«分页信息«开放api请求日志返回VO»»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         }
       },
@@ -124,8 +124,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«开放api请求日志返回VO»",
-          "$ref": "#/definitions/分页信息«开放api请求日志返回VO»"
+          "$ref": "#/definitions/分页信息«开放api请求日志返回VO»",
+          "originalRef": "分页信息«开放api请求日志返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -163,8 +163,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "开放api请求日志返回VO",
-            "$ref": "#/definitions/开放api请求日志返回VO"
+            "$ref": "#/definitions/开放api请求日志返回VO",
+            "originalRef": "开放api请求日志返回VO"
           }
         },
         "lastPage": {

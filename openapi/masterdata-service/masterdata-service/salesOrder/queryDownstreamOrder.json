@@ -28,8 +28,8 @@
             "description": "idsDTO",
             "required": true,
             "schema": {
-              "originalRef": "id集合信息",
-              "$ref": "#/definitions/id集合信息"
+              "$ref": "#/definitions/id集合信息",
+              "originalRef": "id集合信息"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«关联单据响应»»",
-              "$ref": "#/definitions/JSONResult«List«关联单据响应»»"
+              "$ref": "#/definitions/JSONResult«List«关联单据响应»»",
+              "originalRef": "JSONResult«List«关联单据响应»»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "关联单据响应",
-            "$ref": "#/definitions/关联单据响应"
+            "$ref": "#/definitions/关联单据响应",
+            "originalRef": "关联单据响应"
           }
         },
         "ts": {

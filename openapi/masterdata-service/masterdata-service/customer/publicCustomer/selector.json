@@ -28,8 +28,8 @@
             "description": "input",
             "required": true,
             "schema": {
-              "originalRef": "分页_1",
-              "$ref": "#/definitions/分页_1"
+              "$ref": "#/definitions/分页_1",
+              "originalRef": "分页_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«Id，名称，编号VO»»",
-              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»"
+              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»",
+              "originalRef": "JSONResult«List«Id，名称，编号VO»»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "name": {
@@ -142,8 +142,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "Id，名称，编号VO",
-            "$ref": "#/definitions/Id，名称，编号VO"
+            "$ref": "#/definitions/Id，名称，编号VO",
+            "originalRef": "Id，名称，编号VO"
           }
         },
         "ts": {

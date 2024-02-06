@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«生产成本分配动态表头响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«生产成本分配动态表头响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«生产成本分配动态表头响应对象»»",
+              "originalRef": "JSONResult«List«生产成本分配动态表头响应对象»»"
             }
           },
           "401": {
@@ -61,8 +61,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "生产成本分配动态表头响应对象",
-            "$ref": "#/definitions/生产成本分配动态表头响应对象"
+            "$ref": "#/definitions/生产成本分配动态表头响应对象",
+            "originalRef": "生产成本分配动态表头响应对象"
           }
         },
         "ts": {

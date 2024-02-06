@@ -28,8 +28,8 @@
             "description": "add",
             "required": true,
             "schema": {
-              "originalRef": "员工超管新增请求DTO",
-              "$ref": "#/definitions/员工超管新增请求DTO"
+              "$ref": "#/definitions/员工超管新增请求DTO",
+              "originalRef": "员工超管新增请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {

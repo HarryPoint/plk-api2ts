@@ -28,8 +28,8 @@
             "description": "canvasSnapshotSaveRequest",
             "required": true,
             "schema": {
-              "originalRef": "工艺画布快照获取请求DTO_1",
-              "$ref": "#/definitions/工艺画布快照获取请求DTO_1"
+              "$ref": "#/definitions/工艺画布快照获取请求DTO_1",
+              "originalRef": "工艺画布快照获取请求DTO_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

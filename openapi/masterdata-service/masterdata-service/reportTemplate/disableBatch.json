@@ -28,8 +28,8 @@
             "description": "disableRequest",
             "required": true,
             "schema": {
-              "originalRef": "ReportTemplateDisableRequestDTO",
-              "$ref": "#/definitions/ReportTemplateDisableRequestDTO"
+              "$ref": "#/definitions/ReportTemplateDisableRequestDTO",
+              "originalRef": "ReportTemplateDisableRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»_1",
-              "$ref": "#/definitions/JSONResult«string»_1"
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
             }
           },
           "201": {

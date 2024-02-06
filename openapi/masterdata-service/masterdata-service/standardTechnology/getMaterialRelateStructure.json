@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«具体物料数据结构响应对象»",
-              "$ref": "#/definitions/JSONResult«具体物料数据结构响应对象»"
+              "$ref": "#/definitions/JSONResult«具体物料数据结构响应对象»",
+              "originalRef": "JSONResult«具体物料数据结构响应对象»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "具体物料数据结构响应对象_1",
-          "$ref": "#/definitions/具体物料数据结构响应对象_1"
+          "$ref": "#/definitions/具体物料数据结构响应对象_1",
+          "originalRef": "具体物料数据结构响应对象_1"
         },
         "ts": {
           "type": "integer",
@@ -107,13 +107,13 @@
         },
         "materialBomStructure": {
           "description": "物料BOM",
-          "originalRef": "具体物料数据结构响应对象",
-          "$ref": "#/definitions/具体物料数据结构响应对象"
+          "$ref": "#/definitions/具体物料数据结构响应对象",
+          "originalRef": "具体物料数据结构响应对象"
         },
         "materialRoutingStructure": {
           "description": "工艺路径",
-          "originalRef": "具体物料数关联工艺路径数据结构响应对象",
-          "$ref": "#/definitions/具体物料数关联工艺路径数据结构响应对象"
+          "$ref": "#/definitions/具体物料数关联工艺路径数据结构响应对象",
+          "originalRef": "具体物料数关联工艺路径数据结构响应对象"
         }
       },
       "title": "具体物料数据结构响应对象_1"
@@ -142,8 +142,8 @@
           "type": "array",
           "description": "Bom物料明细",
           "items": {
-            "originalRef": "标准工艺具体物料bom详情对象",
-            "$ref": "#/definitions/标准工艺具体物料bom详情对象"
+            "$ref": "#/definitions/标准工艺具体物料bom详情对象",
+            "originalRef": "标准工艺具体物料bom详情对象"
           }
         }
       },
@@ -184,8 +184,8 @@
         },
         "childMaterialStructure": {
           "description": "子物料信息",
-          "originalRef": "具体物料数据结构响应对象_1",
-          "$ref": "#/definitions/具体物料数据结构响应对象_1"
+          "$ref": "#/definitions/具体物料数据结构响应对象_1",
+          "originalRef": "具体物料数据结构响应对象_1"
         }
       },
       "title": "标准工艺具体物料bom详情对象"
@@ -210,8 +210,8 @@
           "type": "array",
           "description": "工艺路径步骤集合",
           "items": {
-            "originalRef": "具体物料数关联工艺路径步骤数据结构响应对象",
-            "$ref": "#/definitions/具体物料数关联工艺路径步骤数据结构响应对象"
+            "$ref": "#/definitions/具体物料数关联工艺路径步骤数据结构响应对象",
+            "originalRef": "具体物料数关联工艺路径步骤数据结构响应对象"
           }
         }
       },
@@ -240,23 +240,23 @@
         },
         "processSheet": {
           "description": "工艺卡",
-          "originalRef": "标准工艺具体工艺卡详情对象_1",
-          "$ref": "#/definitions/标准工艺具体工艺卡详情对象_1"
+          "$ref": "#/definitions/标准工艺具体工艺卡详情对象_1",
+          "originalRef": "标准工艺具体工艺卡详情对象_1"
         },
         "keyParameter": {
           "description": "关键参数",
-          "originalRef": "关键参数信息响应对象",
-          "$ref": "#/definitions/关键参数信息响应对象"
+          "$ref": "#/definitions/关键参数信息响应对象",
+          "originalRef": "关键参数信息响应对象"
         },
         "capacity": {
           "description": "产能",
-          "originalRef": "产能响应对象",
-          "$ref": "#/definitions/产能响应对象"
+          "$ref": "#/definitions/产能响应对象",
+          "originalRef": "产能响应对象"
         },
         "laborCost": {
           "description": "工费",
-          "originalRef": "工费响应对象",
-          "$ref": "#/definitions/工费响应对象"
+          "$ref": "#/definitions/工费响应对象",
+          "originalRef": "工费响应对象"
         },
         "bomConsumeSureType": {
           "type": "string",
@@ -292,8 +292,8 @@
           "type": "array",
           "description": "工艺卡明细",
           "items": {
-            "originalRef": "标准工艺具体工艺卡详情对象",
-            "$ref": "#/definitions/标准工艺具体工艺卡详情对象"
+            "$ref": "#/definitions/标准工艺具体工艺卡详情对象",
+            "originalRef": "标准工艺具体工艺卡详情对象"
           }
         }
       },
@@ -417,24 +417,24 @@
           "type": "array",
           "description": "关联工序",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "materialRp": {
           "type": "array",
           "description": "关联物料",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "parameterDetailList": {
           "type": "array",
           "description": "关键参数集合",
           "items": {
-            "originalRef": "关键参数信息详情响应对象",
-            "$ref": "#/definitions/关键参数信息详情响应对象"
+            "$ref": "#/definitions/关键参数信息详情响应对象",
+            "originalRef": "关键参数信息详情响应对象"
           }
         }
       },
@@ -552,16 +552,16 @@
           "type": "array",
           "description": "关联工序",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "materialRp": {
           "type": "array",
           "description": "关联物料",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "readyTime": {
@@ -617,16 +617,16 @@
           "type": "array",
           "description": "关联工序",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "materialRp": {
           "type": "array",
           "description": "关联物料",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "producePrice": {

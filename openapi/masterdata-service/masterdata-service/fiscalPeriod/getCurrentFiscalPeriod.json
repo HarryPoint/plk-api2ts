@@ -25,8 +25,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«期间响应对象»",
-              "$ref": "#/definitions/JSONResult«期间响应对象»"
+              "$ref": "#/definitions/JSONResult«期间响应对象»",
+              "originalRef": "JSONResult«期间响应对象»"
             }
           },
           "201": {
@@ -65,8 +65,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "期间响应对象",
-          "$ref": "#/definitions/期间响应对象"
+          "$ref": "#/definitions/期间响应对象",
+          "originalRef": "期间响应对象"
         },
         "ts": {
           "type": "integer",

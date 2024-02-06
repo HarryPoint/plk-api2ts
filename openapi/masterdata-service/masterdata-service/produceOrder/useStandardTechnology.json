@@ -28,8 +28,8 @@
             "description": "useRequest",
             "required": true,
             "schema": {
-              "originalRef": "标准工艺使用请求",
-              "$ref": "#/definitions/标准工艺使用请求"
+              "$ref": "#/definitions/标准工艺使用请求",
+              "originalRef": "标准工艺使用请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -68,8 +68,8 @@
           "type": "array",
           "description": "生产订单和标准工艺关联关系列表",
           "items": {
-            "originalRef": "生产订单和标准工艺关系请求",
-            "$ref": "#/definitions/生产订单和标准工艺关系请求"
+            "$ref": "#/definitions/生产订单和标准工艺关系请求",
+            "originalRef": "生产订单和标准工艺关系请求"
           }
         }
       },
@@ -92,8 +92,8 @@
           "type": "array",
           "description": "子物料生产订单配置请求",
           "items": {
-            "originalRef": "子生产订单配置请求",
-            "$ref": "#/definitions/子生产订单配置请求"
+            "$ref": "#/definitions/子生产订单配置请求",
+            "originalRef": "子生产订单配置请求"
           }
         },
         "notProduceChildMaterialStandardTechnologyNodeIdList": {
@@ -147,8 +147,8 @@
           "type": "array",
           "description": "批次信息列表",
           "items": {
-            "originalRef": "批次编辑DTO",
-            "$ref": "#/definitions/批次编辑DTO"
+            "$ref": "#/definitions/批次编辑DTO",
+            "originalRef": "批次编辑DTO"
           }
         }
       },

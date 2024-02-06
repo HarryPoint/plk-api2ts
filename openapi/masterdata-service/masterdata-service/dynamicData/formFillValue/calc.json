@@ -36,8 +36,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "表单填充请求",
-              "$ref": "#/definitions/表单填充请求"
+              "$ref": "#/definitions/表单填充请求",
+              "originalRef": "表单填充请求"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«JSONObject»»",
-              "$ref": "#/definitions/JSONResult«List«JSONObject»»"
+              "$ref": "#/definitions/JSONResult«List«JSONObject»»",
+              "originalRef": "JSONResult«List«JSONObject»»"
             }
           },
           "201": {
@@ -80,8 +80,8 @@
           "type": "array",
           "description": "填充数据项",
           "items": {
-            "originalRef": "表单填充项下标",
-            "$ref": "#/definitions/表单填充项下标"
+            "$ref": "#/definitions/表单填充项下标",
+            "originalRef": "表单填充项下标"
           }
         },
         "formRecord": {
@@ -130,8 +130,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "JSONObject",
-            "$ref": "#/definitions/JSONObject"
+            "$ref": "#/definitions/JSONObject",
+            "originalRef": "JSONObject"
           }
         },
         "ts": {

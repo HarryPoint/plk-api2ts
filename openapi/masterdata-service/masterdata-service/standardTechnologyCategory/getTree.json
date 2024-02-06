@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«标准工艺分类树响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«标准工艺分类树响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«标准工艺分类树响应DTO»»",
+              "originalRef": "JSONResult«List«标准工艺分类树响应DTO»»"
             }
           },
           "401": {
@@ -61,8 +61,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "标准工艺分类树响应DTO",
-            "$ref": "#/definitions/标准工艺分类树响应DTO"
+            "$ref": "#/definitions/标准工艺分类树响应DTO",
+            "originalRef": "标准工艺分类树响应DTO"
           }
         },
         "ts": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "子分类列表",
           "items": {
-            "originalRef": "标准工艺分类树响应DTO",
-            "$ref": "#/definitions/标准工艺分类树响应DTO"
+            "$ref": "#/definitions/标准工艺分类树响应DTO",
+            "originalRef": "标准工艺分类树响应DTO"
           }
         }
       },

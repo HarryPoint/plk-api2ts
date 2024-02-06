@@ -28,8 +28,8 @@
             "description": "editDTO",
             "required": true,
             "schema": {
-              "originalRef": "工序任务设置默认操作员编辑DTO",
-              "$ref": "#/definitions/工序任务设置默认操作员编辑DTO"
+              "$ref": "#/definitions/工序任务设置默认操作员编辑DTO",
+              "originalRef": "工序任务设置默认操作员编辑DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

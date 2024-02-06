@@ -28,8 +28,8 @@
             "description": "extendParam",
             "required": true,
             "schema": {
-              "originalRef": "项目计划变更单扩展参数请求",
-              "$ref": "#/definitions/项目计划变更单扩展参数请求"
+              "$ref": "#/definitions/项目计划变更单扩展参数请求",
+              "originalRef": "项目计划变更单扩展参数请求"
             }
           }
         ],
@@ -64,16 +64,16 @@
           "type": "array",
           "description": "项目阶段列表",
           "items": {
-            "originalRef": "项目变更表单扩展参数编辑请求",
-            "$ref": "#/definitions/项目变更表单扩展参数编辑请求"
+            "$ref": "#/definitions/项目变更表单扩展参数编辑请求",
+            "originalRef": "项目变更表单扩展参数编辑请求"
           }
         },
         "projectTaskList": {
           "type": "array",
           "description": "项目任务列表",
           "items": {
-            "originalRef": "项目变更表单扩展参数编辑请求",
-            "$ref": "#/definitions/项目变更表单扩展参数编辑请求"
+            "$ref": "#/definitions/项目变更表单扩展参数编辑请求",
+            "originalRef": "项目变更表单扩展参数编辑请求"
           }
         }
       },
@@ -105,8 +105,8 @@
           "type": "array",
           "description": "字段数据列表",
           "items": {
-            "originalRef": "项目变更单字段扩展参数请求",
-            "$ref": "#/definitions/项目变更单字段扩展参数请求"
+            "$ref": "#/definitions/项目变更单字段扩展参数请求",
+            "originalRef": "项目变更单字段扩展参数请求"
           }
         }
       },
@@ -141,8 +141,8 @@
           "type": "array",
           "description": "子表数据列表",
           "items": {
-            "originalRef": "项目变更单子表字段扩展参数请求_1",
-            "$ref": "#/definitions/项目变更单子表字段扩展参数请求_1"
+            "$ref": "#/definitions/项目变更单子表字段扩展参数请求_1",
+            "originalRef": "项目变更单子表字段扩展参数请求_1"
           }
         }
       },
@@ -169,8 +169,8 @@
           "type": "array",
           "description": "列数据",
           "items": {
-            "originalRef": "项目变更单字段扩展参数请求",
-            "$ref": "#/definitions/项目变更单字段扩展参数请求"
+            "$ref": "#/definitions/项目变更单字段扩展参数请求",
+            "originalRef": "项目变更单字段扩展参数请求"
           }
         }
       },

@@ -35,8 +35,8 @@
             "description": "formCodeOrNameSearchVO",
             "required": true,
             "schema": {
-              "originalRef": "流程表单Code或Name搜索VO",
-              "$ref": "#/definitions/流程表单Code或Name搜索VO"
+              "$ref": "#/definitions/流程表单Code或Name搜索VO",
+              "originalRef": "流程表单Code或Name搜索VO"
             }
           }
         ],
@@ -44,8 +44,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«JSONObject»»",
-              "$ref": "#/definitions/JSONResult«List«JSONObject»»"
+              "$ref": "#/definitions/JSONResult«List«JSONObject»»",
+              "originalRef": "JSONResult«List«JSONObject»»"
             }
           },
           "201": {
@@ -88,16 +88,16 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         },
         "orders": {
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "searchValue": {
@@ -193,8 +193,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "JSONObject",
-            "$ref": "#/definitions/JSONObject"
+            "$ref": "#/definitions/JSONObject",
+            "originalRef": "JSONObject"
           }
         },
         "ts": {

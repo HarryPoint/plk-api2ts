@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "用户生产统计搜索VO",
-              "$ref": "#/definitions/用户生产统计搜索VO"
+              "$ref": "#/definitions/用户生产统计搜索VO",
+              "originalRef": "用户生产统计搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«工时工费统计返回VO»",
-              "$ref": "#/definitions/JSONResult«工时工费统计返回VO»"
+              "$ref": "#/definitions/JSONResult«工时工费统计返回VO»",
+              "originalRef": "JSONResult«工时工费统计返回VO»"
             }
           },
           "201": {
@@ -133,8 +133,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "工时工费统计返回VO",
-          "$ref": "#/definitions/工时工费统计返回VO"
+          "$ref": "#/definitions/工时工费统计返回VO",
+          "originalRef": "工时工费统计返回VO"
         },
         "ts": {
           "type": "integer",

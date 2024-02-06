@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "originalRef": "SetExecutorDTO",
-                "$ref": "#/definitions/SetExecutorDTO"
+                "$ref": "#/definitions/SetExecutorDTO",
+                "originalRef": "SetExecutorDTO"
               }
             }
           },
@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»_1",
-              "$ref": "#/definitions/JSONResult«string»_1"
+              "$ref": "#/definitions/JSONResult«string»_1",
+              "originalRef": "JSONResult«string»_1"
             }
           },
           "201": {

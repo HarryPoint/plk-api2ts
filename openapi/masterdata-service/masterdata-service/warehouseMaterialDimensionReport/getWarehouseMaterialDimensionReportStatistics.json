@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "GetWarehouseMaterialDimensionReportStatistics",
-              "$ref": "#/definitions/GetWarehouseMaterialDimensionReportStatistics"
+              "$ref": "#/definitions/GetWarehouseMaterialDimensionReportStatistics",
+              "originalRef": "GetWarehouseMaterialDimensionReportStatistics"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«物料库存维度查询响应对象»",
-              "$ref": "#/definitions/JSONResult«物料库存维度查询响应对象»"
+              "$ref": "#/definitions/JSONResult«物料库存维度查询响应对象»",
+              "originalRef": "JSONResult«物料库存维度查询响应对象»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "物料库存维度查询响应对象",
-          "$ref": "#/definitions/物料库存维度查询响应对象"
+          "$ref": "#/definitions/物料库存维度查询响应对象",
+          "originalRef": "物料库存维度查询响应对象"
         },
         "ts": {
           "type": "integer",

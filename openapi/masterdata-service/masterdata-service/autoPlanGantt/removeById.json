@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«boolean»",
-              "$ref": "#/definitions/JSONResult«boolean»"
+              "$ref": "#/definitions/JSONResult«boolean»",
+              "originalRef": "JSONResult«boolean»"
             }
           },
           "401": {
