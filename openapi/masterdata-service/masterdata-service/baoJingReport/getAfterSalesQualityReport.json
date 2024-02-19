@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/售后质量分析报表搜索VO",
-              "originalRef": "售后质量分析报表搜索VO"
+              "originalRef": "售后质量分析报表搜索VO",
+              "$ref": "#/definitions/售后质量分析报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«售后质量分析返回VO»",
-              "originalRef": "JSONResult«售后质量分析返回VO»"
+              "originalRef": "JSONResult«售后质量分析返回VO»",
+              "$ref": "#/definitions/JSONResult«售后质量分析返回VO»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "fillingEndDate": {
@@ -201,8 +201,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/售后质量分析返回VO_1",
-          "originalRef": "售后质量分析返回VO_1"
+          "originalRef": "售后质量分析返回VO_1",
+          "$ref": "#/definitions/售后质量分析返回VO_1"
         },
         "ts": {
           "type": "integer",
@@ -218,23 +218,23 @@
       "properties": {
         "tablePage": {
           "description": "数据表",
-          "$ref": "#/definitions/分页信息«售后质量分析返回VO»",
-          "originalRef": "分页信息«售后质量分析返回VO»"
+          "originalRef": "分页信息«售后质量分析返回VO»",
+          "$ref": "#/definitions/分页信息«售后质量分析返回VO»"
         },
         "customerDimension": {
           "type": "array",
           "description": "客户维度",
           "items": {
-            "$ref": "#/definitions/售后质量分析图表数据返回VO",
-            "originalRef": "售后质量分析图表数据返回VO"
+            "originalRef": "售后质量分析图表数据返回VO",
+            "$ref": "#/definitions/售后质量分析图表数据返回VO"
           }
         },
         "chartsOfAccident": {
           "type": "array",
           "description": "趋势图",
           "items": {
-            "$ref": "#/definitions/售后质量分析图表数据返回VO",
-            "originalRef": "售后质量分析图表数据返回VO"
+            "originalRef": "售后质量分析图表数据返回VO",
+            "$ref": "#/definitions/售后质量分析图表数据返回VO"
           }
         }
       },
@@ -267,8 +267,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/售后质量分析返回VO",
-            "originalRef": "售后质量分析返回VO"
+            "originalRef": "售后质量分析返回VO",
+            "$ref": "#/definitions/售后质量分析返回VO"
           }
         },
         "lastPage": {
@@ -359,8 +359,8 @@
           "type": "array",
           "description": "图片",
           "items": {
-            "$ref": "#/definitions/附件 VO",
-            "originalRef": "附件 VO"
+            "originalRef": "附件 VO",
+            "$ref": "#/definitions/附件 VO"
           }
         },
         "remark": {

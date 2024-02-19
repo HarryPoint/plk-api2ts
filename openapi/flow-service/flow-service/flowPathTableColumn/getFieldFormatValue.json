@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "queryDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程表格列对应的值格式化查询DTO",
-              "originalRef": "流程表格列对应的值格式化查询DTO"
+              "originalRef": "流程表格列对应的值格式化查询DTO",
+              "$ref": "#/definitions/流程表格列对应的值格式化查询DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»_1",
-              "originalRef": "JSONResult«string»_1"
+              "originalRef": "JSONResult«string»_1",
+              "$ref": "#/definitions/JSONResult«string»_1"
             }
           },
           "201": {

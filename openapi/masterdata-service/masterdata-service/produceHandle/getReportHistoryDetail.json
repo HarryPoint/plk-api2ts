@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«生产处理基础信息详情返回VO»",
-              "originalRef": "JSONResult«生产处理基础信息详情返回VO»"
+              "originalRef": "JSONResult«生产处理基础信息详情返回VO»",
+              "$ref": "#/definitions/JSONResult«生产处理基础信息详情返回VO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/生产处理基础信息详情返回VO",
-          "originalRef": "生产处理基础信息详情返回VO"
+          "originalRef": "生产处理基础信息详情返回VO",
+          "$ref": "#/definitions/生产处理基础信息详情返回VO"
         },
         "ts": {
           "type": "integer",
@@ -221,8 +221,8 @@
           "type": "array",
           "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
           "items": {
-            "$ref": "#/definitions/工艺卡明细返回VO(含填写的信息)",
-            "originalRef": "工艺卡明细返回VO(含填写的信息)"
+            "originalRef": "工艺卡明细返回VO(含填写的信息)",
+            "$ref": "#/definitions/工艺卡明细返回VO(含填写的信息)"
           }
         },
         "desc": {

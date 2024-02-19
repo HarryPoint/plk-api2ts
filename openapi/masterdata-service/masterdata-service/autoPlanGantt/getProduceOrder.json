@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "searchCondition",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/甘特图搜索VO",
-              "originalRef": "甘特图搜索VO"
+              "originalRef": "甘特图搜索VO",
+              "$ref": "#/definitions/甘特图搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«生产订单自动排产甘特图返回VO»",
-              "originalRef": "JSONResult«生产订单自动排产甘特图返回VO»"
+              "originalRef": "JSONResult«生产订单自动排产甘特图返回VO»",
+              "$ref": "#/definitions/JSONResult«生产订单自动排产甘特图返回VO»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "produceOrderCode": {
@@ -169,8 +169,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/生产订单自动排产甘特图返回VO",
-          "originalRef": "生产订单自动排产甘特图返回VO"
+          "originalRef": "生产订单自动排产甘特图返回VO",
+          "$ref": "#/definitions/生产订单自动排产甘特图返回VO"
         },
         "ts": {
           "type": "integer",
@@ -188,14 +188,14 @@
           "type": "array",
           "description": "全局时间占用集",
           "items": {
-            "$ref": "#/definitions/占用返回VO",
-            "originalRef": "占用返回VO"
+            "originalRef": "占用返回VO",
+            "$ref": "#/definitions/占用返回VO"
           }
         },
         "produceOrders": {
           "description": "生产订单分页信息",
-          "$ref": "#/definitions/分页信息«生产订单自动排产排期返回VO»",
-          "originalRef": "分页信息«生产订单自动排产排期返回VO»"
+          "originalRef": "分页信息«生产订单自动排产排期返回VO»",
+          "$ref": "#/definitions/分页信息«生产订单自动排产排期返回VO»"
         }
       },
       "title": "生产订单自动排产甘特图返回VO"
@@ -275,8 +275,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/生产订单自动排产排期返回VO",
-            "originalRef": "生产订单自动排产排期返回VO"
+            "originalRef": "生产订单自动排产排期返回VO",
+            "$ref": "#/definitions/生产订单自动排产排期返回VO"
           }
         },
         "lastPage": {
@@ -369,16 +369,16 @@
           "type": "array",
           "description": "工序占用时间集",
           "items": {
-            "$ref": "#/definitions/占用返回VO",
-            "originalRef": "占用返回VO"
+            "originalRef": "占用返回VO",
+            "$ref": "#/definitions/占用返回VO"
           }
         },
         "processTimes": {
           "type": "array",
           "description": "工序排期时间集",
           "items": {
-            "$ref": "#/definitions/工序时间返回VO",
-            "originalRef": "工序时间返回VO"
+            "originalRef": "工序时间返回VO",
+            "$ref": "#/definitions/工序时间返回VO"
           }
         }
       },

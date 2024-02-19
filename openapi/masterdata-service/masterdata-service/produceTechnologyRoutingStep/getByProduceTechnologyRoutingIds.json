@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»",
-              "originalRef": "JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»"
+              "originalRef": "JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyRoutingStepResponseDTO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepResponseDTO",
-            "originalRef": "ProduceTechnologyRoutingStepResponseDTO"
+            "originalRef": "ProduceTechnologyRoutingStepResponseDTO",
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepResponseDTO"
           }
         },
         "ts": {
@@ -237,8 +237,8 @@
           "type": "array",
           "description": "物料消耗",
           "items": {
-            "$ref": "#/definitions/ProduceTechnologyRoutingStepBomDetailResponseDTO",
-            "originalRef": "ProduceTechnologyRoutingStepBomDetailResponseDTO"
+            "originalRef": "ProduceTechnologyRoutingStepBomDetailResponseDTO",
+            "$ref": "#/definitions/ProduceTechnologyRoutingStepBomDetailResponseDTO"
           }
         }
       },

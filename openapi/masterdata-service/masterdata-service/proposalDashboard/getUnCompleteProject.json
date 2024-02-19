@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«UnCompleteProjectResponseDTO»",
-              "originalRef": "JSONResult«UnCompleteProjectResponseDTO»"
+              "originalRef": "JSONResult«UnCompleteProjectResponseDTO»",
+              "$ref": "#/definitions/JSONResult«UnCompleteProjectResponseDTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/UnCompleteProjectResponseDTO",
-          "originalRef": "UnCompleteProjectResponseDTO"
+          "originalRef": "UnCompleteProjectResponseDTO",
+          "$ref": "#/definitions/UnCompleteProjectResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -83,16 +83,16 @@
           "type": "array",
           "description": "项目指标区间配置",
           "items": {
-            "$ref": "#/definitions/ProjectIndicatorsRangeConfigResponseDTO",
-            "originalRef": "ProjectIndicatorsRangeConfigResponseDTO"
+            "originalRef": "ProjectIndicatorsRangeConfigResponseDTO",
+            "$ref": "#/definitions/ProjectIndicatorsRangeConfigResponseDTO"
           }
         },
         "departmentProjectIndicatorsList": {
           "type": "array",
           "description": "部门的各个项目指标",
           "items": {
-            "$ref": "#/definitions/DepartmentProjectIndicatorsResponseDTO",
-            "originalRef": "DepartmentProjectIndicatorsResponseDTO"
+            "originalRef": "DepartmentProjectIndicatorsResponseDTO",
+            "$ref": "#/definitions/DepartmentProjectIndicatorsResponseDTO"
           }
         }
       },

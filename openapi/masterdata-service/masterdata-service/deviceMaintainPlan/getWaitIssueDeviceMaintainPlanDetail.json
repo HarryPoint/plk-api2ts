@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -34,8 +34,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/保养计划明细待下发响应DTO",
-                "originalRef": "保养计划明细待下发响应DTO"
+                "originalRef": "保养计划明细待下发响应DTO",
+                "$ref": "#/definitions/保养计划明细待下发响应DTO"
               }
             }
           },

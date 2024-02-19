@@ -1,0 +1,220 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:17400",
+  "info": {
+    "description": "服务名: app-mobile-web",
+    "version": "1.0",
+    "title": "普朗克移动端(app-mobile-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-mobile-web/api/app/mobile/warehouseStorageMaterialScan/outStorageScanLotNo": {
+      "post": {
+        "tags": [
+          "物料库存扫码相关服务"
+        ],
+        "summary": "出库扫码批次号",
+        "operationId": "outStorageScanLotNoUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "scanLotNoRequest",
+            "description": "scanLotNoRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "物料出库扫码批次号查询对象",
+              "$ref": "#/definitions/物料出库扫码批次号查询对象"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«物料出库扫码批次号分组返回对象»»",
+              "$ref": "#/definitions/JSONResult«List«物料出库扫码批次号分组返回对象»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "物料出库扫码批次号查询对象": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "流程id"
+        },
+        "formData": {
+          "type": "object",
+          "description": "通用：提交项， 用户编辑的数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        }
+      },
+      "title": "物料出库扫码批次号查询对象"
+    },
+    "JSONResult«List«物料出库扫码批次号分组返回对象»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "物料出库扫码批次号分组返回对象",
+            "$ref": "#/definitions/物料出库扫码批次号分组返回对象"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«物料出库扫码批次号分组返回对象»»"
+    },
+    "物料出库扫码批次号分组返回对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "details": {
+          "type": "array",
+          "description": "明细数据",
+          "items": {
+            "originalRef": "物料出库扫码批次号返回对象",
+            "$ref": "#/definitions/物料出库扫码批次号返回对象"
+          }
+        }
+      },
+      "title": "物料出库扫码批次号分组返回对象"
+    },
+    "物料出库扫码批次号返回对象": {
+      "type": "object",
+      "properties": {
+        "warehouseMaterialRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "库存id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编码"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "materialUnitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料单位id"
+        },
+        "materialUnitName": {
+          "type": "string",
+          "description": "物料单位名称"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "storehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓库id"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseCode": {
+          "type": "string",
+          "description": "仓位code"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "storageTotalCount": {
+          "type": "number",
+          "description": "库存总数"
+        },
+        "storageLockCount": {
+          "type": "number",
+          "description": "库存锁定数"
+        },
+        "storageUseCount": {
+          "type": "number",
+          "description": "库存可使用数"
+        }
+      },
+      "title": "物料出库扫码批次号返回对象"
+    }
+  }
+}

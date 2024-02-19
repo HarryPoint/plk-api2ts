@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "produceCostComputationReportPageQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产成本核算分页请求对象",
-              "originalRef": "生产成本核算分页请求对象"
+              "originalRef": "生产成本核算分页请求对象",
+              "$ref": "#/definitions/生产成本核算分页请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«生产成本核算分页响应对象»»",
-              "originalRef": "JSONResult«分页信息«生产成本核算分页响应对象»»"
+              "originalRef": "JSONResult«分页信息«生产成本核算分页响应对象»»",
+              "$ref": "#/definitions/JSONResult«分页信息«生产成本核算分页响应对象»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "groupBys": {
@@ -259,8 +259,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«生产成本核算分页响应对象»",
-          "originalRef": "分页信息«生产成本核算分页响应对象»"
+          "originalRef": "分页信息«生产成本核算分页响应对象»",
+          "$ref": "#/definitions/分页信息«生产成本核算分页响应对象»"
         },
         "ts": {
           "type": "integer",
@@ -298,8 +298,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/生产成本核算分页响应对象",
-            "originalRef": "生产成本核算分页响应对象"
+            "originalRef": "生产成本核算分页响应对象",
+            "$ref": "#/definitions/生产成本核算分页响应对象"
           }
         },
         "lastPage": {

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "calendarSchedule",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/日历排班VO",
-              "originalRef": "日历排班VO"
+              "originalRef": "日历排班VO",
+              "$ref": "#/definitions/日历排班VO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "排班天数集",
           "items": {
-            "$ref": "#/definitions/日历排班天数VO",
-            "originalRef": "日历排班天数VO"
+            "originalRef": "日历排班天数VO",
+            "$ref": "#/definitions/日历排班天数VO"
           }
         },
         "beginDate": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "排班明细",
           "items": {
-            "$ref": "#/definitions/日历排班天数明细VO",
-            "originalRef": "日历排班天数明细VO"
+            "originalRef": "日历排班天数明细VO",
+            "$ref": "#/definitions/日历排班天数明细VO"
           }
         }
       },

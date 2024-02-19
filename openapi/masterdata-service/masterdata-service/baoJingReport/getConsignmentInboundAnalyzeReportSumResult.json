@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/寄售入库分析报表搜索VO",
-              "originalRef": "寄售入库分析报表搜索VO"
+              "originalRef": "寄售入库分析报表搜索VO",
+              "$ref": "#/definitions/寄售入库分析报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«寄售入库分析报表合计返回VO»",
-              "originalRef": "JSONResult«寄售入库分析报表合计返回VO»"
+              "originalRef": "JSONResult«寄售入库分析报表合计返回VO»",
+              "$ref": "#/definitions/JSONResult«寄售入库分析报表合计返回VO»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "customerId": {
@@ -197,8 +197,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/寄售入库分析报表合计返回VO",
-          "originalRef": "寄售入库分析报表合计返回VO"
+          "originalRef": "寄售入库分析报表合计返回VO",
+          "$ref": "#/definitions/寄售入库分析报表合计返回VO"
         },
         "ts": {
           "type": "integer",

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "numberRuleEdit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/业务编码规则编辑dto",
-              "originalRef": "业务编码规则编辑dto"
+              "originalRef": "业务编码规则编辑dto",
+              "$ref": "#/definitions/业务编码规则编辑dto"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -75,8 +75,8 @@
           "type": "array",
           "description": "明细",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细编辑DTO",
-            "originalRef": "流程表单字段编码规则明细编辑DTO"
+            "originalRef": "流程表单字段编码规则明细编辑DTO",
+            "$ref": "#/definitions/流程表单字段编码规则明细编辑DTO"
           }
         }
       },

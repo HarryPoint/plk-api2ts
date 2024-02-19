@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "editRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/标准工艺具体工艺路径节点编辑请求对象",
-              "originalRef": "标准工艺具体工艺路径节点编辑请求对象"
+              "originalRef": "标准工艺具体工艺路径节点编辑请求对象",
+              "$ref": "#/definitions/标准工艺具体工艺路径节点编辑请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«工艺路径节点编辑响应对象»",
-              "originalRef": "JSONResult«工艺路径节点编辑响应对象»"
+              "originalRef": "JSONResult«工艺路径节点编辑响应对象»",
+              "$ref": "#/definitions/JSONResult«工艺路径节点编辑响应对象»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "工艺路径详情列表",
           "items": {
-            "$ref": "#/definitions/标准工艺具体工艺路径节点详情编辑请求对象",
-            "originalRef": "标准工艺具体工艺路径节点详情编辑请求对象"
+            "originalRef": "标准工艺具体工艺路径节点详情编辑请求对象",
+            "$ref": "#/definitions/标准工艺具体工艺路径节点详情编辑请求对象"
           }
         }
       },
@@ -143,8 +143,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/工艺路径节点编辑响应对象",
-          "originalRef": "工艺路径节点编辑响应对象"
+          "originalRef": "工艺路径节点编辑响应对象",
+          "$ref": "#/definitions/工艺路径节点编辑响应对象"
         },
         "ts": {
           "type": "integer",
@@ -175,8 +175,8 @@
           "type": "array",
           "description": "工艺路径详情列表",
           "items": {
-            "$ref": "#/definitions/工艺路径节点详情编辑响应对象",
-            "originalRef": "工艺路径节点详情编辑响应对象"
+            "originalRef": "工艺路径节点详情编辑响应对象",
+            "$ref": "#/definitions/工艺路径节点详情编辑响应对象"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程工厂日历搜索VO",
-              "originalRef": "流程工厂日历搜索VO"
+              "originalRef": "流程工厂日历搜索VO",
+              "$ref": "#/definitions/流程工厂日历搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«流程排班记录返回VO»»",
-              "originalRef": "JSONResult«分页信息«流程排班记录返回VO»»"
+              "originalRef": "JSONResult«分页信息«流程排班记录返回VO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«流程排班记录返回VO»»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         }
       },
@@ -124,8 +124,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«流程排班记录返回VO»",
-          "originalRef": "分页信息«流程排班记录返回VO»"
+          "originalRef": "分页信息«流程排班记录返回VO»",
+          "$ref": "#/definitions/分页信息«流程排班记录返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -163,8 +163,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/流程排班记录返回VO",
-            "originalRef": "流程排班记录返回VO"
+            "originalRef": "流程排班记录返回VO",
+            "$ref": "#/definitions/流程排班记录返回VO"
           }
         },
         "lastPage": {
@@ -223,8 +223,8 @@
           "type": "array",
           "description": "排班天数集",
           "items": {
-            "$ref": "#/definitions/流程排班基数返回VO",
-            "originalRef": "流程排班基数返回VO"
+            "originalRef": "流程排班基数返回VO",
+            "$ref": "#/definitions/流程排班基数返回VO"
           }
         },
         "createUserId": {
@@ -256,8 +256,8 @@
           "type": "array",
           "description": "流程排班循环配置",
           "items": {
-            "$ref": "#/definitions/流程排班基数明细返回VO",
-            "originalRef": "流程排班基数明细返回VO"
+            "originalRef": "流程排班基数明细返回VO",
+            "$ref": "#/definitions/流程排班基数明细返回VO"
           }
         }
       },
@@ -291,8 +291,8 @@
         },
         "classShiftBeginTime": {
           "description": "班次开始时间",
-          "$ref": "#/definitions/LocalTime",
-          "originalRef": "LocalTime"
+          "originalRef": "LocalTime",
+          "$ref": "#/definitions/LocalTime"
         },
         "endTimeType": {
           "type": "string",
@@ -304,8 +304,8 @@
         },
         "classShiftEndTime": {
           "description": "班次结束时间",
-          "$ref": "#/definitions/LocalTime",
-          "originalRef": "LocalTime"
+          "originalRef": "LocalTime",
+          "$ref": "#/definitions/LocalTime"
         }
       },
       "title": "流程排班基数明细返回VO"

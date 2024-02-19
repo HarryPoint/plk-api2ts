@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "function",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程表格列定位分组流程id编辑DTO",
-              "originalRef": "流程表格列定位分组流程id编辑DTO"
+              "originalRef": "流程表格列定位分组流程id编辑DTO",
+              "$ref": "#/definitions/流程表格列定位分组流程id编辑DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {
@@ -67,16 +67,16 @@
           "type": "array",
           "description": "左侧固定表格列",
           "items": {
-            "$ref": "#/definitions/流程表格列编辑DTO",
-            "originalRef": "流程表格列编辑DTO"
+            "originalRef": "流程表格列编辑DTO",
+            "$ref": "#/definitions/流程表格列编辑DTO"
           }
         },
         "normalFixColumns": {
           "type": "array",
           "description": "不固定表格列",
           "items": {
-            "$ref": "#/definitions/流程表格列编辑DTO",
-            "originalRef": "流程表格列编辑DTO"
+            "originalRef": "流程表格列编辑DTO",
+            "$ref": "#/definitions/流程表格列编辑DTO"
           }
         },
         "systemType": {
@@ -259,8 +259,8 @@
           "type": "array",
           "description": "右侧固定表格列",
           "items": {
-            "$ref": "#/definitions/流程表格列编辑DTO",
-            "originalRef": "流程表格列编辑DTO"
+            "originalRef": "流程表格列编辑DTO",
+            "$ref": "#/definitions/流程表格列编辑DTO"
           }
         },
         "formFunction": {
@@ -298,8 +298,8 @@
           "type": "array",
           "description": "子集",
           "items": {
-            "$ref": "#/definitions/流程表格列编辑DTO",
-            "originalRef": "流程表格列编辑DTO"
+            "originalRef": "流程表格列编辑DTO",
+            "$ref": "#/definitions/流程表格列编辑DTO"
           }
         }
       },

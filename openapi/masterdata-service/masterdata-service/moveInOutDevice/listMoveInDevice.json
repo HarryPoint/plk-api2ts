@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "moveInDeviceQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进料设备查询DTO",
-              "originalRef": "进料设备查询DTO"
+              "originalRef": "进料设备查询DTO",
+              "$ref": "#/definitions/进料设备查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«进料设备响应DTO»»",
-              "originalRef": "JSONResult«List«进料设备响应DTO»»"
+              "originalRef": "JSONResult«List«进料设备响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«进料设备响应DTO»»"
             }
           },
           "201": {
@@ -97,8 +97,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/进料设备响应DTO",
-            "originalRef": "进料设备响应DTO"
+            "originalRef": "进料设备响应DTO",
+            "$ref": "#/definitions/进料设备响应DTO"
           }
         },
         "ts": {

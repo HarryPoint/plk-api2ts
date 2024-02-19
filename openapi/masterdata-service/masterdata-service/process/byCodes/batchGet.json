@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -47,8 +47,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProcessDeprecatedVO»»",
-              "originalRef": "JSONResult«List«ProcessDeprecatedVO»»"
+              "originalRef": "JSONResult«List«ProcessDeprecatedVO»»",
+              "$ref": "#/definitions/JSONResult«List«ProcessDeprecatedVO»»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProcessDeprecatedVO",
-            "originalRef": "ProcessDeprecatedVO"
+            "originalRef": "ProcessDeprecatedVO",
+            "$ref": "#/definitions/ProcessDeprecatedVO"
           }
         },
         "ts": {

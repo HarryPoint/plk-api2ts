@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LotSerialNumberPlanBatchRemoveRequestDTO",
-              "originalRef": "LotSerialNumberPlanBatchRemoveRequestDTO"
+              "originalRef": "LotSerialNumberPlanBatchRemoveRequestDTO",
+              "$ref": "#/definitions/LotSerialNumberPlanBatchRemoveRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»_1",
-              "originalRef": "JSONResult«string»_1"
+              "originalRef": "JSONResult«string»_1",
+              "$ref": "#/definitions/JSONResult«string»_1"
             }
           },
           "201": {

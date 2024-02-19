@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/仓库盘点任务批次编辑DTO",
-              "originalRef": "仓库盘点任务批次编辑DTO"
+              "originalRef": "仓库盘点任务批次编辑DTO",
+              "$ref": "#/definitions/仓库盘点任务批次编辑DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "任务列表",
           "items": {
-            "$ref": "#/definitions/仓库盘点任务编辑DTO",
-            "originalRef": "仓库盘点任务编辑DTO"
+            "originalRef": "仓库盘点任务编辑DTO",
+            "$ref": "#/definitions/仓库盘点任务编辑DTO"
           }
         },
         "planBeginTime": {
@@ -107,8 +107,8 @@
           "type": "array",
           "description": "指定仓库仓位id集，盘点范围为指定仓位时必填，只传最底层仓位",
           "items": {
-            "$ref": "#/definitions/仓库盘点任务仓位编辑DTO",
-            "originalRef": "仓库盘点任务仓位编辑DTO"
+            "originalRef": "仓库盘点任务仓位编辑DTO",
+            "$ref": "#/definitions/仓库盘点任务仓位编辑DTO"
           }
         }
       },

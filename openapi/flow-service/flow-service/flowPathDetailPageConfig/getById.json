@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«FlowPathDetailPageConfigVO»",
-              "originalRef": "JSONResult«FlowPathDetailPageConfigVO»"
+              "originalRef": "JSONResult«FlowPathDetailPageConfigVO»",
+              "$ref": "#/definitions/JSONResult«FlowPathDetailPageConfigVO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/FlowPathDetailPageConfigVO",
-          "originalRef": "FlowPathDetailPageConfigVO"
+          "originalRef": "FlowPathDetailPageConfigVO",
+          "$ref": "#/definitions/FlowPathDetailPageConfigVO"
         },
         "ts": {
           "type": "integer",
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "分组列表",
           "items": {
-            "$ref": "#/definitions/条件组_2",
-            "originalRef": "条件组_2"
+            "originalRef": "条件组_2",
+            "$ref": "#/definitions/条件组_2"
           }
         }
       },
@@ -125,8 +125,8 @@
           "type": "array",
           "description": "过滤列表",
           "items": {
-            "$ref": "#/definitions/条件",
-            "originalRef": "条件"
+            "originalRef": "条件",
+            "$ref": "#/definitions/条件"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»",
-              "originalRef": "JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»"
+              "originalRef": "JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»",
+              "$ref": "#/definitions/JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchBO",
-          "originalRef": "ProductionMaterialIssuanceOrderCostFetchBO"
+          "originalRef": "ProductionMaterialIssuanceOrderCostFetchBO",
+          "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchBO"
         },
         "ts": {
           "type": "integer",
@@ -93,8 +93,8 @@
         "detailList": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchDetailBO",
-            "originalRef": "ProductionMaterialIssuanceOrderCostFetchDetailBO"
+            "originalRef": "ProductionMaterialIssuanceOrderCostFetchDetailBO",
+            "$ref": "#/definitions/ProductionMaterialIssuanceOrderCostFetchDetailBO"
           }
         },
         "success": {

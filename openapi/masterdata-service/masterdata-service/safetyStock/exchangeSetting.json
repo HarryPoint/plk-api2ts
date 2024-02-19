@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -37,8 +37,8 @@
             "description": "exchange",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/安全库存统一设置配置",
-              "originalRef": "安全库存统一设置配置"
+              "originalRef": "安全库存统一设置配置",
+              "$ref": "#/definitions/安全库存统一设置配置"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

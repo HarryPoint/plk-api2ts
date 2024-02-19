@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«仓库仓位树返回VO»»",
-              "originalRef": "JSONResult«List«仓库仓位树返回VO»»"
+              "originalRef": "JSONResult«List«仓库仓位树返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«仓库仓位树返回VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/仓库仓位树返回VO_1",
-            "originalRef": "仓库仓位树返回VO_1"
+            "originalRef": "仓库仓位树返回VO_1",
+            "$ref": "#/definitions/仓库仓位树返回VO_1"
           }
         },
         "ts": {
@@ -103,8 +103,8 @@
           "type": "array",
           "description": "子仓库/仓位",
           "items": {
-            "$ref": "#/definitions/仓库仓位树返回VO_1",
-            "originalRef": "仓库仓位树返回VO_1"
+            "originalRef": "仓库仓位树返回VO_1",
+            "$ref": "#/definitions/仓库仓位树返回VO_1"
           }
         }
       },

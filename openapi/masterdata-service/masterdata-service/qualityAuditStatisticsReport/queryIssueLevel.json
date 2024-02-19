@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/基础质量审核查询请求",
-              "originalRef": "基础质量审核查询请求"
+              "originalRef": "基础质量审核查询请求",
+              "$ref": "#/definitions/基础质量审核查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«问题等级查询响应»»",
-              "originalRef": "JSONResult«List«问题等级查询响应»»"
+              "originalRef": "JSONResult«List«问题等级查询响应»»",
+              "$ref": "#/definitions/JSONResult«List«问题等级查询响应»»"
             }
           },
           "201": {
@@ -95,8 +95,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/问题等级查询响应",
-            "originalRef": "问题等级查询响应"
+            "originalRef": "问题等级查询响应",
+            "$ref": "#/definitions/问题等级查询响应"
           }
         },
         "ts": {

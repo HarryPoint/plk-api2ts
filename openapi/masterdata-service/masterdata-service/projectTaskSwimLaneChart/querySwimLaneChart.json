@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«项目任务泳道图响应对象»",
-              "originalRef": "JSONResult«项目任务泳道图响应对象»"
+              "originalRef": "JSONResult«项目任务泳道图响应对象»",
+              "$ref": "#/definitions/JSONResult«项目任务泳道图响应对象»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/项目任务泳道图响应对象",
-          "originalRef": "项目任务泳道图响应对象"
+          "originalRef": "项目任务泳道图响应对象",
+          "$ref": "#/definitions/项目任务泳道图响应对象"
         },
         "ts": {
           "type": "integer",
@@ -88,24 +88,24 @@
           "type": "array",
           "description": "任务列表",
           "items": {
-            "$ref": "#/definitions/项目任务泳道图任务响应对象",
-            "originalRef": "项目任务泳道图任务响应对象"
+            "originalRef": "项目任务泳道图任务响应对象",
+            "$ref": "#/definitions/项目任务泳道图任务响应对象"
           }
         },
         "roleList": {
           "type": "array",
           "description": "角色列表",
           "items": {
-            "$ref": "#/definitions/项目任务泳道图角色响应对象",
-            "originalRef": "项目任务泳道图角色响应对象"
+            "originalRef": "项目任务泳道图角色响应对象",
+            "$ref": "#/definitions/项目任务泳道图角色响应对象"
           }
         },
         "stageList": {
           "type": "array",
           "description": "阶段列表",
           "items": {
-            "$ref": "#/definitions/项目任务泳道图阶段响应对象",
-            "originalRef": "项目任务泳道图阶段响应对象"
+            "originalRef": "项目任务泳道图阶段响应对象",
+            "$ref": "#/definitions/项目任务泳道图阶段响应对象"
           }
         }
       },

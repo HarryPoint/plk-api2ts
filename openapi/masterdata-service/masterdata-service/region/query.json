@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«RegionVo»»",
-              "originalRef": "JSONResult«List«RegionVo»»"
+              "originalRef": "JSONResult«List«RegionVo»»",
+              "$ref": "#/definitions/JSONResult«List«RegionVo»»"
             }
           },
           "401": {
@@ -60,8 +60,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/RegionVo",
-            "originalRef": "RegionVo"
+            "originalRef": "RegionVo",
+            "$ref": "#/definitions/RegionVo"
           }
         },
         "ts": {
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "下级行政区域",
           "items": {
-            "$ref": "#/definitions/RegionVo",
-            "originalRef": "RegionVo"
+            "originalRef": "RegionVo",
+            "$ref": "#/definitions/RegionVo"
           }
         }
       },

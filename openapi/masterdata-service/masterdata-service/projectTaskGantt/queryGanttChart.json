@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/QueryGanttChart",
-              "originalRef": "QueryGanttChart"
+              "originalRef": "QueryGanttChart",
+              "$ref": "#/definitions/QueryGanttChart"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«项目任务甘特图阶段响应对象»»",
-              "originalRef": "JSONResult«List«项目任务甘特图阶段响应对象»»"
+              "originalRef": "JSONResult«List«项目任务甘特图阶段响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«项目任务甘特图阶段响应对象»»"
             }
           },
           "201": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/项目任务甘特图阶段响应对象",
-            "originalRef": "项目任务甘特图阶段响应对象"
+            "originalRef": "项目任务甘特图阶段响应对象",
+            "$ref": "#/definitions/项目任务甘特图阶段响应对象"
           }
         },
         "ts": {
@@ -140,8 +140,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "$ref": "#/definitions/项目任务甘特图任务响应对象",
-            "originalRef": "项目任务甘特图任务响应对象"
+            "originalRef": "项目任务甘特图任务响应对象",
+            "$ref": "#/definitions/项目任务甘特图任务响应对象"
           }
         }
       },
@@ -241,8 +241,8 @@
           "type": "array",
           "description": "前置任务列表",
           "items": {
-            "$ref": "#/definitions/项目任务前置任务响应对象",
-            "originalRef": "项目任务前置任务响应对象"
+            "originalRef": "项目任务前置任务响应对象",
+            "$ref": "#/definitions/项目任务前置任务响应对象"
           }
         },
         "parentId": {
@@ -515,8 +515,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "$ref": "#/definitions/项目任务甘特图任务响应对象",
-            "originalRef": "项目任务甘特图任务响应对象"
+            "originalRef": "项目任务甘特图任务响应对象",
+            "$ref": "#/definitions/项目任务甘特图任务响应对象"
           }
         }
       },

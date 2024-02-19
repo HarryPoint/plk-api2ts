@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "taskTransferUserQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程任务转交人员查询DTO",
-              "originalRef": "流程任务转交人员查询DTO"
+              "originalRef": "流程任务转交人员查询DTO",
+              "$ref": "#/definitions/流程任务转交人员查询DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«员工响应对象»»",
-              "originalRef": "JSONResult«List«员工响应对象»»"
+              "originalRef": "JSONResult«List«员工响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«员工响应对象»»"
             }
           },
           "201": {
@@ -119,8 +119,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/员工响应对象",
-            "originalRef": "员工响应对象"
+            "originalRef": "员工响应对象",
+            "$ref": "#/definitions/员工响应对象"
           }
         },
         "ts": {

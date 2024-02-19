@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -33,8 +33,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程数据搜索VO",
-              "originalRef": "流程数据搜索VO"
+              "originalRef": "流程数据搜索VO",
+              "$ref": "#/definitions/流程数据搜索VO"
             }
           },
           {
@@ -221,8 +221,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«DynamicDataQueryPageVO»",
-              "originalRef": "JSONResult«DynamicDataQueryPageVO»"
+              "originalRef": "JSONResult«DynamicDataQueryPageVO»",
+              "$ref": "#/definitions/JSONResult«DynamicDataQueryPageVO»"
             }
           },
           "401": {
@@ -257,8 +257,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "$ref": "#/definitions/流程数据明细搜索VO",
-            "originalRef": "流程数据明细搜索VO"
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
           }
         },
         "pageSize": {
@@ -270,8 +270,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "tableColumnCode": {
@@ -280,8 +280,8 @@
         },
         "currentFormDataGrouping": {
           "description": "当前的表单分组",
-          "$ref": "#/definitions/表单数据分组DTO",
-          "originalRef": "表单数据分组DTO"
+          "originalRef": "表单数据分组DTO",
+          "$ref": "#/definitions/表单数据分组DTO"
         },
         "opUserId": {
           "type": "integer",
@@ -395,8 +395,8 @@
           "type": "array",
           "description": "下级分组",
           "items": {
-            "$ref": "#/definitions/表单数据分组DTO",
-            "originalRef": "表单数据分组DTO"
+            "originalRef": "表单数据分组DTO",
+            "$ref": "#/definitions/表单数据分组DTO"
           }
         },
         "cascadeFormData": {
@@ -431,8 +431,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/DynamicDataQueryPageVO",
-          "originalRef": "DynamicDataQueryPageVO"
+          "originalRef": "DynamicDataQueryPageVO",
+          "$ref": "#/definitions/DynamicDataQueryPageVO"
         },
         "ts": {
           "type": "integer",
@@ -447,21 +447,21 @@
       "type": "object",
       "properties": {
         "flowPath": {
-          "$ref": "#/definitions/FlowPathBaseVO",
-          "originalRef": "FlowPathBaseVO"
+          "originalRef": "FlowPathBaseVO",
+          "$ref": "#/definitions/FlowPathBaseVO"
         },
         "masterTableColumns": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/FlowPathTableColumnBaseVO",
-            "originalRef": "FlowPathTableColumnBaseVO"
+            "originalRef": "FlowPathTableColumnBaseVO",
+            "$ref": "#/definitions/FlowPathTableColumnBaseVO"
           }
         },
         "childTableColumns": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/FlowPathTableColumnBaseVO",
-            "originalRef": "FlowPathTableColumnBaseVO"
+            "originalRef": "FlowPathTableColumnBaseVO",
+            "$ref": "#/definitions/FlowPathTableColumnBaseVO"
           }
         }
       },
@@ -551,8 +551,8 @@
         "numberRuleDetails": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/NumberRuleDetailBaseVO",
-            "originalRef": "NumberRuleDetailBaseVO"
+            "originalRef": "NumberRuleDetailBaseVO",
+            "$ref": "#/definitions/NumberRuleDetailBaseVO"
           }
         },
         "flowPathFormFieldId": {

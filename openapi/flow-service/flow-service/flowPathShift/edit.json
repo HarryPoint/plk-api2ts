@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/任务班次编辑DTO",
-              "originalRef": "任务班次编辑DTO"
+              "originalRef": "任务班次编辑DTO",
+              "$ref": "#/definitions/任务班次编辑DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -112,8 +112,8 @@
           "type": "array",
           "description": "员工集合",
           "items": {
-            "$ref": "#/definitions/执行人编辑DTO",
-            "originalRef": "执行人编辑DTO"
+            "originalRef": "执行人编辑DTO",
+            "$ref": "#/definitions/执行人编辑DTO"
           }
         },
         "planName": {

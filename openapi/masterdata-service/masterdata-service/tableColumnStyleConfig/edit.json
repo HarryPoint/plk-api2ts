@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "editDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/列表列样式配置编辑DTO",
-              "originalRef": "列表列样式配置编辑DTO"
+              "originalRef": "列表列样式配置编辑DTO",
+              "$ref": "#/definitions/列表列样式配置编辑DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«列表列样式配置编辑DTO»",
-              "originalRef": "JSONResult«列表列样式配置编辑DTO»"
+              "originalRef": "JSONResult«列表列样式配置编辑DTO»",
+              "$ref": "#/definitions/JSONResult«列表列样式配置编辑DTO»"
             }
           },
           "201": {
@@ -118,8 +118,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/列表列样式配置编辑DTO",
-          "originalRef": "列表列样式配置编辑DTO"
+          "originalRef": "列表列样式配置编辑DTO",
+          "$ref": "#/definitions/列表列样式配置编辑DTO"
         },
         "ts": {
           "type": "integer",

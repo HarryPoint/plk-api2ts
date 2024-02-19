@@ -1,0 +1,648 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/standardTechnology/getMaterialRelateStructure": {
+      "get": {
+        "tags": [
+          "标准工艺相关"
+        ],
+        "summary": "获取具体物料关联数据结构信息",
+        "operationId": "getMaterialRelateStructureUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "materialId",
+            "in": "query",
+            "description": "materialId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«具体物料数据结构响应对象»",
+              "$ref": "#/definitions/JSONResult«具体物料数据结构响应对象»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "Tan Peng",
+        "x-order": "60"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«具体物料数据结构响应对象»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "具体物料数据结构响应对象_1",
+          "$ref": "#/definitions/具体物料数据结构响应对象_1"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«具体物料数据结构响应对象»"
+    },
+    "具体物料数据结构响应对象_1": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "主物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "主物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "主物料编号"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "主物料种类"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "主物料单位"
+        },
+        "materialBomStructure": {
+          "description": "物料BOM",
+          "originalRef": "具体物料数据结构响应对象",
+          "$ref": "#/definitions/具体物料数据结构响应对象"
+        },
+        "materialRoutingStructure": {
+          "description": "工艺路径",
+          "originalRef": "具体物料数关联工艺路径数据结构响应对象",
+          "$ref": "#/definitions/具体物料数关联工艺路径数据结构响应对象"
+        }
+      },
+      "title": "具体物料数据结构响应对象_1"
+    },
+    "具体物料数据结构响应对象": {
+      "type": "object",
+      "properties": {
+        "bomId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "bomId"
+        },
+        "bomName": {
+          "type": "string",
+          "description": "BOM名称"
+        },
+        "bomCode": {
+          "type": "string",
+          "description": "BOM编号"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "消耗数量"
+        },
+        "bomDetailList": {
+          "type": "array",
+          "description": "Bom物料明细",
+          "items": {
+            "originalRef": "标准工艺具体物料bom详情对象",
+            "$ref": "#/definitions/标准工艺具体物料bom详情对象"
+          }
+        }
+      },
+      "title": "具体物料数据结构响应对象"
+    },
+    "标准工艺具体物料bom详情对象": {
+      "type": "object",
+      "properties": {
+        "bomDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "bom明细id"
+        },
+        "childMaterialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "子物料id"
+        },
+        "childMaterialType": {
+          "type": "string",
+          "description": "子物料种类"
+        },
+        "childMaterialName": {
+          "type": "string",
+          "description": "子物料名称"
+        },
+        "childMaterialCode": {
+          "type": "string",
+          "description": "子物料编号"
+        },
+        "childMaterialUnit": {
+          "type": "string",
+          "description": "子物料单位"
+        },
+        "totalConsumeCount": {
+          "type": "number",
+          "description": "消耗数量"
+        },
+        "childMaterialStructure": {
+          "description": "子物料信息",
+          "originalRef": "具体物料数据结构响应对象_1",
+          "$ref": "#/definitions/具体物料数据结构响应对象_1"
+        }
+      },
+      "title": "标准工艺具体物料bom详情对象"
+    },
+    "具体物料数关联工艺路径数据结构响应对象": {
+      "type": "object",
+      "properties": {
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径id"
+        },
+        "routingName": {
+          "type": "string",
+          "description": "工艺路径名称"
+        },
+        "routingCode": {
+          "type": "string",
+          "description": "工艺路径编码"
+        },
+        "materialRoutingStepList": {
+          "type": "array",
+          "description": "工艺路径步骤集合",
+          "items": {
+            "originalRef": "具体物料数关联工艺路径步骤数据结构响应对象",
+            "$ref": "#/definitions/具体物料数关联工艺路径步骤数据结构响应对象"
+          }
+        }
+      },
+      "title": "具体物料数关联工艺路径数据结构响应对象"
+    },
+    "具体物料数关联工艺路径步骤数据结构响应对象": {
+      "type": "object",
+      "properties": {
+        "routingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺路径步骤id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编码"
+        },
+        "processSheet": {
+          "description": "工艺卡",
+          "originalRef": "标准工艺具体工艺卡详情对象_1",
+          "$ref": "#/definitions/标准工艺具体工艺卡详情对象_1"
+        },
+        "keyParameter": {
+          "description": "关键参数",
+          "originalRef": "关键参数信息响应对象",
+          "$ref": "#/definitions/关键参数信息响应对象"
+        },
+        "capacity": {
+          "description": "产能",
+          "originalRef": "产能响应对象",
+          "$ref": "#/definitions/产能响应对象"
+        },
+        "laborCost": {
+          "description": "工费",
+          "originalRef": "工费响应对象",
+          "$ref": "#/definitions/工费响应对象"
+        },
+        "bomConsumeSureType": {
+          "type": "string",
+          "description": "进出站确认类型",
+          "enum": [
+            "  MOVE_IN-在进站时确认",
+            "  MOVE_OUT-在出站时确认"
+          ]
+        }
+      },
+      "title": "具体物料数关联工艺路径步骤数据结构响应对象"
+    },
+    "标准工艺具体工艺卡详情对象_1": {
+      "type": "object",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "processSheetId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工艺卡id"
+        },
+        "name": {
+          "type": "string",
+          "description": "工艺卡名称"
+        },
+        "code": {
+          "type": "string",
+          "description": "工艺卡编号"
+        },
+        "processSheetDetailStructureList": {
+          "type": "array",
+          "description": "工艺卡明细",
+          "items": {
+            "originalRef": "标准工艺具体工艺卡详情对象",
+            "$ref": "#/definitions/标准工艺具体工艺卡详情对象"
+          }
+        }
+      },
+      "title": "标准工艺具体工艺卡详情对象_1"
+    },
+    "标准工艺具体工艺卡详情对象": {
+      "type": "object",
+      "required": [
+        "code",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "type": {
+          "type": "string",
+          "description": "明细类型",
+          "enum": [
+            "  FILE-文件",
+            "  TEXT-描述",
+            "  INPUT-录入"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "明细名称/标题"
+        },
+        "code": {
+          "type": "string",
+          "description": "明细编号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "描述内容/备注"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "文件名称"
+        },
+        "fileKey": {
+          "type": "string",
+          "description": "文件key"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": "文件完整url"
+        },
+        "inputType": {
+          "type": "string",
+          "description": "录入类型",
+          "enum": [
+            "  TEXT-文本",
+            "  SELECTOR-单选框",
+            "  CHECKBOX-多选框",
+            "  NUMBER-数值",
+            "  IMAGE-上传图片"
+          ]
+        },
+        "textType": {
+          "type": "string",
+          "description": "文本类型",
+          "enum": [
+            "  INPUT-输入",
+            "  COMPARE-比较"
+          ]
+        },
+        "textCompareValueList": {
+          "type": "array",
+          "description": "文本比较值集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "numberUnit": {
+          "type": "string",
+          "description": "数值单位"
+        },
+        "imageTotalCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "图片最大上传量"
+        },
+        "selectorList": {
+          "type": "array",
+          "description": "选项集",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "标准工艺具体工艺卡详情对象"
+    },
+    "关键参数信息响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "processRp": {
+          "type": "array",
+          "description": "关联工序",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "materialRp": {
+          "type": "array",
+          "description": "关联物料",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "parameterDetailList": {
+          "type": "array",
+          "description": "关键参数集合",
+          "items": {
+            "originalRef": "关键参数信息详情响应对象",
+            "$ref": "#/definitions/关键参数信息详情响应对象"
+          }
+        }
+      },
+      "title": "关键参数信息响应对象"
+    },
+    "关联下拉响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "showFieldValue": {
+          "type": "string",
+          "description": "显示字段名称"
+        }
+      },
+      "title": "关联下拉响应对象"
+    },
+    "关键参数信息详情响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "字段id"
+        },
+        "name": {
+          "type": "string",
+          "description": "字段名称"
+        },
+        "remark": {
+          "type": "string",
+          "description": "帮助提示"
+        },
+        "inputType": {
+          "type": "string",
+          "description": "字段类型",
+          "enum": [
+            "  TEXT-文本",
+            "  SELECTOR-单选框",
+            "  CHECKBOX-多选框",
+            "  NUMBER-数值",
+            "  IMAGE-上传图片"
+          ]
+        },
+        "textType": {
+          "type": "string",
+          "description": "文本类型",
+          "enum": [
+            "  INPUT-输入",
+            "  COMPARE-比较"
+          ]
+        },
+        "textCompareValue": {
+          "type": "string",
+          "description": "文本比较值，多个英文逗号,分割"
+        },
+        "textCompareValueList": {
+          "type": "array",
+          "description": "文本比较值集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "numberUnit": {
+          "type": "string",
+          "description": "数值单位"
+        },
+        "imageTotalCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "图片最大上传量"
+        },
+        "selector": {
+          "type": "string",
+          "description": "选项集，多个英文逗号,分割"
+        },
+        "selectorList": {
+          "type": "array",
+          "description": "选项集",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "关键参数信息详情响应对象"
+    },
+    "产能响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "processRp": {
+          "type": "array",
+          "description": "关联工序",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "materialRp": {
+          "type": "array",
+          "description": "关联物料",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "readyTime": {
+          "type": "number",
+          "description": "准备耗时"
+        },
+        "readyTimeUnit": {
+          "type": "string",
+          "description": "准备时间单位",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "capacityProduceTime": {
+          "type": "number",
+          "description": "生产耗时"
+        },
+        "capacityTimeType": {
+          "type": "string",
+          "description": "生产时间单位",
+          "enum": [
+            "  SECOND-秒",
+            "  MIN-分钟",
+            "  HOUR-小时"
+          ]
+        },
+        "capacityProduceQuantity": {
+          "type": "number",
+          "description": "产出数量"
+        }
+      },
+      "title": "产能响应对象"
+    },
+    "工费响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "processRp": {
+          "type": "array",
+          "description": "关联工序",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "materialRp": {
+          "type": "array",
+          "description": "关联物料",
+          "items": {
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
+          }
+        },
+        "producePrice": {
+          "type": "number",
+          "description": "合格产出工费单价（元）"
+        },
+        "backProducePrice": {
+          "type": "number",
+          "description": "返工产出工费单价（元）"
+        },
+        "readyPrice": {
+          "type": "number",
+          "description": "准备工费（元）"
+        }
+      },
+      "title": "工费响应对象"
+    }
+  }
+}

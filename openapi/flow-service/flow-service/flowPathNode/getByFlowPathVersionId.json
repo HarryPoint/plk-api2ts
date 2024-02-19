@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«流程节点DTO»",
-              "originalRef": "JSONResult«流程节点DTO»"
+              "originalRef": "JSONResult«流程节点DTO»",
+              "$ref": "#/definitions/JSONResult«流程节点DTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/流程节点DTO",
-          "originalRef": "流程节点DTO"
+          "originalRef": "流程节点DTO",
+          "$ref": "#/definitions/流程节点DTO"
         },
         "ts": {
           "type": "integer",
@@ -359,48 +359,48 @@
           "type": "array",
           "description": "字段权限列表",
           "items": {
-            "$ref": "#/definitions/FlowPathNodeFormFieldPermissionsRpTreeVO",
-            "originalRef": "FlowPathNodeFormFieldPermissionsRpTreeVO"
+            "originalRef": "FlowPathNodeFormFieldPermissionsRpTreeVO",
+            "$ref": "#/definitions/FlowPathNodeFormFieldPermissionsRpTreeVO"
           }
         },
         "messageConfigList": {
           "type": "array",
           "description": "消息配置列表",
           "items": {
-            "$ref": "#/definitions/流程节点编辑DTO",
-            "originalRef": "流程节点编辑DTO"
+            "originalRef": "流程节点编辑DTO",
+            "$ref": "#/definitions/流程节点编辑DTO"
           }
         },
         "timeoutConfigList": {
           "type": "array",
           "description": "超时配置",
           "items": {
-            "$ref": "#/definitions/流程节点超时配置针对编辑返回VO",
-            "originalRef": "流程节点超时配置针对编辑返回VO"
+            "originalRef": "流程节点超时配置针对编辑返回VO",
+            "$ref": "#/definitions/流程节点超时配置针对编辑返回VO"
           }
         },
         "leaderUsers": {
           "type": "array",
           "description": "负责人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "carbonCopyUsers": {
           "type": "array",
           "description": "抄送人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "transferUsers": {
           "type": "array",
           "description": "转交人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "previousNodeAssignmentRange": {
@@ -415,8 +415,8 @@
           "type": "array",
           "description": "上个节点用户选项列表",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "isEnabledAcceptTimeout": {
@@ -429,23 +429,23 @@
         },
         "nextNode": {
           "description": "下节点信息",
-          "$ref": "#/definitions/流程节点DTO",
-          "originalRef": "流程节点DTO"
+          "originalRef": "流程节点DTO",
+          "$ref": "#/definitions/流程节点DTO"
         },
         "branches": {
           "type": "array",
           "description": "分支子节点",
           "items": {
-            "$ref": "#/definitions/流程节点DTO",
-            "originalRef": "流程节点DTO"
+            "originalRef": "流程节点DTO",
+            "$ref": "#/definitions/流程节点DTO"
           }
         },
         "condiGroups": {
           "type": "array",
           "description": "条件组集",
           "items": {
-            "$ref": "#/definitions/流程节点条件组针对编辑返回VO_1",
-            "originalRef": "流程节点条件组针对编辑返回VO_1"
+            "originalRef": "流程节点条件组针对编辑返回VO_1",
+            "$ref": "#/definitions/流程节点条件组针对编辑返回VO_1"
           }
         },
         "isCustomBeginningContent": {
@@ -582,8 +582,8 @@
         "tableFormFieldPermissionsRp": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/FlowPathNodeFormFieldPermissionsRpTreeVO",
-            "originalRef": "FlowPathNodeFormFieldPermissionsRpTreeVO"
+            "originalRef": "FlowPathNodeFormFieldPermissionsRpTreeVO",
+            "$ref": "#/definitions/FlowPathNodeFormFieldPermissionsRpTreeVO"
           }
         }
       },
@@ -716,8 +716,8 @@
           "type": "array",
           "description": "预警提醒人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "earlyWarningSendType": {
@@ -747,8 +747,8 @@
           "type": "array",
           "description": "超时提醒人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "timeoutSendType": {
@@ -762,8 +762,8 @@
           "type": "array",
           "description": "消息配置列表",
           "items": {
-            "$ref": "#/definitions/流程节点编辑DTO",
-            "originalRef": "流程节点编辑DTO"
+            "originalRef": "流程节点编辑DTO",
+            "$ref": "#/definitions/流程节点编辑DTO"
           }
         }
       },
@@ -835,8 +835,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/FlowPathNodeCondiVO",
-            "originalRef": "FlowPathNodeCondiVO"
+            "originalRef": "FlowPathNodeCondiVO",
+            "$ref": "#/definitions/FlowPathNodeCondiVO"
           }
         }
       },

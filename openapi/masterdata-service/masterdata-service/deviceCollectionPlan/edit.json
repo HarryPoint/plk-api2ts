@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/编辑设备数采方案 DTO",
-              "originalRef": "编辑设备数采方案 DTO"
+              "originalRef": "编辑设备数采方案 DTO",
+              "$ref": "#/definitions/编辑设备数采方案 DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "参数清单",
           "items": {
-            "$ref": "#/definitions/设备数采方案参数关联信息编辑DTO",
-            "originalRef": "设备数采方案参数关联信息编辑DTO"
+            "originalRef": "设备数采方案参数关联信息编辑DTO",
+            "$ref": "#/definitions/设备数采方案参数关联信息编辑DTO"
           }
         }
       },
@@ -178,8 +178,8 @@
           "type": "array",
           "description": "统计范围配置项集",
           "items": {
-            "$ref": "#/definitions/设备数采方案参数预警编辑DTO",
-            "originalRef": "设备数采方案参数预警编辑DTO"
+            "originalRef": "设备数采方案参数预警编辑DTO",
+            "$ref": "#/definitions/设备数采方案参数预警编辑DTO"
           }
         }
       },

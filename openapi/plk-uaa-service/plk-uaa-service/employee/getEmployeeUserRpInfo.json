@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/员工用户关联信息查询",
-              "originalRef": "员工用户关联信息查询"
+              "originalRef": "员工用户关联信息查询",
+              "$ref": "#/definitions/员工用户关联信息查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«员工用户关联信息响应»",
-              "originalRef": "JSONResult«员工用户关联信息响应»"
+              "originalRef": "JSONResult«员工用户关联信息响应»",
+              "$ref": "#/definitions/JSONResult«员工用户关联信息响应»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/员工用户关联信息响应",
-          "originalRef": "员工用户关联信息响应"
+          "originalRef": "员工用户关联信息响应",
+          "$ref": "#/definitions/员工用户关联信息响应"
         },
         "ts": {
           "type": "integer",
@@ -133,8 +133,8 @@
           "type": "array",
           "description": "角色集",
           "items": {
-            "$ref": "#/definitions/角色信息响应",
-            "originalRef": "角色信息响应"
+            "originalRef": "角色信息响应",
+            "$ref": "#/definitions/角色信息响应"
           }
         },
         "userId": {

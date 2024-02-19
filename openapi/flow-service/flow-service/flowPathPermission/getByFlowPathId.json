@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«查询权限查询Response»",
-              "originalRef": "JSONResult«查询权限查询Response»"
+              "originalRef": "JSONResult«查询权限查询Response»",
+              "$ref": "#/definitions/JSONResult«查询权限查询Response»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/查询权限查询Response",
-          "originalRef": "查询权限查询Response"
+          "originalRef": "查询权限查询Response",
+          "$ref": "#/definitions/查询权限查询Response"
         },
         "ts": {
           "type": "integer",
@@ -88,32 +88,32 @@
           "type": "array",
           "description": "表单控制 - 编辑权限列表",
           "items": {
-            "$ref": "#/definitions/新增权限编辑_2",
-            "originalRef": "新增权限编辑_2"
+            "originalRef": "新增权限编辑_2",
+            "$ref": "#/definitions/新增权限编辑_2"
           }
         },
         "addPermissionList": {
           "type": "array",
           "description": "表单控制 - 新增权限列表",
           "items": {
-            "$ref": "#/definitions/新增权限编辑",
-            "originalRef": "新增权限编辑"
+            "originalRef": "新增权限编辑",
+            "$ref": "#/definitions/新增权限编辑"
           }
         },
         "queryPermissionList": {
           "type": "array",
           "description": "表单控制 - 查询权限列表",
           "items": {
-            "$ref": "#/definitions/查询权限编辑",
-            "originalRef": "查询权限编辑"
+            "originalRef": "查询权限编辑",
+            "$ref": "#/definitions/查询权限编辑"
           }
         },
         "copyPermissionList": {
           "type": "array",
           "description": "表单控制 - 复制权限列表",
           "items": {
-            "$ref": "#/definitions/新增权限编辑_1",
-            "originalRef": "新增权限编辑_1"
+            "originalRef": "新增权限编辑_1",
+            "$ref": "#/definitions/新增权限编辑_1"
           }
         }
       },

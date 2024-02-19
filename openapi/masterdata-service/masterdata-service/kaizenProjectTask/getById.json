@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«KaizenProjectTaskResponseDTO»",
-              "originalRef": "JSONResult«KaizenProjectTaskResponseDTO»"
+              "originalRef": "JSONResult«KaizenProjectTaskResponseDTO»",
+              "$ref": "#/definitions/JSONResult«KaizenProjectTaskResponseDTO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/KaizenProjectTaskResponseDTO",
-          "originalRef": "KaizenProjectTaskResponseDTO"
+          "originalRef": "KaizenProjectTaskResponseDTO",
+          "$ref": "#/definitions/KaizenProjectTaskResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -108,13 +108,13 @@
         },
         "projectId": {
           "description": "关联项目",
-          "$ref": "#/definitions/关联表单数据VO",
-          "originalRef": "关联表单数据VO"
+          "originalRef": "关联表单数据VO",
+          "$ref": "#/definitions/关联表单数据VO"
         },
         "leaderUserId": {
           "description": "执行人",
-          "$ref": "#/definitions/关联表单数据VO",
-          "originalRef": "关联表单数据VO"
+          "originalRef": "关联表单数据VO",
+          "$ref": "#/definitions/关联表单数据VO"
         },
         "parentId": {
           "type": "integer",
@@ -147,8 +147,8 @@
         },
         "createUserId": {
           "description": "创建用户ID",
-          "$ref": "#/definitions/关联表单数据VO",
-          "originalRef": "关联表单数据VO"
+          "originalRef": "关联表单数据VO",
+          "$ref": "#/definitions/关联表单数据VO"
         },
         "createTime": {
           "type": "string",
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "$ref": "#/definitions/KaizenProjectTaskResponseDTO",
-            "originalRef": "KaizenProjectTaskResponseDTO"
+            "originalRef": "KaizenProjectTaskResponseDTO",
+            "$ref": "#/definitions/KaizenProjectTaskResponseDTO"
           }
         }
       },

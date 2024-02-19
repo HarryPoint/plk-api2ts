@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/主数据基础编辑 DTO",
-                "originalRef": "主数据基础编辑 DTO"
+                "originalRef": "主数据基础编辑 DTO",
+                "$ref": "#/definitions/主数据基础编辑 DTO"
               }
             }
           },
@@ -56,8 +56,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«string»»",
-              "originalRef": "JSONResult«List«string»»"
+              "originalRef": "JSONResult«List«string»»",
+              "$ref": "#/definitions/JSONResult«List«string»»"
             }
           },
           "201": {

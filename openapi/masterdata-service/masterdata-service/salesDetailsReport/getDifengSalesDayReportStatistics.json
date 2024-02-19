@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/GetDifengSalesDayReportStatistics",
-              "originalRef": "GetDifengSalesDayReportStatistics"
+              "originalRef": "GetDifengSalesDayReportStatistics",
+              "$ref": "#/definitions/GetDifengSalesDayReportStatistics"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«销售明细表统计返回对象»",
-              "originalRef": "JSONResult«销售明细表统计返回对象»"
+              "originalRef": "JSONResult«销售明细表统计返回对象»",
+              "$ref": "#/definitions/JSONResult«销售明细表统计返回对象»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/销售明细表统计返回对象",
-          "originalRef": "销售明细表统计返回对象"
+          "originalRef": "销售明细表统计返回对象",
+          "$ref": "#/definitions/销售明细表统计返回对象"
         },
         "ts": {
           "type": "integer",

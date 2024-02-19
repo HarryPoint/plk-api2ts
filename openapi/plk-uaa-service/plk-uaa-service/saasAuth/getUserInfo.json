@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -25,8 +25,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«Saas 用户信息响应»",
-              "originalRef": "JSONResult«Saas 用户信息响应»"
+              "originalRef": "JSONResult«Saas 用户信息响应»",
+              "$ref": "#/definitions/JSONResult«Saas 用户信息响应»"
             }
           },
           "201": {
@@ -65,8 +65,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/Saas 用户信息响应",
-          "originalRef": "Saas 用户信息响应"
+          "originalRef": "Saas 用户信息响应",
+          "$ref": "#/definitions/Saas 用户信息响应"
         },
         "ts": {
           "type": "integer",
@@ -99,18 +99,18 @@
         },
         "enterprise": {
           "description": "企业信息",
-          "$ref": "#/definitions/Saas企业响应 DTO",
-          "originalRef": "Saas企业响应 DTO"
+          "originalRef": "Saas企业响应 DTO",
+          "$ref": "#/definitions/Saas企业响应 DTO"
         },
         "employee": {
           "description": "员工信息",
-          "$ref": "#/definitions/员工信息响应",
-          "originalRef": "员工信息响应"
+          "originalRef": "员工信息响应",
+          "$ref": "#/definitions/员工信息响应"
         },
         "department": {
           "description": "部门信息",
-          "$ref": "#/definitions/部门响应 DTO",
-          "originalRef": "部门响应 DTO"
+          "originalRef": "部门响应 DTO",
+          "$ref": "#/definitions/部门响应 DTO"
         },
         "isManage": {
           "type": "string",

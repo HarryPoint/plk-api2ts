@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/关键参数分页查询对象",
-              "originalRef": "关键参数分页查询对象"
+              "originalRef": "关键参数分页查询对象",
+              "$ref": "#/definitions/关键参数分页查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«关键参数分页响应对象»»",
-              "originalRef": "JSONResult«分页信息«关键参数分页响应对象»»"
+              "originalRef": "JSONResult«分页信息«关键参数分页响应对象»»",
+              "$ref": "#/definitions/JSONResult«分页信息«关键参数分页响应对象»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "processId": {
@@ -139,8 +139,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«关键参数分页响应对象»",
-          "originalRef": "分页信息«关键参数分页响应对象»"
+          "originalRef": "分页信息«关键参数分页响应对象»",
+          "$ref": "#/definitions/分页信息«关键参数分页响应对象»"
         },
         "ts": {
           "type": "integer",
@@ -178,8 +178,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/关键参数分页响应对象",
-            "originalRef": "关键参数分页响应对象"
+            "originalRef": "关键参数分页响应对象",
+            "$ref": "#/definitions/关键参数分页响应对象"
           }
         },
         "lastPage": {
@@ -282,16 +282,16 @@
           "type": "array",
           "description": "关联工序",
           "items": {
-            "$ref": "#/definitions/关联下拉响应对象",
-            "originalRef": "关联下拉响应对象"
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
           }
         },
         "materialRp": {
           "type": "array",
           "description": "关联物料",
           "items": {
-            "$ref": "#/definitions/关联下拉响应对象",
-            "originalRef": "关联下拉响应对象"
+            "originalRef": "关联下拉响应对象",
+            "$ref": "#/definitions/关联下拉响应对象"
           }
         },
         "dataStatus": {

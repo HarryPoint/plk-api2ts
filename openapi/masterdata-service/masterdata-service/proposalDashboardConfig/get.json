@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ProposalDashboardConfigResponseDTO»",
-              "originalRef": "JSONResult«ProposalDashboardConfigResponseDTO»"
+              "originalRef": "JSONResult«ProposalDashboardConfigResponseDTO»",
+              "$ref": "#/definitions/JSONResult«ProposalDashboardConfigResponseDTO»"
             }
           },
           "401": {
@@ -58,8 +58,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/ProposalDashboardConfigResponseDTO",
-          "originalRef": "ProposalDashboardConfigResponseDTO"
+          "originalRef": "ProposalDashboardConfigResponseDTO",
+          "$ref": "#/definitions/ProposalDashboardConfigResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "建议部门 ID => Name",
           "items": {
-            "$ref": "#/definitions/基础数据",
-            "originalRef": "基础数据"
+            "originalRef": "基础数据",
+            "$ref": "#/definitions/基础数据"
           }
         },
         "projectDepartmentIdList": {
@@ -106,8 +106,8 @@
           "type": "array",
           "description": "项目部门 ID => Name",
           "items": {
-            "$ref": "#/definitions/基础数据",
-            "originalRef": "基础数据"
+            "originalRef": "基础数据",
+            "$ref": "#/definitions/基础数据"
           }
         },
         "unCompleteTargetValue": {
@@ -124,16 +124,16 @@
           "type": "array",
           "description": "未完成项目数量的统计区间配置",
           "items": {
-            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO",
-            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO"
+            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO",
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO"
           }
         },
         "completedProjectDashboardStatisticsConfigList": {
           "type": "array",
           "description": "已完成项目数量的统计区间配置",
           "items": {
-            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO",
-            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO"
+            "originalRef": "ProposalDashboardStatisticsConfigResponseDTO",
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigResponseDTO"
           }
         }
       },

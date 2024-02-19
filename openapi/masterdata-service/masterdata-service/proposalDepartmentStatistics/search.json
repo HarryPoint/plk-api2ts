@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ProposalDepartmentStatisticsQueryRequestDTO",
-              "originalRef": "ProposalDepartmentStatisticsQueryRequestDTO"
+              "originalRef": "ProposalDepartmentStatisticsQueryRequestDTO",
+              "$ref": "#/definitions/ProposalDepartmentStatisticsQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProposalDepartmentStatisticsQueryResponseDTO»»",
-              "originalRef": "JSONResult«List«ProposalDepartmentStatisticsQueryResponseDTO»»"
+              "originalRef": "JSONResult«List«ProposalDepartmentStatisticsQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«ProposalDepartmentStatisticsQueryResponseDTO»»"
             }
           },
           "201": {
@@ -106,8 +106,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentStatisticsQueryResponseDTO",
-            "originalRef": "ProposalDepartmentStatisticsQueryResponseDTO"
+            "originalRef": "ProposalDepartmentStatisticsQueryResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentStatisticsQueryResponseDTO"
           }
         },
         "ts": {
@@ -166,112 +166,112 @@
           "type": "array",
           "description": "月指标列表-汇总",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month1IndicatorList": {
           "type": "array",
           "description": "1月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month2IndicatorList": {
           "type": "array",
           "description": "2月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month3IndicatorList": {
           "type": "array",
           "description": "3月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month4IndicatorList": {
           "type": "array",
           "description": "4月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month5IndicatorList": {
           "type": "array",
           "description": "5月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month6IndicatorList": {
           "type": "array",
           "description": "6月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month7IndicatorList": {
           "type": "array",
           "description": "7月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month8IndicatorList": {
           "type": "array",
           "description": "8月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month9IndicatorList": {
           "type": "array",
           "description": "9月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month10IndicatorList": {
           "type": "array",
           "description": "10月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month11IndicatorList": {
           "type": "array",
           "description": "11月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "month12IndicatorList": {
           "type": "array",
           "description": "12月指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentMonthStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentMonthStatisticsResponseDTO"
           }
         },
         "ytdIndicatorList": {
           "type": "array",
           "description": "年指标列表",
           "items": {
-            "$ref": "#/definitions/ProposalDepartmentYtdStatisticsResponseDTO",
-            "originalRef": "ProposalDepartmentYtdStatisticsResponseDTO"
+            "originalRef": "ProposalDepartmentYtdStatisticsResponseDTO",
+            "$ref": "#/definitions/ProposalDepartmentYtdStatisticsResponseDTO"
           }
         }
       },

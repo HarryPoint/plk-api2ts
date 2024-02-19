@@ -1,20 +1,11 @@
 // 项目计划变更单扩展参数请求
 export interface IProjectPlanChangeOrderExtensionParameterRequest {
+    // 项目计划变更信息列表
+    projectPlanList: IItemChangeSingleFieldExtensionParameterRequest[];
     // 项目阶段列表
     projectStageList: IItemChangeFormExtensionParameterEditRequest[];
     // 项目任务列表
     projectTaskList: IItemChangeFormExtensionParameterEditRequest[];
-}
-// 项目变更表单扩展参数编辑请求
-export interface IItemChangeFormExtensionParameterEditRequest {
-    // 应用id
-    appId: number;
-    // 表单操作类型
-    operateType: string;
-    // 数据id
-    dataId: string;
-    // 字段数据列表
-    fieldDataList: IItemChangeSingleFieldExtensionParameterRequest[];
 }
 // 项目变更单字段扩展参数请求
 export interface IItemChangeSingleFieldExtensionParameterRequest {
@@ -37,4 +28,15 @@ export interface IItemChangeListFieldExtensionParameterRequest1 {
     operateType: string;
     // 列数据
     columnData: IItemChangeSingleFieldExtensionParameterRequest[];
+}
+// 项目变更表单扩展参数编辑请求
+export interface IItemChangeFormExtensionParameterEditRequest {
+    // 应用id
+    appId: number;
+    // 表单操作类型
+    operateType: string;
+    // 数据id
+    dataId: string;
+    // 字段数据列表
+    fieldDataList: IItemChangeSingleFieldExtensionParameterRequest[];
 }

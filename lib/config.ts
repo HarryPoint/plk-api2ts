@@ -2,23 +2,51 @@ import path from "path";
 const argv = require("yargs").argv;
 const dir = path.join(__dirname, "..", argv.dir);
 
-type IServiceMap = {
-  "masterdata-service": string;
-  "plk-uaa-service": string;
-  "flow-service": string;
-  "todo-service": string;
-  "hp_masterdata-service": string;
+// 接口文档资料===========================================
+// 端口：16700 masterdata-service 主数据服务
+// 端口：18100 plk-uaa-service 权限服务
+// 端口：17900 plk-api-integration-service 集成平台服务
+// 端口：16400 pc聚合服务
+// 端口：17400 app-moblie聚合服务
+// dev接口文档地址：http://47.108.139.107/
+// uat接口文档地址：http://47.108.135.148/
+// ====================================================
+
+const platformMap = {
+  dev: "47.108.139.107",
+  uat: "47.108.135.148",
 };
 
-const apiMap: Record<string, IServiceMap> = {
-  dev: {
-    "masterdata-service": "http://47.108.135.148:16700",
-    "plk-uaa-service": "http://47.108.135.148:18100",
-    "flow-service": "http://47.108.135.148:16500",
-    "todo-service": "http://47.108.139.107:16600",
-    "hp_masterdata-service": "http://192.168.111.94:16700",
-  },
+const serviceMap = {
+  "masterdata-service": 16700,
+  "plk-uaa-service": 18100,
+  "flow-service": 16500,
+  "todo-service": 16600,
+  "app-enterprise-web": 16400,
+  "app-mobile-web": 17400,
 };
+
+type IPlatformMap = typeof platformMap;
+
+type IServiceMap = typeof serviceMap;
+
+const apiMap = Object.keys(platformMap)
+  .map((platform) => ({
+    [platform]: Object.keys(serviceMap)
+      .map((service) => ({
+        [service]: `http://${platformMap[platform as keyof IPlatformMap]}:${
+          serviceMap[service as keyof IServiceMap]
+        }`,
+      }))
+      .reduce(
+        (prev, next) => ({ ...prev, ...next }),
+        {} as Record<keyof IServiceMap, string>
+      ),
+  }))
+  .reduce(
+    (prev, next) => ({ ...prev, ...next }),
+    {} as Record<string, Record<keyof IServiceMap, string>>
+  ) as Record<string, Record<keyof IServiceMap, string>>;
 
 export default {
   dir,

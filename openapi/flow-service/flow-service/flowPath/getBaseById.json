@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«流程基本信息响应DTO»",
-              "originalRef": "JSONResult«流程基本信息响应DTO»"
+              "originalRef": "JSONResult«流程基本信息响应DTO»",
+              "$ref": "#/definitions/JSONResult«流程基本信息响应DTO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/流程基本信息响应DTO",
-          "originalRef": "流程基本信息响应DTO"
+          "originalRef": "流程基本信息响应DTO",
+          "$ref": "#/definitions/流程基本信息响应DTO"
         },
         "ts": {
           "type": "integer",

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«MaterialBomRoutingVO»»",
-              "originalRef": "JSONResult«List«MaterialBomRoutingVO»»"
+              "originalRef": "JSONResult«List«MaterialBomRoutingVO»»",
+              "$ref": "#/definitions/JSONResult«List«MaterialBomRoutingVO»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/MaterialBomRoutingVO",
-            "originalRef": "MaterialBomRoutingVO"
+            "originalRef": "MaterialBomRoutingVO",
+            "$ref": "#/definitions/MaterialBomRoutingVO"
           }
         },
         "ts": {

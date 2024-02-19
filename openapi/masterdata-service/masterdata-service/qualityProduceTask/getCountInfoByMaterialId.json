@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«质检物料校验信息VO»",
-              "originalRef": "JSONResult«质检物料校验信息VO»"
+              "originalRef": "JSONResult«质检物料校验信息VO»",
+              "$ref": "#/definitions/JSONResult«质检物料校验信息VO»"
             }
           },
           "401": {
@@ -89,8 +89,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/质检物料校验信息VO",
-          "originalRef": "质检物料校验信息VO"
+          "originalRef": "质检物料校验信息VO",
+          "$ref": "#/definitions/质检物料校验信息VO"
         },
         "ts": {
           "type": "integer",
@@ -106,20 +106,20 @@
       "properties": {
         "qualityProduceTask": {
           "description": "质检任务信息",
-          "$ref": "#/definitions/QualityProduceTaskVO",
-          "originalRef": "QualityProduceTaskVO"
+          "originalRef": "QualityProduceTaskVO",
+          "$ref": "#/definitions/QualityProduceTaskVO"
         },
         "qualityStorageTask": {
           "description": "仓库质检任务信息",
-          "$ref": "#/definitions/QualityStorageTaskVO",
-          "originalRef": "QualityStorageTaskVO"
+          "originalRef": "QualityStorageTaskVO",
+          "$ref": "#/definitions/QualityStorageTaskVO"
         },
         "qualityPlanItemIdMap": {
           "type": "object",
           "description": "质检方案质检项关联map， key：质检方案质检项关联id， value：质检方案质检项id关系",
           "additionalProperties": {
-            "$ref": "#/definitions/质检方案质检项idVO",
-            "originalRef": "质检方案质检项idVO"
+            "originalRef": "质检方案质检项idVO",
+            "$ref": "#/definitions/质检方案质检项idVO"
           }
         },
         "passQuantity": {

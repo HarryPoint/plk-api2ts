@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/仓位树返回VO_1",
-              "originalRef": "仓位树返回VO_1"
+              "originalRef": "仓位树返回VO_1",
+              "$ref": "#/definitions/仓位树返回VO_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«仓位查询DTO»»",
-              "originalRef": "JSONResult«分页信息«仓位查询DTO»»"
+              "originalRef": "JSONResult«分页信息«仓位查询DTO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«仓位查询DTO»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "nameOrCodeMatch": {
@@ -120,8 +120,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«仓位查询DTO»",
-          "originalRef": "分页信息«仓位查询DTO»"
+          "originalRef": "分页信息«仓位查询DTO»",
+          "$ref": "#/definitions/分页信息«仓位查询DTO»"
         },
         "ts": {
           "type": "integer",
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/仓位查询DTO",
-            "originalRef": "仓位查询DTO"
+            "originalRef": "仓位查询DTO",
+            "$ref": "#/definitions/仓位查询DTO"
           }
         },
         "lastPage": {

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "processFieldRpQueryVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/工序关联字段查询请求对象",
-              "originalRef": "工序关联字段查询请求对象"
+              "originalRef": "工序关联字段查询请求对象",
+              "$ref": "#/definitions/工序关联字段查询请求对象"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«工序对应字段详情VO»»",
-              "originalRef": "JSONResult«List«工序对应字段详情VO»»"
+              "originalRef": "JSONResult«List«工序对应字段详情VO»»",
+              "$ref": "#/definitions/JSONResult«List«工序对应字段详情VO»»"
             }
           },
           "201": {
@@ -107,8 +107,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/工序对应字段详情VO",
-            "originalRef": "工序对应字段详情VO"
+            "originalRef": "工序对应字段详情VO",
+            "$ref": "#/definitions/工序对应字段详情VO"
           }
         },
         "ts": {

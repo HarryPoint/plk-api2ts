@@ -1,0 +1,3 @@
+// ModelAndView
+export interface IModelAndView {
+}

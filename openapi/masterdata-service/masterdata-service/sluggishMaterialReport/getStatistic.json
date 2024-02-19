@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/GetStatistic",
-              "originalRef": "GetStatistic"
+              "originalRef": "GetStatistic",
+              "$ref": "#/definitions/GetStatistic"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«呆滞物料报表查询合计响应对象»",
-              "originalRef": "JSONResult«呆滞物料报表查询合计响应对象»"
+              "originalRef": "JSONResult«呆滞物料报表查询合计响应对象»",
+              "$ref": "#/definitions/JSONResult«呆滞物料报表查询合计响应对象»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/呆滞物料报表查询合计响应对象",
-          "originalRef": "呆滞物料报表查询合计响应对象"
+          "originalRef": "呆滞物料报表查询合计响应对象",
+          "$ref": "#/definitions/呆滞物料报表查询合计响应对象"
         },
         "ts": {
           "type": "integer",

@@ -1,0 +1,303 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/get": {
+      "get": {
+        "tags": [
+          "设备保养计划相关"
+        ],
+        "summary": "查询计划详情",
+        "operationId": "getUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«保养计划响应DTO»",
+              "$ref": "#/definitions/JSONResult«保养计划响应DTO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«保养计划响应DTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "保养计划响应DTO",
+          "$ref": "#/definitions/保养计划响应DTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«保养计划响应DTO»"
+    },
+    "保养计划响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "保养计划名称"
+        },
+        "maintainPlanStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "保养计划开始日期"
+        },
+        "maintainPlanEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "保养计划截止日期"
+        },
+        "maintainPlanIssueTime": {
+          "type": "integer",
+          "format": "int32",
+          "description": "保养任务提前下发时间"
+        },
+        "maintainPlanIssueTimeUnit": {
+          "type": "string",
+          "description": "单位",
+          "enum": [
+            "  HOUR-小时",
+            "  DAY-天",
+            "  WEEK-周",
+            "  MONTH-月"
+          ]
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "planDetailList": {
+          "type": "array",
+          "description": "计划明细",
+          "items": {
+            "originalRef": "保养计划明细响应DTO",
+            "$ref": "#/definitions/保养计划明细响应DTO"
+          }
+        }
+      },
+      "title": "保养计划响应DTO"
+    },
+    "保养计划明细响应DTO": {
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备id"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "deviceDataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "设备数据状态(0:停用，1:启用)"
+        },
+        "deviceTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备类型id"
+        },
+        "deviceTypeName": {
+          "type": "string",
+          "description": "设备类型名称"
+        },
+        "productionLineId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "产线id"
+        },
+        "productionLineName": {
+          "type": "string",
+          "description": "产线名称"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属区域id"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "所属区域"
+        },
+        "planDetails": {
+          "type": "array",
+          "description": "保养明细",
+          "items": {
+            "originalRef": "保养计划明细项响应DTO",
+            "$ref": "#/definitions/保养计划明细项响应DTO"
+          }
+        }
+      },
+      "title": "保养计划明细响应DTO"
+    },
+    "保养计划明细项响应DTO": {
+      "type": "object",
+      "properties": {
+        "maintainType": {
+          "type": "string",
+          "description": "保养类型",
+          "enum": [
+            "  YEAR-年",
+            "  HALF_YEAR-半年",
+            "  QUARTER-季度",
+            "  MONTH-月"
+          ]
+        },
+        "maintainSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "保养方案id"
+        },
+        "maintainSchemeName": {
+          "type": "string",
+          "description": "保养方案名称"
+        },
+        "times": {
+          "type": "array",
+          "description": "保养时间",
+          "items": {
+            "originalRef": "保养计划明细项时间响应DTO",
+            "$ref": "#/definitions/保养计划明细项时间响应DTO"
+          }
+        }
+      },
+      "title": "保养计划明细项响应DTO"
+    },
+    "保养计划明细项时间响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "deviceMaintainPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备保养计划id"
+        },
+        "deviceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备id"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceTypeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备类型id"
+        },
+        "productionLineId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "产线id"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属区域id"
+        },
+        "maintainType": {
+          "type": "string",
+          "description": "保养类型",
+          "enum": [
+            "  YEAR-年",
+            "  HALF_YEAR-半年",
+            "  QUARTER-季度",
+            "  MONTH-月"
+          ]
+        },
+        "maintainSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "保养方案id"
+        },
+        "maintainStartTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "保养开始时间"
+        },
+        "planDetailStatus": {
+          "type": "string",
+          "description": "计划明细状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  ISSUE-已下发",
+            "  CANCEL-已取消",
+            "  COMPLETE-已完成"
+          ]
+        }
+      },
+      "title": "保养计划明细项时间响应DTO"
+    }
+  }
+}

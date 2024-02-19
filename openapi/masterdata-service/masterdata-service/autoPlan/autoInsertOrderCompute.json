@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "autoInsertCompute",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产订单自动插单DTO",
-              "originalRef": "生产订单自动插单DTO"
+              "originalRef": "生产订单自动插单DTO",
+              "$ref": "#/definitions/生产订单自动插单DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«排产计算结果VO»",
-              "originalRef": "JSONResult«排产计算结果VO»"
+              "originalRef": "JSONResult«排产计算结果VO»",
+              "$ref": "#/definitions/JSONResult«排产计算结果VO»"
             }
           },
           "201": {
@@ -148,8 +148,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/排产计算结果VO",
-          "originalRef": "排产计算结果VO"
+          "originalRef": "排产计算结果VO",
+          "$ref": "#/definitions/排产计算结果VO"
         },
         "ts": {
           "type": "integer",
@@ -165,44 +165,44 @@
       "properties": {
         "ascAnalysis": {
           "description": "正向排产结果分析",
-          "$ref": "#/definitions/排产计算结果分析VO",
-          "originalRef": "排产计算结果分析VO"
+          "originalRef": "排产计算结果分析VO",
+          "$ref": "#/definitions/排产计算结果分析VO"
         },
         "descAnalysis": {
           "description": "倒序排产结果分析",
-          "$ref": "#/definitions/排产计算结果分析VO",
-          "originalRef": "排产计算结果分析VO"
+          "originalRef": "排产计算结果分析VO",
+          "$ref": "#/definitions/排产计算结果分析VO"
         },
         "ascList": {
           "type": "array",
           "description": "正向排产结果",
           "items": {
-            "$ref": "#/definitions/未排产生产订单返回VO",
-            "originalRef": "未排产生产订单返回VO"
+            "originalRef": "未排产生产订单返回VO",
+            "$ref": "#/definitions/未排产生产订单返回VO"
           }
         },
         "descList": {
           "type": "array",
           "description": "倒序排产结果",
           "items": {
-            "$ref": "#/definitions/未排产生产订单返回VO",
-            "originalRef": "未排产生产订单返回VO"
+            "originalRef": "未排产生产订单返回VO",
+            "$ref": "#/definitions/未排产生产订单返回VO"
           }
         },
         "ascPostponeList": {
           "type": "array",
           "description": "正向顺延订单",
           "items": {
-            "$ref": "#/definitions/未排产生产订单返回VO",
-            "originalRef": "未排产生产订单返回VO"
+            "originalRef": "未排产生产订单返回VO",
+            "$ref": "#/definitions/未排产生产订单返回VO"
           }
         },
         "descPostponeList": {
           "type": "array",
           "description": "倒序顺延订单",
           "items": {
-            "$ref": "#/definitions/未排产生产订单返回VO",
-            "originalRef": "未排产生产订单返回VO"
+            "originalRef": "未排产生产订单返回VO",
+            "$ref": "#/definitions/未排产生产订单返回VO"
           }
         }
       },
@@ -264,8 +264,8 @@
           "type": "array",
           "description": "可增加工时日期集",
           "items": {
-            "$ref": "#/definitions/LocalDateTime",
-            "originalRef": "LocalDateTime"
+            "originalRef": "LocalDateTime",
+            "$ref": "#/definitions/LocalDateTime"
           }
         }
       },
@@ -389,8 +389,8 @@
           "type": "array",
           "description": "步骤集",
           "items": {
-            "$ref": "#/definitions/未排产订单步骤返回VO",
-            "originalRef": "未排产订单步骤返回VO"
+            "originalRef": "未排产订单步骤返回VO",
+            "$ref": "#/definitions/未排产订单步骤返回VO"
           }
         }
       },

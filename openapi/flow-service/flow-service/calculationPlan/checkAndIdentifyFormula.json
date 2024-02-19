@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/CalcPlanFormulaCheckRequestDTO",
-              "originalRef": "CalcPlanFormulaCheckRequestDTO"
+              "originalRef": "CalcPlanFormulaCheckRequestDTO",
+              "$ref": "#/definitions/CalcPlanFormulaCheckRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«CalcPlanFormulaCheckResponseDTO»",
-              "originalRef": "JSONResult«CalcPlanFormulaCheckResponseDTO»"
+              "originalRef": "JSONResult«CalcPlanFormulaCheckResponseDTO»",
+              "$ref": "#/definitions/JSONResult«CalcPlanFormulaCheckResponseDTO»"
             }
           },
           "201": {
@@ -91,8 +91,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/CalcPlanFormulaCheckResponseDTO",
-          "originalRef": "CalcPlanFormulaCheckResponseDTO"
+          "originalRef": "CalcPlanFormulaCheckResponseDTO",
+          "$ref": "#/definitions/CalcPlanFormulaCheckResponseDTO"
         },
         "ts": {
           "type": "integer",

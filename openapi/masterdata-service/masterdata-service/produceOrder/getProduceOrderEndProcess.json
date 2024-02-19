@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产订单最后一道工序查询VO",
-              "originalRef": "生产订单最后一道工序查询VO"
+              "originalRef": "生产订单最后一道工序查询VO",
+              "$ref": "#/definitions/生产订单最后一道工序查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产订单最后一道工序VO»»",
-              "originalRef": "JSONResult«List«生产订单最后一道工序VO»»"
+              "originalRef": "JSONResult«List«生产订单最后一道工序VO»»",
+              "$ref": "#/definitions/JSONResult«List«生产订单最后一道工序VO»»"
             }
           },
           "201": {
@@ -104,8 +104,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产订单最后一道工序VO",
-            "originalRef": "生产订单最后一道工序VO"
+            "originalRef": "生产订单最后一道工序VO",
+            "$ref": "#/definitions/生产订单最后一道工序VO"
           }
         },
         "ts": {

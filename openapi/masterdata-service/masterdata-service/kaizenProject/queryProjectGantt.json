@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "projectGanttQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目甘特图查询对象",
-              "originalRef": "项目甘特图查询对象"
+              "originalRef": "项目甘特图查询对象",
+              "$ref": "#/definitions/项目甘特图查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«项目甘特图响应对象»»",
-              "originalRef": "JSONResult«List«项目甘特图响应对象»»"
+              "originalRef": "JSONResult«List«项目甘特图响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«项目甘特图响应对象»»"
             }
           },
           "201": {
@@ -182,8 +182,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/项目甘特图响应对象",
-            "originalRef": "项目甘特图响应对象"
+            "originalRef": "项目甘特图响应对象",
+            "$ref": "#/definitions/项目甘特图响应对象"
           }
         },
         "ts": {
@@ -252,8 +252,8 @@
           "type": "array",
           "description": "项目任务列表",
           "items": {
-            "$ref": "#/definitions/项目任务甘特图响应对象",
-            "originalRef": "项目任务甘特图响应对象"
+            "originalRef": "项目任务甘特图响应对象",
+            "$ref": "#/definitions/项目任务甘特图响应对象"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "filterQueryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程关联表单搜索VO",
-              "originalRef": "流程关联表单搜索VO"
+              "originalRef": "流程关联表单搜索VO",
+              "$ref": "#/definitions/流程关联表单搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«流程关联表单查询返回VO»",
-              "originalRef": "JSONResult«流程关联表单查询返回VO»"
+              "originalRef": "JSONResult«流程关联表单查询返回VO»",
+              "$ref": "#/definitions/JSONResult«流程关联表单查询返回VO»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "flowPathCode": {
@@ -167,8 +167,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/流程关联表单查询返回VO",
-          "originalRef": "流程关联表单查询返回VO"
+          "originalRef": "流程关联表单查询返回VO",
+          "$ref": "#/definitions/流程关联表单查询返回VO"
         },
         "ts": {
           "type": "integer",
@@ -202,16 +202,16 @@
           "type": "array",
           "description": "字段列表",
           "items": {
-            "$ref": "#/definitions/流程关联表单表头查询返回VO",
-            "originalRef": "流程关联表单表头查询返回VO"
+            "originalRef": "流程关联表单表头查询返回VO",
+            "$ref": "#/definitions/流程关联表单表头查询返回VO"
           }
         },
         "dataList": {
           "type": "array",
           "description": "数据列表",
           "items": {
-            "$ref": "#/definitions/Map«string,string»",
-            "originalRef": "Map«string,string»"
+            "originalRef": "Map«string,string»",
+            "$ref": "#/definitions/Map«string,string»"
           }
         }
       },
@@ -236,8 +236,8 @@
           "type": "array",
           "description": "选项集",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "formFieldType": {

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«流程明细针对编辑返回VO»",
-              "originalRef": "JSONResult«流程明细针对编辑返回VO»"
+              "originalRef": "JSONResult«流程明细针对编辑返回VO»",
+              "$ref": "#/definitions/JSONResult«流程明细针对编辑返回VO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/流程明细针对编辑返回VO",
-          "originalRef": "流程明细针对编辑返回VO"
+          "originalRef": "流程明细针对编辑返回VO",
+          "$ref": "#/definitions/流程明细针对编辑返回VO"
         },
         "ts": {
           "type": "integer",
@@ -371,26 +371,26 @@
           "type": "array",
           "description": "表单集",
           "items": {
-            "$ref": "#/definitions/流程表单VO",
-            "originalRef": "流程表单VO"
+            "originalRef": "流程表单VO",
+            "$ref": "#/definitions/流程表单VO"
           }
         },
         "flowPathNode": {
           "description": "节点信息",
-          "$ref": "#/definitions/流程节点针对编辑返回VO",
-          "originalRef": "流程节点针对编辑返回VO"
+          "originalRef": "流程节点针对编辑返回VO",
+          "$ref": "#/definitions/流程节点针对编辑返回VO"
         },
         "permission": {
           "description": "权限设置",
-          "$ref": "#/definitions/流程权限VO",
-          "originalRef": "流程权限VO"
+          "originalRef": "流程权限VO",
+          "$ref": "#/definitions/流程权限VO"
         },
         "flowPathEvents": {
           "type": "array",
           "description": "业务事件集",
           "items": {
-            "$ref": "#/definitions/流程事件编辑VO",
-            "originalRef": "流程事件编辑VO"
+            "originalRef": "流程事件编辑VO",
+            "$ref": "#/definitions/流程事件编辑VO"
           }
         },
         "customFieldSerialNos": {
@@ -404,16 +404,16 @@
           "type": "array",
           "description": "打印模板",
           "items": {
-            "$ref": "#/definitions/流程打印模板返回VO",
-            "originalRef": "流程打印模板返回VO"
+            "originalRef": "流程打印模板返回VO",
+            "$ref": "#/definitions/流程打印模板返回VO"
           }
         },
         "publishEnterpriseRouterList": {
           "type": "array",
           "description": "发布企业路由位置",
           "items": {
-            "$ref": "#/definitions/PublishEnterpriseRouterResultDTO",
-            "originalRef": "PublishEnterpriseRouterResultDTO"
+            "originalRef": "PublishEnterpriseRouterResultDTO",
+            "$ref": "#/definitions/PublishEnterpriseRouterResultDTO"
           }
         },
         "flowPathResultNotify": {
@@ -454,15 +454,15 @@
         },
         "todoConfig": {
           "description": "代办设置",
-          "$ref": "#/definitions/流程自定义通知字段响应VO",
-          "originalRef": "流程自定义通知字段响应VO"
+          "originalRef": "流程自定义通知字段响应VO",
+          "$ref": "#/definitions/流程自定义通知字段响应VO"
         },
         "detailPageConfigList": {
           "type": "array",
           "description": "详细页配置列表",
           "items": {
-            "$ref": "#/definitions/FlowPathDetailPageConfigVO",
-            "originalRef": "FlowPathDetailPageConfigVO"
+            "originalRef": "FlowPathDetailPageConfigVO",
+            "$ref": "#/definitions/FlowPathDetailPageConfigVO"
           }
         },
         "appServicePackId": {
@@ -713,16 +713,16 @@
           "type": "array",
           "description": "计算公式用到的表单序号值集",
           "items": {
-            "$ref": "#/definitions/流程表单公式字段返回VO",
-            "originalRef": "流程表单公式字段返回VO"
+            "originalRef": "流程表单公式字段返回VO",
+            "$ref": "#/definitions/流程表单公式字段返回VO"
           }
         },
         "codeNumberRules": {
           "type": "array",
           "description": "编码规则",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细VO",
-            "originalRef": "流程表单字段编码规则明细VO"
+            "originalRef": "流程表单字段编码规则明细VO",
+            "$ref": "#/definitions/流程表单字段编码规则明细VO"
           }
         },
         "isMust": {
@@ -792,24 +792,24 @@
           "type": "array",
           "description": "选项集",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "selectorDictionaryList": {
           "type": "array",
           "description": "选项集字典",
           "items": {
-            "$ref": "#/definitions/流程表单字段关联字典选项集VO",
-            "originalRef": "流程表单字段关联字典选项集VO"
+            "originalRef": "流程表单字段关联字典选项集VO",
+            "$ref": "#/definitions/流程表单字段关联字典选项集VO"
           }
         },
         "selectorAssociateDisplayList": {
           "type": "array",
           "description": "下拉选项关联显示列表",
           "items": {
-            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO",
-            "originalRef": "流程表单字段下拉选项关联显示VO"
+            "originalRef": "流程表单字段下拉选项关联显示VO",
+            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO"
           }
         },
         "selectorOptionSource": {
@@ -893,24 +893,24 @@
           "type": "array",
           "description": "关联表单筛选条件组集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单筛选条件组VO",
-            "originalRef": "流程表单关联表单筛选条件组VO"
+            "originalRef": "流程表单关联表单筛选条件组VO",
+            "$ref": "#/definitions/流程表单关联表单筛选条件组VO"
           }
         },
         "formRpFills": {
           "type": "array",
           "description": "关联表单填充规则集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单填充VO",
-            "originalRef": "流程表单关联表单填充VO"
+            "originalRef": "流程表单关联表单填充VO",
+            "$ref": "#/definitions/流程表单关联表单填充VO"
           }
         },
         "tableCustomFormFields": {
           "type": "array",
           "description": "表格自定义字段集",
           "items": {
-            "$ref": "#/definitions/流程表单VO",
-            "originalRef": "流程表单VO"
+            "originalRef": "流程表单VO",
+            "$ref": "#/definitions/流程表单VO"
           }
         },
         "style": {
@@ -1030,15 +1030,15 @@
         },
         "dataLinkage": {
           "description": "数据联动",
-          "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO",
-          "originalRef": "FlowPathFormFieldDataLinkageVO"
+          "originalRef": "FlowPathFormFieldDataLinkageVO",
+          "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {
           "type": "array",
           "description": "字段值限制规则",
           "items": {
-            "$ref": "#/definitions/FlowPathFormFieldValueLimitRuleEditDTO",
-            "originalRef": "FlowPathFormFieldValueLimitRuleEditDTO"
+            "originalRef": "FlowPathFormFieldValueLimitRuleEditDTO",
+            "$ref": "#/definitions/FlowPathFormFieldValueLimitRuleEditDTO"
           }
         },
         "isHyperlinkEnabled": {
@@ -1293,8 +1293,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单筛选条件VO",
-            "originalRef": "流程表单关联表单筛选条件VO"
+            "originalRef": "流程表单关联表单筛选条件VO",
+            "$ref": "#/definitions/流程表单关联表单筛选条件VO"
           }
         },
         "isSystemDefault": {
@@ -1518,8 +1518,8 @@
           "type": "array",
           "description": "筛选条件组集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单筛选条件组VO",
-            "originalRef": "流程表单关联表单筛选条件组VO"
+            "originalRef": "流程表单关联表单筛选条件组VO",
+            "$ref": "#/definitions/流程表单关联表单筛选条件组VO"
           }
         }
       },
@@ -1633,16 +1633,16 @@
           "type": "array",
           "description": "负责人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "carbonCopyUsers": {
           "type": "array",
           "description": "抄送人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "approvalType": {
@@ -1683,16 +1683,16 @@
           "type": "array",
           "description": "表单操作权限集",
           "items": {
-            "$ref": "#/definitions/流程表单操作权限集返回VO",
-            "originalRef": "流程表单操作权限集返回VO"
+            "originalRef": "流程表单操作权限集返回VO",
+            "$ref": "#/definitions/流程表单操作权限集返回VO"
           }
         },
         "condiGroups": {
           "type": "array",
           "description": "条件组集",
           "items": {
-            "$ref": "#/definitions/流程节点条件组针对编辑返回VO",
-            "originalRef": "流程节点条件组针对编辑返回VO"
+            "originalRef": "流程节点条件组针对编辑返回VO",
+            "$ref": "#/definitions/流程节点条件组针对编辑返回VO"
           }
         },
         "enabledTimeout": {
@@ -1707,8 +1707,8 @@
           "type": "array",
           "description": "超时配置",
           "items": {
-            "$ref": "#/definitions/流程节点超时配置针对编辑返回VO",
-            "originalRef": "流程节点超时配置针对编辑返回VO"
+            "originalRef": "流程节点超时配置针对编辑返回VO",
+            "$ref": "#/definitions/流程节点超时配置针对编辑返回VO"
           }
         },
         "isCustomSubmitContent": {
@@ -1725,15 +1725,15 @@
         },
         "nextNode": {
           "description": "下节点信息",
-          "$ref": "#/definitions/流程节点针对编辑返回VO",
-          "originalRef": "流程节点针对编辑返回VO"
+          "originalRef": "流程节点针对编辑返回VO",
+          "$ref": "#/definitions/流程节点针对编辑返回VO"
         },
         "branches": {
           "type": "array",
           "description": "分支子节点",
           "items": {
-            "$ref": "#/definitions/流程节点针对编辑返回VO",
-            "originalRef": "流程节点针对编辑返回VO"
+            "originalRef": "流程节点针对编辑返回VO",
+            "$ref": "#/definitions/流程节点针对编辑返回VO"
           }
         },
         "launchType": {
@@ -1828,8 +1828,8 @@
           "type": "array",
           "description": "消息配置列表",
           "items": {
-            "$ref": "#/definitions/流程节点编辑DTO",
-            "originalRef": "流程节点编辑DTO"
+            "originalRef": "流程节点编辑DTO",
+            "$ref": "#/definitions/流程节点编辑DTO"
           }
         },
         "isEnabledAcceptTimeout": {
@@ -1872,8 +1872,8 @@
           "type": "array",
           "description": "转交人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "enableFormStaging": {
@@ -1928,8 +1928,8 @@
           "type": "array",
           "description": "上一节点选项人员集合",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         }
       },
@@ -2056,8 +2056,8 @@
           "type": "array",
           "description": "表格权限集",
           "items": {
-            "$ref": "#/definitions/流程表单操作权限集返回VO",
-            "originalRef": "流程表单操作权限集返回VO"
+            "originalRef": "流程表单操作权限集返回VO",
+            "$ref": "#/definitions/流程表单操作权限集返回VO"
           }
         }
       },
@@ -2075,8 +2075,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/流程节点条件针对编辑返回VO",
-            "originalRef": "流程节点条件针对编辑返回VO"
+            "originalRef": "流程节点条件针对编辑返回VO",
+            "$ref": "#/definitions/流程节点条件针对编辑返回VO"
           }
         }
       },
@@ -2136,8 +2136,8 @@
           "type": "array",
           "description": "选项信息集",
           "items": {
-            "$ref": "#/definitions/名称，编号VO",
-            "originalRef": "名称，编号VO"
+            "originalRef": "名称，编号VO",
+            "$ref": "#/definitions/名称，编号VO"
           }
         },
         "compareMode": {
@@ -2307,8 +2307,8 @@
           "type": "array",
           "description": "预警提醒人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "earlyWarningSendType": {
@@ -2338,8 +2338,8 @@
           "type": "array",
           "description": "超时提醒人集",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "timeoutSendType": {
@@ -2353,8 +2353,8 @@
           "type": "array",
           "description": "消息配置列表",
           "items": {
-            "$ref": "#/definitions/流程节点编辑DTO",
-            "originalRef": "流程节点编辑DTO"
+            "originalRef": "流程节点编辑DTO",
+            "$ref": "#/definitions/流程节点编辑DTO"
           }
         }
       },
@@ -2420,48 +2420,48 @@
           "type": "array",
           "description": "按钮权限集",
           "items": {
-            "$ref": "#/definitions/路由按钮返回VO",
-            "originalRef": "路由按钮返回VO"
+            "originalRef": "路由按钮返回VO",
+            "$ref": "#/definitions/路由按钮返回VO"
           }
         },
         "rolePermissions": {
           "type": "array",
           "description": "角色权限集",
           "items": {
-            "$ref": "#/definitions/流程角色权限VO",
-            "originalRef": "流程角色权限VO"
+            "originalRef": "流程角色权限VO",
+            "$ref": "#/definitions/流程角色权限VO"
           }
         },
         "editPermissionList": {
           "type": "array",
           "description": "表单控制 - 编辑权限列表",
           "items": {
-            "$ref": "#/definitions/新增权限编辑_2",
-            "originalRef": "新增权限编辑_2"
+            "originalRef": "新增权限编辑_2",
+            "$ref": "#/definitions/新增权限编辑_2"
           }
         },
         "addPermissionList": {
           "type": "array",
           "description": "表单控制 - 新增权限列表",
           "items": {
-            "$ref": "#/definitions/新增权限编辑",
-            "originalRef": "新增权限编辑"
+            "originalRef": "新增权限编辑",
+            "$ref": "#/definitions/新增权限编辑"
           }
         },
         "queryPermissionList": {
           "type": "array",
           "description": "表单控制 - 查询权限列表",
           "items": {
-            "$ref": "#/definitions/查询权限编辑",
-            "originalRef": "查询权限编辑"
+            "originalRef": "查询权限编辑",
+            "$ref": "#/definitions/查询权限编辑"
           }
         },
         "copyPermissionList": {
           "type": "array",
           "description": "表单控制 - 复制权限列表",
           "items": {
-            "$ref": "#/definitions/新增权限编辑_1",
-            "originalRef": "新增权限编辑_1"
+            "originalRef": "新增权限编辑_1",
+            "$ref": "#/definitions/新增权限编辑_1"
           }
         }
       },
@@ -2526,8 +2526,8 @@
           "type": "array",
           "description": "数据权限集",
           "items": {
-            "$ref": "#/definitions/流程角色数据权限VO",
-            "originalRef": "流程角色数据权限VO"
+            "originalRef": "流程角色数据权限VO",
+            "$ref": "#/definitions/流程角色数据权限VO"
           }
         }
       },
@@ -2550,8 +2550,8 @@
           "type": "array",
           "description": "数据权限类型",
           "items": {
-            "$ref": "#/definitions/流程角色数据权限字段VO",
-            "originalRef": "流程角色数据权限字段VO"
+            "originalRef": "流程角色数据权限字段VO",
+            "$ref": "#/definitions/流程角色数据权限字段VO"
           }
         }
       },
@@ -2768,13 +2768,13 @@
         },
         "validSetting": {
           "description": "触发条件生效设置",
-          "$ref": "#/definitions/流程事件设置编辑VO",
-          "originalRef": "流程事件设置编辑VO"
+          "originalRef": "流程事件设置编辑VO",
+          "$ref": "#/definitions/流程事件设置编辑VO"
         },
         "invalidSetting": {
           "description": "触发条件失效设置",
-          "$ref": "#/definitions/流程事件设置编辑VO",
-          "originalRef": "流程事件设置编辑VO"
+          "originalRef": "流程事件设置编辑VO",
+          "$ref": "#/definitions/流程事件设置编辑VO"
         },
         "isTriggerFlow": {
           "type": "string",
@@ -2840,38 +2840,38 @@
           "type": "array",
           "description": "流程事件操作设置集",
           "items": {
-            "$ref": "#/definitions/流程事件操作设置编辑VO",
-            "originalRef": "流程事件操作设置编辑VO"
+            "originalRef": "流程事件操作设置编辑VO",
+            "$ref": "#/definitions/流程事件操作设置编辑VO"
           }
         },
         "operateFilterGroups": {
           "type": "array",
           "description": "流程事件操作筛选条件组集",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件组编辑VO",
-            "originalRef": "流程事件操作筛选条件组编辑VO"
+            "originalRef": "流程事件操作筛选条件组编辑VO",
+            "$ref": "#/definitions/流程事件操作筛选条件组编辑VO"
           }
         },
         "triggerConditionFilterGroups": {
           "type": "array",
           "description": "触发条件筛选组",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件组编辑VO",
-            "originalRef": "流程事件操作筛选条件组编辑VO"
+            "originalRef": "流程事件操作筛选条件组编辑VO",
+            "$ref": "#/definitions/流程事件操作筛选条件组编辑VO"
           }
         },
         "insertEventChildFormSettings": {
           "type": "array",
           "description": "流程事件子表设置集合 -- 针对新增事件",
           "items": {
-            "$ref": "#/definitions/应用新增事件子表设置响应DTO",
-            "originalRef": "应用新增事件子表设置响应DTO"
+            "originalRef": "应用新增事件子表设置响应DTO",
+            "$ref": "#/definitions/应用新增事件子表设置响应DTO"
           }
         },
         "detailGroup": {
           "description": "明细分组",
-          "$ref": "#/definitions/插入业务事件-明细数据分组的依据_1",
-          "originalRef": "插入业务事件-明细数据分组的依据_1"
+          "originalRef": "插入业务事件-明细数据分组的依据_1",
+          "$ref": "#/definitions/插入业务事件-明细数据分组的依据_1"
         },
         "isDirectDeleteTargetForm": {
           "type": "string",
@@ -2930,8 +2930,8 @@
           "type": "array",
           "description": "计算公式用到的表单序号值集",
           "items": {
-            "$ref": "#/definitions/流程表单公式字段返回VO",
-            "originalRef": "流程表单公式字段返回VO"
+            "originalRef": "流程表单公式字段返回VO",
+            "$ref": "#/definitions/流程表单公式字段返回VO"
           }
         },
         "fixedValue": {
@@ -2976,8 +2976,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件编辑VO",
-            "originalRef": "流程事件操作筛选条件编辑VO"
+            "originalRef": "流程事件操作筛选条件编辑VO",
+            "$ref": "#/definitions/流程事件操作筛选条件编辑VO"
           }
         }
       },
@@ -3089,8 +3089,8 @@
           "type": "array",
           "description": "字段序列号",
           "items": {
-            "$ref": "#/definitions/应用新增事件子表条件组响应DTO",
-            "originalRef": "应用新增事件子表条件组响应DTO"
+            "originalRef": "应用新增事件子表条件组响应DTO",
+            "$ref": "#/definitions/应用新增事件子表条件组响应DTO"
           }
         }
       },
@@ -3112,8 +3112,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件编辑VO",
-            "originalRef": "流程事件操作筛选条件编辑VO"
+            "originalRef": "流程事件操作筛选条件编辑VO",
+            "$ref": "#/definitions/流程事件操作筛选条件编辑VO"
           }
         }
       },
@@ -3269,8 +3269,8 @@
           "type": "array",
           "description": "分组列表",
           "items": {
-            "$ref": "#/definitions/条件组_2",
-            "originalRef": "条件组_2"
+            "originalRef": "条件组_2",
+            "$ref": "#/definitions/条件组_2"
           }
         }
       },
@@ -3293,8 +3293,8 @@
           "type": "array",
           "description": "过滤列表",
           "items": {
-            "$ref": "#/definitions/条件",
-            "originalRef": "条件"
+            "originalRef": "条件",
+            "$ref": "#/definitions/条件"
           }
         }
       },

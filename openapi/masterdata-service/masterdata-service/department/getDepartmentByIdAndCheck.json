@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«部门VO»",
-              "originalRef": "JSONResult«部门VO»"
+              "originalRef": "JSONResult«部门VO»",
+              "$ref": "#/definitions/JSONResult«部门VO»"
             }
           },
           "401": {
@@ -76,8 +76,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/部门VO",
-          "originalRef": "部门VO"
+          "originalRef": "部门VO",
+          "$ref": "#/definitions/部门VO"
         },
         "ts": {
           "type": "integer",

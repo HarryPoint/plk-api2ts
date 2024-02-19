@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "computeRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/检验项计算DTO",
-              "originalRef": "检验项计算DTO"
+              "originalRef": "检验项计算DTO",
+              "$ref": "#/definitions/检验项计算DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«检验项计算响应DTO»",
-              "originalRef": "JSONResult«检验项计算响应DTO»"
+              "originalRef": "JSONResult«检验项计算响应DTO»",
+              "$ref": "#/definitions/JSONResult«检验项计算响应DTO»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/检验项计算响应DTO",
-          "originalRef": "检验项计算响应DTO"
+          "originalRef": "检验项计算响应DTO",
+          "$ref": "#/definitions/检验项计算响应DTO"
         },
         "ts": {
           "type": "integer",

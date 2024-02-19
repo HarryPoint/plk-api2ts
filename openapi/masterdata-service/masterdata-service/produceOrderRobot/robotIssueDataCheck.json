@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "issueDataCheckRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产订单自动排产下发任务数据校验请求DTO",
-              "originalRef": "生产订单自动排产下发任务数据校验请求DTO"
+              "originalRef": "生产订单自动排产下发任务数据校验请求DTO",
+              "$ref": "#/definitions/生产订单自动排产下发任务数据校验请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«生产订单自动排产下发任务数据校验返回DTO»",
-              "originalRef": "JSONResult«生产订单自动排产下发任务数据校验返回DTO»"
+              "originalRef": "JSONResult«生产订单自动排产下发任务数据校验返回DTO»",
+              "$ref": "#/definitions/JSONResult«生产订单自动排产下发任务数据校验返回DTO»"
             }
           },
           "201": {
@@ -94,8 +94,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/生产订单自动排产下发任务数据校验返回DTO",
-          "originalRef": "生产订单自动排产下发任务数据校验返回DTO"
+          "originalRef": "生产订单自动排产下发任务数据校验返回DTO",
+          "$ref": "#/definitions/生产订单自动排产下发任务数据校验返回DTO"
         },
         "ts": {
           "type": "integer",
@@ -121,8 +121,8 @@
           "type": "array",
           "description": "数据校验明细",
           "items": {
-            "$ref": "#/definitions/生产订单自动排产下发任务数据校验明细返回DTO",
-            "originalRef": "生产订单自动排产下发任务数据校验明细返回DTO"
+            "originalRef": "生产订单自动排产下发任务数据校验明细返回DTO",
+            "$ref": "#/definitions/生产订单自动排产下发任务数据校验明细返回DTO"
           }
         }
       },

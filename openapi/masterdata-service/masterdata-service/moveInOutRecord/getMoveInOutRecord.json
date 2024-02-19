@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进出站记录搜索VO",
-              "originalRef": "进出站记录搜索VO"
+              "originalRef": "进出站记录搜索VO",
+              "$ref": "#/definitions/进出站记录搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«进出站记录返回VO»»",
-              "originalRef": "JSONResult«List«进出站记录返回VO»»"
+              "originalRef": "JSONResult«List«进出站记录返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«进出站记录返回VO»»"
             }
           },
           "201": {
@@ -112,8 +112,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/进出站记录返回VO",
-            "originalRef": "进出站记录返回VO"
+            "originalRef": "进出站记录返回VO",
+            "$ref": "#/definitions/进出站记录返回VO"
           }
         },
         "ts": {
@@ -194,8 +194,8 @@
           "type": "array",
           "description": "关键参数录入信息 - 仅已进出站有工艺卡信息时有值",
           "items": {
-            "$ref": "#/definitions/ProduceTechnologyKeyParameterDetailResponseDTO",
-            "originalRef": "ProduceTechnologyKeyParameterDetailResponseDTO"
+            "originalRef": "ProduceTechnologyKeyParameterDetailResponseDTO",
+            "$ref": "#/definitions/ProduceTechnologyKeyParameterDetailResponseDTO"
           }
         },
         "produceTaskId": {

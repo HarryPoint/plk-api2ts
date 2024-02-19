@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«项目成员变更信息»»",
-              "originalRef": "JSONResult«List«项目成员变更信息»»"
+              "originalRef": "JSONResult«List«项目成员变更信息»»",
+              "$ref": "#/definitions/JSONResult«List«项目成员变更信息»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/项目成员变更信息",
-            "originalRef": "项目成员变更信息"
+            "originalRef": "项目成员变更信息",
+            "$ref": "#/definitions/项目成员变更信息"
           }
         },
         "ts": {

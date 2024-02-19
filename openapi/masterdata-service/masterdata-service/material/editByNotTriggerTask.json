@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "dataEdit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/物料编辑请求DTO",
-              "originalRef": "物料编辑请求DTO"
+              "originalRef": "物料编辑请求DTO",
+              "$ref": "#/definitions/物料编辑请求DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {
@@ -92,8 +92,8 @@
         },
         "lotSetting": {
           "description": "物料批次设置",
-          "$ref": "#/definitions/物料批次设置编辑对象",
-          "originalRef": "物料批次设置编辑对象"
+          "originalRef": "物料批次设置编辑对象",
+          "$ref": "#/definitions/物料批次设置编辑对象"
         }
       },
       "title": "物料编辑请求DTO"

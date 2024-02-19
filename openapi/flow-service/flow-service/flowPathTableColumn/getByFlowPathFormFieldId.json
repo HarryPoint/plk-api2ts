@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -43,8 +43,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«流程表格列VO»",
-              "originalRef": "JSONResult«流程表格列VO»"
+              "originalRef": "JSONResult«流程表格列VO»",
+              "$ref": "#/definitions/JSONResult«流程表格列VO»"
             }
           },
           "201": {
@@ -83,8 +83,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/流程表格列VO",
-          "originalRef": "流程表格列VO"
+          "originalRef": "流程表格列VO",
+          "$ref": "#/definitions/流程表格列VO"
         },
         "ts": {
           "type": "integer",
@@ -188,24 +188,24 @@
           "type": "array",
           "description": "表格内字段集",
           "items": {
-            "$ref": "#/definitions/流程表格列VO",
-            "originalRef": "流程表格列VO"
+            "originalRef": "流程表格列VO",
+            "$ref": "#/definitions/流程表格列VO"
           }
         },
         "numberRuleDetails": {
           "type": "array",
           "description": "编码字段编码规则集",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细VO",
-            "originalRef": "流程表单字段编码规则明细VO"
+            "originalRef": "流程表单字段编码规则明细VO",
+            "$ref": "#/definitions/流程表单字段编码规则明细VO"
           }
         },
         "selectorList": {
           "type": "array",
           "description": "选项集",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "serialNo": {

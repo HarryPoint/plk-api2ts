@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/工厂日历搜索VO",
-              "originalRef": "工厂日历搜索VO"
+              "originalRef": "工厂日历搜索VO",
+              "$ref": "#/definitions/工厂日历搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«任务排班返回VO»»",
-              "originalRef": "JSONResult«List«任务排班返回VO»»"
+              "originalRef": "JSONResult«List«任务排班返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«任务排班返回VO»»"
             }
           },
           "201": {
@@ -104,8 +104,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/任务排班返回VO",
-            "originalRef": "任务排班返回VO"
+            "originalRef": "任务排班返回VO",
+            "$ref": "#/definitions/任务排班返回VO"
           }
         },
         "ts": {
@@ -134,8 +134,8 @@
           "type": "array",
           "description": "对应班次集",
           "items": {
-            "$ref": "#/definitions/流程任务班次用户信息返回VO",
-            "originalRef": "流程任务班次用户信息返回VO"
+            "originalRef": "流程任务班次用户信息返回VO",
+            "$ref": "#/definitions/流程任务班次用户信息返回VO"
           }
         }
       },
@@ -153,8 +153,8 @@
           "type": "array",
           "description": "对应的员工信息集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "flowPathShiftId": {
@@ -168,8 +168,8 @@
         },
         "flowPathShiftBeginTime": {
           "description": "班次开始时间",
-          "$ref": "#/definitions/LocalTime",
-          "originalRef": "LocalTime"
+          "originalRef": "LocalTime",
+          "$ref": "#/definitions/LocalTime"
         },
         "endTimeType": {
           "type": "string",
@@ -181,8 +181,8 @@
         },
         "flowPathShiftEndTime": {
           "description": "班次结束时间",
-          "$ref": "#/definitions/LocalTime",
-          "originalRef": "LocalTime"
+          "originalRef": "LocalTime",
+          "$ref": "#/definitions/LocalTime"
         },
         "planName": {
           "type": "string",

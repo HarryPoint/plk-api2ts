@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«文件分类明细响应DTO»_1",
-              "originalRef": "JSONResult«文件分类明细响应DTO»_1"
+              "originalRef": "JSONResult«文件分类明细响应DTO»_1",
+              "$ref": "#/definitions/JSONResult«文件分类明细响应DTO»_1"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/文件分类明细响应DTO_1",
-          "originalRef": "文件分类明细响应DTO_1"
+          "originalRef": "文件分类明细响应DTO_1",
+          "$ref": "#/definitions/文件分类明细响应DTO_1"
         },
         "ts": {
           "type": "integer",
@@ -107,8 +107,8 @@
           "type": "array",
           "description": "下级树列表",
           "items": {
-            "$ref": "#/definitions/文件分类明细响应DTO_6",
-            "originalRef": "文件分类明细响应DTO_6"
+            "originalRef": "文件分类明细响应DTO_6",
+            "$ref": "#/definitions/文件分类明细响应DTO_6"
           }
         },
         "userPermissionList": {
@@ -158,8 +158,8 @@
           "type": "array",
           "description": "下级树列表",
           "items": {
-            "$ref": "#/definitions/文件分类明细响应DTO_6",
-            "originalRef": "文件分类明细响应DTO_6"
+            "originalRef": "文件分类明细响应DTO_6",
+            "$ref": "#/definitions/文件分类明细响应DTO_6"
           }
         },
         "userPermissionList": {

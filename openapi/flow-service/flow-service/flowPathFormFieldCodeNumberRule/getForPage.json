@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/编码规则分页查询VO",
-              "originalRef": "编码规则分页查询VO"
+              "originalRef": "编码规则分页查询VO",
+              "$ref": "#/definitions/编码规则分页查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«编码规则分页返回VO»»",
-              "originalRef": "JSONResult«分页信息«编码规则分页返回VO»»"
+              "originalRef": "JSONResult«分页信息«编码规则分页返回VO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«编码规则分页返回VO»»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         }
       },
@@ -140,8 +140,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«编码规则分页返回VO»",
-          "originalRef": "分页信息«编码规则分页返回VO»"
+          "originalRef": "分页信息«编码规则分页返回VO»",
+          "$ref": "#/definitions/分页信息«编码规则分页返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -179,8 +179,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/编码规则分页返回VO",
-            "originalRef": "编码规则分页返回VO"
+            "originalRef": "编码规则分页返回VO",
+            "$ref": "#/definitions/编码规则分页返回VO"
           }
         },
         "lastPage": {
@@ -307,8 +307,8 @@
           "type": "array",
           "description": "编码规则明细",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细VO",
-            "originalRef": "流程表单字段编码规则明细VO"
+            "originalRef": "流程表单字段编码规则明细VO",
+            "$ref": "#/definitions/流程表单字段编码规则明细VO"
           }
         }
       },

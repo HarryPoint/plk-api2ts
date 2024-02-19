@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "extendParam",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目计划变更单扩展参数请求",
-              "originalRef": "项目计划变更单扩展参数请求"
+              "originalRef": "项目计划变更单扩展参数请求",
+              "$ref": "#/definitions/项目计划变更单扩展参数请求"
             }
           }
         ],
@@ -60,57 +60,32 @@
     "项目计划变更单扩展参数请求": {
       "type": "object",
       "properties": {
+        "projectPlanList": {
+          "type": "array",
+          "description": "项目计划变更信息列表",
+          "items": {
+            "originalRef": "项目变更单字段扩展参数请求",
+            "$ref": "#/definitions/项目变更单字段扩展参数请求"
+          }
+        },
         "projectStageList": {
           "type": "array",
           "description": "项目阶段列表",
           "items": {
-            "$ref": "#/definitions/项目变更表单扩展参数编辑请求",
-            "originalRef": "项目变更表单扩展参数编辑请求"
+            "originalRef": "项目变更表单扩展参数编辑请求",
+            "$ref": "#/definitions/项目变更表单扩展参数编辑请求"
           }
         },
         "projectTaskList": {
           "type": "array",
           "description": "项目任务列表",
           "items": {
-            "$ref": "#/definitions/项目变更表单扩展参数编辑请求",
-            "originalRef": "项目变更表单扩展参数编辑请求"
+            "originalRef": "项目变更表单扩展参数编辑请求",
+            "$ref": "#/definitions/项目变更表单扩展参数编辑请求"
           }
         }
       },
       "title": "项目计划变更单扩展参数请求"
-    },
-    "项目变更表单扩展参数编辑请求": {
-      "type": "object",
-      "properties": {
-        "appId": {
-          "type": "integer",
-          "format": "int64",
-          "description": "应用id"
-        },
-        "operateType": {
-          "type": "string",
-          "description": "表单操作类型",
-          "enum": [
-            "  ADD-新增",
-            "  MODIFY-修改",
-            "  DELETE-删除",
-            "  MODIFY_PROJECT_MANGER-修改项目经理"
-          ]
-        },
-        "dataId": {
-          "type": "string",
-          "description": "数据id"
-        },
-        "fieldDataList": {
-          "type": "array",
-          "description": "字段数据列表",
-          "items": {
-            "$ref": "#/definitions/项目变更单字段扩展参数请求",
-            "originalRef": "项目变更单字段扩展参数请求"
-          }
-        }
-      },
-      "title": "项目变更表单扩展参数编辑请求"
     },
     "项目变更单字段扩展参数请求": {
       "type": "object",
@@ -141,8 +116,8 @@
           "type": "array",
           "description": "子表数据列表",
           "items": {
-            "$ref": "#/definitions/项目变更单子表字段扩展参数请求_1",
-            "originalRef": "项目变更单子表字段扩展参数请求_1"
+            "originalRef": "项目变更单子表字段扩展参数请求_1",
+            "$ref": "#/definitions/项目变更单子表字段扩展参数请求_1"
           }
         }
       },
@@ -169,12 +144,45 @@
           "type": "array",
           "description": "列数据",
           "items": {
-            "$ref": "#/definitions/项目变更单字段扩展参数请求",
-            "originalRef": "项目变更单字段扩展参数请求"
+            "originalRef": "项目变更单字段扩展参数请求",
+            "$ref": "#/definitions/项目变更单字段扩展参数请求"
           }
         }
       },
       "title": "项目变更单子表字段扩展参数请求_1"
+    },
+    "项目变更表单扩展参数编辑请求": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用id"
+        },
+        "operateType": {
+          "type": "string",
+          "description": "表单操作类型",
+          "enum": [
+            "  ADD-新增",
+            "  MODIFY-修改",
+            "  DELETE-删除",
+            "  MODIFY_PROJECT_MANGER-修改项目经理"
+          ]
+        },
+        "dataId": {
+          "type": "string",
+          "description": "数据id"
+        },
+        "fieldDataList": {
+          "type": "array",
+          "description": "字段数据列表",
+          "items": {
+            "originalRef": "项目变更单字段扩展参数请求",
+            "$ref": "#/definitions/项目变更单字段扩展参数请求"
+          }
+        }
+      },
+      "title": "项目变更表单扩展参数编辑请求"
     }
   }
 }

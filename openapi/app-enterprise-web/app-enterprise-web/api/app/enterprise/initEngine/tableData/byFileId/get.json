@@ -1,0 +1,219 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/initEngine/tableData/byFileId/get": {
+      "get": {
+        "tags": [
+          "初始化引擎 - 表数据相关"
+        ],
+        "summary": "根据文件ID查询表的简述信息",
+        "operationId": "getTableDataByFileIdUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "fileId",
+            "in": "query",
+            "description": "fileId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«表格数据»",
+              "$ref": "#/definitions/JSONResult«表格数据»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«表格数据»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "表格数据",
+          "$ref": "#/definitions/表格数据"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«表格数据»"
+    },
+    "表格数据": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "tableDefine": {
+          "description": "表定义",
+          "originalRef": "关联表定义_1",
+          "$ref": "#/definitions/关联表定义_1"
+        },
+        "template": {
+          "description": "模板",
+          "originalRef": "关联模板",
+          "$ref": "#/definitions/关联模板"
+        },
+        "fileId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件ID"
+        },
+        "verificationStatus": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  NOT_VERIFIED-未校验",
+            "  CHECKING-校验中",
+            "  VERIFIED-校验完成",
+            "  VERIFIED_FAIL-校验失败"
+          ]
+        },
+        "importStatus": {
+          "type": "string",
+          "description": "数据导入状态",
+          "enum": [
+            "  NOT-未导入",
+            "  COMPLETE-完成导入",
+            "  IMPORTING-导入中",
+            "  IMPORT_FAIL-导入失败"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "description": "消息"
+        },
+        "desc": {
+          "type": "string",
+          "description": "描述"
+        },
+        "customColumnTitle": {
+          "type": "object",
+          "description": "自定义列标题",
+          "additionalProperties": {
+            "originalRef": "TitleDefineDTO",
+            "$ref": "#/definitions/TitleDefineDTO"
+          }
+        },
+        "repeatDataQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "重复数据数量"
+        },
+        "overrideImportQuantityInRepeat": {
+          "type": "integer",
+          "format": "int64",
+          "description": "重复数据中的覆盖导入数量"
+        },
+        "cancelImportQuantityInRepeat": {
+          "type": "integer",
+          "format": "int64",
+          "description": "重复数据中的取消导入数据"
+        },
+        "errorQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "错误数据数量"
+        },
+        "importsQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "可以导入的数量"
+        }
+      },
+      "title": "表格数据"
+    },
+    "关联表定义_1": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "关联表定义_1"
+    },
+    "关联模板": {
+      "type": "object",
+      "required": [
+        "code",
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "关联模板"
+    },
+    "TitleDefineDTO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "title": "TitleDefineDTO"
+    }
+  }
+}

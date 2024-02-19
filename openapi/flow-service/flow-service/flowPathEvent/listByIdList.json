@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«FlowPathEventQueryResponseDTO»»",
-              "originalRef": "JSONResult«List«FlowPathEventQueryResponseDTO»»"
+              "originalRef": "JSONResult«List«FlowPathEventQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«FlowPathEventQueryResponseDTO»»"
             }
           },
           "201": {
@@ -82,8 +82,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/FlowPathEventQueryResponseDTO",
-            "originalRef": "FlowPathEventQueryResponseDTO"
+            "originalRef": "FlowPathEventQueryResponseDTO",
+            "$ref": "#/definitions/FlowPathEventQueryResponseDTO"
           }
         },
         "ts": {
@@ -160,26 +160,26 @@
         "triggerConditionFilterGroups": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件组查询DTO",
-            "originalRef": "流程事件操作筛选条件组查询DTO"
+            "originalRef": "流程事件操作筛选条件组查询DTO",
+            "$ref": "#/definitions/流程事件操作筛选条件组查询DTO"
           }
         },
         "filterGroups": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件组查询DTO",
-            "originalRef": "流程事件操作筛选条件组查询DTO"
+            "originalRef": "流程事件操作筛选条件组查询DTO",
+            "$ref": "#/definitions/流程事件操作筛选条件组查询DTO"
           }
         },
         "detailGroup": {
-          "$ref": "#/definitions/插入业务事件-明细数据分组的依据_2",
-          "originalRef": "插入业务事件-明细数据分组的依据_2"
+          "originalRef": "插入业务事件-明细数据分组的依据_2",
+          "$ref": "#/definitions/插入业务事件-明细数据分组的依据_2"
         },
         "operateSettings": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/流程事件映射条件组-查询响应",
-            "originalRef": "流程事件映射条件组-查询响应"
+            "originalRef": "流程事件映射条件组-查询响应",
+            "$ref": "#/definitions/流程事件映射条件组-查询响应"
           }
         },
         "tableKitTableColumnCode": {
@@ -226,8 +226,8 @@
         "childFormSettings": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/应用新增事件子表设置响应DTO_1",
-            "originalRef": "应用新增事件子表设置响应DTO_1"
+            "originalRef": "应用新增事件子表设置响应DTO_1",
+            "$ref": "#/definitions/应用新增事件子表设置响应DTO_1"
           }
         },
         "addDataInDimensionWhereTableCode": {
@@ -252,8 +252,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件DTO",
-            "originalRef": "流程事件操作筛选条件DTO"
+            "originalRef": "流程事件操作筛选条件DTO",
+            "$ref": "#/definitions/流程事件操作筛选条件DTO"
           }
         },
         "triggerType": {
@@ -500,8 +500,8 @@
           "type": "array",
           "description": "筛选条件组",
           "items": {
-            "$ref": "#/definitions/流程事件操作筛选条件组查询DTO",
-            "originalRef": "流程事件操作筛选条件组查询DTO"
+            "originalRef": "流程事件操作筛选条件组查询DTO",
+            "$ref": "#/definitions/流程事件操作筛选条件组查询DTO"
           }
         }
       },

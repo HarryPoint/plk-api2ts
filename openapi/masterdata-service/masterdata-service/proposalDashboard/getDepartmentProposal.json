@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«DepartmentProposalDashboardResponseDTO»",
-              "originalRef": "JSONResult«DepartmentProposalDashboardResponseDTO»"
+              "originalRef": "JSONResult«DepartmentProposalDashboardResponseDTO»",
+              "$ref": "#/definitions/JSONResult«DepartmentProposalDashboardResponseDTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/DepartmentProposalDashboardResponseDTO",
-          "originalRef": "DepartmentProposalDashboardResponseDTO"
+          "originalRef": "DepartmentProposalDashboardResponseDTO",
+          "$ref": "#/definitions/DepartmentProposalDashboardResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "部门提案指标",
           "items": {
-            "$ref": "#/definitions/DepartmentProposalIndicatorsResponseDTO",
-            "originalRef": "DepartmentProposalIndicatorsResponseDTO"
+            "originalRef": "DepartmentProposalIndicatorsResponseDTO",
+            "$ref": "#/definitions/DepartmentProposalIndicatorsResponseDTO"
           }
         }
       },

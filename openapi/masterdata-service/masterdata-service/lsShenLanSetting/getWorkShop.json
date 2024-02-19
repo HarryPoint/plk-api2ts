@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«深蓝车间看板响应VO»",
-              "originalRef": "JSONResult«深蓝车间看板响应VO»"
+              "originalRef": "JSONResult«深蓝车间看板响应VO»",
+              "$ref": "#/definitions/JSONResult«深蓝车间看板响应VO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/深蓝车间看板响应VO",
-          "originalRef": "深蓝车间看板响应VO"
+          "originalRef": "深蓝车间看板响应VO",
+          "$ref": "#/definitions/深蓝车间看板响应VO"
         },
         "ts": {
           "type": "integer",
@@ -85,31 +85,31 @@
       "properties": {
         "productionOverview": {
           "description": "生产概览-左上",
-          "$ref": "#/definitions/车间生产概览统计响应VO",
-          "originalRef": "车间生产概览统计响应VO"
+          "originalRef": "车间生产概览统计响应VO",
+          "$ref": "#/definitions/车间生产概览统计响应VO"
         },
         "completeRates": {
           "type": "array",
           "description": "订单完工率-右上",
           "items": {
-            "$ref": "#/definitions/车间及时入库率响应VO",
-            "originalRef": "车间及时入库率响应VO"
+            "originalRef": "车间及时入库率响应VO",
+            "$ref": "#/definitions/车间及时入库率响应VO"
           }
         },
         "dayPlans": {
           "type": "array",
           "description": "日计划及生产进度-右下",
           "items": {
-            "$ref": "#/definitions/车间日计划及生产进度响应VO",
-            "originalRef": "车间日计划及生产进度响应VO"
+            "originalRef": "车间日计划及生产进度响应VO",
+            "$ref": "#/definitions/车间日计划及生产进度响应VO"
           }
         },
         "workCenters": {
           "type": "array",
           "description": "工作中心看板-左下",
           "items": {
-            "$ref": "#/definitions/工作中心生产进度响应VO",
-            "originalRef": "工作中心生产进度响应VO"
+            "originalRef": "工作中心生产进度响应VO",
+            "$ref": "#/definitions/工作中心生产进度响应VO"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«宝晶销售发货报表包材表头响应对象»",
-              "originalRef": "JSONResult«宝晶销售发货报表包材表头响应对象»"
+              "originalRef": "JSONResult«宝晶销售发货报表包材表头响应对象»",
+              "$ref": "#/definitions/JSONResult«宝晶销售发货报表包材表头响应对象»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/宝晶销售发货报表包材表头响应对象",
-          "originalRef": "宝晶销售发货报表包材表头响应对象"
+          "originalRef": "宝晶销售发货报表包材表头响应对象",
+          "$ref": "#/definitions/宝晶销售发货报表包材表头响应对象"
         },
         "ts": {
           "type": "integer",
@@ -87,8 +87,8 @@
           "type": "array",
           "description": "包材表头",
           "items": {
-            "$ref": "#/definitions/Id Code Name 通用传输对象",
-            "originalRef": "Id Code Name 通用传输对象"
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
           }
         }
       },

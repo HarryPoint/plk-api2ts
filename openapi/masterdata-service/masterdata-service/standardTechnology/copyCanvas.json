@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "canvasCopyRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/标准工艺画布复制请求对象",
-              "originalRef": "标准工艺画布复制请求对象"
+              "originalRef": "标准工艺画布复制请求对象",
+              "$ref": "#/definitions/标准工艺画布复制请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«标准工艺画布响应对象»",
-              "originalRef": "JSONResult«标准工艺画布响应对象»"
+              "originalRef": "JSONResult«标准工艺画布响应对象»",
+              "$ref": "#/definitions/JSONResult«标准工艺画布响应对象»"
             }
           },
           "201": {
@@ -91,8 +91,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/标准工艺画布响应对象",
-          "originalRef": "标准工艺画布响应对象"
+          "originalRef": "标准工艺画布响应对象",
+          "$ref": "#/definitions/标准工艺画布响应对象"
         },
         "ts": {
           "type": "integer",
@@ -161,8 +161,8 @@
         },
         "nodeResponse": {
           "description": "标准工艺节点响应对象",
-          "$ref": "#/definitions/标准工艺节点响应对象",
-          "originalRef": "标准工艺节点响应对象"
+          "originalRef": "标准工艺节点响应对象",
+          "$ref": "#/definitions/标准工艺节点响应对象"
         },
         "canvasSnapshot": {
           "type": "object",
@@ -245,15 +245,15 @@
         },
         "nextNode": {
           "description": "下一节点",
-          "$ref": "#/definitions/标准工艺节点响应对象",
-          "originalRef": "标准工艺节点响应对象"
+          "originalRef": "标准工艺节点响应对象",
+          "$ref": "#/definitions/标准工艺节点响应对象"
         },
         "branches": {
           "type": "array",
           "description": "分支节点列表",
           "items": {
-            "$ref": "#/definitions/标准工艺节点响应对象",
-            "originalRef": "标准工艺节点响应对象"
+            "originalRef": "标准工艺节点响应对象",
+            "$ref": "#/definitions/标准工艺节点响应对象"
           }
         }
       },

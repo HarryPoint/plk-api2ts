@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16500",
+  "host": "47.108.139.107:16500",
   "info": {
     "description": "服务名: flow-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«项目管理模板应用响应DTO»",
-              "originalRef": "JSONResult«项目管理模板应用响应DTO»"
+              "originalRef": "JSONResult«项目管理模板应用响应DTO»",
+              "$ref": "#/definitions/JSONResult«项目管理模板应用响应DTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/项目管理模板应用响应DTO",
-          "originalRef": "项目管理模板应用响应DTO"
+          "originalRef": "项目管理模板应用响应DTO",
+          "$ref": "#/definitions/项目管理模板应用响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -78,16 +78,16 @@
           "type": "array",
           "description": "默认应用",
           "items": {
-            "$ref": "#/definitions/流程响应VO_1",
-            "originalRef": "流程响应VO_1"
+            "originalRef": "流程响应VO_1",
+            "$ref": "#/definitions/流程响应VO_1"
           }
         },
         "customApps": {
           "type": "array",
           "description": "自定义应用",
           "items": {
-            "$ref": "#/definitions/流程响应VO_1",
-            "originalRef": "流程响应VO_1"
+            "originalRef": "流程响应VO_1",
+            "$ref": "#/definitions/流程响应VO_1"
           }
         }
       },

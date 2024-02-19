@@ -15,6 +15,8 @@ export interface ITheProjectPlanChangesTheResponseObject {
     projectStageList: IChangeOrderResponseParametersInProjectPhase[];
     // 项目任务响应列表
     projectTaskList: IProjectTaskChangeOrderResponseParameters[];
+    // 项目计划变更信息响应列表
+    projectPlanList: IItemChangeOrderFieldResponseParameter[];
 }
 // 项目阶段变更单响应参数
 export interface IChangeOrderResponseParametersInProjectPhase {

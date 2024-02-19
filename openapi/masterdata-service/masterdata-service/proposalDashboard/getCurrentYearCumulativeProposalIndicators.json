@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«CumulativeProposalIndicatorsResponseDTO»",
-              "originalRef": "JSONResult«CumulativeProposalIndicatorsResponseDTO»"
+              "originalRef": "JSONResult«CumulativeProposalIndicatorsResponseDTO»",
+              "$ref": "#/definitions/JSONResult«CumulativeProposalIndicatorsResponseDTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/CumulativeProposalIndicatorsResponseDTO",
-          "originalRef": "CumulativeProposalIndicatorsResponseDTO"
+          "originalRef": "CumulativeProposalIndicatorsResponseDTO",
+          "$ref": "#/definitions/CumulativeProposalIndicatorsResponseDTO"
         },
         "ts": {
           "type": "integer",

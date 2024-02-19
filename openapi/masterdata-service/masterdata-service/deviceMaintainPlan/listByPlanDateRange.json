@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "dateRangeRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/计划开始结束日期查询DTO",
-              "originalRef": "计划开始结束日期查询DTO"
+              "originalRef": "计划开始结束日期查询DTO",
+              "$ref": "#/definitions/计划开始结束日期查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«保养计划响应DTO»»",
-              "originalRef": "JSONResult«List«保养计划响应DTO»»"
+              "originalRef": "JSONResult«List«保养计划响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«保养计划响应DTO»»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/保养计划响应DTO",
-            "originalRef": "保养计划响应DTO"
+            "originalRef": "保养计划响应DTO",
+            "$ref": "#/definitions/保养计划响应DTO"
           }
         },
         "ts": {
@@ -162,8 +162,8 @@
           "type": "array",
           "description": "计划明细",
           "items": {
-            "$ref": "#/definitions/保养计划明细响应DTO",
-            "originalRef": "保养计划明细响应DTO"
+            "originalRef": "保养计划明细响应DTO",
+            "$ref": "#/definitions/保养计划明细响应DTO"
           }
         }
       },
@@ -221,8 +221,8 @@
           "type": "array",
           "description": "保养明细",
           "items": {
-            "$ref": "#/definitions/保养计划明细项响应DTO",
-            "originalRef": "保养计划明细项响应DTO"
+            "originalRef": "保养计划明细项响应DTO",
+            "$ref": "#/definitions/保养计划明细项响应DTO"
           }
         }
       },
@@ -254,8 +254,8 @@
           "type": "array",
           "description": "保养时间",
           "items": {
-            "$ref": "#/definitions/保养计划明细项时间响应DTO",
-            "originalRef": "保养计划明细项时间响应DTO"
+            "originalRef": "保养计划明细项时间响应DTO",
+            "$ref": "#/definitions/保养计划明细项时间响应DTO"
           }
         }
       },

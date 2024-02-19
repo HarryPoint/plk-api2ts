@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -37,8 +37,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/安全库存物料库存配置信息搜索VO",
-              "originalRef": "安全库存物料库存配置信息搜索VO"
+              "originalRef": "安全库存物料库存配置信息搜索VO",
+              "$ref": "#/definitions/安全库存物料库存配置信息搜索VO"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«安全库存物料库存配置信息返回VO»",
-              "originalRef": "JSONResult«安全库存物料库存配置信息返回VO»"
+              "originalRef": "JSONResult«安全库存物料库存配置信息返回VO»",
+              "$ref": "#/definitions/JSONResult«安全库存物料库存配置信息返回VO»"
             }
           },
           "201": {
@@ -122,8 +122,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/安全库存物料库存配置信息返回VO",
-          "originalRef": "安全库存物料库存配置信息返回VO"
+          "originalRef": "安全库存物料库存配置信息返回VO",
+          "$ref": "#/definitions/安全库存物料库存配置信息返回VO"
         },
         "ts": {
           "type": "integer",

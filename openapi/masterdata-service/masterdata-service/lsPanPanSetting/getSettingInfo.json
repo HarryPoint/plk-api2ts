@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«盼盼生产大屏设置响应DTO»",
-              "originalRef": "JSONResult«盼盼生产大屏设置响应DTO»"
+              "originalRef": "JSONResult«盼盼生产大屏设置响应DTO»",
+              "$ref": "#/definitions/JSONResult«盼盼生产大屏设置响应DTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/盼盼生产大屏设置响应DTO",
-          "originalRef": "盼盼生产大屏设置响应DTO"
+          "originalRef": "盼盼生产大屏设置响应DTO",
+          "$ref": "#/definitions/盼盼生产大屏设置响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -82,8 +82,8 @@
           "type": "array",
           "description": "大屏展示工序id集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "produceOrderOverdueType": {

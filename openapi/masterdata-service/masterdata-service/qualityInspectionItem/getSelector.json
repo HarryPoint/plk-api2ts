@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«质检项基础信息返回VO»»",
-              "originalRef": "JSONResult«List«质检项基础信息返回VO»»"
+              "originalRef": "JSONResult«List«质检项基础信息返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«质检项基础信息返回VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/质检项基础信息返回VO",
-            "originalRef": "质检项基础信息返回VO"
+            "originalRef": "质检项基础信息返回VO",
+            "$ref": "#/definitions/质检项基础信息返回VO"
           }
         },
         "ts": {
@@ -127,8 +127,8 @@
           "type": "array",
           "description": "选项内容集合",
           "items": {
-            "$ref": "#/definitions/质检项选择项返回VO",
-            "originalRef": "质检项选择项返回VO"
+            "originalRef": "质检项选择项返回VO",
+            "$ref": "#/definitions/质检项选择项返回VO"
           }
         }
       },

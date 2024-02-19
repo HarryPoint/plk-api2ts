@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ProducePlanAutoScheduleOutputVO»",
-              "originalRef": "JSONResult«ProducePlanAutoScheduleOutputVO»"
+              "originalRef": "JSONResult«ProducePlanAutoScheduleOutputVO»",
+              "$ref": "#/definitions/JSONResult«ProducePlanAutoScheduleOutputVO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/ProducePlanAutoScheduleOutputVO",
-          "originalRef": "ProducePlanAutoScheduleOutputVO"
+          "originalRef": "ProducePlanAutoScheduleOutputVO",
+          "$ref": "#/definitions/ProducePlanAutoScheduleOutputVO"
         },
         "ts": {
           "type": "integer",

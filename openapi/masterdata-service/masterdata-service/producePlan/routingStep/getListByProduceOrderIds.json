@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产计划工艺路径步骤排产 VO",
-              "originalRef": "生产计划工艺路径步骤排产 VO"
+              "originalRef": "生产计划工艺路径步骤排产 VO",
+              "$ref": "#/definitions/生产计划工艺路径步骤排产 VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产计划工艺路径步骤排产  VO»»",
-              "originalRef": "JSONResult«List«生产计划工艺路径步骤排产  VO»»"
+              "originalRef": "JSONResult«List«生产计划工艺路径步骤排产  VO»»",
+              "$ref": "#/definitions/JSONResult«List«生产计划工艺路径步骤排产  VO»»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产计划工艺路径步骤排产  VO",
-            "originalRef": "生产计划工艺路径步骤排产  VO"
+            "originalRef": "生产计划工艺路径步骤排产  VO",
+            "$ref": "#/definitions/生产计划工艺路径步骤排产  VO"
           }
         },
         "ts": {

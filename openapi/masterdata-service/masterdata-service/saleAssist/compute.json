@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "compute",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/销售交期应答辅助计算DTO",
-              "originalRef": "销售交期应答辅助计算DTO"
+              "originalRef": "销售交期应答辅助计算DTO",
+              "$ref": "#/definitions/销售交期应答辅助计算DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«销售交期应答辅助返回VO»",
-              "originalRef": "JSONResult«销售交期应答辅助返回VO»"
+              "originalRef": "JSONResult«销售交期应答辅助返回VO»",
+              "$ref": "#/definitions/JSONResult«销售交期应答辅助返回VO»"
             }
           },
           "201": {
@@ -138,8 +138,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/销售交期应答辅助返回VO",
-          "originalRef": "销售交期应答辅助返回VO"
+          "originalRef": "销售交期应答辅助返回VO",
+          "$ref": "#/definitions/销售交期应答辅助返回VO"
         },
         "ts": {
           "type": "integer",
@@ -155,15 +155,15 @@
       "properties": {
         "materialInfo": {
           "description": "主物料信息",
-          "$ref": "#/definitions/销售交期应答辅助物料返回VO",
-          "originalRef": "销售交期应答辅助物料返回VO"
+          "originalRef": "销售交期应答辅助物料返回VO",
+          "$ref": "#/definitions/销售交期应答辅助物料返回VO"
         },
         "childMaterialInfos": {
           "type": "array",
           "description": "子物料信息集",
           "items": {
-            "$ref": "#/definitions/销售交期应答辅助物料返回VO",
-            "originalRef": "销售交期应答辅助物料返回VO"
+            "originalRef": "销售交期应答辅助物料返回VO",
+            "$ref": "#/definitions/销售交期应答辅助物料返回VO"
           }
         },
         "leadTime": {
@@ -233,8 +233,8 @@
           "type": "array",
           "description": "子物料信息集",
           "items": {
-            "$ref": "#/definitions/销售交期应答辅助物料返回VO",
-            "originalRef": "销售交期应答辅助物料返回VO"
+            "originalRef": "销售交期应答辅助物料返回VO",
+            "$ref": "#/definitions/销售交期应答辅助物料返回VO"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«首检检验任务响应对象»",
-              "originalRef": "JSONResult«首检检验任务响应对象»"
+              "originalRef": "JSONResult«首检检验任务响应对象»",
+              "$ref": "#/definitions/JSONResult«首检检验任务响应对象»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/首检检验任务响应对象",
-          "originalRef": "首检检验任务响应对象"
+          "originalRef": "首检检验任务响应对象",
+          "$ref": "#/definitions/首检检验任务响应对象"
         },
         "ts": {
           "type": "integer",
@@ -275,8 +275,8 @@
         "inspectionEmployees": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/关联表单数据VO",
-            "originalRef": "关联表单数据VO"
+            "originalRef": "关联表单数据VO",
+            "$ref": "#/definitions/关联表单数据VO"
           }
         },
         "isAssignment": {
@@ -320,22 +320,22 @@
         "mutualRecords": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/首检检验任务互检记录响应对象",
-            "originalRef": "首检检验任务互检记录响应对象"
+            "originalRef": "首检检验任务互检记录响应对象",
+            "$ref": "#/definitions/首检检验任务互检记录响应对象"
           }
         },
         "specialRecords": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/首检检验专检记录响应对象",
-            "originalRef": "首检检验专检记录响应对象"
+            "originalRef": "首检检验专检记录响应对象",
+            "$ref": "#/definitions/首检检验专检记录响应对象"
           }
         },
         "selfRecords": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/首检检验检验自检记录响应对象",
-            "originalRef": "首检检验检验自检记录响应对象"
+            "originalRef": "首检检验检验自检记录响应对象",
+            "$ref": "#/definitions/首检检验检验自检记录响应对象"
           }
         }
       },

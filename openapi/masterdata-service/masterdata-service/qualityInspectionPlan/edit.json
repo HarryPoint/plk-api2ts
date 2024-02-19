@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/编辑质检方案 DTO",
-              "originalRef": "编辑质检方案 DTO"
+              "originalRef": "编辑质检方案 DTO",
+              "$ref": "#/definitions/编辑质检方案 DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -113,8 +113,8 @@
           "type": "array",
           "description": "质检项清单",
           "items": {
-            "$ref": "#/definitions/质检方案质检项关联信息编辑DTO",
-            "originalRef": "质检方案质检项关联信息编辑DTO"
+            "originalRef": "质检方案质检项关联信息编辑DTO",
+            "$ref": "#/definitions/质检方案质检项关联信息编辑DTO"
           }
         },
         "issueCode": {

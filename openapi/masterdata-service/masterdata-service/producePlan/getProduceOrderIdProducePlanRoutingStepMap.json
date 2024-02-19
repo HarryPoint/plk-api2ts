@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«Map«long,List«生产计划工艺路径步骤排产  VO»»»",
-              "originalRef": "JSONResult«Map«long,List«生产计划工艺路径步骤排产  VO»»»"
+              "originalRef": "JSONResult«Map«long,List«生产计划工艺路径步骤排产  VO»»»",
+              "$ref": "#/definitions/JSONResult«Map«long,List«生产计划工艺路径步骤排产  VO»»»"
             }
           },
           "201": {
@@ -91,8 +91,8 @@
           "additionalProperties": {
             "type": "array",
             "items": {
-              "$ref": "#/definitions/生产计划工艺路径步骤排产  VO",
-              "originalRef": "生产计划工艺路径步骤排产  VO"
+              "originalRef": "生产计划工艺路径步骤排产  VO",
+              "$ref": "#/definitions/生产计划工艺路径步骤排产  VO"
             }
           }
         },
