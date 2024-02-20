@@ -3021,5 +3021,22 @@
   "JSONResultList设备状态VO": "JSONResultListDeviceStatusVO",
   "设备状态VO": "DeviceStatusVO",
   "JSONResult文件VO": "JSONResultFileVO",
-  "文件VO": "FileVO"
+  "文件VO": "FileVO",
+  "AppMessageConfigBatchCheckRequestDTO": "Appmessageconfigbatchcheckrequestdto",
+  "AppMessageConfigBatchEnabledRequestDTO": "AppMessageConfigBatchEnabledRequestDTO",
+  "AppMessageConfigBatchStagingRequestDTO": "AppMessageConfigBatchStagingRequestDTO",
+  "FileProvisionCompleteRequestDTO": "FileProvisionCompleteRequestDTO",
+  "EmailTaskWaitForExecutionQueryRequestDTO": "EmailTaskWaitForExecutionQueryRequestDTO",
+  "JSONResultEmailTaskWaitForExecutionQueryResponseDTO": "JSONResultEmailTaskWaitForExecutionQueryResponseDTO",
+  "EmailTaskWaitForExecutionQueryResponseDTO": "EmailTaskWaitForExecutionQueryResponseDTO",
+  "EmailTaskStartTaskRequestDTO": "EmailTaskStartTaskRequestDTO",
+  "JSONResultEmailTaskStartTaskResponseDTO": "JSONResultEmailTaskStartTaskResponseDTO",
+  "EmailTaskStartTaskResponseDTO": "EmailTaskStartTaskResponseDTO",
+  "消息查询DTO": "MessageQueryDTO",
+  "GenerateFileFailRequestDTO": "GenerateFileFailRequestDTO",
+  "RaceAttachmentProvisionTaskRequestDTO": "RaceAttachmentProvisionTaskRequestDTO",
+  "JSONResultRaceAttachmentProvisionTaskResponseDTO": "JSONResultRaceAttachmentProvisionTaskResponseDTO",
+  "RaceAttachmentProvisionTaskResponseDTO": "RaceAttachmentProvisionTaskResponseDTO",
+  "TransferFileRequestDTO": "TransferFileRequestDTO",
+  "AttachmentRequestDTO": "AttachmentRequestDTO"
 }

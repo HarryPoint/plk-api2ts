@@ -24,6 +24,7 @@ const serviceMap = {
   "todo-service": 16600,
   "app-enterprise-web": 16400,
   "app-mobile-web": 17400,
+  "message-notification-service": 17600,
 };
 
 type IPlatformMap = typeof platformMap;
