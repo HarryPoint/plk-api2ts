@@ -6,7 +6,7 @@ export interface IQualifiedSupplierInspectionModelQueryRequestDTO {
     dateRangeEnd: string;
 }
 // JSONResult«List«供应商交检合格率-型号查询响应»»
-export interface IJSONResultListResponseToTheSupplier'sQualifiedDeliveryRate {
+export interface IJSONResultListResponseToTheSuppliersQualifiedDeliveryRate {
     // 返回码
     code: number;
     // 返回消息说明
@@ -15,6 +15,7 @@ export interface IJSONResultListResponseToTheSupplier'sQualifiedDeliveryRate {
     data: ISupplierDeliveryQualifiedRateModelQueryResponse[];
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
+}
 // 供应商交检合格率-型号查询响应
 export interface ISupplierDeliveryQualifiedRateModelQueryResponse {
     // 型号
@@ -23,6 +24,4 @@ export interface ISupplierDeliveryQualifiedRateModelQueryResponse {
     qualifiedQuantity: number;
     // 不合格数量
     unqualifiedQuantity: number;
-}
-
 }

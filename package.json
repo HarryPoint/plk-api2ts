@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch-data": "ts-node ./lib/createData.ts --dir=./openapi",
-    "create-ts": "ts-node ./lib/createTs.ts --dir=./openapi",
-    "init-ts": "npm run fetch-data && npm run create-ts"
+    "fetch-data": "ts-node ./src/createData.ts --dir=./openapi",
+    "create-ts": "ts-node ./src/createTs.ts --dir=./openapi",
+    "init-ts": "npm run fetch-data && npm run create-ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "qs": "^6.11.2",
     "ts-morph": "^20.0.0",
     "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "yargs": "^17.7.2"
   }
 }
