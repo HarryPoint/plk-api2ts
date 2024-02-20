@@ -12,7 +12,7 @@ const typeMap = {
 
 // 去除所有的特殊字符
 const formatName = (name: string) =>
-  name.replace(/[、,，/《》«»()（）-\s]/gi, "");
+  name.replace(/[、,，'/《》«»()（）-\s]/gi, "");
 
 type IDefinitionsMapItem = {
   name: string;
