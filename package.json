@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch-data": "ts-node ./src/createData.ts --dir=./openapi",
-    "create-ts": "ts-node ./src/createTs.ts --dir=./openapi",
+    "fetch-data": "node ./lib/createData.js --dir=./openapi",
+    "create-ts": "node ./lib/createTs.js --dir=./openapi",
     "init-ts": "npm run fetch-data && npm run create-ts",
+    "src-fetch-data": "ts-node ./src/createData.ts --dir=./openapi",
+    "src-create-ts": "ts-node ./src/createTs.ts --dir=./openapi",
+    "src-init-ts": "npm run src-fetch-data && npm run src-create-ts",
     "build": "tsc"
   },
   "keywords": [],
