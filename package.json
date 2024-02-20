@@ -1,6 +1,6 @@
 {
   "name": "plk-api2ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,20 +26,22 @@
     "lib",
     "README.md"
   ],
-  "devDependencies": {
-    "@types/crypto-js": "^4.2.2",
-    "@types/lodash": "^4.14.202",
-    "@types/lodash-es": "^4.17.12",
-    "@types/node": "^20.11.15",
-    "@types/qs": "^6.9.11",
+  "dependencies": {
     "axios": "^1.6.7",
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",
     "lodash": "^4.17.21",
     "qs": "^6.11.2",
     "ts-morph": "^20.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/lodash": "^4.14.202",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^20.11.15",
+    "@types/qs": "^6.9.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   }
 }
