@@ -1,5 +1,5 @@
 {
-  "name": "ts-generator",
+  "name": "api2ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,11 +11,16 @@
     "src-fetch-data": "ts-node ./src/createData.ts --dir=./openapi",
     "src-create-ts": "ts-node ./src/createTs.ts --dir=./openapi",
     "src-init-ts": "npm run src-fetch-data && npm run src-create-ts",
-    "build": "tsc"
+    "build": "tsc",
+    "update": "tsc && npm link"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bin": {
+    "api2json": "./bin/api2json",
+    "api2ts": "./bin/api2ts"
+  },
   "files": [
     "bin",
     "lib",

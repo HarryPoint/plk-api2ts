@@ -103,6 +103,13 @@
           "type": "string",
           "description": "时间结束 yyyy-MM-dd HH:mm:ss"
         },
+        "ignoreAppCodeList": {
+          "type": "array",
+          "description": "忽略应用编码列表",
+          "items": {
+            "type": "string"
+          }
+        },
         "isRead": {
           "type": "string",
           "description": "是否已读",
@@ -115,6 +122,13 @@
           "type": "integer",
           "format": "int32",
           "description": "最新发布终端值合计"
+        },
+        "appCodeList": {
+          "type": "array",
+          "description": "应用编码列表",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "title": "消息搜索VO"

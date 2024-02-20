@@ -135,6 +135,10 @@
           "enum": [
             "  PRODUCE_TASK-生产任务"
           ]
+        },
+        "fromAppCode": {
+          "type": "string",
+          "description": "来源应用编码"
         }
       },
       "title": "消息信息"

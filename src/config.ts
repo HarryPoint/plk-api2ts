@@ -1,6 +1,7 @@
 import path from "path";
 const argv = require("yargs").argv;
-const dir = path.join(__dirname, "..", argv.dir);
+
+const dir = path.join(process.cwd(), argv.dir);
 
 // 接口文档资料===========================================
 // 端口：16700 masterdata-service 主数据服务

@@ -306,6 +306,10 @@
           "type": "string",
           "description": "当前节点"
         },
+        "taskWeight": {
+          "type": "number",
+          "description": "任务权重"
+        },
         "leaderUserIds": {
           "type": "array",
           "items": {
@@ -580,6 +584,10 @@
         "processStatusName": {
           "type": "string",
           "description": "当前节点"
+        },
+        "taskWeight": {
+          "type": "number",
+          "description": "任务权重"
         },
         "leaderUserIds": {
           "type": "array",

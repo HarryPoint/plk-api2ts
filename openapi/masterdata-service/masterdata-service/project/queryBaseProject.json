@@ -330,6 +330,14 @@
             "type": "string"
           }
         },
+        "isQueryEmptyPlanTask": {
+          "type": "string",
+          "description": "是否查询没有关联项目计划的任务",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
         "updateDeptIds": {
           "type": "array",
           "description": "修改部门ids",
@@ -338,12 +346,9 @@
             "format": "int64"
           }
         },
-        "fromAppIds": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
+        "beginTaskWeight": {
+          "type": "number",
+          "description": "任务权重 -- 开始"
         },
         "isQueryCurrentMember": {
           "type": "string",
@@ -361,6 +366,13 @@
             "  N-否"
           ]
         },
+        "fromAppIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
         "projectTypeIds": {
           "type": "array",
           "description": "项目类型id集",
@@ -368,6 +380,10 @@
             "type": "integer",
             "format": "int64"
           }
+        },
+        "endTaskWeight": {
+          "type": "number",
+          "description": "任务权重 -- 结束"
         },
         "projectCategories": {
           "type": "array",

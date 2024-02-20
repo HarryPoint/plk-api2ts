@@ -307,6 +307,14 @@
           "format": "int64",
           "description": "项目计划id"
         },
+        "projectPlanCode": {
+          "type": "string",
+          "description": "项目计划编号"
+        },
+        "projectPlanName": {
+          "type": "string",
+          "description": "项目计划名称"
+        },
         "level": {
           "type": "integer",
           "format": "int32",

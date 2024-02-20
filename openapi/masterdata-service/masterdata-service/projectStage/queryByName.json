@@ -126,6 +126,11 @@
     "项目阶段响应对象": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目阶段id"
+        },
         "projectPlanId": {
           "type": "array",
           "description": "项目计划ids",
