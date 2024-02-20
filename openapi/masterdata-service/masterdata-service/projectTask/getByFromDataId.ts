@@ -91,6 +91,8 @@ export interface IProjectTaskResponseObject6 {
     deliverableName: string;
     // 当前节点
     processStatusName: string;
+    // 任务权重
+    taskWeight: number;
     // undefined
     leaderUserIds: any[];
     // undefined
@@ -201,6 +203,8 @@ export interface IProjectTaskResponseObject9 {
     deliverableName: string;
     // 当前节点
     processStatusName: string;
+    // 任务权重
+    taskWeight: number;
     // undefined
     leaderUserIds: any[];
     // undefined

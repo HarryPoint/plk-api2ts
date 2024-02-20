@@ -14,10 +14,14 @@ export interface IMessageSearchVO {
     beginTime: string;
     // 时间结束 yyyy-MM-dd HH:mm:ss
     endTime: string;
+    // 忽略应用编码列表
+    ignoreAppCodeList: string[];
     // 是否已读
     isRead: string;
     // 最新发布终端值合计
     sendTarget: number;
+    // 应用编码列表
+    appCodeList: string[];
 }
 // 分页排序VO
 export interface IPagingSortVO {

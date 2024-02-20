@@ -22,6 +22,8 @@ export interface IJSONResultListProjectPhaseResponseObject {
 }
 // 项目阶段响应对象
 export interface IProjectPhaseResponseObject {
+    // 项目阶段id
+    id: number;
     // 项目计划ids
     projectPlanId: any[];
     // 名称

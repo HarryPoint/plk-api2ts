@@ -86,16 +86,22 @@ export interface IProjectPhaseTaskQueryObject {
     endUpdateTime: string;
     // 处理进度名称列表
     processStatusNames: string[];
+    // 是否查询没有关联项目计划的任务
+    isQueryEmptyPlanTask: string;
     // 修改部门ids
     updateDeptIds: number[];
-    // undefined
-    fromAppIds: number[];
+    // 任务权重 -- 开始
+    beginTaskWeight: number;
     // 是否仅查询当前登录用户
     isQueryCurrentMember: string;
     // 是否展示子任务
     isShowChildTask: string;
+    // undefined
+    fromAppIds: number[];
     // 项目类型id集
     projectTypeIds: number[];
+    // 任务权重 -- 结束
+    endTaskWeight: number;
     // 项目大类集
     projectCategories: string[];
     // undefined

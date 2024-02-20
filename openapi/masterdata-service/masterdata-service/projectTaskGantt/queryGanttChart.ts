@@ -94,6 +94,10 @@ export interface IProjectTaskGanttChartTaskResponseObject {
     projectId: number;
     // 项目计划id
     projectPlanId: number;
+    // 项目计划编号
+    projectPlanCode: string;
+    // 项目计划名称
+    projectPlanName: string;
     // 层级
     level: number;
     // 排序

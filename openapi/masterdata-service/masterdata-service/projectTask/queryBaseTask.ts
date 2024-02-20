@@ -10,8 +10,6 @@ export interface IProjectPhaseTaskQueryObject1 {
     groupBys: string[];
     // 导出字段集
     exportFields: string[];
-    // 任务编号
-    code: string;
     // 项目id
     projectId: number;
     // 项目id集
@@ -22,8 +20,8 @@ export interface IProjectPhaseTaskQueryObject1 {
     projectPlanIds: number[];
     // 任务名称
     name: string;
-    // 任务负责人列表
-    leaderUserIds: string[];
+    // 任务编号
+    code: string;
     // 名称or编号
     nameOrCode: string;
     // 是否超期（Y是 N:否）
@@ -34,18 +32,16 @@ export interface IProjectPhaseTaskQueryObject1 {
     projectStageIds: number[];
     // 项目任务类型ids列表
     projectTaskTypeIds: number[];
+    // 任务负责人列表
+    leaderUserIds: string[];
     // 任务状态（DRAFT:草稿,UN_ISSUE:未下发,UN_RECEIVE:未接受,UN_START:未开始,HANDLING:进行中,COMPLETE:已完成,NOT_PASS:未通过,CANCEL:已取消）
     taskStatusList: string[];
-    // 任务开始日期 --结束日期
-    endPlanBeginTime: string;
     // 任务状态（DRAFT:草稿,UN_ISSUE:未下发,UN_RECEIVE:未接受,UN_START:未开始,HANDLING:进行中,COMPLETE:已完成,NOT_PASS:未通过,CANCEL:已取消）
     taskStatusGroupList: string[];
     // 超期天数开始
     beginOverdueDay: number;
     // 超期天数结束
     endOverdueDay: number;
-    // 任务截止日期 --结束日期
-    endPlanEndTime: string;
     // 任务id集
     taskIds: number[];
     // 任务查询日期 --开始日期
@@ -54,14 +50,18 @@ export interface IProjectPhaseTaskQueryObject1 {
     preTaskIds: string[];
     // 任务开始日期 --开始日期
     beginPlanBeginTime: string;
-    // 上级任务列表
-    parentIds: number[];
+    // 任务开始日期 --结束日期
+    endPlanBeginTime: string;
     // 任务截止日期 --开始日期
     beginPlanEndTime: string;
+    // 任务截止日期 --结束日期
+    endPlanEndTime: string;
     // 任务查询日期 --开始日期
     beginTaskTime: string;
     // 优先级列表
     priorityList: string[];
+    // 上级任务列表
+    parentIds: number[];
     // 备注
     remark: string;
     // 状态 HANDLING进行中，COMPLETE已完成，NOT_PASS未通过, STAGING暂存, INVALID作废/停用
@@ -90,6 +90,12 @@ export interface IProjectPhaseTaskQueryObject1 {
     isShowChildTask: string;
     // 处理进度名称列表
     processStatusNames: string[];
+    // 是否查询没有关联项目计划的任务
+    isQueryEmptyPlanTask: string;
+    // 任务权重 -- 开始
+    beginTaskWeight: number;
+    // 任务权重 -- 结束
+    endTaskWeight: number;
     // undefined
     notEmptyCondition: boolean;
     // undefined

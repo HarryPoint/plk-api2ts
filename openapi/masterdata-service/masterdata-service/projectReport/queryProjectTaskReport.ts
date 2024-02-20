@@ -90,6 +90,12 @@ export interface IProjectTaskReportResponseObject {
     actualEndTime: string;
     // 任务进度
     taskProgress: number;
+    // 项目计划id
+    projectPlanId: number;
+    // 项目计划编号
+    projectPlanCode: string;
+    // 项目计划名称
+    projectPlanName: string;
     // undefined
     parentId: number;
     // undefined

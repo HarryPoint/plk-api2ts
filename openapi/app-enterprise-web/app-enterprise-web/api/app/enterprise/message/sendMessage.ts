@@ -24,6 +24,8 @@ export interface IMessageInformation {
     businessId: number;
     // 消息业务类型
     businessType: string;
+    // 来源应用编码
+    fromAppCode: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {
