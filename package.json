@@ -16,6 +16,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ],
   "dependencies": {
     "@types/crypto-js": "^4.2.2",
     "@types/lodash": "^4.14.202",
