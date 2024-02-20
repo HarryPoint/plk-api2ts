@@ -6,8 +6,6 @@ export interface IItemNameNumberPublicQueryObject1 {
     projectPlanId: number;
     // 名称or编号
     nameOrCode: string;
-    // undefined
-    projectPlanFlowIsComplete: string;
 }
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeNameACommonTransferObject {

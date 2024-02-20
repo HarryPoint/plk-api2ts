@@ -4,12 +4,12 @@ export interface IItemNameNumberPublicQueryObject {
     nameOrCode: string;
     // 条数
     limit: number;
+    // 项目计划ids
+    projectPlanIds: number[];
     // undefined
     ids: number[];
     // undefined
     projectIds: number[];
-    // undefined
-    projectPlanIds: number[];
     // undefined
     statusList: string[];
 }

@@ -8,16 +8,18 @@ export interface IProjectPhaseTaskQueryObject1 {
     orders: IPagingSort[];
     // 汇总聚合维度字段集
     groupBys: string[];
-    // 任务编号
-    code: string;
     // 导出字段集
     exportFields: string[];
+    // 任务编号
+    code: string;
     // 项目id
     projectId: number;
     // 项目id集
     projectIds: number[];
     // 项目计划id
     projectPlanId: number;
+    // 项目计划id集
+    projectPlanIds: number[];
     // 任务名称
     name: string;
     // 任务负责人列表
@@ -89,11 +91,7 @@ export interface IProjectPhaseTaskQueryObject1 {
     // 处理进度名称列表
     processStatusNames: string[];
     // undefined
-    projectPlanFlowIsComplete: string;
-    // undefined
     notEmptyCondition: boolean;
-    // undefined
-    filterDraftStatus: string;
     // undefined
     processStatusCodes: string[];
     // undefined

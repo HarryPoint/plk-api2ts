@@ -14,7 +14,7 @@
           "项目任务相关"
         ],
         "summary": "删除项目任务",
-        "operationId": "removeByIdUsingGET_2",
+        "operationId": "removeByIdUsingGET_3",
         "produces": [
           "*/*"
         ],

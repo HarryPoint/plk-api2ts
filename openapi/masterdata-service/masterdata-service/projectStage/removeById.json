@@ -14,7 +14,7 @@
           "项目阶段相关"
         ],
         "summary": "删除项目阶段",
-        "operationId": "removeByIdUsingGET_1",
+        "operationId": "removeByIdUsingGET_2",
         "produces": [
           "*/*"
         ],

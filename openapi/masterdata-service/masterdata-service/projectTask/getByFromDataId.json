@@ -172,6 +172,10 @@
           "type": "string",
           "description": "项目计划编号"
         },
+        "projectPlanName": {
+          "type": "string",
+          "description": "项目计划名称"
+        },
         "projectStageId": {
           "type": "integer",
           "format": "int64",
@@ -442,6 +446,10 @@
         "projectPlanCode": {
           "type": "string",
           "description": "项目计划编号"
+        },
+        "projectPlanName": {
+          "type": "string",
+          "description": "项目计划名称"
         },
         "projectStageId": {
           "type": "integer",

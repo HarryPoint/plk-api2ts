@@ -77,13 +77,6 @@
         "nameOrCode": {
           "type": "string",
           "description": "名称or编号"
-        },
-        "projectPlanFlowIsComplete": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
-          ]
         }
       },
       "title": "项目名称编号公共查询对象_1"

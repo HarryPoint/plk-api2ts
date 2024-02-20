@@ -14,7 +14,7 @@
           "项目任务模板相关"
         ],
         "summary": "通过项目任务模板id删除数据",
-        "operationId": "removeByIdUsingGET_3",
+        "operationId": "removeByIdUsingGET_4",
         "produces": [
           "*/*"
         ],

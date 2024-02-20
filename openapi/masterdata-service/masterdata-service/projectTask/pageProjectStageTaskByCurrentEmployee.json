@@ -210,19 +210,17 @@
           "type": "string",
           "description": "项目名称"
         },
-        "projectPlanId": {
-          "type": "integer",
-          "format": "int64",
-          "description": "项目计划id"
-        },
-        "projectPlanCode": {
-          "type": "string",
-          "description": "项目计划编号"
-        },
         "projectStageId": {
           "type": "integer",
           "format": "int64",
           "description": "项目阶段id"
+        },
+        "projectPlanIds": {
+          "type": "array",
+          "description": "项目计划ids",
+          "items": {
+            "type": "object"
+          }
         },
         "projectStageName": {
           "type": "string",
@@ -333,6 +331,10 @@
         "projectPlanCode": {
           "type": "string",
           "description": "项目计划编号"
+        },
+        "projectPlanName": {
+          "type": "string",
+          "description": "项目计划名称"
         },
         "projectStageId": {
           "type": "integer",

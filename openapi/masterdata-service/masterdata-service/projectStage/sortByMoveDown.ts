@@ -6,6 +6,10 @@ export interface IProjectPhaseSortRequestObjects {
     moveProjectStageId: number;
     // 移动到的排序,最小为1
     moveToSort: number;
+    // 是否是在项目计划模块展示的阶段
+    isProjectPlanShow: string;
+    // 是否是在项目任务模块展示的阶段
+    isProjectTaskShow: string;
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -15,12 +15,10 @@ export interface IProjectTaskResponseObject10 {
     projectId: number;
     // 项目名称
     projectName: string;
-    // 项目计划id
-    projectPlanId: number;
-    // 项目计划编号
-    projectPlanCode: string;
     // 项目阶段id
     projectStageId: number;
+    // 项目计划ids
+    projectPlanIds: any[];
     // 项目阶段名称
     projectStageName: string;
     // 项目阶段来源应用编号
@@ -62,6 +60,8 @@ export interface IProjectTaskResponseObject9 {
     projectPlanId: number;
     // 项目计划编号
     projectPlanCode: string;
+    // 项目计划名称
+    projectPlanName: string;
     // 项目阶段id
     projectStageId: number;
     // 项目阶段名称

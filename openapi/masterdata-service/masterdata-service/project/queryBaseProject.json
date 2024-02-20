@@ -102,16 +102,21 @@
             "type": "string"
           }
         },
-        "name": {
-          "type": "string",
-          "description": "任务名称"
-        },
         "exportFields": {
           "type": "array",
           "description": "导出字段集",
           "items": {
             "type": "string"
           }
+        },
+        "name": {
+          "type": "string",
+          "description": "任务名称"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
         },
         "isOverdueList": {
           "type": "array",
@@ -120,10 +125,20 @@
             "type": "string"
           }
         },
-        "projectId": {
-          "type": "integer",
-          "format": "int64",
-          "description": "项目id"
+        "projectManagerIds": {
+          "type": "array",
+          "description": "项目经理id集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "projectPlanIds": {
+          "type": "array",
+          "description": "项目计划id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
         },
         "projectStageIds": {
           "type": "array",
@@ -131,13 +146,6 @@
           "items": {
             "type": "integer",
             "format": "int64"
-          }
-        },
-        "projectManagerIds": {
-          "type": "array",
-          "description": "项目经理id集",
-          "items": {
-            "type": "string"
           }
         },
         "code": {
@@ -330,6 +338,13 @@
             "format": "int64"
           }
         },
+        "fromAppIds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
         "isQueryCurrentMember": {
           "type": "string",
           "description": "是否仅查询当前登录用户",
@@ -338,26 +353,12 @@
             "  N-否"
           ]
         },
-        "fromAppIds": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
         "isShowChildTask": {
           "type": "string",
           "description": "是否展示子任务",
           "enum": [
             "  Y-是",
             "  N-否"
-          ]
-        },
-        "projectPlanFlowIsComplete": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
           ]
         },
         "projectTypeIds": {
@@ -368,9 +369,6 @@
             "format": "int64"
           }
         },
-        "notEmptyCondition": {
-          "type": "boolean"
-        },
         "projectCategories": {
           "type": "array",
           "description": "项目大类集",
@@ -378,12 +376,8 @@
             "type": "string"
           }
         },
-        "filterDraftStatus": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
-          ]
+        "notEmptyCondition": {
+          "type": "boolean"
         },
         "projectAdminUserIds": {
           "type": "array",

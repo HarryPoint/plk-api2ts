@@ -73,6 +73,14 @@
           "format": "int32",
           "description": "条数"
         },
+        "projectPlanIds": {
+          "type": "array",
+          "description": "项目计划ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
         "ids": {
           "type": "array",
           "items": {
@@ -81,13 +89,6 @@
           }
         },
         "projectIds": {
-          "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "projectPlanIds": {
           "type": "array",
           "items": {
             "type": "integer",

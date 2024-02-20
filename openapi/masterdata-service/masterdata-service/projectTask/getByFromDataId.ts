@@ -39,6 +39,8 @@ export interface IProjectTaskResponseObject6 {
     projectPlanId: number;
     // 项目计划编号
     projectPlanCode: string;
+    // 项目计划名称
+    projectPlanName: string;
     // 项目阶段id
     projectStageId: number;
     // 项目阶段名称
@@ -147,6 +149,8 @@ export interface IProjectTaskResponseObject9 {
     projectPlanId: number;
     // 项目计划编号
     projectPlanCode: string;
+    // 项目计划名称
+    projectPlanName: string;
     // 项目阶段id
     projectStageId: number;
     // 项目阶段名称

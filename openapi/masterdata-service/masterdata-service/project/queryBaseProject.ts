@@ -12,18 +12,20 @@ export interface IProjectPhaseTaskQueryObject {
     projectPlanId: number;
     // 汇总聚合维度字段集
     groupBys: string[];
-    // 任务名称
-    name: string;
     // 导出字段集
     exportFields: string[];
-    // 是否超期（Y是 N:否）
-    isOverdueList: string[];
+    // 任务名称
+    name: string;
     // 项目id
     projectId: number;
-    // 项目阶段ids列表
-    projectStageIds: number[];
+    // 是否超期（Y是 N:否）
+    isOverdueList: string[];
     // 项目经理id集
     projectManagerIds: string[];
+    // 项目计划id集
+    projectPlanIds: number[];
+    // 项目阶段ids列表
+    projectStageIds: number[];
     // 任务编号
     code: string;
     // 任务负责人列表
@@ -86,22 +88,18 @@ export interface IProjectPhaseTaskQueryObject {
     processStatusNames: string[];
     // 修改部门ids
     updateDeptIds: number[];
-    // 是否仅查询当前登录用户
-    isQueryCurrentMember: string;
     // undefined
     fromAppIds: number[];
+    // 是否仅查询当前登录用户
+    isQueryCurrentMember: string;
     // 是否展示子任务
     isShowChildTask: string;
-    // undefined
-    projectPlanFlowIsComplete: string;
     // 项目类型id集
     projectTypeIds: number[];
-    // undefined
-    notEmptyCondition: boolean;
     // 项目大类集
     projectCategories: string[];
     // undefined
-    filterDraftStatus: string;
+    notEmptyCondition: boolean;
     // 项目管理员id集
     projectAdminUserIds: string[];
     // undefined

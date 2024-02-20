@@ -1,13 +1,15 @@
-// 项目名称编号公共查询对象_1
-export interface IItemNameNumberPublicQueryObject1 {
+// 项目任务名称编号查询对象
+export interface IItemTaskNameNumberQueryObject {
     // 项目id
     projectId: number;
     // 项目计划id
     projectPlanId: number;
+    // 是否查询只在项目计划模块展示的任务
+    isProjectPlanShow: string;
+    // 是否查询只在项目任务模块展示的任务
+    isProjectTaskShow: string;
     // 名称or编号
     nameOrCode: string;
-    // undefined
-    projectPlanFlowIsComplete: string;
 }
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeNameACommonTransferObject {
