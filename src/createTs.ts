@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { Project } from "ts-morph";
-import config, { translateCacheFileName } from "./config";
+import config from "./config";
 import { createDefinitions } from "./createDefinitions";
 
 const readFiles = async (dir: string, project: Project) => {
@@ -13,7 +13,7 @@ const readFiles = async (dir: string, project: Project) => {
     if (
       stat.isFile() &&
       info.ext === ".json" &&
-      info.base !== translateCacheFileName
+      info.base !== config.translateCacheFileName
     ) {
       const data = fs.readFileSync(filePath);
       const swaggerData = JSON.parse(data.toString());

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 export type IConfig = {
-  translateCache: string;
+  translateCacheFileName: string;
   translateApiUri: string;
   translateAppKey: string;
   translateAppSecret: string;
@@ -49,12 +49,10 @@ const apiMap = Object.keys(platformMap)
     {} as Record<string, Record<keyof IServiceMap, string>>
   ) as Record<string, Record<keyof IServiceMap, string>>;
 
-export const translateCacheFileName = "translateCache.json";
-
 const output = path.join(process.cwd(), "./openapi");
 
 const defaultConfig: IConfig = {
-  translateCache: path.join(output, translateCacheFileName),
+  translateCacheFileName: "translateCache.json",
   translateApiUri: "https://openapi.youdao.com/v2/api",
   translateAppKey: "4a8802ec639e5e84",
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
@@ -72,17 +70,20 @@ if (!fs.existsSync(configPath)) {
   throw new Error("config file not found");
 }
 
-let configData = require(configPath);
+let configFn = require(configPath);
+let configData: Partial<IConfig> = {};
 
-if (typeof configData === "function") {
-  configData = configData(defaultConfig);
+if (typeof configFn === "function") {
+  configData = configFn(defaultConfig) as Partial<IConfig>;
+} else {
+  configData = configFn as Partial<IConfig>;
 }
 
 if (!configData.output) {
   throw new Error("config file must have output field");
 }
 
-const resultConfig = {
+const resultConfig: IConfig = {
   ...defaultConfig,
   ...configData,
 };

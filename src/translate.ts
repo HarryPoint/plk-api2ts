@@ -2,6 +2,7 @@ import axios from "axios";
 import CryptoJS from "crypto-js";
 import fs from "fs";
 import _ from "lodash";
+import path from "path";
 import qs from "qs";
 import config from "./config";
 
@@ -66,14 +67,17 @@ const fetchApi = async (input: string[]) => {
 export const translate = async (input: string | string[]) => {
   const inputArr = Array.isArray(input) ? input : [input];
   const chunkArr = _.chunk(inputArr, chunkSize);
+  const translateCachePath = path.join(
+    config.output,
+    config.translateCacheFileName
+  );
   let translateCacheData: Record<string, string> = {};
   try {
-    const stat = fs.statSync(config.translateCache);
+    const stat = fs.statSync(translateCachePath);
     if (stat.isFile()) {
       translateCacheData =
-        JSON.parse(
-          fs.readFileSync(config.translateCache, "utf-8").toString()
-        ) || {};
+        JSON.parse(fs.readFileSync(translateCachePath, "utf-8").toString()) ||
+        {};
     }
   } catch (err) {}
   const chunkResArr: string[][] = [];
@@ -110,7 +114,7 @@ export const translate = async (input: string | string[]) => {
     chunkResArr.push(await translateFn(chunkItem));
   }
   fs.writeFileSync(
-    config.translateCache,
+    translateCachePath,
     JSON.stringify(translateCacheData, null, 2)
   );
   return _.flatten(chunkResArr);
