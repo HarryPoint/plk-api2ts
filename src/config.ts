@@ -49,7 +49,7 @@ const apiMap = Object.keys(platformMap)
     {} as Record<string, Record<keyof IServiceMap, string>>
   ) as Record<string, Record<keyof IServiceMap, string>>;
 
-const output = path.join(process.cwd(), "./openapi");
+const output = path.join(process.cwd(), "./autoApi");
 
 const defaultConfig: IConfig = {
   translateCacheFileName: "translateCache.json",
