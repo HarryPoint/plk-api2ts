@@ -1,0 +1,192 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/qualityAuditStatisticsReport/queryAuditType": {
+      "post": {
+        "tags": [
+          "质量审核统计表"
+        ],
+        "summary": "不符合项统计 - 审核类型",
+        "operationId": "queryAuditTypeUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "基础质量审核查询请求_1",
+              "$ref": "#/definitions/基础质量审核查询请求_1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«质量审核类型查询响应»",
+              "$ref": "#/definitions/JSONResult«质量审核类型查询响应»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "helin",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "基础质量审核查询请求_1": {
+      "type": "object",
+      "properties": {
+        "dateRangeBegin": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期范围-起始"
+        },
+        "dateRangeEnd": {
+          "type": "string",
+          "format": "date-time",
+          "description": "日期范围-结束"
+        }
+      },
+      "title": "基础质量审核查询请求_1"
+    },
+    "JSONResult«质量审核类型查询响应»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "质量审核类型查询响应",
+          "$ref": "#/definitions/质量审核类型查询响应"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«质量审核类型查询响应»"
+    },
+    "质量审核类型查询响应": {
+      "type": "object",
+      "properties": {
+        "titleList": {
+          "type": "array",
+          "description": "标题列表-仅包含XX不符合项数量,XX 不符合占比",
+          "items": {
+            "originalRef": "审核类型标题",
+            "$ref": "#/definitions/审核类型标题"
+          }
+        },
+        "internalAudit": {
+          "description": "内审清单",
+          "originalRef": "质量审核类型的值响应",
+          "$ref": "#/definitions/质量审核类型的值响应"
+        },
+        "externalAudit": {
+          "description": "外审清单",
+          "originalRef": "质量审核类型的值响应",
+          "$ref": "#/definitions/质量审核类型的值响应"
+        },
+        "specialAudit": {
+          "description": "专审清单",
+          "originalRef": "质量审核类型的值响应",
+          "$ref": "#/definitions/质量审核类型的值响应"
+        }
+      },
+      "title": "质量审核类型查询响应"
+    },
+    "审核类型标题": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "description": "标题的Key"
+        },
+        "name": {
+          "type": "string",
+          "description": "标题的名称"
+        }
+      },
+      "title": "审核类型标题"
+    },
+    "质量审核类型的值响应": {
+      "type": "object",
+      "properties": {
+        "nonConformanceQuantity": {
+          "type": "number",
+          "description": "不符合项数量"
+        },
+        "dynamicIndicators": {
+          "type": "object",
+          "description": "不符合项 - 动态指标。 key - 为 titleList[].key。指标为表格的值",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "nonConformanceUnRectifiedQuantity": {
+          "type": "integer",
+          "format": "int64",
+          "description": "不符合项 - 未整改数量"
+        },
+        "nonConformanceRectificationRate": {
+          "type": "number",
+          "description": "不符合项 - 整改率"
+        },
+        "suggestedItemsQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "建议项数量"
+        },
+        "suggestedItemsUnRectifiedQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "建议项 - 未整改数量"
+        },
+        "suggestedItemsRectificationRate": {
+          "type": "number",
+          "description": "建议项 - 整改率"
+        }
+      },
+      "title": "质量审核类型的值响应"
+    }
+  }
+}

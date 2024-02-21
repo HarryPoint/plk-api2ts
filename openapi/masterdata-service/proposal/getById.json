@@ -1,0 +1,155 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/proposal/getById": {
+      "post": {
+        "tags": [
+          "合理化建议相关"
+        ],
+        "summary": "根据ID查询合理化建议",
+        "operationId": "getByIdUsingPOST_2",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«ProposalResponseDTO»",
+              "$ref": "#/definitions/JSONResult«ProposalResponseDTO»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«ProposalResponseDTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "ProposalResponseDTO",
+          "$ref": "#/definitions/ProposalResponseDTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«ProposalResponseDTO»"
+    },
+    "ProposalResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "code": {
+          "type": "string",
+          "description": "编号"
+        },
+        "name": {
+          "type": "string",
+          "description": "建议名称"
+        },
+        "improvementCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善类别ID"
+        },
+        "improvementCategoryName": {
+          "type": "string",
+          "description": "改善类别名称"
+        },
+        "improvementDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善部门"
+        },
+        "improvementDeptLeaderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "改善部门负责人"
+        },
+        "createDeptLeaderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "提议部门负责人"
+        },
+        "problemDesc": {
+          "type": "string",
+          "description": "问题描述"
+        },
+        "solution": {
+          "type": "string",
+          "description": "解决方案"
+        },
+        "savingCost": {
+          "type": "string",
+          "description": "可增加的收益或节约成本估算"
+        },
+        "remark": {
+          "type": "string",
+          "description": "其他说明"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "ProposalResponseDTO"
+    }
+  }
+}

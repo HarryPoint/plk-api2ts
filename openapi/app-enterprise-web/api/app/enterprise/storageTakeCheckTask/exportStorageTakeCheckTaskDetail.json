@@ -1,0 +1,197 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/exportStorageTakeCheckTaskDetail": {
+      "post": {
+        "tags": [
+          "仓库盘点任务相关"
+        ],
+        "summary": "导出盘点明细",
+        "operationId": "exportStorageTakeCheckTaskDetailUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "checkList",
+            "description": "checkList",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "originalRef": "仓库盘点仓位清单导出DTO",
+                "$ref": "#/definitions/仓库盘点仓位清单导出DTO"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "ModelAndView",
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "150"
+      }
+    }
+  },
+  "definitions": {
+    "仓库盘点仓位清单导出DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "盘点详情id"
+        },
+        "warehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位id"
+        },
+        "warehouseName": {
+          "type": "string",
+          "description": "仓位名称"
+        },
+        "warehouseCode": {
+          "type": "string",
+          "description": "仓位编号"
+        },
+        "areaName": {
+          "type": "string",
+          "description": "区域名称"
+        },
+        "areaCode": {
+          "type": "string",
+          "description": "区域编号"
+        },
+        "storehouseName": {
+          "type": "string",
+          "description": "仓库名称"
+        },
+        "storehouseCode": {
+          "type": "string",
+          "description": "仓库编号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "materialType": {
+          "type": "string",
+          "description": "物料种类"
+        },
+        "materialTypeDesc": {
+          "type": "string",
+          "description": "物料种类描述"
+        },
+        "originalQuantity": {
+          "type": "number",
+          "description": "原始数量(账面库存)"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "盘点数量"
+        },
+        "verifyQuantity": {
+          "type": "number",
+          "description": "核对数量"
+        },
+        "verifyDiffQuantity": {
+          "type": "number",
+          "description": "核对调整数量"
+        },
+        "checkQuantity": {
+          "type": "number",
+          "description": "盘点结果(盈亏数量)"
+        },
+        "differenceReason": {
+          "type": "string",
+          "description": "差异原因"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "serialNos": {
+          "type": "array",
+          "description": "序列号集",
+          "items": {
+            "originalRef": "盘点任务盘点明细序列号DTO_1",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1"
+          }
+        },
+        "serialNoStr": {
+          "type": "string"
+        }
+      },
+      "title": "仓库盘点仓位清单导出DTO"
+    },
+    "盘点任务盘点明细序列号DTO_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "string",
+          "description": "序列号"
+        },
+        "serialRemark": {
+          "type": "string",
+          "description": "备注"
+        }
+      },
+      "title": "盘点任务盘点明细序列号DTO_1"
+    },
+    "ModelAndView": {
+      "type": "object",
+      "title": "ModelAndView"
+    }
+  }
+}

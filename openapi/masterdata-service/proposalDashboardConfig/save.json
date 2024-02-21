@@ -1,0 +1,191 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/proposalDashboardConfig/save": {
+      "post": {
+        "tags": [
+          "合理化建议综合看板-配置页面相关"
+        ],
+        "summary": "保存合理化建议综合看板的配置",
+        "operationId": "saveUsingPOST_6",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "config",
+            "description": "config",
+            "required": true,
+            "schema": {
+              "originalRef": "ProposalDashboardConfigRequestDTO",
+              "$ref": "#/definitions/ProposalDashboardConfigRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "ProposalDashboardConfigRequestDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "proposalDepartmentIdList": {
+          "type": "array",
+          "description": "建议部门ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0,
+            "maximum": 20
+          },
+          "maxItems": 20,
+          "minItems": 0
+        },
+        "projectDepartmentIdList": {
+          "type": "array",
+          "description": "项目部门ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0,
+            "maximum": 20
+          },
+          "maxItems": 20,
+          "minItems": 0
+        },
+        "unCompleteTargetValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未完成目标值"
+        },
+        "completeTargetValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成目标值"
+        },
+        "unCompleteProjectDashboardStatisticsConfigList": {
+          "type": "array",
+          "description": "未完成项目数量的统计区间配置",
+          "items": {
+            "originalRef": "ProposalDashboardStatisticsConfigRequestDTO",
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigRequestDTO"
+          }
+        },
+        "completedProjectDashboardStatisticsConfigList": {
+          "type": "array",
+          "description": "已完成项目数量的统计区间配置",
+          "items": {
+            "originalRef": "ProposalDashboardStatisticsConfigRequestDTO",
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigRequestDTO"
+          }
+        }
+      },
+      "title": "ProposalDashboardConfigRequestDTO"
+    },
+    "ProposalDashboardStatisticsConfigRequestDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "ID"
+        },
+        "type": {
+          "type": "string",
+          "description": "统计类型",
+          "enum": [
+            "  RANGE-数值区间",
+            "  GE-数值大于等于",
+            "  GT-数值大于"
+          ]
+        },
+        "beginValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "开始值 - 适用于数值区间、数值大于等于、数值大于"
+        },
+        "endValue": {
+          "type": "integer",
+          "format": "int32",
+          "description": "结束值"
+        },
+        "projectCompleteStatus": {
+          "type": "string",
+          "description": "项目归属的完成状态 - 未完成项目， 已完成项目",
+          "enum": [
+            "  UN_COMPLETED-未完成",
+            "  COMPLETED-已完成"
+          ]
+        }
+      },
+      "title": "ProposalDashboardStatisticsConfigRequestDTO"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

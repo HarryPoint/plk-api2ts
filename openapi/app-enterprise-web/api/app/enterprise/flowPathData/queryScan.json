@@ -1,0 +1,145 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/flowPathData/queryScan": {
+      "post": {
+        "tags": [
+          "流程数据相关"
+        ],
+        "summary": "扫码查询",
+        "operationId": "queryScanUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "AssociationFormScanQueryRequestDTO",
+              "$ref": "#/definitions/AssociationFormScanQueryRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«AssociationFormScanQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«AssociationFormScanQueryResponseDTO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "200"
+      }
+    }
+  },
+  "definitions": {
+    "AssociationFormScanQueryRequestDTO": {
+      "type": "object",
+      "properties": {
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用ID"
+        },
+        "flowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "流程字段ID"
+        },
+        "codeList": {
+          "type": "array",
+          "description": "编码列表",
+          "items": {
+            "type": "string"
+          }
+        },
+        "formData": {
+          "type": "object",
+          "description": "表单数据",
+          "additionalProperties": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "AssociationFormScanQueryRequestDTO"
+    },
+    "JSONResult«List«AssociationFormScanQueryResponseDTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "AssociationFormScanQueryResponseDTO",
+            "$ref": "#/definitions/AssociationFormScanQueryResponseDTO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«AssociationFormScanQueryResponseDTO»»"
+    },
+    "AssociationFormScanQueryResponseDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "表单记录ID"
+        },
+        "code": {
+          "type": "string",
+          "description": "表单记录编码"
+        },
+        "showFieldValue": {
+          "type": "string",
+          "description": "显示字段值"
+        }
+      },
+      "title": "AssociationFormScanQueryResponseDTO"
+    }
+  }
+}

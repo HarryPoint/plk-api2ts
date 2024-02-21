@@ -1,0 +1,510 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/qualityProduceTask/getCountInfoByMaterialId": {
+      "get": {
+        "tags": [
+          "生产质检管理"
+        ],
+        "summary": "生产任务-通过物料id从生产质检任务里面找质检时间在区间内的不合格数量与让步接收数量",
+        "operationId": "getCountInfoByMaterialIdUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "beginTime",
+            "in": "query",
+            "description": "开始时间",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endTime",
+            "in": "query",
+            "description": "结束时间",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "materialId",
+            "in": "query",
+            "description": "物料id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«质检物料校验信息VO»",
+              "$ref": "#/definitions/JSONResult«质检物料校验信息VO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "101"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«质检物料校验信息VO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "质检物料校验信息VO",
+          "$ref": "#/definitions/质检物料校验信息VO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«质检物料校验信息VO»"
+    },
+    "质检物料校验信息VO": {
+      "type": "object",
+      "properties": {
+        "qualityProduceTask": {
+          "description": "质检任务信息",
+          "originalRef": "QualityProduceTaskVO",
+          "$ref": "#/definitions/QualityProduceTaskVO"
+        },
+        "qualityStorageTask": {
+          "description": "仓库质检任务信息",
+          "originalRef": "QualityStorageTaskVO",
+          "$ref": "#/definitions/QualityStorageTaskVO"
+        },
+        "qualityPlanItemIdMap": {
+          "type": "object",
+          "description": "质检方案质检项关联map， key：质检方案质检项关联id， value：质检方案质检项id关系",
+          "additionalProperties": {
+            "originalRef": "质检方案质检项idVO",
+            "$ref": "#/definitions/质检方案质检项idVO"
+          }
+        },
+        "passQuantity": {
+          "type": "number",
+          "description": "合格数量"
+        },
+        "notPassQuantity": {
+          "type": "number",
+          "description": "不合格数量"
+        },
+        "concessionQuantity": {
+          "type": "number",
+          "description": "让步接收数量"
+        }
+      },
+      "title": "质检物料校验信息VO"
+    },
+    "QualityProduceTaskVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属生产任务id"
+        },
+        "produceTaskNo": {
+          "type": "string",
+          "description": "所属生产任务号"
+        },
+        "produceTaskType": {
+          "type": "string",
+          "description": "生产任务类型",
+          "enum": [
+            "  PRODUCE-生产任务",
+            "  BACK-返工任务"
+          ]
+        },
+        "produceHandleId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应生产处理id"
+        },
+        "type": {
+          "type": "string",
+          "description": "质检任务类型",
+          "enum": [
+            "  ALL-全检",
+            "  RADIO_SPOT_CHECK-比例抽检",
+            "  FIX_SPOT_CHECK-固定抽检"
+          ]
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单id"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "salesOrderDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属销售订单详情id"
+        },
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次订单id"
+        },
+        "lotOrderNo": {
+          "type": "string",
+          "description": "批次订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工艺路径id"
+        },
+        "routingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工艺路径步骤id"
+        },
+        "routingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "工艺路径步骤"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "warehouseMaterialRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "仓位物料库存关联id"
+        },
+        "quantityStatus": {
+          "type": "string",
+          "description": "仓位物料WIP关联数量状态",
+          "enum": [
+            "  NORMAL-正常",
+            "  WAIT_INSPECTION-等待质检",
+            "  INSPECTION_PASS-质检合格",
+            "  INSPECTION_CONCESSION-质检让步接收",
+            "  INSPECTION_NOT_PASS-质检不合格",
+            "  APPLY_BACK-等待返工审批",
+            "  APPLY_SCRAP-等待报废审批",
+            "  HOLD-等待扣留审批",
+            "  ENTRUST_BACK-委外返回"
+          ]
+        },
+        "factoryCalendarId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工厂日历id"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应班组id"
+        },
+        "classShiftId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应班次id"
+        },
+        "totalInspectionQuantity": {
+          "type": "number",
+          "description": "总质检数"
+        },
+        "waitInspectionQuantity": {
+          "type": "number",
+          "description": "待检数"
+        },
+        "inspectionQuantity": {
+          "type": "number",
+          "description": "已检数"
+        },
+        "passQuantity": {
+          "type": "number",
+          "description": "合格数"
+        },
+        "notPassQuantity": {
+          "type": "number",
+          "description": "不合格数"
+        },
+        "concessionQuantity": {
+          "type": "number",
+          "description": "让步接收数"
+        },
+        "actualBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际质检开始时间"
+        },
+        "actualEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "实际质检结束时间"
+        },
+        "inspectionUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "质检人"
+        },
+        "inspectionTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "质检时间"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待质检",
+            "  COMPLETE-已完成",
+            "  CANCEL-已撤销",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "cancelUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "取消人"
+        },
+        "cancelTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "取消时间"
+        },
+        "cancelRemark": {
+          "type": "string",
+          "description": "取消原因"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        }
+      },
+      "title": "QualityProduceTaskVO"
+    },
+    "QualityStorageTaskVO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "type": {
+          "type": "string",
+          "description": "质检任务类型",
+          "enum": [
+            "  ALL-全检",
+            "  RADIO_SPOT_CHECK-比例抽检",
+            "  FIX_SPOT_CHECK-固定抽检"
+          ]
+        },
+        "purchaseWorkOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "采购收货单id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "purchaseWorkOrderDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "采购收货单物料明细id"
+        },
+        "qualityInspectionPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应质检方案id"
+        },
+        "qualityInspectionCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应质检分类id"
+        },
+        "qualityWarehouseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "质检仓位id"
+        },
+        "checkPositionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验位置id"
+        },
+        "handleUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "质检处理人"
+        },
+        "planBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "totalInspectionQuantity": {
+          "type": "number",
+          "description": "总质检数"
+        },
+        "waitInspectionQuantity": {
+          "type": "number",
+          "description": "待检数"
+        },
+        "inspectionQuantity": {
+          "type": "number",
+          "description": "已检数"
+        },
+        "passQuantity": {
+          "type": "number",
+          "description": "合格数"
+        },
+        "notPassQuantity": {
+          "type": "number",
+          "description": "不合格数"
+        },
+        "concessionQuantity": {
+          "type": "number",
+          "description": "让步接收数"
+        },
+        "completeTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "完成时间"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  WAIT-待质检",
+            "  COMPLETE-已完成",
+            "  CANCEL-已撤销",
+            "  CLOSE-已关闭"
+          ]
+        },
+        "cancelUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "取消人"
+        },
+        "cancelTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "取消时间"
+        },
+        "taskType": {
+          "type": "string",
+          "description": "质检任务类型",
+          "enum": [
+            "  STORAGE_IN_QUALITY_TASK-入库质检任务",
+            "  STORAGE_QUALITY_TASK-存货质检任务"
+          ]
+        }
+      },
+      "title": "QualityStorageTaskVO"
+    },
+    "质检方案质检项idVO": {
+      "type": "object",
+      "properties": {
+        "qualityPlanId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "qualityItemId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "质检方案质检项idVO"
+    }
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/lotOrder/batchPrint": {
+      "post": {
+        "tags": [
+          "生产批次订单相关"
+        ],
+        "summary": "批量获取批次打印信息",
+        "operationId": "batchPrintUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "ids",
+            "description": "ids",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«批次订单打印信息返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«批次订单打印信息返回VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "140"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«List«批次订单打印信息返回VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "批次订单打印信息返回VO",
+            "$ref": "#/definitions/批次订单打印信息返回VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«批次订单打印信息返回VO»»"
+    },
+    "批次订单打印信息返回VO": {
+      "type": "object",
+      "properties": {
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "对应生产订单号"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "对应销售订单号"
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "数量"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "printDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "打印日期"
+        },
+        "lotNoQrCode": {
+          "type": "string",
+          "description": "批次号二维码"
+        }
+      },
+      "title": "批次订单打印信息返回VO"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/todo/markRead": {
+      "post": {
+        "tags": [
+          "代办相关"
+        ],
+        "summary": "标记已读",
+        "operationId": "markReadUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "ToDoMarkReadRequestDTO",
+              "$ref": "#/definitions/ToDoMarkReadRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "ToDoMarkReadRequestDTO": {
+      "type": "object",
+      "required": [
+        "isAll"
+      ],
+      "properties": {
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "用户ID不能为空"
+        },
+        "isAll": {
+          "type": "string",
+          "description": "是否全部标记已读",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "单个标记id，isAll=N时必传"
+        }
+      },
+      "title": "ToDoMarkReadRequestDTO"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}

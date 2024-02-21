@@ -1,0 +1,272 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/supplier/export": {
+      "post": {
+        "tags": [
+          "供应商相关"
+        ],
+        "summary": "导出查询数据",
+        "operationId": "exportUsingPOST_54",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "exportRequest",
+            "description": "exportRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "流程数据搜索VO",
+              "$ref": "#/definitions/流程数据搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "20"
+      }
+    }
+  },
+  "definitions": {
+    "流程数据搜索VO": {
+      "type": "object",
+      "properties": {
+        "showFieldSerialNoList": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allSearch": {
+          "type": "string",
+          "description": "全局搜索"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "dataSearchList": {
+          "type": "array",
+          "description": "字段搜索",
+          "items": {
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
+          }
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "tableColumnCode": {
+          "type": "string",
+          "description": "明细表表code，传值后，将会查询明细表数据"
+        },
+        "currentFormDataGrouping": {
+          "description": "当前的表单分组",
+          "originalRef": "表单数据分组DTO",
+          "$ref": "#/definitions/表单数据分组DTO"
+        },
+        "opUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "操作员工id"
+        },
+        "opRoleIds": {
+          "type": "array",
+          "description": "操作角色id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "opDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "操作部门id"
+        }
+      },
+      "title": "流程数据搜索VO"
+    },
+    "流程数据明细搜索VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "searchType"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "列code"
+        },
+        "searchType": {
+          "type": "string",
+          "description": "搜索类型",
+          "enum": [
+            "NONE",
+            "EQ",
+            "LIKE",
+            "RANGE",
+            "SELECTOR",
+            "IS_NULL",
+            "NOT_NULL",
+            "NE",
+            "REGEXP"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "搜索文本 - 针对文本搜索"
+        },
+        "limitBegin": {
+          "type": "object",
+          "description": "搜索起始值 - 针对范围搜索"
+        },
+        "limitEnd": {
+          "type": "object",
+          "description": "搜索结束值 - 针对范围搜索"
+        },
+        "selectors": {
+          "type": "array",
+          "description": "搜索选项值 - 针对选择搜索",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tableCode": {
+          "type": "string",
+          "description": "表格编码"
+        }
+      },
+      "title": "流程数据明细搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "表单数据分组DTO": {
+      "type": "object",
+      "properties": {
+        "groupingFieldSerialNo": {
+          "type": "string",
+          "description": "分组字段序列"
+        },
+        "groupFieldCode": {
+          "type": "string",
+          "description": "分组字段编码"
+        },
+        "groupingValue": {
+          "type": "string",
+          "description": "分组的值， 如果是关联表单，则是ID"
+        },
+        "groupingName": {
+          "type": "string",
+          "description": "分组名称"
+        },
+        "children": {
+          "type": "array",
+          "description": "下级分组",
+          "items": {
+            "originalRef": "表单数据分组DTO",
+            "$ref": "#/definitions/表单数据分组DTO"
+          }
+        },
+        "cascadeFormData": {
+          "type": "string",
+          "description": "级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "treeDataParentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "多级基础数据上级ID"
+        }
+      },
+      "title": "表单数据分组DTO"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

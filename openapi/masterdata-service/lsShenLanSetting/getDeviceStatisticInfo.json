@@ -1,0 +1,340 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/lsShenLanSetting/getDeviceStatisticInfo": {
+      "get": {
+        "tags": [
+          "深蓝大屏相关"
+        ],
+        "summary": "查询设备统计大屏信息",
+        "operationId": "getShenLanDeviceStatisticInfoUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«深蓝设备统计响应VO»",
+              "$ref": "#/definitions/JSONResult«深蓝设备统计响应VO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "70"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«深蓝设备统计响应VO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "深蓝设备统计响应VO",
+          "$ref": "#/definitions/深蓝设备统计响应VO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«深蓝设备统计响应VO»"
+    },
+    "深蓝设备统计响应VO": {
+      "type": "object",
+      "properties": {
+        "deviceRunInfos": {
+          "type": "object",
+          "description": "左、中、右-设备运行信息",
+          "additionalProperties": {
+            "originalRef": "深蓝设备运行信息响应VO",
+            "$ref": "#/definitions/深蓝设备运行信息响应VO"
+          }
+        },
+        "alarmInfos": {
+          "type": "array",
+          "description": "报警信息-右上",
+          "items": {
+            "originalRef": "深蓝报警统计信息VO",
+            "$ref": "#/definitions/深蓝报警统计信息VO"
+          }
+        },
+        "produceInfos": {
+          "type": "array",
+          "description": "今日生产情况-右下",
+          "items": {
+            "originalRef": "深蓝设备综合效率响应VO_1",
+            "$ref": "#/definitions/深蓝设备综合效率响应VO_1"
+          }
+        },
+        "onlineInfos": {
+          "type": "array",
+          "description": "在线结点数/节点率-右下",
+          "items": {
+            "originalRef": "深蓝设备在线情况响应VO",
+            "$ref": "#/definitions/深蓝设备在线情况响应VO"
+          }
+        }
+      },
+      "title": "深蓝设备统计响应VO"
+    },
+    "深蓝设备运行信息响应VO": {
+      "type": "object",
+      "properties": {
+        "runProcesses": {
+          "type": "array",
+          "description": "设备运行进度信息",
+          "items": {
+            "originalRef": "深蓝设备运行进度信息响应VO",
+            "$ref": "#/definitions/深蓝设备运行进度信息响应VO"
+          }
+        },
+        "todayRun": {
+          "description": "设备今日运行统计",
+          "originalRef": "深蓝设备运行统计响应VO",
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
+        },
+        "yesterdayRun": {
+          "description": "设备昨日运行统计",
+          "originalRef": "深蓝设备运行统计响应VO",
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
+        },
+        "weekRun": {
+          "description": "设备本周运行统计",
+          "originalRef": "深蓝设备运行统计响应VO",
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
+        },
+        "preWeekRun": {
+          "description": "设备上周运行统计",
+          "originalRef": "深蓝设备运行统计响应VO",
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
+        },
+        "deviceEfficiencies": {
+          "description": "设备综合效率",
+          "originalRef": "深蓝设备综合效率响应VO",
+          "$ref": "#/definitions/深蓝设备综合效率响应VO"
+        }
+      },
+      "title": "深蓝设备运行信息响应VO"
+    },
+    "深蓝设备运行进度信息响应VO": {
+      "type": "object",
+      "properties": {
+        "deviceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备id"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编码"
+        },
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "oee": {
+          "type": "number",
+          "description": "OEE"
+        },
+        "speed": {
+          "type": "integer",
+          "format": "int64",
+          "description": "进给速度/主轴转速"
+        },
+        "produceQty": {
+          "type": "integer",
+          "format": "int64",
+          "description": "加工产量"
+        },
+        "normalRunningTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "正常运行时间"
+        },
+        "stopTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "停机时间"
+        },
+        "currentToolName": {
+          "type": "string",
+          "description": "当前执行程序名称"
+        },
+        "feedRatio": {
+          "type": "number",
+          "description": "进给倍率"
+        }
+      },
+      "title": "深蓝设备运行进度信息响应VO"
+    },
+    "深蓝设备运行统计响应VO": {
+      "type": "object",
+      "properties": {
+        "averageTime": {
+          "type": "number",
+          "description": "平均出件耗时"
+        },
+        "produceQty": {
+          "type": "integer",
+          "format": "int64",
+          "description": "加工产量"
+        },
+        "normalRunningTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "正常运行时间"
+        },
+        "stopTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "停机时间"
+        },
+        "onlineTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "在线时间"
+        }
+      },
+      "title": "深蓝设备运行统计响应VO"
+    },
+    "深蓝设备综合效率响应VO": {
+      "type": "object",
+      "properties": {
+        "totalNormalRunningTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "类型设备正常运行时间和"
+        },
+        "totalTime": {
+          "type": "integer",
+          "format": "int64",
+          "description": "类型设备工作时间和"
+        }
+      },
+      "title": "深蓝设备综合效率响应VO"
+    },
+    "深蓝报警统计信息VO": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "报警时间"
+        },
+        "deviceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "报警设备id"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "报警设备编码"
+        },
+        "deviceName": {
+          "type": "string",
+          "description": "报警设备名称"
+        },
+        "alarmInfo": {
+          "type": "string",
+          "description": "报警信息"
+        }
+      },
+      "title": "深蓝报警统计信息VO"
+    },
+    "深蓝设备综合效率响应VO_1": {
+      "type": "object",
+      "properties": {
+        "serialNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "序号"
+        },
+        "productOrderNo": {
+          "type": "string",
+          "description": "生产订单编号"
+        },
+        "productName": {
+          "type": "string",
+          "description": "产品名称"
+        },
+        "productSpec": {
+          "type": "string",
+          "description": "产品规格"
+        },
+        "productQuantity": {
+          "type": "number",
+          "description": "数量"
+        },
+        "deliveryDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交期"
+        },
+        "completeRatio": {
+          "type": "number",
+          "description": "订单完成进度"
+        }
+      },
+      "title": "深蓝设备综合效率响应VO_1"
+    },
+    "深蓝设备在线情况响应VO": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "日期"
+        },
+        "onlineRate": {
+          "type": "number",
+          "description": "每日在线率"
+        },
+        "offlineRate": {
+          "type": "number",
+          "description": "每日离线率"
+        }
+      },
+      "title": "深蓝设备在线情况响应VO"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/fileUpload/upload": {
+      "post": {
+        "tags": [
+          "文件上传相关"
+        ],
+        "summary": "上传文件 - FormData方式",
+        "operationId": "uploadUsingPOST",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "file",
+            "in": "formData",
+            "description": "file",
+            "required": false,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«附件 VO»",
+              "$ref": "#/definitions/JSONResult«附件 VO»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«附件 VO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "附件 VO",
+          "$ref": "#/definitions/附件 VO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«附件 VO»"
+    },
+    "附件 VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件id"
+        },
+        "fileKey": {
+          "type": "string",
+          "description": "文件key"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": "文件完整路径"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "文件名"
+        },
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件大小"
+        }
+      },
+      "title": "附件 VO"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/lsPanPanSetting/saveSettingInfo": {
+      "post": {
+        "tags": [
+          "盼盼大屏相关"
+        ],
+        "summary": "保存质检生产大屏配置",
+        "operationId": "saveSettingInfoUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "editDTO",
+            "description": "editDTO",
+            "required": true,
+            "schema": {
+              "originalRef": "盼盼大屏设置DTO",
+              "$ref": "#/definitions/盼盼大屏设置DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "TanPeng",
+        "x-order": "2"
+      }
+    }
+  },
+  "definitions": {
+    "盼盼大屏设置DTO": {
+      "type": "object",
+      "properties": {
+        "overdueTime": {
+          "type": "number",
+          "description": "延期订单判断值（小时）"
+        },
+        "processIds": {
+          "type": "array",
+          "description": "大屏展示工序id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "produceOrderOverdueType": {
+          "type": "string",
+          "description": "延期订单判断类型",
+          "enum": [
+            "  PLAN_END_TIME-计划完工日期",
+            "  THEORETIC_END_TIME-理论完工日期"
+          ]
+        },
+        "monthBeginType": {
+          "type": "string",
+          "description": "开始时间月份类型",
+          "enum": [
+            "  LAST_MONTH-上月",
+            "  CURRENT_MONTH-本月"
+          ]
+        },
+        "monthBeginDay": {
+          "type": "integer",
+          "format": "int32",
+          "description": "开始时间月份日期"
+        },
+        "monthEndDay": {
+          "type": "integer",
+          "format": "int32",
+          "description": "结束时间月份日期"
+        },
+        "thisMonthPlanQuantity": {
+          "type": "number",
+          "description": "大屏中上 - 本月计划数量"
+        },
+        "panPanProduceOrderCompleteType": {
+          "type": "string",
+          "description": "大屏左上 - 当日生产概览 - 各工序当日完工情况表 产出数 取值逻辑类型",
+          "enum": [
+            "  ACTUAL_MOVE_OUT_QUANTITY-实际出料数量",
+            "  PLAN_ORDER_MOVE_OUT_QUANTITY-计划订单出料数量"
+          ]
+        },
+        "thisMonthOrderCount": {
+          "type": "number",
+          "description": "大屏中上 - 本月累计订单量"
+        }
+      },
+      "title": "盼盼大屏设置DTO"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}

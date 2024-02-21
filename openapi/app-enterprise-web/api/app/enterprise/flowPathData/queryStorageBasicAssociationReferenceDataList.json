@@ -1,0 +1,135 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/flowPathData/queryStorageBasicAssociationReferenceDataList": {
+      "post": {
+        "tags": [
+          "流程数据相关"
+        ],
+        "summary": "库存基础数据 - 批量检查",
+        "operationId": "queryStorageBasicAssociationReferenceDataListUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "FormReferencingQueryRequestDTO",
+              "$ref": "#/definitions/FormReferencingQueryRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«库存基础数据关联数据查询响应»»",
+              "$ref": "#/definitions/JSONResult«List«库存基础数据关联数据查询响应»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "Tan Peng",
+        "x-order": "210"
+      }
+    }
+  },
+  "definitions": {
+    "FormReferencingQueryRequestDTO": {
+      "type": "object",
+      "required": [
+        "flowPathId"
+      ],
+      "properties": {
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "formRecordIdList": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "FormReferencingQueryRequestDTO"
+    },
+    "JSONResult«List«库存基础数据关联数据查询响应»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "库存基础数据关联数据查询响应",
+            "$ref": "#/definitions/库存基础数据关联数据查询响应"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«库存基础数据关联数据查询响应»»"
+    },
+    "库存基础数据关联数据查询响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "数据id"
+        },
+        "code": {
+          "type": "string",
+          "description": "数据编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "数据名称"
+        }
+      },
+      "title": "库存基础数据关联数据查询响应"
+    }
+  }
+}

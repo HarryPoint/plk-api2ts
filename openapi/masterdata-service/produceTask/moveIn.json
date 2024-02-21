@@ -1,0 +1,361 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/produceTask/moveIn": {
+      "post": {
+        "tags": [
+          "生产任务相关"
+        ],
+        "summary": "进料",
+        "operationId": "moveInUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "moveInRequest",
+            "description": "moveInRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "进料信息DTO",
+              "$ref": "#/definitions/进料信息DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "170"
+      }
+    }
+  },
+  "definitions": {
+    "进料信息DTO": {
+      "type": "object",
+      "required": [
+        "produceTaskId"
+      ],
+      "properties": {
+        "moveInOutRecordId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "进出站记录id - 如果是从进出站记录里面点进来的，则必传"
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "finishedMaterialInputList": {
+          "type": "array",
+          "description": "成品物料填写信息列表",
+          "items": {
+            "originalRef": "成品物料填写请求DTO",
+            "$ref": "#/definitions/成品物料填写请求DTO"
+          }
+        },
+        "moveInProduceTechnologyDeviceIds": {
+          "type": "array",
+          "description": "进料生产工艺设备ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "moveInProduceTechnologyMoldIds": {
+          "type": "array",
+          "description": "生产工艺模具ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "bomMaterials": {
+          "type": "array",
+          "description": "BOM消耗列表",
+          "items": {
+            "originalRef": "BOM消耗请求DTO",
+            "$ref": "#/definitions/BOM消耗请求DTO"
+          }
+        },
+        "keyParametersInfo": {
+          "description": "关键参数信息填写",
+          "originalRef": "进出站工艺卡填写",
+          "$ref": "#/definitions/进出站工艺卡填写"
+        },
+        "splitLots": {
+          "type": "array",
+          "description": "拆分批次相关",
+          "items": {
+            "originalRef": "进料批次拆分请求DTO",
+            "$ref": "#/definitions/进料批次拆分请求DTO"
+          }
+        },
+        "handleOtherAsync": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "进料信息DTO"
+    },
+    "成品物料填写请求DTO": {
+      "type": "object",
+      "properties": {
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数(质检数)"
+        },
+        "applyQualityAgainQuantity": {
+          "type": "number",
+          "description": "再次申请质检数"
+        },
+        "optTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "操作时间"
+        }
+      },
+      "title": "成品物料填写请求DTO"
+    },
+    "BOM消耗请求DTO": {
+      "type": "object",
+      "required": [
+        "actualQuantity",
+        "id",
+        "materialId"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺路径步骤bom明细关联id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数"
+        },
+        "lotOrders": {
+          "type": "array",
+          "description": "进料批次列表",
+          "items": {
+            "originalRef": "bom消耗批次订单请求对象",
+            "$ref": "#/definitions/bom消耗批次订单请求对象"
+          }
+        },
+        "externalCodeList": {
+          "type": "array",
+          "description": "进料外部码列表",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "BOM消耗请求DTO"
+    },
+    "bom消耗批次订单请求对象": {
+      "type": "object",
+      "required": [
+        "actualQuantity",
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次订单id"
+        },
+        "lotNo": {
+          "type": "string"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数"
+        },
+        "serialNoIds": {
+          "type": "array",
+          "description": "序列号ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "bom消耗批次订单请求对象"
+    },
+    "进出站工艺卡填写": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关键参数id"
+        },
+        "keyParameterDetailList": {
+          "type": "array",
+          "description": "录入集合 - 带录入信息",
+          "items": {
+            "originalRef": "关键参数明细填写信息",
+            "$ref": "#/definitions/关键参数明细填写信息"
+          }
+        }
+      },
+      "title": "进出站工艺卡填写"
+    },
+    "关键参数明细填写信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "inputValue": {
+          "type": "string",
+          "description": "录入值 - 明细录入类型不是图片时，有值"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传key集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "关键参数明细填写信息"
+    },
+    "进料批次拆分请求DTO": {
+      "type": "object",
+      "required": [
+        "originalLotOrderId",
+        "splitDetails"
+      ],
+      "properties": {
+        "originalLotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "原始批次id"
+        },
+        "splitQuantity": {
+          "type": "number",
+          "description": "拆分数量"
+        },
+        "splitDetails": {
+          "type": "array",
+          "description": "原始批次id",
+          "items": {
+            "originalRef": "进料批次拆分明细请求DTO",
+            "$ref": "#/definitions/进料批次拆分明细请求DTO"
+          }
+        }
+      },
+      "title": "进料批次拆分请求DTO"
+    },
+    "进料批次拆分明细请求DTO": {
+      "type": "object",
+      "required": [
+        "actualQuantity",
+        "splitLotNo"
+      ],
+      "properties": {
+        "splitLotNo": {
+          "type": "string",
+          "description": "拆分批次号"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "optTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "操作时间"
+        },
+        "splitLotOrderId": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "进料批次拆分明细请求DTO"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}

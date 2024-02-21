@@ -1,0 +1,211 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/exportAuth/getProduceTimeFeeMonthByTicket": {
+      "get": {
+        "tags": [
+          "导出相关"
+        ],
+        "summary": "根据ticket查询工时工费月度汇总表报表",
+        "operationId": "getProduceTimeFeeMonthByTicketUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "ticket",
+            "in": "query",
+            "description": "ticket",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«导出信息«工时工费月度汇总报表返回VO»»",
+              "$ref": "#/definitions/JSONResult«导出信息«工时工费月度汇总报表返回VO»»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "200"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«导出信息«工时工费月度汇总报表返回VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "导出信息«工时工费月度汇总报表返回VO»",
+          "$ref": "#/definitions/导出信息«工时工费月度汇总报表返回VO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«导出信息«工时工费月度汇总报表返回VO»»"
+    },
+    "导出信息«工时工费月度汇总报表返回VO»": {
+      "type": "object",
+      "properties": {
+        "exportType": {
+          "type": "string",
+          "description": "导出类型",
+          "enum": [
+            "  USER-员工数据",
+            "  MAJOR_DATA-物料数据",
+            "  BOM-BOM数据",
+            "  DEVICE-设备数据",
+            "  DEVICE_COLLECTION_PARAM-设备采集参数",
+            "  PROCESS-工序数据",
+            "  WORK_PLACE-工位数据",
+            "  MAJOR_DATA_UNIT-单位数据",
+            "  PRODUCE_TAG-标签数据",
+            "  PRODUCE_ABNORMAL_CATEGORY-生产异常类型数据",
+            "  ROUTING-工艺路径",
+            "  PRODUCE_ROUTING-工艺路径",
+            "  PRODUCE_ROUTING_FAST-工艺路径",
+            "  SUPPLIER-供应商数据",
+            "  CUSTOMER-客户数据",
+            "  ANDON_STATION_MACHINE-安灯终端数据",
+            "  PRODUCE_ENTRUST-委外订单",
+            "  DEVICE_COLLECTION_STATISTIC-设备数采统计",
+            "  DEVICE_COLLECTION_DETAIL-设备数采详单",
+            "  WAREHOUSE-仓位",
+            "  USER_REPORT-员工统计报表",
+            "  SALES_ORDER_REPORT-订单进度报表",
+            "  PRODUCTION_REPORT_CLASS_GROUP-产出统计报表(按班组统计)",
+            "  PRODUCTION_REPORT_PROCESS-产出统计报表(按工序统计)",
+            "  PRODUCTION_REPORT_MAJOR_DATA-产出统计报表(按物料统计)",
+            "  PRODUCTION_REPORT_DATA-产出统计报表(产出数据统计)",
+            "  PRODUCE_TIME_FEE_DETAIL-工时工费统计(明细)",
+            "  PRODUCE_TIME_FEE_MONTH-工时工费统计(月度汇总)",
+            "  YIELD_RATE_REPORT_CLASS_GROUP-良品率数据表",
+            "  SCRAP_REPORT_CLASS_GROUP-良品与报废报表(按班组统计)",
+            "  SCRAP_REPORT_PROCESS-良品与报废报表(按工序统计)",
+            "  SCRAP_REPORT_MAJOR_DATA-良品与报废报表(按物料统计)",
+            "  SCRAP_REPORT_TYPE-良品与报废报表(按报废类型统计)",
+            "  SCRAP_REPORT_DATA-良品与报废报表(报废数据统计)",
+            "  PRODUCE_FEE_REPORT-工费报表",
+            "  PRODUCE_ENTRUST_REPORT-委外统计报表",
+            "  FPY_RATE_REPORT_DATA-直通率数据表",
+            "  FPY_RATE_REPORT-直通率统计报表",
+            "  WIP_REPORT-实时WIP表",
+            "  WIP_EXCEPTION_REPORT-异常WIP表",
+            "  ANDON_CALL_ANALYZE_REPORT-安灯呼叫分析表",
+            "  ANDON_DEVICE_FAULT_REPORT-安灯设备故障表",
+            "  ANDON_BAD_INCOMING_REPORT-安灯来料不良表",
+            "  ANDON_ABNORMAL_QUALITY_REPORT-安灯品质异常表",
+            "  XINDE_COATING_LINE_DAILY_REPORT-智能涂装线能耗统计表",
+            "  XINDE_DZJ_STATISTIC_REPORT-电子锯报表",
+            "  XINDE_FBJ_STATISTIC_REPORT-封边机报表",
+            "  XINDE_GZX_STATISTIC_REPORT-辊轧线报表",
+            "  BAO_JING_SALES_DELIVER_REPORT-销售发货分析表",
+            "  BAO_JING_CONSIGNMENT_INBOUND_ANALYZE_REPORT-销售结算分析表",
+            "  BAO_JING_CONSIGNMENT_LOSS_ANALYZE_REPORT-寄售损耗分析表",
+            "  BAO_JING_ACCOUNTS_RECEIVABLE_REPORT-应收账款分析表",
+            "  BAO_JING_COLLECTION_TOTAL_REPORT-收款汇总分析表",
+            "  BAO_JING_PURCHASE_ARRIVED_STATISTIC_REPORT-采购到货统计表",
+            "  BAO_JING_AFTER_SALES_QUALITY_REPORT-售后质量分析表",
+            "  BAO_JING_PRODUCE_STORAGE_REPORT-库存日报表",
+            "  BAO_JING_RAW_STORAGE_REPORT-原材料库存日报表",
+            "  BAO_JING_SCRAP_REPORT-仓库报废统计表",
+            "  QUALITY_GOOD_SCRAP_REPORT-良品报废数据表",
+            "  STORAGE_TAKE_CHECK_TASK_DETAIL-盘点任务明细表",
+            "  STORAGE_TAKE_CHECK_TASK_DETAIL_LOT-盘点任务明细表",
+            "  STORAGE_TAKE_CHECK_TASK_DETAIL_SERIAL_NO-盘点任务明细表",
+            "  STORAGE_TAKE_CHECK_TASK_DETAIL_LOT_SERIAL_NO-盘点任务明细表",
+            "  PROJECT_TASK_EXPORT-项目任务列表",
+            "  PROJECT_TASK_IMPORT-项目计划导入模板",
+            "  QMS_QUALITY_MONTH_REPORT_EXPORT-质量月报报表",
+            "  QMS_QUALITY_MONTH_REPORT_DEPARTMENT_EXPORT-质量月报报表"
+          ]
+        },
+        "itemList": {
+          "type": "array",
+          "description": "数据",
+          "items": {
+            "originalRef": "工时工费月度汇总报表返回VO",
+            "$ref": "#/definitions/工时工费月度汇总报表返回VO"
+          }
+        }
+      },
+      "title": "导出信息«工时工费月度汇总报表返回VO»"
+    },
+    "工时工费月度汇总报表返回VO": {
+      "type": "object",
+      "properties": {
+        "month": {
+          "type": "string",
+          "format": "date-time",
+          "description": "月份"
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "员工id"
+        },
+        "username": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班组id"
+        },
+        "classGroupName": {
+          "type": "string",
+          "description": "班组名称"
+        },
+        "produceFee": {
+          "type": "number",
+          "description": "合格产出工费"
+        },
+        "backFee": {
+          "type": "number",
+          "description": "返工产出工费"
+        },
+        "totalFee": {
+          "type": "number",
+          "description": "合计工费"
+        }
+      },
+      "title": "工时工费月度汇总报表返回VO"
+    }
+  }
+}

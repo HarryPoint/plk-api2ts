@@ -1,0 +1,238 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/baoJingWarehouseMaterial/export": {
+      "post": {
+        "tags": [
+          "宝晶即时库存查询相关"
+        ],
+        "summary": "导出物料库存信息",
+        "operationId": "exportUsingPOST_2",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "宝晶物料主数据库存搜索VO",
+              "$ref": "#/definitions/宝晶物料主数据库存搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "60"
+      }
+    }
+  },
+  "definitions": {
+    "宝晶物料主数据库存搜索VO": {
+      "type": "object",
+      "properties": {
+        "materialIds": {
+          "type": "array",
+          "description": "物料id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "materialOutsideCode": {
+          "type": "string",
+          "description": "外部编码"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "规格"
+        },
+        "storehouseIds": {
+          "type": "array",
+          "description": "仓库id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "materialTypes": {
+          "type": "array",
+          "description": "物料种类",
+          "items": {
+            "type": "string"
+          }
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "编号"
+        },
+        "storehousePurposeList": {
+          "type": "array",
+          "description": "仓库用途",
+          "items": {
+            "type": "string"
+          }
+        },
+        "materialCurators": {
+          "type": "array",
+          "description": "保管员",
+          "items": {
+            "type": "string"
+          }
+        },
+        "warehousePurposeList": {
+          "type": "array",
+          "description": "仓位用途",
+          "items": {
+            "type": "string"
+          }
+        },
+        "materialTexture": {
+          "type": "array",
+          "description": "材质",
+          "items": {
+            "type": "string"
+          }
+        },
+        "businessUserIdList": {
+          "type": "array",
+          "description": "业务员id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "materialTechnology": {
+          "type": "array",
+          "description": "工艺",
+          "items": {
+            "type": "string"
+          }
+        },
+        "customerIdList": {
+          "type": "array",
+          "description": "客户id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "warehouseIds": {
+          "type": "array",
+          "description": "仓位id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "宝晶物料主数据库存搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

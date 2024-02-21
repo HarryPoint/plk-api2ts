@@ -1,0 +1,50 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getStorageTakeCheckTaskDetailExcelTemplate": {
+      "get": {
+        "tags": [
+          "仓库盘点任务相关"
+        ],
+        "summary": "下载盘点明细excel模板",
+        "operationId": "getStorageTakeCheckTaskDetailExcelTemplateUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "ModelAndView",
+              "$ref": "#/definitions/ModelAndView"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "140"
+      }
+    }
+  },
+  "definitions": {
+    "ModelAndView": {
+      "type": "object",
+      "title": "ModelAndView"
+    }
+  }
+}

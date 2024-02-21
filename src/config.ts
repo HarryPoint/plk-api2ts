@@ -59,5 +59,5 @@ export default {
   translateChunkSize: 100,
   serviceMap: apiMap.dev,
   // 接口服务目录
-  serviceNameToPath: true,
+  serviceNameToPath: false,
 };

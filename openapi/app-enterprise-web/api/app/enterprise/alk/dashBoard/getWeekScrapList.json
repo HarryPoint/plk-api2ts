@@ -1,0 +1,104 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getWeekScrapList": {
+      "get": {
+        "tags": [
+          "安利康大屏相关"
+        ],
+        "summary": "获取近7天报废品数据",
+        "operationId": "getWeekScrapListUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "categoryCode",
+            "in": "query",
+            "description": "物料大类编号",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«近7天报废品数据VO»»",
+              "$ref": "#/definitions/JSONResult«List«近7天报废品数据VO»»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«List«近7天报废品数据VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "近7天报废品数据VO",
+            "$ref": "#/definitions/近7天报废品数据VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«近7天报废品数据VO»»"
+    },
+    "近7天报废品数据VO": {
+      "type": "object",
+      "properties": {
+        "categoryName": {
+          "type": "string",
+          "description": "类型"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "数量"
+        },
+        "rate": {
+          "type": "number",
+          "description": "比例"
+        }
+      },
+      "title": "近7天报废品数据VO"
+    }
+  }
+}

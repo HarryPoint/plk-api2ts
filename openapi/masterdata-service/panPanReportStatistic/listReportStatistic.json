@@ -1,0 +1,182 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/panPanReportStatistic/listReportStatistic": {
+      "post": {
+        "tags": [
+          "盼盼上报统计"
+        ],
+        "summary": "获取上报统计列表",
+        "operationId": "listReportStatisticUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "reportStatisticQuery",
+            "description": "reportStatisticQuery",
+            "required": true,
+            "schema": {
+              "originalRef": "盼盼上报统计查询对象",
+              "$ref": "#/definitions/盼盼上报统计查询对象"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«盼盼上报统计响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«盼盼上报统计响应对象»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "20"
+      }
+    }
+  },
+  "definitions": {
+    "盼盼上报统计查询对象": {
+      "type": "object",
+      "required": [
+        "beginTime",
+        "endTime"
+      ],
+      "properties": {
+        "beginTime": {
+          "type": "string",
+          "description": "查询开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "endTime": {
+          "type": "string",
+          "description": "查询结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "materialIds": {
+          "type": "array",
+          "description": "物料id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "processIds": {
+          "type": "array",
+          "description": "工序id集合",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "盼盼上报统计查询对象"
+    },
+    "JSONResult«List«盼盼上报统计响应对象»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "盼盼上报统计响应对象",
+            "$ref": "#/definitions/盼盼上报统计响应对象"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«盼盼上报统计响应对象»»"
+    },
+    "盼盼上报统计响应对象": {
+      "type": "object",
+      "properties": {
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialUnit": {
+          "type": "string",
+          "description": "物料单位"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "工序编号"
+        },
+        "totalPlanQuantity": {
+          "type": "number",
+          "description": "计划数"
+        },
+        "totalProduceQuantity": {
+          "type": "number",
+          "description": "出料数"
+        },
+        "totalBackQuantity": {
+          "type": "number",
+          "description": "返工数"
+        },
+        "totalScrapQuantity": {
+          "type": "number",
+          "description": "报废个数"
+        }
+      },
+      "title": "盼盼上报统计响应对象"
+    }
+  }
+}
