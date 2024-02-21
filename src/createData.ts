@@ -2,9 +2,13 @@ import axios from "axios";
 import fs from "fs";
 import _ from "lodash";
 import path from "path";
-import config from "./config";
+import config, { IConfig } from "./config";
 
-const fetchData = async (apiUri: string, prefix: string = "./") => {
+const fetchData = async (
+  apiUri: string,
+  prefix: string = "./",
+  config: IConfig
+) => {
   if (!apiUri) {
     throw new Error("apiUri not found");
   }
@@ -54,12 +58,12 @@ const fetchData = async (apiUri: string, prefix: string = "./") => {
   openJsonArr.forEach(([pathStr, jsonData]) => {
     const pathArr = pathStr.split("/");
     const outputFolder = path.join(
-      config.dir,
+      config.output,
       prefix,
       pathArr.slice(0, pathArr.length - 1).join("/")
     );
     console.log("outputFolder: ", outputFolder);
-    const filePath = path.join(config.dir, prefix, `${pathStr}.json`);
+    const filePath = path.join(config.output, prefix, `${pathStr}.json`);
     // 创建输出目录
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });
@@ -68,11 +72,11 @@ const fetchData = async (apiUri: string, prefix: string = "./") => {
   });
 };
 
-const main = async () => {
+const main = async (config: IConfig) => {
   for (const key in config.serviceMap) {
     const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
-    await fetchData(apiUri, config.serviceNameToPath ? key : "./");
+    await fetchData(apiUri, config.serviceNameToPath ? key : "./", config);
   }
 };
 
-main();
+main(config);

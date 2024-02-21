@@ -1,17 +1,16 @@
+import fs from "fs";
 import path from "path";
-const argv = require("yargs").argv;
 
-const dir = path.join(process.cwd(), argv.dir);
-
-// 接口文档资料===========================================
-// 端口：16700 masterdata-service 主数据服务
-// 端口：18100 plk-uaa-service 权限服务
-// 端口：17900 plk-api-integration-service 集成平台服务
-// 端口：16400 pc聚合服务
-// 端口：17400 app-moblie聚合服务
-// dev接口文档地址：http://47.108.139.107/
-// uat接口文档地址：http://47.108.135.148/
-// ====================================================
+export type IConfig = {
+  translateCache: string;
+  translateApiUri: string;
+  translateAppKey: string;
+  translateAppSecret: string;
+  translateChunkSize: number;
+  serviceMap: Record<string, string>;
+  serviceNameToPath: boolean;
+  output: string;
+};
 
 const platformMap = {
   dev: "47.108.139.107",
@@ -50,14 +49,42 @@ const apiMap = Object.keys(platformMap)
     {} as Record<string, Record<keyof IServiceMap, string>>
   ) as Record<string, Record<keyof IServiceMap, string>>;
 
-export default {
-  dir,
-  translateCache: path.join(dir, "translateCache.json"),
+export const translateCacheFileName = "translateCache.json";
+
+const output = path.join(process.cwd(), "./openapi");
+
+const defaultConfig: IConfig = {
+  translateCache: path.join(output, translateCacheFileName),
   translateApiUri: "https://openapi.youdao.com/v2/api",
   translateAppKey: "4a8802ec639e5e84",
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
   serviceMap: apiMap.dev,
-  // 接口服务目录
   serviceNameToPath: false,
+  output,
 };
+
+const argv = require("yargs").argv;
+
+const configPath = path.join(process.cwd(), argv.config || "api2ts.config.js");
+
+if (!fs.existsSync(configPath)) {
+  throw new Error("config file not found");
+}
+
+let configData = require(configPath);
+
+if (typeof configData === "function") {
+  configData = configData(defaultConfig);
+}
+
+if (!configData.output) {
+  throw new Error("config file must have output field");
+}
+
+const resultConfig = {
+  ...defaultConfig,
+  ...configData,
+};
+
+export default resultConfig;

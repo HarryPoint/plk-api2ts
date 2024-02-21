@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fetch": "node ./lib/createData.js --dir=./openapi",
-    "create": "node ./lib/createTs.js --dir=./openapi",
+    "fetch": "node ./lib/createData.js",
+    "create": "node ./lib/createTs.js",
     "init": "npm run fetch-data && npm run create-ts",
-    "src:fetch": "ts-node ./src/createData.ts --dir=./openapi",
-    "src:create": "ts-node ./src/createTs.ts --dir=./openapi",
+    "src:fetch": "ts-node ./src/createData.ts",
+    "src:create": "ts-node ./src/createTs.ts",
     "src:init": "npm run src-fetch-data && npm run src-create-ts",
-    "case": "ts-node ./src/createTs.ts --dir=./case",
+    "case": "ts-node ./src/createTs.ts --target=./case",
     "update:link": "tsc && npm link",
     "build": "tsc"
   },
