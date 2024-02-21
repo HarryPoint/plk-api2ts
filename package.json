@@ -10,6 +10,7 @@
     "src:fetch": "ts-node ./src/createData.ts --dir=./openapi",
     "src:create": "ts-node ./src/createTs.ts --dir=./openapi",
     "src:init": "npm run src-fetch-data && npm run src-create-ts",
+    "case": "ts-node ./src/createTs.ts --dir=./case",
     "update:link": "tsc && npm link",
     "build": "tsc"
   },
