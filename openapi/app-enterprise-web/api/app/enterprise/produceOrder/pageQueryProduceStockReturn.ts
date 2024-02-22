@@ -87,5 +87,5 @@ export interface IProductionStockReturnQueryResponseDTO {
     // 退库数量
     stockReturnQuantity: number;
     // 退库序列号列表
-    serialNoList: any[];
+    serialNoList: Record<string, any>[];
 }

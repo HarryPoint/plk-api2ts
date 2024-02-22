@@ -111,7 +111,7 @@ export interface IWorkOrderDetailsReturnInformationVO {
     // 列code
     code: string;
     // 列值
-    value: any;
+    value: Record<string, any>;
 }
 // 流程工单预览信息返回VO
 export interface IProcessTicketPreviewInformationIsReturnedToVO {

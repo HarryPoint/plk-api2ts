@@ -18,7 +18,7 @@ export interface IProjectTaskResponseObject {
     // 任务名称
     name: string;
     // 任务负责人
-    leaderUserIds: any[];
+    leaderUserIds: Record<string, any>[];
     // 任务负责人
     leaderUserList: IIdCodeNameGenericTransportObject[];
     // 任务进度
@@ -42,7 +42,7 @@ export interface IProjectTaskResponseObject {
     // 上级任务名称
     parentName: string;
     // 前置任务ids
-    preTaskIds: any[];
+    preTaskIds: Record<string, any>[];
     // 前置任务列表
     preTaskList: IIdCodeNameGenericTransportObject[];
     // 项目阶段id

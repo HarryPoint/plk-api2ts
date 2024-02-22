@@ -3,11 +3,11 @@ export interface IMasterDataBaseEditDTO2 {
     // 子任务列表
     childTaskList: IJSONObject[];
     // 编辑数据
-    data: any;
+    data: Record<string, Record<string, any>>;
     // 流程任务id - 新增/重新编辑业务，要设置为null
     flowPathTaskId: number;
     // 扩展参数
-    extensionParam: any;
+    extensionParam: Record<string, Record<string, any>>;
 }
 // JSONObject
 export interface IJSONObject {

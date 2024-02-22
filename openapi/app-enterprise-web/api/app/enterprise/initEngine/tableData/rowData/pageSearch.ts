@@ -3,7 +3,7 @@ export interface ISearchForRowData1 {
     // 表数据ID
     tableDataId: number;
     // 字段查询条件
-    fieldQueryCondition: any;
+    fieldQueryCondition: Record<string, string>;
     // 当前页面
     pageNo: number;
     // 错误数据

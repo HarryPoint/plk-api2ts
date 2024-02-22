@@ -55,7 +55,7 @@ export interface IMessageSendingContentTemplateDTO {
     // 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题
     messageContent: string;
     // 字段序列号列表
-    fieldSerialNoList: any[];
+    fieldSerialNoList: Record<string, any>[];
     // 字段元数据
     fieldMetaList: IMessageContentFieldMetaDTO[];
     // 是否使用配置
@@ -93,15 +93,15 @@ export interface IMessageRecipientDTO {
     // 接收人类型
     recipientType: string;
     // 部门ID列表
-    departmentIdList: any[];
+    departmentIdList: Record<string, any>[];
     // 班组ID列表
-    classGroupIdList: any[];
+    classGroupIdList: Record<string, any>[];
     // 组织字段序列号列表
-    organizationFieldSerialList: any[];
+    organizationFieldSerialList: Record<string, any>[];
     // 用户ID列表
-    userIdList: any[];
+    userIdList: Record<string, any>[];
     // 邮件地址列表json
-    emailAddressList: any[];
+    emailAddressList: Record<string, any>[];
     // 部门列表
     departmentList: IDepartmentResponseObject1[];
     // 班组列表
@@ -194,7 +194,7 @@ export interface IOriginalDataFilterConditionDTO {
     // undefined
     fieldSerialNo: string;
     // undefined
-    value: any[];
+    value: Record<string, any>[];
 }
 // MessageTriggerNodeDTO
 export interface IMessageTriggerNodeDTO {
@@ -242,7 +242,7 @@ export interface IMessageTriggerConditionDTO {
     // SUM(${fieldSerialNo}) / count(${fieldSerialNo})
     formula: string;
     // 公式字段列表
-    formulaFieldList: any[];
+    formulaFieldList: Record<string, any>[];
     // 判断表达式
     judgeExpression: string;
     // 条件值
@@ -305,7 +305,7 @@ export interface ISmsTemplateDTO {
     // 消息内容
     messageContent: string;
     // 字段序列号列表
-    fieldSerialNoList: any[];
+    fieldSerialNoList: Record<string, any>[];
     // 表单配置ID
     formConfigId: number;
     // 是否使用配置

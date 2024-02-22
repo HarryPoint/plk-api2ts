@@ -94,9 +94,9 @@ export interface IProjectTaskResponseObject6 {
     // 任务权重
     taskWeight: number;
     // undefined
-    leaderUserIds: any[];
+    leaderUserIds: Record<string, any>[];
     // undefined
-    preTaskIds: any[];
+    preTaskIds: Record<string, any>[];
     // undefined
     projectTaskTypeId: number;
     // undefined
@@ -206,9 +206,9 @@ export interface IProjectTaskResponseObject9 {
     // 任务权重
     taskWeight: number;
     // undefined
-    leaderUserIds: any[];
+    leaderUserIds: Record<string, any>[];
     // undefined
-    preTaskIds: any[];
+    preTaskIds: Record<string, any>[];
     // undefined
     projectTaskTypeId: number;
     // undefined

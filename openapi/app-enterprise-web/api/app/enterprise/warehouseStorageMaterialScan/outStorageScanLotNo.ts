@@ -3,7 +3,7 @@ export interface ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsTo
     // 流程id
     appId: number;
     // 通用：提交项， 用户编辑的数据
-    formData: any;
+    formData: Record<string, Record<string, any>>;
     // 批次号
     lotNo: string;
 }

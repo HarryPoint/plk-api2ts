@@ -85,7 +85,7 @@ export interface IProjectActionItemReportResponseObject {
     // undefined
     responsibleDeptId: number;
     // undefined
-    responsibleUserIds: any[];
+    responsibleUserIds: Record<string, any>[];
     // undefined
     secretType: string;
     // undefined

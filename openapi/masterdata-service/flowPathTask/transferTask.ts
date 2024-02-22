@@ -3,7 +3,7 @@ export interface IProcessTasksAreTransferredToTheDTO {
     // 任务ID
     id: number;
     // 表单数据
-    data: any;
+    data: Record<string, Record<string, any>>;
     // 审批意见/执行情况
     notes: string;
     // 转交人id
@@ -16,7 +16,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: any;
+    data: Record<string, any>;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

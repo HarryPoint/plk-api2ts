@@ -19,5 +19,5 @@ export interface IUserAggregationDimensionConfigurationQuery {
     // 编号
     code: string;
     // 配置信息
-    config: any;
+    config: Record<string, Record<string, any>>;
 }

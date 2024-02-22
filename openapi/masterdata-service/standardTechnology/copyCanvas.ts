@@ -39,7 +39,7 @@ export interface IStandardProcessCanvasResponseObject {
     // 标准工艺节点响应对象
     nodeResponse: IStandardProcessNodeResponseObject;
     // 标准工艺画布快照 草稿状态时有值
-    canvasSnapshot: any;
+    canvasSnapshot: Record<string, Record<string, any>>;
 }
 // 标准工艺节点响应对象
 export interface IStandardProcessNodeResponseObject {
@@ -64,7 +64,7 @@ export interface IStandardProcessNodeResponseObject {
     // 分支类型 -- 只有分支节点才会有值
     branchType: string;
     // 节点数据 -- 不同的节点类型的数据格式不一样
-    nodeData: any;
+    nodeData: Record<string, Record<string, any>>;
     // 下一节点
     nextNode: IStandardProcessNodeResponseObject;
     // 分支节点列表

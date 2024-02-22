@@ -83,5 +83,5 @@ export interface IProduceMaterialIssuanceQueryResponseDTO {
     // 领料数量
     issuanceQuantity: number;
     // 序列号列表
-    serialNoList: any[];
+    serialNoList: Record<string, any>[];
 }

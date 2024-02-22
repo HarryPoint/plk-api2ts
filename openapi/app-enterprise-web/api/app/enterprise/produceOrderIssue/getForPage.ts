@@ -24,11 +24,11 @@ export interface IProcessDataDetailsSearchVO {
     // 搜索文本 - 针对文本搜索
     text: string;
     // 搜索起始值 - 针对范围搜索
-    limitBegin: any;
+    limitBegin: Record<string, any>;
     // 搜索结束值 - 针对范围搜索
-    limitEnd: any;
+    limitEnd: Record<string, any>;
     // 搜索选项值 - 针对选择搜索
-    selectors: any[];
+    selectors: Record<string, any>[];
     // 表格编码
     tableCode: string;
 }
@@ -95,7 +95,7 @@ export interface IDynamicExpansionDataVOProductionOrderDeliveryExpansionInformat
     // 拓展数据
     ext: IProductionOrderDeliveryExtendedMessageVO;
     // 动态数据
-    data: any;
+    data: Record<string, Record<string, any>>;
 }
 // 生产订单下发扩展信息VO
 export interface IProductionOrderDeliveryExtendedMessageVO {

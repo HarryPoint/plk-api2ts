@@ -86,5 +86,5 @@ export interface ISMSTemplateQueryResponseDTO {
     // 显示信息内容
     showMessageContent: string;
     // 字段序列号
-    fieldSerialNoList: any[];
+    fieldSerialNoList: Record<string, any>[];
 }

@@ -24,7 +24,7 @@ export interface IMessageDetailsAreReturnedToVO {
     // 消息内容
     content: string;
     // 消息图片key集
-    imageKeys: any[];
+    imageKeys: Record<string, any>[];
     // 消息图片url集
     imageUrls: string[];
     // 是否已读

@@ -21,9 +21,9 @@ export interface IThirdApiRequestInfoResponseDTO {
     // undefined
     url: string;
     // undefined
-    headers: any;
+    headers: Record<string, string>;
     // undefined
-    params: any;
+    params: Record<string, string>;
     // undefined
     body: string;
 }
@@ -42,7 +42,7 @@ export interface IThirdApiResponseInfoResponseDTO {
     // undefined
     responseBody: string;
     // undefined
-    responseDataObj: any;
+    responseDataObj: Record<string, Record<string, any>>;
     // undefined
-    responseDataArray: any[];
+    responseDataArray: Record<string, any>[];
 }

@@ -103,9 +103,9 @@ export interface IProjectTaskReportResponseObject {
     // undefined
     projectTaskTypeId: number;
     // undefined
-    leaderUserIds: any[];
+    leaderUserIds: Record<string, any>[];
     // undefined
-    preTaskIds: any[];
+    preTaskIds: Record<string, any>[];
     // undefined
     priority: string;
 }

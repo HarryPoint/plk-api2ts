@@ -43,5 +43,5 @@ export interface IQualityAuditClauseNumberQueryItemResponseDTO {
     // 整改率
     rectificationRate: number;
     // 各部门不符合项分布情况
-    dynamicIndicates: any;
+    dynamicIndicates: Record<string, number>;
 }

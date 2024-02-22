@@ -77,11 +77,11 @@ export interface IProductionStockInSummaryQueryResponseDTO {
     // 已入库数量
     stockInQuantity: number;
     // 入库序列号
-    stockInSerialNoList: any[];
+    stockInSerialNoList: Record<string, any>[];
     // 未入库数量
     notStockInQuantity: number;
     // 已退库数量
     stockReturnedQuantity: number;
     // 退库序列号
-    stockReturnSerialNoList: any[];
+    stockReturnSerialNoList: Record<string, any>[];
 }

@@ -79,7 +79,7 @@ export interface IProductionCostAllocatesPagingResponseObjects {
     // 分配比例
     assignRatio: number;
     // 费用动态数据
-    produceFeeAssignDynamicData: any[];
+    produceFeeAssignDynamicData: Record<string, any>[];
     // 费用动态数据
     produceFeeAssignPageDynamicDataList: IProductionCostAllocatesDynamicDataPagingResponseObjects[];
     // 费用合计

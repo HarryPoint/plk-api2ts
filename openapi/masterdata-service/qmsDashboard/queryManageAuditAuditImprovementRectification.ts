@@ -27,9 +27,9 @@ export interface IImproveTheRectificationRate {
     // 已整改总数
     rectifiedQuantity: number;
     // 不符合程度-单项值总数
-    singleItemTotalQuantityMap: any;
+    singleItemTotalQuantityMap: Record<string, number>;
     // 不符合程度-单项值未整改数
-    singleItemNotRectifiedTotalQuantityMap: any;
+    singleItemNotRectifiedTotalQuantityMap: Record<string, number>;
 }
 // TitleDefineQueryResponseDTO
 export interface ITitleDefineQueryResponseDTO {

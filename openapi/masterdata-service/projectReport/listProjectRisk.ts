@@ -81,5 +81,5 @@ export interface IProjectRiskReportResponseObject {
     // undefined
     responsibleDeptId: number;
     // undefined
-    handleUserIds: any[];
+    handleUserIds: Record<string, any>[];
 }

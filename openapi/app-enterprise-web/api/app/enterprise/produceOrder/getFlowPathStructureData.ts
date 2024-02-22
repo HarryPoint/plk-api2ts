@@ -19,7 +19,7 @@ export interface IJSONResultProductionOrderDynamicDataVO {
 // 生产订单动态数据VO
 export interface IProductionOrderDynamicDataVO {
     // 数据
-    data: any;
+    data: Record<string, Record<string, any>>;
     // 流程id
     flowPathId: number;
     // 流程版本
@@ -167,9 +167,9 @@ export interface IProcessFormVO {
     // 选择框样式
     style: string;
     // 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}]
-    formRpShowFields: any[];
+    formRpShowFields: Record<string, any>[];
     // 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}]
-    formRpMultiGroupFields: any[];
+    formRpMultiGroupFields: Record<string, any>[];
     // 排序
     sort: number;
     // 父级流程表单id
@@ -177,11 +177,11 @@ export interface IProcessFormVO {
     // 父级流程表单编码
     parentFlowPathFormFieldCode: string;
     // 前端配置拓展字段
-    meta: any;
+    meta: Record<string, Record<string, any>>;
     // 组织类型
     organizationType: string;
     // 表格字段列表
-    actualFields: any[];
+    actualFields: Record<string, any>[];
     // 是否自动获取位置
     isAutoGetLocation: string;
     // 地址类型
@@ -286,7 +286,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     // 下拉选项的code
     selectorItemCode: string;
     // 关联显示字段的序列号集合
-    associateDisplayFieldSerialNos: any[];
+    associateDisplayFieldSerialNos: Record<string, any>[];
 }
 // 流程表单关联表单筛选条件组VO
 export interface IProcessFormsAssociateFormFilterGroupVO {
@@ -379,9 +379,9 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: any[];
+    formulaFormFieldSerialNos: Record<string, any>[];
     // 前端配置拓展字段
-    meta: any;
+    meta: Record<string, Record<string, any>>;
 }
 // 生产订单详情 - 排产VO
 export interface IProductionOrderDetailsProductionVO {

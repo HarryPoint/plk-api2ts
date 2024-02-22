@@ -5,7 +5,7 @@ export interface IFormDataGroupingSettingsAreRelated {
     // 应用ID
     flowPathId: number;
     // 分组字段序列号
-    groupingFieldSerialNo: any[];
+    groupingFieldSerialNo: Record<string, any>[];
 }
 // JSONResult«string»
 export interface IJSONResultstring {

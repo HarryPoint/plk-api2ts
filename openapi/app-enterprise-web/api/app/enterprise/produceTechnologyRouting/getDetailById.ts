@@ -103,7 +103,7 @@ export interface IProduceTechnologyRoutingStepResponseDTO {
     // 是否允许直接出站
     allowDirectExit: string;
     // 配置块的顺序数组(前端用于保存每个配置块的顺序)
-    configModuleSortArray: any[];
+    configModuleSortArray: Record<string, any>[];
     // 物料消耗
     routingStepBomDetailList: IProduceTechnologyRoutingStepBomDetailResponseDTO[];
 }

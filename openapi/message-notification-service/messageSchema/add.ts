@@ -43,7 +43,7 @@ export interface IMessageSendingContentTemplateAddDTO {
     // 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题
     messageContent: string;
     // undefined
-    fieldSerialNoList: any[];
+    fieldSerialNoList: Record<string, any>[];
     // 字段元数据
     fieldMetaList: IMessageContentFieldMetaAddDTO[];
     // 是否使用配置
@@ -73,15 +73,15 @@ export interface IMessageRecipientAddDTO {
     // 接收人类型
     recipientType: string;
     // 部门ID列表
-    departmentIdList: any[];
+    departmentIdList: Record<string, any>[];
     // 班组ID列表
-    classGroupIdList: any[];
+    classGroupIdList: Record<string, any>[];
     // 组织字段序列号列表
-    organizationFieldSerialList: any[];
+    organizationFieldSerialList: Record<string, any>[];
     // 用户ID列表
-    userIdList: any[];
+    userIdList: Record<string, any>[];
     // 邮箱列表
-    emailAddressList: any[];
+    emailAddressList: Record<string, any>[];
 }
 // OriginalDataFilterConditionAddDTO
 export interface IOriginalDataFilterConditionAddDTO {
@@ -96,7 +96,7 @@ export interface IOriginalDataFilterConditionAddDTO {
     // undefined
     fieldSerialNo: string;
     // undefined
-    value: any[];
+    value: Record<string, any>[];
 }
 // MessageTriggerNodeAddDTO
 export interface IMessageTriggerNodeAddDTO {
@@ -134,7 +134,7 @@ export interface IMessageTriggerConditionAddDTO {
     // SUM(${fieldSerialNo}) / count(${fieldSerialNo})
     formula: string;
     // 公式字段列表。字段 ["fieldSerialNo"...]
-    formulaFieldList: any[];
+    formulaFieldList: Record<string, any>[];
     // 判断表达式
     judgeExpression: string;
     // 条件值

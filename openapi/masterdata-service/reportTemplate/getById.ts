@@ -42,7 +42,7 @@ export interface IReportTemplateDTO {
     // 开始时间字段编码
     beginTimeFieldCode: string;
     // 数据筛选条件
-    exportParam: any;
+    exportParam: Record<string, Record<string, any>>;
     // 显示模板条件添加请求列表
     showFilterConditionList: IReportTemplateConditionDTO[];
     // 报表统计时间范围添加请求

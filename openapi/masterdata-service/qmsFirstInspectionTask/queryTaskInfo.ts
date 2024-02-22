@@ -50,7 +50,7 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     // undefined
     inspectionApplyQuantity: number;
     // undefined
-    threeInspectionSystems: any[];
+    threeInspectionSystems: Record<string, any>[];
     // undefined
     selfInspectionEmployeeIds: number[];
     // undefined
@@ -94,7 +94,7 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     // undefined
     qmsInspectionSchemeId: number;
     // undefined
-    inspectionEmployeeIds: any[];
+    inspectionEmployeeIds: Record<string, any>[];
     // undefined
     inspectionEmployees: IAssociateFormDataVO[];
     // undefined

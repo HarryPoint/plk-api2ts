@@ -13,7 +13,7 @@ export interface IStandardProcessEditRequestObjectForAClassOfMaterial {
     // 标准工艺节点编辑请求对象 发布时传递
     nodeEditRequest: IStandardProcessNodeRespondsToObject1;
     // 标准工艺画布快照 暂存时必须传递
-    canvasSnapshot: any;
+    canvasSnapshot: Record<string, Record<string, any>>;
     // 条件组id(该工艺对应的条件组id)
     standardTechnologyConditionGroupId: number;
     // 条件来源应用编号
@@ -32,7 +32,7 @@ export interface IStandardProcessNodeRespondsToObject1 {
     // 分支类型 -- 只有分支节点才会有值
     branchType: string;
     // 节点数据 -- 不同的节点类型的数据格式不一样
-    nodeData: any;
+    nodeData: Record<string, Record<string, any>>;
     // 下一节点
     nextNode: IStandardProcessNodeRespondsToObject2;
     // 分支节点列表
@@ -51,7 +51,7 @@ export interface IStandardProcessNodeRespondsToObject2 {
     // 分支类型 -- 只有分支节点才会有值
     branchType: string;
     // 节点数据 -- 不同的节点类型的数据格式不一样
-    nodeData: any;
+    nodeData: Record<string, Record<string, any>>;
     // 下一节点
     nextNode: IStandardProcessNodeRespondsToObject2;
     // 分支节点列表
@@ -64,7 +64,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: any;
+    data: Record<string, any>;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

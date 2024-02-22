@@ -238,5 +238,5 @@ export interface IOperationsCorrespondToFieldDetailsVO {
     // 关联字段名称
     fieldName: string;
     // 值
-    value: any;
+    value: Record<string, any>;
 }

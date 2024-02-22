@@ -30,7 +30,7 @@ export interface IProduceOrderImportSynchronizationOutputDTO {
     // undefined
     failureProduceOrderList: IProduceOrderImportFailureOutputDTO[];
     // undefined
-    repeatProduceOrderList: any[];
+    repeatProduceOrderList: Record<string, any>[];
     // undefined
     savedProduceOrderIdList: number[];
 }

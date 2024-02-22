@@ -28,7 +28,7 @@ export interface ITabularData {
     // 描述
     desc: string;
     // 自定义列标题
-    customColumnTitle: any;
+    customColumnTitle: Record<string, ITitleDefineDTO>;
     // 重复数据数量
     repeatDataQuantity: number;
     // 重复数据中的覆盖导入数量

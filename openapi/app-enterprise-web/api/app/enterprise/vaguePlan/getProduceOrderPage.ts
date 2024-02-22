@@ -143,7 +143,7 @@ export interface IProductionOrderReturnsVO2 {
     // 关闭时间
     closeTime: string;
     // 其他拓展参数
-    extData: any;
+    extData: Record<string, Record<string, any>>;
     // 生产部门id
     placeOrderDepartmentId: number;
     // 生产部门编号

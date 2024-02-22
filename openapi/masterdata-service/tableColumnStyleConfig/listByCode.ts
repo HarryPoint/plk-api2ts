@@ -20,7 +20,7 @@ export interface IListColumnStyleConfigurationVO {
     // 类型
     type: string;
     // 列配置JSON
-    config: any;
+    config: Record<string, Record<string, any>>;
     // 排序
     sort: number;
     // 是否是当前用户选中的

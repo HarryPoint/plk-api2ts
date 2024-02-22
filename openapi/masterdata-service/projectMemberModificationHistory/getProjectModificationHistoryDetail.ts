@@ -16,5 +16,5 @@ export interface IProjectMemberChangeInformationVersionRecord {
     // undefined
     modificationId: number;
     // undefined
-    dataSnapshot: any[];
+    dataSnapshot: Record<string, any>[];
 }

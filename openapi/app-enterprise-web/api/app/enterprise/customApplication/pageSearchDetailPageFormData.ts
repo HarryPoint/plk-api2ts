@@ -21,7 +21,7 @@ export interface IProcessDataBasicSearchVO1 {
     // 详情页关联的应用ID - 即 FlowPath.id
     associationFormId: number;
     // 当前表单记录
-    currentFormRecord: any;
+    currentFormRecord: Record<string, Record<string, any>>;
 }
 // 流程数据明细搜索VO
 export interface IProcessDataDetailsSearchVO {
@@ -32,11 +32,11 @@ export interface IProcessDataDetailsSearchVO {
     // 搜索文本 - 针对文本搜索
     text: string;
     // 搜索起始值 - 针对范围搜索
-    limitBegin: any;
+    limitBegin: Record<string, any>;
     // 搜索结束值 - 针对范围搜索
-    limitEnd: any;
+    limitEnd: Record<string, any>;
     // 搜索选项值 - 针对选择搜索
-    selectors: any[];
+    selectors: Record<string, any>[];
     // 表格编码
     tableCode: string;
 }

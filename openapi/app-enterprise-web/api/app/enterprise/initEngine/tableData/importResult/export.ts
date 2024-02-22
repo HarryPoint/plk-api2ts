@@ -3,7 +3,7 @@ export interface ISearchRowData {
     // 表数据ID
     tableDataId: number;
     // 字段查询条件
-    fieldQueryCondition: any;
+    fieldQueryCondition: Record<string, string>;
     // 空数据
     existsEmptyData: string;
     // 错误数据

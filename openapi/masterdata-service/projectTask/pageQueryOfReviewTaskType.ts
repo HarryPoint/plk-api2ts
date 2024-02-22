@@ -89,7 +89,7 @@ export interface IProjectTaskPagingQueryResponse {
     // 修改规则值
     modifyRuleValue: number;
     // 修改任务ID列表
-    modifyTaskIdList: any[];
+    modifyTaskIdList: Record<string, any>[];
     // 修改任务列表
     modifyTaskList: IIdNameVO[];
 }

@@ -69,5 +69,5 @@ export interface IProjectQualityProblemReportResponseObject {
     // 实际完成时间
     actualCompleteTime: string;
     // undefined
-    responsibleUserIds: any[];
+    responsibleUserIds: Record<string, any>[];
 }

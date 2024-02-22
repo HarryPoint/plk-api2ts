@@ -128,7 +128,7 @@ export interface IProcessEventMappingConditionGroupQueryResponse {
     // undefined
     secondarySourceFieldCode: string;
     // undefined
-    formulaFormFieldSerialNos: any[];
+    formulaFormFieldSerialNos: Record<string, any>[];
 }
 // 应用新增事件子表设置响应DTO_1
 export interface IApplyTheNewEventSubtableToSetResponseDTO1 {

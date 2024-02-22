@@ -1,11 +1,11 @@
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {
     // 编辑数据
-    data: any;
+    data: Record<string, Record<string, any>>;
     // 流程任务id - 新增/重新编辑业务，要设置为null
     flowPathTaskId: number;
     // 扩展参数
-    extensionParam: any;
+    extensionParam: Record<string, Record<string, any>>;
 }
 // JSONResult«List«string»»
 export interface IJSONResultListstring {

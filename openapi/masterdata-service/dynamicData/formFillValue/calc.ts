@@ -5,7 +5,7 @@ export interface IFormFillRequest {
     // 填充数据项
     itemList: IFormFillItemSubscript[];
     // undefined
-    formRecord: any;
+    formRecord: Record<string, Record<string, any>>;
 }
 // 表单填充项下标
 export interface IFormFillItemSubscript {

@@ -181,7 +181,7 @@ export interface IProductionTaskAssignmentVOForMobile {
     // 是否已分配
     isAssign: string;
     // 生产订单
-    produceOrder: any;
+    produceOrder: Record<string, Record<string, any>>;
     // 批次信息
     lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
     // 批次数量

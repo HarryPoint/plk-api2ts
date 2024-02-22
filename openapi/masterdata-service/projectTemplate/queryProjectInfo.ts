@@ -14,7 +14,7 @@ export interface IProjectTemplateProjectInformationRespondsToTheDTO {
     // 项目模板id
     projectTemplateId: number;
     // 项目数据
-    projectData: any;
+    projectData: Record<string, Record<string, any>>;
     // 项目取值字段
     projectExtractDataFields: IIdCodeNameGenericTransportObject[];
 }

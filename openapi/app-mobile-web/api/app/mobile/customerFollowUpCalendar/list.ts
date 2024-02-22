@@ -29,9 +29,9 @@ export interface ICustomerFollowUpCalendarOutputVO {
     // 发生时间
     dateOfOccurrence: string;
     // 客户信息
-    customer: any;
+    customer: Record<string, Record<string, any>>;
     // 跟进人
-    createUserId: any;
+    createUserId: Record<string, Record<string, any>>;
     // 创建人
     createTime: string;
     // 流程ID

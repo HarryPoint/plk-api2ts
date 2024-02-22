@@ -21,7 +21,7 @@ export interface IConsignmentLossAnalysisReportPagingReturnsVO {
     // 客户ids json
     customerIdsJson: string;
     // 销售发货子表ids json
-    salesDeliveryIdsJson: any[];
+    salesDeliveryIdsJson: Record<string, any>[];
     // 客户ids
     customerIds: number[];
     // 客户id

@@ -19,7 +19,7 @@ export interface IProcessAssociationFormSearchVO {
     // 非通用：字段序列号， 即 当flowPathFormFieldId = null时，可以 flowPathCode、fieldSerialNo联合使用来查询关联表单数据
     fieldSerialNo: string;
     // 通用：提交项， 用户编辑的数据
-    submitFieldsJsonObject: any;
+    submitFieldsJsonObject: Record<string, Record<string, any>>;
     // 通用：精确匹配字段的字段编码
     matchingFieldCode: string;
     // 通用：精确匹配的值列表。1、精确匹配的字段优先是matchingFieldSerialNo。  2、再第一项不成立的时候，搜索的表.列。是关联表单显示字段的字段名、以及关联表单影响的列

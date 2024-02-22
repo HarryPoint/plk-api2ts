@@ -1,11 +1,11 @@
 // 物料编辑请求DTO
 export interface IMaterialEditorRequestDTO {
     // 编辑数据
-    data: any;
+    data: Record<string, Record<string, any>>;
     // 流程任务id - 新增/重新编辑业务，要设置为null
     flowPathTaskId: number;
     // 扩展参数
-    extensionParam: any;
+    extensionParam: Record<string, Record<string, any>>;
     // 物料批次设置
     lotSetting: IMaterialBatchSetEditObject;
 }

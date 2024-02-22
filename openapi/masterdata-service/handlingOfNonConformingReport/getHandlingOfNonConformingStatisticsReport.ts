@@ -43,7 +43,7 @@ export interface ITheUnqualifiedReportIsReturnedToTheDTO {
     // 不合格品处理单号
     code: string;
     // 检验员
-    inspectionEmployeeIds: any[];
+    inspectionEmployeeIds: Record<string, any>[];
     // 检验员名称
     inspectionEmployeeNames: string[];
     // 检验日期

@@ -85,5 +85,5 @@ export interface IProductionStockInQueryResponseDTO {
     // 入库数量
     stockInQuantity: number;
     // 入库序列号列表
-    serialNoList: any[];
+    serialNoList: Record<string, any>[];
 }

@@ -62,7 +62,7 @@ export interface IProductionTaskExportTableColumnDTO {
     // 组织类型
     organizationType: string;
     // 实际存储数据字段列表 --- 数据格式[{"code":"字段编码", "name":"字段名称", "addressFieldCode" : "地址字段编码", "addressFieldSerialNo": "地址字段序列号"}]
-    actualFields: any[];
+    actualFields: Record<string, any>[];
     // 地址类型
     addressType: string;
     // 是否使用有账号的员工
@@ -78,9 +78,9 @@ export interface IProductionTaskExportTableColumnDTO {
     // 关联表单选项显示字段Serial No
     formRpSelectorShowFieldSerialNo: string;
     // 关联表单展示code集合
-    formRpShowFields: any[];
+    formRpShowFields: Record<string, any>[];
     // 关联表单多选分组字段code集合
-    formRpMultiGroupFields: any[];
+    formRpMultiGroupFields: Record<string, any>[];
     // 选择框样式
     style: string;
     // 套件类型
@@ -173,7 +173,7 @@ export interface ITheProcessTableListsVO {
     // 组织类型
     organizationType: string;
     // 实际存储数据字段列表 --- 数据格式[{"code":"字段编码", "name":"字段名称", "addressFieldCode" : "地址字段编码", "addressFieldSerialNo": "地址字段序列号"}]
-    actualFields: any[];
+    actualFields: Record<string, any>[];
     // 地址类型
     addressType: string;
     // 是否使用有账号的员工
@@ -189,9 +189,9 @@ export interface ITheProcessTableListsVO {
     // 关联表单选项显示字段Serial No
     formRpSelectorShowFieldSerialNo: string;
     // 关联表单展示code集合
-    formRpShowFields: any[];
+    formRpShowFields: Record<string, any>[];
     // 关联表单多选分组字段code集合
-    formRpMultiGroupFields: any[];
+    formRpMultiGroupFields: Record<string, any>[];
     // 选择框样式
     style: string;
     // 套件类型

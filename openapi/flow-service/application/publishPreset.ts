@@ -5,9 +5,9 @@ export interface IApplicationPublishingDefaultRequestDTO {
     // 应用原始code
     originalApplicationCode: string;
     // 明细表格code变更 key -> 原始code，value -> 变更后的code
-    exchangedTableDetailCode: any;
+    exchangedTableDetailCode: Record<string, string>;
     // 字段serialNo变更 key -> 原始serialNo，value -> 变更后的serialNo
-    exchangedFormFieldSerialNo: any;
+    exchangedFormFieldSerialNo: Record<string, string>;
 }
 // 流程编辑DTO
 export interface IProcessEditingDTO {
@@ -159,15 +159,15 @@ export interface IProcessFormFieldEditDTO {
     // 选择框样式
     style: string;
     // 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}]
-    formRpShowFields: any[];
+    formRpShowFields: Record<string, any>[];
     // 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}]
-    formRpMultiGroupFields: any[];
+    formRpMultiGroupFields: Record<string, any>[];
     // 前端配置拓展字段
-    meta: any;
+    meta: Record<string, Record<string, any>>;
     // 组织类型
     organizationType: string;
     // 表格字段列表
-    actualFields: any[];
+    actualFields: Record<string, any>[];
     // 是否自动获取位置
     isAutoGetLocation: string;
     // 地址类型
@@ -320,9 +320,9 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     // 计算公式
     formula: string;
     // 计算公式用到的表单序号值集
-    formulaFormFieldSerialNos: any[];
+    formulaFormFieldSerialNos: Record<string, any>[];
     // 前端配置拓展字段
-    meta: any;
+    meta: Record<string, Record<string, any>>;
 }
 // 流程节点编辑DTO_4
 export interface IProcessNodeEditDTO4 {
@@ -681,7 +681,7 @@ export interface IProcessEventOperationSettingsEditTheDTO {
     // 固定值
     fixedValue: string;
     // 前端配置拓展字段
-    meta: any;
+    meta: Record<string, Record<string, any>>;
     // 禁用编辑，不填或者N代表不禁止。Y代表禁止不能编辑
     isDisableEdit: string;
 }
@@ -831,7 +831,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: any;
+    data: Record<string, any>;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

@@ -27,7 +27,7 @@ export interface IPrintTheTemplateRequestObject {
     // 背景图片key
     bgPicKey: string;
     // 模板JSON结构
-    printTemplateJson: any;
+    printTemplateJson: Record<string, Record<string, any>>;
     // 模板字段集合
     printTemplateFields: IPrintTheTemplateFieldRequestObject[];
 }
@@ -81,7 +81,7 @@ export interface IJSONResultobject {
     // 返回消息说明
     msg: string;
     // 响应结果
-    data: any;
+    data: Record<string, any>;
     // 服务器结果返回时的 Unix timestamp,单位毫秒
     ts: number;
 }

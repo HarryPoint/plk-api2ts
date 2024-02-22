@@ -24,7 +24,7 @@ export interface IAppMessageSentContentTemplateAddRequestDTO {
     // 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题
     messageContent: string;
     // undefined
-    fieldSerialNoList: any[];
+    fieldSerialNoList: Record<string, any>[];
     // 字段元数据
     fieldMetaList: IMessageContentFieldMetaAddDTO[];
     // 是否使用配置
@@ -52,17 +52,17 @@ export interface IAppMessageRecipientAddRequestDTO {
     // 接收人类型
     recipientType: string;
     // 部门ID列表
-    departmentIdList: any[];
+    departmentIdList: Record<string, any>[];
     // 班组ID列表
-    classGroupIdList: any[];
+    classGroupIdList: Record<string, any>[];
     // 组织字段序列号列表
-    organizationFieldSerialList: any[];
+    organizationFieldSerialList: Record<string, any>[];
     // 用户ID列表
-    userIdList: any[];
+    userIdList: Record<string, any>[];
     // 邮箱列表
-    emailAddressList: any[];
+    emailAddressList: Record<string, any>[];
     // 节点接受人类型
-    nodeRecipientTypeList: any[];
+    nodeRecipientTypeList: Record<string, any>[];
 }
 // JSONResult«long»
 export interface IJSONResultlong {

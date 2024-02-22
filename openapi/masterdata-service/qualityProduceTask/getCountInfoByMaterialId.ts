@@ -16,7 +16,7 @@ export interface IQcMaterialVerificationInformationVO {
     // 仓库质检任务信息
     qualityStorageTask: IQualityStorageTaskVO;
     // 质检方案质检项关联map， key：质检方案质检项关联id， value：质检方案质检项id关系
-    qualityPlanItemIdMap: any;
+    qualityPlanItemIdMap: Record<string, IQualityInspectionSolutionQualityInspectionItemIdVO>;
     // 合格数量
     passQuantity: number;
     // 不合格数量

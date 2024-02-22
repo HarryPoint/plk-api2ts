@@ -127,7 +127,7 @@ export interface IWorkOrderDetailsReturnInformationVO {
     // 列code
     code: string;
     // 列值
-    value: any;
+    value: Record<string, any>;
 }
 // 流程节点执行人VO
 export interface IProcessNodeExecutorVO {
@@ -253,7 +253,7 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     // 创建时间
     createTime: string;
     // 生产订单
-    produceOrder: any;
+    produceOrder: Record<string, Record<string, any>>;
     // 批次信息
     lotOrders: IProductionTaskBatchResponseDTOForMobileEnd[];
     // 批次数量
