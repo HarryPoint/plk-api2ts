@@ -79,7 +79,8 @@ export const createDefinitions = async (
     // console.log("item.name: ", item.name);
   });
 
-  // 生成接口文档链接
+  // TODO: 转换到外层实现
+  // 生成接口文档链接 和 方法定义
   for (let url in data.paths) {
     const fetchDefines = data.paths[url];
     for (let method in fetchDefines) {
