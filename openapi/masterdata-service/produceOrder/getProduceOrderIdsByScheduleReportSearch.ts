@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderIdsByScheduleReportSearchUsingPOST
+export function fetchMethod(data: IProductionSchedulingOrderSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceOrder/getProduceOrderIdsByScheduleReportSearch",
+      data,
+      params,
+    });
+}
 // 生产排产订单搜索VO
 export interface IProductionSchedulingOrderSearchVO {
     // 当前页面

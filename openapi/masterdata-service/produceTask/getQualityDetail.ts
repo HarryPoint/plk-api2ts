@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQualityDetailUsingPOST
+export function fetchMethod(data: IEnterAndExitTheStationForDetailedVOSearch, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/getQualityDetail",
+      data,
+      params,
+    });
+}
 // 进出站详细搜索VO
 export interface IEnterAndExitTheStationForDetailedVOSearch {
     // 任务id

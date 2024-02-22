@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationFormTableRecordUsingPOST
+export function fetchMethod(data: IPage2) {
+    return post({
+      url: "/masterdata-service/dynamicData/associationQuery/queryTableRecord",
+      data,
+    });
+}
 // 分页_2
 export interface IPage2 {
     // 当前表单数据

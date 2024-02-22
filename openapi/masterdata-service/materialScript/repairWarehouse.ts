@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/material-script-controller/repairWarehouseUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/materialScript/repairWarehouse",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

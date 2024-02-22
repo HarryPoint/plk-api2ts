@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产工艺相关/queryMaterialBomListUsingPOST
+export function fetchMethod(data: number[]) {
+    return post({
+      url: "/masterdata-service/produceTechnology/queryMaterialBomList",
+      data,
+    });
+}
 // JSONResult«List«ProduceTechnologyMaterialBomDTO»»
 export interface IJSONResultListProduceTechnologyMaterialBomDTO {
     // 返回码

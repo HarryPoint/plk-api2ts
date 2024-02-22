@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getCountInfoByMaterialIdUsingGET
+export function fetchMethod(params: { beginTime: string; endTime: string; materialId: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/qualityProduceTask/getCountInfoByMaterialId",
+      params,
+    });
+}
 // JSONResult«质检物料校验信息VO»
 export interface IJSONResultCheckInformationVO {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMajorDataIdCodesByIdsUsingPOST
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/material/getMajorDataIdCodesByIds",
+      data,
+      params,
+    });
+}
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {
     // 返回码

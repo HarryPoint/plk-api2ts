@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityListUsingPOST
+export function fetchMethod(data: ISecurityQueryRequest) {
+    return post({
+      url: "/masterdata-service/hseDashboard/querySecurityList",
+      data,
+    });
+}
 // 安全查询请求
 export interface ISecurityQueryRequest {
     // 查询日期的开始

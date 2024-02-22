@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/getAllProcessOperateUserIdsUsingPOST
+export function fetchMethod(data: IProcessOperatorIdSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/processTaskSetting/getAllProcessOperateUserIds",
+      data,
+      params,
+    });
+}
 // 工序操作人员id搜索VO
 export interface IProcessOperatorIdSearchVO {
     // 当前页面

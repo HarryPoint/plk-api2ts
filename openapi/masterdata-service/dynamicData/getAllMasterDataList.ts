@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getAllMasterDataListUsingGET
+export function fetchMethod(params: { enterpriseId: number; flowPathCode: string }) {
+    return get({
+      url: "/masterdata-service/dynamicData/getAllMasterDataList",
+      params,
+    });
+}
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/费用类型相关/getFlowPathStructureDataUsingPOST_10
+export function fetchMethod(data: IProcessStructureSearchVO) {
+    return post({
+      url: "/masterdata-service/produceFeeType/getFlowPathStructureData",
+      data,
+    });
+}
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {
     // 流程任务id

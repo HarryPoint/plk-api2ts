@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/sortByMoveDownUsingPOST_1
+export function fetchMethod(data: IProjectTaskSortRequestObject) {
+    return post({
+      url: "/masterdata-service/projectTask/sortByMoveDown",
+      data,
+    });
+}
 // 项目任务排序请求对象
 export interface IProjectTaskSortRequestObject {
     // 项目计划id

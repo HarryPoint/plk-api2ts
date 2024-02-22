@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getSalesDayReportStatisticsUsingPOST
+export function fetchMethod(data: GetSalesDayReportStatistics) {
+    return post({
+      url: "/masterdata-service/salesDayReport/getSalesDayReportStatistics",
+      data,
+    });
+}
 // JSONResult«销售日报表统计返回对象»
 export interface IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics {
     // 返回码

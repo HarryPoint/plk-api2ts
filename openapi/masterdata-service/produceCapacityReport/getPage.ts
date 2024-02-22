@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/getPageUsingPOST_11
+export function fetchMethod(data: ICapacityUtilizationReportQueryingDtos) {
+    return post({
+      url: "/masterdata-service/produceCapacityReport/getPage",
+      data,
+    });
+}
 // 产能利用率报表查询DTO
 export interface ICapacityUtilizationReportQueryingDtos {
     // 当前页面

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质量月报报表相关/queryUsingPOST_1
+export function fetchMethod(data: Query) {
+    return post({
+      url: "/masterdata-service/qmsQualityMonthReport/query",
+      data,
+    });
+}
 // 质量月报响应DTO
 export interface IQualityMonthlyReportRespondsToDTO {
     // 月份

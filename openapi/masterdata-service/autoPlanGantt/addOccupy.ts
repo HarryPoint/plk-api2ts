@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/addOccupyUsingPOST
+export function fetchMethod(data: ITheOccupiedDTOWasAdded) {
+    return post({
+      url: "/masterdata-service/autoPlanGantt/addOccupy",
+      data,
+    });
+}
 // 添加占用DTO
 export interface ITheOccupiedDTOWasAdded {
     // 占用类型

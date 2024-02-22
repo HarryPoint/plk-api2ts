@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/pagingSearchUsingPOST
+export function fetchMethod(data: IPaging14) {
+    return post({
+      url: "/masterdata-service/reportTemplate/pagingSearch",
+      data,
+    });
+}
 // 分页_14
 export interface IPaging14 {
     // 模板名称 - 模糊查询

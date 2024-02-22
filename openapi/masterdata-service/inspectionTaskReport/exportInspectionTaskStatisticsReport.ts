@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/exportInspectionTaskStatisticsReportUsingPOST
+export function fetchMethod(data: ExportInspectionTaskStatisticsReport) {
+    return post({
+      url: "/masterdata-service/inspectionTaskReport/exportInspectionTaskStatisticsReport",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

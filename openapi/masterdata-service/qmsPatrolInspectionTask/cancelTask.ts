@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/巡检检验任务相关/cancelTaskUsingPOST_3
+export function fetchMethod(data: IVerifyTaskCancellationRequestDTO) {
+    return post({
+      url: "/masterdata-service/qmsPatrolInspectionTask/cancelTask",
+      data,
+    });
+}
 // 检验任务取消请求DTO
 export interface IVerifyTaskCancellationRequestDTO {
     // 流程id

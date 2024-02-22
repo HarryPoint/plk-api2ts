@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getStatisticUsingPOST
+export function fetchMethod(data: GetStatistic) {
+    return post({
+      url: "/masterdata-service/sluggishMaterialReport/getStatistic",
+      data,
+    });
+}
 // JSONResult«呆滞物料报表查询合计响应对象»
 export interface IJSONResultTotalResponseObjectForQueryingTheInactiveMaterialsReport {
     // 返回码

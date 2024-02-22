@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
+export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/process/getByIdsIgnoreStatus",
+      data,
+      params,
+    });
+}
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

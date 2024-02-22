@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryDetailUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/produceHandle/getReportHistoryDetail",
+      params,
+    });
+}
 // JSONResult«生产处理基础信息详情返回VO»
 export interface IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO {
     // 返回码

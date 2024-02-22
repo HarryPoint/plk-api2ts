@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFieldDataPageSelectorUsingPOST
+export function fetchMethod(data: IProcessAssociationFormSearchVO) {
+    return post({
+      url: "/masterdata-service/dynamicData/getFieldDataPageSelector",
+      data,
+    });
+}
 // 流程关联表单搜索VO
 export interface IProcessAssociationFormSearchVO {
     // 当前页面

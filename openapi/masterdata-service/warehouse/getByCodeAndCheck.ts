@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getByCodeAndCheckUsingPOST_1
+export function fetchMethod(params: { code: string; enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/warehouse/getByCodeAndCheck",
+      params,
+    });
+}
 // JSONResult«仓位VO»
 export interface IJSONResultPositionVO {
     // 返回码

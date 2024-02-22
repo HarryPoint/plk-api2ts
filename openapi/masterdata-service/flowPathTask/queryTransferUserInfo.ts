@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/queryTransferUserInfoUsingPOST
+export function fetchMethod(data: IProcessTasksAreTransferredToPersonnelToInquireDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/flowPathTask/queryTransferUserInfo",
+      data,
+      params,
+    });
+}
 // 流程任务转交人员查询DTO
 export interface IProcessTasksAreTransferredToPersonnelToInquireDTO {
     // 流程id

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单操作日志相关/getListByProduceOrderIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; produceOrderId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrderOperateLog/getListByProduceOrderId",
+      params,
+    });
+}
 // JSONResult«List«生产订单详情 - 操作日志VO»»
 export interface IJSONResultListProductionOrderDetailsOperationLogVO {
     // 返回码

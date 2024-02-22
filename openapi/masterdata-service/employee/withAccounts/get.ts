@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUsersWithAccountsUsingPOST
+export function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList) {
+    return post({
+      url: "/masterdata-service/employee/withAccounts/get",
+      data,
+    });
+}
 // 用户主数据选择列表搜索VO
 export interface ISearchVOWithTheHomeOwnerDataSelectionList {
     // 当前页面

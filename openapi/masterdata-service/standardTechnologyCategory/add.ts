@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/addUsingPOST_8
+export function fetchMethod(data: INewRequestDTOForStandardProcessClassification) {
+    return post({
+      url: "/masterdata-service/standardTechnologyCategory/add",
+      data,
+    });
+}
 // 标准工艺分类新增请求DTO
 export interface INewRequestDTOForStandardProcessClassification {
     // 父级分类id

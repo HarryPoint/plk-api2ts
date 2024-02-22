@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/手动甘特图相关/getSalesOrderUsingPOST_1
+export function fetchMethod(data: IGanttChartSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/handPlanGantt/getSalesOrder",
+      data,
+      params,
+    });
+}
 // 甘特图搜索VO
 export interface IGanttChartSearchVO {
     // 开始日期 yyyy-MM-dd

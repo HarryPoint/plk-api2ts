@@ -1,4 +1,11 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/定时任务相关/checkJobCanExchangeUsingPOST
+export function fetchMethod() {
+    return post({
+      url: "/masterdata-service/job/checkJobCanExchange",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

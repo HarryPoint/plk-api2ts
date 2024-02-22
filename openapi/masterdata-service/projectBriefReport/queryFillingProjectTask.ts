@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目简报相关/queryFillingProjectTaskUsingGET
+export function fetchMethod(params: { projectId: string }) {
+    return get({
+      url: "/masterdata-service/projectBriefReport/queryFillingProjectTask",
+      params,
+    });
+}
 // JSONResult«List«项目任务响应对象»»
 export interface IJSONResultListProjectTaskResponseObject {
     // 返回码

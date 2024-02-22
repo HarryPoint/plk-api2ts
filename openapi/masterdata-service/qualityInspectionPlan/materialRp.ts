@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检方案/materialRpUsingPOST
+export function fetchMethod(data: IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/qualityInspectionPlan/materialRp",
+      data,
+      params,
+    });
+}
 // 质检方案物料应用关联信息编辑DTO
 export interface IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO {
     // 质检方案id

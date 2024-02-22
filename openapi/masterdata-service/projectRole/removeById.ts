@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目角色相关/removeByIdUsingPOST
+export function fetchMethod(data: IIdInformation) {
+    return post({
+      url: "/masterdata-service/projectRole/removeById",
+      data,
+    });
+}
 // id信息
 export interface IIdInformation {
     // id

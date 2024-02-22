@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/produce-technology-material-bom-controller/getDetailByIdUsingGET_2
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/produceTechnologyMaterialBom/getDetailById",
+      params,
+    });
+}
 // JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»
 export interface IJSONResultProduceTechnologyMaterialBomInfoResponseDTO {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByRoutingStepIdUsingPOST
+export function fetchMethod(data: IProduceTasksFromMessagesToSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/getProduceTaskByRoutingStepId",
+      data,
+      params,
+    });
+}
 // 生产任务从消息来的搜索VO
 export interface IProduceTasksFromMessagesToSearchVO {
     // 生产订单id

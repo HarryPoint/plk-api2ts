@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/getByBusinessIdUsingGET
+export function fetchMethod(params: { businessId: number; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/flowPathWorkOrder/getByBusinessId",
+      params,
+    });
+}
 // JSONResult«流程工单VO»
 export interface IJSONResultProcessWorkOrderVO {
     // 返回码

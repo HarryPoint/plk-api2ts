@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质量月报部门设置相关/queryUsingPOST_2
+export function fetchMethod(data: IQualityMonthlyReportDepartmentSettingsQueryDTO) {
+    return post({
+      url: "/masterdata-service/qmsQualityMonthReportDeptSetting/query",
+      data,
+    });
+}
 // 质量月报部门设置查询DTO
 export interface IQualityMonthlyReportDepartmentSettingsQueryDTO {
     // 年份开始时间

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检统计/getPageUsingPOST_19
+export function fetchMethod(data: IScrapDataSheetSearchVO) {
+    return post({
+      url: "/masterdata-service/qualityGoodScrapReport/getPage",
+      data,
+    });
+}
 // 良品报废数据表搜索VO
 export interface IScrapDataSheetSearchVO {
     // 当前页面

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/backTaskUsingPOST
+export function fetchMethod(data: IRollbackTheDTOOfAFlowTask) {
+    return post({
+      url: "/masterdata-service/flowPathTask/backTask",
+      data,
+    });
+}
 // 流程任务回退DTO
 export interface IRollbackTheDTOOfAFlowTask {
     // 任务ID

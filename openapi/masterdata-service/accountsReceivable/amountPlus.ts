@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/应收账款相关/amountPlusUsingPOST_1
+export function fetchMethod(data: IAddAccountsReceivableDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/accountsReceivable/amountPlus",
+      data,
+      params,
+    });
+}
 // 添加应收账款DTO
 export interface IAddAccountsReceivableDTO {
     // 客户id

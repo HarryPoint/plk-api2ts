@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/getStructureDataUsingPOST
+export function fetchMethod(data: IProjectDynamicFormRecordQuery) {
+    return post({
+      url: "/masterdata-service/project/getStructureDataByFlowPathId",
+      data,
+    });
+}
 // 项目动态表单记录查询
 export interface IProjectDynamicFormRecordQuery {
     // 项目ID

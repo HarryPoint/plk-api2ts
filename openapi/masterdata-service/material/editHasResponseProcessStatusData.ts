@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料相关/editHasResponseProcessStatusDataUsingPOST
+export function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/material/editHasResponseProcessStatusData",
+      data,
+      params,
+    });
+}
 // 物料编辑请求DTO
 export interface IMaterialEditorRequestDTO {
     // 编辑数据

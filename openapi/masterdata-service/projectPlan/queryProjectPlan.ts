@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/queryProjectPlanUsingPOST
+export function fetchMethod(data: ITheProjectPlansToApplyResponseObject1) {
+    return post({
+      url: "/masterdata-service/projectPlan/queryProjectPlan",
+      data,
+    });
+}
 // 项目计划应用响应对象_1
 export interface ITheProjectPlansToApplyResponseObject1 {
     // 项目id

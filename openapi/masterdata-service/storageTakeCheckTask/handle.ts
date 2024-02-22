@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/handleUsingPOST
+export function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/storageTakeCheckTask/handle",
+      data,
+      params,
+    });
+}
 // 盘点任务盘点处理DTO
 export interface IInventoryTaskInventoryProcessingDTO {
     // 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT)

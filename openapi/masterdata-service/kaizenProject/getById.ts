@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/getByIdUsingPOST
+export function fetchMethod(params: { id: number }) {
+    return post({
+      url: "/masterdata-service/kaizenProject/getById",
+      params,
+    });
+}
 // JSONResult«KaizenProjectResponseDTO»
 export interface IJSONResultKaizenProjectResponseDTO {
     // 返回码

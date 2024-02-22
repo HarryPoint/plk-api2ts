@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/排产全局参数配置相关/saveSettingUsingPOST
+export function fetchMethod(data: ISchedulingParametersDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/planGlobalConfig/saveSetting",
+      data,
+      params,
+    });
+}
 // 排产参数DTO
 export interface ISchedulingParametersDTO {
     // 排产方式值

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardLocationUsingPOST
+export function fetchMethod(data: IOccupationalHazardSiteInquiryRequest) {
+    return post({
+      url: "/masterdata-service/hseDashboard/queryHazardLocation",
+      data,
+    });
+}
 // 职业危害场所查询请求
 export interface IOccupationalHazardSiteInquiryRequest {
     // 查询日期的开始

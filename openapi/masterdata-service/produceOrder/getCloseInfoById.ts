@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getCloseInfoByIdUsingGET
+export function fetchMethod(params: { id: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrder/getCloseInfoById",
+      params,
+    });
+}
 // JSONResult«生产订单关闭信息返回VO»
 export interface IJSONResultProductionOrderClosureInformationIsReturnedToVO {
     // 返回码

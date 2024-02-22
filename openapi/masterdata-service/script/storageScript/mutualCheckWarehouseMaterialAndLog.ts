@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/库存脚本相关接口/mutualCheckWarehouseMaterialAndLogUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/script/storageScript/mutualCheckWarehouseMaterialAndLog",
+      params,
+    });
+}
 // JSONResult«string»
 export interface IJSONResultstring {
     // 返回码

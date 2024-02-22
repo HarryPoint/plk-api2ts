@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getByIdUsingGET_3
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/fileCategory/getById",
+      params,
+    });
+}
 // JSONResult«文件分类明细响应DTO»
 export interface IJSONResultFileClassificationDetailsResponseDTO {
     // 返回码

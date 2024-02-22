@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/cancelUsingPOST
+export function fetchMethod(data: IIdInformation) {
+    return post({
+      url: "/masterdata-service/kaizenProject/cancel",
+      data,
+    });
+}
 // id信息
 export interface IIdInformation {
     // id

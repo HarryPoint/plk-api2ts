@@ -1,4 +1,13 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/getHandlingWorkOrderListByBusinessIdListUsingGET
+export function fetchMethod(data: IHandlingWorkOrderQueryRequest, params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/flowPathWorkOrder/getHandlingWorkOrderListByBusinessIdList",
+      data,
+      params,
+    });
+}
 // HandlingWorkOrderQueryRequest
 export interface IHandlingWorkOrderQueryRequest {
     // 应用ID

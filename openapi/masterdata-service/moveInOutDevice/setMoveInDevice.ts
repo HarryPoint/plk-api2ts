@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
+export function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO) {
+    return post({
+      url: "/masterdata-service/moveInOutDevice/setMoveInDevice",
+      data,
+    });
+}
 // 生产任务设置进料设备请求DTO
 export interface ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO {
     // 生产任务id

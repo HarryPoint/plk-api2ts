@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/getPageUsingPOST_24
+export function fetchMethod(data: IPreparationPeriodQueryVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/readyTime/getPage",
+      data,
+      params,
+    });
+}
 // 准备期查询VO
 export interface IPreparationPeriodQueryVO {
     // 当前页面

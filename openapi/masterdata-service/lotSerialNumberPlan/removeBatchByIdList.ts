@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/removeBatchByIdListUsingPOST
+export function fetchMethod(data: ILotSerialNumberPlanBatchRemoveRequestDTO) {
+    return post({
+      url: "/masterdata-service/lotSerialNumberPlan/removeBatchByIdList",
+      data,
+    });
+}
 // LotSerialNumberPlanBatchRemoveRequestDTO
 export interface ILotSerialNumberPlanBatchRemoveRequestDTO {
     // idList

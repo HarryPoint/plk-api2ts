@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/refuseUsingPOST_1
+export function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceHandleScrap/refuse",
+      data,
+      params,
+    });
+}
 // 生产处理报废变更状态DTO
 export interface IProductionProcessingScrapChangeStatusDTO {
     // 生产处理id

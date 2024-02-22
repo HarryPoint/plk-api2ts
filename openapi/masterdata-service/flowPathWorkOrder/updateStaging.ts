@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/updateStagingUsingPOST
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return post({
+      url: "/masterdata-service/flowPathWorkOrder/updateStaging",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

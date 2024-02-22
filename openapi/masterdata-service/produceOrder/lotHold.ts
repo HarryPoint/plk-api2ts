@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/lotHoldUsingPOST
+export function fetchMethod(data: IBatchWithholdDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceOrder/lotHold",
+      data,
+      params,
+    });
+}
 // 批次扣留DTO
 export interface IBatchWithholdDTO {
     // 批次id

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/saveChangeUsingPOST
+export function fetchMethod(data: IChangeGanttChartPlanDTO[]) {
+    return post({
+      url: "/masterdata-service/autoPlanGantt/saveChange",
+      data,
+    });
+}
 // 变更甘特图计划DTO
 export interface IChangeGanttChartPlanDTO {
     // 排期类型

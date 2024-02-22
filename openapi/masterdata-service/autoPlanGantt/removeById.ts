@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/removeByIdUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/autoPlanGantt/removeById",
+      params,
+    });
+}
 // JSONResult«boolean»
 export interface IJSONResultboolean {
     // 返回码

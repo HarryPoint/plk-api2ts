@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageQueryOfReviewTaskTypeUsingPOST
+export function fetchMethod(data: IItemTaskPagingQueryResponse1) {
+    return post({
+      url: "/masterdata-service/projectTask/pageQueryOfReviewTaskType",
+      data,
+    });
+}
 // 项目任务分页查询响应_1
 export interface IItemTaskPagingQueryResponse1 {
     // 当前页面

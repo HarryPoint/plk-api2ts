@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务甘特图相关/queryGanttChartUsingPOST
+export function fetchMethod(data: QueryGanttChart) {
+    return post({
+      url: "/masterdata-service/projectTaskGantt/queryGanttChart",
+      data,
+    });
+}
 // JSONResult«List«项目任务甘特图阶段响应对象»»
 export interface IJSONResultListProjectTaskGanttChartPhaseResponseObject {
     // 返回码

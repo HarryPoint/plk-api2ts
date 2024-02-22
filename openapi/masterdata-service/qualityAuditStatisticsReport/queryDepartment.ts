@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryDepartmentUsingPOST
+export function fetchMethod(data: IBasicQualityAuditQueryRequest) {
+    return post({
+      url: "/masterdata-service/qualityAuditStatisticsReport/queryDepartment",
+      data,
+    });
+}
 // 基础质量审核查询请求
 export interface IBasicQualityAuditQueryRequest {
     // 日期范围-起始

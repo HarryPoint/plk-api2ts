@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/checkProduceDataReportUsingPOST
+export function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/rtProductionSnapshot/checkProduceDataReport",
+      data,
+      params,
+    });
+}
 // 产出类报表搜索VO
 export interface IOutputClassReportSearchVO {
     // 班组id集

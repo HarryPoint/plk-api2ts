@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产计划工艺路径步骤排产/getListByProduceOrderIdsUsingPOST_2
+export function fetchMethod(data: IProductionPlanningProcessPathStepSchedulingProductionVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/producePlan/routingStep/getListByProduceOrderIds",
+      data,
+      params,
+    });
+}
 // 生产计划工艺路径步骤排产 VO
 export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     // 生产订单ids

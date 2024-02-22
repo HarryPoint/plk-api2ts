@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialStatisticsUsingPOST
+export function fetchMethod(data: IBaojingMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialStatistics",
+      data,
+      params,
+    });
+}
 // 宝晶物料主数据库存搜索VO
 export interface IBaojingMaterialMasterDataInventorySearchVO {
     // 物料id集

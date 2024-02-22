@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/exportUsingPOST_30
+export function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/safetyStockExchangeApply/export",
+      data,
+      params,
+    });
+}
 // 安全库存变更申请搜索VO
 export interface ISecurityStockChangeRequestSearchVO {
     // 当前页面

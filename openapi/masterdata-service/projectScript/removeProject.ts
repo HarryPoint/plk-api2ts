@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/project-script-controller/removeProjectUsingGET
+export function fetchMethod(params: { enterpriseId: number; projectId: number }) {
+    return get({
+      url: "/masterdata-service/projectScript/removeProject",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

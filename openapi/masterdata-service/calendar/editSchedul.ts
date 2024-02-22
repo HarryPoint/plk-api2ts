@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/editSchedulUsingPOST
+export function fetchMethod(data: ICalendarSchedulingVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/calendar/editSchedul",
+      data,
+      params,
+    });
+}
 // 日历排班VO
 export interface ICalendarSchedulingVO {
     // 排班天数集

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getTreeByWarehouseUsingGET
+export function fetchMethod(params: { storehouseId: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/warehouse/getTreeByWarehouse",
+      params,
+    });
+}
 // JSONResult«List«仓位树返回VO»»
 export interface IJSONResultListPositionTreeReturnsVO {
     // 返回码

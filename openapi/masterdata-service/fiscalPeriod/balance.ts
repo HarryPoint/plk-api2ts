@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/balanceUsingPOST
+export function fetchMethod(data: IFinancialPeriodBalanceRequest) {
+    return post({
+      url: "/masterdata-service/fiscalPeriod/balance",
+      data,
+    });
+}
 // 财务期间结存请求
 export interface IFinancialPeriodBalanceRequest {
     // ID

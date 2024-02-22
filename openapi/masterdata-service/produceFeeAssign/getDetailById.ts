@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDetailByIdUsingGET_1
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/produceFeeAssign/getDetailById",
+      params,
+    });
+}
 // JSONResult«生产成本分配响应对象»
 export interface IJSONResultProductionCostAllocationResponseObject {
     // 返回码

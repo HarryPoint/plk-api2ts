@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/checkTodoTaskByUserUsingGET_1
+export function fetchMethod(params: { enterpriseId: number; userId: number }) {
+    return get({
+      url: "/masterdata-service/qualityProduceTask/checkTodoTaskByUser",
+      params,
+    });
+}
 // JSONResult«boolean»
 export interface IJSONResultboolean {
     // 返回码

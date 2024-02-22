@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchImportUsingPOST_1
+export function fetchMethod(data: IMasterDataBaseEditDTO[], params: { enterpriseId: number; flowPathId: number }) {
+    return post({
+      url: "/masterdata-service/dynamicData/batchImport",
+      data,
+      params,
+    });
+}
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {
     // 编辑数据

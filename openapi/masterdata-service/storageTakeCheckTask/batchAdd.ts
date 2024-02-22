@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/batchAddUsingPOST
+export function fetchMethod(data: IEditDTOForWarehouseInventoryTaskBatch, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/storageTakeCheckTask/batchAdd",
+      data,
+      params,
+    });
+}
 // 仓库盘点任务批次编辑DTO
 export interface IEditDTOForWarehouseInventoryTaskBatch {
     // 任务列表

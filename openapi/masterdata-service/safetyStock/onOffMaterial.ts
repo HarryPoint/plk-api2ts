@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/onOffMaterialUsingPOST
+export function fetchMethod(data: ISafetyStockMaterialSwitchWarning, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/safetyStock/onOffMaterial",
+      data,
+      params,
+    });
+}
 // 安全库存物料开关预警
 export interface ISafetyStockMaterialSwitchWarning {
     // 设置类型

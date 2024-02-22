@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/selectorUsingPOST
+export function fetchMethod(data: IReportTemplateSelectorQueryConditionDTO) {
+    return post({
+      url: "/masterdata-service/reportTemplate/selector",
+      data,
+    });
+}
 // ReportTemplateSelectorQueryConditionDTO
 export interface IReportTemplateSelectorQueryConditionDTO {
     // 模板名称 - 模糊查询

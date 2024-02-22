@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/application-script-controller/changeSerialNoUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/applicationScript/changeSerialNo",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

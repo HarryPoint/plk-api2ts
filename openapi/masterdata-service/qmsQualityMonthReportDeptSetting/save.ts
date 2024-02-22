@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质量月报部门设置相关/saveUsingPOST_7
+export function fetchMethod(data: IQualityMonthlyReportDepartmentSetUpEditorDTO) {
+    return post({
+      url: "/masterdata-service/qmsQualityMonthReportDeptSetting/save",
+      data,
+    });
+}
 // 质量月报部门设置编辑DTO
 export interface IQualityMonthlyReportDepartmentSetUpEditorDTO {
     // 部门id集合

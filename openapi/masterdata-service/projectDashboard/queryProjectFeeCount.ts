@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectFeeCountUsingPOST
+export function fetchMethod(data: IProjectKanbanQueryDto) {
+    return post({
+      url: "/masterdata-service/projectDashboard/queryProjectFeeCount",
+      data,
+    });
+}
 // 项目看板查询dto
 export interface IProjectKanbanQueryDto {
     // 开始日期

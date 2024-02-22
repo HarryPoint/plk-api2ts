@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/费用类型相关/exportUsingPOST_18
+export function fetchMethod(data: IProcessDataSearchVO) {
+    return post({
+      url: "/masterdata-service/produceFeeType/export",
+      data,
+    });
+}
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {
     // undefined

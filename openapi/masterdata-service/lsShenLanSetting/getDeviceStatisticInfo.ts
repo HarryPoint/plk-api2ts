@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getShenLanDeviceStatisticInfoUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/lsShenLanSetting/getDeviceStatisticInfo",
+      params,
+    });
+}
 // JSONResult«深蓝设备统计响应VO»
 export interface IJSONResultDarkBlueDeviceStatisticalResponseVO {
     // 返回码

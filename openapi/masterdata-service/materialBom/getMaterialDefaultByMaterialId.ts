@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialDefaultByMaterialIdUsingGET
+export function fetchMethod(params: { materialId: number }) {
+    return get({
+      url: "/masterdata-service/materialBom/getMaterialDefaultByMaterialId",
+      params,
+    });
+}
 // JSONResult«物料bom响应对象»
 export interface IJSONResultBomResponseObject {
     // 返回码

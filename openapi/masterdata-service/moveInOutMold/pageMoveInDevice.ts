@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/pageMoveInDeviceUsingPOST_1
+export function fetchMethod(data: IFeedMoldPagingQueryObject) {
+    return post({
+      url: "/masterdata-service/moveInOutMold/pageMoveInDevice",
+      data,
+    });
+}
 // 进料模具分页查询对象
 export interface IFeedMoldPagingQueryObject {
     // 生产任务ids

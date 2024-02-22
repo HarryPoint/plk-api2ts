@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getSalesDetailsReportStatisticsUsingPOST
+export function fetchMethod(data: GetSalesDetailsReportStatistics) {
+    return post({
+      url: "/masterdata-service/salesDetailsReport/getSalesDetailsReportStatistics",
+      data,
+    });
+}
 // JSONResult«销售明细表统计返回对象»
 export interface IJSONResultSalesStatisticsReturnObject {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产线相关/getDeviceSelectorUsingPOST
+export function fetchMethod(data: IAssociatedQueryDtosOfDevicesInTheProductionLine) {
+    return post({
+      url: "/masterdata-service/productionLine/getDeviceSelector",
+      data,
+    });
+}
 // 产线设备关联查询DTO
 export interface IAssociatedQueryDtosOfDevicesInTheProductionLine {
     // 名称or编号

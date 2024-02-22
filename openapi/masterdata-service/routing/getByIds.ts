@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getByIdsUsingPOST_5
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/routing/getByIds",
+      data,
+      params,
+    });
+}
 // JSONResult«List«基础VO»»_2
 export interface IJSONResultListBaseVO2 {
     // 返回码

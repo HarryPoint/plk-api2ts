@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/commitTaskUsingPOST
+export function fetchMethod(data: IProcessTaskSubmitDTO) {
+    return post({
+      url: "/masterdata-service/flowPathTask/commitTask",
+      data,
+    });
+}
 // 流程任务提交DTO
 export interface IProcessTaskSubmitDTO {
     // 任务ID

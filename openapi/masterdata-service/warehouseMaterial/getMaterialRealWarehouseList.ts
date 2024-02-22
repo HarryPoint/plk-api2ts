@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialRealWarehouseListUsingPOST
+export function fetchMethod(data: IMaterialRealTimeInventoryQueryReturnedToVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/warehouseMaterial/getMaterialRealWarehouseList",
+      data,
+      params,
+    });
+}
 // 物料实时库存查询返回VO
 export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     // 物料ids

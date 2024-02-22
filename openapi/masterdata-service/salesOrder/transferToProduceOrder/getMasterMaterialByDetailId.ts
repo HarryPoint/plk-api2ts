@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getMasterMaterialByDetailIdUsingGET
+export function fetchMethod(params: { detailId: number }) {
+    return get({
+      url: "/masterdata-service/salesOrder/transferToProduceOrder/getMasterMaterialByDetailId",
+      params,
+    });
+}
 // JSONResult«转生产订单主物料信息»
 export interface IJSONResultMainMaterialInformationOfTheProductionOrder {
     // 返回码

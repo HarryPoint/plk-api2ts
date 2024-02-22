@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/lotHoldUsingGET
+export function fetchMethod(params: { id: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrder/getTaskSelector",
+      params,
+    });
+}
 // JSONResult«List«生产任务选择信息返回VO»»
 export interface IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO {
     // 返回码

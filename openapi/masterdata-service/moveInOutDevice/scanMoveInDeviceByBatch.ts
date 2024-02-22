@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/scanMoveInDeviceByBatchUsingPOST
+export function fetchMethod(data: IFeedEquipmentQueryDTO) {
+    return post({
+      url: "/masterdata-service/moveInOutDevice/scanMoveInDeviceByBatch",
+      data,
+    });
+}
 // 进料设备查询DTO
 export interface IFeedEquipmentQueryDTO {
     // 生产任务ids

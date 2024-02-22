@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/listUsingGET_2
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/employee/list",
+    });
+}
 // JSONResult«List«员工基础响应 DTO»»
 export interface IJSONResultListEmployeeBaseResponseDTO {
     // 返回码

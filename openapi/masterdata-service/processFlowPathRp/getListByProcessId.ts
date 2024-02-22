@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getListByProcessIdUsingGET
+export function fetchMethod(params: { processId: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/processFlowPathRp/getListByProcessId",
+      params,
+    });
+}
 // JSONResult«List«工序字段对应表详情VO»»
 export interface ITheJSONResultListOperationFieldCorrespondsToTheTableDetailsVO {
     // 返回码

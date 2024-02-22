@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/listByPlanDateRangeUsingPOST
+export function fetchMethod(data: IScheduleStartEndDateQueryTheDTO) {
+    return post({
+      url: "/masterdata-service/deviceMaintainPlan/listByPlanDateRange",
+      data,
+    });
+}
 // 计划开始结束日期查询DTO
 export interface IScheduleStartEndDateQueryTheDTO {
     // planId

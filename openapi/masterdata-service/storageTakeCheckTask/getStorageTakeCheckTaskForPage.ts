@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getStorageTakeCheckTaskForPageUsingPOST
+export function fetchMethod(data: ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/storageTakeCheckTask/getStorageTakeCheckTaskForPage",
+      data,
+      params,
+    });
+}
 // 仓库盘点任务执行端搜索VO
 export interface ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask {
     // 处理类型

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/单位相关/getByNamesUsingPOST
+export function fetchMethod(data: string[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/unit/getByNames",
+      data,
+      params,
+    });
+}
 // JSONResult«List«单位返回VO»»
 export interface ITheJSONResultListUnitReturnsVO {
     // 返回码

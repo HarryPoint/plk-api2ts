@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/pageMoveInDeviceUsingPOST
+export function fetchMethod(data: IFeedEquipmentPagingQuery) {
+    return post({
+      url: "/masterdata-service/moveInOutDevice/pageMoveInDevice",
+      data,
+    });
+}
 // 进料设备分页查询
 export interface IFeedEquipmentPagingQuery {
     // 生产任务ids

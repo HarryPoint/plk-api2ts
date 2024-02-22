@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/库存脚本相关接口/repairPhysicalSnapshotUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/script/storageScript/repairPhysicalSnapshot",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

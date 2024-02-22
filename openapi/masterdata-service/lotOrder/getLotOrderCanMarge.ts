@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getLotOrderCanMargeUsingPOST
+export function fetchMethod(data: IBatchOrderVerificationCanMergeSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/lotOrder/getLotOrderCanMarge",
+      data,
+      params,
+    });
+}
 // 批次订单校验能否合并搜索VO
 export interface IBatchOrderVerificationCanMergeSearchVO {
     // 批次id集

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/listMoveInMoldByProduceTaskIdUsingGET
+export function fetchMethod(params: { produceTaskId: string }) {
+    return get({
+      url: "/masterdata-service/moveInOutMold/listMoveInMoldByProduceTaskId",
+      params,
+    });
+}
 // JSONResult«List«进料模具响应DTO»»_1
 export interface IJSONResultListFeedMoldResponseDTO1 {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/acceptTaskUsingPOST
+export function fetchMethod(data: IFlowPathTaskProcessRequestDTO) {
+    return post({
+      url: "/masterdata-service/flowPathTask/acceptTask",
+      data,
+    });
+}
 // FlowPathTaskProcessRequestDTO
 export interface IFlowPathTaskProcessRequestDTO {
     // 任务ID

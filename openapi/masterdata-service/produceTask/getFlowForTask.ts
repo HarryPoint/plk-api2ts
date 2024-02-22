@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getFlowForTaskUsingPOST_1
+export function fetchMethod(data: IProductionProcessingQueryVOForProductionOrders, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/getFlowForTask",
+      data,
+      params,
+    });
+}
 // 生产处理查询VO - 针对生产订单
 export interface IProductionProcessingQueryVOForProductionOrders {
     // 生产订单id

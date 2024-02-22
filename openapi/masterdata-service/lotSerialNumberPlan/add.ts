@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/addUsingPOST_1
+export function fetchMethod(data: ILotSerialNumberPlanAddRequestDTO) {
+    return post({
+      url: "/masterdata-service/lotSerialNumberPlan/add",
+      data,
+    });
+}
 // LotSerialNumberPlanAddRequestDTO
 export interface ILotSerialNumberPlanAddRequestDTO {
     // 编码

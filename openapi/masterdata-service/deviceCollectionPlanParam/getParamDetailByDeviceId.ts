@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据方案参数关联相关/getParamDetailByDeviceIdUsingGET
+export function fetchMethod(params: { deviceId: number; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/deviceCollectionPlanParam/getParamDetailByDeviceId",
+      params,
+    });
+}
 // JSONResult«List«设备数采方案参数关联信息返回VO»»
 export interface IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/queryTaskInfoUsingGET
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/qmsFirstInspectionTask/queryTaskInfo",
+      params,
+    });
+}
 // JSONResult«首检检验任务响应对象»
 export interface IJSONResultFirstCheckChecksTheTaskResponseObject {
     // 返回码

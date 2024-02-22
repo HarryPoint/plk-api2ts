@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/盘亏单相关/exportUsingPOST_7
+export function fetchMethod(data: IProcessDataSearchVO) {
+    return post({
+      url: "/masterdata-service/inventoryLossesOrder/export",
+      data,
+    });
+}
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {
     // undefined

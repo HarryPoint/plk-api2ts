@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/editUsingPOST_8
+export function fetchMethod(data: IProcedureFieldsCorrespondToTableEditDTO) {
+    return post({
+      url: "/masterdata-service/processFlowPathRp/edit",
+      data,
+    });
+}
 // 工序字段对应表编辑DTO
 export interface IProcedureFieldsCorrespondToTableEditDTO {
     // id

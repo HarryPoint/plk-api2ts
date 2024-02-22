@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工费相关/batchImportUsingPOST_2
+export function fetchMethod(data: ILaborCostsSaveDTO[]) {
+    return post({
+      url: "/masterdata-service/laborCost/batchImport",
+      data,
+    });
+}
 // 工费保存DTO
 export interface ILaborCostsSaveDTO {
     // id

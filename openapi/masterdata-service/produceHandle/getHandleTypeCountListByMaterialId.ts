@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getHandleTypeCountListByMaterialIdUsingGET
+export function fetchMethod(params: { beginTime: string; materialId: string; endTime: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceHandle/getHandleTypeCountListByMaterialId",
+      params,
+    });
+}
 // JSONResult«生产处理统计VO»
 export interface IJSONResultProductionProcessingStatisticsVO {
     // 返回码

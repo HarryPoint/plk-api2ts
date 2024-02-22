@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectTaskCompleteQuarterDistributeUsingGET
+export function fetchMethod(params: { projectCategory: string }) {
+    return get({
+      url: "/masterdata-service/projectDashboard/queryProjectTaskCompleteQuarterDistribute",
+      params,
+    });
+}
 // JSONResult«List«项目任务季度分布响应对象»»
 export interface IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks {
     // 返回码

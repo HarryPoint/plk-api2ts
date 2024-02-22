@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/configMaterialEditUsingPOST
+export function fetchMethod(data: IStandardProcessEditRequestObjectForAClassOfMaterial) {
+    return post({
+      url: "/masterdata-service/standardTechnology/configMaterialEdit",
+      data,
+    });
+}
 // 标准工艺某一类别物料编辑请求对象
 export interface IStandardProcessEditRequestObjectForAClassOfMaterial {
     // 标准工艺id, 新增时传递为空

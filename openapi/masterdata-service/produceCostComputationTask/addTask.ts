@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/addTaskUsingPOST
+export function fetchMethod(data: IProductionCostingTaskAddsRequestObject) {
+    return post({
+      url: "/masterdata-service/produceCostComputationTask/addTask",
+      data,
+    });
+}
 // 生产成本核算任务添加请求对象
 export interface IProductionCostingTaskAddsRequestObject {
     // 财务期间id

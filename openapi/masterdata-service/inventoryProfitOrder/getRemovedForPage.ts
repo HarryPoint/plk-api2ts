@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/盘盈单相关/getRemovedForPageUsingPOST_4
+export function fetchMethod(data: IProcessDataBaseSearchVO) {
+    return post({
+      url: "/masterdata-service/inventoryProfitOrder/getRemovedForPage",
+      data,
+    });
+}
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {
     // 全局搜索

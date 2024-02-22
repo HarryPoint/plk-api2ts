@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务泳道图相关/querySwimLaneChartUsingGET
+export function fetchMethod(params: { projectId: number }) {
+    return get({
+      url: "/masterdata-service/projectTaskSwimLaneChart/querySwimLaneChart",
+      params,
+    });
+}
 // JSONResult«项目任务泳道图响应对象»
 export interface IJSONResultProjectTaskLaneMapResponseObject {
     // 返回码

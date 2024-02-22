@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchUseLotNoUsingPOST
+export function fetchMethod(data: string[]) {
+    return post({
+      url: "/masterdata-service/lotOrder/batchUseLotNo",
+      data,
+    });
+}
 // JSONResult«批次号使用DTO»_1
 export interface IJSONResultTheBatchNumberIsDTO1 {
     // 返回码

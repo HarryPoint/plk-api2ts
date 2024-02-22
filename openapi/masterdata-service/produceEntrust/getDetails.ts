@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/委外加工管理/getDetailsUsingGET
+export function fetchMethod(params: { id: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceEntrust/getDetails",
+      params,
+    });
+}
 // JSONResult«List«委外加工明细返回VO»»
 export interface IJSONResultListOutsourcedProcessingDetailsAreReturnedToVO {
     // 返回码

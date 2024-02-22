@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncMessageUsingPOST
+export function fetchMethod(data: IKingdeeMessageSendRequest) {
+    return post({
+      url: "/masterdata-service/hangFa/syncMessage",
+      data,
+    });
+}
 // 金蝶消息发送请求
 export interface IKingdeeMessageSendRequest {
     // 消息id

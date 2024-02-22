@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标签设置/changeValidUsingPOST_5
+export function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTag/changeValid",
+      data,
+      params,
+    });
+}
 // 启用or停用VO
 export interface IEnableOrDisableVO {
     // id

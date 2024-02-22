@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getLotOrderWipListUsingPOST
+export function fetchMethod(data: IBatchOrderWipSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/lotOrder/getLotOrderWipList",
+      data,
+      params,
+    });
+}
 // 批次订单Wip搜索VO
 export interface IBatchOrderWipSearchVO {
     // 批次id集

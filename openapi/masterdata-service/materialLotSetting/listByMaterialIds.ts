@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/listByMaterialIdsUsingPOST
+export function fetchMethod(data: number[]) {
+    return post({
+      url: "/masterdata-service/materialLotSetting/listByMaterialIds",
+      data,
+    });
+}
 // JSONResult«List«物料批次设置编辑响应对象»»
 export interface IJSONResultListMaterialBatchSettingsEditResponseObjects {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getByCodeAndCheckUsingPOST
+export function fetchMethod(params: { code: string; enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/material/getByCodeAndCheck",
+      params,
+    });
+}
 // JSONResult«物料主数据基础信息返回VO»
 export interface IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO {
     // 返回码

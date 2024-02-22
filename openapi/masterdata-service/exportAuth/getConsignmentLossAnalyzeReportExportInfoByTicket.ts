@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getConsignmentLossAnalyzeReportExportInfoByTicketUsingGET
+export function fetchMethod(params: { ticket: string }) {
+    return get({
+      url: "/masterdata-service/exportAuth/getConsignmentLossAnalyzeReportExportInfoByTicket",
+      params,
+    });
+}
 // JSONResult«导出信息«寄售损耗分析报表分页返回VO»»
 export interface IJSONResultExportInformationConsignmentLossAnalysisReportPaginatedReturnVO {
     // 返回码

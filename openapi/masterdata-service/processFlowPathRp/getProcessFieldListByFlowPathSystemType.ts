@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getProcessFieldListByFlowPathSystemTypeUsingGET
+export function fetchMethod(params: { flowPathSystemTypeList: string; processId: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/processFlowPathRp/getProcessFieldListByFlowPathSystemType",
+      params,
+    });
+}
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {
     // 返回码

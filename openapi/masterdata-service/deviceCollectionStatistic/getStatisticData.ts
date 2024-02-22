@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备参数报表相关/getStatisticDataUsingPOST_1
+export function fetchMethod(data: IDeviceStatisticsSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/deviceCollectionStatistic/getStatisticData",
+      data,
+      params,
+    });
+}
 // 设备统计数据搜索VO
 export interface IDeviceStatisticsSearchVO {
     // 设备id集

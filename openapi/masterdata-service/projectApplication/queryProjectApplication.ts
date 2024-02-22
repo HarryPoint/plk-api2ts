@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/queryProjectApplicationUsingPOST
+export function fetchMethod(data: IProjectApplicationRequestObject) {
+    return post({
+      url: "/masterdata-service/projectApplication/queryProjectApplication",
+      data,
+    });
+}
 // 项目应用请求对象
 export interface IProjectApplicationRequestObject {
     // 项目id

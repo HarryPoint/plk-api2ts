@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/scheduleAutoVaguePlanAndIssueProduceOrderUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/produceOrderRobot/scheduleAutoVaguePlanAndIssueProduceOrder",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓位系统应用库存序列号相关/getWarehouseStorageSystemApplicationBySerialNoListUsingPOST
+export function fetchMethod(data: ITheWarehouseSystemAppliesTheInventorySerialNumberQueryObject) {
+    return post({
+      url: "/masterdata-service/warehouseStorageSystemApplicationSerialNo/getBySerialNoList",
+      data,
+    });
+}
 // 仓位系统应用库存序列号查询对象
 export interface ITheWarehouseSystemAppliesTheInventorySerialNumberQueryObject {
     // 序列号

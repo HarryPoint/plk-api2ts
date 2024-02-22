@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/职位相关/getNameByIdUsingGET_3
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/position/getNameById",
+      params,
+    });
+}
 // JSONResult«string»
 export interface IJSONResultstring {
     // 返回码

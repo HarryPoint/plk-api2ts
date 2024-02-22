@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检分类/editUsingPOST_16
+export function fetchMethod(data: IEditTheQualityInspectionClassificationDTO, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/qualityInspectionCategory/edit",
+      data,
+      params,
+    });
+}
 // 编辑质检分类 DTO
 export interface IEditTheQualityInspectionClassificationDTO {
     // id，如果不传就是新增

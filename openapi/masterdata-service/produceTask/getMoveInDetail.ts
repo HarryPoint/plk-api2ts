@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveInDetailUsingPOST
+export function fetchMethod(data: IQueryDTOForIncomingAndOutgoingMaterialInformation, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/getMoveInDetail",
+      data,
+      params,
+    });
+}
 // 进出料信息查询DTO
 export interface IQueryDTOForIncomingAndOutgoingMaterialInformation {
     // 任务id

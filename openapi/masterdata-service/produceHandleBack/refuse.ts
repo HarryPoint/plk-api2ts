@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/refuseUsingPOST
+export function fetchMethod(data: IProductionHandlesReworkRejectRequestObjects) {
+    return post({
+      url: "/masterdata-service/produceHandleBack/refuse",
+      data,
+    });
+}
 // 生产处理返工拒绝请求对象
 export interface IProductionHandlesReworkRejectRequestObjects {
     // 生产处理id

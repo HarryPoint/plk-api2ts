@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialNameCodeListUsingPOST
+export function fetchMethod(data: IMaterialNameNumberQueryVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/material/getMaterialNameCodeList",
+      data,
+      params,
+    });
+}
 // 物料名称编号查询VO
 export interface IMaterialNameNumberQueryVO {
     // 物料名称/编号

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreTaskListUsingPOST
+export function fetchMethod(data: IItemTaskNameNumberQueryObject) {
+    return post({
+      url: "/masterdata-service/projectTask/queryPreTaskList",
+      data,
+    });
+}
 // 项目任务名称编号查询对象
 export interface IItemTaskNameNumberQueryObject {
     // 项目id

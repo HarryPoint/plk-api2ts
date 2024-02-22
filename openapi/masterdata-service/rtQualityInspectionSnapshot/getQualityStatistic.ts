@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getQualityStatisticUsingPOST
+export function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/rtQualityInspectionSnapshot/getQualityStatistic",
+      data,
+      params,
+    });
+}
 // 用户生产统计搜索VO
 export interface IUserProductionStatisticsSearchVO {
     // 查询开始时间 yyyy-MM-dd HH:mm:ss

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/assignmentTaskUsingPOST
+export function fetchMethod(data: IVerifyTaskAssignmentRequestDTO) {
+    return post({
+      url: "/masterdata-service/qmsFirstInspectionTask/assignmentTask",
+      data,
+    });
+}
 // 检验任务分配请求DTO
 export interface IVerifyTaskAssignmentRequestDTO {
     // 流程id

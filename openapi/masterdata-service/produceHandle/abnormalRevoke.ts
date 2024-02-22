@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/abnormalRevokeUsingPOST
+export function fetchMethod(data: IIdInformation, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceHandle/abnormalRevoke",
+      data,
+      params,
+    });
+}
 // id信息
 export interface IIdInformation {
     // id

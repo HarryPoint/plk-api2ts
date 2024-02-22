@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/exportWarehouseMaterialDimensionReportUsingPOST
+export function fetchMethod(data: ExportWarehouseMaterialDimensionReport) {
+    return post({
+      url: "/masterdata-service/warehouseMaterialDimensionReport/exportWarehouseMaterialDimensionReport",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

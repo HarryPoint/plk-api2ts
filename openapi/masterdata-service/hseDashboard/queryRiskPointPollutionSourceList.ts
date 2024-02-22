@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryRiskPointPollutionSourceListUsingPOST
+export function fetchMethod(data: IRiskPointPollutionSourceQueryRequest) {
+    return post({
+      url: "/masterdata-service/hseDashboard/queryRiskPointPollutionSourceList",
+      data,
+    });
+}
 // 风险点污染源查询请求
 export interface IRiskPointPollutionSourceQueryRequest {
     // 查询日期的开始

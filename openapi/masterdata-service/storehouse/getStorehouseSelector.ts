@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库相关/getStorehouseSelectorUsingPOST
+export function fetchMethod(data: IWarehouseMasterDataSelectionListSearchVO) {
+    return post({
+      url: "/masterdata-service/storehouse/getStorehouseSelector",
+      data,
+    });
+}
 // 仓库主数据选择列表搜索VO
 export interface IWarehouseMasterDataSelectionListSearchVO {
     // 当前页面

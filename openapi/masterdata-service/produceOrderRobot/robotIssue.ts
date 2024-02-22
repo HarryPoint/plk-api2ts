@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/robotIssueUsingPOST
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceOrderRobot/robotIssue",
+      data,
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

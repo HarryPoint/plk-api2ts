@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/batchRemoveUsingPOST
+export function fetchMethod(data: IIdCollectionInformation) {
+    return post({
+      url: "/masterdata-service/capacity/batchRemove",
+      data,
+    });
+}
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

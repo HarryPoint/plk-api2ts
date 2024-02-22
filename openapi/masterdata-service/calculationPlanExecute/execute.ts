@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/计算过方案执行相关/executeUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/calculationPlanExecute/execute",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务自动出料相关/batchMoveOutByProduceOrderUsingPOST
+export function fetchMethod(data: IProductionTaskAutomaticDischargeUploadDataDTO[], params: { clientIp: string; enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTaskAutoMoveOut/batchMoveOutByProduceOrder",
+      data,
+      params,
+    });
+}
 // 生产任务自动出料上传数据DTO
 export interface IProductionTaskAutomaticDischargeUploadDataDTO {
     // 标记id,(eg RFID)

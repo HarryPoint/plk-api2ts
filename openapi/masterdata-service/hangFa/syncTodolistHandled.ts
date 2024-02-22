@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncTodolistHandledUsingPOST
+export function fetchMethod(data: IKingdeeBacklogActionRequest) {
+    return post({
+      url: "/masterdata-service/hangFa/syncTodolistHandled",
+      data,
+    });
+}
 // 金蝶待办动作请求
 export interface IKingdeeBacklogActionRequest {
     // 待办id

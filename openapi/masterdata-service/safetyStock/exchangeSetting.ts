@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
+export function fetchMethod(data: IUnifiedSecurityInventoryConfiguration, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/safetyStock/exchangeSetting",
+      data,
+      params,
+    });
+}
 // 安全库存统一设置配置
 export interface IUnifiedSecurityInventoryConfiguration {
     // 设置类型

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getInfoByIdUsingGET
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/capacity/getInfoById",
+      params,
+    });
+}
 // JSONResult«产能响应对象»
 export interface IJSONResultProductivityResponseObject {
     // 返回码

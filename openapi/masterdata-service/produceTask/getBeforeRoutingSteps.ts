@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getBeforeRoutingStepsUsingGET_1
+export function fetchMethod(params: { taskId: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceTask/getBeforeRoutingSteps",
+      params,
+    });
+}
 // JSONResult«List«工艺路径步骤选择VO»»
 export interface IJSONResultListProcessPathStepsSelectVO {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listByToCodeUsingGET
+export function fetchMethod(params: { enterpriseId: number; toCode: string }) {
+    return get({
+      url: "/masterdata-service/processDocumentMapConfig/listByToCode",
+      params,
+    });
+}
 // JSONResult«List«工艺文档映射配置VO»»
 export interface IJSONResultListProcessDocumentMapConfigurationVO {
     // 返回码

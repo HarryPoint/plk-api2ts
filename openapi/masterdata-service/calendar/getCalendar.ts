@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCalendarUsingPOST
+export function fetchMethod(data: IFactoryCalendarSearchVO1, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/calendar/getCalendar",
+      data,
+      params,
+    });
+}
 // 工厂日历搜索VO_1
 export interface IFactoryCalendarSearchVO1 {
     // 月份 yyyy-MM, 如果月份不为空则优先按照月份查询，如果为空，则按照开始日期-结束日期查询

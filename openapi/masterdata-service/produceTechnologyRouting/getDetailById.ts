@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-controller/getDetailByIdUsingGET_3
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/produceTechnologyRouting/getDetailById",
+      params,
+    });
+}
 // JSONResult«ProduceTechnologyRoutingInfoResponseDTO»
 export interface IJSONResultProduceTechnologyRoutingInfoResponseDTO {
     // 返回码

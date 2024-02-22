@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/setNavigationSortUsingPOST
+export function fetchMethod(data: IProjectApplicationNavigationSortRequestObjects) {
+    return post({
+      url: "/masterdata-service/projectApplication/setNavigationSort",
+      data,
+    });
+}
 // 项目应用导航排序请求对象
 export interface IProjectApplicationNavigationSortRequestObjects {
     // undefined

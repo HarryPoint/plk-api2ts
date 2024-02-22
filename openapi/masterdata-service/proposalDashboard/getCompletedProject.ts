@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCompletedProjectUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/proposalDashboard/getCompletedProject",
+    });
+}
 // JSONResult«CompleteProjectResponseDTO»
 export interface IJSONResultCompleteProjectResponseDTO {
     // 返回码

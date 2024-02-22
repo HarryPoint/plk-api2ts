@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarByDeviceModeUsingPOST
+export function fetchMethod(data: IEquipmentMaintenanceCalendarRequestDTO) {
+    return post({
+      url: "/masterdata-service/deviceMaintainCalendar/getDeviceMaintainCalendarByDeviceMode",
+      data,
+    });
+}
 // 设备保养日历请求DTO
 export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备保养计划明细ids

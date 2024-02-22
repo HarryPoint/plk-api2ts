@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/采购明细报表相关/exportPurchaseDetailsReportUsingPOST
+export function fetchMethod(data: ExportPurchaseDetailsReport) {
+    return post({
+      url: "/masterdata-service/purchaseDetailsReport/exportPurchaseDetailsReport",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

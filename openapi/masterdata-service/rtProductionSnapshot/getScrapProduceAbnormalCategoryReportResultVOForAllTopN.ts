@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getScrapProduceAbnormalCategoryReportResultVOForAllTopNUsingGET
+export function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number; top: number }) {
+    return get({
+      url: "/masterdata-service/rtProductionSnapshot/getScrapProduceAbnormalCategoryReportResultVOForAllTopN",
+      params,
+    });
+}
 // JSONResult«List«报废类型统计返回VO»»
 export interface IJSONResultListScrapTypeStatisticsReturnVO {
     // 返回码

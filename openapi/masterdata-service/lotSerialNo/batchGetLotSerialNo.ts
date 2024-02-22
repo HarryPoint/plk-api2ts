@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchGetLotSerialNoForProduceUsingPOST
+export function fetchMethod(data: IBatchSerialNumberRequestDTO) {
+    return post({
+      url: "/masterdata-service/lotSerialNo/batchGetLotSerialNo",
+      data,
+    });
+}
 // 批次/序列号申请DTO
 export interface IBatchSerialNumberRequestDTO {
     // 批次/序列号方案id

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发/recallIssueAllUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrderIssue/recallIssue/all",
+      params,
+    });
+}
 // JSONResult«生产订单下发结果DTO»
 export interface IJSONResultProductionOrderDeliveryResultDTO {
     // 返回码

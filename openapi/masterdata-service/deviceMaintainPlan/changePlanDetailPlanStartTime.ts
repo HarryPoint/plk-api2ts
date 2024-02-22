@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/changePlanDetailPlanStartTimeUsingPOST
+export function fetchMethod(data: IMaintenancePlanDetailsMaintenanceStartTimeEditDTO) {
+    return post({
+      url: "/masterdata-service/deviceMaintainPlan/changePlanDetailPlanStartTime",
+      data,
+    });
+}
 // 保养计划明细保养开始时间编辑DTO
 export interface IMaintenancePlanDetailsMaintenanceStartTimeEditDTO {
     // id

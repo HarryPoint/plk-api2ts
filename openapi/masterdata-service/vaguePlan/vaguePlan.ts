@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/模糊排产/vaguePlanUsingPOST
+export function fetchMethod(data: IProductionOrderFuzzySchedulingDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/vaguePlan/vaguePlan",
+      data,
+      params,
+    });
+}
 // 生产订单模糊排产DTO
 export interface IProductionOrderFuzzySchedulingDTO {
     // 排产计划单名称

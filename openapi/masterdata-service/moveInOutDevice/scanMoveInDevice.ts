@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/scanMoveInDeviceUsingPOST
+export function fetchMethod(data: IFeedDeviceScanRequestDTO) {
+    return post({
+      url: "/masterdata-service/moveInOutDevice/scanMoveInDevice",
+      data,
+    });
+}
 // 进料设备扫描请求DTO
 export interface IFeedDeviceScanRequestDTO {
     // 生产任务id

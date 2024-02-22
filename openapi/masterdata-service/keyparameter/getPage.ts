@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/getPageUsingPOST_5
+export function fetchMethod(data: IKeyParameterPageQueryObject) {
+    return post({
+      url: "/masterdata-service/keyparameter/getPage",
+      data,
+    });
+}
 // 关键参数分页查询对象
 export interface IKeyParameterPageQueryObject {
     // 编号

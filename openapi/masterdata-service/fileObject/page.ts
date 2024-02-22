@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/pageUsingPOST_1
+export function fetchMethod(data: IFileObjectPagingQueryRequestDTO) {
+    return post({
+      url: "/masterdata-service/fileObject/page",
+      data,
+    });
+}
 // 文件对象分页查询请求DTO
 export interface IFileObjectPagingQueryRequestDTO {
     // 当前页面

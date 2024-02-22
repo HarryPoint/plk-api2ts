@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupByIdAndCheckUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/classGroup/getClassGroupByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«班组VO»
 export interface IJSONResultVOGroup {
     // 返回码

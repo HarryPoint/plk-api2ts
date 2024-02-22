@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryBatchCanMoveInOutOpTaskUsingPOST
+export function fetchMethod(data: ITaskBatchOperationDTO1, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/queryBatchCanMoveInOutOpTask",
+      data,
+      params,
+    });
+}
 // 任务批量操作DTO_1
 export interface ITaskBatchOperationDTO1 {
     // 工序id

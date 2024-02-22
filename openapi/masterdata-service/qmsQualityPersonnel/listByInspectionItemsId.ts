@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/listByInspectionItemsIdUsingGET
+export function fetchMethod(params: { inspectionItemsId: number }) {
+    return get({
+      url: "/masterdata-service/qmsQualityPersonnel/listByInspectionItemsId",
+      params,
+    });
+}
 // JSONResult«List«质量人员下拉响应DTO»»
 export interface IJSONResultListQualityPersonnelDropDownResponseDtos {
     // 返回码

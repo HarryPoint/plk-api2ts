@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/cancelBatchUsingPOST
+export function fetchMethod(data: IProduceOrderBatchCancelRequestDTO) {
+    return post({
+      url: "/masterdata-service/produceOrder/cancelBatch",
+      data,
+    });
+}
 // ProduceOrderBatchCancelRequestDTO
 export interface IProduceOrderBatchCancelRequestDTO {
     // 生产订单ID列表

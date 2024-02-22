@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/listMoveInDeviceByProduceTaskIdUsingGET
+export function fetchMethod(params: { produceTaskId: string }) {
+    return get({
+      url: "/masterdata-service/moveInOutDevice/listMoveInDeviceByProduceTaskId",
+      params,
+    });
+}
 // JSONResult«List«进料设备响应DTO»»_1
 export interface IJSONResultListTheFeedDeviceRespondsToDTO1 {
     // 返回码

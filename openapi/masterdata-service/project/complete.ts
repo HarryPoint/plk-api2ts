@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/completeUsingGET
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/project/complete",
+      params,
+    });
+}
 // JSONResult«string»_1
 export interface IJSONResultstring1 {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺脚本相关/resetUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/script/standardTechnology/reset",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

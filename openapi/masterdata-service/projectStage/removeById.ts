@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/removeByIdUsingPOST_1
+export function fetchMethod(data: IDeleteTheRequestObjectDuringTheProjectPhase) {
+    return post({
+      url: "/masterdata-service/projectStage/removeById",
+      data,
+    });
+}
 // 项目阶段删除请求对象
 export interface IDeleteTheRequestObjectDuringTheProjectPhase {
     // 项目阶段id

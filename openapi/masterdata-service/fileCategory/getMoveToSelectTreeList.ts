@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getMoveToSelectTreeListUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/fileCategory/getMoveToSelectTreeList",
+      params,
+    });
+}
 // JSONResult«List«文件分类明细响应DTO»»_1
 export interface IJSONResultListFileClassificationDetailResponseDTO1 {
     // 返回码

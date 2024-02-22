@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseTreeListUsingPOST
+export function fetchMethod(data: IDatabaseBitTreeQueryVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/warehouse/getWarehouseTreeList",
+      data,
+      params,
+    });
+}
 // 库位树查询VO
 export interface IDatabaseBitTreeQueryVO {
     // 仓库id

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportProducePlanExcelUsingPOST
+export function fetchMethod(data: IBaojingProductionTaskGanttChartQueryObject) {
+    return post({
+      url: "/masterdata-service/baoJingReport/exportBaoJingReportProducePlanExcel",
+      data,
+    });
+}
 // 宝晶生产任务甘特图查询对象
 export interface IBaojingProductionTaskGanttChartQueryObject {
     // 物料id

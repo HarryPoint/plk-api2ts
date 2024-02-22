@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getDataIdAndCodeListUsingPOST
+export function fetchMethod(data: string[], params: { enterpriseCode: string; enterpriseId: number; flowPathCode: string }) {
+    return post({
+      url: "/masterdata-service/dynamicData/getDataIdAndCodeList",
+      data,
+      params,
+    });
+}
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {
     // 返回码

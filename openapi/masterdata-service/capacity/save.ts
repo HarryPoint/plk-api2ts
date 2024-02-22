@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/saveUsingPOST
+export function fetchMethod(data: ICapacityPreservationDTO) {
+    return post({
+      url: "/masterdata-service/capacity/save",
+      data,
+    });
+}
 // 产能保存DTO
 export interface ICapacityPreservationDTO {
     // id

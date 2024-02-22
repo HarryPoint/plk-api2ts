@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getInfoByIdUsingGET_2
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/laborCost/getInfoById",
+      params,
+    });
+}
 // JSONResult«工费响应对象»
 export interface IJSONResultLaborResponseObject {
     // 返回码

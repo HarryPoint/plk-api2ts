@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/transferUsingPOST_1
+export function fetchMethod(data: IBatchTransferToOtherProductionOrderDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceOrder/transfer",
+      data,
+      params,
+    });
+}
 // 批次转移到其他生产订单DTO
 export interface IBatchTransferToOtherProductionOrderDTO {
     // wipRpId

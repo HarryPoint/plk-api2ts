@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/用户聚合维度配置相关/queryUsingPOST
+export function fetchMethod(data: IUserAggregationDimensionConfigurationQuery1) {
+    return post({
+      url: "/masterdata-service/employeeCollectDimensionConfig/query",
+      data,
+    });
+}
 // 用户聚合维度配置查询_1
 export interface IUserAggregationDimensionConfigurationQuery1 {
     // 编码

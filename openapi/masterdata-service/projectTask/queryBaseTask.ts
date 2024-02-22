@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryBaseTaskUsingPOST
+export function fetchMethod(data: IProjectPhaseTaskQueryObject1) {
+    return post({
+      url: "/masterdata-service/projectTask/queryBaseTask",
+      data,
+    });
+}
 // 项目阶段任务查询对象_1
 export interface IProjectPhaseTaskQueryObject1 {
     // 当前页面

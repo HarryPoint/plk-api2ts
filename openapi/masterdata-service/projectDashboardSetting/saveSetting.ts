@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/saveSettingUsingPOST_1
+export function fetchMethod(data: IProjectLargeScreenSettingsSaveRequestDto1) {
+    return post({
+      url: "/masterdata-service/projectDashboardSetting/saveSetting",
+      data,
+    });
+}
 // 项目大屏设置保存请求dto_1
 export interface IProjectLargeScreenSettingsSaveRequestDto1 {
     // 统计范围

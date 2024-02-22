@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/closeBatchUsingPOST
+export function fetchMethod(data: IProduceOrderBatchCloseRequestDTO) {
+    return post({
+      url: "/masterdata-service/produceOrder/closeBatch",
+      data,
+    });
+}
 // ProduceOrderBatchCloseRequestDTO
 export interface IProduceOrderBatchCloseRequestDTO {
     // 生产订单ID列表

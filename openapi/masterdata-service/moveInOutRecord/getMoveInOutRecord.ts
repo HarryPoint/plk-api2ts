@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveInOutRecordUsingPOST
+export function fetchMethod(data: IEntryAndExitRecordsSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/moveInOutRecord/getMoveInOutRecord",
+      data,
+      params,
+    });
+}
 // 进出站记录搜索VO
 export interface IEntryAndExitRecordsSearchVO {
     // 任务id

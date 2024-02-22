@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUserByIdAndCheckUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/employee/getUserByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«员工VO»
 export interface IJSONResultEmployeeVO {
     // 返回码

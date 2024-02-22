@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/序列号跟踪报表相关/getMaterialSerialNoTrackReportForPageUsingPOST
+export function fetchMethod(data: GetMaterialSerialNoTrackReportForPage) {
+    return post({
+      url: "/masterdata-service/warehouseStorageSerialNoTrackReport/getMaterialSerialNoTrackReportForPage",
+      data,
+    });
+}
 // JSONResult«分页信息«物料序列号跟踪分页响应对象»»
 export interface IJSONResultPagingInformationMaterialSerialNumberTracesPagingResponseObjects {
     // 返回码

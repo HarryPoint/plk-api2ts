@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产原材料成本归集相关/syncProduceRawMaterialCostUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/produceRawMaterialCostCollect/syncProduceRawMaterialCost",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

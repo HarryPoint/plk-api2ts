@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程工单流转日志相关/getForPageUsingPOST_2
+export function fetchMethod(data: IJobLogSearchVO, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/flowPathWorkOrderDirectionLog/getForPage",
+      data,
+      params,
+    });
+}
 // 工单日志搜索VO
 export interface IJobLogSearchVO {
     // 当前页面

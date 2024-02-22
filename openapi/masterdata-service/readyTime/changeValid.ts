@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/changeValidUsingPOST_10
+export function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/readyTime/changeValid",
+      data,
+      params,
+    });
+}
 // 启用or停用VO
 export interface IEnableOrDisableVO {
     // id

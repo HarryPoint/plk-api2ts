@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/validUsingPOST
+export function fetchMethod(data: IStandardProcessEnablesDeactivationOfRequestObjects) {
+    return post({
+      url: "/masterdata-service/standardTechnology/valid",
+      data,
+    });
+}
 // 标准工艺启用、停用请求对象
 export interface IStandardProcessEnablesDeactivationOfRequestObjects {
     // 启用 Y 停用 N

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getByProduceIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; produceOrderId: number }) {
+    return get({
+      url: "/masterdata-service/produceTask/getByProduceId",
+      params,
+    });
+}
 // JSONResult«List«ProduceTaskVO»»
 export interface IJSONResultListProduceTaskVO {
     // 返回码

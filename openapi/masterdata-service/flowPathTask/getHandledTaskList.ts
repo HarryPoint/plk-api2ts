@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/getHandledTaskListUsingPOST
+export function fetchMethod(data: IProcessTaskResultQueryVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/flowPathTask/getHandledTaskList",
+      data,
+      params,
+    });
+}
 // 流程任务处理结果查询VO
 export interface IProcessTaskResultQueryVO {
     // 业务流程系统类型

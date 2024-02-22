@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceMaterialIssuanceUsingPOST
+export function fetchMethod(data: IPaging6) {
+    return post({
+      url: "/masterdata-service/produceOrder/pageQueryProduceMaterialIssuance",
+      data,
+    });
+}
 // 分页_6
 export interface IPaging6 {
     // 当前页面

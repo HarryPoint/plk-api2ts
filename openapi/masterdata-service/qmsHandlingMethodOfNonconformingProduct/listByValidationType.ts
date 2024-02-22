@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
+export function fetchMethod(params: { useValidationTypes: string }) {
+    return get({
+      url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByValidationType",
+      params,
+    });
+}
 // JSONResult«List«不合格品处理方式响应对象»»
 export interface IJSONResultListResponseObjectForHandlingNonconformingItems {
     // 返回码

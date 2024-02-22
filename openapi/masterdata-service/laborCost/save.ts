@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工费相关/saveUsingPOST_3
+export function fetchMethod(data: ILaborCostsSaveDTO) {
+    return post({
+      url: "/masterdata-service/laborCost/save",
+      data,
+    });
+}
 // 工费保存DTO
 export interface ILaborCostsSaveDTO {
     // id

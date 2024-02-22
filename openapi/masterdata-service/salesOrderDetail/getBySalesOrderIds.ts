@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售订单明细相关/getBySalesOrderIdsUsingPOST
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/salesOrderDetail/getBySalesOrderIds",
+      data,
+      params,
+    });
+}
 // JSONResult«List«销售订单明细»»
 export interface IJSONResultListSalesOrderDetails {
     // 返回码

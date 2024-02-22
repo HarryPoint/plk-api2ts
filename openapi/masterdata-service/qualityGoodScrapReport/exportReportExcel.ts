@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检统计/exportReportExcelUsingPOST_2
+export function fetchMethod(data: IScrapDataSheetSearchVO) {
+    return post({
+      url: "/masterdata-service/qualityGoodScrapReport/exportReportExcel",
+      data,
+    });
+}
 // 良品报废数据表搜索VO
 export interface IScrapDataSheetSearchVO {
     // 当前页面

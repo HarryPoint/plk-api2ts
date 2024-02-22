@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialResponseUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/material/getMaterialResponse",
+      params,
+    });
+}
 // JSONResult«物料返回信息»
 export interface IJSONResultMaterialReturnInformation {
     // 返回码

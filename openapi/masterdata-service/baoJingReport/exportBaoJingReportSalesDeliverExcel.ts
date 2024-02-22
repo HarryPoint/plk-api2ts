@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportSalesDeliverExcelUsingPOST
+export function fetchMethod(data: IBaojingSalesDeliveryReportSearchVO) {
+    return post({
+      url: "/masterdata-service/baoJingReport/exportBaoJingReportSalesDeliverExcel",
+      data,
+    });
+}
 // 宝晶销售发货报表搜索VO
 export interface IBaojingSalesDeliveryReportSearchVO {
     // 当前页面

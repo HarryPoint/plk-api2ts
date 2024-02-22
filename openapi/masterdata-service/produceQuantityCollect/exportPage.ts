@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/exportPageUsingPOST
+export function fetchMethod(data: ExportPage) {
+    return post({
+      url: "/masterdata-service/produceQuantityCollect/exportPage",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

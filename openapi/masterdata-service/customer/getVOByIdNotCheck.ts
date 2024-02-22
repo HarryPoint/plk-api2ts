@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/客户相关/getVOByIdNotCheckUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/customer/getVOByIdNotCheck",
+      params,
+    });
+}
 // JSONResult«客户VO»
 export interface IJSONResultCustomerVO {
     // 返回码

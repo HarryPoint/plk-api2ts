@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/projectDashboard/queryProjectCategory",
+    });
+}
 // JSONResult«List«项目大类分布响应对象»»
 export interface ITheJSONResultListProjectClassDistributesResponseObjects {
     // 返回码

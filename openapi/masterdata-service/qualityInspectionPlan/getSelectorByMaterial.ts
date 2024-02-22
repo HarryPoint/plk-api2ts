@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检方案/getSelectorByMaterialUsingGET
+export function fetchMethod(params: { enterpriseId: number; materialId: number }) {
+    return get({
+      url: "/masterdata-service/qualityInspectionPlan/getSelectorByMaterial",
+      params,
+    });
+}
 // JSONResult«List«质检方案选择VO»»
 export interface IJSONResultListSelectVOAsTheInspectionSolution {
     // 返回码

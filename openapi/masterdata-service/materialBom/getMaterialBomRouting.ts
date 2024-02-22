@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialBomRoutingUsingGET
+export function fetchMethod(params: { enterpriseId: number; materialId: number }) {
+    return get({
+      url: "/masterdata-service/materialBom/getMaterialBomRouting",
+      params,
+    });
+}
 // JSONResult«List«MaterialBomRoutingVO»»
 export interface IJSONResultListMaterialBomRoutingVO {
     // 返回码

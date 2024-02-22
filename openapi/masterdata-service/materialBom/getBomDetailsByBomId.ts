@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getBomDetailsByBomIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/materialBom/getBomDetailsByBomId",
+      params,
+    });
+}
 // JSONResult«List«物料主数据Bom详情选择基础信息DTO»»
 export interface IJSONResultListBomDetailsSelectBasicInformationDTO {
     // 返回码

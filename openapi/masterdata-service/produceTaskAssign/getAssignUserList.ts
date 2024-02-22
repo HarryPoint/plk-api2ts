@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getAssignUserListUsingGET
+export function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
+    return get({
+      url: "/masterdata-service/produceTaskAssign/getAssignUserList",
+      params,
+    });
+}
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {
     // 返回码

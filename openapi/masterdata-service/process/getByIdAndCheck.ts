@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdAndCheckUsingPOST
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return post({
+      url: "/masterdata-service/process/getByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«ProcessDeprecatedVO»
 export interface IJSONResultProcessDeprecatedVO {
     // 返回码

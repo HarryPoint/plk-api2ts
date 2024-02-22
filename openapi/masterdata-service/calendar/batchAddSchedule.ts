@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/batchAddScheduleUsingPOST
+export function fetchMethod(data: IScheduleNewDtos[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/calendar/batchAddSchedule",
+      data,
+      params,
+    });
+}
 // 排班新增DTO
 export interface IScheduleNewDtos {
     // 排班日期 yyyy-MM-dd

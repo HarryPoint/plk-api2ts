@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/releaseUsingPOST
+export function fetchMethod(data: ITheProductionProcessHoldsTheReleaseRequestObject) {
+    return post({
+      url: "/masterdata-service/produceHandleHoldPause/release",
+      data,
+    });
+}
 // 生产处理暂扣放行请求对象
 export interface ITheProductionProcessHoldsTheReleaseRequestObject {
     // 生产处理id

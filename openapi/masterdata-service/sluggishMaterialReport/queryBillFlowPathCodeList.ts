@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/queryBillFlowPathCodeListUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/sluggishMaterialReport/queryBillFlowPathCodeList",
+    });
+}
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeNameACommonTransferObject {
     // 返回码

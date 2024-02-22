@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getMaterialCompareUsingPOST
+export function fetchMethod(data: IMaterialMasterDataBomidCollectionVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/materialCompare/getCompare",
+      data,
+      params,
+    });
+}
 // 物料主数据bom id集合VO
 export interface IMaterialMasterDataBomidCollectionVO {
     // bomId集合

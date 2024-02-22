@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyUseCodeUsingPOST
+export function fetchMethod(params: { code: string }) {
+    return post({
+      url: "/masterdata-service/codeSyncTask/applyUseCode",
+      params,
+    });
+}
 // JSONResult«string»_1
 export interface IJSONResultstring1 {
     // 返回码

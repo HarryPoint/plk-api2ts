@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportScrapExcelUsingPOST
+export function fetchMethod(data: IBaojingReportScrapRelatedSearchVO) {
+    return post({
+      url: "/masterdata-service/baoJingReport/exportBaoJingReportScrapExcel",
+      data,
+    });
+}
 // 宝晶报表(报废)相关搜索VO
 export interface IBaojingReportScrapRelatedSearchVO {
     // 当前页面

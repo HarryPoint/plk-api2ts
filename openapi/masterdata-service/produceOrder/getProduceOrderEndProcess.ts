@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderEndProcessUsingPOST
+export function fetchMethod(data: IQueryVOForTheLastStepOfTheProductionOrder, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceOrder/getProduceOrderEndProcess",
+      data,
+      params,
+    });
+}
 // 生产订单最后一道工序查询VO
 export interface IQueryVOForTheLastStepOfTheProductionOrder {
     // 物料ids

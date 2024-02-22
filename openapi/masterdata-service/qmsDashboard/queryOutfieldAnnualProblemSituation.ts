@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryOutfieldAnnualProblemSituationUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/qmsDashboard/queryOutfieldAnnualProblemSituation",
+    });
+}
 // JSONResult«年度问题查询情况»
 export interface IJSONResultAnnualProblemQuery {
     // 返回码

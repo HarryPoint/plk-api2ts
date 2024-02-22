@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/listByNavigationUsingGET
+export function fetchMethod(params: { projectId: number }) {
+    return get({
+      url: "/masterdata-service/projectApplication/listByNavigation",
+      params,
+    });
+}
 // JSONResult«List«项目应用返回对象»»
 export interface ITheJSONResultListProjectAppliesTheReturnObject {
     // 返回码

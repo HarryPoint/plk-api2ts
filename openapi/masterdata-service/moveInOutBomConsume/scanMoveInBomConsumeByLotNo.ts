@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/scanMoveInBomConsumeByLotNoUsingPOST
+export function fetchMethod(data: IFeedBomConsumptionScanRequestDTO) {
+    return post({
+      url: "/masterdata-service/moveInOutBomConsume/scanMoveInBomConsumeByLotNo",
+      data,
+    });
+}
 // 进料bom消耗扫描请求DTO
 export interface IFeedBomConsumptionScanRequestDTO {
     // 生产任务id

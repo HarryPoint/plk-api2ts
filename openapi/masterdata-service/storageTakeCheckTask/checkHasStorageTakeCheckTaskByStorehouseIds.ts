@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/checkHasStorageTakeCheckTaskByStorehouseIdsUsingGET
+export function fetchMethod(params: { enterpriseId: number; storehouseIds: number[] }) {
+    return get({
+      url: "/masterdata-service/storageTakeCheckTask/checkHasStorageTakeCheckTaskByStorehouseIds",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

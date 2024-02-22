@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByDepartmentIdUsingGET
+export function fetchMethod(params: { departmentId: number; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/employee/getIdsByDepartmentId",
+      params,
+    });
+}
 // JSONResult«List«long»»
 export interface IJSONResultListlong {
     // 返回码

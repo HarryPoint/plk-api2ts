@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/batchGetByIdListUsingPOST
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/employee/batchGetByIdList",
+      data,
+      params,
+    });
+}
 // JSONResult«List«员工VO»»
 export interface IJSONResultListEmployeeVO {
     // 返回码

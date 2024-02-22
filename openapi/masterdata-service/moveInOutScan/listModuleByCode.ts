@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/listModuleByCodeUsingGET
+export function fetchMethod(params: { code: string }) {
+    return get({
+      url: "/masterdata-service/moveInOutScan/listModuleByCode",
+      params,
+    });
+}
 // JSONResult«Set«string»»
 export interface IJSONResultSetstring {
     // 返回码

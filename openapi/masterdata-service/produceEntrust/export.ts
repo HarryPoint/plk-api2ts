@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
+export function fetchMethod(data: IOutsourcingSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceEntrust/export",
+      data,
+      params,
+    });
+}
 // 委外加工搜索VO
 export interface IOutsourcingSearchVO {
     // 委外单号

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/editUsingPOST_22
+export function fetchMethod(data: IStandardProcessCodingRulesRequestDTO) {
+    return post({
+      url: "/masterdata-service/standardTechnologyCodeRule/edit",
+      data,
+    });
+}
 // 标准工艺编码规则请求 DTO
 export interface IStandardProcessCodingRulesRequestDTO {
     // id

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getPurchaseArrivedStatisticReportSumResultUsingPOST
+export function fetchMethod(data: IPurchaseArrivalStatisticsReportSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/baoJingReport/getPurchaseArrivedStatisticReportSumResult",
+      data,
+      params,
+    });
+}
 // 采购到货统计报表搜索VO
 export interface IPurchaseArrivalStatisticsReportSearchVO {
     // 当前页面

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/客户相关/claimCustomerUsingPOST
+export function fetchMethod(data: ICustomerClaimInputVO) {
+    return post({
+      url: "/masterdata-service/customer/publicCustomer/claim",
+      data,
+    });
+}
 // CustomerClaimInputVO
 export interface ICustomerClaimInputVO {
     // 客户ID列表

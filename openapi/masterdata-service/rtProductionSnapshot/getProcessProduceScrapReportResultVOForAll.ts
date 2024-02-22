@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProcessProduceScrapReportResultVOForAllUsingPOST
+export function fetchMethod(data: number[], params: { beginTime: string; endTime: string; enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/rtProductionSnapshot/getProcessProduceScrapReportResultVOForAll",
+      data,
+      params,
+    });
+}
 // JSONResult«List«工序产出报废统计返回VO»»
 export interface IJSONResultListProcessOutputScrapStatisticsAreReturnedToVO {
     // 返回码

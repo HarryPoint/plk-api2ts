@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getSelectorOptionSearchUsingPOST_2
+export function fetchMethod(data: ITheLaborCostDropDownListIsUsedToSearchForDtos) {
+    return post({
+      url: "/masterdata-service/laborCost/getSelectorOptionSearch",
+      data,
+    });
+}
 // 工费下拉选择列表搜索DTO
 export interface ITheLaborCostDropDownListIsUsedToSearchForDtos {
     // 物料id

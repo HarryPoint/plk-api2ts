@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseSelectorUsingGET
+export function fetchMethod(params: { enterpriseId: number; materialId: number }) {
+    return get({
+      url: "/masterdata-service/warehouse/getWarehouseSelector",
+      params,
+    });
+}
 // JSONResult«List«物料主数据仓位返回VO»»
 export interface IJSONResultListReturnsTheMaterialMasterDataStoreToVO {
     // 返回码

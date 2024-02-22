@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备相关/getDeviceSelectorForPlanUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/device/getDeviceSelectorForPlan",
+      params,
+    });
+}
 // JSONResult«List«设备选择返回VO - 针对数采方案»»
 export interface ITheJSONResultListDeviceSelectsToReturnVOForTheDataCollectionScheme {
     // 返回码

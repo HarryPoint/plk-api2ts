@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/上报反馈服务相关/addReportUsingPOST
+export function fetchMethod(data: IReportTheFeedbackProcessingDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceHandleReport/addReport",
+      data,
+      params,
+    });
+}
 // 上报反馈处理DTO
 export interface IReportTheFeedbackProcessingDTO {
     // 生产任务id，任务外的上报反馈可不传

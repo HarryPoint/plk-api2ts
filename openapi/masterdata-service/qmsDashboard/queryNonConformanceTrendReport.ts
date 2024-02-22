@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNonConformanceTrendReportUsingPOST
+export function fetchMethod(data: INonConformanceTrendReportRequestDTO) {
+    return post({
+      url: "/masterdata-service/qmsDashboard/queryNonConformanceTrendReport",
+      data,
+    });
+}
 // NonConformanceTrendReportRequestDTO
 export interface INonConformanceTrendReportRequestDTO {
     // 当前的时间

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/listLotOrderFlowDetailUsingPOST
+export function fetchMethod(data: IBatchOrderHistorySearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceOrder/listLotOrderFlowDetail",
+      data,
+      params,
+    });
+}
 // 批次订单流水搜索VO
 export interface IBatchOrderHistorySearchVO {
     // 生产订单id

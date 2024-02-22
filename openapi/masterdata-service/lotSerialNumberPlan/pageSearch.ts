@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/pageSearchUsingPOST_1
+export function fetchMethod(data: IPaging5) {
+    return post({
+      url: "/masterdata-service/lotSerialNumberPlan/pageSearch",
+      data,
+    });
+}
 // 分页_5
 export interface IPaging5 {
     // 编码匹配

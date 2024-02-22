@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseListSelectionUsingPOST
+export function fetchMethod(data: IPositionTreeReturnsVO1) {
+    return post({
+      url: "/masterdata-service/warehouse/getWarehouseListSelection",
+      data,
+    });
+}
 // 仓位树返回VO_1
 export interface IPositionTreeReturnsVO1 {
     // 当前页面

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listAllProcessDocumentUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/processDocumentMapConfig/listAllProcessDocument",
+      params,
+    });
+}
 // JSONResult«List«工艺文档VO»»
 export interface IJSONResultListProcessDocumentVO {
     // 返回码

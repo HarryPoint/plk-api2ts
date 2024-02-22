@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产线相关/getForPageUsingPOST_15
+export function fetchMethod(data: IProcessDataBaseSearchVO) {
+    return post({
+      url: "/masterdata-service/productionLine/getForPage",
+      data,
+    });
+}
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {
     // 全局搜索

@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportRawStorageResultVOUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/baoJingReportCheck/check",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

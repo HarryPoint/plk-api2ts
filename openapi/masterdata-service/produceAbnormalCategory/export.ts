@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/exportUsingPOST_13
+export function fetchMethod(data: IExceptionTypeSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceAbnormalCategory/export",
+      data,
+      params,
+    });
+}
 // 异常类型搜索VO
 export interface IExceptionTypeSearchVO {
     // 当前页面

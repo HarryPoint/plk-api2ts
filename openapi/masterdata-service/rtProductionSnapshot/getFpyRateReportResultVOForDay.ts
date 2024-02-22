@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getFpyRateReportResultVOForDayUsingGET
+export function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/rtProductionSnapshot/getFpyRateReportResultVOForDay",
+      params,
+    });
+}
 // JSONResult«List«直通报表返回VO»»
 export interface IJSONResultListReturnVOToThePassthroughReport {
     // 返回码

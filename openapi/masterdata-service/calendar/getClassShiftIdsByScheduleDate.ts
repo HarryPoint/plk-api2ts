@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getClassShiftIdsByScheduleDateUsingPOST
+export function fetchMethod(data: ISchedulingDateDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/calendar/getClassShiftIdsByScheduleDate",
+      data,
+      params,
+    });
+}
 // 排班日期DTO
 export interface ISchedulingDateDTO {
     // 排班日期 yyyy-MM-dd

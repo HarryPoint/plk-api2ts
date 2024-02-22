@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryCanRemoveByIdUsingGET_1
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/projectTask/queryCanRemoveById",
+      params,
+    });
+}
 // JSONResult«string»_1
 export interface IJSONResultstring1 {
     // 返回码

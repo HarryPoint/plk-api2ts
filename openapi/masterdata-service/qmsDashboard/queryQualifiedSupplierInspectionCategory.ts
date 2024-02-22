@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionCategoryUsingPOST
+export function fetchMethod(data: IQualifiedSupplierInspectionCategoryQueryRequestDTO) {
+    return post({
+      url: "/masterdata-service/qmsDashboard/queryQualifiedSupplierInspectionCategory",
+      data,
+    });
+}
 // QualifiedSupplierInspectionCategoryQueryRequestDTO
 export interface IQualifiedSupplierInspectionCategoryQueryRequestDTO {
     // 查询日期的开始

@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/行政区控制器/queryAllRegionUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/region/query",
+    });
+}
 // JSONResult«List«RegionVo»»
 export interface IJSONResultListRegionVo {
     // 返回码

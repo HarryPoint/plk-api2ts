@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/moveInScanUsingPOST
+export function fetchMethod(data: IFeedScanRequestDTO) {
+    return post({
+      url: "/masterdata-service/moveInOutScan/moveInScan",
+      data,
+    });
+}
 // 进料扫描请求DTO
 export interface IFeedScanRequestDTO {
     // 生产任务id

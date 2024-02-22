@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/editUsingPOST_20
+export function fetchMethod(data: IPreparatoryPeriodEditorDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/readyTime/edit",
+      data,
+      params,
+    });
+}
 // 准备期编辑DTO
 export interface IPreparatoryPeriodEditorDTO {
     // id

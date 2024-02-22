@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/getPageUsingPOST_12
+export function fetchMethod(data: IProductionCostingPagingRequestObject) {
+    return post({
+      url: "/masterdata-service/produceCostComputationReport/getPage",
+      data,
+    });
+}
 // 生产成本核算分页请求对象
 export interface IProductionCostingPagingRequestObject {
     // 当前页面

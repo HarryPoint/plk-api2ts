@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getChildMaterialListUsingPOST
+export function fetchMethod(data: IProductionSubMaterialQueryRequest[]) {
+    return post({
+      url: "/masterdata-service/salesOrder/transferToProduceOrder/getChildMaterial",
+      data,
+    });
+}
 // 生产子物料查询请求
 export interface IProductionSubMaterialQueryRequest {
     // 销售订单详细ID

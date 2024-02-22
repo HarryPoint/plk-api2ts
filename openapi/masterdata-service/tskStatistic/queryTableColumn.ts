@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTableColumnUsingGET_2
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/tskStatistic/queryTableColumn",
+    });
+}
 // JSONResult«List«TskStatisticReportTableColumnBO»»
 export interface IJSONResultListTskStatisticReportTableColumnBO {
     // 返回码

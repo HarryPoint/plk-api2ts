@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/pageUsingPOST
+export function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/employee/page",
+      data,
+      params,
+    });
+}
 // 流程数据搜索VO_1
 export interface IProcessDataSearchVO1 {
     // 全局搜索

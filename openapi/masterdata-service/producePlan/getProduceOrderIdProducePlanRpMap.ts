@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProduceOrderIdProducePlanRpMapUsingPOST
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/producePlan/getProduceOrderIdProducePlanRpMap",
+      data,
+      params,
+    });
+}
 // JSONResult«Map«long,生产计划生产订单关联VO»»
 export interface IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO {
     // 返回码

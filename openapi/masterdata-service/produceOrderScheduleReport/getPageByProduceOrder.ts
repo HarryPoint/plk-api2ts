@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/getPageByProduceOrderUsingPOST
+export function fetchMethod(data: IProductionSchedulingOrderSearchVO) {
+    return post({
+      url: "/masterdata-service/produceOrderScheduleReport/getPageByProduceOrder",
+      data,
+    });
+}
 // 生产排产订单搜索VO
 export interface IProductionSchedulingOrderSearchVO {
     // 当前页面

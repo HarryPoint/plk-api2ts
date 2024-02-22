@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/balanceAntiUsingPOST
+export function fetchMethod(data: ICounterbalanceRequestForFinancialPeriod) {
+    return post({
+      url: "/masterdata-service/fiscalPeriod/balanceAnti",
+      data,
+    });
+}
 // 财务期间反结存请求
 export interface ICounterbalanceRequestForFinancialPeriod {
     // ID

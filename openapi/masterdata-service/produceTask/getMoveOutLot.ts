@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveOutLotUsingGET
+export function fetchMethod(params: { taskId: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceTask/getMoveOutLot",
+      params,
+    });
+}
 // JSONResult«List«wip可进出料响应dto»»
 export interface IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials {
     // 返回码

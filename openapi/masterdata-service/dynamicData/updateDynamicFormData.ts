@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/updateDynamicFormDataUsingPOST
+export function fetchMethod(data: IDynamicFormDataUpdateRequestDTO[]) {
+    return post({
+      url: "/masterdata-service/dynamicData/updateDynamicFormData",
+      data,
+    });
+}
 // DynamicFormDataUpdateRequestDTO
 export interface IDynamicFormDataUpdateRequestDTO {
     // undefined

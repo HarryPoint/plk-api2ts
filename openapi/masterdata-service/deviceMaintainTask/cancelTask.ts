@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备保养任务相关/cancelTaskUsingPOST
+export function fetchMethod(data: IIdInformation) {
+    return post({
+      url: "/masterdata-service/deviceMaintainTask/cancelTask",
+      data,
+    });
+}
 // Id 信息
 export interface IIdInformation {
     // id

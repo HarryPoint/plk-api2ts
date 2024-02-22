@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检方案/changeValidUsingPOST_9
+export function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/qualityInspectionPlan/changeValid",
+      data,
+      params,
+    });
+}
 // 启用or停用VO
 export interface IEnableOrDisableVO {
     // id

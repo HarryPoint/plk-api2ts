@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchValidUsingPOST_1
+export function fetchMethod(data: IDynamicFormEnabledRequestDTO, params: { flowPathId: number }) {
+    return post({
+      url: "/masterdata-service/dynamicData/batchValid",
+      data,
+      params,
+    });
+}
 // DynamicFormEnabledRequestDTO
 export interface IDynamicFormEnabledRequestDTO {
     // ID列表

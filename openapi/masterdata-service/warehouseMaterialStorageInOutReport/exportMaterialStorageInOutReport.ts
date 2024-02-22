@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料收发汇总报表相关/exportMaterialStorageInOutReportUsingPOST
+export function fetchMethod(data: ExportMaterialStorageInOutReport) {
+    return post({
+      url: "/masterdata-service/warehouseMaterialStorageInOutReport/exportMaterialStorageInOutReport",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

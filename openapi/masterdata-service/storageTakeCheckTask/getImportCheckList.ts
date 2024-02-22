@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getImportCheckListUsingPOST
+export function fetchMethod(data: IImportDetailsListDTOForInventory, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/storageTakeCheckTask/getImportCheckList",
+      data,
+      params,
+    });
+}
 // 盘点导入明细列表DTO
 export interface IImportDetailsListDTOForInventory {
     // taskId

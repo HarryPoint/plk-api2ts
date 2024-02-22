@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getDynamicUserByIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/employee/getDynamicUserById",
+      params,
+    });
+}
 // JSONResult«Id，名称，编号VO»
 export interface IJSONResultIdNameNumberVO {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionMaterialReportExportInfoByTicketUsingGET
+export function fetchMethod(params: { ticket: string }) {
+    return get({
+      url: "/masterdata-service/exportAuth/getProductionMaterialReportExportInfoByTicket",
+      params,
+    });
+}
 // JSONResult«导出信息«产出报表导出VO»»
 export interface IJSONResultExportInformationOutputReportExportVO {
     // 返回码

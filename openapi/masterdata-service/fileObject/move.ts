@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/moveUsingPOST_1
+export function fetchMethod(data: IFileObjectMoveRequestDTO) {
+    return post({
+      url: "/masterdata-service/fileObject/move",
+      data,
+    });
+}
 // FileObjectMoveRequestDTO
 export interface IFileObjectMoveRequestDTO {
     // 文件对象ID

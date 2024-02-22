@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺具体物料节点相关/getBomUsedStandardTechnologyUsingPOST
+export function fetchMethod(data: IStandardProcessQueryObjectUsedByBom) {
+    return post({
+      url: "/masterdata-service/standardTechnologySpecificMaterialNode/getBomUsedStandardTechnology",
+      data,
+    });
+}
 // bom占用的标准工艺查询对象
 export interface IStandardProcessQueryObjectUsedByBom {
     // bomId

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getDeviceCollectionStatisticReportExportByTicketUsingGET
+export function fetchMethod(params: { ticket: string }) {
+    return get({
+      url: "/masterdata-service/exportAuth/getDeviceCollectionStatisticReportExportByTicket",
+      params,
+    });
+}
 // JSONResult«导出信息«设备数采统计报表导出VO»»
 export interface IJSONResultExportInformationExportDeviceDataCollectionStatisticsReportVO {
     // 返回码

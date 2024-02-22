@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getRoutingStepSelectorUsingGET_1
+export function fetchMethod(params: { id: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrder/getRoutingStepSelector",
+      params,
+    });
+}
 // JSONResult«List«生产工艺路径步骤工序响应 DTO»»
 export interface IJSONResultListProductionProcessPathStepProcessResponseDTO {
     // 返回码

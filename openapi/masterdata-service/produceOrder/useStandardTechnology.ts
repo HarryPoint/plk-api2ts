@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/useStandardTechnologyUsingPOST
+export function fetchMethod(data: IStandardProcessUseRequest) {
+    return post({
+      url: "/masterdata-service/produceOrder/useStandardTechnology",
+      data,
+    });
+}
 // 标准工艺使用请求
 export interface IStandardProcessUseRequest {
     // 生产订单和标准工艺关联关系列表

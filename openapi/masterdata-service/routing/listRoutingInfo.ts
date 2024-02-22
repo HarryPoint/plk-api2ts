@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/listRoutingInfoUsingPOST
+export function fetchMethod(data: IProcessPathInformationQueryObject, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/routing/listRoutingInfo",
+      data,
+      params,
+    });
+}
 // 工艺路径信息查询对象
 export interface IProcessPathInformationQueryObject {
     // 物料id

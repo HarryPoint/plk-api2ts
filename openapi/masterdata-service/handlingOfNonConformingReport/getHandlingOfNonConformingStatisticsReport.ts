@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/getHandlingOfNonConformingStatisticsReportUsingPOST
+export function fetchMethod(data: GetHandlingOfNonConformingStatisticsReport) {
+    return post({
+      url: "/masterdata-service/handlingOfNonConformingReport/getHandlingOfNonConformingStatisticsReport",
+      data,
+    });
+}
 // JSONResult«分页信息«不合格报表返回DTO»»
 export interface IJSONResultTheDTOIsReturnedAfterThePageInformationFails {
     // 返回码

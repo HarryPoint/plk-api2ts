@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标签设置/editUsingPOST_12
+export function fetchMethod(data: IProductionLabelEditingDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTag/edit",
+      data,
+      params,
+    });
+}
 // 生产标签编辑DTO
 export interface IProductionLabelEditingDTO {
     // id

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getIdCodeTreeByEnterpriseIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
+    return get({
+      url: "/masterdata-service/department/getIdCodeTreeByEnterpriseId",
+      params,
+    });
+}
 // JSONResult«List«Id，名称，编号树状VO»»
 export interface IJSONResultListIdNameNumberTreeVO {
     // 返回码

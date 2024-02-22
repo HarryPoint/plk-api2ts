@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportDetailByIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number; userId: number }) {
+    return get({
+      url: "/masterdata-service/deviceCollectionData/getUserReportDetailById",
+      params,
+    });
+}
 // JSONResult«设备数采数据人工上报详单返回VO»
 export interface IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO {
     // 返回码

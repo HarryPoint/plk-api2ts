@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET_1
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/routing/getByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«RoutingDeprecatedVO»
 export interface IJSONResultRoutingDeprecatedVO {
     // 返回码

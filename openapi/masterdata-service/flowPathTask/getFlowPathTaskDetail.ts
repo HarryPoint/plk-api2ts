@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskDetailUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/flowPathTask/getFlowPathTaskDetail",
+      params,
+    });
+}
 // JSONResult«流程任务明细返回VO»
 export interface IJSONResultProcessTaskDetailsAreReturnedToVO {
     // 返回码

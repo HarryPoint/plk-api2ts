@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getPageUsingPOST
+export function fetchMethod(data: ICapacityPagingQueryObject) {
+    return post({
+      url: "/masterdata-service/capacity/getPage",
+      data,
+    });
+}
 // 产能分页查询对象
 export interface ICapacityPagingQueryObject {
     // 编号

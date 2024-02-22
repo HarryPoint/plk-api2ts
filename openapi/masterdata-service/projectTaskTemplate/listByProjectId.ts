@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/listByProjectIdUsingGET_1
+export function fetchMethod(params: { projectId: string }) {
+    return get({
+      url: "/masterdata-service/projectTaskTemplate/listByProjectId",
+      params,
+    });
+}
 // JSONResult«List«项目任务模板响应DTO»»
 export interface IJSONResultListProjectTaskTemplateRespondsToTheDTO {
     // 返回码

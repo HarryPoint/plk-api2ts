@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorOptionSearchUsingPOST_3
+export function fetchMethod(data: IProcessDropDownListToSearchForDtos) {
+    return post({
+      url: "/masterdata-service/processSheet/getSelectorOptionSearch",
+      data,
+    });
+}
 // 工艺卡下拉选择列表搜索DTO
 export interface IProcessDropDownListToSearchForDtos {
     // 物料id

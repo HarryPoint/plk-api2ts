@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/project-script-controller/resetProjectTaskTypeCodeUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/projectScript/resetProjectTaskTypeCode",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

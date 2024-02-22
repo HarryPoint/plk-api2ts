@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoInsertOrderComputeDetermineUsingPOST
+export function fetchMethod(data: IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/autoPlan/autoInsertOrderComputeDetermine",
+      data,
+      params,
+    });
+}
 // 生产订单自动插单计算结果确定DTO
 export interface IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO {
     // 排产计划单名称

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/委外加工管理/entrustUsingPOST
+export function fetchMethod(data: IProductionOutsourcingSubmitDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceEntrust/entrust",
+      data,
+      params,
+    });
+}
 // 生产委外加工提交DTO
 export interface IProductionOutsourcingSubmitDTO {
     // 生产任务id

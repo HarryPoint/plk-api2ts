@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
+export function fetchMethod(data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried) {
+    return post({
+      url: "/masterdata-service/warehouseStorageMaterialScan/outStorageScanLotNo",
+      data,
+    });
+}
 // 物料出库扫码批次号查询对象
 export interface ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried {
     // 流程id

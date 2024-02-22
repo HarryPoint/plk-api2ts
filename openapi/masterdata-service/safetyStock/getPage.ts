@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/getPageUsingPOST_26
+export function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/safetyStock/getPage",
+      data,
+      params,
+    });
+}
 // 安全库存搜索VO
 export interface ISecurityInventorySearchVO {
     // 当前页面

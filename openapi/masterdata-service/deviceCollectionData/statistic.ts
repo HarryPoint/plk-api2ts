@@ -1,4 +1,11 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/statisticUsingPOST
+export function fetchMethod() {
+    return post({
+      url: "/masterdata-service/deviceCollectionData/statistic",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

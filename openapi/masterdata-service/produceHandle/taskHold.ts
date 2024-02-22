@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/taskHoldUsingPOST
+export function fetchMethod(data: IProductionTreatment, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceHandle/taskHold",
+      data,
+      params,
+    });
+}
 // 生产处理
 export interface IProductionTreatment {
     // 生产任务id，任务外的上报反馈可不传

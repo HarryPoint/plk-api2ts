@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskLotListForMobileUsingPOST
+export function fetchMethod(data: IProductionTaskBatchInformationQueryDTOForMobileTerminals) {
+    return post({
+      url: "/masterdata-service/produceTask/getProduceTaskLotListForMobile",
+      data,
+    });
+}
 // 生产任务批次信息查询DTO(针对移动端)
 export interface IProductionTaskBatchInformationQueryDTOForMobileTerminals {
     // 任务ids

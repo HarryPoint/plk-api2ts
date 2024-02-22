@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/exportUsingPOST_22
+export function fetchMethod(data: IExportTheDTOOfAProductionTask, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/export",
+      data,
+      params,
+    });
+}
 // 生产任务导出DTO
 export interface IExportTheDTOOfAProductionTask {
     // 当前页面

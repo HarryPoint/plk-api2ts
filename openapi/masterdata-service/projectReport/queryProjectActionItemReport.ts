@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectActionItemReportUsingPOST
+export function fetchMethod(data: QueryProjectActionItemReport) {
+    return post({
+      url: "/masterdata-service/projectReport/queryProjectActionItemReport",
+      data,
+    });
+}
 // JSONResult«分页信息«项目行动项报表响应对象»»
 export interface IJSONResultPageInformationItemActionItemReportResponseObject {
     // 返回码

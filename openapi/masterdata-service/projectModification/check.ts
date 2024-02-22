@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目变更相关/checkUsingGET_1
+export function fetchMethod(params: { projectId: string }) {
+    return get({
+      url: "/masterdata-service/projectModification/check",
+      params,
+    });
+}
 // JSONResult«项目变更信息校验结果»
 export interface IJSONResultIndicatesTheResultOfVerifyingProjectChangeInformation {
     // 返回码

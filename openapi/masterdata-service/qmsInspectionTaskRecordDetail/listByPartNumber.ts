@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/检验任务检验记录相关/listByPartNumberUsingPOST
+export function fetchMethod(data: ICheckTaskCheckRecordQueryRequestDTO) {
+    return post({
+      url: "/masterdata-service/qmsInspectionTaskRecordDetail/listByPartNumber",
+      data,
+    });
+}
 // 检验任务检验记录查询请求DTO
 export interface ICheckTaskCheckRecordQueryRequestDTO {
     // 业务类型

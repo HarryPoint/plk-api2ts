@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/queryIdCodeListByCodeListUsingPOST
+export function fetchMethod(data: string[]) {
+    return post({
+      url: "/masterdata-service/capacity/queryIdCodeListByCodeList",
+      data,
+    });
+}
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {
     // 返回码

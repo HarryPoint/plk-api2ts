@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByQueryTypeAndProcessIdUsingPOST
+export function fetchMethod(data: IProductionTaskQueryDTOForMobileEnd, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/getProduceTaskByQueryTypeAndProcessId",
+      data,
+      params,
+    });
+}
 // 生产任务查询DTO(针对移动端)
 export interface IProductionTaskQueryDTOForMobileEnd {
     // 当前页面

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/batchQueryByMaterialCodeUsingPOST
+export function fetchMethod(data: string[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/materialBom/by/materialCode/batchQuery",
+      data,
+      params,
+    });
+}
 // JSONResult«List«MaterialBomBaseVo»»
 export interface IJSONResultListMaterialBomBaseVo {
     // 返回码

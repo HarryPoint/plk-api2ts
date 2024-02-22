@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAllUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/weiLianLotPrintTemplate/listAll",
+    });
+}
 // JSONResult«List«维联批次打印模板响应对象»»_1
 export interface IJSONResultListVirtualizedBatchPrintTemplateResponseObject1 {
     // 返回码

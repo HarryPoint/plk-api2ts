@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editByCodeUsingPOST
+export function fetchMethod(data: IListColumnStyleSystemConfigurationEditDTO) {
+    return post({
+      url: "/masterdata-service/tableColumnStyleConfig/editByCode",
+      data,
+    });
+}
 // 列表列样式系统配置编辑DTO
 export interface IListColumnStyleSystemConfigurationEditDTO {
     // 编码

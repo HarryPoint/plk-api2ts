@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/getInfoByIdUsingGET_3
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/standardTechnologyConditionGroup/getInfoById",
+      params,
+    });
+}
 // JSONResult«标准工艺条件组响应DTO»
 export interface IJSONResultStandardProcessConditionGroupRespondsToDTO {
     // 返回码

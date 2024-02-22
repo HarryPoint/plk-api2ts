@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/batchRemoveUsingPOST_2
+export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/kaizenProjectTask/batchRemove",
+      data,
+      params,
+    });
+}
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

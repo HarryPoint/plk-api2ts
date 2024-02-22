@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryThreeViolationsUsingPOST
+export function fetchMethod(data: I3DInformationQueryRequest) {
+    return post({
+      url: "/masterdata-service/hseDashboard/queryThreeViolations",
+      data,
+    });
+}
 // 三维信息查询请求
 export interface I3DInformationQueryRequest {
     // 查询日期的开始

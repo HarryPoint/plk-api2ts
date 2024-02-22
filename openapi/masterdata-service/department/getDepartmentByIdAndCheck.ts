@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getDepartmentByIdAndCheckUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/department/getDepartmentByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«部门VO»
 export interface IJSONResultDepartmentVO {
     // 返回码

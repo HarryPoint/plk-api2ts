@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
+export function fetchMethod(params: { id: number }) {
+    return post({
+      url: "/masterdata-service/reportTemplate/getById",
+      params,
+    });
+}
 // JSONResult«ReportTemplateDTO»
 export interface IJSONResultReportTemplateDTO {
     // 返回码

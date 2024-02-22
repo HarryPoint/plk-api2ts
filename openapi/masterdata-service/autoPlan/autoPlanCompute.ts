@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
+export function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/autoPlan/autoPlanCompute",
+      data,
+      params,
+    });
+}
 // 生产订单自动排产DTO
 export interface IAutomaticProductionOrderSchedulingDTO {
     // 待排产订单id集

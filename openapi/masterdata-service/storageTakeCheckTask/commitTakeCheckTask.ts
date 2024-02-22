@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/commitTakeCheckTaskUsingPOST
+export function fetchMethod(data: ISubmitTheInventoryTaskToTheDTO, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/storageTakeCheckTask/commitTakeCheckTask",
+      data,
+      params,
+    });
+}
 // 盘点任务提交DTO
 export interface ISubmitTheInventoryTaskToTheDTO {
     // 任务id

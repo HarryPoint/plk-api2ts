@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/getPageUsingPOST_2
+export function fetchMethod(data: IDeviceDataOverviewSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/deviceCollection/getPage",
+      data,
+      params,
+    });
+}
 // 设备数据概览搜索VO
 export interface IDeviceDataOverviewSearchVO {
     // 当前页面

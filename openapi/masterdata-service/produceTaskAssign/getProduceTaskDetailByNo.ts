@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getProduceTaskDetailByNoUsingGET
+export function fetchMethod(params: { taskNo: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceTaskAssign/getProduceTaskDetailByNo",
+      params,
+    });
+}
 // JSONResult«生产任务针对员工详情返回VO»
 export interface IJSONResultTheProductionTaskReturnsVOForEmployeeDetails {
     // 返回码

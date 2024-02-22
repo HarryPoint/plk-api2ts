@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceTimeFeeMonthExportResultUsingPOST
+export function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/rtProductionSnapshot/getAllProduceTimeFeeMonthExportResult",
+      data,
+      params,
+    });
+}
 // 工时工费月度报表搜索VO
 export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     // 当前页面

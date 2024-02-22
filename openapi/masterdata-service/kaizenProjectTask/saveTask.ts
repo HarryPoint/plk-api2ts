@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/saveTaskUsingPOST
+export function fetchMethod(data: IMasterDataBaseEditDTO2) {
+    return post({
+      url: "/masterdata-service/kaizenProjectTask/saveTask",
+      data,
+    });
+}
 // 主数据基础编辑 DTO_2
 export interface IMasterDataBaseEditDTO2 {
     // 子任务列表

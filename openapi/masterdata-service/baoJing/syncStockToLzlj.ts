@@ -1,4 +1,11 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶相关/syncStockToLzljUsingPOST
+export function fetchMethod() {
+    return post({
+      url: "/masterdata-service/baoJing/syncStockToLzlj",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverSumResultUsingPOST
+export function fetchMethod(data: IBaojingSalesDeliveryReportSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/baoJingReport/getBaoJingSalesDeliverSumResult",
+      data,
+      params,
+    });
+}
 // 宝晶销售发货报表搜索VO
 export interface IBaojingSalesDeliveryReportSearchVO {
     // 当前页面

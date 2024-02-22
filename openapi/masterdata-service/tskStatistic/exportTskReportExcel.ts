@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/exportTskReportExcelUsingPOST
+export function fetchMethod(data: ITSKReportQueryDTO1) {
+    return post({
+      url: "/masterdata-service/tskStatistic/exportTskReportExcel",
+      data,
+    });
+}
 // TSK报表查询DTO_1
 export interface ITSKReportQueryDTO1 {
     // 字段搜索

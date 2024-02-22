@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
+export function fetchMethod(params: { applicationId: number; id: number; voucherNo: string }) {
+    return get({
+      url: "/masterdata-service/financialVoucher/getOutsideFinancialVoucher",
+      params,
+    });
+}
 // JSONResult«外部财务凭证响应对象»
 export interface IJSONResultExternalFinancialCertificateResponseObject {
     // 返回码

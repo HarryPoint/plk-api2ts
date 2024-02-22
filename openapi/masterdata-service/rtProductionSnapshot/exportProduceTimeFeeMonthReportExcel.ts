@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/exportProduceTimeFeeMonthReportExcelUsingPOST
+export function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO) {
+    return post({
+      url: "/masterdata-service/rtProductionSnapshot/exportProduceTimeFeeMonthReportExcel",
+      data,
+    });
+}
 // 工时工费月度报表搜索VO
 export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     // 当前页面

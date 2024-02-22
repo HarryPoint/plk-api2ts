@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUserDetailUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/employee/getUserDetail",
+      params,
+    });
+}
 // JSONResult«用户详细VO»
 export interface IJSONResultUserDetailsVO {
     // 返回码

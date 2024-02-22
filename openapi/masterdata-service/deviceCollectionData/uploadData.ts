@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/uploadDataUsingPOST
+export function fetchMethod(data: IDeviceDataAcquisitionDataUpload[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/deviceCollectionData/uploadData",
+      data,
+      params,
+    });
+}
 // 设备数采数据上传
 export interface IDeviceDataAcquisitionDataUpload {
     // 数据采集时间 格式：yyyy-MM-dd HH:mm:ss

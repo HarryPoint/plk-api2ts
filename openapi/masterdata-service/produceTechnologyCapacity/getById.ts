@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产工艺产能相关/getByIdUsingGET_9
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/produceTechnologyCapacity/getById",
+      params,
+    });
+}
 // JSONResult«ProduceTechnologyCapacityResponseDTO»
 export interface IJSONResultProduceTechnologyCapacityResponseDTO {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
+export function fetchMethod(params: { materialId: number }) {
+    return get({
+      url: "/masterdata-service/standardTechnology/getMaterialRelateStructure",
+      params,
+    });
+}
 // JSONResult«具体物料数据结构响应对象»
 export interface IJSONResultSpecificMaterialDataStructureResponseObject {
     // 返回码

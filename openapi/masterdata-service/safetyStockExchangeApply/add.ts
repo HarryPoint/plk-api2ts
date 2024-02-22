@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/addUsingPOST_7
+export function fetchMethod(data: ISecurityInventoryChangeRequestConfiguration, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/safetyStockExchangeApply/add",
+      data,
+      params,
+    });
+}
 // 安全库存变更申请配置
 export interface ISecurityInventoryChangeRequestConfiguration {
     // 设置类型

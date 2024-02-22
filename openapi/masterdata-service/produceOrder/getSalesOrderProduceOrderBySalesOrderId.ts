@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getSalesOrderProduceOrderBySalesOrderIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; salesOrderId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrder/getSalesOrderProduceOrderBySalesOrderId",
+      params,
+    });
+}
 // JSONResult«List«销售订单 - 生产订单返回VO»»
 export interface IJSONResultListSalesOrderProductionOrderReturnVO {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/getForPageUsingPOST_11
+export function fetchMethod(data: IProcessTaskSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/processTaskSetting/getForPage",
+      data,
+      params,
+    });
+}
 // 工序任务搜索VO
 export interface IProcessTaskSearchVO {
     // 工序id集合

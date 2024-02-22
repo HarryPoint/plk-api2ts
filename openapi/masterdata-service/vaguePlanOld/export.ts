@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/模糊排产相关/exportUsingPOST_33
+export function fetchMethod(data: IProductionOrderSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/vaguePlanOld/export",
+      data,
+      params,
+    });
+}
 // 生产订单搜索VO
 export interface IProductionOrderSearchVO {
     // 当前页面

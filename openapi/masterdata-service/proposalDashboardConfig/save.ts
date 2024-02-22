@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板-配置页面相关/saveUsingPOST_6
+export function fetchMethod(data: IProposalDashboardConfigRequestDTO) {
+    return post({
+      url: "/masterdata-service/proposalDashboardConfig/save",
+      data,
+    });
+}
 // ProposalDashboardConfigRequestDTO
 export interface IProposalDashboardConfigRequestDTO {
     // ID

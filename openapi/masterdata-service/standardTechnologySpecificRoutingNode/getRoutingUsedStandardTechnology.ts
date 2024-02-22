@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺具体工艺路径节点相关/getRoutingUsedStandardTechnologyUsingPOST
+export function fetchMethod(data: IStandardProcessQueryObjectOccupiedByProcessPath) {
+    return post({
+      url: "/masterdata-service/standardTechnologySpecificRoutingNode/getRoutingUsedStandardTechnology",
+      data,
+    });
+}
 // 工艺路径占用的标准工艺查询对象
 export interface IStandardProcessQueryObjectOccupiedByProcessPath {
     // routingId

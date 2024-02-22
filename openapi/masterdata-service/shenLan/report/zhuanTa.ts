@@ -1,4 +1,13 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZhuanTaReportUsingGET
+export function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/shenLan/report/zhuanTa",
+      data,
+      params,
+    });
+}
 // 深蓝报表查询条件
 export interface IQueryConditionsOfTheDarkBlueReport {
     // 日期

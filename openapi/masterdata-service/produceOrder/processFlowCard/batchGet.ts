@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProcessFlowCardUsingPOST
+export function fetchMethod(data: number[]) {
+    return post({
+      url: "/masterdata-service/produceOrder/processFlowCard/batchGet",
+      data,
+    });
+}
 // JSONResult«List«ProcessFlowCardDTO»»
 export interface IJSONResultListProcessFlowCardDTO {
     // 返回码

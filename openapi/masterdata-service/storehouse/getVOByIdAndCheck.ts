@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库相关/getVOByIdAndCheckUsingGET_2
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/storehouse/getVOByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«仓库VO»
 export interface IJSONResultWarehouseVO {
     // 返回码

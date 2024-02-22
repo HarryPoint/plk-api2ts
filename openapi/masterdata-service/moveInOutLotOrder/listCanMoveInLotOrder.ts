@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanMoveInLotOrderUsingPOST
+export function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches) {
+    return post({
+      url: "/masterdata-service/moveInOutLotOrder/listCanMoveInLotOrder",
+      data,
+    });
+}
 // 可进出料批次查询dto
 export interface IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches {
     // 生产任务id

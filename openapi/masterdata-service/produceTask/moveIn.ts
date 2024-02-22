@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/moveInUsingPOST
+export function fetchMethod(data: IIncomingInformationDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/moveIn",
+      data,
+      params,
+    });
+}
 // 进料信息DTO
 export interface IIncomingInformationDTO {
     // 进出站记录id - 如果是从进出站记录里面点进来的，则必传

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesDetailsReportUsingPOST
+export function fetchMethod(data: GetDifengSalesDetailsReport) {
+    return post({
+      url: "/masterdata-service/salesDetailsReport/getDifengSalesDetailsReport",
+      data,
+    });
+}
 // JSONResult«分页信息«销售明细表返回对象»»
 export interface IJSONResultPageInformationSalesListReturnedObject {
     // 返回码

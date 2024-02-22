@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByClassGroupIdUsingGET
+export function fetchMethod(params: { classGroupId: number; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/employee/getIdsByClassGroupId",
+      params,
+    });
+}
 // JSONResult«List«long»»
 export interface IJSONResultListlong {
     // 返回码

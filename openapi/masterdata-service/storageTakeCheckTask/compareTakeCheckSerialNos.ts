@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/compareTakeCheckSerialNosUsingPOST
+export function fetchMethod(data: IInventorySerialNumberComparisonRequestDTO) {
+    return post({
+      url: "/masterdata-service/storageTakeCheckTask/compareTakeCheckSerialNos",
+      data,
+    });
+}
 // 盘点序列号比较请求DTO
 export interface IInventorySerialNumberComparisonRequestDTO {
     // 仓位id

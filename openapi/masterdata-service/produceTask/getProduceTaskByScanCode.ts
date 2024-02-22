@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByScanCodeUsingPOST
+export function fetchMethod(data: IProductionTaskScanCodeQueryDtosForMobileTerminals, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/getProduceTaskByScanCode",
+      data,
+      params,
+    });
+}
 // 生产任务扫码查询DTO(针对移动端)
 export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
     // 当前页面

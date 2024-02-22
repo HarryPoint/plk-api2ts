@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getPageByFlowPathSystemTypeUsingPOST
+export function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number; systemType: string }) {
+    return post({
+      url: "/masterdata-service/dynamicData/getPageByFlowPathSystemType",
+      data,
+      params,
+    });
+}
 // 流程数据搜索VO_1
 export interface IProcessDataSearchVO1 {
     // 全局搜索

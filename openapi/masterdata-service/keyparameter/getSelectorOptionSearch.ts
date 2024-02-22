@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/getSelectorOptionSearchUsingPOST_1
+export function fetchMethod(data: ISelectTheKeyParameterDropDownListToSearchForDtos) {
+    return post({
+      url: "/masterdata-service/keyparameter/getSelectorOptionSearch",
+      data,
+    });
+}
 // 关键参数下拉选择列表搜索DTO
 export interface ISelectTheKeyParameterDropDownListToSearchForDtos {
     // 物料id

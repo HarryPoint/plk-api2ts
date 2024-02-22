@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设置检验任务的检验方式相关/editUsingPOST_15
+export function fetchMethod(data: ISetTheCheckTaskCheckModeToRequestTheDTO) {
+    return post({
+      url: "/masterdata-service/qmsTaskInspectionMethodSetting/edit",
+      data,
+    });
+}
 // 设置检验任务检验方式请求DTO
 export interface ISetTheCheckTaskCheckModeToRequestTheDTO {
     // 检验方式

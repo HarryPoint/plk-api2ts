@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListInCascadeModeUsingPOST
+export function fetchMethod(data: IPaging3) {
+    return post({
+      url: "/masterdata-service/dynamicData/associationFormData/searchByFlowPathCodeAndSerialNoListInCascadeMode",
+      data,
+    });
+}
 // 分页_3
 export interface IPaging3 {
     // 关联表单编码

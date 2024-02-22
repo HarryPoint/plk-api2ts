@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getSchedulLoopForPageUsingPOST
+export function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/calendar/getSchedulLoopForPage",
+      data,
+      params,
+    });
+}
 // 工厂日历搜索VO
 export interface IFactoryCalendarSearchVO {
     // 当前页面

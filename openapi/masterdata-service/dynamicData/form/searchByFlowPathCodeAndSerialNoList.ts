@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListUsingPOST
+export function fetchMethod(data: IDynamicFormQuery) {
+    return post({
+      url: "/masterdata-service/dynamicData/form/searchByFlowPathCodeAndSerialNoList",
+      data,
+    });
+}
 // 动态表单查询
 export interface IDynamicFormQuery {
     // 关联表单编码

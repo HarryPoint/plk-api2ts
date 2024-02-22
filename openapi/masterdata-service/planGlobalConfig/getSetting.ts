@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/排产全局参数配置相关/getSettingUsingPOST
+export function fetchMethod(params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/planGlobalConfig/getSetting",
+      params,
+    });
+}
 // JSONResult«排产参数VO»
 export interface IJSONResultSchedulingParameterVO {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryYearlyGoalsUsingPOST
+export function fetchMethod(data: IAnnualTargetQueryRequest) {
+    return post({
+      url: "/masterdata-service/hseDashboard/queryYearlyGoals",
+      data,
+    });
+}
 // 年度目标查询请求
 export interface IAnnualTargetQueryRequest {
     // 查询日期的开始

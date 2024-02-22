@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentLossAnalyzeReportUsingPOST
+export function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/baoJingReport/getConsignmentLossAnalyzeReport",
+      data,
+      params,
+    });
+}
 // 寄售损耗分析报表搜索VO
 export interface IConsignmentLossAnalysisReportSearchVO {
     // 当前页面

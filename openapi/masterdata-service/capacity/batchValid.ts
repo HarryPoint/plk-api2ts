@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/batchValidUsingPOST
+export function fetchMethod(data: IEnableOrDisableVOInBatches) {
+    return post({
+      url: "/masterdata-service/capacity/batchValid",
+      data,
+    });
+}
 // 批量启用or停用VO
 export interface IEnableOrDisableVOInBatches {
     // id集合

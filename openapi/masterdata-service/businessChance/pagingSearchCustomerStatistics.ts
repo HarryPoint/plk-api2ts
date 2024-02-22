@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/pagingSearchCustomerStatisticsUsingPOST
+export function fetchMethod(data: ICustomerStatisticsInputConditions) {
+    return post({
+      url: "/masterdata-service/businessChance/pagingSearchCustomerStatistics",
+      data,
+    });
+}
 // 客户情况统计输入条件
 export interface ICustomerStatisticsInputConditions {
     // 客户ID列表

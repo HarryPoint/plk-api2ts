@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/removeBatchUsingPOST
+export function fetchMethod(data: IReportTemplateRemoveRequestDTO) {
+    return post({
+      url: "/masterdata-service/reportTemplate/removeBatch",
+      data,
+    });
+}
 // ReportTemplateRemoveRequestDTO
 export interface IReportTemplateRemoveRequestDTO {
     // ID列表

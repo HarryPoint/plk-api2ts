@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/物料齐套相关/getMaterialCompleteKitResultUsingPOST
+export function fetchMethod(data: IMaterialSetQueryRequestObject) {
+    return post({
+      url: "/masterdata-service/materialCompleteKit/getMaterialCompleteKitResult",
+      data,
+    });
+}
 // 物料齐套查询请求对象
 export interface IMaterialSetQueryRequestObject {
     // 物料id

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaTreeUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/area/getAreaTree",
+      params,
+    });
+}
 // JSONResult«List«区域树返回VO»»
 export interface ITheJSONResultListAreaTreeReturnsVO {
     // 返回码

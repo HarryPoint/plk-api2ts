@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/getHistoryFormDetailByIdUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/projectTaskHistory/getHistoryFormDetailById",
+      params,
+    });
+}
 // JSONResult«表单结构VO»
 export interface IJSONResultFormStructureVO {
     // 返回码

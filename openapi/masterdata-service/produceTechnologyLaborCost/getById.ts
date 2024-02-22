@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产工艺工费相关/getByIdUsingGET_10
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/produceTechnologyLaborCost/getById",
+      params,
+    });
+}
 // JSONResult«ProduceTechnologyLaborCostResponseDTO»
 export interface IJSONResultProduceTechnologyLaborCostResponseDTO {
     // 返回码

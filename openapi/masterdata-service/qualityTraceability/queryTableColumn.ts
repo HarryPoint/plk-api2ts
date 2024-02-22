@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质量追溯/queryTableColumnUsingGET_1
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/qualityTraceability/queryTableColumn",
+    });
+}
 // JSONResult«List«QualityTraceabilityReportTableColumnBO»»
 export interface IJSONResultListQualityTraceabilityReportTableColumnBO {
     // 返回码

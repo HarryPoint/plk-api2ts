@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/splitUsingPOST
+export function fetchMethod(data: IBatchOrderSplitDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/lotOrder/split",
+      data,
+      params,
+    });
+}
 // 批次订单拆分DTO
 export interface IBatchOrderSplitDTO {
     // wipRpId

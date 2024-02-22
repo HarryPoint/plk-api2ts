@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工具脚本相关/importEnterpriseDataUsingGET
+export function fetchMethod(params: { enterpriseId: number; fileKey: string }) {
+    return get({
+      url: "/masterdata-service/toolScript/importEnterpriseData",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

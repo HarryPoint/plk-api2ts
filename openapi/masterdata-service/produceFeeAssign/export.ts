@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/exportUsingPOST_16
+export function fetchMethod(data: Export) {
+    return post({
+      url: "/masterdata-service/produceFeeAssign/export",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/盘亏单相关/queryCanInvalidOrdersUsingPOST
+export function fetchMethod(data: IIdCollectionInformation) {
+    return post({
+      url: "/masterdata-service/inventoryLossesOrder/queryCanInvalidOrders",
+      data,
+    });
+}
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

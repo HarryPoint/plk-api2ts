@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/chooseUsingGET
+export function fetchMethod(params: { enterpriseId: number; tableColumnStyleConfigId: number }) {
+    return get({
+      url: "/masterdata-service/tableColumnStyleConfig/choose",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/客户相关/getByIdsUsingPOST_1
+export function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/customer/getByIds",
+      data,
+      params,
+    });
+}
 // JSONResult«List«客户VO»»
 export interface IJSONResultListClientVO {
     // 返回码

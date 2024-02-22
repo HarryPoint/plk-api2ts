@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getPageUsingPOST_15
+export function fetchMethod(data: IProduceObjectsThatHandlePagingQueries, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceHandle/getPage",
+      data,
+      params,
+    });
+}
 // 生产处理分页查询的对象
 export interface IProduceObjectsThatHandlePagingQueries {
     // 当前页面

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/saveMoveInDetailUsingPOST
+export function fetchMethod(data: IInboundAndOutboundInformationDTO1, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceTask/saveMoveInDetail",
+      data,
+      params,
+    });
+}
 // 进出站信息DTO_1
 export interface IInboundAndOutboundInformationDTO1 {
     // 进出站记录id - 如果是从进出站记录里面点进来的，则必传

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/enableBatchUsingPOST
+export function fetchMethod(data: IReportTemplateEnableRequestDTO) {
+    return post({
+      url: "/masterdata-service/reportTemplate/enableBatch",
+      data,
+    });
+}
 // ReportTemplateEnableRequestDTO
 export interface IReportTemplateEnableRequestDTO {
     // ID列表

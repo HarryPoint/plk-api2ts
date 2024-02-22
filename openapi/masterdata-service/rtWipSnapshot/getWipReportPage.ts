@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/Wip快照相关/getWipReportPageUsingPOST
+export function fetchMethod(data: IWIPStatisticsReportSearchForVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/rtWipSnapshot/getWipReportPage",
+      data,
+      params,
+    });
+}
 // WIP统计报表搜索VO
 export interface IWIPStatisticsReportSearchForVO {
     // 当前页面

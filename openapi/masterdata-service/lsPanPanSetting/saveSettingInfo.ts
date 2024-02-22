@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/saveSettingInfoUsingPOST
+export function fetchMethod(data: IPanpanLargeScreenSetDTO) {
+    return post({
+      url: "/masterdata-service/lsPanPanSetting/saveSettingInfo",
+      data,
+    });
+}
 // 盼盼大屏设置DTO
 export interface IPanpanLargeScreenSetDTO {
     // 延期订单判断值（小时）

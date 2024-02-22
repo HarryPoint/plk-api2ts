@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialPlaceUsingPOST_1
+export function fetchMethod(data: IMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/warehouseMaterial/getMaterialPlace",
+      data,
+      params,
+    });
+}
 // 物料主数据库存分布搜索VO
 export interface IMaterialMasterDataInventoryDistributionSearchVO {
     // 当前页面

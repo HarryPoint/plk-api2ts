@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingAuditStatisticsUsingGET
+export function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
+    return get({
+      url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingAuditStatistics",
+      params,
+    });
+}
 // JSONResult«大屏不合格品统计按审理情况响应DTO»
 export interface IJSONResultLargeScreenNonconformingProductStatisticsRespondToDTOAccordingToTheTrialSituation {
     // 返回码

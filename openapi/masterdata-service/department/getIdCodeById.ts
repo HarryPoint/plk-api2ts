@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getIdCodeByIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/department/getIdCodeById",
+      params,
+    });
+}
 // JSONResult«Id，名称，编号VO»
 export interface IJSONResultIdNameNumberVO {
     // 返回码

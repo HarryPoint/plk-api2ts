@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/exportUsingPOST_20
+export function fetchMethod(data: IProcessDataBaseSearchVO2) {
+    return post({
+      url: "/masterdata-service/produceProgressStatistics/export",
+      data,
+    });
+}
 // 流程数据基础搜索VO_2
 export interface IProcessDataBaseSearchVO2 {
     // 显示字段序列号

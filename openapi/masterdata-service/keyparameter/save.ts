@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/saveUsingPOST_2
+export function fetchMethod(data: IKeyParametersSaveTheDTO) {
+    return post({
+      url: "/masterdata-service/keyparameter/save",
+      data,
+    });
+}
 // 关键参数保存DTO
 export interface IKeyParametersSaveTheDTO {
     // id

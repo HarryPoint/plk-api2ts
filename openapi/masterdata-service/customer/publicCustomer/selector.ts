@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/客户相关/searchPublicCustomerSelectorDataListUsingPOST
+export function fetchMethod(data: IPaging1) {
+    return post({
+      url: "/masterdata-service/customer/publicCustomer/selector",
+      data,
+    });
+}
 // 分页_1
 export interface IPaging1 {
     // ID 列表

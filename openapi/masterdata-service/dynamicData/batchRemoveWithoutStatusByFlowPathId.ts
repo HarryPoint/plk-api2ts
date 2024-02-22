@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchRemoveWithoutStatusByFlowPathIdUsingPOST
+export function fetchMethod(data: IDynamicDataStatelessDeleteRequestObject, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/dynamicData/batchRemoveWithoutStatusByFlowPathId",
+      data,
+      params,
+    });
+}
 // 动态数据无状态删除请求对象
 export interface IDynamicDataStatelessDeleteRequestObject {
     // 删除明细

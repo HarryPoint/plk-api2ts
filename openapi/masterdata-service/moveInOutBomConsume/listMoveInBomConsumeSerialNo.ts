@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeSerialNoUsingPOST
+export function fetchMethod(data: IFeedBomConsumptionSerialNumberQueryDTO) {
+    return post({
+      url: "/masterdata-service/moveInOutBomConsume/listMoveInBomConsumeSerialNo",
+      data,
+    });
+}
 // 进料bom消耗序列号查询DTO
 export interface IFeedBomConsumptionSerialNumberQueryDTO {
     // 生产任务id

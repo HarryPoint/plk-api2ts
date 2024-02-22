@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/维联批次打印相关/listLotPrintResultByProduceOrderIdsUsingPOST
+export function fetchMethod(data: string) {
+    return post({
+      url: "/masterdata-service/weiLianLotPrint/listLotPrintResultByProduceOrderIds",
+      data,
+    });
+}
 // JSONResult«List«维联批次打印模板响应对象»»
 export interface IJSONResultListPrintsTemplateResponseObjectsForTheVTLBatch {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检项/getByIdUsingGET_13
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/qualityInspectionItem/getById",
+      params,
+    });
+}
 // JSONResult«质检项详细返回VO»
 export interface IJSONResultCheckItemDetailsVOIsReturned {
     // 返回码

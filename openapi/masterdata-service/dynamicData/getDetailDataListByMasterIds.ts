@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getDetailDataListByMasterIdsUsingPOST
+export function fetchMethod(data: ISubtableDataQueryVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/dynamicData/getDetailDataListByMasterIds",
+      data,
+      params,
+    });
+}
 // 子表数据查询VO
 export interface ISubtableDataQueryVO {
     // 流程编码

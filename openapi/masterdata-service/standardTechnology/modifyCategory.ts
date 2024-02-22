@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/modifyCategoryUsingPOST
+export function fetchMethod(data: IStandardProcessModificationClassificationRequestObject) {
+    return post({
+      url: "/masterdata-service/standardTechnology/modifyCategory",
+      data,
+    });
+}
 // 标准工艺修改分类请求对象
 export interface IStandardProcessModificationClassificationRequestObject {
     // 是否修改全部

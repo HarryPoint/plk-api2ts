@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检项/exportUsingPOST_25
+export function fetchMethod(data: ICheckItemSearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/qualityInspectionItem/export",
+      data,
+      params,
+    });
+}
 // 质检项搜索VO
 export interface ICheckItemSearchVO {
     // 当前页面

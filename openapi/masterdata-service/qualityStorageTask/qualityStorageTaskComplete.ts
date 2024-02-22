@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检管理/qualityStorageTaskCompleteUsingPOST
+export function fetchMethod(data: ITheDTOCompletesTheInspectionTask, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/qualityStorageTask/qualityStorageTaskComplete",
+      data,
+      params,
+    });
+}
 // 质检任务完成 DTO
 export interface ITheDTOCompletesTheInspectionTask {
     // 质检任务id

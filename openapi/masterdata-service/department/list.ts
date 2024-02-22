@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/部门相关/listUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/department/list",
+    });
+}
 // JSONResult«List«部门DTO»»
 export interface IJSONResultListDepartmentDTO {
     // 返回码

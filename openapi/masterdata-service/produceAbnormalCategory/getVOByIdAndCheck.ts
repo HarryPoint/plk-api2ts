@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getVOByIdAndCheckUsingGET_1
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/produceAbnormalCategory/getVOByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«生产异常类型VO»
 export interface IJSONResultIndicatesTheProductionExceptionTypeVO {
     // 返回码

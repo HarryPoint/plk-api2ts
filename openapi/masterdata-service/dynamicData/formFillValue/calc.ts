@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/calcFormFillValueUsingPOST
+export function fetchMethod(data: IFormFillRequest, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/dynamicData/formFillValue/calc",
+      data,
+      params,
+    });
+}
 // 表单填充请求
 export interface IFormFillRequest {
     // 关联字段ID

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
+export function fetchMethod(data: IEquipmentPersonnelAbilityToBatchEditDtos) {
+    return post({
+      url: "/masterdata-service/deviceEmployeeCapacity/batchEditDelete",
+      data,
+    });
+}
 // 设备人员能力批量编辑DTO
 export interface IEquipmentPersonnelAbilityToBatchEditDtos {
     // 编辑项列表

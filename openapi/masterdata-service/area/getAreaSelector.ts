@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaSelectorUsingPOST
+export function fetchMethod(data: IRegionalMasterDataSelectionListSearchVO) {
+    return post({
+      url: "/masterdata-service/area/getAreaSelector",
+      data,
+    });
+}
 // 区域主数据选择列表搜索VO
 export interface IRegionalMasterDataSelectionListSearchVO {
     // 当前页面

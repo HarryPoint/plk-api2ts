@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportForPageUsingPOST
+export function fetchMethod(data: IExampleQueryTheDataDTOReportedByAUser, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/deviceCollectionData/getUserReportForPage",
+      data,
+      params,
+    });
+}
 // 查询用户上报数据DTO
 export interface IExampleQueryTheDataDTOReportedByAUser {
     // 当前页面

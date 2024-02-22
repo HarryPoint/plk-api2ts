@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialStatisticsUsingPOST_1
+export function fetchMethod(data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/warehouseMaterial/getMaterialStatistics",
+      data,
+      params,
+    });
+}
 // 物料主数据库存搜索VO
 export interface IMaterialMasterDataInventorySearchVO {
     // 当前页面

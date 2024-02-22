@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
+export function fetchMethod(params: { number: string }) {
+    return get({
+      url: "/masterdata-service/hangFa/getUserByNumber",
+      params,
+    });
+}
 // JSONResult«ThirdApiResponseDTO»
 export interface IJSONResultThirdApiResponseDTO {
     // 返回码

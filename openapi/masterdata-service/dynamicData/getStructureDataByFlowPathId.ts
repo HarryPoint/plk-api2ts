@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getStructureDataByFlowPathIdUsingPOST
+export function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number; flowPathId: number }) {
+    return post({
+      url: "/masterdata-service/dynamicData/getStructureDataByFlowPathId",
+      data,
+      params,
+    });
+}
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {
     // 流程任务id

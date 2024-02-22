@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/采购明细报表相关/getDifengPurchaseDetailsReportUsingPOST
+export function fetchMethod(data: GetDifengPurchaseDetailsReport) {
+    return post({
+      url: "/masterdata-service/purchaseDetailsReport/getDifengPurchaseDetailsReport",
+      data,
+    });
+}
 // JSONResult«分页信息«采购明细表返回对象»»
 export interface IJSONResultPageInformationProcurementDetailReturnedObject {
     // 返回码

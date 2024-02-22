@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodQuantityCollectUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodQuantityCollect",
+    });
+}
 // JSONResult«List«完工及产成品归集分页响应对象»»
 export interface IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts {
     // 返回码

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺画布快照相关/getCanvasSnapshotByUserUsingPOST
+export function fetchMethod(data: ICraftCanvasSnapshotAcquisitionRequestDTO) {
+    return post({
+      url: "/masterdata-service/standardTechnologyCanvasSnapshot/getByUser",
+      data,
+    });
+}
 // 工艺画布快照获取请求DTO
 export interface ICraftCanvasSnapshotAcquisitionRequestDTO {
     // 工艺id - 新增场景传值-1

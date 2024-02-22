@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/setProductionPersonUsingPOST
+export function fetchMethod(data: ISetExecutorDTO[]) {
+    return post({
+      url: "/masterdata-service/userProcess/{id}/productionPerson/set",
+      data,
+    });
+}
 // SetExecutorDTO
 export interface ISetExecutorDTO {
     // undefined

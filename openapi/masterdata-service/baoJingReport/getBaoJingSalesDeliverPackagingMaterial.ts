@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/baoJingReport/getBaoJingSalesDeliverPackagingMaterial",
+      params,
+    });
+}
 // JSONResult«宝晶销售发货报表包材表头响应对象»
 export interface IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject {
     // 返回码

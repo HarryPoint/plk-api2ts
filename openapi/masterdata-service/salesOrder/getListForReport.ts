@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getListForReportUsingPOST
+export function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/salesOrder/getListForReport",
+      data,
+      params,
+    });
+}
 // 订单进度统计查询VO
 export interface IOrderProgressStatisticsQueryVO {
     // 当前页面

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getSelectorByNameCodeUsingGET
+export function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
+    return get({
+      url: "/masterdata-service/process/getSelectorByNameCode",
+      params,
+    });
+}
 // JSONResult«List«工序选择返回VO»»
 export interface ITheJSONResultListOperationSelectsToReturnVO {
     // 返回码

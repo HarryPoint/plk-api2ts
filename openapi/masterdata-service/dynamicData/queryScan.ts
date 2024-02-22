@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryScanUsingPOST
+export function fetchMethod(data: IAssociationFormScanQueryRequestDTO) {
+    return post({
+      url: "/masterdata-service/dynamicData/queryScan",
+      data,
+    });
+}
 // AssociationFormScanQueryRequestDTO
 export interface IAssociationFormScanQueryRequestDTO {
     // 应用ID

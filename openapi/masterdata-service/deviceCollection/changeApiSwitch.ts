@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/changeApiSwitchUsingPOST
+export function fetchMethod(data: IDeviceDataAcquisitionCommunicationStatusDTO, params: { enterpriseId: number; userId: number }) {
+    return post({
+      url: "/masterdata-service/deviceCollection/changeApiSwitch",
+      data,
+      params,
+    });
+}
 // 设备数采通讯状态DTO
 export interface IDeviceDataAcquisitionCommunicationStatusDTO {
     // id

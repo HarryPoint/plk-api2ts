@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingSalesDeliverReportExportInfoByTicketUsingGET
+export function fetchMethod(params: { ticket: string }) {
+    return get({
+      url: "/masterdata-service/exportAuth/getBaoJingSalesDeliverReportExportInfoByTicket",
+      params,
+    });
+}
 // JSONResult«导出信息«宝晶销售发货报表表格返回VO»»
 export interface IJSONResultExportInformationBaojingSalesDeliveryReportFormReturnedToVO {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getStepsByRoutingIdUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/routing/getStepsByRoutingId",
+      params,
+    });
+}
 // JSONResult«List«工艺路径详情步骤VO»»
 export interface IJSONResultListProcessPathDetailsStepVO {
     // 返回码

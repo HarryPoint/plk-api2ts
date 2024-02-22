@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/批次跟踪报表相关/exportMaterialLotNoTrackReportUsingPOST
+export function fetchMethod(data: ExportMaterialLotNoTrackReport) {
+    return post({
+      url: "/masterdata-service/warehouseStorageLotNoTrackReport/exportMaterialLotNoTrackReport",
+      data,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

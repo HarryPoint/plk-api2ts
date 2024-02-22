@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/区域相关/getVOByIdAndCheckUsingGET
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/area/getVOByIdAndCheck",
+      params,
+    });
+}
 // JSONResult«区域VO»
 export interface IJSONResultAreaVO {
     // 返回码

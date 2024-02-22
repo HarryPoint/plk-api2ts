@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/batchUploadUsingPOST
+export function fetchMethod(data: ITSKTestData[], params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/tskStatistic/batchUpload",
+      data,
+      params,
+    });
+}
 // TSK测试数据
 export interface ITSKTestData {
 }

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单工位计划手动排产详情相关/getPlanQuantityForDayUsingGET
+export function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrderWorkPlacePlanHandDetail/getPlanQuantityForDay",
+      params,
+    });
+}
 // JSONResult«List«计划返回VO»»
 export interface IJSONResultListPlansToReturnVO {
     // 返回码

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/checkProduceFeeAssignHasModifyUsingGET
+export function fetchMethod(params: { fiscalPeriodId: string }) {
+    return get({
+      url: "/masterdata-service/produceFeeAssign/checkProduceFeeAssignHasModify",
+      params,
+    });
+}
 // JSONResult«校验响应对象»
 export interface IJSONResultVerifiesTheResponseObject {
     // 返回码

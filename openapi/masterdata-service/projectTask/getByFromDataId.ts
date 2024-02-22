@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/getByFromDataIdUsingGET
+export function fetchMethod(data: number) {
+    return get({
+      url: "/masterdata-service/projectTask/getByFromDataId",
+      data,
+    });
+}
 // JSONResult«项目任务响应对象»
 export interface IJSONResultProjectTaskResponseObject {
     // 返回码

@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/addScrapUsingPOST
+export function fetchMethod(data: IProductionScrapTreatment, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/produceHandleScrap/addScrap",
+      data,
+      params,
+    });
+}
 // 生产报废处理
 export interface IProductionScrapTreatment {
     // 生产任务id

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/客户相关/getCustomerSelectorUsingPOST
+export function fetchMethod(data: ICustomerSelectionListSearch) {
+    return post({
+      url: "/masterdata-service/customer/getCustomerSelector",
+      data,
+    });
+}
 // 客户选择列表搜索
 export interface ICustomerSelectionListSearch {
     // 当前页面

@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/addSuperManagerUsingPOST
+export function fetchMethod(data: INewRequestDTOForEmployeeOvermanagement) {
+    return post({
+      url: "/masterdata-service/employee/addSuperManager",
+      data,
+    });
+}
 // 员工超管新增请求DTO
 export interface INewRequestDTOForEmployeeOvermanagement {
     // 员工姓名

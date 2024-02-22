@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/getByIdsIgnoreStatusUsingPOST_1
+export function fetchMethod(data: IIdCollectionInformation) {
+    return post({
+      url: "/masterdata-service/keyparameter/getByIdsIgnoreStatus",
+      data,
+    });
+}
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

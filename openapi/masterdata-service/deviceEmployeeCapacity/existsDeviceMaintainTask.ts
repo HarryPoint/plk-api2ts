@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/existsDeviceMaintainTaskUsingPOST
+export function fetchMethod(data: IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO) {
+    return post({
+      url: "/masterdata-service/deviceEmployeeCapacity/existsDeviceMaintainTask",
+      data,
+    });
+}
 // 设备人员能力是否存在任务请求DTO
 export interface IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO {
     // 员工能力ids

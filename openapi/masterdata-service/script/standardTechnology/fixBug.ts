@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺脚本相关/fixBugUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/script/standardTechnology/fixBug",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

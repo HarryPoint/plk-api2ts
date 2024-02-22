@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryDangerPointsUsingPOST
+export function fetchMethod(data: IDangerPointQueryRequest) {
+    return post({
+      url: "/masterdata-service/hseDashboard/queryDangerPoints",
+      data,
+    });
+}
 // 危险点查询请求
 export interface IDangerPointQueryRequest {
     // 查询日期的开始

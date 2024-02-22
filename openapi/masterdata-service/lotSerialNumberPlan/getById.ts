@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/getByIdUsingGET_7
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/lotSerialNumberPlan/getById",
+      params,
+    });
+}
 // JSONResult«LotSerialNumberPlanDTO»
 export interface IJSONResultLotSerialNumberPlanDTO {
     // 返回码

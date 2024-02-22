@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检方案/getByIdUsingGET_14
+export function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get({
+      url: "/masterdata-service/qualityInspectionPlan/getById",
+      params,
+    });
+}
 // JSONResult«质检方案明细返回VO»
 export interface IJSONResultCheckSolutionDetailsAreReturnedToVO {
     // 返回码

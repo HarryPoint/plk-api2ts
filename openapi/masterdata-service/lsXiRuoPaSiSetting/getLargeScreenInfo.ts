@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getLsUsingGET
+export function fetchMethod(params: { enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/lsXiRuoPaSiSetting/getLargeScreenInfo",
+      params,
+    });
+}
 // JSONResult«西偌帕斯大屏返回VO»
 export interface IJSONResultSilopusBigScreenReturnVO {
     // 返回码

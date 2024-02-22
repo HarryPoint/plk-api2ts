@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/execTaskUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/produceCostComputationTask/execTask",
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

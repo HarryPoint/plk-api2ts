@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getProduceCapacityReportPageUsingPOST
+export function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/process/getProduceCapacityReportPage",
+      data,
+      params,
+    });
+}
 // 产能利用率报表查询DTO
 export interface ICapacityUtilizationReportQueryingDtos {
     // 当前页面

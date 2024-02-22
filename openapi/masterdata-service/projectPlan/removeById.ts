@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/removeByIdUsingGET_1
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/projectPlan/removeById",
+      params,
+    });
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

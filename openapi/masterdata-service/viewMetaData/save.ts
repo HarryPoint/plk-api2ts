@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/视图元数据相关/saveUsingPOST_9
+export function fetchMethod(data: IViewMetadataSaveRequestDTO) {
+    return post({
+      url: "/masterdata-service/viewMetaData/save",
+      data,
+    });
+}
 // ViewMetadataSaveRequestDTO
 export interface IViewMetadataSaveRequestDTO {
     // 应用编码

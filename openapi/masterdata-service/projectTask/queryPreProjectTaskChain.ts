@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreProjectTaskChainUsingGET
+export function fetchMethod(params: { id: number }) {
+    return get({
+      url: "/masterdata-service/projectTask/queryPreProjectTaskChain",
+      params,
+    });
+}
 // JSONResult«List«项目任务链路节点»»
 export interface IJSONResultListProjectTaskLinkNode {
     // 返回码

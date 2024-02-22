@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getUserByAccountIdUsingGET
+export function fetchMethod(params: { accountId: number; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/dynamicData/getUserByAccountId",
+      params,
+    });
+}
 // JSONResult«员工账户VO»
 export interface IJSONResultEmployeeAccountVO {
     // 返回码

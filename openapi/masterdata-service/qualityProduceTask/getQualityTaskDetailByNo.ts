@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskDetailByNoUsingGET
+export function fetchMethod(params: { taskNo: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/qualityProduceTask/getQualityTaskDetailByNo",
+      params,
+    });
+}
 // JSONResult«质检任务明细针对员工返回VO»
 export interface IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees {
     // 返回码

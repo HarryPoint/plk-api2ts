@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeGroupListUsingPOST
+export function fetchMethod(data: IDevicePersonnelAbilityQueryDtosInGroups) {
+    return post({
+      url: "/masterdata-service/deviceEmployeeCapacity/getEmployeeGroupList",
+      data,
+    });
+}
 // 设备人员能力分组查询DTO
 export interface IDevicePersonnelAbilityQueryDtosInGroups {
     // 人员id

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderMatchTaskDetailByIdUsingGET
+export function fetchMethod(params: { taskId: number }) {
+    return get({
+      url: "/masterdata-service/produceOrder/getProduceOrderMatchTaskById",
+      params,
+    });
+}
 // JSONResult«生产订单匹配任务查询请求»
 export interface IJSONResultQueryRequestForProductionOrderMatchingTasks {
     // 返回码

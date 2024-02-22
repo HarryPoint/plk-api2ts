@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/editProcessDefaultOperateUserUsingPOST
+export function fetchMethod(data: IProcedureTaskSettingDefaultOperatorEditsDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/processTaskSetting/editProcessDefaultOperateUser",
+      data,
+      params,
+    });
+}
 // 工序任务设置默认操作员编辑DTO
 export interface IProcedureTaskSettingDefaultOperatorEditsDTO {
     // 员工类型

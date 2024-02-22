@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售出库单相关/queryDownstreamOrderUsingPOST_2
+export function fetchMethod(data: IIdCollectionInformation) {
+    return post({
+      url: "/masterdata-service/salesOutStorageOrder/queryDownstreamOrder",
+      data,
+    });
+}
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

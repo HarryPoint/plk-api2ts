@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/editByNotTriggerTaskUsingPOST_2
+export function fetchMethod(data: IMasterDataBaseEditDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/process/editByNotTriggerTask",
+      data,
+      params,
+    });
+}
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {
     // 编辑数据

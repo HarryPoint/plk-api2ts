@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/exportProjectGanttExcelUsingPOST
+export function fetchMethod(data: IProjectGanttChartQueryObject) {
+    return post({
+      url: "/masterdata-service/kaizenProject/exportProjectGanttExcel",
+      data,
+    });
+}
 // 项目甘特图查询对象
 export interface IProjectGanttChartQueryObject {
     // 项目名称

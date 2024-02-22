@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/listUsingGET_4
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/project/list",
+    });
+}
 // JSONResult«List«项目响应»»
 export interface IJSONResultListProjectResponse {
     // 返回码

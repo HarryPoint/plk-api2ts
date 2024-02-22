@@ -1,4 +1,12 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
+export function fetchMethod(data: INameNumberDTO) {
+    return post({
+      url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByNameOrCode",
+      data,
+    });
+}
 // 名称、编号DTO
 export interface INameNumberDTO {
     // 名称or编号

@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/listByParentIdUsingGET
+export function fetchMethod(params: { parentId: number }) {
+    return get({
+      url: "/masterdata-service/kaizenProjectTask/listByParentId",
+      params,
+    });
+}
 // JSONResult«List«KaizenProjectTaskResponseDTO»»
 export interface IJSONResultListKaizenProjectTaskResponseDTO {
     // 返回码

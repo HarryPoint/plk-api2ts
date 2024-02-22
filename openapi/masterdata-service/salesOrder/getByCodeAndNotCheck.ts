@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
+export function fetchMethod(params: { code: string; enterpriseId: number }) {
+    return get({
+      url: "/masterdata-service/salesOrder/getByCodeAndNotCheck",
+      params,
+    });
+}
 // JSONResult«销售订单VO»
 export interface IJSONResultSalesOrderVO {
     // 返回码

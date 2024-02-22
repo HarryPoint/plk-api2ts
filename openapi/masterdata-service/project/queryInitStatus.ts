@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/queryInitStatusUsingGET
+export function fetchMethod(params: { id: string }) {
+    return get({
+      url: "/masterdata-service/project/queryInitStatus",
+      params,
+    });
+}
 // JSONResult«string»_2
 export interface IJSONResultstring2 {
     // 返回码

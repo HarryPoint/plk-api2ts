@@ -1,4 +1,13 @@
+import { post } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/班次相关/editUsingPOST_1
+export function fetchMethod(data: IShiftEditorDTO, params: { enterpriseId: number }) {
+    return post({
+      url: "/masterdata-service/classShift/edit",
+      data,
+      params,
+    });
+}
 // 班次编辑DTO
 export interface IShiftEditorDTO {
     // id

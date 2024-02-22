@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getAllTaskUsingGET
+export function fetchMethod(params: { enterpriseId: number; status: string }) {
+    return get({
+      url: "/masterdata-service/qualityStorageTask/getAllTask",
+      params,
+    });
+}
 // JSONResult«List«销售模块返回VO»»
 export interface ITheJSONResultListSalesModuleReturnsVO {
     // 返回码

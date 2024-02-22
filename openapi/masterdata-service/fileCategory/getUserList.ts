@@ -1,4 +1,11 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getUserListUsingGET
+export function fetchMethod() {
+    return get({
+      url: "/masterdata-service/fileCategory/getUserList",
+    });
+}
 // JSONResult«List«FileCategoryListQueryResponseDTO»»
 export interface IJSONResultListFileCategoryListQueryResponseDTO {
     // 返回码

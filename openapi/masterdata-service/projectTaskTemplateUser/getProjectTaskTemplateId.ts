@@ -1,4 +1,12 @@
+import { get } from '@/api/http';
+ 
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/getProjectTaskTemplateIdUsingGET
+export function fetchMethod(params: { projectId: string }) {
+    return get({
+      url: "/masterdata-service/projectTaskTemplateUser/getProjectTaskTemplateId",
+      params,
+    });
+}
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码
