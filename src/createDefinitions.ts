@@ -1,4 +1,4 @@
-import { SourceFile } from "ts-morph";
+import { OptionalKind, PropertySignatureStructure, SourceFile } from "ts-morph";
 import { translate as translateFn } from "./translate";
 
 const typeMap = {
@@ -41,7 +41,11 @@ export const createDefinitions = async (
       return transFormType(define.items) + "[]";
     }
     if (typeOrigin === typeMap.object) {
-      return "any";
+      return `Record<string, ${
+        define?.additionalProperties
+          ? transFormType(define?.additionalProperties)
+          : "any"
+      }>`;
     }
     return typeOrigin;
   };
@@ -79,7 +83,9 @@ export const createDefinitions = async (
       const ins = definitionsFile.addInterface({
         name: item.name,
         isExported: true,
-        properties: Object.keys(define.properties || {}).map((key) => ({
+        properties: Object.keys(define.properties || {}).map<
+          OptionalKind<PropertySignatureStructure>
+        >((key) => ({
           name: key,
           type: transFormType(define.properties[key]),
           leadingTrivia: `// ${define.properties[key].description}`,
