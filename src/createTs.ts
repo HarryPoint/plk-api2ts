@@ -22,7 +22,8 @@ const readFiles = async (dir: string, project: Project) => {
         overwrite: true,
       });
       await createDefinitions(definitionsFile, swaggerData, {
-        translate: true,
+        translate: config.translate,
+        prefix: config.prefix,
       });
     } else if (stat.isDirectory()) {
       await readFiles(filePath, project);

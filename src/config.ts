@@ -2,6 +2,8 @@ import fs from "fs";
 import path from "path";
 
 export type IConfig = {
+  prefix: string;
+  translate: boolean;
   translateCacheFileName: string;
   translateApiUri: string;
   translateAppKey: string;
@@ -52,11 +54,13 @@ const apiMap = Object.keys(platformMap)
 const output = path.join(process.cwd(), "./autoApi");
 
 const defaultConfig: IConfig = {
+  translate: true,
   translateCacheFileName: "translateCache.json",
   translateApiUri: "https://openapi.youdao.com/v2/api",
   translateAppKey: "4a8802ec639e5e84",
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
+  prefix: "I",
   serviceMap: apiMap.dev,
   serviceNameToPath: false,
   output,
