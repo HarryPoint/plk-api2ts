@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
 // 安全库存统一设置配置
 export interface IUnifiedSecurityInventoryConfiguration {
     // 设置类型

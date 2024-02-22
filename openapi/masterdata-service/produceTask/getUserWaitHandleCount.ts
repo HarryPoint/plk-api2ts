@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getUserWaitHandleCountUsingGET
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

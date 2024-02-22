@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeDetailPageUsingPOST
 // 工时工费报表搜索VO
 export interface IHourlyLaborRateReportSearchVO {
     // 当前页面

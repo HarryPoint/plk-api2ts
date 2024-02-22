@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByIdsUsingPOST_6
 // JSONResult«List«销售订单VO»»
 export interface IJSONResultListSalesOrderVO {
     // 返回码

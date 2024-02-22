@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产工艺工费相关/getByIdUsingGET_10
 // JSONResult«ProduceTechnologyLaborCostResponseDTO»
 export interface IJSONResultProduceTechnologyLaborCostResponseDTO {
     // 返回码

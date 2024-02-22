@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/费用分配相关/getFiscalPeriodSelectorUsingPOST
 // JSONResult«List«期间响应对象»»
 export interface IJSONResultListRespondsToTheObjectDuring {
     // 返回码

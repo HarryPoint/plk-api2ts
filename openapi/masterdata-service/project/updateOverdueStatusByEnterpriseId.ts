@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目相关/updateOverdueStatusByEnterpriseIdUsingGET
 // JSONResult«string»
 export interface IJSONResultstring {
     // 返回码

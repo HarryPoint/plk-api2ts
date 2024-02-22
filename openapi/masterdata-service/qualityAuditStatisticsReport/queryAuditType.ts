@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryAuditTypeUsingPOST
 // 基础质量审核查询请求_1
 export interface IBasicQualityAuditQueryRequest1 {
     // 日期范围-起始

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/文件分类相关/moveUsingPOST
 // FileCategoryMoveRequestDTO
 export interface IFileCategoryMoveRequestDTO {
     // 当前文件分类ID

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序完成明细表/pageUsingPOST_2
 // 工序完成明细表查询
 export interface IProcedureCompletionListQuery {
     // 当前页面

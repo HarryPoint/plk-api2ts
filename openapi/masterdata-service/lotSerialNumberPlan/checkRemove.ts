@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/批次方案相关/checkRemoveUsingPOST
 // LotSerialNumberPlanRemoveCheckRequestDTO
 export interface ILotSerialNumberPlanRemoveCheckRequestDTO {
     // 批次方案ID列表

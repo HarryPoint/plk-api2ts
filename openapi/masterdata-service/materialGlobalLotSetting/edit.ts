@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料全局批次设置相关/editUsingPOST_7
 // 物料全局批次设置编辑对象
 export interface IMaterialsBureauBatchSetEditObject {
     // 启用序列号

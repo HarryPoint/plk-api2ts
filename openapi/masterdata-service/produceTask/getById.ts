@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getByIdUsingGET_8
 // JSONResult«生产任务详情返回VO»
 export interface IJSONResultProductionTaskDetailsReturnToVO {
     // 返回码

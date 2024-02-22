@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/准备期相关/changeValidUsingPOST_10
 // 启用or停用VO
 export interface IEnableOrDisableVO {
     // id

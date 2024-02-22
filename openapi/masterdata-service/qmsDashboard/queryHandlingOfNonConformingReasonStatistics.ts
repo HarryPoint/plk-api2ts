@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingReasonStatisticsUsingGET
 // JSONResult«List«大屏不合格品统计按原因响应DTO»»
 export interface IJSONResultListLargeScreenUnqualifiedProductStatisticsRespondToTheDTOBasedOnTheCause {
     // 返回码

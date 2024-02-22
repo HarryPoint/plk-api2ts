@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/specificMaterialEditUsingPOST
 // 标准工艺具体物料编辑请求对象
 export interface IStandardProcessSpecificMaterialEditRequestObject {
     // 标准工艺id, 新增时传递为空

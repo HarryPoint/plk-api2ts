@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreProjectTaskChainUsingGET
 // JSONResult«List«项目任务链路节点»»
 export interface IJSONResultListProjectTaskLinkNode {
     // 返回码

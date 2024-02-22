@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getByIdsUsingPOST_5
 // JSONResult«List«基础VO»»_2
 export interface IJSONResultListBaseVO2 {
     // 返回码

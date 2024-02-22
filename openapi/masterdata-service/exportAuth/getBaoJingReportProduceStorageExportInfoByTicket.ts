@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportProduceStorageExportInfoByTicketUsingGET
 // JSONResult«导出信息«宝晶报表(成品日报表)响应对象»»
 export interface IJSONResultExportInformationBaojingReportProductDailyReportResponseObject {
     // 返回码

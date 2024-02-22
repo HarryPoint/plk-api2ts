@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getMaterialSettingUsingPOST
 // 安全库存物料库存配置信息搜索VO
 export interface ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO {
     // 设置类型

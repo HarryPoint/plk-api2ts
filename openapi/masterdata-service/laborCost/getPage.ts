@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工费相关/getPageUsingPOST_6
 // 工费分页查询对象DTO
 export interface ILaborPageQueryObjectDtos {
     // 编号

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/应付账款汇总报表相关/getPurchaseAccountPayableSummaryReportStatisticsUsingPOST
 // JSONResult«应付账款汇总表返回对象»
 export interface IJSONResultAccountsPayableSummaryReturnObject {
     // 返回码

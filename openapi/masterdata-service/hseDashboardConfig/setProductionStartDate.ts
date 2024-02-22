@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/setProductionStartDateUsingPOST
 // 生产开始日期-设置请求
 export interface IProductionStartDateSetRequest {
     // 生产开始日期

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getPageUsingPOST_31
 // 仓库盘点任务分页查询对象
 export interface IWarehouseInventoryTasksPageQueryObjects {
     // 当前页面

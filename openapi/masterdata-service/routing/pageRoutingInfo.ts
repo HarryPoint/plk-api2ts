@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺路径相关/pageRoutingInfoUsingPOST
 // 工艺路径信息分页查询DTO
 export interface IProcessPathInformationPagingQueryDTO {
     // 当前页面

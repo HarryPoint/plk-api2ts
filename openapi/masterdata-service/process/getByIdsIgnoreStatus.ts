@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

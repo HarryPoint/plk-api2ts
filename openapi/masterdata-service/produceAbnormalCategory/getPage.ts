@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getPageUsingPOST_10
 // 异常类型搜索VO
 export interface IExceptionTypeSearchVO {
     // 当前页面

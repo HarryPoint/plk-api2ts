@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/getRealTimeDataUsingPOST
 // 设备实时数据搜索VO
 export interface IDeviceRealTimeDataSearchVO {
     // 设备id

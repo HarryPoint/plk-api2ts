@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesDayReportStatisticsUsingPOST_1
 // JSONResult«销售明细表统计返回对象»
 export interface IJSONResultSalesStatisticsReturnObject {
     // 返回码

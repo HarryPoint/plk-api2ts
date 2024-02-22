@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产计划工艺路径步骤排产/getListByProduceOrderIdsUsingPOST_2
 // 生产计划工艺路径步骤排产 VO
 export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     // 生产订单ids

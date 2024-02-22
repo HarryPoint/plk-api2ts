@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderSelectorUsingGET_1
 // JSONResult«List«生产订单返回VO»»
 export interface IJSONResultListTheProductionOrderIsReturnedToVO {
     // 返回码

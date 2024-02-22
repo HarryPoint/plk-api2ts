@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目角色相关/removeByIdUsingPOST
 // id信息
 export interface IIdInformation {
     // id

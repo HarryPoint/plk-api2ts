@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/getByCodeAndCheckUsingPOST
 // JSONResult«物料主数据基础信息返回VO»
 export interface IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO {
     // 返回码

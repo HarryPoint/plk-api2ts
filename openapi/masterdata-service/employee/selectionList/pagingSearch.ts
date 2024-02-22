@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工相关/pagingSearchSelectionUserListUsingPOST
 // 用户主数据选择列表搜索VO
 export interface ISearchVOWithTheHomeOwnerDataSelectionList {
     // 当前页面

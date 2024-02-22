@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
 // JSONResult«具体物料数据结构响应对象»
 export interface IJSONResultSpecificMaterialDataStructureResponseObject {
     // 返回码

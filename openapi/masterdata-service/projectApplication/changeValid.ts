@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目应用相关/changeValidUsingPOST_6
 // 启用or停用VO
 export interface IEnableOrDisableVO {
     // id

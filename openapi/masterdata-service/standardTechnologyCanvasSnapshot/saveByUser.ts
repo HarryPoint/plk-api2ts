@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺画布快照相关/saveCanvasSnapshotByUserUsingPOST
 // 工艺画布快照获取请求DTO_1
 export interface IProcessCanvasSnapshotAcquisitionRequestDTO1 {
     // 工艺id - 新增场景传值-1

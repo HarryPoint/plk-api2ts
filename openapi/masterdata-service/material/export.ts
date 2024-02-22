@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/exportUsingPOST_9
 // 物料主数据库存搜索VO
 export interface IMaterialMasterDataInventorySearchVO {
     // 当前页面

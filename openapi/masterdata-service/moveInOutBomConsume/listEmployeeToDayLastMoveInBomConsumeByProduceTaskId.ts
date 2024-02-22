@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listEmployeeToDayLastMoveInBomConsumeByProduceTaskIdUsingGET
 // JSONResult«List«上一次进料录入bom消耗响应DTO»»
 export interface IJSONResultListRespondsToTheDTOForTheLastInputBom {
     // 返回码

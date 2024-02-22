@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/pagingProduceStorageUsingPOST
 // 宝晶报表(库存)相关搜索DTO
 export interface IBaojingReportInventoryRelatedSearchDTO {
     // 当前页面

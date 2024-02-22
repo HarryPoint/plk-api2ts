@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskTableColumnUsingGET
 // JSONResult«List«生产任务导出表格列DTO»»
 export interface IJSONResultListTableColumnDTOForExportingProductionTasks {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工建议统计报表相关/exportUsingPOST_4
 // 流程数据搜索VO_2
 export interface IProcessDataSearchVO2 {
     // undefined

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/pageQueryUsingPOST_1
 // 分页信息
 export interface IPagingInformation {
     // 当前页面

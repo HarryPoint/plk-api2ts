@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/委外加工管理/entrustUsingPOST
 // 生产委外加工提交DTO
 export interface IProductionOutsourcingSubmitDTO {
     // 生产任务id

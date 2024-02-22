@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectRiskReportUsingPOST
 // JSONResult«分页信息«项目风险报表响应对象»»
 export interface IJSONResultPagingInformationProjectRiskReportResponseObject {
     // 返回码

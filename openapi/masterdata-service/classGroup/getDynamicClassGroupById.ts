@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/班组相关/getDynamicClassGroupByIdUsingGET
 // JSONResult«Id，名称，编号VO»
 export interface IJSONResultIdNameNumberVO {
     // 返回码

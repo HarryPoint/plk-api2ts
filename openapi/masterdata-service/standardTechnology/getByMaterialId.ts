@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getByMaterialIdUsingGET
 // JSONResult«List«标准工艺下拉响应对象»»
 export interface IJSONResultListStandardProcessDropDownResponseObject {
     // 返回码

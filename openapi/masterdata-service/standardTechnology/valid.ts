@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/validUsingPOST
 // 标准工艺启用、停用请求对象
 export interface IStandardProcessEnablesDeactivationOfRequestObjects {
     // 启用 Y 停用 N

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeListByNoSetDeviceEmployeeCapacityUsingPOST
 // 设备人员能力未设置人员查询DTO
 export interface IEquipmentPersonnelCapabilityNoPersonnelQueryDTOIsSet {
     // 搜索参数

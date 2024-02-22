@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/getPageUsingPOST_4
 // 设备数据方案搜索VO
 export interface IDeviceDataSchemeSearchVO {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/序列号跟踪报表相关/getBillFlowPathCodeListUsingGET_2
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeNameACommonTransferObject {
     // 返回码

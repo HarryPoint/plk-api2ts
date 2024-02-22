@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/getUsingGET_2
 // JSONResult«物料批次设置编辑响应对象»
 export interface IJSONResultMaterialBatchSettingsEditResponseObjects {
     // 返回码

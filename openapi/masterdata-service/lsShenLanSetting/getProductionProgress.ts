@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getProductionProgressUsingGET
 // JSONResult«质检生产大屏质检生产信息返回VO»
 export interface IJSONResultLargeScreenInspectionProductionInformationVOIsReturned {
     // 返回码

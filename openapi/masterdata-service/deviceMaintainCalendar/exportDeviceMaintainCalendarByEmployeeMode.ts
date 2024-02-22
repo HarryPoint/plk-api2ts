@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备保养日历相关/exportDeviceMaintainCalendarByEmployeeModeUsingPOST
 // 设备保养日历请求DTO
 export interface IEquipmentMaintenanceCalendarRequestDTO {
     // 设备保养计划明细ids

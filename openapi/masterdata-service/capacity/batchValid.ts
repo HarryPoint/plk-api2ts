@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产能相关/batchValidUsingPOST
 // 批量启用or停用VO
 export interface IEnableOrDisableVOInBatches {
     // id集合

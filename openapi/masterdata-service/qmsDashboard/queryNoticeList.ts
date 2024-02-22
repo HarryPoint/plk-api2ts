@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
 // JSONResult«List«通告栏»»
 export interface IJSONResultListNotificationField {
     // 返回码

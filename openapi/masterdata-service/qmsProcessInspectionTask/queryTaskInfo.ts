@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序检验任务相关/queryTaskInfoUsingGET_1
 // JSONResult«工序检检验任务响应对象»
 export interface IJSONResultProcessCheckTaskResponseObject {
     // 返回码

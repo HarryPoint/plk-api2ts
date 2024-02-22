@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位物料库存关联实体仓快照相关/getNumOfBeginningPeriodByWarehouseAndProductUsingPOST
 // JSONResult«仓位物料库存关联VO»
 export interface IJSONResultWarehouseMaterialInventoryAssociatedVO {
     // 返回码

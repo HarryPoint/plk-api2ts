@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskCanOperatorForMobileUsingPOST
 // 生产任务列表可批量操作项查询DTO(针对移动端)
 export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals {
     // 当前页面

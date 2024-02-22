@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工工序相关/getUserProcessAndAreaSelectorUsingGET
 // JSONResult«List«区域工序选择返回VO»»
 export interface ITheJSONResultListAreaOperationSelectsToReturnVO {
     // 返回码

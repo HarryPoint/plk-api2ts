@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getAreaWarehouseStorehouseTreeUsingGET
 // JSONResult«List«区域仓库仓位树返回VO»»
 export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {
     // 返回码

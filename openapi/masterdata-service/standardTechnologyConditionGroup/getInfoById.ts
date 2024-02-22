@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/getInfoByIdUsingGET_3
 // JSONResult«标准工艺条件组响应DTO»
 export interface IJSONResultStandardProcessConditionGroupRespondsToDTO {
     // 返回码

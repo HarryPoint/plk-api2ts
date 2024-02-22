@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/execTaskUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/费用分配相关/editUsingPOST_11
 // 生产费用分配编辑DTO
 export interface IProductionExpensesAllocationEditDTO {
     // id

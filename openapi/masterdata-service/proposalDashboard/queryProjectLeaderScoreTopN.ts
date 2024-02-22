@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/queryProjectLeaderScoreTopNUsingGET
 // JSONResult«EmployeeScoreIndicatorsResponseDTO»
 export interface IJSONResultEmployeeScoreIndicatorsResponseDTO {
     // 返回码

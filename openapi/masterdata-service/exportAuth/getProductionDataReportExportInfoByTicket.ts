@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionDataReportExportInfoByTicketUsingGET
 // JSONResult«导出信息«产出数据统计返回VO»»
 export interface IJSONResultExportInformationOutputDataStatisticsReturnVO {
     // 返回码

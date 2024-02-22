@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeGrandTotalUsingPOST
 // 项目费用预算查询对象
 export interface IProjectCostBudgetQueryObject {
     // 项目id

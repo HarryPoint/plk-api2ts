@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskByIdAndCheckUsingGET
 // JSONResult«流程任务返回VO»
 export interface IJSONResultProcessTaskReturnsVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/editUsingPOST_4
 // 编辑设备数采方案 DTO
 export interface IEditDeviceDataAcquisitionSchemeDTO {
     // id，如果不传就是新增

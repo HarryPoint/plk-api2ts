@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaSelectorUsingPOST
 // 区域主数据选择列表搜索VO
 export interface IRegionalMasterDataSelectionListSearchVO {
     // 当前页面

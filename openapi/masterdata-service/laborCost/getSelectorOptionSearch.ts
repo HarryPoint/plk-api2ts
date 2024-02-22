@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工费相关/getSelectorOptionSearchUsingPOST_2
 // 工费下拉选择列表搜索DTO
 export interface ITheLaborCostDropDownListIsUsedToSearchForDtos {
     // 物料id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUnionSqlUsingPOST
 // JSONResult«string»
 export interface IJSONResultstring {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/assignUsingPOST
 // 工序任务分配DTO
 export interface IProcessTaskAssignmentDTO {
     // 工序ids

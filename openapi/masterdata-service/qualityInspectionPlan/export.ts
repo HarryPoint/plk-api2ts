@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检方案/exportUsingPOST_26
 // 质检方案搜索VO
 export interface IInspectionSolutionSearchVO {
     // 当前页面

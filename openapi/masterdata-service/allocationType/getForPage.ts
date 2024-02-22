@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/调拨类型相关/getForPageUsingPOST_1
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {
     // 全局搜索

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectQualityIssueReportUsingPOST
 // JSONResult«分页信息«项目质量问题报表响应对象»»
 export interface IJSONResultPagingInformationProjectQualityProblemReportResponseObject {
     // 返回码

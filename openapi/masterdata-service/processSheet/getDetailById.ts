@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getDetailByIdUsingGET
 // JSONResult«工艺卡信息返回VO»
 export interface IJSONResultProcessCardInformationIsReturnedToVO {
     // 返回码

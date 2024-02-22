@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/批次方案相关/editUsingPOST_6
 // LotSerialNumberPlanEditRequestDTO
 export interface ILotSerialNumberPlanEditRequestDTO {
     // 请选择方案ID

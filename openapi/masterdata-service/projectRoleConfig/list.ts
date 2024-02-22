@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目角色配置相关/getForPageUsingPOST_16
 // 项目角色配置查询对象
 export interface IProjectRoleConfigureTheQueryObject {
     // 项目id

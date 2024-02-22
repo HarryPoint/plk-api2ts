@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionAggregateUsingPOST
 // JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»
 export interface IJSONResultCommissionAndCommissionStatisticsTableTeifungCustomizedTotalResponseObject {
     // 返回码

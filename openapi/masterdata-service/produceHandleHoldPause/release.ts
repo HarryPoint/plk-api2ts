@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/releaseUsingPOST
 // 生产处理暂扣放行请求对象
 export interface ITheProductionProcessHoldsTheReleaseRequestObject {
     // 生产处理id

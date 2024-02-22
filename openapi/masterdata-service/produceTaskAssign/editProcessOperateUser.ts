@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/editProcessOperateUserUsingPOST_1
 // 工序操作员编辑DTO
 export interface IProcessOperatorsEditTheDTO {
     // 员工类型

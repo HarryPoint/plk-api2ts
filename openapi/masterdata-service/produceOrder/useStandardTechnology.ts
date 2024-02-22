@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/useStandardTechnologyUsingPOST
 // 标准工艺使用请求
 export interface IStandardProcessUseRequest {
     // 生产订单和标准工艺关联关系列表

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单下发扩展信息/getListByProduceOrderIdsUsingPOST
 // 生产订单下发扩展信息查询VO
 export interface IProductionOrderDeliveryExtendedInformationQueryVO {
     // 生产订单ids

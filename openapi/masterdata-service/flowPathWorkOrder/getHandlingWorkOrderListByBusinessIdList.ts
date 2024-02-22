@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/流程工单相关/getHandlingWorkOrderListByBusinessIdListUsingGET
 // HandlingWorkOrderQueryRequest
 export interface IHandlingWorkOrderQueryRequest {
     // 应用ID

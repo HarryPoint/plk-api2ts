@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getDetailTreeByStorehouseIdsUsingPOST
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

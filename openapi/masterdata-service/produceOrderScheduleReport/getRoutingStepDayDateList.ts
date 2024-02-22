@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/订单排产报表/getRoutingStepDayDateListUsingGET
 // JSONResult«List«string»»
 export interface IJSONResultListstring {
     // 返回码

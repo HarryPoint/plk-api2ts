@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getFactoryCalendarScheduleClassUsingPOST
 // 日期范围查询 DTO
 export interface IDateRangeQueryDTO {
     // 开始时间 yyyy-MM-dd HH:mm:ss

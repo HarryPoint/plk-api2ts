@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryDangerPointsUsingPOST
 // 危险点查询请求
 export interface IDangerPointQueryRequest {
     // 查询日期的开始

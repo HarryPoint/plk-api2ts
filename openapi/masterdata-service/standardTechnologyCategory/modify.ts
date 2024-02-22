@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/modifyUsingPOST
 // 标准工艺分类修改请求DTO
 export interface IStandardProcessClassificationModificationRequestDTO {
     // 父级分类id, 当添加到第一级时,传递空;

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getProduceTaskAssignPageForMobileUsingPOST
 // 生产任务分配查询VO -- 针对mobile
 export interface IProductionTaskAssignmentQueryVOForMobile {
     // 当前页面

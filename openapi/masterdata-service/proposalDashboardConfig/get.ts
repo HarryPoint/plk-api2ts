@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板-配置页面相关/getUsingGET_4
 // JSONResult«ProposalDashboardConfigResponseDTO»
 export interface IJSONResultProposalDashboardConfigResponseDTO {
     // 返回码

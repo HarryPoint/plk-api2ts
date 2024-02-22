@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/报表模板/removeBatchUsingPOST
 // ReportTemplateRemoveRequestDTO
 export interface IReportTemplateRemoveRequestDTO {
     // ID列表

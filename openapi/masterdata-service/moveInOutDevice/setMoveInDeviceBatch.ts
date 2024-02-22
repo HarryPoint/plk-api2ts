@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceBatchUsingPOST
 // 生产任务批量设置进料设备请求DTO
 export interface IProductionTaskBatchSetTheFeedDeviceRequestDTO {
     // 工序id

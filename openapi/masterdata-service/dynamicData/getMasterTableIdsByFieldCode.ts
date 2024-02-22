@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterTableIdsByFieldCodeUsingPOST
 // 主表id查询VO
 export interface IPrimaryTableIdQueryVO {
     // 流程编码

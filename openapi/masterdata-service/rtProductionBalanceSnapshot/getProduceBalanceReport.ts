@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getProduceBalanceReportUsingPOST
 // 生产结存统计报表搜索VO
 export interface IProductionBalanceStatisticsReportSearchVO {
     // 工序id集

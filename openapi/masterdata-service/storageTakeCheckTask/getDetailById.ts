@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getDetailByIdUsingGET_4
 // JSONResult«仓库盘点任务详情返回DTO»
 export interface IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO {
     // 返回码

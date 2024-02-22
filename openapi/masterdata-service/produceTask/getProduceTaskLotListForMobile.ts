@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskLotListForMobileUsingPOST
 // 生产任务批次信息查询DTO(针对移动端)
 export interface IProductionTaskBatchInformationQueryDTOForMobileTerminals {
     // 任务ids

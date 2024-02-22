@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/addUsingPOST_5
 // 项目任务规则新增请求DTO
 export interface IProjectTaskRulesAddRequestDTO {
     // 项目任务ID

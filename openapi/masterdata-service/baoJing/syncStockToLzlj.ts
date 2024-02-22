@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶相关/syncStockToLzljUsingPOST
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

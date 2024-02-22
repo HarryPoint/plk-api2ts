@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/queryTableColumnUsingGET
 // JSONResult«ProduceProgressStatisticTableHeadDTO»
 export interface IJSONResultProduceProgressStatisticTableHeadDTO {
     // 返回码

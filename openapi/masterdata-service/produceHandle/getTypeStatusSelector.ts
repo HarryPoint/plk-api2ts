@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getTypeStatusSelectorUsingGET
 // JSONResult«List«生产处理类型状态二级联动VO»»
 export interface IJSONResultListProductionProcessTypeStatusLevel2LinkageVO {
     // 返回码

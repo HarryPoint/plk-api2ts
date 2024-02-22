@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/库存流水相关/exportUsingPOST_31
 // 库存流水搜索VO
 export interface IInventoryFlowSearchVO {
     // 当前页面

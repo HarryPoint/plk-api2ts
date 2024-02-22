@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
 // JSONResult«销售订单VO»
 export interface IJSONResultSalesOrderVO {
     // 返回码

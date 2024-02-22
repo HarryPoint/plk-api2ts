@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateProjectUsingGET
 // JSONResult«List«项目门户响应对象»»
 export interface IJSONResultListProjectPortalResponseObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/pagingSearchCustomerStatisticsUsingPOST
 // 客户情况统计输入条件
 export interface ICustomerStatisticsInputConditions {
     // 客户ID列表

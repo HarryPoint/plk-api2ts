@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getDetailInfoByDetailIdUsingGET
 // JSONResult«销售订单详情返回VO»
 export interface IJSONResultSalesOrderDetailsBackToVO {
     // 返回码

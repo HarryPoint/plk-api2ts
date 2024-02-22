@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByMaterialIdsUsingPOST
 // 维联批次打印模板已绑定物料请求对象
 export interface ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject {
     // 打印模板id

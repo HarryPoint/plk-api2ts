@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/手动排产/handPlanUsingPOST
 // 生产订单手动排产DTO
 export interface IManualDTOSchedulingOfProductionOrders {
     // 排产计划单名称

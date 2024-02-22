@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyCode10000UsingPOST
 // JSONResult«List«string»»
 export interface IJSONResultListstring {
     // 返回码

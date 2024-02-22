@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getBomDetailsByBomIdUsingGET
 // JSONResult«List«物料主数据Bom详情选择基础信息DTO»»
 export interface IJSONResultListBomDetailsSelectBasicInformationDTO {
     // 返回码

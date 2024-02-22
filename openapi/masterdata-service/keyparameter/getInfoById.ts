@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/关键参数相关/getInfoByIdUsingGET_1
 // JSONResult«关键参数信息响应对象»
 export interface IJSONResultKeyParameterInformationResponseObject {
     // 返回码

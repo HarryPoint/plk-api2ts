@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/getSelectorUsingGET_1
 // JSONResult«List«设备数采选择VO»»
 export interface IJSONResultListDeviceDataCollectionSelectVO {
     // 返回码

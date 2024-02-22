@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/saveUsingPOST_4
 // 完工及产成品归集保存请求对象
 export interface ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject {
     // 财务期间id

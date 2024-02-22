@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺画布编辑锁定相关/lockTechnologyCanvasEditUsingPOST
 // 工艺画布编辑锁定请求DTO
 export interface ICraftCanvasEditLockRequestDTO {
     // 工艺id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZheWanJiReportUsingGET
 // 深蓝报表查询条件
 export interface IQueryConditionsOfTheDarkBlueReport {
     // 日期

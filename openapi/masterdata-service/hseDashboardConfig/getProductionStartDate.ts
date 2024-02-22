@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/getProductionStartDateUsingGET
 // JSONResult«生产开始日期-查询响应»
 export interface IJSONResultResponseToTheProductionStartDateQuery {
     // 返回码

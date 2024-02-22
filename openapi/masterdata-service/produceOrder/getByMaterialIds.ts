@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/getByMaterialIdsUsingPOST
 // JSONResult«List«生产订单»»
 export interface IJSONResultListProductionOrder {
     // 返回码

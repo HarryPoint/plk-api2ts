@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByEnterpriseIdUsingGET
 // JSONResult«List«long»»
 export interface IJSONResultListlong {
     // 返回码

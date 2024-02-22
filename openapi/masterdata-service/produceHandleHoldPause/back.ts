@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/backUsingPOST_1
 // 生产处理暂扣返工请求对象
 export interface IProductionProcessingWithholdReworkRequestObject {
     // 生产处理id

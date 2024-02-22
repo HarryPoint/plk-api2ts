@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/editUsingPOST_10
 // 生产异常类型编辑DTO
 export interface IEditTheDTOForProductionExceptionTypes {
     // id

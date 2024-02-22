@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/单位相关/getByNamesUsingPOST
 // JSONResult«List«单位返回VO»»
 export interface ITheJSONResultListUnitReturnsVO {
     // 返回码

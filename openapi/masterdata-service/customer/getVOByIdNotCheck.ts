@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/客户相关/getVOByIdNotCheckUsingGET
 // JSONResult«客户VO»
 export interface IJSONResultCustomerVO {
     // 返回码

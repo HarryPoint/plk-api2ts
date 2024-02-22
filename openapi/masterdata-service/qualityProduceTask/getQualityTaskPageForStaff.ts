@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskPageForStaffUsingPOST
 // 质检任务针对员工端搜索VO
 export interface ITheInspectionTaskSearchesForVOOnTheEmployeeEnd {
     // 当前页面

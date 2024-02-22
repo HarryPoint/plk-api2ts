@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产质检管理/getCountInfoByMaterialIdUsingGET
 // JSONResult«质检物料校验信息VO»
 export interface IJSONResultCheckInformationVO {
     // 返回码

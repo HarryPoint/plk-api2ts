@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/getByIdUsingGET_16
 // JSONResult«标准工艺编码规则响应 DTO»
 export interface IJSONResultStandardProcessCodingRulesRespondToDtos {
     // 返回码

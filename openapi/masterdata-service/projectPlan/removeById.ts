@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目计划相关/removeByIdUsingGET_1
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

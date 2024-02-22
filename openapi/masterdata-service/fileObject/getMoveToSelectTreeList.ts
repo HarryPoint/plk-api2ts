@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/文件对象相关/getMoveToSelectTreeListUsingGET_1
 // JSONResult«List«文件分类明细响应DTO»»_3
 export interface IJSONResultListFileClassificationDetailResponseDTO3 {
     // 返回码

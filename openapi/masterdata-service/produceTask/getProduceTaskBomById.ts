@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskBomByIdUsingGET
 // JSONResult«List«生产任务BOM物料信息VO»»
 export interface IJSONResultListProductionTaskBOMMaterialInformationVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/saveSettingInfoUsingPOST
 // 盼盼大屏设置DTO
 export interface IPanpanLargeScreenSetDTO {
     // 延期订单判断值（小时）

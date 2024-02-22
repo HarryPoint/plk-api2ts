@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportScrapResultVOExportInfoByTicketUsingGET
 // JSONResult«导出信息«宝晶报表(报废)相关返回VO»»
 export interface IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检方案/editUsingPOST_18
 // 编辑质检方案 DTO
 export interface IEditTheQualityInspectionSchemeDTO {
     // id，如果不传就是新增

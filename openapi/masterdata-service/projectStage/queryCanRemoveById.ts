@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目阶段相关/queryCanRemoveByIdUsingGET
 // JSONResult«string»_1
 export interface IJSONResultstring1 {
     // 返回码

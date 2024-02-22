@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/pageBomConsumeLotOrderUsingGET
 // 进料bom消耗批次分页查询对象
 export interface IFeedBomConsumptionBatchPagingQueryObject {
     // 批次号、物料编号

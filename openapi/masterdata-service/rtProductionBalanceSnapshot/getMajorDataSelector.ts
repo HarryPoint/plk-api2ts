@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getMajorDataSelectorUsingPOST
 // 物料主数据选择列表搜索VO
 export interface IMaterialMasterDataSelectionListSearchVO {
     // 当前页面

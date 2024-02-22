@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/检验项相关/computeSampleSizeUsingPOST
 // 检验项计算DTO
 export interface ICheckItemCalculatesDTO {
     // 抽样标准id

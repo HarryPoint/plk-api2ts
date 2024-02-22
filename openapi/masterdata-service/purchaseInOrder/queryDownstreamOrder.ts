@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/采购入库单相关/queryDownstreamOrderUsingPOST
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

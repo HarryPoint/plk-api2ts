@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getPurchaseArrivedStatisticReportExportInfoByTicketUsingGET
 // JSONResult«导出信息«采购到货统计报表返回VO»»
 export interface IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/安全库存相关/getSettingInfoUsingPOST
 // 安全库存设置搜索VO
 export interface ISecurityStockSettingsSearchVO {
     // 设置类型

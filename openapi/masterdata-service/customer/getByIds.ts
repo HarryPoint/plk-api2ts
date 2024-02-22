@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/客户相关/getByIdsUsingPOST_1
 // JSONResult«List«客户VO»»
 export interface IJSONResultListClientVO {
     // 返回码

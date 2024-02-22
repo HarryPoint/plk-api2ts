@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardArchiveUsingPOST
 // 职业危害档案查询请求
 export interface IOccupationalHazardFileQueryRequest {
     // 查询日期的开始

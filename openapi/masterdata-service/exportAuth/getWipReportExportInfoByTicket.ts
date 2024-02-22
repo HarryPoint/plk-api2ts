@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getWipReportExportInfoByTicketUsingGET
 // JSONResult«导出信息«WIP统计报表返回VO»»
 export interface IJSONResultExportInformationWIPStatisticsReportReturnsVO {
     // 返回码

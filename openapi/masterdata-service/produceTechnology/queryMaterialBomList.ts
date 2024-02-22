@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产工艺相关/queryMaterialBomListUsingPOST
 // JSONResult«List«ProduceTechnologyMaterialBomDTO»»
 export interface IJSONResultListProduceTechnologyMaterialBomDTO {
     // 返回码

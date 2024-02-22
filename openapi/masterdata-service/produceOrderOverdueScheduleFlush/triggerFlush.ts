@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单超期定时刷新相关/triggerFlushUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

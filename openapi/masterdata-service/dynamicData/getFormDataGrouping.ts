@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFromDataGroupingUsingGET
 // JSONResult«List«表单数据分组DTO»»
 export interface IJSONResultListFormDataGroupingDTO {
     // 返回码

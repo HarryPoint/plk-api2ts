@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/文件分类相关/getByIdUsingGET_3
 // JSONResult«文件分类明细响应DTO»
 export interface IJSONResultFileClassificationDetailsResponseDTO {
     // 返回码

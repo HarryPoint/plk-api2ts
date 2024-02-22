@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/exportUsingPOST_22
 // 生产任务导出DTO
 export interface IExportTheDTOOfAProductionTask {
     // 当前页面

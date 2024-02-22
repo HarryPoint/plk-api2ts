@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/addUsingPOST_7
 // 安全库存变更申请配置
 export interface ISecurityInventoryChangeRequestConfiguration {
     // 设置类型

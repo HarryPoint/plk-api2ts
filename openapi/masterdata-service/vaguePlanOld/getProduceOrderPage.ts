@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/模糊排产相关/getProduceOrderPageUsingPOST
 // 生产订单搜索VO
 export interface IProductionOrderSearchVO {
     // 当前页面

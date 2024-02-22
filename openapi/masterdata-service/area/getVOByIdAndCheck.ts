@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/区域相关/getVOByIdAndCheckUsingGET
 // JSONResult«区域VO»
 export interface IJSONResultAreaVO {
     // 返回码

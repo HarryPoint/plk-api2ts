@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryFormRecordDetailListUsingPOST
 // 批量查询表单数据请求
 export interface IBatchQueryFormDataRequests {
     // 应用ID

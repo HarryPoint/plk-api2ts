@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产能相关/batchImportUsingPOST
 // 产能保存DTO
 export interface ICapacityPreservationDTO {
     // id

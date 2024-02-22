@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/listModuleByCodeUsingGET
 // JSONResult«Set«string»»
 export interface IJSONResultSetstring {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/行政区控制器/findRegionFullNameUsingPOST
 // JSONResult«Map«string,string»»
 export interface IJSONResultMapstringstring {
     // 返回码

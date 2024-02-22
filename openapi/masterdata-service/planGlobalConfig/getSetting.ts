@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/排产全局参数配置相关/getSettingUsingPOST
 // JSONResult«排产参数VO»
 export interface IJSONResultSchedulingParameterVO {
     // 返回码

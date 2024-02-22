@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/checkNameRepeatUsingPOST
 // 项目任务模板名称重复校验请求DTO
 export interface IProjectTaskTemplateNameDuplicateVerificationRequestDTO {
     // 项目id

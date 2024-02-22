@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/exportHandlingOfNonConformingStatisticsReportUsingPOST
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

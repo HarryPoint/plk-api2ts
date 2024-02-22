@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/addUsingPOST_4
 // 生产处理暂扣添加请求对象
 export interface ITheProductionProcessingWithholdAddsTheRequestObject {
     // 生产任务id

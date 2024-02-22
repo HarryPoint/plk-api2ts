@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAccountReceivableReportSumResultUsingPOST
 // 宝晶应收账款分析报表搜索VO
 export interface IBaojingAccountsReceivableAnalysisReportSearchVO {
     // 当前页面

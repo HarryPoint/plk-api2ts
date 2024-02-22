@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listAllProduceScheduleUsingGET
 // JSONResult«List«生产排期VO»»
 export interface IJSONResultListProductionScheduleVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务处理进度相关/queryByNameUsingPOST_1
 // 项目名称编号公共查询对象_1
 export interface IItemNameNumberPublicQueryObject1 {
     // 项目id

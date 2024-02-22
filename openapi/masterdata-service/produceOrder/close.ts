@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/closeUsingPOST_1
 // 生产订单关闭 DTO
 export interface IProductionOrderClosedDTO {
     // 生产订单id

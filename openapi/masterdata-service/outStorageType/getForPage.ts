@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/入库类型相关/getForPageUsingPOST_9
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {
     // 全局搜索

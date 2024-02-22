@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseTreeListUsingPOST
 // 库位树查询VO
 export interface IDatabaseBitTreeQueryVO {
     // 仓库id

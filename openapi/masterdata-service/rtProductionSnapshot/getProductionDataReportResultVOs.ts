@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProductionDataReportResultVOsUsingPOST
 // 产出数据报表搜索VO
 export interface IOutputDataReportSearchVO {
     // 物料id集

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingCollectionTotalTableExportInfoByTicketUsingGET
 // JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»
 export interface IJSONResultExportInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     // 返回码

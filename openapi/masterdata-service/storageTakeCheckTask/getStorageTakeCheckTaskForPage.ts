@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getStorageTakeCheckTaskForPageUsingPOST
 // 仓库盘点任务执行端搜索VO
 export interface ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask {
     // 处理类型

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialRealWarehouseListUsingPOST
 // 物料实时库存查询返回VO
 export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     // 物料ids

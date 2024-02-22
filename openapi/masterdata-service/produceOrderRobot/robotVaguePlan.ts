@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/robotVaguePlanUsingPOST
 // ProduceOrderAutoVaguePlanIssueDTO
 export interface IProduceOrderAutoVaguePlanIssueDTO {
     // undefined

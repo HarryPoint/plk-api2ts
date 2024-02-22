@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeSerialNoUsingPOST
 // 进料bom消耗序列号查询DTO
 export interface IFeedBomConsumptionSerialNumberQueryDTO {
     // 生产任务id

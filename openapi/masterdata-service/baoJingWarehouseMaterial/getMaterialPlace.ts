@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialPlaceUsingPOST
 // 宝晶物料主数据库存分布搜索VO
 export interface IBaojingMaterialMasterDataInventoryDistributionSearchVO {
     // 物料id集

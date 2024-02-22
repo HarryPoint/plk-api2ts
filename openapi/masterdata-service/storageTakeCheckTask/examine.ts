@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/examineUsingPOST_1
 // 仓库盘点任务审批DTO
 export interface IWarehouseInventoryTaskApprovalDTO {
     // 任务id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/exportUsingPOST_14
 // 生产成本核算分页请求对象
 export interface IProductionCostingPagingRequestObject {
     // 当前页面

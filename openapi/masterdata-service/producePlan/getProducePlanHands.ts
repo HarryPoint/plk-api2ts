@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProducePlanHandsUsingPOST
 // JSONResult«List«生产计划手动排产VO»»
 export interface IJSONResultListProductionPlanManuallySchedulesVOProduction {
     // 返回码

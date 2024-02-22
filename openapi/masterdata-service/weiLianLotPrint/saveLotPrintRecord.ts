@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/维联批次打印相关/saveLotPrintRecordUsingPOST
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

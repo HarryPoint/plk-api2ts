@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getBomByMaterialIdUsingGET
 // JSONResult«List«MaterialBomBaseVo»»
 export interface IJSONResultListMaterialBomBaseVo {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/resetCategorySortUsingPOST
 // 标准工艺分类排序请求DTO
 export interface IStandardProcessClassificationSortRequestDTO {
     // 父级分类id, 当移动到第一级时,传递空;

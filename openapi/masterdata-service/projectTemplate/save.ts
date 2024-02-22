@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目模板相关/saveUsingPOST_5
 // 项目模板编辑请求DTO
 export interface IProjectTemplateEditRequestDTO {
     // 项目id

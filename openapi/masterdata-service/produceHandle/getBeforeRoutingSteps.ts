@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBeforeRoutingStepsUsingGET
 // JSONResult«List«工艺路径步骤选择VO»»
 export interface IJSONResultListProcessPathStepsSelectVO {
     // 返回码

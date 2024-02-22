@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/提案部门完成情况表-相关/exportUsingPOST_24
 // ProposalDepartmentStatisticsQueryRequestDTO
 export interface IProposalDepartmentStatisticsQueryRequestDTO {
     // 年份

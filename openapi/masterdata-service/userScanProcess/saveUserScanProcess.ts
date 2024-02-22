@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工扫码报工工序相关/saveUserScanProcessUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

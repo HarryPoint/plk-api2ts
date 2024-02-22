@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_5
 // JSONResult«List«项目模板响应DTO»»
 export interface IJSONResultListProjectTemplateRespondsToTheDTO {
     // 返回码

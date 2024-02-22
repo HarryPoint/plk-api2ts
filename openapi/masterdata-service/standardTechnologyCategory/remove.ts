@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/removeUsingPOST
 // 标准工艺分类删除请求DTO
 export interface IStandardProcessClassificationRemoveRequestDTO {
     // 分类id

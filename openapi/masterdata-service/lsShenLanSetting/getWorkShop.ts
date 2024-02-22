@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getWorkShopUsingGET
 // JSONResult«深蓝车间看板响应VO»
 export interface IJSONResultDarkBlueWorkshopKanbanRespondsToVO {
     // 返回码

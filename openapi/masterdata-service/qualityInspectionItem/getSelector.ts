@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检项/getSelectorUsingGET_6
 // JSONResult«List«质检项基础信息返回VO»»
 export interface IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned {
     // 返回码

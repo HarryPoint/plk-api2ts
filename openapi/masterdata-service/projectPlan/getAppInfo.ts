@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目计划相关/getAppInfoUsingGET
 // JSONResult«项目计划应用响应对象»
 export interface ITheJSONResultProjectPlansToApplyTheResponseObject {
     // 返回码

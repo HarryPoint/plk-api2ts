@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/moveInScanUsingPOST
 // 进料扫描请求DTO
 export interface IFeedScanRequestDTO {
     // 生产任务id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceExportResultForProcessUsingPOST
 // 产出类报表搜索VO
 export interface IOutputClassReportSearchVO {
     // 班组id集

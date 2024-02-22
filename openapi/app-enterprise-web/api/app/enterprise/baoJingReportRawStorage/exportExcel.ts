@@ -1,3 +1,0 @@
-// ModelAndView
-export interface IModelAndView {
-}

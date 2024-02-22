@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentLossAnalyzeReportUsingPOST
 // 寄售损耗分析报表搜索VO
 export interface IConsignmentLossAnalysisReportSearchVO {
     // 当前页面

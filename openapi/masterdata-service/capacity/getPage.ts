@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产能相关/getPageUsingPOST
 // 产能分页查询对象
 export interface ICapacityPagingQueryObject {
     // 编号

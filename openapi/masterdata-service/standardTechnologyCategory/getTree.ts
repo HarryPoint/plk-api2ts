@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/getTreeUsingGET
 // JSONResult«List«标准工艺分类树响应DTO»»
 export interface IJSONResultListStandardProcessClassificationTreeRespondsToDtos {
     // 返回码

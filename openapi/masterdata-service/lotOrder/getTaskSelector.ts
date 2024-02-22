@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getTaskSelectorUsingGET
 // JSONResult«List«生产任务选择信息返回VO»»
 export interface IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO {
     // 返回码

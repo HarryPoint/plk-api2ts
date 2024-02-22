@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/getUsingGET_3
 // JSONResult«List«生产任务自定义卡片样式响应对象DTO»»
 export interface IJSONResultListProductionTaskCustomCardStyleResponseObjectDTO {
     // 返回码

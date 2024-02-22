@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务相关/getImportProjectTaskResultUsingGET
 // JSONResult«项目任务导入记录查询响应»
 export interface IJSONResultProjectTaskImportRecordQueryResponse {
     // 返回码

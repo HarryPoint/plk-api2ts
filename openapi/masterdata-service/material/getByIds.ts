@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/getByIdsUsingPOST_2
 // JSONResult«List«物料主数据基础信息返回VO»»
 export interface IJSONResultListReturnBasicInformationAboutTheMaterialMasterDataToVO {
     // 返回码

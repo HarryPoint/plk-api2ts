@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务相关/importProjectTaskUsingPOST
 // 项目任务导入请求DTO
 export interface IProjectTaskImportRequestDTO {
     // 项目计划id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/closeUsingPOST_2
 // 销售订单关闭 DTO
 export interface ISalesOrdersCloseTheDTO {
     // 销售订单id

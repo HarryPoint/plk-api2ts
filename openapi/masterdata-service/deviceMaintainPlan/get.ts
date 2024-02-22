@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getUsingGET
 // JSONResult«保养计划响应DTO»
 export interface IJSONResultMaintenancePlanRespondsToDTO {
     // 返回码

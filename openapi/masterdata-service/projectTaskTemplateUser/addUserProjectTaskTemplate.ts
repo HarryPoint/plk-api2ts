@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/addUserProjectTaskTemplateUsingPOST
 // 项目任务模板用户添加请求DTO
 export interface IProjectTaskTemplateUserAddsRequestDTO {
     // 项目id

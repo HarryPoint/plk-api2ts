@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getProcessFieldListByFlowPathSystemTypeUsingGET
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {
     // 返回码

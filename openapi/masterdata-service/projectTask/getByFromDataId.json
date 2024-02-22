@@ -310,6 +310,22 @@
           "type": "number",
           "description": "任务权重"
         },
+        "isProjectPlanShow": {
+          "type": "string",
+          "description": "项目计划模块是否展示",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isProjectTaskShow": {
+          "type": "string",
+          "description": "项目任务模块是否展示",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
         "leaderUserIds": {
           "type": "array",
           "items": {
@@ -588,6 +604,22 @@
         "taskWeight": {
           "type": "number",
           "description": "任务权重"
+        },
+        "isProjectPlanShow": {
+          "type": "string",
+          "description": "项目计划模块是否展示",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isProjectTaskShow": {
+          "type": "string",
+          "description": "项目任务模块是否展示",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
         },
         "leaderUserIds": {
           "type": "array",

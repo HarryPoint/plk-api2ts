@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/财务期间相关/balanceUsingPOST
 // 财务期间结存请求
 export interface IFinancialPeriodBalanceRequest {
     // ID

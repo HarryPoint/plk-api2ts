@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveOutQuantityByMaterialIdUsingGET
 // JSONResult«bigdecimal»
 export interface IJSONResultbigdecimal {
     // 返回码

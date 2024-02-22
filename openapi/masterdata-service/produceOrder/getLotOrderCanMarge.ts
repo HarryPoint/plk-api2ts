@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/getLotOrderCanMargeUsingPOST_1
 // 批次订单校验能否合并搜索VO
 export interface IBatchOrderVerificationCanMergeSearchVO {
     // 批次id集

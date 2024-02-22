@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/listModificationHistoryUsingGET_2
 // JSONResult«List«项目集合变更信息»»
 export interface IJSONResultListProjectCollectionChangeInformation {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/saveSettingInfoUsingPOST_1
 // 深蓝大屏设置DTO
 export interface IDarkBlueLargeScreenSetsTheDTO {
     // 大屏左侧质检合格率工序id

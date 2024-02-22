@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/检验任务超期计算相关/computeOverdueUsingPOST
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

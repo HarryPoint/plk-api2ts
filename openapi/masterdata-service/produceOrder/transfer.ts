@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/transferUsingPOST_1
 // 批次转移到其他生产订单DTO
 export interface IBatchTransferToOtherProductionOrderDTO {
     // wipRpId

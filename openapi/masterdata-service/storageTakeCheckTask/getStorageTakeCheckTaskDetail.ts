@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getStorageTakeCheckTaskDetailUsingGET
 // JSONResult«仓库盘点任务明细执行端返回DTO»
 export interface IJSONResultReturnsTheDTOFromTheExecutingEndOfTheWarehouseInventoryTaskDetails {
     // 返回码

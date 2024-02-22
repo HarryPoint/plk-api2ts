@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/getSettingInfoUsingGET
 // JSONResult«盼盼生产大屏设置响应DTO»
 export interface IJSONResultPanpanProductionLargeScreenSettingsResponseDTO {
     // 返回码

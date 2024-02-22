@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产工艺产能相关/getByIdUsingGET_9
 // JSONResult«ProduceTechnologyCapacityResponseDTO»
 export interface IJSONResultProduceTechnologyCapacityResponseDTO {
     // 返回码

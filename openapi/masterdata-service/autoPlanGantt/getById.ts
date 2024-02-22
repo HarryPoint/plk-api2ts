@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/甘特图相关/getByIdUsingGET
 // JSONResult«ProducePlanAutoScheduleOutputVO»
 export interface IJSONResultProducePlanAutoScheduleOutputVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
 // 生产订单自动排产DTO
 export interface IAutomaticProductionOrderSchedulingDTO {
     // 待排产订单id集

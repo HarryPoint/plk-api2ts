@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportProducePlanReportUsingPOST
 // 宝晶生产任务甘特图查询对象
 export interface IBaojingProductionTaskGanttChartQueryObject {
     // 物料id

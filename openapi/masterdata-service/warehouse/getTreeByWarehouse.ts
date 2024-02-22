@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getTreeByWarehouseUsingGET
 // JSONResult«List«仓位树返回VO»»
 export interface IJSONResultListPositionTreeReturnsVO {
     // 返回码

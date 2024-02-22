@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getSettingInfoUsingGET_2
 // JSONResult«西偌帕斯大屏设置返回VO»
 export interface IJSONResultSilopusLargeScreenSettingsReturnVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getStepsByRoutingIdUsingGET
 // JSONResult«List«工艺路径详情步骤VO»»
 export interface IJSONResultListProcessPathDetailsStepVO {
     // 返回码

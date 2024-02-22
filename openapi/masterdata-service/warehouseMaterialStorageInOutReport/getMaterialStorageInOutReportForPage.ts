@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料收发汇总报表相关/getMaterialStorageInOutReportForPageUsingPOST
 // JSONResult«分页信息«物料收发汇总分页响应对象»»
 export interface IJSONResultPageInformationPageResponseObjectForReceivingAndReceivingMaterials {
     // 返回码

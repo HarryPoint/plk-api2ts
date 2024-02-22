@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/saveMoveOutDetailUsingPOST
 // 进出站信息DTO_1
 export interface IInboundAndOutboundInformationDTO1 {
     // 进出站记录id - 如果是从进出站记录里面点进来的，则必传

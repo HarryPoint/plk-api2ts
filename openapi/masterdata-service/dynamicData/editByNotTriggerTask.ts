@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/editByNotTriggerTaskUsingPOST
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {
     // 编辑数据

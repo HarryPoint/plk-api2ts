@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/安全库存相关/getPageUsingPOST_26
 // 安全库存搜索VO
 export interface ISecurityInventorySearchVO {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterDataEchoListByIdsUsingPOST
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getStorehouseTreeUsingGET
 // JSONResult«List«区域仓库仓位树返回VO»»
 export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {
     // 返回码

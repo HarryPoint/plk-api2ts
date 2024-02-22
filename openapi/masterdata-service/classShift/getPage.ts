@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/班次相关/getPageUsingPOST_1
 // 班次搜索VO
 export interface IShiftSearchVO {
     // 当前页面

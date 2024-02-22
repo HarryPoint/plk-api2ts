@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getFlowForLotUsingPOST
 // 批次订单流水搜索VO
 export interface IBatchOrderHistorySearchVO {
     // 生产订单id

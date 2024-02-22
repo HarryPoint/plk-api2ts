@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/editUsingPOST_3
 // 设备数采通讯参数编辑DTO
 export interface IDeviceDataAcquisitionCommunicationParametersEditDTO {
     // id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryBatchCanMoveInOutOpTaskUsingPOST
 // 任务批量操作DTO_1
 export interface ITaskBatchOperationDTO1 {
     // 工序id

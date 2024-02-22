@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/batchInvalidUsingPOST_1
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

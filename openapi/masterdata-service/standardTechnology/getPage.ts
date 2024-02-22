@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getPageUsingPOST_29
 // 标准工艺分页查询对象
 export interface IStandardProcessPagingQueryObject {
     // 当前页面

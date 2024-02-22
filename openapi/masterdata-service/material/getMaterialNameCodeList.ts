@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialNameCodeListUsingPOST
 // 物料名称编号查询VO
 export interface IMaterialNameNumberQueryVO {
     // 物料名称/编号

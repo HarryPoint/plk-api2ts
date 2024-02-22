@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/getInspectionTaskStatisticsAmountReportUsingPOST
 // JSONResult«任务量统计报表合计返回DTO»
 export interface IJSONResultTheTotalNumberOfTasksIsReturnedToTheDTO {
     // 返回码

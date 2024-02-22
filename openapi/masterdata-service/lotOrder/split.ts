@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/splitUsingPOST
 // 批次订单拆分DTO
 export interface IBatchOrderSplitDTO {
     // wipRpId

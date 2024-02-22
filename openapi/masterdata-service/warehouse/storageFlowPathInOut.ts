@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/storageFlowPathInOutUsingPOST
 // 仓库流程出入库DTO
 export interface IWarehouseProcessInboundAndOutboundDTO {
     // 物料id

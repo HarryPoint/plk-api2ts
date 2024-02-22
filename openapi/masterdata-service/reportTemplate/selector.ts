@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/报表模板/selectorUsingPOST
 // ReportTemplateSelectorQueryConditionDTO
 export interface IReportTemplateSelectorQueryConditionDTO {
     // 模板名称 - 模糊查询

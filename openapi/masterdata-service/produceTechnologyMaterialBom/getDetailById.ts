@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/produce-technology-material-bom-controller/getDetailByIdUsingGET_2
 // JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»
 export interface IJSONResultProduceTechnologyMaterialBomInfoResponseDTO {
     // 返回码

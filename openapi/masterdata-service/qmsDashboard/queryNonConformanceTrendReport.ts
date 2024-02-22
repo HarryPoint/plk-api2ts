@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNonConformanceTrendReportUsingPOST
 // NonConformanceTrendReportRequestDTO
 export interface INonConformanceTrendReportRequestDTO {
     // 当前的时间

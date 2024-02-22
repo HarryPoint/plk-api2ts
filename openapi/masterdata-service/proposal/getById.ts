@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/合理化建议相关/getByIdUsingPOST_2
 // JSONResult«ProposalResponseDTO»
 export interface IJSONResultProposalResponseDTO {
     // 返回码

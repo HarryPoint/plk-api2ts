@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/robotIssueDataCheckUsingPOST
 // 生产订单自动排产下发任务数据校验请求DTO
 export interface IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO {
     // 生产订单ids

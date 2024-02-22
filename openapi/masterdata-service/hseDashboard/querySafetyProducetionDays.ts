@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySafetyProductionDaysUsingGET
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

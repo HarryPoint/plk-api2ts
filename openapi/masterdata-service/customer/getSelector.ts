@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/客户相关/getSelectorUsingGET
 // JSONResult«List«客户选择返回VO»»
 export interface IJSONResultListClientSelectsToReturnVO {
     // 返回码

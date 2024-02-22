@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/航发相关/syncTodolistHandledUsingPOST
 // 金蝶待办动作请求
 export interface IKingdeeBacklogActionRequest {
     // 待办id

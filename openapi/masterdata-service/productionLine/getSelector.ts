@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产线相关/getSelectorUsingPOST_1
 // 名称、编号VO
 export interface INameNumberVO {
     // 名称or编号

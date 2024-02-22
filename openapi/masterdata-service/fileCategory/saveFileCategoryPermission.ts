@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/文件分类相关/saveFileCategoryPermissionUsingPOST
 // FileCategoryPermissionSaveRequestDTO
 export interface IFileCategoryPermissionSaveRequestDTO {
     // 文件分类ID

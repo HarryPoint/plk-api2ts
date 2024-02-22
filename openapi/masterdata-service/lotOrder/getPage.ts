@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getPageUsingPOST_7
 // 批次订单搜索VO
 export interface IBatchOrderSearchVO {
     // 当前页面

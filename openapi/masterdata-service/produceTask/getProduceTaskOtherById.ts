@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskOtherByIdUsingGET
 // JSONResult«生产任务其他信息VO»
 export interface IJSONResultOtherInformationAboutTheProductionTaskVO {
     // 返回码

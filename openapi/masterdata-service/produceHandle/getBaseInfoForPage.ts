@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBaseInfoForPageUsingPOST
 // 生产处理查询VO
 export interface IProductionProcessingQueryVO {
     // 当前页面

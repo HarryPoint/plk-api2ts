@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/getFiscalPeriodSelectorUsingGET
 // JSONResult«List«期间响应对象»»
 export interface IJSONResultListRespondsToTheObjectDuring {
     // 返回码

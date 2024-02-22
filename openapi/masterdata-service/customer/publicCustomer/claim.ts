@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/客户相关/claimCustomerUsingPOST
 // CustomerClaimInputVO
 export interface ICustomerClaimInputVO {
     // 客户ID列表

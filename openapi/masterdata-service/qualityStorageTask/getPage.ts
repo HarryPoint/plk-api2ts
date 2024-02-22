@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检管理/getPageUsingPOST_23
 // 质检任务搜索VO
 export interface IInspectionTaskSearchesForVO {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/甘特图相关/addOccupyUsingPOST
 // 添加占用DTO
 export interface ITheOccupiedDTOWasAdded {
     // 占用类型

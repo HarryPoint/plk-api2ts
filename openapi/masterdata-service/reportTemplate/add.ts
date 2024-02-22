@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/报表模板/addUsingPOST_6
 // ReportTemplateAddRequestDTO
 export interface IReportTemplateAddRequestDTO {
     // 模板名称

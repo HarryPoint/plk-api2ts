@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getApplicationStructureUsingPOST
 // JSONResult«表单结构VO»_1
 export interface IJSONResultFormStructureVO1 {
     // 返回码

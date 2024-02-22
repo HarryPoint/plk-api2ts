@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getSalesDayReportStatisticsUsingPOST
 // JSONResult«销售日报表统计返回对象»
 export interface IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics {
     // 返回码

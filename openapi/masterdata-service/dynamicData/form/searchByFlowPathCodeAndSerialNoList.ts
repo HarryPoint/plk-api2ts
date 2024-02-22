@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListUsingPOST
 // 动态表单查询
 export interface IDynamicFormQuery {
     // 关联表单编码

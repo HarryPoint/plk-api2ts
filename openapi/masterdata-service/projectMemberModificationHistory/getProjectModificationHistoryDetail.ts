@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目成员变更版本记录相关/getProjectModificationHistoryDetailUsingGET
 // JSONResult«项目成员变更信息版本记录»
 export interface IJSONResultProjectMemberChangeInformationVersionRecord {
     // 返回码

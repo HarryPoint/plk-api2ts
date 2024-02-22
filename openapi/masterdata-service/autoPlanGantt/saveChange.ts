@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/甘特图相关/saveChangeUsingPOST
 // 变更甘特图计划DTO
 export interface IChangeGanttChartPlanDTO {
     // 排期类型

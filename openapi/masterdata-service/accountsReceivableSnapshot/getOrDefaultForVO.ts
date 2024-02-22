@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getOrDefaultForVOUsingGET
 // JSONResult«AccountsReceivableSnapshotVO»
 export interface IJSONResultAccountsReceivableSnapshotVO {
     // 返回码

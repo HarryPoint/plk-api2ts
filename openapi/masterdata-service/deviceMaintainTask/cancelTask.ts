@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备保养任务相关/cancelTaskUsingPOST
 // Id 信息
 export interface IIdInformation {
     // id

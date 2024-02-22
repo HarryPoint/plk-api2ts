@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/文件对象相关/pageUsingPOST_1
 // 文件对象分页查询请求DTO
 export interface IFileObjectPagingQueryRequestDTO {
     // 当前页面

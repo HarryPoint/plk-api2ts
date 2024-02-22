@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/getQualityAnalysisAmountReportUsingPOST
 // JSONResult«质量统计分析报表合计返回DTO»
 export interface IJSONResultTotalQualityStatisticalAnalysisReportReturnedToDTO {
     // 返回码

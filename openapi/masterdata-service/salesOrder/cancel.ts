@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/cancelUsingPOST_2
 // id信息
 export interface IIdInformation {
     // id

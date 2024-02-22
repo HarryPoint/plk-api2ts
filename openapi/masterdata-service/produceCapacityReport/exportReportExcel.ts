@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/exportReportExcelUsingPOST_1
 // 产能利用率报表查询DTO
 export interface ICapacityUtilizationReportQueryingDtos {
     // 当前页面

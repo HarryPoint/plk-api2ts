@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupByIdAndCheckUsingGET
 // JSONResult«班组VO»
 export interface IJSONResultVOGroup {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/getAbnormalTypeUsingGET_2
 // JSONResult«List«异常类型返回VO»»
 export interface ITheJSONResultListExceptionTypeReturnsVO {
     // 返回码

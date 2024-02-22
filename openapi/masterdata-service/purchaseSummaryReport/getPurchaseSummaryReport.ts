@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportUsingPOST
 // JSONResult«分页信息«采购汇总报表返回对象»»
 export interface IJSONResultObjectReturnedByThePagingInformationProcurementSummaryReport {
     // 返回码

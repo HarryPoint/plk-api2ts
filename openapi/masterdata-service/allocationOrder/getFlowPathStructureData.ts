@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/调拨单相关/getFlowPathStructureDataUsingPOST
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {
     // 流程任务id

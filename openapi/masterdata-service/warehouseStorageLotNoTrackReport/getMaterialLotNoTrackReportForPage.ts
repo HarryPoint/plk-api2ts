@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/批次跟踪报表相关/getMaterialLotNoTrackReportForPageUsingPOST
 // JSONResult«分页信息«物料批次跟踪分页响应对象»»
 export interface IJSONResultPagingInformationMaterialBatchTrackingPagingResponseObject {
     // 返回码

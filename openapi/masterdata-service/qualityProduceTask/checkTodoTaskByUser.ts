@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产质检管理/checkTodoTaskByUserUsingGET_1
 // JSONResult«boolean»
 export interface IJSONResultboolean {
     // 返回码

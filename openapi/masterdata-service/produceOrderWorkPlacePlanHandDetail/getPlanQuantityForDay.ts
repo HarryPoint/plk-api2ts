@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单工位计划手动排产详情相关/getPlanQuantityForDayUsingGET
 // JSONResult«List«计划返回VO»»
 export interface IJSONResultListPlansToReturnVO {
     // 返回码

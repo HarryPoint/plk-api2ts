@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/bindMaterialUsingPOST
 // 维联批次打印模板绑定物料请求对象
 export interface ITheViVBatchPrintTemplateBindsTheMaterialRequestObject {
     // 打印模板id

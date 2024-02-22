@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/batchUploadUsingPOST
 // TSK测试数据
 export interface ITSKTestData {
 }

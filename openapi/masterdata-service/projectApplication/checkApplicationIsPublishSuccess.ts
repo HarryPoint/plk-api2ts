@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目应用相关/checkApplicationIsPublishSuccessUsingPOST
 // 应用是否发布成功校验请求对象
 export interface IVerifyWhetherTheApplicationSuccessfullyAdvertisesTheRequestObject {
     // 项目id

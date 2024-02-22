@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseSelectorUsingGET
 // JSONResult«List«物料主数据仓位返回VO»»
 export interface IJSONResultListReturnsTheMaterialMasterDataStoreToVO {
     // 返回码

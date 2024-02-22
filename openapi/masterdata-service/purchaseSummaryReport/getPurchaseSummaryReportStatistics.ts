@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportStatisticsUsingPOST
 // JSONResult«采购汇总报表合计返回对象»
 export interface IJSONResultPurchaseSummaryReportTotalReturnedObjects {
     // 返回码

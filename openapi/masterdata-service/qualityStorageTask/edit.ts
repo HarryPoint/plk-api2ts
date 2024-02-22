@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检管理/editUsingPOST_19
 // 编辑质检任务 DTO
 export interface IEditTheInspectionTaskDTO {
     // id，如果不传就是新增

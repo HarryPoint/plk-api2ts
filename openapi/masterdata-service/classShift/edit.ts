@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/班次相关/editUsingPOST_1
 // 班次编辑DTO
 export interface IShiftEditorDTO {
     // id

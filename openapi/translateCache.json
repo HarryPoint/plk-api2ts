@@ -3039,5 +3039,6 @@
   "RaceAttachmentProvisionTaskResponseDTO": "RaceAttachmentProvisionTaskResponseDTO",
   "TransferFileRequestDTO": "TransferFileRequestDTO",
   "AttachmentRequestDTO": "AttachmentRequestDTO",
-  "项目阶段绑定请求对象": "TheProjectPhaseBindsTheRequestObject"
+  "项目阶段绑定请求对象": "TheProjectPhaseBindsTheRequestObject",
+  "项目阶段删除请求对象": "DeleteTheRequestObjectDuringTheProjectPhase"
 }

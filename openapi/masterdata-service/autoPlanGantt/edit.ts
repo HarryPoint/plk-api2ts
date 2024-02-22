@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/甘特图相关/editUsingPOST
 // EditProducePlanAutoScheduleInputVO
 export interface IEditProducePlanAutoScheduleInputVO {
     // 排期ID

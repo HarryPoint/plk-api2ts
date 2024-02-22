@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/盘盈单相关/exportUsingPOST_8
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {
     // undefined

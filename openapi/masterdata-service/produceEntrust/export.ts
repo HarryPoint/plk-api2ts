@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
 // 委外加工搜索VO
 export interface IOutsourcingSearchVO {
     // 委外单号

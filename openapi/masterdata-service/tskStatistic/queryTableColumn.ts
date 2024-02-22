@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTableColumnUsingGET_2
 // JSONResult«List«TskStatisticReportTableColumnBO»»
 export interface IJSONResultListTskStatisticReportTableColumnBO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryManageAuditAuditImprovementRectificationUsingPOST
 // ImprovementRecificationQueryRequestDTO
 export interface IImprovementRecificationQueryRequestDTO {
     // 查询日期的开始

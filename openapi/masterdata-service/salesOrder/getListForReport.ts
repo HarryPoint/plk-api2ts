@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getListForReportUsingPOST
 // 订单进度统计查询VO
 export interface IOrderProgressStatisticsQueryVO {
     // 当前页面

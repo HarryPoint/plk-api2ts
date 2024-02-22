@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/准备期相关/editUsingPOST_20
 // 准备期编辑DTO
 export interface IPreparatoryPeriodEditorDTO {
     // id

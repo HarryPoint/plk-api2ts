@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/维联批次打印相关/checkPrintProduceOrderIdsUsingPOST
 // JSONResult«维联批次打印模板响应对象»
 export interface IJSONResultVirtualizedBatchPrintTemplateResponseObject {
     // 返回码

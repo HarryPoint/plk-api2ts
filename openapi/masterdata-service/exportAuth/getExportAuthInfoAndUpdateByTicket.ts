@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getExportAuthInfoAndUpdateByTicketUsingGET
 // JSONResult«导出ticket信息»_1
 export interface IJSONResultExportedTicketInformation1 {
     // 返回码

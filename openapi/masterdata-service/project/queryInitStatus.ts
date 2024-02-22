@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目相关/queryInitStatusUsingGET
 // JSONResult«string»_2
 export interface IJSONResultstring2 {
     // 返回码

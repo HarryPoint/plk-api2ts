@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/准备期相关/exportUsingPOST_28
 // 准备期查询VO
 export interface IPreparationPeriodQueryVO {
     // 当前页面

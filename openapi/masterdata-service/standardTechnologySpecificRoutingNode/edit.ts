@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺具体工艺路径节点相关/editUsingPOST_23
 // 标准工艺具体工艺路径节点编辑请求对象
 export interface IStandardProcessSpecificProcessPathNodeEditRequestObject {
     // 当前的标准工艺id, 创建标准工艺阶段 传递null, 编辑标准工艺阶段 传递编辑的标准工艺id

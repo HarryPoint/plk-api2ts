@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterDataByIdUsingGET
 // JSONResult«JSONObject»
 export interface IJSONResultJSONObject {
     // 返回码

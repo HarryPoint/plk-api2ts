@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/单位相关/getSelectorUsingGET_9
 // JSONResult«List«Id，名称VO»»
 export interface IJSONResultListIdNameVO {
     // 返回码

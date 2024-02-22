@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getDataByCodeOrNameListUsingPOST
 // 流程表单Code或Name搜索VO
 export interface IProcessFormCodeOrNameSearchesForVO {
     // 应用code

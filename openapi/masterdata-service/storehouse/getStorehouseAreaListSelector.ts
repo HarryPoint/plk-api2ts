@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库相关/getStorehouseAreaListSelectorUsingGET
 // JSONResult«List«仓库区域树返回VO»»
 export interface ITheJSONResultListRepositoryAreaTreeReturnsVO {
     // 返回码

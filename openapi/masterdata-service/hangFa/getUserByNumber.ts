@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
 // JSONResult«ThirdApiResponseDTO»
 export interface IJSONResultThirdApiResponseDTO {
     // 返回码

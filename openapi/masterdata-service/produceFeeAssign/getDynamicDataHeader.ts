@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDynamicDataHeaderUsingGET
 // JSONResult«List«生产成本分配动态表头响应对象»»
 export interface IJSONResultListProductionCostAllocationDynamicTableHeaderResponseObject {
     // 返回码

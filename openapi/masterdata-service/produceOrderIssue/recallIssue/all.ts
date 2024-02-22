@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单下发/recallIssueAllUsingGET
 // JSONResult«生产订单下发结果DTO»
 export interface IJSONResultProductionOrderDeliveryResultDTO {
     // 返回码

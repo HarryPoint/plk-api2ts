@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/deviceRpUsingPOST
 // 设备数采方案应用设备关联信息编辑DTO
 export interface IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation {
     // 方案id

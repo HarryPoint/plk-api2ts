@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目变更相关/viewAddExtendParamUsingPOST_1
 // 项目变更单扩展参数请求
 export interface IItemChangeOrderExtensionParameterRequest {
     // 字段数据列表

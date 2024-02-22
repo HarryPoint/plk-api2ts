@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序检验任务相关/cancelTaskUsingPOST_4
 // 检验任务取消请求DTO
 export interface IVerifyTaskCancellationRequestDTO {
     // 流程id

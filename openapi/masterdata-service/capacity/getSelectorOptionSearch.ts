@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产能相关/getSelectorOptionSearchUsingPOST
 // 产能下拉选择列表搜索DTO
 export interface ICapacityDropDownListToSearchForDtos {
     // 物料id

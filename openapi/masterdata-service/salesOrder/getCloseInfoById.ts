@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getCloseInfoByIdUsingGET_1
 // JSONResult«销售订单关闭信息返回VO»
 export interface IJSONResultSalesOrderClosureInformationIsReturnedToVO {
     // 返回码

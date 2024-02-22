@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getFpyRateReportResultVOForAllUsingGET
 // JSONResult«直通报表返回VO»
 export interface IJSONResultPassthroughReportReturnsVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/examineUsingPOST
 // 安全库存变更申请审核DTO
 export interface ISecurityInventoryChangeRequestReviewDTO {
     // id

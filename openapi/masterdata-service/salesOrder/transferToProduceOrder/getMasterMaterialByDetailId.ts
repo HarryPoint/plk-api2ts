@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getMasterMaterialByDetailIdUsingGET
 // JSONResult«转生产订单主物料信息»
 export interface IJSONResultMainMaterialInformationOfTheProductionOrder {
     // 返回码

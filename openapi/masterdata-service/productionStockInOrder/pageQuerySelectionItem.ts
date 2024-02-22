@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产入库单相关/pageQuerySelectionItemUsingPOST_1
 // 分页_13
 export interface IPaging13 {
     // 当前页面

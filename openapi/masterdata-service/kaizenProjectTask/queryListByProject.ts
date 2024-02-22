@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/queryListByProjectUsingGET
 // JSONResult«List«KaizenProjectTaskResponseDTO»»
 export interface IJSONResultListKaizenProjectTaskResponseDTO {
     // 返回码

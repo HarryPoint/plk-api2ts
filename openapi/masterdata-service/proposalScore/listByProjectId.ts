@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/合理化建议评分相关/listByProjectIdUsingPOST
 // JSONResult«List«ProposalScoreResponseDTO»»
 export interface IJSONResultListProposalScoreResponseDTO {
     // 返回码

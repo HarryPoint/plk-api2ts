@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/pageQuerySpecialWorksUsingPOST
 // 专项工作查询请求_1
 export interface ISpecialWorkQueryRequest1 {
     // 当前页面

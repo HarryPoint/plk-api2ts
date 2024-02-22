@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/listByInspectionItemsIdUsingGET
 // JSONResult«List«质量人员下拉响应DTO»»
 export interface IJSONResultListQualityPersonnelDropDownResponseDtos {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getDifengSalesDayReportUsingPOST
 // JSONResult«分页信息«销售日报表返回对象»»
 export interface IJSONResultPageInformationObjectReturnedByTheSalesDailyReport {
     // 返回码

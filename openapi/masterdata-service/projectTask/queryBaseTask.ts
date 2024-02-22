@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryBaseTaskUsingPOST
 // 项目阶段任务查询对象_1
 export interface IProjectPhaseTaskQueryObject1 {
     // 当前页面

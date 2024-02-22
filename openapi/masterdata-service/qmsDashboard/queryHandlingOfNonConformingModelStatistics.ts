@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingModelStatisticsUsingGET
 // JSONResult«List«大屏不合格品统计按项目返回»»
 export interface IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem {
     // 返回码

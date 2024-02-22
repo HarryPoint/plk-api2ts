@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工费相关/batchRemoveUsingPOST_4
 // id集合信息
 export interface IIdCollectionInformation {
     // id集合

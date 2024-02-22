@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/changePlanDetailPlanStartTimeUsingPOST
 // 保养计划明细保养开始时间编辑DTO
 export interface IMaintenancePlanDetailsMaintenanceStartTimeEditDTO {
     // id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getChangeRecordListUsingGET
 // JSONResult«List«保养计划变更记录响应DTO»»
 export interface IJSONResultListMaintenancePlanChangeRecordRespondsToDTO {
     // 返回码

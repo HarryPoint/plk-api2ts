@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getAccountsReceivableGroupDayUsingGET
 // JSONResult«AccountsReceivableVO»
 export interface IJSONResultAccountsReceivableVO {
     // 返回码

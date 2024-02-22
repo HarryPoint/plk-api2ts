@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-controller/getDetailByIdUsingGET_3
 // JSONResult«ProduceTechnologyRoutingInfoResponseDTO»
 export interface IJSONResultProduceTechnologyRoutingInfoResponseDTO {
     // 返回码

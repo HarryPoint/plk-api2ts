@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/财务期间相关/getCurrentFiscalPeriodUsingPOST
 // JSONResult«期间响应对象»
 export interface IResponseObjectDuringJSONResult {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检方案/materialRpUsingPOST
 // 质检方案物料应用关联信息编辑DTO
 export interface IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO {
     // 质检方案id

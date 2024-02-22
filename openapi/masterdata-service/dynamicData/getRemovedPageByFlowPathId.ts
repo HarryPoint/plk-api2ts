@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/getRemovedPageByFlowPathIdUsingPOST
 // 流程数据搜索VO_1
 export interface IProcessDataSearchVO1 {
     // 全局搜索

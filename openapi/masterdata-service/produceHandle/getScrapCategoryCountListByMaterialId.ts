@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getScrapCategoryCountListByMaterialIdUsingGET
 // JSONResult«List«Id，值VO»»
 export interface IJSONResultListIdIndicatesTheValueVO {
     // 返回码

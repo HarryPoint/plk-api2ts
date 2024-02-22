@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/changeApiSwitchUsingPOST
 // 设备数采通讯状态DTO
 export interface IDeviceDataAcquisitionCommunicationStatusDTO {
     // id

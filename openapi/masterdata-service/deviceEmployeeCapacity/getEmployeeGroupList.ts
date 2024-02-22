@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeGroupListUsingPOST
 // 设备人员能力分组查询DTO
 export interface IDevicePersonnelAbilityQueryDtosInGroups {
     // 人员id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目阶段相关/getAppInfoUsingGET_1
 // JSONResult«项目阶段应用响应对象»
 export interface IJSONResultProjectPhaseAppliesTheResponseObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/其它入库单相关/getRemovedForPageUsingPOST_5
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {
     // 全局搜索

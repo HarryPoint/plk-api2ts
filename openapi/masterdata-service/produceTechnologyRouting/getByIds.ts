@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-controller/getByIdsUsingPOST_4
 // JSONResult«List«ProduceTechnologyRoutingResponseDTO»»
 export interface IJSONResultListProduceTechnologyRoutingResponseDTO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/saveUsingPOST_8
 // 标准工艺条件组保存DTO
 export interface IDtosAreStoredInStandardProcessConditionsGroup {
     // id

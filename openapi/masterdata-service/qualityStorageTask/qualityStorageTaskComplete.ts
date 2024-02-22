@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检管理/qualityStorageTaskCompleteUsingPOST
 // 质检任务完成 DTO
 export interface ITheDTOCompletesTheInspectionTask {
     // 质检任务id

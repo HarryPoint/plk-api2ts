@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editByCodeUsingPOST
 // 列表列样式系统配置编辑DTO
 export interface IListColumnStyleSystemConfigurationEditDTO {
     // 编码

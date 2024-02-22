@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/assignUsingPOST_1
 // 生产任务分配VO
 export interface IProductionTaskAssignmentVO {
     // 生产任务ids -- 单个分配时, 传递一个即可

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnvironmentalProtectionListUsingPOST
 // 环保S查询请求
 export interface IEnvironmentalProtectionSQueryRequest {
     // 查询日期的开始

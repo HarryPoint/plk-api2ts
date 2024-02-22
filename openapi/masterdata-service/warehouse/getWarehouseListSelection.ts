@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseListSelectionUsingPOST
 // 仓位树返回VO_1
 export interface IPositionTreeReturnsVO1 {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchGetLotSerialNoForStockUsingPOST
 // 批次/序列号申请DTO
 export interface IBatchSerialNumberRequestDTO {
     // 批次/序列号方案id

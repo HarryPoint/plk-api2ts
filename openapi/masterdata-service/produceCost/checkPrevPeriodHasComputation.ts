@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkPrevPeriodHasComputationUsingGET
 // JSONResult«string»_1
 export interface IJSONResultstring1 {
     // 返回码

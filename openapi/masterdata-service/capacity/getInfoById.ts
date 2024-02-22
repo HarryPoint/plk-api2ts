@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产能相关/getInfoByIdUsingGET
 // JSONResult«产能响应对象»
 export interface IJSONResultProductivityResponseObject {
     // 返回码

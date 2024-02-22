@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryDetailUsingGET
 // JSONResult«生产处理基础信息详情返回VO»
 export interface IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/供应商绩效评价报表相关/exportInspectionTaskStatisticsReportUsingPOST_1
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

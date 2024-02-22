@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionEntrustReportExportInfoByTicketUsingGET
 // JSONResult«导出信息«委外报表导出VO»»
 export interface IJSONResultExportInformationOutsourcingReportExportVO {
     // 返回码

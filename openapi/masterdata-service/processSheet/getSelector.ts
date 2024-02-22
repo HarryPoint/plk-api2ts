@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorUsingPOST
 // 工艺卡选择列表搜索VO
 export interface IProcessCardSelectionListSearchVO {
     // 物料id

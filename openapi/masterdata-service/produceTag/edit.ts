@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标签设置/editUsingPOST_12
 // 生产标签编辑DTO
 export interface IProductionLabelEditingDTO {
     // id

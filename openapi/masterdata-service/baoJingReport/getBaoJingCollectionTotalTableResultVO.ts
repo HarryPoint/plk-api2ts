@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingCollectionTotalTableResultVOUsingPOST
 // 宝晶收款汇总分析报表搜索VO
 export interface IBaojingCollectionSummaryAnalysisReportSearchVO {
     // 当前页面

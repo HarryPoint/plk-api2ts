@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceLastQuantityForDayUsingGET
 // JSONResult«List«最后工序合格产出返回VO»»
 export interface IJSONResultListReturnTheFinalProcessQualifiedOutputToVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/getForPageUsingPOST_11
 // 工序任务搜索VO
 export interface IProcessTaskSearchVO {
     // 工序id集合

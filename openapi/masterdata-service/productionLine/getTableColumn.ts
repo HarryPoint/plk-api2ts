@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/产线相关/getTableColumnUsingGET_10
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {
     // 返回码

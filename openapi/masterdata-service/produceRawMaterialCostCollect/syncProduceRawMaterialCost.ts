@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产原材料成本归集相关/syncProduceRawMaterialCostUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/费用分配相关/checkProduceFeeAssignHasModifyUsingGET
 // JSONResult«校验响应对象»
 export interface IJSONResultVerifiesTheResponseObject {
     // 返回码

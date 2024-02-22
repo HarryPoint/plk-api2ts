@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryCountListUsingPOST
 // 生产异常类型统计VO_1
 export interface IProductionExceptionTypeStatisticsVO1 {
     // 所属分类

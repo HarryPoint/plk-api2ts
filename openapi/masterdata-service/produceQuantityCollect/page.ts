@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/pageUsingPOST_3
 // JSONResult«分页信息«完工及产成品归集分页响应对象»»
 export interface IJSONResultCollectsPagingResponseObjectsForCompletedPagingInformationAndFinishedProducts {
     // 返回码

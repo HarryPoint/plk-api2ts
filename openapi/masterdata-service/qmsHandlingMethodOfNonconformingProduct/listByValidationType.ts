@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
 // JSONResult«List«不合格品处理方式响应对象»»
 export interface IJSONResultListResponseObjectForHandlingNonconformingItems {
     // 返回码

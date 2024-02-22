@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/addScrapUsingPOST
 // 生产报废处理
 export interface IProductionScrapTreatment {
     // 生产任务id

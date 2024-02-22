@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityPotentialsUsingPOST
 // 安全隐患查询请求
 export interface ISecurityRiskQueryRequest {
     // 查询日期的开始

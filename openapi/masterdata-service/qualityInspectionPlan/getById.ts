@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检方案/getByIdUsingGET_14
 // JSONResult«质检方案明细返回VO»
 export interface IJSONResultCheckSolutionDetailsAreReturnedToVO {
     // 返回码

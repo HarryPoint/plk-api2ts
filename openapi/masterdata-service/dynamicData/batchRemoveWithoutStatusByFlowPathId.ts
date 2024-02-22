@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchRemoveWithoutStatusByFlowPathIdUsingPOST
 // 动态数据无状态删除请求对象
 export interface IDynamicDataStatelessDeleteRequestObject {
     // 删除明细

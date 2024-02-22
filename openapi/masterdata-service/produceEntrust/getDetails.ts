@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/委外加工管理/getDetailsUsingGET
 // JSONResult«List«委外加工明细返回VO»»
 export interface IJSONResultListOutsourcedProcessingDetailsAreReturnedToVO {
     // 返回码

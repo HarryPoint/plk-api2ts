@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工费相关/batchValidUsingPOST_3
 // 批量启用or停用VO
 export interface IEnableOrDisableVOInBatches {
     // id集合

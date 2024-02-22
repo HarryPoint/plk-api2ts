@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanMoveInLotOrderUsingPOST
 // 可进出料批次查询dto
 export interface IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches {
     // 生产任务id

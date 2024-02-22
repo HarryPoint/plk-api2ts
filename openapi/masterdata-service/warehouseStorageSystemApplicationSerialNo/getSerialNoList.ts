@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位系统应用库存序列号相关/getWarehouseStorageSystemApplicationSerialNoUsingPOST
 // 仓位系统应用库存序列号分页查询对象
 export interface ITheWarehouseSystemAppliesTheInventorySerialNumberPagingQueryObject {
     // 仓位系统应用id(eg：物料id)

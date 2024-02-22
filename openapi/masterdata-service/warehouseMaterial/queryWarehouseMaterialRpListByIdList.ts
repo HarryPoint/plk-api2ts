@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/库存查询相关/queryWarehouseMaterialRpListByIdListUsingPOST
 // JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»
 export interface IJSONResultListWarehouseMaterialRpQueryResponseDTO {
     // 返回码

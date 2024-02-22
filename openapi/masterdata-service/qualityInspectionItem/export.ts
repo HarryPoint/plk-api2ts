@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检项/exportUsingPOST_25
 // 质检项搜索VO
 export interface ICheckItemSearchVO {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/queryVerticalForecastLaborCostUsingPOST
 // 预测工费_1
 export interface IForecastLaborCost1 {
     // 主物料ID

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/syncAllCodePlanUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

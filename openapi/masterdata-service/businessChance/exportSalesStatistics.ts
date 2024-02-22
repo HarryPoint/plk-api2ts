@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/exportSalesStatisticsUsingPOST
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

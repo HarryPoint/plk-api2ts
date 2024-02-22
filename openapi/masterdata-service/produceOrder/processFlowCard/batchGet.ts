@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProcessFlowCardUsingPOST
 // JSONResult«List«ProcessFlowCardDTO»»
 export interface IJSONResultListProcessFlowCardDTO {
     // 返回码

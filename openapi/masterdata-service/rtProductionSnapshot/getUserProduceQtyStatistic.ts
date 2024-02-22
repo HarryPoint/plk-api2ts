@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUserProduceQtyStatisticUsingPOST
 // 用户生产统计搜索VO
 export interface IUserProductionStatisticsSearchVO {
     // 查询开始时间 yyyy-MM-dd HH:mm:ss

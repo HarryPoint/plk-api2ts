@@ -1,3 +1,11 @@
+// http://47.108.139.107:16700/doc.html#/default/项目阶段相关/removeByIdUsingPOST_1
+// 项目阶段删除请求对象
+export interface IDeleteTheRequestObjectDuringTheProjectPhase {
+    // 项目阶段id
+    projectStageId: number;
+    // 项目计划id
+    projectPlanId: number;
+}
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

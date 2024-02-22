@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/供应商绩效评价报表相关/querySupplierPerformanceReportUsingPOST
 // JSONResult«分页信息«质量绩效评价表报表返回DTO»»
 export interface IJSONResultThePageInformationQualityPerformanceEvaluationReportReturnsTheDTO {
     // 返回码

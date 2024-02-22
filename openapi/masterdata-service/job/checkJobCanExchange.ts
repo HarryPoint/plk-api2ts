@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/定时任务相关/checkJobCanExchangeUsingPOST
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

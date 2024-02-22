@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工序相关/listByCodesUsingPOST
 // JSONResult«List«ProcessDeprecatedVO»»
 export interface IJSONResultListProcessDeprecatedVO {
     // 返回码

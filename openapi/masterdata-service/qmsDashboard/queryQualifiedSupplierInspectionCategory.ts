@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionCategoryUsingPOST
 // QualifiedSupplierInspectionCategoryQueryRequestDTO
 export interface IQualifiedSupplierInspectionCategoryQueryRequestDTO {
     // 查询日期的开始

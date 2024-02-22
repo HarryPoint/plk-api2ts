@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getWaitIssueDeviceMaintainPlanDetailUsingGET
 // 保养计划明细待下发响应DTO
 export interface IMaintenancePlanDetailsToBeDeliveredResponseDTO {
     // id

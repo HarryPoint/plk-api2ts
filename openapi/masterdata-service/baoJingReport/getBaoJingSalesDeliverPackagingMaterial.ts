@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
 // JSONResult«宝晶销售发货报表包材表头响应对象»
 export interface IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject {
     // 返回码

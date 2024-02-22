@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/财务期间相关/pageQueryUsingPOST
 // 财务期间查询请求
 export interface IFinancialPeriodQueryRequest {
     // 开始月份

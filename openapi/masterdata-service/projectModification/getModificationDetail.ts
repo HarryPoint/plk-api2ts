@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目变更相关/getModificationDetailUsingGET_1
 // JSONResult«List«项目变更单字段响应参数»»
 export interface IJSONResultListProjectChangeOrderFieldResponseParameters {
     // 返回码

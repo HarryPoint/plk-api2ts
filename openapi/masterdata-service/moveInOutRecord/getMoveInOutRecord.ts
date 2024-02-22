@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveInOutRecordUsingPOST
 // 进出站记录搜索VO
 export interface IEntryAndExitRecordsSearchVO {
     // 任务id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
 // 开放api请求搜索VO
 export interface IOpenApiRequestsSearchVO {
     // 当前页面

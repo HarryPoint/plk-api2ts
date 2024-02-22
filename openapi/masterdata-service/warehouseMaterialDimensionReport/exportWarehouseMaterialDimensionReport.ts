@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/exportWarehouseMaterialDimensionReportUsingPOST
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

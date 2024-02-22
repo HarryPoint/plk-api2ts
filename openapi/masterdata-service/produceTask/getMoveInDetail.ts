@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveInDetailUsingPOST
 // 进出料信息查询DTO
 export interface IQueryDTOForIncomingAndOutgoingMaterialInformation {
     // 任务id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/getCanNotOpenQualityTraceabilityProduceOrderListUsingGET
 // JSONResult«List«质量追溯未打开生产订单响应对象»»
 export interface IJSONResultListQualityTraceabilityDoesNotOpenAProductionOrderResponseObject {
     // 返回码

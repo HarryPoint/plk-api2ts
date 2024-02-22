@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目简报相关/checkWeeklyReportUsingGET
 // JSONResult«string»_1
 export interface IJSONResultstring1 {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务相关/checkPreTaskUsingGET
 // JSONResult«List«项目任务前置任务校验响应对象»»
 export interface IJSONResultListProjectTaskPreTaskVerifyTheResponseObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/财务期间相关/getFiscalPeriodStartMonthUsingGET
 // JSONResult«设置期间开始月份Response»
 export interface IJSONResultSetsResponseDuringTheStartMonth {
     // 返回码

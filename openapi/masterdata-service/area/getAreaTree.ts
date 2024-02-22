@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaTreeUsingGET
 // JSONResult«List«区域树返回VO»»
 export interface ITheJSONResultListAreaTreeReturnsVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目应用相关/queryProjectApplicationUsingPOST
 // 项目应用请求对象
 export interface IProjectApplicationRequestObject {
     // 项目id

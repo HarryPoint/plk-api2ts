@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料收发汇总报表相关/getBillFlowPathCodeListUsingGET
 // JSONResult«物料收发单据列表响应对象»
 export interface IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials {
     // 返回码

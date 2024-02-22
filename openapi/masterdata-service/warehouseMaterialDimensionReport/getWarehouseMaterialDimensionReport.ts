@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/getWarehouseMaterialDimensionReportUsingPOST
 // JSONResult«分页信息«物料库存维度查询明细响应对象»»
 export interface IJSONResultPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension {
     // 返回码

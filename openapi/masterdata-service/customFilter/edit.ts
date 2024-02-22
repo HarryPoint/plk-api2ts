@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/自定义筛选项相关/editUsingPOST_2
 // 自定义筛选项编辑list对象DTO
 export interface ICustomFiltersEditTheListObjectDTO {
     // undefined

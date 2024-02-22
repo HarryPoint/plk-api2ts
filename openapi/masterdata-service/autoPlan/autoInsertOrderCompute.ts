@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoInsertOrderComputeUsingPOST
 // 生产订单自动插单DTO
 export interface IProductionOrderAutomaticInsertionDTO {
     // 待排产订单id集

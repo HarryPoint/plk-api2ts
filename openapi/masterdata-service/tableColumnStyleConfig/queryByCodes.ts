@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/列表列样式配置/queryByCodesUsingPOST
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/脚本相关/syncStorageToPhysicalSnapshotUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

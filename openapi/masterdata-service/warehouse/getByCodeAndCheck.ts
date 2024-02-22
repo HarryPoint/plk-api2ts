@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓位相关/getByCodeAndCheckUsingPOST_1
 // JSONResult«仓位VO»
 export interface IJSONResultPositionVO {
     // 返回码

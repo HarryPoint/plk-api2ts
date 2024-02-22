@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/queryProjectGanttUsingPOST
 // 项目甘特图查询对象
 export interface IProjectGanttChartQueryObject {
     // 项目名称

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/copyCanvasUsingPOST
 // 标准工艺画布复制请求对象
 export interface IStandardProcessCanvasCopyRequestObject {
     // 标准工艺id

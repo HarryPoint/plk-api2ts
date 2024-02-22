@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/addTaskUsingPOST
 // 生产成本核算任务添加请求对象
 export interface IProductionCostingTaskAddsRequestObject {
     // 财务期间id

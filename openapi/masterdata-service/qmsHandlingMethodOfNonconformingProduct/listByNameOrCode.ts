@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
 // 名称、编号DTO
 export interface INameNumberDTO {
     // 名称or编号

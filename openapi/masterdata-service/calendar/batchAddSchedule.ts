@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工厂日历相关/batchAddScheduleUsingPOST
 // 排班新增DTO
 export interface IScheduleNewDtos {
     // 排班日期 yyyy-MM-dd

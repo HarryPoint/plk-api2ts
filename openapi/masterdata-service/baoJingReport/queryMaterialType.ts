@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/queryMaterialTypeUsingGET
 // JSONResult«List«CodeName»»
 export interface IJSONResultListCodeName {
     // 返回码

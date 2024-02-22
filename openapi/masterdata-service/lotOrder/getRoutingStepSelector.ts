@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getRoutingStepSelectorUsingGET
 // JSONResult«List«生产工艺路径步骤工序响应 DTO»»
 export interface IJSONResultListProductionProcessPathStepProcessResponseDTO {
     // 返回码

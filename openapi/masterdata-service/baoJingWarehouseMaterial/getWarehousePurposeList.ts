@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getWarehousePurposeListUsingPOST
 // JSONResult«List«名称，编号VO»»
 export interface IJSONResultListNameNumberVO {
     // 返回码

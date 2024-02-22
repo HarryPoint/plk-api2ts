@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/editUsingPOST_14
 // 项目任务规则编辑请求DTO
 export interface IProjectTaskRuleEditRequestDTO {
     // ID

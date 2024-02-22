@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getRoutingStepsByRoutingIdsUsingPOST
 // JSONResult«List«基础VO»»_1
 export interface IJSONResultListBaseVO1 {
     // 返回码

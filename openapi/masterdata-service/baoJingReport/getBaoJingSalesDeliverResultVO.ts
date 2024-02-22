@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverResultVOUsingPOST
 // 宝晶销售发货报表搜索VO
 export interface IBaojingSalesDeliveryReportSearchVO {
     // 当前页面

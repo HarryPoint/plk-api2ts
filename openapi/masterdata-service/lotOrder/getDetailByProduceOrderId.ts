@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getDetailByProduceOrderIdUsingGET
 // JSONResult«List«批次订单返回VO»»
 export interface IJSONResultListBatchOrderReturnsVO {
     // 返回码

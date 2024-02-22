@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
 // JSONResult«外部财务凭证响应对象»
 export interface IJSONResultExternalFinancialCertificateResponseObject {
     // 返回码

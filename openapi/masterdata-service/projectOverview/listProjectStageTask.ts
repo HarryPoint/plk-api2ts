@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目概况相关/listProjectStageTaskUsingPOST
 // JSONResult«List«项目任务响应对象»»_1
 export interface IJSONResultListProjectTaskResponseObject1 {
     // 返回码
@@ -19,6 +20,8 @@ export interface IProjectTaskResponseObject10 {
     projectStageId: number;
     // 项目计划ids
     projectPlanIds: number[];
+    // 项目计划ids
+    projectPlanList: IIdCodeNameGenericTransportObject[];
     // 项目阶段名称
     projectStageName: string;
     // 项目阶段来源应用编号
@@ -29,6 +32,15 @@ export interface IProjectTaskResponseObject10 {
     projectStageSort: number;
     // 下级任务列表
     children: IProjectTaskResponseObject9[];
+}
+// Id Code Name 通用传输对象
+export interface IIdCodeNameGenericTransportObject {
+    // id
+    id: number;
+    // code
+    code: string;
+    // name
+    name: string;
 }
 // 项目任务响应对象_9
 export interface IProjectTaskResponseObject9 {
@@ -114,6 +126,10 @@ export interface IProjectTaskResponseObject9 {
     processStatusName: string;
     // 任务权重
     taskWeight: number;
+    // 项目计划模块是否展示
+    isProjectPlanShow: string;
+    // 项目任务模块是否展示
+    isProjectTaskShow: string;
     // undefined
     leaderUserIds: Record<string, any>[];
     // undefined

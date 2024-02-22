@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料Bom相关/listByMaterialIdAndMaterialBomIdUsingGET
 // JSONResult«List«物料bom响应对象»»
 export interface IJSONResultListMaterialBomResponseObject {
     // 返回码

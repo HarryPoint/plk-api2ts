@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质量月报报表相关/queryUsingPOST_1
 // 质量月报响应DTO
 export interface IQualityMonthlyReportRespondsToDTO {
     // 月份

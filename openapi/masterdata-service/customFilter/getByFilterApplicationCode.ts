@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/自定义筛选项相关/getByFilterApplicationCodeUsingGET
 // JSONResult«List«自定义筛选项返回对象DTO»»
 export interface IJSONResultListReturnObjectDTOForAUserDefinedFilter {
     // 返回码

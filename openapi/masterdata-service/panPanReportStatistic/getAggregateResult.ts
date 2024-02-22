@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/getAggregateResultUsingPOST
 // 盼盼上报统计查询对象
 export interface IPanpanReportsStatisticsToQueryObjects {
     // 查询开始时间 yyyy-MM-dd HH:mm:ss

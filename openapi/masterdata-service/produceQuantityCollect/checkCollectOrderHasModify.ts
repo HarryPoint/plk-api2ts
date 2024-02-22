@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/checkCollectOrderHasModifyUsingGET
 // JSONResult«校验响应对象»
 export interface IJSONResultVerifiesTheResponseObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getScrapProduceAbnormalCategoryReportResultVOForAllTopNUsingGET
 // JSONResult«List«报废类型统计返回VO»»
 export interface IJSONResultListScrapTypeStatisticsReturnVO {
     // 返回码

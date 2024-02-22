@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产事件管理/getHandleTypeCountListByRoutingStepIdUsingGET
 // JSONResult«生产处理统计VO»
 export interface IJSONResultProductionProcessingStatisticsVO {
     // 返回码

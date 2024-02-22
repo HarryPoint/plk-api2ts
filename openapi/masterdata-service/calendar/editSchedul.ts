@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工厂日历相关/editSchedulUsingPOST
 // 日历排班VO
 export interface ICalendarSchedulingVO {
     // 排班天数集

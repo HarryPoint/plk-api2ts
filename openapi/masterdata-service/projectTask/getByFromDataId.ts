@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务相关/getByFromDataIdUsingGET
 // JSONResult«项目任务响应对象»
 export interface IJSONResultProjectTaskResponseObject {
     // 返回码
@@ -93,6 +94,10 @@ export interface IProjectTaskResponseObject6 {
     processStatusName: string;
     // 任务权重
     taskWeight: number;
+    // 项目计划模块是否展示
+    isProjectPlanShow: string;
+    // 项目任务模块是否展示
+    isProjectTaskShow: string;
     // undefined
     leaderUserIds: Record<string, any>[];
     // undefined
@@ -205,6 +210,10 @@ export interface IProjectTaskResponseObject9 {
     processStatusName: string;
     // 任务权重
     taskWeight: number;
+    // 项目计划模块是否展示
+    isProjectPlanShow: string;
+    // 项目任务模块是否展示
+    isProjectTaskShow: string;
     // undefined
     leaderUserIds: Record<string, any>[];
     // undefined

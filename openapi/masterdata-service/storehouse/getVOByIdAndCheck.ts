@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库相关/getVOByIdAndCheckUsingGET_2
 // JSONResult«仓库VO»
 export interface IJSONResultWarehouseVO {
     // 返回码

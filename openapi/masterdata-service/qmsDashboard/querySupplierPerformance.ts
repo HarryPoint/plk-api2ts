@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySupplierPerformanceUsingPOST
 // qms大屏时间区间请求
 export interface IQmsLargeScreenTimeIntervalRequest {
     // 查询日期的开始

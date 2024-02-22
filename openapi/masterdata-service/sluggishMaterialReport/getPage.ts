@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getPageUsingPOST_28
 // JSONResult«分页信息«呆滞物料报表查询明细响应对象»»
 export interface IJSONResultPageInformationDullMaterialsReportQueryDetailsResponseObject {
     // 返回码

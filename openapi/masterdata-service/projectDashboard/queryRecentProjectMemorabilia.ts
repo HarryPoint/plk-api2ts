@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryRecentProjectMemorabiliaUsingPOST
 // 项目大事记大屏查询dto
 export interface IProjectEventsLargeScreenQueryDto {
     // 项目大类

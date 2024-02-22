@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料模具相关/scanMoveInMoldUsingPOST
 // 进料模具扫描请求DTO
 export interface IFeedMoldScanRequestDTO {
     // 生产任务id

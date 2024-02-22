@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/费用分配相关/exportUsingPOST_16
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

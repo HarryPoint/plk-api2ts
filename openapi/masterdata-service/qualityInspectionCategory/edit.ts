@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检分类/editUsingPOST_16
 // 编辑质检分类 DTO
 export interface IEditTheQualityInspectionClassificationDTO {
     // id，如果不传就是新增

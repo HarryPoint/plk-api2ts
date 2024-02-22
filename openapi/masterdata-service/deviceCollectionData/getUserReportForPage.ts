@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportForPageUsingPOST
 // 查询用户上报数据DTO
 export interface IExampleQueryTheDataDTOReportedByAUser {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchUseLotNoForStockUsingPOST
 // JSONResult«批次号使用DTO»_1
 export interface IJSONResultTheBatchNumberIsDTO1 {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/checkHasStorageTakeCheckTaskByStorehouseIdsUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

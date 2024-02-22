@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/selectedMatchStandardTechnologyUsingPOST
 // SelectedMatchStandardTechnologyRequestDTO
 export interface ISelectedMatchStandardTechnologyRequestDTO {
     // 销售订单明细ID

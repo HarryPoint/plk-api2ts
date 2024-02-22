@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采相关/getAllExportResultUsingPOST
 // 设备统计数据搜索VO
 export interface IDeviceStatisticsSearchVO {
     // 设备id集

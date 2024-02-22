@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/getChildMaterialProduceInfoUsingPOST
 // 子物料生产信息查询请求DTO
 export interface ISubMaterialProductionInformationQueryRequestDTO {
     // 标准工艺ID

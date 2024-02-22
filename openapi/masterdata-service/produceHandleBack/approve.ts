@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/approveUsingPOST
 // 生产处理返工批准请求对象
 export interface IProductionProcessesTheReworkApprovalRequestObject {
     // 生产处理id

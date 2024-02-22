@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProduceOrderIdProducePlanRpMapUsingPOST
 // JSONResult«Map«long,生产计划生产订单关联VO»»
 export interface IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO {
     // 返回码

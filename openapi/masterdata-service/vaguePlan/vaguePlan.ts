@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/模糊排产/vaguePlanUsingPOST
 // 生产订单模糊排产DTO
 export interface IProductionOrderFuzzySchedulingDTO {
     // 排产计划单名称

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessFieldProduceTaskDetailPageUsingPOST
 // 任务汇总表(基于工序字段)搜索VO
 export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     // 当前页面

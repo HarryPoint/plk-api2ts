@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售订单相关/doBatchTransferToProduceOrderUsingPOST
 // 批量转到生产订单
 export interface IBatchTransferToProductionOrder {
     // 是否生产订单继承销售订单编号

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺相关/removeUsingPOST_1
 // 标准工艺修改分类请求对象_1
 export interface IStandardProcessModificationClassificationRequestObject1 {
     // 是否删除全部

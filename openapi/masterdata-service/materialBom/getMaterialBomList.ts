@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialBomListUsingPOST
 // 物料bom查询请求对象
 export interface IMaterialBomQueriesTheRequestedObject {
     // 物料id

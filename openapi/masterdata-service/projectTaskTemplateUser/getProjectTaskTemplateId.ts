@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/getProjectTaskTemplateIdUsingGET
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

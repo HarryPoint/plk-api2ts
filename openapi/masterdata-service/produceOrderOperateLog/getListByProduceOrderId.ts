@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单操作日志相关/getListByProduceOrderIdUsingGET
 // JSONResult«List«生产订单详情 - 操作日志VO»»
 export interface IJSONResultListProductionOrderDetailsOperationLogVO {
     // 返回码

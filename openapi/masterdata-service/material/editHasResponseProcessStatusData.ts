@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/editHasResponseProcessStatusDataUsingPOST
 // 物料编辑请求DTO
 export interface IMaterialEditorRequestDTO {
     // 编辑数据

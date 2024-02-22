@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceStockInSummaryUsingPOST
 // 分页_10
 export interface IPaging10 {
     // 当前页面

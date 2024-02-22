@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/待处理进出料异步处理相关/triggerMoveInOutAsyncHandleTaskUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/部门相关/getIdCodeTreeByEnterpriseIdUsingGET
 // JSONResult«List«Id，名称，编号树状VO»»
 export interface IJSONResultListIdNameNumberTreeVO {
     // 返回码

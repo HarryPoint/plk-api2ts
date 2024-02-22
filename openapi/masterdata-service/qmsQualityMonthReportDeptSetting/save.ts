@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质量月报部门设置相关/saveUsingPOST_7
 // 质量月报部门设置编辑DTO
 export interface IQualityMonthlyReportDepartmentSetUpEditorDTO {
     // 部门id集合

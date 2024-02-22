@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/viewAddExtendParamUsingPOST_2
 // 项目计划变更单扩展参数请求
 export interface IProjectPlanChangeOrderExtensionParameterRequest {
     // 项目计划变更信息列表

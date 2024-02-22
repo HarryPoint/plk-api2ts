@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检统计/exportReportExcelUsingPOST_2
 // 良品报废数据表搜索VO
 export interface IScrapDataSheetSearchVO {
     // 当前页面

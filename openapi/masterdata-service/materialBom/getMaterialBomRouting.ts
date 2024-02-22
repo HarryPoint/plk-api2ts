@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialBomRoutingUsingGET
 // JSONResult«List«MaterialBomRoutingVO»»
 export interface IJSONResultListMaterialBomRoutingVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工相关/addSuperManagerUsingPOST
 // 员工超管新增请求DTO
 export interface INewRequestDTOForEmployeeOvermanagement {
     // 员工姓名

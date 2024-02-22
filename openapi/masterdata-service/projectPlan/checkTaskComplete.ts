@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目计划相关/checkTaskCompleteUsingGET
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeNameACommonTransferObject {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectLeaderInstructReportUsingPOST
 // JSONResult«分页信息«项目领导批示报表响应对象»»
 export interface IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject {
     // 返回码

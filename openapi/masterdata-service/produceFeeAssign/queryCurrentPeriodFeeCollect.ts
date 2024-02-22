@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodFeeCollectUsingGET
 // JSONResult«List«费用归集明细响应DTO»»
 export interface IJSONResultListDetailedResponseDTOForCostCollection {
     // 返回码

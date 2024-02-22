@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/02-01-02-销售交期应答辅助相关/computeUsingPOST
 // 销售交期应答辅助计算DTO
 export interface ISalesDeliveryResponseHelpsCalculateDTO {
     // 物料id

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
 // JSONResult«List«项目任务历史查询响应»»
 export interface IJSONResultListProjectTaskHistoryQueryResponse {
     // 返回码

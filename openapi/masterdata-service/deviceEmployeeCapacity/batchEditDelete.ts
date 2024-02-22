@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
 // 设备人员能力批量编辑DTO
 export interface IEquipmentPersonnelAbilityToBatchEditDtos {
     // 编辑项列表

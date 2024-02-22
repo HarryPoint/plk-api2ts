@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/scrapUsingPOST
 // 生产处理暂扣报废请求对象
 export interface IProductionProcessesWithholdScrapRequestObjects {
     // 生产处理id

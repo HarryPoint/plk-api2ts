@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
 // JSONResult«生产工艺树状响应对象»
 export interface IJSONResultProductionProcessTreeResponseObject {
     // 返回码

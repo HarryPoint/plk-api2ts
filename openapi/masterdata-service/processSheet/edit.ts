@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺卡相关/editUsingPOST_9
 // 工艺卡信息编辑DTO
 export interface IProcessCardInformationEditsDTO {
     // id

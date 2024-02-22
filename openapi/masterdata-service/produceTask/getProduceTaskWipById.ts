@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskWipByIdUsingGET
 // JSONResult«生产任务WIP信息响应DTO»
 export interface IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation {
     // 返回码

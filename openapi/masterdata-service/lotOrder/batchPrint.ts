@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchPrintUsingPOST
 // JSONResult«List«批次订单打印信息返回VO»»
 export interface IJSONResultListBatchOrderPrintInformationIsReturnedToVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/员工相关/getUserDetailUsingGET
 // JSONResult«用户详细VO»
 export interface IJSONResultUserDetailsVO {
     // 返回码

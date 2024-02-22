@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/listByProposalIdUsingPOST
 // JSONResult«List«KaizenProjectResponseDTO»»
 export interface IJSONResultListKaizenProjectResponseDTO {
     // 返回码

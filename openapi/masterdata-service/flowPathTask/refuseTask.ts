@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/流程任务相关/refuseTaskUsingPOST
 // 流程任务提交DTO
 export interface IProcessTaskSubmitDTO {
     // 任务ID

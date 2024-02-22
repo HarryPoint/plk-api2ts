@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getMaterialRoutingSelectorUsingGET
 // JSONResult«List«工艺路径选择VO»»
 export interface IJSONResultListProcessPathSelectVO {
     // 返回码

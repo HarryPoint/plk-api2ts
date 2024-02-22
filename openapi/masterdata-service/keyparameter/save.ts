@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/关键参数相关/saveUsingPOST_2
 // 关键参数保存DTO
 export interface IKeyParametersSaveTheDTO {
     // id

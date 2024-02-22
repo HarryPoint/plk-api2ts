@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/部门相关/listUsingGET
 // JSONResult«List«部门DTO»»
 export interface IJSONResultListDepartmentDTO {
     // 返回码

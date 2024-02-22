@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialResponseUsingGET
 // JSONResult«物料返回信息»
 export interface IJSONResultMaterialReturnInformation {
     // 返回码

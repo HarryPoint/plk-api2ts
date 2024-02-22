@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务用户扩展数据迁移相关/migrateUsingGET
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

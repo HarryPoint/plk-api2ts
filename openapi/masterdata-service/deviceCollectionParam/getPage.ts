@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/getPageUsingPOST_3
 // 设备数据参数概览搜索VO
 export interface IDeviceDataParametersOverviewSearchForVO {
     // 当前页面

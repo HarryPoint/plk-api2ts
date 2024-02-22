@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByScanCodeUsingPOST
 // 生产任务扫码查询DTO(针对移动端)
 export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
     // 当前页面

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/甘特图相关/getProcessUsingPOST
 // 甘特图搜索VO
 export interface IGanttChartSearchVO {
     // 开始日期 yyyy-MM-dd

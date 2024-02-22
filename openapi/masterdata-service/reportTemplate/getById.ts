@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
 // JSONResult«ReportTemplateDTO»
 export interface IJSONResultReportTemplateDTO {
     // 返回码

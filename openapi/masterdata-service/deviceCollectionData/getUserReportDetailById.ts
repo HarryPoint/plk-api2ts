@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportDetailByIdUsingGET
 // JSONResult«设备数采数据人工上报详单返回VO»
 export interface IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/listProjectUsingPOST
 // 项目名称编号公共查询对象
 export interface IItemNameNumberPublicQueryObject {
     // 名称or编号

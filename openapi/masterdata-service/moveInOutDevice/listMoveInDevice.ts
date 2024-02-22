@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料设备相关/listMoveInDeviceUsingPOST
 // 进料设备查询DTO
 export interface IFeedEquipmentQueryDTO {
     // 生产任务ids

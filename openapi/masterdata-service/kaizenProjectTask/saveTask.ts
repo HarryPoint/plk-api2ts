@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/saveTaskUsingPOST
 // 主数据基础编辑 DTO_2
 export interface IMasterDataBaseEditDTO2 {
     // 子任务列表

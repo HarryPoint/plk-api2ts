@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/用户聚合维度配置相关/saveUsingPOST_1
 // 用户聚合维度配置请求
 export interface IUserAggregationDimensionConfigurationRequest {
     // 编码

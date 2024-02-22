@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目任务泳道图相关/querySwimLaneChartUsingGET
 // JSONResult«项目任务泳道图响应对象»
 export interface IJSONResultProjectTaskLaneMapResponseObject {
     // 返回码

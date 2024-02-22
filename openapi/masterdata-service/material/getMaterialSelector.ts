@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialSelectorUsingPOST_1
 // 物料主数据选择列表搜索VO
 export interface IMaterialMasterDataSelectionListSearchVO {
     // 当前页面

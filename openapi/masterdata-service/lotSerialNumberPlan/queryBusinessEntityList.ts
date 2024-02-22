@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/批次方案相关/queryBusinessEntityListUsingGET
 // JSONResult«List«流程响应VO»»
 export interface ITheJSONResultListProcessRespondsToVO {
     // 返回码

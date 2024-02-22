@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/exportDifengSalesDetailsReportUsingPOST
 // JSONResult«long»
 export interface IJSONResultlong {
     // 返回码

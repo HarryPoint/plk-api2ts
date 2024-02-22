@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/来料检验任务相关/assignmentTaskUsingPOST_1
 // 检验任务分配请求DTO
 export interface IVerifyTaskAssignmentRequestDTO {
     // 流程id

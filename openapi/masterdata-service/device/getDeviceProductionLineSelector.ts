@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
 // 设备产线选择请求DTO
 export interface IDeviceProductionLineSelectsRequestDTO {
     // 搜索参数

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveInOutRecordDetailUsingGET
 // JSONResult«进出站信息VO»
 export interface IJSONResultInboundAndOutboundInformationVO {
     // 返回码

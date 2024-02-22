@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/getComputationProgressUsingGET
 // JSONResult«生产成本核算进度响应对象DTO»
 export interface IJSONResultProductionCostAccountingProgressResponseObjectDTO {
     // 返回码

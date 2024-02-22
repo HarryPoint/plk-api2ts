@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInspectionTaskCategoryStatisticsUsingGET
 // JSONResult«List«大屏检验计划执行类别统计返回»»
 export interface IJSONResultListReturnsTheStatisticsOnTheExecutionCategoriesOfTheLargeScreenCheckPlan {
     // 返回码

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/editUsingPOST_22
 // 标准工艺编码规则请求 DTO
 export interface IStandardProcessCodingRulesRequestDTO {
     // id

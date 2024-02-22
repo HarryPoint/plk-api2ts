@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/文件对象相关/moveUsingPOST_1
 // FileObjectMoveRequestDTO
 export interface IFileObjectMoveRequestDTO {
     // 文件对象ID

@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/年度质量目标相关/checkEditInfoUsingPOST
 // 年度质量目标编辑校验DTO
 export interface IAnnualQualityObjectivesEditAndVerifyDTO {
     // id

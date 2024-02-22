@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产任务相关/changeStatusUsingPOST
 // 生产任务变更状态DTO
 export interface ITheProductionTaskChangesTheStatusDTO {
     // id

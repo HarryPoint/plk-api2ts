@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getVOByIdAndCheckUsingGET_1
 // JSONResult«生产异常类型VO»
 export interface IJSONResultIndicatesTheProductionExceptionTypeVO {
     // 返回码

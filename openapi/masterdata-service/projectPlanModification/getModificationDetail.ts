@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/getModificationDetailUsingGET_2
 // JSONResult«项目计划变更响应对象»
 export interface IJSONResultProjectPlanChangeResponseObject {
     // 返回码

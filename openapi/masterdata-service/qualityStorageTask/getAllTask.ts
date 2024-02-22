@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检管理/getAllTaskUsingGET
 // JSONResult«List«销售模块返回VO»»
 export interface ITheJSONResultListSalesModuleReturnsVO {
     // 返回码

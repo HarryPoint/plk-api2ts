@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/上报反馈服务相关/ignoreUsingPOST
 // 上报反馈处理变更状态DTO
 export interface IReportTheDTOToHandleTheChangeStatus {
     // 生产处理id

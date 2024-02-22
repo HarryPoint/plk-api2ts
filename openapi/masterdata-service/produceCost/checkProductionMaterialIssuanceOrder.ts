@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionMaterialIssuanceOrderUsingGET
 // JSONResult«List«生产成本核算单据状态校验响应DTO»»
 export interface IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO {
     // 返回码

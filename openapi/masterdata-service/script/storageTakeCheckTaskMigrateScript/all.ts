@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/盘点单数据迁移服务/allUsingGET_1
 // JSONResult«object»
 export interface IJSONResultobject {
     // 返回码

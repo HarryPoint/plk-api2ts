@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/质检方案/getSelectorUsingGET_7
 // JSONResult«List«质检方案选择VO»»
 export interface IJSONResultListSelectVOAsTheInspectionSolution {
     // 返回码

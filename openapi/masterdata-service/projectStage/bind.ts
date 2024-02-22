@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/项目阶段相关/bindUsingPOST
 // 项目阶段绑定请求对象
 export interface ITheProjectPhaseBindsTheRequestObject {
     // 项目阶段id

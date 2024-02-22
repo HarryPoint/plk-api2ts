@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesMaterialCategoryListUsingPOST
 // 名称、编号DTO
 export interface INameNumberDTO {
     // 名称or编号

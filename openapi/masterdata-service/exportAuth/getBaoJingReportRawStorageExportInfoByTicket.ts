@@ -1,3 +1,4 @@
+// http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportRawStorageExportInfoByTicketUsingGET
 // JSONResult«导出信息«宝晶报表(原材料日报表)相关返回VO»»
 export interface IJSONResultExportInformationBaojingReportDailyReportOfRawMaterialsReturnToVO {
     // 返回码
