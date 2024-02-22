@@ -12,7 +12,7 @@
     "src:init": "npm run src:fetch && npm run src:create",
     "case": "ts-node ./src/createTs.ts --target=./case",
     "update:link": "tsc && npm link",
-    "build": "tsc"
+    "build": "tsc -d"
   },
   "keywords": [],
   "author": "",
