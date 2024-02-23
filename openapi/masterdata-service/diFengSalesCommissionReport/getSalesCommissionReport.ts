@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionReportUsingPOST
 export default function fetchMethod(data: GetSalesCommissionReport) {
-    return post<IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject>({
+    return post<IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject['data']>({
       url: "/masterdata-service/diFengSalesCommissionReport/getSalesCommissionReport",
       data,
     });

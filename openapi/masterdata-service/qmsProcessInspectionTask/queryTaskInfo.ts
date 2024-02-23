@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序检验任务相关/queryTaskInfoUsingGET_1
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultProcessCheckTaskResponseObject>({
+    return get<IJSONResultProcessCheckTaskResponseObject['data']>({
       url: "/masterdata-service/qmsProcessInspectionTask/queryTaskInfo",
       params,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getListForStaffUsingPOST_2
 export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultListQualityStorageTaskVO>({
+    return post<IJSONResultListQualityStorageTaskVO['data']>({
       url: "/masterdata-service/qualityStorageTask/getListForStaff",
       data,
       params,

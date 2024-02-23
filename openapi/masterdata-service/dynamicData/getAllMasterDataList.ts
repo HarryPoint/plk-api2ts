@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getAllMasterDataListUsingGET
 export default function fetchMethod(params: { enterpriseId: number; flowPathCode: string }) {
-    return get<IJSONResultListJSONObject>({
+    return get<IJSONResultListJSONObject['data']>({
       url: "/masterdata-service/dynamicData/getAllMasterDataList",
       params,
     });

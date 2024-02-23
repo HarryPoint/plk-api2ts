@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/getSettingInfoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultPanpanProductionLargeScreenSettingsResponseDTO>({
+    return get<IJSONResultPanpanProductionLargeScreenSettingsResponseDTO['data']>({
       url: "/masterdata-service/lsPanPanSetting/getSettingInfo",
     });
 }

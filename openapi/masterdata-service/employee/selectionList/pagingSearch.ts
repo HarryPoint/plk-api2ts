@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/pagingSearchSelectionUserListUsingPOST
 export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList, params: { enterpriseId: number }) {
-    return post<IJSONResultListEmployeeResponseObject>({
+    return post<IJSONResultListEmployeeResponseObject['data']>({
       url: "/masterdata-service/employee/selectionList/pagingSearch",
       data,
       params,

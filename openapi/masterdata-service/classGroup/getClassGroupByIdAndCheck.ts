@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupByIdAndCheckUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultVOGroup>({
+    return get<IJSONResultVOGroup['data']>({
       url: "/masterdata-service/classGroup/getClassGroupByIdAndCheck",
       params,
     });

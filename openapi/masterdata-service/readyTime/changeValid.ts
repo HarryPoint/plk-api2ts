@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/changeValidUsingPOST_10
 export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/readyTime/changeValid",
       data,
       params,

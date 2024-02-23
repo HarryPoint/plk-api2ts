@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/getComputationProgressUsingGET
 export default function fetchMethod(params: { computationTaskId: string }) {
-    return get<IJSONResultProductionCostAccountingProgressResponseObjectDTO>({
+    return get<IJSONResultProductionCostAccountingProgressResponseObjectDTO['data']>({
       url: "/masterdata-service/produceCostComputationTask/getComputationProgress",
       params,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/库存流水相关/getPageUsingPOST_30
 export default function fetchMethod(data: IInventoryFlowSearchVO, params: { enterpriseId: number; masterDataFlowPathCode: string }) {
-    return post<IJSONResultPagingInformationInventoryReturnsVO>({
+    return post<IJSONResultPagingInformationInventoryReturnsVO['data']>({
       url: "/masterdata-service/storageLog/getPage",
       data,
       params,

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getDetailByIdForStaffUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultInspectionTaskDetailsAreReturnedToVO>({
+    return get<IJSONResultInspectionTaskDetailsAreReturnedToVO['data']>({
       url: "/masterdata-service/qualityStorageTask/getDetailByIdForStaff",
       params,
     });

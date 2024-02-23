@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProduceOrderIdProducePlanRpMapUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO>({
+    return post<IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO['data']>({
       url: "/masterdata-service/producePlan/getProduceOrderIdProducePlanRpMap",
       data,
       params,

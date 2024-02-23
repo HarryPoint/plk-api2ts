@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getPageUsingPOST_10
 export default function fetchMethod(data: IExceptionTypeSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationExceptionTypeVOIsReturned>({
+    return post<IJSONResultPagingInformationExceptionTypeVOIsReturned['data']>({
       url: "/masterdata-service/produceAbnormalCategory/getPage",
       data,
       params,

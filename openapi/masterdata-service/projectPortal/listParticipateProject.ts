@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateProjectUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListProjectPortalResponseObject>({
+    return get<IJSONResultListProjectPortalResponseObject['data']>({
       url: "/masterdata-service/projectPortal/listParticipateProject",
     });
 }

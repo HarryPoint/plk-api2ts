@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject>({
+    return get<IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject['data']>({
       url: "/masterdata-service/baoJingReport/getBaoJingSalesDeliverPackagingMaterial",
       params,
     });

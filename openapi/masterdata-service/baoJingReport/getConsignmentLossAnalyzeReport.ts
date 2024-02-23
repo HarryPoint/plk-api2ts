@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentLossAnalyzeReportUsingPOST
 export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultConsignmentLossAnalysisReportReturnedToVO>({
+    return post<IJSONResultConsignmentLossAnalysisReportReturnedToVO['data']>({
       url: "/masterdata-service/baoJingReport/getConsignmentLossAnalyzeReport",
       data,
       params,

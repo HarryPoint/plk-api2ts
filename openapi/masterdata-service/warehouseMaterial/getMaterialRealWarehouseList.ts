@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialRealWarehouseListUsingPOST
 export default function fetchMethod(data: IMaterialRealTimeInventoryQueryReturnedToVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListMaterialRealTimeLibraryFromVO>({
+    return post<IJSONResultListMaterialRealTimeLibraryFromVO['data']>({
       url: "/masterdata-service/warehouseMaterial/getMaterialRealWarehouseList",
       data,
       params,

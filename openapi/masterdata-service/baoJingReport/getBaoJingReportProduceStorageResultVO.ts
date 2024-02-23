@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/pagingProduceStorageUsingPOST
 export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationBaojingReportProductDailyReportResponseObject>({
+    return post<IJSONResultPageInformationBaojingReportProductDailyReportResponseObject['data']>({
       url: "/masterdata-service/baoJingReport/getBaoJingReportProduceStorageResultVO",
       data,
       params,

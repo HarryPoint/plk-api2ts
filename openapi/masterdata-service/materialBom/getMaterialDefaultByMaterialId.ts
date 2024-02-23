@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialDefaultByMaterialIdUsingGET
 export default function fetchMethod(params: { materialId: number }) {
-    return get<IJSONResultBomResponseObject>({
+    return get<IJSONResultBomResponseObject['data']>({
       url: "/masterdata-service/materialBom/getMaterialDefaultByMaterialId",
       params,
     });

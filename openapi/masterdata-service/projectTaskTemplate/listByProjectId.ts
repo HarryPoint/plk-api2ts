@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/listByProjectIdUsingGET_1
 export default function fetchMethod(params: { projectId: string }) {
-    return get<IJSONResultListProjectTaskTemplateRespondsToTheDTO>({
+    return get<IJSONResultListProjectTaskTemplateRespondsToTheDTO['data']>({
       url: "/masterdata-service/projectTaskTemplate/listByProjectId",
       params,
     });

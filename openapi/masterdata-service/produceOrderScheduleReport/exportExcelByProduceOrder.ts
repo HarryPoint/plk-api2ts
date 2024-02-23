@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/exportExcelByProduceOrderUsingPOST
 export default function fetchMethod(data: IProductionSchedulingOrderSearchVO) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/produceOrderScheduleReport/exportExcelByProduceOrder",
       data,
     });

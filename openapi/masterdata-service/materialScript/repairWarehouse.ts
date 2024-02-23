@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/material-script-controller/repairWarehouseUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultobject>({
+export default function fetchMethod(params: { enterpriseId?: number }) {
+    return get<IJSONResultobject['data']>({
       url: "/masterdata-service/materialScript/repairWarehouse",
       params,
     });

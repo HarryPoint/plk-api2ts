@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualityWorkPlanCompletionRateUsingPOST
 export default function fetchMethod(data: IQmsLargeScreenTimeIntervalRequest) {
-    return post<IJSONResultListQualityWorkPlanCompletionRateReturnToDTO>({
+    return post<IJSONResultListQualityWorkPlanCompletionRateReturnToDTO['data']>({
       url: "/masterdata-service/qmsDashboard/queryQualityWorkPlanCompletionRate",
       data,
     });

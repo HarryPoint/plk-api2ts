@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/getByIdUsingGET_12
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProjectTaskRuleDetailResponseDTO>({
+    return get<IJSONResultProjectTaskRuleDetailResponseDTO['data']>({
       url: "/masterdata-service/projectTaskRule/getById",
       params,
     });

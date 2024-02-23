@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getTaskSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO>({
+    return get<IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO['data']>({
       url: "/masterdata-service/lotOrder/getTaskSelector",
       params,
     });

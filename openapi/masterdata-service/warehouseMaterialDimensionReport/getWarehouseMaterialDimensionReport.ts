@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/getWarehouseMaterialDimensionReportUsingPOST
 export default function fetchMethod(data: GetWarehouseMaterialDimensionReport) {
-    return post<IJSONResultPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension>({
+    return post<IJSONResultPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension['data']>({
       url: "/masterdata-service/warehouseMaterialDimensionReport/getWarehouseMaterialDimensionReport",
       data,
     });

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/checkTodoTaskByUserUsingGET_1
 export default function fetchMethod(params: { enterpriseId: number; userId: number }) {
-    return get<IJSONResultboolean>({
+    return get<IJSONResultboolean['data']>({
       url: "/masterdata-service/qualityProduceTask/checkTodoTaskByUser",
       params,
     });

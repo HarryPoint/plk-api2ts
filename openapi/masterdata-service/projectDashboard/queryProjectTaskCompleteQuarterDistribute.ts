@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectTaskCompleteQuarterDistributeUsingGET
-export default function fetchMethod(params: { projectCategory: string }) {
-    return get<IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks>({
+export default function fetchMethod(params: { projectCategory?: string }) {
+    return get<IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks['data']>({
       url: "/masterdata-service/projectDashboard/queryProjectTaskCompleteQuarterDistribute",
       params,
     });

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
 export default function fetchMethod(params: { code: string; enterpriseId: number }) {
-    return get<IJSONResultSalesOrderVO>({
+    return get<IJSONResultSalesOrderVO['data']>({
       url: "/masterdata-service/salesOrder/getByCodeAndNotCheck",
       params,
     });

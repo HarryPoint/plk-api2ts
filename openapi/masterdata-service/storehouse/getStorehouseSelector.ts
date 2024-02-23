@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓库相关/getStorehouseSelectorUsingPOST
 export default function fetchMethod(data: IWarehouseMasterDataSelectionListSearchVO) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject>({
+    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
       url: "/masterdata-service/storehouse/getStorehouseSelector",
       data,
     });

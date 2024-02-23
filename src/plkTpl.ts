@@ -56,7 +56,7 @@ export const customContent = async (
       functionDeclaration.setBodyText((writer) => {
         writer.writeLine(
           `return ${method}<${
-            responseDefine ? transFormType(responseDefine) : "any"
+            responseDefine ? `${transFormType(responseDefine)}['data']` : "any"
           }>({`
         );
         writer.writeLine(`  url: "${url}",`);

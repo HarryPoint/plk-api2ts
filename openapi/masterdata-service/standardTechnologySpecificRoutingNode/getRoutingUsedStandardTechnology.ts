@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺具体工艺路径节点相关/getRoutingUsedStandardTechnologyUsingPOST
 export default function fetchMethod(data: IStandardProcessQueryObjectOccupiedByProcessPath) {
-    return post<IJSONResultListStandardProcessResponseOccupiedByTheProcessPath>({
+    return post<IJSONResultListStandardProcessResponseOccupiedByTheProcessPath['data']>({
       url: "/masterdata-service/standardTechnologySpecificRoutingNode/getRoutingUsedStandardTechnology",
       data,
     });

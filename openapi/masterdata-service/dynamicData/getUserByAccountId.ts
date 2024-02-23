@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getUserByAccountIdUsingGET
 export default function fetchMethod(params: { accountId: number; enterpriseId: number }) {
-    return get<IJSONResultEmployeeAccountVO>({
+    return get<IJSONResultEmployeeAccountVO['data']>({
       url: "/masterdata-service/dynamicData/getUserByAccountId",
       params,
     });

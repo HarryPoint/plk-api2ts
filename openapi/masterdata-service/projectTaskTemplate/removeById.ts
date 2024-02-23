@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/removeByIdUsingGET_3
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultobject>({
+    return get<IJSONResultobject['data']>({
       url: "/masterdata-service/projectTaskTemplate/removeById",
       params,
     });

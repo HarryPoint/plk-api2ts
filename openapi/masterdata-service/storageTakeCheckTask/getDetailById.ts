@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getDetailByIdUsingGET_4
-export default function fetchMethod(params: { id: string; isCheckHandleUser: string; enterpriseId: number }) {
-    return get<IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO>({
+export default function fetchMethod(params: { id: string; isCheckHandleUser?: string; enterpriseId: number }) {
+    return get<IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO['data']>({
       url: "/masterdata-service/storageTakeCheckTask/getDetailById",
       params,
     });

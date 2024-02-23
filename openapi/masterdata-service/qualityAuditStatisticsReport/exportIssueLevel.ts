@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/exportIssueLevelUsingPOST
 export default function fetchMethod(data: IBasicQualityAuditQueryRequest) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/qualityAuditStatisticsReport/exportIssueLevel",
       data,
     });

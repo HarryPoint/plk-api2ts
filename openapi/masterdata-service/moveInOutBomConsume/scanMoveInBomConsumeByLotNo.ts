@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/scanMoveInBomConsumeByLotNoUsingPOST
 export default function fetchMethod(data: IFeedBomConsumptionScanRequestDTO) {
-    return post<IJSONResultIncomingBomConsumptionScanResponseDTO>({
+    return post<IJSONResultIncomingBomConsumptionScanResponseDTO['data']>({
       url: "/masterdata-service/moveInOutBomConsume/scanMoveInBomConsumeByLotNo",
       data,
     });

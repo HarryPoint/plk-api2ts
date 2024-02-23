@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceMaterialIssuanceSummaryUsingPOST
 export default function fetchMethod(data: IPaging7) {
-    return post<IProduceMaterialIssuanceSummaryQueryResponseDTOJSONResultPagingInformation>({
+    return post<IProduceMaterialIssuanceSummaryQueryResponseDTOJSONResultPagingInformation['data']>({
       url: "/masterdata-service/produceOrder/pageQueryProduceMaterialIssuanceSummary",
       data,
     });

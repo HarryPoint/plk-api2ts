@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getLotOrderCanMargeUsingPOST_1
 export default function fetchMethod(data: IBatchOrderVerificationCanMergeSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultIndicatesWhetherTheInformationIsDisplayed>({
+    return post<IJSONResultIndicatesWhetherTheInformationIsDisplayed['data']>({
       url: "/masterdata-service/produceOrder/getLotOrderCanMarge",
       data,
       params,

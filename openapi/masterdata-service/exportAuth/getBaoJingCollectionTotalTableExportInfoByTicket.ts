@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingCollectionTotalTableExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO>({
+    return get<IJSONResultExportInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO['data']>({
       url: "/masterdata-service/exportAuth/getBaoJingCollectionTotalTableExportInfoByTicket",
       params,
     });

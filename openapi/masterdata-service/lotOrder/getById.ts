@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getByIdUsingGET_6
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultBatchOrderReturnsVO>({
+    return get<IJSONResultBatchOrderReturnsVO['data']>({
       url: "/masterdata-service/lotOrder/getById",
       params,
     });

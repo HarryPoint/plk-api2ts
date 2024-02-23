@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序相关/editByNotTriggerTaskUsingPOST_2
 export default function fetchMethod(data: IMasterDataBaseEditDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultstring>({
+    return post<IJSONResultstring['data']>({
       url: "/masterdata-service/process/editByNotTriggerTask",
       data,
       params,

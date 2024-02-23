@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
-export default function fetchMethod(params: { number: string }) {
-    return get<IJSONResultThirdApiResponseDTO>({
+export default function fetchMethod(params: { number?: string }) {
+    return get<IJSONResultThirdApiResponseDTO['data']>({
       url: "/masterdata-service/hangFa/getUserByNumber",
       params,
     });

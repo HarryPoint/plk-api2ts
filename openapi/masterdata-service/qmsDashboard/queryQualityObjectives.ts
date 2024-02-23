@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualityObjectivesUsingPOST
 export default function fetchMethod(data: IQmsLargeScreenTimeIntervalRequest) {
-    return post<IJSONResultListTheQualityTargetReturnsTheDTO>({
+    return post<IJSONResultListTheQualityTargetReturnsTheDTO['data']>({
       url: "/masterdata-service/qmsDashboard/queryQualityObjectives",
       data,
     });

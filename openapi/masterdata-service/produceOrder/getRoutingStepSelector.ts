@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getRoutingStepSelectorUsingGET_1
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultListProductionProcessPathStepProcessResponseDTO>({
+    return get<IJSONResultListProductionProcessPathStepProcessResponseDTO['data']>({
       url: "/masterdata-service/produceOrder/getRoutingStepSelector",
       params,
     });

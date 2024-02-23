@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySafetyProductionDaysUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultlong>({
+    return get<IJSONResultlong['data']>({
       url: "/masterdata-service/hseDashboard/querySafetyProducetionDays",
     });
 }

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getCloseInfoByIdUsingGET_1
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultSalesOrderClosureInformationIsReturnedToVO>({
+    return get<IJSONResultSalesOrderClosureInformationIsReturnedToVO['data']>({
       url: "/masterdata-service/salesOrder/getCloseInfoById",
       params,
     });

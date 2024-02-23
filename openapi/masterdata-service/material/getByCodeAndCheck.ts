@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getByCodeAndCheckUsingPOST
 export default function fetchMethod(params: { code: string; enterpriseId: number }) {
-    return post<IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO>({
+    return post<IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO['data']>({
       url: "/masterdata-service/material/getByCodeAndCheck",
       params,
     });

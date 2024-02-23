@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/queryProposalEmployeeScoreTopNUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultEmployeeScoreIndicatorsResponseDTO>({
+    return get<IJSONResultEmployeeScoreIndicatorsResponseDTO['data']>({
       url: "/masterdata-service/proposalDashboard/queryProposalEmployeeScoreTopN",
     });
 }

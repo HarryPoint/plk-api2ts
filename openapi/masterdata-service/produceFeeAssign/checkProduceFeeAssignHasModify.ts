@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/checkProduceFeeAssignHasModifyUsingGET
 export default function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get<IJSONResultVerifiesTheResponseObject>({
+    return get<IJSONResultVerifiesTheResponseObject['data']>({
       url: "/masterdata-service/produceFeeAssign/checkProduceFeeAssignHasModify",
       params,
     });

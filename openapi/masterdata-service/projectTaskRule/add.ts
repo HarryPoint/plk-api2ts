@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/addUsingPOST_5
 export default function fetchMethod(data: IProjectTaskRulesAddRequestDTO) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/projectTaskRule/add",
       data,
     });

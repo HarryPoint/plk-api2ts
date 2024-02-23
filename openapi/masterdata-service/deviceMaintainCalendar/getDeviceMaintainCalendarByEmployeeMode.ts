@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarByEmployeeModeUsingPOST
 export default function fetchMethod(data: IEquipmentMaintenanceCalendarRequestDTO) {
-    return post<IJSONResultPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO>({
+    return post<IJSONResultPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO['data']>({
       url: "/masterdata-service/deviceMaintainCalendar/getDeviceMaintainCalendarByEmployeeMode",
       data,
     });

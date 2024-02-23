@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getIdCodeListByNameListUsingPOST
 export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return post<IJSONResultListIdNameNumberVO>({
+    return post<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/material/getIdCodeListByNameList",
       data,
       params,

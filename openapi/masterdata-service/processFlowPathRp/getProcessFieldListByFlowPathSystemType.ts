@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getProcessFieldListByFlowPathSystemTypeUsingGET
-export default function fetchMethod(params: { flowPathSystemTypeList: string; processId: string; enterpriseId: number }) {
-    return get<IJSONResultListIdNameNumberVO>({
+export default function fetchMethod(params: { flowPathSystemTypeList?: string; processId: string; enterpriseId: number }) {
+    return get<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/processFlowPathRp/getProcessFieldListByFlowPathSystemType",
       params,
     });

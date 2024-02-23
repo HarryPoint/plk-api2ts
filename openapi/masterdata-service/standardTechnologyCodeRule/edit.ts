@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/editUsingPOST_22
 export default function fetchMethod(data: IStandardProcessCodingRulesRequestDTO) {
-    return post<IJSONResultidIndicatesTheInformation>({
+    return post<IJSONResultidIndicatesTheInformation['data']>({
       url: "/masterdata-service/standardTechnologyCodeRule/edit",
       data,
     });

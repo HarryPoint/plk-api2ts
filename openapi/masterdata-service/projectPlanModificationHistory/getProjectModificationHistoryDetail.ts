@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目计划变更版本记录相关/getProjectModificationHistoryDetailUsingGET_2
 export default function fetchMethod(params: { projectPlanModificationId: string }) {
-    return get<IJSONResultProjectPlanChangeInformationVersionRecord>({
+    return get<IJSONResultProjectPlanChangeInformationVersionRecord['data']>({
       url: "/masterdata-service/projectPlanModificationHistory/getProjectModificationHistoryDetail",
       params,
     });

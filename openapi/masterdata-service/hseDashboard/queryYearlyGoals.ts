@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryYearlyGoalsUsingPOST
 export default function fetchMethod(data: IAnnualTargetQueryRequest) {
-    return post<IJSONResultListAnnualTargetQueryResponse>({
+    return post<IJSONResultListAnnualTargetQueryResponse['data']>({
       url: "/masterdata-service/hseDashboard/queryYearlyGoals",
       data,
     });

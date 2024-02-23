@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/getProduceLargeScreenUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultPanpanProducesLargeScreenResponseDtos>({
+    return post<IJSONResultPanpanProducesLargeScreenResponseDtos['data']>({
       url: "/masterdata-service/lsPanPanSetting/getProduceLargeScreen",
     });
 }

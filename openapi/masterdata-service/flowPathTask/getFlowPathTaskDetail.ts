@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskDetailUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultProcessTaskDetailsAreReturnedToVO>({
+    return get<IJSONResultProcessTaskDetailsAreReturnedToVO['data']>({
       url: "/masterdata-service/flowPathTask/getFlowPathTaskDetail",
       params,
     });

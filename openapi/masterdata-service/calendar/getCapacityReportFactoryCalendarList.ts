@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCapacityReportFactoryCalendarListUsingPOST
 export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId: number }) {
-    return post<IJSONResultListCapacityUtilizationReportFactoryCalendarVO>({
+    return post<IJSONResultListCapacityUtilizationReportFactoryCalendarVO['data']>({
       url: "/masterdata-service/calendar/getCapacityReportFactoryCalendarList",
       data,
       params,

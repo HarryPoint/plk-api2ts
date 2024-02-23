@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/listUsingGET_3
 export default function fetchMethod() {
-    return get<IJSONResultListFileCategoryListQueryResponseDTO>({
+    return get<IJSONResultListFileCategoryListQueryResponseDTO['data']>({
       url: "/masterdata-service/fileCategory/list",
     });
 }

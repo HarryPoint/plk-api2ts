@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/getInfoByIdUsingGET_1
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultKeyParameterInformationResponseObject>({
+    return get<IJSONResultKeyParameterInformationResponseObject['data']>({
       url: "/masterdata-service/keyparameter/getInfoById",
       params,
     });

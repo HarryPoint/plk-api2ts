@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/getByIdUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultKaizenProjectResponseDTO>({
+    return post<IJSONResultKaizenProjectResponseDTO['data']>({
       url: "/masterdata-service/kaizenProject/getById",
       params,
     });

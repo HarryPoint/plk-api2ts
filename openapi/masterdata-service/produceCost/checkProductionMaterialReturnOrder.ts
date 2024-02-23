@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionMaterialReturnOrderUsingGET
 export default function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>({
+    return get<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO['data']>({
       url: "/masterdata-service/produceCost/checkProductionMaterialReturnOrder",
       params,
     });

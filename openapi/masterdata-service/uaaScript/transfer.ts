@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/uaa迁移脚本相关/transferUsingPOST_2
 export default function fetchMethod() {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/uaaScript/transfer",
     });
 }

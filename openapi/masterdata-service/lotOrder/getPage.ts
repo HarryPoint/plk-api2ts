@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getPageUsingPOST_7
 export default function fetchMethod(data: IBatchOrderSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationBatchOrderReturnsVO>({
+    return post<IJSONResultPagingInformationBatchOrderReturnsVO['data']>({
       url: "/masterdata-service/lotOrder/getPage",
       data,
       params,

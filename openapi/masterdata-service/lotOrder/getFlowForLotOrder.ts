@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getFlowForLotUsingPOST
 export default function fetchMethod(data: IBatchOrderHistorySearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO>({
+    return post<IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO['data']>({
       url: "/masterdata-service/lotOrder/getFlowForLotOrder",
       data,
       params,

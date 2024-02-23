@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listAllProduceScheduleUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListProductionScheduleVO>({
+    return get<IJSONResultListProductionScheduleVO['data']>({
       url: "/masterdata-service/processDocumentMapConfig/listAllProduceSchedule",
       params,
     });

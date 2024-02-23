@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/application-script-controller/changeSerialNoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject>({
+    return get<IJSONResultobject['data']>({
       url: "/masterdata-service/applicationScript/changeSerialNo",
     });
 }

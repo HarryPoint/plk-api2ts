@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdCodesByIdsUsingGET
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return get<IJSONResultListIdNameNumberVO>({
+    return get<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/employee/getIdCodesByIds",
       data,
       params,

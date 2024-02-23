@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产入库单相关/pageQuerySelectionItemUsingPOST_1
 export default function fetchMethod(data: IPaging13) {
-    return post<IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation>({
+    return post<IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation['data']>({
       url: "/masterdata-service/productionStockInOrder/pageQuerySelectionItem",
       data,
     });

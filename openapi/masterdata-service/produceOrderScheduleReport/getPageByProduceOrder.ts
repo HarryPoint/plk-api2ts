@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/getPageByProduceOrderUsingPOST
 export default function fetchMethod(data: IProductionSchedulingOrderSearchVO) {
-    return post<IJSONResultPageInformationSchedulingProductionOrderReportVOProductionOrderDimension>({
+    return post<IJSONResultPageInformationSchedulingProductionOrderReportVOProductionOrderDimension['data']>({
       url: "/masterdata-service/produceOrderScheduleReport/getPageByProduceOrder",
       data,
     });

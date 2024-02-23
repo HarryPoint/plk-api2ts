@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序相关/listByCodesUsingPOST
 export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return post<IJSONResultListProcessDeprecatedVO>({
+    return post<IJSONResultListProcessDeprecatedVO['data']>({
       url: "/masterdata-service/process/byCodes/batchGet",
       data,
       params,

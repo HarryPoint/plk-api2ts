@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工费相关/batchImportUsingPOST_2
 export default function fetchMethod(data: ILaborCostsSaveDTO[]) {
-    return post<IJSONResultListstring>({
+    return post<IJSONResultListstring['data']>({
       url: "/masterdata-service/laborCost/batchImport",
       data,
     });

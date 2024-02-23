@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产退库单相关/getProductionStockReturnSerialNoListUsingPOST
 export default function fetchMethod(params: { productionStockInOrderDetailId: number }) {
-    return post<IJSONResultListProductionStockReturnSerialNoQueryResponseDTO>({
+    return post<IJSONResultListProductionStockReturnSerialNoQueryResponseDTO['data']>({
       url: "/masterdata-service/productionStockReturnOrder/getProductionStockReturnSerialNoList",
       params,
     });

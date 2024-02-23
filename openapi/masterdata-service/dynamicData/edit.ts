@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/editUsingPOST_5
 export default function fetchMethod(data: IMasterDataBaseEditDTO, params: { flowPathId: number }) {
-    return post<IJSONResultDynamicFormSaveResultBO>({
+    return post<IJSONResultDynamicFormSaveResultBO['data']>({
       url: "/masterdata-service/dynamicData/edit",
       data,
       params,

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodFeeCollectUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListDetailedResponseDTOForCostCollection>({
+    return get<IJSONResultListDetailedResponseDTOForCostCollection['data']>({
       url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodFeeCollect",
     });
 }

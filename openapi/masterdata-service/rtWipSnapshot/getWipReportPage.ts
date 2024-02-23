@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/Wip快照相关/getWipReportPageUsingPOST
 export default function fetchMethod(data: IWIPStatisticsReportSearchForVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO>({
+    return post<IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO['data']>({
       url: "/masterdata-service/rtWipSnapshot/getWipReportPage",
       data,
       params,

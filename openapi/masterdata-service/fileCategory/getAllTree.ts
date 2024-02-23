@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getAllTreeListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListFileClassificationDetailsResponseDTO>({
+    return get<IJSONResultListFileClassificationDetailsResponseDTO['data']>({
       url: "/masterdata-service/fileCategory/getAllTree",
     });
 }

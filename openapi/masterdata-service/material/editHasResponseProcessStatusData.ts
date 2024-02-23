@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/editHasResponseProcessStatusDataUsingPOST
 export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultMaterialEditResponseInformation>({
+    return post<IJSONResultMaterialEditResponseInformation['data']>({
       url: "/masterdata-service/material/editHasResponseProcessStatusData",
       data,
       params,

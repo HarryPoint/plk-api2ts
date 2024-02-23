@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目相关/queryInitStatusUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultstring2>({
+    return get<IJSONResultstring2['data']>({
       url: "/masterdata-service/project/queryInitStatus",
       params,
     });

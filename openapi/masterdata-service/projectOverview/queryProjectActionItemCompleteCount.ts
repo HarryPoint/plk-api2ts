@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectActionItemCompleteCountUsingPOST_1
 export default function fetchMethod(data: IProjectOverviewQueryDto) {
-    return post<IJSONResultProjectActionItemStatisticsResponseObject>({
+    return post<IJSONResultProjectActionItemStatisticsResponseObject['data']>({
       url: "/masterdata-service/projectOverview/queryProjectActionItemCompleteCount",
       data,
     });

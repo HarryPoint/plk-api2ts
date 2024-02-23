@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/年度质量目标管理统计报表相关/queryAnnualQualityTargetManageStatisticsReportUsingPOST
 export default function fetchMethod(data: QueryAnnualQualityTargetManageStatisticsReport) {
-    return post<IJSONResultListReturnTheAnnualQualityObjectiveManagementStatisticsToTheDTO>({
+    return post<IJSONResultListReturnTheAnnualQualityObjectiveManagementStatisticsToTheDTO['data']>({
       url: "/masterdata-service/qmsAnnualQualityTargetReport/queryAnnualQualityTargetManageStatisticsReport",
       data,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeDetailTotalUsingPOST
 export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultTotalLaborCostReportReturnedToVO>({
+    return post<IJSONResultTotalLaborCostReportReturnedToVO['data']>({
       url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeDetailTotal",
       data,
       params,

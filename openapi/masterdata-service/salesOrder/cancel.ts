@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/cancelUsingPOST_2
 export default function fetchMethod(data: IIdInformation, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/salesOrder/cancel",
       data,
       params,

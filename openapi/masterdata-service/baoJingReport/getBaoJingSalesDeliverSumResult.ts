@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverSumResultUsingPOST
 export default function fetchMethod(data: IBaojingSalesDeliveryReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO>({
+    return post<IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO['data']>({
       url: "/masterdata-service/baoJingReport/getBaoJingSalesDeliverSumResult",
       data,
       params,

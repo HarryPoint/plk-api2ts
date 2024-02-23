@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/区域相关/getByIdsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListIdNameNumberVO>({
+    return post<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/area/getByIds",
       data,
       params,

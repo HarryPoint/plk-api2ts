@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/客户相关/getCustomerSelectorUsingPOST
 export default function fetchMethod(data: ICustomerSelectionListSearch) {
-    return post<IJSONResultPagingInformationIdCodeNameCommonTransmissionObject>({
+    return post<IJSONResultPagingInformationIdCodeNameCommonTransmissionObject['data']>({
       url: "/masterdata-service/customer/getCustomerSelector",
       data,
     });

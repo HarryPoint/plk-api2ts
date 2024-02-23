@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorOptionSearchUsingPOST_3
 export default function fetchMethod(data: IProcessDropDownListToSearchForDtos) {
-    return post<IJSONResultListProcessDropDownListToSearchForResponseDtos>({
+    return post<IJSONResultListProcessDropDownListToSearchForResponseDtos['data']>({
       url: "/masterdata-service/processSheet/getSelectorOptionSearch",
       data,
     });

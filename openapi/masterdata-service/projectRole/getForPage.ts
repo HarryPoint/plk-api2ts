@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目角色相关/getForPageUsingPOST_17
 export default function fetchMethod(data: IProcessDataBaseSearchVO, params: { projectId: number }) {
-    return post<IJSONResultPagingInformationJSONObject>({
+    return post<IJSONResultPagingInformationJSONObject['data']>({
       url: "/masterdata-service/projectRole/getForPage",
       data,
       params,

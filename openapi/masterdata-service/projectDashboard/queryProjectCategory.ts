@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
 export default function fetchMethod() {
-    return get<ITheJSONResultListProjectClassDistributesResponseObjects>({
+    return get<ITheJSONResultListProjectClassDistributesResponseObjects['data']>({
       url: "/masterdata-service/projectDashboard/queryProjectCategory",
     });
 }

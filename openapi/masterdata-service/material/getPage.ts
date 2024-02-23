@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getPageUsingPOST_8
 export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationMaterialMasterDataInventoryReturnsVO>({
+    return post<IJSONResultPagingInformationMaterialMasterDataInventoryReturnsVO['data']>({
       url: "/masterdata-service/material/getPage",
       data,
       params,

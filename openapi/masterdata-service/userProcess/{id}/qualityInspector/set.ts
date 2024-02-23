@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/setQualityInspectorUsingPOST
 export default function fetchMethod(data: ISetExecutorDTO[]) {
-    return post<IJSONResultstring1>({
+    return post<IJSONResultstring1['data']>({
       url: "/masterdata-service/userProcess/{id}/qualityInspector/set",
       data,
     });

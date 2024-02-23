@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/addOccupyUsingPOST
 export default function fetchMethod(data: ITheOccupiedDTOWasAdded) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/autoPlanGantt/addOccupy",
       data,
     });

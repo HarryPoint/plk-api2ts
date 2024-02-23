@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/getProcessUsingPOST
 export default function fetchMethod(data: IGanttChartSearchVO) {
-    return post<IJSONResultProcedureGanttChartReturnsVO>({
+    return post<IJSONResultProcedureGanttChartReturnsVO['data']>({
       url: "/masterdata-service/autoPlanGantt/getProcess",
       data,
     });

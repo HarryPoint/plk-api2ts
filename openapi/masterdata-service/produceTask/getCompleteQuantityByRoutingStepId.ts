@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getCompleteQuantityByRoutingStepIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; produceOrderId: number; routingStepId: number }) {
-    return get<IJSONResultbigdecimal>({
+    return get<IJSONResultbigdecimal['data']>({
       url: "/masterdata-service/produceTask/getCompleteQuantityByRoutingStepId",
       params,
     });

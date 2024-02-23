@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectTaskUsingPOST
 export default function fetchMethod(data: IItemNameNumberPublicQueryObject) {
-    return post<IJSONResultListProjectReportBaseResponseObject>({
+    return post<IJSONResultListProjectReportBaseResponseObject['data']>({
       url: "/masterdata-service/projectReport/listProjectTask",
       data,
     });

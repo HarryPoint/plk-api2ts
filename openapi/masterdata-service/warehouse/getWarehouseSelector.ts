@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return get<IJSONResultListReturnsTheMaterialMasterDataStoreToVO>({
+    return get<IJSONResultListReturnsTheMaterialMasterDataStoreToVO['data']>({
       url: "/masterdata-service/warehouse/getWarehouseSelector",
       params,
     });

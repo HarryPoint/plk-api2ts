@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/queryByNameUsingPOST
 export default function fetchMethod(data: IProjectPhaseNumberQueryObject) {
-    return post<IJSONResultListProjectPhaseResponseObject>({
+    return post<IJSONResultListProjectPhaseResponseObject['data']>({
       url: "/masterdata-service/projectStage/queryByName",
       data,
     });

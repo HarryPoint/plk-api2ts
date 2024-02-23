@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/getPageUsingPOST_11
 export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos) {
-    return post<IJSONResultPagingInformationCapacityUtilizationReportVO>({
+    return post<IJSONResultPagingInformationCapacityUtilizationReportVO['data']>({
       url: "/masterdata-service/produceCapacityReport/getPage",
       data,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getByIdsIgnoreStatusUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects>({
+    return post<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects['data']>({
       url: "/masterdata-service/capacity/getByIdsIgnoreStatus",
       data,
     });

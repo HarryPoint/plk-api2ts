@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/listMoveInMoldByProduceTaskIdUsingGET
 export default function fetchMethod(params: { produceTaskId: string }) {
-    return get<IJSONResultListFeedMoldResponseDTO1>({
+    return get<IJSONResultListFeedMoldResponseDTO1['data']>({
       url: "/masterdata-service/moveInOutMold/listMoveInMoldByProduceTaskId",
       params,
     });

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getChangeRecordListUsingGET
 export default function fetchMethod(params: { planId: number }) {
-    return get<IJSONResultListMaintenancePlanChangeRecordRespondsToDTO>({
+    return get<IJSONResultListMaintenancePlanChangeRecordRespondsToDTO['data']>({
       url: "/masterdata-service/deviceMaintainPlan/getChangeRecordList",
       params,
     });

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getAccountsReceivableGroupDayUsingGET
 export default function fetchMethod(params: { day: string; enterpriseId: number }) {
-    return get<IJSONResultAccountsReceivableVO>({
+    return get<IJSONResultAccountsReceivableVO['data']>({
       url: "/masterdata-service/accountsReceivableSnapshot/getAccountsReceivableGroupDay",
       params,
     });

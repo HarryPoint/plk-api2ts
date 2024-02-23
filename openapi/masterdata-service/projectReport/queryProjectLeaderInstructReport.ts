@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectLeaderInstructReportUsingPOST
 export default function fetchMethod(data: QueryProjectLeaderInstructReport) {
-    return post<IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject>({
+    return post<IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject['data']>({
       url: "/masterdata-service/projectReport/queryProjectLeaderInstructReport",
       data,
     });

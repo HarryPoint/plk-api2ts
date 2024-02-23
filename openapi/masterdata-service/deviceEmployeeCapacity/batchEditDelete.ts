@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
 export default function fetchMethod(data: IEquipmentPersonnelAbilityToBatchEditDtos) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/deviceEmployeeCapacity/batchEditDelete",
       data,
     });

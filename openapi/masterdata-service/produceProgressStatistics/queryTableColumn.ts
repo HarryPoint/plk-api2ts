@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/queryTableColumnUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultProduceProgressStatisticTableHeadDTO>({
+    return get<IJSONResultProduceProgressStatisticTableHeadDTO['data']>({
       url: "/masterdata-service/produceProgressStatistics/queryTableColumn",
     });
 }

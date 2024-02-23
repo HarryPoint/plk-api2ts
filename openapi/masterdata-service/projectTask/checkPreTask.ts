@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/checkPreTaskUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListProjectTaskPreTaskVerifyTheResponseObject>({
+    return get<IJSONResultListProjectTaskPreTaskVerifyTheResponseObject['data']>({
       url: "/masterdata-service/projectTask/checkPreTask",
       params,
     });

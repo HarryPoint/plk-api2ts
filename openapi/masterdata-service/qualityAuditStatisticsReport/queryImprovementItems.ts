@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryImprovementItemsUsingPOST
 export default function fetchMethod(data: IBasicQualityAuditQueryRequest) {
-    return post<IJSONResultImprovedQueryResponseStatistics>({
+    return post<IJSONResultImprovedQueryResponseStatistics['data']>({
       url: "/masterdata-service/qualityAuditStatisticsReport/queryImprovementItems",
       data,
     });

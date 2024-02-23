@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/removeBatchByIdListUsingPOST
 export default function fetchMethod(data: ILotSerialNumberPlanBatchRemoveRequestDTO) {
-    return post<IJSONResultstring1>({
+    return post<IJSONResultstring1['data']>({
       url: "/masterdata-service/lotSerialNumberPlan/removeBatchByIdList",
       data,
     });

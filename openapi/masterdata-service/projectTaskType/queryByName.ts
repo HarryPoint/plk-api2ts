@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务类型相关/queryByNameUsingPOST_2
 export default function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject>({
+    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
       url: "/masterdata-service/projectTaskType/queryByName",
       data,
     });

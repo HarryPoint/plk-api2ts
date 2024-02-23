@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备相关/getDeviceSelectorForPlanUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<ITheJSONResultListDeviceSelectsToReturnVOForTheDataCollectionScheme>({
+    return get<ITheJSONResultListDeviceSelectsToReturnVOForTheDataCollectionScheme['data']>({
       url: "/masterdata-service/device/getDeviceSelectorForPlan",
       params,
     });

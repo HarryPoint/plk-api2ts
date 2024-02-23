@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportScrapResultVOUsingPOST
 export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationBaoJingReportScrapRelatedReturnVO>({
+    return post<IJSONResultPageInformationBaoJingReportScrapRelatedReturnVO['data']>({
       url: "/masterdata-service/baoJingReport/getBaoJingReportScrapResultVO",
       data,
       params,

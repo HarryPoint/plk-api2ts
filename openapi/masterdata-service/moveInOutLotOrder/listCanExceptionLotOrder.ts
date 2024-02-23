@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanExceptionLotOrderUsingPOST
 export default function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches) {
-    return post<IJSONResultListHandlesBatchResponseDtosAbnormally>({
+    return post<IJSONResultListHandlesBatchResponseDtosAbnormally['data']>({
       url: "/masterdata-service/moveInOutLotOrder/listCanExceptionLotOrder",
       data,
     });

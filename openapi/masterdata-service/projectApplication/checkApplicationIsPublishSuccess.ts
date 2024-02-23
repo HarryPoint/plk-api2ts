@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/checkApplicationIsPublishSuccessUsingPOST
 export default function fetchMethod(data: IVerifyWhetherTheApplicationSuccessfullyAdvertisesTheRequestObject) {
-    return post<IJSONResultstring1>({
+    return post<IJSONResultstring1['data']>({
       url: "/masterdata-service/projectApplication/checkApplicationIsPublishSuccess",
       data,
     });

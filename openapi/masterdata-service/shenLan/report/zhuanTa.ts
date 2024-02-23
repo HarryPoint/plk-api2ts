@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZhuanTaReportUsingGET
 export default function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId: number }) {
-    return get<IJSONResultListTurretOrUnit1To7Report>({
+    return get<IJSONResultListTurretOrUnit1To7Report['data']>({
       url: "/masterdata-service/shenLan/report/zhuanTa",
       data,
       params,

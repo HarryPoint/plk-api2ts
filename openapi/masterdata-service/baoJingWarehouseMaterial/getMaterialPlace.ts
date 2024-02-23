@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialPlaceUsingPOST
 export default function fetchMethod(data: IBaojingMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListReturnTheInventoryDistributionToVO>({
+    return post<IJSONResultListReturnTheInventoryDistributionToVO['data']>({
       url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialPlace",
       data,
       params,

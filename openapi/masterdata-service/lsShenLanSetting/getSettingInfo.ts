@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getSettingInfoUsingGET_1
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultDeepBlueProductionScreenSettingReturnsVO>({
+    return get<IJSONResultDeepBlueProductionScreenSettingReturnsVO['data']>({
       url: "/masterdata-service/lsShenLanSetting/getSettingInfo",
       params,
     });

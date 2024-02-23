@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/modifyCategoryUsingPOST
 export default function fetchMethod(data: IStandardProcessModificationClassificationRequestObject) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/standardTechnology/modifyCategory",
       data,
     });

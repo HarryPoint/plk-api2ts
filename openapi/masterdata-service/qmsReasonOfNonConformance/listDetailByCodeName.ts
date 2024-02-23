@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/不合格原因服务相关/listDetailByCodeNameUsingPOST
 export default function fetchMethod(data: INameNumberDTO) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject>({
+    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
       url: "/masterdata-service/qmsReasonOfNonConformance/listDetailByCodeName",
       data,
     });

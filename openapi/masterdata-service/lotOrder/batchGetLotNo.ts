@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchGetLotNoUsingPOST
 export default function fetchMethod(data: IBatchSerialNumberRequestDTO) {
-    return post<IJSONResultBatchNumberUsesDTO>({
+    return post<IJSONResultBatchNumberUsesDTO['data']>({
       url: "/masterdata-service/lotOrder/batchGetLotNo",
       data,
     });

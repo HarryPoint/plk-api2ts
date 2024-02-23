@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用类型相关/getFlowPathStructureDataUsingPOST_10
 export default function fetchMethod(data: IProcessStructureSearchVO) {
-    return post<IJSONResultFormStructureVO>({
+    return post<IJSONResultFormStructureVO['data']>({
       url: "/masterdata-service/produceFeeType/getFlowPathStructureData",
       data,
     });

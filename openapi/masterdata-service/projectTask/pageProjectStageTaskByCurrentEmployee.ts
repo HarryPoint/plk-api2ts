@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageProjectStageTaskByCurrentEmployeeUsingPOST
 export default function fetchMethod(data: PageProjectStageTaskByCurrentEmployee) {
-    return post<IJSONResultPageInformationProjectProjectPhaseTaskResponseObject>({
+    return post<IJSONResultPageInformationProjectProjectPhaseTaskResponseObject['data']>({
       url: "/masterdata-service/projectTask/pageProjectStageTaskByCurrentEmployee",
       data,
     });

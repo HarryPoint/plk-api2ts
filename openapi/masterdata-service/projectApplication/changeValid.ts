@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/changeValidUsingPOST_6
 export default function fetchMethod(data: IEnableOrDisableVO) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/projectApplication/changeValid",
       data,
     });

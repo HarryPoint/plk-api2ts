@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getByIdUsingGET_2
 export default function fetchMethod(params: { enterpriseId: number; flowPathId: number; formRecordId: number }) {
-    return get<IJSONResultJSONObject>({
+    return get<IJSONResultJSONObject['data']>({
       url: "/masterdata-service/dynamicData/getById",
       params,
     });

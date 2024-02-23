@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/getQualityAnalysisReportUsingPOST
 export default function fetchMethod(data: GetQualityAnalysisReport) {
-    return post<IJSONResultThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO>({
+    return post<IJSONResultThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO['data']>({
       url: "/masterdata-service/inspectionTaskReport/getQualityAnalysisReport",
       data,
     });

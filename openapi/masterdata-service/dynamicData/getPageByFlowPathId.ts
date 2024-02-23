@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getPageByFlowPathIdUsingPOST
 export default function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultPagingInformationJSONObject>({
+    return post<IJSONResultPagingInformationJSONObject['data']>({
       url: "/masterdata-service/dynamicData/getPageByFlowPathId",
       data,
       params,

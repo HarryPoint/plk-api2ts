@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBeforeRoutingStepsUsingGET
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultListProcessPathStepsSelectVO>({
+    return get<IJSONResultListProcessPathStepsSelectVO['data']>({
       url: "/masterdata-service/produceHandle/getBeforeRoutingSteps",
       params,
     });

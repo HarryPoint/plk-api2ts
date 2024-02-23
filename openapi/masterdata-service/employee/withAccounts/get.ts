@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUsersWithAccountsUsingPOST
 export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList) {
-    return post<IJSONResultListIdNameNumberVO>({
+    return post<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/employee/withAccounts/get",
       data,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料收发汇总报表相关/exportMaterialStorageInOutReportUsingPOST
 export default function fetchMethod(data: ExportMaterialStorageInOutReport) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/warehouseMaterialStorageInOutReport/exportMaterialStorageInOutReport",
       data,
     });

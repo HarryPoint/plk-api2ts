@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/报表相关/getAllSalesOrderReportExportResultUsingPOST
 export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListExportOrderProgressStatisticsVO>({
+    return post<IJSONResultListExportOrderProgressStatisticsVO['data']>({
       url: "/masterdata-service/report/getAllSalesOrderReportExportResult",
       data,
       params,

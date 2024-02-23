@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产线相关/getDeviceSelectorUsingPOST
 export default function fetchMethod(data: IAssociatedQueryDtosOfDevicesInTheProductionLine) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject>({
+    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
       url: "/masterdata-service/productionLine/getDeviceSelector",
       data,
     });

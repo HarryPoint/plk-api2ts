@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/editUsingPOST_13
 export default function fetchMethod(data: IProductionTaskCustomCardStyleEditListObjectDTO) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/produceTaskCustomCardStyle/edit",
       data,
     });

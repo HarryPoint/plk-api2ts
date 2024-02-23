@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/客户相关/getVOByIdNotCheckUsingGET
-export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultCustomerVO>({
+export default function fetchMethod(params: { enterpriseId: number; id?: number }) {
+    return get<IJSONResultCustomerVO['data']>({
       url: "/masterdata-service/customer/getVOByIdNotCheck",
       params,
     });

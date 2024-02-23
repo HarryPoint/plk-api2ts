@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingModelStatisticsUsingGET
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return get<IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem>({
+    return get<IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem['data']>({
       url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingModelStatistics",
       params,
     });

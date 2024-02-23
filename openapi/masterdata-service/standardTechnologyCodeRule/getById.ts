@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/getByIdUsingGET_16
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultStandardProcessCodingRulesRespondToDtos>({
+    return get<IJSONResultStandardProcessCodingRulesRespondToDtos['data']>({
       url: "/masterdata-service/standardTechnologyCodeRule/getById",
       params,
     });

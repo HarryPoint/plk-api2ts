@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/手动排产/handPlanUsingPOST
 export default function fetchMethod(data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/handPlan/handPlan",
       data,
       params,

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/getHandledTaskListUsingPOST
 export default function fetchMethod(data: IProcessTaskResultQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListProcessTaskResultVO>({
+    return post<IJSONResultListProcessTaskResultVO['data']>({
       url: "/masterdata-service/flowPathTask/getHandledTaskList",
       data,
       params,

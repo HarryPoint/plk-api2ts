@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryByTypeUsingGET
 export default function fetchMethod(params: { type: string; enterpriseId: number }) {
-    return get<IJSONResultListIdNameNumberVO>({
+    return get<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryByType",
       params,
     });

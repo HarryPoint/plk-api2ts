@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialCuratorSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
-    return get<IJSONResultListstring>({
+    return get<IJSONResultListstring['data']>({
       url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialCuratorSelector",
       params,
     });

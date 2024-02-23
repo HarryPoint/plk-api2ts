@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/listByCodeUsingGET
 export default function fetchMethod(params: { code: string; enterpriseId: number }) {
-    return get<IJSONResultListListColumnStyleConfigurationVO>({
+    return get<IJSONResultListListColumnStyleConfigurationVO['data']>({
       url: "/masterdata-service/tableColumnStyleConfig/listByCode",
       params,
     });

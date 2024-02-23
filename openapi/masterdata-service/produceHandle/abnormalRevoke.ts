@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/abnormalRevokeUsingPOST
 export default function fetchMethod(data: IIdInformation, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/produceHandle/abnormalRevoke",
       data,
       params,

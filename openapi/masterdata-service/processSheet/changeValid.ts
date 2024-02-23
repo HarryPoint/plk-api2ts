@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/changeValidUsingPOST_3
 export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/processSheet/changeValid",
       data,
       params,

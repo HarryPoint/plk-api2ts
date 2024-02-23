@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/维联批次打印相关/checkPrintProduceOrderIdsUsingPOST
 export default function fetchMethod(data: string) {
-    return post<IJSONResultVirtualizedBatchPrintTemplateResponseObject>({
+    return post<IJSONResultVirtualizedBatchPrintTemplateResponseObject['data']>({
       url: "/masterdata-service/weiLianLotPrint/checkPrintProduceOrderIds",
       data,
     });

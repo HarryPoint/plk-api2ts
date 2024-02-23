@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProduceWorkOrderUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListProduceWorkOrderVO>({
+    return post<IJSONResultListProduceWorkOrderVO['data']>({
       url: "/masterdata-service/produceOrder/produceWorkOrder/batchGet",
       data,
     });

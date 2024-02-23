@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/getPageUsingPOST_4
 export default function fetchMethod(data: IDeviceDataSchemeSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO>({
+    return post<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO['data']>({
       url: "/masterdata-service/deviceCollectionPlan/getPage",
       data,
       params,

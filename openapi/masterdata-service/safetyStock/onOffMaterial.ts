@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/onOffMaterialUsingPOST
 export default function fetchMethod(data: ISafetyStockMaterialSwitchWarning, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/safetyStock/onOffMaterial",
       data,
       params,

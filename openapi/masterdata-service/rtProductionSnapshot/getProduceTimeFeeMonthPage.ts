@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeMonthPageUsingPOST
 export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationMonthlySummaryReportOfLaborTimeIsReturnedToVO>({
+    return post<IJSONResultPageInformationMonthlySummaryReportOfLaborTimeIsReturnedToVO['data']>({
       url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeMonthPage",
       data,
       params,

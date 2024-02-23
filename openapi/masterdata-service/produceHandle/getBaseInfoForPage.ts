@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBaseInfoForPageUsingPOST
 export default function fetchMethod(data: IProductionProcessingQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>({
+    return post<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO['data']>({
       url: "/masterdata-service/produceHandle/getBaseInfoForPage",
       data,
       params,

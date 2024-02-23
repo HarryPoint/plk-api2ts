@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/queryMaterialTypeUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListCodeName>({
+    return get<IJSONResultListCodeName['data']>({
       url: "/masterdata-service/baoJingReport/queryMaterialType",
     });
 }

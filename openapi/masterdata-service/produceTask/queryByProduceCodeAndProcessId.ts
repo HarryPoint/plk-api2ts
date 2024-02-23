@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryByProduceCodeAndProcessIdUsingGET
 export default function fetchMethod(params: { processId: number; produceOrderCode: string }) {
-    return get<IJSONResultListProduceTaskVO>({
+    return get<IJSONResultListProduceTaskVO['data']>({
       url: "/masterdata-service/produceTask/queryByProduceCodeAndProcessId",
       params,
     });

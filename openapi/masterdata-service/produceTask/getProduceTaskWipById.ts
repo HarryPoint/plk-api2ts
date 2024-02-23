@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskWipByIdUsingGET
 export default function fetchMethod(params: { taskId: string; enterpriseId: number }) {
-    return get<IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation>({
+    return get<IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation['data']>({
       url: "/masterdata-service/produceTask/getProduceTaskWipById",
       params,
     });

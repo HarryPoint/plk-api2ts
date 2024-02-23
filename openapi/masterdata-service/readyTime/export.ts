@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/exportUsingPOST_28
 export default function fetchMethod(data: IPreparationPeriodQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/readyTime/export",
       data,
       params,

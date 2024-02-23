@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/applyForQualityUsingPOST
 export default function fetchMethod(data: IApplyForTheDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/produceTask/applyForQuality",
       data,
       params,

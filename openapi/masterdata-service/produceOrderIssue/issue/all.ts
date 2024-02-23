@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发/issueAllUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultProductionOrderDeliveryResultDTO>({
+    return get<IJSONResultProductionOrderDeliveryResultDTO['data']>({
       url: "/masterdata-service/produceOrderIssue/issue/all",
       params,
     });

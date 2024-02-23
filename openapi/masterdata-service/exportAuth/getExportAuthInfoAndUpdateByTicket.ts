@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getExportAuthInfoAndUpdateByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportedTicketInformation1>({
+    return get<IJSONResultExportedTicketInformation1['data']>({
       url: "/masterdata-service/exportAuth/getExportAuthInfoAndUpdateByTicket",
       params,
     });

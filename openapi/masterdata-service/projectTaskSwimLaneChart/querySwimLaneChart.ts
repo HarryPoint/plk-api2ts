@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务泳道图相关/querySwimLaneChartUsingGET
 export default function fetchMethod(params: { projectId: number }) {
-    return get<IJSONResultProjectTaskLaneMapResponseObject>({
+    return get<IJSONResultProjectTaskLaneMapResponseObject['data']>({
       url: "/masterdata-service/projectTaskSwimLaneChart/querySwimLaneChart",
       params,
     });

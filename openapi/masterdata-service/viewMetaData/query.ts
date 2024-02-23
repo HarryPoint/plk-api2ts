@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/视图元数据相关/queryUsingPOST_3
 export default function fetchMethod(data: IViewMetadataQueryRequestDTO) {
-    return post<IJSONResultViewMetadataQueryResponseDTO>({
+    return post<IJSONResultViewMetadataQueryResponseDTO['data']>({
       url: "/masterdata-service/viewMetaData/query",
       data,
     });

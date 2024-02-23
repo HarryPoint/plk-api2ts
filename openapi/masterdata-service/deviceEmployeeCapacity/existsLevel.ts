@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/existsLevelUsingGET
 export default function fetchMethod(params: { maintainLevel: string }) {
-    return get<IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsAResponseDTO>({
+    return get<IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsAResponseDTO['data']>({
       url: "/masterdata-service/deviceEmployeeCapacity/existsLevel",
       params,
     });

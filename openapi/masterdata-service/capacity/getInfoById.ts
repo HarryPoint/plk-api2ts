@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getInfoByIdUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultProductivityResponseObject>({
+    return get<IJSONResultProductivityResponseObject['data']>({
       url: "/masterdata-service/capacity/getInfoById",
       params,
     });

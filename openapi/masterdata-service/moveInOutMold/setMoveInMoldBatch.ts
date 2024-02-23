@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/setMoveInMoldBatchUsingPOST
 export default function fetchMethod(data: IProductionTaskBatchSetFeedMoldRequestDTO) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/moveInOutMold/setMoveInMoldBatch",
       data,
     });

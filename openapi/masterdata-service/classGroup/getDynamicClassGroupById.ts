@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/班组相关/getDynamicClassGroupByIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultIdNameNumberVO>({
+    return get<IJSONResultIdNameNumberVO['data']>({
       url: "/masterdata-service/classGroup/getDynamicClassGroupById",
       params,
     });

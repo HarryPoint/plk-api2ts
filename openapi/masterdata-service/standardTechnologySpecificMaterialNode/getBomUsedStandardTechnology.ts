@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺具体物料节点相关/getBomUsedStandardTechnologyUsingPOST
 export default function fetchMethod(data: IStandardProcessQueryObjectUsedByBom) {
-    return post<IJSONResultListbomStandardProcessResponse>({
+    return post<IJSONResultListbomStandardProcessResponse['data']>({
       url: "/masterdata-service/standardTechnologySpecificMaterialNode/getBomUsedStandardTechnology",
       data,
     });

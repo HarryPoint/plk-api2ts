@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/getProcessOfLoginUserUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO>({
+    return get<IJSONResultListIdNameNumberVO['data']>({
       url: "/masterdata-service/userProcess/getProcessOfLoginUser",
     });
 }

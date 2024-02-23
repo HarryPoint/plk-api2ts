@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySpecialAuditImprovementRectificationUsingPOST
 export default function fetchMethod(data: IImprovementRecificationQueryRequestDTO) {
-    return post<IJSONResultImprovesTheRectificationRate>({
+    return post<IJSONResultImprovesTheRectificationRate['data']>({
       url: "/masterdata-service/qmsDashboard/querySpecialAuditImprovementRectification",
       data,
     });

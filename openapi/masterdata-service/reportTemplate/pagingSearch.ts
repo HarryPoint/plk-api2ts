@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/报表模板/pagingSearchUsingPOST
 export default function fetchMethod(data: IPaging14) {
-    return post<IReportTemplateQueryResponseDTOJSONResultPagingInformation>({
+    return post<IReportTemplateQueryResponseDTOJSONResultPagingInformation['data']>({
       url: "/masterdata-service/reportTemplate/pagingSearch",
       data,
     });

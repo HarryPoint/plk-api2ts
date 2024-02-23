@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListNotificationField>({
+    return get<IJSONResultListNotificationField['data']>({
       url: "/masterdata-service/qmsDashboard/queryNoticeList",
     });
 }

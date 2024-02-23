@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/getByIdUsingGET_4
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultFileObjectDetailResponseDTO>({
+    return get<IJSONResultFileObjectDetailResponseDTO['data']>({
       url: "/masterdata-service/fileObject/getById",
       params,
     });

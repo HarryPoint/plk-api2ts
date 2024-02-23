@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/editByNotTriggerTaskUsingPOST_1
 export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultstring>({
+    return post<IJSONResultstring['data']>({
       url: "/masterdata-service/material/editByNotTriggerTask",
       data,
       params,

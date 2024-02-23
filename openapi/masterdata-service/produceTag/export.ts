@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标签设置/exportUsingPOST_21
 export default function fetchMethod(data: IExceptionTagSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/produceTag/export",
       data,
       params,

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/盘亏单相关/getTableColumnUsingGET_3
 export default function fetchMethod() {
-    return get<IJSONResultListProcessTableColumnVO>({
+    return get<IJSONResultListProcessTableColumnVO['data']>({
       url: "/masterdata-service/inventoryLossesOrder/getTableColumn",
     });
 }

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/listByNavigationUsingGET
 export default function fetchMethod(params: { projectId: number }) {
-    return get<ITheJSONResultListProjectAppliesTheReturnObject>({
+    return get<ITheJSONResultListProjectAppliesTheReturnObject['data']>({
       url: "/masterdata-service/projectApplication/listByNavigation",
       params,
     });

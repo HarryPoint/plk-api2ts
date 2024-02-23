@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getUserWaitHandleCountUsingGET
 export default function fetchMethod(params: { enterpriseId: number; isTimeout: string; userId: number }) {
-    return get<IJSONResultlong>({
+    return get<IJSONResultlong['data']>({
       url: "/masterdata-service/produceTask/getUserWaitHandleCount",
       params,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/模糊排产/vaguePlanUsingPOST
 export default function fetchMethod(data: IProductionOrderFuzzySchedulingDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/vaguePlan/vaguePlan",
       data,
       params,

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/balanceAntiUsingPOST
 export default function fetchMethod(data: ICounterbalanceRequestForFinancialPeriod) {
-    return post<IJSONResultboolean>({
+    return post<IJSONResultboolean['data']>({
       url: "/masterdata-service/fiscalPeriod/balanceAnti",
       data,
     });

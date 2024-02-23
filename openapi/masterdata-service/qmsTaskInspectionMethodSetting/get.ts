@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设置检验任务的检验方式相关/getUsingGET_5
 export default function fetchMethod() {
-    return get<IJSONResultSetsTheCheckModeOfTheCheckTaskInResponseToTheDTO>({
+    return get<IJSONResultSetsTheCheckModeOfTheCheckTaskInResponseToTheDTO['data']>({
       url: "/masterdata-service/qmsTaskInspectionMethodSetting/get",
     });
 }

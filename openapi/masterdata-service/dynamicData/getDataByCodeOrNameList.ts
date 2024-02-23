@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getDataByCodeOrNameListUsingPOST
 export default function fetchMethod(data: IProcessFormCodeOrNameSearchesForVO, params: { enterpriseCode: string }) {
-    return post<IJSONResultListJSONObject>({
+    return post<IJSONResultListJSONObject['data']>({
       url: "/masterdata-service/dynamicData/getDataByCodeOrNameList",
       data,
       params,

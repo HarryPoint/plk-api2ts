@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/cancelPlanDetailUsingPOST
 export default function fetchMethod(data: IIdInformation) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/deviceMaintainPlan/cancelPlanDetail",
       data,
     });

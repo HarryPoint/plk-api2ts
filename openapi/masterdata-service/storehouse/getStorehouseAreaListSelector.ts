@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓库相关/getStorehouseAreaListSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<ITheJSONResultListRepositoryAreaTreeReturnsVO>({
+    return get<ITheJSONResultListRepositoryAreaTreeReturnsVO['data']>({
       url: "/masterdata-service/storehouse/getStorehouseAreaListSelector",
       params,
     });

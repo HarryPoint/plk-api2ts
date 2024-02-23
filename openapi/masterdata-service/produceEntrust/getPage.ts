@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/委外加工管理/getPageUsingPOST_13
 export default function fetchMethod(data: IOutsourcingSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationOutsourcingReturnsVO>({
+    return post<IJSONResultPageInformationOutsourcingReturnsVO['data']>({
       url: "/masterdata-service/produceEntrust/getPage",
       data,
       params,

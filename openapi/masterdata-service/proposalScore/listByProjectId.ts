@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/合理化建议评分相关/listByProjectIdUsingPOST
 export default function fetchMethod(params: { projectId: number }) {
-    return post<IJSONResultListProposalScoreResponseDTO>({
+    return post<IJSONResultListProposalScoreResponseDTO['data']>({
       url: "/masterdata-service/proposalScore/listByProjectId",
       params,
     });

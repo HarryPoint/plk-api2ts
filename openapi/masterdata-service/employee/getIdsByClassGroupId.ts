@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByClassGroupIdUsingGET
 export default function fetchMethod(params: { classGroupId: number; enterpriseId: number }) {
-    return get<IJSONResultListlong>({
+    return get<IJSONResultListlong['data']>({
       url: "/masterdata-service/employee/getIdsByClassGroupId",
       params,
     });

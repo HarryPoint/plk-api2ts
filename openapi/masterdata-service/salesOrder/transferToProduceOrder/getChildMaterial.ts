@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getChildMaterialListUsingPOST
 export default function fetchMethod(data: IProductionSubMaterialQueryRequest[]) {
-    return post<IJSONResultListInformationAboutProductionSubMaterials>({
+    return post<IJSONResultListInformationAboutProductionSubMaterials['data']>({
       url: "/masterdata-service/salesOrder/transferToProduceOrder/getChildMaterial",
       data,
     });

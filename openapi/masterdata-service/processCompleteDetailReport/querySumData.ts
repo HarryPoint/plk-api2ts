@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序完成明细表/querySumDataUsingPOST
 export default function fetchMethod(data: IProcedureCompletionListQuery) {
-    return post<IJSONResultProcessCompletionDetailsTotalResponseDto>({
+    return post<IJSONResultProcessCompletionDetailsTotalResponseDto['data']>({
       url: "/masterdata-service/processCompleteDetailReport/querySumData",
       data,
     });

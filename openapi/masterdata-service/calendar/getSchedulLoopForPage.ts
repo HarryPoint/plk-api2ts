@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getSchedulLoopForPageUsingPOST
 export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationSchedulingRecordReturnsVO>({
+    return post<IJSONResultPagingInformationSchedulingRecordReturnsVO['data']>({
       url: "/masterdata-service/calendar/getSchedulLoopForPage",
       data,
       params,

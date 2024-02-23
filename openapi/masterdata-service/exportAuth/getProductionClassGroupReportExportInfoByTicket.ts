@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionClassGroupReportExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationOutputReportExportVO>({
+    return get<IJSONResultExportInformationOutputReportExportVO['data']>({
       url: "/masterdata-service/exportAuth/getProductionClassGroupReportExportInfoByTicket",
       params,
     });

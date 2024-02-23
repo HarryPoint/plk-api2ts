@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检分类/editUsingPOST_16
 export default function fetchMethod(data: IEditTheQualityInspectionClassificationDTO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/qualityInspectionCategory/edit",
       data,
       params,

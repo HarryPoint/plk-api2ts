@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getProductionProgressUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultLargeScreenInspectionProductionInformationVOIsReturned>({
+    return get<IJSONResultLargeScreenInspectionProductionInformationVOIsReturned['data']>({
       url: "/masterdata-service/lsShenLanSetting/getProductionProgress",
       params,
     });

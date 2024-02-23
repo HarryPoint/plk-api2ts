@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/editUsingPOST_10
 export default function fetchMethod(data: IEditTheDTOForProductionExceptionTypes, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/produceAbnormalCategory/edit",
       data,
       params,

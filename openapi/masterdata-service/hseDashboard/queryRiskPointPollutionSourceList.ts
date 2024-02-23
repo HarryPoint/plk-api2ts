@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryRiskPointPollutionSourceListUsingPOST
 export default function fetchMethod(data: IRiskPointPollutionSourceQueryRequest) {
-    return post<IJSONResultListIndicatesTheResponseToTheSourceQueryAtTheRiskPoint>({
+    return post<IJSONResultListIndicatesTheResponseToTheSourceQueryAtTheRiskPoint['data']>({
       url: "/masterdata-service/hseDashboard/queryRiskPointPollutionSourceList",
       data,
     });

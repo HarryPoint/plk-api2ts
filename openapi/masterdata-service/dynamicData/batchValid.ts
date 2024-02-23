@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchValidUsingPOST_1
 export default function fetchMethod(data: IDynamicFormEnabledRequestDTO, params: { flowPathId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/dynamicData/batchValid",
       data,
       params,

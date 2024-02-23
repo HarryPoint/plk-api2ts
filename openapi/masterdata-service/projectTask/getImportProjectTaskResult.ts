@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/getImportProjectTaskResultUsingGET
 export default function fetchMethod(params: { importRecordId: string }) {
-    return get<IJSONResultProjectTaskImportRecordQueryResponse>({
+    return get<IJSONResultProjectTaskImportRecordQueryResponse['data']>({
       url: "/masterdata-service/projectTask/getImportProjectTaskResult",
       params,
     });

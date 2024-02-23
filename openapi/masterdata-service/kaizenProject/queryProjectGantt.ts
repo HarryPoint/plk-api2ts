@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/queryProjectGanttUsingPOST
 export default function fetchMethod(data: IProjectGanttChartQueryObject) {
-    return post<IJSONResultListProjectGanttChartResponseObject>({
+    return post<IJSONResultListProjectGanttChartResponseObject['data']>({
       url: "/masterdata-service/kaizenProject/queryProjectGantt",
       data,
     });

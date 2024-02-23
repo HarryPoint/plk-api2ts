@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检方案/getSelectorByMaterialUsingGET
-export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return get<IJSONResultListSelectVOAsTheInspectionSolution>({
+export default function fetchMethod(params: { enterpriseId: number; materialId?: number }) {
+    return get<IJSONResultListSelectVOAsTheInspectionSolution['data']>({
       url: "/masterdata-service/qualityInspectionPlan/getSelectorByMaterial",
       params,
     });

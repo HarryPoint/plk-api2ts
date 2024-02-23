@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓库相关/getVOByIdAndCheckUsingGET_2
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultWarehouseVO>({
+    return get<IJSONResultWarehouseVO['data']>({
       url: "/masterdata-service/storehouse/getVOByIdAndCheck",
       params,
     });

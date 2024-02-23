@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/库存脚本相关接口/mutualCheckWarehouseMaterialAndLogUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultstring>({
+    return get<IJSONResultstring['data']>({
       url: "/masterdata-service/script/storageScript/mutualCheckWarehouseMaterialAndLog",
       params,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/scanMoveInDeviceByBatchUsingPOST
 export default function fetchMethod(data: IFeedEquipmentQueryDTO) {
-    return post<IJSONResultListFeedDeviceRespondsToDTO>({
+    return post<IJSONResultListFeedDeviceRespondsToDTO['data']>({
       url: "/masterdata-service/moveInOutDevice/scanMoveInDeviceByBatch",
       data,
     });

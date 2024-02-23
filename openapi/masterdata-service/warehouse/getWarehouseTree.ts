@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseTreeUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListWarehouseLocationTreeReturnsVO>({
+    return get<IJSONResultListWarehouseLocationTreeReturnsVO['data']>({
       url: "/masterdata-service/warehouse/getWarehouseTree",
       params,
     });

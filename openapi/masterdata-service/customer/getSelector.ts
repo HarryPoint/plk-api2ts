@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/客户相关/getSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListClientSelectsToReturnVO>({
+    return get<IJSONResultListClientSelectsToReturnVO['data']>({
       url: "/masterdata-service/customer/getSelector",
       params,
     });

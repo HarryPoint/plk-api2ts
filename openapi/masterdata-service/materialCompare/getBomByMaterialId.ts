@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getBomByMaterialIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return get<IJSONResultListMaterialBomBaseVo>({
+    return get<IJSONResultListMaterialBomBaseVo['data']>({
       url: "/masterdata-service/materialCompare/getBomByMaterialId",
       params,
     });

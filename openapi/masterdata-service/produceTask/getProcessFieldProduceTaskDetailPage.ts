@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessFieldProduceTaskDetailPageUsingPOST
 export default function fetchMethod(data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields, params: { enterpriseId: number }) {
-    return post<ITheJSONResultPageInformationTaskSummaryTableIsBasedOnProcessFieldDetailsVO>({
+    return post<ITheJSONResultPageInformationTaskSummaryTableIsBasedOnProcessFieldDetailsVO['data']>({
       url: "/masterdata-service/produceTask/getProcessFieldProduceTaskDetailPage",
       data,
       params,

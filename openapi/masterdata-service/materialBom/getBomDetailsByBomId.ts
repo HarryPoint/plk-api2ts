@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getBomDetailsByBomIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultListBomDetailsSelectBasicInformationDTO>({
+    return get<IJSONResultListBomDetailsSelectBasicInformationDTO['data']>({
       url: "/masterdata-service/materialBom/getBomDetailsByBomId",
       params,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/removeUsingPOST
 export default function fetchMethod(data: IStandardProcessClassificationRemoveRequestDTO) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/standardTechnologyCategory/remove",
       data,
     });

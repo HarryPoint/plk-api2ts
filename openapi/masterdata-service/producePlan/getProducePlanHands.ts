@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProducePlanHandsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListProductionPlanManuallySchedulesVOProduction>({
+    return post<IJSONResultListProductionPlanManuallySchedulesVOProduction['data']>({
       url: "/masterdata-service/producePlan/getProducePlanHands",
       data,
       params,

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/saveMoveInDetailUsingPOST
 export default function fetchMethod(data: IInboundAndOutboundInformationDTO1, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/produceTask/saveMoveInDetail",
       data,
       params,

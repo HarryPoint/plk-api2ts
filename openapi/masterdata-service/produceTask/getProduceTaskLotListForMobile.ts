@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskLotListForMobileUsingPOST
 export default function fetchMethod(data: IProductionTaskBatchInformationQueryDTOForMobileTerminals) {
-    return post<IJSONResultListProductionTaskGroupingBatchOrderResponseDTOForMobile>({
+    return post<IJSONResultListProductionTaskGroupingBatchOrderResponseDTOForMobile['data']>({
       url: "/masterdata-service/produceTask/getProduceTaskLotListForMobile",
       data,
     });

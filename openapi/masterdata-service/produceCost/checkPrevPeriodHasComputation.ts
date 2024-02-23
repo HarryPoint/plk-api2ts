@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkPrevPeriodHasComputationUsingGET
 export default function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get<IJSONResultstring1>({
+    return get<IJSONResultstring1['data']>({
       url: "/masterdata-service/produceCost/checkPrevPeriodHasComputation",
       params,
     });

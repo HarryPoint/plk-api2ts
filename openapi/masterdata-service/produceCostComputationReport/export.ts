@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/exportUsingPOST_14
 export default function fetchMethod(data: IProductionCostingPagingRequestObject) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/produceCostComputationReport/export",
       data,
     });

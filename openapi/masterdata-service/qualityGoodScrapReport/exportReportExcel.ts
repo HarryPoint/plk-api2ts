@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检统计/exportReportExcelUsingPOST_2
 export default function fetchMethod(data: IScrapDataSheetSearchVO) {
-    return post<IJSONResultlong>({
+    return post<IJSONResultlong['data']>({
       url: "/masterdata-service/qualityGoodScrapReport/exportReportExcel",
       data,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/scanCanMoveOutLotOrderUsingPOST
 export default function fetchMethod(data: IDtoCanBeCheckedByBatchScanning) {
-    return post<IJSONResultReleasableBatchResponseDto>({
+    return post<IJSONResultReleasableBatchResponseDto['data']>({
       url: "/masterdata-service/moveInOutLotOrder/scanCanMoveOutLotOrder",
       data,
     });

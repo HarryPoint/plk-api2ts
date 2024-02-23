@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
 export default function fetchMethod(data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried) {
-    return post<IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrievingMaterials>({
+    return post<IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrievingMaterials['data']>({
       url: "/masterdata-service/warehouseStorageMaterialScan/outStorageScanLotNo",
       data,
     });

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/assignUsingPOST
 export default function fetchMethod(data: IProcessTaskAssignmentDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject>({
+    return post<IJSONResultobject['data']>({
       url: "/masterdata-service/processTaskSetting/assign",
       data,
       params,

@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/queryHorizontalForecastLaborCostUsingPOST
 export default function fetchMethod(data: IForecastLaborCost1[]) {
-    return post<IJSONResultPredictedLaborCost>({
+    return post<IJSONResultPredictedLaborCost['data']>({
       url: "/masterdata-service/salesOrder/transferToProduceOrder/queryHorizontalForecastLaborCost",
       data,
     });

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getAbnormalTypeUsingGET_2
 export default function fetchMethod(params: { type: string; enterpriseId: number }) {
-    return get<ITheJSONResultListExceptionTypeReturnsVO>({
+    return get<ITheJSONResultListExceptionTypeReturnsVO['data']>({
       url: "/masterdata-service/produceOrder/getAbnormalType",
       params,
     });

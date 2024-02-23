@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getSelectorByNameCodeUsingGET
-export default function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
-    return get<ITheJSONResultListOperationSelectsToReturnVO>({
+export default function fetchMethod(params: { enterpriseId: number; nameOrCode?: string }) {
+    return get<ITheJSONResultListOperationSelectsToReturnVO['data']>({
       url: "/masterdata-service/process/getSelectorByNameCode",
       params,
     });

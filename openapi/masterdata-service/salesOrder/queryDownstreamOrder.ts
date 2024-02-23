@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/queryDownstreamOrderUsingPOST_1
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultListAssociatesTheDocumentResponse>({
+    return post<IJSONResultListAssociatesTheDocumentResponse['data']>({
       url: "/masterdata-service/salesOrder/queryDownstreamOrder",
       data,
     });

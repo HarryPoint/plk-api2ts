@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/getHandleLogUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListProducesTheResponseObjectForTheSuspenseProcessingRecord>({
+    return get<IJSONResultListProducesTheResponseObjectForTheSuspenseProcessingRecord['data']>({
       url: "/masterdata-service/produceHandleHoldPause/getHandleLog",
       params,
     });

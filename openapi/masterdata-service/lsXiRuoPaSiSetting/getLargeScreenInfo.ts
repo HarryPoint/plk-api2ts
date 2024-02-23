@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getLsUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultSilopusBigScreenReturnVO>({
+    return get<IJSONResultSilopusBigScreenReturnVO['data']>({
       url: "/masterdata-service/lsXiRuoPaSiSetting/getLargeScreenInfo",
       params,
     });

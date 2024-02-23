@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/pageBomConsumeLotOrderUsingGET
 export default function fetchMethod(data: IFeedBomConsumptionBatchPagingQueryObject) {
-    return get<IJSONResultPagingInformationFeedBomConsumesBatchResponseDTO>({
+    return get<IJSONResultPagingInformationFeedBomConsumesBatchResponseDTO['data']>({
       url: "/masterdata-service/moveInOutBomConsume/pageBomConsumeLotOrder",
       data,
     });

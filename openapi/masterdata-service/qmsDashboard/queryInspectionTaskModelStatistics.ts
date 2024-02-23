@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInspectionTaskModelStatisticsUsingGET
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return get<IJSONResultListReturnsTheModelStatisticsOfTheLargeScreenTestPlan>({
+    return get<IJSONResultListReturnsTheModelStatisticsOfTheLargeScreenTestPlan['data']>({
       url: "/masterdata-service/qmsDashboard/queryInspectionTaskModelStatistics",
       params,
     });

@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/getByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProducePlanAutoScheduleOutputVO>({
+    return get<IJSONResultProducePlanAutoScheduleOutputVO['data']>({
       url: "/masterdata-service/autoPlanGantt/getById",
       params,
     });

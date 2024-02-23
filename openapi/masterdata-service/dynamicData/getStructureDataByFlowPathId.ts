@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getStructureDataByFlowPathIdUsingPOST
 export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultFormStructureVO>({
+    return post<IJSONResultFormStructureVO['data']>({
       url: "/masterdata-service/dynamicData/getStructureDataByFlowPathId",
       data,
       params,

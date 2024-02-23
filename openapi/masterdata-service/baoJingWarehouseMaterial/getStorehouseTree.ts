@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getStorehouseTreeUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListAreaWarehouseLocationTreeReturnsVO>({
+    return get<IJSONResultListAreaWarehouseLocationTreeReturnsVO['data']>({
       url: "/masterdata-service/baoJingWarehouseMaterial/getStorehouseTree",
       params,
     });

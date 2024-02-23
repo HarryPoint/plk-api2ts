@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryDetailUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO>({
+    return get<IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO['data']>({
       url: "/masterdata-service/produceHandle/getReportHistoryDetail",
       params,
     });

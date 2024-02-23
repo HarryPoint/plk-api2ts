@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaTreeUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<ITheJSONResultListAreaTreeReturnsVO>({
+    return get<ITheJSONResultListAreaTreeReturnsVO['data']>({
       url: "/masterdata-service/area/getAreaTree",
       params,
     });

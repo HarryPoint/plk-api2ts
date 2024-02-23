@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工具脚本相关/exportEnterpriseDataUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultstring>({
+export default function fetchMethod(params: { enterpriseId?: number }) {
+    return get<IJSONResultstring['data']>({
       url: "/masterdata-service/toolScript/exportEnterpriseData",
       params,
     });

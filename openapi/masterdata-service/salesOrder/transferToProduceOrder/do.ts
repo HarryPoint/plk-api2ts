@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/doBatchTransferToProduceOrderUsingPOST
 export default function fetchMethod(data: IBatchTransferToProductionOrder) {
-    return post<IJSONResultSalesOrderToProductionOrderReturnedToDTO>({
+    return post<IJSONResultSalesOrderToProductionOrderReturnedToDTO['data']>({
       url: "/masterdata-service/salesOrder/transferToProduceOrder/do",
       data,
     });

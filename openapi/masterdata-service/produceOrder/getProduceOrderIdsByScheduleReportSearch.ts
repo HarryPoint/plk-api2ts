@@ -2,7 +2,7 @@ import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderIdsByScheduleReportSearchUsingPOST
 export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListlong>({
+    return post<IJSONResultListlong['data']>({
       url: "/masterdata-service/produceOrder/getProduceOrderIdsByScheduleReportSearch",
       data,
       params,

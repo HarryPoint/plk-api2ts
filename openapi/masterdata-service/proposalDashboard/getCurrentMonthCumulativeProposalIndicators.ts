@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCurrentMonthCumulativeProposalIndicatorsUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultCumulativeProposalIndicatorsResponseDTO>({
+    return get<IJSONResultCumulativeProposalIndicatorsResponseDTO['data']>({
       url: "/masterdata-service/proposalDashboard/getCurrentMonthCumulativeProposalIndicators",
     });
 }

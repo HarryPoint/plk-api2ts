@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检方案/getSelectorUsingGET_7
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListSelectVOAsTheInspectionSolution>({
+    return get<IJSONResultListSelectVOAsTheInspectionSolution['data']>({
       url: "/masterdata-service/qualityInspectionPlan/getSelector",
       params,
     });

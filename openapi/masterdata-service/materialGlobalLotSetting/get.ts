@@ -2,7 +2,7 @@ import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料全局批次设置相关/getUsingGET_1
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultMaterialGlobalBatchSettingsEditResponseObject>({
+    return get<IJSONResultMaterialGlobalBatchSettingsEditResponseObject['data']>({
       url: "/masterdata-service/materialGlobalLotSetting/get",
       params,
     });
