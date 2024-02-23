@@ -28,6 +28,7 @@ export const customContent = async (
       const responseDefine = methodDefine.responses?.[200]?.schema;
       let bodyDefine: any;
       let queryDefine: any;
+      let arrayQueryDefineMap: Record<string, any> = {};
       methodDefine.parameters?.forEach((paramsDefine: any) => {
         if (paramsDefine.in === "body") {
           bodyDefine = paramsDefine;
@@ -42,9 +43,33 @@ export const customContent = async (
               },
             };
           }
-          queryDefine.schema.properties[paramsDefine.name] = paramsDefine;
+          if (paramsDefine.name.includes("[0]")) {
+            const keyArr = paramsDefine.name.split("[0].");
+            const name = keyArr[0];
+            const key = keyArr[1];
+            let targetDefine = arrayQueryDefineMap[name];
+            if (!targetDefine) {
+              targetDefine = {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {},
+                },
+              };
+            }
+            targetDefine.items.properties[key] = paramsDefine;
+            arrayQueryDefineMap[name] = targetDefine;
+          } else {
+            queryDefine.schema.properties[paramsDefine.name] = paramsDefine;
+          }
         }
       });
+      if (queryDefine) {
+        queryDefine.schema.properties = {
+          ...queryDefine.schema.properties,
+          ...arrayQueryDefineMap,
+        };
+      }
       const defineArr = [bodyDefine, queryDefine].filter(Boolean);
       defineArr.forEach((defineItem) => {
         const name = defineItem.in === "body" ? "data" : "params";

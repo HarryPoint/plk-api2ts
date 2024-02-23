@@ -1,0 +1,35 @@
+import { post } from '@/api/http';
+ 
+// http://47.108.139.107:16400/doc.html#/default/工序相关/batchGetUserProcessUsingPOST
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListUserProcessVo['data']>({
+      url: "/app-enterprise-web/api/app/enterprise/process/userProcess/batchGet",
+      data,
+    });
+}
+// JSONResult«List«UserProcessVo»»
+export interface IJSONResultListUserProcessVo {
+    // 返回码
+    code: number;
+    // 返回消息说明
+    msg: string;
+    // 响应结果
+    data: IUserProcessVo[];
+    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    ts: number;
+}
+// UserProcessVo
+export interface IUserProcessVo {
+    // undefined
+    id: number;
+    // undefined
+    processId: number;
+    // undefined
+    executorType: string;
+    // undefined
+    refId: number;
+    // undefined
+    type: string;
+    // undefined
+    refName: string;
+}

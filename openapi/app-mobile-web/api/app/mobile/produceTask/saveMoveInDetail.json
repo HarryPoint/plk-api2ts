@@ -1,0 +1,215 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:17400",
+  "info": {
+    "description": "服务名: app-mobile-web",
+    "version": "1.0",
+    "title": "普朗克移动端(app-mobile-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-mobile-web/api/app/mobile/produceTask/saveMoveInDetail": {
+      "post": {
+        "tags": [
+          "生产任务相关"
+        ],
+        "summary": "暂存进站",
+        "operationId": "saveMoveInDetailUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "moveInOutDTO",
+            "description": "moveInOutDTO",
+            "required": true,
+            "schema": {
+              "originalRef": "进出站信息DTO_1",
+              "$ref": "#/definitions/进出站信息DTO_1"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "150"
+      }
+    }
+  },
+  "definitions": {
+    "进出站信息DTO_1": {
+      "type": "object",
+      "required": [
+        "finishedMaterial",
+        "produceTaskId",
+        "wipRpId"
+      ],
+      "properties": {
+        "moveInOutRecordId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "进出站记录id - 如果是从进出站记录里面点进来的，则必传"
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产任务id"
+        },
+        "lotOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "批次id"
+        },
+        "wipRpId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "wip状态记录id"
+        },
+        "finishedMaterial": {
+          "description": "成品物料信息",
+          "originalRef": "成品物料填写DTO",
+          "$ref": "#/definitions/成品物料填写DTO"
+        },
+        "bomMaterials": {
+          "type": "array",
+          "description": "BOM物料信息列表",
+          "items": {
+            "originalRef": "BOM物料填写DTO",
+            "$ref": "#/definitions/BOM物料填写DTO"
+          }
+        },
+        "keyParametersInfo": {
+          "description": "关键参数信息填写",
+          "originalRef": "进出站工艺卡填写",
+          "$ref": "#/definitions/进出站工艺卡填写"
+        }
+      },
+      "title": "进出站信息DTO_1"
+    },
+    "成品物料填写DTO": {
+      "type": "object",
+      "properties": {
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数(质检数)"
+        },
+        "applyQualityAgainQuantity": {
+          "type": "number",
+          "description": "再次申请质检数"
+        }
+      },
+      "title": "成品物料填写DTO"
+    },
+    "BOM物料填写DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产工艺路径步骤bom明细关联id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料id"
+        },
+        "actualQuantity": {
+          "type": "number",
+          "description": "实际数"
+        }
+      },
+      "title": "BOM物料填写DTO"
+    },
+    "进出站工艺卡填写": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关键参数id"
+        },
+        "keyParameterDetailList": {
+          "type": "array",
+          "description": "录入集合 - 带录入信息",
+          "items": {
+            "originalRef": "关键参数明细填写信息",
+            "$ref": "#/definitions/关键参数明细填写信息"
+          }
+        }
+      },
+      "title": "进出站工艺卡填写"
+    },
+    "关键参数明细填写信息": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "inputValue": {
+          "type": "string",
+          "description": "录入值 - 明细录入类型不是图片时，有值"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传key集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "关键参数明细填写信息"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}

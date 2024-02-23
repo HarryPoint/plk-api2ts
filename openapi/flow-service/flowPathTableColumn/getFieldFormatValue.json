@@ -1,0 +1,121 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16500",
+  "info": {
+    "description": "服务名: flow-service",
+    "version": "1.0",
+    "title": "普朗克流程服务(flow-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/flow-service/flowPathTableColumn/getFieldFormatValue": {
+      "post": {
+        "tags": [
+          "流程表格相关"
+        ],
+        "summary": "获取流程表格列原始值对应的格式化后的值",
+        "operationId": "getFieldFormatValueUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "queryDTO",
+            "description": "queryDTO",
+            "required": true,
+            "schema": {
+              "originalRef": "流程表格列对应的值格式化查询DTO",
+              "$ref": "#/definitions/流程表格列对应的值格式化查询DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«string»_1",
+              "$ref": "#/definitions/JSONResult«string»_1"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "100"
+      }
+    }
+  },
+  "definitions": {
+    "流程表格列对应的值格式化查询DTO": {
+      "type": "object",
+      "properties": {
+        "flowPathCode": {
+          "type": "string",
+          "description": "流程表单code"
+        },
+        "flowPathFormFiledSerialNo": {
+          "type": "string",
+          "description": "流程表单字段序列值"
+        },
+        "flowPathFormFiledCode": {
+          "type": "string",
+          "description": "流程表单字段序列值"
+        },
+        "fieldValue": {
+          "type": "string",
+          "description": "格式化前的值"
+        }
+      },
+      "title": "流程表格列对应的值格式化查询DTO"
+    },
+    "JSONResult«string»_1": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "string",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«string»_1"
+    }
+  }
+}

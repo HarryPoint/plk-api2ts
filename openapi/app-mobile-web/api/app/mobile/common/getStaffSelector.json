@@ -1,0 +1,291 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:17400",
+  "info": {
+    "description": "服务名: app-mobile-web",
+    "version": "1.0",
+    "title": "普朗克移动端(app-mobile-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-mobile-web/api/app/mobile/common/getStaffSelector": {
+      "post": {
+        "tags": [
+          "公共相关"
+        ],
+        "summary": "查询员工选择列表",
+        "operationId": "getStaffSelectorUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "userSelectorSearchVO",
+            "description": "userSelectorSearchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "用户主数据选择列表搜索VO",
+              "$ref": "#/definitions/用户主数据选择列表搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«员工响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«员工响应对象»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "用户主数据选择列表搜索VO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "nameOrCode": {
+          "type": "string",
+          "description": "用户名称/编号"
+        },
+        "idList": {
+          "type": "array",
+          "description": "员工ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "用户主数据选择列表搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«List«员工响应对象»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "员工响应对象",
+            "$ref": "#/definitions/员工响应对象"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«员工响应对象»»"
+    },
+    "员工响应对象": {
+      "type": "object",
+      "properties": {
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建用户ID"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建部门ID"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "创建部门名称"
+        },
+        "updateDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新部门ID"
+        },
+        "updateDeptName": {
+          "type": "string",
+          "description": "更新部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新用户ID"
+        },
+        "birthday": {
+          "type": "string",
+          "format": "date-time",
+          "description": "出生日期"
+        },
+        "updateUserName": {
+          "type": "string",
+          "description": "更新用户名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属企业id"
+        },
+        "code": {
+          "type": "string",
+          "description": "员工工号"
+        },
+        "name": {
+          "type": "string",
+          "description": "员工姓名"
+        },
+        "mobilePhone": {
+          "type": "string",
+          "description": "手机号码"
+        },
+        "classGroupId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "班组id"
+        },
+        "entryTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "入职日期"
+        },
+        "dimissionTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "离职日期"
+        },
+        "gender": {
+          "type": "string",
+          "description": "性别",
+          "enum": [
+            "  MAN-男",
+            "  WOMAN-女"
+          ]
+        },
+        "educational": {
+          "type": "string",
+          "description": "学历",
+          "enum": [
+            "  PRIMARY-小学",
+            "  JUNIOR-初中",
+            "  HIGH-高中",
+            "  COLLEGE-大专",
+            "  UNDERGRADUATE-本科",
+            "  POSTGRADUATE-研究生",
+            "  INTERMEDIATE_TECHNICAL-中技",
+            "  MASTER-硕士",
+            "  TECHNICAL_SECONDARY-中专"
+          ]
+        },
+        "nativePlace": {
+          "type": "string",
+          "description": "籍贯"
+        },
+        "departmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "任职部门id"
+        },
+        "departmentName": {
+          "type": "string",
+          "description": "任职部门名称"
+        },
+        "positionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "任职职位id"
+        },
+        "higherUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "直属上级id"
+        },
+        "email": {
+          "type": "string",
+          "description": "邮箱"
+        }
+      },
+      "title": "员工响应对象"
+    }
+  }
+}

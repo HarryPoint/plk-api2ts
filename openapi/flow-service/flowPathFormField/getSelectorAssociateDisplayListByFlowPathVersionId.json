@@ -1,0 +1,124 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16500",
+  "info": {
+    "description": "服务名: flow-service",
+    "version": "1.0",
+    "title": "普朗克流程服务(flow-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/flow-service/flowPathFormField/getSelectorAssociateDisplayListByFlowPathVersionId": {
+      "post": {
+        "tags": [
+          "流程表单字段相关"
+        ],
+        "summary": "根据字段ID获取关联下拉选项显示服务",
+        "operationId": "getSelectorAssociateDisplayListByFlowPathVersionIdUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "flowPathVersionId",
+            "in": "query",
+            "description": "flowPathVersionId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«流程表单字段下拉选项关联显示VO»»",
+              "$ref": "#/definitions/JSONResult«List«流程表单字段下拉选项关联显示VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "15"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«List«流程表单字段下拉选项关联显示VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "流程表单字段下拉选项关联显示VO",
+            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«流程表单字段下拉选项关联显示VO»»"
+    },
+    "流程表单字段下拉选项关联显示VO": {
+      "type": "object",
+      "properties": {
+        "flowPathFormFieldId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程表单字段id"
+        },
+        "flowPathFormFieldCode": {
+          "type": "string",
+          "description": "所属流程表单字段编号"
+        },
+        "flowPathFormFieldSerialNo": {
+          "type": "string",
+          "description": "所属流程表单字段序列号"
+        },
+        "selectorItemCode": {
+          "type": "string",
+          "description": "下拉选项的code"
+        },
+        "associateDisplayFieldSerialNos": {
+          "type": "array",
+          "description": "关联显示字段的序列号集合",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "流程表单字段下拉选项关联显示VO"
+    }
+  }
+}

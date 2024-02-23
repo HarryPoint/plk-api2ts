@@ -1,0 +1,27 @@
+import { post } from '@/api/http';
+ 
+// http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTargetAppOfEventServicesUsingPOST
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListTheTargetApplicationQueryRequest['data']>({
+      url: "/flow-service/flowPathEvent/queryTargetAppOfEventServices",
+      data,
+    });
+}
+// JSONResult«List«目标应用查询请求»»
+export interface IJSONResultListTheTargetApplicationQueryRequest {
+    // 返回码
+    code: number;
+    // 返回消息说明
+    msg: string;
+    // 响应结果
+    data: ITargetApplicationQueryRequest[];
+    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    ts: number;
+}
+// 目标应用查询请求
+export interface ITargetApplicationQueryRequest {
+    // undefined
+    flowPathEventId: number;
+    // undefined
+    targetAppId: number;
+}

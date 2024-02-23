@@ -1,0 +1,200 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:18100",
+  "info": {
+    "description": "服务名: plk-uaa-service",
+    "version": "1.0",
+    "title": "普朗克用户帐号和身份认证服务(plk-uaa-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/plk-uaa-service/rolePermissionApp/getRolePermissionsByServiceObject": {
+      "post": {
+        "tags": [
+          "应用相关的角色权限"
+        ],
+        "summary": "根据服务对象查询角色权限信息",
+        "operationId": "getRolePermissionsByServiceObjectUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "authQuery",
+            "description": "authQuery",
+            "required": true,
+            "schema": {
+              "originalRef": "角色权限授权查询请求DTO",
+              "$ref": "#/definitions/角色权限授权查询请求DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«List«应用角色权限响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«应用角色权限响应DTO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "4"
+      }
+    }
+  },
+  "definitions": {
+    "角色权限授权查询请求DTO": {
+      "type": "object",
+      "properties": {
+        "applicationLevel": {
+          "type": "string",
+          "description": "应用级别",
+          "enum": [
+            "  PROJECT_MANAGER-项目管理",
+            "  ENTERPRISE-企业"
+          ]
+        },
+        "serviceObjectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "服务对象ID"
+        },
+        "roleIds": {
+          "type": "array",
+          "description": "角色ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "角色权限授权查询请求DTO"
+    },
+    "JSONResult«List«应用角色权限响应DTO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "array",
+          "description": "响应结果",
+          "items": {
+            "originalRef": "应用角色权限响应DTO",
+            "$ref": "#/definitions/应用角色权限响应DTO"
+          }
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«List«应用角色权限响应DTO»»"
+    },
+    "应用角色权限响应DTO": {
+      "type": "object",
+      "properties": {
+        "roleId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "角色id"
+        },
+        "roleName": {
+          "type": "string",
+          "description": "角色名称"
+        },
+        "permissionCodes": {
+          "type": "array",
+          "description": "权限码集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "roleDataAuthList": {
+          "type": "array",
+          "description": "数据权限集",
+          "items": {
+            "originalRef": "企业角色权限响应",
+            "$ref": "#/definitions/企业角色权限响应"
+          }
+        }
+      },
+      "title": "应用角色权限响应DTO"
+    },
+    "企业角色权限响应": {
+      "type": "object",
+      "properties": {
+        "dataAuthType": {
+          "type": "string",
+          "description": "数据权限类型",
+          "enum": [
+            "  FLOW_FIELD-表单字段",
+            "  SELF-本人",
+            "  DEPT-所属部门",
+            "  ALL-全部"
+          ]
+        },
+        "appId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用id"
+        },
+        "enterpriseRouterCode": {
+          "type": "string",
+          "description": "企业路由code"
+        },
+        "roleDataAuthFieldList": {
+          "type": "array",
+          "description": "数据权限对应的字段列表(只针对表单字段类型)",
+          "items": {
+            "originalRef": "角色数据权限字段响应DTO",
+            "$ref": "#/definitions/角色数据权限字段响应DTO"
+          }
+        }
+      },
+      "title": "企业角色权限响应"
+    },
+    "角色数据权限字段响应DTO": {
+      "type": "object",
+      "properties": {
+        "appFieldSerialNo": {
+          "type": "string",
+          "description": "流程表单字段序列号"
+        },
+        "appFieldName": {
+          "type": "string",
+          "description": "流程表单字段名"
+        }
+      },
+      "title": "角色数据权限字段响应DTO"
+    }
+  }
+}

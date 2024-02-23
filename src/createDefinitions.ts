@@ -50,7 +50,7 @@ export const createDefinitions = async (
         return `{ ${Object.keys(define.properties || {})
           .map(
             (key) =>
-              `${key}${
+              `${formatName(key)}${
                 define.properties[key].required === false ? "?" : ""
               }: ${transFormType(define.properties[key])}`
           )
