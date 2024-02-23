@@ -113,4 +113,5 @@ export const createDefinitions = async (
       definitionsMap[name].ins = ins;
     }
   }
+  definitionsFile.formatText();
 };
