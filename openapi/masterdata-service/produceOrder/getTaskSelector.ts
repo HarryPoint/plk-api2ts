@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/lotHoldUsingGET
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO['data']>({
-      url: "/masterdata-service/produceOrder/getTaskSelector",
-      params,
+    return http<IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO>({
+        url: "/masterdata-service/produceOrder/getTaskSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产任务选择信息返回VO»»

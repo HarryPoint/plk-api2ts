@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/报废统计/getMajorDataSelectorUsingPOST_7
 export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return post<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportScrap/getMajorDataSelector",
-      data,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportScrap/getMajorDataSelector",
+        method: "post",
+        data,
     });
 }
 // 物料主数据选择列表搜索VO

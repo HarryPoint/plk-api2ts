@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getPageUsingPOST
 export default function fetchMethod(data: IMessageSearchVO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultPagingInformationMessageReturnsVO['data']>({
-      url: "/message-notification-service/message/getPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationMessageReturnsVO>({
+        url: "/message-notification-service/message/getPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 消息搜索VO

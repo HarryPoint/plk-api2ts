@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/自定义筛选项相关/editUsingPOST_2
 export default function fetchMethod(data: ICustomFiltersEditTheListObjectDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/customFilter/edit",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/customFilter/edit",
+        method: "post",
+        data,
     });
 }
 // 自定义筛选项编辑list对象DTO

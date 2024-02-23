@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/verCodeLoginUsingPOST
 export default function fetchMethod(data: IVerificationCodeLoginRequestDTO) {
-    return post<IJSONResultLoginResponseDTO['data']>({
-      url: "/plk-uaa-service/saasAuth/verCodeLogin",
-      data,
+    return http<IJSONResultLoginResponseDTO>({
+        url: "/plk-uaa-service/saasAuth/verCodeLogin",
+        method: "post",
+        data,
     });
 }
 // 验证码登录请求 DTO

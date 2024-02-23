@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16600/doc.html#/default/待办相关/updateTimeoutByBusinessIdUsingPOST
 export default function fetchMethod(data: IIdInformation, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/todo-service/todoList/updateTimeoutByBusinessId",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/todo-service/todoList/updateTimeoutByBusinessId",
+        method: "post",
+        data,
+        params,
     });
 }
 // id信息

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/modifyBatchManagementUsingPOST
 export default function fetchMethod(data: IExampleModifyTheEnterpriseBatchManagementInformationRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/enterprise/modifyBatchManagement",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/enterprise/modifyBatchManagement",
+        method: "post",
+        data,
     });
 }
 // 修改企业批次管理信息请求对象

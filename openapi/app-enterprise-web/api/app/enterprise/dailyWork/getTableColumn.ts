@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/CRM-工作日报相关/getTableColumnUsingGET_9
 export default function fetchMethod() {
-    return get<IJSONResultListProcessTableColumnVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/dailyWork/getTableColumn",
+    return http<IJSONResultListProcessTableColumnVO>({
+        url: "/app-enterprise-web/api/app/enterprise/dailyWork/getTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«流程表格列VO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品服务相关/getEnterpriseFormalProductServiceUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultProductServiceResponseObject['data']>({
-      url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",
-      params,
+    return http<IJSONResultProductServiceResponseObject>({
+        url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",
+        method: "get",
+        params,
     });
 }
 // JSONResult«产品服务响应对象»

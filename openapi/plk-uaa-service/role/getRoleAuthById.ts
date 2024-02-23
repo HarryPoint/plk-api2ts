@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/角色相关/getRoleAuthByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultResponseToRolePermissionsAndEmployeeInformation['data']>({
-      url: "/plk-uaa-service/role/getRoleAuthById",
-      params,
+    return http<IJSONResultResponseToRolePermissionsAndEmployeeInformation>({
+        url: "/plk-uaa-service/role/getRoleAuthById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«角色权限及员工信息响应»

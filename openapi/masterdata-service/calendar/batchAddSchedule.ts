@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/batchAddScheduleUsingPOST
 export default function fetchMethod(data: IScheduleNewDtos[], params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/calendar/batchAddSchedule",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/calendar/batchAddSchedule",
+        method: "post",
+        data,
+        params,
     });
 }
 // 排班新增DTO

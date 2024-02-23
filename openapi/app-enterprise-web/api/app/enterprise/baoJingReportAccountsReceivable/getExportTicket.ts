@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表(应收账款分析)相关/getExportTicketUsingPOST_2
 export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportAccountsReceivable/getExportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportAccountsReceivable/getExportTicket",
+        method: "post",
+        data,
     });
 }
 // 宝晶应收账款分析报表搜索VO

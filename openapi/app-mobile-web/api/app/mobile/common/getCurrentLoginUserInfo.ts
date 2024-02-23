@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getCurrentLoginUserInfoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultUserDetailsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/common/getCurrentLoginUserInfo",
+    return http<IJSONResultUserDetailsVO>({
+        url: "/app-mobile-web/api/app/mobile/common/getCurrentLoginUserInfo",
+        method: "get",
     });
 }
 // JSONResult«用户详细VO»

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getImportCheckListUsingPOST
 export default function fetchMethod(data: IImportDetailsListDTOForInventory, params: { enterpriseId: number }) {
-    return post<IJSONResultListReturnTheWarehouseInventoryListToTheDTO['data']>({
-      url: "/masterdata-service/storageTakeCheckTask/getImportCheckList",
-      data,
-      params,
+    return http<IJSONResultListReturnTheWarehouseInventoryListToTheDTO>({
+        url: "/masterdata-service/storageTakeCheckTask/getImportCheckList",
+        method: "post",
+        data,
+        params,
     });
 }
 // 盘点导入明细列表DTO

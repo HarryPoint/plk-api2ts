@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/listUserIdsByEmployeeIdsUsingPOST
 export default function fetchMethod(data: IIdSetInformation) {
-    return post<IJSONResultListlong['data']>({
-      url: "/plk-uaa-service/employee/listUserIdsByEmployeeIds",
-      data,
+    return http<IJSONResultListlong>({
+        url: "/plk-uaa-service/employee/listUserIdsByEmployeeIds",
+        method: "post",
+        data,
     });
 }
 // id集 信息

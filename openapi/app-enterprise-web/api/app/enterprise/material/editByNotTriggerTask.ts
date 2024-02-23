@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/物料相关/editByNotTriggerTaskUsingPOST
 export default function fetchMethod(data: IMaterialEditorRequestDTO) {
-    return post<IJSONResultstring1['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/material/editByNotTriggerTask",
-      data,
+    return http<IJSONResultstring1>({
+        url: "/app-enterprise-web/api/app/enterprise/material/editByNotTriggerTask",
+        method: "post",
+        data,
     });
 }
 // 物料编辑请求DTO

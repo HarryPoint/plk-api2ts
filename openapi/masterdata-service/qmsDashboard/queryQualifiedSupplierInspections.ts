@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionsUsingPOST
 export default function fetchMethod(data: IQmsLargeScreenTimeIntervalRequest) {
-    return post<IJSONResultListResponseToTheSupplierDeliveryQualificationRateQuery['data']>({
-      url: "/masterdata-service/qmsDashboard/queryQualifiedSupplierInspections",
-      data,
+    return http<IJSONResultListResponseToTheSupplierDeliveryQualificationRateQuery>({
+        url: "/masterdata-service/qmsDashboard/queryQualifiedSupplierInspections",
+        method: "post",
+        data,
     });
 }
 // qms大屏时间区间请求

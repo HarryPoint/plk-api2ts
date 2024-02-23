@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceTimeFeeMonthExportResultUsingPOST
 export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToVO['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getAllProduceTimeFeeMonthExportResult",
-      data,
-      params,
+    return http<IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToVO>({
+        url: "/masterdata-service/rtProductionSnapshot/getAllProduceTimeFeeMonthExportResult",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工时工费月度报表搜索VO

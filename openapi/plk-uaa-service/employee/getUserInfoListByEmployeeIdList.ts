@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/getUserInfoListByEmployeeIdListUsingPOST
 export default function fetchMethod(data: IUserInfoQueryRequestDTO) {
-    return post<IJSONResultUserInfoQueryResponseDTO['data']>({
-      url: "/plk-uaa-service/employee/getUserInfoListByEmployeeIdList",
-      data,
+    return http<IJSONResultUserInfoQueryResponseDTO>({
+        url: "/plk-uaa-service/employee/getUserInfoListByEmployeeIdList",
+        method: "post",
+        data,
     });
 }
 // UserInfoQueryRequestDTO

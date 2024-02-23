@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产处理返工相关/approveUsingPOST
 export default function fetchMethod(data: IProductionProcessesTheReworkApprovalRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceHandleBack/approve",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/produceHandleBack/approve",
+        method: "post",
+        data,
     });
 }
 // 生产处理返工批准请求对象

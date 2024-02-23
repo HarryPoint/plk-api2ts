@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/getByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultEnterpriseRouteResponseDTO['data']>({
-      url: "/plk-uaa-service/enterpriseRouter/getById",
-      params,
+    return http<IJSONResultEnterpriseRouteResponseDTO>({
+        url: "/plk-uaa-service/enterpriseRouter/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«企业路由响应 DTO»

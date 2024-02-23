@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getBaoJingSalesDeliverSumResultUsingPOST
 export default function fetchMethod(data: IBaojingSalesDeliveryReportSearchVO) {
-    return post<IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getBaoJingSalesDeliverSumResult",
-      data,
+    return http<IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getBaoJingSalesDeliverSumResult",
+        method: "post",
+        data,
     });
 }
 // 宝晶销售发货报表搜索VO

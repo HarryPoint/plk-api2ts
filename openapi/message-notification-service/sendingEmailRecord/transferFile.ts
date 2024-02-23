@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/transferFilesUsingPOST
 export default function fetchMethod(data: ITransferFileRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/message-notification-service/sendingEmailRecord/transferFile",
-      data,
+    return http<IJSONResultstring>({
+        url: "/message-notification-service/sendingEmailRecord/transferFile",
+        method: "post",
+        data,
     });
 }
 // TransferFileRequestDTO

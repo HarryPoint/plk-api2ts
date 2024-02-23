@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工费相关/batchValidUsingPOST_2
 export default function fetchMethod(data: IEnableOrDisableVOInBatches) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/laborCost/batchValid",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/laborCost/batchValid",
+        method: "post",
+        data,
     });
 }
 // 批量启用or停用VO

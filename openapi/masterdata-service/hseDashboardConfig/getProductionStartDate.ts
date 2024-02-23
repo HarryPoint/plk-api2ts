@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/getProductionStartDateUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultResponseToTheProductionStartDateQuery['data']>({
-      url: "/masterdata-service/hseDashboardConfig/getProductionStartDate",
+    return http<IJSONResultResponseToTheProductionStartDateQuery>({
+        url: "/masterdata-service/hseDashboardConfig/getProductionStartDate",
+        method: "get",
     });
 }
 // JSONResult«生产开始日期-查询响应»

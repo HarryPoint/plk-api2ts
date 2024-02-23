@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
 export default function fetchMethod(params: { materialId: number }) {
-    return get<IJSONResultSpecificMaterialDataStructureResponseObject['data']>({
-      url: "/masterdata-service/standardTechnology/getMaterialRelateStructure",
-      params,
+    return http<IJSONResultSpecificMaterialDataStructureResponseObject>({
+        url: "/masterdata-service/standardTechnology/getMaterialRelateStructure",
+        method: "get",
+        params,
     });
 }
 // JSONResult«具体物料数据结构响应对象»

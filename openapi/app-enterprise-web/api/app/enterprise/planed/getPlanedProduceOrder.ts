@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/已排产订单相关/getPlanedProduceOrderUsingPOST
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPageInformationDynamicExpansionDataVOScheduledProductionOrdersReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/planed/getPlanedProduceOrder",
-      data,
+    return http<IJSONResultPageInformationDynamicExpansionDataVOScheduledProductionOrdersReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/planed/getPlanedProduceOrder",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectRiskReportUsingPOST
 export default function fetchMethod(data: QueryProjectRiskReport) {
-    return post<IJSONResultPagingInformationProjectRiskReportResponseObject['data']>({
-      url: "/masterdata-service/projectReport/queryProjectRiskReport",
-      data,
+    return http<IJSONResultPagingInformationProjectRiskReportResponseObject>({
+        url: "/masterdata-service/projectReport/queryProjectRiskReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«项目风险报表响应对象»»

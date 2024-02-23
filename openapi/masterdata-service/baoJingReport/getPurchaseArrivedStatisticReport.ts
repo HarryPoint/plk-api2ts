@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getPurchaseArrivedStatisticReportUsingPOST
 export default function fetchMethod(data: IPurchaseArrivalStatisticsReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationTheStatisticsReportOfPurchasedGoodsIsReturnedToVO['data']>({
-      url: "/masterdata-service/baoJingReport/getPurchaseArrivedStatisticReport",
-      data,
-      params,
+    return http<IJSONResultPagingInformationTheStatisticsReportOfPurchasedGoodsIsReturnedToVO>({
+        url: "/masterdata-service/baoJingReport/getPurchaseArrivedStatisticReport",
+        method: "post",
+        data,
+        params,
     });
 }
 // 采购到货统计报表搜索VO

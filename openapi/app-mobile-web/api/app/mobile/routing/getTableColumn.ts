@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/工艺路径相关/getTableColumnUsingGET_29
 export default function fetchMethod() {
-    return get<IJSONResultListProcessTableColumnVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/routing/getTableColumn",
+    return http<IJSONResultListProcessTableColumnVO>({
+        url: "/app-mobile-web/api/app/mobile/routing/getTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«流程表格列VO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialCuratorSelectorUsingGET
 export default function fetchMethod(params: { nameOrCode: string }) {
-    return get<IJSONResultListstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialCuratorSelector",
-      params,
+    return http<IJSONResultListstring>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialCuratorSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«string»»

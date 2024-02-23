@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationFormTableRecordUsingPOST
 export default function fetchMethod(data: IPage2) {
-    return post<IJSONResultAssociationFormTypeFieldTableRecordOutputVO['data']>({
-      url: "/masterdata-service/dynamicData/associationQuery/queryTableRecord",
-      data,
+    return http<IJSONResultAssociationFormTypeFieldTableRecordOutputVO>({
+        url: "/masterdata-service/dynamicData/associationQuery/queryTableRecord",
+        method: "post",
+        data,
     });
 }
 // 分页_2

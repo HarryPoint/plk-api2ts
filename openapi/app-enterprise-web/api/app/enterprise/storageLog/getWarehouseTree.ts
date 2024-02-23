@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存流水相关/getWarehouseTreeUsingGET_3
 export default function fetchMethod() {
-    return get<IJSONResultListAreaWarehouseLocationTreeReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageLog/getWarehouseTree",
+    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/storageLog/getWarehouseTree",
+        method: "get",
     });
 }
 // JSONResult«List«区域仓库仓位树返回VO»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/queryByNameUsingPOST
 export default function fetchMethod(data: IProjectPhaseNumberQueryObject) {
-    return post<IJSONResultListProjectPhaseResponseObject['data']>({
-      url: "/masterdata-service/projectStage/queryByName",
-      data,
+    return http<IJSONResultListProjectPhaseResponseObject>({
+        url: "/masterdata-service/projectStage/queryByName",
+        method: "post",
+        data,
     });
 }
 // 项目阶段编号查询对象

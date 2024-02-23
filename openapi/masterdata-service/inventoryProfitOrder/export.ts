@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盘盈单相关/exportUsingPOST_8
 export default function fetchMethod(data: IProcessDataSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/inventoryProfitOrder/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/inventoryProfitOrder/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据搜索VO

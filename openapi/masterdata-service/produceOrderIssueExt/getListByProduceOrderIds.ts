@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发扩展信息/getListByProduceOrderIdsUsingPOST
 export default function fetchMethod(data: IProductionOrderDeliveryExtendedInformationQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListExtendedInformationVOForProductionOrderDelivery['data']>({
-      url: "/masterdata-service/produceOrderIssueExt/getListByProduceOrderIds",
-      data,
-      params,
+    return http<IJSONResultListExtendedInformationVOForProductionOrderDelivery>({
+        url: "/masterdata-service/produceOrderIssueExt/getListByProduceOrderIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产订单下发扩展信息查询VO

@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/基于盘点权限同步盘点编码规则相关/syncAllUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/storageTakeCheckTaskSyncCodeRuleScript/syncAll",
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/storageTakeCheckTaskSyncCodeRuleScript/syncAll",
+        method: "get",
     });
 }
 // JSONResult«object»

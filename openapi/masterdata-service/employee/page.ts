@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/pageUsingPOST
 export default function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationDynamicExpansionDataVOIndicatesWhetherTheEmployeeIsAllowedToLogInToTheDTO['data']>({
-      url: "/masterdata-service/employee/page",
-      data,
-      params,
+    return http<IJSONResultPageInformationDynamicExpansionDataVOIndicatesWhetherTheEmployeeIsAllowedToLogInToTheDTO>({
+        url: "/masterdata-service/employee/page",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程数据搜索VO_1

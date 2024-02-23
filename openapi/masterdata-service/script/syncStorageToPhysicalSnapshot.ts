@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/脚本相关/syncStorageToPhysicalSnapshotUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/script/syncStorageToPhysicalSnapshot",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/script/syncStorageToPhysicalSnapshot",
+        method: "get",
     });
 }
 // JSONResult«object»

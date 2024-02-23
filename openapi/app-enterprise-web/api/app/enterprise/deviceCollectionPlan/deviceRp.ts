@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/deviceRpUsingPOST
 export default function fetchMethod(data: IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/deviceRp",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/deviceRp",
+        method: "post",
+        data,
     });
 }
 // 设备数采方案应用设备关联信息编辑DTO

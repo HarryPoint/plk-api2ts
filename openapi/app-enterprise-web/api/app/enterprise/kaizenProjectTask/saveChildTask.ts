@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/项目任务相关/saveChildTaskUsingPOST
 export default function fetchMethod(data: IMasterDataBaseEditDTO1) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/saveChildTask",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/saveChildTask",
+        method: "post",
+        data,
     });
 }
 // 主数据基础编辑 DTO_1

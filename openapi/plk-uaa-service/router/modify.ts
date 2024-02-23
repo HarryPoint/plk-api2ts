@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/路由相关/modifyUsingPOST_10
 export default function fetchMethod(data: IModifyTheRouteDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/router/modify",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/router/modify",
+        method: "post",
+        data,
     });
 }
 // 路由修改 DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/仓位相关/exportUsingPOST_36
 export default function fetchMethod(data: IProcessDataSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-mobile-web/api/app/mobile/warehouse/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-mobile-web/api/app/mobile/warehouse/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据搜索VO

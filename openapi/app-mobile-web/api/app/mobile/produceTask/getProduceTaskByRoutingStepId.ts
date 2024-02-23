@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskByRoutingStepIdUsingGET
 export default function fetchMethod(params: { produceOrderId: number; produceTechnologyRoutingStepId: number; type?: string }) {
-    return get<IJSONResultListProductionTaskResponseDTOForMobile['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByRoutingStepId",
-      params,
+    return http<IJSONResultListProductionTaskResponseDTOForMobile>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByRoutingStepId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产任务响应DTO(针对移动端)»»

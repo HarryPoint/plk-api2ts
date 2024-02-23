@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/addUsingPOST_5
 export default function fetchMethod(data: IMessageSchemaAddRequestDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/messageSchema/add",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/messageSchema/add",
+        method: "post",
+        data,
     });
 }
 // MessageSchemaAddRequestDTO

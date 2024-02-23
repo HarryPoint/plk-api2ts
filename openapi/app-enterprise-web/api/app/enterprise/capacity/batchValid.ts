@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产能相关/batchValidUsingPOST
 export default function fetchMethod(data: IEnableOrDisableVOInBatches) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/capacity/batchValid",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/capacity/batchValid",
+        method: "post",
+        data,
     });
 }
 // 批量启用or停用VO

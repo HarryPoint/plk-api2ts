@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDataByFileIdUsingGET
 export default function fetchMethod(params: { fileId: number }) {
-    return get<IJSONResultTableData['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/byFileId/get",
-      params,
+    return http<IJSONResultTableData>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/byFileId/get",
+        method: "get",
+        params,
     });
 }
 // JSONResult«表格数据»

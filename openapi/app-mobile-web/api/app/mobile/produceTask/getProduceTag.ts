@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTagUsingGET
 export default function fetchMethod(params: { type: string }) {
-    return get<ITheJSONResultListExceptionTagReturnsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTag",
-      params,
+    return http<ITheJSONResultListExceptionTagReturnsVO>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTag",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«异常标签返回VO»»

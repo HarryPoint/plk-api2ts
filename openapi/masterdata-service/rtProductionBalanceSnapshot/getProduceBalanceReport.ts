@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getProduceBalanceReportUsingPOST
 export default function fetchMethod(data: IProductionBalanceStatisticsReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO['data']>({
-      url: "/masterdata-service/rtProductionBalanceSnapshot/getProduceBalanceReport",
-      data,
-      params,
+    return http<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO>({
+        url: "/masterdata-service/rtProductionBalanceSnapshot/getProduceBalanceReport",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产结存统计报表搜索VO

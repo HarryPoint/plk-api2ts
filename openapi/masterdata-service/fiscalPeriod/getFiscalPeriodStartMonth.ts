@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/getFiscalPeriodStartMonthUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultSetsResponseDuringTheStartMonth['data']>({
-      url: "/masterdata-service/fiscalPeriod/getFiscalPeriodStartMonth",
+    return http<IJSONResultSetsResponseDuringTheStartMonth>({
+        url: "/masterdata-service/fiscalPeriod/getFiscalPeriodStartMonth",
+        method: "get",
     });
 }
 // JSONResult«设置期间开始月份Response»

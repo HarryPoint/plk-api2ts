@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<ITheJSONResultListOperationSelectsToReturnVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/process/getByIdsIgnoreStatus",
-      data,
+    return http<ITheJSONResultListOperationSelectsToReturnVO>({
+        url: "/app-enterprise-web/api/app/enterprise/process/getByIdsIgnoreStatus",
+        method: "post",
+        data,
     });
 }
 // id集合信息

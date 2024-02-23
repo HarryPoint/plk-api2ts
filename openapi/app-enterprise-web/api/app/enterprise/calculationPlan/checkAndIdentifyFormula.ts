@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/计算方案相关/checkAndIdentifyFormulaUsingPOST
 export default function fetchMethod(data: ICalcPlanFormulaCheckRequestDTO) {
-    return post<IJSONResultCalcPlanFormulaCheckResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/calculationPlan/checkAndIdentifyFormula",
-      data,
+    return http<IJSONResultCalcPlanFormulaCheckResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/calculationPlan/checkAndIdentifyFormula",
+        method: "post",
+        data,
     });
 }
 // CalcPlanFormulaCheckRequestDTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/assignAuthUsingPOST
 export default function fetchMethod(data: IRolePermissionApplicationAuthorizationRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/rolePermissionApp/assignAuth",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/rolePermissionApp/assignAuth",
+        method: "post",
+        data,
     });
 }
 // 角色权限应用授权请求DTO

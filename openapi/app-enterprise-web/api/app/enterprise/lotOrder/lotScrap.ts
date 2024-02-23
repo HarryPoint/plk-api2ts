@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/lotScrapUsingPOST
 export default function fetchMethod(data: IBatchScrapDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lotOrder/lotScrap",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/lotOrder/lotScrap",
+        method: "post",
+        data,
     });
 }
 // 批次报废DTO

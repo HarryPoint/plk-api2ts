@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/未排产订单相关/vaguePlanUsingPOST
 export default function fetchMethod(data: IProductionOrderFuzzySchedulingDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/notPlan/vaguePlan",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/notPlan/vaguePlan",
+        method: "post",
+        data,
     });
 }
 // 生产订单模糊排产DTO

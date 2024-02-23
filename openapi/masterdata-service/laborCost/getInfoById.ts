@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getInfoByIdUsingGET_2
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultLaborResponseObject['data']>({
-      url: "/masterdata-service/laborCost/getInfoById",
-      params,
+    return http<IJSONResultLaborResponseObject>({
+        url: "/masterdata-service/laborCost/getInfoById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«工费响应对象»

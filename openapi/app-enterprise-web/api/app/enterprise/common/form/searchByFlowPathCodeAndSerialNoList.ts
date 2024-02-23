@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/公共相关/searchByFlowPathCodeAndSerialNoListUsingPOST
 export default function fetchMethod(data: IDynamicFormQuery) {
-    return post<IJSONResultDynamicFormQueryOutputVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/common/form/searchByFlowPathCodeAndSerialNoList",
-      data,
+    return http<IJSONResultDynamicFormQueryOutputVO>({
+        url: "/app-enterprise-web/api/app/enterprise/common/form/searchByFlowPathCodeAndSerialNoList",
+        method: "post",
+        data,
     });
 }
 // 动态表单查询

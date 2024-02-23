@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16600/doc.html#/default/待办相关/removeByIdUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/todo-service/todoList/removeById",
-      params,
+    return http<IJSONResultobject>({
+        url: "/todo-service/todoList/removeById",
+        method: "post",
+        params,
     });
 }
 // JSONResult«object»

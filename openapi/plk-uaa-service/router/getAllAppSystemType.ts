@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/路由相关/getAllAppSystemTypeUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListNameEncodesTheResponseDTO['data']>({
-      url: "/plk-uaa-service/router/getAllAppSystemType",
+    return http<IJSONResultListNameEncodesTheResponseDTO>({
+        url: "/plk-uaa-service/router/getAllAppSystemType",
+        method: "get",
     });
 }
 // JSONResult«List«名称编码响应 DTO»»

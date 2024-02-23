@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/examineUsingPOST_1
 export default function fetchMethod(data: IWarehouseInventoryTaskApprovalDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/examine",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/examine",
+        method: "post",
+        data,
     });
 }
 // 仓库盘点任务审批DTO

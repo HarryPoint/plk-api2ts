@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/correctAllFieldSerialNoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathScript/correctAllFieldSerialNo",
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathScript/correctAllFieldSerialNo",
+        method: "get",
     });
 }
 // JSONResult«object»

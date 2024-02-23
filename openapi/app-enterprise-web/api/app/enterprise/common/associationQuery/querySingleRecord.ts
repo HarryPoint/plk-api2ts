@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/公共相关/queryAssociationFormSingleRecordUsingPOST
 export default function fetchMethod(data: IPaging1) {
-    return post<IJSONResultAssociationFormTypeFieldSingleRecordOutputVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/common/associationQuery/querySingleRecord",
-      data,
+    return http<IJSONResultAssociationFormTypeFieldSingleRecordOutputVO>({
+        url: "/app-enterprise-web/api/app/enterprise/common/associationQuery/querySingleRecord",
+        method: "post",
+        data,
     });
 }
 // 分页_1

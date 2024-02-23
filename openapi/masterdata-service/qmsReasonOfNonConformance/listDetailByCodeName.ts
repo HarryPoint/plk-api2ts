@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/不合格原因服务相关/listDetailByCodeNameUsingPOST
 export default function fetchMethod(data: INameNumberDTO) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
-      url: "/masterdata-service/qmsReasonOfNonConformance/listDetailByCodeName",
-      data,
+    return http<IJSONResultListIdCodeNameACommonTransferObject>({
+        url: "/masterdata-service/qmsReasonOfNonConformance/listDetailByCodeName",
+        method: "post",
+        data,
     });
 }
 // 名称、编号DTO

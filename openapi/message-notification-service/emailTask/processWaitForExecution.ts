@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/processWaitForExecutionUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultstring['data']>({
-      url: "/message-notification-service/emailTask/processWaitForExecution",
+    return http<IJSONResultstring>({
+        url: "/message-notification-service/emailTask/processWaitForExecution",
+        method: "post",
     });
 }
 // JSONResult«string»

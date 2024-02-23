@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTriggerNodesUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListFlowPathEventTriggerNodeQueryResponseDTO['data']>({
-      url: "/flow-service/flowPathEvent/queryTriggerNodes",
-      data,
+    return http<IJSONResultListFlowPathEventTriggerNodeQueryResponseDTO>({
+        url: "/flow-service/flowPathEvent/queryTriggerNodes",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«FlowPathEventTriggerNodeQueryResponseDTO»»

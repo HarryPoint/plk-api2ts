@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanMoveInLotOrderUsingPOST
 export default function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches) {
-    return post<ITheJSONResultListRespondsToTheDtoForIncomingBatches['data']>({
-      url: "/masterdata-service/moveInOutLotOrder/listCanMoveInLotOrder",
-      data,
+    return http<ITheJSONResultListRespondsToTheDtoForIncomingBatches>({
+        url: "/masterdata-service/moveInOutLotOrder/listCanMoveInLotOrder",
+        method: "post",
+        data,
     });
 }
 // 可进出料批次查询dto

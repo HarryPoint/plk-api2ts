@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyBatchPreCodeUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/codeSyncTask/applyBatchPreCode",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/codeSyncTask/applyBatchPreCode",
+        method: "post",
     });
 }
 // JSONResult«object»

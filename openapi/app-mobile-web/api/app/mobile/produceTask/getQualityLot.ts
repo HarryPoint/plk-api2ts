@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getQualityLotUsingGET
 export default function fetchMethod(params: { taskId: string }) {
-    return get<IJSONResultListWipBatchInformationVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getQualityLot",
-      params,
+    return http<IJSONResultListWipBatchInformationVO>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getQualityLot",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«Wip批次信息VO»»

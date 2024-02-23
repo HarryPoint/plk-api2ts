@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/removeUsingPOST_1
 export default function fetchMethod(data: IStandardProcessModificationClassificationRequestObject1) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/standardTechnology/remove",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/standardTechnology/remove",
+        method: "post",
+        data,
     });
 }
 // 标准工艺修改分类请求对象_1

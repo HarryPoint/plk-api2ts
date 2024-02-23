@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
 export default function fetchMethod(data: INameNumberDTO) {
-    return post<IJSONResultListResponseObjectForHandlingNonconformingItems['data']>({
-      url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByNameOrCode",
-      data,
+    return http<IJSONResultListResponseObjectForHandlingNonconformingItems>({
+        url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByNameOrCode",
+        method: "post",
+        data,
     });
 }
 // 名称、编号DTO

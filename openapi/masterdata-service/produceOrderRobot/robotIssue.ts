@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/robotIssueUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceOrderRobot/robotIssue",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceOrderRobot/robotIssue",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«object»

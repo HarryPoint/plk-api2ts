@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getByIdUsingGET_3
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultFlowPathDetailPageConfigVO['data']>({
-      url: "/flow-service/flowPathDetailPageConfig/getById",
-      params,
+    return http<IJSONResultFlowPathDetailPageConfigVO>({
+        url: "/flow-service/flowPathDetailPageConfig/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«FlowPathDetailPageConfigVO»

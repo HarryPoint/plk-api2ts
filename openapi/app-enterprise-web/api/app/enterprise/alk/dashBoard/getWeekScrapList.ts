@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getWeekScrapListUsingGET
 export default function fetchMethod(params: { categoryCode: string }) {
-    return get<IJSONResultListDiscardDataVOInTheLast7Days['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getWeekScrapList",
-      params,
+    return http<IJSONResultListDiscardDataVOInTheLast7Days>({
+        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getWeekScrapList",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«近7天报废品数据VO»»

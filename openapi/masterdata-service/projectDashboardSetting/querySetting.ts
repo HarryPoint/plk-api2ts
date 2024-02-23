@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/querySettingUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultProjectLargeScreenSettingsSaveRequestDto['data']>({
-      url: "/masterdata-service/projectDashboardSetting/querySetting",
+    return http<IJSONResultProjectLargeScreenSettingsSaveRequestDto>({
+        url: "/masterdata-service/projectDashboardSetting/querySetting",
+        method: "post",
     });
 }
 // JSONResult«项目大屏设置保存请求dto»

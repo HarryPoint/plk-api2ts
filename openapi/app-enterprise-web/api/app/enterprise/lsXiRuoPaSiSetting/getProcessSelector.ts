@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/西偌帕斯大屏相关/getProcessSelectorUsingGET_2
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getProcessSelector",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getProcessSelector",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

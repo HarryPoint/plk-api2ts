@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryDepartmentUsingPOST
 export default function fetchMethod(data: IBasicQualityAuditQueryRequest) {
-    return post<IJSONResultStatisticalDepartmentOfInconsistencies['data']>({
-      url: "/masterdata-service/qualityAuditStatisticsReport/queryDepartment",
-      data,
+    return http<IJSONResultStatisticalDepartmentOfInconsistencies>({
+        url: "/masterdata-service/qualityAuditStatisticsReport/queryDepartment",
+        method: "post",
+        data,
     });
 }
 // 基础质量审核查询请求

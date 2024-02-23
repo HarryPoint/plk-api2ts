@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/batchAddUsingPOST
 export default function fetchMethod(data: IEditDTOForWarehouseInventoryTaskBatch) {
-    return post<IJSONResultstring1['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/batchAdd",
-      data,
+    return http<IJSONResultstring1>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/batchAdd",
+        method: "post",
+        data,
     });
 }
 // 仓库盘点任务批次编辑DTO

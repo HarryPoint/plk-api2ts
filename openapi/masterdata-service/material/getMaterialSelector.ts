@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialSelectorUsingPOST_1
 export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/masterdata-service/material/getMaterialSelector",
-      data,
-      params,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/masterdata-service/material/getMaterialSelector",
+        method: "post",
+        data,
+        params,
     });
 }
 // 物料主数据选择列表搜索VO

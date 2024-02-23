@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/exportPageUsingPOST
 export default function fetchMethod(data: ExportPage) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceQuantityCollect/exportPage",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceQuantityCollect/exportPage",
+        method: "post",
+        data,
     });
 }
 // JSONResult«long»

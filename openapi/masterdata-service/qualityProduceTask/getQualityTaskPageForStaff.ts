@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskPageForStaffUsingPOST
 export default function fetchMethod(data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee['data']>({
-      url: "/masterdata-service/qualityProduceTask/getQualityTaskPageForStaff",
-      data,
-      params,
+    return http<IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee>({
+        url: "/masterdata-service/qualityProduceTask/getQualityTaskPageForStaff",
+        method: "post",
+        data,
+        params,
     });
 }
 // 质检任务针对员工端搜索VO

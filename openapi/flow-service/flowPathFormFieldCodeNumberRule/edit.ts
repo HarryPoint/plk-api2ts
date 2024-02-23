@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/editUsingPOST_2
 export default function fetchMethod(data: IProcessFormFieldEncodingRulesEditDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathFormFieldCodeNumberRule/edit",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathFormFieldCodeNumberRule/edit",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程表单字段编码规则编辑DTO

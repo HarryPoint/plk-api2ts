@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getDeviceStatisticInfoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultDarkBlueDeviceStatisticalResponseVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getDeviceStatisticInfo",
+    return http<IJSONResultDarkBlueDeviceStatisticalResponseVO>({
+        url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getDeviceStatisticInfo",
+        method: "get",
     });
 }
 // JSONResult«深蓝设备统计响应VO»

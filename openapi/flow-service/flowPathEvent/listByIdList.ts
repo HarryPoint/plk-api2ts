@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用事件相关/listByIdListUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListFlowPathEventQueryResponseDTO['data']>({
-      url: "/flow-service/flowPathEvent/listByIdList",
-      data,
+    return http<IJSONResultListFlowPathEventQueryResponseDTO>({
+        url: "/flow-service/flowPathEvent/listByIdList",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«FlowPathEventQueryResponseDTO»»

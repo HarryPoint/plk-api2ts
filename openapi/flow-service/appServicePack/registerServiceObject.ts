@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用服务包相关/registerServiceObjectUsingPOST
 export default function fetchMethod(data: IServiceObjectRegistrationRequest1) {
-    return post<IJSONResultlong['data']>({
-      url: "/flow-service/appServicePack/registerServiceObject",
-      data,
+    return http<IJSONResultlong>({
+        url: "/flow-service/appServicePack/registerServiceObject",
+        method: "post",
+        data,
     });
 }
 // 服务对象注册请求_1

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/changeValidUsingPOST
 export default function fetchMethod(data: IEnableOrDisableVO) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPath/changeValid",
-      data,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPath/changeValid",
+        method: "post",
+        data,
     });
 }
 // 启用or停用VO

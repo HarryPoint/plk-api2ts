@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/getProcessUsingPOST
 export default function fetchMethod(data: IGanttChartSearchVO) {
-    return post<IJSONResultProcedureGanttChartReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/getProcess",
-      data,
+    return http<IJSONResultProcedureGanttChartReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/getProcess",
+        method: "post",
+        data,
     });
 }
 // 甘特图搜索VO

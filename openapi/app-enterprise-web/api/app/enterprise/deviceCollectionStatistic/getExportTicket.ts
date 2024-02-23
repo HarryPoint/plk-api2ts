@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getExportTicketUsingPOST_9
 export default function fetchMethod(data: IDeviceStatisticsSearchVO) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceCollectionStatistic/getExportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceCollectionStatistic/getExportTicket",
+        method: "post",
+        data,
     });
 }
 // 设备统计数据搜索VO

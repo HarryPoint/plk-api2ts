@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDynamicDataHeaderUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListProductionCostAllocationDynamicTableHeaderResponseObject['data']>({
-      url: "/masterdata-service/produceFeeAssign/getDynamicDataHeader",
+    return http<IJSONResultListProductionCostAllocationDynamicTableHeaderResponseObject>({
+        url: "/masterdata-service/produceFeeAssign/getDynamicDataHeader",
+        method: "get",
     });
 }
 // JSONResult«List«生产成本分配动态表头响应对象»»

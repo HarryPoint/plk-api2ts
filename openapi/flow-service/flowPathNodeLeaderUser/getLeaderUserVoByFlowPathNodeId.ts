@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程节点负责人相关/getLeaderUserVoByFlowPathNodeIdUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; flowPathNodeId: number }) {
-    return post<IJSONResultListProcessNodeExecutorVO['data']>({
-      url: "/flow-service/flowPathNodeLeaderUser/getLeaderUserVoByFlowPathNodeId",
-      params,
+    return http<IJSONResultListProcessNodeExecutorVO>({
+        url: "/flow-service/flowPathNodeLeaderUser/getLeaderUserVoByFlowPathNodeId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«List«流程节点执行人VO»»

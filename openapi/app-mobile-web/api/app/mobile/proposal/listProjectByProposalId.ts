@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/合理化建议相关/listByProposalIdUsingPOST
 export default function fetchMethod(params: { proposalId: number }) {
-    return post<IJSONResultListKaizenProjectResponseDTO['data']>({
-      url: "/app-mobile-web/api/app/mobile/proposal/listProjectByProposalId",
-      params,
+    return http<IJSONResultListKaizenProjectResponseDTO>({
+        url: "/app-mobile-web/api/app/mobile/proposal/listProjectByProposalId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«List«KaizenProjectResponseDTO»»

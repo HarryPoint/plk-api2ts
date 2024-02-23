@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getDetailByIdUsingGET
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultProcessCardInformationIsReturnedToVO['data']>({
-      url: "/masterdata-service/processSheet/getDetailById",
-      params,
+    return http<IJSONResultProcessCardInformationIsReturnedToVO>({
+        url: "/masterdata-service/processSheet/getDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«工艺卡信息返回VO»

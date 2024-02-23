@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎/searchRelationFormDataUsingPOST
 export default function fetchMethod(data: ITheFieldRefersToTheQueryCondition) {
-    return post<ITheJSONResultFieldReferencesTheSearchResults['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/fieldReference/search",
-      data,
+    return http<ITheJSONResultFieldReferencesTheSearchResults>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/fieldReference/search",
+        method: "post",
+        data,
     });
 }
 // 字段引用查询条件

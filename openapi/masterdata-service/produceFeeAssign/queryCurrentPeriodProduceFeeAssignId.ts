@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodProduceFeeAssignIdUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodProduceFeeAssignId",
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodProduceFeeAssignId",
+        method: "get",
     });
 }
 // JSONResult«long»

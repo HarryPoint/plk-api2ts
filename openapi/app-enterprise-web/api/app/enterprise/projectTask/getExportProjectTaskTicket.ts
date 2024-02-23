@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/项目任务相关/getExportProjectTaskTicketUsingPOST
 export default function fetchMethod(data: GetExportProjectTaskTicket) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/projectTask/getExportProjectTaskTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/projectTask/getExportProjectTaskTicket",
+        method: "post",
+        data,
     });
 }
 // JSONResult«导出ticket信息»

@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/计算方案相关/queryBusinessListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListServiceQueryResponse['data']>({
-      url: "/flow-service/calculationPlan/queryBusinessList",
+    return http<IJSONResultListServiceQueryResponse>({
+        url: "/flow-service/calculationPlan/queryBusinessList",
+        method: "get",
     });
 }
 // JSONResult«List«业务查询响应»»

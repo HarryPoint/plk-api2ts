@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产能利用率统计表/getPageUsingPOST_15
 export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos) {
-    return post<IJSONResultPagingInformationCapacityUtilizationReportVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceCapacityReport/getPage",
-      data,
+    return http<IJSONResultPagingInformationCapacityUtilizationReportVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceCapacityReport/getPage",
+        method: "post",
+        data,
     });
 }
 // 产能利用率报表查询DTO

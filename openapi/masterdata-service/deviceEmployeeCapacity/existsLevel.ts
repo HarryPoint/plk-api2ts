@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/existsLevelUsingGET
 export default function fetchMethod(params: { maintainLevel: string }) {
-    return get<IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsAResponseDTO['data']>({
-      url: "/masterdata-service/deviceEmployeeCapacity/existsLevel",
-      params,
+    return http<IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsAResponseDTO>({
+        url: "/masterdata-service/deviceEmployeeCapacity/existsLevel",
+        method: "get",
+        params,
     });
 }
 // JSONResult«设备人员能力等级是否存在响应DTO»

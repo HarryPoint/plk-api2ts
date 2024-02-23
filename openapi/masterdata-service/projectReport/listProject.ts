@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectUsingPOST_1
 export default function fetchMethod(data: IItemNameNumberPublicQueryObject) {
-    return post<IJSONResultListProjectReportBaseResponseObject['data']>({
-      url: "/masterdata-service/projectReport/listProject",
-      data,
+    return http<IJSONResultListProjectReportBaseResponseObject>({
+        url: "/masterdata-service/projectReport/listProject",
+        method: "post",
+        data,
     });
 }
 // 项目名称编号公共查询对象

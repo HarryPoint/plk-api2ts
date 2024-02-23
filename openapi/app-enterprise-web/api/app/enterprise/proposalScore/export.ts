@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/合理化建议评分相关/exportUsingPOST_39
 export default function fetchMethod(data: IProcessDataSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/proposalScore/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/proposalScore/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据搜索VO

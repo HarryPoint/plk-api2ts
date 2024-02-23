@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getPageUsingPOST_27
 export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO['data']>({
-      url: "/masterdata-service/safetyStockExchangeApply/getPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO>({
+        url: "/masterdata-service/safetyStockExchangeApply/getPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 安全库存变更申请搜索VO

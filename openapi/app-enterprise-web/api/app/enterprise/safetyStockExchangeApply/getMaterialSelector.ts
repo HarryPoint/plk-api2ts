@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/getMaterialSelectorUsingPOST_5
 export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return post<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getMaterialSelector",
-      data,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getMaterialSelector",
+        method: "post",
+        data,
     });
 }
 // 物料主数据选择列表搜索VO

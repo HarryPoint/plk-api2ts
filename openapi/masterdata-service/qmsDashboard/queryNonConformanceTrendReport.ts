@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNonConformanceTrendReportUsingPOST
 export default function fetchMethod(data: INonConformanceTrendReportRequestDTO) {
-    return post<IJSONResultDoesNotMatchTheProjectTrendReport['data']>({
-      url: "/masterdata-service/qmsDashboard/queryNonConformanceTrendReport",
-      data,
+    return http<IJSONResultDoesNotMatchTheProjectTrendReport>({
+        url: "/masterdata-service/qmsDashboard/queryNonConformanceTrendReport",
+        method: "post",
+        data,
     });
 }
 // NonConformanceTrendReportRequestDTO

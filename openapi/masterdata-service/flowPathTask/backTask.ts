@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/backTaskUsingPOST
 export default function fetchMethod(data: IRollbackTheDTOOfAFlowTask) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/flowPathTask/backTask",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/flowPathTask/backTask",
+        method: "post",
+        data,
     });
 }
 // 流程任务回退DTO

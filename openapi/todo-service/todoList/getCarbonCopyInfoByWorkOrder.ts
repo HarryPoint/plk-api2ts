@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16600/doc.html#/default/待办相关/getCarbonCopyInfoByWorkOrderUsingGET
 export default function fetchMethod(params: { enterpriseId: number; flowPathWorkOrderId: number }) {
-    return get<IJSONResultListToDoListVO['data']>({
-      url: "/todo-service/todoList/getCarbonCopyInfoByWorkOrder",
-      params,
+    return http<IJSONResultListToDoListVO>({
+        url: "/todo-service/todoList/getCarbonCopyInfoByWorkOrder",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«ToDoListVO»»

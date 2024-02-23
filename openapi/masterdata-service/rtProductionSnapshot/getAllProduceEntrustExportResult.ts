@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceEntrustExportResultUsingPOST
 export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListOutsourcedReportExportVO['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getAllProduceEntrustExportResult",
-      data,
-      params,
+    return http<IJSONResultListOutsourcedReportExportVO>({
+        url: "/masterdata-service/rtProductionSnapshot/getAllProduceEntrustExportResult",
+        method: "post",
+        data,
+        params,
     });
 }
 // 产出类报表搜索VO

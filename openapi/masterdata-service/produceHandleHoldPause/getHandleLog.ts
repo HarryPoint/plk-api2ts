@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/getHandleLogUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListProducesTheResponseObjectForTheSuspenseProcessingRecord['data']>({
-      url: "/masterdata-service/produceHandleHoldPause/getHandleLog",
-      params,
+    return http<IJSONResultListProducesTheResponseObjectForTheSuspenseProcessingRecord>({
+        url: "/masterdata-service/produceHandleHoldPause/getHandleLog",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产处理暂扣处理记录响应对象»»

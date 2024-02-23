@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/queryVerticalForecastLaborCostUsingPOST
 export default function fetchMethod(data: IForecastLaborCost1[]) {
-    return post<IJSONResultListPredictsWorkCosts['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/queryVerticalForecastLaborCost",
-      data,
+    return http<IJSONResultListPredictsWorkCosts>({
+        url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/queryVerticalForecastLaborCost",
+        method: "post",
+        data,
     });
 }
 // 预测工费_1

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/班次相关/getPageUsingPOST_1
 export default function fetchMethod(data: IShiftSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationShiftReturnsVO['data']>({
-      url: "/masterdata-service/classShift/getPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationShiftReturnsVO>({
+        url: "/masterdata-service/classShift/getPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 班次搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getSelectorAssociateDisplayListByFlowPathVersionIdUsingPOST
 export default function fetchMethod(params: { flowPathVersionId: number }) {
-    return post<IJSONResultListProcessFormFieldDropDownOptionAssociatedToDisplayVO['data']>({
-      url: "/flow-service/flowPathFormField/getSelectorAssociateDisplayListByFlowPathVersionId",
-      params,
+    return http<IJSONResultListProcessFormFieldDropDownOptionAssociatedToDisplayVO>({
+        url: "/flow-service/flowPathFormField/getSelectorAssociateDisplayListByFlowPathVersionId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«List«流程表单字段下拉选项关联显示VO»»

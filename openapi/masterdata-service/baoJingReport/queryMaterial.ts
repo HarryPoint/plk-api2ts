@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/queryMaterialUsingPOST
 export default function fetchMethod(data: IBaojingReportMaterialQueryDTO) {
-    return post<IJSONResultPageInformationBaojingReportMaterialResponseDTO['data']>({
-      url: "/masterdata-service/baoJingReport/queryMaterial",
-      data,
+    return http<IJSONResultPageInformationBaojingReportMaterialResponseDTO>({
+        url: "/masterdata-service/baoJingReport/queryMaterial",
+        method: "post",
+        data,
     });
 }
 // 宝晶报表物料查询DTO

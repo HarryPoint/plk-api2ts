@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/uploadDataUsingPOST
 export default function fetchMethod(data: IDeviceDataAcquisitionDataUpload[], params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/deviceCollectionData/uploadData",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/deviceCollectionData/uploadData",
+        method: "post",
+        data,
+        params,
     });
 }
 // 设备数采数据上传

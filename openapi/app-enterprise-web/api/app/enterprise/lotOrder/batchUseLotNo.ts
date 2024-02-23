@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/batchUseLotNoUsingPOST
 export default function fetchMethod(data: string[]) {
-    return post<IJSONResultTheBatchNumberIsDTO1['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchUseLotNo",
-      data,
+    return http<IJSONResultTheBatchNumberIsDTO1>({
+        url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchUseLotNo",
+        method: "post",
+        data,
     });
 }
 // JSONResult«批次号使用DTO»_1

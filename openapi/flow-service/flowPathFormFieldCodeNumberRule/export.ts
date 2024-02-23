@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/exportUsingPOST
 export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/flow-service/flowPathFormFieldCodeNumberRule/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/flow-service/flowPathFormFieldCodeNumberRule/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 编码规则分页查询VO

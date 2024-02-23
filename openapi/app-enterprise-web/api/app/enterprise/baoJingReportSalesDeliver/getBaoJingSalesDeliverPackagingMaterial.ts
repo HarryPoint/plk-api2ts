@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getBaoJingSalesDeliverPackagingMaterial",
+    return http<IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getBaoJingSalesDeliverPackagingMaterial",
+        method: "get",
     });
 }
 // JSONResult«宝晶销售发货报表包材表头响应对象»

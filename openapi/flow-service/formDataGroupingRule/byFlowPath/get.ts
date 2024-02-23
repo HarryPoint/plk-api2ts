@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/表单数据分组规则相关/getByFlowPathIdUsingGET_2
 export default function fetchMethod(params: { flowPathId: number }) {
-    return get<IJSONResultFormDataGroupingSettingsAreRelated['data']>({
-      url: "/flow-service/formDataGroupingRule/byFlowPath/get",
-      params,
+    return http<IJSONResultFormDataGroupingSettingsAreRelated>({
+        url: "/flow-service/formDataGroupingRule/byFlowPath/get",
+        method: "get",
+        params,
     });
 }
 // JSONResult«表单数据分组设置相关»

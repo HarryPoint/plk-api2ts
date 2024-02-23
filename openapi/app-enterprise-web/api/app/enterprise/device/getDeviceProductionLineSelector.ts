@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
 export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO) {
-    return post<IJSONResultListSelectResponseDtosForTheDeviceProductionLine['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/device/getDeviceProductionLineSelector",
-      data,
+    return http<IJSONResultListSelectResponseDtosForTheDeviceProductionLine>({
+        url: "/app-enterprise-web/api/app/enterprise/device/getDeviceProductionLineSelector",
+        method: "post",
+        data,
     });
 }
 // 设备产线选择请求DTO

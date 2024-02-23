@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序完成明细表/pageUsingPOST_1
 export default function fetchMethod(data: IProcedureCompletionListQuery) {
-    return post<IJSONResultPagingInformationOperationCompletionDetailTableResponseDto['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processCompleteDetailReport/page",
-      data,
+    return http<IJSONResultPagingInformationOperationCompletionDetailTableResponseDto>({
+        url: "/app-enterprise-web/api/app/enterprise/processCompleteDetailReport/page",
+        method: "post",
+        data,
     });
 }
 // 工序完成明细表查询

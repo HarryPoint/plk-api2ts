@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/getAreaSelectorUsingGET
 export default function fetchMethod() {
-    return get<ITheJSONResultListAreaTreeReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/getAreaSelector",
+    return http<ITheJSONResultListAreaTreeReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/getAreaSelector",
+        method: "get",
     });
 }
 // JSONResult«List«区域树返回VO»»

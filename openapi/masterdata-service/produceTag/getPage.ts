@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标签设置/getPageUsingPOST_17
 export default function fetchMethod(data: IExceptionTagSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationExceptionLabelReturnsVO['data']>({
-      url: "/masterdata-service/produceTag/getPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationExceptionLabelReturnsVO>({
+        url: "/masterdata-service/produceTag/getPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 异常标签搜索VO

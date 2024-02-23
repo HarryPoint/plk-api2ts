@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getByIdsIgnoreStatusUsingPOST_4
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultListProcessDropDownListToSearchForResponseDtos['data']>({
-      url: "/masterdata-service/processSheet/getByIdsIgnoreStatus",
-      data,
+    return http<IJSONResultListProcessDropDownListToSearchForResponseDtos>({
+        url: "/masterdata-service/processSheet/getByIdsIgnoreStatus",
+        method: "post",
+        data,
     });
 }
 // id集合信息

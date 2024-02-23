@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质检管理/closeUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/qualityStorageTask/close",
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/qualityStorageTask/close",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

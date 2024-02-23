@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/editSchedulUsingPOST
 export default function fetchMethod(data: ICalendarSchedulingVO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/calendar/editSchedul",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/calendar/editSchedul",
+        method: "post",
+        data,
+        params,
     });
 }
 // 日历排班VO

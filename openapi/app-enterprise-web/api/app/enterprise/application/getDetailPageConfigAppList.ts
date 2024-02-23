@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/应用相关/getDetailPageConfigAppListUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultFlowPathDetailPageConfigAppResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/application/getDetailPageConfigAppList",
-      params,
+    return http<IJSONResultFlowPathDetailPageConfigAppResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/application/getDetailPageConfigAppList",
+        method: "get",
+        params,
     });
 }
 // JSONResult«FlowPathDetailPageConfigAppResponseDTO»

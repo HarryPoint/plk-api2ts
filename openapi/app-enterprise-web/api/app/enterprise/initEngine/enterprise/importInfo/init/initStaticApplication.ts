@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎/initStaticApplicationUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/enterprise/importInfo/init/initStaticApplication",
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/enterprise/importInfo/init/initStaticApplication",
+        method: "post",
     });
 }
 // JSONResult«string»

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/exportByFlowPathSystemTypeUsingPOST
 export default function fetchMethod(data: IProcessDataSearchVO2, params: { enterpriseId: number; systemType: string }) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/dynamicData/byFlowPathSystemType/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/dynamicData/byFlowPathSystemType/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程数据搜索VO_2

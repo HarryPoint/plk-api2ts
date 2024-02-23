@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/设备相关/getDeviceStatusSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListDeviceStatusVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/device/getDeviceStatusSelector",
+    return http<IJSONResultListDeviceStatusVO>({
+        url: "/app-mobile-web/api/app/mobile/device/getDeviceStatusSelector",
+        method: "get",
     });
 }
 // JSONResult«List«设备状态VO»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/委外加工管理/exportUsingPOST_30
 export default function fetchMethod(data: IOutsourcingSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceEntrust/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/produceEntrust/export",
+        method: "post",
+        data,
     });
 }
 // 委外加工搜索VO

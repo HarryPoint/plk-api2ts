@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目相关/getStructureDataUsingPOST
 export default function fetchMethod(data: IProjectDynamicFormRecordQuery) {
-    return post<IJSONResultFormStructureVO['data']>({
-      url: "/masterdata-service/project/getStructureDataByFlowPathId",
-      data,
+    return http<IJSONResultFormStructureVO>({
+        url: "/masterdata-service/project/getStructureDataByFlowPathId",
+        method: "post",
+        data,
     });
 }
 // 项目动态表单记录查询

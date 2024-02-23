@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/getTreeUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListStandardProcessClassificationTreeRespondsToDtos['data']>({
-      url: "/masterdata-service/standardTechnologyCategory/getTree",
+    return http<IJSONResultListStandardProcessClassificationTreeRespondsToDtos>({
+        url: "/masterdata-service/standardTechnologyCategory/getTree",
+        method: "get",
     });
 }
 // JSONResult«List«标准工艺分类树响应DTO»»

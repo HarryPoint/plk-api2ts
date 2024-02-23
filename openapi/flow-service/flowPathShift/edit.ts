@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/任务班次相关/editUsingPOST_3
 export default function fetchMethod(data: ITaskShiftEditDTO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathShift/edit",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathShift/edit",
+        method: "post",
+        data,
+        params,
     });
 }
 // 任务班次编辑DTO

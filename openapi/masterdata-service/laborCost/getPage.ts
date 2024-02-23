@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getPageUsingPOST_6
 export default function fetchMethod(data: ILaborPageQueryObjectDtos) {
-    return post<IJSONResultPagingInformationPagingResponseObject['data']>({
-      url: "/masterdata-service/laborCost/getPage",
-      data,
+    return http<IJSONResultPagingInformationPagingResponseObject>({
+        url: "/masterdata-service/laborCost/getPage",
+        method: "post",
+        data,
     });
 }
 // 工费分页查询对象DTO

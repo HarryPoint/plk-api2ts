@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存统计（原材料）日报表/getExportTicketUsingPOST_5
 export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchVO) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportRawStorage/getExportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportRawStorage/getExportTicket",
+        method: "post",
+        data,
     });
 }
 // 宝晶报表(库存)相关搜索VO

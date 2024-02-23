@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getPageUsingPOST_34
 export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects) {
-    return post<IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getPage",
-      data,
+    return http<IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getPage",
+        method: "post",
+        data,
     });
 }
 // 仓库盘点任务分页查询对象

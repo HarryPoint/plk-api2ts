@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/序列号跟踪报表相关/getBillFlowPathCodeListUsingGET_2
 export default function fetchMethod(params: { masterDataFlowPathCode: string }) {
-    return get<IJSONResultListIdCodeNameACommonTransferObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/warehouseStorageSerialNoTrackReport/getBillFlowPathCodeList",
-      params,
+    return http<IJSONResultListIdCodeNameACommonTransferObject>({
+        url: "/app-enterprise-web/api/app/enterprise/warehouseStorageSerialNoTrackReport/getBillFlowPathCodeList",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«Id Code Name 通用传输对象»»

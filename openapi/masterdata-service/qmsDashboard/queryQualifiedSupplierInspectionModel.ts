@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionModelUsingPOST
 export default function fetchMethod(data: IQualifiedSupplierInspectionModelQueryRequestDTO) {
-    return post<IJSONResultListResponseToTheSuppliersQualifiedDeliveryRate['data']>({
-      url: "/masterdata-service/qmsDashboard/queryQualifiedSupplierInspectionModel",
-      data,
+    return http<IJSONResultListResponseToTheSuppliersQualifiedDeliveryRate>({
+        url: "/masterdata-service/qmsDashboard/queryQualifiedSupplierInspectionModel",
+        method: "post",
+        data,
     });
 }
 // QualifiedSupplierInspectionModelQueryRequestDTO

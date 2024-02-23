@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/ssoLoginUsingPOST
 export default function fetchMethod(data: ISingleSignOnRequestDTO) {
-    return post<IJSONResultLoginResponseDTO['data']>({
-      url: "/plk-uaa-service/saasAuth/ssoLogin",
-      data,
+    return http<IJSONResultLoginResponseDTO>({
+        url: "/plk-uaa-service/saasAuth/ssoLogin",
+        method: "post",
+        data,
     });
 }
 // 单点登录请求 DTO

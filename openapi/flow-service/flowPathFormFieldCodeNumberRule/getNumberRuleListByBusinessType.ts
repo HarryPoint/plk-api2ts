@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleListByBusinessTypeUsingGET
 export default function fetchMethod(params: { businessType: string; enterpriseId: number }) {
-    return get<IJSONResultListProcessFormFieldCodingRuleDetailsVO['data']>({
-      url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleListByBusinessType",
-      params,
+    return http<IJSONResultListProcessFormFieldCodingRuleDetailsVO>({
+        url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleListByBusinessType",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«流程表单字段编码规则明细VO»»

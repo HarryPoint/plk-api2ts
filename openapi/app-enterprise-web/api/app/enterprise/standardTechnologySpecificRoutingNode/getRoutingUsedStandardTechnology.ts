@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/标准工艺具体工艺路径节点相关/getRoutingUsedStandardTechnologyUsingPOST
 export default function fetchMethod(data: IStandardProcessQueryObjectOccupiedByProcessPath) {
-    return post<IJSONResultListStandardProcessResponseOccupiedByTheProcessPath['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificRoutingNode/getRoutingUsedStandardTechnology",
-      data,
+    return http<IJSONResultListStandardProcessResponseOccupiedByTheProcessPath>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificRoutingNode/getRoutingUsedStandardTechnology",
+        method: "post",
+        data,
     });
 }
 // 工艺路径占用的标准工艺查询对象

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盘点单数据迁移服务/allUsingGET_1
 export default function fetchMethod(params: { enterpriseIds: number[] }) {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/script/storageTakeCheckTaskMigrateScript/all",
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/script/storageTakeCheckTaskMigrateScript/all",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

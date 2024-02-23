@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/员工相关/addSuperManagerUsingPOST
 export default function fetchMethod(data: INewRequestDTOForEmployeeOvermanagement) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/employee/addSuperManager",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/employee/addSuperManager",
+        method: "post",
+        data,
     });
 }
 // 员工超管新增请求DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工时工费相关/getMonthExportTicketUsingPOST
 export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getMonthExportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getMonthExportTicket",
+        method: "post",
+        data,
     });
 }
 // 工时工费月度报表搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryByNameOrCodeUsingPOST_1
 export default function fetchMethod(data: IItemTaskNameNumberQueryObject) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
-      url: "/masterdata-service/projectTask/queryByNameOrCode",
-      data,
+    return http<IJSONResultListIdCodeNameACommonTransferObject>({
+        url: "/masterdata-service/projectTask/queryByNameOrCode",
+        method: "post",
+        data,
     });
 }
 // 项目任务名称编号查询对象

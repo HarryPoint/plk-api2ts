@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getMaterialNameCodeListUsingPOST
 export default function fetchMethod(data: IMaterialNameNumberQueryVO) {
-    return post<IJSONResultListReturnInformationAboutTheMaterial['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getMaterialNameCodeList",
-      data,
+    return http<IJSONResultListReturnInformationAboutTheMaterial>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getMaterialNameCodeList",
+        method: "post",
+        data,
     });
 }
 // 物料名称编号查询VO

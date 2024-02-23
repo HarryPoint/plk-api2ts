@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByMaterialIdsUsingPOST
 export default function fetchMethod(data: ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject) {
-    return post<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate['data']>({
-      url: "/masterdata-service/weiLianLotPrintTemplate/listAlreadyBindMaterialByMaterialIds",
-      data,
+    return http<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate>({
+        url: "/masterdata-service/weiLianLotPrintTemplate/listAlreadyBindMaterialByMaterialIds",
+        method: "post",
+        data,
     });
 }
 // 维联批次打印模板已绑定物料请求对象

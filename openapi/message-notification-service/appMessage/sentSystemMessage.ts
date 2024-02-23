@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/sentSystemMessageUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/message-notification-service/appMessage/sentSystemMessage",
+    return http<IJSONResultobject>({
+        url: "/message-notification-service/appMessage/sentSystemMessage",
+        method: "post",
     });
 }
 // JSONResult«object»

@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/文件上传相关/uploadUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultAnnexVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/fileUpload/upload",
+    return http<IJSONResultAnnexVO>({
+        url: "/app-enterprise-web/api/app/enterprise/fileUpload/upload",
+        method: "post",
     });
 }
 // JSONResult«附件 VO»

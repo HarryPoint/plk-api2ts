@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getDepartmentByIdAndCheckUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultDepartmentVO['data']>({
-      url: "/masterdata-service/department/getDepartmentByIdAndCheck",
-      params,
+    return http<IJSONResultDepartmentVO>({
+        url: "/masterdata-service/department/getDepartmentByIdAndCheck",
+        method: "get",
+        params,
     });
 }
 // JSONResult«部门VO»

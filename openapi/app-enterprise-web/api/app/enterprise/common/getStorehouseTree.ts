@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getStorehouseTreeUsingGET_1
 export default function fetchMethod() {
-    return get<ITheJSONResultListRepositoryAreaTreeReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/common/getStorehouseTree",
+    return http<ITheJSONResultListRepositoryAreaTreeReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/common/getStorehouseTree",
+        method: "get",
     });
 }
 // JSONResult«List«仓库区域树返回VO»»

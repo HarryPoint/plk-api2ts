@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/stagingUsingPOST_2
 export default function fetchMethod(data: IMessageSchemaStagingRequestDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/messageSchema/staging",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/messageSchema/staging",
+        method: "post",
+        data,
     });
 }
 // MessageSchemaStagingRequestDTO

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterTableIdsByFieldCodeUsingPOST
 export default function fetchMethod(data: IPrimaryTableIdQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListlong['data']>({
-      url: "/masterdata-service/dynamicData/getMasterTableIdsByFieldCode",
-      data,
-      params,
+    return http<IJSONResultListlong>({
+        url: "/masterdata-service/dynamicData/getMasterTableIdsByFieldCode",
+        method: "post",
+        data,
+        params,
     });
 }
 // 主表id查询VO

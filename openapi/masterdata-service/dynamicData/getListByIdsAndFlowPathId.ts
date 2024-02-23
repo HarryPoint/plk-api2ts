@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getListByIdsAndFlowPathIdUsingPOST
 export default function fetchMethod(data: IListDataQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListJSONObject['data']>({
-      url: "/masterdata-service/dynamicData/getListByIdsAndFlowPathId",
-      data,
-      params,
+    return http<IJSONResultListJSONObject>({
+        url: "/masterdata-service/dynamicData/getListByIdsAndFlowPathId",
+        method: "post",
+        data,
+        params,
     });
 }
 // ListDataQueryVO

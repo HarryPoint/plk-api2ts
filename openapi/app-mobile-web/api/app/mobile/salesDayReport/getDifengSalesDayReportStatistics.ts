@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/销售日报表相关/getDifengSalesDayReportStatisticsUsingPOST
 export default function fetchMethod(data: GetDifengSalesDayReportStatistics) {
-    return post<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics['data']>({
-      url: "/app-mobile-web/api/app/mobile/salesDayReport/getDifengSalesDayReportStatistics",
-      data,
+    return http<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics>({
+        url: "/app-mobile-web/api/app/mobile/salesDayReport/getDifengSalesDayReportStatistics",
+        method: "post",
+        data,
     });
 }
 // JSONResult«销售日报表统计返回对象»

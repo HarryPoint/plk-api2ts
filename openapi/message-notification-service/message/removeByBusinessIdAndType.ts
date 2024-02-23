@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息相关/removeByBusinessIdAndTypeUsingGET
 export default function fetchMethod(params: { businessId: number; businessType: string; enterpriseId: number }) {
-    return get<IJSONResultobject['data']>({
-      url: "/message-notification-service/message/removeByBusinessIdAndType",
-      params,
+    return http<IJSONResultobject>({
+        url: "/message-notification-service/message/removeByBusinessIdAndType",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/reSendEmailUsingPOST
 export default function fetchMethod(data: IReEmailSendingEmailRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/message-notification-service/sendingEmailRecord/reSendEmail",
-      data,
+    return http<IJSONResultstring>({
+        url: "/message-notification-service/sendingEmailRecord/reSendEmail",
+        method: "post",
+        data,
     });
 }
 // ReEmailSendingEmailRequestDTO

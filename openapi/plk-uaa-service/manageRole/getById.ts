@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/运营角色相关/getByIdUsingPOST
 export default function fetchMethod(data: IIdInformation) {
-    return post<IJSONResultOperationRolePermissionInformationResponseObject['data']>({
-      url: "/plk-uaa-service/manageRole/getById",
-      data,
+    return http<IJSONResultOperationRolePermissionInformationResponseObject>({
+        url: "/plk-uaa-service/manageRole/getById",
+        method: "post",
+        data,
     });
 }
 // Id 信息

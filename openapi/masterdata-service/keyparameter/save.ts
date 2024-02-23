@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/saveUsingPOST_2
 export default function fetchMethod(data: IKeyParametersSaveTheDTO) {
-    return post<IJSONResultKeyParameterInformationResponseObject['data']>({
-      url: "/masterdata-service/keyparameter/save",
-      data,
+    return http<IJSONResultKeyParameterInformationResponseObject>({
+        url: "/masterdata-service/keyparameter/save",
+        method: "post",
+        data,
     });
 }
 // 关键参数保存DTO

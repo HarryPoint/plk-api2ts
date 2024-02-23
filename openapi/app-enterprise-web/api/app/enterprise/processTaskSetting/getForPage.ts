@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/getForPageUsingPOST_18
 export default function fetchMethod(data: IProcessTaskSearchVO) {
-    return post<IJSONResultPagingInformationProcedureTaskSetVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/getForPage",
-      data,
+    return http<IJSONResultPagingInformationProcedureTaskSetVO>({
+        url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/getForPage",
+        method: "post",
+        data,
     });
 }
 // 工序任务搜索VO

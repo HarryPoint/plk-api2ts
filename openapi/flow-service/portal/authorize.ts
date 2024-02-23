@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/门户相关/authorizeUsingPOST
 export default function fetchMethod(data: IPortalAuthorizationRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/flow-service/portal/authorize",
-      data,
+    return http<IJSONResultstring>({
+        url: "/flow-service/portal/authorize",
+        method: "post",
+        data,
     });
 }
 // PortalAuthorizationRequestDTO

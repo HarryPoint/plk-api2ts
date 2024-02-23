@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByPrintTemplateIdUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate['data']>({
-      url: "/masterdata-service/weiLianLotPrintTemplate/listAlreadyBindMaterialByPrintTemplateId",
-      params,
+    return http<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate>({
+        url: "/masterdata-service/weiLianLotPrintTemplate/listAlreadyBindMaterialByPrintTemplateId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«维联批次打印模板绑定物料响应对象»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/splitUsingPOST
 export default function fetchMethod(data: IBatchOrderSplitDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lotOrder/split",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/lotOrder/split",
+        method: "post",
+        data,
     });
 }
 // 批次订单拆分DTO

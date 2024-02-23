@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/关键参数相关/getPageUsingPOST_7
 export default function fetchMethod(data: IKeyParameterPageQueryObject) {
-    return post<IJSONResultPagingInformationKeyParameterPagingResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/keyparameter/getPage",
-      data,
+    return http<IJSONResultPagingInformationKeyParameterPagingResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/keyparameter/getPage",
+        method: "post",
+        data,
     });
 }
 // 关键参数分页查询对象

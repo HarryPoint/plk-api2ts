@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getDifengSalesDayReportUsingPOST
 export default function fetchMethod(data: GetDifengSalesDayReport) {
-    return post<IJSONResultPageInformationObjectReturnedByTheSalesDailyReport['data']>({
-      url: "/masterdata-service/salesDayReport/getDifengSalesDayReport",
-      data,
+    return http<IJSONResultPageInformationObjectReturnedByTheSalesDailyReport>({
+        url: "/masterdata-service/salesDayReport/getDifengSalesDayReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«销售日报表返回对象»»

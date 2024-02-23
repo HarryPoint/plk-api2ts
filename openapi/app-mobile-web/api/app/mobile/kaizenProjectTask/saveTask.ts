@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/项目任务相关/saveTaskUsingPOST
 export default function fetchMethod(data: IMasterDataBaseEditDTO2) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/saveTask",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/saveTask",
+        method: "post",
+        data,
     });
 }
 // 主数据基础编辑 DTO_2

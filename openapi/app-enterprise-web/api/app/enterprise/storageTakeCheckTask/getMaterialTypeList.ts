@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getMaterialTypeListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getMaterialTypeList",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getMaterialTypeList",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

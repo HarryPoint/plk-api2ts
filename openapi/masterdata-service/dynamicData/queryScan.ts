@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryScanUsingPOST
 export default function fetchMethod(data: IAssociationFormScanQueryRequestDTO) {
-    return post<IJSONResultListAssociationFormScanQueryResponseDTO['data']>({
-      url: "/masterdata-service/dynamicData/queryScan",
-      data,
+    return http<IJSONResultListAssociationFormScanQueryResponseDTO>({
+        url: "/masterdata-service/dynamicData/queryScan",
+        method: "post",
+        data,
     });
 }
 // AssociationFormScanQueryRequestDTO

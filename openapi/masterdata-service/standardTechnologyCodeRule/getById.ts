@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/getByIdUsingGET_16
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultStandardProcessCodingRulesRespondToDtos['data']>({
-      url: "/masterdata-service/standardTechnologyCodeRule/getById",
-      params,
+    return http<IJSONResultStandardProcessCodingRulesRespondToDtos>({
+        url: "/masterdata-service/standardTechnologyCodeRule/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«标准工艺编码规则响应 DTO»

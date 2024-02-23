@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单甘特图相关/getPageUsingPOST_16
 export default function fetchMethod(data: IProductionOrdersGanttChartSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultProductionOrderGanttReturnedToVO['data']>({
-      url: "/masterdata-service/produceOrderGant/getPage",
-      data,
-      params,
+    return http<IJSONResultProductionOrderGanttReturnedToVO>({
+        url: "/masterdata-service/produceOrderGant/getPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产订单甘特图搜索VO

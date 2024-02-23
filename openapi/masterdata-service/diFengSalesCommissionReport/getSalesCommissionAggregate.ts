@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionAggregateUsingPOST
 export default function fetchMethod(data: GetSalesCommissionAggregate) {
-    return post<IJSONResultCommissionAndCommissionStatisticsTableTeifungCustomizedTotalResponseObject['data']>({
-      url: "/masterdata-service/diFengSalesCommissionReport/getSalesCommissionAggregate",
-      data,
+    return http<IJSONResultCommissionAndCommissionStatisticsTableTeifungCustomizedTotalResponseObject>({
+        url: "/masterdata-service/diFengSalesCommissionReport/getSalesCommissionAggregate",
+        method: "post",
+        data,
     });
 }
 // JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»

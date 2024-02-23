@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/门户相关/disableBatchUsingPOST_3
 export default function fetchMethod(data: IThePortalDisablesTheRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/portal/disableBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/portal/disableBatch",
+        method: "post",
+        data,
     });
 }
 // 门户禁用请求DTO

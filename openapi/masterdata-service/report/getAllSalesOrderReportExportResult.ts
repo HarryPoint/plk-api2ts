@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/报表相关/getAllSalesOrderReportExportResultUsingPOST
 export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListExportOrderProgressStatisticsVO['data']>({
-      url: "/masterdata-service/report/getAllSalesOrderReportExportResult",
-      data,
-      params,
+    return http<IJSONResultListExportOrderProgressStatisticsVO>({
+        url: "/masterdata-service/report/getAllSalesOrderReportExportResult",
+        method: "post",
+        data,
+        params,
     });
 }
 // 订单进度统计查询VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectTaskReportUsingPOST
 export default function fetchMethod(data: QueryProjectTaskReport) {
-    return post<IJSONResultPagingInformationProjectTaskReportResponseObject['data']>({
-      url: "/masterdata-service/projectReport/queryProjectTaskReport",
-      data,
+    return http<IJSONResultPagingInformationProjectTaskReportResponseObject>({
+        url: "/masterdata-service/projectReport/queryProjectTaskReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«项目任务报表响应对象»»

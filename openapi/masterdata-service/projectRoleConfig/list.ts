@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目角色配置相关/getForPageUsingPOST_16
 export default function fetchMethod(data: IProjectRoleConfigureTheQueryObject) {
-    return post<IJSONResultListProjectRoleConfigurationReturnObject['data']>({
-      url: "/masterdata-service/projectRoleConfig/list",
-      data,
+    return http<IJSONResultListProjectRoleConfigurationReturnObject>({
+        url: "/masterdata-service/projectRoleConfig/list",
+        method: "post",
+        data,
     });
 }
 // 项目角色配置查询对象

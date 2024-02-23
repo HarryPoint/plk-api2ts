@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/saveSettingInfoUsingPOST_1
 export default function fetchMethod(data: IDarkBlueLargeScreenSetsTheDTO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/lsShenLanSetting/saveSettingInfo",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/lsShenLanSetting/saveSettingInfo",
+        method: "post",
+        data,
+        params,
     });
 }
 // 深蓝大屏设置DTO

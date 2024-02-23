@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品订单相关/trialDelayAddUsingPOST
 export default function fetchMethod(data: ITrialProductOrderExtensionNewRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/productOrder/trialDelayAdd",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/productOrder/trialDelayAdd",
+        method: "post",
+        data,
     });
 }
 // 试用产品订单延期新增请求对象

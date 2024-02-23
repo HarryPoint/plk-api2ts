@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/路由相关/listTreeUsingPOST_2
 export default function fetchMethod(data: IRouteQuery) {
-    return post<IJSONResultListRouteResponseDTO['data']>({
-      url: "/plk-uaa-service/router/listTree",
-      data,
+    return http<IJSONResultListRouteResponseDTO>({
+        url: "/plk-uaa-service/router/listTree",
+        method: "post",
+        data,
     });
 }
 // 路由查询

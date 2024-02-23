@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getMonthProposalIndicatorsUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultMonthProposalIndicatorsResponseDTO['data']>({
-      url: "/masterdata-service/proposalDashboard/getMonthProposalIndicators",
+    return http<IJSONResultMonthProposalIndicatorsResponseDTO>({
+        url: "/masterdata-service/proposalDashboard/getMonthProposalIndicators",
+        method: "get",
     });
 }
 // JSONResult«MonthProposalIndicatorsResponseDTO»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnvironmentalProtectionListUsingPOST
 export default function fetchMethod(data: IEnvironmentalProtectionSQueryRequest) {
-    return post<IJSONResultListGreenSQueryResponse['data']>({
-      url: "/masterdata-service/hseDashboard/queryEnvironmentalProtectionList",
-      data,
+    return http<IJSONResultListGreenSQueryResponse>({
+        url: "/masterdata-service/hseDashboard/queryEnvironmentalProtectionList",
+        method: "post",
+        data,
     });
 }
 // 环保S查询请求

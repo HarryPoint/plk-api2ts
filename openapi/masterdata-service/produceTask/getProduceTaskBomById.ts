@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskBomByIdUsingGET
 export default function fetchMethod(params: { taskId: string; enterpriseId: number }) {
-    return get<IJSONResultListProductionTaskBOMMaterialInformationVO['data']>({
-      url: "/masterdata-service/produceTask/getProduceTaskBomById",
-      params,
+    return http<IJSONResultListProductionTaskBOMMaterialInformationVO>({
+        url: "/masterdata-service/produceTask/getProduceTaskBomById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产任务BOM物料信息VO»»

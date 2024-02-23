@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品订单相关/onlyEditPayRecordUsingPOST
 export default function fetchMethod(data: IProductOrdersOnlyModifyThePaymentRecordRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/productOrder/onlyEditPayRecord",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/productOrder/onlyEditPayRecord",
+        method: "post",
+        data,
     });
 }
 // 产品订单只修改付款记录请求对象

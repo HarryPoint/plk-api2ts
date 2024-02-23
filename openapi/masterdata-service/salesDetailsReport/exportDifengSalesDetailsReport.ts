@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/exportDifengSalesDetailsReportUsingPOST
 export default function fetchMethod(data: ExportDifengSalesDetailsReport) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/salesDetailsReport/exportDifengSalesDetailsReport",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/salesDetailsReport/exportDifengSalesDetailsReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«long»

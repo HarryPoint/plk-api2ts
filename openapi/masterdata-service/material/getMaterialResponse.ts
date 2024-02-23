@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialResponseUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultMaterialReturnInformation['data']>({
-      url: "/masterdata-service/material/getMaterialResponse",
-      params,
+    return http<IJSONResultMaterialReturnInformation>({
+        url: "/masterdata-service/material/getMaterialResponse",
+        method: "get",
+        params,
     });
 }
 // JSONResult«物料返回信息»

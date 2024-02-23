@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/待办相关/getTaskLogForPageUsingPOST
 export default function fetchMethod(data: IJobLogSearchVO) {
-    return post<IJSONResultThePageInformationWorkOrderLogReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/todoList/getTaskLogForPage",
-      data,
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/todoList/getTaskLogForPage",
+        method: "post",
+        data,
     });
 }
 // 工单日志搜索VO

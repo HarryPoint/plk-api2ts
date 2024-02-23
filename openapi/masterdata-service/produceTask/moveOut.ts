@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/moveOutUsingPOST
 export default function fetchMethod(data: IInboundAndOutboundInformationDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceTask/moveOut",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceTask/moveOut",
+        method: "post",
+        data,
+        params,
     });
 }
 // 进出站信息DTO

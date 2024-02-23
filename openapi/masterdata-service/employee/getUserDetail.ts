@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUserDetailUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultUserDetailsVO['data']>({
-      url: "/masterdata-service/employee/getUserDetail",
-      params,
+    return http<IJSONResultUserDetailsVO>({
+        url: "/masterdata-service/employee/getUserDetail",
+        method: "get",
+        params,
     });
 }
 // JSONResult«用户详细VO»

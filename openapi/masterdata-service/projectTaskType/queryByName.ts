@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务类型相关/queryByNameUsingPOST_2
 export default function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
-      url: "/masterdata-service/projectTaskType/queryByName",
-      data,
+    return http<IJSONResultListIdCodeNameACommonTransferObject>({
+        url: "/masterdata-service/projectTaskType/queryByName",
+        method: "post",
+        data,
     });
 }
 // 项目名称编号公共查询对象_1

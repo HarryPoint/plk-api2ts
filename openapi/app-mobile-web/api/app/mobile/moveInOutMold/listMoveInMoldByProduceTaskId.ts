@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/进出料模具相关/listMoveInMoldByProduceTaskIdUsingGET
 export default function fetchMethod(params: { produceTaskId: string }) {
-    return get<IJSONResultListFeedMoldResponseDTO1['data']>({
-      url: "/app-mobile-web/api/app/mobile/moveInOutMold/listMoveInMoldByProduceTaskId",
-      params,
+    return http<IJSONResultListFeedMoldResponseDTO1>({
+        url: "/app-mobile-web/api/app/mobile/moveInOutMold/listMoveInMoldByProduceTaskId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«进料模具响应DTO»»_1

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/addScrapUsingPOST
 export default function fetchMethod(data: IProductionScrapTreatment, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceHandleScrap/addScrap",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceHandleScrap/addScrap",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产报废处理

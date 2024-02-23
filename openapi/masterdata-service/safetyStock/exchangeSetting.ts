@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
 export default function fetchMethod(data: IUnifiedSecurityInventoryConfiguration, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/safetyStock/exchangeSetting",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/safetyStock/exchangeSetting",
+        method: "post",
+        data,
+        params,
     });
 }
 // 安全库存统一设置配置

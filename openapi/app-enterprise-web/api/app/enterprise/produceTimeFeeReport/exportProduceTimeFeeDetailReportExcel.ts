@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工时工费相关/exportProduceTimeFeeDetailReportExcelUsingPOST
 export default function fetchMethod(data: IHourlyLaborRateReportSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/exportProduceTimeFeeDetailReportExcel",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/exportProduceTimeFeeDetailReportExcel",
+        method: "post",
+        data,
     });
 }
 // 工时工费报表搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/安全库存相关/getPageUsingPOST_27
 export default function fetchMethod(data: ISecurityInventorySearchVO) {
-    return post<IJSONResultPagingInformationSecurityInventoryReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/safetyStock/getPage",
-      data,
+    return http<IJSONResultPagingInformationSecurityInventoryReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/safetyStock/getPage",
+        method: "post",
+        data,
     });
 }
 // 安全库存搜索VO

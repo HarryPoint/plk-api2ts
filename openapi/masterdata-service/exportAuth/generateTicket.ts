@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/generateTicketUsingPOST
 export default function fetchMethod(params: { enterpriseCode: string; enterpriseId: number; searchJson: string; type: string; userId: number }) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/masterdata-service/exportAuth/generateTicket",
-      params,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/masterdata-service/exportAuth/generateTicket",
+        method: "post",
+        params,
     });
 }
 // JSONResult«导出ticket信息»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盘盈单相关/getFlowPathStructureDataUsingPOST_5
 export default function fetchMethod(data: IProcessStructureSearchVO) {
-    return post<IJSONResultFormStructureVO['data']>({
-      url: "/masterdata-service/inventoryProfitOrder/getFlowPathStructureData",
-      data,
+    return http<IJSONResultFormStructureVO>({
+        url: "/masterdata-service/inventoryProfitOrder/getFlowPathStructureData",
+        method: "post",
+        data,
     });
 }
 // 流程结构搜索VO

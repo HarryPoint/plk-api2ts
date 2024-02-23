@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/公共相关/cascadeGetRegionUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListRegionVo['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/common/region/query",
+    return http<IJSONResultListRegionVo>({
+        url: "/app-enterprise-web/api/app/enterprise/common/region/query",
+        method: "get",
     });
 }
 // JSONResult«List«RegionVo»»

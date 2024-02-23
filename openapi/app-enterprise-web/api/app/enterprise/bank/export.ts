@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/银行相关/exportUsingPOST_2
 export default function fetchMethod(data: IProcessDataSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/bank/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/bank/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据搜索VO

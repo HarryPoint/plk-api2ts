@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/班次相关/editUsingPOST_1
 export default function fetchMethod(data: IShiftEditorDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/classShift/edit",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/classShift/edit",
+        method: "post",
+        data,
+        params,
     });
 }
 // 班次编辑DTO

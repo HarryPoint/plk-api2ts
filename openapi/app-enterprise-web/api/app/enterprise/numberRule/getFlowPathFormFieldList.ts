@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/编码规则相关/getFlowPathFormFieldListUsingGET
 export default function fetchMethod(params: { flowPathCode: string }) {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/numberRule/getFlowPathFormFieldList",
-      params,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/numberRule/getFlowPathFormFieldList",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

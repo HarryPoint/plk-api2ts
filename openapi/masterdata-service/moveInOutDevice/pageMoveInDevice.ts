@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/pageMoveInDeviceUsingPOST
 export default function fetchMethod(data: IFeedEquipmentPagingQuery) {
-    return post<IJSONResultThePagingInformationFeedDeviceRespondsToTheDTO['data']>({
-      url: "/masterdata-service/moveInOutDevice/pageMoveInDevice",
-      data,
+    return http<IJSONResultThePagingInformationFeedDeviceRespondsToTheDTO>({
+        url: "/masterdata-service/moveInOutDevice/pageMoveInDevice",
+        method: "post",
+        data,
     });
 }
 // 进料设备分页查询

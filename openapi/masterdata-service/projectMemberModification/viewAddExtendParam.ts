@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目成员变更相关/viewAddExtendParamUsingPOST
 export default function fetchMethod(data: IProjectMemberChangeOrderExtensionParameterRequest) {
-    return post<any>({
-      url: "/masterdata-service/projectMemberModification/viewAddExtendParam",
-      data,
+    return http<any>({
+        url: "/masterdata-service/projectMemberModification/viewAddExtendParam",
+        method: "post",
+        data,
     });
 }
 // 项目成员变更单扩展参数请求

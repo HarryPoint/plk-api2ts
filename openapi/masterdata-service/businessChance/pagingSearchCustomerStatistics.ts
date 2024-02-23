@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/pagingSearchCustomerStatisticsUsingPOST
 export default function fetchMethod(data: ICustomerStatisticsInputConditions) {
-    return post<IJSONResultPagingInformationCustomerStatistics['data']>({
-      url: "/masterdata-service/businessChance/pagingSearchCustomerStatistics",
-      data,
+    return http<IJSONResultPagingInformationCustomerStatistics>({
+        url: "/masterdata-service/businessChance/pagingSearchCustomerStatistics",
+        method: "post",
+        data,
     });
 }
 // 客户情况统计输入条件

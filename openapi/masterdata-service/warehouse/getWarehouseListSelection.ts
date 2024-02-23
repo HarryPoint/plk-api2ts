@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseListSelectionUsingPOST
 export default function fetchMethod(data: IPositionTreeReturnsVO1) {
-    return post<IJSONResultDTOForPagingInformationLocationQuery['data']>({
-      url: "/masterdata-service/warehouse/getWarehouseListSelection",
-      data,
+    return http<IJSONResultDTOForPagingInformationLocationQuery>({
+        url: "/masterdata-service/warehouse/getWarehouseListSelection",
+        method: "post",
+        data,
     });
 }
 // 仓位树返回VO_1

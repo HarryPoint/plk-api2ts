@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/editUsingPOST_2
 export default function fetchMethod(data: IEmailTaskEditRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/message-notification-service/emailTask/edit",
-      data,
+    return http<IJSONResultstring>({
+        url: "/message-notification-service/emailTask/edit",
+        method: "post",
+        data,
     });
 }
 // EmailTaskEditRequestDTO

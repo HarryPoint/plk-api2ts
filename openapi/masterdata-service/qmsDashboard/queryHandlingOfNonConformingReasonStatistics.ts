@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingReasonStatisticsUsingGET
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return get<IJSONResultListLargeScreenUnqualifiedProductStatisticsRespondToTheDTOBasedOnTheCause['data']>({
-      url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingReasonStatistics",
-      params,
+    return http<IJSONResultListLargeScreenUnqualifiedProductStatisticsRespondToTheDTOBasedOnTheCause>({
+        url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingReasonStatistics",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«大屏不合格品统计按原因响应DTO»»

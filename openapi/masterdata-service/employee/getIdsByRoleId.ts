@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByRoleIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; roleId: number }) {
-    return get<IJSONResultListlong['data']>({
-      url: "/masterdata-service/employee/getIdsByRoleId",
-      params,
+    return http<IJSONResultListlong>({
+        url: "/masterdata-service/employee/getIdsByRoleId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«long»»

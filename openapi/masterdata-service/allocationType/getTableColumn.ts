@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/调拨类型相关/getTableColumnUsingGET_1
 export default function fetchMethod() {
-    return get<IJSONResultListProcessTableColumnVO['data']>({
-      url: "/masterdata-service/allocationType/getTableColumn",
+    return http<IJSONResultListProcessTableColumnVO>({
+        url: "/masterdata-service/allocationType/getTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«流程表格列VO»»

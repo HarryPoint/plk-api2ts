@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/其它入库单相关/getFlowPathStructureDataUsingPOST_6
 export default function fetchMethod(data: IProcessStructureSearchVO) {
-    return post<IJSONResultFormStructureVO['data']>({
-      url: "/masterdata-service/otherInStorageOrder/getFlowPathStructureData",
-      data,
+    return http<IJSONResultFormStructureVO>({
+        url: "/masterdata-service/otherInStorageOrder/getFlowPathStructureData",
+        method: "post",
+        data,
     });
 }
 // 流程结构搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncMessageUsingPOST
 export default function fetchMethod(data: IKingdeeMessageSendRequest) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/hangFa/syncMessage",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/hangFa/syncMessage",
+        method: "post",
+        data,
     });
 }
 // 金蝶消息发送请求

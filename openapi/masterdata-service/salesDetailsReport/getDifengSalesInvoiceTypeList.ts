@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesInvoiceTypeListUsingPOST
 export default function fetchMethod(data: INameNumberDTO) {
-    return post<IJSONResultListIdCodeNameACommonTransferObject['data']>({
-      url: "/masterdata-service/salesDetailsReport/getDifengSalesInvoiceTypeList",
-      data,
+    return http<IJSONResultListIdCodeNameACommonTransferObject>({
+        url: "/masterdata-service/salesDetailsReport/getDifengSalesInvoiceTypeList",
+        method: "post",
+        data,
     });
 }
 // 名称、编号DTO

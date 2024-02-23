@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质检分类/changeValidUsingPOST_7
 export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/qualityInspectionCategory/changeValid",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/qualityInspectionCategory/changeValid",
+        method: "post",
+        data,
+        params,
     });
 }
 // 启用or停用VO

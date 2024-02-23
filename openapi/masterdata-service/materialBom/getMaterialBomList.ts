@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialBomListUsingPOST
 export default function fetchMethod(data: IMaterialBomQueriesTheRequestedObject) {
-    return post<IJSONResultListMaterialBomResponseObject['data']>({
-      url: "/masterdata-service/materialBom/getMaterialBomList",
-      data,
+    return http<IJSONResultListMaterialBomResponseObject>({
+        url: "/masterdata-service/materialBom/getMaterialBomList",
+        method: "post",
+        data,
     });
 }
 // 物料bom查询请求对象

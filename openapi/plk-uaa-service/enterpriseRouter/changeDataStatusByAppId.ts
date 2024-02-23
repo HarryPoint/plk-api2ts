@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/changeDataStatusByAppIdUsingPOST
 export default function fetchMethod(data: ITheEnterpriseRouteRequestsTheDTOToChangeTheDataStatusBasedOnTheApplicationId) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/enterpriseRouter/changeDataStatusByAppId",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/enterpriseRouter/changeDataStatusByAppId",
+        method: "post",
+        data,
     });
 }
 // 企业路由根据应用id变更数据状态请求 DTO

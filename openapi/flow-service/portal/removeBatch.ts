@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/门户相关/removeBatchUsingPOST_1
 export default function fetchMethod(data: IPortalDeleteRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/flow-service/portal/removeBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/flow-service/portal/removeBatch",
+        method: "post",
+        data,
     });
 }
 // 门户删除请求DTO

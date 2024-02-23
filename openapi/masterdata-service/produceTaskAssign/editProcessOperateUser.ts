@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/editProcessOperateUserUsingPOST_1
 export default function fetchMethod(data: IProcessOperatorsEditTheDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceTaskAssign/editProcessOperateUser",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceTaskAssign/editProcessOperateUser",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工序操作员编辑DTO

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/委外加工管理/getDetailsUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListOutsourcedProcessingDetailsAreReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceEntrust/getDetails",
-      params,
+    return http<IJSONResultListOutsourcedProcessingDetailsAreReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceEntrust/getDetails",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«委外加工明细返回VO»»

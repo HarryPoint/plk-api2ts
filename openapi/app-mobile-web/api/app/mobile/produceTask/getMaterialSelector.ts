@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getMaterialSelectorUsingGET
 export default function fetchMethod(params: { materialTypeList?: string[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders: { column?: string; isAsc?: string }[] }) {
-    return get<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getMaterialSelector",
-      params,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getMaterialSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«分页信息«物料主数据选择返回VO»»

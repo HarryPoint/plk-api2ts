@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getFlowPathTaskShiftSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListProcessShiftReturnsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/common/getFlowPathTaskShiftSelector",
+    return http<IJSONResultListProcessShiftReturnsVO>({
+        url: "/app-mobile-web/api/app/mobile/common/getFlowPathTaskShiftSelector",
+        method: "get",
     });
 }
 // JSONResult«List«流程班次返回VO»»

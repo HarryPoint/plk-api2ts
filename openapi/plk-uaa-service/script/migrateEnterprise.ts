@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/ 企业迁移脚本相关/migrateEnterpriseUsingPOST
 export default function fetchMethod(data: IEnterpriseMigrateRequestDTO[]) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/script/migrateEnterprise",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/script/migrateEnterprise",
+        method: "post",
+        data,
     });
 }
 // EnterpriseMigrateRequestDTO

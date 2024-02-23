@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/待办相关/completeCarbonCopyUsingPOST
 export default function fetchMethod(data: ICcToDoChangeReadDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/todoList/completeCarbonCopy",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/todoList/completeCarbonCopy",
+        method: "post",
+        data,
     });
 }
 // 待办抄送变更已读DTO

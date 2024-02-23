@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/流程数据相关/getFromDataGroupingUsingGET
 export default function fetchMethod(params: { flowPathId: number }) {
-    return get<IJSONResultListFormDataGroupingDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/flowPathData/getFormDataGrouping",
-      params,
+    return http<IJSONResultListFormDataGroupingDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/flowPathData/getFormDataGrouping",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«表单数据分组DTO»»

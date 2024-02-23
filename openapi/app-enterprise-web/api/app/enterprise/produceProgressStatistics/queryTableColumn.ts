@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产进度统计报表 - 相关/queryTableColumnUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListProcessTableColumnVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceProgressStatistics/queryTableColumn",
+    return http<IJSONResultListProcessTableColumnVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceProgressStatistics/queryTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«流程表格列VO»»

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getDepartmentByIdListUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post<IJSONResultListDepartmentVO['data']>({
-      url: "/masterdata-service/department/getDepartmentByIdList",
-      data,
-      params,
+    return http<IJSONResultListDepartmentVO>({
+        url: "/masterdata-service/department/getDepartmentByIdList",
+        method: "post",
+        data,
+        params,
     });
 }
 // id集合信息

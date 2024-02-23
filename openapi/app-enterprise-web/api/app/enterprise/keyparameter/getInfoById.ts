@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/关键参数相关/getInfoByIdUsingGET_1
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultKeyParameterInformationResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/keyparameter/getInfoById",
-      params,
+    return http<IJSONResultKeyParameterInformationResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/keyparameter/getInfoById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«关键参数信息响应对象»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓位系统应用库存批次号相关/getWarehouseStorageSystemApplicationByLotNoListUsingPOST
 export default function fetchMethod(data: ITheWarehouseSystemAppliesTheInventoryBatchNumberToQueryTheObject) {
-    return post<IJSONResultListTheWarehouseSystemAppliesTheInventoryBatchNumberToThePagingReturnObject['data']>({
-      url: "/masterdata-service/warehouseStorageSystemApplicationLotNo/getByLotNoList",
-      data,
+    return http<IJSONResultListTheWarehouseSystemAppliesTheInventoryBatchNumberToThePagingReturnObject>({
+        url: "/masterdata-service/warehouseStorageSystemApplicationLotNo/getByLotNoList",
+        method: "post",
+        data,
     });
 }
 // 仓位系统应用库存批次号查询对象

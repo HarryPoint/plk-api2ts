@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务自动出料相关/scheduleHandleUploadDataUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceTaskAutoMoveOut/scheduleHandleUploadData",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceTaskAutoMoveOut/scheduleHandleUploadData",
+        method: "get",
     });
 }
 // JSONResult«object»

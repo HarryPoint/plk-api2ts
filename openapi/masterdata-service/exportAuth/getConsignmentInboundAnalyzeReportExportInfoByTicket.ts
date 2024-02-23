@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getConsignmentInboundAnalyzeReportExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationConsignmentInboundAnalysisReportReturnsVO['data']>({
-      url: "/masterdata-service/exportAuth/getConsignmentInboundAnalyzeReportExportInfoByTicket",
-      params,
+    return http<IJSONResultExportInformationConsignmentInboundAnalysisReportReturnsVO>({
+        url: "/masterdata-service/exportAuth/getConsignmentInboundAnalyzeReportExportInfoByTicket",
+        method: "get",
+        params,
     });
 }
 // JSONResult«导出信息«寄售入库分析报表返回VO»»

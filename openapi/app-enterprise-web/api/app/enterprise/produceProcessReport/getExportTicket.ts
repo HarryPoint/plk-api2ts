@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按工序统计)相关/getExportTicketUsingPOST_14
 export default function fetchMethod(data: IOutputClassReportSearchVO) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceProcessReport/getExportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/produceProcessReport/getExportTicket",
+        method: "post",
+        data,
     });
 }
 // 产出类报表搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getPageUsingPOST_29
 export default function fetchMethod(data: IStandardProcessPagingQueryObject) {
-    return post<IJSONResultPagingInformationStandardProcessPagingResponseObject['data']>({
-      url: "/masterdata-service/standardTechnology/getPage",
-      data,
+    return http<IJSONResultPagingInformationStandardProcessPagingResponseObject>({
+        url: "/masterdata-service/standardTechnology/getPage",
+        method: "post",
+        data,
     });
 }
 // 标准工艺分页查询对象

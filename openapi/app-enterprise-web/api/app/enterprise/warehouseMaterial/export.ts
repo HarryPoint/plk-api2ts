@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存查询相关/exportUsingPOST_58
 export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/export",
+        method: "post",
+        data,
     });
 }
 // 物料主数据库存搜索VO

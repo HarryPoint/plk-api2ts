@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/门户相关/queryNavigationListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListPortalQueryResponseDTO['data']>({
-      url: "/flow-service/portal/queryNavigationList",
+    return http<IJSONResultListPortalQueryResponseDTO>({
+        url: "/flow-service/portal/queryNavigationList",
+        method: "get",
     });
 }
 // JSONResult«List«门户查询响应DTO»»

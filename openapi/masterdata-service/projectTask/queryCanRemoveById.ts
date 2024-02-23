@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryCanRemoveByIdUsingGET_1
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultstring1['data']>({
-      url: "/masterdata-service/projectTask/queryCanRemoveById",
-      params,
+    return http<IJSONResultstring1>({
+        url: "/masterdata-service/projectTask/queryCanRemoveById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«string»_1

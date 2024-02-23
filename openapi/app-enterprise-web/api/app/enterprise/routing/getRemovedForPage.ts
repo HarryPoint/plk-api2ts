@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getRemovedForPageUsingPOST_17
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/routing/getRemovedForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-enterprise-web/api/app/enterprise/routing/getRemovedForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

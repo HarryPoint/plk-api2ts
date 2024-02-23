@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/缓存相关/queryCacheCmdListUsingPOST
 export default function fetchMethod(data: ICacheCmdQueryRequestDTO) {
-    return post<IJSONResultListCacheCmdQueryResponseDTO['data']>({
-      url: "/flow-service/cache/queryCacheCmdList",
-      data,
+    return http<IJSONResultListCacheCmdQueryResponseDTO>({
+        url: "/flow-service/cache/queryCacheCmdList",
+        method: "post",
+        data,
     });
 }
 // CacheCmdQueryRequestDTO

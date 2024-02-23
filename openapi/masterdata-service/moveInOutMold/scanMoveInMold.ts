@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/scanMoveInMoldUsingPOST
 export default function fetchMethod(data: IFeedMoldScanRequestDTO) {
-    return post<IJSONResultFeedMoldRespondsToDTO['data']>({
-      url: "/masterdata-service/moveInOutMold/scanMoveInMold",
-      data,
+    return http<IJSONResultFeedMoldRespondsToDTO>({
+        url: "/masterdata-service/moveInOutMold/scanMoveInMold",
+        method: "post",
+        data,
     });
 }
 // 进料模具扫描请求DTO

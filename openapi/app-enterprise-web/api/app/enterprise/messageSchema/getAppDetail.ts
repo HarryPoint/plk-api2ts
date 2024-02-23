@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/getAppDetailUsingPOST
 export default function fetchMethod(data: IApplyTheServiceTreeToQueryTheDTO) {
-    return post<IJSONResultApplicationServiceTreeDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/messageSchema/getAppDetail",
-      data,
+    return http<IJSONResultApplicationServiceTreeDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/messageSchema/getAppDetail",
+        method: "post",
+        data,
     });
 }
 // 应用业务树查询请求DTO

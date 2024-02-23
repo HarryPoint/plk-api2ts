@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/exportUsingPOST_52
 export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/export",
+        method: "post",
+        data,
     });
 }
 // 仓库盘点任务分页查询对象

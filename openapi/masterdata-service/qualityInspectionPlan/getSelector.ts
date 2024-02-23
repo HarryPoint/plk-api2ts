@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质检方案/getSelectorUsingGET_7
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListSelectVOAsTheInspectionSolution['data']>({
-      url: "/masterdata-service/qualityInspectionPlan/getSelector",
-      params,
+    return http<IJSONResultListSelectVOAsTheInspectionSolution>({
+        url: "/masterdata-service/qualityInspectionPlan/getSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«质检方案选择VO»»

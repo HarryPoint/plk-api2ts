@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息相关/changeReadQhseUsingPOST
 export default function fetchMethod(data: IMessageChangeReadDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/message-notification-service/message/changeReadQhse",
-      data,
+    return http<IJSONResultobject>({
+        url: "/message-notification-service/message/changeReadQhse",
+        method: "post",
+        data,
     });
 }
 // 消息变更已读DTO

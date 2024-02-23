@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/getAggregateResultUsingPOST
 export default function fetchMethod(data: IPanpanReportsStatisticsToQueryObjects) {
-    return post<IJSONResultReportStatisticsSummaryResponseObject['data']>({
-      url: "/masterdata-service/panPanReportStatistic/getAggregateResult",
-      data,
+    return http<IJSONResultReportStatisticsSummaryResponseObject>({
+        url: "/masterdata-service/panPanReportStatistic/getAggregateResult",
+        method: "post",
+        data,
     });
 }
 // 盼盼上报统计查询对象

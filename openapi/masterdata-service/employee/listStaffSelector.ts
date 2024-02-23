@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/listStaffSelectorUsingPOST
 export default function fetchMethod(data: INameNumberDTO) {
-    return post<IJSONResultListEmployeeResponseObject['data']>({
-      url: "/masterdata-service/employee/listStaffSelector",
-      data,
+    return http<IJSONResultListEmployeeResponseObject>({
+        url: "/masterdata-service/employee/listStaffSelector",
+        method: "post",
+        data,
     });
 }
 // 名称、编号DTO

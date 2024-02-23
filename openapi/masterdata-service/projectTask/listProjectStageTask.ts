@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/listProjectStageTaskUsingPOST_1
 export default function fetchMethod(data: ListProjectStageTask) {
-    return post<IJSONResultListProjectTaskResponseObject3['data']>({
-      url: "/masterdata-service/projectTask/listProjectStageTask",
-      data,
+    return http<IJSONResultListProjectTaskResponseObject3>({
+        url: "/masterdata-service/projectTask/listProjectStageTask",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«项目任务响应对象»»_3

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityListUsingPOST
 export default function fetchMethod(data: ISecurityQueryRequest) {
-    return post<IJSONResultListSecurityQueryResponse['data']>({
-      url: "/masterdata-service/hseDashboard/querySecurityList",
-      data,
+    return http<IJSONResultListSecurityQueryResponse>({
+        url: "/masterdata-service/hseDashboard/querySecurityList",
+        method: "post",
+        data,
     });
 }
 // 安全查询请求

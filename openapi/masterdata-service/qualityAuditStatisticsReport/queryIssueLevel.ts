@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryIssueLevelUsingPOST
 export default function fetchMethod(data: IBasicQualityAuditQueryRequest) {
-    return post<IJSONResultListProblemLevelQueryResponse['data']>({
-      url: "/masterdata-service/qualityAuditStatisticsReport/queryIssueLevel",
-      data,
+    return http<IJSONResultListProblemLevelQueryResponse>({
+        url: "/masterdata-service/qualityAuditStatisticsReport/queryIssueLevel",
+        method: "post",
+        data,
     });
 }
 // 基础质量审核查询请求

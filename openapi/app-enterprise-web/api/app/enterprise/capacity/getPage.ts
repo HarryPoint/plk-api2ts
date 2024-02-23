@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产能相关/getPageUsingPOST_1
 export default function fetchMethod(data: ICapacityPagingQueryObject) {
-    return post<IJSONResultPagingInformationCapacityPagingResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/capacity/getPage",
-      data,
+    return http<IJSONResultPagingInformationCapacityPagingResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/capacity/getPage",
+        method: "post",
+        data,
     });
 }
 // 产能分页查询对象

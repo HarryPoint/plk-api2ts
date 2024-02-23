@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按班组统计)相关/getReportUsingPOST_8
 export default function fetchMethod(data: IOutputClassReportSearchVO) {
-    return post<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceClassGroupReport/getReport",
-      data,
+    return http<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceClassGroupReport/getReport",
+        method: "post",
+        data,
     });
 }
 // 产出类报表搜索VO

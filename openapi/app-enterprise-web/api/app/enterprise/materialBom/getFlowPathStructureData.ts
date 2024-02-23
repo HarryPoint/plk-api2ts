@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/物料bom相关/getFlowPathStructureDataUsingPOST_19
 export default function fetchMethod(data: IProcessStructureSearchVO) {
-    return post<IJSONResultFormStructureVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/materialBom/getFlowPathStructureData",
-      data,
+    return http<IJSONResultFormStructureVO>({
+        url: "/app-enterprise-web/api/app/enterprise/materialBom/getFlowPathStructureData",
+        method: "post",
+        data,
     });
 }
 // 流程结构搜索VO

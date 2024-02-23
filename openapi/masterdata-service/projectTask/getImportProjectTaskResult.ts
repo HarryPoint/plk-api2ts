@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/getImportProjectTaskResultUsingGET
 export default function fetchMethod(params: { importRecordId: string }) {
-    return get<IJSONResultProjectTaskImportRecordQueryResponse['data']>({
-      url: "/masterdata-service/projectTask/getImportProjectTaskResult",
-      params,
+    return http<IJSONResultProjectTaskImportRecordQueryResponse>({
+        url: "/masterdata-service/projectTask/getImportProjectTaskResult",
+        method: "get",
+        params,
     });
 }
 // JSONResult«项目任务导入记录查询响应»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/logoutUsingPOST
 export default function fetchMethod(data: IDeregisterRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/saasAuth/logout",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/saasAuth/logout",
+        method: "post",
+        data,
     });
 }
 // 注销请求 DTO

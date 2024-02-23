@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16600/doc.html#/default/待办相关/updateTodoBusinessStatusUsingGET
 export default function fetchMethod(params: { enterpriseId: number; flowPathTaskId: number; flowPathWorkOrderId: number; statusDesc: string }) {
-    return get<IJSONResultobject['data']>({
-      url: "/todo-service/todoList/updateTodoBusinessStatus",
-      params,
+    return http<IJSONResultobject>({
+        url: "/todo-service/todoList/updateTodoBusinessStatus",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

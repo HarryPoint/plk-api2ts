@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/scanCanExceptionLotOrderUsingPOST
 export default function fetchMethod(data: IDtoCanBeCheckedByBatchScanning) {
-    return post<IJSONResultHandlesBatchResponseDtosAbnormally['data']>({
-      url: "/masterdata-service/moveInOutLotOrder/scanCanExceptionLotOrder",
-      data,
+    return http<IJSONResultHandlesBatchResponseDtosAbnormally>({
+        url: "/masterdata-service/moveInOutLotOrder/scanCanExceptionLotOrder",
+        method: "post",
+        data,
     });
 }
 // 可进出料批次扫描查询dto

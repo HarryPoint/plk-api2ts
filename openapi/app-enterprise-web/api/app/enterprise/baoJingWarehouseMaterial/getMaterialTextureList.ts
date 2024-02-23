@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialTextureListUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultListNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialTextureList",
+    return http<IJSONResultListNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialTextureList",
+        method: "post",
     });
 }
 // JSONResult«List«名称，编号VO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/getListByBusinessCodeUsingGET
 export default function fetchMethod(params: { businessCode: string; enterpriseId: number }) {
-    return get<IJSONResultListProcessFormFieldAssociationDictionaryOptionSetVO['data']>({
-      url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getListByBusinessCode",
-      params,
+    return http<IJSONResultListProcessFormFieldAssociationDictionaryOptionSetVO>({
+        url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getListByBusinessCode",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«流程表单字段关联字典选项集VO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getBySystemTypeUsingGET
 export default function fetchMethod(params: { enterpriseId: number; systemType: string }) {
-    return get<IJSONResultProcessRespondsToVO['data']>({
-      url: "/flow-service/flowPath/getBySystemType",
-      params,
+    return http<IJSONResultProcessRespondsToVO>({
+        url: "/flow-service/flowPath/getBySystemType",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程响应VO»

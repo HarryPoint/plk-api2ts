@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getSettingInfoUsingGET_1
 export default function fetchMethod() {
-    return get<IJSONResultDeepBlueProductionScreenSettingReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getSettingInfo",
+    return http<IJSONResultDeepBlueProductionScreenSettingReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getSettingInfo",
+        method: "get",
     });
 }
 // JSONResult«深蓝生产大屏设置返回VO»

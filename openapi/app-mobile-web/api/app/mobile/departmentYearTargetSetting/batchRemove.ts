@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/部门年目标设置相关/batchRemoveByFlowPathIdUsingPOST_1
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/batchRemove",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/batchRemove",
+        method: "post",
+        data,
     });
 }
 // id集合信息

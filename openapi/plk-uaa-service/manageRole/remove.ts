@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/运营角色相关/removeUsingPOST_2
 export default function fetchMethod(data: IIdInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/manageRole/remove",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/manageRole/remove",
+        method: "post",
+        data,
     });
 }
 // Id 信息

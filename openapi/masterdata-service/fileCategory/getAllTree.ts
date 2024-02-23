@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getAllTreeListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListFileClassificationDetailsResponseDTO['data']>({
-      url: "/masterdata-service/fileCategory/getAllTree",
+    return http<IJSONResultListFileClassificationDetailsResponseDTO>({
+        url: "/masterdata-service/fileCategory/getAllTree",
+        method: "get",
     });
 }
 // JSONResult«List«文件分类明细响应DTO»»

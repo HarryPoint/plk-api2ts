@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/updateStagingUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/flowPathWorkOrder/updateStaging",
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/flowPathWorkOrder/updateStaging",
+        method: "post",
+        params,
     });
 }
 // JSONResult«object»

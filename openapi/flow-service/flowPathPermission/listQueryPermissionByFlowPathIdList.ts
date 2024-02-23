@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用权限相关/listQueryPermissionByFlowPathIdListUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListEditTheQueryPermission['data']>({
-      url: "/flow-service/flowPathPermission/listQueryPermissionByFlowPathIdList",
-      data,
+    return http<IJSONResultListEditTheQueryPermission>({
+        url: "/flow-service/flowPathPermission/listQueryPermissionByFlowPathIdList",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«查询权限编辑»»

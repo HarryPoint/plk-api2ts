@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getStatisticDataUsingPOST_1
 export default function fetchMethod(data: IDeviceStatisticsSearchVO) {
-    return post<IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStatisticsQuery['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceCollectionStatistic/getStatisticData",
-      data,
+    return http<IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStatisticsQuery>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceCollectionStatistic/getStatisticData",
+        method: "post",
+        data,
     });
 }
 // 设备统计数据搜索VO

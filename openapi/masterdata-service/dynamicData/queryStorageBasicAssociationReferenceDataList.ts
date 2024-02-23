@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryStorageBasicAssociationReferenceDataListUsingPOST
 export default function fetchMethod(data: IFormReferencingQueryRequestDTO) {
-    return post<IJSONResultListInventoryBasicDataAssociationDataQueryResponse['data']>({
-      url: "/masterdata-service/dynamicData/queryStorageBasicAssociationReferenceDataList",
-      data,
+    return http<IJSONResultListInventoryBasicDataAssociationDataQueryResponse>({
+        url: "/masterdata-service/dynamicData/queryStorageBasicAssociationReferenceDataList",
+        method: "post",
+        data,
     });
 }
 // FormReferencingQueryRequestDTO

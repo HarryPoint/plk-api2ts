@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入文件相关/saveImportFileUsingPOST
 export default function fetchMethod(data: ISaveImportFile) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/save",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/save",
+        method: "post",
+        data,
     });
 }
 // 保存导入文件

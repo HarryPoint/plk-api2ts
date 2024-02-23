@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺脚本相关/tempUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/script/standardTechnology/temp",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/script/standardTechnology/temp",
+        method: "get",
     });
 }
 // JSONResult«object»

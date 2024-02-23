@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/准备期相关/getPageUsingPOST_26
 export default function fetchMethod(data: IPreparationPeriodQueryVO) {
-    return post<IJSONResultPageInformationPreparationPeriodReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/readyTime/getPage",
-      data,
+    return http<IJSONResultPageInformationPreparationPeriodReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/readyTime/getPage",
+        method: "post",
+        data,
     });
 }
 // 准备期查询VO

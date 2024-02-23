@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQualityDetailUsingPOST
 export default function fetchMethod(data: IEnterAndExitTheStationForDetailedVOSearch, params: { enterpriseId: number }) {
-    return post<IJSONResultInboundAndOutboundInformationVO['data']>({
-      url: "/masterdata-service/produceTask/getQualityDetail",
-      data,
-      params,
+    return http<IJSONResultInboundAndOutboundInformationVO>({
+        url: "/masterdata-service/produceTask/getQualityDetail",
+        method: "post",
+        data,
+        params,
     });
 }
 // 进出站详细搜索VO

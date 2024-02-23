@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/saveSettingInfoUsingPOST
 export default function fetchMethod(data: IPanpanLargeScreenSetDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/lsPanPanSetting/saveSettingInfo",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/lsPanPanSetting/saveSettingInfo",
+        method: "post",
+        data,
     });
 }
 // 盼盼大屏设置DTO

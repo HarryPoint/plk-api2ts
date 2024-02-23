@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/moveUsingPOST_1
 export default function fetchMethod(data: IFileObjectMoveRequestDTO) {
-    return post<IJSONResultstring1['data']>({
-      url: "/masterdata-service/fileObject/move",
-      data,
+    return http<IJSONResultstring1>({
+        url: "/masterdata-service/fileObject/move",
+        method: "post",
+        data,
     });
 }
 // FileObjectMoveRequestDTO

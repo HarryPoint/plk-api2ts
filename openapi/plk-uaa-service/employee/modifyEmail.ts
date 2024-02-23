@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/modifyEmailUsingPOST
 export default function fetchMethod(data: IEmployeeModifiesEmailToRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/employee/modifyEmail",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/employee/modifyEmail",
+        method: "post",
+        data,
     });
 }
 // 员工修改邮箱请求DTO

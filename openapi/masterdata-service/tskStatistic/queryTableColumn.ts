@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTableColumnUsingGET_2
 export default function fetchMethod() {
-    return get<IJSONResultListTskStatisticReportTableColumnBO['data']>({
-      url: "/masterdata-service/tskStatistic/queryTableColumn",
+    return http<IJSONResultListTskStatisticReportTableColumnBO>({
+        url: "/masterdata-service/tskStatistic/queryTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«TskStatisticReportTableColumnBO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/listBillNameUsingGET
 export default function fetchMethod(params: { billName: string }) {
-    return get<IJSONResultListstring['data']>({
-      url: "/masterdata-service/baoJingReport/listBillName",
-      params,
+    return http<IJSONResultListstring>({
+        url: "/masterdata-service/baoJingReport/listBillName",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«string»»

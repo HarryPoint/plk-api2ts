@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/queryFavoritesUsingPOST
 export default function fetchMethod(data: IEnterpriseRoutingCollectionQueryRequestDTO) {
-    return post<IJSONResultListTheUserCollectsTheEnterpriseRoutingDTO['data']>({
-      url: "/plk-uaa-service/enterpriseRouter/queryFavorites",
-      data,
+    return http<IJSONResultListTheUserCollectsTheEnterpriseRoutingDTO>({
+        url: "/plk-uaa-service/enterpriseRouter/queryFavorites",
+        method: "post",
+        data,
     });
 }
 // 企业路由收藏查询请求 DTO

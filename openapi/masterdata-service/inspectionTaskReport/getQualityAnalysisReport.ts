@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/getQualityAnalysisReportUsingPOST
 export default function fetchMethod(data: GetQualityAnalysisReport) {
-    return post<IJSONResultThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO['data']>({
-      url: "/masterdata-service/inspectionTaskReport/getQualityAnalysisReport",
-      data,
+    return http<IJSONResultThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO>({
+        url: "/masterdata-service/inspectionTaskReport/getQualityAnalysisReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«质量统计分析报表返回DTO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/listFormFieldSerialNoUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultMapstringstring['data']>({
-      url: "/flow-service/flowPathScript/listFormFieldSerialNo",
-      params,
+    return http<IJSONResultMapstringstring>({
+        url: "/flow-service/flowPathScript/listFormFieldSerialNo",
+        method: "get",
+        params,
     });
 }
 // JSONResult«Map«string,string»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/计算方案相关/addUsingPOST_1
 export default function fetchMethod(data: IComputingSolutionAddedARequestDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/calculationPlan/add",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/calculationPlan/add",
+        method: "post",
+        data,
     });
 }
 // 计算方案新增请求DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/运营角色相关/addUsingPOST_7
 export default function fetchMethod(data: IAddedARequestForOperationRoleAuthorizationInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/manageRole/add",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/manageRole/add",
+        method: "post",
+        data,
     });
 }
 // 运营角色授权信息新增请求

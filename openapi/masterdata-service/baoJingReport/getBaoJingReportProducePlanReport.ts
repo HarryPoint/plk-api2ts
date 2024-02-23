@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportProducePlanReportUsingPOST
 export default function fetchMethod(data: IBaojingProductionTaskGanttChartQueryObject) {
-    return post<IJSONResultListTreasureProductionPlanGanttChartResponseObject['data']>({
-      url: "/masterdata-service/baoJingReport/getBaoJingReportProducePlanReport",
-      data,
+    return http<IJSONResultListTreasureProductionPlanGanttChartResponseObject>({
+        url: "/masterdata-service/baoJingReport/getBaoJingReportProducePlanReport",
+        method: "post",
+        data,
     });
 }
 // 宝晶生产任务甘特图查询对象

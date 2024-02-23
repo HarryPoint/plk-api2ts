@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检管理/getQualityInspectionPlanSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListSelectVOAsTheInspectionSolution['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/qualityInspectionPlan/getSelector",
+    return http<IJSONResultListSelectVOAsTheInspectionSolution>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/qualityInspectionPlan/getSelector",
+        method: "get",
     });
 }
 // JSONResult«List«质检方案选择VO»»

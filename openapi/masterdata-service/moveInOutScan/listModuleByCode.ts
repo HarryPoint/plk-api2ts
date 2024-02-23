@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/listModuleByCodeUsingGET
 export default function fetchMethod(params: { code: string }) {
-    return get<IJSONResultSetstring['data']>({
-      url: "/masterdata-service/moveInOutScan/listModuleByCode",
-      params,
+    return http<IJSONResultSetstring>({
+        url: "/masterdata-service/moveInOutScan/listModuleByCode",
+        method: "get",
+        params,
     });
 }
 // JSONResult«Set«string»»

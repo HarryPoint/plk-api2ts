@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveOutLotUsingGET
 export default function fetchMethod(params: { taskId: string; enterpriseId: number }) {
-    return get<IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials['data']>({
-      url: "/masterdata-service/produceTask/getMoveOutLot",
-      params,
+    return http<IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials>({
+        url: "/masterdata-service/produceTask/getMoveOutLot",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«wip可进出料响应dto»»

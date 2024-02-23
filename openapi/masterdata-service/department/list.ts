@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/部门相关/listUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListDepartmentDTO['data']>({
-      url: "/masterdata-service/department/list",
+    return http<IJSONResultListDepartmentDTO>({
+        url: "/masterdata-service/department/list",
+        method: "get",
     });
 }
 // JSONResult«List«部门DTO»»

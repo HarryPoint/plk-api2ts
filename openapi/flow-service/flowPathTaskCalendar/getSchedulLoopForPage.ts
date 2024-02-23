@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/任务排班相关/getSchedulLoopForPageUsingPOST
 export default function fetchMethod(data: IProcessFactoryCalendarSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO['data']>({
-      url: "/flow-service/flowPathTaskCalendar/getSchedulLoopForPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO>({
+        url: "/flow-service/flowPathTaskCalendar/getSchedulLoopForPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程工厂日历搜索VO

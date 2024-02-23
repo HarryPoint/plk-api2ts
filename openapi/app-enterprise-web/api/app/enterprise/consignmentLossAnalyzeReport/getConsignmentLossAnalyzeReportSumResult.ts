@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶寄售损耗报表相关/getConsignmentLossAnalyzeReportSumResultUsingPOST
 export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO) {
-    return post<IJSONResultConsignmentLossAnalysisReportPaginatedReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getConsignmentLossAnalyzeReportSumResult",
-      data,
+    return http<IJSONResultConsignmentLossAnalysisReportPaginatedReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getConsignmentLossAnalyzeReportSumResult",
+        method: "post",
+        data,
     });
 }
 // 寄售损耗分析报表搜索VO

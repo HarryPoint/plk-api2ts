@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
 export default function fetchMethod(data: IEquipmentPersonnelAbilityToBatchEditDtos) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/batchEditDelete",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/batchEditDelete",
+        method: "post",
+        data,
     });
 }
 // 设备人员能力批量编辑DTO

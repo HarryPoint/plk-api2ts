@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/editByBusinessCodeUsingPOST
 export default function fetchMethod(data: IFormFieldOption[], params: { businessCode: string; enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathFormFieldRpSelectorDictionary/editByBusinessCode",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathFormFieldRpSelectorDictionary/editByBusinessCode",
+        method: "post",
+        data,
+        params,
     });
 }
 // FormFieldOption

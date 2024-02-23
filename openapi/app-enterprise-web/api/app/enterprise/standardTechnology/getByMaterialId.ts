@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/标准工艺相关/getByMaterialIdUsingGET
 export default function fetchMethod(params: { materialId: number }) {
-    return get<IJSONResultListStandardProcessDropDownResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getByMaterialId",
-      params,
+    return http<IJSONResultListStandardProcessDropDownResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getByMaterialId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«标准工艺下拉响应对象»»

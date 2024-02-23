@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialStatisticsUsingPOST
 export default function fetchMethod(data: IBaojingMaterialMasterDataInventorySearchVO) {
-    return post<IJSONResultBaojingMaterialInventoryStatisticsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialStatistics",
-      data,
+    return http<IJSONResultBaojingMaterialInventoryStatisticsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialStatistics",
+        method: "post",
+        data,
     });
 }
 // 宝晶物料主数据库存搜索VO

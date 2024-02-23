@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAccountReceivableReportSumResultUsingPOST
 export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO['data']>({
-      url: "/masterdata-service/baoJingReport/getAccountReceivableReportSumResult",
-      data,
-      params,
+    return http<IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO>({
+        url: "/masterdata-service/baoJingReport/getAccountReceivableReportSumResult",
+        method: "post",
+        data,
+        params,
     });
 }
 // 宝晶应收账款分析报表搜索VO

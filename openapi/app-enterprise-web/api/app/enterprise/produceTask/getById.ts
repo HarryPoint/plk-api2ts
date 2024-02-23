@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产任务相关/getByIdUsingGET_13
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultProductionTaskDetailsReturnToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTask/getById",
-      params,
+    return http<IJSONResultProductionTaskDetailsReturnToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTask/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«生产任务详情返回VO»

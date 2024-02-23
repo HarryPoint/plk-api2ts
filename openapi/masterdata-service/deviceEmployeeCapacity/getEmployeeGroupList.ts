@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeGroupListUsingPOST
 export default function fetchMethod(data: IDevicePersonnelAbilityQueryDtosInGroups) {
-    return post<IJSONResultListDevicePersonnelAbilityToGroupResponseDtos['data']>({
-      url: "/masterdata-service/deviceEmployeeCapacity/getEmployeeGroupList",
-      data,
+    return http<IJSONResultListDevicePersonnelAbilityToGroupResponseDtos>({
+        url: "/masterdata-service/deviceEmployeeCapacity/getEmployeeGroupList",
+        method: "post",
+        data,
     });
 }
 // 设备人员能力分组查询DTO

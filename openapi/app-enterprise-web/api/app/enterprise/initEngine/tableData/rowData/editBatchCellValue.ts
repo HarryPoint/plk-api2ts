@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/editBatchVerticalCellUsingPOST
 export default function fetchMethod(data: ICellBatchEditRequest) {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/editBatchCellValue",
-      data,
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/editBatchCellValue",
+        method: "post",
+        data,
     });
 }
 // 单元格批量编辑请求

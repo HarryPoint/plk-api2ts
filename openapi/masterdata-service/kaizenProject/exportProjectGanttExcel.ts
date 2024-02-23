@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/exportProjectGanttExcelUsingPOST
 export default function fetchMethod(data: IProjectGanttChartQueryObject) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/kaizenProject/exportProjectGanttExcel",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/kaizenProject/exportProjectGanttExcel",
+        method: "post",
+        data,
     });
 }
 // 项目甘特图查询对象

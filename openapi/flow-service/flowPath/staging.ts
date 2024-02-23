@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/stagingUsingPOST
 export default function fetchMethod(data: IProcessEditDTO2, params: { enterpriseId: number }) {
-    return post<IJSONResultProcessVersionRespondsToVO['data']>({
-      url: "/flow-service/flowPath/staging",
-      data,
-      params,
+    return http<IJSONResultProcessVersionRespondsToVO>({
+        url: "/flow-service/flowPath/staging",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程编辑DTO_2

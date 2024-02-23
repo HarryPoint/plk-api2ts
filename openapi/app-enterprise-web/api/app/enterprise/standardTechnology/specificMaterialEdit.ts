@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/标准工艺相关/specificMaterialEditUsingPOST
 export default function fetchMethod(data: IStandardProcessSpecificMaterialEditRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnology/specificMaterialEdit",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnology/specificMaterialEdit",
+        method: "post",
+        data,
     });
 }
 // 标准工艺具体物料编辑请求对象

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标签设置/exportUsingPOST_21
 export default function fetchMethod(data: IExceptionTagSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceTag/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceTag/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 异常标签搜索VO

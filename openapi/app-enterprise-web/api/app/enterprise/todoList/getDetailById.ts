@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/待办相关/getDetailByIdUsingGET_4
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProcessTaskDetailsAreReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/todoList/getDetailById",
-      params,
+    return http<IJSONResultProcessTaskDetailsAreReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/todoList/getDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程任务明细返回VO»

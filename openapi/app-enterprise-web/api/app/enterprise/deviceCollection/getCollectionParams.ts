@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备数采数据概览相关/getCollectionParamsUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListDeviceDataCollectionSelectVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceCollection/getCollectionParams",
-      params,
+    return http<IJSONResultListDeviceDataCollectionSelectVO>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceCollection/getCollectionParams",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«设备数采选择VO»»

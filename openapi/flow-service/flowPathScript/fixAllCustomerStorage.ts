@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/fixAllCustomerStorageInUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathScript/fixAllCustomerStorage",
-      data,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathScript/fixAllCustomerStorage",
+        method: "post",
+        data,
     });
 }
 // JSONResult«object»

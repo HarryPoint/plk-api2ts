@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionMaterialIssuanceOrderUsingGET
 export default function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO['data']>({
-      url: "/masterdata-service/produceCost/checkProductionMaterialIssuanceOrder",
-      params,
+    return http<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>({
+        url: "/masterdata-service/produceCost/checkProductionMaterialIssuanceOrder",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产成本核算单据状态校验响应DTO»»

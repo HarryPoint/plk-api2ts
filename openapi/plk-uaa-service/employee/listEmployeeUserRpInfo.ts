@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/listEmployeeUserRpInfoUsingPOST
 export default function fetchMethod(data: IBatchQueryEmployeeUserAssociationInformation) {
-    return post<IJSONResultListEmployeeUserAssociationInformationResponse['data']>({
-      url: "/plk-uaa-service/employee/listEmployeeUserRpInfo",
-      data,
+    return http<IJSONResultListEmployeeUserAssociationInformationResponse>({
+        url: "/plk-uaa-service/employee/listEmployeeUserRpInfo",
+        method: "post",
+        data,
     });
 }
 // 员工用户关联信息批量查询

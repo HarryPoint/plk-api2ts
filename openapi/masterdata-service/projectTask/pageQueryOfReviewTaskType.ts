@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageQueryOfReviewTaskTypeUsingPOST
 export default function fetchMethod(data: IItemTaskPagingQueryResponse1) {
-    return post<IJSONResultPageInformationItemTaskPageQueryResponse['data']>({
-      url: "/masterdata-service/projectTask/pageQueryOfReviewTaskType",
-      data,
+    return http<IJSONResultPageInformationItemTaskPageQueryResponse>({
+        url: "/masterdata-service/projectTask/pageQueryOfReviewTaskType",
+        method: "post",
+        data,
     });
 }
 // 项目任务分页查询响应_1

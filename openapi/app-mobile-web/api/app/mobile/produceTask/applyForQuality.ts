@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/applyForQualityUsingPOST
 export default function fetchMethod(data: IApplyForTheDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/applyForQuality",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/applyForQuality",
+        method: "post",
+        data,
     });
 }
 // 质检申请DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/代办相关/markReadUsingPOST
 export default function fetchMethod(data: IToDoMarkReadRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/todo/markRead",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/todo/markRead",
+        method: "post",
+        data,
     });
 }
 // ToDoMarkReadRequestDTO

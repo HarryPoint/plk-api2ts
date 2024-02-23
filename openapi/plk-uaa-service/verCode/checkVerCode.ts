@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/验证码相关/checkVerCodeUsingPOST
 export default function fetchMethod(data: IVerificationCodeVerifiesTheDTO) {
-    return post<IJSONResultIndicatesWhetherTheInformationIsDisplayed['data']>({
-      url: "/plk-uaa-service/verCode/checkVerCode",
-      data,
+    return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>({
+        url: "/plk-uaa-service/verCode/checkVerCode",
+        method: "post",
+        data,
     });
 }
 // 验证码校验 DTO

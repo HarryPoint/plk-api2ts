@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/班次相关/exportUsingPOST_5
 export default function fetchMethod(data: IShiftSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-mobile-web/api/app/mobile/classShift/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-mobile-web/api/app/mobile/classShift/export",
+        method: "post",
+        data,
     });
 }
 // 班次搜索VO

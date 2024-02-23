@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/getTaskLogForPageUsingPOST
 export default function fetchMethod(data: IJobLogSearchVO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultThePageInformationWorkOrderLogReturnsVO['data']>({
-      url: "/masterdata-service/flowPathTask/getTaskLogForPage",
-      data,
-      params,
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
+        url: "/masterdata-service/flowPathTask/getTaskLogForPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工单日志搜索VO

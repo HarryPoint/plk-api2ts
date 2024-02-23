@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentInboundAnalyzeReportSumResultUsingPOST
 export default function fetchMethod(data: IConsignmentInboundAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultConsignmentInboundAnalysisReportTotalReturnVO['data']>({
-      url: "/masterdata-service/baoJingReport/getConsignmentInboundAnalyzeReportSumResult",
-      data,
-      params,
+    return http<IJSONResultConsignmentInboundAnalysisReportTotalReturnVO>({
+        url: "/masterdata-service/baoJingReport/getConsignmentInboundAnalyzeReportSumResult",
+        method: "post",
+        data,
+        params,
     });
 }
 // 寄售入库分析报表搜索VO

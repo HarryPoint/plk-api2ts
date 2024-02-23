@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/queryCanTrialDelayEnterpriseListUsingPOST
 export default function fetchMethod(data: IProductOrderEnterpriseQueryRequestObject) {
-    return post<IJSONResultListEnterpriseNameNumberResponseObject['data']>({
-      url: "/plk-uaa-service/enterprise/queryCanTrialDelayEnterpriseList",
-      data,
+    return http<IJSONResultListEnterpriseNameNumberResponseObject>({
+        url: "/plk-uaa-service/enterprise/queryCanTrialDelayEnterpriseList",
+        method: "post",
+        data,
     });
 }
 // 产品订单企业查询请求对象

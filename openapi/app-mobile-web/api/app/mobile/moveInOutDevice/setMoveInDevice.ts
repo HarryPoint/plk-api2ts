@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
 export default function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/moveInOutDevice/setMoveInDevice",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/moveInOutDevice/setMoveInDevice",
+        method: "post",
+        data,
     });
 }
 // 生产任务设置进料设备请求DTO

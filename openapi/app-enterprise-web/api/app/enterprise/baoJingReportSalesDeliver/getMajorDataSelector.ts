@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getMajorDataSelectorUsingPOST_6
 export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return post<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getMajorDataSelector",
-      data,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getMajorDataSelector",
+        method: "post",
+        data,
     });
 }
 // 物料主数据选择列表搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/CRM-跟进记录相关/exportUsingPOST_17
 export default function fetchMethod(data: IProcessDataSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-mobile-web/api/app/mobile/followRecord/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-mobile-web/api/app/mobile/followRecord/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据搜索VO

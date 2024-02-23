@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/exportUsingPOST_20
 export default function fetchMethod(data: IProcessDataBaseSearchVO2) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceProgressStatistics/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceProgressStatistics/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO_2

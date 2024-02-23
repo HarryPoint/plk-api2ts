@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeTelephoneByPasswordUsingPOST
 export default function fetchMethod(data: IUpdateMobileNumberBasedOnPasswordRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/saasAuth/changeTelephoneByPassword",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/saasAuth/changeTelephoneByPassword",
+        method: "post",
+        data,
     });
 }
 // 根据密码更新手机号码请求 DTO

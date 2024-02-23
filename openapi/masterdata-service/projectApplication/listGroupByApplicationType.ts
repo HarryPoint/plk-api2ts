@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/listGroupByApplicationTypeUsingGET
 export default function fetchMethod(params: { projectId: number }) {
-    return get<ITheJSONResultListProjectAppliesTheGroupReturnObject['data']>({
-      url: "/masterdata-service/projectApplication/listGroupByApplicationType",
-      params,
+    return http<ITheJSONResultListProjectAppliesTheGroupReturnObject>({
+        url: "/masterdata-service/projectApplication/listGroupByApplicationType",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«项目应用分组返回对象»»

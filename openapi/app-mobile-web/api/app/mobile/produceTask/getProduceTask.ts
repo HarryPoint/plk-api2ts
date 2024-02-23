@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskUsingPOST
 export default function fetchMethod(data: IProductionTaskQueryDTOForMobileEnd) {
-    return post<IJSONResultPageInformationProductionTaskResponseDTOForMobile['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTask",
-      data,
+    return http<IJSONResultPageInformationProductionTaskResponseDTOForMobile>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTask",
+        method: "post",
+        data,
     });
 }
 // 生产任务查询DTO(针对移动端)

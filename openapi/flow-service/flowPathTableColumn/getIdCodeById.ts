@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表格相关/getIdCodeByIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultIdNameNumberVO['data']>({
-      url: "/flow-service/flowPathTableColumn/getIdCodeById",
-      params,
+    return http<IJSONResultIdNameNumberVO>({
+        url: "/flow-service/flowPathTableColumn/getIdCodeById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«Id，名称，编号VO»

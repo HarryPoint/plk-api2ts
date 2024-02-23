@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/cancelFavoriteUsingPOST
 export default function fetchMethod(data: ITheEnterpriseRoutingCollectionCancelsTheRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/enterpriseRouter/cancelFavorite",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/enterpriseRouter/cancelFavorite",
+        method: "post",
+        data,
     });
 }
 // 企业路由收藏取消请求 DTO

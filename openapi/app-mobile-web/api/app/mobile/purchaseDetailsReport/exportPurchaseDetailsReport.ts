@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/采购明细报表相关/exportPurchaseDetailsReportUsingPOST
 export default function fetchMethod(data: ExportPurchaseDetailsReport) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-mobile-web/api/app/mobile/purchaseDetailsReport/exportPurchaseDetailsReport",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-mobile-web/api/app/mobile/purchaseDetailsReport/exportPurchaseDetailsReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«long»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/exportHandlingOfNonConformingStatisticsReportUsingPOST
 export default function fetchMethod(data: ExportHandlingOfNonConformingStatisticsReport) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/handlingOfNonConformingReport/exportHandlingOfNonConformingStatisticsReport",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/handlingOfNonConformingReport/exportHandlingOfNonConformingStatisticsReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«long»

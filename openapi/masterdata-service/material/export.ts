@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料相关/exportUsingPOST_9
 export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/material/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/material/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 物料主数据库存搜索VO

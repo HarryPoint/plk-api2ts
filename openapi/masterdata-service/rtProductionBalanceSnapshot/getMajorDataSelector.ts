@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getMajorDataSelectorUsingPOST
 export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/masterdata-service/rtProductionBalanceSnapshot/getMajorDataSelector",
-      data,
-      params,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/masterdata-service/rtProductionBalanceSnapshot/getMajorDataSelector",
+        method: "post",
+        data,
+        params,
     });
 }
 // 物料主数据选择列表搜索VO

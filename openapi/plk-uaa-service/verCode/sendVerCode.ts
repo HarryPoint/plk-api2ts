@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/验证码相关/sendVerCodeUsingPOST
 export default function fetchMethod(data: ISMSVerificationCodeSendRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/verCode/sendVerCode",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/verCode/sendVerCode",
+        method: "post",
+        data,
     });
 }
 // 短信验证码发送请求 DTO

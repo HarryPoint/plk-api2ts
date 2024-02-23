@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/逆地址解析/parseUsingPOST
 export default function fetchMethod(data: ILocationInfo) {
-    return post<IJSONResultAddressOutputDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/reverseAddressParsing/parsing",
-      data,
+    return http<IJSONResultAddressOutputDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/reverseAddressParsing/parsing",
+        method: "post",
+        data,
     });
 }
 // LocationInfo

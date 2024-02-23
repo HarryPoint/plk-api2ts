@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getBaseByIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultBasicFlowInformationResponseDTO['data']>({
-      url: "/flow-service/flowPath/getBaseById",
-      params,
+    return http<IJSONResultBasicFlowInformationResponseDTO>({
+        url: "/flow-service/flowPath/getBaseById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程基本信息响应DTO»

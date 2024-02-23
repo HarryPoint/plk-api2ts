@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16600/doc.html#/default/待办相关/getAppNotHandleCountUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultint['data']>({
-      url: "/todo-service/todoList/app/getNotHandleCount",
+    return http<IJSONResultint>({
+        url: "/todo-service/todoList/app/getNotHandleCount",
+        method: "get",
     });
 }
 // JSONResult«int»

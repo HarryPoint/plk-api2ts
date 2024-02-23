@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表(收款汇总)相关/getCollectionTotalReportSumResultUsingPOST
 export default function fetchMethod(data: IBaojingCollectionSummaryAnalysisReportSearchVO) {
-    return post<IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportCollectionTotal/getCollectionTotalReportSumResult",
-      data,
+    return http<IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportCollectionTotal/getCollectionTotalReportSumResult",
+        method: "post",
+        data,
     });
 }
 // 宝晶收款汇总分析报表搜索VO

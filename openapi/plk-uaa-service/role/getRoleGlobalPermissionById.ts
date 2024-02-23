@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/角色相关/getRoleGlobalPermissionByIdUsingGET
 export default function fetchMethod(params: { id?: number }) {
-    return get<IJSONResultListRoleGlobalPermissionResponseDTO['data']>({
-      url: "/plk-uaa-service/role/getRoleGlobalPermissionById",
-      params,
+    return http<IJSONResultListRoleGlobalPermissionResponseDTO>({
+        url: "/plk-uaa-service/role/getRoleGlobalPermissionById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«角色全局权限响应DTO»»

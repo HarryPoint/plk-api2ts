@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/getByIdUsingGET_1
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProducePlanAutoScheduleOutputVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/getById",
-      params,
+    return http<IJSONResultProducePlanAutoScheduleOutputVO>({
+        url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«ProducePlanAutoScheduleOutputVO»

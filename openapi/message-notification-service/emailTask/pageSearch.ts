@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/pageSearchUsingPOST
 export default function fetchMethod(data: IPaging) {
-    return post<IEmailTaskQueryResponseDTOJSONResultPagingInformation['data']>({
-      url: "/message-notification-service/emailTask/pageSearch",
-      data,
+    return http<IEmailTaskQueryResponseDTOJSONResultPagingInformation>({
+        url: "/message-notification-service/emailTask/pageSearch",
+        method: "post",
+        data,
     });
 }
 // 分页

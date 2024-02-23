@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/计算方案相关/getByIdUsingGET_1
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultSpecifiesTheResponseDTOForTheCalculationScheme['data']>({
-      url: "/flow-service/calculationPlan/getById",
-      params,
+    return http<IJSONResultSpecifiesTheResponseDTOForTheCalculationScheme>({
+        url: "/flow-service/calculationPlan/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«计算方案明细响应DTO»

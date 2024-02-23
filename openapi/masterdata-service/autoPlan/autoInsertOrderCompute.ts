@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoInsertOrderComputeUsingPOST
 export default function fetchMethod(data: IProductionOrderAutomaticInsertionDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultSchedulingResultVO['data']>({
-      url: "/masterdata-service/autoPlan/autoInsertOrderCompute",
-      data,
-      params,
+    return http<IJSONResultSchedulingResultVO>({
+        url: "/masterdata-service/autoPlan/autoInsertOrderCompute",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产订单自动插单DTO

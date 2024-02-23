@@ -11,7 +11,7 @@ export const customContent = async (
     for (let method in fetchDefines) {
       const methodDefine = fetchDefines[method];
       definitionsFile.addStatements((writer) => {
-        writer.writeLine(`import { ${method} } from '@/api/http';`);
+        writer.writeLine(`import { http } from '@/api/http';`);
         writer.writeLine(" ");
         const docUrl = `// http://${
           data.host
@@ -80,11 +80,12 @@ export const customContent = async (
       });
       functionDeclaration.setBodyText((writer) => {
         writer.writeLine(
-          `return ${method}<${
-            responseDefine ? `${transFormType(responseDefine)}['data']` : "any"
+          `return http<${
+            responseDefine ? `${transFormType(responseDefine)}` : "any"
           }>({`
         );
         writer.writeLine(`  url: "${url}",`);
+        writer.writeLine(`  method: "${method}",`);
         defineArr?.forEach((paramsDefine: any) => {
           if (paramsDefine.in === "body") {
             writer.writeLine(`  data,`);

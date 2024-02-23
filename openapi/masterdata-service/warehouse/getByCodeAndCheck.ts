@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getByCodeAndCheckUsingPOST_1
 export default function fetchMethod(params: { code: string; enterpriseId: number }) {
-    return post<IJSONResultPositionVO['data']>({
-      url: "/masterdata-service/warehouse/getByCodeAndCheck",
-      params,
+    return http<IJSONResultPositionVO>({
+        url: "/masterdata-service/warehouse/getByCodeAndCheck",
+        method: "post",
+        params,
     });
 }
 // JSONResult«仓位VO»

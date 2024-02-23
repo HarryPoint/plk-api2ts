@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/排产全局参数配置相关/saveSettingUsingPOST
 export default function fetchMethod(data: ISchedulingParametersDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/planGlobalConfig/saveSetting",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/planGlobalConfig/saveSetting",
+        method: "post",
+        data,
+        params,
     });
 }
 // 排产参数DTO

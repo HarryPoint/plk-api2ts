@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/modifyCategoryUsingPOST
 export default function fetchMethod(data: IStandardProcessModificationClassificationRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/standardTechnology/modifyCategory",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/standardTechnology/modifyCategory",
+        method: "post",
+        data,
     });
 }
 // 标准工艺修改分类请求对象

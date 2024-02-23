@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/resetSecretUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/enterprise/resetSecret",
-      params,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/enterprise/resetSecret",
+        method: "post",
+        params,
     });
 }
 // JSONResult«object»

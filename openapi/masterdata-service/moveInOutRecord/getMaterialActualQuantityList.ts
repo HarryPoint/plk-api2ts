@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMaterialActualQuantityListUsingPOST
 export default function fetchMethod(data: IMaterialOutputSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListMaterialOutputVO['data']>({
-      url: "/masterdata-service/moveInOutRecord/getMaterialActualQuantityList",
-      data,
-      params,
+    return http<IJSONResultListMaterialOutputVO>({
+        url: "/masterdata-service/moveInOutRecord/getMaterialActualQuantityList",
+        method: "post",
+        data,
+        params,
     });
 }
 // 物料产出搜索VO

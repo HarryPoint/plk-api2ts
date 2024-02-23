@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceBatchUsingPOST
 export default function fetchMethod(data: IProductionTaskBatchSetTheFeedDeviceRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/moveInOutDevice/setMoveInDeviceBatch",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/moveInOutDevice/setMoveInDeviceBatch",
+        method: "post",
+        data,
     });
 }
 // 生产任务批量设置进料设备请求DTO

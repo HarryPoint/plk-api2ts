@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/定时任务相关/checkJobCanExchangeUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/job/checkJobCanExchange",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/job/checkJobCanExchange",
+        method: "post",
     });
 }
 // JSONResult«object»

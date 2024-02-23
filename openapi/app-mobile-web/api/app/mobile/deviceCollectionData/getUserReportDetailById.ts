@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/设备数采相关/getUserReportDetailByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/deviceCollectionData/getUserReportDetailById",
-      params,
+    return http<IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO>({
+        url: "/app-mobile-web/api/app/mobile/deviceCollectionData/getUserReportDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«设备数采数据人工上报详单返回VO»

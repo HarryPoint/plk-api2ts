@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/disableBatchUsingPOST
 export default function fetchMethod(data: IEmailTaskDisableRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/message-notification-service/emailTask/disableBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/message-notification-service/emailTask/disableBatch",
+        method: "post",
+        data,
     });
 }
 // EmailTaskDisableRequestDTO

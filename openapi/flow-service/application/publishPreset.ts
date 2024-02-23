@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用相关/publishPresetUsingPOST
 export default function fetchMethod(data: IApplicationPublishingDefaultRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/application/publishPreset",
-      data,
+    return http<IJSONResultobject>({
+        url: "/flow-service/application/publishPreset",
+        method: "post",
+        data,
     });
 }
 // 应用发布预设请求 DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/checkBatchUsingPOST
 export default function fetchMethod(data: IAppmessageconfigbatchcheckrequestdto) {
-    return post<IJSONResultstring['data']>({
-      url: "/message-notification-service/appMessageConfig/checkBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/message-notification-service/appMessageConfig/checkBatch",
+        method: "post",
+        data,
     });
 }
 // AppMessageConfigBatchCheckRequestDTO

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getStorageTakeCheckTaskDetailUsingGET
 export default function fetchMethod(params: { id: string; enterpriseId: number; userId: number }) {
-    return get<IJSONResultReturnsTheDTOFromTheExecutingEndOfTheWarehouseInventoryTaskDetails['data']>({
-      url: "/masterdata-service/storageTakeCheckTask/getStorageTakeCheckTaskDetail",
-      params,
+    return http<IJSONResultReturnsTheDTOFromTheExecutingEndOfTheWarehouseInventoryTaskDetails>({
+        url: "/masterdata-service/storageTakeCheckTask/getStorageTakeCheckTaskDetail",
+        method: "get",
+        params,
     });
 }
 // JSONResult«仓库盘点任务明细执行端返回DTO»

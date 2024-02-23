@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/getSuperManagerUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultTheSuperAdministratorRespondsToTheDTO['data']>({
-      url: "/plk-uaa-service/enterprise/getSuperManager",
-      params,
+    return http<IJSONResultTheSuperAdministratorRespondsToTheDTO>({
+        url: "/plk-uaa-service/enterprise/getSuperManager",
+        method: "post",
+        params,
     });
 }
 // JSONResult«超级管理员用户响应 DTO»

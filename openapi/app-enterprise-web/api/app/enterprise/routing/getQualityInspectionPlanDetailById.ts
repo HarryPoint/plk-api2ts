@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getQualityInspectionPlanDetailByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultCheckSolutionDetailsAreReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/routing/getQualityInspectionPlanDetailById",
-      params,
+    return http<IJSONResultCheckSolutionDetailsAreReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/routing/getQualityInspectionPlanDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«质检方案明细返回VO»

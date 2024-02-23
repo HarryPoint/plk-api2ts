@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/listUsingGET_2
 export default function fetchMethod() {
-    return get<IJSONResultListEmployeeBaseResponseDTO['data']>({
-      url: "/masterdata-service/employee/list",
+    return http<IJSONResultListEmployeeBaseResponseDTO>({
+        url: "/masterdata-service/employee/list",
+        method: "get",
     });
 }
 // JSONResult«List«员工基础响应 DTO»»

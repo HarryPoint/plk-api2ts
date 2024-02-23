@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getWorkShopUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultDarkBlueWorkshopKanbanRespondsToVO['data']>({
-      url: "/masterdata-service/lsShenLanSetting/getWorkShop",
-      params,
+    return http<IJSONResultDarkBlueWorkshopKanbanRespondsToVO>({
+        url: "/masterdata-service/lsShenLanSetting/getWorkShop",
+        method: "get",
+        params,
     });
 }
 // JSONResult«深蓝车间看板响应VO»

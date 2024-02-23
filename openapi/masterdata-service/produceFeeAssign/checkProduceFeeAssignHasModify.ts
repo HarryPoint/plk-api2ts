@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/checkProduceFeeAssignHasModifyUsingGET
 export default function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get<IJSONResultVerifiesTheResponseObject['data']>({
-      url: "/masterdata-service/produceFeeAssign/checkProduceFeeAssignHasModify",
-      params,
+    return http<IJSONResultVerifiesTheResponseObject>({
+        url: "/masterdata-service/produceFeeAssign/checkProduceFeeAssignHasModify",
+        method: "get",
+        params,
     });
 }
 // JSONResult«校验响应对象»

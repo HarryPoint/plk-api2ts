@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备保养计划相关/changePlanDetailPlanStartTimeUsingPOST
 export default function fetchMethod(data: IMaintenancePlanDetailsMaintenanceStartTimeEditDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/changePlanDetailPlanStartTime",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/changePlanDetailPlanStartTime",
+        method: "post",
+        data,
     });
 }
 // 保养计划明细保养开始时间编辑DTO

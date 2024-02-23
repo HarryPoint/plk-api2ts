@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产能相关/getSelectorOptionSearchUsingPOST
 export default function fetchMethod(data: ICapacityDropDownListToSearchForDtos) {
-    return post<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/capacity/getSelectorOptionSearch",
-      data,
+    return http<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects>({
+        url: "/app-enterprise-web/api/app/enterprise/capacity/getSelectorOptionSearch",
+        method: "post",
+        data,
     });
 }
 // 产能下拉选择列表搜索DTO

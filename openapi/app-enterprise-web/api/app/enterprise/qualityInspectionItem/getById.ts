@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检项/getByIdUsingGET_17
 export default function fetchMethod(params: { id?: number }) {
-    return get<IJSONResultCheckItemDetailsVOIsReturned['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getById",
-      params,
+    return http<IJSONResultCheckItemDetailsVOIsReturned>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«质检项详细返回VO»

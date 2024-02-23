@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/pageQueryExcelDataUsingPOST
 export default function fetchMethod(data: IPaging14) {
-    return post<IJSONResultPageInformationExcelRowDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/pageQueryExcelData",
-      data,
+    return http<IJSONResultPageInformationExcelRowDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/pageQueryExcelData",
+        method: "post",
+        data,
     });
 }
 // 分页_14

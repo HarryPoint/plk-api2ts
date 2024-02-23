@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产统计相关/getMaterialSelectorUsingPOST_1
 export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return post<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceReport/getMaterialSelector",
-      data,
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
+        url: "/app-mobile-web/api/app/mobile/produceReport/getMaterialSelector",
+        method: "post",
+        data,
     });
 }
 // 物料主数据选择列表搜索VO

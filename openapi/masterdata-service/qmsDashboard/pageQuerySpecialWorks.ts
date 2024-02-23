@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/pageQuerySpecialWorksUsingPOST
 export default function fetchMethod(data: ISpecialWorkQueryRequest1) {
-    return post<IJSONResultSpecialTaskQueryRequestForPagingInformation['data']>({
-      url: "/masterdata-service/qmsDashboard/pageQuerySpecialWorks",
-      data,
+    return http<IJSONResultSpecialTaskQueryRequestForPagingInformation>({
+        url: "/masterdata-service/qmsDashboard/pageQuerySpecialWorks",
+        method: "post",
+        data,
     });
 }
 // 专项工作查询请求_1

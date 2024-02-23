@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/计算过方案执行相关/executeUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/calculationPlanExecute/execute",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/calculationPlanExecute/execute",
+        method: "get",
     });
 }
 // JSONResult«object»

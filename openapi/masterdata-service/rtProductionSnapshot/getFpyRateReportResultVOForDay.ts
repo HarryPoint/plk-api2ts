@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getFpyRateReportResultVOForDayUsingGET
 export default function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }) {
-    return get<IJSONResultListReturnVOToThePassthroughReport['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getFpyRateReportResultVOForDay",
-      params,
+    return http<IJSONResultListReturnVOToThePassthroughReport>({
+        url: "/masterdata-service/rtProductionSnapshot/getFpyRateReportResultVOForDay",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«直通报表返回VO»»

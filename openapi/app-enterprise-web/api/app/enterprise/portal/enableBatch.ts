@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/门户相关/enableBatchUsingPOST_3
 export default function fetchMethod(data: IPortalEnabledRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/portal/enableBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/portal/enableBatch",
+        method: "post",
+        data,
     });
 }
 // 门户启用请求DTO

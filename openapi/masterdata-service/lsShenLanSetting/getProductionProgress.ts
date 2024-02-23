@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getProductionProgressUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultLargeScreenInspectionProductionInformationVOIsReturned['data']>({
-      url: "/masterdata-service/lsShenLanSetting/getProductionProgress",
-      params,
+    return http<IJSONResultLargeScreenInspectionProductionInformationVOIsReturned>({
+        url: "/masterdata-service/lsShenLanSetting/getProductionProgress",
+        method: "get",
+        params,
     });
 }
 // JSONResult«质检生产大屏质检生产信息返回VO»

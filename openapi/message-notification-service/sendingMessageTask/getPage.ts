@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/getPageUsingPOST_2
 export default function fetchMethod(data: IMessageQueuePagingQueryRequest) {
-    return post<IJSONResultPagingMessageQueuePagingResponseObject['data']>({
-      url: "/message-notification-service/sendingMessageTask/getPage",
-      data,
+    return http<IJSONResultPagingMessageQueuePagingResponseObject>({
+        url: "/message-notification-service/sendingMessageTask/getPage",
+        method: "post",
+        data,
     });
 }
 // 消息队列分页查询请求

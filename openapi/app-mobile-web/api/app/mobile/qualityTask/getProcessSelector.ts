@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/质检任务相关/getProcessSelectorUsingGET_3
 export default function fetchMethod() {
-    return get<ITheJSONResultListOperationSelectsToReturnVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/qualityTask/getProcessSelector",
+    return http<ITheJSONResultListOperationSelectsToReturnVO>({
+        url: "/app-mobile-web/api/app/mobile/qualityTask/getProcessSelector",
+        method: "get",
     });
 }
 // JSONResult«List«工序选择返回VO»»

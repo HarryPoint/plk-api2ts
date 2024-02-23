@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialSelectorByIdsUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post<IJSONResultListReturnVOToTheMaterialMasterDataSelection['data']>({
-      url: "/masterdata-service/material/getMaterialSelectorByIds",
-      data,
-      params,
+    return http<IJSONResultListReturnVOToTheMaterialMasterDataSelection>({
+        url: "/masterdata-service/material/getMaterialSelectorByIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // id集合信息

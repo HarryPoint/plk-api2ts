@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getProduceCapacityReportPageUsingPOST
 export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationCapacityUtilizationReportVO['data']>({
-      url: "/masterdata-service/process/getProduceCapacityReportPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationCapacityUtilizationReportVO>({
+        url: "/masterdata-service/process/getProduceCapacityReportPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 产能利用率报表查询DTO

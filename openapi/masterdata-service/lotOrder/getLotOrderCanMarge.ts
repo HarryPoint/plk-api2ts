@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getLotOrderCanMargeUsingPOST
 export default function fetchMethod(data: IBatchOrderVerificationCanMergeSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultIndicatesWhetherTheInformationIsDisplayed['data']>({
-      url: "/masterdata-service/lotOrder/getLotOrderCanMarge",
-      data,
-      params,
+    return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>({
+        url: "/masterdata-service/lotOrder/getLotOrderCanMarge",
+        method: "post",
+        data,
+        params,
     });
 }
 // 批次订单校验能否合并搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/batchRemoveUsingPOST_3
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/keyparameter/batchRemove",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/keyparameter/batchRemove",
+        method: "post",
+        data,
     });
 }
 // id集合信息

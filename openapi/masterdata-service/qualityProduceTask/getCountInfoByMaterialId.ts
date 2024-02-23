@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getCountInfoByMaterialIdUsingGET
 export default function fetchMethod(params: { beginTime?: string; endTime?: string; materialId: string; enterpriseId: number }) {
-    return get<IJSONResultCheckInformationVO['data']>({
-      url: "/masterdata-service/qualityProduceTask/getCountInfoByMaterialId",
-      params,
+    return http<IJSONResultCheckInformationVO>({
+        url: "/masterdata-service/qualityProduceTask/getCountInfoByMaterialId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«质检物料校验信息VO»

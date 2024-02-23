@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getProgressByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultImportProgressQueryResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getProgressById",
-      params,
+    return http<IJSONResultImportProgressQueryResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getProgressById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«ImportProgressQueryResponseDTO»

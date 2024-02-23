@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/项目任务相关/getProjectByProjectIdUsingPOST
 export default function fetchMethod(params: { projectId: number }) {
-    return post<IJSONResultKaizenProjectResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getProjectByProjectId",
-      params,
+    return http<IJSONResultKaizenProjectResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getProjectByProjectId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«KaizenProjectResponseDTO»

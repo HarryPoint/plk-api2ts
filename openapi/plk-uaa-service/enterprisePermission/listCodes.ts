@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业权限相关/listCodesUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultSetstring['data']>({
-      url: "/plk-uaa-service/enterprisePermission/listCodes",
+    return http<IJSONResultSetstring>({
+        url: "/plk-uaa-service/enterprisePermission/listCodes",
+        method: "post",
     });
 }
 // JSONResult«Set«string»»

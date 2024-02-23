@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/权限相关/editUsingPOST
 export default function fetchMethod(data: IPermissionAddedTheDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/permission/add",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/permission/add",
+        method: "post",
+        data,
     });
 }
 // 权限新增 DTO

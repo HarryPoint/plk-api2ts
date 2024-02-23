@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getDepartmentSelectorUsingGET
 export default function fetchMethod(params: { nameOrCode?: string }) {
-    return get<IJSONResultListIdNameNumberTreeVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/common/getDepartmentTreeSelector",
-      params,
+    return http<IJSONResultListIdNameNumberTreeVO>({
+        url: "/app-enterprise-web/api/app/enterprise/common/getDepartmentTreeSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«Id，名称，编号树状VO»»

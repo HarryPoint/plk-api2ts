@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质检管理/exportUsingPOST_27
 export default function fetchMethod(data: IInspectionTaskSearchesForVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/qualityStorageTask/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/qualityStorageTask/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 质检任务搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/运营账号相关/modifyUsingPOST_7
 export default function fetchMethod(data: IOperationUserModifiesRequest) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/manageUser/modify",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/manageUser/modify",
+        method: "post",
+        data,
     });
 }
 // 运营用户修改请求

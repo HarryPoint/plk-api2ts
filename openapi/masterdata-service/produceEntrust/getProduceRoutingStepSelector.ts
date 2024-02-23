@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/委外加工管理/getProduceRoutingStepSelectorUsingGET
 export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get<IJSONResultListProcessPathStepsSelectVO['data']>({
-      url: "/masterdata-service/produceEntrust/getProduceRoutingStepSelector",
-      params,
+    return http<IJSONResultListProcessPathStepsSelectVO>({
+        url: "/masterdata-service/produceEntrust/getProduceRoutingStepSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«工艺路径步骤选择VO»»

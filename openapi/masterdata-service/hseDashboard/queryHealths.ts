@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHealthsUsingPOST
 export default function fetchMethod(data: IHealthHQueryRequest) {
-    return post<IJSONResultListHealthHQueryResponse['data']>({
-      url: "/masterdata-service/hseDashboard/queryHealths",
-      data,
+    return http<IJSONResultListHealthHQueryResponse>({
+        url: "/masterdata-service/hseDashboard/queryHealths",
+        method: "post",
+        data,
     });
 }
 // 健康H查询请求

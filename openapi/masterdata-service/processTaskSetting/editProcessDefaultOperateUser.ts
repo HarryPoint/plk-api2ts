@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/editProcessDefaultOperateUserUsingPOST
 export default function fetchMethod(data: IProcedureTaskSettingDefaultOperatorEditsDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/processTaskSetting/editProcessDefaultOperateUser",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/processTaskSetting/editProcessDefaultOperateUser",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工序任务设置默认操作员编辑DTO

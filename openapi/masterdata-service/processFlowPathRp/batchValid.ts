@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/batchValidUsingPOST_4
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/processFlowPathRp/batchValid",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/processFlowPathRp/batchValid",
+        method: "post",
+        data,
     });
 }
 // id集合信息

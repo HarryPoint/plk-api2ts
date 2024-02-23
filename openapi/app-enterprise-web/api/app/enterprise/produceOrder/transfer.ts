@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/transferUsingPOST_1
 export default function fetchMethod(data: IBatchTransferToOtherProductionOrderDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceOrder/transfer",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/produceOrder/transfer",
+        method: "post",
+        data,
     });
 }
 // 批次转移到其他生产订单DTO

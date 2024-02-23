@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/编码规则相关/getForPageUsingPOST_14
 export default function fetchMethod(data: ICodeRulePagingQueryVO) {
-    return post<IJSONResultPagingInformationEncodingRulePagingReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/numberRule/getForPage",
-      data,
+    return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/numberRule/getForPage",
+        method: "post",
+        data,
     });
 }
 // 编码规则分页查询VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryRecentProjectMemorabiliaUsingPOST
 export default function fetchMethod(data: IProjectEventsLargeScreenQueryDto) {
-    return post<IJSONResultListProjectEventResponseObject['data']>({
-      url: "/masterdata-service/projectDashboard/queryRecentProjectMemorabilia",
-      data,
+    return http<IJSONResultListProjectEventResponseObject>({
+        url: "/masterdata-service/projectDashboard/queryRecentProjectMemorabilia",
+        method: "post",
+        data,
     });
 }
 // 项目大事记大屏查询dto

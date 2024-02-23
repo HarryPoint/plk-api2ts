@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUserProduceStatisticUsingPOST
 export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListUserProductionStatisticsReturnVO['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getUserProduceStatistic",
-      data,
-      params,
+    return http<IJSONResultListUserProductionStatisticsReturnVO>({
+        url: "/masterdata-service/rtProductionSnapshot/getUserProduceStatistic",
+        method: "post",
+        data,
+        params,
     });
 }
 // 用户生产统计搜索VO

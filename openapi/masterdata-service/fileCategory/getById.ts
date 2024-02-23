@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getByIdUsingGET_3
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultFileClassificationDetailsResponseDTO['data']>({
-      url: "/masterdata-service/fileCategory/getById",
-      params,
+    return http<IJSONResultFileClassificationDetailsResponseDTO>({
+        url: "/masterdata-service/fileCategory/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«文件分类明细响应DTO»

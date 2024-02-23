@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/checkPasswordUsingPOST
 export default function fetchMethod(data: IPasswordVerificationRequestDTO) {
-    return post<IJSONResultIndicatesWhetherTheInformationIsDisplayed['data']>({
-      url: "/plk-uaa-service/saasAuth/checkPassword",
-      data,
+    return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>({
+        url: "/plk-uaa-service/saasAuth/checkPassword",
+        method: "post",
+        data,
     });
 }
 // 密码校验请求 DTO

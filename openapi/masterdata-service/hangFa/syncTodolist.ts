@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncTodolistUsingPOST
 export default function fetchMethod(data: IKingdeeBacklogCreateRequest) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/hangFa/syncTodolist",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/hangFa/syncTodolist",
+        method: "post",
+        data,
     });
 }
 // 金蝶待办创建请求

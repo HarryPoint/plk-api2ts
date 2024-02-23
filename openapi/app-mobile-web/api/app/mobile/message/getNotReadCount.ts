@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/消息通知相关/getNotReadCountUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultint['data']>({
-      url: "/app-mobile-web/api/app/mobile/message/getNotReadCount",
+    return http<IJSONResultint>({
+        url: "/app-mobile-web/api/app/mobile/message/getNotReadCount",
+        method: "get",
     });
 }
 // JSONResult«int»

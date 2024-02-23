@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getAllDataSourceUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListDataSourceResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/datasource/getAllDataSource",
+    return http<IJSONResultListDataSourceResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/datasource/getAllDataSource",
+        method: "get",
     });
 }
 // JSONResult«List«数据源响应对象»»

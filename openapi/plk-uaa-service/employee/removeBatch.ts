@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/removeBatchUsingPOST
 export default function fetchMethod(data: IEmployeesDeleteRequestsInBatches) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/employee/removeBatch",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/employee/removeBatch",
+        method: "post",
+        data,
     });
 }
 // 员工批量删除请求

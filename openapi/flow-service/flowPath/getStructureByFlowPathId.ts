@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getStructureByFlowPathIdUsingPOST
 export default function fetchMethod(data: IFlowPathStructureQueryRequest, params: { enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultFormStructureVO['data']>({
-      url: "/flow-service/flowPath/getStructureByFlowPathId",
-      data,
-      params,
+    return http<IJSONResultFormStructureVO>({
+        url: "/flow-service/flowPath/getStructureByFlowPathId",
+        method: "post",
+        data,
+        params,
     });
 }
 // FlowPathStructureQueryRequest

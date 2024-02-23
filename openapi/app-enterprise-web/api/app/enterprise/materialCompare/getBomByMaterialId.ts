@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/09-02-04-物料主数据比对相关/getBomByMaterialIdUsingGET
 export default function fetchMethod(params: { materialId: number }) {
-    return get<IJSONResultListMaterialBomBaseVo['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/materialCompare/getBomByMaterialId",
-      params,
+    return http<IJSONResultListMaterialBomBaseVo>({
+        url: "/app-enterprise-web/api/app/enterprise/materialCompare/getBomByMaterialId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«MaterialBomBaseVo»»

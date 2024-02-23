@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/费用归集相关/exportUsingPOST_17
 export default function fetchMethod(data: IProcessDataSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceFeeCollect/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceFeeCollect/export",
+        method: "post",
+        data,
     });
 }
 // 流程数据搜索VO

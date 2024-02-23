@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/getDetailInfoByDetailIdUsingGET
 export default function fetchMethod(params: { detailId: string }) {
-    return get<IJSONResultSalesOrderDetailsBackToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/salesOrder/getDetailInfoByDetailId",
-      params,
+    return http<IJSONResultSalesOrderDetailsBackToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/salesOrder/getDetailInfoByDetailId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«销售订单详情返回VO»

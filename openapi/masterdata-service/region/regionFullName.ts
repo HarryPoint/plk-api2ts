@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/行政区控制器/findRegionFullNameUsingPOST
 export default function fetchMethod(data: string[]) {
-    return post<IJSONResultMapstringstring['data']>({
-      url: "/masterdata-service/region/regionFullName",
-      data,
+    return http<IJSONResultMapstringstring>({
+        url: "/masterdata-service/region/regionFullName",
+        method: "post",
+        data,
     });
 }
 // JSONResult«Map«string,string»»

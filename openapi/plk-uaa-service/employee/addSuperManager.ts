@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/addSuperManagerUsingPOST
 export default function fetchMethod(data: INewRequestForOvermanagementEmployee) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/employee/addSuperManager",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/employee/addSuperManager",
+        method: "post",
+        data,
     });
 }
 // 超管员工新增请求

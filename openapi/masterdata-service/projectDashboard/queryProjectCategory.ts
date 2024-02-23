@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
 export default function fetchMethod() {
-    return get<ITheJSONResultListProjectClassDistributesResponseObjects['data']>({
-      url: "/masterdata-service/projectDashboard/queryProjectCategory",
+    return http<ITheJSONResultListProjectClassDistributesResponseObjects>({
+        url: "/masterdata-service/projectDashboard/queryProjectCategory",
+        method: "get",
     });
 }
 // JSONResult«List«项目大类分布响应对象»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getPageUsingPOST_28
 export default function fetchMethod(data: GetPage) {
-    return post<IJSONResultPageInformationDullMaterialsReportQueryDetailsResponseObject['data']>({
-      url: "/masterdata-service/sluggishMaterialReport/getPage",
-      data,
+    return http<IJSONResultPageInformationDullMaterialsReportQueryDetailsResponseObject>({
+        url: "/masterdata-service/sluggishMaterialReport/getPage",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«呆滞物料报表查询明细响应对象»»

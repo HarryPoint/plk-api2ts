@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/物料库存维度报表相关/getWarehouseMaterialDimensionReportStatisticsUsingPOST
 export default function fetchMethod(data: GetWarehouseMaterialDimensionReportStatistics) {
-    return post<IJSONResultQueriesResponseObjectsInTheInventoryDimension['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialDimensionReport/getWarehouseMaterialDimensionReportStatistics",
-      data,
+    return http<IJSONResultQueriesResponseObjectsInTheInventoryDimension>({
+        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialDimensionReport/getWarehouseMaterialDimensionReportStatistics",
+        method: "post",
+        data,
     });
 }
 // JSONResult«物料库存维度查询响应对象»

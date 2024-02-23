@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/batchUploadUsingPOST
 export default function fetchMethod(data: ITSKTestData[], params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/tskStatistic/batchUpload",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/tskStatistic/batchUpload",
+        method: "post",
+        data,
+        params,
     });
 }
 // TSK测试数据

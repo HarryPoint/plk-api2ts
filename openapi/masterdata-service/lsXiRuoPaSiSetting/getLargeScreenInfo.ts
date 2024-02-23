@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getLsUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultSilopusBigScreenReturnVO['data']>({
-      url: "/masterdata-service/lsXiRuoPaSiSetting/getLargeScreenInfo",
-      params,
+    return http<IJSONResultSilopusBigScreenReturnVO>({
+        url: "/masterdata-service/lsXiRuoPaSiSetting/getLargeScreenInfo",
+        method: "get",
+        params,
     });
 }
 // JSONResult«西偌帕斯大屏返回VO»

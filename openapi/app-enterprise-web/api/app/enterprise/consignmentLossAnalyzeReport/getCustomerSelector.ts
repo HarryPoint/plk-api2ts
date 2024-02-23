@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶寄售损耗报表相关/getCustomerSelectorUsingGET_2
 export default function fetchMethod() {
-    return get<IJSONResultListClientSelectsToReturnVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getCustomerSelector",
+    return http<IJSONResultListClientSelectsToReturnVO>({
+        url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getCustomerSelector",
+        method: "get",
     });
 }
 // JSONResult«List«客户选择返回VO»»

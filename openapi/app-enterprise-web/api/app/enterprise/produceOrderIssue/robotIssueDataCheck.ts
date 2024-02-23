@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/robotIssueDataCheckUsingPOST
 export default function fetchMethod(data: IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO) {
-    return post<IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/robotIssueDataCheck",
-      data,
+    return http<IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/robotIssueDataCheck",
+        method: "post",
+        data,
     });
 }
 // 生产订单自动排产下发任务数据校验请求DTO

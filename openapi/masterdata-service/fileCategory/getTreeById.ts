@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getTreeByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultFileClassificationDetailResponseDTO1['data']>({
-      url: "/masterdata-service/fileCategory/getTreeById",
-      params,
+    return http<IJSONResultFileClassificationDetailResponseDTO1>({
+        url: "/masterdata-service/fileCategory/getTreeById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«文件分类明细响应DTO»_1

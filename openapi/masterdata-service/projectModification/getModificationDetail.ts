@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目变更相关/getModificationDetailUsingGET_1
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListProjectChangeOrderFieldResponseParameters['data']>({
-      url: "/masterdata-service/projectModification/getModificationDetail",
-      params,
+    return http<IJSONResultListProjectChangeOrderFieldResponseParameters>({
+        url: "/masterdata-service/projectModification/getModificationDetail",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«项目变更单字段响应参数»»

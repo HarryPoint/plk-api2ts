@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/getByIdUsingGET_2
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultSendingEmailRecordDTO['data']>({
-      url: "/message-notification-service/sendingEmailRecord/getById",
-      params,
+    return http<IJSONResultSendingEmailRecordDTO>({
+        url: "/message-notification-service/sendingEmailRecord/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«SendingEmailRecordDTO»

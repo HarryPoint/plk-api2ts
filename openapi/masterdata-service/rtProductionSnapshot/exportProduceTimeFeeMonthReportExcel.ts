@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/exportProduceTimeFeeMonthReportExcelUsingPOST
 export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/exportProduceTimeFeeMonthReportExcel",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/rtProductionSnapshot/exportProduceTimeFeeMonthReportExcel",
+        method: "post",
+        data,
     });
 }
 // 工时工费月度报表搜索VO

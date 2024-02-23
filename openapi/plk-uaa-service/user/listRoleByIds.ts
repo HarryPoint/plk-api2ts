@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/用户账号相关/listRoleByIdsUsingPOST
 export default function fetchMethod(data: IIdSetInformation) {
-    return post<IJSONResultListResponseToTheRoleAndUserIdInformation['data']>({
-      url: "/plk-uaa-service/user/listRoleByIds",
-      data,
+    return http<IJSONResultListResponseToTheRoleAndUserIdInformation>({
+        url: "/plk-uaa-service/user/listRoleByIds",
+        method: "post",
+        data,
     });
 }
 // id集 信息

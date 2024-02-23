@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表格相关/getByFlowPathFormFieldIdUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; flowPathFormFieldId: number }) {
-    return post<IJSONResultProcessTableColumnVO['data']>({
-      url: "/flow-service/flowPathTableColumn/getByFlowPathFormFieldId",
-      params,
+    return http<IJSONResultProcessTableColumnVO>({
+        url: "/flow-service/flowPathTableColumn/getByFlowPathFormFieldId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«流程表格列VO»

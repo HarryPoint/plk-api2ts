@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质量月报部门设置相关/saveUsingPOST_7
 export default function fetchMethod(data: IQualityMonthlyReportDepartmentSetUpEditorDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/qmsQualityMonthReportDeptSetting/save",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/qmsQualityMonthReportDeptSetting/save",
+        method: "post",
+        data,
     });
 }
 // 质量月报部门设置编辑DTO

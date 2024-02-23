@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getBomDetailsByBomIdUsingGET
 export default function fetchMethod(params: { bomId: number }) {
-    return get<IJSONResultListBomDetailsSelectBasicInformationDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/routing/getBomDetailsByBomId",
-      params,
+    return http<IJSONResultListBomDetailsSelectBasicInformationDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/routing/getBomDetailsByBomId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«物料主数据Bom详情选择基础信息DTO»»

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProducePlanHandsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListProductionPlanManuallySchedulesVOProduction['data']>({
-      url: "/masterdata-service/producePlan/getProducePlanHands",
-      data,
-      params,
+    return http<IJSONResultListProductionPlanManuallySchedulesVOProduction>({
+        url: "/masterdata-service/producePlan/getProducePlanHands",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«生产计划手动排产VO»»

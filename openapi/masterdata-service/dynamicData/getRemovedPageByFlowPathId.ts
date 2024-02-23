@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getRemovedPageByFlowPathIdUsingPOST
 export default function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/masterdata-service/dynamicData/getRemovedPageByFlowPathId",
-      data,
-      params,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/masterdata-service/dynamicData/getRemovedPageByFlowPathId",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程数据搜索VO_1

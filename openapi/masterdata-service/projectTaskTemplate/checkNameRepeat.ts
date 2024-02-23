@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/checkNameRepeatUsingPOST
 export default function fetchMethod(data: IProjectTaskTemplateNameDuplicateVerificationRequestDTO) {
-    return post<IJSONResultstring1['data']>({
-      url: "/masterdata-service/projectTaskTemplate/checkNameRepeat",
-      data,
+    return http<IJSONResultstring1>({
+        url: "/masterdata-service/projectTaskTemplate/checkNameRepeat",
+        method: "post",
+        data,
     });
 }
 // 项目任务模板名称重复校验请求DTO

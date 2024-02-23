@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产结存报表相关/getReportUsingPOST_6
 export default function fetchMethod(data: IProductionBalanceStatisticsReportSearchVO) {
-    return post<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceBalance/getReport",
-      data,
+    return http<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceBalance/getReport",
+        method: "post",
+        data,
     });
 }
 // 生产结存统计报表搜索VO

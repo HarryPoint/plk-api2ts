@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/getCurrentFiscalPeriodUsingPOST
 export default function fetchMethod() {
-    return post<IResponseObjectDuringJSONResult['data']>({
-      url: "/masterdata-service/fiscalPeriod/getCurrentFiscalPeriod",
+    return http<IResponseObjectDuringJSONResult>({
+        url: "/masterdata-service/fiscalPeriod/getCurrentFiscalPeriod",
+        method: "post",
     });
 }
 // JSONResult«期间响应对象»

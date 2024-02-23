@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/安灯相关/getWorkOrderLogUsingPOST
 export default function fetchMethod(data: IJobLogSearchVO) {
-    return post<IJSONResultThePageInformationWorkOrderLogReturnsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/andon/getWorkOrderLog",
-      data,
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
+        url: "/app-mobile-web/api/app/mobile/andon/getWorkOrderLog",
+        method: "post",
+        data,
     });
 }
 // 工单日志搜索VO

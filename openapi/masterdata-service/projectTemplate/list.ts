@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_5
 export default function fetchMethod(params: { projectCategory: string }) {
-    return get<IJSONResultListProjectTemplateRespondsToTheDTO['data']>({
-      url: "/masterdata-service/projectTemplate/list",
-      params,
+    return http<IJSONResultListProjectTemplateRespondsToTheDTO>({
+        url: "/masterdata-service/projectTemplate/list",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«项目模板响应DTO»»

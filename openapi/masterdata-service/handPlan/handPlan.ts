@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/手动排产/handPlanUsingPOST
 export default function fetchMethod(data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/handPlan/handPlan",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/handPlan/handPlan",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产订单手动排产DTO

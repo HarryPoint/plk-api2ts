@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/listByFlowPathCodeListUsingPOST
 export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return post<IJSONResultListProcessFormVO['data']>({
-      url: "/flow-service/flowPathFormField/listByFlowPathCodeList",
-      data,
-      params,
+    return http<IJSONResultListProcessFormVO>({
+        url: "/flow-service/flowPathFormField/listByFlowPathCodeList",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«流程表单VO»»

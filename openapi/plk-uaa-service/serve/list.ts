@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/服务相关/listUsingGET_3
 export default function fetchMethod() {
-    return get<ITheJSONResultListServiceRespondsToTheDTO['data']>({
-      url: "/plk-uaa-service/serve/list",
+    return http<ITheJSONResultListServiceRespondsToTheDTO>({
+        url: "/plk-uaa-service/serve/list",
+        method: "get",
     });
 }
 // JSONResult«List«服务响应 DTO»»

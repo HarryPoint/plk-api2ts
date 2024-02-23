@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/物料收发汇总报表相关/getBillFlowPathCodeListUsingGET
 export default function fetchMethod(params: { masterDataFlowPathCode: string }) {
-    return get<IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/getBillFlowPathCodeList",
-      params,
+    return http<IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials>({
+        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/getBillFlowPathCodeList",
+        method: "get",
+        params,
     });
 }
 // JSONResult«物料收发单据列表响应对象»

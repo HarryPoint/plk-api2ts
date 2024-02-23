@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盘亏单相关/getRemovedForPageUsingPOST_3
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/masterdata-service/inventoryLossesOrder/getRemovedForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/masterdata-service/inventoryLossesOrder/getRemovedForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

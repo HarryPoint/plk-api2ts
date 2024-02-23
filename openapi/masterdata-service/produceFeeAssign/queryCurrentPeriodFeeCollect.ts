@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodFeeCollectUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListDetailedResponseDTOForCostCollection['data']>({
-      url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodFeeCollect",
+    return http<IJSONResultListDetailedResponseDTOForCostCollection>({
+        url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodFeeCollect",
+        method: "get",
     });
 }
 // JSONResult«List«费用归集明细响应DTO»»

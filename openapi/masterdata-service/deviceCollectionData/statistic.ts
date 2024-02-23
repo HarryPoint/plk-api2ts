@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/statisticUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/deviceCollectionData/statistic",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/deviceCollectionData/statistic",
+        method: "post",
     });
 }
 // JSONResult«object»

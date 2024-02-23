@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/examineUsingPOST
 export default function fetchMethod(data: ISecurityInventoryChangeRequestReviewDTO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/safetyStockExchangeApply/examine",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/safetyStockExchangeApply/examine",
+        method: "post",
+        data,
+        params,
     });
 }
 // 安全库存变更申请审核DTO

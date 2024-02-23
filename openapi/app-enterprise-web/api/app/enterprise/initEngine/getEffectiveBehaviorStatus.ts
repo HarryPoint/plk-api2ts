@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎/getEffectiveBehaviorStatusUsingGET
 export default function fetchMethod(params: { templateId: number }) {
-    return get<IJSONResultDataInteractionOutputDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/getEffectiveBehaviorStatus",
-      params,
+    return http<IJSONResultDataInteractionOutputDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/getEffectiveBehaviorStatus",
+        method: "get",
+        params,
     });
 }
 // JSONResult«DataInteractionOutputDTO»

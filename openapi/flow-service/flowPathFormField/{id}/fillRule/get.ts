@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getFieldFillRuleUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListProcessFormAssociationFormFillVO['data']>({
-      url: "/flow-service/flowPathFormField/{id}/fillRule/get",
-      params,
+    return http<IJSONResultListProcessFormAssociationFormFillVO>({
+        url: "/flow-service/flowPathFormField/{id}/fillRule/get",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«流程表单关联表单填充VO»»

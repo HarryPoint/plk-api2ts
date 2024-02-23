@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/待办相关/getQueryStatusCountUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultNumberOfToDoQueryStatesReturnedToVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/todoList/getQueryStatusCount",
+    return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>({
+        url: "/app-mobile-web/api/app/mobile/todoList/getQueryStatusCount",
+        method: "get",
     });
 }
 // JSONResult«待办事项查询状态数量返回VO»

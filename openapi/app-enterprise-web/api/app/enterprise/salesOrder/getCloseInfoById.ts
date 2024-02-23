@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/getCloseInfoByIdUsingGET_1
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultSalesOrderClosureInformationIsReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/salesOrder/getCloseInfoById",
-      params,
+    return http<IJSONResultSalesOrderClosureInformationIsReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/salesOrder/getCloseInfoById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«销售订单关闭信息返回VO»

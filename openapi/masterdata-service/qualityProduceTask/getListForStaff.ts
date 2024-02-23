@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getListForStaffUsingPOST_1
 export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultListQualityProduceTaskVO['data']>({
-      url: "/masterdata-service/qualityProduceTask/getListForStaff",
-      data,
-      params,
+    return http<IJSONResultListQualityProduceTaskVO>({
+        url: "/masterdata-service/qualityProduceTask/getListForStaff",
+        method: "post",
+        data,
+        params,
     });
 }
 // 公共待办数据查询

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用服务包相关/getApplicationDetailTreeUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultListProcessTreeVO['data']>({
-      url: "/flow-service/appServicePack/getApplicationDetailTree",
-      params,
+    return http<IJSONResultListProcessTreeVO>({
+        url: "/flow-service/appServicePack/getApplicationDetailTree",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«流程树VO»»

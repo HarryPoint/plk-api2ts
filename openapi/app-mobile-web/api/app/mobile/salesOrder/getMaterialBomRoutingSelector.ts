@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/销售订单相关/getMaterialBomRoutingSelectorUsingGET
 export default function fetchMethod(params: { materialId: number }) {
-    return get<IJSONResultListMaterialBomRoutingVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/salesOrder/getMaterialBomRoutingSelector",
-      params,
+    return http<IJSONResultListMaterialBomRoutingVO>({
+        url: "/app-mobile-web/api/app/mobile/salesOrder/getMaterialBomRoutingSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«MaterialBomRoutingVO»»

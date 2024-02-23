@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/计算方案相关/queryBusinessFormFieldListUsingPOST
 export default function fetchMethod(data: IFormFieldQueryRequestDTO) {
-    return post<IJSONResultListFormFieldQueryResponseDTO['data']>({
-      url: "/flow-service/calculationPlan/queryBusinessFormFieldList",
-      data,
+    return http<IJSONResultListFormFieldQueryResponseDTO>({
+        url: "/flow-service/calculationPlan/queryBusinessFormFieldList",
+        method: "post",
+        data,
     });
 }
 // FormFieldQueryRequestDTO

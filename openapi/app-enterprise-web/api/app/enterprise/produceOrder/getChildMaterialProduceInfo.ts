@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/getChildMaterialProduceInfoUsingPOST
 export default function fetchMethod(data: ISubMaterialProductionInformationQueryRequestDTO) {
-    return post<IJSONResultChildProductionOrderInformationQueryResponse['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceOrder/getChildMaterialProduceInfo",
-      data,
+    return http<IJSONResultChildProductionOrderInformationQueryResponse>({
+        url: "/app-enterprise-web/api/app/enterprise/produceOrder/getChildMaterialProduceInfo",
+        method: "post",
+        data,
     });
 }
 // 子物料生产信息查询请求DTO

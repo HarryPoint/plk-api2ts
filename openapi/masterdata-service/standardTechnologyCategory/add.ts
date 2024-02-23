@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/addUsingPOST_8
 export default function fetchMethod(data: INewRequestDTOForStandardProcessClassification) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/standardTechnologyCategory/add",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/standardTechnologyCategory/add",
+        method: "post",
+        data,
     });
 }
 // 标准工艺分类新增请求DTO

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/打印模板相关/listByEnterpriseRouteIdUsingGET
 export default function fetchMethod(params: { enterpriseRouteId: number }) {
-    return get<IJSONResultListPrintsTheTemplateResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/printtemplate/listByEnterpriseRouteId",
-      params,
+    return http<IJSONResultListPrintsTheTemplateResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/printtemplate/listByEnterpriseRouteId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«打印模板响应对象»»

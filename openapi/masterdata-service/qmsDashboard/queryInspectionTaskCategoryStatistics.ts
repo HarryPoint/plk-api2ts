@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInspectionTaskCategoryStatisticsUsingGET
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return get<IJSONResultListReturnsTheStatisticsOnTheExecutionCategoriesOfTheLargeScreenCheckPlan['data']>({
-      url: "/masterdata-service/qmsDashboard/queryInspectionTaskCategoryStatistics",
-      params,
+    return http<IJSONResultListReturnsTheStatisticsOnTheExecutionCategoriesOfTheLargeScreenCheckPlan>({
+        url: "/masterdata-service/qmsDashboard/queryInspectionTaskCategoryStatistics",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«大屏检验计划执行类别统计返回»»

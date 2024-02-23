@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产异常类型相关/exportUsingPOST_29
 export default function fetchMethod(data: IExceptionTypeSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceAbnormalCategory/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/produceAbnormalCategory/export",
+        method: "post",
+        data,
     });
 }
 // 异常类型搜索VO

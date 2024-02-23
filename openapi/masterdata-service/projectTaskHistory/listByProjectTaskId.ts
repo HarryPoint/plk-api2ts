@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
 export default function fetchMethod(params: { projectTaskId: number }) {
-    return get<IJSONResultListProjectTaskHistoryQueryResponse['data']>({
-      url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
-      params,
+    return http<IJSONResultListProjectTaskHistoryQueryResponse>({
+        url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«项目任务历史查询响应»»

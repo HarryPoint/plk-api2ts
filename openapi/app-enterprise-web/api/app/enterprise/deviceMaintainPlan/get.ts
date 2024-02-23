@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备保养计划相关/getUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultMaintenancePlanRespondsToDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/get",
-      params,
+    return http<IJSONResultMaintenancePlanRespondsToDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/get",
+        method: "get",
+        params,
     });
 }
 // JSONResult«保养计划响应DTO»

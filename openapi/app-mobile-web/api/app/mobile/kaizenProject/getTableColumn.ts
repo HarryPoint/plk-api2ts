@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/项目相关/getTableColumnUsingGET_18
 export default function fetchMethod() {
-    return get<IJSONResultListProcessTableColumnVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/kaizenProject/getTableColumn",
+    return http<IJSONResultListProcessTableColumnVO>({
+        url: "/app-mobile-web/api/app/mobile/kaizenProject/getTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«流程表格列VO»»

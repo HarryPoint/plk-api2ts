@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/scrapUsingPOST
 export default function fetchMethod(data: IProductionProcessesWithholdScrapRequestObjects) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceHandleHoldPause/scrap",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceHandleHoldPause/scrap",
+        method: "post",
+        data,
     });
 }
 // 生产处理暂扣报废请求对象

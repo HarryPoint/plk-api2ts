@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/采购明细报表相关/getPurchaseDetailsReportStatisticsUsingPOST
 export default function fetchMethod(data: GetPurchaseDetailsReportStatistics) {
-    return post<IJSONResultPurchaseDetailsStatisticsReturnedObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/purchaseDetailsReport/getPurchaseDetailsReportStatistics",
-      data,
+    return http<IJSONResultPurchaseDetailsStatisticsReturnedObject>({
+        url: "/app-enterprise-web/api/app/enterprise/purchaseDetailsReport/getPurchaseDetailsReportStatistics",
+        method: "post",
+        data,
     });
 }
 // JSONResult«采购明细表统计返回对象»

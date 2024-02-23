@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationFormDataInCascadeModeUsingPOST
 export default function fetchMethod(data: IFormCascadeQueryConditionVO) {
-    return post<IJSONResultListFormCascadeQueryResultVO['data']>({
-      url: "/masterdata-service/dynamicData/associationFormData/cascadeMode/query",
-      data,
+    return http<IJSONResultListFormCascadeQueryResultVO>({
+        url: "/masterdata-service/dynamicData/associationFormData/cascadeMode/query",
+        method: "post",
+        data,
     });
 }
 // FormCascadeQueryConditionVO

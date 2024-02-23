@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程重置相关/resetSystemFlowBySystemTypeUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; systemType: string }) {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathReset/resetSystemFlowBySystemType",
-      params,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathReset/resetSystemFlowBySystemType",
+        method: "post",
+        params,
     });
 }
 // JSONResult«object»

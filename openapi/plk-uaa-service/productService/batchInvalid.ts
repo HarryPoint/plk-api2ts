@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品服务相关/batchInvalidUsingPOST
 export default function fetchMethod(data: IProductServiceOutageRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/productService/batchInvalid",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/productService/batchInvalid",
+        method: "post",
+        data,
     });
 }
 // 产品服务停用请求对象

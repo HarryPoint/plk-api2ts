@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getPcNotReadCountQhseUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultint['data']>({
-      url: "/message-notification-service/message/pc/getNotReadCountQhse",
+    return http<IJSONResultint>({
+        url: "/message-notification-service/message/pc/getNotReadCountQhse",
+        method: "get",
     });
 }
 // JSONResult«int»

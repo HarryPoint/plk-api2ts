@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/设备保养任务相关/getForPageUsingPOST_7
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-mobile-web/api/app/mobile/deviceMaintainTask/getForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-mobile-web/api/app/mobile/deviceMaintainTask/getForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

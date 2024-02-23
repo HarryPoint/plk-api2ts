@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/客户相关/pagingSearchPublicCustomerUsingPOST
 export default function fetchMethod(data: IPaging) {
-    return post<IJSONResultPageInformationPublicCustomerOutputVO['data']>({
-      url: "/masterdata-service/customer/publicCustomer/pagingSearch",
-      data,
+    return http<IJSONResultPageInformationPublicCustomerOutputVO>({
+        url: "/masterdata-service/customer/publicCustomer/pagingSearch",
+        method: "post",
+        data,
     });
 }
 // 分页

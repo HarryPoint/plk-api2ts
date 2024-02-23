@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/运营账号相关/addUsingPOST_8
 export default function fetchMethod(data: IOperationUserAddedARequest) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/manageUser/add",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/manageUser/add",
+        method: "post",
+        data,
     });
 }
 // 运营用户新增请求

@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/系统版本相关/getLastVersionUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultSystemVersionResponseDTO['data']>({
-      url: "/plk-uaa-service/systemVersion/getLastVersion",
+    return http<IJSONResultSystemVersionResponseDTO>({
+        url: "/plk-uaa-service/systemVersion/getLastVersion",
+        method: "get",
     });
 }
 // JSONResult«系统版本响应 DTO»

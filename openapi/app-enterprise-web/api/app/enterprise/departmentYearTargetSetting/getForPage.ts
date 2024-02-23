@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/部门年目标设置相关/getPageByFlowPathIdUsingPOST_5
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/departmentYearTargetSetting/getForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-enterprise-web/api/app/enterprise/departmentYearTargetSetting/getForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

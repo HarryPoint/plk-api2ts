@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/validUsingPOST
 export default function fetchMethod(data: IStandardProcessEnablesDeactivationOfRequestObjects) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/standardTechnology/valid",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/standardTechnology/valid",
+        method: "post",
+        data,
     });
 }
 // 标准工艺启用、停用请求对象

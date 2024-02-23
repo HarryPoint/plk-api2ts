@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/流程数据相关/queryAssociationReferenceRecordListUsingPOST
 export default function fetchMethod(data: IFormReferencingQueryRequestDTO) {
-    return post<IJSONResultListFormReferencingQueryResponseDTO['data']>({
-      url: "/app-mobile-web/api/app/mobile/flowPathData/queryAssociationReferenceDataList",
-      data,
+    return http<IJSONResultListFormReferencingQueryResponseDTO>({
+        url: "/app-mobile-web/api/app/mobile/flowPathData/queryAssociationReferenceDataList",
+        method: "post",
+        data,
     });
 }
 // FormReferencingQueryRequestDTO

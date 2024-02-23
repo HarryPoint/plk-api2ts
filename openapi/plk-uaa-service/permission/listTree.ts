@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/权限相关/listTreeUsingPOST_1
 export default function fetchMethod(data: IPermissionQuery) {
-    return post<ITheJSONResultListPermissionTreeRespondsToTheDTO['data']>({
-      url: "/plk-uaa-service/permission/listTree",
-      data,
+    return http<ITheJSONResultListPermissionTreeRespondsToTheDTO>({
+        url: "/plk-uaa-service/permission/listTree",
+        method: "post",
+        data,
     });
 }
 // 权限查询

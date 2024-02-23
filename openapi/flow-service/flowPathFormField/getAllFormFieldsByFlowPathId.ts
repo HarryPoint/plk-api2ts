@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getAllFormFieldsByFlowPathIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; flowPathId: number }) {
-    return get<IJSONResultListProcessFormVO['data']>({
-      url: "/flow-service/flowPathFormField/getAllFormFieldsByFlowPathId",
-      params,
+    return http<IJSONResultListProcessFormVO>({
+        url: "/flow-service/flowPathFormField/getAllFormFieldsByFlowPathId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«流程表单VO»»

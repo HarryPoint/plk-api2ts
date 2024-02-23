@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/流程数据相关/calcDataLinkageUsingPOST
 export default function fetchMethod(data: IDataLinkageCalcRequestDTO) {
-    return post<IJSONResultDataLinkageCalcResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/flowPathData/calcDataLinkage",
-      data,
+    return http<IJSONResultDataLinkageCalcResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/flowPathData/calcDataLinkage",
+        method: "post",
+        data,
     });
 }
 // DataLinkageCalcRequestDTO

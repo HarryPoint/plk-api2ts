@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getFieldsByDataSourceIdUsingGET
 export default function fetchMethod(params: { dataSourceId: string; printTemplateType: string }) {
-    return get<IJSONResultListDataSourceFieldResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/datasource/getFieldsByDataSourceId",
-      params,
+    return http<IJSONResultListDataSourceFieldResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/datasource/getFieldsByDataSourceId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«数据源字段响应对象»»

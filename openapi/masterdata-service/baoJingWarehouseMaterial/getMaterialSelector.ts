@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
 export default function fetchMethod(data: IBaojingReportMaterialSelectionQuery) {
-    return post<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse['data']>({
-      url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialSelector",
-      data,
+    return http<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse>({
+        url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialSelector",
+        method: "post",
+        data,
     });
 }
 // 宝晶报表物料选择查询

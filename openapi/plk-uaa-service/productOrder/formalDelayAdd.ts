@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品订单相关/formalDelayAddUsingPOST
 export default function fetchMethod(data: INewRequestObjectForOfficialProductOrderExtension) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/productOrder/formalDelayAdd",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/productOrder/formalDelayAdd",
+        method: "post",
+        data,
     });
 }
 // 正式产品订单延期新增请求对象

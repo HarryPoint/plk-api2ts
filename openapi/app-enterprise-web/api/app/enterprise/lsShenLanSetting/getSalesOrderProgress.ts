@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getSalesOrderProgressUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getSalesOrderProgress",
+    return http<IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getSalesOrderProgress",
+        method: "get",
     });
 }
 // JSONResult«List«质检生产大屏订单完成进度返回VO»»

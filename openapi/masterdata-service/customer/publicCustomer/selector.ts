@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/客户相关/searchPublicCustomerSelectorDataListUsingPOST
 export default function fetchMethod(data: IPaging1) {
-    return post<IJSONResultListIdNameNumberVO['data']>({
-      url: "/masterdata-service/customer/publicCustomer/selector",
-      data,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/masterdata-service/customer/publicCustomer/selector",
+        method: "post",
+        data,
     });
 }
 // 分页_1

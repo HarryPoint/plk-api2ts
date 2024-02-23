@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectActionItemCompleteCountUsingPOST
 export default function fetchMethod(data: IProjectKanbanQueryDto) {
-    return post<IJSONResultProjectActionItemStatisticsResponseObject['data']>({
-      url: "/masterdata-service/projectDashboard/queryProjectActionItemCompleteCount",
-      data,
+    return http<IJSONResultProjectActionItemStatisticsResponseObject>({
+        url: "/masterdata-service/projectDashboard/queryProjectActionItemCompleteCount",
+        method: "post",
+        data,
     });
 }
 // 项目看板查询dto

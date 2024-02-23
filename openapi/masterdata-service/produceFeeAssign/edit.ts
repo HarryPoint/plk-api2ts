@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/editUsingPOST_11
 export default function fetchMethod(data: IProductionExpensesAllocationEditDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceFeeAssign/edit",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceFeeAssign/edit",
+        method: "post",
+        data,
     });
 }
 // 生产费用分配编辑DTO

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryUsingPOST
 export default function fetchMethod(data: IProductionProcessingQueryVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO['data']>({
-      url: "/masterdata-service/produceHandle/getReportHistory",
-      data,
-      params,
+    return http<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>({
+        url: "/masterdata-service/produceHandle/getReportHistory",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产处理查询VO

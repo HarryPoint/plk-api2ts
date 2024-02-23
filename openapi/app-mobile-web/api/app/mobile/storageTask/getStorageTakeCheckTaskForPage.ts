@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/仓库任务相关/getStorageTakeCheckTaskForPageUsingPOST
 export default function fetchMethod(data: ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask) {
-    return post<IJSONResultReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask['data']>({
-      url: "/app-mobile-web/api/app/mobile/storageTask/getStorageTakeCheckTaskForPage",
-      data,
+    return http<IJSONResultReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask>({
+        url: "/app-mobile-web/api/app/mobile/storageTask/getStorageTakeCheckTaskForPage",
+        method: "post",
+        data,
     });
 }
 // 仓库盘点任务执行端搜索VO

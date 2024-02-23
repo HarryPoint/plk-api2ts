@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskWipByIdUsingGET
 export default function fetchMethod(params: { taskId: string }) {
-    return get<IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskWipById",
-      params,
+    return http<IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskWipById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«生产任务WIP信息响应DTO»

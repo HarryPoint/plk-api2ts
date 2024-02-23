@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editByCodeUsingPOST
 export default function fetchMethod(data: IListColumnStyleSystemConfigurationEditDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/tableColumnStyleConfig/editByCode",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/tableColumnStyleConfig/editByCode",
+        method: "post",
+        data,
     });
 }
 // 列表列样式系统配置编辑DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工艺画布快照相关/getCanvasSnapshotByUserUsingPOST
 export default function fetchMethod(data: ICraftCanvasSnapshotAcquisitionRequestDTO) {
-    return post<IJSONResultProcessCanvasSnapshotGetsResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCanvasSnapshot/getByUser",
-      data,
+    return http<IJSONResultProcessCanvasSnapshotGetsResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCanvasSnapshot/getByUser",
+        method: "post",
+        data,
     });
 }
 // 工艺画布快照获取请求DTO

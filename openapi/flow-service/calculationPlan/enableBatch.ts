@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/计算方案相关/enableBatchUsingPOST
 export default function fetchMethod(data: IComputingSchemeEnablesRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/flow-service/calculationPlan/enableBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/flow-service/calculationPlan/enableBatch",
+        method: "post",
+        data,
     });
 }
 // 计算方案启用请求DTO

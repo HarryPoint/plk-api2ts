@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/CRM-销售计划相关/getPageByFlowPathIdUsingPOST_15
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-mobile-web/api/app/mobile/salesPlan/getForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-mobile-web/api/app/mobile/salesPlan/getForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

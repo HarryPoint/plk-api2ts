@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/打印模板相关/getListByIdsAndFlowPathIdUsingPOST
 export default function fetchMethod(data: IPrintTemplateDataQueryObjects) {
-    return post<IJSONResultListJSONObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/printtemplate/getListByIdsAndFlowPathId",
-      data,
+    return http<IJSONResultListJSONObject>({
+        url: "/app-enterprise-web/api/app/enterprise/printtemplate/getListByIdsAndFlowPathId",
+        method: "post",
+        data,
     });
 }
 // 打印模板数据查询对象

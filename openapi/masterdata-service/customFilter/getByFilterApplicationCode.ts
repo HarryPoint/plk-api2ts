@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/自定义筛选项相关/getByFilterApplicationCodeUsingGET
 export default function fetchMethod(params: { filterApplicationCode: string }) {
-    return get<IJSONResultListReturnObjectDTOForAUserDefinedFilter['data']>({
-      url: "/masterdata-service/customFilter/getByFilterApplicationCode",
-      params,
+    return http<IJSONResultListReturnObjectDTOForAUserDefinedFilter>({
+        url: "/masterdata-service/customFilter/getByFilterApplicationCode",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«自定义筛选项返回对象DTO»»

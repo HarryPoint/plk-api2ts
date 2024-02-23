@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/模糊排产相关/getProduceOrderAllStepUsingGET
 export default function fetchMethod(params: { id?: number }) {
-    return get<IJSONResultListProcessPathStepsSelectVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/vaguePlan/getProduceOrderAllStep",
-      params,
+    return http<IJSONResultListProcessPathStepsSelectVO>({
+        url: "/app-enterprise-web/api/app/enterprise/vaguePlan/getProduceOrderAllStep",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«工艺路径步骤选择VO»»

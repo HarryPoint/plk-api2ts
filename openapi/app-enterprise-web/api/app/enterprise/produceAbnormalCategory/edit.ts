@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产异常类型相关/editUsingPOST_18
 export default function fetchMethod(data: IEditTheDTOForProductionExceptionTypes) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceAbnormalCategory/edit",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/produceAbnormalCategory/edit",
+        method: "post",
+        data,
     });
 }
 // 生产异常类型编辑DTO

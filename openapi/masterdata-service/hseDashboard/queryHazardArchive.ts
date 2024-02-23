@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardArchiveUsingPOST
 export default function fetchMethod(data: IOccupationalHazardFileQueryRequest) {
-    return post<IJSONResultOccupationalHazardFileQueryResponse['data']>({
-      url: "/masterdata-service/hseDashboard/queryHazardArchive",
-      data,
+    return http<IJSONResultOccupationalHazardFileQueryResponse>({
+        url: "/masterdata-service/hseDashboard/queryHazardArchive",
+        method: "post",
+        data,
     });
 }
 // 职业危害档案查询请求

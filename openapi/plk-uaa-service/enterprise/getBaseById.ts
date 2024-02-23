@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/getBaseByIdUsingPOST
 export default function fetchMethod(data: IIdInformation1) {
-    return post<IJSONResultEnterpriseResponseObject['data']>({
-      url: "/plk-uaa-service/enterprise/getBaseById",
-      data,
+    return http<IJSONResultEnterpriseResponseObject>({
+        url: "/plk-uaa-service/enterprise/getBaseById",
+        method: "post",
+        data,
     });
 }
 // Id 信息_1

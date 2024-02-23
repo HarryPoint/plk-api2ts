@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getRoutingStepsByRoutingIdsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListBaseVO1['data']>({
-      url: "/masterdata-service/routing/getRoutingStepsByRoutingIds",
-      data,
-      params,
+    return http<IJSONResultListBaseVO1>({
+        url: "/masterdata-service/routing/getRoutingStepsByRoutingIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«基础VO»»_1

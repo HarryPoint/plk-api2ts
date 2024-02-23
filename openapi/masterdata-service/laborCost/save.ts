@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工费相关/saveUsingPOST_3
 export default function fetchMethod(data: ILaborCostsSaveDTO) {
-    return post<IJSONResultLaborResponseObject['data']>({
-      url: "/masterdata-service/laborCost/save",
-      data,
+    return http<IJSONResultLaborResponseObject>({
+        url: "/masterdata-service/laborCost/save",
+        method: "post",
+        data,
     });
 }
 // 工费保存DTO

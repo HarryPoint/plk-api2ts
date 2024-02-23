@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16600/doc.html#/default/application-script-controller/changeSerialNoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/todo-service/applicationScript/changeSerialNo",
+    return http<IJSONResultobject>({
+        url: "/todo-service/applicationScript/changeSerialNo",
+        method: "get",
     });
 }
 // JSONResult«object»

@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检管理/getSelectorUsingGET_4
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getQualityInspectionCategorySelector",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getQualityInspectionCategorySelector",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

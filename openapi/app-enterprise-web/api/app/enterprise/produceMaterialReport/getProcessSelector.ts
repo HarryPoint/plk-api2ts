@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按物料统计)相关/getProcessSelectorUsingGET_7
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceMaterialReport/getProcessSelector",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceMaterialReport/getProcessSelector",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

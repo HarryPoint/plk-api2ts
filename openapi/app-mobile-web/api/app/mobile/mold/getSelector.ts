@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/模具相关/getSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/mold/getSelector",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-mobile-web/api/app/mobile/mold/getSelector",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

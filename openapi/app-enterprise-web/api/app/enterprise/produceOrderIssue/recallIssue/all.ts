@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/recallIssueAllUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultProductionOrderDeliveryResultDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/recallIssue/all",
+    return http<IJSONResultProductionOrderDeliveryResultDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/recallIssue/all",
+        method: "get",
     });
 }
 // JSONResult«生产订单下发结果DTO»

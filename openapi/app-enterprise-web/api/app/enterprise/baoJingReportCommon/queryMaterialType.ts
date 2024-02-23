@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表公共/queryMaterialTypeUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListCodeName['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportCommon/queryMaterialType",
+    return http<IJSONResultListCodeName>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportCommon/queryMaterialType",
+        method: "get",
     });
 }
 // JSONResult«List«CodeName»»

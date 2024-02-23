@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskTableColumnUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListTableColumnDTOForExportingProductionTasks['data']>({
-      url: "/masterdata-service/produceTask/getProduceTaskTableColumn",
-      params,
+    return http<IJSONResultListTableColumnDTOForExportingProductionTasks>({
+        url: "/masterdata-service/produceTask/getProduceTaskTableColumn",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产任务导出表格列DTO»»

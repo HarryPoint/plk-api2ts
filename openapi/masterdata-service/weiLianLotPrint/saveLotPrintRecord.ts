@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/维联批次打印相关/saveLotPrintRecordUsingPOST
 export default function fetchMethod(data: string) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/weiLianLotPrint/saveLotPrintRecord",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/weiLianLotPrint/saveLotPrintRecord",
+        method: "post",
+        data,
     });
 }
 // JSONResult«object»

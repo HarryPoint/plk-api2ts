@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getExportAuthInfoAndUpdateByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportedTicketInformation1['data']>({
-      url: "/masterdata-service/exportAuth/getExportAuthInfoAndUpdateByTicket",
-      params,
+    return http<IJSONResultExportedTicketInformation1>({
+        url: "/masterdata-service/exportAuth/getExportAuthInfoAndUpdateByTicket",
+        method: "get",
+        params,
     });
 }
 // JSONResult«导出ticket信息»_1

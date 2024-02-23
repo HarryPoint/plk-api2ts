@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/getPageUsingPOST_5
 export default function fetchMethod(data: IDeviceDataSchemeSearchVO) {
-    return post<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/getPage",
-      data,
+    return http<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/getPage",
+        method: "post",
+        data,
     });
 }
 // 设备数据方案搜索VO

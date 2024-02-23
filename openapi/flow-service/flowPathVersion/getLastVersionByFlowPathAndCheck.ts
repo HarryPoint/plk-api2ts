@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程版本相关/getLastVersionByFlowPathAndCheckUsingGET
 export default function fetchMethod(params: { enterpriseId: number; flowPathId: number }) {
-    return get<IJSONResultProcessVersionRespondsToVO['data']>({
-      url: "/flow-service/flowPathVersion/getLastVersionByFlowPathAndCheck",
-      params,
+    return http<IJSONResultProcessVersionRespondsToVO>({
+        url: "/flow-service/flowPathVersion/getLastVersionByFlowPathAndCheck",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程版本响应VO»

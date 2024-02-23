@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/addProjectTaskFieldUsingGET
 export default function fetchMethod(params: { enterpriseId?: number }) {
-    return get<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathScript/addProjectTaskField",
-      params,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathScript/addProjectTaskField",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

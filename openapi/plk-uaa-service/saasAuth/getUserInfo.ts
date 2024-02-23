@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserInfoUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultSaasUserInformationResponse['data']>({
-      url: "/plk-uaa-service/saasAuth/getUserInfo",
+    return http<IJSONResultSaasUserInformationResponse>({
+        url: "/plk-uaa-service/saasAuth/getUserInfo",
+        method: "post",
     });
 }
 // JSONResult«Saas 用户信息响应»

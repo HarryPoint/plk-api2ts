@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/getUsingGET_2
 export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return get<IJSONResultMaterialBatchSettingsEditResponseObjects['data']>({
-      url: "/masterdata-service/materialLotSetting/get",
-      params,
+    return http<IJSONResultMaterialBatchSettingsEditResponseObjects>({
+        url: "/masterdata-service/materialLotSetting/get",
+        method: "get",
+        params,
     });
 }
 // JSONResult«物料批次设置编辑响应对象»

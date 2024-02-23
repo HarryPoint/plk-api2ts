@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/saveChangeUsingPOST
 export default function fetchMethod(data: IChangeGanttChartPlanDTO[]) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/autoPlanGantt/saveChange",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/autoPlanGantt/saveChange",
+        method: "post",
+        data,
     });
 }
 // 变更甘特图计划DTO

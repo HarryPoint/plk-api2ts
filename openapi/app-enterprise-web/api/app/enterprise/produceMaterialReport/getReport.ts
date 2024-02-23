@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按物料统计)相关/getReportUsingPOST_10
 export default function fetchMethod(data: IOutputClassReportSearchVO) {
-    return post<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceMaterialReport/getReport",
-      data,
+    return http<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceMaterialReport/getReport",
+        method: "post",
+        data,
     });
 }
 // 产出类报表搜索VO

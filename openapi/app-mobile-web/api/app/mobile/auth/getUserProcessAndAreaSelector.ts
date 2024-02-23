@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/用户工序接口/getUserProcessAndAreaSelectorUsingGET
 export default function fetchMethod() {
-    return get<ITheJSONResultListAreaOperationSelectionReturnsVO1['data']>({
-      url: "/app-mobile-web/api/app/mobile/auth/getUserProcessAndAreaSelector",
+    return http<ITheJSONResultListAreaOperationSelectionReturnsVO1>({
+        url: "/app-mobile-web/api/app/mobile/auth/getUserProcessAndAreaSelector",
+        method: "get",
     });
 }
 // JSONResult«List«区域工序选择返回VO»»_1

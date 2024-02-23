@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdAndCheckUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return post<IJSONResultProcessNodeVO['data']>({
-      url: "/flow-service/flowPathNode/getVOByIdAndCheck",
-      params,
+    return http<IJSONResultProcessNodeVO>({
+        url: "/flow-service/flowPathNode/getVOByIdAndCheck",
+        method: "post",
+        params,
     });
 }
 // JSONResult«流程节点VO»

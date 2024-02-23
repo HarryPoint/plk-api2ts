@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品服务相关/getDetailByIdUsingGET_3
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProductServiceDetailsResponseObject['data']>({
-      url: "/plk-uaa-service/productService/getDetailById",
-      params,
+    return http<IJSONResultProductServiceDetailsResponseObject>({
+        url: "/plk-uaa-service/productService/getDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«产品服务详情响应对象»

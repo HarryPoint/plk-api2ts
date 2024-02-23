@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/未排产订单相关/getForPageUsingPOST_13
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPageInformationDynamicExpansionDataVOUnscheduledProductionOrderReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/notPlan/getNotPlanOrderForPage",
-      data,
+    return http<IJSONResultPageInformationDynamicExpansionDataVOUnscheduledProductionOrderReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/notPlan/getNotPlanOrderForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

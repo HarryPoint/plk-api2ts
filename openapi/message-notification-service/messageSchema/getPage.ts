@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息方案/getPageUsingPOST_1
 export default function fetchMethod(data: IMessageSchemeQueryRequest) {
-    return post<IJSONResultPageInformationPageQueryResponse['data']>({
-      url: "/message-notification-service/messageSchema/getPage",
-      data,
+    return http<IJSONResultPageInformationPageQueryResponse>({
+        url: "/message-notification-service/messageSchema/getPage",
+        method: "post",
+        data,
     });
 }
 // 消息方案查询请求

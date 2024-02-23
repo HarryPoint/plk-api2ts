@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/getFiscalPeriodSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListRespondsToTheObjectDuring['data']>({
-      url: "/masterdata-service/produceCostComputationReport/getFiscalPeriodSelector",
+    return http<IJSONResultListRespondsToTheObjectDuring>({
+        url: "/masterdata-service/produceCostComputationReport/getFiscalPeriodSelector",
+        method: "get",
     });
 }
 // JSONResult«List«期间响应对象»»

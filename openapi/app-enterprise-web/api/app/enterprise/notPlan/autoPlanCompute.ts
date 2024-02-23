@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/未排产订单相关/autoPlanComputeUsingPOST
 export default function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO) {
-    return post<IJSONResultSchedulingResultVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/notPlan/autoPlanCompute",
-      data,
+    return http<IJSONResultSchedulingResultVO>({
+        url: "/app-enterprise-web/api/app/enterprise/notPlan/autoPlanCompute",
+        method: "post",
+        data,
     });
 }
 // 生产订单自动排产DTO

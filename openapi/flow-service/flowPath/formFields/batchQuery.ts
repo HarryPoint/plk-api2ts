@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/batchQueryFieldListUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListProcessFormVO['data']>({
-      url: "/flow-service/flowPath/formFields/batchQuery",
-      data,
-      params,
+    return http<IJSONResultListProcessFormVO>({
+        url: "/flow-service/flowPath/formFields/batchQuery",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«流程表单VO»»

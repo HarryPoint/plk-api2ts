@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryCategoryDistributeUsingPOST
 export default function fetchMethod(data: IProjectKanbanQueryDto) {
-    return post<ITheJSONResultListProjectClassDistributesResponseObjects['data']>({
-      url: "/masterdata-service/projectDashboard/queryCategoryDistribute",
-      data,
+    return http<ITheJSONResultListProjectClassDistributesResponseObjects>({
+        url: "/masterdata-service/projectDashboard/queryCategoryDistribute",
+        method: "post",
+        data,
     });
 }
 // 项目看板查询dto

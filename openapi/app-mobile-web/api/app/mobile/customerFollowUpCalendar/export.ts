@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/客户跟进日历相关/exportUsingPOST_8
 export default function fetchMethod(data: ICustomerFollowUpCalendarInputVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-mobile-web/api/app/mobile/customerFollowUpCalendar/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-mobile-web/api/app/mobile/customerFollowUpCalendar/export",
+        method: "post",
+        data,
     });
 }
 // CustomerFollowUpCalendarInputVO

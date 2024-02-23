@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getTodoConfigByFlowPathVersionIdUsingGET
 export default function fetchMethod(params: { flowPathVersionId: number }) {
-    return get<IJSONResultTheProcessCustomNotificationFieldRespondsToVO['data']>({
-      url: "/flow-service/flowPath/getTodoConfigByFlowPathVersionId",
-      params,
+    return http<IJSONResultTheProcessCustomNotificationFieldRespondsToVO>({
+        url: "/flow-service/flowPath/getTodoConfigByFlowPathVersionId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程自定义通知字段响应VO»

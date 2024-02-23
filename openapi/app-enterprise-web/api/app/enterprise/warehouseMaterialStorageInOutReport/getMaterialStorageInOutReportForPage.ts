@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/物料收发汇总报表相关/getMaterialStorageInOutReportForPageUsingPOST
 export default function fetchMethod(data: GetMaterialStorageInOutReportForPage) {
-    return post<IJSONResultPageInformationPageResponseObjectForReceivingAndReceivingMaterials['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/getMaterialStorageInOutReportForPage",
-      data,
+    return http<IJSONResultPageInformationPageResponseObjectForReceivingAndReceivingMaterials>({
+        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/getMaterialStorageInOutReportForPage",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«物料收发汇总分页响应对象»»

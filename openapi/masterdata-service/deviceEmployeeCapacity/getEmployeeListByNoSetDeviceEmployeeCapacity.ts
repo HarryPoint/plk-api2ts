@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeListByNoSetDeviceEmployeeCapacityUsingPOST
 export default function fetchMethod(data: IEquipmentPersonnelCapabilityNoPersonnelQueryDTOIsSet) {
-    return post<IJSONResultListDevicePersonnelCapabilityNoPersonnelResponseDTOIsSet['data']>({
-      url: "/masterdata-service/deviceEmployeeCapacity/getEmployeeListByNoSetDeviceEmployeeCapacity",
-      data,
+    return http<IJSONResultListDevicePersonnelCapabilityNoPersonnelResponseDTOIsSet>({
+        url: "/masterdata-service/deviceEmployeeCapacity/getEmployeeListByNoSetDeviceEmployeeCapacity",
+        method: "post",
+        data,
     });
 }
 // 设备人员能力未设置人员查询DTO

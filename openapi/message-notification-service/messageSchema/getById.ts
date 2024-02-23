@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息方案/getByIdUsingGET_1
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultMessageSchemaQueryResponseDTO['data']>({
-      url: "/message-notification-service/messageSchema/getById",
-      params,
+    return http<IJSONResultMessageSchemaQueryResponseDTO>({
+        url: "/message-notification-service/messageSchema/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«MessageSchemaQueryResponseDTO»

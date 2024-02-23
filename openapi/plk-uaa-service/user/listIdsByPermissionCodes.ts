@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/用户账号相关/listIdsByPermissionCodesUsingPOST
 export default function fetchMethod(data: IQueryByPermissionCodeSetUserIdQueryObjects) {
-    return post<IJSONResultListlong['data']>({
-      url: "/plk-uaa-service/user/listIdsByPermissionCodes",
-      data,
+    return http<IJSONResultListlong>({
+        url: "/plk-uaa-service/user/listIdsByPermissionCodes",
+        method: "post",
+        data,
     });
 }
 // 按权限码集查询用户id 查询对象

@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getAllMajorDataGroupUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getAllMajorDataGroup",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getAllMajorDataGroup",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

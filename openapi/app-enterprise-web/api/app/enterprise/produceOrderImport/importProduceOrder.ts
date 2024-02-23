@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产订单导入相关/importProduceOrderUsingPOST
 export default function fetchMethod(data: IImportProduceOrderInputDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceOrderImport/importProduceOrder",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/produceOrderImport/importProduceOrder",
+        method: "post",
+        data,
     });
 }
 // ImportProduceOrderInputDTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工时工费相关/getMonthTotalUsingPOST
 export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO) {
-    return post<IJSONResultMonthlySummaryStatisticalReportOfManHourFeeReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getMonthTotal",
-      data,
+    return http<IJSONResultMonthlySummaryStatisticalReportOfManHourFeeReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getMonthTotal",
+        method: "post",
+        data,
     });
 }
 // 工时工费月度报表搜索VO

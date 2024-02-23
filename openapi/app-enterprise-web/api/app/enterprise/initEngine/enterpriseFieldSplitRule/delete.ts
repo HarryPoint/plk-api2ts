@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎-企业字段分割规则/deleteUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/enterpriseFieldSplitRule/delete",
-      params,
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/enterpriseFieldSplitRule/delete",
+        method: "post",
+        params,
     });
 }
 // JSONResult«string»

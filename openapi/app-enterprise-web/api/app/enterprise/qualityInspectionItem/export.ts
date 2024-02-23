@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检项/exportUsingPOST_40
 export default function fetchMethod(data: ICheckItemSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/export",
+        method: "post",
+        data,
     });
 }
 // 质检项搜索VO

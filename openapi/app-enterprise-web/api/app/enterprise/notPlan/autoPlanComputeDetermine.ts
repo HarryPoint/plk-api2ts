@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/未排产订单相关/autoPlanComputeDetermineUsingPOST
 export default function fetchMethod(data: IProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/notPlan/autoPlanComputeDetermine",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/notPlan/autoPlanComputeDetermine",
+        method: "post",
+        data,
     });
 }
 // 生产订单自动排产计算结果确定DTO

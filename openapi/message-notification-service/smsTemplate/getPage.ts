@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/短信模板/getPageUsingPOST_3
 export default function fetchMethod(data: IQueryDtosUsingSMSTemplates) {
-    return post<IJSONResultSpecifiesTheResponseDTOToQueryPagingInformationShortMessageTemplate['data']>({
-      url: "/message-notification-service/smsTemplate/getPage",
-      data,
+    return http<IJSONResultSpecifiesTheResponseDTOToQueryPagingInformationShortMessageTemplate>({
+        url: "/message-notification-service/smsTemplate/getPage",
+        method: "post",
+        data,
     });
 }
 // 短信模板查询DTO

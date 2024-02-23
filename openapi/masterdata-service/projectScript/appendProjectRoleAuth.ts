@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/project-script-controller/appendProjectRoleAuthUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/projectScript/appendProjectRoleAuth",
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/projectScript/appendProjectRoleAuth",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

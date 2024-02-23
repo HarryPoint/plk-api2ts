@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTskReportPageUsingPOST
 export default function fetchMethod(data: ITSKReportQueryDTO1) {
-    return post<IJSONResultPageInformationTSKReportQueryDTO['data']>({
-      url: "/masterdata-service/tskStatistic/queryTskReportPage",
-      data,
+    return http<IJSONResultPageInformationTSKReportQueryDTO>({
+        url: "/masterdata-service/tskStatistic/queryTskReportPage",
+        method: "post",
+        data,
     });
 }
 // TSK报表查询DTO_1

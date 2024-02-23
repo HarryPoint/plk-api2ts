@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/销售明细报表相关/getSalesDetailsReportStatisticsUsingPOST
 export default function fetchMethod(data: GetSalesDetailsReportStatistics) {
-    return post<IJSONResultSalesStatisticsReturnObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/salesDetailsReport/getSalesDetailsReportStatistics",
-      data,
+    return http<IJSONResultSalesStatisticsReturnObject>({
+        url: "/app-enterprise-web/api/app/enterprise/salesDetailsReport/getSalesDetailsReportStatistics",
+        method: "post",
+        data,
     });
 }
 // JSONResult«销售明细表统计返回对象»

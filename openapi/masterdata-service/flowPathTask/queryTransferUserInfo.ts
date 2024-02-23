@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/queryTransferUserInfoUsingPOST
 export default function fetchMethod(data: IProcessTasksAreTransferredToPersonnelToInquireDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultListEmployeeResponseObject['data']>({
-      url: "/masterdata-service/flowPathTask/queryTransferUserInfo",
-      data,
-      params,
+    return http<IJSONResultListEmployeeResponseObject>({
+        url: "/masterdata-service/flowPathTask/queryTransferUserInfo",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程任务转交人员查询DTO

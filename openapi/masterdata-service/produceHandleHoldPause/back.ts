@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/backUsingPOST_1
 export default function fetchMethod(data: IProductionProcessingWithholdReworkRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceHandleHoldPause/back",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceHandleHoldPause/back",
+        method: "post",
+        data,
     });
 }
 // 生产处理暂扣返工请求对象

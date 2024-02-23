@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/getSettingInfoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultPanpanProductionLargeScreenSettingsResponseDTO['data']>({
-      url: "/masterdata-service/lsPanPanSetting/getSettingInfo",
+    return http<IJSONResultPanpanProductionLargeScreenSettingsResponseDTO>({
+        url: "/masterdata-service/lsPanPanSetting/getSettingInfo",
+        method: "get",
     });
 }
 // JSONResult«盼盼生产大屏设置响应DTO»

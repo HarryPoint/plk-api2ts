@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByRoutingStepIdUsingPOST
 export default function fetchMethod(data: IProduceTasksFromMessagesToSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListProductionTaskResponseDTOForMobile['data']>({
-      url: "/masterdata-service/produceTask/getProduceTaskByRoutingStepId",
-      data,
-      params,
+    return http<IJSONResultListProductionTaskResponseDTOForMobile>({
+        url: "/masterdata-service/produceTask/getProduceTaskByRoutingStepId",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产任务从消息来的搜索VO

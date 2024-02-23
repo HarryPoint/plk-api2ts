@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/服务相关/modifyUsingPOST_11
 export default function fetchMethod(data: IServiceModifyTheDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/serve/modify",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/serve/modify",
+        method: "post",
+        data,
     });
 }
 // 服务修改 DTO

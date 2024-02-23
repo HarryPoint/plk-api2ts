@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/班次相关/getAllClassShiftUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListShiftsBackToVO['data']>({
-      url: "/masterdata-service/classShift/getAllClassShift",
-      params,
+    return http<IJSONResultListShiftsBackToVO>({
+        url: "/masterdata-service/classShift/getAllClassShift",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«班次返回VO»»

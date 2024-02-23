@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/pagingSearchSelectionUserListUsingPOST
 export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList, params: { enterpriseId: number }) {
-    return post<IJSONResultListEmployeeResponseObject['data']>({
-      url: "/masterdata-service/employee/selectionList/pagingSearch",
-      data,
-      params,
+    return http<IJSONResultListEmployeeResponseObject>({
+        url: "/masterdata-service/employee/selectionList/pagingSearch",
+        method: "post",
+        data,
+        params,
     });
 }
 // 用户主数据选择列表搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息方案/editUsingPOST_3
 export default function fetchMethod(data: IMessageSchemaEditRequestDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/message-notification-service/messageSchema/edit",
-      data,
+    return http<IJSONResultlong>({
+        url: "/message-notification-service/messageSchema/edit",
+        method: "post",
+        data,
     });
 }
 // MessageSchemaEditRequestDTO

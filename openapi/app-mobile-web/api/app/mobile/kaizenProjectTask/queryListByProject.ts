@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/项目任务相关/queryListByProjectUsingGET
 export default function fetchMethod(params: { projectId: number }) {
-    return get<IJSONResultListKaizenProjectTaskResponseDTO['data']>({
-      url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/queryListByProject",
-      params,
+    return http<IJSONResultListKaizenProjectTaskResponseDTO>({
+        url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/queryListByProject",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«KaizenProjectTaskResponseDTO»»

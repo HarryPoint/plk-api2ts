@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质量追溯/queryTableColumnUsingGET_1
 export default function fetchMethod() {
-    return get<IJSONResultListQualityTraceabilityReportTableColumnBO['data']>({
-      url: "/masterdata-service/qualityTraceability/queryTableColumn",
+    return http<IJSONResultListQualityTraceabilityReportTableColumnBO>({
+        url: "/masterdata-service/qualityTraceability/queryTableColumn",
+        method: "get",
     });
 }
 // JSONResult«List«QualityTraceabilityReportTableColumnBO»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdsUsingPOST_1
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListProcessNodeVO['data']>({
-      url: "/flow-service/flowPathNode/getByIds",
-      data,
+    return http<IJSONResultListProcessNodeVO>({
+        url: "/flow-service/flowPathNode/getByIds",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«流程节点VO»»

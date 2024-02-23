@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/exportExcelByProduceOrderUsingPOST
 export default function fetchMethod(data: IProductionSchedulingOrderSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/produceOrderScheduleReport/exportExcelByProduceOrder",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/produceOrderScheduleReport/exportExcelByProduceOrder",
+        method: "post",
+        data,
     });
 }
 // 生产排产订单搜索VO

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/getByIdUsingGET_1
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultTheDeviceDataCollectionSchemeDetailsAreReturnedToVO['data']>({
-      url: "/masterdata-service/deviceCollectionPlan/getById",
-      params,
+    return http<IJSONResultTheDeviceDataCollectionSchemeDetailsAreReturnedToVO>({
+        url: "/masterdata-service/deviceCollectionPlan/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«设备数采方案明细返回VO»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/待办相关/transferTaskUsingPOST
 export default function fetchMethod(data: IProcessTasksAreTransferredToTheDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/todoList/transferTask",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/todoList/transferTask",
+        method: "post",
+        data,
     });
 }
 // 流程任务转交DTO

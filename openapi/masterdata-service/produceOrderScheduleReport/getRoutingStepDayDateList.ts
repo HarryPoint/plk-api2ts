@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/getRoutingStepDayDateListUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListstring['data']>({
-      url: "/masterdata-service/produceOrderScheduleReport/getRoutingStepDayDateList",
+    return http<IJSONResultListstring>({
+        url: "/masterdata-service/produceOrderScheduleReport/getRoutingStepDayDateList",
+        method: "get",
     });
 }
 // JSONResult«List«string»»

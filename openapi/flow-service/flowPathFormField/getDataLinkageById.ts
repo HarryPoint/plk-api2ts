@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getDataLinkageByIdUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return post<IJSONResultFlowPathFormFieldDataLinkageVO['data']>({
-      url: "/flow-service/flowPathFormField/getDataLinkageById",
-      params,
+    return http<IJSONResultFlowPathFormFieldDataLinkageVO>({
+        url: "/flow-service/flowPathFormField/getDataLinkageById",
+        method: "post",
+        params,
     });
 }
 // JSONResult«FlowPathFormFieldDataLinkageVO»

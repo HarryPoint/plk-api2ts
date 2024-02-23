@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/供应商绩效评价报表相关/querySupplierPerformanceReportUsingPOST
 export default function fetchMethod(data: QuerySupplierPerformanceReport) {
-    return post<IJSONResultThePageInformationQualityPerformanceEvaluationReportReturnsTheDTO['data']>({
-      url: "/masterdata-service/supplierPerformanceReport/querySupplierPerformanceReport",
-      data,
+    return http<IJSONResultThePageInformationQualityPerformanceEvaluationReportReturnsTheDTO>({
+        url: "/masterdata-service/supplierPerformanceReport/querySupplierPerformanceReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«质量绩效评价表报表返回DTO»»

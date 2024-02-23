@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/标准工艺具体物料节点相关/getBomUsedStandardTechnologyUsingPOST
 export default function fetchMethod(data: IStandardProcessQueryObjectUsedByBom) {
-    return post<IJSONResultListbomStandardProcessResponse['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificMaterialNode/getBomUsedStandardTechnology",
-      data,
+    return http<IJSONResultListbomStandardProcessResponse>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificMaterialNode/getBomUsedStandardTechnology",
+        method: "post",
+        data,
     });
 }
 // bom占用的标准工艺查询对象

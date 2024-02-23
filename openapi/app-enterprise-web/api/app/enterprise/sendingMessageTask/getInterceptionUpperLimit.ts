@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/getInterceptionUpperLimitUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultint['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getInterceptionUpperLimit",
+    return http<IJSONResultint>({
+        url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getInterceptionUpperLimit",
+        method: "post",
     });
 }
 // JSONResult«int»

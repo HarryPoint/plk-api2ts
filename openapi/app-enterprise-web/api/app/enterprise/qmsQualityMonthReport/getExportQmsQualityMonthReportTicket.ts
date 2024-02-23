@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质量月报报表相关/getExportQmsQualityMonthReportTicketUsingPOST
 export default function fetchMethod(data: GetExportQmsQualityMonthReportTicket) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qmsQualityMonthReport/getExportQmsQualityMonthReportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/qmsQualityMonthReport/getExportQmsQualityMonthReportTicket",
+        method: "post",
+        data,
     });
 }
 // JSONResult«导出ticket信息»

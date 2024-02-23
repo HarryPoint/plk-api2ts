@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/getAllAppSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListAppliesTheServiceTreeDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/messageSchema/getAllAppSelector",
+    return http<IJSONResultListAppliesTheServiceTreeDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/messageSchema/getAllAppSelector",
+        method: "get",
     });
 }
 // JSONResult«List«应用业务树DTO»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/batchGetLotNoUsingPOST
 export default function fetchMethod(data: IBatchSerialNumberRequestDTO) {
-    return post<IJSONResultBatchNumberUsesDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchGetLotNo",
-      data,
+    return http<IJSONResultBatchNumberUsesDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchGetLotNo",
+        method: "post",
+        data,
     });
 }
 // 批次/序列号申请DTO

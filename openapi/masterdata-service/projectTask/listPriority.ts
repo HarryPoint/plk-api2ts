@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/listPriorityUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListIdCodeNameACommonTransferObject['data']>({
-      url: "/masterdata-service/projectTask/listPriority",
+    return http<IJSONResultListIdCodeNameACommonTransferObject>({
+        url: "/masterdata-service/projectTask/listPriority",
+        method: "get",
     });
 }
 // JSONResult«List«Id Code Name 通用传输对象»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/客户相关/getForPageUsingPOST_4
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/customer/getForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-enterprise-web/api/app/enterprise/customer/getForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

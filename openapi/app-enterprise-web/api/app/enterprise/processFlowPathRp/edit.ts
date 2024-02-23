@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序字段对应表相关/editUsingPOST_16
 export default function fetchMethod(data: IProcedureFieldsCorrespondToTableEditDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processFlowPathRp/edit",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/processFlowPathRp/edit",
+        method: "post",
+        data,
     });
 }
 // 工序字段对应表编辑DTO

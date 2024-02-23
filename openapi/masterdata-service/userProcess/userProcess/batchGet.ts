@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/batchGetUserProcessUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListUserProcessVo['data']>({
-      url: "/masterdata-service/userProcess/userProcess/batchGet",
-      data,
+    return http<IJSONResultListUserProcessVo>({
+        url: "/masterdata-service/userProcess/userProcess/batchGet",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«UserProcessVo»»

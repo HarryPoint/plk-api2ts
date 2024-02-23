@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getByShiftIdsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListFlowPathShiftUserRpVO['data']>({
-      url: "/flow-service/flowPathShiftUserRp/getByShiftIds",
-      data,
-      params,
+    return http<IJSONResultListFlowPathShiftUserRpVO>({
+        url: "/flow-service/flowPathShiftUserRp/getByShiftIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«FlowPathShiftUserRpVO»»

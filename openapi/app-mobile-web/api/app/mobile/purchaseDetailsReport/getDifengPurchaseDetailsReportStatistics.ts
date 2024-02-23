@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/采购明细报表相关/getDifengPurchaseDetailsReportStatisticsUsingPOST
 export default function fetchMethod(data: GetDifengPurchaseDetailsReportStatistics) {
-    return post<IJSONResultPurchaseDetailsStatisticsReturnedObject['data']>({
-      url: "/app-mobile-web/api/app/mobile/purchaseDetailsReport/getDifengPurchaseDetailsReportStatistics",
-      data,
+    return http<IJSONResultPurchaseDetailsStatisticsReturnedObject>({
+        url: "/app-mobile-web/api/app/mobile/purchaseDetailsReport/getDifengPurchaseDetailsReportStatistics",
+        method: "post",
+        data,
     });
 }
 // JSONResult«采购明细表统计返回对象»

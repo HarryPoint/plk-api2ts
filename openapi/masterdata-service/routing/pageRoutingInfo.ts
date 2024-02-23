@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/pageRoutingInfoUsingPOST
 export default function fetchMethod(data: IProcessPathInformationPagingQueryDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationProcessPathInformationObject['data']>({
-      url: "/masterdata-service/routing/pageRoutingInfo",
-      data,
-      params,
+    return http<IJSONResultPagingInformationProcessPathInformationObject>({
+        url: "/masterdata-service/routing/pageRoutingInfo",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工艺路径信息分页查询DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportStatisticsUsingPOST
 export default function fetchMethod(data: GetPurchaseSummaryReportStatistics) {
-    return post<IJSONResultPurchaseSummaryReportTotalReturnedObjects['data']>({
-      url: "/app-mobile-web/api/app/mobile/purchaseSummaryReport/getPurchaseSummaryReportStatistics",
-      data,
+    return http<IJSONResultPurchaseSummaryReportTotalReturnedObjects>({
+        url: "/app-mobile-web/api/app/mobile/purchaseSummaryReport/getPurchaseSummaryReportStatistics",
+        method: "post",
+        data,
     });
 }
 // JSONResult«采购汇总报表合计返回对象»

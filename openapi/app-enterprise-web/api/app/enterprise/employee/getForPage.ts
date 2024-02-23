@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/员工相关/getForPageUsingPOST_7
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPageInformationDynamicExpansionDataVOIndicatesWhetherTheEmployeeIsAllowedToLogInToTheDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/employee/getForPage",
-      data,
+    return http<IJSONResultPageInformationDynamicExpansionDataVOIndicatesWhetherTheEmployeeIsAllowedToLogInToTheDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/employee/getForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

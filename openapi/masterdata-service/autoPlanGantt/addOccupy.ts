@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/addOccupyUsingPOST
 export default function fetchMethod(data: ITheOccupiedDTOWasAdded) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/autoPlanGantt/addOccupy",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/autoPlanGantt/addOccupy",
+        method: "post",
+        data,
     });
 }
 // 添加占用DTO

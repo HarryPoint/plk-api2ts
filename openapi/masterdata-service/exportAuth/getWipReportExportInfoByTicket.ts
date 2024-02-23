@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getWipReportExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationWIPStatisticsReportReturnsVO['data']>({
-      url: "/masterdata-service/exportAuth/getWipReportExportInfoByTicket",
-      params,
+    return http<IJSONResultExportInformationWIPStatisticsReportReturnsVO>({
+        url: "/masterdata-service/exportAuth/getWipReportExportInfoByTicket",
+        method: "get",
+        params,
     });
 }
 // JSONResult«导出信息«WIP统计报表返回VO»»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/pageQueryUsingPOST
 export default function fetchMethod(data: IPageBreaks4) {
-    return post<IJSONResultPageInformationImportRecordDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/pageQuery",
-      data,
+    return http<IJSONResultPageInformationImportRecordDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/pageQuery",
+        method: "post",
+        data,
     });
 }
 // 分页_4

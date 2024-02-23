@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/editUsingPOST_3
 export default function fetchMethod(data: IDeviceDataAcquisitionCommunicationParametersEditDTO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/deviceCollectionParam/edit",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/deviceCollectionParam/edit",
+        method: "post",
+        data,
+        params,
     });
 }
 // 设备数采通讯参数编辑DTO

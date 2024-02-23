@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/getOperateUserForPageUsingPOST
 export default function fetchMethod(data: IProcessOperatorSearchesVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPagingInformationProcessOperatorVO['data']>({
-      url: "/masterdata-service/processTaskSetting/getOperateUserForPage",
-      data,
-      params,
+    return http<IJSONResultPagingInformationProcessOperatorVO>({
+        url: "/masterdata-service/processTaskSetting/getOperateUserForPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工序操作人员搜索VO

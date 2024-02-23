@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/模糊排产相关/getProduceOrderPageUsingPOST
 export default function fetchMethod(data: IProductionOrderSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultPageInformationProductionOrderReturnsVO['data']>({
-      url: "/masterdata-service/vaguePlanOld/getProduceOrderPage",
-      data,
-      params,
+    return http<IJSONResultPageInformationProductionOrderReturnsVO>({
+        url: "/masterdata-service/vaguePlanOld/getProduceOrderPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产订单搜索VO

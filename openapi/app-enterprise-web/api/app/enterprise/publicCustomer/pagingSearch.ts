@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/CRM-公海池相关/pagingSearchPublicCustomerUsingPOST
 export default function fetchMethod(data: IPaging12) {
-    return post<IJSONResultPageInformationPublicCustomerOutputVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/publicCustomer/pagingSearch",
-      data,
+    return http<IJSONResultPageInformationPublicCustomerOutputVO>({
+        url: "/app-enterprise-web/api/app/enterprise/publicCustomer/pagingSearch",
+        method: "post",
+        data,
     });
 }
 // 分页_12

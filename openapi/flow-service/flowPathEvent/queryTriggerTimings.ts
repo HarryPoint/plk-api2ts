@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTriggerTimingsUsingPOST
 export default function fetchMethod(data: IEventTriggerTiming) {
-    return post<IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO['data']>({
-      url: "/flow-service/flowPathEvent/queryTriggerTimings",
-      data,
+    return http<IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO>({
+        url: "/flow-service/flowPathEvent/queryTriggerTimings",
+        method: "post",
+        data,
     });
 }
 // 事件触发时机

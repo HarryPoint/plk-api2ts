@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceStockInSummaryUsingPOST
 export default function fetchMethod(data: IPaging10) {
-    return post<IProductionStockInSummaryQueryResponseDTOJSONResultPagingInformation['data']>({
-      url: "/masterdata-service/produceOrder/pageQueryProduceStockInSummary",
-      data,
+    return http<IProductionStockInSummaryQueryResponseDTOJSONResultPagingInformation>({
+        url: "/masterdata-service/produceOrder/pageQueryProduceStockInSummary",
+        method: "post",
+        data,
     });
 }
 // 分页_10

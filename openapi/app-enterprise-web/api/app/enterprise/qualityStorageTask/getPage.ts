@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检管理/getMaterialSelectorUsingPOST_4
 export default function fetchMethod(data: IInspectionTaskSearchesForVO) {
-    return post<IJSONResultThePageInformationInspectionTaskReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getPage",
-      data,
+    return http<IJSONResultThePageInformationInspectionTaskReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getPage",
+        method: "post",
+        data,
     });
 }
 // 质检任务搜索VO

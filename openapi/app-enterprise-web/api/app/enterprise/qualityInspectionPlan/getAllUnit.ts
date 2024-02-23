@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检方案/getAllUnitUsingGET_2
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getAllUnit",
+    return http<IJSONResultListIdNameVO>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getAllUnit",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称VO»»

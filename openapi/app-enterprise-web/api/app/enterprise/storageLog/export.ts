@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存流水相关/exportUsingPOST_51
 export default function fetchMethod(data: IInventoryFlowSearchVO, params: { masterDataFlowPathCode: string }) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageLog/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/storageLog/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 库存流水搜索VO

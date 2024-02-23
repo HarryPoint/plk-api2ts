@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/checkRemoveUsingPOST
 export default function fetchMethod(data: ILotSerialNumberPlanRemoveCheckRequestDTO) {
-    return post<IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO['data']>({
-      url: "/masterdata-service/lotSerialNumberPlan/checkRemove",
-      data,
+    return http<IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO>({
+        url: "/masterdata-service/lotSerialNumberPlan/checkRemove",
+        method: "post",
+        data,
     });
 }
 // LotSerialNumberPlanRemoveCheckRequestDTO

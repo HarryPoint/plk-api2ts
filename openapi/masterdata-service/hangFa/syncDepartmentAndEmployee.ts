@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncDepartmentAndEmployeeUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/hangFa/syncDepartmentAndEmployee",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/hangFa/syncDepartmentAndEmployee",
+        method: "post",
     });
 }
 // JSONResult«object»

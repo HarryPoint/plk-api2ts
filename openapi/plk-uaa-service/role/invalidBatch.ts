@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/角色相关/invalidBatchUsingPOST_1
 export default function fetchMethod(data: IIdSetInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/role/invalidBatch",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/role/invalidBatch",
+        method: "post",
+        data,
     });
 }
 // id集 信息

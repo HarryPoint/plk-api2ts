@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/chooseUsingGET
 export default function fetchMethod(params: { enterpriseId: number; tableColumnStyleConfigId?: number }) {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/tableColumnStyleConfig/choose",
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/tableColumnStyleConfig/choose",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

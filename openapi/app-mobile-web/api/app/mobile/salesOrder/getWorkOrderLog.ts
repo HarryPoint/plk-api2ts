@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/销售订单相关/getWorkOrderLogUsingPOST_26
 export default function fetchMethod(data: IJobLogSearchVO) {
-    return post<IJSONResultThePageInformationWorkOrderLogReturnsVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/salesOrder/getWorkOrderLog",
-      data,
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
+        url: "/app-mobile-web/api/app/mobile/salesOrder/getWorkOrderLog",
+        method: "post",
+        data,
     });
 }
 // 工单日志搜索VO

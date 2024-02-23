@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getTreeByWarehouseUsingGET
 export default function fetchMethod(params: { storehouseId: string; enterpriseId: number }) {
-    return get<IJSONResultListPositionTreeReturnsVO['data']>({
-      url: "/masterdata-service/warehouse/getTreeByWarehouse",
-      params,
+    return http<IJSONResultListPositionTreeReturnsVO>({
+        url: "/masterdata-service/warehouse/getTreeByWarehouse",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«仓位树返回VO»»

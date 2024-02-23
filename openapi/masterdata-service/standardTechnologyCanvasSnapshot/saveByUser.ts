@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工艺画布快照相关/saveCanvasSnapshotByUserUsingPOST
 export default function fetchMethod(data: IProcessCanvasSnapshotAcquisitionRequestDTO1) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/standardTechnologyCanvasSnapshot/saveByUser",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/standardTechnologyCanvasSnapshot/saveByUser",
+        method: "post",
+        data,
     });
 }
 // 工艺画布快照获取请求DTO_1

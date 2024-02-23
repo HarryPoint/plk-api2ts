@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/listMoveInDeviceUsingPOST
 export default function fetchMethod(data: IFeedEquipmentQueryDTO) {
-    return post<IJSONResultListFeedDeviceRespondsToDTO['data']>({
-      url: "/masterdata-service/moveInOutDevice/listMoveInDevice",
-      data,
+    return http<IJSONResultListFeedDeviceRespondsToDTO>({
+        url: "/masterdata-service/moveInOutDevice/listMoveInDevice",
+        method: "post",
+        data,
     });
 }
 // 进料设备查询DTO

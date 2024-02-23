@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/getRoutingStepSelectorByLotOrderIdUsingGET
 export default function fetchMethod(params: { lotOrderId: string }) {
-    return get<IJSONResultListProductionProcessPathStepProcessResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceOrder/getRoutingStepSelectorByLotOrderId",
-      params,
+    return http<IJSONResultListProductionProcessPathStepProcessResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceOrder/getRoutingStepSelectorByLotOrderId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产工艺路径步骤工序响应 DTO»»

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/班组相关/getNameByIdUsingGET
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultstring['data']>({
-      url: "/masterdata-service/classGroup/getNameById",
-      params,
+    return http<IJSONResultstring>({
+        url: "/masterdata-service/classGroup/getNameById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«string»

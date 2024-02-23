@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/getProduceStorageReportSumResultUsingPOST
 export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO) {
-    return post<IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/getProduceStorageReportSumResult",
-      data,
+    return http<IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/getProduceStorageReportSumResult",
+        method: "post",
+        data,
     });
 }
 // 宝晶报表(库存)相关搜索DTO

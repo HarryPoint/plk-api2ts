@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/文件上传相关/uploadUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultFileVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/fileUpload/upload",
+    return http<IJSONResultFileVO>({
+        url: "/app-mobile-web/api/app/mobile/fileUpload/upload",
+        method: "post",
     });
 }
 // JSONResult«文件VO»

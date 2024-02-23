@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-step-controller/getRoutingStepCapacityByProduceTechnologyRoutingIdsUsingPOST
 export default function fetchMethod(data: number[]) {
-    return post<IJSONResultListProduceTechnologyRoutingStepCapacityResponseDTO['data']>({
-      url: "/masterdata-service/produceTechnologyRoutingStep/getRoutingStepCapacityByProduceTechnologyRoutingIds",
-      data,
+    return http<IJSONResultListProduceTechnologyRoutingStepCapacityResponseDTO>({
+        url: "/masterdata-service/produceTechnologyRoutingStep/getRoutingStepCapacityByProduceTechnologyRoutingIds",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«ProduceTechnologyRoutingStepCapacityResponseDTO»»

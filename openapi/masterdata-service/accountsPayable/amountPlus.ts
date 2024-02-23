@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/应付账款相关/amountPlusUsingPOST
 export default function fetchMethod(data: IAddAccountsPayableDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/accountsPayable/amountPlus",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/accountsPayable/amountPlus",
+        method: "post",
+        data,
+        params,
     });
 }
 // 添加应付账款DTO

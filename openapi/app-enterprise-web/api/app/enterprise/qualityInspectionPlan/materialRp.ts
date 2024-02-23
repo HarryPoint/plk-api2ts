@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检方案/materialRpUsingPOST
 export default function fetchMethod(data: IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/materialRp",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/materialRp",
+        method: "post",
+        data,
     });
 }
 // 质检方案物料应用关联信息编辑DTO

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getIdListByBusinessIdAndTypeUsingPOST
 export default function fetchMethod(data: IMessageQueryDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultListlong['data']>({
-      url: "/message-notification-service/message/getIdListByBusinessIdAndType",
-      data,
-      params,
+    return http<IJSONResultListlong>({
+        url: "/message-notification-service/message/getIdListByBusinessIdAndType",
+        method: "post",
+        data,
+        params,
     });
 }
 // 消息查询DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/质检任务相关/qualityCompleteUsingPOST
 export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/qualityTask/qualityComplete",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/qualityTask/qualityComplete",
+        method: "post",
+        data,
     });
 }
 // 质检任务完成 DTO

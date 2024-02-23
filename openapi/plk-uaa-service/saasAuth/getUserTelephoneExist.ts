@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserTelephoneExistUsingPOST
 export default function fetchMethod(data: IQueryTheMobilePhoneNumberOfTheUser) {
-    return post<IJSONResultIndicatesWhetherTheInformationIsDisplayed['data']>({
-      url: "/plk-uaa-service/saasAuth/getUserTelephoneExist",
-      data,
+    return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>({
+        url: "/plk-uaa-service/saasAuth/getUserTelephoneExist",
+        method: "post",
+        data,
     });
 }
 // 用户手机号码查询

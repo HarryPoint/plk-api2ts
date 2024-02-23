@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getInfoByIdUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultProductivityResponseObject['data']>({
-      url: "/masterdata-service/capacity/getInfoById",
-      params,
+    return http<IJSONResultProductivityResponseObject>({
+        url: "/masterdata-service/capacity/getInfoById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«产能响应对象»

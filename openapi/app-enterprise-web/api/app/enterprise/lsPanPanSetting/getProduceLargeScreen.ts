@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/盼盼大屏相关/getProduceLargeScreenUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultPanpanProducesLargeScreenResponseDtos['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lsPanPanSetting/getProduceLargeScreen",
+    return http<IJSONResultPanpanProducesLargeScreenResponseDtos>({
+        url: "/app-enterprise-web/api/app/enterprise/lsPanPanSetting/getProduceLargeScreen",
+        method: "post",
     });
 }
 // JSONResult«盼盼生产大屏响应DTO»

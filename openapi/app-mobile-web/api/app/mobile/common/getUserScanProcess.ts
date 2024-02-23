@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getUserScanProcessUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultUserScanProcessVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/common/getUserScanProcess",
+    return http<IJSONResultUserScanProcessVO>({
+        url: "/app-mobile-web/api/app/mobile/common/getUserScanProcess",
+        method: "get",
     });
 }
 // JSONResult«UserScanProcessVO»

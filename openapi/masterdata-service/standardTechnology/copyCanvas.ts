@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/copyCanvasUsingPOST
 export default function fetchMethod(data: IStandardProcessCanvasCopyRequestObject) {
-    return post<IJSONResultStandardProcessCanvasResponseObject['data']>({
-      url: "/masterdata-service/standardTechnology/copyCanvas",
-      data,
+    return http<IJSONResultStandardProcessCanvasResponseObject>({
+        url: "/masterdata-service/standardTechnology/copyCanvas",
+        method: "post",
+        data,
     });
 }
 // 标准工艺画布复制请求对象

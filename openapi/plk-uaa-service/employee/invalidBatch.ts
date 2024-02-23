@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/invalidBatchUsingPOST
 export default function fetchMethod(data: IEmployeeBatchDeactivationRequest) {
-    return post<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/employee/invalidBatch",
-      data,
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/employee/invalidBatch",
+        method: "post",
+        data,
     });
 }
 // 员工批量停用请求

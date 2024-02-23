@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/checkUsingGET_2
 export default function fetchMethod(params: { projectId: string }) {
-    return get<IJSONResultIndicatesTheResultOfVerifyingProjectChangeInformation['data']>({
-      url: "/masterdata-service/projectPlanModification/check",
-      params,
+    return http<IJSONResultIndicatesTheResultOfVerifyingProjectChangeInformation>({
+        url: "/masterdata-service/projectPlanModification/check",
+        method: "get",
+        params,
     });
 }
 // JSONResult«项目变更信息校验结果»

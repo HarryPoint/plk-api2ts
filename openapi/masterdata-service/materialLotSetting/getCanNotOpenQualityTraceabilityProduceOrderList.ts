@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/getCanNotOpenQualityTraceabilityProduceOrderListUsingGET
 export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return get<IJSONResultListQualityTraceabilityDoesNotOpenAProductionOrderResponseObject['data']>({
-      url: "/masterdata-service/materialLotSetting/getCanNotOpenQualityTraceabilityProduceOrderList",
-      params,
+    return http<IJSONResultListQualityTraceabilityDoesNotOpenAProductionOrderResponseObject>({
+        url: "/masterdata-service/materialLotSetting/getCanNotOpenQualityTraceabilityProduceOrderList",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«质量追溯未打开生产订单响应对象»»

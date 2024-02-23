@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualityPerformanceUsingPOST
 export default function fetchMethod(data: IQmsLargeScreenTimeIntervalRequest) {
-    return post<IJSONResultListReturnTheQualityPerformanceEvaluationTableToTheDTO['data']>({
-      url: "/masterdata-service/qmsDashboard/queryQualityPerformance",
-      data,
+    return http<IJSONResultListReturnTheQualityPerformanceEvaluationTableToTheDTO>({
+        url: "/masterdata-service/qmsDashboard/queryQualityPerformance",
+        method: "post",
+        data,
     });
 }
 // qms大屏时间区间请求

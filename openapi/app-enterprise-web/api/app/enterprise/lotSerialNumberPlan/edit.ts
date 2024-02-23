@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/批次方案相关/editUsingPOST_11
 export default function fetchMethod(data: ILotSerialNumberPlanEditRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/edit",
-      data,
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/edit",
+        method: "post",
+        data,
     });
 }
 // LotSerialNumberPlanEditRequestDTO

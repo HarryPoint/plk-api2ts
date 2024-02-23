@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/changeProject2KaizenProjectUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathScript/changeProject2KaizenProject",
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathScript/changeProject2KaizenProject",
+        method: "post",
     });
 }
 // JSONResult«object»

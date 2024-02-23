@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发/batchRecallIssueUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post<IJSONResultProductionOrderDeliveryResultDTO['data']>({
-      url: "/masterdata-service/produceOrderIssue/recallIssue/batch",
-      data,
-      params,
+    return http<IJSONResultProductionOrderDeliveryResultDTO>({
+        url: "/masterdata-service/produceOrderIssue/recallIssue/batch",
+        method: "post",
+        data,
+        params,
     });
 }
 // id集合信息

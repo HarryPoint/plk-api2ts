@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/项目相关/listProposalScoreByIdUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultListProposalScoreResponseDTO['data']>({
-      url: "/app-mobile-web/api/app/mobile/kaizenProject/listProposalScoreById",
-      params,
+    return http<IJSONResultListProposalScoreResponseDTO>({
+        url: "/app-mobile-web/api/app/mobile/kaizenProject/listProposalScoreById",
+        method: "post",
+        params,
     });
 }
 // JSONResult«List«ProposalScoreResponseDTO»»

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/自定义应用相关/editUsingPOST_1
 export default function fetchMethod(data: IMasterDataBaseEditDTO, params: { flowPathId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/customApplication/edit",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/customApplication/edit",
+        method: "post",
+        data,
+        params,
     });
 }
 // 主数据基础编辑 DTO

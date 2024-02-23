@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialRealWarehouseListUsingPOST
 export default function fetchMethod(data: IMaterialRealTimeInventoryQueryReturnedToVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListMaterialRealTimeLibraryFromVO['data']>({
-      url: "/masterdata-service/warehouseMaterial/getMaterialRealWarehouseList",
-      data,
-      params,
+    return http<IJSONResultListMaterialRealTimeLibraryFromVO>({
+        url: "/masterdata-service/warehouseMaterial/getMaterialRealWarehouseList",
+        method: "post",
+        data,
+        params,
     });
 }
 // 物料实时库存查询返回VO

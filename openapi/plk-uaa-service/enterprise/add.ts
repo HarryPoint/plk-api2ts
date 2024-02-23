@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/addUsingPOST_6
 export default function fetchMethod(data: ITheEnterpriseAddedARequestObject) {
-    return post<IJSONResultlong['data']>({
-      url: "/plk-uaa-service/enterprise/add",
-      data,
+    return http<IJSONResultlong>({
+        url: "/plk-uaa-service/enterprise/add",
+        method: "post",
+        data,
     });
 }
 // 企业新增请求对象

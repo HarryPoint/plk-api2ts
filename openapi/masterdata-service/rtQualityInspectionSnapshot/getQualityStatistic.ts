@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getQualityStatisticUsingPOST
 export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultListReturnsVOToTheUserInspectionStatistics['data']>({
-      url: "/masterdata-service/rtQualityInspectionSnapshot/getQualityStatistic",
-      data,
-      params,
+    return http<IJSONResultListReturnsVOToTheUserInspectionStatistics>({
+        url: "/masterdata-service/rtQualityInspectionSnapshot/getQualityStatistic",
+        method: "post",
+        data,
+        params,
     });
 }
 // 用户生产统计搜索VO

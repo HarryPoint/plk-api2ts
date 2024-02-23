@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工费相关/queryIdCodeListByCodeListUsingPOST_1
 export default function fetchMethod(data: string[]) {
-    return post<IJSONResultListIdNameNumberVO['data']>({
-      url: "/masterdata-service/laborCost/queryIdCodeListByCodeList",
-      data,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/masterdata-service/laborCost/queryIdCodeListByCodeList",
+        method: "post",
+        data,
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

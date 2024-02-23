@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeBudgetUsingPOST
 export default function fetchMethod(data: IProjectCostBudgetQueryObject) {
-    return post<IJSONResultProjectCostBudgetResponseObject['data']>({
-      url: "/masterdata-service/projectFee/getProjectFeeBudget",
-      data,
+    return http<IJSONResultProjectCostBudgetResponseObject>({
+        url: "/masterdata-service/projectFee/getProjectFeeBudget",
+        method: "post",
+        data,
     });
 }
 // 项目费用预算查询对象

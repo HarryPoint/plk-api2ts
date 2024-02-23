@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/batchRecoveryByBusinessIdsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/flowPathWorkOrder/batchRecoveryByBusinessIds",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/flowPathWorkOrder/batchRecoveryByBusinessIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«object»

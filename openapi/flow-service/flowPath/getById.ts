@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getByIdUsingGET_2
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultProcessDetailsReturnVOForEditing['data']>({
-      url: "/flow-service/flowPath/getById",
-      params,
+    return http<IJSONResultProcessDetailsReturnVOForEditing>({
+        url: "/flow-service/flowPath/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程明细针对编辑返回VO»

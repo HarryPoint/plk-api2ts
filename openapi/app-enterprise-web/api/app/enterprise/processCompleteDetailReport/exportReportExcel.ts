@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序完成明细表/exportReportExcelUsingPOST
 export default function fetchMethod(data: IProcedureCompletionListQuery) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processCompleteDetailReport/exportReportExcel",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/processCompleteDetailReport/exportReportExcel",
+        method: "post",
+        data,
     });
 }
 // 工序完成明细表查询

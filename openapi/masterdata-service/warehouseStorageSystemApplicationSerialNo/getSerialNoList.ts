@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓位系统应用库存序列号相关/getWarehouseStorageSystemApplicationSerialNoUsingPOST
 export default function fetchMethod(data: ITheWarehouseSystemAppliesTheInventorySerialNumberPagingQueryObject) {
-    return post<IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnedObject['data']>({
-      url: "/masterdata-service/warehouseStorageSystemApplicationSerialNo/getSerialNoList",
-      data,
+    return http<IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnedObject>({
+        url: "/masterdata-service/warehouseStorageSystemApplicationSerialNo/getSerialNoList",
+        method: "post",
+        data,
     });
 }
 // 仓位系统应用库存序列号分页查询对象

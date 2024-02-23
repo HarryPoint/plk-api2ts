@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产任务相关/getFlowForTaskUsingGET_1
 export default function fetchMethod(params: { produceOrderId?: number; produceTaskId?: number; type?: string }) {
-    return get<IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTask/getFlowForTask",
-      params,
+    return http<IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTask/getFlowForTask",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«生产处理基础信息响应DTO»»

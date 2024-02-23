@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/角色相关/pageUsingPOST_7
 export default function fetchMethod(data: IRoleQuery) {
-    return post<IJSONResultPagingInformationEnterpriseRoleResponse['data']>({
-      url: "/plk-uaa-service/role/page",
-      data,
+    return http<IJSONResultPagingInformationEnterpriseRoleResponse>({
+        url: "/plk-uaa-service/role/page",
+        method: "post",
+        data,
     });
 }
 // 角色查询

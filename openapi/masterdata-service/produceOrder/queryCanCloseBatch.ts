@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/queryCanCloseBatchUsingPOST
 export default function fetchMethod(data: IProduceOrderBatchCloseRequestDTO) {
-    return post<IJSONResultListlong['data']>({
-      url: "/masterdata-service/produceOrder/queryCanCloseBatch",
-      data,
+    return http<IJSONResultListlong>({
+        url: "/masterdata-service/produceOrder/queryCanCloseBatch",
+        method: "post",
+        data,
     });
 }
 // ProduceOrderBatchCloseRequestDTO

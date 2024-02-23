@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/员工相关/getUserIdByEmployeeIdUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/plk-uaa-service/employee/getUserIdByEmployeeId",
-      params,
+    return http<IJSONResultlong>({
+        url: "/plk-uaa-service/employee/getUserIdByEmployeeId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«long»

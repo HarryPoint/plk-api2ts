@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/assignUsingPOST
 export default function fetchMethod(data: IProcessTaskAssignmentDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/assign",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/assign",
+        method: "post",
+        data,
     });
 }
 // 工序任务分配DTO

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMajorDataIdCodesByIdsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListIdNameNumberVO['data']>({
-      url: "/masterdata-service/material/getMajorDataIdCodesByIds",
-      data,
-      params,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/masterdata-service/material/getMajorDataIdCodesByIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

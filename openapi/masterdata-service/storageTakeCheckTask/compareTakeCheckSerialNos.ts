@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/compareTakeCheckSerialNosUsingPOST
 export default function fetchMethod(data: IInventorySerialNumberComparisonRequestDTO) {
-    return post<IJSONResultInventorySerialNumberComparisonResultDTO['data']>({
-      url: "/masterdata-service/storageTakeCheckTask/compareTakeCheckSerialNos",
-      data,
+    return http<IJSONResultInventorySerialNumberComparisonResultDTO>({
+        url: "/masterdata-service/storageTakeCheckTask/compareTakeCheckSerialNos",
+        method: "post",
+        data,
     });
 }
 // 盘点序列号比较请求DTO

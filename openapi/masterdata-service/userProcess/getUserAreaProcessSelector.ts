@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/getUserAreaProcessSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number; type: string }) {
-    return get<ITheJSONResultListAreaOperationSelectionReturnsVO1['data']>({
-      url: "/masterdata-service/userProcess/getUserAreaProcessSelector",
-      params,
+    return http<ITheJSONResultListAreaOperationSelectionReturnsVO1>({
+        url: "/masterdata-service/userProcess/getUserAreaProcessSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«区域工序选择返回VO»»_1

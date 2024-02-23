@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/changeFormFieldTypeUsingGET
 export default function fetchMethod(params: { appSystemType: string; enterpriseId?: number; fieldCode: string; toFormFieldType: string }) {
-    return get<IJSONResultobject['data']>({
-      url: "/flow-service/flowPathScript/changeFormFieldType",
-      params,
+    return http<IJSONResultobject>({
+        url: "/flow-service/flowPathScript/changeFormFieldType",
+        method: "get",
+        params,
     });
 }
 // JSONResult«object»

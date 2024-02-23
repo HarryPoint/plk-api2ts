@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/应用相关/editUsingPOST
 export default function fetchMethod(data: IProcessEditingDTO) {
-    return post<IJSONResultProcessVersionRespondsToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/application/edit",
-      data,
+    return http<IJSONResultProcessVersionRespondsToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/application/edit",
+        method: "post",
+        data,
     });
 }
 // 流程编辑DTO

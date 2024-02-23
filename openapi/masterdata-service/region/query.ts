@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/行政区控制器/queryAllRegionUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListRegionVo['data']>({
-      url: "/masterdata-service/region/query",
+    return http<IJSONResultListRegionVo>({
+        url: "/masterdata-service/region/query",
+        method: "get",
     });
 }
 // JSONResult«List«RegionVo»»

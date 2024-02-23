@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/project-script-controller/supplyAllPermissionAndRouterUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/plk-uaa-service/projectScript/supplyAllPermissionAndRouter",
+    return http<IJSONResultobject>({
+        url: "/plk-uaa-service/projectScript/supplyAllPermissionAndRouter",
+        method: "get",
     });
 }
 // JSONResult«object»

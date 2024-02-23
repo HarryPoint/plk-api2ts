@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/disableBatchUsingPOST_2
 export default function fetchMethod(data: IMessageSchemaBatchDisableRequestDTO) {
-    return post<IJSONResultstring['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/messageSchema/disableBatch",
-      data,
+    return http<IJSONResultstring>({
+        url: "/app-enterprise-web/api/app/enterprise/messageSchema/disableBatch",
+        method: "post",
+        data,
     });
 }
 // MessageSchemaBatchDisableRequestDTO

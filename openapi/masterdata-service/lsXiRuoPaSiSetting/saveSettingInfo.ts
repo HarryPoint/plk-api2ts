@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/saveSettingInfoUsingPOST_2
 export default function fetchMethod(data: ISilopusBigScreenSetUpTheDTO, params: { enterpriseId: number; userId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/lsXiRuoPaSiSetting/saveSettingInfo",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/lsXiRuoPaSiSetting/saveSettingInfo",
+        method: "post",
+        data,
+        params,
     });
 }
 // 西偌帕斯大屏设置DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产任务相关/getPageUsingPOST_20
 export default function fetchMethod(data: IProductionTaskSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTask/getPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTask/getPage",
+        method: "post",
+        data,
     });
 }
 // 生产任务搜索VO

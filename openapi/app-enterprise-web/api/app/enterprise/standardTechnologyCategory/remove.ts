@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/标准工艺分类相关/removeUsingPOST
 export default function fetchMethod(data: IStandardProcessClassificationRemoveRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCategory/remove",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCategory/remove",
+        method: "post",
+        data,
     });
 }
 // 标准工艺分类删除请求DTO

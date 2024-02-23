@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportScrapResultVOExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO['data']>({
-      url: "/masterdata-service/exportAuth/getBaoJingReportScrapResultVOExportInfoByTicket",
-      params,
+    return http<IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO>({
+        url: "/masterdata-service/exportAuth/getBaoJingReportScrapResultVOExportInfoByTicket",
+        method: "get",
+        params,
     });
 }
 // JSONResult«导出信息«宝晶报表(报废)相关返回VO»»

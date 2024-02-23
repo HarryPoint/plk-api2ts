@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getRawStorageReportSumResultUsingPOST
 export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultBaoJingReportRawMaterialsDailyReportRelatedReturnVO['data']>({
-      url: "/masterdata-service/baoJingReport/getRawStorageReportSumResult",
-      data,
-      params,
+    return http<IJSONResultBaoJingReportRawMaterialsDailyReportRelatedReturnVO>({
+        url: "/masterdata-service/baoJingReport/getRawStorageReportSumResult",
+        method: "post",
+        data,
+        params,
     });
 }
 // 宝晶报表(库存)相关搜索DTO

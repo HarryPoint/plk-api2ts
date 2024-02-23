@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/打印模板相关/getByIdUsingGET_12
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultPrintsTheTemplateResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/printtemplate/getById",
-      params,
+    return http<IJSONResultPrintsTheTemplateResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/printtemplate/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«打印模板响应对象»

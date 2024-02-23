@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/业务参数相关/getSettingUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultSchedulingParameterVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/planParam/getSetting",
+    return http<IJSONResultSchedulingParameterVO>({
+        url: "/app-enterprise-web/api/app/enterprise/planParam/getSetting",
+        method: "post",
     });
 }
 // JSONResult«排产参数VO»

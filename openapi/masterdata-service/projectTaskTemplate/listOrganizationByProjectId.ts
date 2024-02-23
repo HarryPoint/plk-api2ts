@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/listOrganizationByProjectIdUsingGET
 export default function fetchMethod(params: { projectId: string }) {
-    return get<ITheJSONResultListProjectTaskTemplateOrganizesTheResponseDTO['data']>({
-      url: "/masterdata-service/projectTaskTemplate/listOrganizationByProjectId",
-      params,
+    return http<ITheJSONResultListProjectTaskTemplateOrganizesTheResponseDTO>({
+        url: "/masterdata-service/projectTaskTemplate/listOrganizationByProjectId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«项目任务模板组织响应DTO»»

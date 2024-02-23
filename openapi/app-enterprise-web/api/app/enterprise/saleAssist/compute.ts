@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/02-01-02-销售交期应答辅助相关/computeUsingPOST
 export default function fetchMethod(data: ISalesDeliveryResponseHelpsCalculateDTO) {
-    return post<IJSONResultSalesDeliveryResponseAssistedReturnToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/saleAssist/compute",
-      data,
+    return http<IJSONResultSalesDeliveryResponseAssistedReturnToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/saleAssist/compute",
+        method: "post",
+        data,
     });
 }
 // 销售交期应答辅助计算DTO

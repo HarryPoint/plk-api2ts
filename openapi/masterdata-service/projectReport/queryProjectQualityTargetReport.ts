@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectQualityTargetReportUsingPOST
 export default function fetchMethod(data: QueryProjectQualityTargetReport) {
-    return post<IJSONResultPagingInformationItemQualityTargetReportResponseObject['data']>({
-      url: "/masterdata-service/projectReport/queryProjectQualityTargetReport",
-      data,
+    return http<IJSONResultPagingInformationItemQualityTargetReportResponseObject>({
+        url: "/masterdata-service/projectReport/queryProjectQualityTargetReport",
+        method: "post",
+        data,
     });
 }
 // JSONResult«分页信息«项目质量目标报表响应对象»»

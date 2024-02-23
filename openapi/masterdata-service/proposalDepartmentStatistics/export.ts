@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/提案部门完成情况表-相关/exportUsingPOST_24
 export default function fetchMethod(data: IProposalDepartmentStatisticsQueryRequestDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/proposalDepartmentStatistics/export",
-      data,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/proposalDepartmentStatistics/export",
+        method: "post",
+        data,
     });
 }
 // ProposalDepartmentStatisticsQueryRequestDTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/计算方案相关/pageUsingPOST
 export default function fetchMethod(data: ICalculationSchemePagingQueryRequestDTO) {
-    return post<IJSONResultPageInformationCalculationSchemePageQueryResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/calculationPlan/page",
-      data,
+    return http<IJSONResultPageInformationCalculationSchemePageQueryResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/calculationPlan/page",
+        method: "post",
+        data,
     });
 }
 // 计算方案分页查询请求DTO

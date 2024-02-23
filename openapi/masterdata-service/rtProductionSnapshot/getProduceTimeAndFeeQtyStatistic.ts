@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeAndFeeQtyStatisticUsingPOST
 export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultStatisticsOnLaborCostReturnedToVO['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getProduceTimeAndFeeQtyStatistic",
-      data,
-      params,
+    return http<IJSONResultStatisticsOnLaborCostReturnedToVO>({
+        url: "/masterdata-service/rtProductionSnapshot/getProduceTimeAndFeeQtyStatistic",
+        method: "post",
+        data,
+        params,
     });
 }
 // 用户生产统计搜索VO

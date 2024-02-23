@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/getMasterMaterialByDetailIdUsingGET
 export default function fetchMethod(params: { detailId: number }) {
-    return get<IJSONResultMainMaterialInformationOfTheProductionOrder['data']>({
-      url: "/masterdata-service/salesOrder/transferToProduceOrder/getMasterMaterialByDetailId",
-      params,
+    return http<IJSONResultMainMaterialInformationOfTheProductionOrder>({
+        url: "/masterdata-service/salesOrder/transferToProduceOrder/getMasterMaterialByDetailId",
+        method: "get",
+        params,
     });
 }
 // JSONResult«转生产订单主物料信息»

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质检方案/exportUsingPOST_26
 export default function fetchMethod(data: IInspectionSolutionSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/masterdata-service/qualityInspectionPlan/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/qualityInspectionPlan/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 质检方案搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检管理/editUsingPOST_23
 export default function fetchMethod(data: IEditTheInspectionTaskDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/edit",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/edit",
+        method: "post",
+        data,
     });
 }
 // 编辑质检任务 DTO

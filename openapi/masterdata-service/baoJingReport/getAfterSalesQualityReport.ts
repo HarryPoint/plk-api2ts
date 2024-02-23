@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAfterSalesQualityReportUsingPOST
 export default function fetchMethod(data: IAfterSalesQualityAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultAfterSalesQualityAnalysisReturnedToVO['data']>({
-      url: "/masterdata-service/baoJingReport/getAfterSalesQualityReport",
-      data,
-      params,
+    return http<IJSONResultAfterSalesQualityAnalysisReturnedToVO>({
+        url: "/masterdata-service/baoJingReport/getAfterSalesQualityReport",
+        method: "post",
+        data,
+        params,
     });
 }
 // 售后质量分析报表搜索VO

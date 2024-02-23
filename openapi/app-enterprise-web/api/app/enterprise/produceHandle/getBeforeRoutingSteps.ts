@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/getBeforeRoutingStepsUsingGET
 export default function fetchMethod(params: { id: string }) {
-    return get<IJSONResultListProcessPathStepsSelectVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceHandle/getBeforeRoutingSteps",
-      params,
+    return http<IJSONResultListProcessPathStepsSelectVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceHandle/getBeforeRoutingSteps",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«工艺路径步骤选择VO»»

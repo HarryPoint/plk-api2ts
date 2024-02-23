@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/设备数采接口管理相关/getApiAuthInfoUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultSaasEnterpriseAkSkRespondsToDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/deviceCollectionApi/getApiAuthInfo",
+    return http<IJSONResultSaasEnterpriseAkSkRespondsToDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/deviceCollectionApi/getApiAuthInfo",
+        method: "get",
     });
 }
 // JSONResult«Saas企业Ak Sk响应 DTO»

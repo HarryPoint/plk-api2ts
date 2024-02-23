@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产工艺产能相关/getByIdUsingGET_14
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProduceTechnologyCapacityResponseDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTechnologyCapacity/getById",
-      params,
+    return http<IJSONResultProduceTechnologyCapacityResponseDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTechnologyCapacity/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«ProduceTechnologyCapacityResponseDTO»

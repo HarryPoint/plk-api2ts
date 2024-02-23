@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/任务班次相关/getDynamicExecutorSelectorUsingGET
 export default function fetchMethod(params: { enterpriseId: number }) {
-    return get<IJSONResultListProcessNodeDynamicExecutorReturnsVO['data']>({
-      url: "/flow-service/flowPathShift/getDynamicExecutorSelector",
-      params,
+    return http<IJSONResultListProcessNodeDynamicExecutorReturnsVO>({
+        url: "/flow-service/flowPathShift/getDynamicExecutorSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«流程节点动态执行人返回VO»»

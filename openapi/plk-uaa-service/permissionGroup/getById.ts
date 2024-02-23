@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/权限组相关/getByIdUsingPOST_1
 export default function fetchMethod(data: IIdInformation) {
-    return post<IJSONResultPermissionGroupAndPermissionResponseDTO['data']>({
-      url: "/plk-uaa-service/permissionGroup/getById",
-      data,
+    return http<IJSONResultPermissionGroupAndPermissionResponseDTO>({
+        url: "/plk-uaa-service/permissionGroup/getById",
+        method: "post",
+        data,
     });
 }
 // Id 信息

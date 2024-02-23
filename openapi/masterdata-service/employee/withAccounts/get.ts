@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUsersWithAccountsUsingPOST
 export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList) {
-    return post<IJSONResultListIdNameNumberVO['data']>({
-      url: "/masterdata-service/employee/withAccounts/get",
-      data,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/masterdata-service/employee/withAccounts/get",
+        method: "post",
+        data,
     });
 }
 // 用户主数据选择列表搜索VO

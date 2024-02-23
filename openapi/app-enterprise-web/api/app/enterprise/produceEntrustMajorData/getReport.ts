@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/委外报表相关/getReportUsingPOST_7
 export default function fetchMethod(data: IOutputClassReportSearchVO) {
-    return post<IJSONResultOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceEntrustMajorData/getReport",
-      data,
+    return http<IJSONResultOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/produceEntrustMajorData/getReport",
+        method: "post",
+        data,
     });
 }
 // 产出类报表搜索VO

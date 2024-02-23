@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/removeByIdUsingGET
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultboolean['data']>({
-      url: "/masterdata-service/autoPlanGantt/removeById",
-      params,
+    return http<IJSONResultboolean>({
+        url: "/masterdata-service/autoPlanGantt/removeById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«boolean»

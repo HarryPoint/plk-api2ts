@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/库存查询相关/getMaterialPlaceUsingPOST_1
 export default function fetchMethod(data: IMaterialMasterDataInventoryDistributionSearchVO) {
-    return post<IJSONResultListReturnsTheInventoryDistributionToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/getMaterialPlace",
-      data,
+    return http<IJSONResultListReturnsTheInventoryDistributionToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/getMaterialPlace",
+        method: "post",
+        data,
     });
 }
 // 物料主数据库存分布搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/queryDownstreamOrderUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultListAssociatesTheDocumentResponse['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/salesOrder/queryDownstreamOrder",
-      data,
+    return http<IJSONResultListAssociatesTheDocumentResponse>({
+        url: "/app-enterprise-web/api/app/enterprise/salesOrder/queryDownstreamOrder",
+        method: "post",
+        data,
     });
 }
 // id集合信息

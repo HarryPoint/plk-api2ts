@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getUserWaitHandleCountUsingGET_1
 export default function fetchMethod(params: { enterpriseId: number; userId: number }) {
-    return get<IJSONResultlong['data']>({
-      url: "/masterdata-service/qualityProduceTask/getUserWaitHandleCount",
-      params,
+    return http<IJSONResultlong>({
+        url: "/masterdata-service/qualityProduceTask/getUserWaitHandleCount",
+        method: "get",
+        params,
     });
 }
 // JSONResult«long»

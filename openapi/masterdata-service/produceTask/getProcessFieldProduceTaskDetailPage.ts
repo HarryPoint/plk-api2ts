@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessFieldProduceTaskDetailPageUsingPOST
 export default function fetchMethod(data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields, params: { enterpriseId: number }) {
-    return post<ITheJSONResultPageInformationTaskSummaryTableIsBasedOnProcessFieldDetailsVO['data']>({
-      url: "/masterdata-service/produceTask/getProcessFieldProduceTaskDetailPage",
-      data,
-      params,
+    return http<ITheJSONResultPageInformationTaskSummaryTableIsBasedOnProcessFieldDetailsVO>({
+        url: "/masterdata-service/produceTask/getProcessFieldProduceTaskDetailPage",
+        method: "post",
+        data,
+        params,
     });
 }
 // 任务汇总表(基于工序字段)搜索VO

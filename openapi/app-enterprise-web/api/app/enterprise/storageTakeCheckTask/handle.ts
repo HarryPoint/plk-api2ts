@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/handleUsingPOST
 export default function fetchMethod(data: IInventoryTaskInventoryProcessingDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/handle",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/handle",
+        method: "post",
+        data,
     });
 }
 // 盘点任务盘点处理DTO

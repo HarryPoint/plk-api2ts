@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检统计/getScrapAbnormalTypeUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultListIdNameNumberVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/getScrapAbnormalType",
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/getScrapAbnormalType",
+        method: "post",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

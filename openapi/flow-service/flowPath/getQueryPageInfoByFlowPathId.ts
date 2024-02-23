@@ -1,11 +1,12 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getQueryPageInfoByFlowPathIdUsingGET
 export default function fetchMethod(data: IProcessDataSearchVO, params: { enterpriseId: number; flowPathId: number }) {
-    return get<IJSONResultDynamicDataQueryPageVO['data']>({
-      url: "/flow-service/flowPath/getQueryPageInfoByFlowPathId",
-      data,
-      params,
+    return http<IJSONResultDynamicDataQueryPageVO>({
+        url: "/flow-service/flowPath/getQueryPageInfoByFlowPathId",
+        method: "get",
+        data,
+        params,
     });
 }
 // 流程数据搜索VO

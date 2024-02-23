@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getIdCodesByNameCodeUsingGET
 export default function fetchMethod(params: { enterpriseId: number; nameOrCode?: string }) {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/masterdata-service/process/getIdCodesByNameCode",
-      params,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/masterdata-service/process/getIdCodesByNameCode",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

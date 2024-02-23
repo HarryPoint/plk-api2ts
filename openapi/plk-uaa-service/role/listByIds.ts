@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/角色相关/listByIdsUsingGET
 export default function fetchMethod(data: IIdSetInformation) {
-    return get<IJSONResultListResponseForRoleInformation['data']>({
-      url: "/plk-uaa-service/role/listByIds",
-      data,
+    return http<IJSONResultListResponseForRoleInformation>({
+        url: "/plk-uaa-service/role/listByIds",
+        method: "get",
+        data,
     });
 }
 // id集 信息

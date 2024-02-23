@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
 export default function fetchMethod(params: { id: number; produceOrderId: number }) {
-    return get<IJSONResultProductionProcessTreeResponseObject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceTechnology/getTreeDetailById",
-      params,
+    return http<IJSONResultProductionProcessTreeResponseObject>({
+        url: "/app-enterprise-web/api/app/enterprise/produceTechnology/getTreeDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«生产工艺树状响应对象»

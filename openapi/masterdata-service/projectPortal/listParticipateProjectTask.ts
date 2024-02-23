@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateProjectTaskUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListProjectTaskResponseObject2['data']>({
-      url: "/masterdata-service/projectPortal/listParticipateProjectTask",
+    return http<IJSONResultListProjectTaskResponseObject2>({
+        url: "/masterdata-service/projectPortal/listParticipateProjectTask",
+        method: "get",
     });
 }
 // JSONResult«List«项目任务响应对象»»_2

@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeDetailTotalUsingPOST
 export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultTotalLaborCostReportReturnedToVO['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeDetailTotal",
-      data,
-      params,
+    return http<IJSONResultTotalLaborCostReportReturnedToVO>({
+        url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeDetailTotal",
+        method: "post",
+        data,
+        params,
     });
 }
 // 工时工费报表搜索VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/getConsignmentLossAnalyzeExportTicketUsingPOST
 export default function fetchMethod(data: IPurchaseArrivalStatisticsReportSearchVO) {
-    return post<IJSONResultExportedTicketInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/purchaseArrivedStatisticReport/getExportTicket",
-      data,
+    return http<IJSONResultExportedTicketInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/purchaseArrivedStatisticReport/getExportTicket",
+        method: "post",
+        data,
     });
 }
 // 采购到货统计报表搜索VO

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/销售订单相关/getMaterialRoutingSelectorUsingGET
 export default function fetchMethod(params: { materialId: number }) {
-    return get<IJSONResultListProcessPathSelectVO['data']>({
-      url: "/app-mobile-web/api/app/mobile/salesOrder/getMaterialRoutingSelector",
-      params,
+    return http<IJSONResultListProcessPathSelectVO>({
+        url: "/app-mobile-web/api/app/mobile/salesOrder/getMaterialRoutingSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«工艺路径选择VO»»

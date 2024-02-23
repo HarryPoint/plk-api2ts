@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsUsingPOST_3
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListBaseVO['data']>({
-      url: "/masterdata-service/process/getByIds",
-      data,
-      params,
+    return http<IJSONResultListBaseVO>({
+        url: "/masterdata-service/process/getByIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«基础VO»»

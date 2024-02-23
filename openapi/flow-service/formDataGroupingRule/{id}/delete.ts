@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/表单数据分组规则相关/deleteUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultstring['data']>({
-      url: "/flow-service/formDataGroupingRule/{id}/delete",
+    return http<IJSONResultstring>({
+        url: "/flow-service/formDataGroupingRule/{id}/delete",
+        method: "post",
     });
 }
 // JSONResult«string»

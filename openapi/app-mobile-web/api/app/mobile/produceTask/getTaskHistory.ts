@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getTaskHistoryUsingPOST
 export default function fetchMethod(data: IProductionProcessingQueryVO) {
-    return post<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getTaskHistory",
-      data,
+    return http<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getTaskHistory",
+        method: "post",
+        data,
     });
 }
 // 生产处理查询VO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/项目任务相关/batchRemoveUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/batchRemove",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/batchRemove",
+        method: "post",
+        data,
     });
 }
 // id集合信息

@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检管理/getSelectorByMaterialUsingGET_1
 export default function fetchMethod(params: { materialId?: number }) {
-    return get<IJSONResultListSelectVOAsTheInspectionSolution['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getSelectorByMaterial",
-      params,
+    return http<IJSONResultListSelectVOAsTheInspectionSolution>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getSelectorByMaterial",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«质检方案选择VO»»

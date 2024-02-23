@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getDepartmentAndUserSelectorUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListIdNameNumberVO2['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/common/getDepartmentAndUserSelector",
+    return http<IJSONResultListIdNameNumberVO2>({
+        url: "/app-enterprise-web/api/app/enterprise/common/getDepartmentAndUserSelector",
+        method: "get",
     });
 }
 // JSONResult«List«Id，名称，编号VO»»_2

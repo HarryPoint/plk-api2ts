@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getDepartmentProposalUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultDepartmentProposalDashboardResponseDTO['data']>({
-      url: "/masterdata-service/proposalDashboard/getDepartmentProposal",
+    return http<IJSONResultDepartmentProposalDashboardResponseDTO>({
+        url: "/masterdata-service/proposalDashboard/getDepartmentProposal",
+        method: "get",
     });
 }
 // JSONResult«DepartmentProposalDashboardResponseDTO»

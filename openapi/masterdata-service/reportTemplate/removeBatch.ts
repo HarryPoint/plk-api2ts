@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/报表模板/removeBatchUsingPOST
 export default function fetchMethod(data: IReportTemplateRemoveRequestDTO) {
-    return post<IJSONResultstring1['data']>({
-      url: "/masterdata-service/reportTemplate/removeBatch",
-      data,
+    return http<IJSONResultstring1>({
+        url: "/masterdata-service/reportTemplate/removeBatch",
+        method: "post",
+        data,
     });
 }
 // ReportTemplateRemoveRequestDTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/setMoveInMoldBatchUsingPOST
 export default function fetchMethod(data: IProductionTaskBatchSetFeedMoldRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/moveInOutMold/setMoveInMoldBatch",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/moveInOutMold/setMoveInMoldBatch",
+        method: "post",
+        data,
     });
 }
 // 生产任务批量设置进料模具请求DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/出料数据导入相关/importProcessMoveOutUsingPOST
 export default function fetchMethod(data: IImportProcessMoveOutInputDTO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processImportMoveOut/importProcessMoveOut",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/processImportMoveOut/importProcessMoveOut",
+        method: "post",
+        data,
     });
 }
 // ImportProcessMoveOutInputDTO

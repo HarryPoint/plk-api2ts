@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检管理/getWarehouseSelectorUsingGET
 export default function fetchMethod(params: { materialId?: number }) {
-    return get<IJSONResultListReturnsTheMaterialMasterDataStoreToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/byMaterialId/getWarehouseSelector",
-      params,
+    return http<IJSONResultListReturnsTheMaterialMasterDataStoreToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/byMaterialId/getWarehouseSelector",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«物料主数据仓位返回VO»»

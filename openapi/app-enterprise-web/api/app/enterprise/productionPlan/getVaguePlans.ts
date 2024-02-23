@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/任务下发相关/getVaguePlansUsingGET
 export default function fetchMethod(params: { id?: number }) {
-    return get<IJSONResultListReturnsVOBasedOnTheSchedulingStep['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/productionPlan/getVaguePlans",
-      params,
+    return http<IJSONResultListReturnsVOBasedOnTheSchedulingStep>({
+        url: "/app-enterprise-web/api/app/enterprise/productionPlan/getVaguePlans",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«排产步骤基础返回VO»»

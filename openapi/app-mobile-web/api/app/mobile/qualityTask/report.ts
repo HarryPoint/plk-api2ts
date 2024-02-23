@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/质检任务相关/reportUsingPOST_1
 export default function fetchMethod(data: IProductionTreatment) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-mobile-web/api/app/mobile/qualityTask/report",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-mobile-web/api/app/mobile/qualityTask/report",
+        method: "post",
+        data,
     });
 }
 // 生产处理

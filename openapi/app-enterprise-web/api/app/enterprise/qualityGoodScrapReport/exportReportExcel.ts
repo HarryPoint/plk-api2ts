@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/质检统计/exportReportExcelUsingPOST_3
 export default function fetchMethod(data: IScrapDataSheetSearchVO) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/exportReportExcel",
-      data,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/exportReportExcel",
+        method: "post",
+        data,
     });
 }
 // 良品报废数据表搜索VO

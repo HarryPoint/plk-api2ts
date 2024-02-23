@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工相关/batchGetByIdListUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post<IJSONResultListEmployeeVO['data']>({
-      url: "/masterdata-service/employee/batchGetByIdList",
-      data,
-      params,
+    return http<IJSONResultListEmployeeVO>({
+        url: "/masterdata-service/employee/batchGetByIdList",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«员工VO»»

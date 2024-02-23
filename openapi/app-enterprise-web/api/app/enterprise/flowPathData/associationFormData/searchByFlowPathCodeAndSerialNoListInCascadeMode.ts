@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/流程数据相关/searchByFlowPathCodeAndSerialNoListInCascadeModeUsingPOST
 export default function fetchMethod(data: IPaging3) {
-    return post<IJSONResultListFormCascadeQueryResultVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/flowPathData/associationFormData/searchByFlowPathCodeAndSerialNoListInCascadeMode",
-      data,
+    return http<IJSONResultListFormCascadeQueryResultVO>({
+        url: "/app-enterprise-web/api/app/enterprise/flowPathData/associationFormData/searchByFlowPathCodeAndSerialNoListInCascadeMode",
+        method: "post",
+        data,
     });
 }
 // 分页_3

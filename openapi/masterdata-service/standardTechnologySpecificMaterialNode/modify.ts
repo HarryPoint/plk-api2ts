@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/标准工艺具体物料节点相关/modifyUsingPOST_1
 export default function fetchMethod(data: IStandardProcessSpecificMaterialNodeModificationRequestObject) {
-    return post<IJSONResultMaterialBOMEditResponseObject['data']>({
-      url: "/masterdata-service/standardTechnologySpecificMaterialNode/modify",
-      data,
+    return http<IJSONResultMaterialBOMEditResponseObject>({
+        url: "/masterdata-service/standardTechnologySpecificMaterialNode/modify",
+        method: "post",
+        data,
     });
 }
 // 标准工艺具体物料节点修改请求对象

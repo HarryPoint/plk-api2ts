@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/queryFavoritesUsingPOST_1
 export default function fetchMethod(data: IPortalEnterpriseRoutingCollectionQueryRequestDTO) {
-    return post<IJSONResultListPortalUsersCollectEnterpriseRoutingDtos['data']>({
-      url: "/plk-uaa-service/portalUserFavorite/queryFavorites",
-      data,
+    return http<IJSONResultListPortalUsersCollectEnterpriseRoutingDtos>({
+        url: "/plk-uaa-service/portalUserFavorite/queryFavorites",
+        method: "post",
+        data,
     });
 }
 // 门户企业路由收藏查询请求 DTO

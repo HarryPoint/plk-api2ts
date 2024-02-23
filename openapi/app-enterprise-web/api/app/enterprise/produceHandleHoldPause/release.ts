@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/生产处理暂扣相关/releaseUsingPOST
 export default function fetchMethod(data: ITheProductionProcessHoldsTheReleaseRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/produceHandleHoldPause/release",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/produceHandleHoldPause/release",
+        method: "post",
+        data,
     });
 }
 // 生产处理暂扣放行请求对象

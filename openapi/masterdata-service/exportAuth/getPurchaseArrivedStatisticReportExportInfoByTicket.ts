@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getPurchaseArrivedStatisticReportExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO['data']>({
-      url: "/masterdata-service/exportAuth/getPurchaseArrivedStatisticReportExportInfoByTicket",
-      params,
+    return http<IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO>({
+        url: "/masterdata-service/exportAuth/getPurchaseArrivedStatisticReportExportInfoByTicket",
+        method: "get",
+        params,
     });
 }
 // JSONResult«导出信息«采购到货统计报表返回VO»»

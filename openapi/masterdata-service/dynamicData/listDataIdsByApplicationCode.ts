@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/listDataIdsByApplicationCodeUsingPOST
 export default function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number; flowPathCode: string }) {
-    return post<IJSONResultListlong['data']>({
-      url: "/masterdata-service/dynamicData/listDataIdsByApplicationCode",
-      data,
-      params,
+    return http<IJSONResultListlong>({
+        url: "/masterdata-service/dynamicData/listDataIdsByApplicationCode",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程数据搜索VO_1

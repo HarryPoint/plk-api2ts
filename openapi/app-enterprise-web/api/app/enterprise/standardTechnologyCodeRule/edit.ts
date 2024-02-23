@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/editUsingPOST_26
 export default function fetchMethod(data: IStandardProcessCodingRulesRequestDTO) {
-    return post<IJSONResultidIndicatesTheInformation['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/edit",
-      data,
+    return http<IJSONResultidIndicatesTheInformation>({
+        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/edit",
+        method: "post",
+        data,
     });
 }
 // 标准工艺编码规则请求 DTO

@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目相关/updateOverdueStatusUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultobject['data']>({
-      url: "/masterdata-service/project/updateOverdueStatus",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/project/updateOverdueStatus",
+        method: "get",
     });
 }
 // JSONResult«object»

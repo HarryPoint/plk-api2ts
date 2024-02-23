@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/关键参数相关/getByIdsIgnoreStatusUsingPOST_1
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/keyparameter/getByIdsIgnoreStatus",
-      data,
+    return http<IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos>({
+        url: "/app-enterprise-web/api/app/enterprise/keyparameter/getByIdsIgnoreStatus",
+        method: "post",
+        data,
     });
 }
 // id集合信息

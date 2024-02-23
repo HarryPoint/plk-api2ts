@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/物料全局批次设置相关/editUsingPOST_12
 export default function fetchMethod(data: IMaterialsBureauBatchSetEditObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/materialGlobalLotSetting/edit",
-      data,
+    return http<IJSONResultobject>({
+        url: "/app-enterprise-web/api/app/enterprise/materialGlobalLotSetting/edit",
+        method: "post",
+        data,
     });
 }
 // 物料全局批次设置编辑对象

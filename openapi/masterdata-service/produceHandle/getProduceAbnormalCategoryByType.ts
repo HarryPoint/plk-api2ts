@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryByTypeUsingGET
 export default function fetchMethod(params: { type: string; enterpriseId: number }) {
-    return get<IJSONResultListIdNameNumberVO['data']>({
-      url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryByType",
-      params,
+    return http<IJSONResultListIdNameNumberVO>({
+        url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryByType",
+        method: "get",
+        params,
     });
 }
 // JSONResult«List«Id，名称，编号VO»»

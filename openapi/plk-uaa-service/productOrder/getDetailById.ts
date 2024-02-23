@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/产品订单相关/getDetailByIdUsingGET_2
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultProductOrderDetailsResponseObject['data']>({
-      url: "/plk-uaa-service/productOrder/getDetailById",
-      params,
+    return http<IJSONResultProductOrderDetailsResponseObject>({
+        url: "/plk-uaa-service/productOrder/getDetailById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«产品订单详情响应对象»

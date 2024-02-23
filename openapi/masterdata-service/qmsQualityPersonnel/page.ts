@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/pageUsingPOST_4
 export default function fetchMethod(data: IQualityPersonnelDropDownPageQueryObjects) {
-    return post<IJSONResultPagingInformationQualityPersonnelDropdownResponseDTO['data']>({
-      url: "/masterdata-service/qmsQualityPersonnel/page",
-      data,
+    return http<IJSONResultPagingInformationQualityPersonnelDropdownResponseDTO>({
+        url: "/masterdata-service/qmsQualityPersonnel/page",
+        method: "post",
+        data,
     });
 }
 // 质量人员下拉分页查询对象

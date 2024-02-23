@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getTreeByWarehouseUsingPOST
 export default function fetchMethod(data: IIdCollectionInformation) {
-    return post<IJSONResultListPositionTreeDetailsAreReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getDetailTreeByStorehouseIds",
-      data,
+    return http<IJSONResultListPositionTreeDetailsAreReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getDetailTreeByStorehouseIds",
+        method: "post",
+        data,
     });
 }
 // id集合信息

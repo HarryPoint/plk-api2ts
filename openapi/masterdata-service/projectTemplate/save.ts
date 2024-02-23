@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目模板相关/saveUsingPOST_5
 export default function fetchMethod(data: IProjectTemplateEditRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/projectTemplate/save",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/projectTemplate/save",
+        method: "post",
+        data,
     });
 }
 // 项目模板编辑请求DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/startTaskUsingPOST
 export default function fetchMethod(data: IEmailTaskStartTaskRequestDTO) {
-    return post<IJSONResultEmailTaskStartTaskResponseDTO['data']>({
-      url: "/message-notification-service/emailTask/startTask",
-      data,
+    return http<IJSONResultEmailTaskStartTaskResponseDTO>({
+        url: "/message-notification-service/emailTask/startTask",
+        method: "post",
+        data,
     });
 }
 // EmailTaskStartTaskRequestDTO

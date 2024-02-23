@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectRiskUsingPOST
 export default function fetchMethod(data: IItemNameNumberPublicQueryObject) {
-    return post<IJSONResultListProjectRiskReportResponseObject['data']>({
-      url: "/masterdata-service/projectReport/listProjectRisk",
-      data,
+    return http<IJSONResultListProjectRiskReportResponseObject>({
+        url: "/masterdata-service/projectReport/listProjectRisk",
+        method: "post",
+        data,
     });
 }
 // 项目名称编号公共查询对象

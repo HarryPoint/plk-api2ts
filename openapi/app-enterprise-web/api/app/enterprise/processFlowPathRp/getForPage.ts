@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工序字段对应表相关/getForPageUsingPOST_17
 export default function fetchMethod(data: IProcedureFieldMappingTableListQueryVO) {
-    return post<IJSONResultPageInformationOperationFieldsCorrespondToTableListVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processFlowPathRp/getForPage",
-      data,
+    return http<IJSONResultPageInformationOperationFieldsCorrespondToTableListVO>({
+        url: "/app-enterprise-web/api/app/enterprise/processFlowPathRp/getForPage",
+        method: "post",
+        data,
     });
 }
 // 工序字段对应表列表查询VO

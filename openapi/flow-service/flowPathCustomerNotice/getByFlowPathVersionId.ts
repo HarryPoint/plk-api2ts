@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程自定义字段相关/getByFlowPathVersionIdUsingPOST
 export default function fetchMethod(params: { enterpriseId: number; flowPathVersionId: number }) {
-    return post<ITheJSONResultListProcessCustomNotificationFieldRespondsToVO['data']>({
-      url: "/flow-service/flowPathCustomerNotice/getByFlowPathVersionId",
-      params,
+    return http<ITheJSONResultListProcessCustomNotificationFieldRespondsToVO>({
+        url: "/flow-service/flowPathCustomerNotice/getByFlowPathVersionId",
+        method: "post",
+        params,
     });
 }
 // JSONResult«List«流程自定义通知字段响应VO»»

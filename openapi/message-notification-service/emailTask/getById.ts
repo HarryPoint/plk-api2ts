@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/getByIdUsingPOST
 export default function fetchMethod(params: { id: number }) {
-    return post<IJSONResultEmailTaskDTO['data']>({
-      url: "/message-notification-service/emailTask/getById",
-      params,
+    return http<IJSONResultEmailTaskDTO>({
+        url: "/message-notification-service/emailTask/getById",
+        method: "post",
+        params,
     });
 }
 // JSONResult«EmailTaskDTO»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/出货检验任务相关/cancelTaskUsingPOST_6
 export default function fetchMethod(data: IVerifyTaskCancellationRequestDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/qmsShipmentInspectionTask/cancelTask",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/qmsShipmentInspectionTask/cancelTask",
+        method: "post",
+        data,
     });
 }
 // 检验任务取消请求DTO

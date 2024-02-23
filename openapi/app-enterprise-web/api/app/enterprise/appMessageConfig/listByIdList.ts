@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/应用消息配置相关/listByIdListUsingPOST
 export default function fetchMethod(data: IAppMessageConfigBatchQueryRequestDTO) {
-    return post<IJSONResultListAppMessageConfigDTO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/appMessageConfig/listByIdList",
-      data,
+    return http<IJSONResultListAppMessageConfigDTO>({
+        url: "/app-enterprise-web/api/app/enterprise/appMessageConfig/listByIdList",
+        method: "post",
+        data,
     });
 }
 // AppMessageConfigBatchQueryRequestDTO

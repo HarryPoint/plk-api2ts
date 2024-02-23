@@ -1,9 +1,10 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件内容模板/listUsingGET
 export default function fetchMethod() {
-    return get<IJSONResultListEmailContentTemplateDTO['data']>({
-      url: "/message-notification-service/emailContentTemplate/list",
+    return http<IJSONResultListEmailContentTemplateDTO>({
+        url: "/message-notification-service/emailContentTemplate/list",
+        method: "get",
     });
 }
 // JSONResult«List«EmailContentTemplateDTO»»

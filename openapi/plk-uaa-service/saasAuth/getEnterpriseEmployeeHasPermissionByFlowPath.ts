@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getEnterpriseEmployeeHasPermissionByFlowPathUsingGET
 export default function fetchMethod(params: { flowPathId: number }) {
-    return get<IJSONResultstring['data']>({
-      url: "/plk-uaa-service/saasAuth/getEnterpriseEmployeeHasPermissionByFlowPath",
-      params,
+    return http<IJSONResultstring>({
+        url: "/plk-uaa-service/saasAuth/getEnterpriseEmployeeHasPermissionByFlowPath",
+        method: "get",
+        params,
     });
 }
 // JSONResult«string»

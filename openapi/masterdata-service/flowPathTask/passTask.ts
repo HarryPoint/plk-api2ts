@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/passTaskUsingPOST
 export default function fetchMethod(data: IProcessTaskSubmitDTO) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/flowPathTask/passTask",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/flowPathTask/passTask",
+        method: "post",
+        data,
     });
 }
 // 流程任务提交DTO

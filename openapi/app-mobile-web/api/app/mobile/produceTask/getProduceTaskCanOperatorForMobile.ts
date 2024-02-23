@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskCanOperatorForMobileUsingPOST
 export default function fetchMethod(data: IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals) {
-    return post<IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd['data']>({
-      url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskCanOperatorForMobile",
-      data,
+    return http<IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd>({
+        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskCanOperatorForMobile",
+        method: "post",
+        data,
     });
 }
 // 生产任务列表可批量操作项查询DTO(针对移动端)

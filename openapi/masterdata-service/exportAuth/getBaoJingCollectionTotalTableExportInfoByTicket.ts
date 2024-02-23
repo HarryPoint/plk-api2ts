@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingCollectionTotalTableExportInfoByTicketUsingGET
 export default function fetchMethod(params: { ticket: string }) {
-    return get<IJSONResultExportInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO['data']>({
-      url: "/masterdata-service/exportAuth/getBaoJingCollectionTotalTableExportInfoByTicket",
-      params,
+    return http<IJSONResultExportInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO>({
+        url: "/masterdata-service/exportAuth/getBaoJingCollectionTotalTableExportInfoByTicket",
+        method: "get",
+        params,
     });
 }
 // JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»

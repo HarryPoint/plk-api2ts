@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/班次相关/getPageUsingPOST_2
 export default function fetchMethod(data: IShiftSearchVO) {
-    return post<IJSONResultPagingInformationShiftReturnsVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/classShift/getPage",
-      data,
+    return http<IJSONResultPagingInformationShiftReturnsVO>({
+        url: "/app-enterprise-web/api/app/enterprise/classShift/getPage",
+        method: "post",
+        data,
     });
 }
 // 班次搜索VO

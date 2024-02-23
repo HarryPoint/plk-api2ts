@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表定义/getTableDefineByIdUsingGET_1
 export default function fetchMethod(params: { id: number }) {
-    return get<IJSONResultTableDefinition['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/initEngine/tableDefine",
-      params,
+    return http<IJSONResultTableDefinition>({
+        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableDefine",
+        method: "get",
+        params,
     });
 }
 // JSONResult«表格定义»

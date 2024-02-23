@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterDataEchoListByIdsUsingPOST
 export default function fetchMethod(data: number[], params: { enterpriseId: number; flowPathId: number }) {
-    return post<IJSONResultListJSONObject['data']>({
-      url: "/masterdata-service/dynamicData/getMasterDataEchoListByIds",
-      data,
-      params,
+    return http<IJSONResultListJSONObject>({
+        url: "/masterdata-service/dynamicData/getMasterDataEchoListByIds",
+        method: "post",
+        data,
+        params,
     });
 }
 // JSONResult«List«JSONObject»»

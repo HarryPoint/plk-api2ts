@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectRiskCountUsingPOST_1
 export default function fetchMethod(data: IProjectOverviewQueryDto) {
-    return post<IJSONResultProjectRiskStatisticsResponseObject['data']>({
-      url: "/masterdata-service/projectOverview/queryProjectRiskCount",
-      data,
+    return http<IJSONResultProjectRiskStatisticsResponseObject>({
+        url: "/masterdata-service/projectOverview/queryProjectRiskCount",
+        method: "post",
+        data,
     });
 }
 // 项目概况查询dto

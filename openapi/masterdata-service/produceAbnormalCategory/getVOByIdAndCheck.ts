@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getVOByIdAndCheckUsingGET_1
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultIndicatesTheProductionExceptionTypeVO['data']>({
-      url: "/masterdata-service/produceAbnormalCategory/getVOByIdAndCheck",
-      params,
+    return http<IJSONResultIndicatesTheProductionExceptionTypeVO>({
+        url: "/masterdata-service/produceAbnormalCategory/getVOByIdAndCheck",
+        method: "get",
+        params,
     });
 }
 // JSONResult«生产异常类型VO»

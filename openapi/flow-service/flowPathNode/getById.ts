@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdUsingGET_5
 export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get<IJSONResultProcessNodeDTO['data']>({
-      url: "/flow-service/flowPathNode/getById",
-      params,
+    return http<IJSONResultProcessNodeDTO>({
+        url: "/flow-service/flowPathNode/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«流程节点DTO»

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/检验项相关/computeSampleSizeUsingPOST
 export default function fetchMethod(data: ICheckItemCalculatesDTO) {
-    return post<ITheJSONResultCheckItemCalculatesTheResponseDTO['data']>({
-      url: "/masterdata-service/qmsInspectionItems/computeSampleSize",
-      data,
+    return http<ITheJSONResultCheckItemCalculatesTheResponseDTO>({
+        url: "/masterdata-service/qmsInspectionItems/computeSampleSize",
+        method: "post",
+        data,
     });
 }
 // 检验项计算DTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/bindUsingPOST
 export default function fetchMethod(data: ITheProjectPhaseBindsTheRequestObject) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/projectStage/bind",
-      data,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/projectStage/bind",
+        method: "post",
+        data,
     });
 }
 // 项目阶段绑定请求对象

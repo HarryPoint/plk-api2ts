@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产原材料成本同步测试相关/getReturnByCodeUsingGET
 export default function fetchMethod(params: { code: string }) {
-    return get<IJSONResultProductionMaterialReturnOrderCostFetchBO['data']>({
-      url: "/masterdata-service/produceRawMaterialCostSyncTest/getReturnByCode",
-      params,
+    return http<IJSONResultProductionMaterialReturnOrderCostFetchBO>({
+        url: "/masterdata-service/produceRawMaterialCostSyncTest/getReturnByCode",
+        method: "get",
+        params,
     });
 }
 // JSONResult«ProductionMaterialReturnOrderCostFetchBO»

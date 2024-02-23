@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/自定义应用相关/exportUsingPOST_8
 export default function fetchMethod(data: IProcessDataSearchVO, params: { flowPathId: number }) {
-    return post<IJSONResultlong['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/customApplication/export",
-      data,
-      params,
+    return http<IJSONResultlong>({
+        url: "/app-enterprise-web/api/app/enterprise/customApplication/export",
+        method: "post",
+        data,
+        params,
     });
 }
 // 流程数据搜索VO

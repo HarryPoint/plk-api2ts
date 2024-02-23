@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/changeStatusUsingPOST
 export default function fetchMethod(data: ITheProductionTaskChangesTheStatusDTO, params: { enterpriseId: number }) {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/produceTask/changeStatus",
-      data,
-      params,
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/produceTask/changeStatus",
+        method: "post",
+        data,
+        params,
     });
 }
 // 生产任务变更状态DTO

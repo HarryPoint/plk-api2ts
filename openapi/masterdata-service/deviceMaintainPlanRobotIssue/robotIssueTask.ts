@@ -1,9 +1,10 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划自动下发相关/robotIssueTaskUsingPOST
 export default function fetchMethod() {
-    return post<IJSONResultobject['data']>({
-      url: "/masterdata-service/deviceMaintainPlanRobotIssue/robotIssueTask",
+    return http<IJSONResultobject>({
+        url: "/masterdata-service/deviceMaintainPlanRobotIssue/robotIssueTask",
+        method: "post",
     });
 }
 // JSONResult«object»

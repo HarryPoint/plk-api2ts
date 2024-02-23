@@ -1,10 +1,11 @@
-import { get } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getByIdUsingGET
 export default function fetchMethod(params: { id: string; clientCode: string; enterpriseId: number; userId: number }) {
-    return get<IJSONResultMessageDetailsAreReturnedToVO['data']>({
-      url: "/message-notification-service/message/getById",
-      params,
+    return http<IJSONResultMessageDetailsAreReturnedToVO>({
+        url: "/message-notification-service/message/getById",
+        method: "get",
+        params,
     });
 }
 // JSONResult«消息详情返回VO»

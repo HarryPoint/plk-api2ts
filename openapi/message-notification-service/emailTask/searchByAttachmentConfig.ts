@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/searchByAttachmentConfigUsingPOST
 export default function fetchMethod(data: IEmailTaskAttachmentConfigQueryRequestDTO) {
-    return post<IJSONResultListEmailTaskQueryResponseDTO['data']>({
-      url: "/message-notification-service/emailTask/searchByAttachmentConfig",
-      data,
+    return http<IJSONResultListEmailTaskQueryResponseDTO>({
+        url: "/message-notification-service/emailTask/searchByAttachmentConfig",
+        method: "post",
+        data,
     });
 }
 // EmailTaskAttachmentConfigQueryRequestDTO

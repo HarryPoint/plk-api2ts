@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:17400/doc.html#/default/项目任务相关/getPageByFlowPathIdUsingPOST_10
 export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post<IJSONResultPagingInformationJSONObject['data']>({
-      url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/getForPage",
-      data,
+    return http<IJSONResultPagingInformationJSONObject>({
+        url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/getForPage",
+        method: "post",
+        data,
     });
 }
 // 流程数据基础搜索VO

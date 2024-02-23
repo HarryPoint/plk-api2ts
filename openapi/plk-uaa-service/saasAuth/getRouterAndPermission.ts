@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getRouterAndPermissionUsingPOST_1
 export default function fetchMethod(data: IEnterpriseRoutingTreeQueryDTO1) {
-    return post<IJSONResultRoutePermissionResponseDTO['data']>({
-      url: "/plk-uaa-service/saasAuth/getRouterAndPermission",
-      data,
+    return http<IJSONResultRoutePermissionResponseDTO>({
+        url: "/plk-uaa-service/saasAuth/getRouterAndPermission",
+        method: "post",
+        data,
     });
 }
 // 企业路由树查询 DTO_1

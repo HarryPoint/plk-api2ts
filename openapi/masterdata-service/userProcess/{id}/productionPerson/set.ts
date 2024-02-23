@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/setProductionPersonUsingPOST
 export default function fetchMethod(data: ISetExecutorDTO[]) {
-    return post<IJSONResultstring1['data']>({
-      url: "/masterdata-service/userProcess/{id}/productionPerson/set",
-      data,
+    return http<IJSONResultstring1>({
+        url: "/masterdata-service/userProcess/{id}/productionPerson/set",
+        method: "post",
+        data,
     });
 }
 // SetExecutorDTO

@@ -1,10 +1,11 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16400/doc.html#/default/工艺卡相关/editUsingPOST_17
 export default function fetchMethod(data: IProcessCardInformationEditsDTO) {
-    return post<IJSONResultProcessCardInformationIsReturnedToVO['data']>({
-      url: "/app-enterprise-web/api/app/enterprise/processSheet/edit",
-      data,
+    return http<IJSONResultProcessCardInformationIsReturnedToVO>({
+        url: "/app-enterprise-web/api/app/enterprise/processSheet/edit",
+        method: "post",
+        data,
     });
 }
 // 工艺卡信息编辑DTO

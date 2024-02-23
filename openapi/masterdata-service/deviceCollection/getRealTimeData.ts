@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/getRealTimeDataUsingPOST
 export default function fetchMethod(data: IDeviceRealTimeDataSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultDeviceDataCollectionRealTimeDataIsReturnedToVO['data']>({
-      url: "/masterdata-service/deviceCollection/getRealTimeData",
-      data,
-      params,
+    return http<IJSONResultDeviceDataCollectionRealTimeDataIsReturnedToVO>({
+        url: "/masterdata-service/deviceCollection/getRealTimeData",
+        method: "post",
+        data,
+        params,
     });
 }
 // 设备实时数据搜索VO

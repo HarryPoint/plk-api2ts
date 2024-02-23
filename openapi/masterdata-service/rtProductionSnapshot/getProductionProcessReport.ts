@@ -1,11 +1,12 @@
-import { post } from '@/api/http';
- 
+import { http } from '@/api/http';
+
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProductionProcessReportUsingPOST
 export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }) {
-    return post<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO['data']>({
-      url: "/masterdata-service/rtProductionSnapshot/getProductionProcessReport",
-      data,
-      params,
+    return http<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO>({
+        url: "/masterdata-service/rtProductionSnapshot/getProductionProcessReport",
+        method: "post",
+        data,
+        params,
     });
 }
 // 产出类报表搜索VO
