@@ -1,5 +1,7 @@
 import fs from "fs";
 import path from "path";
+import { SourceFile } from "ts-morph";
+import { customContent } from "./plkTpl";
 
 export type IConfig = {
   prefix: string;
@@ -12,6 +14,11 @@ export type IConfig = {
   serviceMap: Record<string, string>;
   serviceNameToPath: boolean;
   output: string;
+  customContent: (
+    data: any,
+    definitionsFile: SourceFile,
+    transFormType: (arg: any) => string
+  ) => Promise<void>;
 };
 
 const platformMap = {
@@ -64,6 +71,7 @@ const defaultConfig: IConfig = {
   serviceMap: apiMap.dev,
   serviceNameToPath: false,
   output,
+  customContent,
 };
 
 const argv = require("yargs").argv;

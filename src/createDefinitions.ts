@@ -1,4 +1,5 @@
 import { OptionalKind, PropertySignatureStructure, SourceFile } from "ts-morph";
+import { IConfig } from "./config";
 import { translate as translateFn } from "./translate";
 
 const typeMap = {
@@ -24,9 +25,13 @@ type IDefinitionsMapItem = {
 export const createDefinitions = async (
   definitionsFile: SourceFile,
   data: any,
-  option?: { translate?: boolean; prefix?: string }
+  option?: {
+    translate?: boolean;
+    prefix?: string;
+    customContent?: IConfig["customContent"];
+  }
 ) => {
-  const { translate = true, prefix = "I" } = option || {};
+  const { translate = true, prefix = "I", customContent } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
 
   const transFormType = (define: any): string => {
@@ -84,75 +89,9 @@ export const createDefinitions = async (
     // console.log("item.name: ", item.name);
   });
 
-  // TODO: 转换到外层实现
-  // 生成接口文档链接 和 方法定义
-  for (let url in data.paths) {
-    const fetchDefines = data.paths[url];
-    for (let method in fetchDefines) {
-      const methodDefine = fetchDefines[method];
-      definitionsFile.addStatements((writer) => {
-        writer.writeLine(`import { ${method} } from '@/api/http';`);
-        writer.writeLine(" ");
-        const docUrl = `// http://${
-          data.host
-        }/doc.html#/default/${methodDefine.tags?.join("/")}/${
-          methodDefine.operationId
-        }`;
-        console.log("docUrl: ", docUrl);
-        writer.writeLine(docUrl);
-      });
-      const functionDeclaration = definitionsFile.addFunction({
-        name: "fetchMethod",
-        isDefaultExport: true,
-      });
-      const responseDefine = methodDefine.responses?.[200]?.schema;
-      let bodyDefine: any;
-      let queryDefine: any;
-      methodDefine.parameters?.forEach((paramsDefine: any) => {
-        if (paramsDefine.in === "body") {
-          bodyDefine = paramsDefine;
-        }
-        if (paramsDefine.in === "query") {
-          if (!queryDefine) {
-            queryDefine = {
-              in: "query",
-              schema: {
-                type: "object",
-                properties: {},
-              },
-            };
-          }
-          queryDefine.schema.properties[paramsDefine.name] = paramsDefine;
-        }
-      });
-      const defineArr = [bodyDefine, queryDefine].filter(Boolean);
-      defineArr.forEach((defineItem) => {
-        const name = defineItem.in === "body" ? "data" : "params";
-        functionDeclaration.addParameter({
-          name,
-          type: transFormType(defineItem.schema),
-        });
-      });
-      functionDeclaration.setBodyText((writer) => {
-        writer.writeLine(
-          `return ${method}<${
-            responseDefine ? transFormType(responseDefine) : "any"
-          }>({`
-        );
-        writer.writeLine(`  url: "${url}",`);
-        defineArr?.forEach((paramsDefine: any) => {
-          if (paramsDefine.in === "body") {
-            writer.writeLine(`  data,`);
-          }
-          if (paramsDefine.in === "query") {
-            writer.writeLine(`  params,`);
-          }
-        });
-        writer.writeLine(`});`);
-      });
-    }
+  if (customContent) {
+    await customContent(data, definitionsFile, transFormType);
   }
-
   // 生成所有的定义
   for (let name in definitionsMap) {
     const item = definitionsMap[name];
