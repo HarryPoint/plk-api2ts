@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/排产全局参数配置相关/getSettingUsingPOST
-export function fetchMethod(params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(params: { enterpriseId: number }) {
+    return post<IJSONResultSchedulingParameterVO>({
       url: "/masterdata-service/planGlobalConfig/getSetting",
       params,
     });

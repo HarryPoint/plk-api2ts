@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationReferenceRecordListUsingPOST
-export function fetchMethod(data: IFormReferencingQueryRequestDTO) {
-    return post({
+export default function fetchMethod(data: IFormReferencingQueryRequestDTO) {
+    return post<IJSONResultListFormReferencingQueryResponseDTO>({
       url: "/masterdata-service/dynamicData/queryAssociationReferenceDataList",
       data,
     });

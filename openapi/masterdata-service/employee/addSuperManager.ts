@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/addSuperManagerUsingPOST
-export function fetchMethod(data: INewRequestDTOForEmployeeOvermanagement) {
-    return post({
+export default function fetchMethod(data: INewRequestDTOForEmployeeOvermanagement) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/employee/addSuperManager",
       data,
     });

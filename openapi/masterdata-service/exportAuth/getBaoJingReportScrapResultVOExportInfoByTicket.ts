@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportScrapResultVOExportInfoByTicketUsingGET
-export function fetchMethod(params: { ticket: string }) {
-    return get({
+export default function fetchMethod(params: { ticket: string }) {
+    return get<IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO>({
       url: "/masterdata-service/exportAuth/getBaoJingReportScrapResultVOExportInfoByTicket",
       params,
     });

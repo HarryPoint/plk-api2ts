@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/editUsingPOST_20
-export function fetchMethod(data: IPreparatoryPeriodEditorDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IPreparatoryPeriodEditorDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/readyTime/edit",
       data,
       params,

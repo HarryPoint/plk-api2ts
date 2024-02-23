@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/transferUsingPOST_1
-export function fetchMethod(data: IBatchTransferToOtherProductionOrderDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IBatchTransferToOtherProductionOrderDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceOrder/transfer",
       data,
       params,

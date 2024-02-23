@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getCanvasUsingPOST
-export function fetchMethod(data: IStandardProcessCanvasQueryObject) {
-    return post({
+export default function fetchMethod(data: IStandardProcessCanvasQueryObject) {
+    return post<IJSONResultStandardProcessCanvasResponseObject>({
       url: "/masterdata-service/standardTechnology/getCanvas",
       data,
     });

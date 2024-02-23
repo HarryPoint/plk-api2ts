@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序完成明细表/pageUsingPOST_2
-export function fetchMethod(data: IProcedureCompletionListQuery) {
-    return post({
+export default function fetchMethod(data: IProcedureCompletionListQuery) {
+    return post<IJSONResultPagingInformationOperationCompletionDetailTableResponseDto>({
       url: "/masterdata-service/processCompleteDetailReport/page",
       data,
     });

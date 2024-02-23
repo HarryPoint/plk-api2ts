@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/robotIssueDataCheckUsingPOST
-export function fetchMethod(data: IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO) {
-    return post({
+export default function fetchMethod(data: IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO) {
+    return post<IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO>({
       url: "/masterdata-service/produceOrderRobot/robotIssueDataCheck",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getForPageUsingPOST_10
-export function fetchMethod(data: IProcedureFieldMappingTableListQueryVO) {
-    return post({
+export default function fetchMethod(data: IProcedureFieldMappingTableListQueryVO) {
+    return post<IJSONResultPageInformationOperationFieldsCorrespondToTableListVO>({
       url: "/masterdata-service/processFlowPathRp/getForPage",
       data,
     });

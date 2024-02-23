@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/uploadDeviceDataUsingPOST
-export function fetchMethod(data: IDeviceDataAcquisitionDataUpload[]) {
-    return post({
+export default function fetchMethod(data: IDeviceDataAcquisitionDataUpload[]) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/deviceCollectionData/uploadDataByUser",
       data,
     });

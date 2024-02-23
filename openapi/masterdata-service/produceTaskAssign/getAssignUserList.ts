@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getAssignUserListUsingGET
-export function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
+    return get<IJSONResultListIdNameNumberVO>({
       url: "/masterdata-service/produceTaskAssign/getAssignUserList",
       params,
     });

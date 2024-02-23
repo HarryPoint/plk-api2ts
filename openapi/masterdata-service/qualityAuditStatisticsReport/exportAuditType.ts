@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/exportAuditTypeUsingPOST
-export function fetchMethod(data: IBasicQualityAuditQueryRequest1) {
-    return post({
+export default function fetchMethod(data: IBasicQualityAuditQueryRequest1) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/qualityAuditStatisticsReport/exportAuditType",
       data,
     });

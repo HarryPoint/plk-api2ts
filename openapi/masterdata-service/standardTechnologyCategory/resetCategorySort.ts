@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/resetCategorySortUsingPOST
-export function fetchMethod(data: IStandardProcessClassificationSortRequestDTO) {
-    return post({
+export default function fetchMethod(data: IStandardProcessClassificationSortRequestDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/standardTechnologyCategory/resetCategorySort",
       data,
     });

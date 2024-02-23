@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportStatisticsUsingPOST
-export function fetchMethod(data: GetPurchaseSummaryReportStatistics) {
-    return post({
+export default function fetchMethod(data: GetPurchaseSummaryReportStatistics) {
+    return post<IJSONResultPurchaseSummaryReportTotalReturnedObjects>({
       url: "/masterdata-service/purchaseSummaryReport/getPurchaseSummaryReportStatistics",
       data,
     });

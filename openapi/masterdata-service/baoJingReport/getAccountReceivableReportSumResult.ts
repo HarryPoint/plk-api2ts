@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAccountReceivableReportSumResultUsingPOST
-export function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO>({
       url: "/masterdata-service/baoJingReport/getAccountReceivableReportSumResult",
       data,
       params,

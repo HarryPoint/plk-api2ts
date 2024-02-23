@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
-export function fetchMethod(params: { id: number; produceOrderId: number }) {
-    return get({
+export default function fetchMethod(params: { id: number; produceOrderId: number }) {
+    return get<IJSONResultProductionProcessTreeResponseObject>({
       url: "/masterdata-service/produceTechnology/getTreeDetailById",
       params,
     });

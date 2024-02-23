@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标签设置/getProduceTagUsingGET
-export function fetchMethod(params: { type: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { type: string; enterpriseId: number }) {
+    return get<ITheJSONResultListExceptionTagReturnsVO>({
       url: "/masterdata-service/produceTag/getProduceTag",
       params,
     });

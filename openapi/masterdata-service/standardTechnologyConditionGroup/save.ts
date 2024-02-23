@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/saveUsingPOST_8
-export function fetchMethod(data: IDtosAreStoredInStandardProcessConditionsGroup) {
-    return post({
+export default function fetchMethod(data: IDtosAreStoredInStandardProcessConditionsGroup) {
+    return post<IJSONResultStandardProcessConditionGroupSavesResponseDtos>({
       url: "/masterdata-service/standardTechnologyConditionGroup/save",
       data,
     });

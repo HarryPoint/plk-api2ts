@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质量月报部门设置相关/queryUsingPOST_2
-export function fetchMethod(data: IQualityMonthlyReportDepartmentSettingsQueryDTO) {
-    return post({
+export default function fetchMethod(data: IQualityMonthlyReportDepartmentSettingsQueryDTO) {
+    return post<IJSONResultTheQualityMonthlyReportDepartmentSetsTheResponseDTO>({
       url: "/masterdata-service/qmsQualityMonthReportDeptSetting/query",
       data,
     });

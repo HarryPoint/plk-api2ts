@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveOutLotUsingGET
-export function fetchMethod(params: { taskId: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { taskId: string; enterpriseId: number }) {
+    return get<IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials>({
       url: "/masterdata-service/produceTask/getMoveOutLot",
       params,
     });

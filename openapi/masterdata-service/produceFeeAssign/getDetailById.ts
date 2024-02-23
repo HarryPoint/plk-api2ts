@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDetailByIdUsingGET_1
-export function fetchMethod(params: { id: number }) {
-    return get({
+export default function fetchMethod(params: { id: number }) {
+    return get<IJSONResultProductionCostAllocationResponseObject>({
       url: "/masterdata-service/produceFeeAssign/getDetailById",
       params,
     });

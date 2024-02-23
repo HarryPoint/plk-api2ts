@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/calcFormFillValueUsingPOST
-export function fetchMethod(data: IFormFillRequest, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IFormFillRequest, params: { enterpriseId: number }) {
+    return post<IJSONResultListJSONObject>({
       url: "/masterdata-service/dynamicData/formFillValue/calc",
       data,
       params,

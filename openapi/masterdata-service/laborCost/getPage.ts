@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getPageUsingPOST_6
-export function fetchMethod(data: ILaborPageQueryObjectDtos) {
-    return post({
+export default function fetchMethod(data: ILaborPageQueryObjectDtos) {
+    return post<IJSONResultPagingInformationPagingResponseObject>({
       url: "/masterdata-service/laborCost/getPage",
       data,
     });

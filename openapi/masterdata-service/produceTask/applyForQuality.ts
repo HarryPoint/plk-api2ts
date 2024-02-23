@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/applyForQualityUsingPOST
-export function fetchMethod(data: IApplyForTheDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IApplyForTheDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceTask/applyForQuality",
       data,
       params,

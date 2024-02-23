@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产工艺工费相关/getByIdUsingGET_10
-export function fetchMethod(params: { id: number }) {
-    return get({
+export default function fetchMethod(params: { id: number }) {
+    return get<IJSONResultProduceTechnologyLaborCostResponseDTO>({
       url: "/masterdata-service/produceTechnologyLaborCost/getById",
       params,
     });

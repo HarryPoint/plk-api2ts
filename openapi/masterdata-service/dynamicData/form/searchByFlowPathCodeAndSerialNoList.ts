@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListUsingPOST
-export function fetchMethod(data: IDynamicFormQuery) {
-    return post({
+export default function fetchMethod(data: IDynamicFormQuery) {
+    return post<IJSONResultDynamicFormQueryOutputVO>({
       url: "/masterdata-service/dynamicData/form/searchByFlowPathCodeAndSerialNoList",
       data,
     });

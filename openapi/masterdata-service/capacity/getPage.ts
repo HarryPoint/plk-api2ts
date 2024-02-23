@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getPageUsingPOST
-export function fetchMethod(data: ICapacityPagingQueryObject) {
-    return post({
+export default function fetchMethod(data: ICapacityPagingQueryObject) {
+    return post<IJSONResultPagingInformationCapacityPagingResponseObject>({
       url: "/masterdata-service/capacity/getPage",
       data,
     });

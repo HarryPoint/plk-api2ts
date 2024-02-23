@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterDataByIdUsingGET
-export function fetchMethod(params: { enterpriseCode: string; flowPathCode: string; id: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseCode: string; flowPathCode: string; id: number }) {
+    return get<IJSONResultJSONObject>({
       url: "/masterdata-service/dynamicData/getMasterDataById",
       params,
     });

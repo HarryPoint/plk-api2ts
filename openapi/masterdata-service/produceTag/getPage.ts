@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标签设置/getPageUsingPOST_17
-export function fetchMethod(data: IExceptionTagSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IExceptionTagSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationExceptionLabelReturnsVO>({
       url: "/masterdata-service/produceTag/getPage",
       data,
       params,

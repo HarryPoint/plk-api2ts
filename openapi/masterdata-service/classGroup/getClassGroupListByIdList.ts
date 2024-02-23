@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupListByIdListUsingPOST
-export function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post<IJSONResultListIdNameNumberVO>({
       url: "/masterdata-service/classGroup/getClassGroupListByIdList",
       data,
       params,

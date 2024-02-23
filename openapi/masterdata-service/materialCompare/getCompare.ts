@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getMaterialCompareUsingPOST
-export function fetchMethod(data: IMaterialMasterDataBomidCollectionVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IMaterialMasterDataBomidCollectionVO, params: { enterpriseId: number }) {
+    return post<IJSONResultListReturnVOForMaterialMasterDataComparison>({
       url: "/masterdata-service/materialCompare/getCompare",
       data,
       params,

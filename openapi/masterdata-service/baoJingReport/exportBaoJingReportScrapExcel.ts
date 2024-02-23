@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportScrapExcelUsingPOST
-export function fetchMethod(data: IBaojingReportScrapRelatedSearchVO) {
-    return post({
+export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/baoJingReport/exportBaoJingReportScrapExcel",
       data,
     });

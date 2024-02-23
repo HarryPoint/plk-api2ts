@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/listRoutingInfoUsingPOST
-export function fetchMethod(data: IProcessPathInformationQueryObject, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProcessPathInformationQueryObject, params: { enterpriseId: number }) {
+    return post<IJSONResultListProcessPathInformationObject>({
       url: "/masterdata-service/routing/listRoutingInfo",
       data,
       params,

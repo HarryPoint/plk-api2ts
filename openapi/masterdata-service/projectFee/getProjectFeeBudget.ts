@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeBudgetUsingPOST
-export function fetchMethod(data: IProjectCostBudgetQueryObject) {
-    return post({
+export default function fetchMethod(data: IProjectCostBudgetQueryObject) {
+    return post<IJSONResultProjectCostBudgetResponseObject>({
       url: "/masterdata-service/projectFee/getProjectFeeBudget",
       data,
     });

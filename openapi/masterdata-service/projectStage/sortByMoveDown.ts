@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/sortByMoveDownUsingPOST
-export function fetchMethod(data: IProjectPhaseSortRequestObjects) {
-    return post({
+export default function fetchMethod(data: IProjectPhaseSortRequestObjects) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/projectStage/sortByMoveDown",
       data,
     });

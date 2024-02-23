@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/getSalesOrderUsingPOST
-export function fetchMethod(data: IGanttChartSearchVO) {
-    return post({
+export default function fetchMethod(data: IGanttChartSearchVO) {
+    return post<IJSONResultSalesOrdersGanttChartBackToVO>({
       url: "/masterdata-service/autoPlanGantt/getSalesOrder",
       data,
     });

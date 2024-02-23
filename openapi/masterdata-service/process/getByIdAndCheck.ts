@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdAndCheckUsingPOST
-export function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return post({
+export default function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return post<IJSONResultProcessDeprecatedVO>({
       url: "/masterdata-service/process/getByIdAndCheck",
       params,
     });

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getAllTaskUsingGET
-export function fetchMethod(params: { enterpriseId: number; status: string }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; status: string }) {
+    return get<ITheJSONResultListSalesModuleReturnsVO>({
       url: "/masterdata-service/qualityStorageTask/getAllTask",
       params,
     });

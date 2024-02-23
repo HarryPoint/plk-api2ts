@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getIdCodeTreeByEnterpriseIdUsingGET
-export function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; nameOrCode: string }) {
+    return get<IJSONResultListIdNameNumberTreeVO>({
       url: "/masterdata-service/department/getIdCodeTreeByEnterpriseId",
       params,
     });

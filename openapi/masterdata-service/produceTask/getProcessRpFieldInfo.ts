@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessRpFieldInfoUsingPOST
-export function fetchMethod(data: IProcedureAssociatedFieldQueryRequestObject, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProcedureAssociatedFieldQueryRequestObject, params: { enterpriseId: number }) {
+    return post<ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO>({
       url: "/masterdata-service/produceTask/getProcessRpFieldInfo",
       data,
       params,

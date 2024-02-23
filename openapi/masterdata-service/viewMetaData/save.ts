@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/视图元数据相关/saveUsingPOST_9
-export function fetchMethod(data: IViewMetadataSaveRequestDTO) {
-    return post({
+export default function fetchMethod(data: IViewMetadataSaveRequestDTO) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/viewMetaData/save",
       data,
     });

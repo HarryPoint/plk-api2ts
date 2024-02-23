@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryClauseNumberUsingPOST
-export function fetchMethod(data: IBasicQualityAuditQueryRequest) {
-    return post({
+export default function fetchMethod(data: IBasicQualityAuditQueryRequest) {
+    return post<IJSONResultIndicatesTheStatisticalItemNumberOfTheIncompatibilityItem>({
       url: "/masterdata-service/qualityAuditStatisticsReport/queryClauseNumber",
       data,
     });

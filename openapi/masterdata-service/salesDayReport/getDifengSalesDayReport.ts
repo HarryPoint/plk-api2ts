@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getDifengSalesDayReportUsingPOST
-export function fetchMethod(data: GetDifengSalesDayReport) {
-    return post({
+export default function fetchMethod(data: GetDifengSalesDayReport) {
+    return post<IJSONResultPageInformationObjectReturnedByTheSalesDailyReport>({
       url: "/masterdata-service/salesDayReport/getDifengSalesDayReport",
       data,
     });

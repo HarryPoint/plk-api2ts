@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchPrintUsingPOST
-export function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post<IJSONResultListBatchOrderPrintInformationIsReturnedToVO>({
       url: "/masterdata-service/lotOrder/batchPrint",
       data,
       params,

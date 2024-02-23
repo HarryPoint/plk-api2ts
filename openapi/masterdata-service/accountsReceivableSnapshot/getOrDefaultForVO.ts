@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getOrDefaultForVOUsingGET
-export function fetchMethod(params: { businessUserId: number; customerId: number; day: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { businessUserId: number; customerId: number; day: string; enterpriseId: number }) {
+    return get<IJSONResultAccountsReceivableSnapshotVO>({
       url: "/masterdata-service/accountsReceivableSnapshot/getOrDefaultForVO",
       params,
     });

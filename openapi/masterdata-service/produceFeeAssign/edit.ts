@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/editUsingPOST_11
-export function fetchMethod(data: IProductionExpensesAllocationEditDTO) {
-    return post({
+export default function fetchMethod(data: IProductionExpensesAllocationEditDTO) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/produceFeeAssign/edit",
       data,
     });

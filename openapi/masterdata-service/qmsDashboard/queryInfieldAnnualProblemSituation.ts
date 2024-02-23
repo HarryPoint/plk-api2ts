@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInfieldAnnualProblemSituationUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultAnnualProblemQuery>({
       url: "/masterdata-service/qmsDashboard/queryInfieldAnnualProblemSituation",
     });
 }

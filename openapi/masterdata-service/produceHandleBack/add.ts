@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/addUsingPOST_3
-export function fetchMethod(data: IProductionProcessesReworkAddingRequestObjects) {
-    return post({
+export default function fetchMethod(data: IProductionProcessesReworkAddingRequestObjects) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceHandleBack/add",
       data,
     });

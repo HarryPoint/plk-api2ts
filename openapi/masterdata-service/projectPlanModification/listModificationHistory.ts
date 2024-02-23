@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/listModificationHistoryUsingGET_2
-export function fetchMethod(params: { projectId: string }) {
-    return get({
+export default function fetchMethod(params: { projectId: string }) {
+    return get<IJSONResultListProjectCollectionChangeInformation>({
       url: "/masterdata-service/projectPlanModification/listModificationHistory",
       params,
     });

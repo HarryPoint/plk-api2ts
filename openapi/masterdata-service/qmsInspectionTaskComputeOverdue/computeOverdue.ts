@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/检验任务超期计算相关/computeOverdueUsingPOST
-export function fetchMethod() {
-    return post({
+export default function fetchMethod() {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/qmsInspectionTaskComputeOverdue/computeOverdue",
     });
 }

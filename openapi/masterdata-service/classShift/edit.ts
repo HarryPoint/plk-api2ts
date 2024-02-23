@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/班次相关/editUsingPOST_1
-export function fetchMethod(data: IShiftEditorDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IShiftEditorDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/classShift/edit",
       data,
       params,

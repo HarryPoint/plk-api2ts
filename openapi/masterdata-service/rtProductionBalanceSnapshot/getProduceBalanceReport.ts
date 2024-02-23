@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getProduceBalanceReportUsingPOST
-export function fetchMethod(data: IProductionBalanceStatisticsReportSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionBalanceStatisticsReportSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO>({
       url: "/masterdata-service/rtProductionBalanceSnapshot/getProduceBalanceReport",
       data,
       params,

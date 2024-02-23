@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionMaterialIssuanceOrderUsingGET
-export function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get({
+export default function fetchMethod(params: { fiscalPeriodId: string }) {
+    return get<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>({
       url: "/masterdata-service/produceCost/checkProductionMaterialIssuanceOrder",
       params,
     });

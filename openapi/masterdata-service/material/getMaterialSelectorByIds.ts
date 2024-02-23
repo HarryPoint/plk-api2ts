@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialSelectorByIdsUsingPOST
-export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post<IJSONResultListReturnVOToTheMaterialMasterDataSelection>({
       url: "/masterdata-service/material/getMaterialSelectorByIds",
       data,
       params,

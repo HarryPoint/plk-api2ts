@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyCodeExceptionUsingPOST
-export function fetchMethod() {
-    return post({
+export default function fetchMethod() {
+    return post<IJSONResultstring>({
       url: "/masterdata-service/codeSyncTask/applyCodeException",
     });
 }

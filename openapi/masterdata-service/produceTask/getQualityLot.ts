@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQualityLotUsingGET
-export function fetchMethod(params: { taskId: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { taskId: string; enterpriseId: number }) {
+    return get<IJSONResultListWipBatchInformationVO>({
       url: "/masterdata-service/produceTask/getQualityLot",
       params,
     });

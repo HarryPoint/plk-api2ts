@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceStockReturnUsingPOST
-export function fetchMethod(data: IPaging11) {
-    return post({
+export default function fetchMethod(data: IPaging11) {
+    return post<IProductionStockReturnQueryResponseDTOJSONResultPagingInformation>({
       url: "/masterdata-service/produceOrder/pageQueryProduceStockReturn",
       data,
     });

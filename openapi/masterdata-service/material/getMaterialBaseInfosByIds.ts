@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialBaseInfosByIdsUsingPOST
-export function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post<IJSONResultListReturnBasicInformationAboutTheMaterialMasterDataToVO>({
       url: "/masterdata-service/material/getMaterialBaseInfosByIds",
       data,
       params,

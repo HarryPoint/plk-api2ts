@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检统计/getPageUsingPOST_19
-export function fetchMethod(data: IScrapDataSheetSearchVO) {
-    return post({
+export default function fetchMethod(data: IScrapDataSheetSearchVO) {
+    return post<IJSONResultPagingInformationGoodScrapDataTableResultVO>({
       url: "/masterdata-service/qualityGoodScrapReport/getPage",
       data,
     });

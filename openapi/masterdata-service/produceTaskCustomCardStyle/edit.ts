@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/editUsingPOST_13
-export function fetchMethod(data: IProductionTaskCustomCardStyleEditListObjectDTO) {
-    return post({
+export default function fetchMethod(data: IProductionTaskCustomCardStyleEditListObjectDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceTaskCustomCardStyle/edit",
       data,
     });

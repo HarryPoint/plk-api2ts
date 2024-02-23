@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editUsingPOST_24
-export function fetchMethod(data: IListColumnStyleConfigurationEditDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IListColumnStyleConfigurationEditDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultListColumnStyleConfigurationEditDTO>({
       url: "/masterdata-service/tableColumnStyleConfig/edit",
       data,
       params,

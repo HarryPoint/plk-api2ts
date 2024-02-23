@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产能相关/batchValidUsingPOST
-export function fetchMethod(data: IEnableOrDisableVOInBatches) {
-    return post({
+export default function fetchMethod(data: IEnableOrDisableVOInBatches) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/capacity/batchValid",
       data,
     });

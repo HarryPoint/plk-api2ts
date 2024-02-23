@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBeforeRoutingStepsUsingGET
-export function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { id: string; enterpriseId: number }) {
+    return get<IJSONResultListProcessPathStepsSelectVO>({
       url: "/masterdata-service/produceHandle/getBeforeRoutingSteps",
       params,
     });

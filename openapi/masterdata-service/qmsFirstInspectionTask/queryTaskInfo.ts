@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/queryTaskInfoUsingGET
-export function fetchMethod(params: { id: string }) {
-    return get({
+export default function fetchMethod(params: { id: string }) {
+    return get<IJSONResultFirstCheckChecksTheTaskResponseObject>({
       url: "/masterdata-service/qmsFirstInspectionTask/queryTaskInfo",
       params,
     });

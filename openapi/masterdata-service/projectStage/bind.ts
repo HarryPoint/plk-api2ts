@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/bindUsingPOST
-export function fetchMethod(data: ITheProjectPhaseBindsTheRequestObject) {
-    return post({
+export default function fetchMethod(data: ITheProjectPhaseBindsTheRequestObject) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/projectStage/bind",
       data,
     });

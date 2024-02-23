@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单超期定时刷新相关/triggerFlushUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultobject>({
       url: "/masterdata-service/produceOrderOverdueScheduleFlush/triggerFlush",
     });
 }

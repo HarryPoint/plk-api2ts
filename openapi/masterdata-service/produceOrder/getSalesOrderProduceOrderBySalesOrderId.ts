@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getSalesOrderProduceOrderBySalesOrderIdUsingGET
-export function fetchMethod(params: { enterpriseId: number; salesOrderId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; salesOrderId: number }) {
+    return get<IJSONResultListSalesOrderProductionOrderReturnVO>({
       url: "/masterdata-service/produceOrder/getSalesOrderProduceOrderBySalesOrderId",
       params,
     });

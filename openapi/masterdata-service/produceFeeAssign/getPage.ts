@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/getPageUsingPOST_14
-export function fetchMethod(data: GetPage) {
-    return post({
+export default function fetchMethod(data: GetPage) {
+    return post<IJSONResultPagingInformationTheProductionCostAssignsPagingResponseObjects>({
       url: "/masterdata-service/produceFeeAssign/getPage",
       data,
     });

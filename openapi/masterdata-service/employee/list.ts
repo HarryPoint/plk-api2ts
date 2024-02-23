@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/listUsingGET_2
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListEmployeeBaseResponseDTO>({
       url: "/masterdata-service/employee/list",
     });
 }

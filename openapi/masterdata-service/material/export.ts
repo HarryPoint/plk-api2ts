@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/exportUsingPOST_9
-export function fetchMethod(data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/material/export",
       data,
       params,

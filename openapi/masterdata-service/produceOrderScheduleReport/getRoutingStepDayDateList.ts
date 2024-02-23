@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/getRoutingStepDayDateListUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListstring>({
       url: "/masterdata-service/produceOrderScheduleReport/getRoutingStepDayDateList",
     });
 }

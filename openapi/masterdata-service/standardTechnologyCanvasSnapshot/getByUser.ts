@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺画布快照相关/getCanvasSnapshotByUserUsingPOST
-export function fetchMethod(data: ICraftCanvasSnapshotAcquisitionRequestDTO) {
-    return post({
+export default function fetchMethod(data: ICraftCanvasSnapshotAcquisitionRequestDTO) {
+    return post<IJSONResultProcessCanvasSnapshotGetsResponseDTO>({
       url: "/masterdata-service/standardTechnologyCanvasSnapshot/getByUser",
       data,
     });

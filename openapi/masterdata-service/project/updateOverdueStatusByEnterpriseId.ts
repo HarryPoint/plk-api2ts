@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目相关/updateOverdueStatusByEnterpriseIdUsingGET
-export function fetchMethod(params: { enterpriseId: string }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: string }) {
+    return get<IJSONResultstring>({
       url: "/masterdata-service/project/updateOverdueStatusByEnterpriseId",
       params,
     });

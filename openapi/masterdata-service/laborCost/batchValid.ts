@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工费相关/batchValidUsingPOST_3
-export function fetchMethod(data: IEnableOrDisableVOInBatches) {
-    return post({
+export default function fetchMethod(data: IEnableOrDisableVOInBatches) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/laborCost/batchValid",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/exportUsingPOST_29
-export function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/safetyStock/export",
       data,
       params,

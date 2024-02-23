@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/saveUsingPOST_4
-export function fetchMethod(data: ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject) {
-    return post({
+export default function fetchMethod(data: ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceQuantityCollect/save",
       data,
     });

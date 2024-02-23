@@ -43,7 +43,12 @@ export const createDefinitions = async (
     if (typeOrigin === typeMap.object) {
       if (define.properties) {
         return `{ ${Object.keys(define.properties || {})
-          .map((key) => `${key}: ${transFormType(define.properties[key])}`)
+          .map(
+            (key) =>
+              `${key}${
+                define.properties[key].required === false ? "?" : ""
+              }: ${transFormType(define.properties[key])}`
+          )
           .join("; ")} }`;
       }
       return `Record<string, ${
@@ -98,8 +103,9 @@ export const createDefinitions = async (
       });
       const functionDeclaration = definitionsFile.addFunction({
         name: "fetchMethod",
-        isExported: true,
+        isDefaultExport: true,
       });
+      const responseDefine = methodDefine.responses?.[200]?.schema;
       let bodyDefine: any;
       let queryDefine: any;
       methodDefine.parameters?.forEach((paramsDefine: any) => {
@@ -128,7 +134,11 @@ export const createDefinitions = async (
         });
       });
       functionDeclaration.setBodyText((writer) => {
-        writer.writeLine(`return ${method}({`);
+        writer.writeLine(
+          `return ${method}<${
+            responseDefine ? transFormType(responseDefine) : "any"
+          }>({`
+        );
         writer.writeLine(`  url: "${url}",`);
         defineArr?.forEach((paramsDefine: any) => {
           if (paramsDefine.in === "body") {

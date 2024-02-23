@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getPageUsingPOST_9
-export function fetchMethod(data: ICraftCardSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ICraftCardSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationProcessCardReturnsVO>({
       url: "/masterdata-service/processSheet/getPage",
       data,
       params,

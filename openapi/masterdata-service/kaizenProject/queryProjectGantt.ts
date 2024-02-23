@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/queryProjectGanttUsingPOST
-export function fetchMethod(data: IProjectGanttChartQueryObject) {
-    return post({
+export default function fetchMethod(data: IProjectGanttChartQueryObject) {
+    return post<IJSONResultListProjectGanttChartResponseObject>({
       url: "/masterdata-service/kaizenProject/queryProjectGantt",
       data,
     });

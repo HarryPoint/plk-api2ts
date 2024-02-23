@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓位物料库存关联实体仓快照相关/getNumOfBeginningPeriodByWarehouseAndProductUsingPOST
-export function fetchMethod(params: { date: string; enterpriseId: number; materialId: number; warehouseId: number }) {
-    return post({
+export default function fetchMethod(params: { date: string; enterpriseId: number; materialId: number; warehouseId: number }) {
+    return post<IJSONResultWarehouseMaterialInventoryAssociatedVO>({
       url: "/masterdata-service/warehouseMajorDataRpPhysicalSnapshot/getNumOfBeginningPeriodByWarehouseAndProduct",
       params,
     });

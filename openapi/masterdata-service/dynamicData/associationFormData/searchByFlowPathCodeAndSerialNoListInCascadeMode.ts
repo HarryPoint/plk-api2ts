@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListInCascadeModeUsingPOST
-export function fetchMethod(data: IPaging3) {
-    return post({
+export default function fetchMethod(data: IPaging3) {
+    return post<IJSONResultListFormCascadeQueryResultVO>({
       url: "/masterdata-service/dynamicData/associationFormData/searchByFlowPathCodeAndSerialNoListInCascadeMode",
       data,
     });

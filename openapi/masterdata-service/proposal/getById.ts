@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/合理化建议相关/getByIdUsingPOST_2
-export function fetchMethod(params: { id: number }) {
-    return post({
+export default function fetchMethod(params: { id: number }) {
+    return post<IJSONResultProposalResponseDTO>({
       url: "/masterdata-service/proposal/getById",
       params,
     });

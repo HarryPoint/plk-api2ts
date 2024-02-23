@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryBaseTaskUsingPOST
-export function fetchMethod(data: IProjectPhaseTaskQueryObject1) {
-    return post({
+export default function fetchMethod(data: IProjectPhaseTaskQueryObject1) {
+    return post<IJSONResultListProjectTaskBaseQueryResponseObject>({
       url: "/masterdata-service/projectTask/queryBaseTask",
       data,
     });

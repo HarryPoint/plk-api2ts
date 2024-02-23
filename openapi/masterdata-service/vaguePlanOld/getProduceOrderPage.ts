@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/模糊排产相关/getProduceOrderPageUsingPOST
-export function fetchMethod(data: IProductionOrderSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionOrderSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPageInformationProductionOrderReturnsVO>({
       url: "/masterdata-service/vaguePlanOld/getProduceOrderPage",
       data,
       params,

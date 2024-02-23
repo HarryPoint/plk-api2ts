@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务类型相关/queryByNameUsingPOST_2
-export function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
-    return post({
+export default function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
+    return post<IJSONResultListIdCodeNameACommonTransferObject>({
       url: "/masterdata-service/projectTaskType/queryByName",
       data,
     });

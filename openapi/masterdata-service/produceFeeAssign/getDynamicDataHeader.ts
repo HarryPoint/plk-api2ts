@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDynamicDataHeaderUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListProductionCostAllocationDynamicTableHeaderResponseObject>({
       url: "/masterdata-service/produceFeeAssign/getDynamicDataHeader",
     });
 }

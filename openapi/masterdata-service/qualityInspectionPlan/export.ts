@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检方案/exportUsingPOST_26
-export function fetchMethod(data: IInspectionSolutionSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IInspectionSolutionSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/qualityInspectionPlan/export",
       data,
       params,

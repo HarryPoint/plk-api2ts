@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料齐套相关/getMaterialCompleteKitResultUsingPOST
-export function fetchMethod(data: IMaterialSetQueryRequestObject) {
-    return post({
+export default function fetchMethod(data: IMaterialSetQueryRequestObject) {
+    return post<IJSONResultQueryResponseObject>({
       url: "/masterdata-service/materialCompleteKit/getMaterialCompleteKitResult",
       data,
     });

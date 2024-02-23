@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
-export function fetchMethod(data: IOpenApiRequestsSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IOpenApiRequestsSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>({
       url: "/masterdata-service/deviceCollectionApi/getApiLogPage",
       data,
       params,

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getByIdUsingGET_15
-export function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get<IJSONResultInspectionTaskDetailsAreReturnedToVO>({
       url: "/masterdata-service/qualityStorageTask/getById",
       params,
     });

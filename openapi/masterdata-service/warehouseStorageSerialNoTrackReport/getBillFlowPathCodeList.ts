@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/序列号跟踪报表相关/getBillFlowPathCodeListUsingGET_2
-export function fetchMethod(params: { masterDataFlowPathCode: string }) {
-    return get({
+export default function fetchMethod(params: { masterDataFlowPathCode: string }) {
+    return get<IJSONResultListIdCodeNameACommonTransferObject>({
       url: "/masterdata-service/warehouseStorageSerialNoTrackReport/getBillFlowPathCodeList",
       params,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryFormRecordDetailListUsingPOST
-export function fetchMethod(data: IBatchQueryFormDataRequests) {
-    return post({
+export default function fetchMethod(data: IBatchQueryFormDataRequests) {
+    return post<IJSONResultListJSONObject>({
       url: "/masterdata-service/dynamicData/queryFormRecordList",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/序列号跟踪报表相关/exportMaterialSerialNoTrackReportUsingPOST
-export function fetchMethod(data: ExportMaterialSerialNoTrackReport) {
-    return post({
+export default function fetchMethod(data: ExportMaterialSerialNoTrackReport) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/warehouseStorageSerialNoTrackReport/exportMaterialSerialNoTrackReport",
       data,
     });

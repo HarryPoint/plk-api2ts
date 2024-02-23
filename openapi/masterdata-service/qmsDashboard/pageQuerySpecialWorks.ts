@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/pageQuerySpecialWorksUsingPOST
-export function fetchMethod(data: ISpecialWorkQueryRequest1) {
-    return post({
+export default function fetchMethod(data: ISpecialWorkQueryRequest1) {
+    return post<IJSONResultSpecialTaskQueryRequestForPagingInformation>({
       url: "/masterdata-service/qmsDashboard/pageQuerySpecialWorks",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/handleUsingPOST
-export function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/storageTakeCheckTask/handle",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目相关/listByIdsUsingPOST
-export function fetchMethod(data: number[]) {
-    return post({
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListProjectResponse>({
       url: "/masterdata-service/project/listByIds",
       data,
     });

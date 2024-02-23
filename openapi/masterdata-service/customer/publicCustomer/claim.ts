@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/客户相关/claimCustomerUsingPOST
-export function fetchMethod(data: ICustomerClaimInputVO) {
-    return post({
+export default function fetchMethod(data: ICustomerClaimInputVO) {
+    return post<IJSONResultboolean>({
       url: "/masterdata-service/customer/publicCustomer/claim",
       data,
     });

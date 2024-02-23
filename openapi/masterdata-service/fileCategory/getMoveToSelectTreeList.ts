@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getMoveToSelectTreeListUsingGET
-export function fetchMethod(params: { id: number }) {
-    return get({
+export default function fetchMethod(params: { id: number }) {
+    return get<IJSONResultListFileClassificationDetailResponseDTO1>({
       url: "/masterdata-service/fileCategory/getMoveToSelectTreeList",
       params,
     });

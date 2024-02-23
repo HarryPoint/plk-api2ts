@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/qualityCompleteUsingPOST
-export function fetchMethod(data: ITheDTOCompletesTheInspectionTask, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/qualityProduceTask/qualityComplete",
       data,
       params,

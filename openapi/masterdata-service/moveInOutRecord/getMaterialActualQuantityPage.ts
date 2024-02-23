@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMaterialActualQuantityPageUsingPOST
-export function fetchMethod(data: IMaterialOutputSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IMaterialOutputSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationMaterialOutputVO>({
       url: "/masterdata-service/moveInOutRecord/getMaterialActualQuantityPage",
       data,
       params,

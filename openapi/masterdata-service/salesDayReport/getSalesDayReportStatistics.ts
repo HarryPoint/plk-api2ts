@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getSalesDayReportStatisticsUsingPOST
-export function fetchMethod(data: GetSalesDayReportStatistics) {
-    return post({
+export default function fetchMethod(data: GetSalesDayReportStatistics) {
+    return post<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics>({
       url: "/masterdata-service/salesDayReport/getSalesDayReportStatistics",
       data,
     });

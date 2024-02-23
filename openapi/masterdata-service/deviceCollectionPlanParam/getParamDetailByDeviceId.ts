@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据方案参数关联相关/getParamDetailByDeviceIdUsingGET
-export function fetchMethod(params: { deviceId: number; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { deviceId: number; enterpriseId: number }) {
+    return get<IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO>({
       url: "/masterdata-service/deviceCollectionPlanParam/getParamDetailByDeviceId",
       params,
     });

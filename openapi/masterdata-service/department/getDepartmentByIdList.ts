@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/部门相关/getDepartmentByIdListUsingPOST
-export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post<IJSONResultListDepartmentVO>({
       url: "/masterdata-service/department/getDepartmentByIdList",
       data,
       params,

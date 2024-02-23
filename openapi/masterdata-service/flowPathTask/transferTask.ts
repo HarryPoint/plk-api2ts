@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/transferTaskUsingPOST
-export function fetchMethod(data: IProcessTasksAreTransferredToTheDTO) {
-    return post({
+export default function fetchMethod(data: IProcessTasksAreTransferredToTheDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/flowPathTask/transferTask",
       data,
     });

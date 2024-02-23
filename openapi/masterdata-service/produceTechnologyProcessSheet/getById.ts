@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产工艺工艺卡相关/getByIdUsingGET_11
-export function fetchMethod(params: { id: number }) {
-    return get({
+export default function fetchMethod(params: { id: number }) {
+    return get<IJSONResultProcessCardInformationIsReturnedToTheDTO>({
       url: "/masterdata-service/produceTechnologyProcessSheet/getById",
       params,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/pageQueryUsingPOST_1
-export function fetchMethod(data: IPagingInformation) {
-    return post({
+export default function fetchMethod(data: IPagingInformation) {
+    return post<IKaizenProjectTaskResponseDTOJSONResultPagingInformation>({
       url: "/masterdata-service/kaizenProjectTask/pageQuery",
       data,
     });

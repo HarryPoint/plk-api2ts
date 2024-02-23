@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/project-script-controller/clearProjectUsingGET
-export function fetchMethod(params: { enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number }) {
+    return get<IJSONResultobject>({
       url: "/masterdata-service/projectScript/clearProject",
       params,
     });

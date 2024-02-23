@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/采购明细报表相关/getDifengPurchaseDetailsReportStatisticsUsingPOST
-export function fetchMethod(data: GetDifengPurchaseDetailsReportStatistics) {
-    return post({
+export default function fetchMethod(data: GetDifengPurchaseDetailsReportStatistics) {
+    return post<IJSONResultPurchaseDetailsStatisticsReturnedObject>({
       url: "/masterdata-service/purchaseDetailsReport/getDifengPurchaseDetailsReportStatistics",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发扩展信息/getListByProduceOrderIdsUsingPOST
-export function fetchMethod(data: IProductionOrderDeliveryExtendedInformationQueryVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionOrderDeliveryExtendedInformationQueryVO, params: { enterpriseId: number }) {
+    return post<IJSONResultListExtendedInformationVOForProductionOrderDelivery>({
       url: "/masterdata-service/produceOrderIssueExt/getListByProduceOrderIds",
       data,
       params,

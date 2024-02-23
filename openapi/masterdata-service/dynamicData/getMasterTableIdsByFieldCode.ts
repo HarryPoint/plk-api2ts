@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterTableIdsByFieldCodeUsingPOST
-export function fetchMethod(data: IPrimaryTableIdQueryVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IPrimaryTableIdQueryVO, params: { enterpriseId: number }) {
+    return post<IJSONResultListlong>({
       url: "/masterdata-service/dynamicData/getMasterTableIdsByFieldCode",
       data,
       params,

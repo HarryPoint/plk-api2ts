@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProductionDataReportResultVOsUsingPOST
-export function fetchMethod(data: IOutputDataReportSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IOutputDataReportSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultListReturnsTheOutputDataStatisticsToVO>({
       url: "/masterdata-service/rtProductionSnapshot/getProductionDataReportResultVOs",
       data,
       params,

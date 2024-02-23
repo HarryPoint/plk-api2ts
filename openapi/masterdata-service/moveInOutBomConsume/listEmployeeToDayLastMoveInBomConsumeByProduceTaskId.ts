@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listEmployeeToDayLastMoveInBomConsumeByProduceTaskIdUsingGET
-export function fetchMethod(params: { produceTaskId: number }) {
-    return get({
+export default function fetchMethod(params: { produceTaskId: number }) {
+    return get<IJSONResultListRespondsToTheDTOForTheLastInputBom>({
       url: "/masterdata-service/moveInOutBomConsume/listEmployeeToDayLastMoveInBomConsumeByProduceTaskId",
       params,
     });

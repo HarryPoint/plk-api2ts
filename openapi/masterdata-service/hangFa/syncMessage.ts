@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncMessageUsingPOST
-export function fetchMethod(data: IKingdeeMessageSendRequest) {
-    return post({
+export default function fetchMethod(data: IKingdeeMessageSendRequest) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/hangFa/syncMessage",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/updateDynamicFormDataUsingPOST
-export function fetchMethod(data: IDynamicFormDataUpdateRequestDTO[]) {
-    return post({
+export default function fetchMethod(data: IDynamicFormDataUpdateRequestDTO[]) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/dynamicData/updateDynamicFormData",
       data,
     });

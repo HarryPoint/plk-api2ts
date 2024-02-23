@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/querySalesStatisticsUsingPOST
-export function fetchMethod(data: number[]) {
-    return post({
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListSalesStatisticsItemOutputVO>({
       url: "/masterdata-service/businessChance/querySalesStatistics",
       data,
     });

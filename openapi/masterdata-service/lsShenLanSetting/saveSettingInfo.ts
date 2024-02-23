@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/saveSettingInfoUsingPOST_1
-export function fetchMethod(data: IDarkBlueLargeScreenSetsTheDTO, params: { enterpriseId: number; userId: number }) {
-    return post({
+export default function fetchMethod(data: IDarkBlueLargeScreenSetsTheDTO, params: { enterpriseId: number; userId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/lsShenLanSetting/saveSettingInfo",
       data,
       params,

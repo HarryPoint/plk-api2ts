@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目成员相关/queryByNameOrCodeUsingPOST
-export function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
-    return post({
+export default function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
+    return post<IJSONResultListIdCodeNameACommonTransferObject>({
       url: "/masterdata-service/projectMember/queryByNameOrCode",
       data,
     });

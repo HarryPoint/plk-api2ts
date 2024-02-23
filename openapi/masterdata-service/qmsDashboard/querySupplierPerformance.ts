@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySupplierPerformanceUsingPOST
-export function fetchMethod(data: IQmsLargeScreenTimeIntervalRequest) {
-    return post({
+export default function fetchMethod(data: IQmsLargeScreenTimeIntervalRequest) {
+    return post<IJSONResultListQualityPerformanceEvaluationTableReturnsDTO1>({
       url: "/masterdata-service/qmsDashboard/querySupplierPerformance",
       data,
     });

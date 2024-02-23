@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/configMaterialEditUsingPOST
-export function fetchMethod(data: IStandardProcessEditRequestObjectForAClassOfMaterial) {
-    return post({
+export default function fetchMethod(data: IStandardProcessEditRequestObjectForAClassOfMaterial) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/standardTechnology/configMaterialEdit",
       data,
     });

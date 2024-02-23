@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/editUsingPOST_6
-export function fetchMethod(data: ILotSerialNumberPlanEditRequestDTO) {
-    return post({
+export default function fetchMethod(data: ILotSerialNumberPlanEditRequestDTO) {
+    return post<IJSONResultstring1>({
       url: "/masterdata-service/lotSerialNumberPlan/edit",
       data,
     });

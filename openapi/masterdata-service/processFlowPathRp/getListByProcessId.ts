@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getListByProcessIdUsingGET
-export function fetchMethod(params: { processId: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { processId: string; enterpriseId: number }) {
+    return get<ITheJSONResultListOperationFieldCorrespondsToTheTableDetailsVO>({
       url: "/masterdata-service/processFlowPathRp/getListByProcessId",
       params,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryUsingPOST
-export function fetchMethod(data: IProductionProcessingQueryVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionProcessingQueryVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>({
       url: "/masterdata-service/produceHandle/getReportHistory",
       data,
       params,

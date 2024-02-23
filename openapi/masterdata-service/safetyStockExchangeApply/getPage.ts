@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getPageUsingPOST_27
-export function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO>({
       url: "/masterdata-service/safetyStockExchangeApply/getPage",
       data,
       params,

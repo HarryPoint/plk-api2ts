@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getUserWaitHandleCountUsingGET
-export function fetchMethod(params: { enterpriseId: number; isTimeout: string; userId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; isTimeout: string; userId: number }) {
+    return get<IJSONResultlong>({
       url: "/masterdata-service/produceTask/getUserWaitHandleCount",
       params,
     });

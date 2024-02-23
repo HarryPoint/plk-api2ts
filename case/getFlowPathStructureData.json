@@ -26,7 +26,7 @@
             "name": "enterpriseId",
             "in": "query",
             "description": "enterpriseId",
-            "required": true,
+            "required": false,
             "type": "integer",
             "format": "int64"
           }

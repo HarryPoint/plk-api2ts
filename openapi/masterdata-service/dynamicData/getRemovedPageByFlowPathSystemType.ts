@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getRemovedPageByFlowPathSystemTypeUsingPOST
-export function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number; systemType: string }) {
-    return post({
+export default function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId: number; systemType: string }) {
+    return post<IJSONResultPagingInformationJSONObject>({
       url: "/masterdata-service/dynamicData/getRemovedPageByFlowPathSystemType",
       data,
       params,

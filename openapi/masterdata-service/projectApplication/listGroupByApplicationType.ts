@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/listGroupByApplicationTypeUsingGET
-export function fetchMethod(params: { projectId: number }) {
-    return get({
+export default function fetchMethod(params: { projectId: number }) {
+    return get<ITheJSONResultListProjectAppliesTheGroupReturnObject>({
       url: "/masterdata-service/projectApplication/listGroupByApplicationType",
       params,
     });

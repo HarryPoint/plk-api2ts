@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProducePrintTagUsingPOST
-export function fetchMethod(data: number[]) {
-    return post({
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListProducePrintTagVO>({
       url: "/masterdata-service/produceOrder/producePrintTag/batchGet",
       data,
     });

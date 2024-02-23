@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发/batchRecallIssueUsingPOST
-export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post<IJSONResultProductionOrderDeliveryResultDTO>({
       url: "/masterdata-service/produceOrderIssue/recallIssue/batch",
       data,
       params,

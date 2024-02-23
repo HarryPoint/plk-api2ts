@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/pageSearchDetailPageFormDataUsingPOST
-export function fetchMethod(data: IProcessDataBasicSearchVO1) {
-    return post({
+export default function fetchMethod(data: IProcessDataBasicSearchVO1) {
+    return post<IJSONResultPagingInformationJSONObject>({
       url: "/masterdata-service/dynamicData/pageSearchDetailPageFormData",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/releaseUsingPOST
-export function fetchMethod(data: ITheProductionProcessHoldsTheReleaseRequestObject) {
-    return post({
+export default function fetchMethod(data: ITheProductionProcessHoldsTheReleaseRequestObject) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceHandleHoldPause/release",
       data,
     });

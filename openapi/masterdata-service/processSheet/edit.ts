@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/editUsingPOST_9
-export function fetchMethod(data: IProcessCardInformationEditsDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProcessCardInformationEditsDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultProcessCardInformationIsReturnedToVO>({
       url: "/masterdata-service/processSheet/edit",
       data,
       params,

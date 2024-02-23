@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectQualityIssueReportUsingPOST
-export function fetchMethod(data: QueryProjectQualityIssueReport) {
-    return post({
+export default function fetchMethod(data: QueryProjectQualityIssueReport) {
+    return post<IJSONResultPagingInformationProjectQualityProblemReportResponseObject>({
       url: "/masterdata-service/projectReport/queryProjectQualityIssueReport",
       data,
     });

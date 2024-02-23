@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsUsingPOST_3
-export function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post<IJSONResultListBaseVO>({
       url: "/masterdata-service/process/getByIds",
       data,
       params,

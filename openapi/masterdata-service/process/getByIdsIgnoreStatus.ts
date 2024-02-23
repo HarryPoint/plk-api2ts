@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
-export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post<ITheJSONResultListOperationSelectsToReturnVO>({
       url: "/masterdata-service/process/getByIdsIgnoreStatus",
       data,
       params,

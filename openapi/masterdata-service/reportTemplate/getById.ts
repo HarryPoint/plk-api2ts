@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
-export function fetchMethod(params: { id: number }) {
-    return post({
+export default function fetchMethod(params: { id: number }) {
+    return post<IJSONResultReportTemplateDTO>({
       url: "/masterdata-service/reportTemplate/getById",
       params,
     });

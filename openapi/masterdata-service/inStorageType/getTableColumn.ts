@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/入库类型相关/getTableColumnUsingGET_2
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListProcessTableColumnVO>({
       url: "/masterdata-service/inStorageType/getTableColumn",
     });
 }

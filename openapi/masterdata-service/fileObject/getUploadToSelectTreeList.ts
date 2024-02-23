@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/getUploadToSelectTreeListUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListFileClassificationDetailResponseDTO4>({
       url: "/masterdata-service/fileObject/getUploadToSelectTreeList",
     });
 }

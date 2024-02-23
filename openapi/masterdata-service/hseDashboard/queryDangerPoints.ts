@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryDangerPointsUsingPOST
-export function fetchMethod(data: IDangerPointQueryRequest) {
-    return post({
+export default function fetchMethod(data: IDangerPointQueryRequest) {
+    return post<IJSONResultListResponseToTheDangerPointQuery>({
       url: "/masterdata-service/hseDashboard/queryDangerPoints",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getSelectorOptionSearchUsingPOST_2
-export function fetchMethod(data: ITheLaborCostDropDownListIsUsedToSearchForDtos) {
-    return post({
+export default function fetchMethod(data: ITheLaborCostDropDownListIsUsedToSearchForDtos) {
+    return post<IJSONResultListWorkCostDropDownSelectAListToSearchForResponseDtos>({
       url: "/masterdata-service/laborCost/getSelectorOptionSearch",
       data,
     });

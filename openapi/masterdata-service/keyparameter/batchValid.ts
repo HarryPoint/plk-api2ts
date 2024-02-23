@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/batchValidUsingPOST_2
-export function fetchMethod(data: IEnableOrDisableVOInBatches) {
-    return post({
+export default function fetchMethod(data: IEnableOrDisableVOInBatches) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/keyparameter/batchValid",
       data,
     });

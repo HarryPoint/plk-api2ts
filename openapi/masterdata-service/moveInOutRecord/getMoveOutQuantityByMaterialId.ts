@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveOutQuantityByMaterialIdUsingGET
-export function fetchMethod(params: { beginTime: string; materialId: string; endTime: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { beginTime: string; materialId: string; endTime: string; enterpriseId: number }) {
+    return get<IJSONResultbigdecimal>({
       url: "/masterdata-service/moveInOutRecord/getMoveOutQuantityByMaterialId",
       params,
     });

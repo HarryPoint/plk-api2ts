@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZheWanJiReportUsingGET
-export function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId: number }) {
-    return get({
+export default function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId: number }) {
+    return get<IJSONResultListDarkBluePressReport>({
       url: "/masterdata-service/shenLan/report/zheWanJi",
       data,
       params,

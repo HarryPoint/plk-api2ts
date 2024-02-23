@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
-export function fetchMethod(data: IBaojingReportMaterialSelectionQuery) {
-    return post({
+export default function fetchMethod(data: IBaojingReportMaterialSelectionQuery) {
+    return post<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse>({
       url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialSelector",
       data,
     });

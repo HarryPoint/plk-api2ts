@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByMaterialIdsUsingPOST
-export function fetchMethod(data: ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject) {
-    return post({
+export default function fetchMethod(data: ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject) {
+    return post<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate>({
       url: "/masterdata-service/weiLianLotPrintTemplate/listAlreadyBindMaterialByMaterialIds",
       data,
     });

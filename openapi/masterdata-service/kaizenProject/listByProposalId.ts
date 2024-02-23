@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/listByProposalIdUsingPOST
-export function fetchMethod(params: { proposalId: number }) {
-    return post({
+export default function fetchMethod(params: { proposalId: number }) {
+    return post<IJSONResultListKaizenProjectResponseDTO>({
       url: "/masterdata-service/kaizenProject/listByProposalId",
       params,
     });

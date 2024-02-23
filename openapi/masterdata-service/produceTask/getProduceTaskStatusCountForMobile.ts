@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskStatusCountForMobileUsingPOST
-export function fetchMethod(data: IProductionTaskQueryDTOForMobileEnd) {
-    return post({
+export default function fetchMethod(data: IProductionTaskQueryDTOForMobileEnd) {
+    return post<IJSONResultNumberOfProductionTaskStatesReturnedForTheMobileEnd>({
       url: "/masterdata-service/produceTask/getProduceTaskStatusCountForMobile",
       data,
     });

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/巡检计划相关/issueUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultobject>({
       url: "/masterdata-service/qmsPatrolInspectionPlan/issue",
     });
 }

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getByIdUsingGET_3
-export function fetchMethod(params: { id: number }) {
-    return get({
+export default function fetchMethod(params: { id: number }) {
+    return get<IJSONResultFileClassificationDetailsResponseDTO>({
       url: "/masterdata-service/fileCategory/getById",
       params,
     });

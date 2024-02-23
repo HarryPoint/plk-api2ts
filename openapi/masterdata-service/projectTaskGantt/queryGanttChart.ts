@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务甘特图相关/queryGanttChartUsingPOST
-export function fetchMethod(data: QueryGanttChart) {
-    return post({
+export default function fetchMethod(data: QueryGanttChart) {
+    return post<IJSONResultListProjectTaskGanttChartPhaseResponseObject>({
       url: "/masterdata-service/projectTaskGantt/queryGanttChart",
       data,
     });

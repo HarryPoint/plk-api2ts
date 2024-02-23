@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺脚本相关/tempUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultobject>({
       url: "/masterdata-service/script/standardTechnology/temp",
     });
 }

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/getFiscalPeriodSelectorUsingPOST
-export function fetchMethod() {
-    return post({
+export default function fetchMethod() {
+    return post<IJSONResultListRespondsToTheObjectDuring>({
       url: "/masterdata-service/produceFeeAssign/getFiscalPeriodSelector",
     });
 }

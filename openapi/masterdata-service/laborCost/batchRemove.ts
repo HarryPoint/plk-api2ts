@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工费相关/batchRemoveUsingPOST_4
-export function fetchMethod(data: IIdCollectionInformation) {
-    return post({
+export default function fetchMethod(data: IIdCollectionInformation) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/laborCost/batchRemove",
       data,
     });

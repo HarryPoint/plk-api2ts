@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getShenLanDeviceStatisticInfoUsingGET
-export function fetchMethod(params: { enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number }) {
+    return get<IJSONResultDarkBlueDeviceStatisticalResponseVO>({
       url: "/masterdata-service/lsShenLanSetting/getDeviceStatisticInfo",
       params,
     });

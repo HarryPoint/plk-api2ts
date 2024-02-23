@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getByIdUsingGET_8
-export function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { id: string; enterpriseId: number }) {
+    return get<IJSONResultProductionTaskDetailsReturnToVO>({
       url: "/masterdata-service/produceTask/getById",
       params,
     });

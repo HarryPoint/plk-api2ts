@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/getByFromDataIdUsingGET
-export function fetchMethod(data: number) {
-    return get({
+export default function fetchMethod(data: number) {
+    return get<IJSONResultProjectTaskResponseObject>({
       url: "/masterdata-service/projectTask/getByFromDataId",
       data,
     });

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/checkCanSetMoveInDeviceByProduceTaskIdUsingGET
-export function fetchMethod(params: { produceTaskId: string }) {
-    return get({
+export default function fetchMethod(params: { produceTaskId: string }) {
+    return get<IJSONResultstring1>({
       url: "/masterdata-service/moveInOutDevice/checkCanSetMoveInDeviceByProduceTaskId",
       params,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/batchUploadUsingPOST
-export function fetchMethod(data: ITSKTestData[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ITSKTestData[], params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/tskStatistic/batchUpload",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/开放接口相关/addUsingPOST_2
-export function fetchMethod(params: { clientIp: string; enterpriseId: number; isSuccess: string; reqBody: string; reqType: string; uri: string; userId: number }) {
-    return post({
+export default function fetchMethod(params: { clientIp: string; enterpriseId: number; isSuccess: string; reqBody: string; reqType: string; uri: string; userId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/openapiLog/add",
       params,
     });

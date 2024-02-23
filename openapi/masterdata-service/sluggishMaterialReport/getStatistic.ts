@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getStatisticUsingPOST
-export function fetchMethod(data: GetStatistic) {
-    return post({
+export default function fetchMethod(data: GetStatistic) {
+    return post<IJSONResultTotalResponseObjectForQueryingTheInactiveMaterialsReport>({
       url: "/masterdata-service/sluggishMaterialReport/getStatistic",
       data,
     });

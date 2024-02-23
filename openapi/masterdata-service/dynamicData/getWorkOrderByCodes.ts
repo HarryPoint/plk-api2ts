@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getWorkOrderByCodesUsingPOST
-export function fetchMethod(data: string[], params: { enterpriseId: number; flowPathId: number }) {
-    return post({
+export default function fetchMethod(data: string[], params: { enterpriseId: number; flowPathId: number }) {
+    return post<IJSONResultListJSONObject>({
       url: "/masterdata-service/dynamicData/getWorkOrderByCodes",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/pageUsingPOST_4
-export function fetchMethod(data: IQualityPersonnelDropDownPageQueryObjects) {
-    return post({
+export default function fetchMethod(data: IQualityPersonnelDropDownPageQueryObjects) {
+    return post<IJSONResultPagingInformationQualityPersonnelDropdownResponseDTO>({
       url: "/masterdata-service/qmsQualityPersonnel/page",
       data,
     });

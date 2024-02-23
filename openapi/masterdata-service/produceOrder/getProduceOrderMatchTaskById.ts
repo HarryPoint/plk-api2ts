@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderMatchTaskDetailByIdUsingGET
-export function fetchMethod(params: { taskId: number }) {
-    return get({
+export default function fetchMethod(params: { taskId: number }) {
+    return get<IJSONResultQueryRequestForProductionOrderMatchingTasks>({
       url: "/masterdata-service/produceOrder/getProduceOrderMatchTaskById",
       params,
     });

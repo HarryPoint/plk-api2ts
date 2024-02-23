@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检项/getByIdUsingGET_13
-export function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get<IJSONResultCheckItemDetailsVOIsReturned>({
       url: "/masterdata-service/qualityInspectionItem/getById",
       params,
     });

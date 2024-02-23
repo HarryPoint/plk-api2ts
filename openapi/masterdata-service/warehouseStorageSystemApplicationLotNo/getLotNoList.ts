@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/仓位系统应用库存批次号相关/getWarehouseStorageSystemApplicationLotNoUsingPOST
-export function fetchMethod(data: ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects) {
-    return post({
+export default function fetchMethod(data: ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects) {
+    return post<IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventoryBatchNumberPagingReturnObject>({
       url: "/masterdata-service/warehouseStorageSystemApplicationLotNo/getLotNoList",
       data,
     });

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getTypeStatusSelectorUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListProductionProcessTypeStatusLevel2LinkageVO>({
       url: "/masterdata-service/produceHandle/getTypeStatusSelector",
     });
 }

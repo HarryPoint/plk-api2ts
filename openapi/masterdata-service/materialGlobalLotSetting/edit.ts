@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料全局批次设置相关/editUsingPOST_7
-export function fetchMethod(data: IMaterialsBureauBatchSetEditObject, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IMaterialsBureauBatchSetEditObject, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/materialGlobalLotSetting/edit",
       data,
       params,

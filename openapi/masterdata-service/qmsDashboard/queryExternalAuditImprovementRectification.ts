@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryExternalAuditImprovementRectificationUsingPOST
-export function fetchMethod(data: IImprovementRecificationQueryRequestDTO) {
-    return post({
+export default function fetchMethod(data: IImprovementRecificationQueryRequestDTO) {
+    return post<IJSONResultImprovesTheRectificationRate>({
       url: "/masterdata-service/qmsDashboard/queryExternalAuditImprovementRectification",
       data,
     });

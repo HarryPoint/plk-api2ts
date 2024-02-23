@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目简报相关/queryFillingProjectTaskUsingGET
-export function fetchMethod(params: { projectId: string }) {
-    return get({
+export default function fetchMethod(params: { projectId: string }) {
+    return get<IJSONResultListProjectTaskResponseObject>({
       url: "/masterdata-service/projectBriefReport/queryFillingProjectTask",
       params,
     });

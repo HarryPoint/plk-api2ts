@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
-export function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO) {
-    return post({
+export default function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/moveInOutDevice/setMoveInDevice",
       data,
     });

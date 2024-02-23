@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/scanMoveInMoldByBatchUsingPOST
-export function fetchMethod(data: IFeedMoldQueryDTO) {
-    return post({
+export default function fetchMethod(data: IFeedMoldQueryDTO) {
+    return post<IJSONResultListFeedMoldResponseDTO>({
       url: "/masterdata-service/moveInOutMold/scanMoveInMoldByBatch",
       data,
     });

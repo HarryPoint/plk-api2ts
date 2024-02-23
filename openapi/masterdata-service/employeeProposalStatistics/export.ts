@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工建议统计报表相关/exportUsingPOST_4
-export function fetchMethod(data: IProcessDataSearchVO2) {
-    return post({
+export default function fetchMethod(data: IProcessDataSearchVO2) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/employeeProposalStatistics/export",
       data,
     });

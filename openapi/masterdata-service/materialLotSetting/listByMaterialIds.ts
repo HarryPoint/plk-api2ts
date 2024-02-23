@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/listByMaterialIdsUsingPOST
-export function fetchMethod(data: number[]) {
-    return post({
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListMaterialBatchSettingsEditResponseObjects>({
       url: "/masterdata-service/materialLotSetting/listByMaterialIds",
       data,
     });

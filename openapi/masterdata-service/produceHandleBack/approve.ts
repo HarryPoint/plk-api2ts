@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/approveUsingPOST
-export function fetchMethod(data: IProductionProcessesTheReworkApprovalRequestObject) {
-    return post({
+export default function fetchMethod(data: IProductionProcessesTheReworkApprovalRequestObject) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceHandleBack/approve",
       data,
     });

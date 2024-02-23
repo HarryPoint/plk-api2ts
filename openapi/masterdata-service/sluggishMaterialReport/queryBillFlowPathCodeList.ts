@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/queryBillFlowPathCodeListUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListIdCodeNameACommonTransferObject>({
       url: "/masterdata-service/sluggishMaterialReport/queryBillFlowPathCodeList",
     });
 }

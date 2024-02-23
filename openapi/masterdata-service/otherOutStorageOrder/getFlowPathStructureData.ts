@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/其它出库单相关/getFlowPathStructureDataUsingPOST_7
-export function fetchMethod(data: IProcessStructureSearchVO) {
-    return post({
+export default function fetchMethod(data: IProcessStructureSearchVO) {
+    return post<IJSONResultFormStructureVO>({
       url: "/masterdata-service/otherOutStorageOrder/getFlowPathStructureData",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/pageMoveInDeviceUsingPOST
-export function fetchMethod(data: IFeedEquipmentPagingQuery) {
-    return post({
+export default function fetchMethod(data: IFeedEquipmentPagingQuery) {
+    return post<IJSONResultThePagingInformationFeedDeviceRespondsToTheDTO>({
       url: "/masterdata-service/moveInOutDevice/pageMoveInDevice",
       data,
     });

@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/listBillNameUsingGET
-export function fetchMethod(params: { billName: string }) {
-    return get({
+export default function fetchMethod(params: { billName: string }) {
+    return get<IJSONResultListstring>({
       url: "/masterdata-service/baoJingReport/listBillName",
       params,
     });

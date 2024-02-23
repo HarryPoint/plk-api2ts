@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/checkCollectOrderHasModifyUsingGET
-export function fetchMethod(params: { fiscalPeriodId: string }) {
-    return get({
+export default function fetchMethod(params: { fiscalPeriodId: string }) {
+    return get<IJSONResultVerifiesTheResponseObject>({
       url: "/masterdata-service/produceQuantityCollect/checkCollectOrderHasModify",
       params,
     });

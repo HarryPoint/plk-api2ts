@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/queryWarehouseMaterialRpListByIdListUsingPOST
-export function fetchMethod(data: number[]) {
-    return post({
+export default function fetchMethod(data: number[]) {
+    return post<IJSONResultListWarehouseMaterialRpQueryResponseDTO>({
       url: "/masterdata-service/warehouseMaterial/queryWarehouseMaterialRpListByIdList",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/approvalUsingPOST
-export function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceHandleScrap/approval",
       data,
       params,

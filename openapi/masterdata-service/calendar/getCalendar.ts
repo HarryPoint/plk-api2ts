@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCalendarUsingPOST
-export function fetchMethod(data: IFactoryCalendarSearchVO1, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IFactoryCalendarSearchVO1, params: { enterpriseId: number }) {
+    return post<IJSONResultFactoryCalendarReturnsVO>({
       url: "/masterdata-service/calendar/getCalendar",
       data,
       params,

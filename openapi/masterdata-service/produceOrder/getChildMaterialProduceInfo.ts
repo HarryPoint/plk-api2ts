@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getChildMaterialProduceInfoUsingPOST
-export function fetchMethod(data: ISubMaterialProductionInformationQueryRequestDTO) {
-    return post({
+export default function fetchMethod(data: ISubMaterialProductionInformationQueryRequestDTO) {
+    return post<IJSONResultChildProductionOrderInformationQueryResponse>({
       url: "/masterdata-service/produceOrder/getChildMaterialProduceInfo",
       data,
     });

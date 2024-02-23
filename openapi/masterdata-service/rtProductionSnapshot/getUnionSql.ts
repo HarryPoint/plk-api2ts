@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUnionSqlUsingPOST
-export function fetchMethod(params: { beginTime: string; endTime: string; queryQuantityCount: number; timeType: string }) {
-    return post({
+export default function fetchMethod(params: { beginTime: string; endTime: string; queryQuantityCount: number; timeType: string }) {
+    return post<IJSONResultstring>({
       url: "/masterdata-service/rtProductionSnapshot/getUnionSql",
       params,
     });

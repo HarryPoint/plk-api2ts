@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/editUsingPOST_4
-export function fetchMethod(data: IEditDeviceDataAcquisitionSchemeDTO, params: { enterpriseId: number; userId: number }) {
-    return post({
+export default function fetchMethod(data: IEditDeviceDataAcquisitionSchemeDTO, params: { enterpriseId: number; userId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/deviceCollectionPlan/edit",
       data,
       params,

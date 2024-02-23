@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryBatchCanMoveInOutOpTaskUsingPOST
-export function fetchMethod(data: ITaskBatchOperationDTO1, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ITaskBatchOperationDTO1, params: { enterpriseId: number }) {
+    return post<IJSONResultIndicatesTheDTOReturnedFromABatchOperationTask>({
       url: "/masterdata-service/produceTask/queryBatchCanMoveInOutOpTask",
       data,
       params,

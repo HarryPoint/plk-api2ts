@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
-export function fetchMethod(params: { applicationId: number; id: number; voucherNo: string }) {
-    return get({
+export default function fetchMethod(params: { applicationId: number; id: number; voucherNo: string }) {
+    return get<IJSONResultExternalFinancialCertificateResponseObject>({
       url: "/masterdata-service/financialVoucher/getOutsideFinancialVoucher",
       params,
     });

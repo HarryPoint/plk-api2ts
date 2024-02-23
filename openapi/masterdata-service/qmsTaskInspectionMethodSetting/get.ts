@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/设置检验任务的检验方式相关/getUsingGET_5
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultSetsTheCheckModeOfTheCheckTaskInResponseToTheDTO>({
       url: "/masterdata-service/qmsTaskInspectionMethodSetting/get",
     });
 }

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目相关/getStructureDataUsingPOST
-export function fetchMethod(data: IProjectDynamicFormRecordQuery) {
-    return post({
+export default function fetchMethod(data: IProjectDynamicFormRecordQuery) {
+    return post<IJSONResultFormStructureVO>({
       url: "/masterdata-service/project/getStructureDataByFlowPathId",
       data,
     });

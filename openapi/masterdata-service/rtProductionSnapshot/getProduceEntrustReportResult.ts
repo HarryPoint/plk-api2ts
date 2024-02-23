@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceEntrustReportResultUsingPOST
-export function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO>({
       url: "/masterdata-service/rtProductionSnapshot/getProduceEntrustReportResult",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/saveSettingInfoUsingPOST_2
-export function fetchMethod(data: ISilopusBigScreenSetUpTheDTO, params: { enterpriseId: number; userId: number }) {
-    return post({
+export default function fetchMethod(data: ISilopusBigScreenSetUpTheDTO, params: { enterpriseId: number; userId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/lsXiRuoPaSiSetting/saveSettingInfo",
       data,
       params,

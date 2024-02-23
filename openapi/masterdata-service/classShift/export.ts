@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/班次相关/exportUsingPOST_3
-export function fetchMethod(data: IShiftSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IShiftSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/classShift/export",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/closeBatchUsingPOST
-export function fetchMethod(data: IProduceOrderBatchCloseRequestDTO) {
-    return post({
+export default function fetchMethod(data: IProduceOrderBatchCloseRequestDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceOrder/closeBatch",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProduceOrderIdProducePlanRoutingStepMapUsingPOST
-export function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post<IJSONResultMaplongListProductionPlanProcessPathStepScheduleProductionVO>({
       url: "/masterdata-service/producePlan/getProduceOrderIdProducePlanRoutingStepMap",
       data,
       params,

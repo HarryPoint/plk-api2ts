@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/getInspectionTaskStatisticsAmountReportUsingPOST
-export function fetchMethod(data: GetInspectionTaskStatisticsAmountReport) {
-    return post({
+export default function fetchMethod(data: GetInspectionTaskStatisticsAmountReport) {
+    return post<IJSONResultTheTotalNumberOfTasksIsReturnedToTheDTO>({
       url: "/masterdata-service/inspectionTaskReport/getInspectionTaskStatisticsAmountReport",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/费用类型相关/getRemovedForPageUsingPOST_9
-export function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post({
+export default function fetchMethod(data: IProcessDataBaseSearchVO) {
+    return post<IJSONResultPagingInformationJSONObject>({
       url: "/masterdata-service/produceFeeType/getRemovedForPage",
       data,
     });

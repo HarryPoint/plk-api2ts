@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getPageUsingPOST_15
-export function fetchMethod(data: IProduceObjectsThatHandlePagingQueries, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationProductionHandlesPagingResponseObjects>({
       url: "/masterdata-service/produceHandle/getPage",
       data,
       params,

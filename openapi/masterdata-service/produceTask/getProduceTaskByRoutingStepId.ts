@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByRoutingStepIdUsingPOST
-export function fetchMethod(data: IProduceTasksFromMessagesToSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProduceTasksFromMessagesToSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultListProductionTaskResponseDTOForMobile>({
       url: "/masterdata-service/produceTask/getProduceTaskByRoutingStepId",
       data,
       params,

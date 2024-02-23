@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUserByIdAndCheckUsingGET
-export function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; id: number }) {
+    return get<IJSONResultEmployeeVO>({
       url: "/masterdata-service/employee/getUserByIdAndCheck",
       params,
     });

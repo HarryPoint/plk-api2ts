@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/准备期相关/getPageUsingPOST_24
-export function fetchMethod(data: IPreparationPeriodQueryVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IPreparationPeriodQueryVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPageInformationPreparationPeriodReturnsVO>({
       url: "/masterdata-service/readyTime/getPage",
       data,
       params,

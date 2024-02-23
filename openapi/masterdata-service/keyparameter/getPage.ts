@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/getPageUsingPOST_5
-export function fetchMethod(data: IKeyParameterPageQueryObject) {
-    return post({
+export default function fetchMethod(data: IKeyParameterPageQueryObject) {
+    return post<IJSONResultPagingInformationKeyParameterPagingResponseObject>({
       url: "/masterdata-service/keyparameter/getPage",
       data,
     });

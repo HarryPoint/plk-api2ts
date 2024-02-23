@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/Wip快照相关/checkWipReportUsingPOST
-export function fetchMethod(data: IWIPStatisticsReportSearchForVO) {
-    return post({
+export default function fetchMethod(data: IWIPStatisticsReportSearchForVO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/rtWipSnapshot/checkWipReport",
       data,
     });

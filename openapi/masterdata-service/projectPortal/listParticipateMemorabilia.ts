@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateMemorabiliaUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListProjectEventResponseObject1>({
       url: "/masterdata-service/projectPortal/listParticipateMemorabilia",
     });
 }

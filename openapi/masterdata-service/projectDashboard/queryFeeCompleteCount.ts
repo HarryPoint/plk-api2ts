@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryFeeCompleteCountUsingPOST
-export function fetchMethod(data: IProjectKanbanQueryDto) {
-    return post({
+export default function fetchMethod(data: IProjectKanbanQueryDto) {
+    return post<IJSONResultProjectCostStatisticsResponseObject>({
       url: "/masterdata-service/projectDashboard/queryFeeCompleteCount",
       data,
     });

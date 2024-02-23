@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/班次相关/changeValidUsingPOST
-export function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number; userId: number }) {
-    return post({
+export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number; userId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/classShift/changeValid",
       data,
       params,

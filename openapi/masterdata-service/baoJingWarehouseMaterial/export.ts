@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/exportUsingPOST_2
-export function fetchMethod(data: IBaojingMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IBaojingMaterialMasterDataInventorySearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultlong>({
       url: "/masterdata-service/baoJingWarehouseMaterial/export",
       data,
       params,

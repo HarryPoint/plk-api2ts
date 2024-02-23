@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/queryProjectPlanUsingPOST
-export function fetchMethod(data: ITheProjectPlansToApplyResponseObject1) {
-    return post({
+export default function fetchMethod(data: ITheProjectPlansToApplyResponseObject1) {
+    return post<IJSONResultListIdCodeNameACommonTransferObject>({
       url: "/masterdata-service/projectPlan/queryProjectPlan",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/上报反馈服务相关/ignoreUsingPOST
-export function fetchMethod(data: IReportTheDTOToHandleTheChangeStatus, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IReportTheDTOToHandleTheChangeStatus, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceHandleReport/ignore",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getPageUsingPOST_28
-export function fetchMethod(data: GetPage) {
-    return post({
+export default function fetchMethod(data: GetPage) {
+    return post<IJSONResultPageInformationDullMaterialsReportQueryDetailsResponseObject>({
       url: "/masterdata-service/sluggishMaterialReport/getPage",
       data,
     });

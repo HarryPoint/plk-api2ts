@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/batchUnLockOrderUsingPOST
-export function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/autoPlan/batchUnLockOrder",
       data,
       params,

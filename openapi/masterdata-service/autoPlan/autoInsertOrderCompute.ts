@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoInsertOrderComputeUsingPOST
-export function fetchMethod(data: IProductionOrderAutomaticInsertionDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionOrderAutomaticInsertionDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultSchedulingResultVO>({
       url: "/masterdata-service/autoPlan/autoInsertOrderCompute",
       data,
       params,

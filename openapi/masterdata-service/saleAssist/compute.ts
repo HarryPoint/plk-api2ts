@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/02-01-02-销售交期应答辅助相关/computeUsingPOST
-export function fetchMethod(data: ISalesDeliveryResponseHelpsCalculateDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ISalesDeliveryResponseHelpsCalculateDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultSalesDeliveryResponseAssistedReturnToVO>({
       url: "/masterdata-service/saleAssist/compute",
       data,
       params,

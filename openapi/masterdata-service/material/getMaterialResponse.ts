@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialResponseUsingGET
-export function fetchMethod(params: { id: number }) {
-    return get({
+export default function fetchMethod(params: { id: number }) {
+    return get<IJSONResultMaterialReturnInformation>({
       url: "/masterdata-service/material/getMaterialResponse",
       params,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/queryProjectApplicationUsingPOST
-export function fetchMethod(data: IProjectApplicationRequestObject) {
-    return post({
+export default function fetchMethod(data: IProjectApplicationRequestObject) {
+    return post<ITheJSONResultProjectApplicationReturnsTheObject>({
       url: "/masterdata-service/projectApplication/queryProjectApplication",
       data,
     });

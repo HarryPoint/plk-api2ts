@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/getFiscalPeriodSelectorUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListRespondsToTheObjectDuring>({
       url: "/masterdata-service/produceCostComputationReport/getFiscalPeriodSelector",
     });
 }

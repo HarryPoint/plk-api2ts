@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/refuseTaskUsingPOST
-export function fetchMethod(data: IProcessTaskSubmitDTO) {
-    return post({
+export default function fetchMethod(data: IProcessTaskSubmitDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/flowPathTask/refuseTask",
       data,
     });

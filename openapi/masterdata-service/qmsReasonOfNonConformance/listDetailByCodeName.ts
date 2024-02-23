@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/不合格原因服务相关/listDetailByCodeNameUsingPOST
-export function fetchMethod(data: INameNumberDTO) {
-    return post({
+export default function fetchMethod(data: INameNumberDTO) {
+    return post<IJSONResultListIdCodeNameACommonTransferObject>({
       url: "/masterdata-service/qmsReasonOfNonConformance/listDetailByCodeName",
       data,
     });

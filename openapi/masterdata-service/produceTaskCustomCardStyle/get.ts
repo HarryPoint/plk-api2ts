@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/getUsingGET_3
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListProductionTaskCustomCardStyleResponseObjectDTO>({
       url: "/masterdata-service/produceTaskCustomCardStyle/get",
     });
 }

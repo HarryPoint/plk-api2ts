@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/checkTodoTaskByUserUsingGET
-export function fetchMethod(params: { enterpriseId: number; userId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; userId: number }) {
+    return get<IJSONResultboolean>({
       url: "/masterdata-service/produceTask/checkTodoTaskByUser",
       params,
     });

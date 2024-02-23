@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/listByProjectIdUsingGET
-export function fetchMethod(params: { projectId: string }) {
-    return get({
+export default function fetchMethod(params: { projectId: string }) {
+    return get<ITheJSONResultListProjectPlansTheResponseObject>({
       url: "/masterdata-service/projectPlan/listByProjectId",
       params,
     });

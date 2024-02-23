@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/queryListByProjectUsingGET
-export function fetchMethod(params: { projectId: number }) {
-    return get({
+export default function fetchMethod(params: { projectId: number }) {
+    return get<IJSONResultListKaizenProjectTaskResponseDTO>({
       url: "/masterdata-service/kaizenProjectTask/queryListByProject",
       params,
     });

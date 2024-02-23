@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/getSettingInfoUsingPOST
-export function fetchMethod(data: ISecurityStockSettingsSearchVO, params: { enterpriseId: number; userId: number }) {
-    return post({
+export default function fetchMethod(data: ISecurityStockSettingsSearchVO, params: { enterpriseId: number; userId: number }) {
+    return post<IJSONResultSecurityStockSettingsReturnVO>({
       url: "/masterdata-service/safetyStock/getSettingInfo",
       data,
       params,

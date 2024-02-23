@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/listReportStatisticUsingPOST
-export function fetchMethod(data: IPanpanReportsStatisticsToQueryObjects) {
-    return post({
+export default function fetchMethod(data: IPanpanReportsStatisticsToQueryObjects) {
+    return post<IJSONResultListIndicatesTheResponseObjectForPanpanToReportStatistics>({
       url: "/masterdata-service/panPanReportStatistic/listReportStatistic",
       data,
     });

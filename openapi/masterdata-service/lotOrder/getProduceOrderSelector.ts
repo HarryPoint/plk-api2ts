@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getProduceOrderSelectorUsingGET
-export function fetchMethod(params: { enterpriseId: number; lotOrderId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; lotOrderId: number }) {
+    return get<IJSONResultListTheProductionOrderIsReturnedToVO>({
       url: "/masterdata-service/lotOrder/getProduceOrderSelector",
       params,
     });

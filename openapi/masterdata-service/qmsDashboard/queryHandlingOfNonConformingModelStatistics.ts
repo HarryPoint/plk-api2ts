@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingModelStatisticsUsingGET
-export function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return get({
+export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
+    return get<IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem>({
       url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingModelStatistics",
       params,
     });

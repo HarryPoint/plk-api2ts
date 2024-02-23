@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectQualityIssueCompleteCountUsingPOST
-export function fetchMethod(data: IProjectKanbanQueryDto) {
-    return post({
+export default function fetchMethod(data: IProjectKanbanQueryDto) {
+    return post<IJSONResultStatisticalResponseObjectForProjectQualityProblems>({
       url: "/masterdata-service/projectDashboard/queryProjectQualityIssueCompleteCount",
       data,
     });

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工相关/listStaffSelectorUsingPOST
-export function fetchMethod(data: INameNumberDTO) {
-    return post({
+export default function fetchMethod(data: INameNumberDTO) {
+    return post<IJSONResultListEmployeeResponseObject>({
       url: "/masterdata-service/employee/listStaffSelector",
       data,
     });

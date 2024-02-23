@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目模板相关/queryProjectInfoUsingGET
-export function fetchMethod(params: { projectTemplateId: number }) {
-    return get({
+export default function fetchMethod(params: { projectTemplateId: number }) {
+    return get<IJSONResultProjectTemplateProjectInformationRespondsToTheDTO>({
       url: "/masterdata-service/projectTemplate/queryProjectInfo",
       params,
     });

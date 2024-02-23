@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/调拨单相关/getRemovedForPageUsingPOST
-export function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return post({
+export default function fetchMethod(data: IProcessDataBaseSearchVO) {
+    return post<IJSONResultPagingInformationJSONObject>({
       url: "/masterdata-service/allocationOrder/getRemovedForPage",
       data,
     });

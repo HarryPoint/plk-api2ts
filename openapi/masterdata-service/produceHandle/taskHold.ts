@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/taskHoldUsingPOST
-export function fetchMethod(data: IProductionTreatment, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionTreatment, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceHandle/taskHold",
       data,
       params,

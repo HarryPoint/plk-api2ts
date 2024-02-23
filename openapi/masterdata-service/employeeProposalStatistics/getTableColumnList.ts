@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/员工建议统计报表相关/getTableColumnListUsingGET
-export function fetchMethod() {
-    return get({
+export default function fetchMethod() {
+    return get<IJSONResultListProcessTableColumnVO>({
       url: "/masterdata-service/employeeProposalStatistics/getTableColumnList",
     });
 }

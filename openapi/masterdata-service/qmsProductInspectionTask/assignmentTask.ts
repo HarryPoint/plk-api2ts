@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/成品检验任务相关/assignmentTaskUsingPOST_4
-export function fetchMethod(data: IVerifyTaskAssignmentRequestDTO) {
-    return post({
+export default function fetchMethod(data: IVerifyTaskAssignmentRequestDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/qmsProductInspectionTask/assignmentTask",
       data,
     });

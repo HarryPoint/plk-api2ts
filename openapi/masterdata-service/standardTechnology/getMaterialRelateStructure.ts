@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
-export function fetchMethod(params: { materialId: number }) {
-    return get({
+export default function fetchMethod(params: { materialId: number }) {
+    return get<IJSONResultSpecificMaterialDataStructureResponseObject>({
       url: "/masterdata-service/standardTechnology/getMaterialRelateStructure",
       params,
     });

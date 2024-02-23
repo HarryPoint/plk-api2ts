@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/chooseUsingGET
-export function fetchMethod(params: { enterpriseId: number; tableColumnStyleConfigId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number; tableColumnStyleConfigId: number }) {
+    return get<IJSONResultobject>({
       url: "/masterdata-service/tableColumnStyleConfig/choose",
       params,
     });

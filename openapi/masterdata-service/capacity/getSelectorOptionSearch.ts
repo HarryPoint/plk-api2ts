@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/产能相关/getSelectorOptionSearchUsingPOST
-export function fetchMethod(data: ICapacityDropDownListToSearchForDtos) {
-    return post({
+export default function fetchMethod(data: ICapacityDropDownListToSearchForDtos) {
+    return post<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects>({
       url: "/masterdata-service/capacity/getSelectorOptionSearch",
       data,
     });

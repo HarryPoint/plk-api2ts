@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryCountListUsingPOST
-export function fetchMethod(data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId: number }) {
+    return post<IJSONResultListProductionExceptionTypeStatisticsVO>({
       url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryCountList",
       data,
       params,

@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/addUserProjectTaskTemplateUsingPOST
-export function fetchMethod(data: IProjectTaskTemplateUserAddsRequestDTO) {
-    return post({
+export default function fetchMethod(data: IProjectTaskTemplateUserAddsRequestDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/projectTaskTemplateUser/addUserProjectTaskTemplate",
       data,
     });

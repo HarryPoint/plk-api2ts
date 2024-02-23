@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单相关/closeUsingPOST_2
-export function fetchMethod(data: ISalesOrdersCloseTheDTO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: ISalesOrdersCloseTheDTO, params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/salesOrder/close",
       data,
       params,

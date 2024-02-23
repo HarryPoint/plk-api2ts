@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getMaterialOuterCodeSelectorUsingPOST
-export function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationMaterialMasterDataExternalCodeSelectReturnDTO>({
       url: "/masterdata-service/baoJingReport/getMaterialOuterCodeSelector",
       data,
       params,

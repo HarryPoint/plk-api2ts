@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/processMatchStandardTechnologyTaskUsingPOST
-export function fetchMethod() {
-    return post({
+export default function fetchMethod() {
+    return post<IJSONResultstring1>({
       url: "/masterdata-service/produceOrder/processMatchStandardTechnologyTask",
     });
 }

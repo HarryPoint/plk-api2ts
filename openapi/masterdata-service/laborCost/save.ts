@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/工费相关/saveUsingPOST_3
-export function fetchMethod(data: ILaborCostsSaveDTO) {
-    return post({
+export default function fetchMethod(data: ILaborCostsSaveDTO) {
+    return post<IJSONResultLaborResponseObject>({
       url: "/masterdata-service/laborCost/save",
       data,
     });

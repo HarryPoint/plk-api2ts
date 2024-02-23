@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceLastQuantityForDayUsingGET
-export function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }) {
+    return get<IJSONResultListReturnTheFinalProcessQualifiedOutputToVO>({
       url: "/masterdata-service/rtProductionSnapshot/getProduceLastQuantityForDay",
       params,
     });

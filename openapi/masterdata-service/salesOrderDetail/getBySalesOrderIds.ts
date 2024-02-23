@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/销售订单明细相关/getBySalesOrderIdsUsingPOST
-export function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
+    return post<IJSONResultListSalesOrderDetails>({
       url: "/masterdata-service/salesOrderDetail/getBySalesOrderIds",
       data,
       params,

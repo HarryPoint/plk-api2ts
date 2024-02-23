@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/自定义筛选项相关/editUsingPOST_2
-export function fetchMethod(data: ICustomFiltersEditTheListObjectDTO) {
-    return post({
+export default function fetchMethod(data: ICustomFiltersEditTheListObjectDTO) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/customFilter/edit",
       data,
     });

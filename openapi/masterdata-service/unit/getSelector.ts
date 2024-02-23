@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/单位相关/getSelectorUsingGET_9
-export function fetchMethod(params: { enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { enterpriseId: number }) {
+    return get<IJSONResultListIdNameVO>({
       url: "/masterdata-service/unit/getSelector",
       params,
     });

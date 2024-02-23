@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/质检方案/getPageUsingPOST_22
-export function fetchMethod(data: IInspectionSolutionSearchVO, params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IInspectionSolutionSearchVO, params: { enterpriseId: number }) {
+    return post<IJSONResultPagingInformationVOIsReturned>({
       url: "/masterdata-service/qualityInspectionPlan/getPage",
       data,
       params,

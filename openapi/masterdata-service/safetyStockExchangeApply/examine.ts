@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/examineUsingPOST
-export function fetchMethod(data: ISecurityInventoryChangeRequestReviewDTO, params: { enterpriseId: number; userId: number }) {
-    return post({
+export default function fetchMethod(data: ISecurityInventoryChangeRequestReviewDTO, params: { enterpriseId: number; userId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/safetyStockExchangeApply/examine",
       data,
       params,

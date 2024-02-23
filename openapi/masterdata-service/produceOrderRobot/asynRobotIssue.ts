@@ -1,8 +1,8 @@
 import { post } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/asynRobotIssueUsingPOST
-export function fetchMethod(data: IProduceOrderAutoVaguePlanIssueDTO[], params: { enterpriseId: number }) {
-    return post({
+export default function fetchMethod(data: IProduceOrderAutoVaguePlanIssueDTO[], params: { enterpriseId: number }) {
+    return post<IJSONResultobject>({
       url: "/masterdata-service/produceOrderRobot/asynRobotIssue",
       data,
       params,

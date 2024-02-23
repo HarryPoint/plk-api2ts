@@ -1,8 +1,8 @@
 import { get } from '@/api/http';
  
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getScrapCategoryCountListByMaterialIdUsingGET
-export function fetchMethod(params: { beginTime: string; materialId: string; endTime: string; enterpriseId: number }) {
-    return get({
+export default function fetchMethod(params: { beginTime: string; materialId: string; endTime: string; enterpriseId: number }) {
+    return get<IJSONResultListIdIndicatesTheValueVO>({
       url: "/masterdata-service/produceHandle/getScrapCategoryCountListByMaterialId",
       params,
     });
