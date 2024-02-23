@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/exportUsingPOST_29
-export default function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/safetyStock/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/safetyStock/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 安全库存搜索VO
 export interface ISecurityInventorySearchVO {

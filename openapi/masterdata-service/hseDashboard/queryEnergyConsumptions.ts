@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnergyConsumptionsUsingPOST
-export default function fetchMethod(data: IEnergyConsumptionQueryRequest) {
-    return http<IJSONResultListEnergyConsumptionQueryResponse>({
-        url: "/masterdata-service/hseDashboard/queryEnergyConsumptions",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEnergyConsumptionQueryRequest, extraOptions?: any) {
+    return http<IJSONResultListEnergyConsumptionQueryResponse>(
+        {
+            url: "/masterdata-service/hseDashboard/queryEnergyConsumptions",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 能源消耗查询请求
 export interface IEnergyConsumptionQueryRequest {

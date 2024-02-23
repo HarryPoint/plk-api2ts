@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/removeBatchByIdListUsingPOST
-export default function fetchMethod(data: ILotSerialNumberPlanBatchRemoveRequestDTO) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/lotSerialNumberPlan/removeBatchByIdList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ILotSerialNumberPlanBatchRemoveRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/lotSerialNumberPlan/removeBatchByIdList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // LotSerialNumberPlanBatchRemoveRequestDTO
 export interface ILotSerialNumberPlanBatchRemoveRequestDTO {

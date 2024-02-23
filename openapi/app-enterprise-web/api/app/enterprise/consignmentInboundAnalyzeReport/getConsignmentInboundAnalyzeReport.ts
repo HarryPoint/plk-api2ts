@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶寄售入库报表相关/getConsignmentInboundAnalyzeReportUsingPOST
-export default function fetchMethod(data: IConsignmentInboundAnalysisReportSearchVO) {
-    return http<IJSONResultConsignmentInboundAnalysisReportReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/consignmentInboundAnalyzeReport/getConsignmentInboundAnalyzeReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IConsignmentInboundAnalysisReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultConsignmentInboundAnalysisReportReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/consignmentInboundAnalyzeReport/getConsignmentInboundAnalyzeReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 寄售入库分析报表搜索VO
 export interface IConsignmentInboundAnalysisReportSearchVO {

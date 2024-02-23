@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/checkFiscalPeriodBatchUsingPOST
-export default function fetchMethod(data: IFiscalPeriodCheckRequestDTO[]) {
-    return http<IJSONResultListFiscalPeriodCheckResponseDTO>({
-        url: "/masterdata-service/dynamicData/checkFiscalPeriodBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFiscalPeriodCheckRequestDTO[], extraOptions?: any) {
+    return http<IJSONResultListFiscalPeriodCheckResponseDTO>(
+        {
+            url: "/masterdata-service/dynamicData/checkFiscalPeriodBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // FiscalPeriodCheckRequestDTO
 export interface IFiscalPeriodCheckRequestDTO {

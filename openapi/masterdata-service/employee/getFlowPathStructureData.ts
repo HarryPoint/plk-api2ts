@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getFlowPathStructureDataUsingPOST_2
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultUserDynamicDataResponseDTO>({
-        url: "/masterdata-service/employee/getFlowPathStructureData",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultUserDynamicDataResponseDTO>(
+        {
+            url: "/masterdata-service/employee/getFlowPathStructureData",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {

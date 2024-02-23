@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质量月报报表相关/queryUsingPOST_1
-export default function fetchMethod(data: Query) {
-    return http<IQualityMonthlyReportRespondsToDTO>({
-        url: "/masterdata-service/qmsQualityMonthReport/query",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: Query, extraOptions?: any) {
+    return http<IQualityMonthlyReportRespondsToDTO>(
+        {
+            url: "/masterdata-service/qmsQualityMonthReport/query",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 质量月报响应DTO
 export interface IQualityMonthlyReportRespondsToDTO {

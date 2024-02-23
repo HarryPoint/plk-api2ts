@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/exportSalesCommissionReportUsingPOST
-export default function fetchMethod(data: ExportSalesCommissionReport) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/diFengSalesCommissionReport/exportSalesCommissionReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ExportSalesCommissionReport, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/diFengSalesCommissionReport/exportSalesCommissionReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/addUsingPOST_5
-export default function fetchMethod(data: IProjectTaskRulesAddRequestDTO) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/projectTaskRule/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectTaskRulesAddRequestDTO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/projectTaskRule/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目任务规则新增请求DTO
 export interface IProjectTaskRulesAddRequestDTO {

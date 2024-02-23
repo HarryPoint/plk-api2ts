@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getStatisticUsingPOST
-export default function fetchMethod(data: GetStatistic) {
-    return http<IJSONResultTotalResponseObjectForQueryingTheInactiveMaterialsReport>({
-        url: "/masterdata-service/sluggishMaterialReport/getStatistic",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetStatistic, extraOptions?: any) {
+    return http<IJSONResultTotalResponseObjectForQueryingTheInactiveMaterialsReport>(
+        {
+            url: "/masterdata-service/sluggishMaterialReport/getStatistic",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«呆滞物料报表查询合计响应对象»
 export interface IJSONResultTotalResponseObjectForQueryingTheInactiveMaterialsReport {

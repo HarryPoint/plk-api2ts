@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产计划工艺路径步骤排产/getListByProduceOrderIdsUsingPOST_2
-export default function fetchMethod(data: IProductionPlanningProcessPathStepSchedulingProductionVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListProductionPlanProcessPathStepScheduleProductionVO>({
-        url: "/masterdata-service/producePlan/routingStep/getListByProduceOrderIds",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionPlanningProcessPathStepSchedulingProductionVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProductionPlanProcessPathStepScheduleProductionVO>(
+        {
+            url: "/masterdata-service/producePlan/routingStep/getListByProduceOrderIds",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产计划工艺路径步骤排产 VO
 export interface IProductionPlanningProcessPathStepSchedulingProductionVO {

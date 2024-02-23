@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/未排产订单相关/batchAddScheduleUsingPOST
-export default function fetchMethod(data: IScheduleNewDtos[]) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/notPlan/batchAddSchedule",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IScheduleNewDtos[], extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/notPlan/batchAddSchedule",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 排班新增DTO
 export interface IScheduleNewDtos {

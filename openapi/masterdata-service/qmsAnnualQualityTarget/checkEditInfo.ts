@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/年度质量目标相关/checkEditInfoUsingPOST
-export default function fetchMethod(data: IAnnualQualityObjectivesEditAndVerifyDTO) {
-    return http<IJSONResultAnnualQualityTargetEditCheckReturnsDTO>({
-        url: "/masterdata-service/qmsAnnualQualityTarget/checkEditInfo",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAnnualQualityObjectivesEditAndVerifyDTO, extraOptions?: any) {
+    return http<IJSONResultAnnualQualityTargetEditCheckReturnsDTO>(
+        {
+            url: "/masterdata-service/qmsAnnualQualityTarget/checkEditInfo",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 年度质量目标编辑校验DTO
 export interface IAnnualQualityObjectivesEditAndVerifyDTO {

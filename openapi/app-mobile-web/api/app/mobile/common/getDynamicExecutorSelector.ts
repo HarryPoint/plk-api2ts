@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getDynamicExecutorSelectorUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListProcessNodeDynamicExecutorReturnsVO>({
-        url: "/app-mobile-web/api/app/mobile/common/getDynamicExecutorSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProcessNodeDynamicExecutorReturnsVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/common/getDynamicExecutorSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程节点动态执行人返回VO»»
 export interface IJSONResultListProcessNodeDynamicExecutorReturnsVO {

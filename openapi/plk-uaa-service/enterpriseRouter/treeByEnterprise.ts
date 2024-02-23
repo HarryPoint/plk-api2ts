@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/treeByEnterpriseUsingPOST
-export default function fetchMethod(data: IQueryDTO2InTheEnterpriseRoutingTree) {
-    return http<IJSONResultListEnterpriseRoutingTreeResponseDTO>({
-        url: "/plk-uaa-service/enterpriseRouter/treeByEnterprise",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IQueryDTO2InTheEnterpriseRoutingTree, extraOptions?: any) {
+    return http<IJSONResultListEnterpriseRoutingTreeResponseDTO>(
+        {
+            url: "/plk-uaa-service/enterpriseRouter/treeByEnterprise",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 企业路由树查询 DTO_2
 export interface IQueryDTO2InTheEnterpriseRoutingTree {

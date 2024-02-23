@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-step-controller/getRoutingStepCapacityByProduceTechnologyRoutingIdsUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListProduceTechnologyRoutingStepCapacityResponseDTO>({
-        url: "/masterdata-service/produceTechnologyRoutingStep/getRoutingStepCapacityByProduceTechnologyRoutingIds",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListProduceTechnologyRoutingStepCapacityResponseDTO>(
+        {
+            url: "/masterdata-service/produceTechnologyRoutingStep/getRoutingStepCapacityByProduceTechnologyRoutingIds",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProduceTechnologyRoutingStepCapacityResponseDTO»»
 export interface IJSONResultListProduceTechnologyRoutingStepCapacityResponseDTO {

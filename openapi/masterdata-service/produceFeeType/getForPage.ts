@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/费用类型相关/getForPageUsingPOST_13
-export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return http<IJSONResultPagingInformationJSONObject>({
-        url: "/masterdata-service/produceFeeType/getForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationJSONObject>(
+        {
+            url: "/masterdata-service/produceFeeType/getForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {

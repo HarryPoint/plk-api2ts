@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目成员变更相关/listModificationHistoryUsingGET
-export default function fetchMethod(params: { projectId: string }) {
-    return http<IJSONResultListProjectMemberChangeInformation>({
-        url: "/masterdata-service/projectMemberModification/listModificationHistory",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { projectId: string }, extraOptions?: any) {
+    return http<IJSONResultListProjectMemberChangeInformation>(
+        {
+            url: "/masterdata-service/projectMemberModification/listModificationHistory",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目成员变更信息»»
 export interface IJSONResultListProjectMemberChangeInformation {

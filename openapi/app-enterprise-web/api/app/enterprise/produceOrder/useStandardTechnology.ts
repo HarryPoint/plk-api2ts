@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/useStandardTechnologyUsingPOST
-export default function fetchMethod(data: IStandardProcessUseRequest) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrder/useStandardTechnology",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardProcessUseRequest, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrder/useStandardTechnology",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺使用请求
 export interface IStandardProcessUseRequest {

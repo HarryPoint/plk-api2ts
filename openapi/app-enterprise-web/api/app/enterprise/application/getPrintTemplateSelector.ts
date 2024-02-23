@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/应用相关/getPrintTemplateSelectorUsingGET
-export default function fetchMethod(params: { flowPathId: number }) {
-    return http<IJSONResultListProcessPrintTemplateReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/application/getPrintTemplateSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessPrintTemplateReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/application/getPrintTemplateSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程打印模板返回VO»»
 export interface IJSONResultListProcessPrintTemplateReturnsVO {

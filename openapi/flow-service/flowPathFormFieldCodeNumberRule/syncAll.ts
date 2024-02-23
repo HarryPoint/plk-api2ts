@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/syncAllUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/flow-service/flowPathFormFieldCodeNumberRule/syncAll",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/flow-service/flowPathFormFieldCodeNumberRule/syncAll",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

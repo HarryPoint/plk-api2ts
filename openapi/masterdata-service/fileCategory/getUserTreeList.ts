@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getUserTreeListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListFileClassificationDetailsResponseDTO2>({
-        url: "/masterdata-service/fileCategory/getUserTreeList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListFileClassificationDetailsResponseDTO2>(
+        {
+            url: "/masterdata-service/fileCategory/getUserTreeList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«文件分类明细响应DTO»»_2
 export interface IJSONResultListFileClassificationDetailsResponseDTO2 {

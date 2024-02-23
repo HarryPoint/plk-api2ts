@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/CRM-回款单相关/getPageByFlowPathIdUsingPOST_14
-export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return http<IJSONResultPagingInformationJSONObject>({
-        url: "/app-mobile-web/api/app/mobile/receipt/getForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationJSONObject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/receipt/getForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {

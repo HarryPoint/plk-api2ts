@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingModelStatisticsUsingGET
-export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return http<IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem>({
-        url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingModelStatistics",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
+    return http<IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem>(
+        {
+            url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingModelStatistics",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«大屏不合格品统计按项目返回»»
 export interface IJSONResultListLargeScreenDefectiveProductStatisticsReturnByItem {

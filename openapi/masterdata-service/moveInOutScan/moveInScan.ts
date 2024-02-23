@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/moveInScanUsingPOST
-export default function fetchMethod(data: IFeedScanRequestDTO) {
-    return http<IJSONResultIncomingScanResponseObjectDTO>({
-        url: "/masterdata-service/moveInOutScan/moveInScan",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFeedScanRequestDTO, extraOptions?: any) {
+    return http<IJSONResultIncomingScanResponseObjectDTO>(
+        {
+            url: "/masterdata-service/moveInOutScan/moveInScan",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料扫描请求DTO
 export interface IFeedScanRequestDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/getPageUsingPOST_30
-export default function fetchMethod(data: IMessageQueuePagingQueryRequest) {
-    return http<IJSONResultPagingMessageQueuePagingResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMessageQueuePagingQueryRequest, extraOptions?: any) {
+    return http<IJSONResultPagingMessageQueuePagingResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 消息队列分页查询请求
 export interface IMessageQueuePagingQueryRequest {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用服务包相关/getByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultApplicationServicePackResponse>({
-        url: "/flow-service/appServicePack/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultApplicationServicePackResponse>(
+        {
+            url: "/flow-service/appServicePack/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«应用服务包响应»
 export interface IJSONResultApplicationServicePackResponse {

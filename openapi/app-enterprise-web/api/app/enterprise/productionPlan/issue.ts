@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务下发相关/issueUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/productionPlan/issue",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/productionPlan/issue",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

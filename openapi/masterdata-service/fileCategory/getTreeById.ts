@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/getTreeByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultFileClassificationDetailResponseDTO1>({
-        url: "/masterdata-service/fileCategory/getTreeById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultFileClassificationDetailResponseDTO1>(
+        {
+            url: "/masterdata-service/fileCategory/getTreeById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«文件分类明细响应DTO»_1
 export interface IJSONResultFileClassificationDetailResponseDTO1 {

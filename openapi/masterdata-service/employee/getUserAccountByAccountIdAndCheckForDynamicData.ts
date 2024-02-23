@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUserAccountByAccountIdAndCheckForDynamicDataUsingGET
-export default function fetchMethod(params: { accountId: number; enterpriseId: number }) {
-    return http<IJSONResultEmployeeAccountVO>({
-        url: "/masterdata-service/employee/getUserAccountByAccountIdAndCheckForDynamicData",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { accountId: number; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultEmployeeAccountVO>(
+        {
+            url: "/masterdata-service/employee/getUserAccountByAccountIdAndCheckForDynamicData",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«员工账户VO»
 export interface IJSONResultEmployeeAccountVO {

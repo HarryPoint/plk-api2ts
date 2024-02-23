@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/门户相关/listUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListPortalQueryResponseDTO>({
-        url: "/flow-service/portal/list",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListPortalQueryResponseDTO>(
+        {
+            url: "/flow-service/portal/list",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«门户查询响应DTO»»
 export interface IJSONResultListPortalQueryResponseDTO {

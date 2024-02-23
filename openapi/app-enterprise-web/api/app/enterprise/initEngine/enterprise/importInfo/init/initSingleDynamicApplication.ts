@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎/initSingleDynamicApplicationUsingPOST
-export default function fetchMethod(data: IApplicationInitRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/enterprise/importInfo/init/initSingleDynamicApplication",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IApplicationInitRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/enterprise/importInfo/init/initSingleDynamicApplication",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ApplicationInitRequestDTO
 export interface IApplicationInitRequestDTO {

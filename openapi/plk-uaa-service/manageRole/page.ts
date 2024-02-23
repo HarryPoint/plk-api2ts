@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/运营角色相关/pageUsingPOST_3
-export default function fetchMethod(data: IOperationRoleQuery) {
-    return http<IJSONResultPagingInformationOperationRoleResponse>({
-        url: "/plk-uaa-service/manageRole/page",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IOperationRoleQuery, extraOptions?: any) {
+    return http<IJSONResultPagingInformationOperationRoleResponse>(
+        {
+            url: "/plk-uaa-service/manageRole/page",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 运营角色查询
 export interface IOperationRoleQuery {

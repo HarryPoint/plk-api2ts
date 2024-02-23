@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目变更相关/viewAddExtendParamUsingPOST_1
-export default function fetchMethod(data: IItemChangeOrderExtensionParameterRequest) {
-    return http<any>({
-        url: "/masterdata-service/projectModification/viewAddExtendParam",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IItemChangeOrderExtensionParameterRequest, extraOptions?: any) {
+    return http<any>(
+        {
+            url: "/masterdata-service/projectModification/viewAddExtendParam",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目变更单扩展参数请求
 export interface IItemChangeOrderExtensionParameterRequest {

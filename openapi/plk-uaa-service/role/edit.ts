@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/角色相关/editUsingPOST_2
-export default function fetchMethod(data: IRoleAuthorizationEditRequest) {
-    return http<IJSONResultlong>({
-        url: "/plk-uaa-service/role/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRoleAuthorizationEditRequest, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/plk-uaa-service/role/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 角色授权编辑请求
 export interface IRoleAuthorizationEditRequest {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息方案/processWaitForExecutionUsingPOST_1
-export default function fetchMethod() {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/messageSchema/processWaitForExecution",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/messageSchema/processWaitForExecution",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»
 export interface IJSONResultstring {

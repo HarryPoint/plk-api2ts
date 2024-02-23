@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/revokeTaskUsingPOST
-export default function fetchMethod(data: IProductionTreatment, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/qualityProduceTask/revokeTask",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionTreatment, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/qualityProduceTask/revokeTask",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产处理
 export interface IProductionTreatment {

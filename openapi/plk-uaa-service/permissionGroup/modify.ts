@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/权限组相关/modifyUsingPOST_9
-export default function fetchMethod(data: IPermissionGroupModifiesTheDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/permissionGroup/modify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPermissionGroupModifiesTheDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/permissionGroup/modify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 权限组修改 DTO
 export interface IPermissionGroupModifiesTheDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/编码规则相关/exportUsingPOST_26
-export default function fetchMethod(data: ICodeRulePagingQueryVO) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/numberRule/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICodeRulePagingQueryVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/numberRule/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 编码规则分页查询VO
 export interface ICodeRulePagingQueryVO {

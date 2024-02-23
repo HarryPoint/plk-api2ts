@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getByIdUsingGET_6
-export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return http<IJSONResultBatchOrderReturnsVO>({
-        url: "/masterdata-service/lotOrder/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultBatchOrderReturnsVO>(
+        {
+            url: "/masterdata-service/lotOrder/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«批次订单返回VO»
 export interface IJSONResultBatchOrderReturnsVO {

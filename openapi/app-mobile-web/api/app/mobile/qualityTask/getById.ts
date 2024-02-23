@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/质检任务相关/getByIdUsingGET_2
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultInspectionTaskDetailsAreReturnedToVO>({
-        url: "/app-mobile-web/api/app/mobile/qualityTask/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultInspectionTaskDetailsAreReturnedToVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/qualityTask/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«质检任务明细返回VO»
 export interface IJSONResultInspectionTaskDetailsAreReturnedToVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/queryHorizontalForecastLaborCostUsingPOST
-export default function fetchMethod(data: IForecastLaborCost1[]) {
-    return http<IJSONResultPredictedLaborCost>({
-        url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/queryHorizontalForecastLaborCost",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IForecastLaborCost1[], extraOptions?: any) {
+    return http<IJSONResultPredictedLaborCost>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/queryHorizontalForecastLaborCost",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 预测工费_1
 export interface IForecastLaborCost1 {

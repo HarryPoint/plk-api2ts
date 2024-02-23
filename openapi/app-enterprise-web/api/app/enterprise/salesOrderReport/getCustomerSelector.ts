@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/订单进度统计报表相关/getCustomerSelectorUsingGET_8
-export default function fetchMethod() {
-    return http<IJSONResultListClientSelectsToReturnVO>({
-        url: "/app-enterprise-web/api/app/enterprise/salesOrderReport/getCustomerSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListClientSelectsToReturnVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/salesOrderReport/getCustomerSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«客户选择返回VO»»
 export interface IJSONResultListClientSelectsToReturnVO {

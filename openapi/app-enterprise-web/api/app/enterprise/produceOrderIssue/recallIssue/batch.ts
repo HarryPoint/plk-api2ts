@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/batchRecallIssueUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation) {
-    return http<IJSONResultProductionOrderDeliveryResultDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/recallIssue/batch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+    return http<IJSONResultProductionOrderDeliveryResultDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/recallIssue/batch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

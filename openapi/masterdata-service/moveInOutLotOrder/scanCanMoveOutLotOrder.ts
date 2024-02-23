@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/scanCanMoveOutLotOrderUsingPOST
-export default function fetchMethod(data: IDtoCanBeCheckedByBatchScanning) {
-    return http<IJSONResultReleasableBatchResponseDto>({
-        url: "/masterdata-service/moveInOutLotOrder/scanCanMoveOutLotOrder",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDtoCanBeCheckedByBatchScanning, extraOptions?: any) {
+    return http<IJSONResultReleasableBatchResponseDto>(
+        {
+            url: "/masterdata-service/moveInOutLotOrder/scanCanMoveOutLotOrder",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 可进出料批次扫描查询dto
 export interface IDtoCanBeCheckedByBatchScanning {

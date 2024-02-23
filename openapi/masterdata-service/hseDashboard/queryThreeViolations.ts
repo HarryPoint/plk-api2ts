@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryThreeViolationsUsingPOST
-export default function fetchMethod(data: I3DInformationQueryRequest) {
-    return http<IJSONResultListResponseToQuerying3DInformation>({
-        url: "/masterdata-service/hseDashboard/queryThreeViolations",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: I3DInformationQueryRequest, extraOptions?: any) {
+    return http<IJSONResultListResponseToQuerying3DInformation>(
+        {
+            url: "/masterdata-service/hseDashboard/queryThreeViolations",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 三维信息查询请求
 export interface I3DInformationQueryRequest {

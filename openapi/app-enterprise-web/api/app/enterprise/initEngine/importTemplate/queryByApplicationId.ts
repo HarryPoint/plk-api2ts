@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入模板相关/queryByApplicationIdUsingGET
-export default function fetchMethod(params: { applicationId: number }) {
-    return http<IJSONResultListImportTemplate>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importTemplate/queryByApplicationId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { applicationId: number }, extraOptions?: any) {
+    return http<IJSONResultListImportTemplate>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importTemplate/queryByApplicationId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«导入模板»»
 export interface IJSONResultListImportTemplate {

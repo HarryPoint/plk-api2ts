@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/saveUsingPOST_4
-export default function fetchMethod(data: ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceQuantityCollect/save",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceQuantityCollect/save",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 完工及产成品归集保存请求对象
 export interface ITheFinishedAndFinishedProductsAreCollectedToSaveTheRequestObject {

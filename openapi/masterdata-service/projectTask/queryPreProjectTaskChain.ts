@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreProjectTaskChainUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultListProjectTaskLinkNode>({
-        url: "/masterdata-service/projectTask/queryPreProjectTaskChain",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultListProjectTaskLinkNode>(
+        {
+            url: "/masterdata-service/projectTask/queryPreProjectTaskChain",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目任务链路节点»»
 export interface IJSONResultListProjectTaskLinkNode {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableResumeByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultTableData>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/getTableResumeById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultTableData>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/getTableResumeById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«表格数据»
 export interface IJSONResultTableData {

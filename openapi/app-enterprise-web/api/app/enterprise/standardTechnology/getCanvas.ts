@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/标准工艺相关/getCanvasUsingPOST
-export default function fetchMethod(data: IStandardProcessCanvasQueryObject) {
-    return http<IJSONResultStandardProcessCanvasResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getCanvas",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardProcessCanvasQueryObject, extraOptions?: any) {
+    return http<IJSONResultStandardProcessCanvasResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getCanvas",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺画布查询对象
 export interface IStandardProcessCanvasQueryObject {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathAndTableColumnByFlowPathIdUsingGET
-export default function fetchMethod(params: { enterpriseId: number; flowPathId: number }) {
-    return http<IJSONResultProcessAndTableColumnVO>({
-        url: "/flow-service/flowPath/getFlowPathAndTableColumnByFlowPathId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultProcessAndTableColumnVO>(
+        {
+            url: "/flow-service/flowPath/getFlowPathAndTableColumnByFlowPathId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程及表格列VO»
 export interface IJSONResultProcessAndTableColumnVO {

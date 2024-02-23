@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/路由相关/editUsingPOST_1
-export default function fetchMethod(data: ITheDTOWasAddedToTheRouteProcedure) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/router/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheDTOWasAddedToTheRouteProcedure, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/router/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 路由新增 DTO
 export interface ITheDTOWasAddedToTheRouteProcedure {

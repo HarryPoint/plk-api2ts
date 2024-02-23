@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/application-script-controller/updatePermissionSystemTypeUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/applicationScript/updatePermissionSystemType",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/applicationScript/updatePermissionSystemType",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

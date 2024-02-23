@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getClassGroupAndUserSelectorUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListIdNameNumberVO1>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getClassGroupAndUserSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO1>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getClassGroupAndUserSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»_1
 export interface IJSONResultListIdNameNumberVO1 {

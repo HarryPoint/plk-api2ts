@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderIdsByScheduleReportSearchUsingPOST
-export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListlong>({
-        url: "/masterdata-service/produceOrder/getProduceOrderIdsByScheduleReportSearch",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListlong>(
+        {
+            url: "/masterdata-service/produceOrder/getProduceOrderIdsByScheduleReportSearch",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产排产订单搜索VO
 export interface IProductionSchedulingOrderSearchVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/采购入库单相关/queryDownstreamOrderUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation) {
-    return http<IJSONResultListAssociatesTheDocumentResponse>({
-        url: "/masterdata-service/purchaseInOrder/queryDownstreamOrder",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+    return http<IJSONResultListAssociatesTheDocumentResponse>(
+        {
+            url: "/masterdata-service/purchaseInOrder/queryDownstreamOrder",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

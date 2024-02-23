@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getUnCompleteProjectUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultUnCompleteProjectResponseDTO>({
-        url: "/masterdata-service/proposalDashboard/getUnCompleteProject",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultUnCompleteProjectResponseDTO>(
+        {
+            url: "/masterdata-service/proposalDashboard/getUnCompleteProject",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«UnCompleteProjectResponseDTO»
 export interface IJSONResultUnCompleteProjectResponseDTO {

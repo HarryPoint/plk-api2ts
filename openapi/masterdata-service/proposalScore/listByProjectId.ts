@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议评分相关/listByProjectIdUsingPOST
-export default function fetchMethod(params: { projectId: number }) {
-    return http<IJSONResultListProposalScoreResponseDTO>({
-        url: "/masterdata-service/proposalScore/listByProjectId",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { projectId: number }, extraOptions?: any) {
+    return http<IJSONResultListProposalScoreResponseDTO>(
+        {
+            url: "/masterdata-service/proposalScore/listByProjectId",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProposalScoreResponseDTO»»
 export interface IJSONResultListProposalScoreResponseDTO {

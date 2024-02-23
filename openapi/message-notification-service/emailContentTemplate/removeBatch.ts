@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件内容模板/removeBatchUsingPOST
-export default function fetchMethod(data: IEmailContentTemplateBatchRemoveRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/emailContentTemplate/removeBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmailContentTemplateBatchRemoveRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/emailContentTemplate/removeBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EmailContentTemplateBatchRemoveRequestDTO
 export interface IEmailContentTemplateBatchRemoveRequestDTO {

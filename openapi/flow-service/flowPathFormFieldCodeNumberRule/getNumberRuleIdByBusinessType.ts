@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleIdByBusinessTypeUsingGET
-export default function fetchMethod(params: { businessType: string }) {
-    return http<IJSONResultlong>({
-        url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleIdByBusinessType",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { businessType: string }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleIdByBusinessType",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

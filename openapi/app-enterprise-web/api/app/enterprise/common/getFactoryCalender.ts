@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getFactoryCalenderUsingPOST
-export default function fetchMethod(data: IDateRangeQueryDTO) {
-    return http<IJSONResultListFactoryCalendarScheduleShiftRelationshipVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getFactoryCalender",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDateRangeQueryDTO, extraOptions?: any) {
+    return http<IJSONResultListFactoryCalendarScheduleShiftRelationshipVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getFactoryCalender",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 日期范围查询 DTO
 export interface IDateRangeQueryDTO {

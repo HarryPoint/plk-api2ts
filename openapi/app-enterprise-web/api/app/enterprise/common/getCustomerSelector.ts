@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getCustomerSelectorUsingPOST
-export default function fetchMethod(data: ICustomerSelectionListSearch) {
-    return http<IJSONResultPagingInformationIdCodeNameCommonTransmissionObject>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getCustomerSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICustomerSelectionListSearch, extraOptions?: any) {
+    return http<IJSONResultPagingInformationIdCodeNameCommonTransmissionObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getCustomerSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 客户选择列表搜索
 export interface ICustomerSelectionListSearch {

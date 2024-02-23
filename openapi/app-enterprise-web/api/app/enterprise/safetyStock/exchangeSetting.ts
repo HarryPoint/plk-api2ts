@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
-export default function fetchMethod(data: IUnifiedSecurityInventoryConfiguration) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/safetyStock/exchangeSetting",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUnifiedSecurityInventoryConfiguration, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/safetyStock/exchangeSetting",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 安全库存统一设置配置
 export interface IUnifiedSecurityInventoryConfiguration {

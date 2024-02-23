@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/合理化建议相关/exportUsingPOST_38
-export default function fetchMethod(data: IProcessDataSearchVO) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/proposal/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataSearchVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/proposal/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {

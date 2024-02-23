@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/销售明细报表相关/getDifengSalesDetailsReportUsingPOST
-export default function fetchMethod(data: GetDifengSalesDetailsReport) {
-    return http<IJSONResultPageInformationSalesListReturnedObject>({
-        url: "/app-mobile-web/api/app/mobile/salesDetailsReport/getDifengSalesDetailsReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetDifengSalesDetailsReport, extraOptions?: any) {
+    return http<IJSONResultPageInformationSalesListReturnedObject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/salesDetailsReport/getDifengSalesDetailsReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«销售明细表返回对象»»
 export interface IJSONResultPageInformationSalesListReturnedObject {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/getProduceOrderFlowPathStructureDataUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultFormStructureVO>({
-        url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/produceOrder/getFlowPathStructureData",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultFormStructureVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/produceOrder/getFlowPathStructureData",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«表单结构VO»
 export interface IJSONResultFormStructureVO {

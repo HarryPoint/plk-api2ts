@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/exportUsingPOST_5
-export default function fetchMethod(data: IFinancialPeriodQueryRequest) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/fiscalPeriod/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFinancialPeriodQueryRequest, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/fiscalPeriod/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 财务期间查询请求
 export interface IFinancialPeriodQueryRequest {

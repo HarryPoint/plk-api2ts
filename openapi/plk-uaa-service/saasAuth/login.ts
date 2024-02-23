@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/loginUsingPOST_1
-export default function fetchMethod(data: ILoginRequestDTO) {
-    return http<IJSONResultLoginResponseDTO>({
-        url: "/plk-uaa-service/saasAuth/login",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ILoginRequestDTO, extraOptions?: any) {
+    return http<IJSONResultLoginResponseDTO>(
+        {
+            url: "/plk-uaa-service/saasAuth/login",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 登录请求 DTO
 export interface ILoginRequestDTO {

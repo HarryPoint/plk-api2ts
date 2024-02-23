@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/门户相关/disableBatchUsingPOST_1
-export default function fetchMethod(data: IThePortalDisablesTheRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/flow-service/portal/disableBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IThePortalDisablesTheRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/flow-service/portal/disableBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 门户禁用请求DTO
 export interface IThePortalDisablesTheRequestDTO {

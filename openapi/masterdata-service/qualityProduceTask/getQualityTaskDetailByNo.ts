@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskDetailByNoUsingGET
-export default function fetchMethod(params: { taskNo: string; enterpriseId: number }) {
-    return http<IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees>({
-        url: "/masterdata-service/qualityProduceTask/getQualityTaskDetailByNo",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { taskNo: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees>(
+        {
+            url: "/masterdata-service/qualityProduceTask/getQualityTaskDetailByNo",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«质检任务明细针对员工返回VO»
 export interface IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/任务排班相关/editSchedulUsingPOST
-export default function fetchMethod(data: ITaskSchedulingDTO, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultobject>({
-        url: "/flow-service/flowPathTaskCalendar/editSchedul",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ITaskSchedulingDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/flow-service/flowPathTaskCalendar/editSchedul",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 任务排班DTO
 export interface ITaskSchedulingDTO {

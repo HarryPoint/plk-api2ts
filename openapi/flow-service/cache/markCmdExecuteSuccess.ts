@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/缓存相关/markCmdExecuteSuccessUsingPOST
-export default function fetchMethod(data: IMarkCmdExecuteSuccessRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/flow-service/cache/markCmdExecuteSuccess",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMarkCmdExecuteSuccessRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/flow-service/cache/markCmdExecuteSuccess",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // MarkCmdExecuteSuccessRequestDTO
 export interface IMarkCmdExecuteSuccessRequestDTO {

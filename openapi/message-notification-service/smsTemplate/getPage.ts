@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/短信模板/getPageUsingPOST_3
-export default function fetchMethod(data: IQueryDtosUsingSMSTemplates) {
-    return http<IJSONResultSpecifiesTheResponseDTOToQueryPagingInformationShortMessageTemplate>({
-        url: "/message-notification-service/smsTemplate/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IQueryDtosUsingSMSTemplates, extraOptions?: any) {
+    return http<IJSONResultSpecifiesTheResponseDTOToQueryPagingInformationShortMessageTemplate>(
+        {
+            url: "/message-notification-service/smsTemplate/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 短信模板查询DTO
 export interface IQueryDtosUsingSMSTemplates {

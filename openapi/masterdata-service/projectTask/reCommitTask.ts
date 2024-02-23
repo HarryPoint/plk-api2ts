@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/reCommitTaskUsingGET
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/projectTask/reCommitTask",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/projectTask/reCommitTask",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

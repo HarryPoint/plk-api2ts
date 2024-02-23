@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按班组统计)相关/getProcessSelectorUsingGET_5
-export default function fetchMethod() {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceClassGroupReport/getProcessSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceClassGroupReport/getProcessSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

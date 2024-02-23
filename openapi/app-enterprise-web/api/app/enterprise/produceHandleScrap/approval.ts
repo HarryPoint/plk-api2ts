@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产报废服务相关/approvalUsingPOST
-export default function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandleScrap/approval",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandleScrap/approval",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理报废变更状态DTO
 export interface IProductionProcessingScrapChangeStatusDTO {

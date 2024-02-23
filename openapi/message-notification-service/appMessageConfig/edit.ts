@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/editUsingPOST
-export default function fetchMethod(data: IAppMessageConfigDTO) {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/appMessageConfig/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAppMessageConfigDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/appMessageConfig/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // AppMessageConfigDTO
 export interface IAppMessageConfigDTO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
-export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return http<ITheJSONResultListOperationSelectsToReturnVO>({
-        url: "/masterdata-service/process/getByIdsIgnoreStatus",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<ITheJSONResultListOperationSelectsToReturnVO>(
+        {
+            url: "/masterdata-service/process/getByIdsIgnoreStatus",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

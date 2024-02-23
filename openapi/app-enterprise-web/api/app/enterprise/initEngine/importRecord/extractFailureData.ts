@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/extractFailureDataUsingPOST
-export default function fetchMethod(data: IExtractFailureDataRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/extractFailureData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IExtractFailureDataRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/extractFailureData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ExtractFailureDataRequestDTO
 export interface IExtractFailureDataRequestDTO {

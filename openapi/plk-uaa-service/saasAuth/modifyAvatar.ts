@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/modifyAvatarUsingPOST
-export default function fetchMethod(data: IUpdateProfilePictureRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/saasAuth/modifyAvatar",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUpdateProfilePictureRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/saasAuth/modifyAvatar",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 更新头像请求 DTO
 export interface IUpdateProfilePictureRequestDTO {

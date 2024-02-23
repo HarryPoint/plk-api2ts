@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageProjectStageTaskByCurrentEmployeeUsingPOST
-export default function fetchMethod(data: PageProjectStageTaskByCurrentEmployee) {
-    return http<IJSONResultPageInformationProjectProjectPhaseTaskResponseObject>({
-        url: "/masterdata-service/projectTask/pageProjectStageTaskByCurrentEmployee",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: PageProjectStageTaskByCurrentEmployee, extraOptions?: any) {
+    return http<IJSONResultPageInformationProjectProjectPhaseTaskResponseObject>(
+        {
+            url: "/masterdata-service/projectTask/pageProjectStageTaskByCurrentEmployee",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«项目 项目-阶段-任务响应对象»»
 export interface IJSONResultPageInformationProjectProjectPhaseTaskResponseObject {

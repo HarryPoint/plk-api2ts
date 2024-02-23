@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
-export default function fetchMethod(data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried) {
-    return http<IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrievingMaterials>({
-        url: "/app-enterprise-web/api/app/enterprise/warehouseStorageMaterialScan/outStorageScanLotNo",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried, extraOptions?: any) {
+    return http<IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrievingMaterials>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/warehouseStorageMaterialScan/outStorageScanLotNo",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料出库扫码批次号查询对象
 export interface ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried {

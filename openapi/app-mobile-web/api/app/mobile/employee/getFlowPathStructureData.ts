@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/员工相关/getFlowPathStructureDataUsingPOST_14
-export default function fetchMethod(data: IProcessStructureSearchVO) {
-    return http<IJSONResultUserDynamicDataResponseDTO>({
-        url: "/app-mobile-web/api/app/mobile/employee/getFlowPathStructureData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessStructureSearchVO, extraOptions?: any) {
+    return http<IJSONResultUserDynamicDataResponseDTO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/employee/getFlowPathStructureData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {

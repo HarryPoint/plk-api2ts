@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息相关/sendMessageUsingPOST
-export default function fetchMethod(data: IMessageInformation, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/message-notification-service/message/sendMessage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IMessageInformation, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/message-notification-service/message/sendMessage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 消息信息
 export interface IMessageInformation {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目简报相关/checkWeeklyReportUsingGET
-export default function fetchMethod(params: { projectId: number }) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/projectBriefReport/checkWeeklyReport",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { projectId: number }, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/projectBriefReport/checkWeeklyReport",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»_1
 export interface IJSONResultstring1 {

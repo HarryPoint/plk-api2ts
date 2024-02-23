@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/待办相关/getNotHandleCountUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultint>({
-        url: "/app-enterprise-web/api/app/enterprise/todoList/getNotHandleCount",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultint>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/todoList/getNotHandleCount",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«int»
 export interface IJSONResultint {

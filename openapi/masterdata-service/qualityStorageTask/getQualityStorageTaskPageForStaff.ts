@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getQualityStorageTaskPageForStaffUsingPOST
-export default function fetchMethod(data: ITheInspectionTaskSearchesForVO1OnTheEmployee, params: { enterpriseId: number }) {
-    return http<IJSONResultThePageInformationInspectionTaskReturnsVO>({
-        url: "/masterdata-service/qualityStorageTask/getQualityStorageTaskPageForStaff",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ITheInspectionTaskSearchesForVO1OnTheEmployee, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultThePageInformationInspectionTaskReturnsVO>(
+        {
+            url: "/masterdata-service/qualityStorageTask/getQualityStorageTaskPageForStaff",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 质检任务针对员工端搜索VO_1
 export interface ITheInspectionTaskSearchesForVO1OnTheEmployee {

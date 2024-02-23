@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产工艺工艺卡相关/getByIdUsingGET_16
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultProcessCardInformationIsReturnedToTheDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceTechnologyProcessSheet/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultProcessCardInformationIsReturnedToTheDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceTechnologyProcessSheet/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产工艺工艺卡信息返回DTO»
 export interface IJSONResultProcessCardInformationIsReturnedToTheDTO {

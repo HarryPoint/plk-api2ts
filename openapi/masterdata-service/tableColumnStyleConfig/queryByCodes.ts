@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/列表列样式配置/queryByCodesUsingPOST
-export default function fetchMethod(data: string[]) {
-    return http<IJSONResultListJSONObject>({
-        url: "/masterdata-service/tableColumnStyleConfig/queryByCodes",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: string[], extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/masterdata-service/tableColumnStyleConfig/queryByCodes",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/列表列样式配置/editUsingPOST_28
-export default function fetchMethod(data: IListColumnStyleConfigurationEditDTO) {
-    return http<IJSONResultListColumnStyleConfigurationEditDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IListColumnStyleConfigurationEditDTO, extraOptions?: any) {
+    return http<IJSONResultListColumnStyleConfigurationEditDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 列表列样式配置编辑DTO
 export interface IListColumnStyleConfigurationEditDTO {

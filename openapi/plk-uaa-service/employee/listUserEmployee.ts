@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/员工相关/listUserEmployeeUsingPOST
-export default function fetchMethod(data: IUserEmployeeQuery1) {
-    return http<IJSONResultListUserEmployeeInformationResponse>({
-        url: "/plk-uaa-service/employee/listUserEmployee",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUserEmployeeQuery1, extraOptions?: any) {
+    return http<IJSONResultListUserEmployeeInformationResponse>(
+        {
+            url: "/plk-uaa-service/employee/listUserEmployee",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 用户员工查询_1
 export interface IUserEmployeeQuery1 {

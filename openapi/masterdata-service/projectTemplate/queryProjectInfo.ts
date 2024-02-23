@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目模板相关/queryProjectInfoUsingGET
-export default function fetchMethod(params: { projectTemplateId: number }) {
-    return http<IJSONResultProjectTemplateProjectInformationRespondsToTheDTO>({
-        url: "/masterdata-service/projectTemplate/queryProjectInfo",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { projectTemplateId: number }, extraOptions?: any) {
+    return http<IJSONResultProjectTemplateProjectInformationRespondsToTheDTO>(
+        {
+            url: "/masterdata-service/projectTemplate/queryProjectInfo",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«项目模板项目信息响应DTO»
 export interface IJSONResultProjectTemplateProjectInformationRespondsToTheDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产工艺工费相关/getByIdUsingGET_10
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultProduceTechnologyLaborCostResponseDTO>({
-        url: "/masterdata-service/produceTechnologyLaborCost/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultProduceTechnologyLaborCostResponseDTO>(
+        {
+            url: "/masterdata-service/produceTechnologyLaborCost/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ProduceTechnologyLaborCostResponseDTO»
 export interface IJSONResultProduceTechnologyLaborCostResponseDTO {

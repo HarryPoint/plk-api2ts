@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/uaa迁移脚本相关/transferFixUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/uaaScript/transferFix",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/uaaScript/transferFix",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

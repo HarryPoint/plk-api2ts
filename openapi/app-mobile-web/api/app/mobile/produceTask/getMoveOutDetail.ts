@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getMoveOutDetailUsingPOST
-export default function fetchMethod(data: IQueryDTOForIncomingAndOutgoingMaterialInformation) {
-    return http<IJSONResultIncomingAndOutgoingMaterialInformationResponseObject>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getMoveOutDetail",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IQueryDTOForIncomingAndOutgoingMaterialInformation, extraOptions?: any) {
+    return http<IJSONResultIncomingAndOutgoingMaterialInformationResponseObject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getMoveOutDetail",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进出料信息查询DTO
 export interface IQueryDTOForIncomingAndOutgoingMaterialInformation {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getByIdUsingGET_8
-export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return http<IJSONResultProductionTaskDetailsReturnToVO>({
-        url: "/masterdata-service/produceTask/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultProductionTaskDetailsReturnToVO>(
+        {
+            url: "/masterdata-service/produceTask/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产任务详情返回VO»
 export interface IJSONResultProductionTaskDetailsReturnToVO {

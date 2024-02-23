@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveInOutRecordDetailUsingGET
-export default function fetchMethod(params: { recordId: string; enterpriseId: number }) {
-    return http<IJSONResultInboundAndOutboundInformationVO>({
-        url: "/masterdata-service/moveInOutRecord/getMoveInOutRecordDetail",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { recordId: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultInboundAndOutboundInformationVO>(
+        {
+            url: "/masterdata-service/moveInOutRecord/getMoveInOutRecordDetail",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«进出站信息VO»
 export interface IJSONResultInboundAndOutboundInformationVO {

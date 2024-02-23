@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/迁移脚本相关/rePublishEmployeeAccountAddedEventUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/script/rePublishEmployeeAccountAddedEvent",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/script/rePublishEmployeeAccountAddedEvent",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

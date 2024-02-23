@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/queryProjectManagerAppListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultProjectManageAppQueryResponseDTO>({
-        url: "/flow-service/flowPath/queryProjectManagerAppList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultProjectManageAppQueryResponseDTO>(
+        {
+            url: "/flow-service/flowPath/queryProjectManagerAppList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ProjectManageAppQueryResponseDTO»
 export interface IJSONResultProjectManageAppQueryResponseDTO {

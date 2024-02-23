@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/processMatchStandardTechnologyTaskUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/produceOrder/processMatchStandardTechnologyTask",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/produceOrder/processMatchStandardTechnologyTask",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»_1
 export interface IJSONResultstring1 {

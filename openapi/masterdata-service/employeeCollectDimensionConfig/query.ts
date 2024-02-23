@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/用户聚合维度配置相关/queryUsingPOST
-export default function fetchMethod(data: IUserAggregationDimensionConfigurationQuery1) {
-    return http<IJSONResultUserAggregationDimensionConfigurationQuery>({
-        url: "/masterdata-service/employeeCollectDimensionConfig/query",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUserAggregationDimensionConfigurationQuery1, extraOptions?: any) {
+    return http<IJSONResultUserAggregationDimensionConfigurationQuery>(
+        {
+            url: "/masterdata-service/employeeCollectDimensionConfig/query",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 用户聚合维度配置查询_1
 export interface IUserAggregationDimensionConfigurationQuery1 {

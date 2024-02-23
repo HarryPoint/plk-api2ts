@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionStockInOrderUsingGET
-export default function fetchMethod(params: { fiscalPeriodId: string }) {
-    return http<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>({
-        url: "/masterdata-service/produceCost/checkProductionStockInOrder",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { fiscalPeriodId: string }, extraOptions?: any) {
+    return http<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>(
+        {
+            url: "/masterdata-service/produceCost/checkProductionStockInOrder",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产成本核算单据状态校验响应DTO»»
 export interface IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO {

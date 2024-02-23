@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingCollectionTotalTableResultVOUsingPOST
-export default function fetchMethod(data: IBaojingCollectionSummaryAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPageInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO>({
-        url: "/masterdata-service/baoJingReport/getBaoJingCollectionTotalTableResultVO",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IBaojingCollectionSummaryAnalysisReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPageInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO>(
+        {
+            url: "/masterdata-service/baoJingReport/getBaoJingCollectionTotalTableResultVO",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 宝晶收款汇总分析报表搜索VO
 export interface IBaojingCollectionSummaryAnalysisReportSearchVO {

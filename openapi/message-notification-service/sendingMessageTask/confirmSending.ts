@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/confirmSendingUsingPOST
-export default function fetchMethod(data: IConfirmSendingMessageRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/sendingMessageTask/confirmSending",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IConfirmSendingMessageRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/sendingMessageTask/confirmSending",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ConfirmSendingMessageRequestDTO
 export interface IConfirmSendingMessageRequestDTO {

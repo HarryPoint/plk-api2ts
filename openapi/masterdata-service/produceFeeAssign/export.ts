@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/exportUsingPOST_16
-export default function fetchMethod(data: Export) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/produceFeeAssign/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: Export, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/produceFeeAssign/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

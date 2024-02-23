@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getPageUsingPOST
-export default function fetchMethod(data: IProcessSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPagingInformationFlowRespondsToVO>({
-        url: "/flow-service/flowPath/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationFlowRespondsToVO>(
+        {
+            url: "/flow-service/flowPath/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程搜索VO
 export interface IProcessSearchVO {

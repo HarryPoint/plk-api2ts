@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/CRM-商机销售统计报表相关/exportSalesStatisticsUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/businessChance/salesStatistics/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/businessChance/salesStatistics/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getQualityDetailUsingGET
-export default function fetchMethod(params: { lotOrderId: number; taskId: number; wipRpId: number }) {
-    return http<IJSONResultInboundAndOutboundInformationVO>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getQualityDetail",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { lotOrderId: number; taskId: number; wipRpId: number }, extraOptions?: any) {
+    return http<IJSONResultInboundAndOutboundInformationVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getQualityDetail",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«进出站信息VO»
 export interface IJSONResultInboundAndOutboundInformationVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/班次相关/changeValidUsingPOST
-export default function fetchMethod(data: IEnableOrDisableVO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/classShift/changeValid",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEnableOrDisableVO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/classShift/changeValid",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 启用or停用VO
 export interface IEnableOrDisableVO {

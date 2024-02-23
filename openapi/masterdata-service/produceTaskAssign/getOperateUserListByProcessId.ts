@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getOperateUserListByProcessIdUsingGET
-export default function fetchMethod(params: { enterpriseId: number; processId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/masterdata-service/produceTaskAssign/getOperateUserListByProcessId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; processId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/masterdata-service/produceTaskAssign/getOperateUserListByProcessId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

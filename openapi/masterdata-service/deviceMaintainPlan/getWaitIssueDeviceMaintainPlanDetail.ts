@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getWaitIssueDeviceMaintainPlanDetailUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IMaintenancePlanDetailsToBeDeliveredResponseDTO[]>({
-        url: "/masterdata-service/deviceMaintainPlan/getWaitIssueDeviceMaintainPlanDetail",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IMaintenancePlanDetailsToBeDeliveredResponseDTO[]>(
+        {
+            url: "/masterdata-service/deviceMaintainPlan/getWaitIssueDeviceMaintainPlanDetail",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // 保养计划明细待下发响应DTO
 export interface IMaintenancePlanDetailsToBeDeliveredResponseDTO {

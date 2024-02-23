@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/enableBatchUsingPOST_1
-export default function fetchMethod(data: IEmailTaskEnableRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/emailTask/enableBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmailTaskEnableRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/emailTask/enableBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EmailTaskEnableRequestDTO
 export interface IEmailTaskEnableRequestDTO {

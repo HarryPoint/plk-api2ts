@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getImprovementCategoryIndicatorsUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultImprovementCategoryIndicatorsResponseDTO>({
-        url: "/masterdata-service/proposalDashboard/getImprovementCategoryIndicators",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultImprovementCategoryIndicatorsResponseDTO>(
+        {
+            url: "/masterdata-service/proposalDashboard/getImprovementCategoryIndicators",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ImprovementCategoryIndicatorsResponseDTO»
 export interface IJSONResultImprovementCategoryIndicatorsResponseDTO {

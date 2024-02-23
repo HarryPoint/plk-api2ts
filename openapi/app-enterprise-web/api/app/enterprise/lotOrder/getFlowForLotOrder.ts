@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getFlowForLotUsingGET
-export default function fetchMethod(params: { flowType?: string; lotOrderId?: number; produceOrderId?: number }) {
-    return http<IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/lotOrder/getFlowForLotOrder",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowType?: string; lotOrderId?: number; produceOrderId?: number }, extraOptions?: any) {
+    return http<IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lotOrder/getFlowForLotOrder",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«批次订单流水基本信息响应DTO»»
 export interface IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO {

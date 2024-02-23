@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/权限相关/listTreeUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultListPermissionGroupsAndPermissionTreesRespondToDtos>({
-        url: "/plk-uaa-service/permission/listTreeByGroup",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListPermissionGroupsAndPermissionTreesRespondToDtos>(
+        {
+            url: "/plk-uaa-service/permission/listTreeByGroup",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«权限组及权限树响应 DTO»»
 export interface IJSONResultListPermissionGroupsAndPermissionTreesRespondToDtos {

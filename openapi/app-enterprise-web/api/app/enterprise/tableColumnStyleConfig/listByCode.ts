@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/列表列样式配置/listByCodeUsingGET
-export default function fetchMethod(params: { code: string }) {
-    return http<IJSONResultListListColumnStyleConfigurationVO>({
-        url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/listByCode",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { code: string }, extraOptions?: any) {
+    return http<IJSONResultListListColumnStyleConfigurationVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/listByCode",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«列表列样式配置VO»»
 export interface IJSONResultListListColumnStyleConfigurationVO {

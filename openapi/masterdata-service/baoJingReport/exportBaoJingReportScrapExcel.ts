@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportScrapExcelUsingPOST
-export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/baoJingReport/exportBaoJingReportScrapExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/baoJingReport/exportBaoJingReportScrapExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 宝晶报表(报废)相关搜索VO
 export interface IBaojingReportScrapRelatedSearchVO {

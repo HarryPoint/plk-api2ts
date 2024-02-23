@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工厂日历相关/getSchedulLoopForPageUsingPOST
-export default function fetchMethod(data: IFactoryCalendarSearchVO) {
-    return http<IJSONResultPagingInformationSchedulingRecordReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/calendar/getSchedulLoopForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFactoryCalendarSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationSchedulingRecordReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/calendar/getSchedulLoopForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工厂日历搜索VO
 export interface IFactoryCalendarSearchVO {

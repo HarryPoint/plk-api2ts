@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/editInterceptionUpperLimitUsingPOST
-export default function fetchMethod(data: IEditInterceptionUpperLimitRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/editInterceptionUpperLimit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEditInterceptionUpperLimitRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/editInterceptionUpperLimit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EditInterceptionUpperLimitRequestDTO
 export interface IEditInterceptionUpperLimitRequestDTO {

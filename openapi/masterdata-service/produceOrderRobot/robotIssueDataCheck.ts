@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/robotIssueDataCheckUsingPOST
-export default function fetchMethod(data: IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO) {
-    return http<IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO>({
-        url: "/masterdata-service/produceOrderRobot/robotIssueDataCheck",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO, extraOptions?: any) {
+    return http<IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO>(
+        {
+            url: "/masterdata-service/produceOrderRobot/robotIssueDataCheck",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产订单自动排产下发任务数据校验请求DTO
 export interface IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO {

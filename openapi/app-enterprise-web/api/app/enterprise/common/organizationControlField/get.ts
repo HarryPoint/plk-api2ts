@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getOrganizationControlFieldsUsingGET
-export default function fetchMethod(params: { flowPathCode: string }) {
-    return http<IJSONResultListOrganizationControlFieldVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/organizationControlField/get",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathCode: string }, extraOptions?: any) {
+    return http<IJSONResultListOrganizationControlFieldVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/organizationControlField/get",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«OrganizationControlFieldVO»»
 export interface IJSONResultListOrganizationControlFieldVO {

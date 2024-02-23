@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务自定义卡片样式相关/editUsingPOST_4
-export default function fetchMethod(data: IProductionTaskCustomCardStyleEditListObjectDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceTaskCustomCardStyle/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskCustomCardStyleEditListObjectDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTaskCustomCardStyle/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务自定义卡片样式编辑list对象DTO
 export interface IProductionTaskCustomCardStyleEditListObjectDTO {

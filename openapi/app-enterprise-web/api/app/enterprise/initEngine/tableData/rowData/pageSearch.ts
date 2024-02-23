@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/pageSearchRowDataUsingPOST
-export default function fetchMethod(data: ISearchForRowData1) {
-    return http<IJSONResultPageInformationRowDataOutputDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/pageSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISearchForRowData1, extraOptions?: any) {
+    return http<IJSONResultPageInformationRowDataOutputDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/pageSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 搜索行数据_1
 export interface ISearchForRowData1 {

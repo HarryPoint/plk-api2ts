@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectFeeReportUsingPOST
-export default function fetchMethod(data: QueryProjectFeeReport) {
-    return http<IJSONResultPagingInformationItemCostReportResponseObject>({
-        url: "/masterdata-service/projectReport/queryProjectFeeReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: QueryProjectFeeReport, extraOptions?: any) {
+    return http<IJSONResultPagingInformationItemCostReportResponseObject>(
+        {
+            url: "/masterdata-service/projectReport/queryProjectFeeReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«项目费用报表响应对象»»
 export interface IJSONResultPagingInformationItemCostReportResponseObject {

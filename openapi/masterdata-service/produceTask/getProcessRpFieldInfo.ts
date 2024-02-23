@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessRpFieldInfoUsingPOST
-export default function fetchMethod(data: IProcedureAssociatedFieldQueryRequestObject, params: { enterpriseId: number }) {
-    return http<ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO>({
-        url: "/masterdata-service/produceTask/getProcessRpFieldInfo",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcedureAssociatedFieldQueryRequestObject, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO>(
+        {
+            url: "/masterdata-service/produceTask/getProcessRpFieldInfo",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工序关联字段查询请求对象
 export interface IProcedureAssociatedFieldQueryRequestObject {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getWarehouseTreeListUsingPOST
-export default function fetchMethod(data: IDatabaseBitTreeQueryVO) {
-    return http<IJSONResultListPositionTreeReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getWarehouseTreeList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDatabaseBitTreeQueryVO, extraOptions?: any) {
+    return http<IJSONResultListPositionTreeReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getWarehouseTreeList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 库位树查询VO
 export interface IDatabaseBitTreeQueryVO {

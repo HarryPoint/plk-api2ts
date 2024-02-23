@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getUserScanProcessUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultUserScanProcessVO>({
-        url: "/app-mobile-web/api/app/mobile/common/getUserScanProcess",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultUserScanProcessVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/common/getUserScanProcess",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«UserScanProcessVO»
 export interface IJSONResultUserScanProcessVO {

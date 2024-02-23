@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceLastQuantityForDayUsingGET
-export default function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }) {
-    return http<IJSONResultListReturnTheFinalProcessQualifiedOutputToVO>({
-        url: "/masterdata-service/rtProductionSnapshot/getProduceLastQuantityForDay",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListReturnTheFinalProcessQualifiedOutputToVO>(
+        {
+            url: "/masterdata-service/rtProductionSnapshot/getProduceLastQuantityForDay",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«最后工序合格产出返回VO»»
 export interface IJSONResultListReturnTheFinalProcessQualifiedOutputToVO {

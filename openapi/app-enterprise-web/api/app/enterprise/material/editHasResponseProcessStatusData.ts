@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/物料相关/editHasResponseProcessStatusDataUsingPOST
-export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultMaterialEditResponseInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/material/editHasResponseProcessStatusData",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultMaterialEditResponseInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/material/editHasResponseProcessStatusData",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 物料编辑请求DTO
 export interface IMaterialEditorRequestDTO {

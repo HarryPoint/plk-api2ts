@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/提案部门完成情况表-相关/searchUsingPOST
-export default function fetchMethod(data: IProposalDepartmentStatisticsQueryRequestDTO) {
-    return http<IJSONResultListProposalDepartmentStatisticsQueryResponseDTO>({
-        url: "/masterdata-service/proposalDepartmentStatistics/search",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProposalDepartmentStatisticsQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListProposalDepartmentStatisticsQueryResponseDTO>(
+        {
+            url: "/masterdata-service/proposalDepartmentStatistics/search",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ProposalDepartmentStatisticsQueryRequestDTO
 export interface IProposalDepartmentStatisticsQueryRequestDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/forgetPasswordUsingPOST
-export default function fetchMethod(data: IForgotPasswordRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/saasAuth/forgetPassword",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IForgotPasswordRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/saasAuth/forgetPassword",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 忘记密码请求 DTO
 export interface IForgotPasswordRequestDTO {

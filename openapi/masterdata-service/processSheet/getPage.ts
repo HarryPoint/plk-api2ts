@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getPageUsingPOST_9
-export default function fetchMethod(data: ICraftCardSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPagingInformationProcessCardReturnsVO>({
-        url: "/masterdata-service/processSheet/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ICraftCardSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationProcessCardReturnsVO>(
+        {
+            url: "/masterdata-service/processSheet/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工艺卡搜索VO
 export interface ICraftCardSearchVO {

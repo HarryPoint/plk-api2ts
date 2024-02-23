@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检方案/getSelectorByMaterialUsingGET
-export default function fetchMethod(params: { materialId?: number }) {
-    return http<IJSONResultListSelectVOAsTheInspectionSolution>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getSelectorByMaterial",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { materialId?: number }, extraOptions?: any) {
+    return http<IJSONResultListSelectVOAsTheInspectionSolution>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getSelectorByMaterial",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«质检方案选择VO»»
 export interface IJSONResultListSelectVOAsTheInspectionSolution {

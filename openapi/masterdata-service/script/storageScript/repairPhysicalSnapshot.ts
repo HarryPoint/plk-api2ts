@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/库存脚本相关接口/repairPhysicalSnapshotUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/script/storageScript/repairPhysicalSnapshot",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/script/storageScript/repairPhysicalSnapshot",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

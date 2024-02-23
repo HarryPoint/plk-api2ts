@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/CRM-销售计划相关/exportUsingPOST_32
-export default function fetchMethod(data: IProcessDataSearchVO) {
-    return http<IJSONResultlong>({
-        url: "/app-mobile-web/api/app/mobile/salesPlan/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataSearchVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-mobile-web/api/app/mobile/salesPlan/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {

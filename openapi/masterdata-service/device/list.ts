@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备相关/listUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListDeviceDTO>({
-        url: "/masterdata-service/device/list",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListDeviceDTO>(
+        {
+            url: "/masterdata-service/device/list",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«设备DTO»»
 export interface IJSONResultListDeviceDTO {

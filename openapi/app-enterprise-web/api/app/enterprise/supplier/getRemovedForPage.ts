@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/供应商相关/getRemovedForPageUsingPOST_20
-export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return http<IJSONResultPagingInformationJSONObject>({
-        url: "/app-enterprise-web/api/app/enterprise/supplier/getRemovedForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationJSONObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/supplier/getRemovedForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {

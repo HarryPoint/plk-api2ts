@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectRiskCountUsingPOST
-export default function fetchMethod(data: IProjectKanbanQueryDto) {
-    return http<IJSONResultProjectRiskStatisticsResponseObject>({
-        url: "/masterdata-service/projectDashboard/queryProjectRiskCount",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?: any) {
+    return http<IJSONResultProjectRiskStatisticsResponseObject>(
+        {
+            url: "/masterdata-service/projectDashboard/queryProjectRiskCount",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目看板查询dto
 export interface IProjectKanbanQueryDto {

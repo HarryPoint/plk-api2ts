@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/库存查询相关/queryWarehouseMaterialRpListByIdListUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListWarehouseMaterialRpQueryResponseDTO>({
-        url: "/masterdata-service/warehouseMaterial/queryWarehouseMaterialRpListByIdList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListWarehouseMaterialRpQueryResponseDTO>(
+        {
+            url: "/masterdata-service/warehouseMaterial/queryWarehouseMaterialRpListByIdList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»
 export interface IJSONResultListWarehouseMaterialRpQueryResponseDTO {

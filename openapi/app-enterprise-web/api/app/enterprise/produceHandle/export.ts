@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/exportUsingPOST_31
-export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandle/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandle/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理分页查询的对象
 export interface IProduceObjectsThatHandlePagingQueries {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工艺画布快照相关/saveCanvasSnapshotByUserUsingPOST
-export default function fetchMethod(data: IProcessCanvasSnapshotAcquisitionRequestDTO1) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCanvasSnapshot/saveByUser",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessCanvasSnapshotAcquisitionRequestDTO1, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCanvasSnapshot/saveByUser",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工艺画布快照获取请求DTO_1
 export interface IProcessCanvasSnapshotAcquisitionRequestDTO1 {

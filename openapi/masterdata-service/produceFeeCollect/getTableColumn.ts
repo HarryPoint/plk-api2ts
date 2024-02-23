@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/费用归集相关/getTableColumnUsingGET_8
-export default function fetchMethod() {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/masterdata-service/produceFeeCollect/getTableColumn",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/masterdata-service/produceFeeCollect/getTableColumn",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

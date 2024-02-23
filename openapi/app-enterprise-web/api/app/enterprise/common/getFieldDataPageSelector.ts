@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getFieldDataPageSelectorUsingPOST
-export default function fetchMethod(data: IProcessAssociationFormSearchVO) {
-    return http<IJSONResultProcessAssociationFormQueryReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getFieldDataPageSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessAssociationFormSearchVO, extraOptions?: any) {
+    return http<IJSONResultProcessAssociationFormQueryReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getFieldDataPageSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程关联表单搜索VO
 export interface IProcessAssociationFormSearchVO {

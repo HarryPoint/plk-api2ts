@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getWeekSchedulePlanListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListWeeklyProductionVolumeVO>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/weekSchedulePlan/getList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListWeeklyProductionVolumeVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/weekSchedulePlan/getList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«周生产计划量VO»»
 export interface IJSONResultListWeeklyProductionVolumeVO {

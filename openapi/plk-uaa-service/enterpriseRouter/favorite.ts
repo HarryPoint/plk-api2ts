@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/favoriteUsingPOST
-export default function fetchMethod(data: IEnterpriseRoutingCollectionRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/enterpriseRouter/favorite",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEnterpriseRoutingCollectionRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/enterpriseRouter/favorite",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 企业路由收藏请求 DTO
 export interface IEnterpriseRoutingCollectionRequestDTO {

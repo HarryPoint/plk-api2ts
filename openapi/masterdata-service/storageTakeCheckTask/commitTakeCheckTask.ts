@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/commitTakeCheckTaskUsingPOST
-export default function fetchMethod(data: ISubmitTheInventoryTaskToTheDTO, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/storageTakeCheckTask/commitTakeCheckTask",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISubmitTheInventoryTaskToTheDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/storageTakeCheckTask/commitTakeCheckTask",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 盘点任务提交DTO
 export interface ISubmitTheInventoryTaskToTheDTO {

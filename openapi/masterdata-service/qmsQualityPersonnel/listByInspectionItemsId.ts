@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/listByInspectionItemsIdUsingGET
-export default function fetchMethod(params: { inspectionItemsId: number }) {
-    return http<IJSONResultListQualityPersonnelDropDownResponseDtos>({
-        url: "/masterdata-service/qmsQualityPersonnel/listByInspectionItemsId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { inspectionItemsId: number }, extraOptions?: any) {
+    return http<IJSONResultListQualityPersonnelDropDownResponseDtos>(
+        {
+            url: "/masterdata-service/qmsQualityPersonnel/listByInspectionItemsId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«质量人员下拉响应DTO»»
 export interface IJSONResultListQualityPersonnelDropDownResponseDtos {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdCodesByClassGroupIdUsingGET
-export default function fetchMethod(params: { classGroupId: number; enterpriseId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/masterdata-service/employee/getIdCodesByClassGroupId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { classGroupId: number; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/masterdata-service/employee/getIdCodesByClassGroupId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

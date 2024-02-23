@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getShenLanDeviceStatisticInfoUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultDarkBlueDeviceStatisticalResponseVO>({
-        url: "/masterdata-service/lsShenLanSetting/getDeviceStatisticInfo",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultDarkBlueDeviceStatisticalResponseVO>(
+        {
+            url: "/masterdata-service/lsShenLanSetting/getDeviceStatisticInfo",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«深蓝设备统计响应VO»
 export interface IJSONResultDarkBlueDeviceStatisticalResponseVO {

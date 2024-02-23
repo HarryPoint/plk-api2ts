@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/批次跟踪报表相关/exportMaterialLotNoTrackReportUsingPOST
-export default function fetchMethod(data: ExportMaterialLotNoTrackReport) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/warehouseStorageLotNoTrackReport/exportMaterialLotNoTrackReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ExportMaterialLotNoTrackReport, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/warehouseStorageLotNoTrackReport/exportMaterialLotNoTrackReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

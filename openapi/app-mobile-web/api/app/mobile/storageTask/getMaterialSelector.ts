@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/仓库任务相关/getMaterialSelectorUsingPOST_3
-export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
-        url: "/app-mobile-web/api/app/mobile/storageTask/getMaterialSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/storageTask/getMaterialSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料主数据选择列表搜索VO
 export interface IMaterialMasterDataSelectionListSearchVO {

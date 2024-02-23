@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/流程数据相关/getDataByCodeOrNameListUsingPOST
-export default function fetchMethod(data: IProcessFormCodeOrNameSearchesForVO) {
-    return http<IJSONResultListJSONObject>({
-        url: "/app-enterprise-web/api/app/enterprise/flowPathData/getDataByCodeOrNameList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessFormCodeOrNameSearchesForVO, extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/flowPathData/getDataByCodeOrNameList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程表单Code或Name搜索VO
 export interface IProcessFormCodeOrNameSearchesForVO {

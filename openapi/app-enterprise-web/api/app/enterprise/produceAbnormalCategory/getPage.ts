@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产异常类型相关/getPageUsingPOST_14
-export default function fetchMethod(data: IExceptionTypeSearchVO) {
-    return http<IJSONResultPagingInformationExceptionTypeVOIsReturned>({
-        url: "/app-enterprise-web/api/app/enterprise/produceAbnormalCategory/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IExceptionTypeSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationExceptionTypeVOIsReturned>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceAbnormalCategory/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 异常类型搜索VO
 export interface IExceptionTypeSearchVO {

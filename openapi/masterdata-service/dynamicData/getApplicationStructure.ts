@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getApplicationStructureUsingPOST
-export default function fetchMethod(params: { flowPathId: number }) {
-    return http<IJSONResultFormStructureVO1>({
-        url: "/masterdata-service/dynamicData/getApplicationStructure",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultFormStructureVO1>(
+        {
+            url: "/masterdata-service/dynamicData/getApplicationStructure",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«表单结构VO»_1
 export interface IJSONResultFormStructureVO1 {

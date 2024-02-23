@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskLotListForMobileUsingPOST
-export default function fetchMethod(data: IProductionTaskBatchInformationQueryDTOForMobileTerminals) {
-    return http<IJSONResultListProductionTaskGroupingBatchOrderResponseDTOForMobile>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskLotListForMobile",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskBatchInformationQueryDTOForMobileTerminals, extraOptions?: any) {
+    return http<IJSONResultListProductionTaskGroupingBatchOrderResponseDTOForMobile>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskLotListForMobile",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务批次信息查询DTO(针对移动端)
 export interface IProductionTaskBatchInformationQueryDTOForMobileTerminals {

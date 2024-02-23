@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/应用相关/stagingUsingPOST
-export default function fetchMethod(data: IProcessEditDTO1) {
-    return http<IJSONResultProcessVersionRespondsToVO>({
-        url: "/app-enterprise-web/api/app/enterprise/application/staging",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessEditDTO1, extraOptions?: any) {
+    return http<IJSONResultProcessVersionRespondsToVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/application/staging",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程编辑DTO_1
 export interface IProcessEditDTO1 {

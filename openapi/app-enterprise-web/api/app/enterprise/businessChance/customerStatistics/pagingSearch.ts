@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/CRM-客户统计报表相关/pagingSearchCustomerStatisticsUsingPOST
-export default function fetchMethod(data: ICustomerStatisticsInputConditions) {
-    return http<IJSONResultPagingInformationCustomerStatistics>({
-        url: "/app-enterprise-web/api/app/enterprise/businessChance/customerStatistics/pagingSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICustomerStatisticsInputConditions, extraOptions?: any) {
+    return http<IJSONResultPagingInformationCustomerStatistics>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/businessChance/customerStatistics/pagingSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 客户情况统计输入条件
 export interface ICustomerStatisticsInputConditions {

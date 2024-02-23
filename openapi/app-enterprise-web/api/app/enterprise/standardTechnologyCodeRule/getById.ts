@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/getByIdUsingPOST_3
-export default function fetchMethod(data: IIdInformation) {
-    return http<IJSONResultStandardProcessCodingRulesRespondToDtos>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/getById",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+    return http<IJSONResultStandardProcessCodingRulesRespondToDtos>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/getById",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id信息
 export interface IIdInformation {

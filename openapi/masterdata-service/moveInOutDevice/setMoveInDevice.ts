@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
-export default function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/moveInOutDevice/setMoveInDevice",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/moveInOutDevice/setMoveInDevice",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务设置进料设备请求DTO
 export interface ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO {

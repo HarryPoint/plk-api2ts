@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/saveChangeUsingPOST
-export default function fetchMethod(data: IChangeGanttChartPlanDTO[]) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/saveChange",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IChangeGanttChartPlanDTO[], extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/saveChange",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 变更甘特图计划DTO
 export interface IChangeGanttChartPlanDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序完成明细表/querySumDataUsingPOST
-export default function fetchMethod(data: IProcedureCompletionListQuery) {
-    return http<IJSONResultProcessCompletionDetailsTotalResponseDto>({
-        url: "/masterdata-service/processCompleteDetailReport/querySumData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcedureCompletionListQuery, extraOptions?: any) {
+    return http<IJSONResultProcessCompletionDetailsTotalResponseDto>(
+        {
+            url: "/masterdata-service/processCompleteDetailReport/querySumData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工序完成明细表查询
 export interface IProcedureCompletionListQuery {

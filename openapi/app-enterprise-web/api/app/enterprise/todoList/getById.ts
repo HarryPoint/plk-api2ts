@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/待办相关/getByIdUsingGET_22
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultToDoListDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/todoList/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultToDoListDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/todoList/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ToDoListDTO»
 export interface IJSONResultToDoListDTO {

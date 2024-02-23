@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getHandleTypeCountListByRoutingStepIdUsingGET
-export default function fetchMethod(params: { beginTime?: string; routingStepIds: string; endTime?: string; enterpriseId: number }) {
-    return http<IJSONResultProductionProcessingStatisticsVO>({
-        url: "/masterdata-service/produceHandle/getHandleTypeCountListByRoutingStepId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { beginTime?: string; routingStepIds: string; endTime?: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultProductionProcessingStatisticsVO>(
+        {
+            url: "/masterdata-service/produceHandle/getHandleTypeCountListByRoutingStepId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产处理统计VO»
 export interface IJSONResultProductionProcessingStatisticsVO {

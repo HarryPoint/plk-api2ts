@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/beginTaskUsingPOST
-export default function fetchMethod(data: IFlowPathTaskProcessRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/flowPathTask/beginTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFlowPathTaskProcessRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/flowPathTask/beginTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // FlowPathTaskProcessRequestDTO
 export interface IFlowPathTaskProcessRequestDTO {

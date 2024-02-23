@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
-export default function fetchMethod(data: IBaojingReportMaterialSelectionQuery) {
-    return http<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse>({
-        url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBaojingReportMaterialSelectionQuery, extraOptions?: any) {
+    return http<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 宝晶报表物料选择查询
 export interface IBaojingReportMaterialSelectionQuery {

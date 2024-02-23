@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/员工相关/relateRolesUsingPOST
-export default function fetchMethod(data: IEmployeeAssociatedRoleSetRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/employee/relateRoles",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmployeeAssociatedRoleSetRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/employee/relateRoles",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 员工关联角色集请求对象
 export interface IEmployeeAssociatedRoleSetRequestObject {

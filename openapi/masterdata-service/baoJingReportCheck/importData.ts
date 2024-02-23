@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportRawStorageResultVOUsingPOST
-export default function fetchMethod(params: { enterpriseId: number; filePathNo: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/baoJingReportCheck/importData",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; filePathNo: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/baoJingReportCheck/importData",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

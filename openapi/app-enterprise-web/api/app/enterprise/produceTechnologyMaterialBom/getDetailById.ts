@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产工艺工艺路径相关/getDetailByIdUsingGET_1
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultProduceTechnologyMaterialBomInfoResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceTechnologyMaterialBom/getDetailById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultProduceTechnologyMaterialBomInfoResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceTechnologyMaterialBom/getDetailById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»
 export interface IJSONResultProduceTechnologyMaterialBomInfoResponseDTO {

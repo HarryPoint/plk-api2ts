@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产统计相关/getProduceTimeAndFeeStatisticUsingPOST
-export default function fetchMethod(data: IUserProductionStatisticsSearchVO) {
-    return http<IJSONResultListUserProductionStatisticsReturnVO>({
-        url: "/app-mobile-web/api/app/mobile/produceReport/getProduceTimeAndFeeStatistic",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUserProductionStatisticsSearchVO, extraOptions?: any) {
+    return http<IJSONResultListUserProductionStatisticsReturnVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceReport/getProduceTimeAndFeeStatistic",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 用户生产统计搜索VO
 export interface IUserProductionStatisticsSearchVO {

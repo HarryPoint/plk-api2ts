@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/addUsingPOST_4
-export default function fetchMethod(data: ITheProductionProcessingWithholdAddsTheRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceHandleHoldPause/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheProductionProcessingWithholdAddsTheRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceHandleHoldPause/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理暂扣添加请求对象
 export interface ITheProductionProcessingWithholdAddsTheRequestObject {

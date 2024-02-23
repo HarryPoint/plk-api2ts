@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/resetCategorySortUsingPOST
-export default function fetchMethod(data: IStandardProcessClassificationSortRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/standardTechnologyCategory/resetCategorySort",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardProcessClassificationSortRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/standardTechnologyCategory/resetCategorySort",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺分类排序请求DTO
 export interface IStandardProcessClassificationSortRequestDTO {

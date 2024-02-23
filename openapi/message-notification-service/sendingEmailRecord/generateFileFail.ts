@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/generateFileFailUsingPOST
-export default function fetchMethod(data: IGenerateFileFailRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/sendingEmailRecord/generateFileFail",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IGenerateFileFailRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/sendingEmailRecord/generateFileFail",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // GenerateFileFailRequestDTO
 export interface IGenerateFileFailRequestDTO {

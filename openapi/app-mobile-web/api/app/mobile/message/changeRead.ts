@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/消息通知相关/changeReadUsingPOST
-export default function fetchMethod(data: IMessageChangeReadDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/message/changeRead",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMessageChangeReadDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/message/changeRead",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 消息变更已读DTO
 export interface IMessageChangeReadDTO {

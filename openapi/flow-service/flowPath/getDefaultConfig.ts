@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getDefaultConfigUsingGET
-export default function fetchMethod(params: { type: string }) {
-    return http<IJSONResultTheDefaultValueIsVO>({
-        url: "/flow-service/flowPath/getDefaultConfig",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { type: string }, extraOptions?: any) {
+    return http<IJSONResultTheDefaultValueIsVO>(
+        {
+            url: "/flow-service/flowPath/getDefaultConfig",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程默认配置VO»
 export interface IJSONResultTheDefaultValueIsVO {

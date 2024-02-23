@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/getUsersWithAccountsUsingPOST_1
-export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getStaffSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getStaffSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 用户主数据选择列表搜索VO
 export interface ISearchVOWithTheHomeOwnerDataSelectionList {

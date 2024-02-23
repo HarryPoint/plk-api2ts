@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionDataReportExportInfoByTicketUsingGET
-export default function fetchMethod(params: { ticket: string }) {
-    return http<IJSONResultExportInformationOutputDataStatisticsReturnVO>({
-        url: "/masterdata-service/exportAuth/getProductionDataReportExportInfoByTicket",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+    return http<IJSONResultExportInformationOutputDataStatisticsReturnVO>(
+        {
+            url: "/masterdata-service/exportAuth/getProductionDataReportExportInfoByTicket",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«导出信息«产出数据统计返回VO»»
 export interface IJSONResultExportInformationOutputDataStatisticsReturnVO {

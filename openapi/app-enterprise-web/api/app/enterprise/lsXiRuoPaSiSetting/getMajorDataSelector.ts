@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/西偌帕斯大屏相关/getMajorDataSelectorUsingPOST_9
-export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getMajorDataSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getMajorDataSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料主数据选择列表搜索VO
 export interface IMaterialMasterDataSelectionListSearchVO {

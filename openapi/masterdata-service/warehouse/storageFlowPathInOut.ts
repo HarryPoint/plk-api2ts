@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/storageFlowPathInOutUsingPOST
-export default function fetchMethod(data: IWarehouseProcessInboundAndOutboundDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/warehouse/storageFlowPathInOut",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IWarehouseProcessInboundAndOutboundDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/warehouse/storageFlowPathInOut",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 仓库流程出入库DTO
 export interface IWarehouseProcessInboundAndOutboundDTO {

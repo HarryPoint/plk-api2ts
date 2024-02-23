@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表格相关/getIdCodeByFlowPathCodeAndSerialNoUsingGET
-export default function fetchMethod(params: { enterpriseId: number; flowPathCode: string; serialNo: string }) {
-    return http<IJSONResultIdNameNumberVO>({
-        url: "/flow-service/flowPathTableColumn/getIdCodeByFlowPathCodeAndSerialNo",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; flowPathCode: string; serialNo: string }, extraOptions?: any) {
+    return http<IJSONResultIdNameNumberVO>(
+        {
+            url: "/flow-service/flowPathTableColumn/getIdCodeByFlowPathCodeAndSerialNo",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«Id，名称，编号VO»
 export interface IJSONResultIdNameNumberVO {

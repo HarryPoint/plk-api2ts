@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务自动出料相关/batchMoveOutByProduceOrderUsingPOST
-export default function fetchMethod(data: IProductionTaskAutomaticDischargeUploadDataDTO[], params: { clientIp?: string; enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceTaskAutoMoveOut/batchMoveOutByProduceOrder",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionTaskAutomaticDischargeUploadDataDTO[], params: { clientIp?: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceTaskAutoMoveOut/batchMoveOutByProduceOrder",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产任务自动出料上传数据DTO
 export interface IProductionTaskAutomaticDischargeUploadDataDTO {

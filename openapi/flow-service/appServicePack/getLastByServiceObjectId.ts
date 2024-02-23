@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用服务包相关/getLastByServiceObjectIdUsingGET
-export default function fetchMethod(params: { serviceObjectId: number }) {
-    return http<IJSONResultApplicationServicePackResponse>({
-        url: "/flow-service/appServicePack/getLastByServiceObjectId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { serviceObjectId: number }, extraOptions?: any) {
+    return http<IJSONResultApplicationServicePackResponse>(
+        {
+            url: "/flow-service/appServicePack/getLastByServiceObjectId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«应用服务包响应»
 export interface IJSONResultApplicationServicePackResponse {

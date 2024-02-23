@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportUsingPOST
-export default function fetchMethod(data: GetPurchaseSummaryReport) {
-    return http<IJSONResultObjectReturnedByThePagingInformationProcurementSummaryReport>({
-        url: "/app-enterprise-web/api/app/enterprise/purchaseSummaryReport/getPurchaseSummaryReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetPurchaseSummaryReport, extraOptions?: any) {
+    return http<IJSONResultObjectReturnedByThePagingInformationProcurementSummaryReport>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/purchaseSummaryReport/getPurchaseSummaryReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«采购汇总报表返回对象»»
 export interface IJSONResultObjectReturnedByThePagingInformationProcurementSummaryReport {

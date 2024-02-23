@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getMoveInOutRecordDetailUsingGET
-export default function fetchMethod(params: { recordId: string }) {
-    return http<IJSONResultInboundAndOutboundInformationVO>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getMoveInOutRecordDetail",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { recordId: string }, extraOptions?: any) {
+    return http<IJSONResultInboundAndOutboundInformationVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getMoveInOutRecordDetail",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«进出站信息VO»
 export interface IJSONResultInboundAndOutboundInformationVO {

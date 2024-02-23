@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/业务参数相关/saveSettingUsingPOST
-export default function fetchMethod(data: ISchedulingParametersDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/planParam/saveSetting",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISchedulingParametersDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/planParam/saveSetting",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 排产参数DTO
 export interface ISchedulingParametersDTO {

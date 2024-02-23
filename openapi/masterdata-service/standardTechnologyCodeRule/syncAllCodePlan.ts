@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/syncAllCodePlanUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/standardTechnologyCodeRule/syncAllCodePlan",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/standardTechnologyCodeRule/syncAllCodePlan",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

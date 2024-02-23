@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportSalesDeliverExcelUsingPOST
-export default function fetchMethod(data: IBaojingSalesDeliveryReportSearchVO) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/baoJingReport/exportBaoJingReportSalesDeliverExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBaojingSalesDeliveryReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/baoJingReport/exportBaoJingReportSalesDeliverExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 宝晶销售发货报表搜索VO
 export interface IBaojingSalesDeliveryReportSearchVO {

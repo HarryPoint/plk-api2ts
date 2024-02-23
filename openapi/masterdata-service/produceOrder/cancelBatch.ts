@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/cancelBatchUsingPOST
-export default function fetchMethod(data: IProduceOrderBatchCancelRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceOrder/cancelBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProduceOrderBatchCancelRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceOrder/cancelBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ProduceOrderBatchCancelRequestDTO
 export interface IProduceOrderBatchCancelRequestDTO {

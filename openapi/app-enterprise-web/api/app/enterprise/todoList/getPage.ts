@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/待办相关/getPageUsingPOST_35
-export default function fetchMethod(data: IToDoListSearchVO) {
-    return http<IJSONResultPageInformationBacklogReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/todoList/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IToDoListSearchVO, extraOptions?: any) {
+    return http<IJSONResultPageInformationBacklogReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/todoList/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 待办事项搜索VO
 export interface IToDoListSearchVO {

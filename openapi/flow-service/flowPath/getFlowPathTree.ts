@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathTreeUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultListProcessTreeVO>({
-        url: "/flow-service/flowPath/getFlowPathTree",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessTreeVO>(
+        {
+            url: "/flow-service/flowPath/getFlowPathTree",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程树VO»»
 export interface IJSONResultListProcessTreeVO {

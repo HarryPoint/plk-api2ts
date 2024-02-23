@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/项目任务相关/getWorkOrderLogUsingPOST_18
-export default function fetchMethod(data: IJobLogSearchVO) {
-    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getWorkOrderLog",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IJobLogSearchVO, extraOptions?: any) {
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getWorkOrderLog",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工单日志搜索VO
 export interface IJobLogSearchVO {

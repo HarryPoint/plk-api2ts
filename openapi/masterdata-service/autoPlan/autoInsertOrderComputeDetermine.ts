@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoInsertOrderComputeDetermineUsingPOST
-export default function fetchMethod(data: IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/autoPlan/autoInsertOrderComputeDetermine",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/autoPlan/autoInsertOrderComputeDetermine",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产订单自动插单计算结果确定DTO
 export interface IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO {

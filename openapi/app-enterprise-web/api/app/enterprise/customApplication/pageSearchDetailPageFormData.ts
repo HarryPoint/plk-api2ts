@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/自定义应用相关/pageSearchDetailPageFormDataUsingPOST
-export default function fetchMethod(data: IProcessDataBasicSearchVO1) {
-    return http<IJSONResultPagingInformationJSONObject>({
-        url: "/app-enterprise-web/api/app/enterprise/customApplication/pageSearchDetailPageFormData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBasicSearchVO1, extraOptions?: any) {
+    return http<IJSONResultPagingInformationJSONObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/customApplication/pageSearchDetailPageFormData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO_1
 export interface IProcessDataBasicSearchVO1 {

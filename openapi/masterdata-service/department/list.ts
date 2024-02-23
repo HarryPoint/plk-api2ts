@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/部门相关/listUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListDepartmentDTO>({
-        url: "/masterdata-service/department/list",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListDepartmentDTO>(
+        {
+            url: "/masterdata-service/department/list",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«部门DTO»»
 export interface IJSONResultListDepartmentDTO {

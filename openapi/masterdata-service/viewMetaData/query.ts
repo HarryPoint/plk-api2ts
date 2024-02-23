@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/视图元数据相关/queryUsingPOST_3
-export default function fetchMethod(data: IViewMetadataQueryRequestDTO) {
-    return http<IJSONResultViewMetadataQueryResponseDTO>({
-        url: "/masterdata-service/viewMetaData/query",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IViewMetadataQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultViewMetadataQueryResponseDTO>(
+        {
+            url: "/masterdata-service/viewMetaData/query",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ViewMetadataQueryRequestDTO
 export interface IViewMetadataQueryRequestDTO {

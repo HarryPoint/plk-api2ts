@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/doBatchTransferToProduceOrderUsingPOST
-export default function fetchMethod(data: IBatchTransferToProductionOrder) {
-    return http<IJSONResultSalesOrderToProductionOrderReturnedToDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/do",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBatchTransferToProductionOrder, extraOptions?: any) {
+    return http<IJSONResultSalesOrderToProductionOrderReturnedToDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/do",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 批量转到生产订单
 export interface IBatchTransferToProductionOrder {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16600/doc.html#/default/待办相关/getNotHandleCountOfQhseUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultint>({
-        url: "/todo-service/todoList/pc/getNotHandleCountOfQhse",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultint>(
+        {
+            url: "/todo-service/todoList/pc/getNotHandleCountOfQhse",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«int»
 export interface IJSONResultint {

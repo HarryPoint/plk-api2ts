@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/印章台账相关/cancelBatchSealUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/qmsSealLedger/cancelBatchSeal",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/qmsSealLedger/cancelBatchSeal",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»_1
 export interface IJSONResultstring1 {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getWarehouseListSelectionUsingPOST
-export default function fetchMethod(data: IPositionTreeReturnsVO) {
-    return http<IJSONResultDTOForPagingInformationLocationQuery>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getWarehouseListSelection",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPositionTreeReturnsVO, extraOptions?: any) {
+    return http<IJSONResultDTOForPagingInformationLocationQuery>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getWarehouseListSelection",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 仓位树返回VO
 export interface IPositionTreeReturnsVO {

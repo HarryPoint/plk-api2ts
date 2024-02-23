@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息方案/addUsingPOST_3
-export default function fetchMethod(data: IMessageSchemaAddRequestDTO) {
-    return http<IJSONResultlong>({
-        url: "/message-notification-service/messageSchema/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMessageSchemaAddRequestDTO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/message-notification-service/messageSchema/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // MessageSchemaAddRequestDTO
 export interface IMessageSchemaAddRequestDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/邮件任务/getByIdUsingPOST
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultEmailTaskDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/emailTask/getById",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultEmailTaskDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/emailTask/getById",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«EmailTaskDTO»
 export interface IJSONResultEmailTaskDTO {

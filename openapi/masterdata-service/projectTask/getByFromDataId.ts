@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/getByFromDataIdUsingGET
-export default function fetchMethod(data: number) {
-    return http<IJSONResultProjectTaskResponseObject>({
-        url: "/masterdata-service/projectTask/getByFromDataId",
-        method: "get",
-        data,
-    });
+export default function fetchMethod(data: number, extraOptions?: any) {
+    return http<IJSONResultProjectTaskResponseObject>(
+        {
+            url: "/masterdata-service/projectTask/getByFromDataId",
+            method: "get",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«项目任务响应对象»
 export interface IJSONResultProjectTaskResponseObject {

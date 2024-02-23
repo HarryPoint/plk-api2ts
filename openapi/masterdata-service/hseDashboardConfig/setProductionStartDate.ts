@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/setProductionStartDateUsingPOST
-export default function fetchMethod(data: IProductionStartDateSetRequest) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/hseDashboardConfig/setProductionStartDate",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionStartDateSetRequest, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/hseDashboardConfig/setProductionStartDate",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产开始日期-设置请求
 export interface IProductionStartDateSetRequest {

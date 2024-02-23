@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检统计/getPageUsingPOST_22
-export default function fetchMethod(data: IScrapDataSheetSearchVO) {
-    return http<IJSONResultPagingInformationGoodScrapDataTableResultVO>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IScrapDataSheetSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationGoodScrapDataTableResultVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 良品报废数据表搜索VO
 export interface IScrapDataSheetSearchVO {

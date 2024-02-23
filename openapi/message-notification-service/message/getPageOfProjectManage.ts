@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getPageOfProjectManageUsingPOST
-export default function fetchMethod(data: IMessageSearchVO) {
-    return http<IJSONResultPagingInformationMessageReturnsVO>({
-        url: "/message-notification-service/message/getPageOfProjectManage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMessageSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationMessageReturnsVO>(
+        {
+            url: "/message-notification-service/message/getPageOfProjectManage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 消息搜索VO
 export interface IMessageSearchVO {

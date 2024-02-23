@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质检管理/getAllTaskUsingGET
-export default function fetchMethod(params: { enterpriseId: number; status: string }) {
-    return http<ITheJSONResultListSalesModuleReturnsVO>({
-        url: "/masterdata-service/qualityStorageTask/getAllTask",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; status: string }, extraOptions?: any) {
+    return http<ITheJSONResultListSalesModuleReturnsVO>(
+        {
+            url: "/masterdata-service/qualityStorageTask/getAllTask",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«销售模块返回VO»»
 export interface ITheJSONResultListSalesModuleReturnsVO {

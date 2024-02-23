@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/销售订单明细相关/getByIdsUsingPOST_7
-export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return http<IJSONResultListSalesOrderDetailsReturnToVO>({
-        url: "/masterdata-service/salesOrderDetail/getByIds",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListSalesOrderDetailsReturnToVO>(
+        {
+            url: "/masterdata-service/salesOrderDetail/getByIds",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«销售订单详情返回VO»»
 export interface IJSONResultListSalesOrderDetailsReturnToVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/checkTaskCompleteUsingGET
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/projectPlan/checkTaskComplete",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/projectPlan/checkTaskComplete",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id Code Name 通用传输对象»»
 export interface IJSONResultListIdCodeNameACommonTransferObject {

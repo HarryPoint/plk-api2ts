@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务用户扩展数据迁移相关/migrateUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/script/produceTaskUserExtMigrateScript/migrate",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/script/produceTaskUserExtMigrateScript/migrate",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

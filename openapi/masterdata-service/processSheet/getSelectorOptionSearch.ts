@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorOptionSearchUsingPOST_3
-export default function fetchMethod(data: IProcessDropDownListToSearchForDtos) {
-    return http<IJSONResultListProcessDropDownListToSearchForResponseDtos>({
-        url: "/masterdata-service/processSheet/getSelectorOptionSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDropDownListToSearchForDtos, extraOptions?: any) {
+    return http<IJSONResultListProcessDropDownListToSearchForResponseDtos>(
+        {
+            url: "/masterdata-service/processSheet/getSelectorOptionSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工艺卡下拉选择列表搜索DTO
 export interface IProcessDropDownListToSearchForDtos {

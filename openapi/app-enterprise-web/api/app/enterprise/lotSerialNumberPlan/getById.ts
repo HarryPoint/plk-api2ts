@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/批次方案相关/getByIdUsingGET_9
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultLotSerialNumberPlanDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultLotSerialNumberPlanDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«LotSerialNumberPlanDTO»
 export interface IJSONResultLotSerialNumberPlanDTO {

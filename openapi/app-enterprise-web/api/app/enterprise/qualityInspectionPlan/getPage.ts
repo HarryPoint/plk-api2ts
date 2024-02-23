@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检方案/getPageUsingPOST_25
-export default function fetchMethod(data: IInspectionSolutionSearchVO) {
-    return http<IJSONResultPagingInformationVOIsReturned>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IInspectionSolutionSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationVOIsReturned>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 质检方案搜索VO
 export interface IInspectionSolutionSearchVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检分类/editUsingPOST_20
-export default function fetchMethod(data: IEditTheQualityInspectionClassificationDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionCategory/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEditTheQualityInspectionClassificationDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityInspectionCategory/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 编辑质检分类 DTO
 export interface IEditTheQualityInspectionClassificationDTO {

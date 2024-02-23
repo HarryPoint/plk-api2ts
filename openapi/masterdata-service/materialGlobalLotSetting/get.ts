@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/物料全局批次设置相关/getUsingGET_1
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultMaterialGlobalBatchSettingsEditResponseObject>({
-        url: "/masterdata-service/materialGlobalLotSetting/get",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultMaterialGlobalBatchSettingsEditResponseObject>(
+        {
+            url: "/masterdata-service/materialGlobalLotSetting/get",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«物料全局批次设置编辑响应对象»
 export interface IJSONResultMaterialGlobalBatchSettingsEditResponseObject {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryRecentProjectMemorabiliaUsingPOST_1
-export default function fetchMethod(data: IProjectOverviewQueryDto) {
-    return http<IJSONResultListProjectEventResponseObject>({
-        url: "/masterdata-service/projectOverview/queryRecentProjectMemorabilia",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectOverviewQueryDto, extraOptions?: any) {
+    return http<IJSONResultListProjectEventResponseObject>(
+        {
+            url: "/masterdata-service/projectOverview/queryRecentProjectMemorabilia",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目概况查询dto
 export interface IProjectOverviewQueryDto {

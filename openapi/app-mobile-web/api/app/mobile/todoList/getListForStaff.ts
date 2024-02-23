@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/待办相关/getListForStaffUsingPOST
-export default function fetchMethod(data: IToDoListSearchVO) {
-    return http<IJSONResultListMobileReturnToTheDTO>({
-        url: "/app-mobile-web/api/app/mobile/todoList/getListForStaff",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IToDoListSearchVO, extraOptions?: any) {
+    return http<IJSONResultListMobileReturnToTheDTO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/todoList/getListForStaff",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 待办事项搜索VO
 export interface IToDoListSearchVO {

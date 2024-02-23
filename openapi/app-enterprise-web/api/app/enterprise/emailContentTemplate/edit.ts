@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/邮件内容模板/editUsingPOST_7
-export default function fetchMethod(data: IEmailContentTemplateEditRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/emailContentTemplate/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmailContentTemplateEditRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/emailContentTemplate/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EmailContentTemplateEditRequestDTO
 export interface IEmailContentTemplateEditRequestDTO {

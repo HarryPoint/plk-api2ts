@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/getRolePermissionsByServiceObjectUsingPOST
-export default function fetchMethod(data: IRoleRightsAuthorizationQueryRequestDTO) {
-    return http<IJSONResultListAppliesTheRolePermissionResponseDTO>({
-        url: "/plk-uaa-service/rolePermissionApp/getRolePermissionsByServiceObject",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRoleRightsAuthorizationQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListAppliesTheRolePermissionResponseDTO>(
+        {
+            url: "/plk-uaa-service/rolePermissionApp/getRolePermissionsByServiceObject",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 角色权限授权查询请求DTO
 export interface IRoleRightsAuthorizationQueryRequestDTO {

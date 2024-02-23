@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/产品订单相关/newBuyModifyUsingPOST
-export default function fetchMethod(data: INewProductOrderModificationRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/productOrder/newBuyModify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: INewProductOrderModificationRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/productOrder/newBuyModify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 新购产品订单修改请求对象
 export interface INewProductOrderModificationRequestObject {

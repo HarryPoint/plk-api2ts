@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/表单数据分组规则相关/createUsingPOST
-export default function fetchMethod(data: IFormDataGroupingSettingsAreRelated) {
-    return http<IJSONResultstring>({
-        url: "/flow-service/formDataGroupingRule/create",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFormDataGroupingSettingsAreRelated, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/flow-service/formDataGroupingRule/create",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 表单数据分组设置相关
 export interface IFormDataGroupingSettingsAreRelated {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/batchAddUsingPOST
-export default function fetchMethod(data: IEditDTOForWarehouseInventoryTaskBatch) {
-    return http<IJSONResultstring1>({
-        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/batchAdd",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEditDTOForWarehouseInventoryTaskBatch, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/batchAdd",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 仓库盘点任务批次编辑DTO
 export interface IEditDTOForWarehouseInventoryTaskBatch {

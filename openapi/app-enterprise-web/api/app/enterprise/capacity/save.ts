@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产能相关/saveUsingPOST
-export default function fetchMethod(data: ICapacityPreservationDTO) {
-    return http<IJSONResultProductivityResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/capacity/save",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICapacityPreservationDTO, extraOptions?: any) {
+    return http<IJSONResultProductivityResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/capacity/save",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产能保存DTO
 export interface ICapacityPreservationDTO {

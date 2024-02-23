@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产处理返工相关/addUsingPOST
-export default function fetchMethod(data: IProductionProcessesReworkAddingRequestObjects) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceHandleBack/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionProcessesReworkAddingRequestObjects, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceHandleBack/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理返工添加请求对象
 export interface IProductionProcessesReworkAddingRequestObjects {

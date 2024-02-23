@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工费相关/getInfoByIdUsingGET_2
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultLaborResponseObject>({
-        url: "/masterdata-service/laborCost/getInfoById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultLaborResponseObject>(
+        {
+            url: "/masterdata-service/laborCost/getInfoById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«工费响应对象»
 export interface IJSONResultLaborResponseObject {

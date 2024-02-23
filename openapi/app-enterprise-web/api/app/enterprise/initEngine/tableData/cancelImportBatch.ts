@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/cancelImportBatchUsingPOST
-export default function fetchMethod(data: IBatchCancelImportRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/cancelImportBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBatchCancelImportRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/cancelImportBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // BatchCancelImportRequestDTO
 export interface IBatchCancelImportRequestDTO {

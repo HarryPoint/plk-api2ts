@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/邮件任务/searchByAttachmentConfigUsingPOST
-export default function fetchMethod(data: IEmailTaskAttachmentConfigQueryRequestDTO) {
-    return http<IJSONResultListEmailTaskQueryResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/emailTask/searchByAttachmentConfig",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmailTaskAttachmentConfigQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListEmailTaskQueryResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/emailTask/searchByAttachmentConfig",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EmailTaskAttachmentConfigQueryRequestDTO
 export interface IEmailTaskAttachmentConfigQueryRequestDTO {

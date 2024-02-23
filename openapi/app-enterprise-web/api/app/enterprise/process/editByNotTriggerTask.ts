@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工序相关/editByNotTriggerTaskUsingPOST_1
-export default function fetchMethod(data: IMasterDataBaseEditDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/process/editByNotTriggerTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMasterDataBaseEditDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/process/editByNotTriggerTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {

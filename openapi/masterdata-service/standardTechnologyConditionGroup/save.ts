@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/saveUsingPOST_8
-export default function fetchMethod(data: IDtosAreStoredInStandardProcessConditionsGroup) {
-    return http<IJSONResultStandardProcessConditionGroupSavesResponseDtos>({
-        url: "/masterdata-service/standardTechnologyConditionGroup/save",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDtosAreStoredInStandardProcessConditionsGroup, extraOptions?: any) {
+    return http<IJSONResultStandardProcessConditionGroupSavesResponseDtos>(
+        {
+            url: "/masterdata-service/standardTechnologyConditionGroup/save",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺条件组保存DTO
 export interface IDtosAreStoredInStandardProcessConditionsGroup {

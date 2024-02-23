@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/合理化建议相关/getTableColumnUsingGET_26
-export default function fetchMethod() {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/app-enterprise-web/api/app/enterprise/proposal/getTableColumn",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/proposal/getTableColumn",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getClassShiftIdsByScheduleDateUsingPOST
-export default function fetchMethod(data: ISchedulingDateDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultSetlong>({
-        url: "/masterdata-service/calendar/getClassShiftIdsByScheduleDate",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISchedulingDateDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultSetlong>(
+        {
+            url: "/masterdata-service/calendar/getClassShiftIdsByScheduleDate",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 排班日期DTO
 export interface ISchedulingDateDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/服务Api相关/editBatchUsingPOST
-export default function fetchMethod(data: IServeauthrequestdto) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/serveApi/editBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IServeauthrequestdto, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/serveApi/editBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ServeAuthRequestDTO
 export interface IServeauthrequestdto {

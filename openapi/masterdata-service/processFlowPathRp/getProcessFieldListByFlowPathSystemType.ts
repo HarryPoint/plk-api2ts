@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getProcessFieldListByFlowPathSystemTypeUsingGET
-export default function fetchMethod(params: { flowPathSystemTypeList?: string; processId: string; enterpriseId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/masterdata-service/processFlowPathRp/getProcessFieldListByFlowPathSystemType",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathSystemTypeList?: string; processId: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/masterdata-service/processFlowPathRp/getProcessFieldListByFlowPathSystemType",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getWeekSchedulePlanDayKeyUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListstring>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/weekSchedulePlan/getDayKey",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/weekSchedulePlan/getDayKey",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«string»»
 export interface IJSONResultListstring {

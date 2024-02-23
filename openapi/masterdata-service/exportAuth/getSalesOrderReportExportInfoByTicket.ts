@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getSalesOrderReportExportInfoByTicketUsingGET
-export default function fetchMethod(params: { ticket: string }) {
-    return http<IJSONResultExportOrderProgressStatisticsExportVO>({
-        url: "/masterdata-service/exportAuth/getSalesOrderReportExportInfoByTicket",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+    return http<IJSONResultExportOrderProgressStatisticsExportVO>(
+        {
+            url: "/masterdata-service/exportAuth/getSalesOrderReportExportInfoByTicket",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«导出信息«订单进度统计导出VO»»
 export interface IJSONResultExportOrderProgressStatisticsExportVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/标准工艺分类相关/modifyUsingPOST
-export default function fetchMethod(data: IStandardProcessClassificationModificationRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCategory/modify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardProcessClassificationModificationRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCategory/modify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺分类修改请求DTO
 export interface IStandardProcessClassificationModificationRequestDTO {

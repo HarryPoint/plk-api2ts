@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/scanMoveInBomConsumeMaterialUsingPOST
-export default function fetchMethod(data: IFeedBomConsumptionScanRequestDTO) {
-    return http<IJSONResultIncomingBomConsumedMaterialScanRespondsToDTO>({
-        url: "/masterdata-service/moveInOutBomConsume/scanMoveInBomConsumeMaterial",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFeedBomConsumptionScanRequestDTO, extraOptions?: any) {
+    return http<IJSONResultIncomingBomConsumedMaterialScanRespondsToDTO>(
+        {
+            url: "/masterdata-service/moveInOutBomConsume/scanMoveInBomConsumeMaterial",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料bom消耗扫描请求DTO
 export interface IFeedBomConsumptionScanRequestDTO {

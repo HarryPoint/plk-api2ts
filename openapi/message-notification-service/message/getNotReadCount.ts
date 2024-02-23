@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getNotReadCountUsingGET
-export default function fetchMethod(params: { clientCode: string; enterpriseId: number; userId: number }) {
-    return http<IJSONResultint>({
-        url: "/message-notification-service/message/getNotReadCount",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { clientCode: string; enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultint>(
+        {
+            url: "/message-notification-service/message/getNotReadCount",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«int»
 export interface IJSONResultint {

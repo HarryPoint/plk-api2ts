@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryBusinessListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListServiceQueryResponse>({
-        url: "/app-enterprise-web/api/app/enterprise/calculationPlan/queryBusinessList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListServiceQueryResponse>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/calculationPlan/queryBusinessList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«业务查询响应»»
 export interface IJSONResultListServiceQueryResponse {

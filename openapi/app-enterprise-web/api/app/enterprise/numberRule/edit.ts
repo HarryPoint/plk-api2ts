@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/编码规则相关/editUsingPOST_14
-export default function fetchMethod(data: IProcessFormFieldEncodingRulesEditDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/numberRule/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessFormFieldEncodingRulesEditDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/numberRule/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程表单字段编码规则编辑DTO
 export interface IProcessFormFieldEncodingRulesEditDTO {

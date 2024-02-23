@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/流程数据相关/calcFormFillValueUsingPOST
-export default function fetchMethod(data: IFormFillRequest) {
-    return http<IJSONResultListJSONObject>({
-        url: "/app-enterprise-web/api/app/enterprise/flowPathData/formFillValue/calc",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFormFillRequest, extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/flowPathData/formFillValue/calc",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 表单填充请求
 export interface IFormFillRequest {

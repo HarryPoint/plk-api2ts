@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/pageQueryUsingPOST
-export default function fetchMethod(data: IPageBreaks4) {
-    return http<IJSONResultPageInformationImportRecordDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/pageQuery",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPageBreaks4, extraOptions?: any) {
+    return http<IJSONResultPageInformationImportRecordDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/pageQuery",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_4
 export interface IPageBreaks4 {

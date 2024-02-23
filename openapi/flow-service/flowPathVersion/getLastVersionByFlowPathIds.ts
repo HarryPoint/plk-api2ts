@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程版本相关/getLastVersionByFlowPathIdsUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListProcessVersionRespondsToVO>({
-        url: "/flow-service/flowPathVersion/getLastVersionByFlowPathIds",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListProcessVersionRespondsToVO>(
+        {
+            url: "/flow-service/flowPathVersion/getLastVersionByFlowPathIds",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程版本响应VO»»
 export interface IJSONResultListProcessVersionRespondsToVO {

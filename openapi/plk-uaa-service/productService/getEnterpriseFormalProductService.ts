@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/产品服务相关/getEnterpriseFormalProductServiceUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultProductServiceResponseObject>({
-        url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultProductServiceResponseObject>(
+        {
+            url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«产品服务响应对象»
 export interface IJSONResultProductServiceResponseObject {

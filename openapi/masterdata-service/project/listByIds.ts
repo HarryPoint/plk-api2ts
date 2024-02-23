@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/listByIdsUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListProjectResponse>({
-        url: "/masterdata-service/project/listByIds",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListProjectResponse>(
+        {
+            url: "/masterdata-service/project/listByIds",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目响应»»
 export interface IJSONResultListProjectResponse {

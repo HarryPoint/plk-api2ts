@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getSettingInfoUsingGET_2
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultSilopusLargeScreenSettingsReturnVO>({
-        url: "/masterdata-service/lsXiRuoPaSiSetting/getSettingInfo",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultSilopusLargeScreenSettingsReturnVO>(
+        {
+            url: "/masterdata-service/lsXiRuoPaSiSetting/getSettingInfo",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«西偌帕斯大屏设置返回VO»
 export interface IJSONResultSilopusLargeScreenSettingsReturnVO {

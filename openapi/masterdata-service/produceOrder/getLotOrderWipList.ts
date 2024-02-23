@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getLotOrderWipListUsingPOST_1
-export default function fetchMethod(data: IBatchOrderWipSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListBatchWipInformationIsReturnedToVO>({
-        url: "/masterdata-service/produceOrder/getLotOrderWipList",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IBatchOrderWipSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListBatchWipInformationIsReturnedToVO>(
+        {
+            url: "/masterdata-service/produceOrder/getLotOrderWipList",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 批次订单Wip搜索VO
 export interface IBatchOrderWipSearchVO {

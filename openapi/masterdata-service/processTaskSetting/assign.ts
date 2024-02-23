@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/assignUsingPOST
-export default function fetchMethod(data: IProcessTaskAssignmentDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/processTaskSetting/assign",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessTaskAssignmentDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/processTaskSetting/assign",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工序任务分配DTO
 export interface IProcessTaskAssignmentDTO {

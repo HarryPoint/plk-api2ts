@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/exportReportExcelUsingPOST_1
-export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/produceCapacityReport/exportReportExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/produceCapacityReport/exportReportExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产能利用率报表查询DTO
 export interface ICapacityUtilizationReportQueryingDtos {

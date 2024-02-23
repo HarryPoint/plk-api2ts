@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getOrganizationControlFieldByAppIdsUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListOrganizationControlFieldVO>({
-        url: "/flow-service/flowPathFormField/getOrganizationControlFieldByAppIds",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListOrganizationControlFieldVO>(
+        {
+            url: "/flow-service/flowPathFormField/getOrganizationControlFieldByAppIds",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«OrganizationControlFieldVO»»
 export interface IJSONResultListOrganizationControlFieldVO {

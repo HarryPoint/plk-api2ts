@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/用户工序接口/getUserProcessAndAreaSelectorUsingGET
-export default function fetchMethod() {
-    return http<ITheJSONResultListAreaOperationSelectionReturnsVO1>({
-        url: "/app-mobile-web/api/app/mobile/auth/getUserProcessAndAreaSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<ITheJSONResultListAreaOperationSelectionReturnsVO1>(
+        {
+            url: "/app-mobile-web/api/app/mobile/auth/getUserProcessAndAreaSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«区域工序选择返回VO»»_1
 export interface ITheJSONResultListAreaOperationSelectionReturnsVO1 {

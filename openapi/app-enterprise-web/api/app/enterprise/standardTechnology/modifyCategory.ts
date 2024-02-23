@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/标准工艺相关/modifyCategoryUsingPOST
-export default function fetchMethod(data: IStandardProcessModificationClassificationRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnology/modifyCategory",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardProcessModificationClassificationRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnology/modifyCategory",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺修改分类请求对象
 export interface IStandardProcessModificationClassificationRequestObject {

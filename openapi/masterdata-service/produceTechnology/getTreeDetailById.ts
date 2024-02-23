@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
-export default function fetchMethod(params: { id: number; produceOrderId: number }) {
-    return http<IJSONResultProductionProcessTreeResponseObject>({
-        url: "/masterdata-service/produceTechnology/getTreeDetailById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number; produceOrderId: number }, extraOptions?: any) {
+    return http<IJSONResultProductionProcessTreeResponseObject>(
+        {
+            url: "/masterdata-service/produceTechnology/getTreeDetailById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产工艺树状响应对象»
 export interface IJSONResultProductionProcessTreeResponseObject {

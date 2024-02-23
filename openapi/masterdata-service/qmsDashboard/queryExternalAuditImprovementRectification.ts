@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryExternalAuditImprovementRectificationUsingPOST
-export default function fetchMethod(data: IImprovementRecificationQueryRequestDTO) {
-    return http<IJSONResultImprovesTheRectificationRate>({
-        url: "/masterdata-service/qmsDashboard/queryExternalAuditImprovementRectification",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IImprovementRecificationQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultImprovesTheRectificationRate>(
+        {
+            url: "/masterdata-service/qmsDashboard/queryExternalAuditImprovementRectification",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ImprovementRecificationQueryRequestDTO
 export interface IImprovementRecificationQueryRequestDTO {

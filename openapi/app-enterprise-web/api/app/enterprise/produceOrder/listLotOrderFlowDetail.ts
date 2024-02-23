@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/listLotOrderFlowDetailUsingPOST
-export default function fetchMethod(data: IBatchOrderHistorySearchVO) {
-    return http<IJSONResultListBatchOrderDetailedInformationRespondsToDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrder/listLotOrderFlowDetail",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBatchOrderHistorySearchVO, extraOptions?: any) {
+    return http<IJSONResultListBatchOrderDetailedInformationRespondsToDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrder/listLotOrderFlowDetail",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 批次订单流水搜索VO
 export interface IBatchOrderHistorySearchVO {

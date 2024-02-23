@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/09-02-04-物料主数据比对相关/getMaterialCompareUsingPOST
-export default function fetchMethod(data: IMaterialMasterDataBomidCollectionVO) {
-    return http<IJSONResultListReturnVOForMaterialMasterDataComparison>({
-        url: "/app-enterprise-web/api/app/enterprise/materialCompare/getCompare",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMaterialMasterDataBomidCollectionVO, extraOptions?: any) {
+    return http<IJSONResultListReturnVOForMaterialMasterDataComparison>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/materialCompare/getCompare",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料主数据bom id集合VO
 export interface IMaterialMasterDataBomidCollectionVO {

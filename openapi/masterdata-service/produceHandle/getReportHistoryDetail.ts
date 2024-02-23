@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryDetailUsingGET
-export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return http<IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO>({
-        url: "/masterdata-service/produceHandle/getReportHistoryDetail",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+    return http<IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO>(
+        {
+            url: "/masterdata-service/produceHandle/getReportHistoryDetail",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产处理基础信息详情返回VO»
 export interface IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO {

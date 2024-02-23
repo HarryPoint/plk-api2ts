@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/pageUsingPOST
-export default function fetchMethod(data: IDataEaseMenuPagesQueryObjects) {
-    return http<IJSONResultPagingInformationDataEaseMenuPagingResponseObject>({
-        url: "/plk-uaa-service/dataEaseMenu/page",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDataEaseMenuPagesQueryObjects, extraOptions?: any) {
+    return http<IJSONResultPagingInformationDataEaseMenuPagingResponseObject>(
+        {
+            url: "/plk-uaa-service/dataEaseMenu/page",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // DataEase菜单分页查询对象
 export interface IDataEaseMenuPagesQueryObjects {

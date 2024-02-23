@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/产能相关/batchImportUsingPOST
-export default function fetchMethod(data: ICapacityPreservationDTO[]) {
-    return http<IJSONResultListstring>({
-        url: "/masterdata-service/capacity/batchImport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICapacityPreservationDTO[], extraOptions?: any) {
+    return http<IJSONResultListstring>(
+        {
+            url: "/masterdata-service/capacity/batchImport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产能保存DTO
 export interface ICapacityPreservationDTO {

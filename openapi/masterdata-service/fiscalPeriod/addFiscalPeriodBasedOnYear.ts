@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/addFiscalPeriodBasedOnYearUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/fiscalPeriod/addFiscalPeriodBasedOnYear",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/fiscalPeriod/addFiscalPeriodBasedOnYear",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

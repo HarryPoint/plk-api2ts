@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目阶段相关/queryByNameUsingPOST
-export default function fetchMethod(data: IProjectPhaseNumberQueryObject) {
-    return http<IJSONResultListProjectPhaseResponseObject>({
-        url: "/masterdata-service/projectStage/queryByName",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectPhaseNumberQueryObject, extraOptions?: any) {
+    return http<IJSONResultListProjectPhaseResponseObject>(
+        {
+            url: "/masterdata-service/projectStage/queryByName",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目阶段编号查询对象
 export interface IProjectPhaseNumberQueryObject {

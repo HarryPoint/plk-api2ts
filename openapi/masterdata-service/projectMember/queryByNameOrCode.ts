@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目成员相关/queryByNameOrCodeUsingPOST
-export default function fetchMethod(data: IItemNameNumberPublicQueryObject1) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/projectMember/queryByNameOrCode",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IItemNameNumberPublicQueryObject1, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/projectMember/queryByNameOrCode",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目名称编号公共查询对象_1
 export interface IItemNameNumberPublicQueryObject1 {

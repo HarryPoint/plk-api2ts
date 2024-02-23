@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/sortByMoveDownUsingPOST_1
-export default function fetchMethod(data: IProjectTaskSortRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/projectTask/sortByMoveDown",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectTaskSortRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/projectTask/sortByMoveDown",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目任务排序请求对象
 export interface IProjectTaskSortRequestObject {

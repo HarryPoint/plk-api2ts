@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/关键参数相关/batchValidUsingPOST_1
-export default function fetchMethod(data: IEnableOrDisableVOInBatches) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/keyparameter/batchValid",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEnableOrDisableVOInBatches, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/keyparameter/batchValid",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 批量启用or停用VO
 export interface IEnableOrDisableVOInBatches {

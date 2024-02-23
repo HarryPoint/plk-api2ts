@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/报表模板/disableBatchUsingPOST_4
-export default function fetchMethod(data: IReportTemplateDisableRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/reportTemplate/disableBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IReportTemplateDisableRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/reportTemplate/disableBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ReportTemplateDisableRequestDTO
 export interface IReportTemplateDisableRequestDTO {

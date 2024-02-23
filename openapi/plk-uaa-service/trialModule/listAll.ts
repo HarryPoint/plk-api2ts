@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/试用模块相关/listAllUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListTheTrialModuleRespondsToTheDTO>({
-        url: "/plk-uaa-service/trialModule/listAll",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListTheTrialModuleRespondsToTheDTO>(
+        {
+            url: "/plk-uaa-service/trialModule/listAll",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«试用模块响应DTO»»
 export interface IJSONResultListTheTrialModuleRespondsToTheDTO {

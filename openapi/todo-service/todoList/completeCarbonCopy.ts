@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16600/doc.html#/default/待办相关/completeCarbonCopyUsingPOST
-export default function fetchMethod(data: ICcToDoChangeReadDTO, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultobject>({
-        url: "/todo-service/todoList/completeCarbonCopy",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ICcToDoChangeReadDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/todo-service/todoList/completeCarbonCopy",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 待办抄送变更已读DTO
 export interface ICcToDoChangeReadDTO {

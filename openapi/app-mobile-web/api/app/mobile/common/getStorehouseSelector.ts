@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getStorehouseSelectorUsingPOST
-export default function fetchMethod(data: IWarehouseMasterDataSelectionListSearchVO) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/app-mobile-web/api/app/mobile/common/getStorehouseSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IWarehouseMasterDataSelectionListSearchVO, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/common/getStorehouseSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 仓库主数据选择列表搜索VO
 export interface IWarehouseMasterDataSelectionListSearchVO {

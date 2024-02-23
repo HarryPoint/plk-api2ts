@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检管理/exportUsingPOST_42
-export default function fetchMethod(data: IInspectionTaskSearchesForVO) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IInspectionTaskSearchesForVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 质检任务搜索VO
 export interface IInspectionTaskSearchesForVO {

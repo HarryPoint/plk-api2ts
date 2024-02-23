@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/checkPreTaskUsingGET
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultListProjectTaskPreTaskVerifyTheResponseObject>({
-        url: "/masterdata-service/projectTask/checkPreTask",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultListProjectTaskPreTaskVerifyTheResponseObject>(
+        {
+            url: "/masterdata-service/projectTask/checkPreTask",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目任务前置任务校验响应对象»»
 export interface IJSONResultListProjectTaskPreTaskVerifyTheResponseObject {

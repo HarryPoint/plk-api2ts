@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderMatchTaskDetailByIdUsingGET
-export default function fetchMethod(params: { taskId: number }) {
-    return http<IJSONResultQueryRequestForProductionOrderMatchingTasks>({
-        url: "/masterdata-service/produceOrder/getProduceOrderMatchTaskById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { taskId: number }, extraOptions?: any) {
+    return http<IJSONResultQueryRequestForProductionOrderMatchingTasks>(
+        {
+            url: "/masterdata-service/produceOrder/getProduceOrderMatchTaskById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产订单匹配任务查询请求»
 export interface IJSONResultQueryRequestForProductionOrderMatchingTasks {

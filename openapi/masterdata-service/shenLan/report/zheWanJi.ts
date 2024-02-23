@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZheWanJiReportUsingGET
-export default function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId: number }) {
-    return http<IJSONResultListDarkBluePressReport>({
-        url: "/masterdata-service/shenLan/report/zheWanJi",
-        method: "get",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListDarkBluePressReport>(
+        {
+            url: "/masterdata-service/shenLan/report/zheWanJi",
+            method: "get",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 深蓝报表查询条件
 export interface IQueryConditionsOfTheDarkBlueReport {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/getMaterialSettingUsingPOST
-export default function fetchMethod(data: ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO) {
-    return http<IJSONResultSafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO>({
-        url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getMaterialSetting",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO, extraOptions?: any) {
+    return http<IJSONResultSafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getMaterialSetting",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 安全库存物料库存配置信息搜索VO
 export interface ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO {

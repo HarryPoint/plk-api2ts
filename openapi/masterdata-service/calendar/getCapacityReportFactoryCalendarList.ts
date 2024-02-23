@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCapacityReportFactoryCalendarListUsingPOST
-export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId: number }) {
-    return http<IJSONResultListCapacityUtilizationReportFactoryCalendarVO>({
-        url: "/masterdata-service/calendar/getCapacityReportFactoryCalendarList",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListCapacityUtilizationReportFactoryCalendarVO>(
+        {
+            url: "/masterdata-service/calendar/getCapacityReportFactoryCalendarList",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 产能利用率报表查询DTO
 export interface ICapacityUtilizationReportQueryingDtos {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getMaterialOuterCodeSelectorUsingPOST_3
-export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO) {
-    return http<IJSONResultPagingInformationMaterialMasterDataExternalCodeSelectReturnDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getMaterialOuterCodeSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationMaterialMasterDataExternalCodeSelectReturnDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getMaterialOuterCodeSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料主数据选择列表搜索VO
 export interface IMaterialMasterDataSelectionListSearchVO {

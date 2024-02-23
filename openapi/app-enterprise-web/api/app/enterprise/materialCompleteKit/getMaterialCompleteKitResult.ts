@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/物料齐套相关/getMaterialCompleteKitResultUsingPOST
-export default function fetchMethod(data: IMaterialSetQueryRequestObject) {
-    return http<IJSONResultQueryResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/materialCompleteKit/getMaterialCompleteKitResult",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMaterialSetQueryRequestObject, extraOptions?: any) {
+    return http<IJSONResultQueryResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/materialCompleteKit/getMaterialCompleteKitResult",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料齐套查询请求对象
 export interface IMaterialSetQueryRequestObject {

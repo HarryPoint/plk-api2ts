@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/运营角色相关/modifyUsingPOST_6
-export default function fetchMethod(data: IOperationRoleAuthorizationInformationModificationRequest) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/manageRole/modify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IOperationRoleAuthorizationInformationModificationRequest, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/manageRole/modify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 运营角色授权信息修改请求
 export interface IOperationRoleAuthorizationInformationModificationRequest {

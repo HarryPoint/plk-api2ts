@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/getHandlingOfNonConformingStatisticsAmountReportUsingPOST
-export default function fetchMethod(data: GetHandlingOfNonConformingStatisticsAmountReport) {
-    return http<IJSONResultTotalUnqualifiedReportsAreReturnedToTheDTO>({
-        url: "/masterdata-service/handlingOfNonConformingReport/getHandlingOfNonConformingStatisticsAmountReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetHandlingOfNonConformingStatisticsAmountReport, extraOptions?: any) {
+    return http<IJSONResultTotalUnqualifiedReportsAreReturnedToTheDTO>(
+        {
+            url: "/masterdata-service/handlingOfNonConformingReport/getHandlingOfNonConformingStatisticsAmountReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«不合格报表合计返回DTO»
 export interface IJSONResultTotalUnqualifiedReportsAreReturnedToTheDTO {

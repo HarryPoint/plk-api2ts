@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务汇总表(基于工序字段)/exportDetailReportExcelUsingPOST
-export default function fetchMethod(data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/processFieldProduceTaskReport/detail/exportReportExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/processFieldProduceTaskReport/detail/exportReportExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 任务汇总表(基于工序字段)搜索VO
 export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {

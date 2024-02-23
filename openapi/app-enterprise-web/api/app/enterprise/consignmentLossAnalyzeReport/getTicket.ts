@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶寄售损耗报表相关/getExportTicketUsingPOST_1
-export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO) {
-    return http<IJSONResultExportedTicketInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getTicket",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultExportedTicketInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getTicket",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 寄售损耗分析报表搜索VO
 export interface IConsignmentLossAnalysisReportSearchVO {

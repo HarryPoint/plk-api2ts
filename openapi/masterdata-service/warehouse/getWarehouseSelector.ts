@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseSelectorUsingGET
-export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return http<IJSONResultListReturnsTheMaterialMasterDataStoreToVO>({
-        url: "/masterdata-service/warehouse/getWarehouseSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; materialId: number }, extraOptions?: any) {
+    return http<IJSONResultListReturnsTheMaterialMasterDataStoreToVO>(
+        {
+            url: "/masterdata-service/warehouse/getWarehouseSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«物料主数据仓位返回VO»»
 export interface IJSONResultListReturnsTheMaterialMasterDataStoreToVO {

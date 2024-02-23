@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/产品服务相关/pageUsingPOST_6
-export default function fetchMethod(data: IProductServicePageQueryObject) {
-    return http<IJSONResultPagingInformationProductServicePagingResponseObject>({
-        url: "/plk-uaa-service/productService/page",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductServicePageQueryObject, extraOptions?: any) {
+    return http<IJSONResultPagingInformationProductServicePagingResponseObject>(
+        {
+            url: "/plk-uaa-service/productService/page",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产品服务分页查询对象
 export interface IProductServicePageQueryObject {

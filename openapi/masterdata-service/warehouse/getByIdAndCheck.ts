@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getByIdAndCheckUsingGET_2
-export default function fetchMethod(params: { warehouseId: string; enterpriseId: number }) {
-    return http<IJSONResultPositionVO>({
-        url: "/masterdata-service/warehouse/getByIdAndCheck",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { warehouseId: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPositionVO>(
+        {
+            url: "/masterdata-service/warehouse/getByIdAndCheck",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«仓位VO»
 export interface IJSONResultPositionVO {

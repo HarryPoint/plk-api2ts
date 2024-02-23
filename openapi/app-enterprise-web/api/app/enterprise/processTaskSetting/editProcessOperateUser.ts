@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/editProcessOperateUserUsingPOST
-export default function fetchMethod(data: IProcessOperatorsEditTheDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/editProcessOperateUser",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessOperatorsEditTheDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/editProcessOperateUser",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工序操作员编辑DTO
 export interface IProcessOperatorsEditTheDTO {

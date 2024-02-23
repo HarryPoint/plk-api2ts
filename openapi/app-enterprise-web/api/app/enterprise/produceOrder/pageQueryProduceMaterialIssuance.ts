@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/pageQueryProduceMaterialIssuanceUsingPOST
-export default function fetchMethod(data: IPaging6) {
-    return http<IProduceMaterialIssuanceQueryResponseDTOJSONResultPagingInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrder/pageQueryProduceMaterialIssuance",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging6, extraOptions?: any) {
+    return http<IProduceMaterialIssuanceQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrder/pageQueryProduceMaterialIssuance",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_6
 export interface IPaging6 {

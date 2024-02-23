@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getBomByMaterialIdUsingGET
-export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return http<IJSONResultListMaterialBomBaseVo>({
-        url: "/masterdata-service/materialCompare/getBomByMaterialId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; materialId: number }, extraOptions?: any) {
+    return http<IJSONResultListMaterialBomBaseVo>(
+        {
+            url: "/masterdata-service/materialCompare/getBomByMaterialId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«MaterialBomBaseVo»»
 export interface IJSONResultListMaterialBomBaseVo {

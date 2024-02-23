@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCompletedProjectUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultCompleteProjectResponseDTO>({
-        url: "/masterdata-service/proposalDashboard/getCompletedProject",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultCompleteProjectResponseDTO>(
+        {
+            url: "/masterdata-service/proposalDashboard/getCompletedProject",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«CompleteProjectResponseDTO»
 export interface IJSONResultCompleteProjectResponseDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/taskHoldUsingPOST
-export default function fetchMethod(data: IProductionTreatment) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/taskHold",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTreatment, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/taskHold",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理
 export interface IProductionTreatment {

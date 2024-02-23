@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/委外加工管理/backUsingPOST
-export default function fetchMethod(data: IProductionOutsourcingDesignatedProcessingDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceEntrust/back",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionOutsourcingDesignatedProcessingDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceEntrust/back",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产委外指定加工DTO
 export interface IProductionOutsourcingDesignatedProcessingDTO {

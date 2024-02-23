@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/计算方案相关/disableBatchUsingPOST
-export default function fetchMethod(data: ITheComputingSchemeDisablesTheRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/calculationPlan/disableBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheComputingSchemeDisablesTheRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/calculationPlan/disableBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 计算方案禁用请求DTO
 export interface ITheComputingSchemeDisablesTheRequestDTO {

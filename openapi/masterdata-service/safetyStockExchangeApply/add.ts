@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/addUsingPOST_7
-export default function fetchMethod(data: ISecurityInventoryChangeRequestConfiguration, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/safetyStockExchangeApply/add",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISecurityInventoryChangeRequestConfiguration, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/safetyStockExchangeApply/add",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 安全库存变更申请配置
 export interface ISecurityInventoryChangeRequestConfiguration {

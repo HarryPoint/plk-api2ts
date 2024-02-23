@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/margeUsingPOST_1
-export default function fetchMethod(data: IBatchOrderConsolidationDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrder/marge",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBatchOrderConsolidationDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrder/marge",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 批次订单合并DTO
 export interface IBatchOrderConsolidationDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/用户账号相关/pageForManageUsingPOST
-export default function fetchMethod(data: IUserManagementQuery) {
-    return http<IJSONResultPagingInformationUserManagementResponse>({
-        url: "/plk-uaa-service/user/pageForManage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUserManagementQuery, extraOptions?: any) {
+    return http<IJSONResultPagingInformationUserManagementResponse>(
+        {
+            url: "/plk-uaa-service/user/pageForManage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 用户管理查询
 export interface IUserManagementQuery {

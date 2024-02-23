@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/checkTodoTaskByUserUsingGET_1
-export default function fetchMethod(params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultboolean>({
-        url: "/masterdata-service/qualityProduceTask/checkTodoTaskByUser",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultboolean>(
+        {
+            url: "/masterdata-service/qualityProduceTask/checkTodoTaskByUser",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«boolean»
 export interface IJSONResultboolean {

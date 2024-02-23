@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyCodeExceptionUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultstring>({
-        url: "/masterdata-service/codeSyncTask/applyCodeException",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/masterdata-service/codeSyncTask/applyCodeException",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»
 export interface IJSONResultstring {

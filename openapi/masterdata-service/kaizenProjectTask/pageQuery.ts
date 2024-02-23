@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/pageQueryUsingPOST_1
-export default function fetchMethod(data: IPagingInformation) {
-    return http<IKaizenProjectTaskResponseDTOJSONResultPagingInformation>({
-        url: "/masterdata-service/kaizenProjectTask/pageQuery",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPagingInformation, extraOptions?: any) {
+    return http<IKaizenProjectTaskResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/masterdata-service/kaizenProjectTask/pageQuery",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页信息
 export interface IPagingInformation {

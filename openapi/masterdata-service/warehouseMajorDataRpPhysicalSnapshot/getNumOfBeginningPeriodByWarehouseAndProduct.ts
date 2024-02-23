@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓位物料库存关联实体仓快照相关/getNumOfBeginningPeriodByWarehouseAndProductUsingPOST
-export default function fetchMethod(params: { date: string; enterpriseId: number; materialId: number; warehouseId: number }) {
-    return http<IJSONResultWarehouseMaterialInventoryAssociatedVO>({
-        url: "/masterdata-service/warehouseMajorDataRpPhysicalSnapshot/getNumOfBeginningPeriodByWarehouseAndProduct",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { date: string; enterpriseId: number; materialId: number; warehouseId: number }, extraOptions?: any) {
+    return http<IJSONResultWarehouseMaterialInventoryAssociatedVO>(
+        {
+            url: "/masterdata-service/warehouseMajorDataRpPhysicalSnapshot/getNumOfBeginningPeriodByWarehouseAndProduct",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«仓位物料库存关联VO»
 export interface IJSONResultWarehouseMaterialInventoryAssociatedVO {

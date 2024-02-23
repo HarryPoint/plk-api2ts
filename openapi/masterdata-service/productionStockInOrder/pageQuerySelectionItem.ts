@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产入库单相关/pageQuerySelectionItemUsingPOST_1
-export default function fetchMethod(data: IPaging13) {
-    return http<IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation>({
-        url: "/masterdata-service/productionStockInOrder/pageQuerySelectionItem",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging13, extraOptions?: any) {
+    return http<IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation>(
+        {
+            url: "/masterdata-service/productionStockInOrder/pageQuerySelectionItem",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_13
 export interface IPaging13 {

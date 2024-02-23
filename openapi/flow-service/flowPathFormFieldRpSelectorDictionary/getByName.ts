@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/getByNameUsingGET
-export default function fetchMethod(params: { businessCode: string; enterpriseId: number; name: string }) {
-    return http<IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO>({
-        url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getByName",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { businessCode: string; enterpriseId: number; name: string }, extraOptions?: any) {
+    return http<IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO>(
+        {
+            url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getByName",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程表单字段关联字典选项集VO»
 export interface IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO {

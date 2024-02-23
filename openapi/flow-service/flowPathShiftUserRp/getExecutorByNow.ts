@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getExecutorByNowUsingGET
-export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return http<IJSONResultListProcessNodeExecutorVO>({
-        url: "/flow-service/flowPathShiftUserRp/getExecutorByNow",
-        method: "get",
-        data,
-        params,
-    });
+export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessNodeExecutorVO>(
+        {
+            url: "/flow-service/flowPathShiftUserRp/getExecutorByNow",
+            method: "get",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程节点执行人VO»»
 export interface IJSONResultListProcessNodeExecutorVO {

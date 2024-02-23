@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/计算方案相关/removeBatchUsingPOST
-export default function fetchMethod(data: ICalculationSchemeDeleteRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/flow-service/calculationPlan/removeBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICalculationSchemeDeleteRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/flow-service/calculationPlan/removeBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 计算方案删除请求DTO
 export interface ICalculationSchemeDeleteRequestDTO {

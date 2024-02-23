@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/质检任务相关/qualityStorageTaskCompleteUsingPOST
-export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/qualityTask/qualityStorageTaskComplete",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/qualityTask/qualityStorageTaskComplete",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 质检任务完成 DTO
 export interface ITheDTOCompletesTheInspectionTask {

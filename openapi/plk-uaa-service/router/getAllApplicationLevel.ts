@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/路由相关/getAllApplicationLevelUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListNameEncodesTheResponseDTO>({
-        url: "/plk-uaa-service/router/getAllApplicationLevel",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListNameEncodesTheResponseDTO>(
+        {
+            url: "/plk-uaa-service/router/getAllApplicationLevel",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«名称编码响应 DTO»»
 export interface IJSONResultListNameEncodesTheResponseDTO {

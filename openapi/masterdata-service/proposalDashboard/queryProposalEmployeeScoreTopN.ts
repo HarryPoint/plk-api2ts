@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/queryProposalEmployeeScoreTopNUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultEmployeeScoreIndicatorsResponseDTO>({
-        url: "/masterdata-service/proposalDashboard/queryProposalEmployeeScoreTopN",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultEmployeeScoreIndicatorsResponseDTO>(
+        {
+            url: "/masterdata-service/proposalDashboard/queryProposalEmployeeScoreTopN",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«EmployeeScoreIndicatorsResponseDTO»
 export interface IJSONResultEmployeeScoreIndicatorsResponseDTO {

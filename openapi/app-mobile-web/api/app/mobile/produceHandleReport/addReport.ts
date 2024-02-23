@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/上报反馈服务相关/addReportUsingPOST
-export default function fetchMethod(data: IReportTheFeedbackProcessingDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceHandleReport/addReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IReportTheFeedbackProcessingDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceHandleReport/addReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 上报反馈处理DTO
 export interface IReportTheFeedbackProcessingDTO {

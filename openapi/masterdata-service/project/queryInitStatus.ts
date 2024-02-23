@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/queryInitStatusUsingGET
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultstring2>({
-        url: "/masterdata-service/project/queryInitStatus",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultstring2>(
+        {
+            url: "/masterdata-service/project/queryInitStatus",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»_2
 export interface IJSONResultstring2 {

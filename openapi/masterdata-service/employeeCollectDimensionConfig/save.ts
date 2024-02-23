@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/用户聚合维度配置相关/saveUsingPOST_1
-export default function fetchMethod(data: IUserAggregationDimensionConfigurationRequest) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/employeeCollectDimensionConfig/save",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUserAggregationDimensionConfigurationRequest, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/employeeCollectDimensionConfig/save",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 用户聚合维度配置请求
 export interface IUserAggregationDimensionConfigurationRequest {

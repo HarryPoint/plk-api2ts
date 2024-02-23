@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/产品订单相关/appendBuyModifyUsingPOST
-export default function fetchMethod(data: IAdditionalProductOrderModificationRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/productOrder/appendBuyModify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAdditionalProductOrderModificationRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/productOrder/appendBuyModify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 加购产品订单修改请求对象
 export interface IAdditionalProductOrderModificationRequestObject {

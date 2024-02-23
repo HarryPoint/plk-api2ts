@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/editMaintainLevelUsingPOST
-export default function fetchMethod(data: ISelectorJsonInfo[], params: { flowPathId: number }) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/editMaintainLevel",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISelectorJsonInfo[], params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/editMaintainLevel",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // SelectorJsonInfo
 export interface ISelectorJsonInfo {

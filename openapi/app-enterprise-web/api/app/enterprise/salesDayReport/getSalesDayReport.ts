@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/销售日报表相关/getSalesDayReportUsingPOST
-export default function fetchMethod(data: GetSalesDayReport) {
-    return http<IJSONResultPageInformationObjectReturnedByTheSalesDailyReport>({
-        url: "/app-enterprise-web/api/app/enterprise/salesDayReport/getSalesDayReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetSalesDayReport, extraOptions?: any) {
+    return http<IJSONResultPageInformationObjectReturnedByTheSalesDailyReport>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/salesDayReport/getSalesDayReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«销售日报表返回对象»»
 export interface IJSONResultPageInformationObjectReturnedByTheSalesDailyReport {

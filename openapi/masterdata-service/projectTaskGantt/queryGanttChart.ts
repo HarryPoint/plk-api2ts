@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务甘特图相关/queryGanttChartUsingPOST
-export default function fetchMethod(data: QueryGanttChart) {
-    return http<IJSONResultListProjectTaskGanttChartPhaseResponseObject>({
-        url: "/masterdata-service/projectTaskGantt/queryGanttChart",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: QueryGanttChart, extraOptions?: any) {
+    return http<IJSONResultListProjectTaskGanttChartPhaseResponseObject>(
+        {
+            url: "/masterdata-service/projectTaskGantt/queryGanttChart",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目任务甘特图阶段响应对象»»
 export interface IJSONResultListProjectTaskGanttChartPhaseResponseObject {

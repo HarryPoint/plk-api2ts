@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
-export default function fetchMethod(data: IOpenApiRequestsSearchVO) {
-    return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/deviceCollectionApi/getApiLogPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IOpenApiRequestsSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/deviceCollectionApi/getApiLogPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 开放api请求搜索VO
 export interface IOpenApiRequestsSearchVO {

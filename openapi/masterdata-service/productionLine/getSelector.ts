@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/产线相关/getSelectorUsingPOST_1
-export default function fetchMethod(data: INameNumberVO) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/productionLine/getSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: INameNumberVO, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/productionLine/getSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 名称、编号VO
 export interface INameNumberVO {

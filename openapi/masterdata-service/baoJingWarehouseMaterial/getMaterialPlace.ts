@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialPlaceUsingPOST
-export default function fetchMethod(data: IBaojingMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListReturnTheInventoryDistributionToVO>({
-        url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialPlace",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IBaojingMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListReturnTheInventoryDistributionToVO>(
+        {
+            url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialPlace",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 宝晶物料主数据库存分布搜索VO
 export interface IBaojingMaterialMasterDataInventoryDistributionSearchVO {

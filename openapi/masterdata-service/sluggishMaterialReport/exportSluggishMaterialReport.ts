@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/exportSluggishMaterialReportUsingPOST
-export default function fetchMethod(data: ExportSluggishMaterialReport) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/sluggishMaterialReport/exportSluggishMaterialReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ExportSluggishMaterialReport, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/sluggishMaterialReport/exportSluggishMaterialReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

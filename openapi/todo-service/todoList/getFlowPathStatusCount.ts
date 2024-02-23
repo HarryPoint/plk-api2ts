@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16600/doc.html#/default/待办相关/getFlowPathStatusCountUsingGET
-export default function fetchMethod(params: { enterpriseId: number; flowPathId: number; userId: number }) {
-    return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>({
-        url: "/todo-service/todoList/getFlowPathStatusCount",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; flowPathId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>(
+        {
+            url: "/todo-service/todoList/getFlowPathStatusCount",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«待办事项查询状态数量返回VO»
 export interface IJSONResultNumberOfToDoQueryStatesReturnedToVO {

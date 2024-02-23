@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getListByProcessIdUsingGET
-export default function fetchMethod(params: { processId: string; enterpriseId: number }) {
-    return http<ITheJSONResultListOperationFieldCorrespondsToTheTableDetailsVO>({
-        url: "/masterdata-service/processFlowPathRp/getListByProcessId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { processId: string; enterpriseId: number }, extraOptions?: any) {
+    return http<ITheJSONResultListOperationFieldCorrespondsToTheTableDetailsVO>(
+        {
+            url: "/masterdata-service/processFlowPathRp/getListByProcessId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«工序字段对应表详情VO»»
 export interface ITheJSONResultListOperationFieldCorrespondsToTheTableDetailsVO {

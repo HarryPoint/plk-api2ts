@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/门户相关/queryNavigationListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListPortalQueryResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/portal/queryNavigationList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListPortalQueryResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/portal/queryNavigationList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«门户查询响应DTO»»
 export interface IJSONResultListPortalQueryResponseDTO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单下发/batchIssueUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return http<IJSONResultProductionOrderDeliveryResultDTO>({
-        url: "/masterdata-service/produceOrderIssue/issue/batch",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultProductionOrderDeliveryResultDTO>(
+        {
+            url: "/masterdata-service/produceOrderIssue/issue/batch",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

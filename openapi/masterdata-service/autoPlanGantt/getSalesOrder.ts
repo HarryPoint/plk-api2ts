@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/getSalesOrderUsingPOST
-export default function fetchMethod(data: IGanttChartSearchVO) {
-    return http<IJSONResultSalesOrdersGanttChartBackToVO>({
-        url: "/masterdata-service/autoPlanGantt/getSalesOrder",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IGanttChartSearchVO, extraOptions?: any) {
+    return http<IJSONResultSalesOrdersGanttChartBackToVO>(
+        {
+            url: "/masterdata-service/autoPlanGantt/getSalesOrder",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 甘特图搜索VO
 export interface IGanttChartSearchVO {

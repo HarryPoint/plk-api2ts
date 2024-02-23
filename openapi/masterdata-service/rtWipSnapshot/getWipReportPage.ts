@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/Wip快照相关/getWipReportPageUsingPOST
-export default function fetchMethod(data: IWIPStatisticsReportSearchForVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO>({
-        url: "/masterdata-service/rtWipSnapshot/getWipReportPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IWIPStatisticsReportSearchForVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO>(
+        {
+            url: "/masterdata-service/rtWipSnapshot/getWipReportPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // WIP统计报表搜索VO
 export interface IWIPStatisticsReportSearchForVO {

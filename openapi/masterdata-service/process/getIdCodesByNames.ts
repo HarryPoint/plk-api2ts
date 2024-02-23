@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getIdCodesByNamesUsingPOST
-export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/masterdata-service/process/getIdCodesByNames",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: string[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/masterdata-service/process/getIdCodesByNames",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产出报表(产出数据相关)相关/getClassGroupUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceDataReport/getClassGroupSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceDataReport/getClassGroupSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

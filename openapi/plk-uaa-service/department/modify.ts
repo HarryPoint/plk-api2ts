@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/部门相关/modifyUsingPOST_3
-export default function fetchMethod(data: IDepartmentEditRequest) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/department/modify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDepartmentEditRequest, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/department/modify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 部门编辑请求
 export interface IDepartmentEditRequest {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用相关/listAllUsingPOST
-export default function fetchMethod(data: IApplyBasicInformationToQueryObjects) {
-    return http<IJSONResultListBasicFlowInformationRespondsToTheDTO>({
-        url: "/flow-service/application/listAll",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IApplyBasicInformationToQueryObjects, extraOptions?: any) {
+    return http<IJSONResultListBasicFlowInformationRespondsToTheDTO>(
+        {
+            url: "/flow-service/application/listAll",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 应用基本信息查询对象
 export interface IApplyBasicInformationToQueryObjects {

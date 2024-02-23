@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getCategorySelectorUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListNameNumberVO>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getCategorySelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListNameNumberVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getCategorySelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«名称，编号VO»»
 export interface IJSONResultListNameNumberVO {

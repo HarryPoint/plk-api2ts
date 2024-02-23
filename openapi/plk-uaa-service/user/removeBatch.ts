@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/用户账号相关/removeBatchUsingPOST_1
-export default function fetchMethod(data: IIdSetInformation) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/user/removeBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdSetInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/user/removeBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id集 信息
 export interface IIdSetInformation {

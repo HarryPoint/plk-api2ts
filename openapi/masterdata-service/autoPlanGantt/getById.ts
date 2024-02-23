@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/甘特图相关/getByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultProducePlanAutoScheduleOutputVO>({
-        url: "/masterdata-service/autoPlanGantt/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultProducePlanAutoScheduleOutputVO>(
+        {
+            url: "/masterdata-service/autoPlanGantt/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ProducePlanAutoScheduleOutputVO»
 export interface IJSONResultProducePlanAutoScheduleOutputVO {

@@ -78,12 +78,18 @@ export const customContent = async (
           type: transFormType(defineItem.schema),
         });
       });
+      functionDeclaration.addParameter({
+        name: "extraOptions",
+        type: "any",
+        hasQuestionToken: true,
+      });
       functionDeclaration.setBodyText((writer) => {
         writer.writeLine(
           `return http<${
             responseDefine ? `${transFormType(responseDefine)}` : "any"
-          }>({`
+          }>(`
         );
+        writer.writeLine(`  {`);
         writer.writeLine(`  url: "${url}",`);
         writer.writeLine(`  method: "${method}",`);
         defineArr?.forEach((paramsDefine: any) => {
@@ -94,7 +100,9 @@ export const customContent = async (
             writer.writeLine(`  params,`);
           }
         });
-        writer.writeLine(`});`);
+        writer.writeLine(`},`);
+        writer.writeLine(`extraOptions,`);
+        writer.writeLine(`);`);
       });
     }
   }

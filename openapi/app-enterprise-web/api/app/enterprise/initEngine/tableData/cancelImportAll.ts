@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/cancelImportAllUsingPOST
-export default function fetchMethod(data: IAllCancelImportRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/cancelImportAll",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAllCancelImportRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/cancelImportAll",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // AllCancelImportRequestDTO
 export interface IAllCancelImportRequestDTO {

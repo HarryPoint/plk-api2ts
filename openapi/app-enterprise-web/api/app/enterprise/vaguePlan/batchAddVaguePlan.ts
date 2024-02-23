@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/模糊排产相关/batchAddVaguePlanUsingPOST
-export default function fetchMethod(data: IProductionOrderBatchFuzzySchedulingDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/vaguePlan/batchAddVaguePlan",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionOrderBatchFuzzySchedulingDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/vaguePlan/batchAddVaguePlan",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产订单批量模糊排产DTO
 export interface IProductionOrderBatchFuzzySchedulingDTO {

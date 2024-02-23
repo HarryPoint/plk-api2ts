@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/getProcessOfLoginUserUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/masterdata-service/userProcess/getProcessOfLoginUser",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/masterdata-service/userProcess/getProcessOfLoginUser",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/工艺路径相关/getProcessSheetSelectorUsingPOST
-export default function fetchMethod(data: IProcessCardSelectionListSearchVO) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-mobile-web/api/app/mobile/routing/getProcessSheetSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessCardSelectionListSearchVO, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/routing/getProcessSheetSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工艺卡选择列表搜索VO
 export interface IProcessCardSelectionListSearchVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/CRM-跟进计划相关/getTableColumnUsingGET_15
-export default function fetchMethod() {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/app-mobile-web/api/app/mobile/followPlan/getTableColumn",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/followPlan/getTableColumn",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

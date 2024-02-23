@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/savePreEnterpriseFieldCorrectDataUsingPOST
-export default function fetchMethod(data: string[]) {
-    return http<IJSONResultobject>({
-        url: "/flow-service/flowPathScript/savePreEnterpriseFieldCorrectData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: string[], extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/flow-service/flowPathScript/savePreEnterpriseFieldCorrectData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportForPageUsingPOST
-export default function fetchMethod(data: IExampleQueryTheDataDTOReportedByAUser, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO>({
-        url: "/masterdata-service/deviceCollectionData/getUserReportForPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IExampleQueryTheDataDTOReportedByAUser, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO>(
+        {
+            url: "/masterdata-service/deviceCollectionData/getUserReportForPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 查询用户上报数据DTO
 export interface IExampleQueryTheDataDTOReportedByAUser {

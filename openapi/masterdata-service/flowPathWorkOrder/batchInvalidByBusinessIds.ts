@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/batchInvalidByBusinessIdsUsingPOST
-export default function fetchMethod(data: number[], params: { enterpriseId: number; flowPathId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/flowPathWorkOrder/batchInvalidByBusinessIds",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: number[], params: { enterpriseId: number; flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/flowPathWorkOrder/batchInvalidByBusinessIds",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

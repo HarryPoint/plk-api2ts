@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/定制表单字段设置规则 - 相关/getByFormFunctionUsingGET
-export default function fetchMethod(params: { formFunctionType: string }) {
-    return http<IJSONResultListCustomizedFormFieldSettingRuleVO>({
-        url: "/flow-service/customizationFormFieldSettingRule/getByFormFunction",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { formFunctionType: string }, extraOptions?: any) {
+    return http<IJSONResultListCustomizedFormFieldSettingRuleVO>(
+        {
+            url: "/flow-service/customizationFormFieldSettingRule/getByFormFunction",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«CustomizedFormFieldSettingRuleVO»»
 export interface IJSONResultListCustomizedFormFieldSettingRuleVO {

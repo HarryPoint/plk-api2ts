@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/报废统计/getExportTicketUsingPOST_7
-export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO) {
-    return http<IJSONResultExportedTicketInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/baoJingReportScrap/getExportTicket",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, extraOptions?: any) {
+    return http<IJSONResultExportedTicketInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/baoJingReportScrap/getExportTicket",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 宝晶报表(报废)相关搜索VO
 export interface IBaojingReportScrapRelatedSearchVO {

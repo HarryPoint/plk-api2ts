@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/列表列样式配置/chooseUsingGET
-export default function fetchMethod(params: { tableColumnStyleConfigId?: number }) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/choose",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { tableColumnStyleConfigId?: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/choose",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

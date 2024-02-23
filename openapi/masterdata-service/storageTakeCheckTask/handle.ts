@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/handleUsingPOST
-export default function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/storageTakeCheckTask/handle",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/storageTakeCheckTask/handle",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 盘点任务盘点处理DTO
 export interface IInventoryTaskInventoryProcessingDTO {

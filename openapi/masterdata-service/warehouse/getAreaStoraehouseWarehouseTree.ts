@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓位相关/getAreaWarehouseStorehouseTreeUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>({
-        url: "/masterdata-service/warehouse/getAreaStoraehouseWarehouseTree",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>(
+        {
+            url: "/masterdata-service/warehouse/getAreaStoraehouseWarehouseTree",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«区域仓库仓位树返回VO»»
 export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {

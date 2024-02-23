@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getFilterGroupsUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<ITheJSONResultListProcessFormAssociatesTheFormFilterGroupVO>({
-        url: "/flow-service/flowPathFormField/{id}/fillGroup/get",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<ITheJSONResultListProcessFormAssociatesTheFormFilterGroupVO>(
+        {
+            url: "/flow-service/flowPathFormField/{id}/fillGroup/get",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表单关联表单筛选条件组VO»»
 export interface ITheJSONResultListProcessFormAssociatesTheFormFilterGroupVO {

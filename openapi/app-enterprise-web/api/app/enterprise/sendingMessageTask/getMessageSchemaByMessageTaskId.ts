@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/getMessageSchemaByMessageTaskIdUsingGET
-export default function fetchMethod(params: { messageTaskId: number }) {
-    return http<IJSONResultMessageSchemaQueryResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getMessageSchemaByMessageTaskId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { messageTaskId: number }, extraOptions?: any) {
+    return http<IJSONResultMessageSchemaQueryResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getMessageSchemaByMessageTaskId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«MessageSchemaQueryResponseDTO»
 export interface IJSONResultMessageSchemaQueryResponseDTO {

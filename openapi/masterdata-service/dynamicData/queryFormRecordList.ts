@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryFormRecordDetailListUsingPOST
-export default function fetchMethod(data: IBatchQueryFormDataRequests) {
-    return http<IJSONResultListJSONObject>({
-        url: "/masterdata-service/dynamicData/queryFormRecordList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBatchQueryFormDataRequests, extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/masterdata-service/dynamicData/queryFormRecordList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 批量查询表单数据请求
 export interface IBatchQueryFormDataRequests {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchValidUsingPOST_1
-export default function fetchMethod(data: IDynamicFormEnabledRequestDTO, params: { flowPathId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/dynamicData/batchValid",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IDynamicFormEnabledRequestDTO, params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/dynamicData/batchValid",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // DynamicFormEnabledRequestDTO
 export interface IDynamicFormEnabledRequestDTO {

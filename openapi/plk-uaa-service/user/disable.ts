@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/用户账号相关/disableUsingPOST_1
-export default function fetchMethod(data: IIdInformation) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/user/disable",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/user/disable",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // Id 信息
 export interface IIdInformation {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产处理暂扣相关/backUsingPOST_1
-export default function fetchMethod(data: IProductionProcessingWithholdReworkRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandleHoldPause/back",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionProcessingWithholdReworkRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandleHoldPause/back",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理暂扣返工请求对象
 export interface IProductionProcessingWithholdReworkRequestObject {

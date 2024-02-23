@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶售后质量分析报表相关/getAfterSalesQualityExportTicketUsingPOST
-export default function fetchMethod(data: IAfterSalesQualityAnalysisReportSearchVO) {
-    return http<IJSONResultExportedTicketInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/afterSalesQualityReport/getExportTicket",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAfterSalesQualityAnalysisReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultExportedTicketInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/afterSalesQualityReport/getExportTicket",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 售后质量分析报表搜索VO
 export interface IAfterSalesQualityAnalysisReportSearchVO {

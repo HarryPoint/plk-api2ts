@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/部门年目标设置相关/getTableColumnUsingGET_11
-export default function fetchMethod() {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/getTableColumn",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/getTableColumn",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

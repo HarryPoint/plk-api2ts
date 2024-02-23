@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/favoriteUsingPOST_1
-export default function fetchMethod(data: IPortalUserFavoriteRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/portalUserFavorite/favorite",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPortalUserFavoriteRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/portalUserFavorite/favorite",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // PortalUserFavoriteRequestDTO
 export interface IPortalUserFavoriteRequestDTO {

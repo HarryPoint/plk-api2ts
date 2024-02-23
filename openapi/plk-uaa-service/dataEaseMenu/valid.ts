@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/validUsingPOST
-export default function fetchMethod(data: ITheDataEaseMenuEnablesTheRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/dataEaseMenu/valid",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheDataEaseMenuEnablesTheRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/dataEaseMenu/valid",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // DataEase菜单启用请求对象
 export interface ITheDataEaseMenuEnablesTheRequestObject {

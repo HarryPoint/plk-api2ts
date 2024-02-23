@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产处理返工相关/refuseUsingPOST
-export default function fetchMethod(data: IProductionHandlesReworkRejectRequestObjects) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandleBack/refuse",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionHandlesReworkRejectRequestObjects, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandleBack/refuse",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理返工拒绝请求对象
 export interface IProductionHandlesReworkRejectRequestObjects {

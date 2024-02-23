@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listEmployeeToDayLastMoveInBomConsumeByProduceTaskIdUsingGET
-export default function fetchMethod(params: { produceTaskId: number }) {
-    return http<IJSONResultListRespondsToTheDTOForTheLastInputBom>({
-        url: "/masterdata-service/moveInOutBomConsume/listEmployeeToDayLastMoveInBomConsumeByProduceTaskId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { produceTaskId: number }, extraOptions?: any) {
+    return http<IJSONResultListRespondsToTheDTOForTheLastInputBom>(
+        {
+            url: "/masterdata-service/moveInOutBomConsume/listEmployeeToDayLastMoveInBomConsumeByProduceTaskId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«上一次进料录入bom消耗响应DTO»»
 export interface IJSONResultListRespondsToTheDTOForTheLastInputBom {

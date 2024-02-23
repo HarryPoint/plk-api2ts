@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getMaterialRoutingSelectorUsingGET
-export default function fetchMethod(params: { enterpriseId: number; materialId: number }) {
-    return http<IJSONResultListProcessPathSelectVO>({
-        url: "/masterdata-service/routing/getMaterialRoutingSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; materialId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessPathSelectVO>(
+        {
+            url: "/masterdata-service/routing/getMaterialRoutingSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«工艺路径选择VO»»
 export interface IJSONResultListProcessPathSelectVO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getPageUsingPOST_7
-export default function fetchMethod(data: IBatchOrderSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPagingInformationBatchOrderReturnsVO>({
-        url: "/masterdata-service/lotOrder/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IBatchOrderSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationBatchOrderReturnsVO>(
+        {
+            url: "/masterdata-service/lotOrder/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 批次订单搜索VO
 export interface IBatchOrderSearchVO {

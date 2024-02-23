@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/运营管理端授权相关/initUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/manageAuth/init",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/manageAuth/init",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

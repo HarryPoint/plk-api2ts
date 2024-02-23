@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBaseInfoForPageUsingPOST
-export default function fetchMethod(data: IProductionProcessingQueryVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>({
-        url: "/masterdata-service/produceHandle/getBaseInfoForPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionProcessingQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>(
+        {
+            url: "/masterdata-service/produceHandle/getBaseInfoForPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产处理查询VO
 export interface IProductionProcessingQueryVO {

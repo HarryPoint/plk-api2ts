@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/手动甘特图相关/getSalesOrderUsingPOST_1
-export default function fetchMethod(data: IGanttChartSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPageInformationSalesOrderManualSchedulingGanttChartReturnsVO>({
-        url: "/masterdata-service/handPlanGantt/getSalesOrder",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IGanttChartSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPageInformationSalesOrderManualSchedulingGanttChartReturnsVO>(
+        {
+            url: "/masterdata-service/handPlanGantt/getSalesOrder",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 甘特图搜索VO
 export interface IGanttChartSearchVO {

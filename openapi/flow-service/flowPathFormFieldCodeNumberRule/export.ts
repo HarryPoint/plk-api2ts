@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/exportUsingPOST
-export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/flow-service/flowPathFormFieldCodeNumberRule/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/flow-service/flowPathFormFieldCodeNumberRule/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 编码规则分页查询VO
 export interface ICodeRulePagingQueryVO {

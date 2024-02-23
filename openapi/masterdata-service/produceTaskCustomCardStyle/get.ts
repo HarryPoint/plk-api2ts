@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/getUsingGET_3
-export default function fetchMethod() {
-    return http<IJSONResultListProductionTaskCustomCardStyleResponseObjectDTO>({
-        url: "/masterdata-service/produceTaskCustomCardStyle/get",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProductionTaskCustomCardStyleResponseObjectDTO>(
+        {
+            url: "/masterdata-service/produceTaskCustomCardStyle/get",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产任务自定义卡片样式响应对象DTO»»
 export interface IJSONResultListProductionTaskCustomCardStyleResponseObjectDTO {

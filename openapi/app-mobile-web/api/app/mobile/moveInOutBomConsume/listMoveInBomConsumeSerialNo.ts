@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeSerialNoUsingPOST
-export default function fetchMethod(data: IFeedBomConsumptionSerialNumberQueryDTO) {
-    return http<IJSONResultListIncomingBomConsumptionSerialNumberRespondsToDTO>({
-        url: "/app-mobile-web/api/app/mobile/moveInOutBomConsume/listMoveInBomConsumeSerialNo",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFeedBomConsumptionSerialNumberQueryDTO, extraOptions?: any) {
+    return http<IJSONResultListIncomingBomConsumptionSerialNumberRespondsToDTO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/moveInOutBomConsume/listMoveInBomConsumeSerialNo",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料bom消耗序列号查询DTO
 export interface IFeedBomConsumptionSerialNumberQueryDTO {

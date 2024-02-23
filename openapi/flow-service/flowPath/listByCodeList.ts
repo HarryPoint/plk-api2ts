@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/listByCodeListUsingPOST
-export default function fetchMethod(data: string[]) {
-    return http<ITheJSONResultListProcessRespondsToVO>({
-        url: "/flow-service/flowPath/listByCodeList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: string[], extraOptions?: any) {
+    return http<ITheJSONResultListProcessRespondsToVO>(
+        {
+            url: "/flow-service/flowPath/listByCodeList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程响应VO»»
 export interface ITheJSONResultListProcessRespondsToVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备保养任务相关/cancelTaskUsingPOST
-export default function fetchMethod(data: IIdInformation) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/deviceMaintainTask/cancelTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/deviceMaintainTask/cancelTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // Id 信息
 export interface IIdInformation {

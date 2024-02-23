@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectQualityTargetCompleteCountUsingPOST
-export default function fetchMethod(data: IProjectKanbanQueryDto) {
-    return http<IJSONResultStatisticalResponseObjectForProjectQualityObjectives>({
-        url: "/masterdata-service/projectDashboard/queryProjectQualityTargetCompleteCount",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?: any) {
+    return http<IJSONResultStatisticalResponseObjectForProjectQualityObjectives>(
+        {
+            url: "/masterdata-service/projectDashboard/queryProjectQualityTargetCompleteCount",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目看板查询dto
 export interface IProjectKanbanQueryDto {

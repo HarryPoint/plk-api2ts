@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/盼盼大屏相关/getSettingInfoUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultPanpanProductionLargeScreenSettingsResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/lsPanPanSetting/getSettingInfo",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultPanpanProductionLargeScreenSettingsResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lsPanPanSetting/getSettingInfo",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«盼盼生产大屏设置响应DTO»
 export interface IJSONResultPanpanProductionLargeScreenSettingsResponseDTO {

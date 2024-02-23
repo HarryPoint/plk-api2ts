@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/报表模板/selectorUsingPOST
-export default function fetchMethod(params: { templateName?: string }) {
-    return http<IJSONResultListReportTemplateQueryResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/reportTemplate/selector",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { templateName?: string }, extraOptions?: any) {
+    return http<IJSONResultListReportTemplateQueryResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/reportTemplate/selector",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ReportTemplateQueryResponseDTO»»
 export interface IJSONResultListReportTemplateQueryResponseDTO {

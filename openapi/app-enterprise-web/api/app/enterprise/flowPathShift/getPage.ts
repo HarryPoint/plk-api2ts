@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务班次相关/getPageUsingPOST_6
-export default function fetchMethod(data: ITaskShiftSearchVO) {
-    return http<IJSONResultPagingInformationFlowShiftReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/flowPathShift/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITaskShiftSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationFlowShiftReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/flowPathShift/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 任务班次搜索VO
 export interface ITaskShiftSearchVO {

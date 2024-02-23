@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/服务相关/listUsingGET_3
-export default function fetchMethod() {
-    return http<ITheJSONResultListServiceRespondsToTheDTO>({
-        url: "/plk-uaa-service/serve/list",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<ITheJSONResultListServiceRespondsToTheDTO>(
+        {
+            url: "/plk-uaa-service/serve/list",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«服务响应 DTO»»
 export interface ITheJSONResultListServiceRespondsToTheDTO {

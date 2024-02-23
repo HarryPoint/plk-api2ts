@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/pageMoveInDeviceUsingPOST_1
-export default function fetchMethod(data: IFeedMoldPagingQueryObject) {
-    return http<IJSONResultPagingInformationFeedMoldRespondsToDTO>({
-        url: "/masterdata-service/moveInOutMold/pageMoveInDevice",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFeedMoldPagingQueryObject, extraOptions?: any) {
+    return http<IJSONResultPagingInformationFeedMoldRespondsToDTO>(
+        {
+            url: "/masterdata-service/moveInOutMold/pageMoveInDevice",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料模具分页查询对象
 export interface IFeedMoldPagingQueryObject {

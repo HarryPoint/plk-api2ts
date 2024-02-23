@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/班次相关/changeValidUsingPOST
-export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/classShift/changeValid",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/classShift/changeValid",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 启用or停用VO
 export interface IEnableOrDisableVO {

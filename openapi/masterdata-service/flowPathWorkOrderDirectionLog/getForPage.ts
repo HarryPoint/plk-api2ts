@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程工单流转日志相关/getForPageUsingPOST_2
-export default function fetchMethod(data: IJobLogSearchVO, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
-        url: "/masterdata-service/flowPathWorkOrderDirectionLog/getForPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IJobLogSearchVO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
+        {
+            url: "/masterdata-service/flowPathWorkOrderDirectionLog/getForPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工单日志搜索VO
 export interface IJobLogSearchVO {

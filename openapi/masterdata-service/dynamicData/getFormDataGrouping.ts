@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFromDataGroupingUsingGET
-export default function fetchMethod(params: { flowPathId: number }) {
-    return http<IJSONResultListFormDataGroupingDTO>({
-        url: "/masterdata-service/dynamicData/getFormDataGrouping",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultListFormDataGroupingDTO>(
+        {
+            url: "/masterdata-service/dynamicData/getFormDataGrouping",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«表单数据分组DTO»»
 export interface IJSONResultListFormDataGroupingDTO {

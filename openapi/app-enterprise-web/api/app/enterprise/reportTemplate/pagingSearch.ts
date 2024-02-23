@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/报表模板/pagingSearchUsingPOST
-export default function fetchMethod(data: IPaging13) {
-    return http<IReportTemplateQueryResponseDTOJSONResultPagingInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/reportTemplate/pagingSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging13, extraOptions?: any) {
+    return http<IReportTemplateQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/reportTemplate/pagingSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_13
 export interface IPaging13 {

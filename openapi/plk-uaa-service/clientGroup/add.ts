@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/客户端组相关/addUsingPOST_1
-export default function fetchMethod(data: ITheDTOIsAddedToTheClientGroup) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/clientGroup/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheDTOIsAddedToTheClientGroup, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/clientGroup/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 客户端组新增 DTO
 export interface ITheDTOIsAddedToTheClientGroup {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/getDetailByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultDataEaseMenuDetailsResponseObject>({
-        url: "/plk-uaa-service/dataEaseMenu/getDetailById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultDataEaseMenuDetailsResponseObject>(
+        {
+            url: "/plk-uaa-service/dataEaseMenu/getDetailById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«DataEase菜单详情响应对象»
 export interface IJSONResultDataEaseMenuDetailsResponseObject {

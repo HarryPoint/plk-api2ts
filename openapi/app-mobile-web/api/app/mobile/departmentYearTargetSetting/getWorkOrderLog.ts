@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/部门年目标设置相关/getWorkOrderLogUsingPOST_10
-export default function fetchMethod(data: IJobLogSearchVO) {
-    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
-        url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/getWorkOrderLog",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IJobLogSearchVO, extraOptions?: any) {
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/getWorkOrderLog",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工单日志搜索VO
 export interface IJobLogSearchVO {

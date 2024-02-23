@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务下发相关/exportUsingPOST_37
-export default function fetchMethod(data: ITaskDeliverySearchesVO) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/productionPlan/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITaskDeliverySearchesVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/productionPlan/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 任务下发搜索VO
 export interface ITaskDeliverySearchesVO {

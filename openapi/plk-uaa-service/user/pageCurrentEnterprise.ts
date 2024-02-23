@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/用户账号相关/pageCurrentEnterpriseUsingPOST
-export default function fetchMethod(data: IQueryTheCurrentEnterpriseUser) {
-    return http<IJSONResultPagingInformationEnterpriseUserResponse>({
-        url: "/plk-uaa-service/user/pageCurrentEnterprise",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IQueryTheCurrentEnterpriseUser, extraOptions?: any) {
+    return http<IJSONResultPagingInformationEnterpriseUserResponse>(
+        {
+            url: "/plk-uaa-service/user/pageCurrentEnterprise",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 当前企业用户查询
 export interface IQueryTheCurrentEnterpriseUser {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/batchResetAndDeleteSystemBySystemTypeUsingGET
-export default function fetchMethod(params: { systemType: string }) {
-    return http<IJSONResultobject>({
-        url: "/flow-service/flowPathScript/batchResetAndDeleteSystemBySystemType",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { systemType: string }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/flow-service/flowPathScript/batchResetAndDeleteSystemBySystemType",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

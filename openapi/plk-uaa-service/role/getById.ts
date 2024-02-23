@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/角色相关/getByIdUsingGET_1
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultResponseToRoleInformation>({
-        url: "/plk-uaa-service/role/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultResponseToRoleInformation>(
+        {
+            url: "/plk-uaa-service/role/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«角色信息响应»
 export interface IJSONResultResponseToRoleInformation {

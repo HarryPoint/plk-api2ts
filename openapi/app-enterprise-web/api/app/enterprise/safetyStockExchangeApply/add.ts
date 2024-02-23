@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/addUsingPOST_7
-export default function fetchMethod(data: ISecurityInventoryChangeRequestConfiguration) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISecurityInventoryChangeRequestConfiguration, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 安全库存变更申请配置
 export interface ISecurityInventoryChangeRequestConfiguration {

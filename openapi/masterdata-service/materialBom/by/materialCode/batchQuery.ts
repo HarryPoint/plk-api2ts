@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/物料Bom相关/batchQueryByMaterialCodeUsingPOST
-export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return http<IJSONResultListMaterialBomBaseVo>({
-        url: "/masterdata-service/materialBom/by/materialCode/batchQuery",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: string[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListMaterialBomBaseVo>(
+        {
+            url: "/masterdata-service/materialBom/by/materialCode/batchQuery",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«MaterialBomBaseVo»»
 export interface IJSONResultListMaterialBomBaseVo {

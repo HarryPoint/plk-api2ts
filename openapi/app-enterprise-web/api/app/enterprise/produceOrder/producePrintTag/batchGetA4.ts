@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/batchGetProducePrintTagA4UsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListProducePrintTagVO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrder/producePrintTag/batchGetA4",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListProducePrintTagVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrder/producePrintTag/batchGetA4",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProducePrintTagVO»»
 export interface IJSONResultListProducePrintTagVO {

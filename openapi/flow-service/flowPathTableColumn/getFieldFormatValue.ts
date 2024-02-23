@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表格相关/getFieldFormatValueUsingPOST
-export default function fetchMethod(data: IFormatTheValueOfTheFlowTableColumnToQueryTheDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultstring1>({
-        url: "/flow-service/flowPathTableColumn/getFieldFormatValue",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IFormatTheValueOfTheFlowTableColumnToQueryTheDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/flow-service/flowPathTableColumn/getFieldFormatValue",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程表格列对应的值格式化查询DTO
 export interface IFormatTheValueOfTheFlowTableColumnToQueryTheDTO {

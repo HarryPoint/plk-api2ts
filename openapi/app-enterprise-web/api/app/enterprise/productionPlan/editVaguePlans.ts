@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务下发相关/editVagueUsingPOST
-export default function fetchMethod(data: IProductionOrderStepSchedulingEditDTO1) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/productionPlan/editVaguePlans",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionOrderStepSchedulingEditDTO1, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/productionPlan/editVaguePlans",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产订单步骤排产编辑DTO_1
 export interface IProductionOrderStepSchedulingEditDTO1 {

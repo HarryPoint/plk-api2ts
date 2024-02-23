@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/lotHoldUsingPOST
-export default function fetchMethod(data: IBatchWithholdDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/lotOrder/lotHold",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBatchWithholdDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lotOrder/lotHold",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 批次扣留DTO
 export interface IBatchWithholdDTO {

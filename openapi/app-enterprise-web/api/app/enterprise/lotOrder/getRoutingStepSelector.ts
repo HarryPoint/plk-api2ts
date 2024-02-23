@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getRoutingStepSelectorUsingGET
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultListProductionProcessPathStepProcessResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/lotOrder/getRoutingStepSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultListProductionProcessPathStepProcessResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lotOrder/getRoutingStepSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产工艺路径步骤工序响应 DTO»»
 export interface IJSONResultListProductionProcessPathStepProcessResponseDTO {

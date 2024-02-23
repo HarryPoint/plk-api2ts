@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/getPageUsingPOST_4
-export default function fetchMethod(data: IDeviceDataSchemeSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO>({
-        url: "/masterdata-service/deviceCollectionPlan/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IDeviceDataSchemeSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO>(
+        {
+            url: "/masterdata-service/deviceCollectionPlan/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 设备数据方案搜索VO
 export interface IDeviceDataSchemeSearchVO {

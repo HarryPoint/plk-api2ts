@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/project-script-controller/supplyPermissionAndRouterUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/projectScript/supplyPermissionAndRouter",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/projectScript/supplyPermissionAndRouter",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

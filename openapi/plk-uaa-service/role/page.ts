@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/角色相关/pageUsingPOST_7
-export default function fetchMethod(data: IRoleQuery) {
-    return http<IJSONResultPagingInformationEnterpriseRoleResponse>({
-        url: "/plk-uaa-service/role/page",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRoleQuery, extraOptions?: any) {
+    return http<IJSONResultPagingInformationEnterpriseRoleResponse>(
+        {
+            url: "/plk-uaa-service/role/page",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 角色查询
 export interface IRoleQuery {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getStorehouseTreeUsingGET_2
-export default function fetchMethod() {
-    return http<ITheJSONResultListRepositoryAreaTreeReturnsVO1>({
-        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getStorehouseTree",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<ITheJSONResultListRepositoryAreaTreeReturnsVO1>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getStorehouseTree",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«仓库区域树返回VO»»_1
 export interface ITheJSONResultListRepositoryAreaTreeReturnsVO1 {

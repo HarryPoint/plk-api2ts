@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入文件相关/getImportFileUsingGET
-export default function fetchMethod(params: { templateId: number }) {
-    return http<IJSONResultImportFile>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/byTemplateId/get",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { templateId: number }, extraOptions?: any) {
+    return http<IJSONResultImportFile>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/byTemplateId/get",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«导入文件»
 export interface IJSONResultImportFile {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/Wip快照相关/checkWipReportUsingPOST
-export default function fetchMethod(data: IWIPStatisticsReportSearchForVO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/rtWipSnapshot/checkWipReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IWIPStatisticsReportSearchForVO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/rtWipSnapshot/checkWipReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // WIP统计报表搜索VO
 export interface IWIPStatisticsReportSearchForVO {

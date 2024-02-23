@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectTaskCompleteQuarterDistributeUsingGET
-export default function fetchMethod(params: { projectCategory?: string }) {
-    return http<IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks>({
-        url: "/masterdata-service/projectDashboard/queryProjectTaskCompleteQuarterDistribute",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { projectCategory?: string }, extraOptions?: any) {
+    return http<IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks>(
+        {
+            url: "/masterdata-service/projectDashboard/queryProjectTaskCompleteQuarterDistribute",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目任务季度分布响应对象»»
 export interface IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks {

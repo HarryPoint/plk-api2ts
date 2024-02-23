@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入文件相关/getByIdUsingGET_4
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultImportFile>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultImportFile>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«导入文件»
 export interface IJSONResultImportFile {

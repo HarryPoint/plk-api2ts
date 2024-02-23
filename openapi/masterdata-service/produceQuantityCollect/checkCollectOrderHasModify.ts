@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/checkCollectOrderHasModifyUsingGET
-export default function fetchMethod(params: { fiscalPeriodId?: string }) {
-    return http<IJSONResultVerifiesTheResponseObject>({
-        url: "/masterdata-service/produceQuantityCollect/checkCollectOrderHasModify",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { fiscalPeriodId?: string }, extraOptions?: any) {
+    return http<IJSONResultVerifiesTheResponseObject>(
+        {
+            url: "/masterdata-service/produceQuantityCollect/checkCollectOrderHasModify",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«校验响应对象»
 export interface IJSONResultVerifiesTheResponseObject {

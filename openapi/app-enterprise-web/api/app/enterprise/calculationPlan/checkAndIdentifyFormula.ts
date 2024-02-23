@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/计算方案相关/checkAndIdentifyFormulaUsingPOST
-export default function fetchMethod(data: ICalcPlanFormulaCheckRequestDTO) {
-    return http<IJSONResultCalcPlanFormulaCheckResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/calculationPlan/checkAndIdentifyFormula",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICalcPlanFormulaCheckRequestDTO, extraOptions?: any) {
+    return http<IJSONResultCalcPlanFormulaCheckResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/calculationPlan/checkAndIdentifyFormula",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // CalcPlanFormulaCheckRequestDTO
 export interface ICalcPlanFormulaCheckRequestDTO {

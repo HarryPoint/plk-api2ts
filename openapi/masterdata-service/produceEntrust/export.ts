@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
-export default function fetchMethod(data: IOutsourcingSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/produceEntrust/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IOutsourcingSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/produceEntrust/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 委外加工搜索VO
 export interface IOutsourcingSearchVO {

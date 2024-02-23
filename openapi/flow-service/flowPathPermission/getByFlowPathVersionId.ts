@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用权限相关/getByFlowPathVersionIdUsingGET_1
-export default function fetchMethod(params: { flowPathVersionId: number }) {
-    return http<IJSONResultQueryPermissionQueryResponse>({
-        url: "/flow-service/flowPathPermission/getByFlowPathVersionId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathVersionId: number }, extraOptions?: any) {
+    return http<IJSONResultQueryPermissionQueryResponse>(
+        {
+            url: "/flow-service/flowPathPermission/getByFlowPathVersionId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«查询权限查询Response»
 export interface IJSONResultQueryPermissionQueryResponse {

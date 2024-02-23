@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/saveMoveInDetailUsingPOST
-export default function fetchMethod(data: IInboundAndOutboundInformationDTO1, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceTask/saveMoveInDetail",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IInboundAndOutboundInformationDTO1, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceTask/saveMoveInDetail",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 进出站信息DTO_1
 export interface IInboundAndOutboundInformationDTO1 {

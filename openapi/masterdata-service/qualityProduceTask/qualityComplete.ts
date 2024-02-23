@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产质检管理/qualityCompleteUsingPOST
-export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/qualityProduceTask/qualityComplete",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/qualityProduceTask/qualityComplete",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 质检任务完成 DTO
 export interface ITheDTOCompletesTheInspectionTask {

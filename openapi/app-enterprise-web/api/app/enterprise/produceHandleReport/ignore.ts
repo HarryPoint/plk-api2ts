@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/上报反馈服务相关/ignoreUsingPOST
-export default function fetchMethod(data: IReportTheDTOToHandleTheChangeStatus) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandleReport/ignore",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IReportTheDTOToHandleTheChangeStatus, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandleReport/ignore",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 上报反馈处理变更状态DTO
 export interface IReportTheDTOToHandleTheChangeStatus {

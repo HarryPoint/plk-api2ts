@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getDayPassListUsingGET
-export default function fetchMethod(params: { categoryCode: string }) {
-    return http<IJSONResultListTodaysGoodProductStatisticsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getDayPassList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { categoryCode: string }, extraOptions?: any) {
+    return http<IJSONResultListTodaysGoodProductStatisticsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getDayPassList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«今日良品统计VO»»
 export interface IJSONResultListTodaysGoodProductStatisticsVO {

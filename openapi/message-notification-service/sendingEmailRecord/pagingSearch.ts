@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/pagingSearchUsingPOST
-export default function fetchMethod(data: ISendAnEmailRecordQueryRequest) {
-    return http<ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation>({
-        url: "/message-notification-service/sendingEmailRecord/pagingSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISendAnEmailRecordQueryRequest, extraOptions?: any) {
+    return http<ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/message-notification-service/sendingEmailRecord/pagingSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 发送邮件记录查询请求
 export interface ISendAnEmailRecordQueryRequest {

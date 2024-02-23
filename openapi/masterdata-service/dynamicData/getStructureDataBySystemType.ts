@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getStructureDataBySystemTypeUsingPOST
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number; systemType: string }) {
-    return http<IJSONResultFormStructureVO>({
-        url: "/masterdata-service/dynamicData/getStructureDataBySystemType",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number; systemType: string }, extraOptions?: any) {
+    return http<IJSONResultFormStructureVO>(
+        {
+            url: "/masterdata-service/dynamicData/getStructureDataBySystemType",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getQueryPageInfoByFlowPathSystemTypeUsingGET
-export default function fetchMethod(data: IProcessDataSearchVO, params: { enterpriseId: number; systemType: string }) {
-    return http<IJSONResultDynamicDataQueryPageVO>({
-        url: "/flow-service/flowPath/getQueryPageInfoByFlowPathSystemType",
-        method: "get",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessDataSearchVO, params: { enterpriseId: number; systemType: string }, extraOptions?: any) {
+    return http<IJSONResultDynamicDataQueryPageVO>(
+        {
+            url: "/flow-service/flowPath/getQueryPageInfoByFlowPathSystemType",
+            method: "get",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {

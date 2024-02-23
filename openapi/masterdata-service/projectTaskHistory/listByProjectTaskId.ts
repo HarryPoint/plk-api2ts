@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
-export default function fetchMethod(params: { projectTaskId: number }) {
-    return http<IJSONResultListProjectTaskHistoryQueryResponse>({
-        url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { projectTaskId: number }, extraOptions?: any) {
+    return http<IJSONResultListProjectTaskHistoryQueryResponse>(
+        {
+            url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目任务历史查询响应»»
 export interface IJSONResultListProjectTaskHistoryQueryResponse {

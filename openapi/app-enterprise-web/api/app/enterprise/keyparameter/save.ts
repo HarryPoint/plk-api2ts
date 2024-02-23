@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/关键参数相关/saveUsingPOST_1
-export default function fetchMethod(data: IKeyParametersSaveTheDTO) {
-    return http<IJSONResultKeyParameterInformationResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/keyparameter/save",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IKeyParametersSaveTheDTO, extraOptions?: any) {
+    return http<IJSONResultKeyParameterInformationResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/keyparameter/save",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 关键参数保存DTO
 export interface IKeyParametersSaveTheDTO {

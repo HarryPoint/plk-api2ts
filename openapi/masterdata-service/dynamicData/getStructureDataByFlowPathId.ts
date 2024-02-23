@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getStructureDataByFlowPathIdUsingPOST
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number; flowPathId: number }) {
-    return http<IJSONResultFormStructureVO>({
-        url: "/masterdata-service/dynamicData/getStructureDataByFlowPathId",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessStructureSearchVO, params: { enterpriseId: number; flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultFormStructureVO>(
+        {
+            url: "/masterdata-service/dynamicData/getStructureDataByFlowPathId",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {

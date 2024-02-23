@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionReportUsingPOST
-export default function fetchMethod(data: GetSalesCommissionReport) {
-    return http<IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject>({
-        url: "/masterdata-service/diFengSalesCommissionReport/getSalesCommissionReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetSalesCommissionReport, extraOptions?: any) {
+    return http<IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject>(
+        {
+            url: "/masterdata-service/diFengSalesCommissionReport/getSalesCommissionReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«佣金与提成统计表（帝丰定制）响应对象»»
 export interface IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject {

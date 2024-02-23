@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getByMaterialIdsUsingPOST
-export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return http<IJSONResultListProductionOrder>({
-        url: "/masterdata-service/produceOrder/getByMaterialIds",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProductionOrder>(
+        {
+            url: "/masterdata-service/produceOrder/getByMaterialIds",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产订单»»
 export interface IJSONResultListProductionOrder {

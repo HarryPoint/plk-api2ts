@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务下发相关/getStatusQuantityUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultNumberOfSchedulingPlansTheValueIsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/productionPlan/getStatusQuantity",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultNumberOfSchedulingPlansTheValueIsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/productionPlan/getStatusQuantity",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«排产计划状态数量返回VO»
 export interface IJSONResultNumberOfSchedulingPlansTheValueIsVO {

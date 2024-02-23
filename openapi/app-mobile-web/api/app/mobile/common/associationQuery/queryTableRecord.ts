@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/公共相关/queryAssociationFormTableRecordUsingPOST
-export default function fetchMethod(data: IPaging1) {
-    return http<IJSONResultAssociationFormTypeFieldTableRecordOutputVO>({
-        url: "/app-mobile-web/api/app/mobile/common/associationQuery/queryTableRecord",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging1, extraOptions?: any) {
+    return http<IJSONResultAssociationFormTypeFieldTableRecordOutputVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/common/associationQuery/queryTableRecord",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_1
 export interface IPaging1 {

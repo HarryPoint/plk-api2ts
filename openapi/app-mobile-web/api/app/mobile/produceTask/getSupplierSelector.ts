@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getSupplierSelectorUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getSupplierSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getSupplierSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

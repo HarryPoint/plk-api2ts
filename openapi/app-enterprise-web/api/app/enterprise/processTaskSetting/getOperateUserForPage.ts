@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/getOperateUserForPageUsingPOST
-export default function fetchMethod(data: IProcessOperatorSearchesVO) {
-    return http<IJSONResultPagingInformationProcessOperatorVO>({
-        url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/getOperateUserForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessOperatorSearchesVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationProcessOperatorVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/getOperateUserForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工序操作人员搜索VO
 export interface IProcessOperatorSearchesVO {

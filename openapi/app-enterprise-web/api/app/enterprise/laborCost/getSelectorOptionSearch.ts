@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工费相关/getSelectorOptionSearchUsingPOST_2
-export default function fetchMethod(data: ITheLaborCostDropDownListIsUsedToSearchForDtos) {
-    return http<IJSONResultListWorkCostDropDownSelectAListToSearchForResponseDtos>({
-        url: "/app-enterprise-web/api/app/enterprise/laborCost/getSelectorOptionSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheLaborCostDropDownListIsUsedToSearchForDtos, extraOptions?: any) {
+    return http<IJSONResultListWorkCostDropDownSelectAListToSearchForResponseDtos>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/laborCost/getSelectorOptionSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工费下拉选择列表搜索DTO
 export interface ITheLaborCostDropDownListIsUsedToSearchForDtos {

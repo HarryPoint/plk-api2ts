@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getSalesOrderProgressUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO>({
-        url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getSalesOrderProgress",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/getSalesOrderProgress",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«质检生产大屏订单完成进度返回VO»»
 export interface IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO {

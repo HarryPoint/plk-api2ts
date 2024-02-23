@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/批次方案相关/pageSearchUsingPOST_1
-export default function fetchMethod(data: IPaging5) {
-    return http<ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/pageSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging5, extraOptions?: any) {
+    return http<ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/pageSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_5
 export interface IPaging5 {

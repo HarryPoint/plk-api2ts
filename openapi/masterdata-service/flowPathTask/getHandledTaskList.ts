@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/getHandledTaskListUsingPOST
-export default function fetchMethod(data: IProcessTaskResultQueryVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListProcessTaskResultVO>({
-        url: "/masterdata-service/flowPathTask/getHandledTaskList",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessTaskResultQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessTaskResultVO>(
+        {
+            url: "/masterdata-service/flowPathTask/getHandledTaskList",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程任务处理结果查询VO
 export interface IProcessTaskResultQueryVO {

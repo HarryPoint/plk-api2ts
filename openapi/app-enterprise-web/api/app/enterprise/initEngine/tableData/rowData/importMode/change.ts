@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/updateImportModeUsingPOST
-export default function fetchMethod(data: IRowDataImportModeInputDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/importMode/change",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRowDataImportModeInputDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/importMode/change",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // RowDataImportModeInputDTO
 export interface IRowDataImportModeInputDTO {

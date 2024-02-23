@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按工序统计)相关/getReportUsingPOST_11
-export default function fetchMethod(data: IOutputClassReportSearchVO) {
-    return http<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceProcessReport/getReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IOutputClassReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultOutputLineChartReturnsVOOutputReportReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceProcessReport/getReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产出类报表搜索VO
 export interface IOutputClassReportSearchVO {

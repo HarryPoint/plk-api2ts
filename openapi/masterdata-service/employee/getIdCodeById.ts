@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdCodeByIdUsingGET_1
-export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return http<IJSONResultIdNameNumberVO>({
-        url: "/masterdata-service/employee/getIdCodeById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+    return http<IJSONResultIdNameNumberVO>(
+        {
+            url: "/masterdata-service/employee/getIdCodeById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«Id，名称，编号VO»
 export interface IJSONResultIdNameNumberVO {

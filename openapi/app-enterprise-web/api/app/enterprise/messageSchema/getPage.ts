@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/消息方案相关/getPageUsingPOST_11
-export default function fetchMethod(data: IMessageSchemeQueryRequest) {
-    return http<IJSONResultPageInformationPageQueryResponse>({
-        url: "/app-enterprise-web/api/app/enterprise/messageSchema/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMessageSchemeQueryRequest, extraOptions?: any) {
+    return http<IJSONResultPageInformationPageQueryResponse>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/messageSchema/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 消息方案查询请求
 export interface IMessageSchemeQueryRequest {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanExceptionLotOrderUsingPOST
-export default function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches) {
-    return http<IJSONResultListHandlesBatchResponseDtosAbnormally>({
-        url: "/masterdata-service/moveInOutLotOrder/listCanExceptionLotOrder",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches, extraOptions?: any) {
+    return http<IJSONResultListHandlesBatchResponseDtosAbnormally>(
+        {
+            url: "/masterdata-service/moveInOutLotOrder/listCanExceptionLotOrder",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 可进出料批次查询dto
 export interface IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches {

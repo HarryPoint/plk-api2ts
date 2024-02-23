@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getUserIdCodesByClassGroupIdUsingGET
-export default function fetchMethod(params: { classGroupId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-mobile-web/api/app/mobile/common/getUserIdCodesByClassGroupId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { classGroupId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/common/getUserIdCodesByClassGroupId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

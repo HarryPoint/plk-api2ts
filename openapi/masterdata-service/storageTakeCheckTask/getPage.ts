@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getPageUsingPOST_31
-export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId: number }) {
-    return http<IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO>({
-        url: "/masterdata-service/storageTakeCheckTask/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO>(
+        {
+            url: "/masterdata-service/storageTakeCheckTask/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 仓库盘点任务分页查询对象
 export interface IWarehouseInventoryTasksPageQueryObjects {

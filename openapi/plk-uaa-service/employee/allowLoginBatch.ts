@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/员工相关/allowLoginBatchUsingPOST
-export default function fetchMethod(data: IEmployeesAllowLoginRequestsInBulk) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/employee/allowLoginBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmployeesAllowLoginRequestsInBulk, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/employee/allowLoginBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 员工批量允许登录请求
 export interface IEmployeesAllowLoginRequestsInBulk {

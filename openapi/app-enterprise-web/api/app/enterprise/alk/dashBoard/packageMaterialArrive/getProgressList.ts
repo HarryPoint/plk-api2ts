@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getPackageMaterialArriveProgressListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListPackageMaterialArrivalProgressVO>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/packageMaterialArrive/getProgressList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListPackageMaterialArrivalProgressVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/packageMaterialArrive/getProgressList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«包装材料到达进度VO»»
 export interface IJSONResultListPackageMaterialArrivalProgressVO {

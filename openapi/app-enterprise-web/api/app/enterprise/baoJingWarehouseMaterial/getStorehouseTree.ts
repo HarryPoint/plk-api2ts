@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getStorehouseTreeUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getStorehouseTree",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getStorehouseTree",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«区域仓库仓位树返回VO»»
 export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {

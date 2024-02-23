@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程版本相关/getByIdNotCheckUsingGET_1
-export default function fetchMethod(params: { enterpriseId: number; id?: number }) {
-    return http<IJSONResultProcessVersionRespondsToVO>({
-        url: "/flow-service/flowPathVersion/getVOByIdNotCheck",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; id?: number }, extraOptions?: any) {
+    return http<IJSONResultProcessVersionRespondsToVO>(
+        {
+            url: "/flow-service/flowPathVersion/getVOByIdNotCheck",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程版本响应VO»
 export interface IJSONResultProcessVersionRespondsToVO {

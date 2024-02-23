@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/saveChildTaskUsingPOST
-export default function fetchMethod(data: IMasterDataBaseEditDTO1) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/kaizenProjectTask/saveChildTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMasterDataBaseEditDTO1, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/kaizenProjectTask/saveChildTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 主数据基础编辑 DTO_1
 export interface IMasterDataBaseEditDTO1 {

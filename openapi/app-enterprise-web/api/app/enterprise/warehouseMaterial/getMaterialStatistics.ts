@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/库存查询相关/getMaterialStatisticsUsingPOST_1
-export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO) {
-    return http<IJSONResultMaterialInventoryStatisticsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/getMaterialStatistics",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, extraOptions?: any) {
+    return http<IJSONResultMaterialInventoryStatisticsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/getMaterialStatistics",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 物料主数据库存搜索VO
 export interface IMaterialMasterDataInventorySearchVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialBaseInfoByIdUsingPOST
-export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return http<IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO>({
-        url: "/masterdata-service/material/getMaterialBaseInfoById",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+    return http<IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO>(
+        {
+            url: "/masterdata-service/material/getMaterialBaseInfoById",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«物料主数据基础信息返回VO»
 export interface IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO {

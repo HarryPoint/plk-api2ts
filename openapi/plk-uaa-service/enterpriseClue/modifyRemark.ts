@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/客户线索相关/modifyRemarkUsingPOST
-export default function fetchMethod(data: ICustomerLeadsUpdateNoteRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/enterpriseClue/modifyRemark",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICustomerLeadsUpdateNoteRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/enterpriseClue/modifyRemark",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 客户线索更新备注请求对象
 export interface ICustomerLeadsUpdateNoteRequestObject {

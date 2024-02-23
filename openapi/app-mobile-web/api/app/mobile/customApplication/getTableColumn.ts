@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/自定义应用相关/getTableColumnUsingGET_6
-export default function fetchMethod(params: { flowPathId: number }) {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/app-mobile-web/api/app/mobile/customApplication/getTableColumn",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/customApplication/getTableColumn",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

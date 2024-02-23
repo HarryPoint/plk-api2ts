@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/getPeriodOptionsUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListstring>({
-        url: "/masterdata-service/fiscalPeriod/getPeriodOptions",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListstring>(
+        {
+            url: "/masterdata-service/fiscalPeriod/getPeriodOptions",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«string»»
 export interface IJSONResultListstring {

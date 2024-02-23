@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/进出料模具相关/setMoveInMoldBatchUsingPOST
-export default function fetchMethod(data: IProductionTaskBatchSetFeedMoldRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/moveInOutMold/setMoveInMoldBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskBatchSetFeedMoldRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/moveInOutMold/setMoveInMoldBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务批量设置进料模具请求DTO
 export interface IProductionTaskBatchSetFeedMoldRequestDTO {

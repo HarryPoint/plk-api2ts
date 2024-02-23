@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/raceAttachmentProvisionTaskUsingPOST
-export default function fetchMethod(data: IRaceAttachmentProvisionTaskRequestDTO) {
-    return http<IJSONResultRaceAttachmentProvisionTaskResponseDTO>({
-        url: "/message-notification-service/sendingEmailRecord/raceAttachmentProvisionTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRaceAttachmentProvisionTaskRequestDTO, extraOptions?: any) {
+    return http<IJSONResultRaceAttachmentProvisionTaskResponseDTO>(
+        {
+            url: "/message-notification-service/sendingEmailRecord/raceAttachmentProvisionTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // RaceAttachmentProvisionTaskRequestDTO
 export interface IRaceAttachmentProvisionTaskRequestDTO {

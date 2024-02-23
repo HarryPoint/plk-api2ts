@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/cancelFavoriteUsingPOST_1
-export default function fetchMethod(data: IEnterpriseRouteCollectionCancelRequestDTO1) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/portalUserFavorite/cancelFavorite",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEnterpriseRouteCollectionCancelRequestDTO1, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/portalUserFavorite/cancelFavorite",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 企业路由收藏取消请求 DTO_1
 export interface IEnterpriseRouteCollectionCancelRequestDTO1 {

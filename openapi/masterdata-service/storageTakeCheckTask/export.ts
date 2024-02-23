@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/exportUsingPOST_32
-export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/storageTakeCheckTask/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/storageTakeCheckTask/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 仓库盘点任务分页查询对象
 export interface IWarehouseInventoryTasksPageQueryObjects {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTableColumnUsingGET_2
-export default function fetchMethod() {
-    return http<IJSONResultListTskStatisticReportTableColumnBO>({
-        url: "/masterdata-service/tskStatistic/queryTableColumn",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListTskStatisticReportTableColumnBO>(
+        {
+            url: "/masterdata-service/tskStatistic/queryTableColumn",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«TskStatisticReportTableColumnBO»»
 export interface IJSONResultListTskStatisticReportTableColumnBO {

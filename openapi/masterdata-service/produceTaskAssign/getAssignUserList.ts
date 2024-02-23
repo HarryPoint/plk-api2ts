@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getAssignUserListUsingGET
-export default function fetchMethod(params: { enterpriseId: number; nameOrCode?: string }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/masterdata-service/produceTaskAssign/getAssignUserList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; nameOrCode?: string }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/masterdata-service/produceTaskAssign/getAssignUserList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

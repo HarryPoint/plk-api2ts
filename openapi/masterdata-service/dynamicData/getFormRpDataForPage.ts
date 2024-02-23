@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFormRpDataForPageUsingPOST
-export default function fetchMethod(data: IProcessAssociationFormSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultProcessAssociationFormQueryReturnsVO>({
-        url: "/masterdata-service/dynamicData/getFormRpDataForPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessAssociationFormSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultProcessAssociationFormQueryReturnsVO>(
+        {
+            url: "/masterdata-service/dynamicData/getFormRpDataForPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程关联表单搜索VO
 export interface IProcessAssociationFormSearchVO {

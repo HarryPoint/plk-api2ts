@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/应用相关/getDefaultConfigUsingGET
-export default function fetchMethod(params: { type: string }) {
-    return http<IJSONResultTheDefaultValueIsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/application/getDefaultConfig",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { type: string }, extraOptions?: any) {
+    return http<IJSONResultTheDefaultValueIsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/application/getDefaultConfig",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程默认配置VO»
 export interface IJSONResultTheDefaultValueIsVO {

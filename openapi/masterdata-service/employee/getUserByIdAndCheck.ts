@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getUserByIdAndCheckUsingGET
-export default function fetchMethod(params: { enterpriseId: number; id: number }) {
-    return http<IJSONResultEmployeeVO>({
-        url: "/masterdata-service/employee/getUserByIdAndCheck",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+    return http<IJSONResultEmployeeVO>(
+        {
+            url: "/masterdata-service/employee/getUserByIdAndCheck",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«员工VO»
 export interface IJSONResultEmployeeVO {

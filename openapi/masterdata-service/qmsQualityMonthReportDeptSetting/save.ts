@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质量月报部门设置相关/saveUsingPOST_7
-export default function fetchMethod(data: IQualityMonthlyReportDepartmentSetUpEditorDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/qmsQualityMonthReportDeptSetting/save",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IQualityMonthlyReportDepartmentSetUpEditorDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/qmsQualityMonthReportDeptSetting/save",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 质量月报部门设置编辑DTO
 export interface IQualityMonthlyReportDepartmentSetUpEditorDTO {

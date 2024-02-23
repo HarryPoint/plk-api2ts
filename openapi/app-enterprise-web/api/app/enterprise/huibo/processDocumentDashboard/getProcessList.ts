@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/慧博工艺文档大屏相关/getProcessListUsingGET
-export default function fetchMethod(params: { areaId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-enterprise-web/api/app/enterprise/huibo/processDocumentDashboard/getProcessList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { areaId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/huibo/processDocumentDashboard/getProcessList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

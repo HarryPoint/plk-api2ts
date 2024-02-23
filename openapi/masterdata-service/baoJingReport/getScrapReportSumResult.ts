@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getScrapReportSumResultUsingPOST
-export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultReportScrapRelatedReturnVO>({
-        url: "/masterdata-service/baoJingReport/getScrapReportSumResult",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultReportScrapRelatedReturnVO>(
+        {
+            url: "/masterdata-service/baoJingReport/getScrapReportSumResult",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 宝晶报表(报废)相关搜索VO
 export interface IBaojingReportScrapRelatedSearchVO {

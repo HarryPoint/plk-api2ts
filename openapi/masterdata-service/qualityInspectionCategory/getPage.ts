@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质检分类/getPageUsingPOST_20
-export default function fetchMethod(data: IInspectionCategorySearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultThePageInformationIsReturnedToVO>({
-        url: "/masterdata-service/qualityInspectionCategory/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IInspectionCategorySearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultThePageInformationIsReturnedToVO>(
+        {
+            url: "/masterdata-service/qualityInspectionCategory/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 质检分类搜索VO
 export interface IInspectionCategorySearchVO {

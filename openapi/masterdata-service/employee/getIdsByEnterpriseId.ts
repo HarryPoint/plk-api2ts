@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByEnterpriseIdUsingGET
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultListlong>({
-        url: "/masterdata-service/employee/getIdsByEnterpriseId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListlong>(
+        {
+            url: "/masterdata-service/employee/getIdsByEnterpriseId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«long»»
 export interface IJSONResultListlong {

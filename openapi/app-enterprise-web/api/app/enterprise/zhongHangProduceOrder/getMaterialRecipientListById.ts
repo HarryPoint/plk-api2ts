@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/中航机器人生产订单相关/getMaterialRecipientListByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder>({
-        url: "/app-enterprise-web/api/app/enterprise/zhongHangProduceOrder/getMaterialRecipientListById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/zhongHangProduceOrder/getMaterialRecipientListById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产订单物料领用响应dto»»
 export interface IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder {

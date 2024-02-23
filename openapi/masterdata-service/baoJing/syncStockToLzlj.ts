@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶相关/syncStockToLzljUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/baoJing/syncStockToLzlj",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/baoJing/syncStockToLzlj",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

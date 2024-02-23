@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产能相关/getByIdsIgnoreStatusUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation) {
-    return http<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects>({
-        url: "/app-enterprise-web/api/app/enterprise/capacity/getByIdsIgnoreStatus",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+    return http<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/capacity/getByIdsIgnoreStatus",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

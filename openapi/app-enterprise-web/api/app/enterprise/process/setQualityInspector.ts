@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工序相关/setQualityInspectorUsingPOST
-export default function fetchMethod(data: ISetExecutorDTO[], params: { id: number }) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/process/setQualityInspector",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISetExecutorDTO[], params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/process/setQualityInspector",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // SetExecutorDTO
 export interface ISetExecutorDTO {

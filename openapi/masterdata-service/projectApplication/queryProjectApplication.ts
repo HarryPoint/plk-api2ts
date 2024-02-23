@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目应用相关/queryProjectApplicationUsingPOST
-export default function fetchMethod(data: IProjectApplicationRequestObject) {
-    return http<ITheJSONResultProjectApplicationReturnsTheObject>({
-        url: "/masterdata-service/projectApplication/queryProjectApplication",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectApplicationRequestObject, extraOptions?: any) {
+    return http<ITheJSONResultProjectApplicationReturnsTheObject>(
+        {
+            url: "/masterdata-service/projectApplication/queryProjectApplication",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目应用请求对象
 export interface IProjectApplicationRequestObject {

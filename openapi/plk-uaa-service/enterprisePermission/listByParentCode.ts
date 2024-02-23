@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/企业权限相关/listByParentCodeUsingGET
-export default function fetchMethod(params: { parentCode: string }) {
-    return http<IJSONResultListEnterprisePermissionResponseDTO>({
-        url: "/plk-uaa-service/enterprisePermission/listByParentCode",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { parentCode: string }, extraOptions?: any) {
+    return http<IJSONResultListEnterprisePermissionResponseDTO>(
+        {
+            url: "/plk-uaa-service/enterprisePermission/listByParentCode",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«企业权限响应 DTO»»
 export interface IJSONResultListEnterprisePermissionResponseDTO {

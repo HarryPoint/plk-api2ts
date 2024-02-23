@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/selectorUsingPOST
-export default function fetchMethod(data: IReportTemplateSelectorQueryConditionDTO) {
-    return http<IJSONResultListReportTemplateQueryResponseDTO>({
-        url: "/masterdata-service/reportTemplate/selector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IReportTemplateSelectorQueryConditionDTO, extraOptions?: any) {
+    return http<IJSONResultListReportTemplateQueryResponseDTO>(
+        {
+            url: "/masterdata-service/reportTemplate/selector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ReportTemplateSelectorQueryConditionDTO
 export interface IReportTemplateSelectorQueryConditionDTO {

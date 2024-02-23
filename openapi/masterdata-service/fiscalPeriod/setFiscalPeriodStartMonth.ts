@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/财务期间相关/setFiscalPeriodStartMonthUsingPOST
-export default function fetchMethod(data: ISetTheStartMonthRequestDuringThePeriod) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/fiscalPeriod/setFiscalPeriodStartMonth",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISetTheStartMonthRequestDuringThePeriod, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/fiscalPeriod/setFiscalPeriodStartMonth",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 设置期间开始月份Request
 export interface ISetTheStartMonthRequestDuringThePeriod {

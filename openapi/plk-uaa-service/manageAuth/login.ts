@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/运营管理端授权相关/loginUsingPOST
-export default function fetchMethod(data: ILoginRequestDTO) {
-    return http<IJSONResultLoginResponseDTO>({
-        url: "/plk-uaa-service/manageAuth/login",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ILoginRequestDTO, extraOptions?: any) {
+    return http<IJSONResultLoginResponseDTO>(
+        {
+            url: "/plk-uaa-service/manageAuth/login",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 登录请求 DTO
 export interface ILoginRequestDTO {

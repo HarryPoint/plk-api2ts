@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/bindMaterialUsingPOST
-export default function fetchMethod(data: ITheViVBatchPrintTemplateBindsTheMaterialRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/weiLianLotPrintTemplate/bindMaterial",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheViVBatchPrintTemplateBindsTheMaterialRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/weiLianLotPrintTemplate/bindMaterial",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 维联批次打印模板绑定物料请求对象
 export interface ITheViVBatchPrintTemplateBindsTheMaterialRequestObject {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表格相关/listBySerialNoListUsingPOST
-export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/flow-service/flowPathTableColumn/listBySerialNoList",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: string[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/flow-service/flowPathTableColumn/listBySerialNoList",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

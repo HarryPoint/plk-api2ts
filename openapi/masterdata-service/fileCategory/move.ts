@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/moveUsingPOST
-export default function fetchMethod(data: IFileCategoryMoveRequestDTO) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/fileCategory/move",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFileCategoryMoveRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/fileCategory/move",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // FileCategoryMoveRequestDTO
 export interface IFileCategoryMoveRequestDTO {

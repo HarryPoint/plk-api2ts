@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/saveSettingUsingPOST_1
-export default function fetchMethod(data: IProjectLargeScreenSettingsSaveRequestDto1) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/projectDashboardSetting/saveSetting",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectLargeScreenSettingsSaveRequestDto1, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/projectDashboardSetting/saveSetting",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目大屏设置保存请求dto_1
 export interface IProjectLargeScreenSettingsSaveRequestDto1 {

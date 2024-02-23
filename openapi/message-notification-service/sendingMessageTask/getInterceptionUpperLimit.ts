@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/getInterceptionUpperLimitUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultint>({
-        url: "/message-notification-service/sendingMessageTask/getInterceptionUpperLimit",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultint>(
+        {
+            url: "/message-notification-service/sendingMessageTask/getInterceptionUpperLimit",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«int»
 export interface IJSONResultint {

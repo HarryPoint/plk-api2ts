@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/编码规则相关/getForPageUsingPOST_14
-export default function fetchMethod(data: ICodeRulePagingQueryVO) {
-    return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/numberRule/getForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICodeRulePagingQueryVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/numberRule/getForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 编码规则分页查询VO
 export interface ICodeRulePagingQueryVO {

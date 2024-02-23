@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/getAllProcessOperateUserIdsUsingPOST
-export default function fetchMethod(data: IProcessOperatorIdSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListlong>({
-        url: "/masterdata-service/processTaskSetting/getAllProcessOperateUserIds",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessOperatorIdSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListlong>(
+        {
+            url: "/masterdata-service/processTaskSetting/getAllProcessOperateUserIds",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工序操作人员id搜索VO
 export interface IProcessOperatorIdSearchVO {

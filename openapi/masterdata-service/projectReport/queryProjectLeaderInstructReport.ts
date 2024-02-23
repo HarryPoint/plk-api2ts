@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectLeaderInstructReportUsingPOST
-export default function fetchMethod(data: QueryProjectLeaderInstructReport) {
-    return http<IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject>({
-        url: "/masterdata-service/projectReport/queryProjectLeaderInstructReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: QueryProjectLeaderInstructReport, extraOptions?: any) {
+    return http<IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject>(
+        {
+            url: "/masterdata-service/projectReport/queryProjectLeaderInstructReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«分页信息«项目领导批示报表响应对象»»
 export interface IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject {

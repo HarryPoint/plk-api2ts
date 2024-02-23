@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskByNoUsingGET_1
-export default function fetchMethod(params: { taskNo: string }) {
-    return http<IJSONResultTheProductionTaskReturnsVOForEmployeeDetails>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByNo",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { taskNo: string }, extraOptions?: any) {
+    return http<IJSONResultTheProductionTaskReturnsVOForEmployeeDetails>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByNo",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产任务针对员工详情返回VO»
 export interface IJSONResultTheProductionTaskReturnsVOForEmployeeDetails {

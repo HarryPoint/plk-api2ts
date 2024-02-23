@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/batchSendingEmailMessageUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/sendingMessageTask/batchSendingEmailMessage",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/sendingMessageTask/batchSendingEmailMessage",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»
 export interface IJSONResultstring {

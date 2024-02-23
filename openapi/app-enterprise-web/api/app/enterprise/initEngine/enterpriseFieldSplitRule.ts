@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎-企业字段分割规则/queryAllEnterpriseFieldSplitRuleUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListEnterpriseFieldSplitRule>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/enterpriseFieldSplitRule",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListEnterpriseFieldSplitRule>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/enterpriseFieldSplitRule",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«企业字段拆分规则»»
 export interface IJSONResultListEnterpriseFieldSplitRule {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件内容模板/addUsingPOST_1
-export default function fetchMethod(data: IEmailContentTemplateAddRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/message-notification-service/emailContentTemplate/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmailContentTemplateAddRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/message-notification-service/emailContentTemplate/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EmailContentTemplateAddRequestDTO
 export interface IEmailContentTemplateAddRequestDTO {

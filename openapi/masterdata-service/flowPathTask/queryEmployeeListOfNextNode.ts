@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/queryEmployeeListOfNextNodeUsingPOST
-export default function fetchMethod(data: IPageBreaks4) {
-    return http<IJSONResultListEmployeeResponseObject>({
-        url: "/masterdata-service/flowPathTask/queryEmployeeListOfNextNode",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPageBreaks4, extraOptions?: any) {
+    return http<IJSONResultListEmployeeResponseObject>(
+        {
+            url: "/masterdata-service/flowPathTask/queryEmployeeListOfNextNode",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_4
 export interface IPageBreaks4 {

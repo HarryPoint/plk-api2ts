@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/设备数采数据概览相关/getDataDetailForPageUsingPOST
-export default function fetchMethod(data: IDeviceDataAcquisitionDataListSearchVO) {
-    return http<IJSONResultTheDeviceDataCollectionDetailsAreReturnedToVO>({
-        url: "/app-enterprise-web/api/app/enterprise/deviceCollection/getDataDetailForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDeviceDataAcquisitionDataListSearchVO, extraOptions?: any) {
+    return http<IJSONResultTheDeviceDataCollectionDetailsAreReturnedToVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/deviceCollection/getDataDetailForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 设备数采数据详单搜索VO
 export interface IDeviceDataAcquisitionDataListSearchVO {

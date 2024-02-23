@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByFlowPathVersionIdUsingGET
-export default function fetchMethod(params: { flowPathVersionId: number }) {
-    return http<IJSONResultProcessNodeDTO>({
-        url: "/flow-service/flowPathNode/getByFlowPathVersionId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathVersionId: number }, extraOptions?: any) {
+    return http<IJSONResultProcessNodeDTO>(
+        {
+            url: "/flow-service/flowPathNode/getByFlowPathVersionId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程节点DTO»
 export interface IJSONResultProcessNodeDTO {

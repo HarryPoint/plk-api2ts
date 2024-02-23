@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/关键参数相关/getSelectorOptionSearchUsingPOST_1
-export default function fetchMethod(data: ISelectTheKeyParameterDropDownListToSearchForDtos) {
-    return http<IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos>({
-        url: "/masterdata-service/keyparameter/getSelectorOptionSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISelectTheKeyParameterDropDownListToSearchForDtos, extraOptions?: any) {
+    return http<IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos>(
+        {
+            url: "/masterdata-service/keyparameter/getSelectorOptionSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 关键参数下拉选择列表搜索DTO
 export interface ISelectTheKeyParameterDropDownListToSearchForDtos {

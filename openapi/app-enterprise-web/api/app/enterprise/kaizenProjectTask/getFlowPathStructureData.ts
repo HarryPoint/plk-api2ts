@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/项目任务相关/getFlowPathStructureDataUsingPOST_18
-export default function fetchMethod(data: IProcessStructureSearchVO) {
-    return http<IJSONResultFormStructureVO>({
-        url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getFlowPathStructureData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessStructureSearchVO, extraOptions?: any) {
+    return http<IJSONResultFormStructureVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getFlowPathStructureData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {

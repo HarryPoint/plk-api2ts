@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/未排产订单相关/getClassShiftIdsByScheduleDateUsingPOST
-export default function fetchMethod(data: ISchedulingDateDTO) {
-    return http<IJSONResultSetlong>({
-        url: "/app-enterprise-web/api/app/enterprise/notPlan/getClassShiftIdsByScheduleDate",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISchedulingDateDTO, extraOptions?: any) {
+    return http<IJSONResultSetlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/notPlan/getClassShiftIdsByScheduleDate",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 排班日期DTO
 export interface ISchedulingDateDTO {

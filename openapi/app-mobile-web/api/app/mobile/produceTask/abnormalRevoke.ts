@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/abnormalRevokeUsingPOST
-export default function fetchMethod(data: IIdInformation) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/abnormalRevoke",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/abnormalRevoke",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id信息
 export interface IIdInformation {

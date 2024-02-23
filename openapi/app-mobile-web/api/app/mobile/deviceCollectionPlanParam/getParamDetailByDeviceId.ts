@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/设备数采数据方案参数关联相关/getParamDetailByDeviceIdUsingGET
-export default function fetchMethod(params: { deviceId: number }) {
-    return http<IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO>({
-        url: "/app-mobile-web/api/app/mobile/deviceCollectionPlanParam/getParamDetailByDeviceId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { deviceId: number }, extraOptions?: any) {
+    return http<IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/deviceCollectionPlanParam/getParamDetailByDeviceId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«设备数采方案参数关联信息返回VO»»
 export interface IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO {

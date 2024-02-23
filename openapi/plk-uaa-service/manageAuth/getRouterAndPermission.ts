@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/运营管理端授权相关/getRouterAndPermissionUsingPOST
-export default function fetchMethod(data: IRouteQuery) {
-    return http<IJSONResultOperationRoutePermissionResponseDTO>({
-        url: "/plk-uaa-service/manageAuth/getRouterAndPermission",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRouteQuery, extraOptions?: any) {
+    return http<IJSONResultOperationRoutePermissionResponseDTO>(
+        {
+            url: "/plk-uaa-service/manageAuth/getRouterAndPermission",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 路由查询
 export interface IRouteQuery {

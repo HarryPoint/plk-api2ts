@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/getAggregateResultUsingPOST
-export default function fetchMethod(data: IPanpanReportsStatisticsToQueryObjects) {
-    return http<IJSONResultReportStatisticsSummaryResponseObject>({
-        url: "/masterdata-service/panPanReportStatistic/getAggregateResult",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPanpanReportsStatisticsToQueryObjects, extraOptions?: any) {
+    return http<IJSONResultReportStatisticsSummaryResponseObject>(
+        {
+            url: "/masterdata-service/panPanReportStatistic/getAggregateResult",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 盼盼上报统计查询对象
 export interface IPanpanReportsStatisticsToQueryObjects {

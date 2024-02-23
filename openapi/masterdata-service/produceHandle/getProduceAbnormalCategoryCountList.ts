@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryCountListUsingPOST
-export default function fetchMethod(data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId: number }) {
-    return http<IJSONResultListProductionExceptionTypeStatisticsVO>({
-        url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryCountList",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProductionExceptionTypeStatisticsVO>(
+        {
+            url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryCountList",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产异常类型统计VO_1
 export interface IProductionExceptionTypeStatisticsVO1 {

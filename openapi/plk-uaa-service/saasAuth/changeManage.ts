@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeManageUsingPOST
-export default function fetchMethod(data: ITransferSuperAdministratorDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/saasAuth/changeManage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITransferSuperAdministratorDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/saasAuth/changeManage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 转让超级管理员 DTO
 export interface ITransferSuperAdministratorDTO {

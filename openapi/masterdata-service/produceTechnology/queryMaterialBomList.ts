@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产工艺相关/queryMaterialBomListUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListProduceTechnologyMaterialBomDTO>({
-        url: "/masterdata-service/produceTechnology/queryMaterialBomList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListProduceTechnologyMaterialBomDTO>(
+        {
+            url: "/masterdata-service/produceTechnology/queryMaterialBomList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProduceTechnologyMaterialBomDTO»»
 export interface IJSONResultListProduceTechnologyMaterialBomDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/copyByIdsUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListStandardProcessCodingRulesCopyResponseDtos>({
-        url: "/masterdata-service/standardTechnologyCodeRule/copyByIds",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListStandardProcessCodingRulesCopyResponseDtos>(
+        {
+            url: "/masterdata-service/standardTechnologyCodeRule/copyByIds",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«标准工艺编码规则复制响应 DTO»»
 export interface IJSONResultListStandardProcessCodingRulesCopyResponseDtos {

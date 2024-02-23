@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/慧博工艺文档大屏相关/getDashboardUsingPOST
-export default function fetchMethod(data: IProcessDocumentLargeScreenQueryDTO) {
-    return http<IJSONResultProcessDocumentLargeScreenResultVO>({
-        url: "/app-enterprise-web/api/app/enterprise/huibo/processDocumentDashboard/getDashboard",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDocumentLargeScreenQueryDTO, extraOptions?: any) {
+    return http<IJSONResultProcessDocumentLargeScreenResultVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/huibo/processDocumentDashboard/getDashboard",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工艺文档大屏查询DTO
 export interface IProcessDocumentLargeScreenQueryDTO {

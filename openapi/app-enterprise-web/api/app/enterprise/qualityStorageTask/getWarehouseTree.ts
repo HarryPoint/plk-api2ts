@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检管理/getWarehouseTreeUsingGET_2
-export default function fetchMethod() {
-    return http<IJSONResultListWarehouseLocationTreeReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getWarehouseTree",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListWarehouseLocationTreeReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getWarehouseTree",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«仓库仓位树返回VO»»
 export interface IJSONResultListWarehouseLocationTreeReturnsVO {

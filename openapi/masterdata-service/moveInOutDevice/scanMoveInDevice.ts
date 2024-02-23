@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/scanMoveInDeviceUsingPOST
-export default function fetchMethod(data: IFeedDeviceScanRequestDTO) {
-    return http<IJSONResultFeedDeviceRespondsToDTO>({
-        url: "/masterdata-service/moveInOutDevice/scanMoveInDevice",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFeedDeviceScanRequestDTO, extraOptions?: any) {
+    return http<IJSONResultFeedDeviceRespondsToDTO>(
+        {
+            url: "/masterdata-service/moveInOutDevice/scanMoveInDevice",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料设备扫描请求DTO
 export interface IFeedDeviceScanRequestDTO {

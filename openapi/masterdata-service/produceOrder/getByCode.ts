@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/getByCodeUsingGET
-export default function fetchMethod(params: { code: string }) {
-    return http<IJSONResultProductionOrder>({
-        url: "/masterdata-service/produceOrder/getByCode",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { code: string }, extraOptions?: any) {
+    return http<IJSONResultProductionOrder>(
+        {
+            url: "/masterdata-service/produceOrder/getByCode",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产订单»
 export interface IJSONResultProductionOrder {

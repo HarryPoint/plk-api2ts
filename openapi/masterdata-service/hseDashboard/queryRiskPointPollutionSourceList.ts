@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryRiskPointPollutionSourceListUsingPOST
-export default function fetchMethod(data: IRiskPointPollutionSourceQueryRequest) {
-    return http<IJSONResultListIndicatesTheResponseToTheSourceQueryAtTheRiskPoint>({
-        url: "/masterdata-service/hseDashboard/queryRiskPointPollutionSourceList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRiskPointPollutionSourceQueryRequest, extraOptions?: any) {
+    return http<IJSONResultListIndicatesTheResponseToTheSourceQueryAtTheRiskPoint>(
+        {
+            url: "/masterdata-service/hseDashboard/queryRiskPointPollutionSourceList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 风险点污染源查询请求
 export interface IRiskPointPollutionSourceQueryRequest {

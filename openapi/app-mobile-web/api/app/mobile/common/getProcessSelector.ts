@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/公共相关/getProcessSelectorUsingGET
-export default function fetchMethod(params: { nameOrCode?: string }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-mobile-web/api/app/mobile/common/getProcessSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { nameOrCode?: string }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/common/getProcessSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

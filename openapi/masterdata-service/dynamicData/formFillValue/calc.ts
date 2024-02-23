@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/calcFormFillValueUsingPOST
-export default function fetchMethod(data: IFormFillRequest, params: { enterpriseId: number }) {
-    return http<IJSONResultListJSONObject>({
-        url: "/masterdata-service/dynamicData/formFillValue/calc",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IFormFillRequest, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/masterdata-service/dynamicData/formFillValue/calc",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 表单填充请求
 export interface IFormFillRequest {

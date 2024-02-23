@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/matchStandardTechnologyUsingPOST
-export default function fetchMethod(data: IStandardTechnologyMatchRequestDTO) {
-    return http<IJSONResultStandardTechnologyMatchResponseDTO>({
-        url: "/masterdata-service/produceOrder/matchStandardTechnology",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardTechnologyMatchRequestDTO, extraOptions?: any) {
+    return http<IJSONResultStandardTechnologyMatchResponseDTO>(
+        {
+            url: "/masterdata-service/produceOrder/matchStandardTechnology",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // StandardTechnologyMatchRequestDTO
 export interface IStandardTechnologyMatchRequestDTO {

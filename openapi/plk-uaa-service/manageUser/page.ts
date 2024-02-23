@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/运营账号相关/pageUsingPOST_4
-export default function fetchMethod(data: IAccountInquiry) {
-    return http<IJSONResultPageInformationOperationUserInformationResponse>({
-        url: "/plk-uaa-service/manageUser/page",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAccountInquiry, extraOptions?: any) {
+    return http<IJSONResultPageInformationOperationUserInformationResponse>(
+        {
+            url: "/plk-uaa-service/manageUser/page",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 账号查询
 export interface IAccountInquiry {

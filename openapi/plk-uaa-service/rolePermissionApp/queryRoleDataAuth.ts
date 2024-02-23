@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/queryRoleDataAuthUsingPOST
-export default function fetchMethod(data: IRoleQuery1) {
-    return http<IJSONResultListEnterpriseRolePermissionResponse>({
-        url: "/plk-uaa-service/rolePermissionApp/queryRoleDataAuth",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRoleQuery1, extraOptions?: any) {
+    return http<IJSONResultListEnterpriseRolePermissionResponse>(
+        {
+            url: "/plk-uaa-service/rolePermissionApp/queryRoleDataAuth",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 角色查询_1
 export interface IRoleQuery1 {

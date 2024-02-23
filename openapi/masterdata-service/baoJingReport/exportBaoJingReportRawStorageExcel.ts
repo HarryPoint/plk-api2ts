@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportRawStorageExcelUsingPOST
-export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/baoJingReport/exportBaoJingReportRawStorageExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/baoJingReport/exportBaoJingReportRawStorageExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 宝晶报表(库存)相关搜索DTO
 export interface IBaojingReportInventoryRelatedSearchDTO {

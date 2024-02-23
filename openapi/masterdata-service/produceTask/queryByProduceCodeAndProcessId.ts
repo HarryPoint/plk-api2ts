@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryByProduceCodeAndProcessIdUsingGET
-export default function fetchMethod(params: { processId: number; produceOrderCode: string }) {
-    return http<IJSONResultListProduceTaskVO>({
-        url: "/masterdata-service/produceTask/queryByProduceCodeAndProcessId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { processId: number; produceOrderCode: string }, extraOptions?: any) {
+    return http<IJSONResultListProduceTaskVO>(
+        {
+            url: "/masterdata-service/produceTask/queryByProduceCodeAndProcessId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProduceTaskVO»»
 export interface IJSONResultListProduceTaskVO {

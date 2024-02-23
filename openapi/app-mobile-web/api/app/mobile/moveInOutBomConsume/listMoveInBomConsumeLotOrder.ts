@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeLotOrderUsingPOST
-export default function fetchMethod(data: IIncomingBomConsumptionBatchOrderQueryDTO) {
-    return http<IJSONResultListIncomingBomConsumedBatchResponseDTO>({
-        url: "/app-mobile-web/api/app/mobile/moveInOutBomConsume/listMoveInBomConsumeLotOrder",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIncomingBomConsumptionBatchOrderQueryDTO, extraOptions?: any) {
+    return http<IJSONResultListIncomingBomConsumedBatchResponseDTO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/moveInOutBomConsume/listMoveInBomConsumeLotOrder",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料bom消耗批次订单查询DTO
 export interface IIncomingBomConsumptionBatchOrderQueryDTO {

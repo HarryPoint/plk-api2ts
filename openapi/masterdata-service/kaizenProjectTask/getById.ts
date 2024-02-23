@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/getByIdUsingGET_5
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultKaizenProjectTaskResponseDTO>({
-        url: "/masterdata-service/kaizenProjectTask/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultKaizenProjectTaskResponseDTO>(
+        {
+            url: "/masterdata-service/kaizenProjectTask/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«KaizenProjectTaskResponseDTO»
 export interface IJSONResultKaizenProjectTaskResponseDTO {

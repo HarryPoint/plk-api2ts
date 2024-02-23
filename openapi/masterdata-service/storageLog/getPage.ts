@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/库存流水相关/getPageUsingPOST_30
-export default function fetchMethod(data: IInventoryFlowSearchVO, params: { enterpriseId: number; masterDataFlowPathCode: string }) {
-    return http<IJSONResultPagingInformationInventoryReturnsVO>({
-        url: "/masterdata-service/storageLog/getPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IInventoryFlowSearchVO, params: { enterpriseId: number; masterDataFlowPathCode: string }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationInventoryReturnsVO>(
+        {
+            url: "/masterdata-service/storageLog/getPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 库存流水搜索VO
 export interface IInventoryFlowSearchVO {

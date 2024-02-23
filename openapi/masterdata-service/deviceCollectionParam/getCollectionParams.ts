@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/getCollectionParamsUsingGET
-export default function fetchMethod(params: { id: string; enterpriseId: number }) {
-    return http<IJSONResultListDeviceDataCollectionSelectVO>({
-        url: "/masterdata-service/deviceCollectionParam/getCollectionParams",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListDeviceDataCollectionSelectVO>(
+        {
+            url: "/masterdata-service/deviceCollectionParam/getCollectionParams",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«设备数采选择VO»»
 export interface IJSONResultListDeviceDataCollectionSelectVO {

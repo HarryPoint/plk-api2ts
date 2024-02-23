@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/打印模板相关/changValidUsingPOST
-export default function fetchMethod(data: IEnableOrDisableVO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/printtemplate/changValid",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEnableOrDisableVO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/printtemplate/changValid",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 启用or停用VO
 export interface IEnableOrDisableVO {

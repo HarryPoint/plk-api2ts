@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/任务班次相关/exportUsingPOST_1
-export default function fetchMethod(data: ITaskShiftSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/flow-service/flowPathShift/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ITaskShiftSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/flow-service/flowPathShift/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 任务班次搜索VO
 export interface ITaskShiftSearchVO {

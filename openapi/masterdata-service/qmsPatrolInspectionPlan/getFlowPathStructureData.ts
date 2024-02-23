@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/巡检计划相关/getFlowPathStructureDataUsingPOST_12
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { flowPathId: number }) {
-    return http<IJSONResultDynamicDataResponseDtoOfTheInspectionPlan>({
-        url: "/masterdata-service/qmsPatrolInspectionPlan/getFlowPathStructureData",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessStructureSearchVO, params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultDynamicDataResponseDtoOfTheInspectionPlan>(
+        {
+            url: "/masterdata-service/qmsPatrolInspectionPlan/getFlowPathStructureData",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程结构搜索VO
 export interface IProcessStructureSearchVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCurrentMonthCumulativeProposalIndicatorsUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultCumulativeProposalIndicatorsResponseDTO>({
-        url: "/masterdata-service/proposalDashboard/getCurrentMonthCumulativeProposalIndicators",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultCumulativeProposalIndicatorsResponseDTO>(
+        {
+            url: "/masterdata-service/proposalDashboard/getCurrentMonthCumulativeProposalIndicators",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«CumulativeProposalIndicatorsResponseDTO»
 export interface IJSONResultCumulativeProposalIndicatorsResponseDTO {

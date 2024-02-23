@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/库存统计（原材料）日报表/exportBaoJingReportRawStorageExcelUsingPOST
-export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/baoJingReportRawStorage/exportBaoJingReportRawStorageExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/baoJingReportRawStorage/exportBaoJingReportRawStorageExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 宝晶报表(库存)相关搜索DTO
 export interface IBaojingReportInventoryRelatedSearchDTO {

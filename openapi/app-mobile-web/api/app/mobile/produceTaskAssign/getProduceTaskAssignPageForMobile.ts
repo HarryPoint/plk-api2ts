@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务分配相关/getProduceTaskAssignPageForMobileUsingPOST
-export default function fetchMethod(data: IProductionTaskAssignmentQueryVOForMobile) {
-    return http<IJSONResultPageInformationProductionTaskAssignmentVOForMobile>({
-        url: "/app-mobile-web/api/app/mobile/produceTaskAssign/getProduceTaskAssignPageForMobile",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskAssignmentQueryVOForMobile, extraOptions?: any) {
+    return http<IJSONResultPageInformationProductionTaskAssignmentVOForMobile>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTaskAssign/getProduceTaskAssignPageForMobile",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务分配查询VO -- 针对mobile
 export interface IProductionTaskAssignmentQueryVOForMobile {

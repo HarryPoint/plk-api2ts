@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产出报表(按班组统计)相关/getExportTicketUsingPOST_11
-export default function fetchMethod(data: IOutputClassReportSearchVO) {
-    return http<IJSONResultExportedTicketInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/produceClassGroupReport/getExportTicket",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IOutputClassReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultExportedTicketInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceClassGroupReport/getExportTicket",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产出类报表搜索VO
 export interface IOutputClassReportSearchVO {

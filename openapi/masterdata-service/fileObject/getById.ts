@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/getByIdUsingGET_4
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultFileObjectDetailResponseDTO>({
-        url: "/masterdata-service/fileObject/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultFileObjectDetailResponseDTO>(
+        {
+            url: "/masterdata-service/fileObject/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«文件对象明细响应DTO»
 export interface IJSONResultFileObjectDetailResponseDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/采购明细报表相关/exportDifengPurchaseDetailsReportUsingPOST
-export default function fetchMethod(data: ExportDifengPurchaseDetailsReport) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/purchaseDetailsReport/exportDifengPurchaseDetailsReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ExportDifengPurchaseDetailsReport, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/purchaseDetailsReport/exportDifengPurchaseDetailsReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

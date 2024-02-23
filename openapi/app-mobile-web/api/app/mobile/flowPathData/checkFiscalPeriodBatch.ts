@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/流程数据相关/checkFiscalPeriodBatchUsingPOST
-export default function fetchMethod(data: IFiscalPeriodCheckRequestDTO[]) {
-    return http<IJSONResultListFiscalPeriodCheckResponseDTO>({
-        url: "/app-mobile-web/api/app/mobile/flowPathData/checkFiscalPeriodBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFiscalPeriodCheckRequestDTO[], extraOptions?: any) {
+    return http<IJSONResultListFiscalPeriodCheckResponseDTO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/flowPathData/checkFiscalPeriodBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // FiscalPeriodCheckRequestDTO
 export interface IFiscalPeriodCheckRequestDTO {

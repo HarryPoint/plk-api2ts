@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProduceOrderIdProducePlanRpMapUsingPOST
-export default function fetchMethod(data: number[], params: { enterpriseId: number }) {
-    return http<IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO>({
-        url: "/masterdata-service/producePlan/getProduceOrderIdProducePlanRpMap",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO>(
+        {
+            url: "/masterdata-service/producePlan/getProduceOrderIdProducePlanRpMap",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«Map«long,生产计划生产订单关联VO»»
 export interface IJSONResultMaplongAProductionPlanAssociatesAProductionOrderWithVO {

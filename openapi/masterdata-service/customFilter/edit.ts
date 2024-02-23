@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/自定义筛选项相关/editUsingPOST_2
-export default function fetchMethod(data: ICustomFiltersEditTheListObjectDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/customFilter/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICustomFiltersEditTheListObjectDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/customFilter/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 自定义筛选项编辑list对象DTO
 export interface ICustomFiltersEditTheListObjectDTO {

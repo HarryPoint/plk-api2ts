@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/销售订单相关/getMasterMaterialByIdListUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListInformationAboutTheMainMaterialsOfAProductionOrder>({
-        url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/getMasterMaterialByIdList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListInformationAboutTheMainMaterialsOfAProductionOrder>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/getMasterMaterialByIdList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«转生产订单主物料信息»»
 export interface IJSONResultListInformationAboutTheMainMaterialsOfAProductionOrder {

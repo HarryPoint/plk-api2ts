@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/客户跟进日历相关/listUsingPOST
-export default function fetchMethod(data: ICustomerFollowUpCalendarInputVO) {
-    return http<IJSONResultListCustomerFollowUpCalendarOutputVO>({
-        url: "/app-enterprise-web/api/app/enterprise/customerFollowUpCalendar/list",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICustomerFollowUpCalendarInputVO, extraOptions?: any) {
+    return http<IJSONResultListCustomerFollowUpCalendarOutputVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/customerFollowUpCalendar/list",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // CustomerFollowUpCalendarInputVO
 export interface ICustomerFollowUpCalendarInputVO {

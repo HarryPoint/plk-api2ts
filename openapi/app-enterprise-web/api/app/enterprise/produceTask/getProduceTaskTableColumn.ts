@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产任务相关/getProduceTaskTableColumnUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListTableColumnDTOForExportingProductionTasks>({
-        url: "/app-enterprise-web/api/app/enterprise/produceTask/getProduceTaskTableColumn",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListTableColumnDTOForExportingProductionTasks>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceTask/getProduceTaskTableColumn",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产任务导出表格列DTO»»
 export interface IJSONResultListTableColumnDTOForExportingProductionTasks {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getDetailByIdUsingGET_3
-export default function fetchMethod(params: { id: string; isCheckHandleUser?: string }) {
-    return http<IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getDetailById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string; isCheckHandleUser?: string }, extraOptions?: any) {
+    return http<IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getDetailById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«仓库盘点任务详情返回DTO»
 export interface IJSONResultReturnTheDetailsOfTheWarehouseInventoryTaskToTheDTO {

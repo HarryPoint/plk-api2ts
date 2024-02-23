@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProducePrintTagUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListProducePrintTagVO>({
-        url: "/masterdata-service/produceOrder/producePrintTag/batchGet",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListProducePrintTagVO>(
+        {
+            url: "/masterdata-service/produceOrder/producePrintTag/batchGet",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProducePrintTagVO»»
 export interface IJSONResultListProducePrintTagVO {

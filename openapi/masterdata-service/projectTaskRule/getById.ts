@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/getByIdUsingGET_12
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultProjectTaskRuleDetailResponseDTO>({
-        url: "/masterdata-service/projectTaskRule/getById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultProjectTaskRuleDetailResponseDTO>(
+        {
+            url: "/masterdata-service/projectTaskRule/getById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«项目任务规则明细响应DTO»
 export interface IJSONResultProjectTaskRuleDetailResponseDTO {

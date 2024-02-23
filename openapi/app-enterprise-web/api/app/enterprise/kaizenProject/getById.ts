@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/项目相关/getByIdUsingPOST_1
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultKaizenProjectResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/kaizenProject/getById",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultKaizenProjectResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/kaizenProject/getById",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«KaizenProjectResponseDTO»
 export interface IJSONResultKaizenProjectResponseDTO {

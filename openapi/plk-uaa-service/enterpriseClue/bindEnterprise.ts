@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/客户线索相关/bindEnterpriseUsingPOST
-export default function fetchMethod(data: ICustomerLeadsUpdateTheEnterpriseRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/enterpriseClue/bindEnterprise",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICustomerLeadsUpdateTheEnterpriseRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/enterpriseClue/bindEnterprise",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 客户线索更新企业请求对象
 export interface ICustomerLeadsUpdateTheEnterpriseRequestObject {

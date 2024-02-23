@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/existsDeviceMaintainTaskUsingPOST
-export default function fetchMethod(data: IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO) {
-    return http<IJSONResultListDevicePersonnelCapabilityWhetherATaskResponseDTOExists>({
-        url: "/masterdata-service/deviceEmployeeCapacity/existsDeviceMaintainTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListDevicePersonnelCapabilityWhetherATaskResponseDTOExists>(
+        {
+            url: "/masterdata-service/deviceEmployeeCapacity/existsDeviceMaintainTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 设备人员能力是否存在任务请求DTO
 export interface IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO {

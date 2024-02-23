@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchUseSerialNoForOutStockUsingPOST
-export default function fetchMethod(data: string[]) {
-    return http<IJSONResultTheBatchNumberIsDTO1>({
-        url: "/masterdata-service/lotSerialNo/batchUseSerialNoForOutStock",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: string[], extraOptions?: any) {
+    return http<IJSONResultTheBatchNumberIsDTO1>(
+        {
+            url: "/masterdata-service/lotSerialNo/batchUseSerialNoForOutStock",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«批次号使用DTO»_1
 export interface IJSONResultTheBatchNumberIsDTO1 {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/addUsingPOST_6
-export default function fetchMethod(data: IReportTemplateAddRequestDTO) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/reportTemplate/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IReportTemplateAddRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/reportTemplate/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ReportTemplateAddRequestDTO
 export interface IReportTemplateAddRequestDTO {

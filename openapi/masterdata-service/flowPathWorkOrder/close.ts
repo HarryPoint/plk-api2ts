@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程工单相关/closeUsingPOST
-export default function fetchMethod(data: IWorkOrderCloseRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/flowPathWorkOrder/close",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IWorkOrderCloseRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/flowPathWorkOrder/close",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // WorkOrderCloseRequestDTO
 export interface IWorkOrderCloseRequestDTO {

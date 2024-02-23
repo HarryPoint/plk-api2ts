@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/批次方案相关/getSelectorOptionSearchUsingPOST
-export default function fetchMethod(data: IPage2) {
-    return http<ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInformation>({
-        url: "/app-mobile-web/api/app/mobile/lotSerialNumberPlan/getSelectorOptionSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPage2, extraOptions?: any) {
+    return http<ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/app-mobile-web/api/app/mobile/lotSerialNumberPlan/getSelectorOptionSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_2
 export interface IPage2 {

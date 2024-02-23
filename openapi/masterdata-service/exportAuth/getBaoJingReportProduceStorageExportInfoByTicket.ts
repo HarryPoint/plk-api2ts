@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportProduceStorageExportInfoByTicketUsingGET
-export default function fetchMethod(params: { ticket: string }) {
-    return http<IJSONResultExportInformationBaojingReportProductDailyReportResponseObject>({
-        url: "/masterdata-service/exportAuth/getBaoJingReportProduceStorageExportInfoByTicket",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+    return http<IJSONResultExportInformationBaojingReportProductDailyReportResponseObject>(
+        {
+            url: "/masterdata-service/exportAuth/getBaoJingReportProduceStorageExportInfoByTicket",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«导出信息«宝晶报表(成品日报表)响应对象»»
 export interface IJSONResultExportInformationBaojingReportProductDailyReportResponseObject {

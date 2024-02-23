@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/物料收发汇总报表相关/exportMaterialStorageInOutReportUsingPOST
-export default function fetchMethod(data: ExportMaterialStorageInOutReport) {
-    return http<IJSONResultlong>({
-        url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/exportMaterialStorageInOutReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ExportMaterialStorageInOutReport, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/exportMaterialStorageInOutReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

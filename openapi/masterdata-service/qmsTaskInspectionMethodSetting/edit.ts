@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设置检验任务的检验方式相关/editUsingPOST_15
-export default function fetchMethod(data: ISetTheCheckTaskCheckModeToRequestTheDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/qmsTaskInspectionMethodSetting/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISetTheCheckTaskCheckModeToRequestTheDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/qmsTaskInspectionMethodSetting/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 设置检验任务检验方式请求DTO
 export interface ISetTheCheckTaskCheckModeToRequestTheDTO {

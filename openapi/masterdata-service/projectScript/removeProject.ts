@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/project-script-controller/removeProjectUsingGET
-export default function fetchMethod(params: { enterpriseId?: number; projectId?: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/projectScript/removeProject",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId?: number; projectId?: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/projectScript/removeProject",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

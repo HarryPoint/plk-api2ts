@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/检验任务检验记录相关/listByPartNumberUsingPOST
-export default function fetchMethod(data: ICheckTaskCheckRecordQueryRequestDTO) {
-    return http<IJSONResultListValidationTaskValidatesTheRecordQueryResponseDTO>({
-        url: "/masterdata-service/qmsInspectionTaskRecordDetail/listByPartNumber",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICheckTaskCheckRecordQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListValidationTaskValidatesTheRecordQueryResponseDTO>(
+        {
+            url: "/masterdata-service/qmsInspectionTaskRecordDetail/listByPartNumber",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 检验任务检验记录查询请求DTO
 export interface ICheckTaskCheckRecordQueryRequestDTO {

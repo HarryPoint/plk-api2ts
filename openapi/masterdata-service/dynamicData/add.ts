@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/addUsingPOST
-export default function fetchMethod(data: IMasterDataBaseEditDTO, params: { flowPathId: number }) {
-    return http<IJSONResultDynamicFormSaveResultBO>({
-        url: "/masterdata-service/dynamicData/add",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IMasterDataBaseEditDTO, params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultDynamicFormSaveResultBO>(
+        {
+            url: "/masterdata-service/dynamicData/add",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {

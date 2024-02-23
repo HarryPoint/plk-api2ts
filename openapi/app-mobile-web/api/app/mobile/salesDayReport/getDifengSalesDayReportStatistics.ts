@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/销售日报表相关/getDifengSalesDayReportStatisticsUsingPOST
-export default function fetchMethod(data: GetDifengSalesDayReportStatistics) {
-    return http<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics>({
-        url: "/app-mobile-web/api/app/mobile/salesDayReport/getDifengSalesDayReportStatistics",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetDifengSalesDayReportStatistics, extraOptions?: any) {
+    return http<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics>(
+        {
+            url: "/app-mobile-web/api/app/mobile/salesDayReport/getDifengSalesDayReportStatistics",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«销售日报表统计返回对象»
 export interface IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics {

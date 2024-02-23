@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInspectionTaskModelStatisticsUsingGET
-export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return http<IJSONResultListReturnsTheModelStatisticsOfTheLargeScreenTestPlan>({
-        url: "/masterdata-service/qmsDashboard/queryInspectionTaskModelStatistics",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
+    return http<IJSONResultListReturnsTheModelStatisticsOfTheLargeScreenTestPlan>(
+        {
+            url: "/masterdata-service/qmsDashboard/queryInspectionTaskModelStatistics",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«大屏检验计划执行型号统计返回»»
 export interface IJSONResultListReturnsTheModelStatisticsOfTheLargeScreenTestPlan {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/合理化建议评分相关/getWorkOrderLogUsingPOST_23
-export default function fetchMethod(data: IJobLogSearchVO) {
-    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>({
-        url: "/app-mobile-web/api/app/mobile/proposalScore/getWorkOrderLog",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IJobLogSearchVO, extraOptions?: any) {
+    return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/proposalScore/getWorkOrderLog",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工单日志搜索VO
 export interface IJobLogSearchVO {

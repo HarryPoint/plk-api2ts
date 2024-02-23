@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getIdBySystemTypeUsingPOST
-export default function fetchMethod(params: { enterpriseId: number; systemType: string }) {
-    return http<IJSONResultlong>({
-        url: "/flow-service/flowPath/getIdBySystemType",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; systemType: string }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/flow-service/flowPath/getIdBySystemType",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

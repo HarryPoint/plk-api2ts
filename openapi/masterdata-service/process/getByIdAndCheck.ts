@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdAndCheckUsingPOST
-export default function fetchMethod(params: { enterpriseId: number; id?: number }) {
-    return http<IJSONResultProcessDeprecatedVO>({
-        url: "/masterdata-service/process/getByIdAndCheck",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; id?: number }, extraOptions?: any) {
+    return http<IJSONResultProcessDeprecatedVO>(
+        {
+            url: "/masterdata-service/process/getByIdAndCheck",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ProcessDeprecatedVO»
 export interface IJSONResultProcessDeprecatedVO {

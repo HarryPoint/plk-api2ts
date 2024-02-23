@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListNotificationField>({
-        url: "/masterdata-service/qmsDashboard/queryNoticeList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListNotificationField>(
+        {
+            url: "/masterdata-service/qmsDashboard/queryNoticeList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«通告栏»»
 export interface IJSONResultListNotificationField {

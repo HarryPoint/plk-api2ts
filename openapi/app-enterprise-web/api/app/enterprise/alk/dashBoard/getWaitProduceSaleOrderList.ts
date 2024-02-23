@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getWaitProduceSaleOrderListUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListSalesVOToBeProduced>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getWaitProduceSaleOrderList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListSalesVOToBeProduced>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getWaitProduceSaleOrderList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«待生产销售单VO»»
 export interface IJSONResultListSalesVOToBeProduced {

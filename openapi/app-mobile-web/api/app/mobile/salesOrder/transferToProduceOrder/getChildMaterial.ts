@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/销售订单相关/getChildMaterialListUsingPOST
-export default function fetchMethod(data: IProductionSubMaterialQueryRequest[]) {
-    return http<IJSONResultListInformationAboutProductionSubMaterials>({
-        url: "/app-mobile-web/api/app/mobile/salesOrder/transferToProduceOrder/getChildMaterial",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionSubMaterialQueryRequest[], extraOptions?: any) {
+    return http<IJSONResultListInformationAboutProductionSubMaterials>(
+        {
+            url: "/app-mobile-web/api/app/mobile/salesOrder/transferToProduceOrder/getChildMaterial",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产子物料查询请求
 export interface IProductionSubMaterialQueryRequest {

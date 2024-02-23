@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/标签设置/editUsingPOST_12
-export default function fetchMethod(data: IProductionLabelEditingDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceTag/edit",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionLabelEditingDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceTag/edit",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产标签编辑DTO
 export interface IProductionLabelEditingDTO {

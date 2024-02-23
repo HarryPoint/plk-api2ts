@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质量追溯/getFormRpDataForPageUsingPOST_1
-export default function fetchMethod(data: IProcessAssociationFormSearchVO) {
-    return http<IJSONResultProcessAssociationFormQueryReturnsVO>({
-        url: "/masterdata-service/qualityTraceability/getFormRpDataForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessAssociationFormSearchVO, extraOptions?: any) {
+    return http<IJSONResultProcessAssociationFormQueryReturnsVO>(
+        {
+            url: "/masterdata-service/qualityTraceability/getFormRpDataForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程关联表单搜索VO
 export interface IProcessAssociationFormSearchVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/企业路由相关/editForAppUsingPOST
-export default function fetchMethod(data: IApplyTheEnterpriseRouteEditRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/enterpriseRouter/editForApp",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IApplyTheEnterpriseRouteEditRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/enterpriseRouter/editForApp",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 应用企业路由编辑请求 DTO
 export interface IApplyTheEnterpriseRouteEditRequestDTO {

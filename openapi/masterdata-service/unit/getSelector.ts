@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/单位相关/getSelectorUsingGET_9
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultListIdNameVO>({
-        url: "/masterdata-service/unit/getSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameVO>(
+        {
+            url: "/masterdata-service/unit/getSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称VO»»
 export interface IJSONResultListIdNameVO {

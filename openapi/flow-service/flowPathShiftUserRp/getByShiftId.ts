@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getByShiftIdUsingGET
-export default function fetchMethod(params: { enterpriseId: number; flowPathShiftId: number }) {
-    return http<IJSONResultListFlowPathShiftUserRpVO>({
-        url: "/flow-service/flowPathShiftUserRp/getByShiftId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; flowPathShiftId: number }, extraOptions?: any) {
+    return http<IJSONResultListFlowPathShiftUserRpVO>(
+        {
+            url: "/flow-service/flowPathShiftUserRp/getByShiftId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«FlowPathShiftUserRpVO»»
 export interface IJSONResultListFlowPathShiftUserRpVO {

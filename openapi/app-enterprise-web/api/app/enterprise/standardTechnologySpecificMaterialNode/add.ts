@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/标准工艺具体物料节点相关/addUsingPOST_9
-export default function fetchMethod(data: ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardProcess) {
-    return http<IJSONResultMaterialBOMEditResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificMaterialNode/add",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardProcess, extraOptions?: any) {
+    return http<IJSONResultMaterialBOMEditResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificMaterialNode/add",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺具体物料节点新增请求对象
 export interface ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardProcess {

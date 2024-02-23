@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/getComputationProgressUsingGET
-export default function fetchMethod(params: { computationTaskId: string }) {
-    return http<IJSONResultProductionCostAccountingProgressResponseObjectDTO>({
-        url: "/masterdata-service/produceCostComputationTask/getComputationProgress",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { computationTaskId: string }, extraOptions?: any) {
+    return http<IJSONResultProductionCostAccountingProgressResponseObjectDTO>(
+        {
+            url: "/masterdata-service/produceCostComputationTask/getComputationProgress",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«生产成本核算进度响应对象DTO»
 export interface IJSONResultProductionCostAccountingProgressResponseObjectDTO {

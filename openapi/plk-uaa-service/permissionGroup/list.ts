@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/权限组相关/listUsingGET_2
-export default function fetchMethod() {
-    return http<IJSONResultListPermissionGroupRespondsToTheDTO>({
-        url: "/plk-uaa-service/permissionGroup/list",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListPermissionGroupRespondsToTheDTO>(
+        {
+            url: "/plk-uaa-service/permissionGroup/list",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«权限组响应 DTO»»
 export interface IJSONResultListPermissionGroupRespondsToTheDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用权限相关/listCopyPermissionUsingGET
-export default function fetchMethod(params: { flowPathId: number }) {
-    return http<IJSONResultListAddsPermissionEdit1>({
-        url: "/flow-service/flowPathPermission/listCopyPermission",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultListAddsPermissionEdit1>(
+        {
+            url: "/flow-service/flowPathPermission/listCopyPermission",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«新增权限编辑»»_1
 export interface IJSONResultListAddsPermissionEdit1 {

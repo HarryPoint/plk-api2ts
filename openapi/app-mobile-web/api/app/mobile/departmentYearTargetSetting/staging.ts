@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/部门年目标设置相关/stagingUsingPOST_1
-export default function fetchMethod(data: IMasterDataBaseEditDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/staging",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IMasterDataBaseEditDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/staging",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 主数据基础编辑 DTO
 export interface IMasterDataBaseEditDTO {

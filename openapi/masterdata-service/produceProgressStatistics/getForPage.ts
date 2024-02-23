@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/getForPageUsingPOST_14
-export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return http<IProduceOrderStatisticsItemDTOJSONResultPagingInformation>({
-        url: "/masterdata-service/produceProgressStatistics/getForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+    return http<IProduceOrderStatisticsItemDTOJSONResultPagingInformation>(
+        {
+            url: "/masterdata-service/produceProgressStatistics/getForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {

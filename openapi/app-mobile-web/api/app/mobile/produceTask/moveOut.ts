@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/moveOutUsingPOST
-export default function fetchMethod(data: IInboundAndOutboundInformationDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/moveOut",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IInboundAndOutboundInformationDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/moveOut",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进出站信息DTO
 export interface IInboundAndOutboundInformationDTO {

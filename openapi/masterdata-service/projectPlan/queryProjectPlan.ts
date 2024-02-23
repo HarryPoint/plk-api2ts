@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/queryProjectPlanUsingPOST
-export default function fetchMethod(data: ITheProjectPlansToApplyResponseObject1) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/projectPlan/queryProjectPlan",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheProjectPlansToApplyResponseObject1, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/projectPlan/queryProjectPlan",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目计划应用响应对象_1
 export interface ITheProjectPlansToApplyResponseObject1 {

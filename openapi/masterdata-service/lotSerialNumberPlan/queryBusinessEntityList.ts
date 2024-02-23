@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/批次方案相关/queryBusinessEntityListUsingGET
-export default function fetchMethod() {
-    return http<ITheJSONResultListProcessRespondsToVO>({
-        url: "/masterdata-service/lotSerialNumberPlan/queryBusinessEntityList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<ITheJSONResultListProcessRespondsToVO>(
+        {
+            url: "/masterdata-service/lotSerialNumberPlan/queryBusinessEntityList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程响应VO»»
 export interface ITheJSONResultListProcessRespondsToVO {

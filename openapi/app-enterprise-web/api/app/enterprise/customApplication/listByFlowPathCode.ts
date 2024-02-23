@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/自定义应用相关/listByFlowPathCodeUsingGET
-export default function fetchMethod(params: { flowPathCode: string }) {
-    return http<IJSONResultListProcessTableColumnVO>({
-        url: "/app-enterprise-web/api/app/enterprise/customApplication/listByFlowPathCode",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { flowPathCode: string }, extraOptions?: any) {
+    return http<IJSONResultListProcessTableColumnVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/customApplication/listByFlowPathCode",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«流程表格列VO»»
 export interface IJSONResultListProcessTableColumnVO {

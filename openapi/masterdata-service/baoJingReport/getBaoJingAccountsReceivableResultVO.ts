@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingAccountsReceivableResultVOUsingPOST
-export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultBaoJingAccountsReceivableAnalysisReportReturnedToVO>({
-        url: "/masterdata-service/baoJingReport/getBaoJingAccountsReceivableResultVO",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultBaoJingAccountsReceivableAnalysisReportReturnedToVO>(
+        {
+            url: "/masterdata-service/baoJingReport/getBaoJingAccountsReceivableResultVO",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 宝晶应收账款分析报表搜索VO
 export interface IBaojingAccountsReceivableAnalysisReportSearchVO {

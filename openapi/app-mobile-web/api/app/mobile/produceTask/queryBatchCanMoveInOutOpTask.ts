@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/queryBatchCanMoveInOutOpTaskUsingPOST
-export default function fetchMethod(data: ITaskBatchOperationDTO1) {
-    return http<IJSONResultIndicatesTheDTOReturnedFromABatchOperationTask>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/queryBatchCanMoveInOutOpTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITaskBatchOperationDTO1, extraOptions?: any) {
+    return http<IJSONResultIndicatesTheDTOReturnedFromABatchOperationTask>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/queryBatchCanMoveInOutOpTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 任务批量操作DTO_1
 export interface ITaskBatchOperationDTO1 {

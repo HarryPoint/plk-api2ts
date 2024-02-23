@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/addOccupyUsingPOST
-export default function fetchMethod(data: ITheOccupiedDTOWasAdded) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/addOccupy",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ITheOccupiedDTOWasAdded, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/addOccupy",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 添加占用DTO
 export interface ITheOccupiedDTOWasAdded {

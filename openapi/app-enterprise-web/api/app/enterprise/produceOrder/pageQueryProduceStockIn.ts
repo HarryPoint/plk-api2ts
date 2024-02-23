@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产订单相关/pageQueryProduceStockInUsingPOST
-export default function fetchMethod(data: IPaging9) {
-    return http<IProductionStockInQueryResponseDTOJSONResultPagingInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/produceOrder/pageQueryProduceStockIn",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging9, extraOptions?: any) {
+    return http<IProductionStockInQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceOrder/pageQueryProduceStockIn",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_9
 export interface IPaging9 {

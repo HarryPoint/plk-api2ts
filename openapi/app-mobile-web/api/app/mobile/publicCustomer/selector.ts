@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/CRM-公海池相关/searchPublicCustomerSelectorDataListUsingPOST_1
-export default function fetchMethod(data: IPaging) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-mobile-web/api/app/mobile/publicCustomer/selector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPaging, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/publicCustomer/selector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页
 export interface IPaging {

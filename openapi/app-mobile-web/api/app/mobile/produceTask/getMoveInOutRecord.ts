@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getMoveInOutRecordUsingPOST
-export default function fetchMethod(data: IEntryAndExitRecordsSearchVO) {
-    return http<IJSONResultListInboundAndOutboundRecordsReturnVO>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getMoveInOutRecord",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEntryAndExitRecordsSearchVO, extraOptions?: any) {
+    return http<IJSONResultListInboundAndOutboundRecordsReturnVO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getMoveInOutRecord",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进出站记录搜索VO
 export interface IEntryAndExitRecordsSearchVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/getTypeStatusSelectorUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListProductionProcessTypeStatusLevel2LinkageVO>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandle/getTypeStatusSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListProductionProcessTypeStatusLevel2LinkageVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandle/getTypeStatusSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«生产处理类型状态二级联动VO»»
 export interface IJSONResultListProductionProcessTypeStatusLevel2LinkageVO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目计划相关/listByProjectIdUsingGET
-export default function fetchMethod(params: { projectId: string }) {
-    return http<ITheJSONResultListProjectPlansTheResponseObject>({
-        url: "/masterdata-service/projectPlan/listByProjectId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { projectId: string }, extraOptions?: any) {
+    return http<ITheJSONResultListProjectPlansTheResponseObject>(
+        {
+            url: "/masterdata-service/projectPlan/listByProjectId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«项目计划响应对象»»
 export interface ITheJSONResultListProjectPlansTheResponseObject {

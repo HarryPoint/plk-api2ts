@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料模具相关/scanMoveInMoldByBatchUsingPOST
-export default function fetchMethod(data: IFeedMoldQueryDTO) {
-    return http<IJSONResultListFeedMoldResponseDTO>({
-        url: "/masterdata-service/moveInOutMold/scanMoveInMoldByBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFeedMoldQueryDTO, extraOptions?: any) {
+    return http<IJSONResultListFeedMoldResponseDTO>(
+        {
+            url: "/masterdata-service/moveInOutMold/scanMoveInMoldByBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 进料模具查询DTO
 export interface IFeedMoldQueryDTO {

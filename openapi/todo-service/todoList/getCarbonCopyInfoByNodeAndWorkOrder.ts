@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16600/doc.html#/default/待办相关/getCarbonCopyInfoByNodeAndWorkOrderUsingGET
-export default function fetchMethod(params: { enterpriseId: number; flowPathNodeId: number; flowPathWorkOrderId: number }) {
-    return http<IJSONResultListToDoListVO>({
-        url: "/todo-service/todoList/getCarbonCopyInfoByNodeAndWorkOrder",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; flowPathNodeId: number; flowPathWorkOrderId: number }, extraOptions?: any) {
+    return http<IJSONResultListToDoListVO>(
+        {
+            url: "/todo-service/todoList/getCarbonCopyInfoByNodeAndWorkOrder",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ToDoListVO»»
 export interface IJSONResultListToDoListVO {

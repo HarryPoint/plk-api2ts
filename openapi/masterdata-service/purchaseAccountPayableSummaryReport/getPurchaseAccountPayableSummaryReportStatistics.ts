@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/应付账款汇总报表相关/getPurchaseAccountPayableSummaryReportStatisticsUsingPOST
-export default function fetchMethod(data: GetPurchaseAccountPayableSummaryReportStatistics) {
-    return http<IJSONResultAccountsPayableSummaryReturnObject>({
-        url: "/masterdata-service/purchaseAccountPayableSummaryReport/getPurchaseAccountPayableSummaryReportStatistics",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: GetPurchaseAccountPayableSummaryReportStatistics, extraOptions?: any) {
+    return http<IJSONResultAccountsPayableSummaryReturnObject>(
+        {
+            url: "/masterdata-service/purchaseAccountPayableSummaryReport/getPurchaseAccountPayableSummaryReportStatistics",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«应付账款汇总表返回对象»
 export interface IJSONResultAccountsPayableSummaryReturnObject {

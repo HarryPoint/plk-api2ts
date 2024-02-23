@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/标准工艺相关/specificMaterialEditUsingPOST
-export default function fetchMethod(data: IStandardProcessSpecificMaterialEditRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnology/specificMaterialEdit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IStandardProcessSpecificMaterialEditRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnology/specificMaterialEdit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 标准工艺具体物料编辑请求对象
 export interface IStandardProcessSpecificMaterialEditRequestObject {

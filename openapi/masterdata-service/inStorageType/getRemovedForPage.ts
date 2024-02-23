@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/入库类型相关/getRemovedForPageUsingPOST_2
-export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return http<IJSONResultPagingInformationJSONObject>({
-        url: "/masterdata-service/inStorageType/getRemovedForPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationJSONObject>(
+        {
+            url: "/masterdata-service/inStorageType/getRemovedForPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {

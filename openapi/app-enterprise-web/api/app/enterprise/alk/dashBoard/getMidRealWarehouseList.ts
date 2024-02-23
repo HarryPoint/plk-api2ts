@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getMidRealWarehouseListUsingGET
-export default function fetchMethod(params: { categoryCode: string }) {
-    return http<IJSONResultListIntermediateLibraryRealTimeInventoryVO>({
-        url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getMidRealWarehouseList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { categoryCode: string }, extraOptions?: any) {
+    return http<IJSONResultListIntermediateLibraryRealTimeInventoryVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getMidRealWarehouseList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«中间库实时库存VO»»
 export interface IJSONResultListIntermediateLibraryRealTimeInventoryVO {

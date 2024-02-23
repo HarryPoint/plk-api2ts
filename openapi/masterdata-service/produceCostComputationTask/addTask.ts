@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/addTaskUsingPOST
-export default function fetchMethod(data: IProductionCostingTaskAddsRequestObject) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/produceCostComputationTask/addTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionCostingTaskAddsRequestObject, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/produceCostComputationTask/addTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产成本核算任务添加请求对象
 export interface IProductionCostingTaskAddsRequestObject {

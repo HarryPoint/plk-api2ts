@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/editByBusinessTypeUsingPOST
-export default function fetchMethod(data: IBusinessCodingRulesEditDto) {
-    return http<IJSONResultobject>({
-        url: "/flow-service/flowPathFormFieldCodeNumberRule/editByBusinessType",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IBusinessCodingRulesEditDto, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/flow-service/flowPathFormFieldCodeNumberRule/editByBusinessType",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 业务编码规则编辑dto
 export interface IBusinessCodingRulesEditDto {

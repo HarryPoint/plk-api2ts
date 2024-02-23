@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultReportTemplateDTO>({
-        url: "/masterdata-service/reportTemplate/getById",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultReportTemplateDTO>(
+        {
+            url: "/masterdata-service/reportTemplate/getById",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ReportTemplateDTO»
 export interface IJSONResultReportTemplateDTO {

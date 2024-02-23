@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/产能相关/getInfoByIdUsingGET
-export default function fetchMethod(params: { id: string }) {
-    return http<IJSONResultProductivityResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/capacity/getInfoById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+    return http<IJSONResultProductivityResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/capacity/getInfoById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«产能响应对象»
 export interface IJSONResultProductivityResponseObject {

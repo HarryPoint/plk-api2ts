@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工工序相关/batchGetUserProcessUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListUserProcessVo>({
-        url: "/masterdata-service/userProcess/userProcess/batchGet",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListUserProcessVo>(
+        {
+            url: "/masterdata-service/userProcess/userProcess/batchGet",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«UserProcessVo»»
 export interface IJSONResultListUserProcessVo {

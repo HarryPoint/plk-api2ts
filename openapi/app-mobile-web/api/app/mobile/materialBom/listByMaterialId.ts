@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/物料bom相关/listByMaterialIdAndMaterialBomIdUsingGET
-export default function fetchMethod(params: { materialBomId: number; materialId: number }) {
-    return http<IJSONResultListMaterialBomResponseObject>({
-        url: "/app-mobile-web/api/app/mobile/materialBom/listByMaterialId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { materialBomId: number; materialId: number }, extraOptions?: any) {
+    return http<IJSONResultListMaterialBomResponseObject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/materialBom/listByMaterialId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«物料bom响应对象»»
 export interface IJSONResultListMaterialBomResponseObject {

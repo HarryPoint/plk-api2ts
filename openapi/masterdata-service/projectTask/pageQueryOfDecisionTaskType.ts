@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageQueryOfDecisionTaskTypeUsingPOST
-export default function fetchMethod(data: IItemTaskPagingQueryResponse1) {
-    return http<IJSONResultPageInformationItemTaskPageQueryResponse>({
-        url: "/masterdata-service/projectTask/pageQueryOfDecisionTaskType",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IItemTaskPagingQueryResponse1, extraOptions?: any) {
+    return http<IJSONResultPageInformationItemTaskPageQueryResponse>(
+        {
+            url: "/masterdata-service/projectTask/pageQueryOfDecisionTaskType",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目任务分页查询响应_1
 export interface IItemTaskPagingQueryResponse1 {

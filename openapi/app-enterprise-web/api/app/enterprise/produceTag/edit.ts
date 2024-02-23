@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产标签相关/editUsingPOST_19
-export default function fetchMethod(data: IProductionLabelEditingDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/produceTag/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionLabelEditingDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceTag/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产标签编辑DTO
 export interface IProductionLabelEditingDTO {

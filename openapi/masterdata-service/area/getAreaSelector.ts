@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaSelectorUsingPOST
-export default function fetchMethod(data: IRegionalMasterDataSelectionListSearchVO) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/area/getAreaSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IRegionalMasterDataSelectionListSearchVO, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/area/getAreaSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 区域主数据选择列表搜索VO
 export interface IRegionalMasterDataSelectionListSearchVO {

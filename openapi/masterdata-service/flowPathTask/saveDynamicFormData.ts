@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/saveDynamicFormDataUsingPOST
-export default function fetchMethod(data: IFlowPathTaskProcessRequestDTO) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/flowPathTask/saveDynamicFormData",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFlowPathTaskProcessRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/flowPathTask/saveDynamicFormData",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // FlowPathTaskProcessRequestDTO
 export interface IFlowPathTaskProcessRequestDTO {

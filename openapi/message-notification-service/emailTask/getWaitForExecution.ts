@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/邮件任务/getWaitForExecutionUsingPOST
-export default function fetchMethod(data: IEmailTaskWaitForExecutionQueryRequestDTO) {
-    return http<IJSONResultEmailTaskWaitForExecutionQueryResponseDTO>({
-        url: "/message-notification-service/emailTask/getWaitForExecution",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IEmailTaskWaitForExecutionQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultEmailTaskWaitForExecutionQueryResponseDTO>(
+        {
+            url: "/message-notification-service/emailTask/getWaitForExecution",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // EmailTaskWaitForExecutionQueryRequestDTO
 export interface IEmailTaskWaitForExecutionQueryRequestDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/定制表单字段设置规则 - 相关/saveRuleForSystemBusinessTypeUsingPOST
-export default function fetchMethod(data: IFlowTableLocateTheGroupFlowIdEditTheDTO) {
-    return http<IJSONResultstring>({
-        url: "/flow-service/customizationFormFieldSettingRule/saveRuleForSystemBusinessType",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFlowTableLocateTheGroupFlowIdEditTheDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/flow-service/customizationFormFieldSettingRule/saveRuleForSystemBusinessType",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程表格列定位分组流程id编辑DTO
 export interface IFlowTableLocateTheGroupFlowIdEditTheDTO {

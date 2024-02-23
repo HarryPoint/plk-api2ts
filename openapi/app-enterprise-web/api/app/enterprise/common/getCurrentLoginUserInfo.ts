@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getCurrentLoginUserInfoUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultUserDetailsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getCurrentLoginUserInfo",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultUserDetailsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getCurrentLoginUserInfo",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«用户详细VO»
 export interface IJSONResultUserDetailsVO {

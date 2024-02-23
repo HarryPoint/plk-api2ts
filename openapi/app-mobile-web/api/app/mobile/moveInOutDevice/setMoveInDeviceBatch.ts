@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/进出料设备相关/setMoveInDeviceBatchUsingPOST
-export default function fetchMethod(data: IProductionTaskBatchSetTheFeedDeviceRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/moveInOutDevice/setMoveInDeviceBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskBatchSetTheFeedDeviceRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/moveInOutDevice/setMoveInDeviceBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务批量设置进料设备请求DTO
 export interface IProductionTaskBatchSetTheFeedDeviceRequestDTO {

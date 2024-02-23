@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工序相关/listByCodesUsingPOST
-export default function fetchMethod(data: string[], params: { enterpriseId: number }) {
-    return http<IJSONResultListProcessDeprecatedVO>({
-        url: "/masterdata-service/process/byCodes/batchGet",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: string[], params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessDeprecatedVO>(
+        {
+            url: "/masterdata-service/process/byCodes/batchGet",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«ProcessDeprecatedVO»»
 export interface IJSONResultListProcessDeprecatedVO {

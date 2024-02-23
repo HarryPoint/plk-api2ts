@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingLevelStatisticsUsingGET
-export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return http<IJSONResultLargeScreenDefectiveProductStatisticsAreReturnedByLevel>({
-        url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingLevelStatistics",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
+    return http<IJSONResultLargeScreenDefectiveProductStatisticsAreReturnedByLevel>(
+        {
+            url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingLevelStatistics",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«大屏不合格品统计按级别返回»
 export interface IJSONResultLargeScreenDefectiveProductStatisticsAreReturnedByLevel {

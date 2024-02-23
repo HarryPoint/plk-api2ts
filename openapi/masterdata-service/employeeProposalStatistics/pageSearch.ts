@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工建议统计报表相关/pageSearchUsingPOST
-export default function fetchMethod(data: IProcessDataBaseSearchVO) {
-    return http<IEmployeeProposalStatisticsResponseDTOJSONResultPagingInformation>({
-        url: "/masterdata-service/employeeProposalStatistics/pageSearch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+    return http<IEmployeeProposalStatisticsResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/masterdata-service/employeeProposalStatistics/pageSearch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据基础搜索VO
 export interface IProcessDataBaseSearchVO {

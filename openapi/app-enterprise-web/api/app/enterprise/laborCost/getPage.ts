@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工费相关/getPageUsingPOST_8
-export default function fetchMethod(data: ILaborPageQueryObjectDtos) {
-    return http<IJSONResultPagingInformationPagingResponseObject>({
-        url: "/app-enterprise-web/api/app/enterprise/laborCost/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ILaborPageQueryObjectDtos, extraOptions?: any) {
+    return http<IJSONResultPagingInformationPagingResponseObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/laborCost/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工费分页查询对象DTO
 export interface ILaborPageQueryObjectDtos {

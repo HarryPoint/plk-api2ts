@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathByCodeAndCheckUsingGET
-export default function fetchMethod(params: { code: string; enterpriseId: number }) {
-    return http<IJSONResultProcessRespondsToVO>({
-        url: "/flow-service/flowPath/getFlowPathByCodeAndCheck",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { code: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultProcessRespondsToVO>(
+        {
+            url: "/flow-service/flowPath/getFlowPathByCodeAndCheck",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«流程响应VO»
 export interface IJSONResultProcessRespondsToVO {

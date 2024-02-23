@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/出料数据导入相关/getImportResultByIdUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultProcessMoveOutImportSynchronizationOutputDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/processImportMoveOut/getImportResultById",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultProcessMoveOutImportSynchronizationOutputDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/processImportMoveOut/getImportResultById",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ProcessMoveOutImportSynchronizationOutputDTO»
 export interface IJSONResultProcessMoveOutImportSynchronizationOutputDTO {

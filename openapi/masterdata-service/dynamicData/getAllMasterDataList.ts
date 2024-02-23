@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/getAllMasterDataListUsingGET
-export default function fetchMethod(params: { enterpriseId: number; flowPathCode: string }) {
-    return http<IJSONResultListJSONObject>({
-        url: "/masterdata-service/dynamicData/getAllMasterDataList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; flowPathCode: string }, extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/masterdata-service/dynamicData/getAllMasterDataList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«JSONObject»»
 export interface IJSONResultListJSONObject {

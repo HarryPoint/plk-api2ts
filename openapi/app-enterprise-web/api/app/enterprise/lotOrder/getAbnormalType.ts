@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getAbnormalTypeUsingGET
-export default function fetchMethod(params: { type: string }) {
-    return http<ITheJSONResultListExceptionTypeReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/lotOrder/getAbnormalType",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { type: string }, extraOptions?: any) {
+    return http<ITheJSONResultListExceptionTypeReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lotOrder/getAbnormalType",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«异常类型返回VO»»
 export interface ITheJSONResultListExceptionTypeReturnsVO {

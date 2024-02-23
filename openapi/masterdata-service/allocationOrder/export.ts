@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/调拨单相关/exportUsingPOST
-export default function fetchMethod(data: IProcessDataSearchVO) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/allocationOrder/export",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessDataSearchVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/allocationOrder/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程数据搜索VO
 export interface IProcessDataSearchVO {

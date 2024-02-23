@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产事件管理/getScrapCategoryCountListByMaterialIdUsingGET
-export default function fetchMethod(params: { beginTime?: string; materialId: string; endTime?: string; enterpriseId: number }) {
-    return http<IJSONResultListIdIndicatesTheValueVO>({
-        url: "/masterdata-service/produceHandle/getScrapCategoryCountListByMaterialId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { beginTime?: string; materialId: string; endTime?: string; enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdIndicatesTheValueVO>(
+        {
+            url: "/masterdata-service/produceHandle/getScrapCategoryCountListByMaterialId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，值VO»»
 export interface IJSONResultListIdIndicatesTheValueVO {

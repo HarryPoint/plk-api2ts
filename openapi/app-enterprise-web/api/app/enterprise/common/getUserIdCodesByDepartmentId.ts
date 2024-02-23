@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getUserIdCodesByDepartmentIdUsingGET
-export default function fetchMethod(params: { departmentId: number }) {
-    return http<IJSONResultListIdNameNumberVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getUserIdCodesByDepartmentId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { departmentId: number }, extraOptions?: any) {
+    return http<IJSONResultListIdNameNumberVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getUserIdCodesByDepartmentId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称，编号VO»»
 export interface IJSONResultListIdNameNumberVO {

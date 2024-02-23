@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/任务排班相关/getGroupListUsingPOST
-export default function fetchMethod(data: IFactoryCalendarSearchVO1) {
-    return http<IJSONResultListTaskSchedulingReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/flowPathTaskCalendar/getCalendar",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IFactoryCalendarSearchVO1, extraOptions?: any) {
+    return http<IJSONResultListTaskSchedulingReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/flowPathTaskCalendar/getCalendar",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工厂日历搜索VO_1
 export interface IFactoryCalendarSearchVO1 {

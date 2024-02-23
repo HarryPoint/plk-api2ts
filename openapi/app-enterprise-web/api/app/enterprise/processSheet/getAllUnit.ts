@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getAllUnitUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListIdNameVO>({
-        url: "/app-enterprise-web/api/app/enterprise/processSheet/getAllUnit",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIdNameVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/processSheet/getAllUnit",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Id，名称VO»»
 export interface IJSONResultListIdNameVO {

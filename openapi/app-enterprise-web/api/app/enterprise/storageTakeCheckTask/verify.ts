@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/verifyUsingPOST
-export default function fetchMethod(data: ICheckTheDTOForInventoryTasks) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/verify",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICheckTheDTOForInventoryTasks, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/verify",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 盘点任务核对DTO
 export interface ICheckTheDTOForInventoryTasks {

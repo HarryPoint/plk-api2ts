@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16600/doc.html#/default/application-script-controller/changeSerialNoUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultobject>({
-        url: "/todo-service/applicationScript/changeSerialNo",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/todo-service/applicationScript/changeSerialNo",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

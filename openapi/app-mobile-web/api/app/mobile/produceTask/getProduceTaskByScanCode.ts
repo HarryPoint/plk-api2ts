@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskByScanCodeUsingPOST
-export default function fetchMethod(data: IProductionTaskScanCodeQueryDtosForMobileTerminals) {
-    return http<IJSONResultProductionTaskScanResponseDTOForMobileTerminals>({
-        url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByScanCode",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskScanCodeQueryDtosForMobileTerminals, extraOptions?: any) {
+    return http<IJSONResultProductionTaskScanResponseDTOForMobileTerminals>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByScanCode",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务扫码查询DTO(针对移动端)
 export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesMaterialCategoryListUsingPOST
-export default function fetchMethod(data: INameNumberDTO) {
-    return http<IJSONResultListNameEncodesTheResponseDTO>({
-        url: "/masterdata-service/salesDetailsReport/getDifengSalesMaterialCategoryList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
+    return http<IJSONResultListNameEncodesTheResponseDTO>(
+        {
+            url: "/masterdata-service/salesDetailsReport/getDifengSalesMaterialCategoryList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 名称、编号DTO
 export interface INameNumberDTO {

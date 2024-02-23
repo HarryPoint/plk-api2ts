@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/流程相关/getDetailPageConfigAppListUsingGET
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultFlowPathDetailPageConfigAppResponseDTO>({
-        url: "/app-mobile-web/api/app/mobile/flowPath/getDetailPageConfigAppList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultFlowPathDetailPageConfigAppResponseDTO>(
+        {
+            url: "/app-mobile-web/api/app/mobile/flowPath/getDetailPageConfigAppList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«FlowPathDetailPageConfigAppResponseDTO»
 export interface IJSONResultFlowPathDetailPageConfigAppResponseDTO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产订单相关/closeUsingPOST_1
-export default function fetchMethod(data: IProductionOrderClosedDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceOrder/close",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionOrderClosedDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceOrder/close",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产订单关闭 DTO
 export interface IProductionOrderClosedDTO {

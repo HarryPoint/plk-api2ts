@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodQuantityCollectUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts>({
-        url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodQuantityCollect",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts>(
+        {
+            url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodQuantityCollect",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«完工及产成品归集分页响应对象»»
 export interface IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts {

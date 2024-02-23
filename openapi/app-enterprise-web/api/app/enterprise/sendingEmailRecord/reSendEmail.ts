@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/发送邮件记录/reSendEmailUsingPOST
-export default function fetchMethod(data: IReEmailSendingEmailRequestDTO) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/sendingEmailRecord/reSendEmail",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IReEmailSendingEmailRequestDTO, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/sendingEmailRecord/reSendEmail",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // ReEmailSendingEmailRequestDTO
 export interface IReEmailSendingEmailRequestDTO {

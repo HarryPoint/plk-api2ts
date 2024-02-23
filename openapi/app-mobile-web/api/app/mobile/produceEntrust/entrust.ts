@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产委外服务相关/entrustUsingPOST
-export default function fetchMethod(data: IProductionOutsourcingSubmitDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceEntrust/entrust",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionOutsourcingSubmitDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceEntrust/entrust",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产委外加工提交DTO
 export interface IProductionOutsourcingSubmitDTO {

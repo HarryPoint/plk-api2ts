@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/getAkSkByIdUsingPOST
-export default function fetchMethod(params: { id: number }) {
-    return http<IJSONResultSaasEnterpriseAkSkRespondsToDTO>({
-        url: "/plk-uaa-service/enterprise/getAkSkById",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultSaasEnterpriseAkSkRespondsToDTO>(
+        {
+            url: "/plk-uaa-service/enterprise/getAkSkById",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«Saas企业Ak Sk响应 DTO»
 export interface IJSONResultSaasEnterpriseAkSkRespondsToDTO {

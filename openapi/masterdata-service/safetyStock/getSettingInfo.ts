@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/安全库存相关/getSettingInfoUsingPOST
-export default function fetchMethod(data: ISecurityStockSettingsSearchVO, params: { enterpriseId: number; userId: number }) {
-    return http<IJSONResultSecurityStockSettingsReturnVO>({
-        url: "/masterdata-service/safetyStock/getSettingInfo",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISecurityStockSettingsSearchVO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+    return http<IJSONResultSecurityStockSettingsReturnVO>(
+        {
+            url: "/masterdata-service/safetyStock/getSettingInfo",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 安全库存设置搜索VO
 export interface ISecurityStockSettingsSearchVO {

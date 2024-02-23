@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/供应商绩效评价报表相关/exportInspectionTaskStatisticsReportUsingPOST_1
-export default function fetchMethod(data: ExportInspectionTaskStatisticsReport) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/supplierPerformanceReport/exportInspectionTaskStatisticsReport",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ExportInspectionTaskStatisticsReport, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/supplierPerformanceReport/exportInspectionTaskStatisticsReport",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«long»
 export interface IJSONResultlong {

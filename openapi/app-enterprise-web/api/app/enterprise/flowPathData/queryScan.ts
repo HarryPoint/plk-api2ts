@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/流程数据相关/queryScanUsingPOST
-export default function fetchMethod(data: IAssociationFormScanQueryRequestDTO) {
-    return http<IJSONResultListAssociationFormScanQueryResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/flowPathData/queryScan",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IAssociationFormScanQueryRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListAssociationFormScanQueryResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/flowPathData/queryScan",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // AssociationFormScanQueryRequestDTO
 export interface IAssociationFormScanQueryRequestDTO {

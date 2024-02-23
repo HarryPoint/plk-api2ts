@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getImportingRecordByTemplateCodeUsingGET
-export default function fetchMethod(params: { templateCode: string }) {
-    return http<IJSONResultImportRecordDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getImportingRecordByTemplateCode",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { templateCode: string }, extraOptions?: any) {
+    return http<IJSONResultImportRecordDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getImportingRecordByTemplateCode",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ImportRecordDTO»
 export interface IJSONResultImportRecordDTO {

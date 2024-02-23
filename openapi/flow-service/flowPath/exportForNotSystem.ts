@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/exportForNotSystemUsingPOST
-export default function fetchMethod(data: IProcessSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/flow-service/flowPath/exportForNotSystem",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/flow-service/flowPath/exportForNotSystem",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 流程搜索VO
 export interface IProcessSearchVO {

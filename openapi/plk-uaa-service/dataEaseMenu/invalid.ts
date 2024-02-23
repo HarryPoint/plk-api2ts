@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/invalidUsingPOST
-export default function fetchMethod(data: IDataEaseMenuDeactivatesTheRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/dataEaseMenu/invalid",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDataEaseMenuDeactivatesTheRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/dataEaseMenu/invalid",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // DataEase菜单停用请求对象
 export interface IDataEaseMenuDeactivatesTheRequestObject {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserInfoUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultSaasUserInformationResponse>({
-        url: "/plk-uaa-service/saasAuth/getUserInfo",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultSaasUserInformationResponse>(
+        {
+            url: "/plk-uaa-service/saasAuth/getUserInfo",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«Saas 用户信息响应»
 export interface IJSONResultSaasUserInformationResponse {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserEnterpriseUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultListSaasEnterpriseResponseDTO>({
-        url: "/plk-uaa-service/saasAuth/getUserEnterprise",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListSaasEnterpriseResponseDTO>(
+        {
+            url: "/plk-uaa-service/saasAuth/getUserEnterprise",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«Saas企业响应 DTO»»
 export interface IJSONResultListSaasEnterpriseResponseDTO {

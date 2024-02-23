@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/角色相关/validBatchUsingPOST
-export default function fetchMethod(data: IIdSetInformation) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/role/validBatch",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdSetInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/role/validBatch",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id集 信息
 export interface IIdSetInformation {

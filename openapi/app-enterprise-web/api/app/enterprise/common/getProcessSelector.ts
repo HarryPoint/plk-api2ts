@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/公共相关/getProcessSelectorUsingGET
-export default function fetchMethod(params: { nameOrCode?: string }) {
-    return http<ITheJSONResultListOperationSelectsToReturnVO>({
-        url: "/app-enterprise-web/api/app/enterprise/common/getProcessSelector",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { nameOrCode?: string }, extraOptions?: any) {
+    return http<ITheJSONResultListOperationSelectsToReturnVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/common/getProcessSelector",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«工序选择返回VO»»
 export interface ITheJSONResultListOperationSelectsToReturnVO {

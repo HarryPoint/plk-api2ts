@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/计算方案相关/queryCalcPlanSelectionItemUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListCalcPlanSelectionItemQueryResponseDTO>({
-        url: "/flow-service/calculationPlan/queryCalcPlanSelectionItem",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListCalcPlanSelectionItemQueryResponseDTO>(
+        {
+            url: "/flow-service/calculationPlan/queryCalcPlanSelectionItem",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«CalcPlanSelectionItemQueryResponseDTO»»
 export interface IJSONResultListCalcPlanSelectionItemQueryResponseDTO {

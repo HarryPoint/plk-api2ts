@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/生产任务分配相关/assignUsingPOST
-export default function fetchMethod(data: IProductionTaskAssignmentVO) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/produceTaskAssign/assign",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionTaskAssignmentVO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/produceTaskAssign/assign",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产任务分配VO
 export interface IProductionTaskAssignmentVO {

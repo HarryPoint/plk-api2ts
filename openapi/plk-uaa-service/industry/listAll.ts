@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/行业相关/listAllUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListIndustryResponseObjectDTO>({
-        url: "/plk-uaa-service/industry/listAll",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListIndustryResponseObjectDTO>(
+        {
+            url: "/plk-uaa-service/industry/listAll",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«行业响应对象DTO»»
 export interface IJSONResultListIndustryResponseObjectDTO {

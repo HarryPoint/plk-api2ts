@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTargetAppOfEventServicesUsingPOST
-export default function fetchMethod(data: number[]) {
-    return http<IJSONResultListTheTargetApplicationQueryRequest>({
-        url: "/flow-service/flowPathEvent/queryTargetAppOfEventServices",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: number[], extraOptions?: any) {
+    return http<IJSONResultListTheTargetApplicationQueryRequest>(
+        {
+            url: "/flow-service/flowPathEvent/queryTargetAppOfEventServices",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«目标应用查询请求»»
 export interface IJSONResultListTheTargetApplicationQueryRequest {

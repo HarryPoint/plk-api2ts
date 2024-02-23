@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/系统版本相关/getLastVersionUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultSystemVersionResponseDTO>({
-        url: "/plk-uaa-service/systemVersion/getLastVersion",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultSystemVersionResponseDTO>(
+        {
+            url: "/plk-uaa-service/systemVersion/getLastVersion",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«系统版本响应 DTO»
 export interface IJSONResultSystemVersionResponseDTO {

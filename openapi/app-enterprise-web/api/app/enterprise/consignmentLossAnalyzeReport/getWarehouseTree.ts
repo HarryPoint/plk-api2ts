@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/宝晶寄售损耗报表相关/getWarehouseTreeUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>({
-        url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getWarehouseTree",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/consignmentLossAnalyzeReport/getWarehouseTree",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«区域仓库仓位树返回VO»»
 export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {

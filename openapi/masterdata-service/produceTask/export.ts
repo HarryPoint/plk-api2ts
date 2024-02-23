@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/exportUsingPOST_22
-export default function fetchMethod(data: IExportTheDTOOfAProductionTask, params: { enterpriseId: number }) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/produceTask/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IExportTheDTOOfAProductionTask, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/produceTask/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产任务导出DTO
 export interface IExportTheDTOOfAProductionTask {

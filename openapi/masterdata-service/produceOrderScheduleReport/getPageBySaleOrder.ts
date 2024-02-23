@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/订单排产报表/getPageBySaleOrderUsingPOST
-export default function fetchMethod(data: IProductionSchedulingOrderSearchVO) {
-    return http<IJSONResultPageInformationSchedulingOrderReportVOSalesSingleDimension>({
-        url: "/masterdata-service/produceOrderScheduleReport/getPageBySaleOrder",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, extraOptions?: any) {
+    return http<IJSONResultPageInformationSchedulingOrderReportVOSalesSingleDimension>(
+        {
+            url: "/masterdata-service/produceOrderScheduleReport/getPageBySaleOrder",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产排产订单搜索VO
 export interface IProductionSchedulingOrderSearchVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息方案/getAllAppSelectorUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultListAppliesTheServiceTreeDTO>({
-        url: "/message-notification-service/messageSchema/getAllAppSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListAppliesTheServiceTreeDTO>(
+        {
+            url: "/message-notification-service/messageSchema/getAllAppSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«应用业务树DTO»»
 export interface IJSONResultListAppliesTheServiceTreeDTO {

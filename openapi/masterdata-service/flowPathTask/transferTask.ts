@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/流程任务相关/transferTaskUsingPOST
-export default function fetchMethod(data: IProcessTasksAreTransferredToTheDTO) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/flowPathTask/transferTask",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProcessTasksAreTransferredToTheDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/flowPathTask/transferTask",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 流程任务转交DTO
 export interface IProcessTasksAreTransferredToTheDTO {

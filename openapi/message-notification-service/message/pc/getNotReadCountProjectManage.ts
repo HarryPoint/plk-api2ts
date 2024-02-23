@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17600/doc.html#/default/消息相关/getNotReadCountProjectManageUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultint>({
-        url: "/message-notification-service/message/pc/getNotReadCountProjectManage",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultint>(
+        {
+            url: "/message-notification-service/message/pc/getNotReadCountProjectManage",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«int»
 export interface IJSONResultint {

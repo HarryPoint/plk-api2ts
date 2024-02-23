@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/material-script-controller/repairWarehouseUsingGET
-export default function fetchMethod(params: { enterpriseId?: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/materialScript/repairWarehouse",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/materialScript/repairWarehouse",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

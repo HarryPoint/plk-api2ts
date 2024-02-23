@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/销售订单相关/isShowForecastLaborCostUsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultstring>({
-        url: "/app-mobile-web/api/app/mobile/salesOrder/isShowForecastLaborCost",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-mobile-web/api/app/mobile/salesOrder/isShowForecastLaborCost",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»
 export interface IJSONResultstring {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectRiskTypeUsingPOST
-export default function fetchMethod(data: IItemNameNumberPublicQueryObject) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/projectReport/listProjectRiskType",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IItemNameNumberPublicQueryObject, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/projectReport/listProjectRiskType",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目名称编号公共查询对象
 export interface IItemNameNumberPublicQueryObject {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeTelephoneByVerCodeUsingPOST
-export default function fetchMethod(data: IUpdateMobileNumberAccordingToVerificationCodeRequestDTO) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/saasAuth/changeTelephoneByVerCode",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IUpdateMobileNumberAccordingToVerificationCodeRequestDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/saasAuth/changeTelephoneByVerCode",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 根据验证码更新手机号码请求 DTO
 export interface IUpdateMobileNumberAccordingToVerificationCodeRequestDTO {

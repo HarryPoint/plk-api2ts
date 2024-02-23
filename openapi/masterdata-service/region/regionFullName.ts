@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/行政区控制器/findRegionFullNameUsingPOST
-export default function fetchMethod(data: string[]) {
-    return http<IJSONResultMapstringstring>({
-        url: "/masterdata-service/region/regionFullName",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: string[], extraOptions?: any) {
+    return http<IJSONResultMapstringstring>(
+        {
+            url: "/masterdata-service/region/regionFullName",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«Map«string,string»»
 export interface IJSONResultMapstringstring {

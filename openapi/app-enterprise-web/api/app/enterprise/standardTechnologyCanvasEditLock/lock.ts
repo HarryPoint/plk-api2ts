@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工艺画布编辑锁定相关/lockTechnologyCanvasEditUsingPOST
-export default function fetchMethod(data: ICraftCanvasEditLockRequestDTO) {
-    return http<IJSONResultProcessCanvasEditsLockResponseDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCanvasEditLock/lock",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ICraftCanvasEditLockRequestDTO, extraOptions?: any) {
+    return http<IJSONResultProcessCanvasEditsLockResponseDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCanvasEditLock/lock",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工艺画布编辑锁定请求DTO
 export interface ICraftCanvasEditLockRequestDTO {

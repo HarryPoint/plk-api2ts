@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingPlaceStatisticsUsingGET
-export default function fetchMethod(params: { dateBegin: string; dateEnd: string }) {
-    return http<IJSONResultLargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO>({
-        url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingPlaceStatistics",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
+    return http<IJSONResultLargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO>(
+        {
+            url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingPlaceStatistics",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«大屏不合格品统计内外场响应DTO»
 export interface IJSONResultLargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO {

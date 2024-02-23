@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/自定义应用相关/batchRemoveWithoutStatusUsingPOST
-export default function fetchMethod(data: IDynamicDataStatelessDeleteRequestObject) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/customApplication/batchRemoveWithoutStatus",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDynamicDataStatelessDeleteRequestObject, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/customApplication/batchRemoveWithoutStatus",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 动态数据无状态删除请求对象
 export interface IDynamicDataStatelessDeleteRequestObject {

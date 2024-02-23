@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安全库存相关/onOffMaterialUsingPOST
-export default function fetchMethod(data: ISafetyStockMaterialSwitchWarning) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/safetyStock/onOffMaterial",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISafetyStockMaterialSwitchWarning, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/safetyStock/onOffMaterial",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 安全库存物料开关预警
 export interface ISafetyStockMaterialSwitchWarning {

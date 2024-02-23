@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/质检项/getSelectorUsingGET_2
-export default function fetchMethod() {
-    return http<IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned>({
-        url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getSelector",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getSelector",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«质检项基础信息返回VO»»
 export interface IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/closeUsingPOST_2
-export default function fetchMethod(data: IIdInformation) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/close",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/close",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id信息
 export interface IIdInformation {

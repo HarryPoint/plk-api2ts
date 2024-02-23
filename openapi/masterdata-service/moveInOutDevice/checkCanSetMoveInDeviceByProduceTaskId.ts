@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/进出料设备相关/checkCanSetMoveInDeviceByProduceTaskIdUsingGET
-export default function fetchMethod(params: { produceTaskId: string }) {
-    return http<IJSONResultstring1>({
-        url: "/masterdata-service/moveInOutDevice/checkCanSetMoveInDeviceByProduceTaskId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { produceTaskId: string }, extraOptions?: any) {
+    return http<IJSONResultstring1>(
+        {
+            url: "/masterdata-service/moveInOutDevice/checkCanSetMoveInDeviceByProduceTaskId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«string»_1
 export interface IJSONResultstring1 {

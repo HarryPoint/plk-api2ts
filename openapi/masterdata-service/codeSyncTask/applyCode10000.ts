@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyCode10000UsingPOST
-export default function fetchMethod() {
-    return http<IJSONResultListstring>({
-        url: "/masterdata-service/codeSyncTask/applyCode10000",
-        method: "post",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListstring>(
+        {
+            url: "/masterdata-service/codeSyncTask/applyCode10000",
+            method: "post",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«string»»
 export interface IJSONResultListstring {

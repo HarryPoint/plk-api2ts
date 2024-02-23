@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/质量追溯/exportQualityTraceabilityReportExcelUsingPOST
-export default function fetchMethod(data: IQualityTraceabilityReportQueryDTO) {
-    return http<IJSONResultlong>({
-        url: "/masterdata-service/qualityTraceability/exportQualityTraceabilityReportExcel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IQualityTraceabilityReportQueryDTO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/masterdata-service/qualityTraceability/exportQualityTraceabilityReportExcel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 质量追溯报表查询DTO
 export interface IQualityTraceabilityReportQueryDTO {

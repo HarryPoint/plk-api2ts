@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
-export default function fetchMethod(data: IOpenApiRequestsSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>({
-        url: "/masterdata-service/deviceCollectionApi/getApiLogPage",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IOpenApiRequestsSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>(
+        {
+            url: "/masterdata-service/deviceCollectionApi/getApiLogPage",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 开放api请求搜索VO
 export interface IOpenApiRequestsSearchVO {

@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/exportNewTableDataAndImportResultUsingPOST
-export default function fetchMethod(data: ISearchRowData, params: { id: number }) {
-    return http<IJSONResultstring>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/importResult/export",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: ISearchRowData, params: { id: number }, extraOptions?: any) {
+    return http<IJSONResultstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/importResult/export",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 搜索行数据
 export interface ISearchRowData {

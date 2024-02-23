@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/迁移脚本相关/addDefaultPortalUserFavoriteUsingGET
-export default function fetchMethod(data: number) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/script/addDefaultPortalUserFavorite",
-        method: "get",
-        data,
-    });
+export default function fetchMethod(data: number, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/script/addDefaultPortalUserFavorite",
+            method: "get",
+            data,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationFormSingleRecordUsingPOST
-export default function fetchMethod(data: IPage2) {
-    return http<IJSONResultAssociationFormTypeFieldSingleRecordOutputVO>({
-        url: "/masterdata-service/dynamicData/associationQuery/querySingleRecord",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPage2, extraOptions?: any) {
+    return http<IJSONResultAssociationFormTypeFieldSingleRecordOutputVO>(
+        {
+            url: "/masterdata-service/dynamicData/associationQuery/querySingleRecord",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 分页_2
 export interface IPage2 {

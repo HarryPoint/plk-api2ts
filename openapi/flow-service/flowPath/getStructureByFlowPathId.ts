@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/getStructureByFlowPathIdUsingPOST
-export default function fetchMethod(data: IFlowPathStructureQueryRequest, params: { enterpriseId: number; flowPathId: number }) {
-    return http<IJSONResultFormStructureVO>({
-        url: "/flow-service/flowPath/getStructureByFlowPathId",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IFlowPathStructureQueryRequest, params: { enterpriseId: number; flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultFormStructureVO>(
+        {
+            url: "/flow-service/flowPath/getStructureByFlowPathId",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // FlowPathStructureQueryRequest
 export interface IFlowPathStructureQueryRequest {

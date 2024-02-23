@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/listByPlanDateRangeUsingPOST
-export default function fetchMethod(data: IScheduleStartEndDateQueryTheDTO) {
-    return http<IJSONResultListMaintenancePlanRespondsToTheDTO>({
-        url: "/masterdata-service/deviceMaintainPlan/listByPlanDateRange",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IScheduleStartEndDateQueryTheDTO, extraOptions?: any) {
+    return http<IJSONResultListMaintenancePlanRespondsToTheDTO>(
+        {
+            url: "/masterdata-service/deviceMaintainPlan/listByPlanDateRange",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 计划开始结束日期查询DTO
 export interface IScheduleStartEndDateQueryTheDTO {

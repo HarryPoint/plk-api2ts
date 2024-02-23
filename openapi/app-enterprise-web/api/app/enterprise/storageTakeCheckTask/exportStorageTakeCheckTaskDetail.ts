@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/exportStorageTakeCheckTaskDetailUsingPOST
-export default function fetchMethod(data: IExportTheWarehouseInventoryListToDTO[]) {
-    return http<IModelAndView>({
-        url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/exportStorageTakeCheckTaskDetail",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IExportTheWarehouseInventoryListToDTO[], extraOptions?: any) {
+    return http<IModelAndView>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/exportStorageTakeCheckTaskDetail",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 仓库盘点仓位清单导出DTO
 export interface IExportTheWarehouseInventoryListToDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目相关/queryBaseProjectUsingPOST
-export default function fetchMethod(data: IProjectPhaseTaskQueryObject) {
-    return http<IJSONResultListProjectBaseQueryResponseObject>({
-        url: "/masterdata-service/project/queryBaseProject",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectPhaseTaskQueryObject, extraOptions?: any) {
+    return http<IJSONResultListProjectBaseQueryResponseObject>(
+        {
+            url: "/masterdata-service/project/queryBaseProject",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目阶段任务查询对象
 export interface IProjectPhaseTaskQueryObject {

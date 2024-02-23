@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
-export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO) {
-    return http<IJSONResultListSelectResponseDtosForTheDeviceProductionLine>({
-        url: "/masterdata-service/device/getDeviceProductionLineSelector",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO, extraOptions?: any) {
+    return http<IJSONResultListSelectResponseDtosForTheDeviceProductionLine>(
+        {
+            url: "/masterdata-service/device/getDeviceProductionLineSelector",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 设备产线选择请求DTO
 export interface IDeviceProductionLineSelectsRequestDTO {

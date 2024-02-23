@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreTaskListUsingPOST
-export default function fetchMethod(data: IItemTaskNameNumberQueryObject) {
-    return http<IJSONResultListIdCodeNameACommonTransferObject>({
-        url: "/masterdata-service/projectTask/queryPreTaskList",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IItemTaskNameNumberQueryObject, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
+        {
+            url: "/masterdata-service/projectTask/queryPreTaskList",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目任务名称编号查询对象
 export interface IItemTaskNameNumberQueryObject {

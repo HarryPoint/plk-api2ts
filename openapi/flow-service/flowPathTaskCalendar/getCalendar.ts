@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/任务排班相关/getCalendarUsingPOST
-export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId: number }) {
-    return http<IJSONResultListTaskSchedulingReturnsVO>({
-        url: "/flow-service/flowPathTaskCalendar/getCalendar",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListTaskSchedulingReturnsVO>(
+        {
+            url: "/flow-service/flowPathTaskCalendar/getCalendar",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工厂日历搜索VO
 export interface IFactoryCalendarSearchVO {

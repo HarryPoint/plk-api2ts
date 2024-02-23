@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/航发相关/syncTodolistDeletedUsingPOST
-export default function fetchMethod(data: IKingdeeBacklogActionRequest) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/hangFa/syncTodolistDeleted",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IKingdeeBacklogActionRequest, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/hangFa/syncTodolistDeleted",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 金蝶待办动作请求
 export interface IKingdeeBacklogActionRequest {

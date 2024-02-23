@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/文件对象相关/getMoveToSelectTreeListUsingGET_1
-export default function fetchMethod() {
-    return http<IJSONResultListFileClassificationDetailResponseDTO3>({
-        url: "/masterdata-service/fileObject/getMoveToSelectTreeList",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListFileClassificationDetailResponseDTO3>(
+        {
+            url: "/masterdata-service/fileObject/getMoveToSelectTreeList",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«文件分类明细响应DTO»»_3
 export interface IJSONResultListFileClassificationDetailResponseDTO3 {

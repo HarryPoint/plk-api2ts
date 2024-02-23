@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/文件分类相关/listUsingGET_3
-export default function fetchMethod() {
-    return http<IJSONResultListFileCategoryListQueryResponseDTO>({
-        url: "/masterdata-service/fileCategory/list",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultListFileCategoryListQueryResponseDTO>(
+        {
+            url: "/masterdata-service/fileCategory/list",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«FileCategoryListQueryResponseDTO»»
 export interface IJSONResultListFileCategoryListQueryResponseDTO {

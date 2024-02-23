@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/西偌帕斯大屏相关/getLsUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultSilopusBigScreenReturnVO>({
-        url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getLargeScreenInfo",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultSilopusBigScreenReturnVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getLargeScreenInfo",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«西偌帕斯大屏返回VO»
 export interface IJSONResultSilopusBigScreenReturnVO {

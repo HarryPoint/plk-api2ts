@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/listBillNameUsingGET
-export default function fetchMethod(params: { billName: string }) {
-    return http<IJSONResultListstring>({
-        url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/listBillName",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { billName: string }, extraOptions?: any) {
+    return http<IJSONResultListstring>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/listBillName",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«string»»
 export interface IJSONResultListstring {

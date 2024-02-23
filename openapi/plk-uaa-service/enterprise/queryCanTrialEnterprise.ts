@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/企业客户相关/queryCanTrialEnterpriseListUsingPOST
-export default function fetchMethod(data: IProductOrderEnterpriseQueryRequestObject) {
-    return http<IJSONResultListEnterpriseNameNumberResponseObject>({
-        url: "/plk-uaa-service/enterprise/queryCanTrialEnterprise",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProductOrderEnterpriseQueryRequestObject, extraOptions?: any) {
+    return http<IJSONResultListEnterpriseNameNumberResponseObject>(
+        {
+            url: "/plk-uaa-service/enterprise/queryCanTrialEnterprise",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 产品订单企业查询请求对象
 export interface IProductOrderEnterpriseQueryRequestObject {

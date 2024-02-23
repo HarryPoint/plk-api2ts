@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getChangeRecordListUsingGET
-export default function fetchMethod(params: { planId: number }) {
-    return http<IJSONResultListMaintenancePlanChangeRecordRespondsToDTO>({
-        url: "/masterdata-service/deviceMaintainPlan/getChangeRecordList",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { planId: number }, extraOptions?: any) {
+    return http<IJSONResultListMaintenancePlanChangeRecordRespondsToDTO>(
+        {
+            url: "/masterdata-service/deviceMaintainPlan/getChangeRecordList",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«保养计划变更记录响应DTO»»
 export interface IJSONResultListMaintenancePlanChangeRecordRespondsToDTO {

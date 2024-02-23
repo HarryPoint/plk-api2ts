@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/getPageUsingPOST_17
-export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries) {
-    return http<IJSONResultPagingInformationProductionHandlesPagingResponseObjects>({
-        url: "/app-enterprise-web/api/app/enterprise/produceHandle/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries, extraOptions?: any) {
+    return http<IJSONResultPagingInformationProductionHandlesPagingResponseObjects>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceHandle/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 生产处理分页查询的对象
 export interface IProduceObjectsThatHandlePagingQueries {

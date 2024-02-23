@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/自定义应用相关/batchInvalidByFlowPathIdUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation, params: { flowPathId: number }) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/customApplication/batchInvalid",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, params: { flowPathId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/customApplication/batchInvalid",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

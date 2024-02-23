@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产计划订单日产量/getListByProduceOrderIdsUsingPOST_1
-export default function fetchMethod(data: IProductionPlanOrderDailyOutputVO1, params: { enterpriseId: number }) {
-    return http<IJSONResultListProductionPlanOrderDailyOutputVO>({
-        url: "/masterdata-service/producePlan/orderDayQuantity/getListByProduceOrderIds",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProductionPlanOrderDailyOutputVO1, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProductionPlanOrderDailyOutputVO>(
+        {
+            url: "/masterdata-service/producePlan/orderDayQuantity/getListByProduceOrderIds",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 生产计划订单日产量 VO_1
 export interface IProductionPlanOrderDailyOutputVO1 {

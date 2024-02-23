@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/准备期相关/editUsingPOST_24
-export default function fetchMethod(data: IPreparatoryPeriodEditorDTO) {
-    return http<IJSONResultobject>({
-        url: "/app-enterprise-web/api/app/enterprise/readyTime/edit",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IPreparatoryPeriodEditorDTO, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/readyTime/edit",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 准备期编辑DTO
 export interface IPreparatoryPeriodEditorDTO {

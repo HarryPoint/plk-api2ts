@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/工艺路径相关/listRoutingInfoUsingPOST
-export default function fetchMethod(data: IProcessPathInformationQueryObject, params: { enterpriseId: number }) {
-    return http<IJSONResultListProcessPathInformationObject>({
-        url: "/masterdata-service/routing/listRoutingInfo",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IProcessPathInformationQueryObject, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListProcessPathInformationObject>(
+        {
+            url: "/masterdata-service/routing/listRoutingInfo",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 工艺路径信息查询对象
 export interface IProcessPathInformationQueryObject {

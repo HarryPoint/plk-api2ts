@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/员工相关/batchAllowLoginUsingPOST
-export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/employee/batchAllowLogin",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/employee/batchAllowLogin",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // id集合信息
 export interface IIdCollectionInformation {

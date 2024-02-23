@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/getPageUsingPOST_28
-export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO) {
-    return http<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO>({
-        url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getPage",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, extraOptions?: any) {
+    return http<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/getPage",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 安全库存变更申请搜索VO
 export interface ISecurityStockChangeRequestSearchVO {

@@ -1,11 +1,14 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16500/doc.html#/default/流程相关/queryEnterpriseLevelAppsOfProjectManagerUsingGET
-export default function fetchMethod() {
-    return http<IJSONResultProjectManagementTemplateApplicationResponseDTO>({
-        url: "/flow-service/flowPath/queryEnterpriseLevelAppsOfProjectManager",
-        method: "get",
-    });
+export default function fetchMethod(extraOptions?: any) {
+    return http<IJSONResultProjectManagementTemplateApplicationResponseDTO>(
+        {
+            url: "/flow-service/flowPath/queryEnterpriseLevelAppsOfProjectManager",
+            method: "get",
+        },
+        extraOptions,
+    );
 }
 // JSONResult«项目管理模板应用响应DTO»
 export interface IJSONResultProjectManagementTemplateApplicationResponseDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectMapUsingPOST
-export default function fetchMethod(data: IProjectKanbanQueryDto) {
-    return http<IJSONResultListProjectMapResponseObject>({
-        url: "/masterdata-service/projectDashboard/queryProjectMap",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?: any) {
+    return http<IJSONResultListProjectMapResponseObject>(
+        {
+            url: "/masterdata-service/projectDashboard/queryProjectMap",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 项目看板查询dto
 export interface IProjectKanbanQueryDto {

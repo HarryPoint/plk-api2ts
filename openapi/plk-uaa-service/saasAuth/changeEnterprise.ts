@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeEnterpriseUsingPOST
-export default function fetchMethod(data: IIdInformation1) {
-    return http<IJSONResultobject>({
-        url: "/plk-uaa-service/saasAuth/changeEnterprise",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation1, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/plk-uaa-service/saasAuth/changeEnterprise",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // Id 信息_1
 export interface IIdInformation1 {

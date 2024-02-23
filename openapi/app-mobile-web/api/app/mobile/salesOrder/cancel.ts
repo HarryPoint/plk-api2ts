@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:17400/doc.html#/default/销售订单相关/cancelUsingPOST_1
-export default function fetchMethod(data: IIdInformation) {
-    return http<IJSONResultobject>({
-        url: "/app-mobile-web/api/app/mobile/salesOrder/cancel",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/app-mobile-web/api/app/mobile/salesOrder/cancel",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // id信息
 export interface IIdInformation {

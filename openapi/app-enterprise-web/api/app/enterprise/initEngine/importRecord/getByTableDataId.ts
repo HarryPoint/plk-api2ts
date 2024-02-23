@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getByTableDataIdUsingGET
-export default function fetchMethod(params: { tableDataId: number }) {
-    return http<IJSONResultImportRecordDTO>({
-        url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getByTableDataId",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { tableDataId: number }, extraOptions?: any) {
+    return http<IJSONResultImportRecordDTO>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getByTableDataId",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«ImportRecordDTO»
 export interface IJSONResultImportRecordDTO {

@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getStorehousePurposeListUsingPOST
-export default function fetchMethod(params: { enterpriseId: number }) {
-    return http<IJSONResultListNameNumberVO>({
-        url: "/masterdata-service/baoJingWarehouseMaterial/getStorehousePurposeList",
-        method: "post",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultListNameNumberVO>(
+        {
+            url: "/masterdata-service/baoJingWarehouseMaterial/getStorehousePurposeList",
+            method: "post",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«List«名称，编号VO»»
 export interface IJSONResultListNameNumberVO {

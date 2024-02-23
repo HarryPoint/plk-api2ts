@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16400/doc.html#/default/工时工费相关/getDetailExportTicketUsingPOST
-export default function fetchMethod(data: IHourlyLaborRateReportSearchVO) {
-    return http<IJSONResultExportedTicketInformation>({
-        url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getDetailExportTicket",
-        method: "post",
-        data,
-    });
+export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, extraOptions?: any) {
+    return http<IJSONResultExportedTicketInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getDetailExportTicket",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
 }
 // 工时工费报表搜索VO
 export interface IHourlyLaborRateReportSearchVO {

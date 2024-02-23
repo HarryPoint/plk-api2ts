@@ -1,12 +1,15 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/checkHasStorageTakeCheckTaskByStorehouseIdsUsingGET
-export default function fetchMethod(params: { enterpriseId: number; storehouseIds: number[] }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/storageTakeCheckTask/checkHasStorageTakeCheckTaskByStorehouseIds",
-        method: "get",
-        params,
-    });
+export default function fetchMethod(params: { enterpriseId: number; storehouseIds: number[] }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/storageTakeCheckTask/checkHasStorageTakeCheckTaskByStorehouseIds",
+            method: "get",
+            params,
+        },
+        extraOptions,
+    );
 }
 // JSONResult«object»
 export interface IJSONResultobject {

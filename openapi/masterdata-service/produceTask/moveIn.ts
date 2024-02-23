@@ -1,13 +1,16 @@
 import { http } from '@/api/http';
 
 // http://47.108.139.107:16700/doc.html#/default/生产任务相关/moveInUsingPOST
-export default function fetchMethod(data: IIncomingInformationDTO, params: { enterpriseId: number }) {
-    return http<IJSONResultobject>({
-        url: "/masterdata-service/produceTask/moveIn",
-        method: "post",
-        data,
-        params,
-    });
+export default function fetchMethod(data: IIncomingInformationDTO, params: { enterpriseId: number }, extraOptions?: any) {
+    return http<IJSONResultobject>(
+        {
+            url: "/masterdata-service/produceTask/moveIn",
+            method: "post",
+            data,
+            params,
+        },
+        extraOptions,
+    );
 }
 // 进料信息DTO
 export interface IIncomingInformationDTO {
