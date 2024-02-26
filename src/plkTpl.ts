@@ -22,7 +22,6 @@ export const customContent = async (
         writer.writeLine(`* @link ${docUrl}`);
         writer.writeLine("*/");
         console.log("docUrl: ", docUrl);
-        // writer.writeLine(docUrl);
       });
       const functionDeclaration = definitionsFile.addFunction({
         name: "fetchMethod",
