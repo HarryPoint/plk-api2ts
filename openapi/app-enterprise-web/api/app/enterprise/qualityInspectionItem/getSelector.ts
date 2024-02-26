@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检项/getSelectorUsingGET_2
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getSelector",

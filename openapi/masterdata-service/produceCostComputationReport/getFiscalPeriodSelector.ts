@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/getFiscalPeriodSelectorUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheObjectDuring>(
         {
             url: "/masterdata-service/produceCostComputationReport/getFiscalPeriodSelector",

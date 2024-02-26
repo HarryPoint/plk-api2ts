@@ -94,22 +94,15 @@ export interface IMaterialMasterDataExternalCodeSelectReturnDTO {
 }
 
 export enum EMaterialMasterDataSelectionListSearchVO_materialTypeList_items {
-    /** undefined */
     RAW = "RAW",
-    /** undefined */
     SEMI_PRODUCT = "SEMI_PRODUCT",
-    /** undefined */
     FINISH_GOODS = "FINISH_GOODS",
-    /** undefined */
     KIT = "KIT",
-    /** undefined */
     PARTS = "PARTS"
 }
 
 export enum EPagingSortVO_isAsc {
-    /** undefined */
     Y = "Y",
-    /** undefined */
     N = "N"
 }
 

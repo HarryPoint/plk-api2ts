@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/行业相关/listAllUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListIndustryResponseObjectDTO>(
         {
             url: "/plk-uaa-service/industry/listAll",

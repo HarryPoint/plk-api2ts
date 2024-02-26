@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/用户工序接口/getUserProcessAndAreaSelectorUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<ITheJSONResultListAreaOperationSelectionReturnsVO1>(
         {
             url: "/app-mobile-web/api/app/mobile/auth/getUserProcessAndAreaSelector",

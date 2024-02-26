@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getCustomerSelectorUsingGET_6
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListClientSelectsToReturnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportSalesDeliver/getCustomerSelector",

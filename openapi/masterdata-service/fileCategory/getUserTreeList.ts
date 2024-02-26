@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/getUserTreeListUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailsResponseDTO2>(
         {
             url: "/masterdata-service/fileCategory/getUserTreeList",

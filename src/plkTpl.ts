@@ -75,6 +75,11 @@ export const customContent = async (
       const defineArr = [bodyDefine, queryDefine].filter(Boolean);
       functionDeclaration.addParameter({
         name: "options",
+        initializer: (writer) => {
+          if (defineArr.length === 0) {
+            writer.write("{}");
+          }
+        },
         type: (writer) => {
           writer.write("{");
           defineArr.forEach((defineItem) => {

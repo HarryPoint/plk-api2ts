@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/getTypeStatusSelectorUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProductionProcessTypeStatusLevel2LinkageVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandle/getTypeStatusSelector",

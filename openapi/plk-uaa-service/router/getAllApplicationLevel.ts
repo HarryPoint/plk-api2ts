@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/路由相关/getAllApplicationLevelUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListNameEncodesTheResponseDTO>(
         {
             url: "/plk-uaa-service/router/getAllApplicationLevel",

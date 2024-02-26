@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getUnCompleteProjectUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultUnCompleteProjectResponseDTO>(
         {
             url: "/masterdata-service/proposalDashboard/getUnCompleteProject",

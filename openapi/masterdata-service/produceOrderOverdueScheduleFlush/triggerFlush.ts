@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单超期定时刷新相关/triggerFlushUsingGET
 */
-export default function fetchMethod(options: {}, extraOptions?: any) {
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceOrderOverdueScheduleFlush/triggerFlush",
