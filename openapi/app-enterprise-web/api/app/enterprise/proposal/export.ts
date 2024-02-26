@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/合理化建议相关/exportUsingPOST_38
 */
-export default function fetchMethod(data: IProcessDataSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/proposal/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/getRoleGlobalPermissionByIdUsingGET
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultListRoleGlobalPermissionResponseDTO>(
         {
             url: "/plk-uaa-service/role/getRoleGlobalPermissionById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

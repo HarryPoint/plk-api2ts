@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/pageCurrentEnterpriseUsingPOST
 */
-export default function fetchMethod(data: IQueryTheCurrentEnterpriseUser, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryTheCurrentEnterpriseUser }, extraOptions?: any) {
     return http<IJSONResultPagingInformationEnterpriseUserResponse>(
         {
             url: "/plk-uaa-service/user/pageCurrentEnterprise",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/待办相关/acceptExecuteTaskUsingPOST
 */
-export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/todoList/acceptExecuteTask",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

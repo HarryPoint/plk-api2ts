@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/采购汇总报表相关/exportPurchaseSummaryReportUsingPOST
 */
-export default function fetchMethod(data: ExportPurchaseSummaryReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: ExportPurchaseSummaryReport }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/purchaseSummaryReport/exportPurchaseSummaryReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

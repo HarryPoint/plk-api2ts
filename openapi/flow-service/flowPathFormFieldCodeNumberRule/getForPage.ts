@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getForPageUsingPOST
 */
-export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICodeRulePagingQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getForPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

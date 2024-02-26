@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/exportTskReportExcelUsingPOST
 */
-export default function fetchMethod(data: ITSKReportQueryDTO1, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITSKReportQueryDTO1 }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/tskStatistic/exportTskReportExcel",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

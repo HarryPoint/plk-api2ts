@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检管理/getSelectorByMaterialUsingGET_1
 */
-export default function fetchMethod(params: { materialId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialId?: number } }, extraOptions?: any) {
     return http<IJSONResultListSelectVOAsTheInspectionSolution>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getSelectorByMaterial",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

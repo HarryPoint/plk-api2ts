@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-销售计划相关/getTableColumnUsingGET_32
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesPlan/getTableColumn",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

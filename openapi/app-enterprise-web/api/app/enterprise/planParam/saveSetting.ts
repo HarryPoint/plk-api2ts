@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/业务参数相关/saveSettingUsingPOST
 */
-export default function fetchMethod(data: ISchedulingParametersDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISchedulingParametersDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/planParam/saveSetting",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

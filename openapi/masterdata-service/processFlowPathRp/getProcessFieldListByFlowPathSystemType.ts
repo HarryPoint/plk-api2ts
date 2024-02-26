@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序字段对应表相关/getProcessFieldListByFlowPathSystemTypeUsingGET
 */
-export default function fetchMethod(params: { flowPathSystemTypeList?: string; processId?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathSystemTypeList?: string; processId?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/processFlowPathRp/getProcessFieldListByFlowPathSystemType",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

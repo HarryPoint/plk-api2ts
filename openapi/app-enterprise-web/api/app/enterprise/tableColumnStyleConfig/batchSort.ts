@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/列表列样式配置/batchSortUsingPOST
 */
-export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/batchSort",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

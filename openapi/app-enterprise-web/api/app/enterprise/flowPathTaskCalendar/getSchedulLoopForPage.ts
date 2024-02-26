@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务排班相关/getSchedulLoopForPageUsingPOST_1
 */
-export default function fetchMethod(data: IProcessFactoryCalendarSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessFactoryCalendarSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathTaskCalendar/getSchedulLoopForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

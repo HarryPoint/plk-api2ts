@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/航发相关/syncTodolistHandledUsingPOST
 */
-export default function fetchMethod(data: IKingdeeBacklogActionRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IKingdeeBacklogActionRequest }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/hangFa/syncTodolistHandled",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

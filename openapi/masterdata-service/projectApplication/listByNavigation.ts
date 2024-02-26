@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/listByNavigationUsingGET
 */
-export default function fetchMethod(params: { projectId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListProjectAppliesTheReturnObject>(
         {
             url: "/masterdata-service/projectApplication/listByNavigation",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

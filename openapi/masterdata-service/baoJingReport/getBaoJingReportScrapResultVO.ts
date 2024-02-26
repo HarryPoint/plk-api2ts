@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportScrapResultVOUsingPOST
 */
-export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingReportScrapRelatedSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPageInformationBaoJingReportScrapRelatedReturnVO>(
         {
             url: "/masterdata-service/baoJingReport/getBaoJingReportScrapResultVO",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

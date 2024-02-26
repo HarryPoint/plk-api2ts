@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序相关/batchGetUserProcessUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListUserProcessVo>(
         {
             url: "/app-enterprise-web/api/app/enterprise/process/userProcess/batchGet",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

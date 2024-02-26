@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/queryCanTrialEnterpriseListUsingPOST
 */
-export default function fetchMethod(data: IProductOrderEnterpriseQueryRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductOrderEnterpriseQueryRequestObject }, extraOptions?: any) {
     return http<IJSONResultListEnterpriseNameNumberResponseObject>(
         {
             url: "/plk-uaa-service/enterprise/queryCanTrialEnterprise",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

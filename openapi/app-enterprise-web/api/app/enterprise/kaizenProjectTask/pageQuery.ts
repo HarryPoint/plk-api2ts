@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/pageQueryUsingPOST_1
 */
-export default function fetchMethod(data: IPagingInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPagingInformation }, extraOptions?: any) {
     return http<IKaizenProjectTaskResponseDTOJSONResultPagingInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/pageQuery",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

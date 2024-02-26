@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/getCountInfoByMaterialIdUsingGET
 */
-export default function fetchMethod(params: { beginTime?: string; endTime?: string; materialId?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: string; endTime?: string; materialId?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultCheckInformationVO>(
         {
             url: "/masterdata-service/qualityProduceTask/getCountInfoByMaterialId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

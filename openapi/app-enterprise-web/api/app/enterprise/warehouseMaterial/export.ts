@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存查询相关/exportUsingPOST_58
 */
-export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

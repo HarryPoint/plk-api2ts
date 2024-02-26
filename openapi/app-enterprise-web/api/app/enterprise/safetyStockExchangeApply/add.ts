@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/addUsingPOST_7
 */
-export default function fetchMethod(data: ISecurityInventoryChangeRequestConfiguration, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISecurityInventoryChangeRequestConfiguration }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/safetyStockExchangeApply/add",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

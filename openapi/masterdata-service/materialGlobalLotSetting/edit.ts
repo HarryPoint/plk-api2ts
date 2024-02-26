@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料全局批次设置相关/editUsingPOST_7
 */
-export default function fetchMethod(data: IMaterialsBureauBatchSetEditObject, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialsBureauBatchSetEditObjectparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/materialGlobalLotSetting/edit",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

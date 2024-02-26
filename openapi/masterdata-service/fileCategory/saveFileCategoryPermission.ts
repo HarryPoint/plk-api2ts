@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/saveFileCategoryPermissionUsingPOST
 */
-export default function fetchMethod(data: IFileCategoryPermissionSaveRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFileCategoryPermissionSaveRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/fileCategory/saveFileCategoryPermission",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

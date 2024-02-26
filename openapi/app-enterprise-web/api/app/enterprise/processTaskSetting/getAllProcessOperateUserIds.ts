@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/getAllProcessOperateUserIdsUsingPOST
 */
-export default function fetchMethod(data: IProcessOperatorIdSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessOperatorIdSearchVO }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processTaskSetting/getAllProcessOperateUserIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

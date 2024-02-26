@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getFlowPathFormFieldByCodeAndFlowPathVersionIdAndCheckUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathVersionId?: number; serialNo?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathVersionId?: number; serialNo?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessFormVO>(
         {
             url: "/flow-service/flowPathFormField/getFlowPathFormFieldByCodeAndFlowPathVersionIdAndCheck",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

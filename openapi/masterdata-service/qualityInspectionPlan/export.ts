@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检方案/exportUsingPOST_26
 */
-export default function fetchMethod(data: IInspectionSolutionSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInspectionSolutionSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qualityInspectionPlan/export",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

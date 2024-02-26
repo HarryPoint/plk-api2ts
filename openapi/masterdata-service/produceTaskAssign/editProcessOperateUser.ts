@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/editProcessOperateUserUsingPOST_1
 */
-export default function fetchMethod(data: IProcessOperatorsEditTheDTO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessOperatorsEditTheDTOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTaskAssign/editProcessOperateUser",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印模板相关/listByEnterpriseRouteIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseRouteId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseRouteId?: number } }, extraOptions?: any) {
     return http<IJSONResultListPrintsTheTemplateResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/printtemplate/listByEnterpriseRouteId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

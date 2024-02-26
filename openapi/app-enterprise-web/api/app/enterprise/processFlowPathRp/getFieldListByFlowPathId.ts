@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序字段对应表相关/getFieldListByFlowPathIdUsingGET
 */
-export default function fetchMethod(params: { flowPathId?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processFlowPathRp/getFieldListByFlowPathId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

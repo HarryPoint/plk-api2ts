@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用相关/getDefaultConfigUsingGET
 */
-export default function fetchMethod(params: { type?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: string } }, extraOptions?: any) {
     return http<IJSONResultTheDefaultValueIsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/application/getDefaultConfig",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

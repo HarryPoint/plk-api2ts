@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardArchiveUsingPOST
 */
-export default function fetchMethod(data: IOccupationalHazardFileQueryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOccupationalHazardFileQueryRequest }, extraOptions?: any) {
     return http<IJSONResultOccupationalHazardFileQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/queryHazardArchive",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

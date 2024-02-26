@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/queryAssociationFormSingleRecordUsingPOST
 */
-export default function fetchMethod(data: IPaging1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPaging1 }, extraOptions?: any) {
     return http<IJSONResultAssociationFormTypeFieldSingleRecordOutputVO>(
         {
             url: "/app-mobile-web/api/app/mobile/common/associationQuery/querySingleRecord",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

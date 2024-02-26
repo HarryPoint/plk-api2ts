@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getMasterMaterialByIdListUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListInformationAboutTheMainMaterialsOfAProductionOrder>(
         {
             url: "/masterdata-service/salesOrder/transferToProduceOrder/getMasterMaterialByIdList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

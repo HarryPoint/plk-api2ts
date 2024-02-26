@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBeforeRoutingStepsUsingGET
 */
-export default function fetchMethod(params: { id?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessPathStepsSelectVO>(
         {
             url: "/masterdata-service/produceHandle/getBeforeRoutingSteps",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

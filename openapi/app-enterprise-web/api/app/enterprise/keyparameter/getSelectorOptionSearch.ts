@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/关键参数相关/getSelectorOptionSearchUsingPOST_1
 */
-export default function fetchMethod(data: ISelectTheKeyParameterDropDownListToSearchForDtos, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISelectTheKeyParameterDropDownListToSearchForDtos }, extraOptions?: any) {
     return http<IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos>(
         {
             url: "/app-enterprise-web/api/app/enterprise/keyparameter/getSelectorOptionSearch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

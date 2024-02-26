@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchRemoveUsingPOST_1
 */
-export default function fetchMethod(data: IDynamicFormDeletedRequestDTO, params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDynamicFormDeletedRequestDTOparams: { flowPathId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/dynamicData/batchRemove",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

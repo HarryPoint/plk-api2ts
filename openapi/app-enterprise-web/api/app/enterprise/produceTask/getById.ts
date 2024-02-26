@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/getByIdUsingGET_13
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionTaskDetailsReturnToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTask/getById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

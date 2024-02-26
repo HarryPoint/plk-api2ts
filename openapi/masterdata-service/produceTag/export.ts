@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/exportUsingPOST_21
 */
-export default function fetchMethod(data: IExceptionTagSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExceptionTagSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceTag/export",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

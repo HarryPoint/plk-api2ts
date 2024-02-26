@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/应付账款汇总报表相关/getPurchaseAccountPayableSummaryReportStatisticsUsingPOST
 */
-export default function fetchMethod(data: GetPurchaseAccountPayableSummaryReportStatistics, extraOptions?: any) {
+export default function fetchMethod(options: { data: GetPurchaseAccountPayableSummaryReportStatistics }, extraOptions?: any) {
     return http<IJSONResultAccountsPayableSummaryReturnObject>(
         {
             url: "/masterdata-service/purchaseAccountPayableSummaryReport/getPurchaseAccountPayableSummaryReportStatistics",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

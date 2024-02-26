@@ -73,12 +73,16 @@ export const customContent = async (
         };
       }
       const defineArr = [bodyDefine, queryDefine].filter(Boolean);
-      defineArr.forEach((defineItem) => {
-        const name = defineItem.in === "body" ? "data" : "params";
-        functionDeclaration.addParameter({
-          name,
-          type: transFormType(defineItem.schema),
-        });
+      functionDeclaration.addParameter({
+        name: "options",
+        type: (writer) => {
+          writer.write("{");
+          defineArr.forEach((defineItem) => {
+            const name = defineItem.in === "body" ? "data" : "params";
+            writer.write(`${name}: ${transFormType(defineItem.schema)}`);
+          });
+          writer.write("}");
+        },
       });
       functionDeclaration.addParameter({
         name: "extraOptions",
@@ -94,14 +98,7 @@ export const customContent = async (
         writer.writeLine(`  {`);
         writer.writeLine(`  url: "${url}",`);
         writer.writeLine(`  method: "${method}",`);
-        defineArr?.forEach((paramsDefine: any) => {
-          if (paramsDefine.in === "body") {
-            writer.writeLine(`  data,`);
-          }
-          if (paramsDefine.in === "query") {
-            writer.writeLine(`  params,`);
-          }
-        });
+        writer.writeLine(`  ...options,`);
         writer.writeLine(`},`);
         writer.writeLine(`extraOptions,`);
         writer.writeLine(`);`);

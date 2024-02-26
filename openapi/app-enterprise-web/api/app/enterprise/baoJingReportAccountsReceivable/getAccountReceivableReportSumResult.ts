@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(应收账款分析)相关/getAccountReceivableReportSumResultUsingPOST
 */
-export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingAccountsReceivableAnalysisReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportAccountsReceivable/getAccountReceivableReportSumResult",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

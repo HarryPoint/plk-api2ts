@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/refuseTaskUsingPOST
 */
-export default function fetchMethod(data: IProcessTaskSubmitDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTaskSubmitDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/flowPathTask/refuseTask",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

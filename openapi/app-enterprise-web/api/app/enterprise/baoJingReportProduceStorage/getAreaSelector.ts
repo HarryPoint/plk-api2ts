@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/getAreaSelectorUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<ITheJSONResultListAreaTreeReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/getAreaSelector",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

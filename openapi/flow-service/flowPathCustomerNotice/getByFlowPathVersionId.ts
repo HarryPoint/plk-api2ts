@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程自定义字段相关/getByFlowPathVersionIdUsingPOST
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathVersionId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathVersionId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListProcessCustomNotificationFieldRespondsToVO>(
         {
             url: "/flow-service/flowPathCustomerNotice/getByFlowPathVersionId",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

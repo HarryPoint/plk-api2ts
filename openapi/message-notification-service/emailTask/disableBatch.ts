@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/disableBatchUsingPOST
 */
-export default function fetchMethod(data: IEmailTaskDisableRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEmailTaskDisableRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/emailTask/disableBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目甘特图相关/queryProjectGanttUsingPOST
 */
-export default function fetchMethod(data: IProjectGanttChartQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectGanttChartQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectGanttChartResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectGantt/queryProjectGantt",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

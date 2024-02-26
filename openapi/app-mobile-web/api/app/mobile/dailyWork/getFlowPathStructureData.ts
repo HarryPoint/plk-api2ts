@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/CRM-工作日报相关/getFlowPathStructureDataUsingPOST_9
 */
-export default function fetchMethod(data: IProcessStructureSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVO }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/app-mobile-web/api/app/mobile/dailyWork/getFlowPathStructureData",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

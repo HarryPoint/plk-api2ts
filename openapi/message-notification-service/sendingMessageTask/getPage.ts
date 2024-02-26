@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/getPageUsingPOST_2
 */
-export default function fetchMethod(data: IMessageQueuePagingQueryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageQueuePagingQueryRequest }, extraOptions?: any) {
     return http<IJSONResultPagingMessageQueuePagingResponseObject>(
         {
             url: "/message-notification-service/sendingMessageTask/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

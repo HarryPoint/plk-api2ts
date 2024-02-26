@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/维联批次打印相关/listLotPrintResultByProduceOrderIdsUsingPOST
 */
-export default function fetchMethod(data: string, extraOptions?: any) {
+export default function fetchMethod(options: { data: string }, extraOptions?: any) {
     return http<IJSONResultListPrintsTemplateResponseObjectsForTheVTLBatch>(
         {
             url: "/masterdata-service/weiLianLotPrint/listLotPrintResultByProduceOrderIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

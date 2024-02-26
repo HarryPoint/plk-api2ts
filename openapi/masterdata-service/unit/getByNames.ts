@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/单位相关/getByNamesUsingPOST
 */
-export default function fetchMethod(data: string[], params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[]params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListUnitReturnsVO>(
         {
             url: "/masterdata-service/unit/getByNames",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialDefaultByMaterialIdUsingGET
 */
-export default function fetchMethod(params: { materialId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialId?: number } }, extraOptions?: any) {
     return http<IJSONResultBomResponseObject>(
         {
             url: "/masterdata-service/materialBom/getMaterialDefaultByMaterialId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

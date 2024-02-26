@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/removeByBusinessIdUsingPOST
 */
-export default function fetchMethod(data: IIdInformation, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdInformationparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/removeByBusinessId",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

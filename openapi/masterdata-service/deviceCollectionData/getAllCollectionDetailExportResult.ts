@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/getAllCollectionDetailExportResultUsingPOST
 */
-export default function fetchMethod(data: IDeviceDataAcquisitionDataListSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataListSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListExportDetailedDeviceDataCollectionReportVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getAllCollectionDetailExportResult",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

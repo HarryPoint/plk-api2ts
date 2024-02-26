@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/getBaseByIdUsingPOST
 */
-export default function fetchMethod(data: IIdInformation1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdInformation1 }, extraOptions?: any) {
     return http<IJSONResultEnterpriseResponseObject>(
         {
             url: "/plk-uaa-service/enterprise/getBaseById",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

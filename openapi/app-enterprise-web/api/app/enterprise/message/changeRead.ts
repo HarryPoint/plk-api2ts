@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/消息相关/changeReadUsingPOST
 */
-export default function fetchMethod(data: IMessageChangeReadDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageChangeReadDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/message/changeRead",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/saveMoveInDetailUsingPOST
 */
-export default function fetchMethod(data: IInboundAndOutboundInformationDTO1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInboundAndOutboundInformationDTO1 }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/saveMoveInDetail",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

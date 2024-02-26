@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/changeValidUsingPOST_5
 */
-export default function fetchMethod(data: IEnableOrDisableVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEnableOrDisableVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTag/changeValid",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

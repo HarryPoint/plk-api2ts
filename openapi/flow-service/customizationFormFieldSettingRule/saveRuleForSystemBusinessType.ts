@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/定制表单字段设置规则 - 相关/saveRuleForSystemBusinessTypeUsingPOST
 */
-export default function fetchMethod(data: IFlowTableLocateTheGroupFlowIdEditTheDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFlowTableLocateTheGroupFlowIdEditTheDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/flow-service/customizationFormFieldSettingRule/saveRuleForSystemBusinessType",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

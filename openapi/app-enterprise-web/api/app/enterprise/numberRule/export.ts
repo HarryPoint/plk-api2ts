@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/编码规则相关/exportUsingPOST_26
 */
-export default function fetchMethod(data: ICodeRulePagingQueryVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICodeRulePagingQueryVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/numberRule/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

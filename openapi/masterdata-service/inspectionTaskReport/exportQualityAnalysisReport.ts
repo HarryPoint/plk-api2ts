@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/exportQualityAnalysisReportUsingPOST
 */
-export default function fetchMethod(data: ExportQualityAnalysisReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: ExportQualityAnalysisReport }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/inspectionTaskReport/exportQualityAnalysisReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectFeeUsingPOST
 */
-export default function fetchMethod(data: IItemNameNumberPublicQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IItemNameNumberPublicQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectCostReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/listProjectFee",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

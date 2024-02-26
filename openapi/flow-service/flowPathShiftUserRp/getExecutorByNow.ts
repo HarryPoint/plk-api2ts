@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getExecutorByNowUsingGET
 */
-export default function fetchMethod(data: number[], params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessNodeExecutorVO>(
         {
             url: "/flow-service/flowPathShiftUserRp/getExecutorByNow",
             method: "get",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

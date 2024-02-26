@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用消息配置相关/addUsingPOST
 */
-export default function fetchMethod(data: IAppMessageConfigAddRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAppMessageConfigAddRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/appMessageConfig/add",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

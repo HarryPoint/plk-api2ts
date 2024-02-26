@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInspectionTaskModelStatisticsUsingGET
 */
-export default function fetchMethod(params: { dateBegin?: string; dateEnd?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { dateBegin?: string; dateEnd?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheModelStatisticsOfTheLargeScreenTestPlan>(
         {
             url: "/masterdata-service/qmsDashboard/queryInspectionTaskModelStatistics",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

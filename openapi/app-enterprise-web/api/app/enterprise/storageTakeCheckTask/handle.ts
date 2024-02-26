@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/handleUsingPOST
 */
-export default function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInventoryTaskInventoryProcessingDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/handle",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

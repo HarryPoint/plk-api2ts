@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/selectedMatchStandardTechnologyUsingPOST
 */
-export default function fetchMethod(data: ISelectedMatchStandardTechnologyRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISelectedMatchStandardTechnologyRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/salesOrder/transferToProduceOrder/selectedMatchStandardTechnology",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

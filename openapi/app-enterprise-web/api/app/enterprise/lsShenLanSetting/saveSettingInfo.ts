@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/saveSettingInfoUsingPOST_1
 */
-export default function fetchMethod(data: IDarkBlueLargeScreenSetsTheDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDarkBlueLargeScreenSetsTheDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lsShenLanSetting/saveSettingInfo",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

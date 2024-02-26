@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/getPageUsingPOST_11
 */
-export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtos }, extraOptions?: any) {
     return http<IJSONResultPagingInformationCapacityUtilizationReportVO>(
         {
             url: "/masterdata-service/produceCapacityReport/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

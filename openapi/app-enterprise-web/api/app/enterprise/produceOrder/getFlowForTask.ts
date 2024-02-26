@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getFlowForTaskUsingGET
 */
-export default function fetchMethod(params: { produceOrderId?: number; produceTaskId?: number; type?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceOrderId?: number; produceTaskId?: number; type?: string } }, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/getFlowForTask",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/saveTaskUsingPOST
 */
-export default function fetchMethod(data: IMasterDataBaseEditDTO2, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMasterDataBaseEditDTO2 }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/saveTask",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

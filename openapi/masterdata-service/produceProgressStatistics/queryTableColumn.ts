@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/queryTableColumnUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultProduceProgressStatisticTableHeadDTO>(
         {
             url: "/masterdata-service/produceProgressStatistics/queryTableColumn",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

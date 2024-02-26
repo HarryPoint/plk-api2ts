@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/产出报表(产出数据相关)相关/getReportUsingPOST_9
 */
-export default function fetchMethod(data: IOutputClassReportSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputClassReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheOutputDataStatisticsToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceDataReport/getReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

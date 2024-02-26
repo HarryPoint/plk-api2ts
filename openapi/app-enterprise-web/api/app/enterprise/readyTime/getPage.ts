@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/准备期相关/getPageUsingPOST_26
 */
-export default function fetchMethod(data: IPreparationPeriodQueryVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPreparationPeriodQueryVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationPreparationPeriodReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/readyTime/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

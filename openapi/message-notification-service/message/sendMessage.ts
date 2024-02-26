@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息相关/sendMessageUsingPOST
 */
-export default function fetchMethod(data: IMessageInformation, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageInformationparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/message-notification-service/message/sendMessage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

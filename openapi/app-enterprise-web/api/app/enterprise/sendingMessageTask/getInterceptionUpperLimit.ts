@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/消息方案相关/getInterceptionUpperLimitUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultint>(
         {
             url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/getInterceptionUpperLimit",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/lotHoldUsingGET
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/getTaskSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

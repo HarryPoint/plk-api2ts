@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产处理暂扣相关/releaseUsingPOST
 */
-export default function fetchMethod(data: ITheProductionProcessHoldsTheReleaseRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheProductionProcessHoldsTheReleaseRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandleHoldPause/release",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

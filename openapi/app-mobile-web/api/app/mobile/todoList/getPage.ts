@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/getPageUsingPOST_2
 */
-export default function fetchMethod(data: IToDoListSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IToDoListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationBacklogReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/todoList/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

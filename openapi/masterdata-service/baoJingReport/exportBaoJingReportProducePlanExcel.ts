@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportProducePlanExcelUsingPOST
 */
-export default function fetchMethod(data: IBaojingProductionTaskGanttChartQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingProductionTaskGanttChartQueryObject }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/baoJingReport/exportBaoJingReportProducePlanExcel",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

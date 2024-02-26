@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺条件组相关/saveUsingPOST_3
 */
-export default function fetchMethod(data: IDtosAreStoredInStandardProcessConditionsGroup, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDtosAreStoredInStandardProcessConditionsGroup }, extraOptions?: any) {
     return http<IJSONResultStandardProcessConditionGroupSavesResponseDtos>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyConditionGroup/save",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

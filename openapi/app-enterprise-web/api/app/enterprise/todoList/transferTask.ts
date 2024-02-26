@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/待办相关/transferTaskUsingPOST
 */
-export default function fetchMethod(data: IProcessTasksAreTransferredToTheDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTasksAreTransferredToTheDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/todoList/transferTask",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

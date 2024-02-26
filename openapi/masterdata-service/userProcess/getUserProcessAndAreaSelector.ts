@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/getUserProcessAndAreaSelectorUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; type?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; type?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListAreaOperationSelectsToReturnVO>(
         {
             url: "/masterdata-service/userProcess/getUserProcessAndAreaSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

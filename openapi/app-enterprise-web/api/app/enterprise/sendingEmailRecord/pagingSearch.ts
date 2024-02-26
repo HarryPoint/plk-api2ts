@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/发送邮件记录/pagingSearchUsingPOST_1
 */
-export default function fetchMethod(data: ISendAnEmailRecordQueryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISendAnEmailRecordQueryRequest }, extraOptions?: any) {
     return http<ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/sendingEmailRecord/pagingSearch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

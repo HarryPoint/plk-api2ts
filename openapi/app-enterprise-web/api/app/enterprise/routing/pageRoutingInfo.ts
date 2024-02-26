@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺路径相关/pageRoutingInfoUsingPOST
 */
-export default function fetchMethod(data: IProcessPathInformationPagingQueryDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessPathInformationPagingQueryDTO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessPathInformationObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/routing/pageRoutingInfo",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

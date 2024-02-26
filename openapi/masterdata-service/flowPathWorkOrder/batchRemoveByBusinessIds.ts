@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/batchRemoveByBusinessIdsUsingPOST
 */
-export default function fetchMethod(data: number[], params: { enterpriseId?: number; flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number; flowPathId?: number } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/flowPathWorkOrder/batchRemoveByBusinessIds",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

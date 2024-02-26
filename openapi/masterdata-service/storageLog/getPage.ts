@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/库存流水相关/getPageUsingPOST_30
 */
-export default function fetchMethod(data: IInventoryFlowSearchVO, params: { enterpriseId?: number; masterDataFlowPathCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInventoryFlowSearchVOparams: { enterpriseId?: number; masterDataFlowPathCode?: string, extraOptions?: any) {
     return http<IJSONResultPagingInformationInventoryReturnsVO>(
         {
             url: "/masterdata-service/storageLog/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

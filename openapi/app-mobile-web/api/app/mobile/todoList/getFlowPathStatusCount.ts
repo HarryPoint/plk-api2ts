@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/getFlowPathStatusCountUsingGET
 */
-export default function fetchMethod(params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: number } }, extraOptions?: any) {
     return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/todoList/getFlowPathStatusCount",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

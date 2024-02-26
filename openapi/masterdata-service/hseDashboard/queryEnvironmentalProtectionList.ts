@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnvironmentalProtectionListUsingPOST
 */
-export default function fetchMethod(data: IEnvironmentalProtectionSQueryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEnvironmentalProtectionSQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListGreenSQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/queryEnvironmentalProtectionList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAfterSalesQualityReportSumResultUsingPOST
 */
-export default function fetchMethod(data: IAfterSalesQualityAnalysisReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAfterSalesQualityAnalysisReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultAfterSalesQualityAnalysisReturnsVO1>(
         {
             url: "/masterdata-service/baoJingReport/getAfterSalesQualityReportSumResult",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

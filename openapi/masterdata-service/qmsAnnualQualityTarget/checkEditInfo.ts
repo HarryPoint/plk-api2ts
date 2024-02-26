@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/年度质量目标相关/checkEditInfoUsingPOST
 */
-export default function fetchMethod(data: IAnnualQualityObjectivesEditAndVerifyDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAnnualQualityObjectivesEditAndVerifyDTO }, extraOptions?: any) {
     return http<IJSONResultAnnualQualityTargetEditCheckReturnsDTO>(
         {
             url: "/masterdata-service/qmsAnnualQualityTarget/checkEditInfo",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/margeUsingPOST
 */
-export default function fetchMethod(data: IBatchOrderConsolidationDTO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchOrderConsolidationDTOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/lotOrder/marge",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

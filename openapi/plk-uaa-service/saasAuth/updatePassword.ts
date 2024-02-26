@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/updatePasswordUsingPOST
 */
-export default function fetchMethod(data: IUpdatePasswordRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUpdatePasswordRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/saasAuth/updatePassword",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

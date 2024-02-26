@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/addUsingPOST_2
 */
-export default function fetchMethod(data: ITheDataEaseMenuAddsTheRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheDataEaseMenuAddsTheRequestObject }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/plk-uaa-service/dataEaseMenu/add",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

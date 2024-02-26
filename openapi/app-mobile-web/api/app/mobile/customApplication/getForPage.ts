@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/自定义应用相关/getPageByFlowPathIdUsingPOST_2
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO, params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVOparams: { flowPathId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-mobile-web/api/app/mobile/customApplication/getForPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

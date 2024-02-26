@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/getPageUsingPOST_20
 */
-export default function fetchMethod(data: IProductionTaskSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTask/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

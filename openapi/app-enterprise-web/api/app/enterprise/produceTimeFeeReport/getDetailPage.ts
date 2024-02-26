@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工时工费相关/getDetailPageUsingPOST_1
 */
-export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IHourlyLaborRateReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheLaborCostReportReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getDetailPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

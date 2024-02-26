@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getByIdUsingGET_4
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultProcessFormVO>(
         {
             url: "/flow-service/flowPathFormField/{id}/get",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

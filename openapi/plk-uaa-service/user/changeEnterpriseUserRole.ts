@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/changeEnterpriseUserRoleUsingPOST
 */
-export default function fetchMethod(data: IRequestForAnEnterpriseUserToChangeRoles, extraOptions?: any) {
+export default function fetchMethod(options: { data: IRequestForAnEnterpriseUserToChangeRoles }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/user/changeEnterpriseUserRole",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

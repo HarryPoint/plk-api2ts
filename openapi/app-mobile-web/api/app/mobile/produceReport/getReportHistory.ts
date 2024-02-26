@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产统计相关/getReportHistoryUsingPOST
 */
-export default function fetchMethod(data: IProductionProcessingQueryVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionProcessingQueryVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceReport/getReportHistory",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

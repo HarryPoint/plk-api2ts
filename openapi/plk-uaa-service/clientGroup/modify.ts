@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/客户端组相关/modifyUsingPOST_1
 */
-export default function fetchMethod(data: IExampleModifyTheDTOOfAClientGroup, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExampleModifyTheDTOOfAClientGroup }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/clientGroup/modify",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备相关/getForPageUsingPOST_6
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/device/getForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

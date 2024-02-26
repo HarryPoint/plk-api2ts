@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/流程选项集字典相关/getListByBusinessCodeUsingGET
 */
-export default function fetchMethod(params: { businessCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldAssociationDictionaryOptionSetVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathFormFieldRpSelectorDictionary/getListByBusinessCode",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

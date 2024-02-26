@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/exportUsingPOST_13
 */
-export default function fetchMethod(data: IExceptionTypeSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExceptionTypeSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceAbnormalCategory/export",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

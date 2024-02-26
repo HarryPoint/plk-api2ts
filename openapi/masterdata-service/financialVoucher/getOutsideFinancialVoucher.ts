@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
 */
-export default function fetchMethod(params: { applicationId?: number; id?: number; voucherNo?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { applicationId?: number; id?: number; voucherNo?: string } }, extraOptions?: any) {
     return http<IJSONResultExternalFinancialCertificateResponseObject>(
         {
             url: "/masterdata-service/financialVoucher/getOutsideFinancialVoucher",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

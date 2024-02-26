@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_5
 */
-export default function fetchMethod(params: { projectCategory?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectCategory?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTemplateRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTemplate/list",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

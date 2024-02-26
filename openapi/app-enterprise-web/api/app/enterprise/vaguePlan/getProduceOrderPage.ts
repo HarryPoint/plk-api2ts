@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/模糊排产相关/getProduceOrderPageUsingPOST
 */
-export default function fetchMethod(data: IProductionOrderSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationProductionOrderReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/vaguePlan/getProduceOrderPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

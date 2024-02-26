@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/表单数据分组规则相关/editUsingPOST_4
 */
-export default function fetchMethod(data: IFormDataGroupingSettingsAreRelated, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFormDataGroupingSettingsAreRelated }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/flow-service/formDataGroupingRule/{id}/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

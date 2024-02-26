@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
 */
-export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceProductionLineSelectsRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListSelectResponseDtosForTheDeviceProductionLine>(
         {
             url: "/app-enterprise-web/api/app/enterprise/device/getDeviceProductionLineSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

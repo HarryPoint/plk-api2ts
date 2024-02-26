@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产报表/exportExcelBySaleOrderUsingPOST
 */
-export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderScheduleReport/exportExcelBySaleOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

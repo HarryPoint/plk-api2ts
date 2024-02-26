@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安全库存相关/onOffMaterialUsingPOST
 */
-export default function fetchMethod(data: ISafetyStockMaterialSwitchWarning, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchWarning }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/safetyStock/onOffMaterial",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

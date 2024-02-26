@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务自动出料相关/scheduleHandleUploadDataUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTaskAutoMoveOut/scheduleHandleUploadData",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

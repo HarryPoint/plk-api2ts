@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备保养计划相关/getUsingGET
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultMaintenancePlanRespondsToDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/get",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

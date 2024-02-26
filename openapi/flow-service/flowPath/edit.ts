@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/editUsingPOST_1
 */
-export default function fetchMethod(data: IProcessEditDTO1, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessEditDTO1params: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultProcessVersionRespondsToVO>(
         {
             url: "/flow-service/flowPath/edit",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

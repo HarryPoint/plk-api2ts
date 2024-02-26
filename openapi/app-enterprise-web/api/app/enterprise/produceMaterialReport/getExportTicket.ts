@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/产出报表(按物料统计)相关/getExportTicketUsingPOST_13
 */
-export default function fetchMethod(data: IOutputClassReportSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputClassReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceMaterialReport/getExportTicket",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/进出料设备相关/setMoveInDeviceBatchUsingPOST
 */
-export default function fetchMethod(data: IProductionTaskBatchSetTheFeedDeviceRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskBatchSetTheFeedDeviceRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutDevice/setMoveInDeviceBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

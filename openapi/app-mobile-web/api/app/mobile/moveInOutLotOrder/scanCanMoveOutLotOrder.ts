@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/进出料批次相关/scanCanMoveOutLotOrderUsingPOST
 */
-export default function fetchMethod(data: IDtoCanBeCheckedByBatchScanning, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDtoCanBeCheckedByBatchScanning }, extraOptions?: any) {
     return http<IJSONResultReleasableBatchResponseDto>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutLotOrder/scanCanMoveOutLotOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

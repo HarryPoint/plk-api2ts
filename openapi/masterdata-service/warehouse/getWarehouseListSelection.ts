@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getWarehouseListSelectionUsingPOST
 */
-export default function fetchMethod(data: IPositionTreeReturnsVO1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPositionTreeReturnsVO1 }, extraOptions?: any) {
     return http<IJSONResultDTOForPagingInformationLocationQuery>(
         {
             url: "/masterdata-service/warehouse/getWarehouseListSelection",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/仓位系统应用库存批次号相关/getWarehouseStorageSystemApplicationLotNoUsingPOST
 */
-export default function fetchMethod(data: ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventoryBatchNumberPagingReturnObject>(
         {
             url: "/app-mobile-web/api/app/mobile/warehouseStorageSystemApplicationLotNo/getLotNoList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

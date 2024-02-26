@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/editByBusinessTypeUsingPOST
 */
-export default function fetchMethod(data: IBusinessCodingRulesEditDto, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBusinessCodingRulesEditDto }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/editByBusinessType",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

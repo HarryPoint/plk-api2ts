@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/进出料bom消耗相关/listEmployeeToDayLastMoveInBomConsumeByProduceTaskIdUsingGET
 */
-export default function fetchMethod(params: { produceTaskId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceTaskId?: number } }, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheDTOForTheLastInputBom>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutBomConsume/listEmployeeToDayLastMoveInBomConsumeByProduceTaskId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

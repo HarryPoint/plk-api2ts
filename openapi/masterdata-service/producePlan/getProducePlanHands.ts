@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProducePlanHandsUsingPOST
 */
-export default function fetchMethod(data: number[], params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProductionPlanManuallySchedulesVOProduction>(
         {
             url: "/masterdata-service/producePlan/getProducePlanHands",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

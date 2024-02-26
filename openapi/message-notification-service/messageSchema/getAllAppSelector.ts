@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/getAllAppSelectorUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListAppliesTheServiceTreeDTO>(
         {
             url: "/message-notification-service/messageSchema/getAllAppSelector",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

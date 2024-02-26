@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
 */
-export default function fetchMethod(data: IBaojingReportMaterialSelectionQuery, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingReportMaterialSelectionQuery }, extraOptions?: any) {
     return http<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/getMaterialSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

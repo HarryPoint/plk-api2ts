@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveInDetailUsingPOST
 */
-export default function fetchMethod(data: IQueryDTOForIncomingAndOutgoingMaterialInformation, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryDTOForIncomingAndOutgoingMaterialInformationparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultIncomingAndOutgoingMaterialInformationResponseObject>(
         {
             url: "/masterdata-service/produceTask/getMoveInDetail",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

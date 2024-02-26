@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/qualityCompleteUsingPOST
 */
-export default function fetchMethod(data: ITheDTOCompletesTheInspectionTask, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheDTOCompletesTheInspectionTask }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/qualityComplete",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

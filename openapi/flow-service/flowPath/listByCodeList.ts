@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/listByCodeListUsingPOST
 */
-export default function fetchMethod(data: string[], extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<ITheJSONResultListProcessRespondsToVO>(
         {
             url: "/flow-service/flowPath/listByCodeList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

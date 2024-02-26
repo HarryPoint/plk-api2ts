@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorUsingPOST
 */
-export default function fetchMethod(data: IProcessCardSelectionListSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessCardSelectionListSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/processSheet/getSelector",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/batchResetSystemBySystemTypeUsingGET
 */
-export default function fetchMethod(params: { systemType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { systemType?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathScript/batchResetSystemBySystemType",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

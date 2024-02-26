@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料全局批次设置相关/getUsingGET_1
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultMaterialGlobalBatchSettingsEditResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/materialGlobalLotSetting/get",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

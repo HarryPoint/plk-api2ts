@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/listStaffSelectorUsingPOST
 */
-export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: INameNumberDTO }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/listStaffSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

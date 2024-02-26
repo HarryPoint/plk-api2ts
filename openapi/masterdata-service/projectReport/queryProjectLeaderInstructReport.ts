@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectLeaderInstructReportUsingPOST
 */
-export default function fetchMethod(data: QueryProjectLeaderInstructReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: QueryProjectLeaderInstructReport }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectLeaderInstructReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

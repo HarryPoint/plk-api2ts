@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/西偌帕斯大屏相关/getProcessSelectorUsingGET_2
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lsXiRuoPaSiSetting/getProcessSelector",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

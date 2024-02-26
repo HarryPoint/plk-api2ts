@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/待办相关/getTodoTaskStatusSelectorUsingGET
 */
-export default function fetchMethod(params: { queryStatus?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { queryStatus?: string } }, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/todoList/getTodoTaskStatusSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

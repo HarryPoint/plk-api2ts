@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/editUsingPOST_26
 */
-export default function fetchMethod(data: IStandardProcessCodingRulesRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IStandardProcessCodingRulesRequestDTO }, extraOptions?: any) {
     return http<IJSONResultidIndicatesTheInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

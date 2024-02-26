@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getDetailPageConfigOptionalAppListUsingGET
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigOptionalAppResponseDTO>(
         {
             url: "/flow-service/flowPathDetailPageConfig/getDetailPageConfigOptionalAppList",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

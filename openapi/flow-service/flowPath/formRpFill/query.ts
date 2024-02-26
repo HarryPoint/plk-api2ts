@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/queryFormRpFillByConditionUsingPOST
 */
-export default function fetchMethod(data: IFlowPathFormFieldFormRpQueryConditionVo, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFlowPathFormFieldFormRpQueryConditionVoparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListFlowPathFormFieldFormRpFillVo>(
         {
             url: "/flow-service/flowPath/formRpFill/query",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量追溯/queryQualityTraceabilityReportPageUsingPOST
 */
-export default function fetchMethod(data: IQualityTraceabilityReportQueryDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQualityTraceabilityReportQueryDTO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationQualityTraceabilityReportRespondsToTheDTO>(
         {
             url: "/masterdata-service/qualityTraceability/queryQualityTraceabilityReportPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

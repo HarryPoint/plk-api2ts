@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/batchUseLotNoUsingPOST
 */
-export default function fetchMethod(data: string[], extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultTheBatchNumberIsDTO1>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchUseLotNo",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeTelephoneByVerCodeUsingPOST
 */
-export default function fetchMethod(data: IUpdateMobileNumberAccordingToVerificationCodeRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUpdateMobileNumberAccordingToVerificationCodeRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/saasAuth/changeTelephoneByVerCode",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

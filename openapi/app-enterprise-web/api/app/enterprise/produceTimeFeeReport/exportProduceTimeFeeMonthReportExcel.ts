@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工时工费相关/exportProduceTimeFeeMonthReportExcelUsingPOST
 */
-export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/exportProduceTimeFeeMonthReportExcel",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

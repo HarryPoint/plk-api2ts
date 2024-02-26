@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/设备数采相关/uploadDeviceDataUsingPOST
 */
-export default function fetchMethod(data: IDeviceDataAcquisitionDataUpload[], extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataUpload[] }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/deviceCollectionData/uploadDataByUser",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

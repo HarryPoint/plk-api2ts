@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/querySalesStatisticsUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListSalesStatisticsItemOutputVO>(
         {
             url: "/masterdata-service/businessChance/querySalesStatistics",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

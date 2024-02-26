@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/getInfoUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultEnterpriseResponseObject>(
         {
             url: "/plk-uaa-service/enterprise/getInfo",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

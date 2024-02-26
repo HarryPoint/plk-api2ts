@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/addBatchUsingPOST_1
 */
-export default function fetchMethod(data: IEmployeeEditRequest[], extraOptions?: any) {
+export default function fetchMethod(options: { data: IEmployeeEditRequest[] }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/employee/addBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

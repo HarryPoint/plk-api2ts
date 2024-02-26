@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskDetailByNoUsingGET
 */
-export default function fetchMethod(params: { taskNo?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskNo?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees>(
         {
             url: "/masterdata-service/qualityProduceTask/getQualityTaskDetailByNo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

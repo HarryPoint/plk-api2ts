@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getDifengSalesDayReportStatisticsUsingPOST
 */
-export default function fetchMethod(data: GetDifengSalesDayReportStatistics, extraOptions?: any) {
+export default function fetchMethod(options: { data: GetDifengSalesDayReportStatistics }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics>(
         {
             url: "/masterdata-service/salesDayReport/getDifengSalesDayReportStatistics",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

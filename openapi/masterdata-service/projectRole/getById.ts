@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目角色相关/getByIdUsingPOST_1
 */
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { flowPathId?: number; projectId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVOparams: { flowPathId?: number; projectId?: number, extraOptions?: any) {
     return http<IJSONResultProjectRoleEditsResponseDTO>(
         {
             url: "/masterdata-service/projectRole/getById",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

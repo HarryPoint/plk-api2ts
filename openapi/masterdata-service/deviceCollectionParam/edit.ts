@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/editUsingPOST_3
 */
-export default function fetchMethod(data: IDeviceDataAcquisitionCommunicationParametersEditDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionCommunicationParametersEditDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/deviceCollectionParam/edit",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/短信模板/processUpdateSmsTemplateForAuditStateUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/smsTemplate/processUpdateSmsTemplateForAuditState",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/changeSortUsingPOST
 */
-export default function fetchMethod(data: IIdSetInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdSetInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/enterpriseRouter/changeSort",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

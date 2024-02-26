@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getDetailDataListByMasterIdsUsingPOST
 */
-export default function fetchMethod(data: ISubtableDataQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISubtableDataQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getDetailDataListByMasterIds",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

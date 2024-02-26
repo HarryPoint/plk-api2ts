@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getUserIdCodesByDepartmentIdUsingGET
 */
-export default function fetchMethod(params: { departmentId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { departmentId?: number } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/getUserIdCodesByDepartmentId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

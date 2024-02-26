@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺条件组相关/getInfoByIdUsingGET_3
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultStandardProcessConditionGroupRespondsToDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyConditionGroup/getInfoById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

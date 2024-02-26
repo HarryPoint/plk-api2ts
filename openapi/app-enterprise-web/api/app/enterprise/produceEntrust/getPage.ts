@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/委外加工管理/getPageUsingPOST_16
 */
-export default function fetchMethod(data: IOutsourcingSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutsourcingSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationOutsourcingReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceEntrust/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

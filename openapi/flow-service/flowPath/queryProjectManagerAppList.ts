@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/queryProjectManagerAppListUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultProjectManageAppQueryResponseDTO>(
         {
             url: "/flow-service/flowPath/queryProjectManagerAppList",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

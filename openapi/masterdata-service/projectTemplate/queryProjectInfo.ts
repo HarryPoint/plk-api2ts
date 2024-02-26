@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/queryProjectInfoUsingGET
 */
-export default function fetchMethod(params: { projectTemplateId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectTemplateId?: number } }, extraOptions?: any) {
     return http<IJSONResultProjectTemplateProjectInformationRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTemplate/queryProjectInfo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

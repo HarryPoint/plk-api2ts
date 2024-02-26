@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getTreeByWarehouseUsingGET
 */
-export default function fetchMethod(params: { storehouseId?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { storehouseId?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListPositionTreeReturnsVO>(
         {
             url: "/masterdata-service/warehouse/getTreeByWarehouse",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

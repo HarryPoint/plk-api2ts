@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/已排产订单相关/batchUnLockOrderUsingPOST
 */
-export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/planed/batchUnLockOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

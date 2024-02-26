@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-step-controller/getByProduceTechnologyRoutingIdsUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListProduceTechnologyRoutingStepResponseDTO>(
         {
             url: "/masterdata-service/produceTechnologyRoutingStep/getByProduceTechnologyRoutingIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

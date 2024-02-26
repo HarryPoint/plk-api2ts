@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeAndFeeQtyStatisticUsingPOST
 */
-export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUserProductionStatisticsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultStatisticsOnLaborCostReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeAndFeeQtyStatistic",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

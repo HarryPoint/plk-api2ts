@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目相关/forceRemoveByIdUsingGET
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/project/forceRemoveById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

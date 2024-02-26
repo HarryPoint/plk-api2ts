@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/abnormalRevokeUsingPOST
 */
-export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/abnormalRevoke",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

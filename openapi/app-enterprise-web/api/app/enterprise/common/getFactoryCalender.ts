@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getFactoryCalenderUsingPOST
 */
-export default function fetchMethod(data: IDateRangeQueryDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDateRangeQueryDTO }, extraOptions?: any) {
     return http<IJSONResultListFactoryCalendarScheduleShiftRelationshipVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/getFactoryCalender",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

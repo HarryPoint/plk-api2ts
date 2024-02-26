@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByMaterialIdsUsingPOST
 */
-export default function fetchMethod(data: ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject }, extraOptions?: any) {
     return http<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate>(
         {
             url: "/masterdata-service/weiLianLotPrintTemplate/listAlreadyBindMaterialByMaterialIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

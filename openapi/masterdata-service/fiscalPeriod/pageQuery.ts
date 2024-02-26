@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/pageQueryUsingPOST
 */
-export default function fetchMethod(data: IFinancialPeriodQueryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFinancialPeriodQueryRequest }, extraOptions?: any) {
     return http<IJSONResultPagingInformationFinancialPeriodQueryResponse>(
         {
             url: "/masterdata-service/fiscalPeriod/pageQuery",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

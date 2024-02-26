@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/逆地址解析/parseUsingPOST
 */
-export default function fetchMethod(data: ILocationInfo, extraOptions?: any) {
+export default function fetchMethod(options: { data: ILocationInfo }, extraOptions?: any) {
     return http<IJSONResultAddressOutputDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/reverseAddressParsing/parsing",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

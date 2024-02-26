@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathAndTableColumnByFlowPathIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathId?: number } }, extraOptions?: any) {
     return http<IJSONResultProcessAndTableColumnVO>(
         {
             url: "/flow-service/flowPath/getFlowPathAndTableColumnByFlowPathId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

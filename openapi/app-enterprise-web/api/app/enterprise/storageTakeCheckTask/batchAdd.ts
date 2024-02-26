@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/batchAddUsingPOST
 */
-export default function fetchMethod(data: IEditDTOForWarehouseInventoryTaskBatch, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEditDTOForWarehouseInventoryTaskBatch }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/batchAdd",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

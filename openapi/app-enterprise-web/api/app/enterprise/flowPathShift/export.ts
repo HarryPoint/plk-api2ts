@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务班次相关/exportUsingPOST_17
 */
-export default function fetchMethod(data: ITaskShiftSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITaskShiftSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathShift/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

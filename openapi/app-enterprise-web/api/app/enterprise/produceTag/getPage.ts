@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产标签相关/getPageUsingPOST_19
 */
-export default function fetchMethod(data: IExceptionTagSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExceptionTagSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationExceptionLabelReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTag/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

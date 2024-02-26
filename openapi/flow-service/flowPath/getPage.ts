@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getPageUsingPOST
 */
-export default function fetchMethod(data: IProcessSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationFlowRespondsToVO>(
         {
             url: "/flow-service/flowPath/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

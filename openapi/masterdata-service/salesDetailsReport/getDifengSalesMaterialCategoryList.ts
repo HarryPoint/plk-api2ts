@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesMaterialCategoryListUsingPOST
 */
-export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: INameNumberDTO }, extraOptions?: any) {
     return http<IJSONResultListNameEncodesTheResponseDTO>(
         {
             url: "/masterdata-service/salesDetailsReport/getDifengSalesMaterialCategoryList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getMaterialSelectorUsingGET
 */
-export default function fetchMethod(params: { materialTypeList?: string[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: string }[] }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialTypeList?: string[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: string }[] } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getMaterialSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

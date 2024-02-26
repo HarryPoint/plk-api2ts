@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产进度统计报表 - 相关/getForPageUsingPOST_21
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceProgressStatistics/getForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

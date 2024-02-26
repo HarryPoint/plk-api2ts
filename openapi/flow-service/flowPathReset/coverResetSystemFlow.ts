@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程重置相关/coverResetSystemFlowUsingPOST
 */
-export default function fetchMethod(params: { enterpriseId?: number; systemType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; systemType?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathReset/coverResetSystemFlow",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

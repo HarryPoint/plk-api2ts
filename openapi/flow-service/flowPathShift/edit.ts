@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/editUsingPOST_3
 */
-export default function fetchMethod(data: ITaskShiftEditDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITaskShiftEditDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathShift/edit",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/searchByFlowPathCodeAndSerialNoListUsingPOST
 */
-export default function fetchMethod(data: IDynamicFormQuery, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDynamicFormQuery }, extraOptions?: any) {
     return http<IJSONResultDynamicFormQueryOutputVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/form/searchByFlowPathCodeAndSerialNoList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

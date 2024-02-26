@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/pageMoveInDeviceUsingPOST
 */
-export default function fetchMethod(data: IFeedEquipmentPagingQuery, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFeedEquipmentPagingQuery }, extraOptions?: any) {
     return http<IJSONResultThePagingInformationFeedDeviceRespondsToTheDTO>(
         {
             url: "/masterdata-service/moveInOutDevice/pageMoveInDevice",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

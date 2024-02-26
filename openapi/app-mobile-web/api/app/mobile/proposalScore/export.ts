@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/合理化建议评分相关/exportUsingPOST_27
 */
-export default function fetchMethod(data: IProcessDataSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-mobile-web/api/app/mobile/proposalScore/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

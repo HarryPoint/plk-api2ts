@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表相关/getPageUsingPOST_25
 */
-export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOrderProgressStatisticsQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPageInformationOrderProgressStatisticsResponseVO>(
         {
             url: "/masterdata-service/report/getSalesOrderReport",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

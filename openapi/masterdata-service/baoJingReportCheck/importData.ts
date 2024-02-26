@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingReportRawStorageResultVOUsingPOST
 */
-export default function fetchMethod(params: { enterpriseId?: number; filePathNo?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; filePathNo?: number } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/baoJingReportCheck/importData",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

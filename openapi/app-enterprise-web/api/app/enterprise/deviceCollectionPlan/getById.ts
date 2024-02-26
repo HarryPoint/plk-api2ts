@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/getByIdUsingGET_3
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultTheDeviceDataCollectionSchemeDetailsAreReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/getById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

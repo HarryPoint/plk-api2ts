@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/手动排产甘特图相关/getProduceOrderUsingPOST_1
 */
-export default function fetchMethod(data: IGanttChartSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IGanttChartSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationProductionOrderManualSchedulingGanttChartReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/handPlanGantt/getProduceOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

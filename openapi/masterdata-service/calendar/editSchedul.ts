@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/editSchedulUsingPOST
 */
-export default function fetchMethod(data: ICalendarSchedulingVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICalendarSchedulingVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/calendar/editSchedul",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

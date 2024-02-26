@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getIdCodeBySerialNoUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathId?: number; serialNo?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathId?: number; serialNo?: string } }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
             url: "/flow-service/flowPathTableColumn/getIdCodeBySerialNo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

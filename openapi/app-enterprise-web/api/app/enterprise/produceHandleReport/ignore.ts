@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/上报反馈服务相关/ignoreUsingPOST
 */
-export default function fetchMethod(data: IReportTheDTOToHandleTheChangeStatus, extraOptions?: any) {
+export default function fetchMethod(options: { data: IReportTheDTOToHandleTheChangeStatus }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandleReport/ignore",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

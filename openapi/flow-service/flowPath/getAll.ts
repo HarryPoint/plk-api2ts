@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getAllUsingPOST
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListProcessRespondsToVO>(
         {
             url: "/flow-service/flowPath/getAll",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

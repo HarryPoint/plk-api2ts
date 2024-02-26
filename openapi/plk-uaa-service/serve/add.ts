@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/服务相关/addUsingPOST_10
 */
-export default function fetchMethod(data: IServiceAddedADTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IServiceAddedADTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/serve/add",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

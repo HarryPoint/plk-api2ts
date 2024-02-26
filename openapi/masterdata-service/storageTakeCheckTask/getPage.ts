@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getPageUsingPOST_31
 */
-export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IWarehouseInventoryTasksPageQueryObjectsparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

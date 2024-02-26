@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料批次设置相关/getUsingGET_2
 */
-export default function fetchMethod(params: { materialId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialId?: number } }, extraOptions?: any) {
     return http<IJSONResultMaterialBatchSettingsEditResponseObjects>(
         {
             url: "/app-enterprise-web/api/app/enterprise/materialLotSetting/get",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

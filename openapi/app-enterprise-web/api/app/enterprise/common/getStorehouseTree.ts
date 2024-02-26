@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getStorehouseTreeUsingGET_1
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<ITheJSONResultListRepositoryAreaTreeReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/getStorehouseTree",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

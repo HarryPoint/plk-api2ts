@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养计划自动下发相关/robotIssueTaskUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/deviceMaintainPlanRobotIssue/robotIssueTask",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

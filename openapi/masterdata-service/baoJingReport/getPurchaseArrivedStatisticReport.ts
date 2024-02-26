@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getPurchaseArrivedStatisticReportUsingPOST
 */
-export default function fetchMethod(data: IPurchaseArrivalStatisticsReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPurchaseArrivalStatisticsReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheStatisticsReportOfPurchasedGoodsIsReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getPurchaseArrivedStatisticReport",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

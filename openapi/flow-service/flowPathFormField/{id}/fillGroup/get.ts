@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getFilterGroupsUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListProcessFormAssociatesTheFormFilterGroupVO>(
         {
             url: "/flow-service/flowPathFormField/{id}/fillGroup/get",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

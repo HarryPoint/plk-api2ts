@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/getPageUsingPOST_1
 */
-export default function fetchMethod(data: ITaskShiftSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITaskShiftSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationFlowShiftReturnsVO>(
         {
             url: "/flow-service/flowPathShift/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

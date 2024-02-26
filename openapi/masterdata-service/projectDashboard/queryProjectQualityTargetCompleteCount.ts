@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectQualityTargetCompleteCountUsingPOST
 */
-export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectKanbanQueryDto }, extraOptions?: any) {
     return http<IJSONResultStatisticalResponseObjectForProjectQualityObjectives>(
         {
             url: "/masterdata-service/projectDashboard/queryProjectQualityTargetCompleteCount",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

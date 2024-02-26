@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
 */
-export default function fetchMethod(data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried }, extraOptions?: any) {
     return http<IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrievingMaterials>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseStorageMaterialScan/outStorageScanLotNo",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

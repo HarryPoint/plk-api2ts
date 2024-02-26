@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getOrganizationControlFieldsUsingGET
 */
-export default function fetchMethod(params: { flowPathCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListOrganizationControlFieldVO>(
         {
             url: "/flow-service/flowPathFormField/organizationControlField/get",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

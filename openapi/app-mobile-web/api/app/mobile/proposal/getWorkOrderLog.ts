@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/合理化建议相关/getWorkOrderLogUsingPOST_22
 */
-export default function fetchMethod(data: IJobLogSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IJobLogSearchVO }, extraOptions?: any) {
     return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/proposal/getWorkOrderLog",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

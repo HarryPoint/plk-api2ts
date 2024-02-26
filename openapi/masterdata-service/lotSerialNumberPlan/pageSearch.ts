@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/批次方案相关/pageSearchUsingPOST_1
 */
-export default function fetchMethod(data: IPaging5, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPaging5 }, extraOptions?: any) {
     return http<ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInformation>(
         {
             url: "/masterdata-service/lotSerialNumberPlan/pageSearch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/calcDataLinkageUsingPOST
 */
-export default function fetchMethod(data: IDataLinkageCalcRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDataLinkageCalcRequestDTO }, extraOptions?: any) {
     return http<IJSONResultDataLinkageCalcResponseDTO>(
         {
             url: "/masterdata-service/dynamicData/calcDataLinkage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

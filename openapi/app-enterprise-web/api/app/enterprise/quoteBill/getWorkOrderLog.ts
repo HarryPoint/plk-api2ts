@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-报价单相关/getWorkOrderLogUsingPOST_26
 */
-export default function fetchMethod(data: IJobLogSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IJobLogSearchVO }, extraOptions?: any) {
     return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/quoteBill/getWorkOrderLog",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

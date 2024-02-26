@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/班组相关/getDynamicClassGroupByIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
             url: "/masterdata-service/classGroup/getDynamicClassGroupById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

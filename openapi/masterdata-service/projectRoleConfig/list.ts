@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目角色配置相关/getForPageUsingPOST_16
 */
-export default function fetchMethod(data: IProjectRoleConfigureTheQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectRoleConfigureTheQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectRoleConfigurationReturnObject>(
         {
             url: "/masterdata-service/projectRoleConfig/list",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

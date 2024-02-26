@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/pagingSearchSelectionUserListUsingPOST
 */
-export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISearchVOWithTheHomeOwnerDataSelectionListparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/masterdata-service/employee/selectionList/pagingSearch",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

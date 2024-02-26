@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/销售订单相关/getCloseInfoByIdUsingGET_1
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesOrderClosureInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesOrder/getCloseInfoById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

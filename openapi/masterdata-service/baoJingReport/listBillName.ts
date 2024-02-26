@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/listBillNameUsingGET
 */
-export default function fetchMethod(params: { billName?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { billName?: string } }, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/masterdata-service/baoJingReport/listBillName",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

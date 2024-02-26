@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/updateTodoBusinessStatusUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathTaskId?: number; flowPathWorkOrderId?: number; statusDesc?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathTaskId?: number; flowPathWorkOrderId?: number; statusDesc?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/updateTodoBusinessStatus",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

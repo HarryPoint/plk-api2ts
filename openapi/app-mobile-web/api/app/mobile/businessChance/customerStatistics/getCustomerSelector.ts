@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/CRM-客户统计报表相关/getCustomerSelectorUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListClientSelectsToReturnVO>(
         {
             url: "/app-mobile-web/api/app/mobile/businessChance/customerStatistics/getCustomerSelector",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

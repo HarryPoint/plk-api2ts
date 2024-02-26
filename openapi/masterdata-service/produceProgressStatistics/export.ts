@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产进度统计报表 - 相关/exportUsingPOST_20
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO2, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVO2 }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceProgressStatistics/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

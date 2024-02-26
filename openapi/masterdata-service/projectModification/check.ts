@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目变更相关/checkUsingGET_1
 */
-export default function fetchMethod(params: { projectId?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheResultOfVerifyingProjectChangeInformation>(
         {
             url: "/masterdata-service/projectModification/check",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

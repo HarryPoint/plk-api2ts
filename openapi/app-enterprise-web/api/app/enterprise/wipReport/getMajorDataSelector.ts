@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/WIP报表相关/getMajorDataSelectorUsingPOST_20
 */
-export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/wipReport/getMajorDataSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

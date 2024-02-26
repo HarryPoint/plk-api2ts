@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/客户线索相关/pageUsingPOST_1
 */
-export default function fetchMethod(data: IPagingQueryOfCustomerLeads, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPagingQueryOfCustomerLeads }, extraOptions?: any) {
     return http<IJSONResultPagingInformationCustomerLeadPagingResponse>(
         {
             url: "/plk-uaa-service/enterpriseClue/page",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

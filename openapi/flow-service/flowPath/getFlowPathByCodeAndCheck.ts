@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathByCodeAndCheckUsingGET
 */
-export default function fetchMethod(params: { code?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultProcessRespondsToVO>(
         {
             url: "/flow-service/flowPath/getFlowPathByCodeAndCheck",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

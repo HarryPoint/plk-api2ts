@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/deleteUsingGET
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/projectTemplate/delete",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

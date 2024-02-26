@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFieldDataPageSelectorUsingPOST
 */
-export default function fetchMethod(data: IProcessAssociationFormSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessAssociationFormSearchVO }, extraOptions?: any) {
     return http<IJSONResultProcessAssociationFormQueryReturnsVO>(
         {
             url: "/masterdata-service/dynamicData/getFieldDataPageSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

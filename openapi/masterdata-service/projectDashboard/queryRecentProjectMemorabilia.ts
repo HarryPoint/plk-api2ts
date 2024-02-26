@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryRecentProjectMemorabiliaUsingPOST
 */
-export default function fetchMethod(data: IProjectEventsLargeScreenQueryDto, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectEventsLargeScreenQueryDto }, extraOptions?: any) {
     return http<IJSONResultListProjectEventResponseObject>(
         {
             url: "/masterdata-service/projectDashboard/queryRecentProjectMemorabilia",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺具体工艺路径节点相关/editUsingPOST_27
 */
-export default function fetchMethod(data: IStandardProcessSpecificProcessPathNodeEditRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IStandardProcessSpecificProcessPathNodeEditRequestObject }, extraOptions?: any) {
     return http<IJSONResultProcessPathNodeEditsTheResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificRoutingNode/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

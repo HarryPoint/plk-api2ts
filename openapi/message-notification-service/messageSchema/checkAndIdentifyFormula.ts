@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/checkAndIdentifyFormulaUsingPOST
 */
-export default function fetchMethod(data: IFormulaCheckRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFormulaCheckRequestDTO }, extraOptions?: any) {
     return http<IJSONResultFormulaCheckResponseDTO>(
         {
             url: "/message-notification-service/messageSchema/checkAndIdentifyFormula",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工费相关/saveUsingPOST_3
 */
-export default function fetchMethod(data: ILaborCostsSaveDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ILaborCostsSaveDTO }, extraOptions?: any) {
     return http<IJSONResultLaborResponseObject>(
         {
             url: "/masterdata-service/laborCost/save",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

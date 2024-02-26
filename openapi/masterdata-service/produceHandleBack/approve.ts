@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/approveUsingPOST
 */
-export default function fetchMethod(data: IProductionProcessesTheReworkApprovalRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionProcessesTheReworkApprovalRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleBack/approve",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

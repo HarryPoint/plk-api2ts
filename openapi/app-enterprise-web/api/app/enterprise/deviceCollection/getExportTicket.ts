@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据概览相关/getExportTicketUsingPOST_8
 */
-export default function fetchMethod(data: IDeviceDataAcquisitionDataListSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataListSearchVO }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollection/getExportTicket",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

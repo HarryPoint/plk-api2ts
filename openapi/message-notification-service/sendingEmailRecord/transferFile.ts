@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/transferFilesUsingPOST
 */
-export default function fetchMethod(data: ITransferFileRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITransferFileRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/sendingEmailRecord/transferFile",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

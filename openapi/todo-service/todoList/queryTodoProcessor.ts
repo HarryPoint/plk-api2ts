@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/queryTodoProcessorUsingPOST
 */
-export default function fetchMethod(data: ITodoProcessorQueryRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITodoProcessorQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultTodoProcessorQueryResponseDTO>(
         {
             url: "/todo-service/todoList/queryTodoProcessor",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

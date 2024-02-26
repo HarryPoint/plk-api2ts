@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/project-script-controller/supplyPermissionAndRouterUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/projectScript/supplyPermissionAndRouter",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

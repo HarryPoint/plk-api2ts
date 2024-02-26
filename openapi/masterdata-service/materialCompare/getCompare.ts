@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getMaterialCompareUsingPOST
 */
-export default function fetchMethod(data: IMaterialMasterDataBomidCollectionVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataBomidCollectionVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListReturnVOForMaterialMasterDataComparison>(
         {
             url: "/masterdata-service/materialCompare/getCompare",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

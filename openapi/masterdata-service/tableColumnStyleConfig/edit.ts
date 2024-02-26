@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editUsingPOST_24
 */
-export default function fetchMethod(data: IListColumnStyleConfigurationEditDTO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IListColumnStyleConfigurationEditDTOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListColumnStyleConfigurationEditDTO>(
         {
             url: "/masterdata-service/tableColumnStyleConfig/edit",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/基于盘点权限同步盘点编码规则相关/syncAllUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/storageTakeCheckTaskSyncCodeRuleScript/syncAll",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

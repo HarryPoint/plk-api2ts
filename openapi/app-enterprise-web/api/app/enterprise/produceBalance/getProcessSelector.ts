@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产结存报表相关/getProcessSelectorUsingGET_4
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceBalance/getProcessSelector",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/generateTicketUsingPOST
 */
-export default function fetchMethod(params: { enterpriseCode?: string; enterpriseId?: number; searchJson?: string; type?: string; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseCode?: string; enterpriseId?: number; searchJson?: string; type?: string; userId?: number } }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/masterdata-service/exportAuth/generateTicket",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

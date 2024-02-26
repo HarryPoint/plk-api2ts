@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业权限相关/listByParentCodeUsingGET
 */
-export default function fetchMethod(params: { parentCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { parentCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListEnterprisePermissionResponseDTO>(
         {
             url: "/plk-uaa-service/enterprisePermission/listByParentCode",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

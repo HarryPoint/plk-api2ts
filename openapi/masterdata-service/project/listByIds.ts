@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目相关/listByIdsUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListProjectResponse>(
         {
             url: "/masterdata-service/project/listByIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

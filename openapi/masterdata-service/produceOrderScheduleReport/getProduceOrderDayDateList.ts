@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/订单排产报表/getProduceOrderDayDateListUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/masterdata-service/produceOrderScheduleReport/getProduceOrderDayDateList",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

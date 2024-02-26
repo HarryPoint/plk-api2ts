@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/getPageUsingPOST_17
 */
-export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProduceObjectsThatHandlePagingQueries }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProductionHandlesPagingResponseObjects>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandle/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

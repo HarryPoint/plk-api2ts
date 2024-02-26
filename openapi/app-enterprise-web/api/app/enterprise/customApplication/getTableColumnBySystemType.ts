@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/自定义应用相关/getTableColumnBySystemTypeUsingGET
 */
-export default function fetchMethod(params: { flowPathSystemType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathSystemType?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/customApplication/getTableColumnBySystemType",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

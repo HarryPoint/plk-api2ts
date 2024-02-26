@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeListByNoSetDeviceEmployeeCapacityUsingPOST
 */
-export default function fetchMethod(data: IEquipmentPersonnelCapabilityNoPersonnelQueryDTOIsSet, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEquipmentPersonnelCapabilityNoPersonnelQueryDTOIsSet }, extraOptions?: any) {
     return http<IJSONResultListDevicePersonnelCapabilityNoPersonnelResponseDTOIsSet>(
         {
             url: "/masterdata-service/deviceEmployeeCapacity/getEmployeeListByNoSetDeviceEmployeeCapacity",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

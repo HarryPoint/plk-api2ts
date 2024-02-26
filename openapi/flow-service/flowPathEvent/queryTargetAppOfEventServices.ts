@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTargetAppOfEventServicesUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListTheTargetApplicationQueryRequest>(
         {
             url: "/flow-service/flowPathEvent/queryTargetAppOfEventServices",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/部门相关/modifyUsingPOST_3
 */
-export default function fetchMethod(data: IDepartmentEditRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDepartmentEditRequest }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/department/modify",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

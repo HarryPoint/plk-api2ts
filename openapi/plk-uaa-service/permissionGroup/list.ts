@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/权限组相关/listUsingGET_2
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListPermissionGroupRespondsToTheDTO>(
         {
             url: "/plk-uaa-service/permissionGroup/list",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

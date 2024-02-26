@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议评分相关/listByProjectIdUsingPOST
 */
-export default function fetchMethod(params: { projectId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProposalScoreResponseDTO>(
         {
             url: "/masterdata-service/proposalScore/listByProjectId",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanMoveInLotOrderUsingPOST
 */
-export default function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches }, extraOptions?: any) {
     return http<ITheJSONResultListRespondsToTheDtoForIncomingBatches>(
         {
             url: "/masterdata-service/moveInOutLotOrder/listCanMoveInLotOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

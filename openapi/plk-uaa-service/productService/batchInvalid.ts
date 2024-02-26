@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/batchInvalidUsingPOST
 */
-export default function fetchMethod(data: IProductServiceOutageRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductServiceOutageRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/productService/batchInvalid",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

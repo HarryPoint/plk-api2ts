@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/syncAllUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/codeSyncTask/syncAll",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

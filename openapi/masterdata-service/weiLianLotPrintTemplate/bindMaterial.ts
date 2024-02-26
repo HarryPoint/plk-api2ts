@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/bindMaterialUsingPOST
 */
-export default function fetchMethod(data: ITheViVBatchPrintTemplateBindsTheMaterialRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheViVBatchPrintTemplateBindsTheMaterialRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/weiLianLotPrintTemplate/bindMaterial",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

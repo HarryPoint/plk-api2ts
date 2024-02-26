@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/报废统计/getReportUsingPOST_5
 */
-export default function fetchMethod(data: IBaojingReportScrapRelatedSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingReportScrapRelatedSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationBaoJingReportScrapRelatedReturnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportScrap/getReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

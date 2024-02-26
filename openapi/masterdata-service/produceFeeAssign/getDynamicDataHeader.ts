@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDynamicDataHeaderUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProductionCostAllocationDynamicTableHeaderResponseObject>(
         {
             url: "/masterdata-service/produceFeeAssign/getDynamicDataHeader",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

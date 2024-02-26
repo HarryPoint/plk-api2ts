@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/用户聚合维度配置相关/queryUsingPOST
 */
-export default function fetchMethod(data: IUserAggregationDimensionConfigurationQuery1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUserAggregationDimensionConfigurationQuery1 }, extraOptions?: any) {
     return http<IJSONResultUserAggregationDimensionConfigurationQuery>(
         {
             url: "/masterdata-service/employeeCollectDimensionConfig/query",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

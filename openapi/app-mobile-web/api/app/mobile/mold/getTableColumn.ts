@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/模具相关/getTableColumnUsingGET_22
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-mobile-web/api/app/mobile/mold/getTableColumn",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

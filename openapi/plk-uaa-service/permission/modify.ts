@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/权限相关/modifyUsingPOST_8
 */
-export default function fetchMethod(data: IPermissionEditDtos, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPermissionEditDtos }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/permission/modify",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

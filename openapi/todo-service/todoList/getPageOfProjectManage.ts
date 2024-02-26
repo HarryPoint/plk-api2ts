@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/getPageOfProjectManageUsingPOST
 */
-export default function fetchMethod(data: IToDoListSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IToDoListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationBacklogReturnsVO>(
         {
             url: "/todo-service/todoList/getPageOfProjectManage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

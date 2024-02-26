@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料相关/getFlowPathStructureDataUsingPOST_20
 */
-export default function fetchMethod(data: IProcessStructureSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVO }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/material/getFlowPathStructureData",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

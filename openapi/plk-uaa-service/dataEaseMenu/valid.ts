@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/validUsingPOST
 */
-export default function fetchMethod(data: ITheDataEaseMenuEnablesTheRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheDataEaseMenuEnablesTheRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/dataEaseMenu/valid",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

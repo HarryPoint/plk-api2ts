@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/onlyEditPayRecordUsingPOST
 */
-export default function fetchMethod(data: IProductOrdersOnlyModifyThePaymentRecordRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductOrdersOnlyModifyThePaymentRecordRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/productOrder/onlyEditPayRecord",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

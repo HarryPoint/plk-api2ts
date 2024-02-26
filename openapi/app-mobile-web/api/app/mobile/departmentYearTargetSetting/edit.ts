@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/部门年目标设置相关/editUsingPOST_3
 */
-export default function fetchMethod(data: IMasterDataBaseEditDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMasterDataBaseEditDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/departmentYearTargetSetting/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

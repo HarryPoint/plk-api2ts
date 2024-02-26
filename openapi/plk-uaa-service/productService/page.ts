@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/pageUsingPOST_6
 */
-export default function fetchMethod(data: IProductServicePageQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductServicePageQueryObject }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProductServicePagingResponseObject>(
         {
             url: "/plk-uaa-service/productService/page",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

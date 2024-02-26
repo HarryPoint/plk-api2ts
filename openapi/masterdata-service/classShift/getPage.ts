@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/班次相关/getPageUsingPOST_1
 */
-export default function fetchMethod(data: IShiftSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IShiftSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationShiftReturnsVO>(
         {
             url: "/masterdata-service/classShift/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectRiskReportUsingPOST
 */
-export default function fetchMethod(data: QueryProjectRiskReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: QueryProjectRiskReport }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProjectRiskReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectRiskReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

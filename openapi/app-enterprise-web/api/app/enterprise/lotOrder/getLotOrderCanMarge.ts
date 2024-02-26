@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getLotOrderCanMargeUsingPOST
 */
-export default function fetchMethod(data: IBatchOrderVerificationCanMergeSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchOrderVerificationCanMergeSearchVO }, extraOptions?: any) {
     return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/getLotOrderCanMarge",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

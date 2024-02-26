@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检分类/getPageUsingPOST_23
 */
-export default function fetchMethod(data: IInspectionCategorySearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInspectionCategorySearchVO }, extraOptions?: any) {
     return http<IJSONResultThePageInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityInspectionCategory/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

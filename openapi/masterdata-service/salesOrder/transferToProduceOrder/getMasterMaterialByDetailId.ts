@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getMasterMaterialByDetailIdUsingGET
 */
-export default function fetchMethod(params: { detailId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { detailId?: number } }, extraOptions?: any) {
     return http<IJSONResultMainMaterialInformationOfTheProductionOrder>(
         {
             url: "/masterdata-service/salesOrder/transferToProduceOrder/getMasterMaterialByDetailId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

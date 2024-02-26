@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskBomByIdUsingGET
 */
-export default function fetchMethod(params: { taskId?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionTaskBOMMaterialInformationVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskBomById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

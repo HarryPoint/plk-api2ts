@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
 */
-export default function fetchMethod(params: { id?: number; produceOrderId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number; produceOrderId?: number } }, extraOptions?: any) {
     return http<IJSONResultProductionProcessTreeResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTechnology/getTreeDetailById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

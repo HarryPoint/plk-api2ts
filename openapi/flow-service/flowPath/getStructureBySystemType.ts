@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getStructureBySystemTypeUsingPOST
 */
-export default function fetchMethod(data: IFlowPathStructureQueryRequest, params: { enterpriseId?: number; systemType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFlowPathStructureQueryRequestparams: { enterpriseId?: number; systemType?: string, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/flow-service/flowPath/getStructureBySystemType",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

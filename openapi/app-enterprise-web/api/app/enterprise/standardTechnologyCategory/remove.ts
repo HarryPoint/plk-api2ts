@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺分类相关/removeUsingPOST
 */
-export default function fetchMethod(data: IStandardProcessClassificationRemoveRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IStandardProcessClassificationRemoveRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCategory/remove",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

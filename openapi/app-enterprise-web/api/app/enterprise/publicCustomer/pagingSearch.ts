@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-公海池相关/pagingSearchPublicCustomerUsingPOST
 */
-export default function fetchMethod(data: IPaging12, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPaging12 }, extraOptions?: any) {
     return http<IJSONResultPageInformationPublicCustomerOutputVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/publicCustomer/pagingSearch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

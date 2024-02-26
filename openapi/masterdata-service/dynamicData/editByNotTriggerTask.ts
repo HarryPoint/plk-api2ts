@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/editByNotTriggerTaskUsingPOST
 */
-export default function fetchMethod(data: IMasterDataBaseEditDTO, params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMasterDataBaseEditDTOparams: { flowPathId?: number, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/masterdata-service/dynamicData/editByNotTriggerTask",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

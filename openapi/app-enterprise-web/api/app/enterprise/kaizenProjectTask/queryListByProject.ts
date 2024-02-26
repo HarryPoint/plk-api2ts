@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/queryListByProjectUsingGET_1
 */
-export default function fetchMethod(params: { projectId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectTaskResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/queryListByProject",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

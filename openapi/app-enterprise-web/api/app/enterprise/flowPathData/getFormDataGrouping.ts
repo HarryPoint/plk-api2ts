@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/getFromDataGroupingUsingGET
 */
-export default function fetchMethod(params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: number } }, extraOptions?: any) {
     return http<IJSONResultListFormDataGroupingDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathData/getFormDataGrouping",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

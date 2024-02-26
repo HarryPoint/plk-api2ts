@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/getHandlingWorkOrderListByBusinessIdListUsingGET
 */
-export default function fetchMethod(data: IHandlingWorkOrderQueryRequest, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IHandlingWorkOrderQueryRequestparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListProcessWorkorderVO>(
         {
             url: "/masterdata-service/flowPathWorkOrder/getHandlingWorkOrderListByBusinessIdList",
             method: "get",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

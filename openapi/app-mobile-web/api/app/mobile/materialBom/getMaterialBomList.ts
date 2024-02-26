@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/物料bom相关/getMaterialBomListUsingPOST
 */
-export default function fetchMethod(data: IMaterialBomQueriesTheRequestedObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialBomQueriesTheRequestedObject }, extraOptions?: any) {
     return http<IJSONResultListMaterialBomResponseObject>(
         {
             url: "/app-mobile-web/api/app/mobile/materialBom/getMaterialBomList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

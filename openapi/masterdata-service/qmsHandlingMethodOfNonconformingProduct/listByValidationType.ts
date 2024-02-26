@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
 */
-export default function fetchMethod(params: { useValidationTypes?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { useValidationTypes?: string } }, extraOptions?: any) {
     return http<IJSONResultListResponseObjectForHandlingNonconformingItems>(
         {
             url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByValidationType",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

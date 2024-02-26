@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
 */
-export default function fetchMethod(data: IUnifiedSecurityInventoryConfiguration, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUnifiedSecurityInventoryConfiguration }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/safetyStock/exchangeSetting",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

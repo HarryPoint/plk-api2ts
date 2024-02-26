@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工费相关/queryIdCodeListByCodeListUsingPOST_1
 */
-export default function fetchMethod(data: string[], extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/laborCost/queryIdCodeListByCodeList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

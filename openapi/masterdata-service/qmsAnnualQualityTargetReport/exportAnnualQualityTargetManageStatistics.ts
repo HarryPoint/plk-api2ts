@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/年度质量目标管理统计报表相关/exportAnnualQualityTargetManageStatisticsUsingPOST
 */
-export default function fetchMethod(data: ExportAnnualQualityTargetManageStatistics, extraOptions?: any) {
+export default function fetchMethod(options: { data: ExportAnnualQualityTargetManageStatistics }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qmsAnnualQualityTargetReport/exportAnnualQualityTargetManageStatistics",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

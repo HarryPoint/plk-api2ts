@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/WIP报表相关/getWipReportPageUsingPOST
 */
-export default function fetchMethod(data: IWIPStatisticsReportSearchForVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IWIPStatisticsReportSearchForVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/wipReport/getReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

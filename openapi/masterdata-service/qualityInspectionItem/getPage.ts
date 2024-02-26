@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检项/getPageUsingPOST_21
 */
-export default function fetchMethod(data: ICheckItemSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICheckItemSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPageInformationVOIsReturned>(
         {
             url: "/masterdata-service/qualityInspectionItem/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getSettingInfoUsingGET_1
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultDeepBlueProductionScreenSettingReturnsVO>(
         {
             url: "/masterdata-service/lsShenLanSetting/getSettingInfo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

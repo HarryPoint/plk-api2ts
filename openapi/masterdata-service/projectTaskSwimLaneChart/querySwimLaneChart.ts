@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务泳道图相关/querySwimLaneChartUsingGET
 */
-export default function fetchMethod(params: { projectId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
     return http<IJSONResultProjectTaskLaneMapResponseObject>(
         {
             url: "/masterdata-service/projectTaskSwimLaneChart/querySwimLaneChart",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

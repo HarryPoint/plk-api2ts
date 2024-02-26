@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/销售订单相关/queryHorizontalForecastLaborCostUsingPOST
 */
-export default function fetchMethod(data: IForecastLaborCost1[], extraOptions?: any) {
+export default function fetchMethod(options: { data: IForecastLaborCost1[] }, extraOptions?: any) {
     return http<IJSONResultPredictedLaborCost>(
         {
             url: "/app-mobile-web/api/app/mobile/salesOrder/transferToProduceOrder/queryHorizontalForecastLaborCost",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

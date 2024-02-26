@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getPurchaseArrivedStatisticReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { ticket?: string } }, extraOptions?: any) {
     return http<IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO>(
         {
             url: "/masterdata-service/exportAuth/getPurchaseArrivedStatisticReportExportInfoByTicket",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

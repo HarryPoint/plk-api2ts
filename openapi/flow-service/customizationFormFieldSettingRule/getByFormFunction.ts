@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/定制表单字段设置规则 - 相关/getByFormFunctionUsingGET
 */
-export default function fetchMethod(params: { formFunctionType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { formFunctionType?: string } }, extraOptions?: any) {
     return http<IJSONResultListCustomizedFormFieldSettingRuleVO>(
         {
             url: "/flow-service/customizationFormFieldSettingRule/getByFormFunction",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

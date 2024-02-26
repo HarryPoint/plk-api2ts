@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/文件上传相关/uploadUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultFileVO>(
         {
             url: "/app-mobile-web/api/app/mobile/fileUpload/upload",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

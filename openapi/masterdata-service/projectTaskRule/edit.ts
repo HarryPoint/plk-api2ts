@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/editUsingPOST_14
 */
-export default function fetchMethod(data: IProjectTaskRuleEditRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectTaskRuleEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/projectTaskRule/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/invalidBatchUsingPOST
 */
-export default function fetchMethod(data: IEmployeeBatchDeactivationRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEmployeeBatchDeactivationRequest }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/employee/invalidBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

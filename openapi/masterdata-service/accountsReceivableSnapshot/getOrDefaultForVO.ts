@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getOrDefaultForVOUsingGET
 */
-export default function fetchMethod(params: { businessUserId?: number; customerId?: number; day?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessUserId?: number; customerId?: number; day?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultAccountsReceivableSnapshotVO>(
         {
             url: "/masterdata-service/accountsReceivableSnapshot/getOrDefaultForVO",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/getPageUsingPOST_14
 */
-export default function fetchMethod(data: GetPage, extraOptions?: any) {
+export default function fetchMethod(options: { data: GetPage }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheProductionCostAssignsPagingResponseObjects>(
         {
             url: "/masterdata-service/produceFeeAssign/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

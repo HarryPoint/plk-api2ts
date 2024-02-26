@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/采购汇总报表相关/exportSalesDayReportUsingPOST
 */
-export default function fetchMethod(data: ExportSalesDayReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: ExportSalesDayReport }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-mobile-web/api/app/mobile/purchaseSummaryReport/exportSalesDayReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

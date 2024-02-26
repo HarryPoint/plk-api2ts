@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采接口管理相关/getApiAuthInfoUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultSaasEnterpriseAkSkRespondsToDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionApi/getApiAuthInfo",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

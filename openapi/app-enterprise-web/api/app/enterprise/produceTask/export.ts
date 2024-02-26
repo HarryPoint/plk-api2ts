@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/exportUsingPOST_36
 */
-export default function fetchMethod(data: IExportTheDTOOfAProductionTask, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExportTheDTOOfAProductionTask }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTask/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

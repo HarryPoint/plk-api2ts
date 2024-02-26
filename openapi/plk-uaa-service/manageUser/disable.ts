@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/运营账号相关/disableUsingPOST
 */
-export default function fetchMethod(data: IIdInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/manageUser/disable",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

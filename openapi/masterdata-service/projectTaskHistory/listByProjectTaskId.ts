@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
 */
-export default function fetchMethod(params: { projectTaskId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectTaskId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskHistoryQueryResponse>(
         {
             url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

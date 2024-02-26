@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/editUsingPOST_1
 */
-export default function fetchMethod(data: IEditProducePlanAutoScheduleInputVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEditProducePlanAutoScheduleInputVO }, extraOptions?: any) {
     return http<IJSONResultboolean>(
         {
             url: "/app-enterprise-web/api/app/enterprise/autoPlanGantt/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

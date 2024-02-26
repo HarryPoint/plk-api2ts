@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/getUserInfoListByEmployeeIdListUsingPOST
 */
-export default function fetchMethod(data: IUserInfoQueryRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUserInfoQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultUserInfoQueryResponseDTO>(
         {
             url: "/plk-uaa-service/employee/getUserInfoListByEmployeeIdList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getImportingRecordByTemplateCodeUsingGET
 */
-export default function fetchMethod(params: { templateCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { templateCode?: string } }, extraOptions?: any) {
     return http<IJSONResultImportRecordDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getImportingRecordByTemplateCode",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

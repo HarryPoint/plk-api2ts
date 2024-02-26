@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getCollectionParamsUsingGET_1
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListDeviceDataCollectionSelectVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionStatistic/getCollectionParams",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

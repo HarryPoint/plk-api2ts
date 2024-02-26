@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskPageForStaffUsingPOST
 */
-export default function fetchMethod(data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVOOnTheEmployeeEndparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee>(
         {
             url: "/masterdata-service/qualityProduceTask/getQualityTaskPageForStaff",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

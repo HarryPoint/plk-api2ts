@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/checkPasswordUsingPOST
 */
-export default function fetchMethod(data: IPasswordVerificationRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPasswordVerificationRequestDTO }, extraOptions?: any) {
     return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>(
         {
             url: "/plk-uaa-service/saasAuth/checkPassword",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

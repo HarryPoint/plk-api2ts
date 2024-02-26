@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/getReportUsingPOST_2
 */
-export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO }, extraOptions?: any) {
     return http<IJSONResultPageInformationBaoJingReportFinishedDailyReportRelatedReturnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/getReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

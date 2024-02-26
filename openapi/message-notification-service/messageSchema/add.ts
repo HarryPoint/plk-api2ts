@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/addUsingPOST_3
 */
-export default function fetchMethod(data: IMessageSchemaAddRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageSchemaAddRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/message-notification-service/messageSchema/add",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

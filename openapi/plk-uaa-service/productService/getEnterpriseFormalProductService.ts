@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/getEnterpriseFormalProductServiceUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultProductServiceResponseObject>(
         {
             url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

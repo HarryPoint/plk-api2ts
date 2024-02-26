@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/stagingUsingPOST_1
 */
-export default function fetchMethod(data: IMessageSchemaStagingRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageSchemaStagingRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/message-notification-service/messageSchema/staging",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

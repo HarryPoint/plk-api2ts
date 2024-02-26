@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getAllMasterDataListUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getAllMasterDataList",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

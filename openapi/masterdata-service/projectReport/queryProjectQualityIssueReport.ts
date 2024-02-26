@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectQualityIssueReportUsingPOST
 */
-export default function fetchMethod(data: QueryProjectQualityIssueReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: QueryProjectQualityIssueReport }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProjectQualityProblemReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectQualityIssueReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

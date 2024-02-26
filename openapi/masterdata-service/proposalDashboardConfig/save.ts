@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板-配置页面相关/saveUsingPOST_6
 */
-export default function fetchMethod(data: IProposalDashboardConfigRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProposalDashboardConfigRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/proposalDashboardConfig/save",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

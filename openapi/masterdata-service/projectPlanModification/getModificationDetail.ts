@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/getModificationDetailUsingGET_2
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectPlanChangeResponseObject>(
         {
             url: "/masterdata-service/projectPlanModification/getModificationDetail",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

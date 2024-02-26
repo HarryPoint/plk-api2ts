@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/getForPageUsingPOST_20
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/getForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

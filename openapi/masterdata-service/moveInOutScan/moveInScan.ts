@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/moveInScanUsingPOST
 */
-export default function fetchMethod(data: IFeedScanRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFeedScanRequestDTO }, extraOptions?: any) {
     return http<IJSONResultIncomingScanResponseObjectDTO>(
         {
             url: "/masterdata-service/moveInOutScan/moveInScan",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

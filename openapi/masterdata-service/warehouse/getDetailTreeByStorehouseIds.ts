@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getDetailTreeByStorehouseIdsUsingPOST
 */
-export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformationparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListPositionTreeDetailsAreReturnedToVO>(
         {
             url: "/masterdata-service/warehouse/getDetailTreeByStorehouseIds",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

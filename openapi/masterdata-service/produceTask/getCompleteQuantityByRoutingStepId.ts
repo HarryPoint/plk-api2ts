@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getCompleteQuantityByRoutingStepIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; produceOrderId?: number; routingStepId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; produceOrderId?: number; routingStepId?: number } }, extraOptions?: any) {
     return http<IJSONResultbigdecimal>(
         {
             url: "/masterdata-service/produceTask/getCompleteQuantityByRoutingStepId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产进度统计报表 - 相关/saveFormFieldSortRuleUsingPOST
 */
-export default function fetchMethod(data: IProcessTableColumnLocationGroupEditDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTableColumnLocationGroupEditDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceProgressStatistics/saveFormFieldSortRule",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

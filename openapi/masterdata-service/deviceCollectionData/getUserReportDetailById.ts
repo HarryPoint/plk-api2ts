@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportDetailByIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number; userId?: number } }, extraOptions?: any) {
     return http<IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getUserReportDetailById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

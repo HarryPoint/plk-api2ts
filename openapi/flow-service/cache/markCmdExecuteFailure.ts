@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/缓存相关/markCmdExecuteFailureUsingPOST
 */
-export default function fetchMethod(data: IMarkCmdExecuteFailureRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMarkCmdExecuteFailureRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/cache/markCmdExecuteFailure",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

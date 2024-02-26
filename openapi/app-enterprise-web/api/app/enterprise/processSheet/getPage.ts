@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getPageUsingPOST_13
 */
-export default function fetchMethod(data: ICraftCardSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICraftCardSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessCardReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processSheet/getPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

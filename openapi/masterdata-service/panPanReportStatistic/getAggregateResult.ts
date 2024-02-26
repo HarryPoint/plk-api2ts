@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/getAggregateResultUsingPOST
 */
-export default function fetchMethod(data: IPanpanReportsStatisticsToQueryObjects, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPanpanReportsStatisticsToQueryObjects }, extraOptions?: any) {
     return http<IJSONResultReportStatisticsSummaryResponseObject>(
         {
             url: "/masterdata-service/panPanReportStatistic/getAggregateResult",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

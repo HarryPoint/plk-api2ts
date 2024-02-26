@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料收发汇总报表相关/getBillFlowPathCodeListUsingGET
 */
-export default function fetchMethod(params: { masterDataFlowPathCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { masterDataFlowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/getBillFlowPathCodeList",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getOperateUserListByProcessIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; processId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; processId?: number } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/produceTaskAssign/getOperateUserListByProcessId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

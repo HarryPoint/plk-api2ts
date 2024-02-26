@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/getCustomerSelectorUsingGET_3
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListClientSelectsToReturnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/purchaseArrivedStatisticReport/getCustomerSelector",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

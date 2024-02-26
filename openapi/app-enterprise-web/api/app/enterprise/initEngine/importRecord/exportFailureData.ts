@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/exportFailureDataUsingPOST
 */
-export default function fetchMethod(data: IExportFailureDataRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExportFailureDataRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/exportFailureData",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

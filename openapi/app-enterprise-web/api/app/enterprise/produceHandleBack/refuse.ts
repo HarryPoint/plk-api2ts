@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产处理返工相关/refuseUsingPOST
 */
-export default function fetchMethod(data: IProductionHandlesReworkRejectRequestObjects, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionHandlesReworkRejectRequestObjects }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandleBack/refuse",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

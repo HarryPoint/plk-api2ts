@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getAllDataSourceUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListDataSourceResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/datasource/getAllDataSource",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

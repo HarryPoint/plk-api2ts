@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/关键参数相关/batchValidUsingPOST_1
 */
-export default function fetchMethod(data: IEnableOrDisableVOInBatches, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEnableOrDisableVOInBatches }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/keyparameter/batchValid",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

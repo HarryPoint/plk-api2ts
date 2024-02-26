@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺具体工艺路径节点相关/getRoutingUsedStandardTechnologyUsingPOST
 */
-export default function fetchMethod(data: IStandardProcessQueryObjectOccupiedByProcessPath, extraOptions?: any) {
+export default function fetchMethod(options: { data: IStandardProcessQueryObjectOccupiedByProcessPath }, extraOptions?: any) {
     return http<IJSONResultListStandardProcessResponseOccupiedByTheProcessPath>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologySpecificRoutingNode/getRoutingUsedStandardTechnology",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

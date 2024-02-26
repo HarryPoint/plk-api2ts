@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
 */
-export default function fetchMethod(data: IEquipmentPersonnelAbilityToBatchEditDtos, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEquipmentPersonnelAbilityToBatchEditDtos }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/batchEditDelete",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

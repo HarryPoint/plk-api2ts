@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/getSelectorUsingGET_1
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListDeviceDataCollectionSelectVO>(
         {
             url: "/masterdata-service/deviceCollectionParam/getSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

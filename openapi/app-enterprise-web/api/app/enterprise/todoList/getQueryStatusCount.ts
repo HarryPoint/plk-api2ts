@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/待办相关/getQueryStatusCountUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/todoList/getQueryStatusCount",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

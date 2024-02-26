@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/batchPrintUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListBatchOrderPrintInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchPrint",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

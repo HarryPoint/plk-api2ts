@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/待处理进出料异步处理相关/triggerMoveInOutAsyncHandleTaskUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/moveInOutWaitAsyncHandle/triggerMoveInOutAsyncHandleTask",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

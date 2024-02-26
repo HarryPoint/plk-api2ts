@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用归集相关/getForPageUsingPOST_12
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/produceFeeCollect/getForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

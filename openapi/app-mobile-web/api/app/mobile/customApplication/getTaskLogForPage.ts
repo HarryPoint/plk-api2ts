@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/自定义应用相关/getTaskLogForPageUsingPOST
 */
-export default function fetchMethod(data: IJobLogSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IJobLogSearchVO }, extraOptions?: any) {
     return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/customApplication/getTaskLogForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
 */
-export default function fetchMethod(data: IOpenApiRequestsSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOpenApiRequestsSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionApi/getApiLogPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

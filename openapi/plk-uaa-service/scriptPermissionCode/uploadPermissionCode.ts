@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/权限码脚本相关/uploadPermissionCodeUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/scriptPermissionCode/uploadPermissionCode",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用服务包相关/cloneServicePackUsingPOST
 */
-export default function fetchMethod(data: IServiceObjectRegistrationRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IServiceObjectRegistrationRequest }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/appServicePack/cloneServicePack",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

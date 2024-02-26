@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/验证码相关/checkVerCodeUsingPOST
 */
-export default function fetchMethod(data: IVerificationCodeVerifiesTheDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IVerificationCodeVerifiesTheDTO }, extraOptions?: any) {
     return http<IJSONResultIndicatesWhetherTheInformationIsDisplayed>(
         {
             url: "/plk-uaa-service/verCode/checkVerCode",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

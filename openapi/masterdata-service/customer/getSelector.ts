@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/getSelectorUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListClientSelectsToReturnVO>(
         {
             url: "/masterdata-service/customer/getSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/appendByApplicationLevelUsingGET
 */
-export default function fetchMethod(params: { enterpriseIds?: number[]; level?: string; systemTypeList?: string[] }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseIds?: number[]; level?: string; systemTypeList?: string[] } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathScript/appendByApplicationLevel",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

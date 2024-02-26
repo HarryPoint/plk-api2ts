@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/cascadeGetRegionUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListRegionVo>(
         {
             url: "/app-mobile-web/api/app/mobile/common/region/query",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

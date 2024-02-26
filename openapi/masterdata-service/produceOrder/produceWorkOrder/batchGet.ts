@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProduceWorkOrderUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListProduceWorkOrderVO>(
         {
             url: "/masterdata-service/produceOrder/produceWorkOrder/batchGet",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

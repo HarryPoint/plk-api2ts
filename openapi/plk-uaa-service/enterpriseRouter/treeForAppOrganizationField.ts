@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/treeForOrganizationFiledUsingPOST
 */
-export default function fetchMethod(data: IEnterpriseRoutingTreeQueryDTO1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEnterpriseRoutingTreeQueryDTO1 }, extraOptions?: any) {
     return http<IJSONResultListEnterpriseRoutingTreeResponseDTO>(
         {
             url: "/plk-uaa-service/enterpriseRouter/treeForAppOrganizationField",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

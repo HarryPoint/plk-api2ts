@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathDataAuthDetailListUsingPOST
 */
-export default function fetchMethod(data: IProcessRoleDataPermissionDetailsSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessRoleDataPermissionDetailsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListProcessRoleDataPermissionDetailsVO>(
         {
             url: "/flow-service/flowPath/dataAuth/detail/list",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

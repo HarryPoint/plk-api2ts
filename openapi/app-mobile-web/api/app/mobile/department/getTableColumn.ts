@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/部门相关/getTableColumnUsingGET_10
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-mobile-web/api/app/mobile/department/getTableColumn",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/cancelBatchUsingPOST
 */
-export default function fetchMethod(data: IProduceOrderBatchCancelRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProduceOrderBatchCancelRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/cancelBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

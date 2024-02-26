@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getQualityStorageTaskUsingPOST
 */
-export default function fetchMethod(data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd }, extraOptions?: any) {
     return http<IJSONResultThePageInformationInspectionTaskReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getQualityStorageTask",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/listUserIdsByEmployeeIdsUsingPOST
 */
-export default function fetchMethod(data: IIdSetInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdSetInformation }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/plk-uaa-service/employee/listUserIdsByEmployeeIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

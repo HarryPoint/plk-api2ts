@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/仓位系统应用库存序列号相关/getWarehouseStorageSystemApplicationBySerialNoListUsingPOST
 */
-export default function fetchMethod(data: ITheWarehouseSystemAppliesTheInventorySerialNumberQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheWarehouseSystemAppliesTheInventorySerialNumberQueryObject }, extraOptions?: any) {
     return http<IJSONResultListTheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject>(
         {
             url: "/app-mobile-web/api/app/mobile/warehouseStorageSystemApplicationSerialNo/getBySerialNoList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用相关/getPrintTemplateSelectorUsingGET
 */
-export default function fetchMethod(params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessPrintTemplateReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/application/getPrintTemplateSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

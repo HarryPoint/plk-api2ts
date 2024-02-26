@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单导入相关/importProduceOrderUsingPOST
 */
-export default function fetchMethod(data: IImportProduceOrderInputDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IImportProduceOrderInputDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderImport/importProduceOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

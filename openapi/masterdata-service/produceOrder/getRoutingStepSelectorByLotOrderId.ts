@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getRoutingStepSelectorByLotOrderIdUsingGET
 */
-export default function fetchMethod(params: { lotOrderId?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { lotOrderId?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProductionProcessPathStepProcessResponseDTO>(
         {
             url: "/masterdata-service/produceOrder/getRoutingStepSelectorByLotOrderId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

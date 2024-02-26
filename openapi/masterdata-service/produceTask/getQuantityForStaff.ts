@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQuantityForStaffUsingPOST
 */
-export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQueryparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceTask/getQuantityForStaff",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

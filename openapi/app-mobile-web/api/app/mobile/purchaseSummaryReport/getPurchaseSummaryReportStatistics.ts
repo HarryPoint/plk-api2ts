@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportStatisticsUsingPOST
 */
-export default function fetchMethod(data: GetPurchaseSummaryReportStatistics, extraOptions?: any) {
+export default function fetchMethod(options: { data: GetPurchaseSummaryReportStatistics }, extraOptions?: any) {
     return http<IJSONResultPurchaseSummaryReportTotalReturnedObjects>(
         {
             url: "/app-mobile-web/api/app/mobile/purchaseSummaryReport/getPurchaseSummaryReportStatistics",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

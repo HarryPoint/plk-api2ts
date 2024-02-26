@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessRpFieldInfoUsingPOST
 */
-export default function fetchMethod(data: IProcedureAssociatedFieldQueryRequestObject, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcedureAssociatedFieldQueryRequestObjectparams: { enterpriseId?: number, extraOptions?: any) {
     return http<ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO>(
         {
             url: "/masterdata-service/produceTask/getProcessRpFieldInfo",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

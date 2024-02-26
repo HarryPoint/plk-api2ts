@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/pageUsingPOST
 */
-export default function fetchMethod(data: ICalculationSchemePagingQueryRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICalculationSchemePagingQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultPageInformationCalculationSchemePageQueryResponseDTO>(
         {
             url: "/flow-service/calculationPlan/page",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

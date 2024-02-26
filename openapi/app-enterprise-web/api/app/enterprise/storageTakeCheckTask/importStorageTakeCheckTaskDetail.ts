@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/importStorageTakeCheckTaskDetailUsingPOST
 */
-export default function fetchMethod(params: { submitCheckList?: string; taskId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { submitCheckList?: string; taskId?: number } }, extraOptions?: any) {
     return http<IJSONResultListReturnTheWarehouseInventoryListToTheDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/importStorageTakeCheckTaskDetail",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

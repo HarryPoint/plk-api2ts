@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardLocationUsingPOST
 */
-export default function fetchMethod(data: IOccupationalHazardSiteInquiryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOccupationalHazardSiteInquiryRequest }, extraOptions?: any) {
     return http<IJSONResultResponseToOccupationalHazardSiteQuery>(
         {
             url: "/masterdata-service/hseDashboard/queryHazardLocation",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

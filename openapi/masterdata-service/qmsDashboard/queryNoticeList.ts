@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListNotificationField>(
         {
             url: "/masterdata-service/qmsDashboard/queryNoticeList",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

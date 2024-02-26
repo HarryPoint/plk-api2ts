@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryPollutantEmissionsUsingPOST
 */
-export default function fetchMethod(data: IPollutantQueryRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPollutantQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListPollutantQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/queryPollutantEmissions",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/产线相关/getSelectorUsingPOST_1
 */
-export default function fetchMethod(data: INameNumberVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: INameNumberVO }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/productionLine/getSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

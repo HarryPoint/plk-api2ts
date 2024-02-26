@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/editUsingPOST_2
 */
-export default function fetchMethod(data: IProcessFormFieldEncodingRulesEditDTO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessFormFieldEncodingRulesEditDTOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/edit",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

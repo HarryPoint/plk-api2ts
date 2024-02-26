@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getLsUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultSilopusBigScreenReturnVO>(
         {
             url: "/masterdata-service/lsXiRuoPaSiSetting/getLargeScreenInfo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

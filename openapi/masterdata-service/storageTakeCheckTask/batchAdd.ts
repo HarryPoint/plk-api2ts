@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/batchAddUsingPOST
 */
-export default function fetchMethod(data: IEditDTOForWarehouseInventoryTaskBatch, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEditDTOForWarehouseInventoryTaskBatchparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/masterdata-service/storageTakeCheckTask/batchAdd",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

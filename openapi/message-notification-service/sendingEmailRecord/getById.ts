@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/getByIdUsingGET_2
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultSendingEmailRecordDTO>(
         {
             url: "/message-notification-service/sendingEmailRecord/getById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

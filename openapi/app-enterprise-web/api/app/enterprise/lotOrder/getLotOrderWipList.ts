@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getLotOrderWipListUsingPOST
 */
-export default function fetchMethod(data: IBatchOrderWipSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchOrderWipSearchVO }, extraOptions?: any) {
     return http<IJSONResultListBatchWipInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/getLotOrderWipList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

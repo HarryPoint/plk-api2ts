@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/pageUsingPOST
 */
-export default function fetchMethod(data: IDataEaseMenuPagesQueryObjects, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDataEaseMenuPagesQueryObjects }, extraOptions?: any) {
     return http<IJSONResultPagingInformationDataEaseMenuPagingResponseObject>(
         {
             url: "/plk-uaa-service/dataEaseMenu/page",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

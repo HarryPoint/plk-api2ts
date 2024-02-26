@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/部门相关/getIdCodeTreeByEnterpriseIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; nameOrCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; nameOrCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberTreeVO>(
         {
             url: "/masterdata-service/department/getIdCodeTreeByEnterpriseId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/stagingUsingPOST
 */
-export default function fetchMethod(data: IAppMessageConfigBatchStagingRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAppMessageConfigBatchStagingRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/appMessageConfig/staging",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

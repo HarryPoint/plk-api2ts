@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/getCustomerSelectorUsingPOST
 */
-export default function fetchMethod(data: ICustomerSelectionListSearch, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICustomerSelectionListSearch }, extraOptions?: any) {
     return http<IJSONResultPagingInformationIdCodeNameCommonTransmissionObject>(
         {
             url: "/masterdata-service/customer/getCustomerSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

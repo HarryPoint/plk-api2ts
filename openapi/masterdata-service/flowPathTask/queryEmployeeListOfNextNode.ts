@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/queryEmployeeListOfNextNodeUsingPOST
 */
-export default function fetchMethod(data: IPageBreaks4, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPageBreaks4 }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/masterdata-service/flowPathTask/queryEmployeeListOfNextNode",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

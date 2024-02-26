@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序字段对应表相关/getFlowPathDetailTreeUsingGET_1
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProcessTreeVO1>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processFlowPathRp/getFlowPathDetailTree",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

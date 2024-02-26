@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectRiskCountUsingPOST_1
 */
-export default function fetchMethod(data: IProjectOverviewQueryDto, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectOverviewQueryDto }, extraOptions?: any) {
     return http<IJSONResultProjectRiskStatisticsResponseObject>(
         {
             url: "/masterdata-service/projectOverview/queryProjectRiskCount",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getByIdsIgnoreStatusUsingPOST_4
 */
-export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultListProcessDropDownListToSearchForResponseDtos>(
         {
             url: "/masterdata-service/processSheet/getByIdsIgnoreStatus",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

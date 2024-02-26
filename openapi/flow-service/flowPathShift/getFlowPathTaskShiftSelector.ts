@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/getFlowPathTaskShiftSelectorUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessShiftReturnsVO>(
         {
             url: "/flow-service/flowPathShift/getFlowPathTaskShiftSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

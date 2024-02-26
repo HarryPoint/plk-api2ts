@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/消息相关/getNotReadCountUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultint>(
         {
             url: "/app-enterprise-web/api/app/enterprise/message/getNotReadCount",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeBudgetUsingPOST
 */
-export default function fetchMethod(data: IProjectCostBudgetQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProjectCostBudgetQueryObject }, extraOptions?: any) {
     return http<IJSONResultProjectCostBudgetResponseObject>(
         {
             url: "/masterdata-service/projectFee/getProjectFeeBudget",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

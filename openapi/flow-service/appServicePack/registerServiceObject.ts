@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用服务包相关/registerServiceObjectUsingPOST
 */
-export default function fetchMethod(data: IServiceObjectRegistrationRequest1, extraOptions?: any) {
+export default function fetchMethod(options: { data: IServiceObjectRegistrationRequest1 }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/appServicePack/registerServiceObject",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

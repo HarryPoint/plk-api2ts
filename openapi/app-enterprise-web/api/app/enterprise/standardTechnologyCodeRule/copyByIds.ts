@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/copyByIdsUsingPOST
 */
-export default function fetchMethod(data: number[], extraOptions?: any) {
+export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
     return http<IJSONResultListStandardProcessCodingRulesCopyResponseDtos>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/copyByIds",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getMaterialSelectorUsingPOST_2
 */
-export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getMaterialSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

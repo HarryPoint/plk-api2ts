@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/getNotHandleCountOfProjectManageUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultint>(
         {
             url: "/todo-service/todoList/pc/getNotHandleCountOfProjectManage",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

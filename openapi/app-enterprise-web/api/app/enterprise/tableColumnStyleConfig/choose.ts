@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/列表列样式配置/chooseUsingGET
 */
-export default function fetchMethod(params: { tableColumnStyleConfigId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { tableColumnStyleConfigId?: number } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/choose",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

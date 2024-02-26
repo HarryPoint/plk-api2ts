@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/enableBatchUsingPOST
 */
-export default function fetchMethod(data: IComputingSchemeEnablesRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IComputingSchemeEnablesRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/calculationPlan/enableBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

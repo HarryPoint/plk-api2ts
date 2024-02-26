@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskByRoutingStepIdUsingGET
 */
-export default function fetchMethod(params: { produceOrderId?: number; produceTechnologyRoutingStepId?: number; type?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceOrderId?: number; produceTechnologyRoutingStepId?: number; type?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionTaskResponseDTOForMobile>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskByRoutingStepId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

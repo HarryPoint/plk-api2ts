@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/getMessageSchemaByMessageTaskIdUsingGET
 */
-export default function fetchMethod(params: { messageTaskId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { messageTaskId?: number } }, extraOptions?: any) {
     return http<IJSONResultMessageSchemaQueryResponseDTO>(
         {
             url: "/message-notification-service/sendingMessageTask/getMessageSchemaByMessageTaskId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

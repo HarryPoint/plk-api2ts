@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/disableBatchUsingPOST
 */
-export default function fetchMethod(data: ITheComputingSchemeDisablesTheRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheComputingSchemeDisablesTheRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/flow-service/calculationPlan/disableBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

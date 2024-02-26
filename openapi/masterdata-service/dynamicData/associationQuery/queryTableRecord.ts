@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationFormTableRecordUsingPOST
 */
-export default function fetchMethod(data: IPage2, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPage2 }, extraOptions?: any) {
     return http<IJSONResultAssociationFormTypeFieldTableRecordOutputVO>(
         {
             url: "/masterdata-service/dynamicData/associationQuery/queryTableRecord",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

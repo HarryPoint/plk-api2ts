@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultReportTemplateDTO>(
         {
             url: "/masterdata-service/reportTemplate/getById",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

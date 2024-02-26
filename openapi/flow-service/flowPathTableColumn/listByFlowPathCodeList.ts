@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/listByFlowPathCodeListUsingPOST_1
 */
-export default function fetchMethod(data: string[], params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[]params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/flow-service/flowPathTableColumn/listByFlowPathCodeList",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

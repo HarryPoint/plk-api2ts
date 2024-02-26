@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/提案部门完成情况表-相关/exportUsingPOST_24
 */
-export default function fetchMethod(data: IProposalDepartmentStatisticsQueryRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProposalDepartmentStatisticsQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/proposalDepartmentStatistics/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

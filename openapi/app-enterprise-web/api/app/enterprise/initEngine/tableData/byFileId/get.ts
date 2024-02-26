@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDataByFileIdUsingGET
 */
-export default function fetchMethod(params: { fileId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { fileId?: number } }, extraOptions?: any) {
     return http<IJSONResultTableData>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/byFileId/get",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

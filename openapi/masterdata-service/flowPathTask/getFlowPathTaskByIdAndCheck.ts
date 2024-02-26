@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskByIdAndCheckUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
     return http<IJSONResultProcessTaskReturnsVO>(
         {
             url: "/masterdata-service/flowPathTask/getFlowPathTaskByIdAndCheck",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

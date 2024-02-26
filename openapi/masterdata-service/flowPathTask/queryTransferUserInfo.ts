@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/queryTransferUserInfoUsingPOST
 */
-export default function fetchMethod(data: IProcessTasksAreTransferredToPersonnelToInquireDTO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTasksAreTransferredToPersonnelToInquireDTOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/masterdata-service/flowPathTask/queryTransferUserInfo",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

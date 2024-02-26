@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getMaterialRoutingSelectorUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; materialId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; materialId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessPathSelectVO>(
         {
             url: "/masterdata-service/routing/getMaterialRoutingSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/vaguePlanUsingPOST
 */
-export default function fetchMethod(data: IProductionOrderFuzzySchedulingDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderFuzzySchedulingDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/notPlan/vaguePlan",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

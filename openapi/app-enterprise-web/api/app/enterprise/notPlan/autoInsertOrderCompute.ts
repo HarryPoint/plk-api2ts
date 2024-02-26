@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/autoInsertOrderComputeUsingPOST
 */
-export default function fetchMethod(data: IProductionOrderAutomaticInsertionDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderAutomaticInsertionDTO }, extraOptions?: any) {
     return http<IJSONResultSchedulingResultVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/notPlan/autoInsertOrderCompute",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

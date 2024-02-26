@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息相关/getPageUsingPOST
 */
-export default function fetchMethod(data: IMessageSearchVO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageSearchVOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultPagingInformationMessageReturnsVO>(
         {
             url: "/message-notification-service/message/getPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

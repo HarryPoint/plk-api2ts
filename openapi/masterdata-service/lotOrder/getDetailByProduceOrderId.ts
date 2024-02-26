@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getDetailByProduceOrderIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; produceOrderId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; produceOrderId?: number } }, extraOptions?: any) {
     return http<IJSONResultListBatchOrderReturnsVO>(
         {
             url: "/masterdata-service/lotOrder/getDetailByProduceOrderId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

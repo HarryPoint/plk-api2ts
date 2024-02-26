@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZhuanTaReportUsingGET
 */
-export default function fetchMethod(data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReportparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListTurretOrUnit1To7Report>(
         {
             url: "/masterdata-service/shenLan/report/zhuanTa",
             method: "get",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

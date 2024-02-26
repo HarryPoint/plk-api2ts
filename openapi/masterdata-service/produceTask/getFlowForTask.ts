@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getFlowForTaskUsingPOST_1
 */
-export default function fetchMethod(data: IProductionProcessingQueryVOForProductionOrders, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionProcessingQueryVOForProductionOrdersparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation>(
         {
             url: "/masterdata-service/produceTask/getFlowForTask",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

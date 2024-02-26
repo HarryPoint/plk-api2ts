@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getSalesOrderProduceOrderBySalesOrderIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; salesOrderId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; salesOrderId?: number } }, extraOptions?: any) {
     return http<IJSONResultListSalesOrderProductionOrderReturnVO>(
         {
             url: "/masterdata-service/produceOrder/getSalesOrderProduceOrderBySalesOrderId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

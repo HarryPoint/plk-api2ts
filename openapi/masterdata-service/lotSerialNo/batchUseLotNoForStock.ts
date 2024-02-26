@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchUseLotNoForStockUsingPOST
 */
-export default function fetchMethod(data: string[], extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultTheBatchNumberIsDTO1>(
         {
             url: "/masterdata-service/lotSerialNo/batchUseLotNoForStock",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

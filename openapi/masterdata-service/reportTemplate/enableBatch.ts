@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表模板/enableBatchUsingPOST
 */
-export default function fetchMethod(data: IReportTemplateEnableRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IReportTemplateEnableRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/reportTemplate/enableBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getByIdUsingGET_2
 */
-export default function fetchMethod(params: { enterpriseId?: number; flowPathId?: number; formRecordId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathId?: number; formRecordId?: number } }, extraOptions?: any) {
     return http<IJSONResultJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

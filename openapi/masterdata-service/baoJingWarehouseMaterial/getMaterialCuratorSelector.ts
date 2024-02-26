@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialCuratorSelectorUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; nameOrCode?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; nameOrCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialCuratorSelector",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getCollectionTotalReportSumResultUsingPOST
 */
-export default function fetchMethod(data: IBaojingCollectionSummaryAnalysisReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingCollectionSummaryAnalysisReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getCollectionTotalReportSumResult",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

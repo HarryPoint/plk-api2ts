@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/消息通知相关/getByIdUsingGET_1
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultMessageDetailsAreReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/message/getById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

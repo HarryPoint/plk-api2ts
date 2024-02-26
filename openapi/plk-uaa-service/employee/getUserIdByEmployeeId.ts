@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/getUserIdByEmployeeIdUsingPOST
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/plk-uaa-service/employee/getUserIdByEmployeeId",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

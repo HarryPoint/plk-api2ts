@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/listByParentIdUsingGET
 */
-export default function fetchMethod(params: { parentId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { parentId?: number } }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectTaskResponseDTO>(
         {
             url: "/masterdata-service/kaizenProjectTask/listByParentId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

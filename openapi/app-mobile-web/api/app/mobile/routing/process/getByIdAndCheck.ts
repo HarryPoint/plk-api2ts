@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET
 */
-export default function fetchMethod(params: { processId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { processId?: number } }, extraOptions?: any) {
     return http<IJSONResultProcessDeprecatedVO>(
         {
             url: "/app-mobile-web/api/app/mobile/routing/process/getByIdAndCheck",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

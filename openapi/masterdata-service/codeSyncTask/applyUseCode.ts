@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/applyUseCodeUsingPOST
 */
-export default function fetchMethod(params: { code?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/codeSyncTask/applyUseCode",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

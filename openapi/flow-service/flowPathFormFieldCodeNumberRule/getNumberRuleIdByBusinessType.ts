@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleIdByBusinessTypeUsingGET
 */
-export default function fetchMethod(params: { businessType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessType?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleIdByBusinessType",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

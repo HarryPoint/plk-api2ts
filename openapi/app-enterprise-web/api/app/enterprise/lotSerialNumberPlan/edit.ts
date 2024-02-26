@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/批次方案相关/editUsingPOST_11
 */
-export default function fetchMethod(data: ILotSerialNumberPlanEditRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ILotSerialNumberPlanEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

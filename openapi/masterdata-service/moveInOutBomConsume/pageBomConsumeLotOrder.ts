@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/pageBomConsumeLotOrderUsingGET
 */
-export default function fetchMethod(data: IFeedBomConsumptionBatchPagingQueryObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFeedBomConsumptionBatchPagingQueryObject }, extraOptions?: any) {
     return http<IJSONResultPagingInformationFeedBomConsumesBatchResponseDTO>(
         {
             url: "/masterdata-service/moveInOutBomConsume/pageBomConsumeLotOrder",
             method: "get",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/中航机器人生产订单相关/getMaterialRecipientListByIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
     return http<IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder>(
         {
             url: "/masterdata-service/zhongHangProduceOrder/getMaterialRecipientListById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

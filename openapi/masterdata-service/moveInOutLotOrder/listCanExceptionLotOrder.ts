@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanExceptionLotOrderUsingPOST
 */
-export default function fetchMethod(data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches }, extraOptions?: any) {
     return http<IJSONResultListHandlesBatchResponseDtosAbnormally>(
         {
             url: "/masterdata-service/moveInOutLotOrder/listCanExceptionLotOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

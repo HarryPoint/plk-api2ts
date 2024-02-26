@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/其它出库单相关/exportUsingPOST_11
 */
-export default function fetchMethod(data: IProcessDataSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/otherOutStorageOrder/export",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

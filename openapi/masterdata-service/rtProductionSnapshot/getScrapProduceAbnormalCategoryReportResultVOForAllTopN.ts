@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getScrapProduceAbnormalCategoryReportResultVOForAllTopNUsingGET
 */
-export default function fetchMethod(params: { beginTime?: string; endTime?: string; enterpriseId?: number; top?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: string; endTime?: string; enterpriseId?: number; top?: number } }, extraOptions?: any) {
     return http<IJSONResultListScrapTypeStatisticsReturnVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getScrapProduceAbnormalCategoryReportResultVOForAllTopN",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

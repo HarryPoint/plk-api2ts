@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/getStatusQuantityUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultNumberOfSchedulingPlansTheValueIsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/productionPlan/getStatusQuantity",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/getByIdUsingGET_2
 */
-export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
     return http<IJSONResultSpecifiesTheResponseDTOForTheCalculationScheme>(
         {
             url: "/app-enterprise-web/api/app/enterprise/calculationPlan/getById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

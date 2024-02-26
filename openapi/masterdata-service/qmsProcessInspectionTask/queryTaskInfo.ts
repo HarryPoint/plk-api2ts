@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序检验任务相关/queryTaskInfoUsingGET_1
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessCheckTaskResponseObject>(
         {
             url: "/masterdata-service/qmsProcessInspectionTask/queryTaskInfo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

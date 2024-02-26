@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/用户聚合维度配置相关/saveUsingPOST_1
 */
-export default function fetchMethod(data: IUserAggregationDimensionConfigurationRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUserAggregationDimensionConfigurationRequest }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/employeeCollectDimensionConfig/save",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaTreeUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListAreaTreeReturnsVO>(
         {
             url: "/masterdata-service/area/getAreaTree",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-公海池相关/searchPublicCustomerSelectorDataListUsingPOST_1
 */
-export default function fetchMethod(data: IPaging, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPaging }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/publicCustomer/selector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

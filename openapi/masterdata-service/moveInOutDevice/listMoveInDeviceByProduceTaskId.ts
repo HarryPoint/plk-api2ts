@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/listMoveInDeviceByProduceTaskIdUsingGET
 */
-export default function fetchMethod(params: { produceTaskId?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheFeedDeviceRespondsToDTO1>(
         {
             url: "/masterdata-service/moveInOutDevice/listMoveInDeviceByProduceTaskId",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

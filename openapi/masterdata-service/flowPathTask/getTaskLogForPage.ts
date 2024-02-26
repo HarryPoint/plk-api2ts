@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getTaskLogForPageUsingPOST
 */
-export default function fetchMethod(data: IJobLogSearchVO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IJobLogSearchVOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
         {
             url: "/masterdata-service/flowPathTask/getTaskLogForPage",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesInvoiceTypeListUsingPOST
 */
-export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: INameNumberDTO }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/salesDetailsReport/getDifengSalesInvoiceTypeList",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

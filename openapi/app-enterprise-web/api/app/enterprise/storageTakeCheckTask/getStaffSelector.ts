@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getStaffSelectorUsingPOST_1
 */
-export default function fetchMethod(data: ISearchVOWithTheHomeOwnerDataSelectionList, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISearchVOWithTheHomeOwnerDataSelectionList }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getStaffSelector",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

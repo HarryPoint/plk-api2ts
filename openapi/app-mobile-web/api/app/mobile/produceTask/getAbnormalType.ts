@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getAbnormalTypeUsingGET
 */
-export default function fetchMethod(params: { type?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getAbnormalType",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

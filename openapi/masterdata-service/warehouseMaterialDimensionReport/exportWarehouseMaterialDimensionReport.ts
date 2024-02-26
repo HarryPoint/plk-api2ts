@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/exportWarehouseMaterialDimensionReportUsingPOST
 */
-export default function fetchMethod(data: ExportWarehouseMaterialDimensionReport, extraOptions?: any) {
+export default function fetchMethod(options: { data: ExportWarehouseMaterialDimensionReport }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/warehouseMaterialDimensionReport/exportWarehouseMaterialDimensionReport",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

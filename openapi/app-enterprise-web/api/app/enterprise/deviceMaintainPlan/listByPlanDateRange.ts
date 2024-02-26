@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备保养计划相关/listByPlanDateRangeUsingPOST
 */
-export default function fetchMethod(data: IScheduleStartEndDateQueryTheDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IScheduleStartEndDateQueryTheDTO }, extraOptions?: any) {
     return http<IJSONResultListMaintenancePlanRespondsToTheDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/listByPlanDateRange",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

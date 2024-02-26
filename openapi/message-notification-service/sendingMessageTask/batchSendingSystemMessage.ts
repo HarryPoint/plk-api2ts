@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/batchSendingSystemMessageUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/sendingMessageTask/batchSendingSystemMessage",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

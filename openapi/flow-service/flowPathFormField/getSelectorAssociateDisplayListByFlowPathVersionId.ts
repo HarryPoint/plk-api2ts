@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getSelectorAssociateDisplayListByFlowPathVersionIdUsingPOST
 */
-export default function fetchMethod(params: { flowPathVersionId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathVersionId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldDropDownOptionAssociatedToDisplayVO>(
         {
             url: "/flow-service/flowPathFormField/getSelectorAssociateDisplayListByFlowPathVersionId",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

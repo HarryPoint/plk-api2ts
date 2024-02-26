@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/服务相关/listUsingGET_3
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<ITheJSONResultListServiceRespondsToTheDTO>(
         {
             url: "/plk-uaa-service/serve/list",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/modifyCategoryUsingPOST
 */
-export default function fetchMethod(data: IStandardProcessModificationClassificationRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IStandardProcessModificationClassificationRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnology/modifyCategory",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getAllFormFieldsByFlowPathIdListUsingPOST
 */
-export default function fetchMethod(data: number[], params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormVO>(
         {
             url: "/flow-service/flowPathFormField/getAllFormFieldsByFlowPathIdList",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

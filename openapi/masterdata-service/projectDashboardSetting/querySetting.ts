@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/querySettingUsingPOST
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultProjectLargeScreenSettingsSaveRequestDto>(
         {
             url: "/masterdata-service/projectDashboardSetting/querySetting",
             method: "post",
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/关键参数相关/saveUsingPOST_2
 */
-export default function fetchMethod(data: IKeyParametersSaveTheDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IKeyParametersSaveTheDTO }, extraOptions?: any) {
     return http<IJSONResultKeyParameterInformationResponseObject>(
         {
             url: "/masterdata-service/keyparameter/save",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

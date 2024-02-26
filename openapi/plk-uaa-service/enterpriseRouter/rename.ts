@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/renameUsingPOST
 */
-export default function fetchMethod(data: IEnterpriseRouteRenamingRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEnterpriseRouteRenamingRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/enterpriseRouter/rename",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

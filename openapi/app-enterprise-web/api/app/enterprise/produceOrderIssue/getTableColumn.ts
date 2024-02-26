@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/getTableColumnUsingGET_25
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/getTableColumn",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

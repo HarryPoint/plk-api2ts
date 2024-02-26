@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/loginUsingPOST_1
 */
-export default function fetchMethod(data: ILoginRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ILoginRequestDTO }, extraOptions?: any) {
     return http<IJSONResultLoginResponseDTO>(
         {
             url: "/plk-uaa-service/saasAuth/login",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/自定义应用相关/getFlowPathStructureDataUsingPOST_6
 */
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVOparams: { flowPathId?: number, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/customApplication/getFlowPathStructureData",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

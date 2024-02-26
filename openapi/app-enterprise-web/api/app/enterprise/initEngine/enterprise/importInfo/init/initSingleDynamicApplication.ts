@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/initSingleDynamicApplicationUsingPOST
 */
-export default function fetchMethod(data: IApplicationInitRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IApplicationInitRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/enterprise/importInfo/init/initSingleDynamicApplication",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

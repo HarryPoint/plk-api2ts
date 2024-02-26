@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/changeHeaderUsingPOST
 */
-export default function fetchMethod(data: ITableHeaderChangesTheInput, params: { id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITableHeaderChangesTheInputparams: { id?: number, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/header/change",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

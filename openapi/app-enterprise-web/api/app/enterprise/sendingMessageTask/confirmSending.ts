@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/消息方案相关/confirmSendingUsingPOST
 */
-export default function fetchMethod(data: IConfirmSendingMessageRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IConfirmSendingMessageRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/sendingMessageTask/confirmSending",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

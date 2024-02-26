@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/部门相关/getDynamicDepartmentByIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
             url: "/masterdata-service/department/getDynamicDepartmentById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

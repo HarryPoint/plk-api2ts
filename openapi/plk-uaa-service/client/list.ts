@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/客户端相关/listUsingGET
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListTheClientRespondsToTheDTO>(
         {
             url: "/plk-uaa-service/client/list",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

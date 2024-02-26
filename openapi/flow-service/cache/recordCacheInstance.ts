@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/缓存相关/recordCacheInstanceUsingPOST
 */
-export default function fetchMethod(data: ICacheInstanceRecordRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICacheInstanceRecordRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/cache/recordCacheInstance",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

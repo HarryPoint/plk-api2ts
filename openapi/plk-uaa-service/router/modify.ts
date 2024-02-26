@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/路由相关/modifyUsingPOST_10
 */
-export default function fetchMethod(data: IModifyTheRouteDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IModifyTheRouteDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/router/modify",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

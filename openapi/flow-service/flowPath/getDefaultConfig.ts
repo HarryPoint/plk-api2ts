@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getDefaultConfigUsingGET
 */
-export default function fetchMethod(params: { type?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: string } }, extraOptions?: any) {
     return http<IJSONResultTheDefaultValueIsVO>(
         {
             url: "/flow-service/flowPath/getDefaultConfig",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

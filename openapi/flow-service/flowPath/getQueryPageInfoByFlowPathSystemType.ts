@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getQueryPageInfoByFlowPathSystemTypeUsingGET
 */
-export default function fetchMethod(data: IProcessDataSearchVO, params: { enterpriseId?: number; systemType?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVOparams: { enterpriseId?: number; systemType?: string, extraOptions?: any) {
     return http<IJSONResultDynamicDataQueryPageVO>(
         {
             url: "/flow-service/flowPath/getQueryPageInfoByFlowPathSystemType",
             method: "get",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-公海池相关/claimCustomerUsingPOST
 */
-export default function fetchMethod(data: ICustomerClaimInputVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICustomerClaimInputVO }, extraOptions?: any) {
     return http<IJSONResultboolean>(
         {
             url: "/app-enterprise-web/api/app/enterprise/publicCustomer/claim",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

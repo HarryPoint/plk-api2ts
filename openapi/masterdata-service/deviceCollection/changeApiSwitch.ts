@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/changeApiSwitchUsingPOST
 */
-export default function fetchMethod(data: IDeviceDataAcquisitionCommunicationStatusDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionCommunicationStatusDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/deviceCollection/changeApiSwitch",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

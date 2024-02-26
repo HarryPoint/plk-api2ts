@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/backUsingPOST_1
 */
-export default function fetchMethod(data: IProductionProcessingWithholdReworkRequestObject, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionProcessingWithholdReworkRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleHoldPause/back",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

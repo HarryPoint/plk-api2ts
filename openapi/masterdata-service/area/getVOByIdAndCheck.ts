@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/区域相关/getVOByIdAndCheckUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
     return http<IJSONResultAreaVO>(
         {
             url: "/masterdata-service/area/getVOByIdAndCheck",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

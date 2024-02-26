@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/editUsingPOST_2
 */
-export default function fetchMethod(data: IRoleAuthorizationEditRequest, extraOptions?: any) {
+export default function fetchMethod(options: { data: IRoleAuthorizationEditRequest }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/plk-uaa-service/role/edit",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

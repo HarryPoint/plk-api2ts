@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/关键参数相关/getInfoByIdUsingGET_1
 */
-export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultKeyParameterInformationResponseObject>(
         {
             url: "/masterdata-service/keyparameter/getInfoById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

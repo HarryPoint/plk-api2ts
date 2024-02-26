@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/completeCarbonCopyUsingPOST
 */
-export default function fetchMethod(data: ICcToDoChangeReadDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICcToDoChangeReadDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/completeCarbonCopy",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

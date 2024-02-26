@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/disableBatchUsingPOST_1
 */
-export default function fetchMethod(data: IMessageSchemaBatchDisableRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageSchemaBatchDisableRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/messageSchema/disableBatch",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

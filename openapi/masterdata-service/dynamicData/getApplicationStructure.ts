@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getApplicationStructureUsingPOST
 */
-export default function fetchMethod(params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: number } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO1>(
         {
             url: "/masterdata-service/dynamicData/getApplicationStructure",
             method: "post",
-            params,
+            ...options,
         },
         extraOptions,
     );

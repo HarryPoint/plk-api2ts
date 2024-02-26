@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/pageQueryProduceStockInUsingPOST
 */
-export default function fetchMethod(data: IPaging9, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPaging9 }, extraOptions?: any) {
     return http<IProductionStockInQueryResponseDTOJSONResultPagingInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/pageQueryProduceStockIn",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

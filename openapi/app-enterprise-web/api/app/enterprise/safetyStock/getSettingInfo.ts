@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安全库存相关/getSettingInfoUsingPOST
 */
-export default function fetchMethod(data: ISecurityStockSettingsSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISecurityStockSettingsSearchVO }, extraOptions?: any) {
     return http<IJSONResultSecurityStockSettingsReturnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/safetyStock/getSettingInfo",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

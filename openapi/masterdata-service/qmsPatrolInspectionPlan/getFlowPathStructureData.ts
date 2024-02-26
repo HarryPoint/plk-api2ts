@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/巡检计划相关/getFlowPathStructureDataUsingPOST_12
 */
-export default function fetchMethod(data: IProcessStructureSearchVO, params: { flowPathId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVOparams: { flowPathId?: number, extraOptions?: any) {
     return http<IJSONResultDynamicDataResponseDtoOfTheInspectionPlan>(
         {
             url: "/masterdata-service/qmsPatrolInspectionPlan/getFlowPathStructureData",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

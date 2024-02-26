@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺画布编辑锁定相关/lockTechnologyCanvasEditUsingPOST
 */
-export default function fetchMethod(data: ICraftCanvasEditLockRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICraftCanvasEditLockRequestDTO }, extraOptions?: any) {
     return http<IJSONResultProcessCanvasEditsLockResponseDTO>(
         {
             url: "/masterdata-service/standardTechnologyCanvasEditLock/lock",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

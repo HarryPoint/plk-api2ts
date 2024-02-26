@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/批次跟踪报表相关/getMaterialLotNoTrackReportForPageUsingPOST
 */
-export default function fetchMethod(data: GetMaterialLotNoTrackReportForPage, extraOptions?: any) {
+export default function fetchMethod(options: { data: GetMaterialLotNoTrackReportForPage }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialBatchTrackingPagingResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseStorageLotNoTrackReport/getMaterialLotNoTrackReportForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

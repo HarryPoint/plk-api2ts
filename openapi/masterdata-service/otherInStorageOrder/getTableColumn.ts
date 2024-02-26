@@ -3,11 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/其它入库单相关/getTableColumnUsingGET_5
 */
-export default function fetchMethod(extraOptions?: any) {
+export default function fetchMethod(options: {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/masterdata-service/otherInStorageOrder/getTableColumn",
             method: "get",
+            ...options,
         },
         extraOptions,
     );

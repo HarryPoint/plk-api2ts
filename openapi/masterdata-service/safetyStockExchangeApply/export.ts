@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/exportUsingPOST_30
 */
-export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISecurityStockChangeRequestSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/safetyStockExchangeApply/export",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

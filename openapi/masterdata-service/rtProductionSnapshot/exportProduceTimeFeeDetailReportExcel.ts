@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/exportProduceTimeFeeDetailReportExcelUsingPOST
 */
-export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IHourlyLaborRateReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/rtProductionSnapshot/exportProduceTimeFeeDetailReportExcel",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

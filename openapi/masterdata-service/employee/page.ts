@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/pageUsingPOST
 */
-export default function fetchMethod(data: IProcessDataSearchVO1, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO1params: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultPageInformationDynamicExpansionDataVOIndicatesWhetherTheEmployeeIsAllowedToLogInToTheDTO>(
         {
             url: "/masterdata-service/employee/page",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );

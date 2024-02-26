@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/getRolePermissionsByServiceObjectUsingPOST
 */
-export default function fetchMethod(data: IRoleRightsAuthorizationQueryRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IRoleRightsAuthorizationQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListAppliesTheRolePermissionResponseDTO>(
         {
             url: "/plk-uaa-service/rolePermissionApp/getRolePermissionsByServiceObject",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

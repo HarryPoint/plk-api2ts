@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getBaseByIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
     return http<IJSONResultBasicFlowInformationResponseDTO>(
         {
             url: "/flow-service/flowPath/getBaseById",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

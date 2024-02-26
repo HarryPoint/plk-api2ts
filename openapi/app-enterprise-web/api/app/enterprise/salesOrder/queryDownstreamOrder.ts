@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/销售订单相关/queryDownstreamOrderUsingPOST
 */
-export default function fetchMethod(data: IIdCollectionInformation, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultListAssociatesTheDocumentResponse>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesOrder/queryDownstreamOrder",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

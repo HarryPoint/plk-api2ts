@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用相关/publishPresetUsingPOST
 */
-export default function fetchMethod(data: IApplicationPublishingDefaultRequestDTO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IApplicationPublishingDefaultRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/application/publishPreset",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

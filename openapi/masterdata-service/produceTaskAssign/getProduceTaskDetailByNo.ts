@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/getProduceTaskDetailByNoUsingGET
 */
-export default function fetchMethod(params: { taskNo?: string; enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskNo?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultTheProductionTaskReturnsVOForEmployeeDetails>(
         {
             url: "/masterdata-service/produceTaskAssign/getProduceTaskDetailByNo",
             method: "get",
-            params,
+            ...options,
         },
         extraOptions,
     );

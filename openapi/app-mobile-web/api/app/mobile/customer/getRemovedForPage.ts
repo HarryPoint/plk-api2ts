@@ -3,12 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/客户相关/getRemovedForPageUsingPOST_4
 */
-export default function fetchMethod(data: IProcessDataBaseSearchVO, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-mobile-web/api/app/mobile/customer/getRemovedForPage",
             method: "post",
-            data,
+            ...options,
         },
         extraOptions,
     );

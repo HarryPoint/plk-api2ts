@@ -3,13 +3,12 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务排班相关/getCalendarUsingPOST
 */
-export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFactoryCalendarSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
     return http<IJSONResultListTaskSchedulingReturnsVO>(
         {
             url: "/flow-service/flowPathTaskCalendar/getCalendar",
             method: "post",
-            data,
-            params,
+            ...options,
         },
         extraOptions,
     );
