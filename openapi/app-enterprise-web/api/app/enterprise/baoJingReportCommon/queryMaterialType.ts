@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/宝晶报表公共/queryMaterialTypeUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/宝晶报表公共/queryMaterialTypeUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListCodeName>(
         {
@@ -10,21 +12,21 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«CodeName»»
+/** JSONResult«List«CodeName»» */
 export interface IJSONResultListCodeName {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICodeName[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// CodeName
+/** CodeName */
 export interface ICodeName {
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     name: string;
 }

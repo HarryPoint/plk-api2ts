@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
+*/
 export default function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: ITheProductionTaskSetsTheFeedDeviceToR
         extraOptions,
     );
 }
-// 生产任务设置进料设备请求DTO
+/** 生产任务设置进料设备请求DTO */
 export interface ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO {
-    // 生产任务id
+    /** 生产任务id */
     produceTaskId: number;
-    // 设备ids
+    /** 设备ids */
     deviceIds: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCompletedProjectUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCompletedProjectUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultCompleteProjectResponseDTO>(
         {
@@ -10,39 +12,39 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«CompleteProjectResponseDTO»
+/** JSONResult«CompleteProjectResponseDTO» */
 export interface IJSONResultCompleteProjectResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICompleteProjectResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// CompleteProjectResponseDTO
+/** CompleteProjectResponseDTO */
 export interface ICompleteProjectResponseDTO {
-    // 项目目标值
+    /** 项目目标值 */
     projectTargetValue: number;
-    // 项目指标区间配置
+    /** 项目指标区间配置 */
     projectIndicatorsRangeConfigList: IProjectIndicatorsRangeConfigResponseDTO[];
-    // 部门的各个项目指标
+    /** 部门的各个项目指标 */
     departmentProjectIndicatorsList: IDepartmentProjectIndicatorsResponseDTO[];
 }
-// ProjectIndicatorsRangeConfigResponseDTO
+/** ProjectIndicatorsRangeConfigResponseDTO */
 export interface IProjectIndicatorsRangeConfigResponseDTO {
-    // 指标Key -> 项目指标Key
+    /** 指标Key -> 项目指标Key */
     indicatorsKey: string;
-    // 指标名称
+    /** 指标名称 */
     indicatorsName: string;
 }
-// DepartmentProjectIndicatorsResponseDTO
+/** DepartmentProjectIndicatorsResponseDTO */
 export interface IDepartmentProjectIndicatorsResponseDTO {
-    // undefined
+    /** undefined */
     departmentId: number;
-    // undefined
+    /** undefined */
     departmentName: string;
-    // 指标Key => Project Quantity Map
+    /** 指标Key => Project Quantity Map */
     indicatorsToProjectQuantityMap: Record<string, number>;
 }

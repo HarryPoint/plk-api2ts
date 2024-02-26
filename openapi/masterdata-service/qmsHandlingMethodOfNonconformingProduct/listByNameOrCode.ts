@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
+*/
 export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
     return http<IJSONResultListResponseObjectForHandlingNonconformingItems>(
         {
@@ -11,32 +13,32 @@ export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
         extraOptions,
     );
 }
-// 名称、编号DTO
+/** 名称、编号DTO */
 export interface INameNumberDTO {
-    // 名称or编号
+    /** 名称or编号 */
     nameOrCode: string;
 }
-// JSONResult«List«不合格品处理方式响应对象»»
+/** JSONResult«List«不合格品处理方式响应对象»» */
 export interface IJSONResultListResponseObjectForHandlingNonconformingItems {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheNonconformingProductHandlingModeRespondsToTheObject[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 不合格品处理方式响应对象
+/** 不合格品处理方式响应对象 */
 export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
-    // id
+    /** id */
     id: number;
-    // 编号
+    /** 编号 */
     code: string;
-    // 处理方式
+    /** 处理方式 */
     handingMethod: string;
-    // 适用检验类型
+    /** 适用检验类型 */
     useValidationTypes: string;
-    // 适用检验类型描述
+    /** 适用检验类型描述 */
     useValidationTypesDesc: string;
 }

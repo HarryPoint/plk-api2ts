@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUserProduceQtyStatisticUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUserProduceQtyStatisticUsingPOST
+*/
 export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultTotalUserProductionStatisticsReturnVO>(
         {
@@ -12,42 +14,42 @@ export default function fetchMethod(data: IUserProductionStatisticsSearchVO, par
         extraOptions,
     );
 }
-// 用户生产统计搜索VO
+/** 用户生产统计搜索VO */
 export interface IUserProductionStatisticsSearchVO {
-    // 查询开始时间 yyyy-MM-dd HH:mm:ss
+    /** 查询开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime: string;
-    // 查询结束时间 yyyy-MM-dd HH:mm:ss
+    /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
-    // 物料id集合
+    /** 物料id集合 */
     materialIds: number[];
-    // 工序id集合
+    /** 工序id集合 */
     processIds: number[];
-    // 生产任务类型
+    /** 生产任务类型 */
     produceTaskTypeList: string[];
-    // 生产订单编码
+    /** 生产订单编码 */
     produceOrderCode: string;
 }
-// JSONResult«用户生产合计统计返回VO»
+/** JSONResult«用户生产合计统计返回VO» */
 export interface IJSONResultTotalUserProductionStatisticsReturnVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IUserProductionTotalStatisticsAreReturnedToVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 用户生产合计统计返回VO
+/** 用户生产合计统计返回VO */
 export interface IUserProductionTotalStatisticsAreReturnedToVO {
-    // 总进料个数
+    /** 总进料个数 */
     totalProduceMoveInQuantity: number;
-    // 总合格产出个数
+    /** 总合格产出个数 */
     totalProduceQuantity: number;
-    // 总返工个数
+    /** 总返工个数 */
     totalBackQuantity: number;
-    // 总报废个数
+    /** 总报废个数 */
     totalScrapQuantity: number;
-    // 总暂扣品个数
+    /** 总暂扣品个数 */
     totalHoldPauseQuantity: number;
 }

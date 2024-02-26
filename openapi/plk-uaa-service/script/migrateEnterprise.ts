@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/ 企业迁移脚本相关/migrateEnterpriseUsingPOST
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/ 企业迁移脚本相关/migrateEnterpriseUsingPOST
+*/
 export default function fetchMethod(data: IEnterpriseMigrateRequestDTO[], extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,35 +13,35 @@ export default function fetchMethod(data: IEnterpriseMigrateRequestDTO[], extraO
         extraOptions,
     );
 }
-// EnterpriseMigrateRequestDTO
+/** EnterpriseMigrateRequestDTO */
 export interface IEnterpriseMigrateRequestDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     name: string;
-    // undefined
+    /** undefined */
     defaultAccountCount: number;
-    // undefined
+    /** undefined */
     usedAccountQuantity: number;
-    // undefined
+    /** undefined */
     expireTime: string;
-    // undefined
+    /** undefined */
     isEnableBatchManagement: string;
-    // undefined
+    /** undefined */
     accessKey: string;
-    // undefined
+    /** undefined */
     accessSecret: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

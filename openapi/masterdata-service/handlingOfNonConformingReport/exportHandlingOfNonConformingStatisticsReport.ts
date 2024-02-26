@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/exportHandlingOfNonConformingStatisticsReportUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/exportHandlingOfNonConformingStatisticsReportUsingPOST
+*/
 export default function fetchMethod(data: ExportHandlingOfNonConformingStatisticsReport, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -11,14 +13,14 @@ export default function fetchMethod(data: ExportHandlingOfNonConformingStatistic
         extraOptions,
     );
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

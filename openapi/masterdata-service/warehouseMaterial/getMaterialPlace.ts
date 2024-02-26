@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialPlaceUsingPOST_1
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialPlaceUsingPOST_1
+*/
 export default function fetchMethod(data: IMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheInventoryDistributionToVO>(
         {
@@ -12,69 +14,69 @@ export default function fetchMethod(data: IMaterialMasterDataInventoryDistributi
         extraOptions,
     );
 }
-// 物料主数据库存分布搜索VO
+/** 物料主数据库存分布搜索VO */
 export interface IMaterialMasterDataInventoryDistributionSearchVO {
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 物料名称
+    /** 物料名称 */
     materialName: string;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 物料id
+    /** 物料id */
     materialId: number;
-    // 物料id集
+    /** 物料id集 */
     materialIds: number[];
-    // 编号
+    /** 编号 */
     materialCode: string;
-    // 规格
+    /** 规格 */
     materialSpec: string;
-    // 仓库id
+    /** 仓库id */
     storehouseIds: number[];
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«List«物料库存分布返回VO»»
+/** JSONResult«List«物料库存分布返回VO»» */
 export interface IJSONResultListReturnsTheInventoryDistributionToVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IMaterialInventoryDistributionReturnedToVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 物料库存分布返回VO
+/** 物料库存分布返回VO */
 export interface IMaterialInventoryDistributionReturnedToVO {
-    // 区域id
+    /** 区域id */
     areaId: number;
-    // 区域名称
+    /** 区域名称 */
     areaName: string;
-    // 区域编号
+    /** 区域编号 */
     areaCode: string;
-    // 仓库id
+    /** 仓库id */
     storehouseId: number;
-    // 仓库名称
+    /** 仓库名称 */
     storehouseName: string;
-    // 仓库编号
+    /** 仓库编号 */
     storehouseCode: string;
-    // 仓位id
+    /** 仓位id */
     warehouseId: number;
-    // 仓位名称
+    /** 仓位名称 */
     warehouseName: string;
-    // 仓位编号
+    /** 仓位编号 */
     warehouseCode: string;
-    // 库存总数
+    /** 库存总数 */
     storageTotalCount: number;
-    // 库存锁定数
+    /** 库存锁定数 */
     storageLockCount: number;
-    // 库存可使用数
+    /** 库存可使用数 */
     storageUseCount: number;
 }

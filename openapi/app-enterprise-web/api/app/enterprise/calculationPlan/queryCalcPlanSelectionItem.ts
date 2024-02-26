@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryCalcPlanSelectionItemUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryCalcPlanSelectionItemUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListCalcPlanSelectionItemQueryResponseDTO>(
         {
@@ -10,21 +12,21 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«CalcPlanSelectionItemQueryResponseDTO»»
+/** JSONResult«List«CalcPlanSelectionItemQueryResponseDTO»» */
 export interface IJSONResultListCalcPlanSelectionItemQueryResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICalcPlanSelectionItemQueryResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// CalcPlanSelectionItemQueryResponseDTO
+/** CalcPlanSelectionItemQueryResponseDTO */
 export interface ICalcPlanSelectionItemQueryResponseDTO {
-    // ID
+    /** ID */
     id: number;
-    // 方案名称
+    /** 方案名称 */
     name: string;
 }

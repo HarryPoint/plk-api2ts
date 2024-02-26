@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/addUserProjectTaskTemplateUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/addUserProjectTaskTemplateUsingPOST
+*/
 export default function fetchMethod(data: IProjectTaskTemplateUserAddsRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IProjectTaskTemplateUserAddsRequestDTO
         extraOptions,
     );
 }
-// 项目任务模板用户添加请求DTO
+/** 项目任务模板用户添加请求DTO */
 export interface IProjectTaskTemplateUserAddsRequestDTO {
-    // 项目id
+    /** 项目id */
     projectId: number;
-    // 项目任务模板id
+    /** 项目任务模板id */
     projectTaskTemplateId: number;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

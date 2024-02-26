@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/质检管理/getWarehouseTreeUsingGET_2
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/质检管理/getWarehouseTreeUsingGET_2
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListWarehouseLocationTreeReturnsVO>(
         {
@@ -10,25 +12,25 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«仓库仓位树返回VO»»
+/** JSONResult«List«仓库仓位树返回VO»» */
 export interface IJSONResultListWarehouseLocationTreeReturnsVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheWarehouseLocationTreeReturnsVO1[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 仓库仓位树返回VO_1
+/** 仓库仓位树返回VO_1 */
 export interface ITheWarehouseLocationTreeReturnsVO1 {
-    // id
+    /** id */
     id: number;
-    // 仓库/仓位名称
+    /** 仓库/仓位名称 */
     name: string;
-    // 仓库/仓位编号
+    /** 仓库/仓位编号 */
     code: string;
-    // 子仓库/仓位
+    /** 子仓库/仓位 */
     children: ITheWarehouseLocationTreeReturnsVO1[];
 }

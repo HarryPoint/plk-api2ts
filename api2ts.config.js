@@ -1,10 +1,33 @@
 const path = require("path");
 
+const platformMap = {
+  dev: "47.108.139.107",
+  uat: "47.108.135.148",
+};
+
+const serviceMap = {
+  "masterdata-service": 16700,
+  "plk-uaa-service": 18100,
+  "flow-service": 16500,
+  "todo-service": 16600,
+  "app-enterprise-web": 16400,
+  "app-mobile-web": 17400,
+  "message-notification-service": 17600,
+};
+
+const apiMap = Object.keys(platformMap)
+  .map((platform) => ({
+    [platform]: Object.keys(serviceMap)
+      .map((service) => ({
+        [service]: `http://${platformMap[platform]}:${serviceMap[service]}`,
+      }))
+      .reduce((prev, next) => ({ ...prev, ...next }), {}),
+  }))
+  .reduce((prev, next) => ({ ...prev, ...next }), {});
+
 module.exports = () => {
   return {
     output: path.resolve(__dirname, "./openapi"),
-    // serviceMap: {
-    //   "masterdata-service": "http://47.108.139.107:16700",
-    // },
+    serviceMap: apiMap.dev,
   };
 };

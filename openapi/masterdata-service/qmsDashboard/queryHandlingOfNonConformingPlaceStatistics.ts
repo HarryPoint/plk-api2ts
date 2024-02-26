@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingPlaceStatisticsUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingPlaceStatisticsUsingGET
+*/
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
     return http<IJSONResultLargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO>(
         {
@@ -11,25 +13,25 @@ export default function fetchMethod(params: { dateBegin: string; dateEnd: string
         extraOptions,
     );
 }
-// JSONResult«大屏不合格品统计内外场响应DTO»
+/** JSONResult«大屏不合格品统计内外场响应DTO» */
 export interface IJSONResultLargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ILargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 大屏不合格品统计内外场响应DTO
+/** 大屏不合格品统计内外场响应DTO */
 export interface ILargeScreenNonconformingProductStatisticsInternalAndExternalFieldResponseDTO {
-    // 内场数量
+    /** 内场数量 */
     internalQuantity: number;
-    // 内场占比
+    /** 内场占比 */
     internalRatio: number;
-    // 外场数量
+    /** 外场数量 */
     externalQuantity: number;
-    // 外场占比
+    /** 外场占比 */
     externalRatio: number;
 }

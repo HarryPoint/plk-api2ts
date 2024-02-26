@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
+*/
 export default function fetchMethod(params: { number?: string }, extraOptions?: any) {
     return http<IJSONResultThirdApiResponseDTO>(
         {
@@ -11,51 +13,51 @@ export default function fetchMethod(params: { number?: string }, extraOptions?: 
         extraOptions,
     );
 }
-// JSONResult«ThirdApiResponseDTO»
+/** JSONResult«ThirdApiResponseDTO» */
 export interface IJSONResultThirdApiResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IThirdApiResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ThirdApiResponseDTO
+/** ThirdApiResponseDTO */
 export interface IThirdApiResponseDTO {
-    // undefined
+    /** undefined */
     requestInfo: IThirdApiRequestInfoResponseDTO;
-    // undefined
+    /** undefined */
     responseInfo: IThirdApiResponseInfoResponseDTO;
 }
-// ThirdApiRequestInfoResponseDTO
+/** ThirdApiRequestInfoResponseDTO */
 export interface IThirdApiRequestInfoResponseDTO {
-    // undefined
+    /** undefined */
     url: string;
-    // undefined
+    /** undefined */
     headers: Record<string, string>;
-    // undefined
+    /** undefined */
     params: Record<string, string>;
-    // undefined
+    /** undefined */
     body: string;
 }
-// ThirdApiResponseInfoResponseDTO
+/** ThirdApiResponseInfoResponseDTO */
 export interface IThirdApiResponseInfoResponseDTO {
-    // undefined
+    /** undefined */
     success: string;
-    // undefined
+    /** undefined */
     errorInfo: string;
-    // undefined
+    /** undefined */
     status: number;
-    // undefined
+    /** undefined */
     responseCode: string;
-    // undefined
+    /** undefined */
     responseMsg: string;
-    // undefined
+    /** undefined */
     responseBody: string;
-    // undefined
+    /** undefined */
     responseDataObj: Record<string, Record<string, any>>;
-    // undefined
+    /** undefined */
     responseDataArray: Record<string, any>[];
 }

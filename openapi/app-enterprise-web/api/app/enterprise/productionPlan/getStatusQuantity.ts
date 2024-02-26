@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/任务下发相关/getStatusQuantityUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/getStatusQuantityUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultNumberOfSchedulingPlansTheValueIsVO>(
         {
@@ -10,23 +12,23 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«排产计划状态数量返回VO»
+/** JSONResult«排产计划状态数量返回VO» */
 export interface IJSONResultNumberOfSchedulingPlansTheValueIsVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IScheduleStatusQuantityReturnedToVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 排产计划状态数量返回VO
+/** 排产计划状态数量返回VO */
 export interface IScheduleStatusQuantityReturnedToVO {
-    // 全部数量
+    /** 全部数量 */
     allQuantity: number;
-    // 已下发数量
+    /** 已下发数量 */
     issueQuantity: number;
-    // 待下发数量
+    /** 待下发数量 */
     waitQuantity: number;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/流程相关/getQueryPageInfoByFlowPathSystemTypeUsingGET
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/流程相关/getQueryPageInfoByFlowPathSystemTypeUsingGET
+*/
 export default function fetchMethod(data: IProcessDataSearchVO, params: { enterpriseId: number; systemType: string }, extraOptions?: any) {
     return http<IJSONResultDynamicDataQueryPageVO>(
         {
@@ -12,160 +14,160 @@ export default function fetchMethod(data: IProcessDataSearchVO, params: { enterp
         extraOptions,
     );
 }
-// 流程数据搜索VO
+/** 流程数据搜索VO */
 export interface IProcessDataSearchVO {
-    // 全局搜索
+    /** 全局搜索 */
     allSearch: string;
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 字段搜索
+    /** 字段搜索 */
     dataSearchList: IProcessDataDetailsSearchVO[];
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 明细表表code，传值后，将会查询明细表数据
+    /** 明细表表code，传值后，将会查询明细表数据 */
     tableColumnCode: string;
-    // 当前的表单分组
+    /** 当前的表单分组 */
     currentFormDataGrouping: IFormDataGroupingDTO;
-    // 操作员工id
+    /** 操作员工id */
     opUserId: number;
-    // 操作角色id集
+    /** 操作角色id集 */
     opRoleIds: number[];
-    // 操作部门id
+    /** 操作部门id */
     opDeptId: number;
 }
-// 流程数据明细搜索VO
+/** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
-    // 列code
+    /** 列code */
     code: string;
-    // 搜索类型
+    /** 搜索类型 */
     searchType: string;
-    // 搜索文本 - 针对文本搜索
+    /** 搜索文本 - 针对文本搜索 */
     text: string;
-    // 搜索起始值 - 针对范围搜索
+    /** 搜索起始值 - 针对范围搜索 */
     limitBegin: Record<string, any>;
-    // 搜索结束值 - 针对范围搜索
+    /** 搜索结束值 - 针对范围搜索 */
     limitEnd: Record<string, any>;
-    // 搜索选项值 - 针对选择搜索
+    /** 搜索选项值 - 针对选择搜索 */
     selectors: Record<string, any>[];
-    // 表格编码
+    /** 表格编码 */
     tableCode: string;
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// 表单数据分组DTO
+/** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
-    // 分组字段序列
+    /** 分组字段序列 */
     groupingFieldSerialNo: string;
-    // 分组字段编码
+    /** 分组字段编码 */
     groupFieldCode: string;
-    // 分组的值， 如果是关联表单，则是ID
+    /** 分组的值， 如果是关联表单，则是ID */
     groupingValue: string;
-    // 分组名称
+    /** 分组名称 */
     groupingName: string;
-    // 下级分组
+    /** 下级分组 */
     children: IFormDataGroupingDTO[];
-    // 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N
+    /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData: string;
-    // 多级基础数据上级ID
+    /** 多级基础数据上级ID */
     treeDataParentId: number;
 }
-// JSONResult«DynamicDataQueryPageVO»
+/** JSONResult«DynamicDataQueryPageVO» */
 export interface IJSONResultDynamicDataQueryPageVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IDynamicDataQueryPageVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// DynamicDataQueryPageVO
+/** DynamicDataQueryPageVO */
 export interface IDynamicDataQueryPageVO {
-    // undefined
+    /** undefined */
     flowPath: IFlowPathBaseVO;
-    // undefined
+    /** undefined */
     masterTableColumns: IFlowPathTableColumnBaseVO[];
-    // undefined
+    /** undefined */
     childTableColumns: IFlowPathTableColumnBaseVO[];
 }
-// FlowPathBaseVO
+/** FlowPathBaseVO */
 export interface IFlowPathBaseVO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     lastName: string;
-    // undefined
+    /** undefined */
     type: string;
 }
-// FlowPathTableColumnBaseVO
+/** FlowPathTableColumnBaseVO */
 export interface IFlowPathTableColumnBaseVO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     isTableField: string;
-    // undefined
+    /** undefined */
     formFieldType: string;
-    // undefined
+    /** undefined */
     formFieldTypeGroup: string;
-    // undefined
+    /** undefined */
     parentFlowPathFormFieldCode: string;
-    // undefined
+    /** undefined */
     numberRuleDetails: INumberRuleDetailBaseVO[];
-    // undefined
+    /** undefined */
     flowPathFormFieldId: number;
-    // undefined
+    /** undefined */
     formRpCode: string;
-    // undefined
+    /** undefined */
     formDetailRpCode: string;
-    // undefined
+    /** undefined */
     formRpSelectorShowFieldCode: string;
-    // undefined
+    /** undefined */
     formRpSelectorShowFieldSerialNo: string;
-    // undefined
+    /** undefined */
     actualFields: Record<string, any>[];
-    // undefined
+    /** undefined */
     isAutoGetLocation: string;
-    // undefined
+    /** undefined */
     addressType: string;
-    // undefined
+    /** undefined */
     numberFormat: string;
-    // undefined
+    /** undefined */
     dynamicControlValueFieldSerialNo: string;
-    // undefined
+    /** undefined */
     processorShowFieldSerialNo: string;
-    // undefined
+    /** undefined */
     processorShowFieldCode: string;
-    // undefined
+    /** undefined */
     organizationType: string;
 }
-// NumberRuleDetailBaseVO
+/** NumberRuleDetailBaseVO */
 export interface INumberRuleDetailBaseVO {
-    // undefined
+    /** undefined */
     type: string;
-    // undefined
+    /** undefined */
     dateFormat: string;
-    // undefined
+    /** undefined */
     fixValue: string;
-    // undefined
+    /** undefined */
     ruleLength: number;
-    // undefined
+    /** undefined */
     startValue: number;
-    // undefined
+    /** undefined */
     stepValue: number;
-    // undefined
+    /** undefined */
     isCodeAccording: string;
-    // undefined
+    /** undefined */
     flowPathFormFieldCodeNumberRuleId: number;
 }

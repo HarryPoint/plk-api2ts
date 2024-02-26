@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTargetAppOfEventServicesUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTargetAppOfEventServicesUsingPOST
+*/
 export default function fetchMethod(data: number[], extraOptions?: any) {
     return http<IJSONResultListTheTargetApplicationQueryRequest>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«目标应用查询请求»»
+/** JSONResult«List«目标应用查询请求»» */
 export interface IJSONResultListTheTargetApplicationQueryRequest {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITargetApplicationQueryRequest[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 目标应用查询请求
+/** 目标应用查询请求 */
 export interface ITargetApplicationQueryRequest {
-    // undefined
+    /** undefined */
     flowPathEventId: number;
-    // undefined
+    /** undefined */
     targetAppId: number;
 }

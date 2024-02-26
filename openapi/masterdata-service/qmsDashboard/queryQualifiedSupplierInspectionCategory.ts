@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionCategoryUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionCategoryUsingPOST
+*/
 export default function fetchMethod(data: IQualifiedSupplierInspectionCategoryQueryRequestDTO, extraOptions?: any) {
     return http<IJSONResultListResponseToTheSupplierDeliveryQualificationRateCategoryQuery>(
         {
@@ -11,32 +13,32 @@ export default function fetchMethod(data: IQualifiedSupplierInspectionCategoryQu
         extraOptions,
     );
 }
-// QualifiedSupplierInspectionCategoryQueryRequestDTO
+/** QualifiedSupplierInspectionCategoryQueryRequestDTO */
 export interface IQualifiedSupplierInspectionCategoryQueryRequestDTO {
-    // 查询日期的开始
+    /** 查询日期的开始 */
     dateRangeBegin: string;
-    // 查询日期的结束
+    /** 查询日期的结束 */
     dateRangeEnd: string;
 }
-// JSONResult«List«供应商交检合格率-类别查询响应»»
+/** JSONResult«List«供应商交检合格率-类别查询响应»» */
 export interface IJSONResultListResponseToTheSupplierDeliveryQualificationRateCategoryQuery {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ISupplierDeliveryQualifiedRateCategoryQueryResponse[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 供应商交检合格率-类别查询响应
+/** 供应商交检合格率-类别查询响应 */
 export interface ISupplierDeliveryQualifiedRateCategoryQueryResponse {
-    // 类别ID
+    /** 类别ID */
     categoryId: number;
-    // 类别名称
+    /** 类别名称 */
     categoryName: string;
-    // 合格数量
+    /** 合格数量 */
     qualifiedQuantity: number;
-    // 不合格数量
+    /** 不合格数量 */
     unqualifiedQuantity: number;
 }

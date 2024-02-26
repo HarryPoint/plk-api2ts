@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListNotificationField>(
         {
@@ -10,21 +12,21 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«通告栏»»
+/** JSONResult«List«通告栏»» */
 export interface IJSONResultListNotificationField {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: INoticeBoard[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 通告栏
+/** 通告栏 */
 export interface INoticeBoard {
-    // ID
+    /** ID */
     id: number;
-    // 通知内容
+    /** 通知内容 */
     content: string;
 }

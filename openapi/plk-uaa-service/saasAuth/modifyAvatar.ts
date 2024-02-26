@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/Saas授权相关/modifyAvatarUsingPOST
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/modifyAvatarUsingPOST
+*/
 export default function fetchMethod(data: IUpdateProfilePictureRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,19 +13,19 @@ export default function fetchMethod(data: IUpdateProfilePictureRequestDTO, extra
         extraOptions,
     );
 }
-// 更新头像请求 DTO
+/** 更新头像请求 DTO */
 export interface IUpdateProfilePictureRequestDTO {
-    // 头像
+    /** 头像 */
     avatar: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

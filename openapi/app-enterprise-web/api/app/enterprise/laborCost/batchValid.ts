@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/工费相关/batchValidUsingPOST_2
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/工费相关/batchValidUsingPOST_2
+*/
 export default function fetchMethod(data: IEnableOrDisableVOInBatches, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IEnableOrDisableVOInBatches, extraOpti
         extraOptions,
     );
 }
-// 批量启用or停用VO
+/** 批量启用or停用VO */
 export interface IEnableOrDisableVOInBatches {
-    // id集合
+    /** id集合 */
     ids: number[];
-    // 状态
+    /** 状态 */
     dataStatus: number;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

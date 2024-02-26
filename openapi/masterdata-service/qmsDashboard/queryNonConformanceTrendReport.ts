@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNonConformanceTrendReportUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNonConformanceTrendReportUsingPOST
+*/
 export default function fetchMethod(data: INonConformanceTrendReportRequestDTO, extraOptions?: any) {
     return http<IJSONResultDoesNotMatchTheProjectTrendReport>(
         {
@@ -11,44 +13,44 @@ export default function fetchMethod(data: INonConformanceTrendReportRequestDTO, 
         extraOptions,
     );
 }
-// NonConformanceTrendReportRequestDTO
+/** NonConformanceTrendReportRequestDTO */
 export interface INonConformanceTrendReportRequestDTO {
-    // 当前的时间
+    /** 当前的时间 */
     currentYear: string;
 }
-// JSONResult«不符合项目趋势报告»
+/** JSONResult«不符合项目趋势报告» */
 export interface IJSONResultDoesNotMatchTheProjectTrendReport {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IDoesNotMatchTheProjectTrendReport;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 不符合项目趋势报告
+/** 不符合项目趋势报告 */
 export interface IDoesNotMatchTheProjectTrendReport {
-    // 内审
+    /** 内审 */
     internalAudit: IQueryResponseOfNonMatchItems;
-    // 外审
+    /** 外审 */
     externalAudit: IQueryResponseOfNonMatchItems;
-    // 专审
+    /** 专审 */
     specialAudit: IQueryResponseOfNonMatchItems;
 }
-// 不符合项查询响应
+/** 不符合项查询响应 */
 export interface IQueryResponseOfNonMatchItems {
-    // undefined
+    /** undefined */
     clauseNoList: ITermsNumberQueryResponse[];
-    // undefined
+    /** undefined */
     lastYear: Record<string, number>;
-    // undefined
+    /** undefined */
     currentYear: Record<string, number>;
 }
-// 条款号查询响应
+/** 条款号查询响应 */
 export interface ITermsNumberQueryResponse {
-    // ID
+    /** ID */
     id: number;
-    // 条款号
+    /** 条款号 */
     clauseNo: string;
 }

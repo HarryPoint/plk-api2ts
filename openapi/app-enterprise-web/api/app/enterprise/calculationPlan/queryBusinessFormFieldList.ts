@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryBusinessFormFieldListUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryBusinessFormFieldListUsingPOST
+*/
 export default function fetchMethod(data: IFormFieldQueryRequestDTO, extraOptions?: any) {
     return http<IJSONResultListFormFieldQueryResponseDTO>(
         {
@@ -11,36 +13,36 @@ export default function fetchMethod(data: IFormFieldQueryRequestDTO, extraOption
         extraOptions,
     );
 }
-// FormFieldQueryRequestDTO
+/** FormFieldQueryRequestDTO */
 export interface IFormFieldQueryRequestDTO {
-    // 应用ID
+    /** 应用ID */
     appId: number;
-    // 表格字段编码
+    /** 表格字段编码 */
     tableFieldCode: string;
-    // 是否明细业务
+    /** 是否明细业务 */
     isDetailFlow: string;
 }
-// JSONResult«List«FormFieldQueryResponseDTO»»
+/** JSONResult«List«FormFieldQueryResponseDTO»» */
 export interface IJSONResultListFormFieldQueryResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IFormFieldQueryResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// FormFieldQueryResponseDTO
+/** FormFieldQueryResponseDTO */
 export interface IFormFieldQueryResponseDTO {
-    // ID
+    /** ID */
     id: number;
-    // 编码
+    /** 编码 */
     code: string;
-    // 序列号
+    /** 序列号 */
     serialNo: string;
-    // 名称
+    /** 名称 */
     name: string;
-    // 表单字段类型
+    /** 表单字段类型 */
     formFieldType: string;
 }

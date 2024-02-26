@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产工艺产能相关/getByIdUsingGET_9
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产工艺产能相关/getByIdUsingGET_9
+*/
 export default function fetchMethod(params: { id: number }, extraOptions?: any) {
     return http<IJSONResultProduceTechnologyCapacityResponseDTO>(
         {
@@ -11,53 +13,53 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«ProduceTechnologyCapacityResponseDTO»
+/** JSONResult«ProduceTechnologyCapacityResponseDTO» */
 export interface IJSONResultProduceTechnologyCapacityResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProduceTechnologyCapacityResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProduceTechnologyCapacityResponseDTO
+/** ProduceTechnologyCapacityResponseDTO */
 export interface IProduceTechnologyCapacityResponseDTO {
-    // 创建用户ID
+    /** 创建用户ID */
     createUserId: number;
-    // 创建用户名
+    /** 创建用户名 */
     createUserName: string;
-    // 创建部门ID
+    /** 创建部门ID */
     createDeptId: number;
-    // 创建部门名称
+    /** 创建部门名称 */
     createDeptName: string;
-    // 更新部门ID
+    /** 更新部门ID */
     updateDeptId: number;
-    // 更新部门名称
+    /** 更新部门名称 */
     updateDeptName: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 更新用户ID
+    /** 更新用户ID */
     updateUserId: number;
-    // 更新用户名称
+    /** 更新用户名称 */
     updateUserName: string;
-    // 更新时间
+    /** 更新时间 */
     updateTime: string;
-    // id
+    /** id */
     id: number;
-    // 产能编号
+    /** 产能编号 */
     code: string;
-    // 产能名称
+    /** 产能名称 */
     name: string;
-    // 准备耗时
+    /** 准备耗时 */
     readyTime: number;
-    // 准备时间单位
+    /** 准备时间单位 */
     readyTimeUnit: string;
-    // 生产耗时
+    /** 生产耗时 */
     capacityProduceTime: number;
-    // 生产时间单位
+    /** 生产时间单位 */
     capacityTimeType: string;
-    // 产出数量
+    /** 产出数量 */
     capacityProduceQuantity: number;
 }

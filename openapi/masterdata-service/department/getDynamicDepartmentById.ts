@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/部门相关/getDynamicDepartmentByIdUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/部门相关/getDynamicDepartmentByIdUsingGET
+*/
 export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
@@ -11,23 +13,23 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
         extraOptions,
     );
 }
-// JSONResult«Id，名称，编号VO»
+/** JSONResult«Id，名称，编号VO» */
 export interface IJSONResultIdNameNumberVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IIdNameNumberVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// Id，名称，编号VO
+/** Id，名称，编号VO */
 export interface IIdNameNumberVO {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
 }

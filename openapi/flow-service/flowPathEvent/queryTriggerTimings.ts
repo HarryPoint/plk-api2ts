@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTriggerTimingsUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTriggerTimingsUsingPOST
+*/
 export default function fetchMethod(data: IEventTriggerTiming, extraOptions?: any) {
     return http<IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO>(
         {
@@ -11,34 +13,34 @@ export default function fetchMethod(data: IEventTriggerTiming, extraOptions?: an
         extraOptions,
     );
 }
-// 事件触发时机
+/** 事件触发时机 */
 export interface IEventTriggerTiming {
-    // 根据应用版本ID列表
+    /** 根据应用版本ID列表 */
     flowPathVersionIdList: number[];
-    // 触发事件的时机
+    /** 触发事件的时机 */
     triggerEventTiming: string;
 }
-// JSONResult«List«FlowPathEventTriggerTimingQueryResponseDTO»»
+/** JSONResult«List«FlowPathEventTriggerTimingQueryResponseDTO»» */
 export interface IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IFlowPathEventTriggerTimingQueryResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// FlowPathEventTriggerTimingQueryResponseDTO
+/** FlowPathEventTriggerTimingQueryResponseDTO */
 export interface IFlowPathEventTriggerTimingQueryResponseDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     flowPathId: number;
-    // undefined
+    /** undefined */
     flowPathVersionId: number;
-    // undefined
+    /** undefined */
     flowPathEventId: number;
-    // undefined
+    /** undefined */
     eventTriggerTiming: string;
 }

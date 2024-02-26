@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/质检方案/getAllUnitUsingGET_2
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/质检方案/getAllUnitUsingGET_2
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListIdNameVO>(
         {
@@ -10,21 +12,21 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«Id，名称VO»»
+/** JSONResult«List«Id，名称VO»» */
 export interface IJSONResultListIdNameVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IIdNameVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// Id，名称VO
+/** Id，名称VO */
 export interface IIdNameVO {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
 }

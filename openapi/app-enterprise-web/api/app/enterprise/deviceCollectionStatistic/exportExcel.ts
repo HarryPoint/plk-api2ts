@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/exportExcelUsingGET_9
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/exportExcelUsingGET_9
+*/
 export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
     return http<IModelAndView>(
         {
@@ -11,6 +13,6 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
         extraOptions,
     );
 }
-// ModelAndView
+/** ModelAndView */
 export interface IModelAndView {
 }

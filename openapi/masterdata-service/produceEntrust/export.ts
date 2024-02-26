@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
+*/
 export default function fetchMethod(data: IOutsourcingSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -12,40 +14,40 @@ export default function fetchMethod(data: IOutsourcingSearchVO, params: { enterp
         extraOptions,
     );
 }
-// 委外加工搜索VO
+/** 委外加工搜索VO */
 export interface IOutsourcingSearchVO {
-    // 委外单号
+    /** 委外单号 */
     entrustNo: string;
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 生产订单号
+    /** 生产订单号 */
     produceOrderCode: string;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 物料id
+    /** 物料id */
     materialId: number;
-    // 发起时间开始 yyyy-MM-dd HH:mm:ss
+    /** 发起时间开始 yyyy-MM-dd HH:mm:ss */
     beginTime: string;
-    // 发起时间结束 yyyy-MM-dd HH:mm:ss
+    /** 发起时间结束 yyyy-MM-dd HH:mm:ss */
     endTime: string;
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

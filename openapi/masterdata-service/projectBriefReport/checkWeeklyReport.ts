@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/项目简报相关/checkWeeklyReportUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/项目简报相关/checkWeeklyReportUsingGET
+*/
 export default function fetchMethod(params: { projectId: number }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
@@ -11,14 +13,14 @@ export default function fetchMethod(params: { projectId: number }, extraOptions?
         extraOptions,
     );
 }
-// JSONResult«string»_1
+/** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: string;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

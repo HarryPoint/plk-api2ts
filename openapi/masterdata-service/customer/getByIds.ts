@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/客户相关/getByIdsUsingPOST_1
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/客户相关/getByIdsUsingPOST_1
+*/
 export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListClientVO>(
         {
@@ -12,35 +14,35 @@ export default function fetchMethod(data: number[], params: { enterpriseId: numb
         extraOptions,
     );
 }
-// JSONResult«List«客户VO»»
+/** JSONResult«List«客户VO»» */
 export interface IJSONResultListClientVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICustomerVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 客户VO
+/** 客户VO */
 export interface ICustomerVO {
-    // id
+    /** id */
     id: number;
-    // 所属企业id
+    /** 所属企业id */
     enterpriseId: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // 公司电话
+    /** 公司电话 */
     companyPhone: string;
-    // 传真
+    /** 传真 */
     fax: string;
-    // 统一社会信用代码
+    /** 统一社会信用代码 */
     unifiedSocialCreditCode: string;
-    // 银行id
+    /** 银行id */
     bankId: number;
-    // 开户账号
+    /** 开户账号 */
     bankAccount: string;
 }

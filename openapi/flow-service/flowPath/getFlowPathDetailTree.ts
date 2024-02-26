@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathDetailTreeUsingGET
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathDetailTreeUsingGET
+*/
 export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListProcessTreeVO>(
         {
@@ -11,77 +13,77 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
         extraOptions,
     );
 }
-// JSONResult«List«流程树VO»»
+/** JSONResult«List«流程树VO»» */
 export interface IJSONResultListProcessTreeVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProcessTreeVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 流程树VO
+/** 流程树VO */
 export interface IProcessTreeVO {
-    // 路由id
+    /** 路由id */
     routerId: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // 流程id
+    /** 流程id */
     flowPathId: number;
-    // 流程树类型
+    /** 流程树类型 */
     treeType: string;
-    // 字段集
+    /** 字段集 */
     columns: IProcessTreeFieldInformationIsReturnedToVO[];
-    // 子集
+    /** 子集 */
     children: IProcessTreeVO[];
-    // 流程code
+    /** 流程code */
     flowPathCode: string;
-    // 流程类型
+    /** 流程类型 */
     flowPathType: string;
 }
-// 流程树字段信息返回VO
+/** 流程树字段信息返回VO */
 export interface IProcessTreeFieldInformationIsReturnedToVO {
-    // 字段id
+    /** 字段id */
     flowPathFormFieldId: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // 序号值
+    /** 序号值 */
     serialNo: string;
-    // 是否是系统字段
+    /** 是否是系统字段 */
     isSystem: string;
-    // 字段类型
+    /** 字段类型 */
     flowPathFormFieldType: string;
-    // 是否是表格内字段
+    /** 是否是表格内字段 */
     isTableField: string;
-    // 选项集 传值传code，显示name
+    /** 选项集 传值传code，显示name */
     selector: IFormFieldOption[];
-    // 日期类型
+    /** 日期类型 */
     dateType: string;
-    // 宽度
+    /** 宽度 */
     span: number;
-    // 组织类型
+    /** 组织类型 */
     organizationType: string;
-    // 关联表单编码
+    /** 关联表单编码 */
     formRpCode: string;
-    // 关联表单选项显示字段code
+    /** 关联表单选项显示字段code */
     formRpSelectorShowFieldCode: string;
-    // 关联表单选项显示字段SerialNo
+    /** 关联表单选项显示字段SerialNo */
     formRpSelectorShowFieldSerialNo: string;
-    // 是否必填
+    /** 是否必填 */
     isMust: string;
 }
-// FormFieldOption
+/** FormFieldOption */
 export interface IFormFieldOption {
-    // undefined
+    /** undefined */
     name: string;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     color: string;
 }

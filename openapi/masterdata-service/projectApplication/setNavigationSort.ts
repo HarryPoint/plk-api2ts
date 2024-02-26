@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/项目应用相关/setNavigationSortUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/setNavigationSortUsingPOST
+*/
 export default function fetchMethod(data: IProjectApplicationNavigationSortRequestObjects, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IProjectApplicationNavigationSortReque
         extraOptions,
     );
 }
-// 项目应用导航排序请求对象
+/** 项目应用导航排序请求对象 */
 export interface IProjectApplicationNavigationSortRequestObjects {
-    // undefined
+    /** undefined */
     projectId: number;
-    // undefined
+    /** undefined */
     projectApplicationIds: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
+*/
 export default function fetchMethod(params: { code: string; enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultSalesOrderVO>(
         {
@@ -11,83 +13,83 @@ export default function fetchMethod(params: { code: string; enterpriseId: number
         extraOptions,
     );
 }
-// JSONResult«销售订单VO»
+/** JSONResult«销售订单VO» */
 export interface IJSONResultSalesOrderVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ISalesOrderVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 销售订单VO
+/** 销售订单VO */
 export interface ISalesOrderVO {
-    // id
+    /** id */
     id: number;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 所属企业id
+    /** 所属企业id */
     enterpriseId: number;
-    // 销售订单名称
+    /** 销售订单名称 */
     name: string;
-    // 销售订单号
+    /** 销售订单号 */
     code: string;
-    // 订单类型
+    /** 订单类型 */
     orderType: string;
-    // 客户id
+    /** 客户id */
     customerId: number;
-    // 合同号
+    /** 合同号 */
     contractNo: string;
-    // 备注
+    /** 备注 */
     remark: string;
-    // 下单日期(销售日期)
+    /** 下单日期(销售日期) */
     placeOrderTime: string;
-    // 下单业务部门id
+    /** 下单业务部门id */
     placeOrderDepartmentId: number;
-    // 业务员id
+    /** 业务员id */
     businessUserId: number;
-    // 收货地址
+    /** 收货地址 */
     receivingAddress: string;
-    // 客户联系人名称
+    /** 客户联系人名称 */
     customerContactsName: string;
-    // 客户联系人手机
+    /** 客户联系人手机 */
     customerContactsPhone: string;
-    // 附件
+    /** 附件 */
     attachedFileKeys: string;
-    // 是否完全转为生产订单
+    /** 是否完全转为生产订单 */
     isConvertProduceOrder: string;
-    // 销售订单状态
+    /** 销售订单状态 */
     handleStatus: string;
-    // 销售订单生产状态
+    /** 销售订单生产状态 */
     produceStatus: string;
-    // 关闭人
+    /** 关闭人 */
     closeUserId: number;
-    // 关闭时间
+    /** 关闭时间 */
     closeTime: string;
-    // 关闭原因
+    /** 关闭原因 */
     closeRemark: string;
-    // 发货数量
+    /** 发货数量 */
     deliveryQuantity: number;
-    // 未发货数量
+    /** 未发货数量 */
     notDeliveryQuantity: number;
-    // 出库数量
+    /** 出库数量 */
     storageOutQuantity: number;
-    // 未出库数量
+    /** 未出库数量 */
     notStorageOutQuantity: number;
-    // 退货数量
+    /** 退货数量 */
     returnQuantity: number;
-    // 未退货数量
+    /** 未退货数量 */
     notReturnQuantity: number;
-    // 应收金额
+    /** 应收金额 */
     receivableAmount: number;
-    // 已收金额
+    /** 已收金额 */
     receivedAmount: number;
-    // 应退金额
+    /** 应退金额 */
     refundableAmount: number;
-    // 已退金额
+    /** 已退金额 */
     returnedAmount: number;
-    // 应收余额
+    /** 应收余额 */
     receivableBalance: number;
 }

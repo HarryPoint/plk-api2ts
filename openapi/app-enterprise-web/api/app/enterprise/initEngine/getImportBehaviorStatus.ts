@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/初始化引擎/getImportBehaviorStatusUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/getImportBehaviorStatusUsingGET
+*/
 export default function fetchMethod(params: { templateId: number }, extraOptions?: any) {
     return http<IJSONResultDataInteractionOutputDTO>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(params: { templateId: number }, extraOptions
         extraOptions,
     );
 }
-// JSONResult«DataInteractionOutputDTO»
+/** JSONResult«DataInteractionOutputDTO» */
 export interface IJSONResultDataInteractionOutputDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IDataInteractionOutputDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// DataInteractionOutputDTO
+/** DataInteractionOutputDTO */
 export interface IDataInteractionOutputDTO {
-    // 模板编码
+    /** 模板编码 */
     templateCode: string;
-    // 生效状态
+    /** 生效状态 */
     interactionStatus: string;
 }

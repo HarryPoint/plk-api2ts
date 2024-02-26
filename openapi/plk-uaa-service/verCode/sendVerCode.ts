@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/验证码相关/sendVerCodeUsingPOST
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/验证码相关/sendVerCodeUsingPOST
+*/
 export default function fetchMethod(data: ISMSVerificationCodeSendRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,19 +13,19 @@ export default function fetchMethod(data: ISMSVerificationCodeSendRequestDTO, ex
         extraOptions,
     );
 }
-// 短信验证码发送请求 DTO
+/** 短信验证码发送请求 DTO */
 export interface ISMSVerificationCodeSendRequestDTO {
-    // 手机号码
+    /** 手机号码 */
     account: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

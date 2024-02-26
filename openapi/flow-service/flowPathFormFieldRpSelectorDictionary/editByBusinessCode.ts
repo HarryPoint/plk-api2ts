@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/editByBusinessCodeUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/editByBusinessCodeUsingPOST
+*/
 export default function fetchMethod(data: IFormFieldOption[], params: { businessCode: string; enterpriseId: number; flowPathId: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -12,23 +14,23 @@ export default function fetchMethod(data: IFormFieldOption[], params: { business
         extraOptions,
     );
 }
-// FormFieldOption
+/** FormFieldOption */
 export interface IFormFieldOption {
-    // undefined
+    /** undefined */
     name: string;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     color: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

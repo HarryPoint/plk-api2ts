@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/assignUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/assignUsingPOST
+*/
 export default function fetchMethod(data: IProcessTaskAssignmentDTO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -12,21 +14,21 @@ export default function fetchMethod(data: IProcessTaskAssignmentDTO, params: { e
         extraOptions,
     );
 }
-// 工序任务分配DTO
+/** 工序任务分配DTO */
 export interface IProcessTaskAssignmentDTO {
-    // 工序ids
+    /** 工序ids */
     processIds: number[];
-    // 是否分配  Y 分配 N 不分配
+    /** 是否分配  Y 分配 N 不分配 */
     isAssign: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

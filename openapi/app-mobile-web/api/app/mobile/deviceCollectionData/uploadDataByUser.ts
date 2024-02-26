@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/设备数采相关/uploadDeviceDataUsingPOST
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/设备数采相关/uploadDeviceDataUsingPOST
+*/
 export default function fetchMethod(data: IDeviceDataAcquisitionDataUpload[], extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,27 +13,27 @@ export default function fetchMethod(data: IDeviceDataAcquisitionDataUpload[], ex
         extraOptions,
     );
 }
-// 设备数采数据上传
+/** 设备数采数据上传 */
 export interface IDeviceDataAcquisitionDataUpload {
-    // 数据采集时间 格式：yyyy-MM-dd HH:mm:ss
+    /** 数据采集时间 格式：yyyy-MM-dd HH:mm:ss */
     collectTime: string;
-    // 设备编号
+    /** 设备编号 */
     deviceCode: string;
-    // 设备连线状态
+    /** 设备连线状态 */
     onlineStatus: string;
-    // 设备状态
+    /** 设备状态 */
     status: string;
-    // 自定义参数，json对象，参数的编号为key键，参数值为value值
+    /** 自定义参数，json对象，参数的编号为key键，参数值为value值 */
     ext: Record<string, Record<string, any>>;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

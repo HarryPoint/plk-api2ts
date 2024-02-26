@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/班次相关/editUsingPOST
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/班次相关/editUsingPOST
+*/
 export default function fetchMethod(data: IShiftEditorDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,29 +13,29 @@ export default function fetchMethod(data: IShiftEditorDTO, extraOptions?: any) {
         extraOptions,
     );
 }
-// 班次编辑DTO
+/** 班次编辑DTO */
 export interface IShiftEditorDTO {
-    // id
+    /** id */
     id: number;
-    // 班次名称
+    /** 班次名称 */
     name: string;
-    // 班次编号
+    /** 班次编号 */
     code: string;
-    // 开始时间 HH:mm
+    /** 开始时间 HH:mm */
     beginTime: string;
-    // 班次结束时间类型
+    /** 班次结束时间类型 */
     endTimeType: string;
-    // 结束时间 HH:mm
+    /** 结束时间 HH:mm */
     endTime: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

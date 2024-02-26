@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCapacityReportFactoryCalendarListUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCapacityReportFactoryCalendarListUsingPOST
+*/
 export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListCapacityUtilizationReportFactoryCalendarVO>(
         {
@@ -12,53 +14,53 @@ export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos
         extraOptions,
     );
 }
-// 产能利用率报表查询DTO
+/** 产能利用率报表查询DTO */
 export interface ICapacityUtilizationReportQueryingDtos {
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 工序id列表
+    /** 工序id列表 */
     processIdList: number[];
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 日期 -- 开始时间
+    /** 日期 -- 开始时间 */
     beginTime: string;
-    // 天数
+    /** 天数 */
     dayCount: number;
-    // 日期 -- 结束时间
+    /** 日期 -- 结束时间 */
     endTime: string;
-    // undefined
+    /** undefined */
     produceTaskIds: number[];
-    // undefined
+    /** undefined */
     panPanProduceOrderCompleteType: string;
-    // 是否按天数过滤
+    /** 是否按天数过滤 */
     isFilterByDayCount: boolean;
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«List«产能利用率报表工厂日历VO»»
+/** JSONResult«List«产能利用率报表工厂日历VO»» */
 export interface IJSONResultListCapacityUtilizationReportFactoryCalendarVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICapacityUtilizationReportFactoryCalendarVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 产能利用率报表工厂日历VO
+/** 产能利用率报表工厂日历VO */
 export interface ICapacityUtilizationReportFactoryCalendarVO {
-    // 日程安排日期
+    /** 日程安排日期 */
     scheduleDate: string;
-    // 日程安排日期对应的工时统计（每个班次的时间*该班次相关的班组人数）
+    /** 日程安排日期对应的工时统计（每个班次的时间*该班次相关的班组人数） */
     workTimeQuantity: number;
-    // 日程安排日期对应的班组人员统计
+    /** 日程安排日期对应的班组人员统计 */
     workUserQuantity: number;
 }

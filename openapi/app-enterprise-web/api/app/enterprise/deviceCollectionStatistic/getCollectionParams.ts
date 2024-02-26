@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getCollectionParamsUsingGET_1
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getCollectionParamsUsingGET_1
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListDeviceDataCollectionSelectVO>(
         {
@@ -10,29 +12,29 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«设备数采选择VO»»
+/** JSONResult«List«设备数采选择VO»» */
 export interface IJSONResultListDeviceDataCollectionSelectVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IVOIsSelectedForDeviceDataAcquisition[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 设备数采选择VO
+/** 设备数采选择VO */
 export interface IVOIsSelectedForDeviceDataAcquisition {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // 数据类型(number数字 text文本)
+    /** 数据类型(number数字 text文本) */
     dataType: string;
-    // 单位类型(quantity数量 time时间)
+    /** 单位类型(quantity数量 time时间) */
     unitType: string;
-    // 单位
+    /** 单位 */
     unit: string;
 }

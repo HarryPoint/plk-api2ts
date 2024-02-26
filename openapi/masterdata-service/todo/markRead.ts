@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/代办相关/markReadUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/代办相关/markReadUsingPOST
+*/
 export default function fetchMethod(data: IToDoMarkReadRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,23 +13,23 @@ export default function fetchMethod(data: IToDoMarkReadRequestDTO, extraOptions?
         extraOptions,
     );
 }
-// ToDoMarkReadRequestDTO
+/** ToDoMarkReadRequestDTO */
 export interface IToDoMarkReadRequestDTO {
-    // 用户ID不能为空
+    /** 用户ID不能为空 */
     userId: number;
-    // 是否全部标记已读
+    /** 是否全部标记已读 */
     isAll: string;
-    // 单个标记id，isAll=N时必传
+    /** 单个标记id，isAll=N时必传 */
     id: number;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

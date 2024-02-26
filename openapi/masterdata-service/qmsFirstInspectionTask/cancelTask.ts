@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/cancelTaskUsingPOST_1
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/cancelTaskUsingPOST_1
+*/
 export default function fetchMethod(data: IVerifyTaskCancellationRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IVerifyTaskCancellationRequestDTO, ext
         extraOptions,
     );
 }
-// 检验任务取消请求DTO
+/** 检验任务取消请求DTO */
 export interface IVerifyTaskCancellationRequestDTO {
-    // 流程id
+    /** 流程id */
     flowPathId: number;
-    // 任务id
+    /** 任务id */
     ids: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

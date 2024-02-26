@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入模板相关/queryByApplicationCodeUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入模板相关/queryByApplicationCodeUsingGET
+*/
 export default function fetchMethod(params: { applicationCode: number }, extraOptions?: any) {
     return http<IJSONResultListImportTemplate>(
         {
@@ -11,45 +13,45 @@ export default function fetchMethod(params: { applicationCode: number }, extraOp
         extraOptions,
     );
 }
-// JSONResult«List«导入模板»»
+/** JSONResult«List«导入模板»» */
 export interface IJSONResultListImportTemplate {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IImportTemplate[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 导入模板
+/** 导入模板 */
 export interface IImportTemplate {
-    // ID
+    /** ID */
     id: number;
-    // 模板编码
+    /** 模板编码 */
     code: string;
-    // 模板名称
+    /** 模板名称 */
     name: string;
-    // 文件key
+    /** 文件key */
     fileKey: string;
-    // 表定义
+    /** 表定义 */
     tableDefine: IAssociationTableDefinition;
-    // 是否预设模板模板
+    /** 是否预设模板模板 */
     presetTemplate: boolean;
-    // 应用
+    /** 应用 */
     application: IApplicationDTO;
-    // 描述
+    /** 描述 */
     desc: string;
 }
-// 关联表定义
+/** 关联表定义 */
 export interface IAssociationTableDefinition {
-    // undefined
+    /** undefined */
     code: string;
 }
-// ApplicationDTO
+/** ApplicationDTO */
 export interface IApplicationDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
 }

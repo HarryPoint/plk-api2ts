@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getPackageMaterialArriveProgressListUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getPackageMaterialArriveProgressListUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListPackageMaterialArrivalProgressVO>(
         {
@@ -10,34 +12,34 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«包装材料到达进度VO»»
+/** JSONResult«List«包装材料到达进度VO»» */
 export interface IJSONResultListPackageMaterialArrivalProgressVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IPackagingMaterialsArrivedVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 包装材料到达进度VO
+/** 包装材料到达进度VO */
 export interface IPackagingMaterialsArrivedVO {
-    // 订单号
+    /** 订单号 */
     saleOrderCode: string;
-    // 客户名称
+    /** 客户名称 */
     customerName: string;
-    // 到达详情
+    /** 到达详情 */
     arriveProgressDetailList: IPackagingMaterialsArrivalScheduleDetailsVO[];
 }
-// 包装材料到达进度详情VO
+/** 包装材料到达进度详情VO */
 export interface IPackagingMaterialsArrivalScheduleDetailsVO {
-    // id
+    /** id */
     id: number;
-    // 物料名称
+    /** 物料名称 */
     materialName: string;
-    // 到达状态
+    /** 到达状态 */
     arriveProgress: string;
-    // new标记
+    /** new标记 */
     newFlag: boolean;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/批次方案相关/checkRemoveUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/批次方案相关/checkRemoveUsingPOST
+*/
 export default function fetchMethod(data: ILotSerialNumberPlanRemoveCheckRequestDTO, extraOptions?: any) {
     return http<IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO>(
         {
@@ -11,28 +13,28 @@ export default function fetchMethod(data: ILotSerialNumberPlanRemoveCheckRequest
         extraOptions,
     );
 }
-// LotSerialNumberPlanRemoveCheckRequestDTO
+/** LotSerialNumberPlanRemoveCheckRequestDTO */
 export interface ILotSerialNumberPlanRemoveCheckRequestDTO {
-    // 批次方案ID列表
+    /** 批次方案ID列表 */
     idList: number[];
 }
-// JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO»
+/** JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO» */
 export interface IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ILotSerialNumberPlanRemoveCheckResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// LotSerialNumberPlanRemoveCheckResponseDTO
+/** LotSerialNumberPlanRemoveCheckResponseDTO */
 export interface ILotSerialNumberPlanRemoveCheckResponseDTO {
-    // 允许删除的ID列表
+    /** 允许删除的ID列表 */
     allowDeletionIdList: number[];
-    // 不允许删除的ID列表
+    /** 不允许删除的ID列表 */
     notAllowDeletionIdList: number[];
-    // 已使用的ID列表
+    /** 已使用的ID列表 */
     usedIdList: number[];
 }

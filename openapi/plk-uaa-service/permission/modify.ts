@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/权限相关/modifyUsingPOST_8
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/权限相关/modifyUsingPOST_8
+*/
 export default function fetchMethod(data: IPermissionEditDtos, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,31 +13,31 @@ export default function fetchMethod(data: IPermissionEditDtos, extraOptions?: an
         extraOptions,
     );
 }
-// 权限编辑 DTO
+/** 权限编辑 DTO */
 export interface IPermissionEditDtos {
-    // 权限编码
+    /** 权限编码 */
     code: string;
-    // 名称
+    /** 名称 */
     name: string;
-    // 父级编码
+    /** 父级编码 */
     parentCode: string;
-    // 权限类型
+    /** 权限类型 */
     type: string;
-    // 系统应用类型
+    /** 系统应用类型 */
     applicationSystemType: string;
-    // 应用级别
+    /** 应用级别 */
     applicationLevel: string;
-    // id
+    /** id */
     id: number;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

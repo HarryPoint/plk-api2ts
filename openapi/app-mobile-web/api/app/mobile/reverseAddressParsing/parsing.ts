@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/逆地址解析/parseUsingPOST
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/逆地址解析/parseUsingPOST
+*/
 export default function fetchMethod(data: ILocationInfo, extraOptions?: any) {
     return http<IJSONResultAddressOutputDTO>(
         {
@@ -11,69 +13,69 @@ export default function fetchMethod(data: ILocationInfo, extraOptions?: any) {
         extraOptions,
     );
 }
-// LocationInfo
+/** LocationInfo */
 export interface ILocationInfo {
-    // undefined
+    /** undefined */
     lat: number;
-    // undefined
+    /** undefined */
     lng: number;
 }
-// JSONResult«AddressOutputDTO»
+/** JSONResult«AddressOutputDTO» */
 export interface IJSONResultAddressOutputDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IAddressOutputDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// AddressOutputDTO
+/** AddressOutputDTO */
 export interface IAddressOutputDTO {
-    // undefined
+    /** undefined */
     location: ILocationInfo;
-    // 以行政区划 + 道路 + 门牌号等信息组成的标准格式化地址
+    /** 以行政区划 + 道路 + 门牌号等信息组成的标准格式化地址 */
     address: string;
-    // 地址部件，address不满足需求时可自行拼接
+    /** 地址部件，address不满足需求时可自行拼接 */
     addressComponent: IAddressComponentOutputDTO;
-    // 以结合知名地点形成的描述性地址，更具备人性化特点
+    /** 以结合知名地点形成的描述性地址，更具备人性化特点 */
     formattedAddresses: IFormattedAddressesOutputDTO;
-    // 行政区划信息
+    /** 行政区划信息 */
     adInfo: IAddressRegionInfo;
 }
-// AddressComponentOutputDTO
+/** AddressComponentOutputDTO */
 export interface IAddressComponentOutputDTO {
-    // undefined
+    /** undefined */
     nation: string;
-    // undefined
+    /** undefined */
     province: string;
-    // undefined
+    /** undefined */
     city: string;
-    // undefined
+    /** undefined */
     district: string;
-    // undefined
+    /** undefined */
     street: string;
-    // undefined
+    /** undefined */
     streetNumber: string;
 }
-// FormattedAddressesOutputDTO
+/** FormattedAddressesOutputDTO */
 export interface IFormattedAddressesOutputDTO {
-    // 推荐使用的地址描述，描述精确性较高
+    /** 推荐使用的地址描述，描述精确性较高 */
     recommend: string;
-    // 粗略位置描述
+    /** 粗略位置描述 */
     rough: string;
 }
-// AddressRegionInfo
+/** AddressRegionInfo */
 export interface IAddressRegionInfo {
-    // 国家代码（ISO3166标准3位数字码）
+    /** 国家代码（ISO3166标准3位数字码） */
     nationCode: string;
-    // 行政区划编码
+    /** 行政区划编码 */
     regionCode: string;
-    // 省
+    /** 省 */
     province: string;
-    // 市，如果当前城市为省直辖县级区划，city与district字段均会返回此城市
+    /** 市，如果当前城市为省直辖县级区划，city与district字段均会返回此城市 */
     city: string;
-    // 区
+    /** 区 */
     district: string;
 }

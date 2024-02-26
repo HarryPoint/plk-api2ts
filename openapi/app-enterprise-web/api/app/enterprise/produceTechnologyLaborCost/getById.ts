@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产工艺产能相关/getByIdUsingGET_15
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产工艺产能相关/getByIdUsingGET_15
+*/
 export default function fetchMethod(params: { id: number }, extraOptions?: any) {
     return http<IJSONResultProduceTechnologyLaborCostResponseDTO>(
         {
@@ -11,55 +13,55 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«ProduceTechnologyLaborCostResponseDTO»
+/** JSONResult«ProduceTechnologyLaborCostResponseDTO» */
 export interface IJSONResultProduceTechnologyLaborCostResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProduceTechnologyLaborCostResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProduceTechnologyLaborCostResponseDTO
+/** ProduceTechnologyLaborCostResponseDTO */
 export interface IProduceTechnologyLaborCostResponseDTO {
-    // 创建用户ID
+    /** 创建用户ID */
     createUserId: number;
-    // 创建用户名
+    /** 创建用户名 */
     createUserName: string;
-    // 生产工艺id
+    /** 生产工艺id */
     produceTechnologyId: number;
-    // 创建部门ID
+    /** 创建部门ID */
     createDeptId: number;
-    // 创建部门名称
+    /** 创建部门名称 */
     createDeptName: string;
-    // 更新部门ID
+    /** 更新部门ID */
     updateDeptId: number;
-    // 更新部门名称
+    /** 更新部门名称 */
     updateDeptName: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 更新用户ID
+    /** 更新用户ID */
     updateUserId: number;
-    // 更新用户名称
+    /** 更新用户名称 */
     updateUserName: string;
-    // 更新时间
+    /** 更新时间 */
     updateTime: string;
-    // id
+    /** id */
     id: number;
-    // 所属工艺路径步骤id
+    /** 所属工艺路径步骤id */
     produceTechnologyRoutingStepId: number;
-    // 工费名称
+    /** 工费名称 */
     name: string;
-    // 工费编号
+    /** 工费编号 */
     code: string;
-    // 合格产出工费单价
+    /** 合格产出工费单价 */
     producePrice: number;
-    // 返工产出工费单价
+    /** 返工产出工费单价 */
     backProducePrice: number;
-    // 准备工费
+    /** 准备工费 */
     readyPrice: number;
-    // 关联工费id
+    /** 关联工费id */
     laborCostId: number;
 }

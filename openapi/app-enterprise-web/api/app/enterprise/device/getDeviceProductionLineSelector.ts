@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
+*/
 export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO, extraOptions?: any) {
     return http<IJSONResultListSelectResponseDtosForTheDeviceProductionLine>(
         {
@@ -11,52 +13,52 @@ export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO
         extraOptions,
     );
 }
-// 设备产线选择请求DTO
+/** 设备产线选择请求DTO */
 export interface IDeviceProductionLineSelectsRequestDTO {
-    // 搜索参数
+    /** 搜索参数 */
     searchValue: string;
-    // 设备ids
+    /** 设备ids */
     deviceIds: number[];
-    // 设备类型ids
+    /** 设备类型ids */
     deviceTypeIds: number[];
-    // 产线ids
+    /** 产线ids */
     productionLineIds: number[];
-    // 区域ids
+    /** 区域ids */
     areaIds: number[];
-    // 设备状态
+    /** 设备状态 */
     dataStatusList: number[];
 }
-// JSONResult«List«设备产线选择响应DTO»»
+/** JSONResult«List«设备产线选择响应DTO»» */
 export interface IJSONResultListSelectResponseDtosForTheDeviceProductionLine {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheEquipmentProductionLineSelectsResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 设备产线选择响应DTO
+/** 设备产线选择响应DTO */
 export interface ITheEquipmentProductionLineSelectsResponseDTO {
-    // 设备id
+    /** 设备id */
     id: number;
-    // 设备code
+    /** 设备code */
     code: string;
-    // 设备名称
+    /** 设备名称 */
     name: string;
-    // 设备状态
+    /** 设备状态 */
     dataStatus: number;
-    // 设备类型id
+    /** 设备类型id */
     deviceTypeId: number;
-    // 设备类型名称
+    /** 设备类型名称 */
     deviceTypeName: string;
-    // 产线id
+    /** 产线id */
     productionLineId: number;
-    // 产线名称
+    /** 产线名称 */
     productionLineName: string;
-    // 区域id
+    /** 区域id */
     areaId: number;
-    // 区域名称
+    /** 区域名称 */
     areaName: string;
 }

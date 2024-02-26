@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产报废服务相关/approvalUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产报废服务相关/approvalUsingPOST
+*/
 export default function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IProductionProcessingScrapChangeStatus
         extraOptions,
     );
 }
-// 生产处理报废变更状态DTO
+/** 生产处理报废变更状态DTO */
 export interface IProductionProcessingScrapChangeStatusDTO {
-    // 生产处理id
+    /** 生产处理id */
     id: number;
-    // 处理意见
+    /** 处理意见 */
     handleRemark: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

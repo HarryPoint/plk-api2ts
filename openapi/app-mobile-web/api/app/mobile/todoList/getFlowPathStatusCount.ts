@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/待办相关/getFlowPathStatusCountUsingGET
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/待办相关/getFlowPathStatusCountUsingGET
+*/
 export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
     return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>(
         {
@@ -11,37 +13,37 @@ export default function fetchMethod(params: { flowPathId: number }, extraOptions
         extraOptions,
     );
 }
-// JSONResult«待办事项查询状态数量返回VO»
+/** JSONResult«待办事项查询状态数量返回VO» */
 export interface IJSONResultNumberOfToDoQueryStatesReturnedToVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: INumberOfBacklogQueryStatesReturnsVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 待办事项查询状态数量返回VO
+/** 待办事项查询状态数量返回VO */
 export interface INumberOfBacklogQueryStatesReturnsVO {
-    // 待处理数
+    /** 待处理数 */
     notHandleCount: number;
-    // 已逾期数
+    /** 已逾期数 */
     overdueCount: number;
-    // 已处理数
+    /** 已处理数 */
     handledCount: number;
-    // 抄送我的数量
+    /** 抄送我的数量 */
     carbonCopyCount: number;
-    // 我发起的数量
+    /** 我发起的数量 */
     createdByMeCount: number;
-    // 全部数量
+    /** 全部数量 */
     totalCount: number;
-    // 未读数量
+    /** 未读数量 */
     notReadCount: number;
-    // 进行中数量
+    /** 进行中数量 */
     inProgressCount: number;
-    // 已完成数量
+    /** 已完成数量 */
     completeCount: number;
-    // 未通过数量
+    /** 未通过数量 */
     failedCount: number;
 }

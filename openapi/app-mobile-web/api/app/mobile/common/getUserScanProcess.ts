@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/公共相关/getUserScanProcessUsingGET
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/公共相关/getUserScanProcessUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultUserScanProcessVO>(
         {
@@ -10,25 +12,25 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«UserScanProcessVO»
+/** JSONResult«UserScanProcessVO» */
 export interface IJSONResultUserScanProcessVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IUserScanProcessVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// UserScanProcessVO
+/** UserScanProcessVO */
 export interface IUserScanProcessVO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     enterpriseId: number;
-    // undefined
+    /** undefined */
     userId: number;
-    // undefined
+    /** undefined */
     processId: number;
 }

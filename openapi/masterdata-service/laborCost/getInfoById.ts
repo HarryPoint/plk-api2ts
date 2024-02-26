@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/工费相关/getInfoByIdUsingGET_2
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/工费相关/getInfoByIdUsingGET_2
+*/
 export default function fetchMethod(params: { id: string }, extraOptions?: any) {
     return http<IJSONResultLaborResponseObject>(
         {
@@ -11,40 +13,40 @@ export default function fetchMethod(params: { id: string }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«工费响应对象»
+/** JSONResult«工费响应对象» */
 export interface IJSONResultLaborResponseObject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICostResponseObject;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 工费响应对象
+/** 工费响应对象 */
 export interface ICostResponseObject {
-    // id
+    /** id */
     id: number;
-    // 编号
+    /** 编号 */
     code: string;
-    // 名称
+    /** 名称 */
     name: string;
-    // 关联工序
+    /** 关联工序 */
     processRp: IAssociatedDropDownResponseObjects[];
-    // 关联物料
+    /** 关联物料 */
     materialRp: IAssociatedDropDownResponseObjects[];
-    // 合格产出工费单价（元）
+    /** 合格产出工费单价（元） */
     producePrice: number;
-    // 返工产出工费单价（元）
+    /** 返工产出工费单价（元） */
     backProducePrice: number;
-    // 准备工费（元）
+    /** 准备工费（元） */
     readyPrice: number;
 }
-// 关联下拉响应对象
+/** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
-    // id
+    /** id */
     id: number;
-    // 显示字段名称
+    /** 显示字段名称 */
     showFieldValue: string;
 }

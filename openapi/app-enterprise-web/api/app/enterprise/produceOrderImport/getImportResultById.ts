@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产订单导入相关/getImportResultByIdUsingGET_1
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产订单导入相关/getImportResultByIdUsingGET_1
+*/
 export default function fetchMethod(params: { id: number }, extraOptions?: any) {
     return http<IJSONResultProduceOrderImportSynchronizationOutputDTO>(
         {
@@ -11,46 +13,46 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«ProduceOrderImportSynchronizationOutputDTO»
+/** JSONResult«ProduceOrderImportSynchronizationOutputDTO» */
 export interface IJSONResultProduceOrderImportSynchronizationOutputDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProduceOrderImportSynchronizationOutputDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProduceOrderImportSynchronizationOutputDTO
+/** ProduceOrderImportSynchronizationOutputDTO */
 export interface IProduceOrderImportSynchronizationOutputDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     importStatus: string;
-    // undefined
+    /** undefined */
     failureMessage: string;
-    // undefined
+    /** undefined */
     totalCount: number;
-    // undefined
+    /** undefined */
     importedCount: number;
-    // undefined
+    /** undefined */
     existsSystemQuantity: number;
-    // undefined
+    /** undefined */
     importSuccessQuantity: number;
-    // undefined
+    /** undefined */
     importFailureQuantity: number;
-    // undefined
+    /** undefined */
     failureProduceOrderList: IProduceOrderImportFailureOutputDTO[];
-    // undefined
+    /** undefined */
     repeatProduceOrderList: Record<string, any>[];
-    // undefined
+    /** undefined */
     savedProduceOrderIdList: number[];
 }
-// ProduceOrderImportFailureOutputDTO
+/** ProduceOrderImportFailureOutputDTO */
 export interface IProduceOrderImportFailureOutputDTO {
-    // undefined
+    /** undefined */
     produceOrderCode: string;
-    // undefined
+    /** undefined */
     failureMessage: string;
 }

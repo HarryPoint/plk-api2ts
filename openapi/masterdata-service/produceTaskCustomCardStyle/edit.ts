@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/editUsingPOST_13
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/editUsingPOST_13
+*/
 export default function fetchMethod(data: IProductionTaskCustomCardStyleEditListObjectDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,34 +13,34 @@ export default function fetchMethod(data: IProductionTaskCustomCardStyleEditList
         extraOptions,
     );
 }
-// 生产任务自定义卡片样式编辑list对象DTO
+/** 生产任务自定义卡片样式编辑list对象DTO */
 export interface IProductionTaskCustomCardStyleEditListObjectDTO {
-    // undefined
+    /** undefined */
     customCardStyleList: IProductionTaskCustomCardStyleEditObjectDTO[];
 }
-// 生产任务自定义卡片样式编辑对象DTO
+/** 生产任务自定义卡片样式编辑对象DTO */
 export interface IProductionTaskCustomCardStyleEditObjectDTO {
-    // 字段名称
+    /** 字段名称 */
     formFieldName: string;
-    // 字段code
+    /** 字段code */
     formFieldCode: string;
-    // 字段类型
+    /** 字段类型 */
     formFieldType: string;
-    // 字段表
+    /** 字段表 */
     formFieldTable: string;
-    // 显示位置
+    /** 显示位置 */
     displayPosition: string;
-    // 扩展元数据
+    /** 扩展元数据 */
     metaData: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

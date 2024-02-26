@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingLevelStatisticsUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingLevelStatisticsUsingGET
+*/
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
     return http<IJSONResultLargeScreenDefectiveProductStatisticsAreReturnedByLevel>(
         {
@@ -11,29 +13,29 @@ export default function fetchMethod(params: { dateBegin: string; dateEnd: string
         extraOptions,
     );
 }
-// JSONResult«大屏不合格品统计按级别返回»
+/** JSONResult«大屏不合格品统计按级别返回» */
 export interface IJSONResultLargeScreenDefectiveProductStatisticsAreReturnedByLevel {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ILargeScreenNonconformingProductStatisticsAreReturnedByLevel;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 大屏不合格品统计按级别返回
+/** 大屏不合格品统计按级别返回 */
 export interface ILargeScreenNonconformingProductStatisticsAreReturnedByLevel {
-    // I的数量
+    /** I的数量 */
     quantityOfCategoryOne: number;
-    // II的数量
+    /** II的数量 */
     quantityOfCategoryTwo: number;
-    // III的数量
+    /** III的数量 */
     quantityOfCategoryThree: number;
-    // I的占比
+    /** I的占比 */
     percentageOfCategoryOne: number;
-    // II的占比
+    /** II的占比 */
     percentageOfCategoryTwo: number;
-    // III的占比
+    /** III的占比 */
     percentageOfCategoryThree: number;
 }

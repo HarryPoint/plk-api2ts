@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产订单相关/getFlowForProduceOrderUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getFlowForProduceOrderUsingGET
+*/
 export default function fetchMethod(params: { produceOrderId: string }, extraOptions?: any) {
     return http<IJSONResultListReturnTheProductionOrderToVO1>(
         {
@@ -11,27 +13,27 @@ export default function fetchMethod(params: { produceOrderId: string }, extraOpt
         extraOptions,
     );
 }
-// JSONResult«List«生产订单返回VO»»_1
+/** JSONResult«List«生产订单返回VO»»_1 */
 export interface IJSONResultListReturnTheProductionOrderToVO1 {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheProductionOrderIsReturnedToVO1[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 生产订单返回VO_1
+/** 生产订单返回VO_1 */
 export interface ITheProductionOrderIsReturnedToVO1 {
-    // id
+    /** id */
     id: number;
-    // 订单状态
+    /** 订单状态 */
     orderStatus: string;
-    // 订单状态描述
+    /** 订单状态描述 */
     orderStatusDesc: string;
-    // 操作时间
+    /** 操作时间 */
     createTime: string;
-    // 描述
+    /** 描述 */
     remark: string;
 }

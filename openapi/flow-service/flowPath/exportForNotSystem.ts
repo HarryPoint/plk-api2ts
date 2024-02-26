@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/流程相关/exportForNotSystemUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/流程相关/exportForNotSystemUsingPOST
+*/
 export default function fetchMethod(data: IProcessSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -12,42 +14,42 @@ export default function fetchMethod(data: IProcessSearchVO, params: { enterprise
         extraOptions,
     );
 }
-// 流程搜索VO
+/** 流程搜索VO */
 export interface IProcessSearchVO {
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 编号
+    /** 编号 */
     code: string;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 是否是系统应用
+    /** 是否是系统应用 */
     isSystem: string;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 名称
+    /** 名称 */
     name: string;
-    // 状态
+    /** 状态 */
     dataStatus: number[];
-    // 创建时间-开始时间
+    /** 创建时间-开始时间 */
     beginTime: string;
-    // 创建时间-结束时间
+    /** 创建时间-结束时间 */
     endTime: string;
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

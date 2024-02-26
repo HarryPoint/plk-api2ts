@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/物料相关/editByNotTriggerTaskUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/物料相关/editByNotTriggerTaskUsingPOST
+*/
 export default function fetchMethod(data: IMaterialEditorRequestDTO, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
@@ -11,46 +13,46 @@ export default function fetchMethod(data: IMaterialEditorRequestDTO, extraOption
         extraOptions,
     );
 }
-// 物料编辑请求DTO
+/** 物料编辑请求DTO */
 export interface IMaterialEditorRequestDTO {
-    // 编辑数据
+    /** 编辑数据 */
     data: Record<string, Record<string, any>>;
-    // 流程任务id - 新增/重新编辑业务，要设置为null
+    /** 流程任务id - 新增/重新编辑业务，要设置为null */
     flowPathTaskId: number;
-    // 扩展参数
+    /** 扩展参数 */
     extensionParam: Record<string, Record<string, any>>;
-    // 物料批次设置
+    /** 物料批次设置 */
     lotSetting: IMaterialBatchSetEditObject;
 }
-// 物料批次设置编辑对象
+/** 物料批次设置编辑对象 */
 export interface IMaterialBatchSetEditObject {
-    // 物料id
+    /** 物料id */
     materialId: number;
-    // 启用序列号
+    /** 启用序列号 */
     enableSerialNo: string;
-    // 序列号方案id
+    /** 序列号方案id */
     serialNoSchemeId: number;
-    // 启用批次
+    /** 启用批次 */
     enableLot: string;
-    // 批次方案id
+    /** 批次方案id */
     lotSchemeId: number;
-    // 启用质量追溯
+    /** 启用质量追溯 */
     enableQualityTraceability: string;
-    // 启用外部码
+    /** 启用外部码 */
     enableExternalCode: string;
-    // 外部码字段名称
+    /** 外部码字段名称 */
     externalCodeFieldName: string;
-    // 外部码长度
+    /** 外部码长度 */
     externalCodeLength: number;
 }
-// JSONResult«string»_1
+/** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: string;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

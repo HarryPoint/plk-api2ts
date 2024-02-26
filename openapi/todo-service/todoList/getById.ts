@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16600/doc.html#/default/待办相关/getByIdUsingGET
+/**
+* @link http://47.108.139.107:16600/doc.html#/default/待办相关/getByIdUsingGET
+*/
 export default function fetchMethod(params: { id: number }, extraOptions?: any) {
     return http<IJSONResultToDoListDTO>(
         {
@@ -11,85 +13,85 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«ToDoListDTO»
+/** JSONResult«ToDoListDTO» */
 export interface IJSONResultToDoListDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IToDoListDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ToDoListDTO
+/** ToDoListDTO */
 export interface IToDoListDTO {
-    // id
+    /** id */
     id: number;
-    // 所属用户id
+    /** 所属用户id */
     userId: number;
-    // 待办编号
+    /** 待办编号 */
     code: string;
-    // 流程处理类型
+    /** 流程处理类型 */
     type: string;
-    // 任务开始时间
+    /** 任务开始时间 */
     planBeginTime: string;
-    // 预计结束时间
+    /** 预计结束时间 */
     planEndTime: string;
-    // 对应业务id
+    /** 对应业务id */
     businessId: number;
-    // 状态
+    /** 状态 */
     status: string;
-    // 完成时间
+    /** 完成时间 */
     completeTime: string;
-    // 发起人id
+    /** 发起人id */
     workOrderCreateUserId: number;
-    // 是否超时处理
+    /** 是否超时处理 */
     isTimeout: string;
-    // 节点处理状态描述
+    /** 节点处理状态描述 */
     flowPathNodeHandleStatus: string;
-    // 工单处理状态描述
+    /** 工单处理状态描述 */
     flowPathWorkOrderHandleStatus: string;
-    // 所属工单ID
+    /** 所属工单ID */
     flowPathWorkOrderId: number;
-    // 所属工单编号
+    /** 所属工单编号 */
     flowPathWorkOrderCode: string;
-    // 所属工单业务ID(具体数据id)
+    /** 所属工单业务ID(具体数据id) */
     flowPathWorkOrderBusinessId: number;
-    // 所属流程节点id
+    /** 所属流程节点id */
     flowPathNodeId: number;
-    // 工单状态
+    /** 工单状态 */
     flowPathWorkOrderStatus: string;
-    // 流程id
+    /** 流程id */
     flowPathId: number;
-    // 流程名称
+    /** 流程名称 */
     flowPathName: string;
-    // 节点名称
+    /** 节点名称 */
     flowPathNodeName: string;
-    // 是否能跳转
+    /** 是否能跳转 */
     canRedirect: string;
-    // pc端跳转路径
+    /** pc端跳转路径 */
     webPath: string;
-    // 移动端跳转路径
+    /** 移动端跳转路径 */
     mobilePath: string;
-    // 标题
+    /** 标题 */
     title: string;
-    // 表头
+    /** 表头 */
     tableHeaderList: ITableheaderdto[];
-    // 表数据
+    /** 表数据 */
     tableDataList: ITabledatadto[];
 }
-// TableHeaderDTO
+/** TableHeaderDTO */
 export interface ITableheaderdto {
-    // undefined
+    /** undefined */
     serialNo: string;
-    // undefined
+    /** undefined */
     name: string;
 }
-// TableDataDTO
+/** TableDataDTO */
 export interface ITabledatadto {
-    // undefined
+    /** undefined */
     serialNo: string;
-    // undefined
+    /** undefined */
     showValue: string;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/项目相关/queryListByProjectUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/项目相关/queryListByProjectUsingGET
+*/
 export default function fetchMethod(params: { projectId: number }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectTaskResponseDTO>(
         {
@@ -11,58 +13,58 @@ export default function fetchMethod(params: { projectId: number }, extraOptions?
         extraOptions,
     );
 }
-// JSONResult«List«KaizenProjectTaskResponseDTO»»
+/** JSONResult«List«KaizenProjectTaskResponseDTO»» */
 export interface IJSONResultListKaizenProjectTaskResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IKaizenProjectTaskResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// KaizenProjectTaskResponseDTO
+/** KaizenProjectTaskResponseDTO */
 export interface IKaizenProjectTaskResponseDTO {
-    // ID
+    /** ID */
     id: number;
-    // 编码
+    /** 编码 */
     code: string;
-    // 名称
+    /** 名称 */
     name: string;
-    // 项目任务状态
+    /** 项目任务状态 */
     projectTaskStatus: string;
-    // 关联项目
+    /** 关联项目 */
     projectId: IAssociateFormDataVO;
-    // 执行人
+    /** 执行人 */
     leaderUserId: IAssociateFormDataVO;
-    // 上级ID
+    /** 上级ID */
     parentId: number;
-    // 开始时间
+    /** 开始时间 */
     beginTime: string;
-    // 结束时间
+    /** 结束时间 */
     endTime: string;
-    // 优先级
+    /** 优先级 */
     priority: string;
-    // 备注
+    /** 备注 */
     remark: string;
-    // 创建用户ID
+    /** 创建用户ID */
     createUserId: IAssociateFormDataVO;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 下级任务列表
+    /** 下级任务列表 */
     childTaskList: IKaizenProjectTaskResponseDTO[];
 }
-// 关联表单数据VO
+/** 关联表单数据VO */
 export interface IAssociateFormDataVO {
-    // id
+    /** id */
     id: number;
-    // 关联表单显示值
+    /** 关联表单显示值 */
     showFieldValue: string;
-    // 数据状态
+    /** 数据状态 */
     dataStatus: number;
-    // 是否已删除显示字段
+    /** 是否已删除显示字段 */
     isRemovedShowField: string;
-    // 主数据ID
+    /** 主数据ID */
     masterDataId: number;
 }

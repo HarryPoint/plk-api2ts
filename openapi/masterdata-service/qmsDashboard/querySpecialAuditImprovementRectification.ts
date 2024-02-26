@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySpecialAuditImprovementRectificationUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySpecialAuditImprovementRectificationUsingPOST
+*/
 export default function fetchMethod(data: IImprovementRecificationQueryRequestDTO, extraOptions?: any) {
     return http<IJSONResultImprovesTheRectificationRate>(
         {
@@ -11,43 +13,43 @@ export default function fetchMethod(data: IImprovementRecificationQueryRequestDT
         extraOptions,
     );
 }
-// ImprovementRecificationQueryRequestDTO
+/** ImprovementRecificationQueryRequestDTO */
 export interface IImprovementRecificationQueryRequestDTO {
-    // 查询日期的开始
+    /** 查询日期的开始 */
     dateRangeBegin: string;
-    // 查询日期的结束
+    /** 查询日期的结束 */
     dateRangeEnd: string;
 }
-// JSONResult«改进整改率»
+/** JSONResult«改进整改率» */
 export interface IJSONResultImprovesTheRectificationRate {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IImproveTheRectificationRate;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 改进整改率
+/** 改进整改率 */
 export interface IImproveTheRectificationRate {
-    // 标题列表
+    /** 标题列表 */
     titleDefineList: ITitleDefineQueryResponseDTO[];
-    // 总数
+    /** 总数 */
     totalQuantity: number;
-    // 未整改总数
+    /** 未整改总数 */
     notRectifiedQuantity: number;
-    // 已整改总数
+    /** 已整改总数 */
     rectifiedQuantity: number;
-    // 不符合程度-单项值总数
+    /** 不符合程度-单项值总数 */
     singleItemTotalQuantityMap: Record<string, number>;
-    // 不符合程度-单项值未整改数
+    /** 不符合程度-单项值未整改数 */
     singleItemNotRectifiedTotalQuantityMap: Record<string, number>;
 }
-// TitleDefineQueryResponseDTO
+/** TitleDefineQueryResponseDTO */
 export interface ITitleDefineQueryResponseDTO {
-    // key
+    /** key */
     key: string;
-    // 名称
+    /** 名称 */
     name: string;
 }

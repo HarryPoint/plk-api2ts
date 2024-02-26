@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingAuditStatisticsUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingAuditStatisticsUsingGET
+*/
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
     return http<IJSONResultLargeScreenNonconformingProductStatisticsRespondToDTOAccordingToTheTrialSituation>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(params: { dateBegin: string; dateEnd: string
         extraOptions,
     );
 }
-// JSONResult«大屏不合格品统计按审理情况响应DTO»
+/** JSONResult«大屏不合格品统计按审理情况响应DTO» */
 export interface IJSONResultLargeScreenNonconformingProductStatisticsRespondToDTOAccordingToTheTrialSituation {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ILargeScreenNonconformingProductStatisticsAccordingToTheTrialSituationResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 大屏不合格品统计按审理情况响应DTO
+/** 大屏不合格品统计按审理情况响应DTO */
 export interface ILargeScreenNonconformingProductStatisticsAccordingToTheTrialSituationResponseDTO {
-    // 未关闭数量
+    /** 未关闭数量 */
     handlingQuantity: number;
-    // 已关闭数量
+    /** 已关闭数量 */
     completeQuantity: number;
 }

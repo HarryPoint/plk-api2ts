@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getByShiftIdsUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getByShiftIdsUsingPOST
+*/
 export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListFlowPathShiftUserRpVO>(
         {
@@ -12,29 +14,29 @@ export default function fetchMethod(data: number[], params: { enterpriseId: numb
         extraOptions,
     );
 }
-// JSONResult«List«FlowPathShiftUserRpVO»»
+/** JSONResult«List«FlowPathShiftUserRpVO»» */
 export interface IJSONResultListFlowPathShiftUserRpVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IFlowPathShiftUserRpVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// FlowPathShiftUserRpVO
+/** FlowPathShiftUserRpVO */
 export interface IFlowPathShiftUserRpVO {
-    // id
+    /** id */
     id: number;
-    // 所属企业id
+    /** 所属企业id */
     enterpriseId: number;
-    // 对应班次id
+    /** 对应班次id */
     flowPathShiftId: number;
-    // 关联id
+    /** 关联id */
     executorId: number;
-    // 关联类型
+    /** 关联类型 */
     executorType: string;
-    // 关联系统控件类型
+    /** 关联系统控件类型 */
     executorSysType: string;
 }

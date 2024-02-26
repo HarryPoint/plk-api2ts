@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET
+*/
 export default function fetchMethod(params: { processId?: number }, extraOptions?: any) {
     return http<IJSONResultProcessDeprecatedVO>(
         {
@@ -11,43 +13,43 @@ export default function fetchMethod(params: { processId?: number }, extraOptions
         extraOptions,
     );
 }
-// JSONResult«ProcessDeprecatedVO»
+/** JSONResult«ProcessDeprecatedVO» */
 export interface IJSONResultProcessDeprecatedVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProcessDeprecatedVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProcessDeprecatedVO
+/** ProcessDeprecatedVO */
 export interface IProcessDeprecatedVO {
-    // id
+    /** id */
     id: number;
-    // 所属企业id
+    /** 所属企业id */
     enterpriseId: number;
-    // 所属区域id
+    /** 所属区域id */
     areaId: number;
-    // 工序名称
+    /** 工序名称 */
     name: string;
-    // 工序编号
+    /** 工序编号 */
     code: string;
-    // 准备时间
+    /** 准备时间 */
     readyTime: number;
-    // 准备时间单位
+    /** 准备时间单位 */
     readyTimeUnit: string;
-    // 生产时间
+    /** 生产时间 */
     produceTime: number;
-    // 生产时间单位
+    /** 生产时间单位 */
     produceTimeUnit: string;
-    // 产出数量
+    /** 产出数量 */
     produceQuantity: number;
-    // 准备工费（元）
+    /** 准备工费（元） */
     readyPrice: number;
-    // 合格产出工费（元）
+    /** 合格产出工费（元） */
     producePrice: number;
-    // 返工产出工费（元）
+    /** 返工产出工费（元） */
     backProducePrice: number;
 }

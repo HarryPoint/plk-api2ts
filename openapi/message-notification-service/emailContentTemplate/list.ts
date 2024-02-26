@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17600/doc.html#/default/邮件内容模板/listUsingGET
+/**
+* @link http://47.108.139.107:17600/doc.html#/default/邮件内容模板/listUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListEmailContentTemplateDTO>(
         {
@@ -10,21 +12,21 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«EmailContentTemplateDTO»»
+/** JSONResult«List«EmailContentTemplateDTO»» */
 export interface IJSONResultListEmailContentTemplateDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IEmailContentTemplateDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// EmailContentTemplateDTO
+/** EmailContentTemplateDTO */
 export interface IEmailContentTemplateDTO {
-    // ID
+    /** ID */
     id: number;
-    // 邮件内容
+    /** 邮件内容 */
     content: string;
 }

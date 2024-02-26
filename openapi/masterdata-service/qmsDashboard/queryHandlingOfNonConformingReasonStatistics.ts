@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingReasonStatisticsUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingReasonStatisticsUsingGET
+*/
 export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
     return http<IJSONResultListLargeScreenUnqualifiedProductStatisticsRespondToTheDTOBasedOnTheCause>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(params: { dateBegin: string; dateEnd: string
         extraOptions,
     );
 }
-// JSONResult«List«大屏不合格品统计按原因响应DTO»»
+/** JSONResult«List«大屏不合格品统计按原因响应DTO»» */
 export interface IJSONResultListLargeScreenUnqualifiedProductStatisticsRespondToTheDTOBasedOnTheCause {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ILargeScreenUnqualifiedProductStatisticsAccordingToTheReasonResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 大屏不合格品统计按原因响应DTO
+/** 大屏不合格品统计按原因响应DTO */
 export interface ILargeScreenUnqualifiedProductStatisticsAccordingToTheReasonResponseDTO {
-    // 原因
+    /** 原因 */
     category: string;
-    // 数量
+    /** 数量 */
     quantity: number;
 }

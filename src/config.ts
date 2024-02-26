@@ -21,43 +21,6 @@ export type IConfig = {
   ) => Promise<void>;
 };
 
-const platformMap = {
-  dev: "47.108.139.107",
-  uat: "47.108.135.148",
-};
-
-const serviceMap = {
-  "masterdata-service": 16700,
-  "plk-uaa-service": 18100,
-  "flow-service": 16500,
-  "todo-service": 16600,
-  "app-enterprise-web": 16400,
-  "app-mobile-web": 17400,
-  "message-notification-service": 17600,
-};
-
-type IPlatformMap = typeof platformMap;
-
-type IServiceMap = typeof serviceMap;
-
-const apiMap = Object.keys(platformMap)
-  .map((platform) => ({
-    [platform]: Object.keys(serviceMap)
-      .map((service) => ({
-        [service]: `http://${platformMap[platform as keyof IPlatformMap]}:${
-          serviceMap[service as keyof IServiceMap]
-        }`,
-      }))
-      .reduce(
-        (prev, next) => ({ ...prev, ...next }),
-        {} as Record<keyof IServiceMap, string>
-      ),
-  }))
-  .reduce(
-    (prev, next) => ({ ...prev, ...next }),
-    {} as Record<string, Record<keyof IServiceMap, string>>
-  ) as Record<string, Record<keyof IServiceMap, string>>;
-
 const output = path.join(process.cwd(), "./autoApi");
 
 const defaultConfig: IConfig = {
@@ -68,7 +31,7 @@ const defaultConfig: IConfig = {
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
   prefix: "I",
-  serviceMap: apiMap.dev,
+  serviceMap: {},
   serviceNameToPath: false,
   output,
   customContent,
@@ -93,6 +56,10 @@ if (typeof configFn === "function") {
 
 if (!configData.output) {
   throw new Error("config file must have output field");
+}
+
+if (!configData.serviceMap) {
+  throw new Error("config file must have serviceMap field");
 }
 
 const resultConfig: IConfig = {

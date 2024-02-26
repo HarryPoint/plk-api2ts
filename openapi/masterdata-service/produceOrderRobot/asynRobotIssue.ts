@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/asynRobotIssueUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/asynRobotIssueUsingPOST
+*/
 export default function fetchMethod(data: IProduceOrderAutoVaguePlanIssueDTO[], params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -12,27 +14,27 @@ export default function fetchMethod(data: IProduceOrderAutoVaguePlanIssueDTO[], 
         extraOptions,
     );
 }
-// ProduceOrderAutoVaguePlanIssueDTO
+/** ProduceOrderAutoVaguePlanIssueDTO */
 export interface IProduceOrderAutoVaguePlanIssueDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     beginTime: string;
-    // undefined
+    /** undefined */
     endTime: string;
-    // undefined
+    /** undefined */
     stepIds: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

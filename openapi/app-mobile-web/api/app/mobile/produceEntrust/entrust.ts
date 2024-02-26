@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/生产委外服务相关/entrustUsingPOST
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/生产委外服务相关/entrustUsingPOST
+*/
 export default function fetchMethod(data: IProductionOutsourcingSubmitDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,27 +13,27 @@ export default function fetchMethod(data: IProductionOutsourcingSubmitDTO, extra
         extraOptions,
     );
 }
-// 生产委外加工提交DTO
+/** 生产委外加工提交DTO */
 export interface IProductionOutsourcingSubmitDTO {
-    // 生产任务id
+    /** 生产任务id */
     produceTaskId: number;
-    // 批次id
+    /** 批次id */
     lotOrderId: number;
-    // 委外单单号
+    /** 委外单单号 */
     entrustNo: string;
-    // 委外数量
+    /** 委外数量 */
     totalQuantity: number;
-    // 供应商id
+    /** 供应商id */
     supplierId: number;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

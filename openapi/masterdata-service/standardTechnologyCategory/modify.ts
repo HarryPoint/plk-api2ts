@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/modifyUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/标准工艺分类相关/modifyUsingPOST
+*/
 export default function fetchMethod(data: IStandardProcessClassificationModificationRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,23 +13,23 @@ export default function fetchMethod(data: IStandardProcessClassificationModifica
         extraOptions,
     );
 }
-// 标准工艺分类修改请求DTO
+/** 标准工艺分类修改请求DTO */
 export interface IStandardProcessClassificationModificationRequestDTO {
-    // 父级分类id, 当添加到第一级时,传递空;
+    /** 父级分类id, 当添加到第一级时,传递空; */
     parentCategoryId: number;
-    // 分类id
+    /** 分类id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/应用服务包相关/cloneServicePackUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/应用服务包相关/cloneServicePackUsingPOST
+*/
 export default function fetchMethod(data: IServiceObjectRegistrationRequest, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IServiceObjectRegistrationRequest, ext
         extraOptions,
     );
 }
-// 服务对象注册请求
+/** 服务对象注册请求 */
 export interface IServiceObjectRegistrationRequest {
-    // 服务对象id
+    /** 服务对象id */
     serviceObjectId: number;
-    // 应用级别
+    /** 应用级别 */
     applicationLevel: string;
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

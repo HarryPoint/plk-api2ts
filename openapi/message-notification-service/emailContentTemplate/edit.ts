@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17600/doc.html#/default/邮件内容模板/editUsingPOST_1
+/**
+* @link http://47.108.139.107:17600/doc.html#/default/邮件内容模板/editUsingPOST_1
+*/
 export default function fetchMethod(data: IEmailContentTemplateEditRequestDTO, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IEmailContentTemplateEditRequestDTO, e
         extraOptions,
     );
 }
-// EmailContentTemplateEditRequestDTO
+/** EmailContentTemplateEditRequestDTO */
 export interface IEmailContentTemplateEditRequestDTO {
-    // ID
+    /** ID */
     id: number;
-    // 邮件内容
+    /** 邮件内容 */
     content: string;
 }
-// JSONResult«string»
+/** JSONResult«string» */
 export interface IJSONResultstring {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: string;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

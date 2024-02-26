@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryOutfieldAnnualProblemSituationUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryOutfieldAnnualProblemSituationUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultAnnualProblemQuery>(
         {
@@ -10,17 +12,17 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«年度问题查询情况»
+/** JSONResult«年度问题查询情况» */
 export interface IJSONResultAnnualProblemQuery {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IAnnualQuestionQuery;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 年度问题查询情况
+/** 年度问题查询情况 */
 export interface IAnnualQuestionQuery {
 }

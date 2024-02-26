@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryThreeViolationsUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryThreeViolationsUsingPOST
+*/
 export default function fetchMethod(data: I3DInformationQueryRequest, extraOptions?: any) {
     return http<IJSONResultListResponseToQuerying3DInformation>(
         {
@@ -11,34 +13,34 @@ export default function fetchMethod(data: I3DInformationQueryRequest, extraOptio
         extraOptions,
     );
 }
-// 三维信息查询请求
+/** 三维信息查询请求 */
 export interface I3DInformationQueryRequest {
-    // 查询日期的开始
+    /** 查询日期的开始 */
     dateRangeBegin: string;
-    // 查询日期的结束
+    /** 查询日期的结束 */
     dateRangeEnd: string;
 }
-// JSONResult«List«三维信息查询响应»»
+/** JSONResult«List«三维信息查询响应»» */
 export interface IJSONResultListResponseToQuerying3DInformation {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: I3DInformationQueryResponse[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 三维信息查询响应
+/** 三维信息查询响应 */
 export interface I3DInformationQueryResponse {
-    // 违规Key
+    /** 违规Key */
     violationKey: string;
-    // 违规名称
+    /** 违规名称 */
     violationName: string;
-    // 整改完成数量
+    /** 整改完成数量 */
     rectificationQuantity: number;
-    // 违规数量
+    /** 违规数量 */
     violationQuantity: number;
-    // 整改完成率 = 整改完成数量 / 违规数量
+    /** 整改完成率 = 整改完成数量 / 违规数量 */
     rectificationCompletionRare: number;
 }

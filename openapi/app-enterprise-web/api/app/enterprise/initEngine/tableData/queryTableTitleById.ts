@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/queryTableTitleByIdUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/queryTableTitleByIdUsingGET
+*/
 export default function fetchMethod(params: { id: number }, extraOptions?: any) {
     return http<IJSONResultTableTitleQueryResponseDTO>(
         {
@@ -11,30 +13,30 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«TableTitleQueryResponseDTO»
+/** JSONResult«TableTitleQueryResponseDTO» */
 export interface IJSONResultTableTitleQueryResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITableTitleQueryResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// TableTitleQueryResponseDTO
+/** TableTitleQueryResponseDTO */
 export interface ITableTitleQueryResponseDTO {
-    // 表数据ID
+    /** 表数据ID */
     tableDataId: number;
-    // 标题定义列表
+    /** 标题定义列表 */
     titleDefineList: ITableTitleDefineDTO[];
 }
-// TableTitleDefineDTO
+/** TableTitleDefineDTO */
 export interface ITableTitleDefineDTO {
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     name: string;
-    // undefined
+    /** undefined */
     isMasterTableField: string;
 }

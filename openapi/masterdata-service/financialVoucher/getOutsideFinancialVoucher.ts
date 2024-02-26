@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
+*/
 export default function fetchMethod(params: { applicationId?: number; id?: number; voucherNo?: string }, extraOptions?: any) {
     return http<IJSONResultExternalFinancialCertificateResponseObject>(
         {
@@ -11,42 +13,42 @@ export default function fetchMethod(params: { applicationId?: number; id?: numbe
         extraOptions,
     );
 }
-// JSONResult«外部财务凭证响应对象»
+/** JSONResult«外部财务凭证响应对象» */
 export interface IJSONResultExternalFinancialCertificateResponseObject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IExternalFinancialCertificateResponseObject;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 外部财务凭证响应对象
+/** 外部财务凭证响应对象 */
 export interface IExternalFinancialCertificateResponseObject {
-    // 凭证号
+    /** 凭证号 */
     voucherNo: string;
-    // 凭证字号
+    /** 凭证字号 */
     voucherType: string;
-    // 日期
+    /** 日期 */
     date: string;
-    // 凭证期间
+    /** 凭证期间 */
     voucherPeriod: string;
-    // 借方合计
+    /** 借方合计 */
     debitEntryTotalAmount: string;
-    // 贷方合计
+    /** 贷方合计 */
     creditEntryTotalAmount: string;
-    // 明细
+    /** 明细 */
     details: IExternalFinancialCertificateDetailsResponseObject[];
 }
-// 外部财务凭证详情响应对象
+/** 外部财务凭证详情响应对象 */
 export interface IExternalFinancialCertificateDetailsResponseObject {
-    // 摘要
+    /** 摘要 */
     summary: string;
-    // 科目
+    /** 科目 */
     accountName: string;
-    // 借方
+    /** 借方 */
     debitEntry: string;
-    // 贷方
+    /** 贷方 */
     creditEntry: string;
 }

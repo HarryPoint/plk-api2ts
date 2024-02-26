@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeManageUsingPOST
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeManageUsingPOST
+*/
 export default function fetchMethod(data: ITransferSuperAdministratorDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: ITransferSuperAdministratorDTO, extraO
         extraOptions,
     );
 }
-// 转让超级管理员 DTO
+/** 转让超级管理员 DTO */
 export interface ITransferSuperAdministratorDTO {
-    // 验证码
+    /** 验证码 */
     verCode: string;
-    // 转让用户id
+    /** 转让用户id */
     changeUserId: number;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

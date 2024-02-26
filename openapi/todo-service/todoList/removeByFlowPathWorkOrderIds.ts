@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16600/doc.html#/default/待办相关/removeByFlowPathWorkOrderIdsUsingPOST
+/**
+* @link http://47.108.139.107:16600/doc.html#/default/待办相关/removeByFlowPathWorkOrderIdsUsingPOST
+*/
 export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -12,14 +14,14 @@ export default function fetchMethod(data: number[], params: { enterpriseId: numb
         extraOptions,
     );
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

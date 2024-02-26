@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产工艺相关/queryMaterialBomListUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产工艺相关/queryMaterialBomListUsingPOST
+*/
 export default function fetchMethod(data: number[], extraOptions?: any) {
     return http<IJSONResultListProduceTechnologyMaterialBomDTO>(
         {
@@ -11,29 +13,29 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«ProduceTechnologyMaterialBomDTO»»
+/** JSONResult«List«ProduceTechnologyMaterialBomDTO»» */
 export interface IJSONResultListProduceTechnologyMaterialBomDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProduceTechnologyMaterialBomDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProduceTechnologyMaterialBomDTO
+/** ProduceTechnologyMaterialBomDTO */
 export interface IProduceTechnologyMaterialBomDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     materialId: number;
-    // undefined
+    /** undefined */
     materialBomId: number;
-    // undefined
+    /** undefined */
     name: string;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     produceTechnologyId: number;
 }

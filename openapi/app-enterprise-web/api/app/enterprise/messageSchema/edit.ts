@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/消息方案相关/editUsingPOST_13
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/消息方案相关/editUsingPOST_13
+*/
 export default function fetchMethod(data: IMessageSchemaEditRequestDTO, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -11,306 +13,306 @@ export default function fetchMethod(data: IMessageSchemaEditRequestDTO, extraOpt
         extraOptions,
     );
 }
-// MessageSchemaEditRequestDTO
+/** MessageSchemaEditRequestDTO */
 export interface IMessageSchemaEditRequestDTO {
-    // 消息方案
+    /** 消息方案 */
     messageSchema: IMessageSchemaDTO;
-    // 业务配置
+    /** 业务配置 */
     formConfig: IFormConfigDTO;
 }
-// MessageSchemaDTO
+/** MessageSchemaDTO */
 export interface IMessageSchemaDTO {
-    // ID
+    /** ID */
     id: number;
-    // 编码
+    /** 编码 */
     code: string;
-    // 标题
+    /** 标题 */
     title: string;
-    // 发送内容状态
+    /** 发送内容状态 */
     sendingContentStatus: string;
-    // 异常原因
+    /** 异常原因 */
     exceptionalReason: string;
-    // 已选择的时间类型
+    /** 已选择的时间类型 */
     selectedTimeType: string;
-    // 已选择的时间类型
+    /** 已选择的时间类型 */
     isRepeatSending: string;
-    // 间隔时间
+    /** 间隔时间 */
     intervalTime: number;
-    // 间隔时间类型
+    /** 间隔时间类型 */
     intervalTimeType: string;
-    // 消息发送内容模板列表
+    /** 消息发送内容模板列表 */
     messageSendingContentTemplateList: IMessageSendingContentTemplateDTO[];
-    // 消息接受人列表
+    /** 消息接受人列表 */
     recipientList: IMessageRecipientDTO[];
-    // 过滤条件列表
+    /** 过滤条件列表 */
     filterConditionList: IOriginalDataFilterConditionDTO[];
-    // 消息触发节点列表
+    /** 消息触发节点列表 */
     messageTriggerNodeList: IMessageTriggerNodeDTO[];
-    // 消息类型
+    /** 消息类型 */
     messageType: string;
-    // 时间配置
+    /** 时间配置 */
     timeConfig: IMessageSchemaTimeConfigDTO;
 }
-// MessageSendingContentTemplateDTO
+/** MessageSendingContentTemplateDTO */
 export interface IMessageSendingContentTemplateDTO {
-    // ID
+    /** ID */
     id: number;
-    // 消息方案ID
+    /** 消息方案ID */
     messageSchemaId: number;
-    // 消息发送模式
+    /** 消息发送模式 */
     sendingMode: string;
-    // 是否使用消息模板
+    /** 是否使用消息模板 */
     isUseSmsTemplate: string;
-    // 消息模板ID
+    /** 消息模板ID */
     smsTemplateId: number;
-    // 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题
+    /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
     messageContent: string;
-    // 字段序列号列表
+    /** 字段序列号列表 */
     fieldSerialNoList: Record<string, any>[];
-    // 字段元数据
+    /** 字段元数据 */
     fieldMetaList: IMessageContentFieldMetaDTO[];
-    // 是否使用配置
+    /** 是否使用配置 */
     isUseConfig: string;
-    // html 内容
+    /** html 内容 */
     htmlContent: string;
-    // 邮件主题
+    /** 邮件主题 */
     emailSubject: string;
-    // 消息链接
+    /** 消息链接 */
     messageLink: string;
 }
-// MessageContentFieldMetaDTO
+/** MessageContentFieldMetaDTO */
 export interface IMessageContentFieldMetaDTO {
-    // ID
+    /** ID */
     id: number;
-    // 应用编码
+    /** 应用编码 */
     applicationCode: string;
-    // 当前表单字段序列号
+    /** 当前表单字段序列号 */
     currentFormFieldSerialNo: string;
-    // 关联应用编码
+    /** 关联应用编码 */
     associationApplicationCode: string;
-    // 关联表单序列号
+    /** 关联表单序列号 */
     associationFormFieldSerialNo: string;
-    // 显示字段名
+    /** 显示字段名 */
     showFieldName: string;
-    // 引用消息模板ID
+    /** 引用消息模板ID */
     refMessageTemplateId: number;
 }
-// MessageRecipientDTO
+/** MessageRecipientDTO */
 export interface IMessageRecipientDTO {
-    // ID
+    /** ID */
     id: number;
-    // 消息方案ID
+    /** 消息方案ID */
     messageSchemaId: number;
-    // 接收人类型
+    /** 接收人类型 */
     recipientType: string;
-    // 部门ID列表
+    /** 部门ID列表 */
     departmentIdList: Record<string, any>[];
-    // 班组ID列表
+    /** 班组ID列表 */
     classGroupIdList: Record<string, any>[];
-    // 组织字段序列号列表
+    /** 组织字段序列号列表 */
     organizationFieldSerialList: Record<string, any>[];
-    // 用户ID列表
+    /** 用户ID列表 */
     userIdList: Record<string, any>[];
-    // 邮件地址列表json
+    /** 邮件地址列表json */
     emailAddressList: Record<string, any>[];
-    // 部门列表
+    /** 部门列表 */
     departmentList: IDepartmentResponseObject1[];
-    // 班组列表
+    /** 班组列表 */
     classGroupList: IDepartmentResponseObject[];
-    // 用户列表
+    /** 用户列表 */
     userList: IPersonnelResponseObject[];
-    // 组织字段列表
+    /** 组织字段列表 */
     organizationFieldList: IFieldSerialNoToNameMappingDTO[];
 }
-// 部门响应对象_1
+/** 部门响应对象_1 */
 export interface IDepartmentResponseObject1 {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // 人员
+    /** 人员 */
     users: IPersonnelResponseObject[];
 }
-// 人员响应对象
+/** 人员响应对象 */
 export interface IPersonnelResponseObject {
-    // 创建用户ID
+    /** 创建用户ID */
     createUserId: number;
-    // 创建用户名
+    /** 创建用户名 */
     createUserName: string;
-    // 创建部门ID
+    /** 创建部门ID */
     createDeptId: number;
-    // 创建部门名称
+    /** 创建部门名称 */
     createDeptName: string;
-    // 更新部门ID
+    /** 更新部门ID */
     updateDeptId: number;
-    // 更新部门名称
+    /** 更新部门名称 */
     updateDeptName: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 更新用户ID
+    /** 更新用户ID */
     updateUserId: number;
-    // 更新用户名称
+    /** 更新用户名称 */
     updateUserName: string;
-    // 更新时间
+    /** 更新时间 */
     updateTime: string;
-    // id
+    /** id */
     id: number;
-    // 所属企业id
+    /** 所属企业id */
     enterpriseId: number;
-    // 员工工号
+    /** 员工工号 */
     code: string;
-    // 员工姓名
+    /** 员工姓名 */
     name: string;
-    // 手机号码
+    /** 手机号码 */
     mobilePhone: string;
-    // 班组id
+    /** 班组id */
     classGroupId: number;
-    // 邮箱
+    /** 邮箱 */
     email: string;
 }
-// 部门响应对象
+/** 部门响应对象 */
 export interface IDepartmentResponseObject {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // 人员
+    /** 人员 */
     users: IPersonnelResponseObject[];
 }
-// FieldSerialNoToNameMappingDTO
+/** FieldSerialNoToNameMappingDTO */
 export interface IFieldSerialNoToNameMappingDTO {
-    // undefined
+    /** undefined */
     serialNo: string;
-    // undefined
+    /** undefined */
     name: string;
 }
-// OriginalDataFilterConditionDTO
+/** OriginalDataFilterConditionDTO */
 export interface IOriginalDataFilterConditionDTO {
-    // ID
+    /** ID */
     id: number;
-    // 消息方案ID
+    /** 消息方案ID */
     messageSchemaId: number;
-    // 表-编码
+    /** 表-编码 */
     tableCode: string;
-    // 流程编码
+    /** 流程编码 */
     applicationCode: string;
-    // 表单字段编码
+    /** 表单字段编码 */
     detailTableFieldCode: string;
-    // 表字段编码
+    /** 表字段编码 */
     fieldCode: string;
-    // undefined
+    /** undefined */
     fieldSerialNo: string;
-    // undefined
+    /** undefined */
     value: Record<string, any>[];
 }
-// MessageTriggerNodeDTO
+/** MessageTriggerNodeDTO */
 export interface IMessageTriggerNodeDTO {
-    // ID
+    /** ID */
     id: number;
-    // 消息方案ID
+    /** 消息方案ID */
     messageSchemaId: number;
-    // 节点类型
+    /** 节点类型 */
     nodeType: string;
-    // 逻辑运算符类型
+    /** 逻辑运算符类型 */
     logicalType: string;
-    // 当前触发节点条件ID
+    /** 当前触发节点条件ID */
     currentTriggerConditionId: number;
-    // 上级触发节点ID
+    /** 上级触发节点ID */
     parentTriggerNodeId: number;
-    // 当前节点表达式
+    /** 当前节点表达式 */
     currentConditionExpression: IMessageTriggerConditionDTO;
-    // 下级节点表达式列表
+    /** 下级节点表达式列表 */
     children: IMessageTriggerNodeDTO[];
-    // 排序
+    /** 排序 */
     order: number;
 }
-// MessageTriggerConditionDTO
+/** MessageTriggerConditionDTO */
 export interface IMessageTriggerConditionDTO {
-    // ID
+    /** ID */
     id: number;
-    // 消息方案ID
+    /** 消息方案ID */
     messageSchemaId: number;
-    // 触发模式
+    /** 触发模式 */
     triggerMode: string;
-    // 消息触发动作
+    /** 消息触发动作 */
     triggerAction: string;
-    // 消息表达式类型
+    /** 消息表达式类型 */
     expressionType: string;
-    // 表-编码
+    /** 表-编码 */
     tableCode: string;
-    // 流程字段编码
+    /** 流程字段编码 */
     applicationCode: string;
-    // 表格字段编码
+    /** 表格字段编码 */
     detailTableFieldCode: string;
-    // 字段序列号
+    /** 字段序列号 */
     fieldSerialNo: string;
-    // 字段编码
+    /** 字段编码 */
     fieldCode: string;
-    // SUM(${fieldSerialNo}) / count(${fieldSerialNo})
+    /** SUM(${fieldSerialNo}) / count(${fieldSerialNo}) */
     formula: string;
-    // 公式字段列表
+    /** 公式字段列表 */
     formulaFieldList: Record<string, any>[];
-    // 判断表达式
+    /** 判断表达式 */
     judgeExpression: string;
-    // 条件值
+    /** 条件值 */
     value: string;
-    // html 内容
+    /** html 内容 */
     htmlContent: string;
 }
-// MessageSchemaTimeConfigDTO
+/** MessageSchemaTimeConfigDTO */
 export interface IMessageSchemaTimeConfigDTO {
-    // ID
+    /** ID */
     id: number;
-    // 时间模式
+    /** 时间模式 */
     timeMode: string;
-    // 周号
+    /** 周号 */
     weekNo: number;
-    // 每月的计时模式
+    /** 每月的计时模式 */
     monthCalcTimeMode: string;
-    // 第几天
+    /** 第几天 */
     day: number;
-    // 季度计时模式
+    /** 季度计时模式 */
     quarterCalcTimeMode: string;
-    // 每天第几天
+    /** 每天第几天 */
     month: number;
-    // 时间
+    /** 时间 */
     time: string;
-    // 每半年计算模式
+    /** 每半年计算模式 */
     halfYearCalcTimeMode: string;
-    // 消息方案ID
+    /** 消息方案ID */
     messageSchemaId: number;
 }
-// FormConfigDTO
+/** FormConfigDTO */
 export interface IFormConfigDTO {
-    // ID
+    /** ID */
     id: number;
-    // 应用编码
+    /** 应用编码 */
     applicationCode: string;
-    // 详细流程字段编码
+    /** 详细流程字段编码 */
     detailTableFieldCode: string;
-    // 详细流程字段ID
+    /** 详细流程字段ID */
     detailTableFieldId: number;
-    // 详细流程字段序列号
+    /** 详细流程字段序列号 */
     detailTableFieldSerialNo: string;
-    // 是否详细流程表
+    /** 是否详细流程表 */
     isDetailFlowTable: string;
-    // 是否动态表单
+    /** 是否动态表单 */
     isDynamicForm: string;
-    // 表 - 编码
+    /** 表 - 编码 */
     tableCode: string;
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

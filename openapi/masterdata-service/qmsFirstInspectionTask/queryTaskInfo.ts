@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/queryTaskInfoUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/queryTaskInfoUsingGET
+*/
 export default function fetchMethod(params: { id: string }, extraOptions?: any) {
     return http<IJSONResultFirstCheckChecksTheTaskResponseObject>(
         {
@@ -11,193 +13,193 @@ export default function fetchMethod(params: { id: string }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«首检检验任务响应对象»
+/** JSONResult«首检检验任务响应对象» */
 export interface IJSONResultFirstCheckChecksTheTaskResponseObject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheFirstCheckChecksTheTaskResponseObject;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 首检检验任务响应对象
+/** 首检检验任务响应对象 */
 export interface ITheFirstCheckChecksTheTaskResponseObject {
-    // id
+    /** id */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     businessType: string;
-    // undefined
+    /** undefined */
     isEmergent: string;
-    // undefined
+    /** undefined */
     isTemporarily: string;
-    // undefined
+    /** undefined */
     qmsInspectionApplyFormMaterialDetailId: number;
-    // undefined
+    /** undefined */
     applyDate: string;
-    // undefined
+    /** undefined */
     applyEmployeeId: number;
-    // undefined
+    /** undefined */
     applyDepartmentId: number;
-    // undefined
+    /** undefined */
     areaId: number;
-    // undefined
+    /** undefined */
     productionLineId: number;
-    // undefined
+    /** undefined */
     processId: number;
-    // undefined
+    /** undefined */
     materialId: number;
-    // undefined
+    /** undefined */
     qmsInspectionCategoryId: number;
-    // undefined
+    /** undefined */
     materialCode: string;
-    // undefined
+    /** undefined */
     materialSpec: string;
-    // undefined
+    /** undefined */
     materialUnitId: number;
-    // undefined
+    /** undefined */
     lot: string;
-    // undefined
+    /** undefined */
     inspectionApplyQuantity: number;
-    // undefined
+    /** undefined */
     threeInspectionSystems: Record<string, any>[];
-    // undefined
+    /** undefined */
     selfInspectionEmployeeIds: number[];
-    // undefined
+    /** undefined */
     mutualInspectionEmployeeIds: number[];
-    // undefined
+    /** undefined */
     inspectionMethod: string;
-    // undefined
+    /** undefined */
     inspectionQuantity: number;
-    // undefined
+    /** undefined */
     selfQualifiedQuantity: number;
-    // undefined
+    /** undefined */
     selfUnQualifiedQuantity: number;
-    // undefined
+    /** undefined */
     selfInspectionResult: string;
-    // undefined
+    /** undefined */
     mutualQualifiedQuantity: number;
-    // undefined
+    /** undefined */
     mutualUnQualifiedQuantity: number;
-    // undefined
+    /** undefined */
     mutualInspectionResult: string;
-    // undefined
+    /** undefined */
     specialQualifiedQuantity: number;
-    // undefined
+    /** undefined */
     specialUnQualifiedQuantity: number;
-    // undefined
+    /** undefined */
     specialInspectionResult: string;
-    // undefined
+    /** undefined */
     applyInspectAddress: string;
-    // undefined
+    /** undefined */
     applyInspectDate: string;
-    // undefined
+    /** undefined */
     inspectionApplyFiles: string;
-    // undefined
+    /** undefined */
     edition: string;
-    // undefined
+    /** undefined */
     inspectionSchemeFiles: string;
-    // undefined
+    /** undefined */
     inspectionRecordFiles: string;
-    // undefined
+    /** undefined */
     inspectionResultDesc: string;
-    // undefined
+    /** undefined */
     qmsInspectionSchemeId: number;
-    // undefined
+    /** undefined */
     inspectionEmployeeIds: Record<string, any>[];
-    // undefined
+    /** undefined */
     inspectionEmployees: IAssociateFormDataVO[];
-    // undefined
+    /** undefined */
     isAssignment: string;
-    // undefined
+    /** undefined */
     inspectionEndDate: string;
-    // undefined
+    /** undefined */
     inspectionCompletedDate: string;
-    // undefined
+    /** undefined */
     taskStartDate: string;
-    // undefined
+    /** undefined */
     taskStatus: string;
-    // undefined
+    /** undefined */
     isOverdue: string;
-    // undefined
+    /** undefined */
     overdueDay: number;
-    // undefined
+    /** undefined */
     mutualRecords: IFirstCheckCheckTaskMutualCheckRecordResponseObject[];
-    // undefined
+    /** undefined */
     specialRecords: IFirstCheckCheckSpecialCheckRecordResponseObject[];
-    // undefined
+    /** undefined */
     selfRecords: IFirstCheckCheckSelfCheckRecordResponseObject[];
 }
-// 关联表单数据VO
+/** 关联表单数据VO */
 export interface IAssociateFormDataVO {
-    // id
+    /** id */
     id: number;
-    // 关联表单显示值
+    /** 关联表单显示值 */
     showFieldValue: string;
-    // 数据状态
+    /** 数据状态 */
     dataStatus: number;
-    // 是否已删除显示字段
+    /** 是否已删除显示字段 */
     isRemovedShowField: string;
-    // 主数据ID
+    /** 主数据ID */
     masterDataId: number;
 }
-// 首检检验任务互检记录响应对象
+/** 首检检验任务互检记录响应对象 */
 export interface IFirstCheckCheckTaskMutualCheckRecordResponseObject {
-    // id
+    /** id */
     id: number;
-    // undefined
+    /** undefined */
     partNumber: string;
-    // undefined
+    /** undefined */
     inspectionResultsOfIndividualParts: string;
-    // undefined
+    /** undefined */
     descriptionOfNonconformities: string;
-    // undefined
+    /** undefined */
     qmsInspectionItemsId: number;
-    // undefined
+    /** undefined */
     inspectionStandardValue: string;
-    // undefined
+    /** undefined */
     inspectionActualValue: string;
-    // undefined
+    /** undefined */
     inspectionResult: string;
 }
-// 首检检验专检记录响应对象
+/** 首检检验专检记录响应对象 */
 export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     partNumber: string;
-    // undefined
+    /** undefined */
     inspectionResultsOfIndividualParts: string;
-    // undefined
+    /** undefined */
     descriptionOfNonconformities: string;
-    // undefined
+    /** undefined */
     qmsInspectionItemsId: number;
-    // undefined
+    /** undefined */
     inspectionStandardValue: string;
-    // undefined
+    /** undefined */
     inspectionActualValue: string;
-    // undefined
+    /** undefined */
     inspectionResult: string;
 }
-// 首检检验检验自检记录响应对象
+/** 首检检验检验自检记录响应对象 */
 export interface IFirstCheckCheckSelfCheckRecordResponseObject {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     partNumber: string;
-    // undefined
+    /** undefined */
     inspectionResultsOfIndividualParts: string;
-    // undefined
+    /** undefined */
     descriptionOfNonconformities: string;
-    // undefined
+    /** undefined */
     qmsInspectionItemsId: number;
-    // undefined
+    /** undefined */
     inspectionStandardValue: string;
-    // undefined
+    /** undefined */
     inspectionActualValue: string;
-    // undefined
+    /** undefined */
     inspectionResult: string;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-controller/getByIdsUsingPOST_4
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-controller/getByIdsUsingPOST_4
+*/
 export default function fetchMethod(data: number[], extraOptions?: any) {
     return http<IJSONResultListProduceTechnologyRoutingResponseDTO>(
         {
@@ -11,53 +13,53 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«ProduceTechnologyRoutingResponseDTO»»
+/** JSONResult«List«ProduceTechnologyRoutingResponseDTO»» */
 export interface IJSONResultListProduceTechnologyRoutingResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProduceTechnologyRoutingResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProduceTechnologyRoutingResponseDTO
+/** ProduceTechnologyRoutingResponseDTO */
 export interface IProduceTechnologyRoutingResponseDTO {
-    // 创建用户ID
+    /** 创建用户ID */
     createUserId: number;
-    // 创建用户名
+    /** 创建用户名 */
     createUserName: string;
-    // 生产工艺id
+    /** 生产工艺id */
     produceTechnologyId: number;
-    // 创建部门ID
+    /** 创建部门ID */
     createDeptId: number;
-    // 创建部门名称
+    /** 创建部门名称 */
     createDeptName: string;
-    // 更新部门ID
+    /** 更新部门ID */
     updateDeptId: number;
-    // 更新部门名称
+    /** 更新部门名称 */
     updateDeptName: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 更新用户ID
+    /** 更新用户ID */
     updateUserId: number;
-    // 更新用户名称
+    /** 更新用户名称 */
     updateUserName: string;
-    // 更新时间
+    /** 更新时间 */
     updateTime: string;
-    // id
+    /** id */
     id: number;
-    // 所属工艺路径id
+    /** 所属工艺路径id */
     routingId: number;
-    // 工艺路径编码
+    /** 工艺路径编码 */
     code: string;
-    // 工艺路径名称
+    /** 工艺路径名称 */
     name: string;
-    // 关联物料id
+    /** 关联物料id */
     materialId: number;
-    // 关联BOM id
+    /** 关联BOM id */
     materialBomId: number;
-    // 所属生产工艺物料BOMid
+    /** 所属生产工艺物料BOMid */
     produceTechnologyMaterialBomId: number;
 }

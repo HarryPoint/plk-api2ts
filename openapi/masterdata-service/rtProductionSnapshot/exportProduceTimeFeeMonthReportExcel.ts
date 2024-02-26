@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产快照相关/exportProduceTimeFeeMonthReportExcelUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/exportProduceTimeFeeMonthReportExcelUsingPOST
+*/
 export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -11,38 +13,38 @@ export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO
         extraOptions,
     );
 }
-// 工时工费月度报表搜索VO
+/** 工时工费月度报表搜索VO */
 export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 员工id集
+    /** 员工id集 */
     userIds: number[];
-    // 班组id集
+    /** 班组id集 */
     classGroupIds: number[];
-    // 查询开始日期 yyyy-MM-dd HH:mm:ss
+    /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
     beginTime: string;
-    // 查询结束日期 yyyy-MM-dd HH:mm:ss
+    /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
     endTime: string;
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

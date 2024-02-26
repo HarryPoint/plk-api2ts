@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/assignmentTaskUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/assignmentTaskUsingPOST
+*/
 export default function fetchMethod(data: IVerifyTaskAssignmentRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,23 +13,23 @@ export default function fetchMethod(data: IVerifyTaskAssignmentRequestDTO, extra
         extraOptions,
     );
 }
-// 检验任务分配请求DTO
+/** 检验任务分配请求DTO */
 export interface IVerifyTaskAssignmentRequestDTO {
-    // 流程id
+    /** 流程id */
     flowPathId: number;
-    // 任务id
+    /** 任务id */
     taskIds: number[];
-    // 质量人员id
+    /** 质量人员id */
     qualityPersonnelIds: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupByIdAndCheckUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupByIdAndCheckUsingGET
+*/
 export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
     return http<IJSONResultVOGroup>(
         {
@@ -11,25 +13,25 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
         extraOptions,
     );
 }
-// JSONResult«班组VO»
+/** JSONResult«班组VO» */
 export interface IJSONResultVOGroup {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITeamVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 班组VO
+/** 班组VO */
 export interface ITeamVO {
-    // id
+    /** id */
     id: number;
-    // 班组名称
+    /** 班组名称 */
     name: string;
-    // 班组编号
+    /** 班组编号 */
     code: string;
-    // 上级部门id
+    /** 上级部门id */
     departmentId: number;
 }

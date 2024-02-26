@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
+*/
 export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject>(
         {
@@ -11,28 +13,28 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
         extraOptions,
     );
 }
-// JSONResult«宝晶销售发货报表包材表头响应对象»
+/** JSONResult«宝晶销售发货报表包材表头响应对象» */
 export interface IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IBaojingSalesDeliveryReportPackageHeadResponseObject;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 宝晶销售发货报表包材表头响应对象
+/** 宝晶销售发货报表包材表头响应对象 */
 export interface IBaojingSalesDeliveryReportPackageHeadResponseObject {
-    // 包材表头
+    /** 包材表头 */
     packagingMaterialHeaders: IIdCodeNameGenericTransportObject[];
 }
-// Id Code Name 通用传输对象
+/** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
-    // id
+    /** id */
     id: number;
-    // code
+    /** code */
     code: string;
-    // name
+    /** name */
     name: string;
 }

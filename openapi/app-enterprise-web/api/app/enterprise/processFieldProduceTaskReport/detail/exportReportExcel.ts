@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/任务汇总表(基于工序字段)/exportDetailReportExcelUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/任务汇总表(基于工序字段)/exportDetailReportExcelUsingPOST
+*/
 export default function fetchMethod(data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
@@ -11,42 +13,42 @@ export default function fetchMethod(data: ITheTaskSummaryTableSearchesVOBasedOnP
         extraOptions,
     );
 }
-// 任务汇总表(基于工序字段)搜索VO
+/** 任务汇总表(基于工序字段)搜索VO */
 export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 工序id
+    /** 工序id */
     processId: number;
-    // 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss
+    /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
     planStartDate: string;
-    // 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss
+    /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
     planEndDate: string;
-    // 生产订单编号
+    /** 生产订单编号 */
     produceOrderCode: string;
-    // 物料ids
+    /** 物料ids */
     materialIds: number[];
-    // 生产任务状态列表
+    /** 生产任务状态列表 */
     produceTaskStatusList: string[];
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«long»
+/** JSONResult«long» */
 export interface IJSONResultlong {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: number;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

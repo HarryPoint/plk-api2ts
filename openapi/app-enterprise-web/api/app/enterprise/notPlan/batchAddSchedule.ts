@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/未排产订单相关/batchAddScheduleUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/batchAddScheduleUsingPOST
+*/
 export default function fetchMethod(data: IScheduleNewDtos[], extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,23 +13,23 @@ export default function fetchMethod(data: IScheduleNewDtos[], extraOptions?: any
         extraOptions,
     );
 }
-// 排班新增DTO
+/** 排班新增DTO */
 export interface IScheduleNewDtos {
-    // 排班日期 yyyy-MM-dd
+    /** 排班日期 yyyy-MM-dd */
     scheduleDate: string;
-    // 班次id
+    /** 班次id */
     classShiftId: number;
-    // 班组id
+    /** 班组id */
     classGroupIdList: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

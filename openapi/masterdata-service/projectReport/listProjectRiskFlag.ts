@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectRiskFlagUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectRiskFlagUsingPOST
+*/
 export default function fetchMethod(data: IItemNameNumberPublicQueryObject, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
@@ -11,38 +13,38 @@ export default function fetchMethod(data: IItemNameNumberPublicQueryObject, extr
         extraOptions,
     );
 }
-// 项目名称编号公共查询对象
+/** 项目名称编号公共查询对象 */
 export interface IItemNameNumberPublicQueryObject {
-    // 名称or编号
+    /** 名称or编号 */
     nameOrCode: string;
-    // 条数
+    /** 条数 */
     limit: number;
-    // 项目计划ids
+    /** 项目计划ids */
     projectPlanIds: number[];
-    // undefined
+    /** undefined */
     ids: number[];
-    // undefined
+    /** undefined */
     projectIds: number[];
-    // undefined
+    /** undefined */
     statusList: string[];
 }
-// JSONResult«List«Id Code Name 通用传输对象»»
+/** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IIdCodeNameGenericTransportObject[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// Id Code Name 通用传输对象
+/** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
-    // id
+    /** id */
     id: number;
-    // code
+    /** code */
     code: string;
-    // name
+    /** name */
     name: string;
 }

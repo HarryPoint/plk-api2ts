@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产原材料成本同步测试相关/getIssuanceByCodeUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产原材料成本同步测试相关/getIssuanceByCodeUsingGET
+*/
 export default function fetchMethod(params: { code: string }, extraOptions?: any) {
     return http<IJSONResultProductionMaterialIssuanceOrderCostFetchBO>(
         {
@@ -11,38 +13,38 @@ export default function fetchMethod(params: { code: string }, extraOptions?: any
         extraOptions,
     );
 }
-// JSONResult«ProductionMaterialIssuanceOrderCostFetchBO»
+/** JSONResult«ProductionMaterialIssuanceOrderCostFetchBO» */
 export interface IJSONResultProductionMaterialIssuanceOrderCostFetchBO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProductionMaterialIssuanceOrderCostFetchBO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProductionMaterialIssuanceOrderCostFetchBO
+/** ProductionMaterialIssuanceOrderCostFetchBO */
 export interface IProductionMaterialIssuanceOrderCostFetchBO {
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     billDate: string;
-    // undefined
+    /** undefined */
     detailList: IProductionMaterialIssuanceOrderCostFetchDetailBO[];
-    // undefined
+    /** undefined */
     success: string;
-    // undefined
+    /** undefined */
     errorInfo: string;
 }
-// ProductionMaterialIssuanceOrderCostFetchDetailBO
+/** ProductionMaterialIssuanceOrderCostFetchDetailBO */
 export interface IProductionMaterialIssuanceOrderCostFetchDetailBO {
-    // undefined
+    /** undefined */
     materialCode: string;
-    // undefined
+    /** undefined */
     issuanceQuantity: number;
-    // undefined
+    /** undefined */
     unitCost: number;
-    // undefined
+    /** undefined */
     totalCost: number;
 }

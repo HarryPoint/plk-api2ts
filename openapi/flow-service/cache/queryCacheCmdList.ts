@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/缓存相关/queryCacheCmdListUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/缓存相关/queryCacheCmdListUsingPOST
+*/
 export default function fetchMethod(data: ICacheCmdQueryRequestDTO, extraOptions?: any) {
     return http<IJSONResultListCacheCmdQueryResponseDTO>(
         {
@@ -11,38 +13,38 @@ export default function fetchMethod(data: ICacheCmdQueryRequestDTO, extraOptions
         extraOptions,
     );
 }
-// CacheCmdQueryRequestDTO
+/** CacheCmdQueryRequestDTO */
 export interface ICacheCmdQueryRequestDTO {
-    // undefined
+    /** undefined */
     cacheType: string;
-    // undefined
+    /** undefined */
     applicationName: string;
-    // undefined
+    /** undefined */
     serviceInstance: string;
 }
-// JSONResult«List«CacheCmdQueryResponseDTO»»
+/** JSONResult«List«CacheCmdQueryResponseDTO»» */
 export interface IJSONResultListCacheCmdQueryResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICacheCmdQueryResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// CacheCmdQueryResponseDTO
+/** CacheCmdQueryResponseDTO */
 export interface ICacheCmdQueryResponseDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     cmdType: string;
-    // undefined
+    /** undefined */
     cacheType: string;
-    // undefined
+    /** undefined */
     applicationName: string;
-    // undefined
+    /** undefined */
     serviceInstance: string;
-    // undefined
+    /** undefined */
     cacheKey: string;
 }

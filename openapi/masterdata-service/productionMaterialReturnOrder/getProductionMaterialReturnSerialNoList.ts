@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产退料单相关/getProductionMaterialReturnSerialNoListUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产退料单相关/getProductionMaterialReturnSerialNoListUsingPOST
+*/
 export default function fetchMethod(params: { productionMaterialIssuanceOrderDetailId: number }, extraOptions?: any) {
     return http<IJSONResultListProductionMaterialReturnSerialNoQueryResponseDTO>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(params: { productionMaterialIssuanceOrderDet
         extraOptions,
     );
 }
-// JSONResult«List«ProductionMaterialReturnSerialNoQueryResponseDTO»»
+/** JSONResult«List«ProductionMaterialReturnSerialNoQueryResponseDTO»» */
 export interface IJSONResultListProductionMaterialReturnSerialNoQueryResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProductionMaterialReturnSerialNoQueryResponseDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProductionMaterialReturnSerialNoQueryResponseDTO
+/** ProductionMaterialReturnSerialNoQueryResponseDTO */
 export interface IProductionMaterialReturnSerialNoQueryResponseDTO {
-    // undefined
+    /** undefined */
     serialNo: string;
-    // undefined
+    /** undefined */
     serialRemark: string;
 }

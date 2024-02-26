@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByMaterialIdsUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByMaterialIdsUsingPOST
+*/
 export default function fetchMethod(data: ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject, extraOptions?: any) {
     return http<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate>(
         {
@@ -11,30 +13,30 @@ export default function fetchMethod(data: ITheVTLBatchPrintTemplateHasBeenBoundT
         extraOptions,
     );
 }
-// 维联批次打印模板已绑定物料请求对象
+/** 维联批次打印模板已绑定物料请求对象 */
 export interface ITheVTLBatchPrintTemplateHasBeenBoundToAMaterialRequestObject {
-    // 打印模板id
+    /** 打印模板id */
     printTemplateId: number;
-    // 物料ids
+    /** 物料ids */
     materialIds: number[];
 }
-// JSONResult«List«维联批次打印模板绑定物料响应对象»»
+/** JSONResult«List«维联批次打印模板绑定物料响应对象»» */
 export interface IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IVTLBatchPrintTemplateBindingMaterialResponseObject[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 维联批次打印模板绑定物料响应对象
+/** 维联批次打印模板绑定物料响应对象 */
 export interface IVTLBatchPrintTemplateBindingMaterialResponseObject {
-    // 物料id
+    /** 物料id */
     materialId: number;
-    // 物料名称
+    /** 物料名称 */
     materialName: string;
-    // 物料编号
+    /** 物料编号 */
     materialCode: string;
 }

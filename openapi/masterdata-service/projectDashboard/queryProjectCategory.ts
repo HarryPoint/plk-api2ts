@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<ITheJSONResultListProjectClassDistributesResponseObjects>(
         {
@@ -10,23 +12,23 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«项目大类分布响应对象»»
+/** JSONResult«List«项目大类分布响应对象»» */
 export interface ITheJSONResultListProjectClassDistributesResponseObjects {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheProjectClassDistributesTheResponseObjects[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 项目大类分布响应对象
+/** 项目大类分布响应对象 */
 export interface ITheProjectClassDistributesTheResponseObjects {
-    // 项目大类名称
+    /** 项目大类名称 */
     projectCategoryName: string;
-    // 项目大类编号
+    /** 项目大类编号 */
     projectCategory: string;
-    // 分布数量
+    /** 分布数量 */
     distributeQuantity: number;
 }

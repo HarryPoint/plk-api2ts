@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/未排产订单相关/autoPlanComputeUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/autoPlanComputeUsingPOST
+*/
 export default function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO, extraOptions?: any) {
     return http<IJSONResultSchedulingResultVO>(
         {
@@ -11,143 +13,143 @@ export default function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO
         extraOptions,
     );
 }
-// 生产订单自动排产DTO
+/** 生产订单自动排产DTO */
 export interface IAutomaticProductionOrderSchedulingDTO {
-    // 待排产订单id集
+    /** 待排产订单id集 */
     waitProduceOrderIds: number[];
-    // 是否正向排产
+    /** 是否正向排产 */
     isAsc: string;
-    // 是否倒序排产
+    /** 是否倒序排产 */
     isDesc: string;
-    // 是否考虑自动提前
+    /** 是否考虑自动提前 */
     isAutoMoveUp: string;
-    // 排产开始时间 yyyy-MM-dd HH:mm:ss
+    /** 排产开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime: string;
-    // 排产结束时间 yyyy-MM-dd HH:mm:ss
+    /** 排产结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
 }
-// JSONResult«排产计算结果VO»
+/** JSONResult«排产计算结果VO» */
 export interface IJSONResultSchedulingResultVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ICalculationResultOfSchedulingVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 排产计算结果VO
+/** 排产计算结果VO */
 export interface ICalculationResultOfSchedulingVO {
-    // 正向排产结果分析
+    /** 正向排产结果分析 */
     ascAnalysis: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
-    // 倒序排产结果分析
+    /** 倒序排产结果分析 */
     descAnalysis: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
-    // 正向排产结果
+    /** 正向排产结果 */
     ascList: IUnscheduledProductionOrdersAreReturnedToVO1[];
-    // 倒序排产结果
+    /** 倒序排产结果 */
     descList: IUnscheduledProductionOrdersAreReturnedToVO1[];
-    // 正向顺延订单
+    /** 正向顺延订单 */
     ascPostponeList: IUnscheduledProductionOrdersAreReturnedToVO1[];
-    // 倒序顺延订单
+    /** 倒序顺延订单 */
     descPostponeList: IUnscheduledProductionOrdersAreReturnedToVO1[];
 }
-// 排产计算结果分析VO
+/** 排产计算结果分析VO */
 export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
-    // 排产方式
+    /** 排产方式 */
     autoPlanType: string;
-    // 是否按期交付
+    /** 是否按期交付 */
     isOnTime: string;
-    // 影响订单个数
+    /** 影响订单个数 */
     affectOrderCount: number;
-    // 超期订单个数
+    /** 超期订单个数 */
     overdueOrderCount: number;
-    // 超期原因类型集
+    /** 超期原因类型集 */
     overdueTypes: string[];
-    // 超期原因分析集
+    /** 超期原因分析集 */
     overdueReasons: string[];
-    // 还需增加工时(小时)
+    /** 还需增加工时(小时) */
     needPlusTime: number;
-    // 可增加工时日期集
+    /** 可增加工时日期集 */
     canPlusDays: LocalDateTime[];
 }
-// 未排产生产订单返回VO_1
+/** 未排产生产订单返回VO_1 */
 export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
-    // id
+    /** id */
     id: number;
-    // 是否加急
+    /** 是否加急 */
     isEmergentOrder: string;
-    // 生产订单编号
+    /** 生产订单编号 */
     code: string;
-    // 父级订单编号
+    /** 父级订单编号 */
     parentProduceOrderCode: string;
-    // 销售订单编号
+    /** 销售订单编号 */
     salesOrderCode: string;
-    // 生产物料id
+    /** 生产物料id */
     materialId: number;
-    // 生产物料名称
+    /** 生产物料名称 */
     materialName: string;
-    // 生产物料编号
+    /** 生产物料编号 */
     materialCode: string;
-    // 物料规格
+    /** 物料规格 */
     materialSpec: string;
-    // 物料单位id
+    /** 物料单位id */
     materialUnitId: number;
-    // 物料单位
+    /** 物料单位 */
     materialUnit: string;
-    // 计划交付日期
+    /** 计划交付日期 */
     deliveryDate: string;
-    // 订单计划开始日期
+    /** 订单计划开始日期 */
     beginTime: string;
-    // 订单计划结束日期
+    /** 订单计划结束日期 */
     endTime: string;
-    // 订单当前计划开始日期
+    /** 订单当前计划开始日期 */
     currentBeginTime: string;
-    // 订单当前计划结束日期
+    /** 订单当前计划结束日期 */
     currentEndTime: string;
-    // 订单优先级
+    /** 订单优先级 */
     priorityLevel: number;
-    // 工艺路径id
+    /** 工艺路径id */
     routingId: number;
-    // 工艺路径名称
+    /** 工艺路径名称 */
     routingName: string;
-    // 工艺路径编号
+    /** 工艺路径编号 */
     routingCode: string;
-    // 交付数量
+    /** 交付数量 */
     totalCount: number;
-    // 排产状态
+    /** 排产状态 */
     planStatus: string;
-    // 排产状态描述
+    /** 排产状态描述 */
     planStatusDesc: string;
-    // 步骤集
+    /** 步骤集 */
     steps: IUnscheduledProductionOrderStepReturnToVO1[];
 }
-// 未排产订单步骤返回VO_1
+/** 未排产订单步骤返回VO_1 */
 export interface IUnscheduledProductionOrderStepReturnToVO1 {
-    // id
+    /** id */
     id: number;
-    // 工序id
+    /** 工序id */
     processId: number;
-    // 工序名称
+    /** 工序名称 */
     processName: string;
-    // 工序编号
+    /** 工序编号 */
     processCode: string;
-    // 准备耗时
+    /** 准备耗时 */
     readyTime: number;
-    // 准备时间单位
+    /** 准备时间单位 */
     readyTimeUnit: string;
-    // 产能-生产时间
+    /** 产能-生产时间 */
     capacityProduceTime: number;
-    // 产能-时间类型
+    /** 产能-时间类型 */
     capacityTimeType: string;
-    // 产能-生产数量
+    /** 产能-生产数量 */
     capacityProduceQuantity: number;
-    // 工序计划开始日期
+    /** 工序计划开始日期 */
     beginTime: string;
-    // 工序计划结束日期
+    /** 工序计划结束日期 */
     endTime: string;
-    // 工序当前计划开始日期
+    /** 工序当前计划开始日期 */
     currentBeginTime: string;
-    // 工序当前计划结束日期
+    /** 工序当前计划结束日期 */
     currentEndTime: string;
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/仓位相关/getAreaWarehouseStorehouseTreeUsingGET
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getAreaWarehouseStorehouseTreeUsingGET
+*/
 export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListAreaWarehouseLocationTreeReturnsVO>(
         {
@@ -11,38 +13,38 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
         extraOptions,
     );
 }
-// JSONResult«List«区域仓库仓位树返回VO»»
+/** JSONResult«List«区域仓库仓位树返回VO»» */
 export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ITheRegionalWarehouseLocationTreeReturnsVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 区域仓库仓位树返回VO
+/** 区域仓库仓位树返回VO */
 export interface ITheRegionalWarehouseLocationTreeReturnsVO {
-    // id
+    /** id */
     id: number;
-    // 区域名称
+    /** 区域名称 */
     name: string;
-    // 区域名称
+    /** 区域名称 */
     code: string;
-    // 子区域
+    /** 子区域 */
     children: ITheRegionalWarehouseLocationTreeReturnsVO[];
-    // 仓库-仓位树
+    /** 仓库-仓位树 */
     warehouseStorehouseTree: ITheWarehouseLocationTreeReturnsVO[];
 }
-// 仓库仓位树返回VO
+/** 仓库仓位树返回VO */
 export interface ITheWarehouseLocationTreeReturnsVO {
-    // id
+    /** id */
     id: number;
-    // 仓库/仓位名称
+    /** 仓库/仓位名称 */
     name: string;
-    // 仓库/仓位编号
+    /** 仓库/仓位编号 */
     code: string;
-    // 子仓库/仓位
+    /** 子仓库/仓位 */
     children: ITheWarehouseLocationTreeReturnsVO[];
 }

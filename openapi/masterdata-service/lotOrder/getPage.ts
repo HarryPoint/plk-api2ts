@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getPageUsingPOST_7
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getPageUsingPOST_7
+*/
 export default function fetchMethod(data: IBatchOrderSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationBatchOrderReturnsVO>(
         {
@@ -12,155 +14,155 @@ export default function fetchMethod(data: IBatchOrderSearchVO, params: { enterpr
         extraOptions,
     );
 }
-// 批次订单搜索VO
+/** 批次订单搜索VO */
 export interface IBatchOrderSearchVO {
-    // 当前页面
+    /** 当前页面 */
     pageNo: number;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 生产订单号
+    /** 生产订单号 */
     produceOrderCode: string;
-    // 排序字段集
+    /** 排序字段集 */
     orders: IPagingSortVO[];
-    // 当前流水类型(界面上的批次当前生产状态)
+    /** 当前流水类型(界面上的批次当前生产状态) */
     lastFlowType: string;
-    // 批次订单号
+    /** 批次订单号 */
     lotOrderNo: string;
-    // 创建开始时间 yyyy-MM-dd HH:mm:ss
+    /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
     createBeginTime: string;
-    // 销售订单号
+    /** 销售订单号 */
     salesOrderCode: string;
-    // 创建结束时间 yyyy-MM-dd HH:mm:ss
+    /** 创建结束时间 yyyy-MM-dd HH:mm:ss */
     createEndTime: string;
-    // 对应物料id
+    /** 对应物料id */
     materialId: number;
-    // 来源类型
+    /** 来源类型 */
     sourceType: string;
-    // 来源批次单号
+    /** 来源批次单号 */
     sourceLotNo: string;
-    // 状态
+    /** 状态 */
     status: string;
 }
-// 分页排序VO
+/** 分页排序VO */
 export interface IPagingSortVO {
-    // undefined
+    /** undefined */
     column: string;
-    // undefined
+    /** undefined */
     isAsc: string;
 }
-// JSONResult«分页信息«批次订单返回VO»»
+/** JSONResult«分页信息«批次订单返回VO»» */
 export interface IJSONResultPagingInformationBatchOrderReturnsVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IPagingInformationBatchOrderReturnsVO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 分页信息«批次订单返回VO»
+/** 分页信息«批次订单返回VO» */
 export interface IPagingInformationBatchOrderReturnsVO {
-    // 当前页码
+    /** 当前页码 */
     pageNo: number;
-    // 分页大小
+    /** 分页大小 */
     pageSize: number;
-    // 总页数
+    /** 总页数 */
     totalPage: number;
-    // 总的记录数
+    /** 总的记录数 */
     totalCount: number;
-    // 分页列表
+    /** 分页列表 */
     list: IBatchOrderIsReturnedToVO[];
-    // 最后页页码
+    /** 最后页页码 */
     lastPage: number;
-    // 是否有上一页
+    /** 是否有上一页 */
     hasPreviousPage: string;
-    // 是否有下一页
+    /** 是否有下一页 */
     hasNextPage: string;
-    // 上一页页码
+    /** 上一页页码 */
     previousPage: number;
-    // 下一页页码
+    /** 下一页页码 */
     nextPage: number;
 }
-// 批次订单返回VO
+/** 批次订单返回VO */
 export interface IBatchOrderIsReturnedToVO {
-    // id
+    /** id */
     id: number;
-    // 批次名称
+    /** 批次名称 */
     lotName: string;
-    // 批次号
+    /** 批次号 */
     lotNo: string;
-    // 来源批次号
+    /** 来源批次号 */
     originalLotNo: string;
-    // 对应生产订单id
+    /** 对应生产订单id */
     produceOrderId: string;
-    // 对应生产订单号
+    /** 对应生产订单号 */
     produceOrderCode: string;
-    // 对应销售订单号
+    /** 对应销售订单号 */
     salesOrderCode: string;
-    // 对应物料id
+    /** 对应物料id */
     materialId: number;
-    // 对应物料名称
+    /** 对应物料名称 */
     materialName: string;
-    // 对应物料编号
+    /** 对应物料编号 */
     materialCode: string;
-    // 对应物料规格
+    /** 对应物料规格 */
     materialSpec: string;
-    // 对应物料单位
+    /** 对应物料单位 */
     materialUnit: string;
-    // 总数量
+    /** 总数量 */
     totalCount: number;
-    // 当前生产数量
+    /** 当前生产数量 */
     currentCount: number;
-    // 总报废数量
+    /** 总报废数量 */
     scrapTotalCount: number;
-    // 实际剩余数量
+    /** 实际剩余数量 */
     actualTotalCount: number;
-    // 拆出数量
+    /** 拆出数量 */
     changeTotalCount: number;
-    // 生产工艺路径id
+    /** 生产工艺路径id */
     produceTechnologyRoutingId: number;
-    // 生产工艺路径名称
+    /** 生产工艺路径名称 */
     produceTechnologyRoutingName: string;
-    // 生产工艺路径编号
+    /** 生产工艺路径编号 */
     produceTechnologyRoutingCode: string;
-    // 当前流水类型(界面上的当前生产状态)
+    /** 当前流水类型(界面上的当前生产状态) */
     lastFlowType: string;
-    // 当前流水类型描述
+    /** 当前流水类型描述 */
     lastFlowTypeDesc: string;
-    // 当前对应工艺路径步骤id
+    /** 当前对应工艺路径步骤id */
     lastProduceRoutingStepId: number;
-    // 当前对应工序id
+    /** 当前对应工序id */
     lastProcessId: number;
-    // 当前对应工序名称
+    /** 当前对应工序名称 */
     lastProcessName: string;
-    // 当前对应工序编号
+    /** 当前对应工序编号 */
     lastProcessCode: string;
-    // 当前工艺步骤 - 用于展示工艺进度条
+    /** 当前工艺步骤 - 用于展示工艺进度条 */
     lastRoutingStep: number;
-    // 总工艺数 - 用于展示工艺进度条
+    /** 总工艺数 - 用于展示工艺进度条 */
     totalStepCount: number;
-    // 状态
+    /** 状态 */
     status: string;
-    // 状态描述
+    /** 状态描述 */
     statusDesc: string;
-    // 来源集
+    /** 来源集 */
     sourceList: IBatchOrderSourceReturnedToVO[];
-    // 创建人id
+    /** 创建人id */
     createUserId: number;
-    // 创建人姓名
+    /** 创建人姓名 */
     createUsername: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 批次订单二维码值
+    /** 批次订单二维码值 */
     lotOrderQrcode: string;
 }
-// 批次订单来源返回VO
+/** 批次订单来源返回VO */
 export interface IBatchOrderSourceReturnedToVO {
-    // 来源类型
+    /** 来源类型 */
     sourceType: string;
-    // 来源类型描述
+    /** 来源类型描述 */
     sourceTypeDesc: string;
-    // 来源批次单号
+    /** 来源批次单号 */
     sourceLotNo: string;
 }

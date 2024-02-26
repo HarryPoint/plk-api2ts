@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/质检任务相关/getAbnormalTypeUsingGET_1
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getAbnormalTypeUsingGET_1
+*/
 export default function fetchMethod(params: { type: string }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(
         {
@@ -11,35 +13,35 @@ export default function fetchMethod(params: { type: string }, extraOptions?: any
         extraOptions,
     );
 }
-// JSONResult«List«异常类型返回VO»»
+/** JSONResult«List«异常类型返回VO»» */
 export interface ITheJSONResultListExceptionTypeReturnsVO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IExceptionTypeReturnsVO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 异常类型返回VO
+/** 异常类型返回VO */
 export interface IExceptionTypeReturnsVO {
-    // id
+    /** id */
     id: number;
-    // 所属分类
+    /** 所属分类 */
     type: string;
-    // 所属分类
+    /** 所属分类 */
     typeDesc: string;
-    // 类型名称
+    /** 类型名称 */
     name: string;
-    // 类型编号
+    /** 类型编号 */
     code: string;
-    // 数据状态
+    /** 数据状态 */
     dataStatus: number;
-    // 创建人
+    /** 创建人 */
     createUserId: number;
-    // 创建人姓名
+    /** 创建人姓名 */
     createUsername: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
 }

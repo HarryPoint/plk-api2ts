@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityPotentialsUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityPotentialsUsingPOST
+*/
 export default function fetchMethod(data: ISecurityRiskQueryRequest, extraOptions?: any) {
     return http<IJSONResultListResponseToASecurityHazardQuery>(
         {
@@ -11,34 +13,34 @@ export default function fetchMethod(data: ISecurityRiskQueryRequest, extraOption
         extraOptions,
     );
 }
-// 安全隐患查询请求
+/** 安全隐患查询请求 */
 export interface ISecurityRiskQueryRequest {
-    // 查询日期的开始
+    /** 查询日期的开始 */
     dateRangeBegin: string;
-    // 查询日期的结束
+    /** 查询日期的结束 */
     dateRangeEnd: string;
 }
-// JSONResult«List«安全隐患查询响应»»
+/** JSONResult«List«安全隐患查询响应»» */
 export interface IJSONResultListResponseToASecurityHazardQuery {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ISecurityRiskQueryResponse[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 安全隐患查询响应
+/** 安全隐患查询响应 */
 export interface ISecurityRiskQueryResponse {
-    // 检查类型-key
+    /** 检查类型-key */
     checkTypeKey: string;
-    // 检查类型-名称
+    /** 检查类型-名称 */
     checkTypeName: string;
-    // 已完成数量
+    /** 已完成数量 */
     completedQuantity: number;
-    // 进行中数量
+    /** 进行中数量 */
     progressQuantity: number;
-    // 超期数量
+    /** 超期数量 */
     overdueQuantity: number;
 }

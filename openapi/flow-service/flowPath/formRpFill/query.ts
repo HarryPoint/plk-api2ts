@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/流程相关/queryFormRpFillByConditionUsingPOST
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/流程相关/queryFormRpFillByConditionUsingPOST
+*/
 export default function fetchMethod(data: IFlowPathFormFieldFormRpQueryConditionVo, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultListFlowPathFormFieldFormRpFillVo>(
         {
@@ -12,46 +14,46 @@ export default function fetchMethod(data: IFlowPathFormFieldFormRpQueryCondition
         extraOptions,
     );
 }
-// FlowPathFormFieldFormRpQueryConditionVo
+/** FlowPathFormFieldFormRpQueryConditionVo */
 export interface IFlowPathFormFieldFormRpQueryConditionVo {
-    // undefined
+    /** undefined */
     flowPathIdList: number[];
-    // undefined
+    /** undefined */
     fillWayList: string[];
 }
-// JSONResult«List«FlowPathFormFieldFormRpFillVo»»
+/** JSONResult«List«FlowPathFormFieldFormRpFillVo»» */
 export interface IJSONResultListFlowPathFormFieldFormRpFillVo {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IFlowPathFormFieldFormRpFillVo[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// FlowPathFormFieldFormRpFillVo
+/** FlowPathFormFieldFormRpFillVo */
 export interface IFlowPathFormFieldFormRpFillVo {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     flowPathId: number;
-    // undefined
+    /** undefined */
     flowPathVersionId: number;
-    // undefined
+    /** undefined */
     flowPathVersionRank: number;
-    // undefined
+    /** undefined */
     flowPathFormFieldId: number;
-    // undefined
+    /** undefined */
     columnSerialNo: string;
-    // undefined
+    /** undefined */
     secondarySourceFieldSerialNo: string;
-    // undefined
+    /** undefined */
     secondarySourceFieldCode: string;
-    // undefined
+    /** undefined */
     fillFormFieldSerialNo: string;
-    // undefined
+    /** undefined */
     fillWay: string;
-    // undefined
+    /** undefined */
     isDisableEdited: string;
 }

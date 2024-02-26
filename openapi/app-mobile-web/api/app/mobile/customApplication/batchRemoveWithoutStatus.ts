@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/自定义应用相关/batchRemoveWithoutStatusUsingPOST
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/自定义应用相关/batchRemoveWithoutStatusUsingPOST
+*/
 export default function fetchMethod(data: IDynamicDataStatelessDeleteRequestObject, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,26 +13,26 @@ export default function fetchMethod(data: IDynamicDataStatelessDeleteRequestObje
         extraOptions,
     );
 }
-// 动态数据无状态删除请求对象
+/** 动态数据无状态删除请求对象 */
 export interface IDynamicDataStatelessDeleteRequestObject {
-    // 删除明细
+    /** 删除明细 */
     removeDetails: IDynamicDataStatelessDeletionOfDetailedRequestObjects[];
 }
-// 动态数据无状态删除明细请求对象
+/** 动态数据无状态删除明细请求对象 */
 export interface IDynamicDataStatelessDeletionOfDetailedRequestObjects {
-    // 流程id
+    /** 流程id */
     flowPathId: number;
-    // 动态数据id集合
+    /** 动态数据id集合 */
     formRecordIdList: number[];
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

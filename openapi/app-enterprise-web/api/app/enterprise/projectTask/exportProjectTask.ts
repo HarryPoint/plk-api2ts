@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/项目任务相关/exportProjectTaskUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/exportProjectTaskUsingGET
+*/
 export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
     return http<IModelAndView>(
         {
@@ -11,6 +13,6 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
         extraOptions,
     );
 }
-// ModelAndView
+/** ModelAndView */
 export interface IModelAndView {
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产标签相关/editUsingPOST_19
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产标签相关/editUsingPOST_19
+*/
 export default function fetchMethod(data: IProductionLabelEditingDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,27 +13,27 @@ export default function fetchMethod(data: IProductionLabelEditingDTO, extraOptio
         extraOptions,
     );
 }
-// 生产标签编辑DTO
+/** 生产标签编辑DTO */
 export interface IProductionLabelEditingDTO {
-    // id
+    /** id */
     id: number;
-    // 所属分类
+    /** 所属分类 */
     type: string;
-    // 标签名称
+    /** 标签名称 */
     name: string;
-    // 标签编号
+    /** 标签编号 */
     code: string;
-    // 是否应用编码规则
+    /** 是否应用编码规则 */
     isCodeRule: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

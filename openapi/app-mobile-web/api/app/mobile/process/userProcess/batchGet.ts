@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17400/doc.html#/default/工序相关/batchGetUserProcessUsingPOST
+/**
+* @link http://47.108.139.107:17400/doc.html#/default/工序相关/batchGetUserProcessUsingPOST
+*/
 export default function fetchMethod(data: number[], extraOptions?: any) {
     return http<IJSONResultListUserProcessVo>(
         {
@@ -11,29 +13,29 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«UserProcessVo»»
+/** JSONResult«List«UserProcessVo»» */
 export interface IJSONResultListUserProcessVo {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IUserProcessVo[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// UserProcessVo
+/** UserProcessVo */
 export interface IUserProcessVo {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     processId: number;
-    // undefined
+    /** undefined */
     executorType: string;
-    // undefined
+    /** undefined */
     refId: number;
-    // undefined
+    /** undefined */
     type: string;
-    // undefined
+    /** undefined */
     refName: string;
 }

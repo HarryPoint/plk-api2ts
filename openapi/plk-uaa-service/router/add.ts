@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/路由相关/editUsingPOST_1
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/路由相关/editUsingPOST_1
+*/
 export default function fetchMethod(data: ITheDTOWasAddedToTheRouteProcedure, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,55 +13,55 @@ export default function fetchMethod(data: ITheDTOWasAddedToTheRouteProcedure, ex
         extraOptions,
     );
 }
-// 路由新增 DTO
+/** 路由新增 DTO */
 export interface ITheDTOWasAddedToTheRouteProcedure {
-    // 客户端组编码
+    /** 客户端组编码 */
     clientGroupCode: string;
-    // 所属权限编码
+    /** 所属权限编码 */
     permissionCode: string;
-    // 父级路由id
+    /** 父级路由id */
     parentId: number;
-    // 父级路由编码
+    /** 父级路由编码 */
     parentCode: string;
-    // 路由name
+    /** 路由name */
     name: string;
-    // 路由code
+    /** 路由code */
     code: string;
-    // 类型
+    /** 类型 */
     type: string;
-    // 图标
+    /** 图标 */
     icon: string;
-    // 路由层级
+    /** 路由层级 */
     level: number;
-    // 路由排序
+    /** 路由排序 */
     sort: number;
-    // 是否存在数据权限
+    /** 是否存在数据权限 */
     hasDataAuth: string;
-    // 配置
+    /** 配置 */
     config: IRouteConfigurationRequestsDTO;
-    // 应用级别
+    /** 应用级别 */
     applicationLevel: string;
 }
-// 路由配置请求 DTO
+/** 路由配置请求 DTO */
 export interface IRouteConfigurationRequestsDTO {
-    // 菜单类型
+    /** 菜单类型 */
     menuType: string;
-    // 应用配置
+    /** 应用配置 */
     appConfig: IApplyTheRouteConfigurationRequestDTO;
 }
-// 应用路由配置请求 DTO
+/** 应用路由配置请求 DTO */
 export interface IApplyTheRouteConfigurationRequestDTO {
-    // 系统应用类型
+    /** 系统应用类型 */
     appSystemType: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

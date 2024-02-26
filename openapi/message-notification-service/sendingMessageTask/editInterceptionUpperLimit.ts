@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/editInterceptionUpperLimitUsingPOST
+/**
+* @link http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/editInterceptionUpperLimitUsingPOST
+*/
 export default function fetchMethod(data: IEditInterceptionUpperLimitRequestDTO, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
@@ -11,19 +13,19 @@ export default function fetchMethod(data: IEditInterceptionUpperLimitRequestDTO,
         extraOptions,
     );
 }
-// EditInterceptionUpperLimitRequestDTO
+/** EditInterceptionUpperLimitRequestDTO */
 export interface IEditInterceptionUpperLimitRequestDTO {
-    // undefined
+    /** undefined */
     interceptionUpperLimit: number;
 }
-// JSONResult«string»
+/** JSONResult«string» */
 export interface IJSONResultstring {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: string;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

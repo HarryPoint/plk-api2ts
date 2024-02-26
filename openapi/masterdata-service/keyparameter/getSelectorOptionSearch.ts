@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/关键参数相关/getSelectorOptionSearchUsingPOST_1
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/关键参数相关/getSelectorOptionSearchUsingPOST_1
+*/
 export default function fetchMethod(data: ISelectTheKeyParameterDropDownListToSearchForDtos, extraOptions?: any) {
     return http<IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos>(
         {
@@ -11,32 +13,32 @@ export default function fetchMethod(data: ISelectTheKeyParameterDropDownListToSe
         extraOptions,
     );
 }
-// 关键参数下拉选择列表搜索DTO
+/** 关键参数下拉选择列表搜索DTO */
 export interface ISelectTheKeyParameterDropDownListToSearchForDtos {
-    // 物料id
+    /** 物料id */
     materialId: number;
-    // 工序id
+    /** 工序id */
     processId: number;
-    // 关键参数名称
+    /** 关键参数名称 */
     keyParameterName: string;
 }
-// JSONResult«List«关键参数下拉选择列表搜索响应DTO»»
+/** JSONResult«List«关键参数下拉选择列表搜索响应DTO»» */
 export interface IJSONResultListKeyParameterDropDownSelectAListToSearchForResponseDtos {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IKeyParameterDropDownSelectAListToSearchForResponseDtos[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 关键参数下拉选择列表搜索响应DTO
+/** 关键参数下拉选择列表搜索响应DTO */
 export interface IKeyParameterDropDownSelectAListToSearchForResponseDtos {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
 }

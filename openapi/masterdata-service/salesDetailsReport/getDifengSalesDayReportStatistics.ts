@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesDayReportStatisticsUsingPOST_1
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesDayReportStatisticsUsingPOST_1
+*/
 export default function fetchMethod(data: GetDifengSalesDayReportStatistics, extraOptions?: any) {
     return http<IJSONResultSalesStatisticsReturnObject>(
         {
@@ -11,31 +13,31 @@ export default function fetchMethod(data: GetDifengSalesDayReportStatistics, ext
         extraOptions,
     );
 }
-// JSONResult«销售明细表统计返回对象»
+/** JSONResult«销售明细表统计返回对象» */
 export interface IJSONResultSalesStatisticsReturnObject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: ISalesStatementStatisticsReturnObject;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 销售明细表统计返回对象
+/** 销售明细表统计返回对象 */
 export interface ISalesStatementStatisticsReturnObject {
-    // 数量
+    /** 数量 */
     quantity: number;
-    // 含税金额
+    /** 含税金额 */
     amountWithTax: number;
-    // 销售收入
+    /** 销售收入 */
     amountWithDiscounted: number;
-    // 销售金额
+    /** 销售金额 */
     amountWithDiscountedTax: number;
-    // 销售成本
+    /** 销售成本 */
     salesCost: number;
-    // 销售毛利
+    /** 销售毛利 */
     salesGrossProfit: number;
-    // 佣金金额
+    /** 佣金金额 */
     commissionAmount: number;
 }

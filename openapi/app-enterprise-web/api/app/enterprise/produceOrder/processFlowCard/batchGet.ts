@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产订单相关/batchGetProcessFlowCardUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/batchGetProcessFlowCardUsingPOST
+*/
 export default function fetchMethod(data: number[], extraOptions?: any) {
     return http<IJSONResultListProcessFlowCardDTO>(
         {
@@ -11,69 +13,69 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«ProcessFlowCardDTO»»
+/** JSONResult«List«ProcessFlowCardDTO»» */
 export interface IJSONResultListProcessFlowCardDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IProcessFlowCardDTO[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// ProcessFlowCardDTO
+/** ProcessFlowCardDTO */
 export interface IProcessFlowCardDTO {
-    // undefined
+    /** undefined */
     produceOrderId: number;
-    // undefined
+    /** undefined */
     produceOrderCode: string;
-    // undefined
+    /** undefined */
     salesOrderCode: string;
-    // undefined
+    /** undefined */
     totalProduceOrderQuantity: number;
-    // undefined
+    /** undefined */
     standardSpecifications: string;
-    // undefined
+    /** undefined */
     customerName: string;
-    // undefined
+    /** undefined */
     textureOfMaterial: string;
-    // undefined
+    /** undefined */
     deliveryDate: string;
-    // undefined
+    /** undefined */
     blankingSize: string;
-    // undefined
+    /** undefined */
     blankingWight: string;
-    // undefined
+    /** undefined */
     heatNo: string;
-    // undefined
+    /** undefined */
     machinedDimensions: string;
-    // undefined
+    /** undefined */
     forgingDimensions: string;
-    // undefined
+    /** undefined */
     heatTreatment: string;
-    // undefined
+    /** undefined */
     roughCar: string;
-    // undefined
+    /** undefined */
     flawDetection: string;
-    // undefined
+    /** undefined */
     fineTurning: string;
-    // undefined
+    /** undefined */
     readyTime: string;
-    // undefined
+    /** undefined */
     machiningTime: string;
-    // undefined
+    /** undefined */
     drill: string;
-    // undefined
+    /** undefined */
     sign: string;
-    // undefined
+    /** undefined */
     orderNo: string;
-    // undefined
+    /** undefined */
     createUserName: string;
-    // undefined
+    /** undefined */
     serialNo: string;
-    // undefined
+    /** undefined */
     customNumber: string;
-    // undefined
+    /** undefined */
     isEmergentOrder: string;
 }

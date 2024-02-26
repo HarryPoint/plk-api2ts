@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/batchEditCellValueUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/batchEditCellValueUsingPOST
+*/
 export default function fetchMethod(data: ICellData[], extraOptions?: any) {
     return http<IJSONResultstring>(
         {
@@ -11,51 +13,51 @@ export default function fetchMethod(data: ICellData[], extraOptions?: any) {
         extraOptions,
     );
 }
-// 单元格数据
+/** 单元格数据 */
 export interface ICellData {
-    // ID
+    /** ID */
     id: number;
-    // 单元格下标
+    /** 单元格下标 */
     cellIndex: number;
-    // 值
+    /** 值 */
     value: string;
-    // 表格数据ID
+    /** 表格数据ID */
     tableDataId: number;
-    // 表格数据ID
+    /** 表格数据ID */
     rowDataId: number;
-    // 关联字段信息
+    /** 关联字段信息 */
     fieldDefine: IAssociatedFieldDefinition1;
-    // 关联表单选项列表
+    /** 关联表单选项列表 */
     selectedItemList: IAssociationFormSelectedItemInputputDTO[];
 }
-// 关联字段定义_1
+/** 关联字段定义_1 */
 export interface IAssociatedFieldDefinition1 {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     code: string;
-    // undefined
+    /** undefined */
     name: string;
-    // undefined
+    /** undefined */
     fieldType: string;
-    // undefined
+    /** undefined */
     applicationCode: string;
 }
-// AssociationFormSelectedItemInputputDTO
+/** AssociationFormSelectedItemInputputDTO */
 export interface IAssociationFormSelectedItemInputputDTO {
-    // undefined
+    /** undefined */
     id: number;
-    // undefined
+    /** undefined */
     showFieldValue: string;
 }
-// JSONResult«string»
+/** JSONResult«string» */
 export interface IJSONResultstring {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: string;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

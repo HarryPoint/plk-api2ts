@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/公共相关/getDepartmentAndUserSelectorUsingGET
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/公共相关/getDepartmentAndUserSelectorUsingGET
+*/
 export default function fetchMethod(extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO2>(
         {
@@ -10,82 +12,82 @@ export default function fetchMethod(extraOptions?: any) {
         extraOptions,
     );
 }
-// JSONResult«List«Id，名称，编号VO»»_2
+/** JSONResult«List«Id，名称，编号VO»»_2 */
 export interface IJSONResultListIdNameNumberVO2 {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IIdNameNumberVO2[];
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// Id，名称，编号VO_2
+/** Id，名称，编号VO_2 */
 export interface IIdNameNumberVO2 {
-    // id
+    /** id */
     id: number;
-    // 名称
+    /** 名称 */
     name: string;
-    // 编号
+    /** 编号 */
     code: string;
-    // undefined
+    /** undefined */
     users: IEmployeeResponseObject[];
 }
-// 员工响应对象
+/** 员工响应对象 */
 export interface IEmployeeResponseObject {
-    // 创建用户ID
+    /** 创建用户ID */
     createUserId: number;
-    // 创建用户名
+    /** 创建用户名 */
     createUserName: string;
-    // 创建部门ID
+    /** 创建部门ID */
     createDeptId: number;
-    // 创建部门名称
+    /** 创建部门名称 */
     createDeptName: string;
-    // 更新部门ID
+    /** 更新部门ID */
     updateDeptId: number;
-    // 更新部门名称
+    /** 更新部门名称 */
     updateDeptName: string;
-    // 创建时间
+    /** 创建时间 */
     createTime: string;
-    // 更新用户ID
+    /** 更新用户ID */
     updateUserId: number;
-    // 出生日期
+    /** 出生日期 */
     birthday: string;
-    // 更新用户名称
+    /** 更新用户名称 */
     updateUserName: string;
-    // 更新时间
+    /** 更新时间 */
     updateTime: string;
-    // id
+    /** id */
     id: number;
-    // 所属企业id
+    /** 所属企业id */
     enterpriseId: number;
-    // 员工工号
+    /** 员工工号 */
     code: string;
-    // 员工姓名
+    /** 员工姓名 */
     name: string;
-    // 手机号码
+    /** 手机号码 */
     mobilePhone: string;
-    // 班组id
+    /** 班组id */
     classGroupId: number;
-    // 入职日期
+    /** 入职日期 */
     entryTime: string;
-    // 离职日期
+    /** 离职日期 */
     dimissionTime: string;
-    // 性别
+    /** 性别 */
     gender: string;
-    // 学历
+    /** 学历 */
     educational: string;
-    // 籍贯
+    /** 籍贯 */
     nativePlace: string;
-    // 任职部门id
+    /** 任职部门id */
     departmentId: number;
-    // 任职部门名称
+    /** 任职部门名称 */
     departmentName: string;
-    // 任职职位id
+    /** 任职职位id */
     positionId: number;
-    // 直属上级id
+    /** 直属上级id */
     higherUserId: number;
-    // 邮箱
+    /** 邮箱 */
     email: string;
 }

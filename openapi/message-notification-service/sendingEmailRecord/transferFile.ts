@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:17600/doc.html#/default/邮件任务/transferFilesUsingPOST
+/**
+* @link http://47.108.139.107:17600/doc.html#/default/邮件任务/transferFilesUsingPOST
+*/
 export default function fetchMethod(data: ITransferFileRequestDTO, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
@@ -11,30 +13,30 @@ export default function fetchMethod(data: ITransferFileRequestDTO, extraOptions?
         extraOptions,
     );
 }
-// TransferFileRequestDTO
+/** TransferFileRequestDTO */
 export interface ITransferFileRequestDTO {
-    // 邮件记录ID
+    /** 邮件记录ID */
     sendingEmailRecordId: number;
-    // undefined
+    /** undefined */
     sendingEmailAttachmentId: number;
-    // 文件ID列表
+    /** 文件ID列表 */
     attachmentList: IAttachmentRequestDTO[];
 }
-// AttachmentRequestDTO
+/** AttachmentRequestDTO */
 export interface IAttachmentRequestDTO {
-    // undefined
+    /** undefined */
     fileKey: number;
-    // undefined
+    /** undefined */
     name: string;
 }
-// JSONResult«string»
+/** JSONResult«string» */
 export interface IJSONResultstring {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: string;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

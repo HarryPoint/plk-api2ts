@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:18100/doc.html#/default/Saas授权相关/updatePasswordUsingPOST
+/**
+* @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/updatePasswordUsingPOST
+*/
 export default function fetchMethod(data: IUpdatePasswordRequestDTO, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IUpdatePasswordRequestDTO, extraOption
         extraOptions,
     );
 }
-// 更新密码请求 DTO
+/** 更新密码请求 DTO */
 export interface IUpdatePasswordRequestDTO {
-    // 旧密码
+    /** 旧密码 */
     oldPassword: string;
-    // 新密码
+    /** 新密码 */
     newPassword: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

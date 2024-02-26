@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/生产任务相关/changeStatusUsingPOST
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/changeStatusUsingPOST
+*/
 export default function fetchMethod(data: ITheProductionTaskChangesTheStatusDTO, params: { enterpriseId: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -12,25 +14,25 @@ export default function fetchMethod(data: ITheProductionTaskChangesTheStatusDTO,
         extraOptions,
     );
 }
-// 生产任务变更状态DTO
+/** 生产任务变更状态DTO */
 export interface ITheProductionTaskChangesTheStatusDTO {
-    // id
+    /** id */
     id: number;
-    // 状态
+    /** 状态 */
     status: string;
-    // 生产异常类型id
+    /** 生产异常类型id */
     produceAbnormalCategoryId: number;
-    // 备注
+    /** 备注 */
     remark: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

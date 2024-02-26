@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/batchResetAndDeleteSystemBySystemTypeUsingGET
+/**
+* @link http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/batchResetAndDeleteSystemBySystemTypeUsingGET
+*/
 export default function fetchMethod(params: { systemType: string }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,14 +13,14 @@ export default function fetchMethod(params: { systemType: string }, extraOptions
         extraOptions,
     );
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }

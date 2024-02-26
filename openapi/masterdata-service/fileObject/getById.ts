@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16700/doc.html#/default/文件对象相关/getByIdUsingGET_4
+/**
+* @link http://47.108.139.107:16700/doc.html#/default/文件对象相关/getByIdUsingGET_4
+*/
 export default function fetchMethod(params: { id: number }, extraOptions?: any) {
     return http<IJSONResultFileObjectDetailResponseDTO>(
         {
@@ -11,29 +13,29 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
         extraOptions,
     );
 }
-// JSONResult«文件对象明细响应DTO»
+/** JSONResult«文件对象明细响应DTO» */
 export interface IJSONResultFileObjectDetailResponseDTO {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: IFileObjectDetailResponseDTO;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
-// 文件对象明细响应DTO
+/** 文件对象明细响应DTO */
 export interface IFileObjectDetailResponseDTO {
-    // ID
+    /** ID */
     id: number;
-    // 文件名
+    /** 文件名 */
     name: string;
-    // 文件分类ID
+    /** 文件分类ID */
     fileCategoryId: number;
-    // 文件大小
+    /** 文件大小 */
     fileSize: number;
-    // 文件来源
+    /** 文件来源 */
     fileForm: string;
-    // 文件Key
+    /** 文件Key */
     fileKeys: Record<string, any>[];
 }

@@ -1,6 +1,8 @@
 import { http } from '@/api/http';
 
-// http://47.108.139.107:16400/doc.html#/default/生产处理返工相关/refuseUsingPOST
+/**
+* @link http://47.108.139.107:16400/doc.html#/default/生产处理返工相关/refuseUsingPOST
+*/
 export default function fetchMethod(data: IProductionHandlesReworkRejectRequestObjects, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
@@ -11,21 +13,21 @@ export default function fetchMethod(data: IProductionHandlesReworkRejectRequestO
         extraOptions,
     );
 }
-// 生产处理返工拒绝请求对象
+/** 生产处理返工拒绝请求对象 */
 export interface IProductionHandlesReworkRejectRequestObjects {
-    // 生产处理id
+    /** 生产处理id */
     id: number;
-    // 处理意见
+    /** 处理意见 */
     handleRemark: string;
 }
-// JSONResult«object»
+/** JSONResult«object» */
 export interface IJSONResultobject {
-    // 返回码
+    /** 返回码 */
     code: number;
-    // 返回消息说明
+    /** 返回消息说明 */
     msg: string;
-    // 响应结果
+    /** 响应结果 */
     data: Record<string, any>;
-    // 服务器结果返回时的 Unix timestamp,单位毫秒
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts: number;
 }
