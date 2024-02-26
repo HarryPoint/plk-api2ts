@@ -67,8 +67,179 @@ npm run api:update
 | serviceMap        |              需要转换的服务              |                                      Record<string, string>                                       |                                  null |
 | serviceNameToPath |       是否根据服务名称添加子级目录       |                                              boolean                                              |                                 false |
 | translate         | 是否启用翻译（自动翻译中文为对应的英文） |                                              boolean                                              |                                  true |
-| customContent     |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                              () => '' |
+| customContent     |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                          详见下方说明 |
 | prefix            |               类型定义前缀               |                                              string                                               |                                   'I' |
+
+## customContent 默认函数如下
+```javascript
+import { SourceFile } from "ts-morph";
+
+export const customContent = async (
+  data: any,
+  definitionsFile: SourceFile,
+  transFormType: (arg: any) => string
+) => {
+  for (let url in data.paths) {
+    const fetchDefines = data.paths[url];
+    for (let method in fetchDefines) {
+      const methodDefine = fetchDefines[method];
+      definitionsFile.addStatements((writer) => {
+        writer.writeLine(`import { http } from '@/api/http';`);
+        writer.writeLine(" ");
+        writer.writeLine("/**");
+        const docUrl = `http://${
+          data.host
+        }/doc.html#/default/${methodDefine.tags?.join("/")}/${
+          methodDefine.operationId
+        }`;
+        writer.writeLine(`* @link ${docUrl}`);
+        writer.writeLine("*/");
+        console.log("docUrl: ", docUrl);
+      });
+      const functionDeclaration = definitionsFile.addFunction({
+        name: "fetchMethod",
+        isDefaultExport: true,
+      });
+      const responseDefine = methodDefine.responses?.[200]?.schema;
+      let bodyDefine: any;
+      let queryDefine: any;
+      let arrayQueryDefineMap: Record<string, any> = {};
+      methodDefine.parameters?.forEach((paramsDefine: any) => {
+        if (paramsDefine.in === "body") {
+          bodyDefine = paramsDefine;
+        }
+        if (paramsDefine.in === "query") {
+          if (!queryDefine) {
+            queryDefine = {
+              in: "query",
+              schema: {
+                type: "object",
+                properties: {},
+              },
+            };
+          }
+          if (paramsDefine.name.includes("[0]")) {
+            const keyArr = paramsDefine.name.split("[0].");
+            const name = keyArr[0];
+            const key = keyArr[1];
+            let targetDefine = arrayQueryDefineMap[name];
+            if (!targetDefine) {
+              targetDefine = {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {},
+                },
+              };
+            }
+            targetDefine.items.properties[key] = paramsDefine;
+            arrayQueryDefineMap[name] = targetDefine;
+          } else {
+            queryDefine.schema.properties[paramsDefine.name] = paramsDefine;
+          }
+        }
+      });
+      if (queryDefine) {
+        queryDefine.schema.properties = {
+          ...queryDefine.schema.properties,
+          ...arrayQueryDefineMap,
+        };
+      }
+      const defineArr = [bodyDefine, queryDefine].filter(Boolean);
+      defineArr.forEach((defineItem) => {
+        const name = defineItem.in === "body" ? "data" : "params";
+        functionDeclaration.addParameter({
+          name,
+          type: transFormType(defineItem.schema),
+        });
+      });
+      functionDeclaration.addParameter({
+        name: "extraOptions",
+        type: "any",
+        hasQuestionToken: true,
+      });
+      functionDeclaration.setBodyText((writer) => {
+        writer.writeLine(
+          `return http<${
+            responseDefine ? `${transFormType(responseDefine)}` : "any"
+          }>(`
+        );
+        writer.writeLine(`  {`);
+        writer.writeLine(`  url: "${url}",`);
+        writer.writeLine(`  method: "${method}",`);
+        defineArr?.forEach((paramsDefine: any) => {
+          if (paramsDefine.in === "body") {
+            writer.writeLine(`  data,`);
+          }
+          if (paramsDefine.in === "query") {
+            writer.writeLine(`  params,`);
+          }
+        });
+        writer.writeLine(`},`);
+        writer.writeLine(`extraOptions,`);
+        writer.writeLine(`);`);
+      });
+    }
+  }
+};
+
+```
+结果示例
+```javascript
+import { http } from '@/api/http';
+
+/**
+* @link http://xxxx/doc.html#/default/库存查询相关/exportUsingPOST_58
+*/
+export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, extraOptions?: any) {
+    return http<IJSONResultlong>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/export",
+            method: "post",
+            data,
+        },
+        extraOptions,
+    );
+}
+/** 物料主数据库存搜索VO */
+export interface IMaterialMasterDataInventorySearchVO {
+    /** 当前页面 */
+    pageNo: number;
+    /** 物料名称 */
+    materialName: string;
+    /** 分页大小 */
+    pageSize: number;
+    /** 排序字段集 */
+    orders: IPagingSortVO[];
+    /** 物料id集 */
+    materialIds: number[];
+    /** 编号 */
+    materialCode: string;
+    /** 规格 */
+    materialSpec: string;
+    /** 仓库id */
+    storehouseIds: number[];
+}
+/** 分页排序VO */
+export interface IPagingSortVO {
+    /** undefined */
+    column: string;
+    /** undefined */
+    isAsc: string;
+}
+/** JSONResult«long» */
+export interface IJSONResultlong {
+    /** 返回码 */
+    code: number;
+    /** 返回消息说明 */
+    msg: string;
+    /** 响应结果 */
+    data: number;
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
+    ts: number;
+}
+
+```
 
 ## CASE
 
@@ -89,6 +260,19 @@ module.exports = () => {
 
 2. 自动生成的翻译名称不符合要求
 修改 translateCache.json 中字典内容，重新执行代码生成逻辑 `npm run api2ts`
+
+
+## 功能清单
+
+| 功能内容                   | 是否支持 |
+| :------------------------- | -------: |
+| 接口数据同步               |       是 |
+| 接口数据类型定义自动生成   |       是 |
+| 接口定义名称翻译           |       是 |
+| 接口定义翻译结果调整       |       是 |
+| 自定义api服务              |       是 |
+| 根据服务名称创建文件夹归类 |       是 |
+| 自定义生成文件内容         |       是 |
 
 ## :copyright: License
 
