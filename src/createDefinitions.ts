@@ -33,7 +33,10 @@ export const createDefinitions = async (
 ) => {
   const { translate = true, prefix = "I", customContent } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
-
+  const formatEnumValue = (str: string) => {
+    const newStrArr = str.trim().split("-");
+    return newStrArr[0];
+  };
   const transFormType = (define: any): string => {
     if (define.originalRef) {
       if (!definitionsMap[define.originalRef]) {
@@ -43,7 +46,7 @@ export const createDefinitions = async (
     }
     const typeOrigin = typeMap[define.type as keyof typeof typeMap];
     if (typeOrigin === typeMap.array) {
-      return transFormType(define.items) + "[]";
+      return `(${transFormType(define.items)})[]`;
     }
     if (typeOrigin === typeMap.object) {
       if (define.properties) {
@@ -62,6 +65,11 @@ export const createDefinitions = async (
           ? transFormType(define?.additionalProperties)
           : "any"
       }>`;
+    }
+    if (typeOrigin === typeMap.string && define.enum) {
+      return define.enum
+        ?.map((item: string) => `'${formatEnumValue(item)}'`)
+        .join(" | ");
     }
     return typeOrigin;
   };
