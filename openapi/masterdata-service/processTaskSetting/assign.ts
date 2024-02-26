@@ -18,7 +18,7 @@ export interface IProcessTaskAssignmentDTO {
     /** 工序ids */
     processIds: number[];
     /** 是否分配  Y 分配 N 不分配 */
-    isAssign: string;
+    isAssign: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

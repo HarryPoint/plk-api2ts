@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: ISecurityInventoryChangeReq
 /** 安全库存变更申请配置 */
 export interface ISecurityInventoryChangeRequestConfiguration {
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
     /** 申请单号 */
     applyNo?: string;
     /** 是否应用编码规则 */
-    isCodeRule?: string;
+    isCodeRule?: ('Y' | 'N');
     /** 物料id */
     materialId?: number;
     /** 安全库存下限 */
@@ -34,7 +34,7 @@ export interface ISecurityInventoryChangeRequestConfiguration {
     /** 通知人id集 */
     sendUserIds?: number[];
     /** 通知类型 */
-    sendType?: string;
+    sendType?: ('MESSAGE');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

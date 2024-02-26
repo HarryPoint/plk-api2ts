@@ -42,5 +42,5 @@ export interface IFlowPathDetailPageConfigItem {
     /** 页签名称/别名 */
     aliasName?: string;
     /** App/FlowPath类型 */
-    appType?: string;
+    appType?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
 }

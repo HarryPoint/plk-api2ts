@@ -38,14 +38,14 @@ export interface IFileClassificationDetailsRespondToDTO {
 /** FileCategoryPermissionResponseDTO */
 export interface IFileCategoryPermissionResponseDTO {
     /** 权限类型 */
-    permissionTypeList?: string[];
+    permissionTypeList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
     /** 组织列表 */
     organizations?: IFileCategoryOrganizationResponseDTO[];
 }
 /** FileCategoryOrganizationResponseDTO */
 export interface IFileCategoryOrganizationResponseDTO {
     /** 组织 */
-    organization?: string;
+    organization?: ('USER' | 'DEPARTMENT' | 'ROLE' | 'ALL');
     /** 文件组织ID */
     organizationId?: number;
     /** 组织名称 */

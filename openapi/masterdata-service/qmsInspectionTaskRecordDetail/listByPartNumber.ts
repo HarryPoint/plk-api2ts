@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: ICheckTaskCheckRecordQueryR
 /** 检验任务检验记录查询请求DTO */
 export interface ICheckTaskCheckRecordQueryRequestDTO {
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
     /** 检验任务id */
     inspectionTaskId?: number;
     /** 零件号 */
     partNumber?: string;
     /** 三检制类型 */
-    threeInspectionSystem?: string;
+    threeInspectionSystem?: ('SELF_INSPECTION' | 'MUTUAL_INSPECTION' | 'SPECIAL_INSPECTION');
 }
 /** JSONResult«List«检验任务检验记录查询响应DTO»» */
 export interface IJSONResultListValidationTaskValidatesTheRecordQueryResponseDTO {
@@ -40,7 +40,7 @@ export interface ICheckTaskCheckRecordQueryResponseDTO {
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -52,5 +52,5 @@ export interface ICheckTaskCheckRecordQueryResponseDTO {
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }

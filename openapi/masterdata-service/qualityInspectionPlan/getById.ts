@@ -63,7 +63,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 创建时间 */
     createTime?: string;
     /** 质检方式 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 质检比例 */
     qualityInspectionRatio?: number;
     /** 质检数量 */
@@ -103,17 +103,17 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
     /** 所属质检项编号 */
     qualityInspectionItemCode?: string;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: string;
+    selectType?: ('SELECTOR' | 'CHECKBOX');
     /** 选择描述 */
     selectTypeDesc?: string;
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */

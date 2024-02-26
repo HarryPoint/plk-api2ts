@@ -28,7 +28,7 @@ export interface IEditTheInspectionTaskDTO {
     /** 质检分类id */
     qualityInspectionCategoryId: number;
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule: ('Y' | 'N');
     /** 物料位置id */
     qualityWarehouseId?: number;
     /** 检验位置id */
@@ -40,7 +40,7 @@ export interface IEditTheInspectionTaskDTO {
     /** 采购收货单id */
     purchaseWorkOrderId?: number;
     /** 质检任务类型 */
-    taskType: string;
+    taskType: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

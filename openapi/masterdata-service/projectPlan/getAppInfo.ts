@@ -37,5 +37,5 @@ export interface ITheProjectPlanAppliesTheResponseObject {
     /** 任务流程状态 */
     flowStatus?: string;
     /** 数据状态 */
-    dataStatus?: string;
+    dataStatus?: ('INVALID' | 'VALID' | 'STAGING' | 'DELETED');
 }

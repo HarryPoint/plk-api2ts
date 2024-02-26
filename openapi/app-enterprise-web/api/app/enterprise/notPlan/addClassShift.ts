@@ -24,7 +24,7 @@ export interface IShiftEditorDTO {
     /** 开始时间 HH:mm */
     beginTime: string;
     /** 班次结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
     /** 结束时间 HH:mm */
     endTime: string;
 }

@@ -39,9 +39,9 @@ export interface IPageInformationItemProjectPhaseTaskResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -111,7 +111,7 @@ export interface IProjectTaskResponseObject9 {
     /** 任务负责人名称 */
     leaderUserNameList?: string[];
     /** 任务状态 */
-    taskStatus?: string;
+    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
     /** 前置任务列表 */
     preTaskList?: IProjectTaskPreTaskResponseObject[];
     /** 任务开始日期 */
@@ -141,7 +141,7 @@ export interface IProjectTaskResponseObject9 {
     /** 备注 */
     remark?: string;
     /** 是否超期 */
-    isOverdue?: string;
+    isOverdue?: ('Y' | 'N');
     /** 层级 */
     level?: number;
     /** 排序 */
@@ -155,9 +155,9 @@ export interface IProjectTaskResponseObject9 {
     /** 当前登录员工所属待办id */
     currentEmployeeTodoId?: number;
     /** 当前登录员工所属待办状态 */
-    currentEmployeeTodoStatus?: string;
+    currentEmployeeTodoStatus?: ('NOT_HANDLE' | 'NOT_READ' | 'HANDLED' | 'READ');
     /** 状态 */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 数据状态 0停用，1启用，2暂存 */
     dataStatus?: number;
     /** 创建员工名称 */
@@ -183,9 +183,9 @@ export interface IProjectTaskResponseObject9 {
     /** 任务权重 */
     taskWeight?: number;
     /** 项目计划模块是否展示 */
-    isProjectPlanShow?: string;
+    isProjectPlanShow?: ('Y' | 'N');
     /** 项目任务模块是否展示 */
-    isProjectTaskShow?: string;
+    isProjectTaskShow?: ('Y' | 'N');
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */

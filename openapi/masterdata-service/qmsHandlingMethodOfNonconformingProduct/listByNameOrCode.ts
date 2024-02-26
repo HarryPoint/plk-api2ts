@@ -38,7 +38,7 @@ export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
     /** 处理方式 */
     handingMethod?: string;
     /** 适用检验类型 */
-    useValidationTypes?: string;
+    useValidationTypes?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
     /** 适用检验类型描述 */
     useValidationTypesDesc?: string;
 }

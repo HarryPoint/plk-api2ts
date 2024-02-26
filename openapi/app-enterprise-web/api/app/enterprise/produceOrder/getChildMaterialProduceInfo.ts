@@ -91,11 +91,11 @@ export interface ISubMaterialProductionInformationVO {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用批次 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {

@@ -18,13 +18,13 @@ export interface IEditTheDTOForProductionExceptionTypes {
     /** id */
     id?: number;
     /** 所属分类 */
-    type: string;
+    type: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 类型名称 */
     name: string;
     /** 类型编号 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule?: string;
+    isCodeRule?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

@@ -48,5 +48,5 @@ export interface IIncomingBomConsumptionScansInResponseToDTO {
     /** 序列号编号 */
     serialNoCode?: string;
     /** 是否有重复 */
-    hasRepeat?: string;
+    hasRepeat?: ('Y' | 'N');
 }

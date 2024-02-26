@@ -20,7 +20,7 @@ export interface IEditDTOForWarehouseInventoryTaskBatch {
     /** 计划开始时间，yyyy-MM-dd HH:mm:ss */
     planBeginTime?: string;
     /** 盘点范围 */
-    scopeType: string;
+    scopeType: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
     /** 物料大类列表，盘点范围为物料类型时必填 */
     handleMaterialTypes?: string[];
     /** 指定仓库仓位id集，盘点范围为指定仓位时必填，只传最底层仓位 */

@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISetExecutorDTO[]params: { 
 /** SetExecutorDTO */
 export interface ISetExecutorDTO {
     /** undefined */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
     /** undefined */
     refIdList?: number[];
 }
@@ -27,7 +27,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

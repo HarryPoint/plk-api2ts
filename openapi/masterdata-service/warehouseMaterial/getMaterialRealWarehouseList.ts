@@ -20,7 +20,7 @@ export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     /** 仓库ids */
     storehouseIds?: number[];
     /** 仓库类型 */
-    warehouseTypes?: string[];
+    warehouseTypes?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP')[];
 }
 /** JSONResult«List«物料实时库从返回VO»» */
 export interface IJSONResultListMaterialRealTimeLibraryFromVO {

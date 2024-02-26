@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ISingleSignOnRequestDTO }, 
 /** 单点登录请求 DTO */
 export interface ISingleSignOnRequestDTO {
     /** 单点登陆系统类型 */
-    ssoSystem: string;
+    ssoSystem: ('PLK' | 'KING_DEE_YZJ');
     /** 单点登陆目标模块 */
-    module?: string;
+    module?: ('QMS' | 'PROJECT');
     /** 登陆企业id */
     enterpriseId: number;
     /** appId */

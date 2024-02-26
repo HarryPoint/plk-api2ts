@@ -127,7 +127,7 @@ export interface IProcessPathSelectionVO {
     /** 工艺路径编号 */
     code?: string;
     /** 是否物料默认 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 物料bomId */
     materialBomId?: number;
     /** 物料bom名称 */

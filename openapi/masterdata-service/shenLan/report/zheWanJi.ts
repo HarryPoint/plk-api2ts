@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«深蓝折弯机报表»» */
 export interface IJSONResultListDarkBluePressReport {

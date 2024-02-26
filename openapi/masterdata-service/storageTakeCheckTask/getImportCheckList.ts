@@ -140,11 +140,11 @@ export interface IWarehouseInventoryListReturnedToDTO {
     /** 批次号 */
     lotNo?: string;
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用序列号 */
-    hasWarehouseMaterial?: string;
+    hasWarehouseMaterial?: ('Y' | 'N');
     /** 序列号集 */
     serialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 匹配序列号集 */

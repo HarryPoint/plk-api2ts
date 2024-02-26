@@ -37,13 +37,13 @@ export interface IDataEaseMenuDetailsResponseObject {
     /** 链接地址 */
     originalLinkUrl?: string;
     /** 是否在PC端发布 */
-    isPcTerminal?: string;
+    isPcTerminal?: ('Y' | 'N');
     /** 是否在移动端发布 */
-    isMobileTerminal?: string;
+    isMobileTerminal?: ('Y' | 'N');
     /** PC端发布路由id */
     pcTerminalPublishRouteId?: number;
     /** PC端展示方式 */
-    pcTerminalDisplayMode?: string;
+    pcTerminalDisplayMode?: ('EMBED_PAGE' | 'SINGLE_PAGE');
     /** 移动端发布路由id */
     mobileTerminalPublishRouteId?: number;
 }

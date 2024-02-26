@@ -47,5 +47,5 @@ export interface IEnterpriseResponseObject {
     /** 企业名 */
     name?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: string;
+    isEnableBatchManagement?: ('Y' | 'N');
 }

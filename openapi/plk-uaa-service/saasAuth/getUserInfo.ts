@@ -41,9 +41,9 @@ export interface ISaasUserInformationResponse {
     /** 部门信息 */
     department?: IDepartmentRespondsToDTO;
     /** 是否是超级管理员 */
-    isManage?: string;
+    isManage?: ('Y' | 'N');
     /** 是否是管理员 */
-    isAdmin?: string;
+    isAdmin?: ('Y' | 'N');
 }
 /** Saas企业响应 DTO */
 export interface ISaasEnterprisesRespondToDtos {
@@ -70,7 +70,7 @@ export interface ISaasEnterprisesRespondToDtos {
     /** 企业名 */
     name?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: string;
+    isEnableBatchManagement?: ('Y' | 'N');
 }
 /** 员工信息响应 */
 export interface IEmployeeInformationResponse {

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/getByCodeUsingGET
 */
-export default function fetchMethod(options: { params: { businessCode?: string; code?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessCode?: ('MATERIAL_TYPE' | 'DEPARTMENT_ORG_CATEGORY' | 'DEPARTMENT_ORG_TYPE' | 'PROJECT_TYPE' | 'PROJECT_CATEGORY' | 'PROJECT_TASK_PRIORITY' | 'PROJECT_ACTION_ITEM_TYPE' | 'PROJECT_FEEDBACK_CYCLE' | 'PROJECT_MEETING_TYPE' | 'PROJECT_SECRET_TYPE' | 'QMS_ANNUAL_QUALITY_MONITOR_RATE' | 'QMS_QUALITATIVE_TARGET_VALUE' | 'QMS_QUALITY_WORK_PLAN_COMPLETE_STATUS' | 'QMS_INTERNAL_AUDIT_AND_INSPECTION_RESULT' | 'QMS_INTERNAL_AUDIT_LEVEL_OF_NON_CONFORMANCE' | 'QMS_INTERNAL_AUDIT_CORRECTIVE_RESULT' | 'QMS_EXTERNAL_AUDIT_CORRECTIVE_RESULT' | 'QMS_SPECIAL_AUDIT_CORRECTIVE_RESULT' | 'QMS_INTERNAL_AUDIT_IMPLEMENTATION_PLAN_WORK_TYPE' | 'QMS_EXTERNAL_AUDIT_NON_CONFORMANCE_REPORT_LEVEL_OF_NON_CONFORMANCE' | 'QMS_SPECIAL_AUDIT_AND_INSPECTION_RECORDS_INSPECTION_RESULT' | 'QMS_SPECIAL_AUDIT_NON_CONFORMANCE_REPORT_LEVEL_OF_NON_CONFORMANCE' | 'QMS_SAMPLING_STANDARDS_NATIONAL_DOCUMENTS' | 'QMS_QUALITY_PERSONNEL_AUTHORIZED_INSPECTION_DUTIES' | 'QMS_QUALITY_PERSONNEL_WORKING_FORM' | 'QMS_QUALITY_PERSONNEL_GROUP' | 'QMS_QUALITY_PERSONNEL_CERTIFICATE_NAME' | 'QMS_QUALITY_PERSONNEL_CERTIFICATE_STATUS' | 'QMS_SEAL_STYLE_QUALIFICATION' | 'QMS_SEAL_STATUS' | 'QMS_ANNUAL_QUALITY_TARGET_CATEGORY' | 'QMS_SAMPLING_STANDARDS_AQL' | 'QMS_SAMPLING_STANDARDS_CHARACTER_CODE' | 'QMS_SAMPLING_STANDARDS_LEVEL' | 'QMS_INSPECTION_INCOMING_TYPE' | 'QMS_PROJECT_TASK_REVIEW_RESULT' | 'QMS_PROJECT_TASK_DECISION_RESULT' | 'QMS_INSPECTION_BUSINESS_TYPE' | 'DEVICE_EMPLOYEE_MAINTAIN_LEVEL'); code?: string; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO>(
         {
             url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getByCode",
@@ -35,9 +35,9 @@ export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
     /** undefined */
     code?: string;
     /** 是否预设 */
-    isPreset?: string;
+    isPreset?: ('Y' | 'N');
     /** 能否修改 */
-    isCanModify?: string;
+    isCanModify?: ('Y' | 'N');
     /** 能否删除 */
-    isCanDelete?: string;
+    isCanDelete?: ('Y' | 'N');
 }

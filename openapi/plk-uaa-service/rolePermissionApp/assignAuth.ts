@@ -36,7 +36,7 @@ export interface IRoleRightsApplyAuthorizationDetailsToRequestTheDTO {
 /** 企业数据权限列表响应_1 */
 export interface IEnterpriseDataPermissionListResponse1 {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
     /** 数据权限对应的字段列表(只针对表单字段类型) */
     roleDataAuthFieldList?: IEditTheDTOForRoleDataPermissionField[];
 }

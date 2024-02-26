@@ -47,7 +47,7 @@ export interface IBomRespondsToTheObject {
     /** 物料单位 */
     unit?: string;
     /** 是否是默认BOM */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 子物料列表 */
     childMaterialList?: IBomDetailsResponseObject[];
 }

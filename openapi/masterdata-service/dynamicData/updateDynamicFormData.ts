@@ -26,7 +26,7 @@ export interface IDynamicFormDataUpdateRequestDTO {
     /** undefined */
     idFieldSerialNoToValueListMap?: Record<string, string[]>;
     /** undefined */
-    isUpdateDetailTable?: string;
+    isUpdateDetailTable?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

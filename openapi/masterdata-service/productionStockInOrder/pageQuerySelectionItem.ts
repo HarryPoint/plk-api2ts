@@ -28,14 +28,14 @@ export interface IPaging13 {
     /** 生产物料ID */
     produceMaterialIdList?: number[];
     /** 是否入库前先领料 */
-    isBeforeStorageIssuanceMaterial?: string;
+    isBeforeStorageIssuanceMaterial?: ('Y' | 'N');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»_1 */
 export interface IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation {
@@ -63,9 +63,9 @@ export interface IThePagingInformationProduceOrderSelectionItemQueryResponseDTO1
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */

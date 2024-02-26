@@ -39,11 +39,11 @@ export interface IProcessDeprecatedVO {
     /** 准备时间 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 生产时间 */
     produceTime?: number;
     /** 生产时间单位 */
-    produceTimeUnit?: string;
+    produceTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产出数量 */
     produceQuantity?: number;
     /** 准备工费（元） */

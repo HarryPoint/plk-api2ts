@@ -18,7 +18,7 @@ export interface IProductionTaskBatchInformationQueryDTOForMobileTerminals {
     /** 任务ids */
     taskIds?: number[];
     /** 进出料类型 */
-    produceTaskOptType?: string;
+    produceTaskOptType?: ('CAN_IN' | 'CAN_OUT');
 }
 /** JSONResult«List«生产任务分组批次订单响应DTO(针对移动端)»» */
 export interface IJSONResultListProductionTaskGroupingBatchOrderResponseDTOForMobile {

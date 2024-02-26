@@ -24,21 +24,21 @@ export interface IPrintTheTemplateRequestObject {
     /** 企业路由id */
     enterpriseRouterIds?: number[];
     /** 模板类型 */
-    type?: string;
+    type?: ('LIST' | 'FORM' | 'FORM_DETAIL');
     /** 画布大小类型 */
-    canvasSizeType?: string;
+    canvasSizeType?: ('A3' | 'A4' | 'A5' | 'A6' | 'CUSTOM');
     /** 画布高 */
     height?: number;
     /** 画布宽 */
     width?: number;
     /** 画布方向类型 */
-    canvasDirectionType?: string;
+    canvasDirectionType?: ('TRANSVERSE' | 'LONGITUDINAL');
     /** 每页添加表头表尾 */
-    sameHeaderTail?: string;
+    sameHeaderTail?: ('Y' | 'N');
     /** 每页添加表格列名称 */
-    sameColumn?: string;
+    sameColumn?: ('Y' | 'N');
     /** 是否需要一页纸张打印多个模板 */
-    mutiTemplate?: string;
+    mutiTemplate?: ('Y' | 'N');
     /** 背景图片key */
     bgPicKey?: string;
     /** 模板JSON结构 */
@@ -55,7 +55,7 @@ export interface IPrintTheTemplateFieldRequestObject {
     /** 字段名称 */
     name?: string;
     /** 字段类型 */
-    type?: string;
+    type?: ('FIELD' | 'TEXT' | 'TABLE' | 'BAR_CODE' | 'QR_CODE' | 'IMAGE' | 'LINE' | 'HEADER' | 'FOOTER' | 'PAGE_NO');
     /** 数据源id */
     dataSourceId?: number;
     /** 关联表单字段id */
@@ -69,15 +69,15 @@ export interface IPrintTheTemplateFieldRequestObject {
     /** 文本内容 */
     textContent?: string;
     /** 是否表格内字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 扫码类型 */
-    scanCodeType?: string;
+    scanCodeType?: ('FORM_FIELD' | 'CUSTOM' | 'ADD_FORM_URL');
     /** 扫码内容 */
     scanCodeContent?: string;
     /** 图片key */
     imageKey?: string;
     /** 线条方向 */
-    lineDirection?: string;
+    lineDirection?: ('TRANSVERSE' | 'LONGITUDINAL');
     /** 页眉内容 */
     headerContent?: string;
     /** 页脚内容 */
@@ -85,7 +85,7 @@ export interface IPrintTheTemplateFieldRequestObject {
     /** 字段配置 */
     fieldConfig?: string;
     /** 表单字段数值格式类型 */
-    formFieldNumberFormat?: string;
+    formFieldNumberFormat?: ('F1' | 'F2' | 'F3' | 'F4');
     /** 子表字段 */
     childPrintTemplateFields?: IPrintTheTemplateFieldRequestObject[];
 }

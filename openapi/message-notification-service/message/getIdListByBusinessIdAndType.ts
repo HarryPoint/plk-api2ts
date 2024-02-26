@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IMessageQueryDTOparams: { e
 /** 消息查询DTO */
 export interface IMessageQueryDTO {
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('PRODUCE_TASK');
     /** 业务id */
     businessIds?: number[];
 }

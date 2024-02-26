@@ -39,7 +39,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«员工响应对象»» */
 export interface IJSONResultListEmployeeResponseObject {
@@ -93,9 +93,9 @@ export interface IEmployeeResponseObject {
     /** 离职日期 */
     dimissionTime?: string;
     /** 性别 */
-    gender?: string;
+    gender?: ('MAN' | 'WOMAN');
     /** 学历 */
-    educational?: string;
+    educational?: ('PRIMARY' | 'JUNIOR' | 'HIGH' | 'COLLEGE' | 'UNDERGRADUATE' | 'POSTGRADUATE' | 'INTERMEDIATE_TECHNICAL' | 'MASTER' | 'TECHNICAL_SECONDARY');
     /** 籍贯 */
     nativePlace?: string;
     /** 任职部门id */

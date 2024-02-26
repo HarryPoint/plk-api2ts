@@ -27,7 +27,7 @@ export interface IJSONResultListProductionProcessTypeStatusLevel2LinkageVO {
 /** 生产处理类型状态二级联动VO */
 export interface IProductionProcessingTypeStatusSecondLevelLinkageVO {
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 异常分类描述 */
     typeDesc?: string;
     /** 关联状态集 */
@@ -36,7 +36,7 @@ export interface IProductionProcessingTypeStatusSecondLevelLinkageVO {
 /** 生产处理状态VO */
 export interface IProductionProcessingStatusVO {
     /** 异常状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 异常状态描述 */
     statusDesc?: string;
 }

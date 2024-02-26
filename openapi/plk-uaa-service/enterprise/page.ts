@@ -26,7 +26,7 @@ export interface IEnterprisePagingQueryObject {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 服务状态列表 */
-    productServiceStatusList?: string[];
+    productServiceStatusList?: ('ON' | 'EXPIRE' | 'INVALID')[];
     /** 创建人ids */
     createUserIds?: number[];
     /** 导出字段集 */
@@ -34,7 +34,7 @@ export interface IEnterprisePagingQueryObject {
     /** 创建时间 -- 开始 */
     createBeginTime?: string;
     /** 服务类型列表 */
-    productServiceTypeList?: string[];
+    productServiceTypeList?: ('TRIAL' | 'FORMAL')[];
     /** 到期时间 -- 开始 */
     expireBeginTime?: string;
     /** 到期时间 -- 结束 */
@@ -47,7 +47,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«企业分页响应»» */
 export interface IJSONResultPagingInformationEnterprisePagingResponse {
@@ -75,9 +75,9 @@ export interface IPagingInformationEnterprisePagingResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,11 +92,11 @@ export interface IEnterprisePagingResponse {
     /** 企业名称 */
     name?: string;
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 服务类型 */
-    productServiceType?: string;
+    productServiceType?: ('TRIAL' | 'FORMAL');
     /** 服务状态 */
-    productServiceStatus?: string;
+    productServiceStatus?: ('ON' | 'EXPIRE' | 'INVALID');
     /** 到期时间 */
     expireTime?: string;
     /** 可用账号数 */
@@ -110,9 +110,9 @@ export interface IEnterprisePagingResponse {
     /** 创建人 */
     createUserName?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: string;
+    isEnableBatchManagement?: ('Y' | 'N');
     /** 是否有新购的产品订单 */
-    hanNewBuyProductOrder?: string;
+    hanNewBuyProductOrder?: ('Y' | 'N');
     /** 系统当前版本号 */
     systemLastVersionCode?: string;
 }

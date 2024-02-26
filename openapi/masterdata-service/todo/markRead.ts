@@ -18,7 +18,7 @@ export interface IToDoMarkReadRequestDTO {
     /** 用户ID不能为空 */
     userId?: number;
     /** 是否全部标记已读 */
-    isAll: string;
+    isAll: ('Y' | 'N');
     /** 单个标记id，isAll=N时必传 */
     id?: number;
 }

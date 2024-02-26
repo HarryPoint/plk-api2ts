@@ -18,7 +18,7 @@ export interface IExampleModifyTheEnterpriseBatchManagementInformationRequestObj
     /** 企业id */
     id?: number;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: string;
+    isEnableBatchManagement?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

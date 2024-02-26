@@ -35,5 +35,5 @@ export interface IBusinessQueryResponse {
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否详细流程 */
-    isDetailFlow?: string;
+    isDetailFlow?: ('Y' | 'N');
 }

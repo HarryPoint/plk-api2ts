@@ -44,7 +44,7 @@ export interface IEquipmentPersonnelCapabilityDetailsEditDTO {
     /** 维修能力 */
     maintainLevel?: string;
     /** 保养能力 */
-    canMaintain?: string;
+    canMaintain?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

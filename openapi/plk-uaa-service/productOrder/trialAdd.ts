@@ -18,7 +18,7 @@ export interface ITrialProductOrderNewRequestObject {
     /** 企业id */
     enterpriseId?: number;
     /** 试用产品类型, 默认传 MES  */
-    productType?: string;
+    productType?: ('MES');
     /** 产品模块 */
     productModuleArray?: string[];
     /** 试用时长(天) */

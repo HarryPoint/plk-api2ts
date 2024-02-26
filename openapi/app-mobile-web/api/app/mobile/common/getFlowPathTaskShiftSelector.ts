@@ -35,7 +35,7 @@ export interface IProcessShiftBackToVO {
     /** 开始时间 */
     beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
     /** 结束时间 */
     endTime?: string;
     /** 状态 */
@@ -60,9 +60,9 @@ export interface IProcessNodeExecutorVO {
     /** 执行人id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
     /** 执行人系统控件类型 */
-    executorSysType?: string;
+    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */

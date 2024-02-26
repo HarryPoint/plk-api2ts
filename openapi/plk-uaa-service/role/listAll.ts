@@ -36,7 +36,7 @@ export interface IRoleQuery {
     /** 角色名称 */
     name?: string;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 创建时间结束 */
     createEndTime?: string;
     /** 服务业务ID */
@@ -47,7 +47,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«角色信息响应»» */
 export interface IJSONResultListResponseForRoleInformation {
@@ -83,13 +83,13 @@ export interface IRoleMessageResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: string;
+    isManage?: ('Y' | 'N');
     /** 是否是管理员 */
-    isAdmin?: string;
+    isAdmin?: ('Y' | 'N');
     /** 描述 */
     description?: string;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */

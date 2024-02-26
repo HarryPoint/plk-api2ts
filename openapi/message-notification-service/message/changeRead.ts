@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IMessageChangeReadDTOparams
 /** 消息变更已读DTO */
 export interface IMessageChangeReadDTO {
     /** 是否全部标记已读 */
-    isAll: string;
+    isAll: ('Y' | 'N');
     /** 单个标记id，isAll=N时必传 */
     id?: number;
 }

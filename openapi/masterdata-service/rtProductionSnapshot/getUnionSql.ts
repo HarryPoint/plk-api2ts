@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUnionSqlUsingPOST
 */
-export default function fetchMethod(options: { params: { beginTime?: string; endTime?: string; queryQuantityCount?: number; timeType?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: string; endTime?: string; queryQuantityCount?: number; timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR') } }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getUnionSql",

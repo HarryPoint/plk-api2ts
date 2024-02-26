@@ -29,7 +29,7 @@ export interface IProduceOrderImportSynchronizationOutputDTO {
     /** undefined */
     id?: number;
     /** undefined */
-    importStatus?: string;
+    importStatus?: ('NOT' | 'COMPLETE' | 'IMPORTING' | 'IMPORT_FAIL');
     /** undefined */
     failureMessage?: string;
     /** undefined */

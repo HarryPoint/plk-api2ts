@@ -31,7 +31,7 @@ export interface IProducePlanAutoScheduleOutputVO {
     /** undefined */
     producePlanId?: number;
     /** undefined */
-    scheduleType?: string;
+    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
     /** undefined */
     produceOrderId?: number;
     /** undefined */
@@ -47,7 +47,7 @@ export interface IProducePlanAutoScheduleOutputVO {
     /** undefined */
     occupyReason?: string;
     /** undefined */
-    isLock?: string;
+    isLock?: ('Y' | 'N');
     /** undefined */
     priorityLevel?: number;
 }

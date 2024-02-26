@@ -37,7 +37,7 @@ export interface IFileClassificationDetailsRespondToDTO1 {
     /** 下级树列表 */
     childList?: IFileClassificationDetailsRespondToDTO6[];
     /** 用户权限列表 */
-    userPermissionList?: string[];
+    userPermissionList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
 }
 /** 文件分类明细响应DTO_6 */
 export interface IFileClassificationDetailsRespondToDTO6 {
@@ -52,5 +52,5 @@ export interface IFileClassificationDetailsRespondToDTO6 {
     /** 下级树列表 */
     childList?: IFileClassificationDetailsRespondToDTO6[];
     /** 用户权限列表 */
-    userPermissionList?: string[];
+    userPermissionList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
 }

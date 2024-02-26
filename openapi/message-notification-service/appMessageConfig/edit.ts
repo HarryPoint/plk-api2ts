@@ -26,7 +26,7 @@ export interface IAppMessageConfigDTO {
     /** 详细表格字段编码 */
     detailTableFieldCode?: string;
     /** 是否明细表, Y - 主表， N - 明细表 */
-    isDetailFlowTable?: string;
+    isDetailFlowTable?: ('Y' | 'N');
     /** 表格编码 */
     tableCode?: string;
     /** 发送内容配置列表 */
@@ -41,7 +41,7 @@ export interface IAppMessageSentContentTemplateDTO {
     /** 消息发送内容模板ID */
     id?: number;
     /** 消息发送模式 */
-    sendingMode?: string;
+    sendingMode?: ('SYSTEM' | 'SMS' | 'EMAIL');
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
     messageContent?: string;
     /** undefined */
@@ -49,7 +49,7 @@ export interface IAppMessageSentContentTemplateDTO {
     /** 字段元数据 */
     fieldMetaList?: IMessageContentFieldMetaDTO[];
     /** 是否使用配置 */
-    isUseConfig?: string;
+    isUseConfig?: ('Y' | 'N');
     /** html 内容 */
     htmlContent?: string;
     /** 邮件主题 */
@@ -77,7 +77,7 @@ export interface IAppMessageRecipientDTO {
     /** 消息接收人ID */
     id?: number;
     /** 接收人类型 */
-    recipientType?: string;
+    recipientType?: ('USER' | 'CLASS_GROUP' | 'DEPARTMENT' | 'EMAIL' | 'BUSINESS');
     /** 部门ID列表 */
     departmentIdList?: Record<string, any>[];
     /** 班组ID列表 */
@@ -163,7 +163,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

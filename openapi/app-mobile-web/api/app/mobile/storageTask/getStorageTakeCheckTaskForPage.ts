@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISearchVOOnTheExecutionSide
 /** 仓库盘点任务执行端搜索VO */
 export interface ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask {
     /** 处理类型 */
-    handleType?: string;
+    handleType?: ('WAIT' | 'HANDLED');
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -29,7 +29,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«仓库盘点任务执行端返回DTO»» */
 export interface IJSONResultReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask {
@@ -57,9 +57,9 @@ export interface IPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouse
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */

@@ -46,7 +46,7 @@ export interface ITheWarehouseTreeReturnsVO {
     /** 仓库编号 */
     code?: string;
     /** 仓库类型 */
-    type?: string;
+    type?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
     /** 仓库类型描述 */
     typeDesc?: string;
     /** 仓位集 */

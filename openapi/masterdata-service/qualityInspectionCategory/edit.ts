@@ -22,7 +22,7 @@ export interface IEditTheQualityInspectionClassificationDTO {
     /** 质检分类编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

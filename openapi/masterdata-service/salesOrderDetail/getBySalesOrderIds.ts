@@ -55,9 +55,9 @@ export interface ISalesOrderDetail {
     /** 总销售金额 */
     totalAmount?: number;
     /** 销售订单详情状态 */
-    handleStatus?: string;
+    handleStatus?: ('CREATED' | 'PART' | 'ALL');
     /** 销售订单生产状态 */
-    produceStatus?: string;
+    produceStatus?: ('CREATED' | 'PRODUCE' | 'CANCEL' | 'CLOSE');
     /** 总计划数量 -  此销售订单下的 所有 生产订单 数量的和 */
     totalPlanQuantity?: number;
     /** 已排产数量 */

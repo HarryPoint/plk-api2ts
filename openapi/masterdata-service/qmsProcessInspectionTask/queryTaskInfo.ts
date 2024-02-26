@@ -31,11 +31,11 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 任务编号 */
     code?: string;
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
     /** 是否紧急 */
-    isEmergent?: string;
+    isEmergent?: ('Y' | 'N');
     /** 是否临检 */
-    isTemporarily?: string;
+    isTemporarily?: ('Y' | 'N');
     /** 报检单物料明细id */
     qmsInspectionApplyFormMaterialDetailId?: number;
     /** 报检日期 */
@@ -71,7 +71,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 互检员 */
     mutualInspectionEmployeeIds?: number[];
     /** 检验方式 */
-    inspectionMethod?: string;
+    inspectionMethod?: ('SPOT_CHECK' | 'ALL_CHECK');
     /** 检验数量 */
     inspectionQuantity?: number;
     /** 自检合格数 */
@@ -79,19 +79,19 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 自检不合格数 */
     selfUnQualifiedQuantity?: number;
     /** 自检检验结果 */
-    selfInspectionResult?: string;
+    selfInspectionResult?: ('Y' | 'N');
     /** 互检合格数 */
     mutualQualifiedQuantity?: number;
     /** 互检不合格数 */
     mutualUnQualifiedQuantity?: number;
     /** 互检检验结果 */
-    mutualInspectionResult?: string;
+    mutualInspectionResult?: ('Y' | 'N');
     /** 专检合格数 */
     specialQualifiedQuantity?: number;
     /** 专检不合格数 */
     specialUnQualifiedQuantity?: number;
     /** 专检检验结果 */
-    specialInspectionResult?: string;
+    specialInspectionResult?: ('Y' | 'N');
     /** 申请验收地点 */
     applyInspectAddress?: string;
     /** 申请验收日期 */
@@ -113,7 +113,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 检验员 */
     inspectionEmployees?: IAssociateFormDataVO[];
     /** 分配状态 */
-    isAssignment?: string;
+    isAssignment?: ('Y' | 'N');
     /** 检验截止日期 */
     inspectionEndDate?: string;
     /** 检验完成日期 */
@@ -121,9 +121,9 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 开始时间 */
     taskStartDate?: string;
     /** 任务执行状态 */
-    taskStatus?: string;
+    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
     /** 是否超期 */
-    isOverdue?: string;
+    isOverdue?: ('Y' | 'N');
     /** 超期天数 */
     overdueDay?: number;
     /** 互检记录 */
@@ -142,7 +142,7 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: string;
+    isRemovedShowField?: ('Y' | 'N');
     /** 主数据ID */
     masterDataId?: number;
 }
@@ -153,7 +153,7 @@ export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -163,7 +163,7 @@ export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }
 /** 首检自检记录响应对象 */
 export interface IFirstCheckSelfCheckRecordResponseObject {
@@ -172,7 +172,7 @@ export interface IFirstCheckSelfCheckRecordResponseObject {
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -182,7 +182,7 @@ export interface IFirstCheckSelfCheckRecordResponseObject {
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }
 /** 工序检检验专检记录响应对象 */
 export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObject {
@@ -191,7 +191,7 @@ export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObje
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -201,5 +201,5 @@ export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObje
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }

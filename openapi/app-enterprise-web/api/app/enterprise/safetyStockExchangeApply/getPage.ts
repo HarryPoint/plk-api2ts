@@ -22,7 +22,7 @@ export interface ISecurityStockChangeRequestSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
 }
@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«安全库存变更申请返回VO»» */
 export interface IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO {
@@ -59,9 +59,9 @@ export interface IPagingInformationSecurityInventoryChangeRequestReturnedToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,11 +88,11 @@ export interface ISecurityStockChangeRequestReturnedToVO {
     /** 通知人集 */
     sendUsers?: IIdNameNumberVO[];
     /** 通知类型 */
-    sendType?: string;
+    sendType?: ('MESSAGE');
     /** 通知类型描述 */
     sendTypeDesc?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_EXAMINE' | 'PASS' | 'REFUSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 审核时间 */

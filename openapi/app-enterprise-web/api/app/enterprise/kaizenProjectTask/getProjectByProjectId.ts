@@ -45,7 +45,7 @@ export interface IKaizenProjectResponseDTO {
     /** 项目截止日期 */
     projectEndDate?: string;
     /** 项目状态 */
-    projectStatus?: string;
+    projectStatus?: ('DRAFT' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELED');
     /** 项目状态描述 */
     projectStatusDesc?: string;
     /** 关联合理化建议 */

@@ -18,7 +18,7 @@ export interface INewProductOrderModificationRequestObject {
     /** 企业id */
     enterpriseId?: number;
     /** 购买产品类型, 默认传 MES  */
-    productType?: string;
+    productType?: ('MES');
     /** 产品模块 */
     productModuleArray?: string[];
     /** 购买时长(天) */
@@ -51,7 +51,7 @@ export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

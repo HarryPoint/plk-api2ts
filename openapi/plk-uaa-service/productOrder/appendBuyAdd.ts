@@ -18,9 +18,9 @@ export interface IAddProductOrderAddedARequestObject {
     /** 企业id */
     enterpriseId?: number;
     /** 加购类型非法传递, 默认传 MES  */
-    appendType?: string;
+    appendType?: ('PRODUCT_MODULE' | 'DURATION' | 'USER_ACCOUNT');
     /** 加购产品类型非法传递, 默认传 MES  */
-    productType?: string;
+    productType?: ('MES');
     /** 加购产品模块 */
     productModuleArray?: string[];
     /** 购买时长(天) */
@@ -51,7 +51,7 @@ export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

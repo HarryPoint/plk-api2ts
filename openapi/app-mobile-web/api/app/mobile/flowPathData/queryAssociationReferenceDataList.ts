@@ -50,5 +50,5 @@ export interface IFormReferencingQueryResponseDTO {
     /** 当前表单编码 */
     currentFormRecordCode?: string;
     /** 单据类型 */
-    billType?: string;
+    billType?: ('DYNAMIC_FORM' | 'STORAGE_TAKE_CHECK_TASK');
 }

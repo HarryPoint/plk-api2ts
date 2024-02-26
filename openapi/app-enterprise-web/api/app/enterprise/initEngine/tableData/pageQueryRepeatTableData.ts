@@ -29,7 +29,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«TableRowDTO»» */
 export interface IJSONResultPageInformationTableRowDTO {
@@ -57,9 +57,9 @@ export interface IPageInformationTableRowDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -74,7 +74,7 @@ export interface ITableRowDTO {
     /** 行ID列表 */
     rowIdList?: number[];
     /** 操作模式 */
-    operatorMode?: string;
+    operatorMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
 }
 /** TableCellDTO */
 export interface ITableCellDTO {

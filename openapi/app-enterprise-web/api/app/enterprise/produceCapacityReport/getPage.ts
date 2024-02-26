@@ -32,7 +32,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** undefined */
     produceTaskIds?: number[];
     /** undefined */
-    panPanProduceOrderCompleteType?: string;
+    panPanProduceOrderCompleteType?: ('ACTUAL_MOVE_OUT_QUANTITY' | 'PLAN_ORDER_MOVE_OUT_QUANTITY');
     /** 是否按天数过滤 */
     isFilterByDayCount?: boolean;
 }
@@ -41,7 +41,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«产能利用率报表VO»» */
 export interface IJSONResultPagingInformationCapacityUtilizationReportVO {
@@ -69,9 +69,9 @@ export interface IPagingInformationCapacityUtilizationReportVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */

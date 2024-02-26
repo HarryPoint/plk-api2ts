@@ -30,11 +30,11 @@ export interface IEmployeeEditRequest {
     /** 邮件 */
     email?: string;
     /** 是否允许登录 */
-    isAllowLogin?: string;
+    isAllowLogin?: ('Y' | 'N');
     /** 是否处理账号信息 */
-    isHandleAccount?: string;
+    isHandleAccount?: ('Y' | 'N');
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */

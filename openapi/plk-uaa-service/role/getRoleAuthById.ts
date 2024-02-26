@@ -39,7 +39,7 @@ export interface IRoleRightsAndEmployeeInformationResponse {
     /** 路由对应的数据权限集 */
     dataAuths?: IEnterpriseDataPermissionResponse[];
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
@@ -57,7 +57,7 @@ export interface IEnterpriseDataPermissionResponse {
 /** 企业数据权限列表响应 */
 export interface IEnterpriseDataPermissionListResponse {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
     /** 数据权限对应的字段列表(只针对表单字段类型) */
     roleDataAuthFieldList?: ITheRoleDataPermissionFieldRespondsToTheDTO[];
 }

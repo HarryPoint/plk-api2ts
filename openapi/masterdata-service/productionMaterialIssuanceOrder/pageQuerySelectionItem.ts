@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»» */
 export interface IProduceOrderSelectionItemQueryResponseDTOJSONResultPagingInformation {
@@ -61,9 +61,9 @@ export interface IThePagingInformationProduceOrderSelectionItemQueryResponseDTO 
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,7 +88,7 @@ export interface IProduceOrderSelectionItemQueryResponseDTO {
     /** 计划生产数量 */
     totalCount?: number;
     /** 领料状态 */
-    materialIssuanceStatus?: string;
+    materialIssuanceStatus?: ('NONE' | 'PARTIAL_ISSUE' | 'FULL_ISSUE');
     /** 子物料ID */
     materialId?: number;
     /** 子物料编号 */

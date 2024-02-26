@@ -54,7 +54,7 @@ export interface IProcessWorkOrderVO1 {
     /** undefined */
     planBeginTime?: string;
     /** undefined */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** undefined */
     processStatus?: string;
     /** undefined */

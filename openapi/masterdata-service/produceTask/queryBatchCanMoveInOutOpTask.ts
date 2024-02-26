@@ -20,7 +20,7 @@ export interface ITaskBatchOperationDTO1 {
     /** 生产任务查询列表 */
     produceTaskDetails: ITaskBatchOperationDtos[];
     /** 查询类型 */
-    queryType: string;
+    queryType: ('MOVE_IN' | 'MOVE_OUT' | 'DEVICE' | 'MOLD');
 }
 /** 任务批量操作DTO */
 export interface ITaskBatchOperationDtos {
@@ -85,7 +85,7 @@ export interface IBatchOpTaskMoveInOutResponseDTO {
     /** 生产任务ID */
     produceTaskId?: number;
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 生产任务编码 */
     produceTaskNo?: string;
     /** 进料/出料数量(可用数量) */

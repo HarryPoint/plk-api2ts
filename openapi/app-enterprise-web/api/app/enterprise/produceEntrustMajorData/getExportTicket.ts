@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: string;
+    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {

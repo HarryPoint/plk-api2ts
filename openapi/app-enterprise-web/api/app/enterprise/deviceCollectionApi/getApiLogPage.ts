@@ -27,7 +27,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«开放api请求日志返回VO»» */
 export interface IJSONResultPagingInformationOpenApiRequestLogReturnsVO {
@@ -55,9 +55,9 @@ export interface IPagingInformationOpenApiRequestLogReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -74,13 +74,13 @@ export interface IOpenApiRequestLogReturnsVO {
     /** 请求ip */
     clientIp?: string;
     /** 请求类型 */
-    reqType?: string;
+    reqType?: ('API' | 'HANDLE');
     /** 请求类型描述 */
     reqTypeDesc?: string;
     /** 请求内容 */
     reqBody?: string;
     /** 是否成功 */
-    isSuccess?: string;
+    isSuccess?: ('Y' | 'N');
     /** 异常码 */
     errorCode?: string;
     /** 异常信息 */

@@ -29,7 +29,7 @@ export interface IVivBatchPrintTemplateResponseObject1 {
     /** id */
     printTemplateId?: number;
     /** 模板类型 */
-    type?: string;
+    type?: ('BARCODE' | 'QRCODE');
     /** 打印模板 */
     printTemplate?: string;
     /** 批次号 */

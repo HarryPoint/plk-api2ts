@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/updateTodoWorkOrderStatusUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathWorkOrderId?: number; userId?: number; workOrderStatus?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathWorkOrderId?: number; userId?: number; workOrderStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID') } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/updateTodoWorkOrderStatus",

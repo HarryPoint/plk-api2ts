@@ -26,7 +26,7 @@ export interface IProductionProcessesReworkAddingRequestObjects {
     /** 返工数量 */
     abnormalQuantity?: number;
     /** 返工生产后处理方式 */
-    backProduceType: string;
+    backProduceType: ('RETURN' | 'ORDER');
     /** 标签id集合 */
     tagIds?: number[];
     /** 图片key集合 */

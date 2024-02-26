@@ -38,14 +38,14 @@ export interface IAccountInquiry {
     /** 手机号码 */
     telephone?: string;
     /** 状态集 */
-    statusList?: string[];
+    statusList?: ('WAIT_ACTIVATE' | 'ACTIVATED' | 'DISABLED')[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«运营用户信息响应»» */
 export interface IJSONResultPageInformationOperationUserInformationResponse {
@@ -73,9 +73,9 @@ export interface IPageInformationOperationUserInformationResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -112,7 +112,7 @@ export interface IOperationUserInformationResponse {
     /** 最后登录时间 */
     lastLoginTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_ACTIVATE' | 'ACTIVATED' | 'DISABLED');
 }
 /** 运营员工信息响应 */
 export interface IOperationalEmployeeInformationResponse {
@@ -160,9 +160,9 @@ export interface IOperationalRoleResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: string;
+    isManage?: ('Y' | 'N');
     /** 是否是管理员 */
-    isAdmin?: string;
+    isAdmin?: ('Y' | 'N');
     /** 描述 */
     description?: string;
     /** 关联的账号数 */

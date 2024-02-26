@@ -66,7 +66,7 @@ export interface IInventoryFlowSearchVO {
     /** 创建部门 - 批量查询 */
     billCreateDeptIdList?: number[];
     /** 业务状态 - 批量查询 */
-    businessStatusList?: string[];
+    businessStatusList?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID')[];
     /** 库存更新时间-结束 yyyy-MM-dd HH:mm:ss */
     updateTimeEnd?: string;
     /** 流程进度 - 模糊查询 */
@@ -81,7 +81,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«库存流水返回VO»» */
 export interface IJSONResultPagingInformationInventoryReturnsVO {
@@ -109,9 +109,9 @@ export interface IPagingInformationInventoryFlowReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -132,7 +132,7 @@ export interface IStockFlowBackToVO {
     /** 所属物料单位 */
     materialUnit?: string;
     /** 流水类型 */
-    flowType?: string;
+    flowType?: ('WORK_ORDER' | 'TAKE_CHECK');
     /** 流水类型描述 */
     flowTypeDesc?: string;
     /** 操作区域id */
@@ -144,7 +144,7 @@ export interface IStockFlowBackToVO {
     /** 仓库名称 */
     opStorehouseName?: string;
     /** 操作库类型 */
-    opWarehouseType?: string;
+    opWarehouseType?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
     /** 操作仓位id */
     opWarehouseId?: number;
     /** 操作仓位层级，从高至低排列 */
@@ -190,7 +190,7 @@ export interface IStockFlowBackToVO {
     /** 流程进度 */
     processStatus?: string;
     /** 业务状态 */
-    businessStatus?: string;
+    businessStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 业务状态描述 */
     businessStatusDesc?: string;
     /** 单位ID */

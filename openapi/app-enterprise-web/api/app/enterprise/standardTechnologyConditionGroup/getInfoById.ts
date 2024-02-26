@@ -44,11 +44,11 @@ export interface IStandardProcessConditionsRespondToDTO {
     /** 来源字段序列号 */
     fromFieldSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'CONTAIN' | 'NOT_CONTAIN');
     /** 判断的值 */
     compareValue?: string;
     /** 连接类型 */
-    joinType?: string;
+    joinType?: ('AND' | 'OR');
     /** 排序 */
     sort?: number;
 }

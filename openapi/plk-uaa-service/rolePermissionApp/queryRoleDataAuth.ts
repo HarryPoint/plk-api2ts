@@ -34,7 +34,7 @@ export interface IJSONResultListEnterpriseRolePermissionResponse {
 /** 企业角色权限响应 */
 export interface IEnterpriseRolePermissionResponse {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
     /** 应用id */
     appId?: number;
     /** 企业路由code */

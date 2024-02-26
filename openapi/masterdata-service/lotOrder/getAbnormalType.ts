@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getAbnormalTypeUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; type?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK') } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(
         {
             url: "/masterdata-service/lotOrder/getAbnormalType",
@@ -29,7 +29,7 @@ export interface IExceptionTypeReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 所属分类 */
     typeDesc?: string;
     /** 类型名称 */

@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IInventoryTaskInventoryProc
 /** 盘点任务盘点处理DTO */
 export interface IInventoryTaskInventoryProcessingDTO {
     /** 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT) */
-    editType?: string;
+    editType?: ('DEFAULT' | 'STAGING' | 'COMPLETE' | 'FLOW_PATH_TASK');
     /** 任务id */
     id: number;
     /** 盘点明细 */

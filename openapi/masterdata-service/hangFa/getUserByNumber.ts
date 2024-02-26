@@ -45,7 +45,7 @@ export interface IThirdApiRequestInfoResponseDTO {
 /** ThirdApiResponseInfoResponseDTO */
 export interface IThirdApiResponseInfoResponseDTO {
     /** undefined */
-    success?: string;
+    success?: ('Y' | 'N');
     /** undefined */
     errorInfo?: string;
     /** undefined */

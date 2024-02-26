@@ -26,9 +26,9 @@ export interface ISecurityInventorySearchVO {
     /** 物料名称 */
     name?: string;
     /** 库存预警类型 */
-    warningType?: string;
+    warningType?: ('NORMAL' | 'CLOSE_WARNING' | 'UPPER' | 'LOWER');
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
 }
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«安全库存返回VO»» */
 export interface IJSONResultPagingInformationSecurityInventoryReturnsVO {
@@ -65,9 +65,9 @@ export interface IPagingInformationSecurityInventoryReturnedToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,9 +92,9 @@ export interface ISafetyStockReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否开启预警 */
-    isWarning?: string;
+    isWarning?: ('Y' | 'N');
     /** 库存预警类型 */
-    warningType?: string;
+    warningType?: ('NORMAL' | 'CLOSE_WARNING' | 'UPPER' | 'LOWER');
     /** 库存预警类型描述 */
     warningTypeDesc?: string;
     /** 安全库存数-采购触发下限 */

@@ -38,14 +38,14 @@ export interface IFinancialPeriodQueryRequest {
     /** 天数 - End */
     daysEnd?: number;
     /** 结存状态列表 */
-    balanceStatusList?: string[];
+    balanceStatusList?: ('UNBALANCED' | 'BALANCED')[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«财务期间查询响应»» */
 export interface IJSONResultPagingInformationFinancialPeriodQueryResponse {
@@ -73,9 +73,9 @@ export interface IPagingInformationFinancialPeriodQueryResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -94,5 +94,5 @@ export interface IFinancialPeriodQueryResponse {
     /** 天数 */
     days?: number;
     /** 结存状态 */
-    balanceStatus?: string;
+    balanceStatus?: ('UNBALANCED' | 'BALANCED');
 }

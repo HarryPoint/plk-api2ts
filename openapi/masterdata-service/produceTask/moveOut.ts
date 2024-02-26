@@ -26,7 +26,7 @@ export interface IInboundAndOutboundInformationDTO {
     /** 关键参数信息填写 */
     keyParametersInfo?: IEntryAndExitProcessCardFilling;
     /** undefined */
-    handleOtherAsync?: string;
+    handleOtherAsync?: ('Y' | 'N');
 }
 /** 成品物料填写请求DTO */
 export interface IFinishedMaterialFillRequestDTO {

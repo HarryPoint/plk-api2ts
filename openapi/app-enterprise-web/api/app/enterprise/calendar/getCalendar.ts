@@ -62,7 +62,7 @@ export interface ICalendarShiftInformationReturnedToVO {
     /** 班次开始时间 */
     classShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
     /** 班次结束时间 */
     classShiftEndTime?: ILocalTime;
     /** 班组列表信息 */

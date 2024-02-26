@@ -18,7 +18,7 @@ export interface IBatchQueryEmployeeUserAssociationInformation {
     /** 员工id集 */
     employeeIds?: number[];
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
 }
@@ -38,7 +38,7 @@ export interface IEmployeeUserAssociationInformationResponse {
     /** 员工id */
     employeeId?: number;
     /** 是否允许登录 */
-    isAllowLogin?: string;
+    isAllowLogin?: ('Y' | 'N');
     /** 角色集 */
     roles?: IRoleMessageResponse[];
     /** 用户id */
@@ -69,13 +69,13 @@ export interface IRoleMessageResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: string;
+    isManage?: ('Y' | 'N');
     /** 是否是管理员 */
-    isAdmin?: string;
+    isAdmin?: ('Y' | 'N');
     /** 描述 */
     description?: string;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */

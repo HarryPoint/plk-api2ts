@@ -20,7 +20,7 @@ export interface IQmsLargeScreenTimeIntervalRequest {
     /** 查询日期的结束 */
     dateRangeEnd?: string;
     /** 查询日期区间类型 */
-    dateRangeType?: string;
+    dateRangeType?: ('YEAR' | 'QUARTER' | 'MONTH');
 }
 /** JSONResult«List«供应商交检合格率查询响应»» */
 export interface IJSONResultListResponseToTheSupplierDeliveryQualificationRateQuery {

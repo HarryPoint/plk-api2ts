@@ -24,7 +24,7 @@ export interface IUserProductionStatisticsSearchVO {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList?: string[];
+    produceTaskTypeList?: ('PRODUCE' | 'BACK')[];
     /** 生产订单编码 */
     produceOrderCode?: string;
 }
@@ -80,5 +80,5 @@ export interface IUserProductionStatisticsReturnVO {
     /** 记录时间 */
     createTime?: string;
     /** 快照类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'SCRAP' | 'BACK' | 'ENTRUST' | 'PRODUCE_MOVE_IN' | 'BACK_MOVE_IN' | 'BACK_APPROVE' | 'HOLD_BACK' | 'HOLD_PAUSE_BACK');
 }

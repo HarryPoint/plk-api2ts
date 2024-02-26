@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/待办相关/getTodoTaskStatusSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { queryStatus?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { queryStatus?: ('NOT_HANDLE' | 'OVERDUE' | 'HANDLED' | 'CREATED_BY_ME' | 'CARBON_COPY_TO_ME' | 'NOT_READ' | 'IN_PROGRESS' | 'COMPLETE' | 'FAILED') } }, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/todoList/getTodoTaskStatusSelector",

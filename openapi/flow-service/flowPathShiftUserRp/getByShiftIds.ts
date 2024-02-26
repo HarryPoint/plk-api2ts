@@ -35,7 +35,7 @@ export interface IFlowPathShiftUserRpVO {
     /** 关联id */
     executorId?: number;
     /** 关联类型 */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
     /** 关联系统控件类型 */
-    executorSysType?: string;
+    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
 }

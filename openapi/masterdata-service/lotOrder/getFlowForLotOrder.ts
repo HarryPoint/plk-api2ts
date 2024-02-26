@@ -20,7 +20,7 @@ export interface IBatchOrderHistorySearchVO {
     /** 批次订单id */
     lotOrderId?: number;
     /** 流水类型 */
-    flowType?: string;
+    flowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
 }
 /** JSONResult«List«批次订单流水基本信息响应DTO»» */
 export interface IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO {
@@ -38,7 +38,7 @@ export interface IBatchOrderFlowBasicInformationResponseDTO {
     /** id */
     id?: number;
     /** 流水类型 */
-    flowType?: string;
+    flowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
     /** 当前流水类型描述 */
     flowTypeDesc?: string;
     /** 操作时间 */

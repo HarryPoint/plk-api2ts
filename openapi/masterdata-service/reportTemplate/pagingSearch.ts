@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«ReportTemplateQueryResponseDTO»» */
 export interface IReportTemplateQueryResponseDTOJSONResultPagingInformation {
@@ -73,9 +73,9 @@ export interface IThePagingInformationReportTemplateQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -108,7 +108,7 @@ export interface IReportTemplateQueryResponseDTO {
     /** 模板名称 - 模糊查询 */
     templateName?: string;
     /** 报表类型 - 报表 */
-    report?: string;
+    report?: ('PRODUCE_DAY_REPORT' | 'QUALITY_GOOD_SCRAP_REPORT' | 'SALES_DELIVER_REPORT' | 'CONSIGNMENT_LOSS_ANALYZE_REPORT' | 'CONSIGNMENT_INBOUND_ANALYZE_REPORT' | 'ACCOUNTS_RECEIVABLE_REPORT' | 'COLLECTION_TOTAL_REPORT' | 'AFTER_SALES_QUALITY_REPORT' | 'SALES_ORDER_REPORT' | 'PURCHASE_ARRIVED_STATISTIC_REPORT' | 'PRODUCE_STORAGE_REPORT' | 'RAW_STORAGE_REPORT' | 'SCRAP_STORAGE_REPORT' | 'PRODUCE_PROGRESS_STATISTICS_REPORT' | 'PRODUCE_CAPACITY_REPORT' | 'PRODUCE_DATA_REPORT' | 'PRODUCE_CLASS_GROUP_REPORT' | 'PRODUCE_PROCESS_REPORT' | 'PRODUCE_MATERIAL_REPORT' | 'PRODUCE_TIME_FEE_DETAIL_REPORT' | 'PRODUCE_TIME_FEE_MONTH_REPORT' | 'PRODUCE_ENTRUST_MAJOR_DATA_REPORT' | 'PRODUCE_ORDER_SCHEDULE_REPORT');
     /** 报表名称 - 模糊查询 */
     reportName?: string;
     /** 模板状态 - 精确匹配 */

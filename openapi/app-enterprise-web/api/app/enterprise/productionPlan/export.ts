@@ -22,9 +22,9 @@ export interface ITaskDeliverySearchesVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'ISSUE' | 'REVOKE' | 'CLOSE');
     /** 排产计划类型 */
-    type?: string;
+    type?: ('AUTO' | 'HAND' | 'VAGUE');
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

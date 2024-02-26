@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«寄售损耗分析报表分页返回VO» */
 export interface IJSONResultConsignmentLossAnalysisReportPaginatedReturnsVO {

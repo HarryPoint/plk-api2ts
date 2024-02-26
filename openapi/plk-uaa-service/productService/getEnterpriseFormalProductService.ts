@@ -29,7 +29,7 @@ export interface IProductServiceResponseObject {
     /** 产品服务id */
     id?: number;
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 到期时间 */
     expireTime?: string;
     /** 账号数 */

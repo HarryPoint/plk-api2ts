@@ -33,11 +33,11 @@ export interface IProjectResponse {
     /** 项目名称 */
     name?: string;
     /** 项目状态 */
-    projectStatus?: string;
+    projectStatus?: ('DRAFT' | 'IN_APPROVE' | 'APPROVAL_DENIED' | 'IN_PROGRESS' | 'COMPLETE' | 'END');
     /** 初始化状态 */
-    projectInitStatus?: string;
+    projectInitStatus?: ('INITIALIZING' | 'COMPLETE' | 'FAILED');
     /** 是否超期 */
-    isOverdue?: string;
+    isOverdue?: ('NOT_OVERDUE' | 'OVERDUE');
     /** 超期天数（天） */
     overdueDayCount?: number;
     /** 项目类型id */

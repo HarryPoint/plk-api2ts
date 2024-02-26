@@ -18,7 +18,7 @@ export interface IListDataQueryVO {
     /** 流程id */
     flowPathId?: number;
     /** 是否是明细表 */
-    isDetailTable?: string;
+    isDetailTable?: ('Y' | 'N');
     /** 主数据ids */
     masterDataIds?: number[];
     /** 明细表格字段id集合 */

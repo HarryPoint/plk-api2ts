@@ -36,7 +36,7 @@ export interface IWarehouseInventoryTasksPageQueryObjects {
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
     planEndTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 完成结束时间 yyyy-MM-dd HH:mm:ss */
     completeEndTime?: string;
 }
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

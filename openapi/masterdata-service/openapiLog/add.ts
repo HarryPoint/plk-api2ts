@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/开放接口相关/addUsingPOST_2
 */
-export default function fetchMethod(options: { params: { clientIp?: string; enterpriseId?: number; isSuccess?: string; reqBody?: string; reqType?: string; uri?: string; userId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { clientIp?: string; enterpriseId?: number; isSuccess?: ('Y' | 'N'); reqBody?: string; reqType?: ('API' | 'HANDLE'); uri?: string; userId?: number } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/openapiLog/add",

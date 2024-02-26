@@ -26,16 +26,16 @@ export interface IExceptionTagSearchVO {
     /** 名称 */
     name?: string;
     /** 类型 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 状态(是否启用) */
-    isValid?: string;
+    isValid?: ('Y' | 'N');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

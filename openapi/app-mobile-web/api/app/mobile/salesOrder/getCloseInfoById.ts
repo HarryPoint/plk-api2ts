@@ -31,11 +31,11 @@ export interface ISalesOrderClosureInformationIsReturnedToVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 是否存在未关闭的生产订单 */
-    hasNotCloseProduceOrder?: string;
+    hasNotCloseProduceOrder?: ('Y' | 'N');
     /** 是否存在未处理的审批事件 */
-    hasWaitProduceHandle?: string;
+    hasWaitProduceHandle?: ('Y' | 'N');
     /** 是否存在未处理完的委外订单 */
-    hasSurplusProduceEntrust?: string;
+    hasSurplusProduceEntrust?: ('Y' | 'N');
     /** 明细 */
     details?: ISalesOrderDetailsCloseInformationBackToVO[];
 }

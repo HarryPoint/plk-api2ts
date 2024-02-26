@@ -18,7 +18,7 @@ export interface IRowDataImportModeInputDTO {
     /** 行数据ID */
     id?: number;
     /** 操作模式 */
-    operationMode?: string;
+    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
@@ -27,7 +27,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

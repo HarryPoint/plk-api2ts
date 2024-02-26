@@ -24,13 +24,13 @@ export interface IPublicBacklogDataQuery {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList?: string[];
+    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
     /** 是否超时(生产任务) */
-    isTimeout?: string;
+    isTimeout?: ('Y' | 'N');
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList?: string[];
+    qualityProduceTaskStatusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
     /** 生产任务可操作类型 */
-    optTypes?: string[];
+    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
 }
 /** JSONResult«List«QualityStorageTaskVO»» */
 export interface IJSONResultListQualityStorageTaskVO {
@@ -52,7 +52,7 @@ export interface IQualityStorageTaskVO {
     /** 任务号 */
     taskNo?: string;
     /** 质检任务类型 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 采购收货单id */
     purchaseWorkOrderId?: number;
     /** 对应物料id */
@@ -88,11 +88,11 @@ export interface IQualityStorageTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 取消人 */
     cancelUserId?: number;
     /** 取消时间 */
     cancelTime?: string;
     /** 质检任务类型 */
-    taskType?: string;
+    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
 }

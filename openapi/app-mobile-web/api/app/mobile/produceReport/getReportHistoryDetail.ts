@@ -33,9 +33,9 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -55,7 +55,7 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 对应生产委外id */
     produceEntrustId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
@@ -123,7 +123,7 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 返工工序编号 */
     backProcessCode?: string;
     /** 返工生产类型 */
-    backProduceType?: string;
+    backProduceType?: ('RETURN' | 'ORDER');
     /** 返工生产类型描述 */
     backProduceTypeDesc?: string;
     /** 处理意见 */
@@ -134,7 +134,7 @@ export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: string;
+    type?: ('FILE' | 'TEXT' | 'INPUT');
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -148,9 +148,9 @@ export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     /** 文件完整url */
     fileUrl?: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 文本类型 */
-    textType?: string;
+    textType?: ('INPUT' | 'COMPARE');
     /** 文本比较值集 */
     textCompareValueList?: string[];
     /** 下限 */

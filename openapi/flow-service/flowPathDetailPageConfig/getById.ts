@@ -55,9 +55,9 @@ export interface IConditions {
     /** 被判断的字段序列号 */
     columnSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断对象类型 */
-    compareObjType?: string;
+    compareObjType?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 判断对象字段code */
     compareColumnSerialNo?: string;
     /** 判断对象字段的关联表单字段序列号 */
@@ -71,7 +71,7 @@ export interface IConditions {
     /** 区间范围 -- 上限 */
     rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
     /** 是否使用日期的显示格式来做为筛选条件 */
-    isUseDateShowFormat?: string;
+    isUseDateShowFormat?: ('Y' | 'N');
 }

@@ -34,9 +34,9 @@ export interface IJSONResultCalcPlanFormulaCheckResponseDTO {
 /** CalcPlanFormulaCheckResponseDTO */
 export interface ICalcPlanFormulaCheckResponseDTO {
     /** 是否有效公式 */
-    isEffectiveFormula?: string;
+    isEffectiveFormula?: ('Y' | 'N');
     /** 公式类型 */
-    messageExpressionType?: string;
+    messageExpressionType?: ('TIME_FUNCTION' | 'MATH_FUNCTION');
     /** 消息 */
     message?: string;
 }

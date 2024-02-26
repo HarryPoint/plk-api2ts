@@ -83,7 +83,7 @@ export interface IProcessCardDetailsReturnedToVO {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: string;
+    type?: ('FILE' | 'TEXT' | 'INPUT');
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -97,9 +97,9 @@ export interface IProcessCardDetailsReturnedToVO {
     /** 文件完整url */
     fileUrl?: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 文本类型 */
-    textType?: string;
+    textType?: ('INPUT' | 'COMPARE');
     /** 文本比较值集 */
     textCompareValueList?: string[];
     /** 下限 */

@@ -46,7 +46,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 盘点仓库编号 */
     storehouseCode?: string;
     /** 盘点范围 */
-    scopeType?: string;
+    scopeType?: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
     /** 盘点范围描述 */
     scopeTypeDesc?: string;
     /** 盘点物料种类(针对盘点范围是物料类型的) */
@@ -62,7 +62,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */
@@ -158,11 +158,11 @@ export interface IWarehouseInventoryListReturnedToDTO {
     /** 批次号 */
     lotNo?: string;
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用序列号 */
-    hasWarehouseMaterial?: string;
+    hasWarehouseMaterial?: ('Y' | 'N');
     /** 序列号集 */
     serialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 匹配序列号集 */

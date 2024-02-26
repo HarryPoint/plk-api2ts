@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcessOperatorsEditTheDTO
 /** 工序操作员编辑DTO */
 export interface IProcessOperatorsEditTheDTO {
     /** 员工类型 */
-    userType: string;
+    userType: ('PRODUCE' | 'QUALITY');
     /** 工序id */
     processId: number;
     /** 操作员id */

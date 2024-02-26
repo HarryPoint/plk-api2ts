@@ -33,7 +33,7 @@ export interface IProjectTaskImportRecordQueryResponse {
     /** 项目计划id */
     projectPlanId?: number;
     /** 导入状态 */
-    importStatus?: string;
+    importStatus?: ('CREATED' | 'IMPORTING' | 'COMPLETE' | 'IMPORT_FAIL');
     /** 总数 */
     totalQuantity?: number;
     /** 成功条数 */

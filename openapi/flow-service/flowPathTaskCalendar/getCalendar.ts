@@ -55,7 +55,7 @@ export interface IProcessTaskShiftUserInformationIsReturnedToVO {
     /** 班次开始时间 */
     flowPathShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
     /** 班次结束时间 */
     flowPathShiftEndTime?: ILocalTime;
     /** 方案名称 */

@@ -43,7 +43,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«文件对象分页查询响应DTO»» */
 export interface IJSONResultPagingInformationFileObjectPagingQueryResponseDTO {
@@ -71,9 +71,9 @@ export interface IPageInformationFileObjectPageQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -116,5 +116,5 @@ export interface IFileObjectPagingQueryResponseDTO {
     /** 文件Key */
     fileKeys?: Record<string, any>[];
     /** 权限列表 */
-    permissionTypeList?: string[];
+    permissionTypeList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
 }

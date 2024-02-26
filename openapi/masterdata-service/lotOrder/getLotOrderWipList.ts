@@ -18,7 +18,7 @@ export interface IBatchOrderWipSearchVO {
     /** 批次id集 */
     lotOrderIds?: number[];
     /** 批次操作类型 */
-    lotOpType?: string;
+    lotOpType?: ('SCRAP' | 'MARGE' | 'SPLIT' | 'TRANSFER');
 }
 /** JSONResult«List«批次Wip信息返回VO»» */
 export interface IJSONResultListBatchWipInformationIsReturnedToVO {
@@ -57,11 +57,11 @@ export interface IBatchWipDetailsAreReturnedToVO {
     /** 工序编号 */
     processCode?: string;
     /** WIP类型 */
-    wipType?: string;
+    wipType?: ('BEFORE' | 'IN');
     /** WIP类型描述 */
     wipTypeDesc?: string;
     /** 任务类型 */
-    storageProduceType?: string;
+    storageProduceType?: ('PRODUCE' | 'BACK');
     /** 任务类型描述 */
     storageProduceTypeDesc?: string;
     /** 生产任务id */
@@ -69,9 +69,9 @@ export interface IBatchWipDetailsAreReturnedToVO {
     /** 生产任务编号 */
     produceTaskNo?: string;
     /** 是否可用 */
-    canUse?: string;
+    canUse?: ('Y' | 'N');
     /** 数量状态 */
-    quantityStatus?: string;
+    quantityStatus?: ('NORMAL' | 'WAIT_INSPECTION' | 'INSPECTION_PASS' | 'INSPECTION_CONCESSION' | 'INSPECTION_NOT_PASS' | 'APPLY_BACK' | 'APPLY_SCRAP' | 'HOLD' | 'ENTRUST_BACK');
     /** 数量状态描述 */
     quantityStatusDesc?: string;
     /** 数量 */

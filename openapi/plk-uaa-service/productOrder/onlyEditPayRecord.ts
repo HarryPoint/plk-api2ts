@@ -33,7 +33,7 @@ export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

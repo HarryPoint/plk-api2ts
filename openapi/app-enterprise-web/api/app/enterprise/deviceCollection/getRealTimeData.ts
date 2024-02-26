@@ -53,11 +53,11 @@ export interface IDeviceDataAcquisitionStatusMessageVO {
     /** 设备数采方案编号 */
     deviceCollectionPlanCode?: string;
     /** 在线状态 */
-    onlineStatus?: string;
+    onlineStatus?: ('ONLINE' | 'OFFLINE');
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    status?: string;
+    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 设备状态描述 */
     statusDesc?: string;
     /** 最后通讯时间 */

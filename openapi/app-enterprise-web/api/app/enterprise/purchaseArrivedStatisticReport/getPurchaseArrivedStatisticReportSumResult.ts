@@ -51,7 +51,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«采购到货统计报表返回VO» */
 export interface IJSONResultPurchasedArrivalStatisticsReportReturnedToVO {

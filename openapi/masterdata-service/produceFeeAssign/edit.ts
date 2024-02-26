@@ -30,7 +30,7 @@ export interface IProductionExpensesAllocationEditDTO {
     /** 费用信息 */
     produceFeeCollectDetailList?: ICostCollectionDetailResponseDTO1[];
     /** undefined */
-    isDeleted?: string;
+    isDeleted?: ('Y' | 'N');
 }
 /** 生产费用分配明细编辑DTO */
 export interface IProductionExpenseAllocationDetailsEditDTO {
@@ -43,7 +43,7 @@ export interface IProductionExpenseAllocationDetailsEditDTO {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: string;
+    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
     /** 计划开工日期 */
     planBeginTime?: string;
     /** 物料id */
@@ -71,7 +71,7 @@ export interface IProductionExpenseAllocationDetailsEditDTO {
     /** 费用合计 */
     totalFee?: number;
     /** undefined */
-    isDeleted?: string;
+    isDeleted?: ('Y' | 'N');
 }
 /** 生产成本分配动态数据 */
 export interface IProductionCostAllocationDynamicData {

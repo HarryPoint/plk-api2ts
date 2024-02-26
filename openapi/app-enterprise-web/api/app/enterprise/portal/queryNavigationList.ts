@@ -55,7 +55,7 @@ export interface IPortalQueryResponseDTO {
     /** 门户权限列表 */
     portalVisualPermissions?: IPortalVisualPermissionQueryResponseDTO[];
     /** 是否默认 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 数据状态 */
     dataStatus?: number;
 }

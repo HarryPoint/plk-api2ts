@@ -30,18 +30,18 @@ export interface IDeviceDataOverviewSearchVO {
     /** 名称 */
     name?: string;
     /** 设备状态 */
-    runningStatus?: string;
+    runningStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 通讯开关状态 */
-    apiSwitchStatus?: string;
+    apiSwitchStatus?: ('ON' | 'OFF');
     /** 在线状态 */
-    onlineStatus?: string;
+    onlineStatus?: ('ONLINE' | 'OFFLINE');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«设备数据概览返回VO»» */
 export interface IJSONResultPagingInformationDeviceDataOverviewReturnsVO {
@@ -69,9 +69,9 @@ export interface IPageInformationDeviceDataOverviewReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,17 +92,17 @@ export interface IDeviceDataOverviewBackToVO {
     /** 设备数采方案编号 */
     deviceCollectionPlanCode?: string;
     /** 通讯开关状态 */
-    apiSwitchStatus?: string;
+    apiSwitchStatus?: ('ON' | 'OFF');
     /** 通讯开关状态描述 */
     apiSwitchStatusDesc?: string;
     /** 最后通讯时间 */
     lastApiTime?: string;
     /** 在线状态 */
-    onlineStatus?: string;
+    onlineStatus?: ('ONLINE' | 'OFFLINE');
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    runningStatus?: string;
+    runningStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 设备状态描述 */
     runningStatusDesc?: string;
     /** 所属设备型号类型名称 */

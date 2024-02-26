@@ -39,11 +39,11 @@ export interface IProductionOrderClosureInformationIsReturnedToVO {
     /** 任务处理数量 */
     taskCompleteQuantity?: number;
     /** 是否存在未处理的审批事件 */
-    hasWaitProduceHandle?: string;
+    hasWaitProduceHandle?: ('Y' | 'N');
     /** 是否存在未处理完的委外订单 */
-    hasSurplusProduceEntrust?: string;
+    hasSurplusProduceEntrust?: ('Y' | 'N');
     /** 关闭后的订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 关闭后的订单状态描述 */
     orderStatusDesc?: string;
 }

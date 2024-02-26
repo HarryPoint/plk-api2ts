@@ -54,9 +54,9 @@ export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     /** 生产时间 -- 产能 */
     capacityProduceTime?: number;
     /** 时间单位 -- 产能 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 时间单位 -- 准备耗时 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 准备耗时 -- 准备耗时 */
     readyTime?: number;
 }

@@ -33,7 +33,7 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 任务号 */
     taskNo?: string;
     /** 质检任务类型 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 对应物料id */
     materialId?: number;
     /** 对应物料名称 */
@@ -83,7 +83,7 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 任务状态名称 */
     statusDesc?: string;
     /** 关闭人 */
@@ -99,7 +99,7 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 质检结果明细 - 状态是已完成时有值 */
     planItemResults?: ICheckItemDetailsAreReturnedToVO[];
     /** 任务类型 */
-    taskType?: string;
+    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
     /** 任务类型名称 */
     taskTypeDesc?: string;
     /** 检验位置id */
@@ -172,13 +172,13 @@ export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检项附件文件名 */
     qualityInspectionItemAttachedFileName?: string;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 选择方式 */
-    selectType?: string;
+    selectType?: ('SELECTOR' | 'CHECKBOX');
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */
@@ -217,7 +217,7 @@ export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检任务质检物料明细id */
     id?: number;
     /** 质检结果类型 */
-    qualityInspectionResultType?: string;
+    qualityInspectionResultType?: ('PASS' | 'NOT_PASS' | 'CONCESSION');
     /** 质检结果类型名称 */
     qualityInspectionResultTypeName?: string;
     /** 质检项集 */
@@ -228,9 +228,9 @@ export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 质检方案质检项关联id */
     qualityInspectionPlanItemRpId?: number;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryByTypeUsingGET
 */
-export default function fetchMethod(options: { params: { type?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN'); enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryByType",

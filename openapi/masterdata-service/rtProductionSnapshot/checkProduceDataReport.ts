@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: string;
+    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
 }
 /** JSONResult«产出数据报表搜索VO» */
 export interface IJSONResultOutputDataReportSearchVO {
@@ -63,5 +63,5 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }

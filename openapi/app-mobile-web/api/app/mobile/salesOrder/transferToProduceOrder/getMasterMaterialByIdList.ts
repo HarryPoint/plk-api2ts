@@ -61,7 +61,7 @@ export interface ITransferProductionOrderMainMaterialInformation {
     /** 优先级 */
     priorityLevel?: number;
     /** 是否紧急订单 */
-    isEmergentOrder?: string;
+    isEmergentOrder?: ('Y' | 'N');
     /** 标准生产工艺可选列表 */
     standardTechnologyOptionalList?: IStandardTechnologyDTO[];
     /** 已选择标准工艺ID */
@@ -71,11 +71,11 @@ export interface ITransferProductionOrderMainMaterialInformation {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用批次 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }
 /** StandardTechnologyDTO */
 export interface IStandardTechnologyDTO {

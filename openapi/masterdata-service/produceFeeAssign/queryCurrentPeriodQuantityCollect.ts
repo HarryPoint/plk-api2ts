@@ -33,7 +33,7 @@ export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObje
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: string;
+    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
     /** 计划开工日期 */
     planBeginTime?: string;
     /** 计划完工日期 */

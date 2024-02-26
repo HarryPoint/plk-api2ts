@@ -34,9 +34,9 @@ export interface IJSONResultFormulaCheckResponseDTO {
 /** FormulaCheckResponseDTO */
 export interface IFormulaCheckResponseDTO {
     /** 是否有效公式 */
-    isEffectiveFormula?: string;
+    isEffectiveFormula?: ('Y' | 'N');
     /** 是否有效公式类型 */
-    messageExpressionType?: string;
+    messageExpressionType?: ('NONE' | 'TIME_FUNCTION' | 'MATH_FUNCTION');
     /** 消息 */
     message?: string;
 }

@@ -20,9 +20,9 @@ export interface IItemTaskNameNumberQueryObject {
     /** 项目计划id */
     projectPlanId?: number;
     /** 是否查询只在项目计划模块展示的任务 */
-    isProjectPlanShow?: string;
+    isProjectPlanShow?: ('Y' | 'N');
     /** 是否查询只在项目任务模块展示的任务 */
-    isProjectTaskShow?: string;
+    isProjectTaskShow?: ('Y' | 'N');
     /** 名称or编号 */
     nameOrCode?: string;
 }

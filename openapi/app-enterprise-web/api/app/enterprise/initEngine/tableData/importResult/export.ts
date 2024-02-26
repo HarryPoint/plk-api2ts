@@ -20,17 +20,17 @@ export interface ISearchRowData {
     /** 字段查询条件 */
     fieldQueryCondition?: Record<string, string>;
     /** 空数据 */
-    existsEmptyData?: string;
+    existsEmptyData?: ('Y' | 'N');
     /** 错误数据 */
-    existsErrorData?: string;
+    existsErrorData?: ('Y' | 'N');
     /** 存在重复的数据 */
-    existsRepeatData?: string;
+    existsRepeatData?: ('Y' | 'N');
     /** 校验状态 */
-    verificationStatus?: string;
+    verificationStatus?: ('NOT' | 'FAILED_VERIFICATION' | 'VERIFICATION_PASSED');
     /** 操作模式 */
-    operationMode?: string;
+    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
     /** 生效状态 */
-    importStatus?: string;
+    importStatus?: ('NOT_IMPORTED' | 'IMPORTED' | 'IMPORT_FAIL');
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
@@ -39,7 +39,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

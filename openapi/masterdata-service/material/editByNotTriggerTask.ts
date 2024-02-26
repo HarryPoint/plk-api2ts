@@ -29,17 +29,17 @@ export interface IMaterialBatchSetEditObject {
     /** 物料id */
     materialId?: number;
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 序列号方案id */
     serialNoSchemeId?: number;
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用外部码 */
-    enableExternalCode?: string;
+    enableExternalCode?: ('Y' | 'N');
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */

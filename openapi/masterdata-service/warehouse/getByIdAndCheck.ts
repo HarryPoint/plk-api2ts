@@ -39,11 +39,11 @@ export interface IPositionVO {
     /** 仓位编号 */
     code?: string;
     /** 是否默认仓位 - 针对整个工厂唯一默认有一个仓位，非仓库下自动创建的默认仓位 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 仓位类型 */
-    type?: string;
+    type?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
     /** WIP类型 - WIP时有值 */
-    wipType?: string;
+    wipType?: ('BEFORE' | 'IN');
     /** 所属工艺路径id - WIP时有值 */
     routingId?: number;
     /** 所属区域id */

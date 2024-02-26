@@ -22,9 +22,9 @@ export interface IProjectPhaseSortRequestObjects {
     /** 移动到的排序,最小为1 */
     moveToSort: number;
     /** 是否是在项目计划模块展示的阶段 */
-    isProjectPlanShow?: string;
+    isProjectPlanShow?: ('Y' | 'N');
     /** 是否是在项目任务模块展示的阶段 */
-    isProjectTaskShow?: string;
+    isProjectTaskShow?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

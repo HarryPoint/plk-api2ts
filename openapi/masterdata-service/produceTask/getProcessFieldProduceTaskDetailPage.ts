@@ -32,14 +32,14 @@ export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     /** 物料ids */
     materialIds?: number[];
     /** 生产任务状态列表 */
-    produceTaskStatusList?: string[];
+    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«任务汇总表(基于工序字段)明细信息VO»» */
 export interface ITheJSONResultPageInformationTaskSummaryTableIsBasedOnProcessFieldDetailsVO {
@@ -67,9 +67,9 @@ export interface IThePageInformationTaskSummaryTableIsBasedOnProcessFieldDetails
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -90,7 +90,7 @@ export interface ITheTaskSummaryTableIsBasedOnProcessFieldDetailsVO {
     /** 动态字段值列表 */
     fieldValueList?: IProcedureFieldValueVO[];
     /** 生产任务状态 */
-    produceTaskStatus?: string;
+    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
 }
 /** 工序字段值VO */
 export interface IProcedureFieldValueVO {

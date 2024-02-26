@@ -66,7 +66,7 @@ export interface IInventoryFlowSearchVO {
     /** 创建部门 - 批量查询 */
     billCreateDeptIdList?: number[];
     /** 业务状态 - 批量查询 */
-    businessStatusList?: string[];
+    businessStatusList?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID')[];
     /** 库存更新时间-结束 yyyy-MM-dd HH:mm:ss */
     updateTimeEnd?: string;
     /** 流程进度 - 模糊查询 */
@@ -81,7 +81,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

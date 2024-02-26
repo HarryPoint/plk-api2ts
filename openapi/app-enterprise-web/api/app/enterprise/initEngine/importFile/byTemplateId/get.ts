@@ -33,7 +33,7 @@ export interface IImportFile {
     /** 文件名 */
     fileName?: string;
     /** 状态 */
-    status?: string;
+    status?: ('NOT_PARSE' | 'PARSED' | 'PARSE_FAIL');
     /** 错误原因 */
     failMessage?: string;
 }

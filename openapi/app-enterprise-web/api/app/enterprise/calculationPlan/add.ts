@@ -22,17 +22,17 @@ export interface IComputingSolutionAddedARequestDTO {
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否明细业务 */
-    isDetailFlow?: string;
+    isDetailFlow?: ('Y' | 'N');
     /** 公式类型 */
-    formulaType?: string;
+    formulaType?: ('TIME_FUNCTION' | 'MATH_FUNCTION');
     /** 公式 */
     formula?: string;
     /** 计算模式 */
-    calculationMode?: string;
+    calculationMode?: ('FIXED_TIME' | 'PERIODICITY');
     /** 固定时间 */
     fixedTime?: string;
     /** 计算周期 */
-    calculationPeriod?: string;
+    calculationPeriod?: ('EVERY_DAY' | 'EVERY_MONTH' | 'EVERY_QUARTER' | 'EVERY_YEAR');
     /** 过滤条件列表 */
     filterConditionList?: ICalculationSchemeFilterConditionDTO2[];
 }

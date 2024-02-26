@@ -34,14 +34,14 @@ export interface IGanttChartSearchVO {
     /** 生产物料ID列表 */
     produceMaterialIdList?: number[];
     /** 订单状态列表 */
-    orderStatusList?: string[];
+    orderStatusList?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE')[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«生产订单手动排产甘特图返回VO»» */
 export interface IJSONResultPageInformationProductionOrderManualSchedulingGanttChartReturnsVO {
@@ -69,9 +69,9 @@ export interface IPageInformationProductionOrdersManualSchedulingGanttChartRetur
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -100,7 +100,7 @@ export interface IProductionOrderManualSchedulingGanttChartBackToVO {
     /** 交付日期 */
     deliveryDate?: string;
     /** 生产订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 计划开始日期 */
     beginTime?: string;
     /** 计划结束日期 */

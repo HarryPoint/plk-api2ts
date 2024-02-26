@@ -63,7 +63,7 @@ export interface IImportRecordDTO {
     /** 应用名称 */
     applicationName?: string;
     /** 导入类型 */
-    importType?: string;
+    importType?: ('FIRST_IMPORT' | 'FAILED_DATA_IMPORT');
     /** 表数据ID */
     tableDataId?: string;
     /** 开始时间 */
@@ -71,7 +71,7 @@ export interface IImportRecordDTO {
     /** 结束时间 */
     endTime?: string;
     /** 导入状态 */
-    importStatus?: string;
+    importStatus?: ('NONE' | 'QUEUING' | 'IMPORTING' | 'COMPLETE');
     /** 失败数量 */
     numberOfFailure?: number;
     /** 操作用户ID */

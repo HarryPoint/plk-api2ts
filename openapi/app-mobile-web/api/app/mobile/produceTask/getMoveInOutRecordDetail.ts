@@ -114,11 +114,11 @@ export interface IBomBOMMaterialConfirmationVO {
     /** 实际数 */
     actualQuantity?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
 }
 /** ProduceTechnologyKeyParameterResponseDTO */
 export interface IProduceTechnologyKeyParameterResponseDTO {
@@ -196,9 +196,9 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     /** 帮助提示 */
     remark?: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 文本类型 */
-    textType?: string;
+    textType?: ('INPUT' | 'COMPARE');
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */
@@ -227,45 +227,45 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: string;
+    needConfirmMoveInQuantity?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: string;
+    autoBringOutLastMold?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: string;
+    autoBringOutLastDevice?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: string;
+    autoBringOutLastBomConsume?: ('Y' | 'N');
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: string;
+    allowSplitLot?: ('Y' | 'N');
     /** 是否强制拆分批次 */
-    forcedSplitLot?: string;
+    forcedSplitLot?: ('Y' | 'N');
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用外部码 */
-    enableExternalCode?: string;
+    enableExternalCode?: ('Y' | 'N');
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: string;
+    enableDevice?: ('Y' | 'N');
     /** 是否有模具 */
-    enableMold?: string;
+    enableMold?: ('Y' | 'N');
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: string;
+    enableMoveInBomConsume?: ('Y' | 'N');
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: string;
+    enableMoveOutBomConsume?: ('Y' | 'N');
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: string;
+    enableMoveInKeyParameter?: ('Y' | 'N');
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: string;
+    enableMoveOutKeyParameter?: ('Y' | 'N');
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: string;
+    isGtPlannedQuantity?: ('Y' | 'N');
 }

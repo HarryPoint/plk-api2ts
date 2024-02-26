@@ -32,9 +32,9 @@ export interface IDataEaseMenuPagesQueryObjects {
     /** 菜单名称 */
     name?: string;
     /** 电脑端 -- 传Y */
-    isPcTerminal?: string;
+    isPcTerminal?: ('Y' | 'N');
     /** 移动端 -- 传Y */
-    isMobileTerminal?: string;
+    isMobileTerminal?: ('Y' | 'N');
     /** 创建时间 -- 开始 */
     beginCreateTime?: string;
     /** 创建时间 -- 结束 */
@@ -45,7 +45,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«DataEase菜单分页响应对象»» */
 export interface IJSONResultPagingInformationDataEaseMenuPagingResponseObject {
@@ -73,9 +73,9 @@ export interface IPagingInformationDataEaseMenuPagingResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -106,9 +106,9 @@ export interface IDataEaseMenuPagingResponseObject {
     /** 链接地址 */
     originalLinkUrl?: string;
     /** 是否在PC端发布 */
-    isPcTerminal?: string;
+    isPcTerminal?: ('Y' | 'N');
     /** 是否在移动端发布 */
-    isMobileTerminal?: string;
+    isMobileTerminal?: ('Y' | 'N');
     /** 状态 */
     dataStatus?: number;
 }

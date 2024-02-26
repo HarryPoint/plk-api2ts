@@ -27,7 +27,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«流程排班记录返回VO»» */
 export interface IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO {
@@ -55,9 +55,9 @@ export interface IPagingInformationProcessSchedulingRecordsAreReturnedToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -102,7 +102,7 @@ export interface IProcessSchedulingBaseDetailsAreReturnedToVO {
     /** 班次开始时间 */
     classShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
     /** 班次结束时间 */
     classShiftEndTime?: ILocalTime;
 }

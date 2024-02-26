@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProductionExceptionTypeSta
 /** 生产异常类型统计VO_1 */
 export interface IProductionExceptionTypeStatisticsVO1 {
     /** 所属分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 处理状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
     /** 所属物料ids */
     materialIds?: number[];
     /** 开始时间 */

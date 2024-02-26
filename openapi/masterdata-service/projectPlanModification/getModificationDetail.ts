@@ -38,7 +38,7 @@ export interface IChangeOrderResponseParametersInProjectPhase {
     /** 名称 */
     name?: string;
     /** 表单操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'MODIFY_PROJECT_MANGER');
     /** 项目变更表单id */
     projectModificationFormId?: number;
     /** 数据id */
@@ -51,7 +51,7 @@ export interface IItemChangeOrderFieldResponseParameter {
     /** 字段编号 */
     fieldCode?: string;
     /** 操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
     /** 旧值 */
     oldValue?: string;
     /** 新值 */
@@ -64,7 +64,7 @@ export interface IItemChangeListFieldExtensionParameterRequest {
     /** 行数据id */
     dataId?: string;
     /** 操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
     /** 列数据 */
     columnData?: IItemChangeOrderFieldResponseParameter[];
 }
@@ -77,7 +77,7 @@ export interface IProjectTaskChangeOrderResponseParameters {
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 表单操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'MODIFY_PROJECT_MANGER');
     /** 项目变更表单id */
     projectModificationFormId?: number;
     /** 数据id */

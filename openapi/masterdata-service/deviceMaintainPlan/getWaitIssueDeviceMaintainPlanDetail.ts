@@ -28,11 +28,11 @@ export interface IMaintenancePlanDetailsToBeDeliveredResponseDTO {
     /** 所属区域id */
     areaId?: number;
     /** 保养类型 */
-    maintainType?: string;
+    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
     /** 保养方案id */
     maintainSchemeId?: number;
     /** 保养开始时间 */
     maintainStartTime?: string;
     /** 计划明细状态 */
-    planDetailStatus?: string;
+    planDetailStatus?: ('CREATED' | 'ISSUE' | 'CANCEL' | 'COMPLETE');
 }

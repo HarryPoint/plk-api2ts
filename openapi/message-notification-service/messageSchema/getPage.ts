@@ -18,11 +18,11 @@ export interface IMessageSchemeQueryRequest {
     /** 当前页面 */
     pageNo?: number;
     /** 消息发送方式 */
-    sendingModeList?: string[];
+    sendingModeList?: ('SYSTEM' | 'SMS' | 'EMAIL')[];
     /** 分页大小 */
     pageSize?: number;
     /** 发送状态 */
-    sendingContentStatusList?: string[];
+    sendingContentStatusList?: ('NORMAL' | 'ABNORMAL')[];
     /** 消息标题 */
     messageSchemaTitle?: string;
     /** 创建员工 */
@@ -64,9 +64,9 @@ export interface IPageInformationPageQueryResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -85,7 +85,7 @@ export interface IPagingQueryResponse {
     /** 更新部门ID */
     updateDeptId?: number;
     /** 发送状态 */
-    sendingContentStatus?: string;
+    sendingContentStatus?: ('NORMAL' | 'ABNORMAL');
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */

@@ -34,7 +34,7 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 计划开始日期查询结束时间 */
     endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList?: string[];
+    planTypeList?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE')[];
     /** 计划结束日期查询结束时间 */
     endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«long»» */
 export interface IJSONResultListlong {

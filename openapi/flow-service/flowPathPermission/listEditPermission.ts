@@ -29,9 +29,9 @@ export interface IAddedPermissionEdit2 {
     /** ID */
     id?: number;
     /** 流程状态 */
-    flowStatus?: string;
+    flowStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 是否可编辑 */
-    isEditable?: string;
+    isEditable?: ('Y' | 'N');
     /** 是否禁用 */
-    isDisabled?: string;
+    isDisabled?: ('Y' | 'N');
 }

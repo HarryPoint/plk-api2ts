@@ -24,13 +24,13 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 提交人id */
     createUserId?: number;
     /** 生产异常类型id */
     produceAbnormalCategoryId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 操作开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 批次号 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

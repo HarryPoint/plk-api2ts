@@ -24,14 +24,14 @@ export interface IMaterialMasterDataSelectionListSearchVO {
     /** 物料名称/编号 */
     nameOrCode?: string;
     /** 物料类型数组 */
-    materialTypeList?: string[];
+    materialTypeList?: ('RAW' | 'SEMI_PRODUCT' | 'FINISH_GOODS' | 'KIT' | 'PARTS')[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«物料主数据选择返回VO»» */
 export interface IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO {
@@ -59,9 +59,9 @@ export interface IPageInformationMaterialMasterDataSelectionReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,5 +88,5 @@ export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否有bom */
-    hasBom?: string;
+    hasBom?: ('Y' | 'N');
 }

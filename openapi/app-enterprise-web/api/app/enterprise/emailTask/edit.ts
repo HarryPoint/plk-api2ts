@@ -26,7 +26,7 @@ export interface IEmailTaskEditRequestDTO {
     /** 邮件正文 */
     content?: string;
     /** 发送模式 */
-    sendingMode?: string;
+    sendingMode?: ('SINGLE' | 'MULTIPLE');
     /** 发送时间 */
     sendingTime?: string;
     /** 下次发送时间 */
@@ -36,7 +36,7 @@ export interface IEmailTaskEditRequestDTO {
     /** 邮件任务配置列表 */
     attachmentConfigList?: IEmailTaskAttachmentConfigEditRequestDTO[];
     /** 邮件状态 */
-    status?: string;
+    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
     /** 发送时间配置 */
     sendingTimeConfig?: ISendingTimeConfigEditRequestDTO;
     /** 创建用户名 */
@@ -62,15 +62,15 @@ export interface ISendingTimeConfigEditRequestDTO {
     /** ID */
     id?: number;
     /** 时间模式 */
-    timeMode?: string;
+    timeMode?: ('DAY' | 'WEEK' | 'MONTH' | 'QUARTER' | 'HALF_YEAR' | 'YEAR');
     /** 周号 */
     weekNo?: number;
     /** 每月的计时模式 */
-    monthCalcTimeMode?: string;
+    monthCalcTimeMode?: ('FROM_BEGINNING_OF_MONTH' | 'FROM_END_OF_MONTH');
     /** 第几天 */
     day?: number;
     /** 季度计时模式 */
-    quarterCalcTimeMode?: string;
+    quarterCalcTimeMode?: ('FROM_BEGINNING_OF_QUARTER' | 'FROM_END_OF_QUARTER');
     /** 每天第几天 */
     month?: number;
     /** 时间 */
@@ -83,7 +83,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

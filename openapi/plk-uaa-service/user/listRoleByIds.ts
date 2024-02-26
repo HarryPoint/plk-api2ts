@@ -38,13 +38,13 @@ export interface IRoleAndUserIdInformationResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: string;
+    isManage?: ('Y' | 'N');
     /** 是否是管理员 */
-    isAdmin?: string;
+    isAdmin?: ('Y' | 'N');
     /** 描述 */
     description?: string;
     /** 用户id */
     userId?: number;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
 }

@@ -45,7 +45,7 @@ export interface ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 默认盘点清单 */

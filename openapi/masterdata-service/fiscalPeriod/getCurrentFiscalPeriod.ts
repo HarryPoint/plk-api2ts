@@ -35,5 +35,5 @@ export interface IDurationResponseObject {
     /** 结束日期 */
     endDate?: string;
     /** 是否当前期间 */
-    isCurrentFiscalPeriod?: string;
+    isCurrentFiscalPeriod?: ('Y' | 'N');
 }

@@ -22,11 +22,11 @@ export interface IProjectGanttChartQueryObject {
     /** 项目类型集合 */
     projectTypeList?: string[];
     /** 任务优先级集合 */
-    priorityList?: string[];
+    priorityList?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY')[];
     /** 项目状态集合 */
-    projectStatusList?: string[];
+    projectStatusList?: ('DRAFT' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELED')[];
     /** 任务状态 */
-    projectTaskStatusList?: string[];
+    projectTaskStatusList?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED')[];
     /** 项目负责人id集合 */
     projectLeaderIdList?: number[];
     /** 任务执行人id集合 */
@@ -60,7 +60,7 @@ export interface IProjectGanttChartResponseObject {
     /** 项目名称 */
     projectName?: string;
     /** 项目状态 */
-    projectStatus?: string;
+    projectStatus?: ('DRAFT' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELED');
     /** 项目状态描述 */
     projectStatusDesc?: string;
     /** 项目负责人id */
@@ -87,11 +87,11 @@ export interface IProjectTaskGanttChartResponseObject {
     /** 项目任务名称 */
     projectTaskName?: string;
     /** 项目任务优先级 */
-    priority?: string;
+    priority?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY');
     /** 项目任务优先级描述 */
     priorityDesc?: string;
     /** 项目任务状态 */
-    projectTaskStatus?: string;
+    projectTaskStatus?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED');
     /** 项目任务状态描述 */
     projectTaskStatusDesc?: string;
     /** 项目任务执行人id */

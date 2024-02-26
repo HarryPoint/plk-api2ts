@@ -31,7 +31,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'BACK');
     /** 生产订单id */
     produceOrderId?: number;
     /** 生产订单号 */
@@ -115,7 +115,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
@@ -123,7 +123,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 可进料批次数 */
     canMoveInLotCount?: number;
     /** 是否需要质检 */
-    isQuality?: string;
+    isQuality?: ('Y' | 'N');
     /** 可出料批次数 */
     canMoveOutLotCount?: number;
     /** 当前步骤配置信息 - 用于前端判断各种情况逻辑 */
@@ -137,54 +137,54 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 对应工艺卡信息 */
     produceTechnologyProcessSheetInfo?: IProductionProcessProcessCardInformationIsReturnedToDTO;
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }
 /** 生产工艺路径步骤设置返回VO */
 export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: string;
+    needConfirmMoveInQuantity?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: string;
+    autoBringOutLastMold?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: string;
+    autoBringOutLastDevice?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: string;
+    autoBringOutLastBomConsume?: ('Y' | 'N');
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: string;
+    allowSplitLot?: ('Y' | 'N');
     /** 是否强制拆分批次 */
-    forcedSplitLot?: string;
+    forcedSplitLot?: ('Y' | 'N');
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用外部码 */
-    enableExternalCode?: string;
+    enableExternalCode?: ('Y' | 'N');
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: string;
+    enableDevice?: ('Y' | 'N');
     /** 是否有模具 */
-    enableMold?: string;
+    enableMold?: ('Y' | 'N');
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: string;
+    enableMoveInBomConsume?: ('Y' | 'N');
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: string;
+    enableMoveOutBomConsume?: ('Y' | 'N');
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: string;
+    enableMoveInKeyParameter?: ('Y' | 'N');
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: string;
+    enableMoveOutKeyParameter?: ('Y' | 'N');
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: string;
+    isGtPlannedQuantity?: ('Y' | 'N');
 }
 /** 生产工艺工艺卡信息返回DTO */
 export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
@@ -232,7 +232,7 @@ export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: string;
+    type?: ('FILE' | 'TEXT' | 'INPUT');
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */

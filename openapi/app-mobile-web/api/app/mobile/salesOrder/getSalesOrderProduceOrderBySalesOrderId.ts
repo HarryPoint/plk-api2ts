@@ -49,7 +49,7 @@ export interface ISalesOrderProductionOrderReturnedToVO {
     /** 计划结束时间 */
     endTime?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 订单状态描述 */
     orderStatusDesc?: string;
 }

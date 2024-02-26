@@ -75,7 +75,7 @@ export interface ICheckTaskDetailsAreReturnedToVOForEmployees {
     /** 实际质检结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 送检人id */
@@ -150,13 +150,13 @@ export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检项附件文件名 */
     qualityInspectionItemAttachedFileName?: string;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 选择方式 */
-    selectType?: string;
+    selectType?: ('SELECTOR' | 'CHECKBOX');
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */
@@ -195,7 +195,7 @@ export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检任务质检物料明细id */
     id?: number;
     /** 质检结果类型 */
-    qualityInspectionResultType?: string;
+    qualityInspectionResultType?: ('PASS' | 'NOT_PASS' | 'CONCESSION');
     /** 质检结果类型名称 */
     qualityInspectionResultTypeName?: string;
     /** 质检项集 */
@@ -206,9 +206,9 @@ export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 质检方案质检项关联id */
     qualityInspectionPlanItemRpId?: number;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */

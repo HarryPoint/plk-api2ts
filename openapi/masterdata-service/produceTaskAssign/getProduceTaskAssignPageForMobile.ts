@@ -22,15 +22,15 @@ export interface IProductionTaskAssignmentQueryVOForMobile {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 任务类型 */
-    types?: string[];
+    types?: ('PRODUCE' | 'BACK')[];
     /** 工序id */
     processId: number;
     /** 物料id */
     materialIds?: number[];
     /** 生产任务可操作类型 */
-    optTypes?: string[];
+    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
     /** 任务状态 */
-    statusList?: string[];
+    statusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
     /** 生产订单号/生产任务编号(扫码查询时默认为生产订单号) */
     codeSearch?: string;
     /** 开始时间 yyyy-MM-dd HH:mm:dd */
@@ -40,13 +40,13 @@ export interface IProductionTaskAssignmentQueryVOForMobile {
     /** 工序id集合 */
     processIds?: number[];
     /** 任务进站关键参数是否需要填写 */
-    moveInKeyParameterFillNeeds?: string;
+    moveInKeyParameterFillNeeds?: ('Y' | 'N');
     /** 生产任务编号集合(扫码查询切换进出料查询时传参) */
     taskNos?: string[];
     /** 是否已分配 */
-    isAssign?: string;
+    isAssign?: ('Y' | 'N');
     /** 任务出站关键参数是否需要填写 */
-    moveOutKeyParameterFillNeeds?: string;
+    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
     /** 操作员id列表 */
     assignUserIds?: number[];
     /** 计划生产数量最低数量 */
@@ -59,7 +59,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«生产任务分配VO -- 针对mobile»» */
 export interface IJSONResultPageInformationProductionTaskAssignmentVOForMobile {
@@ -87,9 +87,9 @@ export interface IPagingInformationProductionTaskAssignmentVOForMobile {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -102,7 +102,7 @@ export interface IProductionTaskAssignmentVOForMobile {
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'BACK');
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -176,25 +176,25 @@ export interface IProductionTaskAssignmentVOForMobile {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
     priorityLevel?: number;
     /** 当前任务WIP是否有物料 */
-    isWip?: string;
+    isWip?: ('Y' | 'N');
     /** 可操作项列表 */
-    canOpItemList?: string[];
+    canOpItemList?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
     /** 可操作项列表拼接 */
     canOpItemListStr?: string;
     /** 任务进站关键参数是否需要填写 */
-    moveInKeyParameterFillNeeds?: string;
+    moveInKeyParameterFillNeeds?: ('Y' | 'N');
     /** 任务出站关键参数是否需要填写 */
-    moveOutKeyParameterFillNeeds?: string;
+    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
     /** 操作员列表 */
     assignUserList?: IIdNameNumberVO[];
     /** 是否已分配 */
-    isAssign?: string;
+    isAssign?: ('Y' | 'N');
     /** 生产订单 */
     produceOrder?: Record<string, Record<string, any>>;
     /** 批次信息 */
@@ -227,45 +227,45 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: string;
+    needConfirmMoveInQuantity?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: string;
+    autoBringOutLastMold?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: string;
+    autoBringOutLastDevice?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: string;
+    autoBringOutLastBomConsume?: ('Y' | 'N');
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: string;
+    allowSplitLot?: ('Y' | 'N');
     /** 是否强制拆分批次 */
-    forcedSplitLot?: string;
+    forcedSplitLot?: ('Y' | 'N');
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用外部码 */
-    enableExternalCode?: string;
+    enableExternalCode?: ('Y' | 'N');
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: string;
+    enableDevice?: ('Y' | 'N');
     /** 是否有模具 */
-    enableMold?: string;
+    enableMold?: ('Y' | 'N');
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: string;
+    enableMoveInBomConsume?: ('Y' | 'N');
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: string;
+    enableMoveOutBomConsume?: ('Y' | 'N');
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: string;
+    enableMoveInKeyParameter?: ('Y' | 'N');
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: string;
+    enableMoveOutKeyParameter?: ('Y' | 'N');
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: string;
+    isGtPlannedQuantity?: ('Y' | 'N');
 }

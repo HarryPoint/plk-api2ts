@@ -27,7 +27,7 @@ export interface IJSONResultListProcessNodeDynamicExecutorReturnsVO {
 /** 流程节点动态执行人返回VO */
 export interface ITheProcessNodeDynamicExecutorReturnsVO {
     /** 动态执行人类型 */
-    dynamicExecutorType?: string;
+    dynamicExecutorType?: ('TASK_PLAN');
     /** id */
     id: number;
     /** 动态执行人类型描述 */
@@ -37,7 +37,7 @@ export interface ITheProcessNodeDynamicExecutorReturnsVO {
     /** 编号 */
     code: string;
     /** 系统控件类型 */
-    executorSysType?: string;
+    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
     /** 配置类型 */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
 }

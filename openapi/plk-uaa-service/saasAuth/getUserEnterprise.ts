@@ -35,7 +35,7 @@ export interface ISaasEnterprisesRespondToDTO1 {
     /** 企业编号 */
     code?: string;
     /** 是否是最后登录企业 */
-    isLastLogin?: string;
+    isLastLogin?: ('Y' | 'N');
     /** 服务类型 */
-    productServiceType?: string;
+    productServiceType?: ('TRIAL' | 'FORMAL');
 }

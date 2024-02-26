@@ -42,7 +42,7 @@ export interface IFiscalPeriodCheckResponseDTO {
     /** 单据日期 */
     billDate?: string;
     /** 结存状态 - 如果没有区间则返回空、如果区间存在则返回实际值 */
-    balanceStatus?: string;
+    balanceStatus?: ('UNBALANCED' | 'BALANCED');
     /** 期间/所属期间- 如果没有区间则返回空、如果区间存在则返回实际值 */
     period?: string;
 }

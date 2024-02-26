@@ -31,7 +31,7 @@ export interface IVivBatchPrintTemplateResponseObject2 {
     /** 模板名称 */
     name?: string;
     /** 模板类型 */
-    type?: string;
+    type?: ('BARCODE' | 'QRCODE');
     /** 打印模板 */
     printTemplate?: string;
 }

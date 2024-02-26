@@ -24,7 +24,7 @@ export interface IWarehouseProcessInboundAndOutboundDTO {
     /** 数量 */
     quantity?: number;
     /** 出入库类型 */
-    inOutType?: string;
+    inOutType?: ('OUT' | 'IN');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

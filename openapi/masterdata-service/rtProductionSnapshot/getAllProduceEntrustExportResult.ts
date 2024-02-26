@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: string;
+    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
 }
 /** JSONResult«List«委外报表导出VO»» */
 export interface IJSONResultListOutsourcedReportExportVO {

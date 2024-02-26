@@ -31,5 +31,5 @@ export interface IQualityTraceabilityTheProductionOrderResponseObjectWasNotOpene
     /** 生产订单号 */
     code?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
 }

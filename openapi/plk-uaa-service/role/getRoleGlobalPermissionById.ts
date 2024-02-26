@@ -31,9 +31,9 @@ export interface ITheGlobalPermissionOfTheRoleRespondsToTheDTO {
     /** 权限code */
     permissionCode?: string;
     /** 权限分类 */
-    permissionType?: string;
+    permissionType?: ('FUN' | 'DATA');
     /** 权限说明 */
     permissionRemark?: string;
     /** 是否已勾选 */
-    isChoose?: string;
+    isChoose?: ('Y' | 'N');
 }

@@ -38,5 +38,5 @@ export interface IFlowPathBaseVO {
     /** undefined */
     lastName?: string;
     /** undefined */
-    type?: string;
+    type?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
 }

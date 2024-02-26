@@ -18,7 +18,7 @@ export interface IServiceObjectRegistrationRequest {
     /** 服务对象id */
     serviceObjectId?: number;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

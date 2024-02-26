@@ -28,7 +28,7 @@ export interface IEnterpriseMigrateRequestDTO {
     /** undefined */
     expireTime: string;
     /** undefined */
-    isEnableBatchManagement?: string;
+    isEnableBatchManagement?: ('Y' | 'N');
     /** undefined */
     accessKey?: string;
     /** undefined */

@@ -20,9 +20,9 @@ export interface ITaskBatchOperationDTO4 {
     /** 生产任务列表 */
     produceTaskList: ITaskBatchOperationDTO3[];
     /** 是否使用进出料信息，来作为实际出料的唯一依据 */
-    isUseMaterialMoveInOrOutInfo?: string;
+    isUseMaterialMoveInOrOutInfo?: ('Y' | 'N');
     /** undefined */
-    handleOtherAsync?: string;
+    handleOtherAsync?: ('Y' | 'N');
 }
 /** 任务批量操作DTO_3 */
 export interface ITaskBatchOperationDTO3 {

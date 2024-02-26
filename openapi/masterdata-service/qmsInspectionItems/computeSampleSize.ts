@@ -18,7 +18,7 @@ export interface ICheckItemCalculatesDTO {
     /** 抽样标准id */
     qmsSamplingStandardsId?: number;
     /** 检验方式 */
-    inspectionMethodType?: string;
+    inspectionMethodType?: ('SPOT_CHECK' | 'ALL_CHECK');
     /** 样本量 */
     sampleSize?: number;
 }

@@ -39,7 +39,7 @@ export interface IAssociatedFieldDefinition1 {
     /** undefined */
     name?: string;
     /** undefined */
-    fieldType?: string;
+    fieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'CODE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'EMAIL' | 'MOBILE' | 'ID_CARD');
     /** undefined */
     applicationCode?: string;
 }
@@ -57,7 +57,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

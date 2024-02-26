@@ -18,9 +18,9 @@ export interface IManualDTOSchedulingOfProductionOrders {
     /** 排产计划单名称 */
     planName?: string;
     /** 排产维度 */
-    dimension?: string;
+    dimension?: ('ORDER' | 'PROCESS');
     /** 时间维度 */
-    timeDimension?: string;
+    timeDimension?: ('DAY' | 'CLASS_SHIFT');
     /** 排产开始日期 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 排产结束日期 yyyy-MM-dd HH:mm:ss */

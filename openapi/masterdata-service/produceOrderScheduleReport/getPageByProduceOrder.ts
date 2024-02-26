@@ -34,7 +34,7 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 计划开始日期查询结束时间 */
     endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList?: string[];
+    planTypeList?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE')[];
     /** 计划结束日期查询结束时间 */
     endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«排产订单报表VO(生产订单维度)»» */
 export interface IJSONResultPageInformationSchedulingProductionOrderReportVOProductionOrderDimension {
@@ -73,9 +73,9 @@ export interface IPageInformationSchedulingOrderReportVOProductionOrderDimension
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -140,9 +140,9 @@ export interface IProductionSchedulingOrderReportProcessStepPlanVO {
     /** 生产时间 -- 产能 */
     capacityProduceTime?: number;
     /** 时间单位 -- 产能 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 时间单位 -- 准备耗时 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 准备耗时 -- 准备耗时 */
     readyTime?: number;
     /** 计划开始时间 */

@@ -22,11 +22,11 @@ export interface IProjectGanttChartQueryObject {
     /** 项目类型集合 */
     projectTypeList?: string[];
     /** 任务优先级集合 */
-    priorityList?: string[];
+    priorityList?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY')[];
     /** 项目状态集合 */
-    projectStatusList?: string[];
+    projectStatusList?: ('DRAFT' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELED')[];
     /** 任务状态 */
-    projectTaskStatusList?: string[];
+    projectTaskStatusList?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED')[];
     /** 项目负责人id集合 */
     projectLeaderIdList?: number[];
     /** 任务执行人id集合 */

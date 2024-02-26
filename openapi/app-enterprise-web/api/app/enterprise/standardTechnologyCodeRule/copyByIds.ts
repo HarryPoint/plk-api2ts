@@ -42,7 +42,7 @@ export interface IStandardProcessCodingRulesDetailCopyResponseDTO {
     /** 原始id */
     originalId?: number;
     /** 类型 */
-    type?: string;
+    type?: ('PRODUCE_ORDER' | 'MATERIAL' | 'SERIAL_NO' | 'DATE' | 'FIX');
     /** 应用表格列code - 类型是应用时有值 */
     flowPathTableColumnCode?: string;
     /** 流水号位数 - 类型是流水号时有值 */
@@ -52,7 +52,7 @@ export interface IStandardProcessCodingRulesDetailCopyResponseDTO {
     /** 流水号步长值 - 类型是流水号时有值 */
     serialNoStepValue?: number;
     /** 日期格式 - 类型是日期时有值 */
-    dateFormat?: string;
+    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
     /** 固定值 - 类型是固定值时有值 */
     fixValue?: string;
 }

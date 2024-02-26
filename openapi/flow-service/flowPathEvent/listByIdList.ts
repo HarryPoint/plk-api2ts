@@ -39,15 +39,15 @@ export interface IFlowPathEventQueryResponseDTO {
     /** undefined */
     flowPathVersionId?: number;
     /** undefined */
-    operateFormType?: string;
+    operateFormType?: ('FLOW' | 'FLOW_TABLE');
     /** undefined */
     operateFormCode?: string;
     /** undefined */
     operateApplicationCode?: string;
     /** undefined */
-    operateType?: string;
+    operateType?: ('UPDATE' | 'UPDATE_STORAGE_IN' | 'UPDATE_STORAGE_OUT' | 'UPDATE_RECEIVED' | 'UPDATE_RECEIVABLE' | 'UPDATE_PAID' | 'UPDATE_PAYABLE' | 'INSERT');
     /** undefined */
-    triggerType?: string;
+    triggerType?: ('VALID' | 'INVALID');
     /** undefined */
     triggerConditionFilterGroups?: IProcessEventOperationFilterGroupQueriesDtos[];
     /** undefined */
@@ -59,13 +59,13 @@ export interface IFlowPathEventQueryResponseDTO {
     /** undefined */
     tableKitTableColumnCode?: string;
     /** undefined */
-    isTriggerFlow?: string;
+    isTriggerFlow?: ('Y' | 'N');
     /** undefined */
-    kitType?: string;
+    kitType?: ('STORAGE_IN' | 'STORAGE_OUT' | 'STORAGE_OUT_STORAGE' | 'STORAGE_MOVE' | 'STORAGE_MOVE_STORAGE' | 'RECEIVED' | 'RECEIVABLE' | 'RECEIVABLE_COLLECTION' | 'PAID' | 'PAYABLE' | 'PAYABLE_PAYMENT' | 'BILL_DATE');
     /** undefined */
-    childFormInsertType?: string;
+    childFormInsertType?: ('ALL' | 'FILTER');
     /** undefined */
-    isDirectDeleteTargetForm?: string;
+    isDirectDeleteTargetForm?: ('Y' | 'N');
     /** undefined */
     childFormSettings?: IApplyTheNewEventSubtableToSetResponseDTO1[];
     /** undefined */
@@ -80,22 +80,22 @@ export interface IProcessEventOperationFilterGroupQueriesDtos {
     /** 条件集 */
     filters?: IProcessEventOperationFilterDTO[];
     /** 操作触发类型 */
-    triggerType?: string;
+    triggerType?: ('VALID' | 'INVALID');
     /** 是否触发条件 - 如果是：则为触发条件、不是，则是筛选条件 */
-    isTriggerCondition?: string;
+    isTriggerCondition?: ('Y' | 'N');
 }
 /** 流程事件操作筛选条件DTO */
 export interface IProcessEventOperationFilterDTO {
     /** id */
     id?: number;
     /** 操作触发类型 */
-    triggerType?: string;
+    triggerType?: ('VALID' | 'INVALID');
     /** 被判断的字段序号值 */
     columnSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断对象类型 */
-    compareObjType?: string;
+    compareObjType?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 判断对象字段序号值 */
     compareColumnSerialNo?: string;
     /** 判断对象自定义值 */
@@ -107,12 +107,12 @@ export interface IProcessEventOperationFilterDTO {
     /** 区间范围 -- 上限 */
     rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
 }
 /** 插入业务事件-明细数据分组的依据_2 */
 export interface IInsertTheBasis2OfTheServiceEventDetailDataGroup {
     /** 是否对明细数据进行分组 */
-    isGroup?: string;
+    isGroup?: ('Y' | 'N');
     /** 分组依据-表格字段类型编码 */
     groupingTableCode?: string;
     /** 分组依据-表格字段类型的序列号 */
@@ -125,11 +125,11 @@ export interface IProcessEventMappingConditionGroupQueryResponse {
     /** id */
     id?: number;
     /** 操作触发类型 */
-    triggerType?: string;
+    triggerType?: ('VALID' | 'INVALID');
     /** 操作赋值字段序号值 */
     operateColumnSerialNo?: string;
     /** 值来源类型 */
-    sourceType?: string;
+    sourceType?: ('FORM' | 'FIXED' | 'FORMULA' | 'NULL');
     /** 表单字段序号值 */
     formFieldSerialNo?: string;
     /** 计算公式 */
@@ -137,7 +137,7 @@ export interface IProcessEventMappingConditionGroupQueryResponse {
     /** 固定值 */
     fixedValue?: string;
     /** 禁用编辑，不填或者N代表不禁止。Y代表禁止不能编辑 */
-    isDisableEdit?: string;
+    isDisableEdit?: ('Y' | 'N');
     /** undefined */
     secondarySourceFieldSerialNo?: string;
     /** undefined */
@@ -150,7 +150,7 @@ export interface IApplyTheNewEventSubtableToSetResponseDTO1 {
     /** id */
     id?: number;
     /** 操作触发类型 */
-    triggerType?: string;
+    triggerType?: ('VALID' | 'INVALID');
     /** 字段id */
     flowPathFormFieldId?: number;
     /** 字段序列号 */

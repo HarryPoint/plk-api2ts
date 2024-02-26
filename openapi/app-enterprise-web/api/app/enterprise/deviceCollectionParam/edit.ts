@@ -22,11 +22,11 @@ export interface IDeviceDataAcquisitionCommunicationParametersEditDTO {
     /** 设备编号 */
     code?: string;
     /** 数据类型 */
-    dataType?: string;
+    dataType?: ('NUMBER' | 'TEXT');
     /** 单位类型 */
-    unitType?: string;
+    unitType?: ('TIME' | 'QUANTITY');
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule: ('Y' | 'N');
     /** 单位 */
     unit?: string;
     /** 备注 */

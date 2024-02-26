@@ -35,5 +35,5 @@ export interface INewPermissionEdit {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 权限类型 */
-    type?: string;
+    type?: ('EDIT' | 'READONLY' | 'HIDDEN');
 }

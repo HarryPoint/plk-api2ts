@@ -22,7 +22,7 @@ export interface ISecurityStockChangeRequestSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
 }
@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

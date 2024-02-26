@@ -43,9 +43,9 @@ export interface IProduceWorkOrderVO {
     /** 计划完工日期 */
     endTime?: string;
     /** 是否急单 */
-    isEmergentOrder?: string;
+    isEmergentOrder?: ('Y' | 'N');
     /** 订单类型 */
-    orderType?: string;
+    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
     /** 订单类型描述 */
     orderTypeDesc?: string;
     /** 工序信息 */

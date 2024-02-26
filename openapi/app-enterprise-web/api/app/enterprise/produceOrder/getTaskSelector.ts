@@ -43,7 +43,7 @@ export interface ITheProductionTaskSelectionInformationIsReturnedToVO {
     /** 对应班次编号 */
     classShiftCode?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
 }

@@ -33,7 +33,7 @@ export interface IProjectPortalResponseObject {
     /** 项目名称 */
     name?: string;
     /** 项目状态 */
-    projectStatus?: string;
+    projectStatus?: ('DRAFT' | 'IN_APPROVE' | 'APPROVAL_DENIED' | 'IN_PROGRESS' | 'COMPLETE' | 'END');
     /** 项目类型名称 */
     projectTypeName?: string;
     /** 项目经理名称 */

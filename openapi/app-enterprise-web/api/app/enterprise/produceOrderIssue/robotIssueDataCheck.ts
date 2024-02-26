@@ -47,5 +47,5 @@ export interface IAutomaticProductionOrderSchedulingTaskDataVerificationDetailsA
     /** 物料名称 */
     materialName?: string;
     /** 校验失败错误类型 */
-    failType?: string;
+    failType?: ('PRODUCE_PLAN_START_TIME_IS_NULL' | 'PRODUCE_PLAN_END_TIME_IS_NULL' | 'PRODUCE_PLAN_START_AND_END_TIME_IS_NULL' | 'PRODUCE_PLAN_START_GT_END_TIME');
 }

@@ -24,7 +24,7 @@ export interface IToDoListSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 查询状态 */
-    queryStatus?: string;
+    queryStatus?: ('NOT_HANDLE' | 'OVERDUE' | 'HANDLED' | 'CREATED_BY_ME' | 'CARBON_COPY_TO_ME' | 'NOT_READ' | 'IN_PROGRESS' | 'COMPLETE' | 'FAILED');
     /** 创建时间 - 结束 yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
     /** 任务状态查询集合 */
@@ -43,7 +43,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«待办事项返回VO»» */
 export interface IJSONResultPageInformationBacklogReturnsVO {
@@ -71,9 +71,9 @@ export interface IPageInformationBacklogReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,7 +92,7 @@ export interface IBacklogReturnsToVO {
     /** 待办编号 */
     code?: string;
     /** 类型 */
-    type?: string;
+    type?: ('HANDLE_BY_ME' | 'CARBON_COPY_TO_ME');
     /** 单据id */
     flowPathWorkOrderId?: number;
     /** 单据编号 */
@@ -104,7 +104,7 @@ export interface IBacklogReturnsToVO {
     /** 对应业务id */
     businessId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('NOT_HANDLE' | 'NOT_READ' | 'HANDLED' | 'READ');
     /** 状态描述 */
     statusDesc?: string;
     /** 节点处理状态描述 */
@@ -122,11 +122,11 @@ export interface IBacklogReturnsToVO {
     /** 当前处理人集合 */
     currentHandleUsers?: IProcessNodeExecutorVO[];
     /** 是否超时 */
-    isTimeout?: string;
+    isTimeout?: ('Y' | 'N');
     /** 待办业务类型 */
-    businessType?: string;
+    businessType?: ('TODO' | 'PRODUCE_TASK' | 'QUALITY_PRODUCE_TASK' | 'QUALITY_STORAGE_TASK' | 'STORAGE_TAKE_CHECK_TASK');
     /** 生产任务是否为返工 */
-    produceTaskIsBack?: string;
+    produceTaskIsBack?: ('Y' | 'N');
     /** 当前完成数量 */
     currentCompleteQuantity?: number;
     /** 计划数量 */
@@ -136,17 +136,17 @@ export interface IBacklogReturnsToVO {
     /** 盘点范围 */
     storageTakeCheckScope?: string;
     /** 是否能跳转 */
-    canRedirect?: string;
+    canRedirect?: ('Y' | 'N');
     /** pc端跳转路径 */
     webPath?: string;
     /** 移动端跳转路径 */
     mobilePath?: string;
     /** 生产任务状态 */
-    produceTaskStatus?: string;
+    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 生产任务状态描述 */
     produceTaskStatusDesc?: string;
     /** 质检任务状态 */
-    qualityTaskStatus?: string;
+    qualityTaskStatus?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 质检任务状态描述 */
     qualityTaskStatusDesc?: string;
     /** 所属流程节点id */
@@ -178,9 +178,9 @@ export interface IProcessNodeExecutorVO {
     /** 执行人id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
     /** 执行人系统控件类型 */
-    executorSysType?: string;
+    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
@@ -195,7 +195,7 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'BACK');
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -269,19 +269,19 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
     priorityLevel?: number;
     /** 当前任务WIP是否有物料 */
-    isWip?: string;
+    isWip?: ('Y' | 'N');
     /** 可操作项列表 */
     canOpItemList?: string[];
     /** 任务进站关键参数是否需要填写 */
-    moveInKeyParameterFillNeeds?: string;
+    moveInKeyParameterFillNeeds?: ('Y' | 'N');
     /** 任务出站关键参数是否需要填写 */
-    moveOutKeyParameterFillNeeds?: string;
+    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
     /** 当前进料总数 */
     currentMoveInQuantity?: number;
     /** 当前还需进料数 */
@@ -315,47 +315,47 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: string;
+    needConfirmMoveInQuantity?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: string;
+    autoBringOutLastMold?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: string;
+    autoBringOutLastDevice?: ('Y' | 'N');
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: string;
+    autoBringOutLastBomConsume?: ('Y' | 'N');
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: string;
+    allowSplitLot?: ('Y' | 'N');
     /** 是否强制拆分批次 */
-    forcedSplitLot?: string;
+    forcedSplitLot?: ('Y' | 'N');
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用外部码 */
-    enableExternalCode?: string;
+    enableExternalCode?: ('Y' | 'N');
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: string;
+    enableDevice?: ('Y' | 'N');
     /** 是否有模具 */
-    enableMold?: string;
+    enableMold?: ('Y' | 'N');
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: string;
+    enableMoveInBomConsume?: ('Y' | 'N');
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: string;
+    enableMoveOutBomConsume?: ('Y' | 'N');
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: string;
+    enableMoveInKeyParameter?: ('Y' | 'N');
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: string;
+    enableMoveOutKeyParameter?: ('Y' | 'N');
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: string;
+    isGtPlannedQuantity?: ('Y' | 'N');
 }
 /** TableHeaderDTO */
 export interface ITableheaderdto {

@@ -39,15 +39,15 @@ export interface IProcessPathDetailsStepsVO {
     /** 准备耗时(分钟) */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 进出站方式描述 */
     inOutTypeDesc?: string;
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: string;
+    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
     /** BOM物料消耗确认类型描述 */
     bomConsumeSureTypeDesc?: string;
     /** 合格产出工费 */
@@ -73,7 +73,7 @@ export interface IProcessPathDetailsStepsVO {
     /** 产能-生产时间 */
     capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 准备工费（元） */
@@ -133,7 +133,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 创建时间 */
     createTime?: string;
     /** 质检方式 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 质检比例 */
     qualityInspectionRatio?: number;
     /** 质检数量 */
@@ -173,17 +173,17 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
     /** 所属质检项编号 */
     qualityInspectionItemCode?: string;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: string;
+    selectType?: ('SELECTOR' | 'CHECKBOX');
     /** 选择描述 */
     selectTypeDesc?: string;
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */

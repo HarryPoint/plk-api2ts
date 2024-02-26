@@ -34,7 +34,7 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 计划开始日期查询结束时间 */
     endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList?: string[];
+    planTypeList?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE')[];
     /** 计划结束日期查询结束时间 */
     endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«报表生产订单返回VO»» */
 export interface IJSONResultPagingInformationReportProductionOrderReturnsVO {
@@ -73,9 +73,9 @@ export interface IPageInformationReportProductionOrderReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -110,11 +110,11 @@ export interface IReportProductionOrdersBackToVO {
     /** 优先级 */
     priorityLevel?: number;
     /** 订单排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 订单排产状态描述 */
     planStatusDesc?: string;
     /** 订单排产方式 */
-    planType?: string;
+    planType?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE');
     /** 订单排产方式描述 */
     planTypeDesc?: string;
     /** 订单计划开始日期 */

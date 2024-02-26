@@ -24,13 +24,13 @@ export interface IPublicBacklogDataQuery {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList?: string[];
+    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
     /** 是否超时(生产任务) */
-    isTimeout?: string;
+    isTimeout?: ('Y' | 'N');
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList?: string[];
+    qualityProduceTaskStatusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
     /** 生产任务可操作类型 */
-    optTypes?: string[];
+    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
 }
 /** JSONResult«List«QualityProduceTaskVO»» */
 export interface IJSONResultListQualityProduceTaskVO {
@@ -56,11 +56,11 @@ export interface IQualityProduceTaskVO {
     /** 所属生产任务号 */
     produceTaskNo?: string;
     /** 生产任务类型 */
-    produceTaskType?: string;
+    produceTaskType?: ('PRODUCE' | 'BACK');
     /** 对应生产处理id */
     produceHandleId?: number;
     /** 质检任务类型 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 生产订单id */
     produceOrderId?: number;
     /** 生产订单号 */
@@ -88,7 +88,7 @@ export interface IQualityProduceTaskVO {
     /** 仓位物料库存关联id */
     warehouseMaterialRpId?: number;
     /** 仓位物料WIP关联数量状态 */
-    quantityStatus?: string;
+    quantityStatus?: ('NORMAL' | 'WAIT_INSPECTION' | 'INSPECTION_PASS' | 'INSPECTION_CONCESSION' | 'INSPECTION_NOT_PASS' | 'APPLY_BACK' | 'APPLY_SCRAP' | 'HOLD' | 'ENTRUST_BACK');
     /** 对应工厂日历id */
     factoryCalendarId?: number;
     /** 对应班组id */
@@ -118,7 +118,7 @@ export interface IQualityProduceTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 取消人 */
     cancelUserId?: number;
     /** 取消时间 */

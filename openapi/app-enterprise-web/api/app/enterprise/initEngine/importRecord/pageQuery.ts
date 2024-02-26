@@ -41,7 +41,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«ImportRecordDTO»» */
 export interface IJSONResultPageInformationImportRecordDTO {
@@ -69,9 +69,9 @@ export interface IPageInformationImportRecordDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -116,7 +116,7 @@ export interface IImportRecordDTO {
     /** 应用名称 */
     applicationName?: string;
     /** 导入类型 */
-    importType?: string;
+    importType?: ('FIRST_IMPORT' | 'FAILED_DATA_IMPORT');
     /** 表数据ID */
     tableDataId?: string;
     /** 开始时间 */
@@ -124,7 +124,7 @@ export interface IImportRecordDTO {
     /** 结束时间 */
     endTime?: string;
     /** 导入状态 */
-    importStatus?: string;
+    importStatus?: ('NONE' | 'QUEUING' | 'IMPORTING' | 'COMPLETE');
     /** 失败数量 */
     numberOfFailure?: number;
     /** 操作用户ID */

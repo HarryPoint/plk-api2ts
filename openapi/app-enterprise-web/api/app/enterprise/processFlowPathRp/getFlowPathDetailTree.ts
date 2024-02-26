@@ -33,11 +33,11 @@ export interface IProcessTreeVO1 {
     /** 流程id */
     flowPathId?: number;
     /** 流程树类型 */
-    treeType?: string;
+    treeType?: ('MENU' | 'FLOW' | 'FLOW_TABLE');
     /** 流程code */
     flowPathCode?: string;
     /** 流程类型 */
-    flowPathType?: string;
+    flowPathType?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
     /** 子集 */
     children?: IProcessTreeVO1[];
 }

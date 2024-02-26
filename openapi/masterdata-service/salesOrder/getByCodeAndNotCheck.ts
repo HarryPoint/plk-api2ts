@@ -37,7 +37,7 @@ export interface ISalesOrderVO {
     /** 销售订单号 */
     code?: string;
     /** 订单类型 */
-    orderType?: string;
+    orderType?: ('DIRECT' | 'CONSIGN' | 'OTHER');
     /** 客户id */
     customerId?: number;
     /** 合同号 */
@@ -59,11 +59,11 @@ export interface ISalesOrderVO {
     /** 附件 */
     attachedFileKeys?: string;
     /** 是否完全转为生产订单 */
-    isConvertProduceOrder?: string;
+    isConvertProduceOrder?: ('Y' | 'N');
     /** 销售订单状态 */
-    handleStatus?: string;
+    handleStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
     /** 销售订单生产状态 */
-    produceStatus?: string;
+    produceStatus?: ('CREATED' | 'PRODUCE' | 'CANCEL' | 'CLOSE');
     /** 关闭人 */
     closeUserId?: number;
     /** 关闭时间 */

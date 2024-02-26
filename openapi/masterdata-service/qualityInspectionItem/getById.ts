@@ -33,11 +33,11 @@ export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检项编号 */
     code?: string;
     /** 质检方式 */
-    qualityMethod?: string;
+    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: string;
+    selectType?: ('SELECTOR' | 'CHECKBOX');
     /** 选择方式描述 */
     selectTypeDesc?: string;
     /** 备注 */

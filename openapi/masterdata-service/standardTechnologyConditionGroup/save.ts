@@ -31,11 +31,11 @@ export interface IDtosAreStoredUnderStandardProcessConditions {
     /** 来源字段序列号 */
     fromFieldSerialNo: string;
     /** 判断方式 */
-    compareType: string;
+    compareType: ('EQ' | 'NE' | 'CONTAIN' | 'NOT_CONTAIN');
     /** 判断的值 */
     compareValue: string;
     /** 连接类型 */
-    joinType: string;
+    joinType: ('AND' | 'OR');
 }
 /** JSONResult«标准工艺条件组保存响应DTO» */
 export interface IJSONResultStandardProcessConditionGroupSavesResponseDtos {

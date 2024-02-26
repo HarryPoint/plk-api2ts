@@ -18,7 +18,7 @@ export interface ITheInspectionTaskSearchesForVOOnTheEmployeeEnd {
     /** 当前页面 */
     pageNo?: number;
     /** 任务状态 */
-    statusList?: string[];
+    statusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«质检任务针对员工返回VO»» */
 export interface IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
@@ -67,9 +67,9 @@ export interface IPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -114,7 +114,7 @@ export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     /** 已检数 */
     inspectionQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 送检人id */

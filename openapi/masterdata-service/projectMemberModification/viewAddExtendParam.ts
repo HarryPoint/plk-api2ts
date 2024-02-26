@@ -23,7 +23,7 @@ export interface IItemChangeFormExtensionParameterEditRequest {
     /** 应用id */
     appId?: number;
     /** 表单操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'MODIFY_PROJECT_MANGER');
     /** 数据id */
     dataId?: string;
     /** 字段数据列表 */
@@ -34,7 +34,7 @@ export interface IItemChangeSingleFieldExtensionParameterRequest {
     /** 字段编号 */
     fieldCode?: string;
     /** 操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
     /** 旧值 */
     oldValue?: string;
     /** 新值 */
@@ -47,7 +47,7 @@ export interface IItemChangeListFieldExtensionParameterRequest1 {
     /** 行数据id */
     dataId?: string;
     /** 行操作类型 */
-    operateType?: string;
+    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
     /** 列数据 */
     columnData?: IItemChangeSingleFieldExtensionParameterRequest[];
 }

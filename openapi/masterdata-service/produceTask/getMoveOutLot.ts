@@ -50,11 +50,11 @@ export interface IWipQuantityStatusInformationResponseObject {
     /** 数量 */
     quantity?: number;
     /** wip数量状态 */
-    quantityStatus?: string;
+    quantityStatus?: ('NORMAL' | 'WAIT_INSPECTION' | 'INSPECTION_PASS' | 'INSPECTION_CONCESSION' | 'INSPECTION_NOT_PASS' | 'APPLY_BACK' | 'APPLY_SCRAP' | 'HOLD' | 'ENTRUST_BACK');
     /** wip数量状态描述 */
     quantityStatusDesc?: string;
     /** 是否可用 */
-    canUse?: string;
+    canUse?: ('Y' | 'N');
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
     wmRpCreateTime?: string;
     /** 可委外数量 */
@@ -62,5 +62,5 @@ export interface IWipQuantityStatusInformationResponseObject {
     /** 可操作数量 */
     canOptQuantity?: number;
     /** 是否锁定 */
-    isLock?: string;
+    isLock?: ('Y' | 'N');
 }

@@ -37,7 +37,7 @@ export interface ISendingEmailRecordDTO {
     /** 内容 */
     content?: string;
     /** 发送邮件状态 */
-    status?: string;
+    status?: ('NONE' | 'SENT_SUCCESS' | 'SENT_FAILURE');
     /** 发送时间 */
     sendingTime?: string;
     /** 发送来源 */
@@ -45,7 +45,7 @@ export interface ISendingEmailRecordDTO {
     /** 收件人地址 */
     addressee?: string;
     /**  是否已准备好数据，只有准备好的邮件才能重新发送 */
-    isReady?: string;
+    isReady?: ('Y' | 'N');
     /** 失败的原因 */
     failureReason?: string;
     /** 发送邮件附件列表 */

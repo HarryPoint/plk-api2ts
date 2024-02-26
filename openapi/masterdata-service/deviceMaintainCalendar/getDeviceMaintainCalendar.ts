@@ -44,7 +44,7 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     /** 班组ids */
     classGroupIds?: number[];
     /** 查询状态 */
-    queryStatusList?: string[];
+    queryStatusList?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE')[];
     /** 保养计划编号 */
     planCode?: string;
     /** 计划开始时间 */
@@ -57,7 +57,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«设备保养日历响应DTO»» */
 export interface IJSONResultListDeviceMaintenanceCalendarResponseDTO {
@@ -94,7 +94,7 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 任务编号 */
     taskCode?: string;
     /** 保养类型 */
-    maintainType?: string;
+    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
     /** 保养方案 */
     maintainSchemeName?: string;
     /** 计划开始时间 */
@@ -110,11 +110,11 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 执行人 */
     executorName?: string;
     /** 任务状态 */
-    taskStatus?: string;
+    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
     /** 返回类型 */
-    resultType?: string;
+    resultType?: ('MAINTAIN_PLAN' | 'MAINTAIN_TASK');
     /** 查询状态 */
-    queryStatus?: string;
+    queryStatus?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE');
     /** 保养内容 */
     maintainDetails?: IMaintenanceContentReturnedToDTO[];
     /** 消耗备件 */
@@ -129,7 +129,7 @@ export interface IMaintenanceContentReturnedToDTO {
     /** 保养执行记录 */
     executorRecord?: string;
     /** 保养情况 */
-    situation?: string;
+    situation?: ('UN_COMPLETE' | 'COMPLETE');
     /** 备注 */
     remark?: string;
 }

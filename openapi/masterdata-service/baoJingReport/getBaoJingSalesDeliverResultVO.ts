@@ -55,7 +55,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«宝晶销售发货报表返回VO» */
 export interface IJSONResultBaojingSalesDeliveryReportReturnedToVO {
@@ -98,9 +98,9 @@ export interface IPaginationInformationBaojingSalesDeliveryReportFormReturnsToVO
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */

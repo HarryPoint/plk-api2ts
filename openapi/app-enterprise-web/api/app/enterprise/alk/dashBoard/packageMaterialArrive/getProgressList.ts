@@ -40,7 +40,7 @@ export interface IPackagingMaterialsArrivalScheduleDetailsVO {
     /** 物料名称 */
     materialName?: string;
     /** 到达状态 */
-    arriveProgress?: string;
+    arriveProgress?: ('UN_FINISHED_TEXT' | 'FINISHED_TEXT' | 'ARRIVE');
     /** new标记 */
     newFlag?: boolean;
 }

@@ -34,14 +34,14 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: string;
+    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {

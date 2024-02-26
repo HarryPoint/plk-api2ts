@@ -67,7 +67,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 生产工艺路径编号 */
     produceTechnologyRoutingCode?: string;
     /** 当前流水类型(界面上的当前生产状态) */
-    lastFlowType?: string;
+    lastFlowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
     /** 当前流水类型描述 */
     lastFlowTypeDesc?: string;
     /** 当前对应工艺路径步骤id */
@@ -83,7 +83,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 总工艺数 - 用于展示工艺进度条 */
     totalStepCount?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'ISSUE' | 'PRODUCE' | 'HOLD' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 来源集 */
@@ -100,7 +100,7 @@ export interface IBatchOrderIsReturnedToVO {
 /** 批次订单来源返回VO */
 export interface IBatchOrderSourceReturnedToVO {
     /** 来源类型 */
-    sourceType?: string;
+    sourceType?: ('MAJOR_DATA' | 'MARGE' | 'SPLIT' | 'TRANSFER');
     /** 来源类型描述 */
     sourceTypeDesc?: string;
     /** 来源批次单号 */

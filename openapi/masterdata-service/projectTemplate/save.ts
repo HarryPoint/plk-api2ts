@@ -28,17 +28,17 @@ export interface IProjectTemplateEditRequestDTO {
     /** 项目字段列表 */
     projectFields?: IIdCodeNameGenericTransportObject[];
     /** 项目团队是否勾选 */
-    checkProjectTeam?: string;
+    checkProjectTeam?: ('Y' | 'N');
     /** 项目成员是否勾选 */
-    checkProjectMember?: string;
+    checkProjectMember?: ('Y' | 'N');
     /** 项目角色是否勾选 */
-    checkProjectRole?: string;
+    checkProjectRole?: ('Y' | 'N');
     /** 项目计划是否勾选 */
-    checkProjectPlan?: string;
+    checkProjectPlan?: ('Y' | 'N');
     /** 项目计划字段 */
     projectPlanFields?: IIdCodeNameGenericTransportObject[];
     /** 项目计划自定义字段是否勾选 */
-    checkProjectPlanCustomField?: string;
+    checkProjectPlanCustomField?: ('Y' | 'N');
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {

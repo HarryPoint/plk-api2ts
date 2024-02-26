@@ -22,7 +22,7 @@ export interface IMessageInformation {
     /** 消息内容 */
     content?: string;
     /** 消息类型 */
-    type?: string;
+    type?: ('BUSINESS_NOTIFICATION' | 'BUSINESS_EARLY_WARNING' | 'SYSTEM_NOTIFICATION');
     /** 消息发送人 */
     sendUserId?: number;
     /** 移动端跳转路径 */
@@ -34,11 +34,11 @@ export interface IMessageInformation {
     /** 消息发送端 */
     sendTarget?: number;
     /** 消息跳转类型 */
-    pathType?: string;
+    pathType?: ('NONE' | 'JUMP' | 'DOWNLOAD' | 'REEXPORT' | 'TODO' | 'APP_ADD_PAGE_LINK' | 'APP_LIST_PAGE_LINK');
     /** 消息业务id */
     businessId?: number;
     /** 消息业务类型 */
-    businessType?: string;
+    businessType?: ('PRODUCE_TASK');
     /** 来源应用编码 */
     fromAppCode?: string;
 }

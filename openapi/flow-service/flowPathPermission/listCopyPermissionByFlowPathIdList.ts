@@ -35,5 +35,5 @@ export interface IAddedPermissionEdit1 {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可以复制 */
-    isCanCopy?: string;
+    isCanCopy?: ('Y' | 'N');
 }

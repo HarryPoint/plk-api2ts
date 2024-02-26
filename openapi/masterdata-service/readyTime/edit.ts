@@ -24,7 +24,7 @@ export interface IPreparatoryPeriodEditorDTO {
     /** 编号 */
     code?: string;
     /** 规则类型 */
-    ruleType: string;
+    ruleType: ('EQUAL' | 'NOT_EQUAL');
     /** 耗时 */
     takeTime: number;
 }

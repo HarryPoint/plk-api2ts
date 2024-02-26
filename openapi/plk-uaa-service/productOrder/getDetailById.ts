@@ -37,13 +37,13 @@ export interface IProductOrderDetailsResponseObject {
     /** 产品模块数组 */
     productModuleArray?: string[];
     /** 类型 */
-    type?: string;
+    type?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
     /** 购买账号数 */
     buyAccountQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY');
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 预计交付日期 */
@@ -65,9 +65,9 @@ export interface IProductOrderDetailsResponseObject {
     /** 合同签约时间 */
     contractTime?: string;
     /** 加购类型 */
-    appendType?: string;
+    appendType?: ('PRODUCT_MODULE' | 'DURATION' | 'USER_ACCOUNT');
     /** 延期类型 */
-    delayType?: string;
+    delayType?: ('TRIAL' | 'FORMAL');
     /** 延长时长(天) */
     delayDurationQuantity?: number;
     /** 延期原因 */
@@ -88,12 +88,12 @@ export interface IProductOrderPaymentHistoryDetailsResponseObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
 }
 /** 产品订单服务信息响应对象 */
 export interface IProductOrderServiceInformationResponseObject {
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 到期时间 */
     expireTime?: string;
     /** 账号数 */

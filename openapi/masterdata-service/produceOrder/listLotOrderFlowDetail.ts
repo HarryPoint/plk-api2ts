@@ -20,7 +20,7 @@ export interface IBatchOrderHistorySearchVO {
     /** 批次订单id */
     lotOrderId?: number;
     /** 流水类型 */
-    flowType?: string;
+    flowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
 }
 /** JSONResult«List«批次订单流水明细信息响应DTO»» */
 export interface IJSONResultListBatchOrderDetailedInformationRespondsToDTO {
@@ -38,7 +38,7 @@ export interface IBatchOrderFlowDetailsRespondToDTO {
     /** id */
     id?: number;
     /** 流水类型 */
-    flowType?: string;
+    flowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
     /** 操作时间 */
     opTime?: string;
     /** 操作员姓名 */
@@ -50,7 +50,7 @@ export interface IBatchOrderFlowDetailsRespondToDTO {
     /** 异常类型名称 -- 针对报废、暂扣、返工 */
     produceAbnormalName?: string;
     /** 当前处理状态 -- 针对返工、报废 */
-    curHandleStatus?: string;
+    curHandleStatus?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 操作单号 -- 针对委外就是委外单号 */
     opCode?: string;
 }

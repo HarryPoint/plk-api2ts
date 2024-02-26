@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IBatchTransferToProductionO
 /** 批量转到生产订单 */
 export interface IBatchTransferToProductionOrder {
     /** 是否生产订单继承销售订单编号 */
-    isExtendSalesOrderCode?: string;
+    isExtendSalesOrderCode?: ('Y' | 'N');
     /** 转生产订单数据列表 */
     transferToProduceOrderDataList?: ISalesOrderToProductionOrderSubmaterialProductionInformationDTO[];
 }
@@ -27,7 +27,7 @@ export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO
     /** 生产交付数量 */
     produceTotalCount?: number;
     /** 订单类型 */
-    orderType: string;
+    orderType: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
     /** 订单优先级，数值越大优先级越高 */
     priorityLevel: number;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO
     /** 下单业务部门名称 */
     placeOrderDepartmentName?: string;
     /** 是否紧急的单子 */
-    isEmergentOrder?: string;
+    isEmergentOrder?: ('Y' | 'N');
     /** 交付日期 yyyy-MM-dd HH:mm:ss */
     deliveryDate?: string;
     /** 标准工艺ID */

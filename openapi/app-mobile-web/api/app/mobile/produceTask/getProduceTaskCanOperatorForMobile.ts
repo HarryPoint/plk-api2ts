@@ -24,11 +24,11 @@ export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobil
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 任务类型 */
-    types?: string[];
+    types?: ('PRODUCE' | 'BACK')[];
     /** 导出字段集 */
     exportFields?: string[];
     /** 生产任务可操作类型 */
-    optTypes?: string[];
+    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
     /** 工序id */
     processId: number;
     /** 任务ids */
@@ -38,7 +38,7 @@ export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobil
     /** 物料id */
     materialIds?: number[];
     /** 任务状态 */
-    statusList?: string[];
+    statusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
     /** 生产任务编号集合(扫码查询切换进出料查询时传参) */
     taskNos?: string[];
     /** 工序id集合 */
@@ -52,15 +52,15 @@ export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobil
     /** 计划生产数量最高数量 */
     planProduceMaxQuantity?: number;
     /** 任务进站关键参数是否需要填写 */
-    moveInKeyParameterFillNeeds?: string;
+    moveInKeyParameterFillNeeds?: ('Y' | 'N');
     /** 查询类型 */
-    queryType?: string;
+    queryType?: ('MOVE_IN' | 'MOVE_OUT' | 'DEVICE' | 'MOLD');
     /** undefined */
     produceOrderIds?: number[];
     /** undefined */
     userId?: number;
     /** 任务出站关键参数是否需要填写 */
-    moveOutKeyParameterFillNeeds?: string;
+    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
     /** 生产订单字段搜索 */
     produceOrderSearchList?: IProcessDataDetailsSearchVO[];
 }
@@ -69,14 +69,14 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: string;
+    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -102,11 +102,11 @@ export interface IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTO
 /** 生产任务列表可批量操作按钮返回DTO(针对移动端) */
 export interface IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd {
     /** 可批量进料 */
-    canBatchMoveIn?: string;
+    canBatchMoveIn?: ('Y' | 'N');
     /** 可批量出料 */
-    canBatchMoveOut?: string;
+    canBatchMoveOut?: ('Y' | 'N');
     /** 可批量录入设备 */
-    canBatchRecordDevice?: string;
+    canBatchRecordDevice?: ('Y' | 'N');
     /** 可批量录入模具 */
-    canBatchRecordMold?: string;
+    canBatchRecordMold?: ('Y' | 'N');
 }

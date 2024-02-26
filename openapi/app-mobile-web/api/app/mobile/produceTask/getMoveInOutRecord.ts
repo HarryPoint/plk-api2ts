@@ -18,7 +18,7 @@ export interface IEntryAndExitRecordsSearchVO {
     /** 任务id */
     produceTaskId: number;
     /** 进出站记录状态 */
-    statusList?: string[];
+    statusList?: ('STAGING' | 'MOVE_IN' | 'MOVE_OUT')[];
 }
 /** JSONResult«List«进出站记录返回VO»» */
 export interface IJSONResultListInboundAndOutboundRecordsReturnVO {
@@ -36,9 +36,9 @@ export interface IInboundAndOutboundLogsReturnToVO {
     /** 记录id */
     id?: number;
     /** 进出站类型 */
-    type?: string;
+    type?: ('MOVE_IN' | 'MOVE_OUT');
     /** 状态 */
-    status?: string;
+    status?: ('STAGING' | 'MOVE_IN' | 'MOVE_OUT');
     /** 对应物料id */
     materialId?: number;
     /** 对应产出物料来料数 */
@@ -105,9 +105,9 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     /** 帮助提示 */
     remark?: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 文本类型 */
-    textType?: string;
+    textType?: ('INPUT' | 'COMPARE');
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */

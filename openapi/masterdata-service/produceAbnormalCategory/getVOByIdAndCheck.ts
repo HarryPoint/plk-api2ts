@@ -31,7 +31,7 @@ export interface IProductionExceptionTypeVO {
     /** 所属企业id */
     enterpriseId?: number;
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 类型名称 */
     name?: string;
     /** 类型编号 */

@@ -29,5 +29,5 @@ export interface IDataInteractionOutputDTO {
     /** 模板编码 */
     templateCode?: string;
     /** 生效状态 */
-    interactionStatus?: string;
+    interactionStatus?: ('IMPORT_TABLE' | 'NOT_IMPORTED_TABLE' | 'IMPORT_FAILURE' | 'IMPORTING' | 'CHECKING' | 'VERIFIED' | 'VERIFIED_FAIL' | 'DATA_IN_EFFECT' | 'DATA_IS_EFFECTIVE');
 }

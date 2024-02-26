@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«产能分页响应对象»» */
 export interface IJSONResultPagingInformationCapacityPagingResponseObject {
@@ -65,9 +65,9 @@ export interface IPagingInformationProducesPagingResponseObjects {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -108,11 +108,11 @@ export interface ICapacityPageResponseObject {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产出数量 */
     capacityProduceQuantity?: number;
     /** 状态 */

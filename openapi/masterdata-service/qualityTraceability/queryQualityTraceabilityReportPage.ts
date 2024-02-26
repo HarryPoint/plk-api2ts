@@ -31,7 +31,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: string;
+    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -48,7 +48,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«质量追溯报表响应DTO»» */
 export interface IJSONResultPagingInformationQualityTraceabilityReportRespondsToTheDTO {
@@ -76,9 +76,9 @@ export interface IPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -95,7 +95,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     /** 工序 */
     processId?: Record<string, any>[];
     /** 操作类型 */
-    optType?: string;
+    optType?: ('MOVE_IN' | 'MOVE_OUT');
     /** 操作员 */
     optEmployeeId?: Record<string, any>[];
     /** 操作时间 */
@@ -113,7 +113,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     /** 任务编号 */
     produceTaskNo?: string;
     /** 任务状态 */
-    produceTaskStatus?: string;
+    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 生产订单号 */
     produceOrderCode?: string;
 }

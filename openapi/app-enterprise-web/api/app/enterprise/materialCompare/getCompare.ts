@@ -64,7 +64,7 @@ export interface IProductionProcessPathBasicInformationVO {
     /** 编号 */
     code?: string;
     /** 是否默认 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 是否可用 */
-    isValid?: string;
+    isValid?: ('Y' | 'N');
 }

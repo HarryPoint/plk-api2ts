@@ -22,7 +22,7 @@ export interface IProductionProcessingWithholdReworkRequestObject {
     /** 返工数量 */
     abnormalQuantity: number;
     /** 返工生产后处理方式 */
-    backProduceType: string;
+    backProduceType: ('RETURN' | 'ORDER');
     /** 返工工艺路径步骤id */
     backProduceTechnologyRoutingStepId: number;
     /** 处理意见 */

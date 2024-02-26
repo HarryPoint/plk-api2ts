@@ -53,7 +53,7 @@ export interface IReportTemplateDTO {
     /** 模板名称 */
     templateName?: string;
     /** 报表类型 */
-    report?: string;
+    report?: ('PRODUCE_DAY_REPORT' | 'QUALITY_GOOD_SCRAP_REPORT' | 'SALES_DELIVER_REPORT' | 'CONSIGNMENT_LOSS_ANALYZE_REPORT' | 'CONSIGNMENT_INBOUND_ANALYZE_REPORT' | 'ACCOUNTS_RECEIVABLE_REPORT' | 'COLLECTION_TOTAL_REPORT' | 'AFTER_SALES_QUALITY_REPORT' | 'SALES_ORDER_REPORT' | 'PURCHASE_ARRIVED_STATISTIC_REPORT' | 'PRODUCE_STORAGE_REPORT' | 'RAW_STORAGE_REPORT' | 'SCRAP_STORAGE_REPORT' | 'PRODUCE_PROGRESS_STATISTICS_REPORT' | 'PRODUCE_CAPACITY_REPORT' | 'PRODUCE_DATA_REPORT' | 'PRODUCE_CLASS_GROUP_REPORT' | 'PRODUCE_PROCESS_REPORT' | 'PRODUCE_MATERIAL_REPORT' | 'PRODUCE_TIME_FEE_DETAIL_REPORT' | 'PRODUCE_TIME_FEE_MONTH_REPORT' | 'PRODUCE_ENTRUST_MAJOR_DATA_REPORT' | 'PRODUCE_ORDER_SCHEDULE_REPORT');
     /** 开始时间字段编码 */
     beginTimeFieldCode?: string;
     /** 数据筛选条件 */
@@ -81,9 +81,9 @@ export interface IReportStatisticsTimeRangeDTO {
     /** ID */
     id?: number;
     /** 时间模式- 今天、本周、本月、本季度、本年、发邮件前 */
-    timeMode?: string;
+    timeMode?: ('DAY' | 'WEEK' | 'MONTH' | 'QUARTER' | 'YEAR' | 'SEND_EMAIL_BEFORE');
     /** 发邮件前的时间模式（只有timeMode = SENDING_EMAIL_BEFORE该配置才是有效配置）- 今天、本周、本月、本季度、本年 */
-    sendingEmailBeforeTimeMode?: string;
+    sendingEmailBeforeTimeMode?: ('DAY' | 'WEEK' | 'MONTH' | 'QUARTER' | 'YEAR');
     /** 开始时间 */
     beginTime?: string;
     /** 结束时间 */
@@ -101,15 +101,15 @@ export interface IReportStatisticsTimeRangeDTO {
     /** 发送邮件前 - 结束天 */
     endDay?: number;
     /** 起始时间为月末 */
-    isStartAtEndOfMonth?: string;
+    isStartAtEndOfMonth?: ('Y' | 'N');
     /** 截止时间为月末 */
-    isDeadlineAtEndOfMonth?: string;
+    isDeadlineAtEndOfMonth?: ('Y' | 'N');
     /** 开始月份 */
     beginMonth?: number;
     /** 结束月份 */
     endMonth?: number;
     /** 起始时间为季度末 */
-    isStartAtEndOfQuarter?: string;
+    isStartAtEndOfQuarter?: ('Y' | 'N');
     /** 截止时间为季度末 */
-    isDeadlineAtEndOfQuarter?: string;
+    isDeadlineAtEndOfQuarter?: ('Y' | 'N');
 }

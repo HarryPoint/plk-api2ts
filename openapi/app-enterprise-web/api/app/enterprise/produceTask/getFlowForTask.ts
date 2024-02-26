@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/getFlowForTaskUsingGET_1
 */
-export default function fetchMethod(options: { params: { produceOrderId?: number; produceTaskId?: number; type?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceOrderId?: number; produceTaskId?: number; type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN') } }, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTask/getFlowForTask",
@@ -33,9 +33,9 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -55,7 +55,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 对应生产委外id */
     produceEntrustId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
@@ -94,7 +94,7 @@ export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 录入值 - 明细录入类型不是图片时，有值 */
     inputValue?: string;
     /** 图片上传key集合 - 明细录入类型是图片时，有值 */

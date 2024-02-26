@@ -31,7 +31,7 @@ export interface IEnterprisePermissionResponseDTO {
     /** 服务code */
     serveCode?: string;
     /** 是否系统权限 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 名称 */
     name?: string;
     /** 权限码 */
@@ -41,5 +41,5 @@ export interface IEnterprisePermissionResponseDTO {
     /** 父级权限编码 */
     parentCode?: string;
     /** 权限类型 */
-    type?: string;
+    type?: ('FUN' | 'BUTTON');
 }

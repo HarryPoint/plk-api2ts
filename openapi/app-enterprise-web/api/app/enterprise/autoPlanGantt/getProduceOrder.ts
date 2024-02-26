@@ -34,14 +34,14 @@ export interface IGanttChartSearchVO {
     /** 生产物料ID列表 */
     produceMaterialIdList?: number[];
     /** 订单状态列表 */
-    orderStatusList?: string[];
+    orderStatusList?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE')[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«生产订单自动排产甘特图返回VO» */
 export interface IJSONResultProductionOrderAutomaticSchedulingGanttChartReturnsVO {
@@ -78,7 +78,7 @@ export interface IOccupiedReturnVO {
     /** 占用原因 */
     reason?: string;
     /** 排期类型 */
-    scheduleType?: string;
+    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
 }
 /** 分页信息«生产订单自动排产排期返回VO» */
 export interface IPageInformationAutomaticProductionOrderSchedulingReturnsVO {
@@ -95,9 +95,9 @@ export interface IPageInformationAutomaticProductionOrderSchedulingReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -122,7 +122,7 @@ export interface IProductionOrdersAreAutomaticallyScheduledBackToVO {
     /** 交付日期 */
     deliveryDate?: string;
     /** 生产订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 工序占用时间集 */
     occupyTimes?: IOccupiedReturnVO[];
     /** 工序排期时间集 */
@@ -147,9 +147,9 @@ export interface IProcedureTimeReturnsToVO {
     /** 计划结束时间 */
     endTime?: string;
     /** 是否锁定 */
-    isLock?: string;
+    isLock?: ('Y' | 'N');
     /** 排期类型 */
-    scheduleType?: string;
+    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
     /** 生产任务状态 */
-    produceTaskStatus?: string;
+    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
 }

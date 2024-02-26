@@ -59,7 +59,7 @@ export interface IProcessWorkOrderVO {
     /** 计划开始时间 */
     planBeginTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 完成时间 */
     completeTime?: string;
     /** 总耗时秒 */

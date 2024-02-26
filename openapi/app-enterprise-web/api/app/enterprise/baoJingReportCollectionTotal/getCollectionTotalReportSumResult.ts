@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«宝晶收款汇总分析报表表格返回VO» */
 export interface IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedToVO {

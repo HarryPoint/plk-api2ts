@@ -24,7 +24,7 @@ export interface IMessageSearchVO {
     /** 消息标题/内容 */
     searchData?: string;
     /** 消息类型 */
-    type?: string;
+    type?: ('BUSINESS_NOTIFICATION' | 'BUSINESS_EARLY_WARNING' | 'SYSTEM_NOTIFICATION');
     /** 时间开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 时间结束 yyyy-MM-dd HH:mm:ss */
@@ -32,7 +32,7 @@ export interface IMessageSearchVO {
     /** 忽略应用编码列表 */
     ignoreAppCodeList?: string[];
     /** 是否已读 */
-    isRead?: string;
+    isRead?: ('Y' | 'N');
     /** 最新发布终端值合计 */
     sendTarget?: number;
     /** 应用编码列表 */
@@ -43,7 +43,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«消息返回VO»» */
 export interface IJSONResultPagingInformationMessageReturnsVO {
@@ -71,9 +71,9 @@ export interface IPagingInformationMessageReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -84,7 +84,7 @@ export interface IMessageReturnVO {
     /** id */
     id?: number;
     /** 消息类型 */
-    type?: string;
+    type?: ('BUSINESS_NOTIFICATION' | 'BUSINESS_EARLY_WARNING' | 'SYSTEM_NOTIFICATION');
     /** 消息类型描述 */
     typeDesc?: string;
     /** 消息标题 */
@@ -92,7 +92,7 @@ export interface IMessageReturnVO {
     /** 消息摘要 */
     digest?: string;
     /** 是否已读 */
-    isRead?: string;
+    isRead?: ('Y' | 'N');
     /** pc端跳转路径 */
     webPath?: string;
     /** 移动端跳转路径 */
@@ -100,7 +100,7 @@ export interface IMessageReturnVO {
     /** 创建时间 */
     createTime?: string;
     /** 消息跳转类型 */
-    pathType?: string;
+    pathType?: ('NONE' | 'JUMP' | 'DOWNLOAD' | 'REEXPORT' | 'TODO' | 'APP_ADD_PAGE_LINK' | 'APP_LIST_PAGE_LINK');
     /** 消息跳转类型描述 */
     pathTypeDesc?: string;
     /** 最新发布终端值合计 */

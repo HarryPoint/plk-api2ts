@@ -34,7 +34,7 @@ export interface ICraftCanvasEditsLockResponseDTO {
     /** 工艺id */
     technologyId?: number;
     /** 锁定结果 Y:锁定成功可以编辑、N:锁定失败不能编辑 */
-    lockSuccess?: string;
+    lockSuccess?: ('Y' | 'N');
     /** 锁定用户 */
     lockUser?: string;
 }

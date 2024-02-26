@@ -34,15 +34,15 @@ export interface IProductionTaskSearchVO {
     /** 任务类型描述 */
     typeDesc?: string;
     /** 任务下发方式 */
-    issueType?: string;
+    issueType?: ('PLAN' | 'DIRECT');
     /** 任务下发方式描述 */
     issueTypeDesc?: string;
     /** 任务类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'BACK');
     /** 计划开始-结束时间 yyyy-MM-dd HH:mm:ss */
     startEndTime?: string;
     /** 任务状态 */
-    statusList?: string[];
+    statusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
     /** 任务优先级 */
     priorityLevel?: number;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -56,7 +56,7 @@ export interface IProductionTaskSearchVO {
     /** 创建结束时间 yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
     /** 可操作项 */
-    canOpItem?: string;
+    canOpItem?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT');
     /** 生产订单字段搜索 */
     produceOrderSearchList?: IProcessDataDetailsSearchVO[];
 }
@@ -65,14 +65,14 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: string;
+    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -110,9 +110,9 @@ export interface IPagingInformationJSONObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */

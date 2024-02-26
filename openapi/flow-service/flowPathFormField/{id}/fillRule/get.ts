@@ -39,9 +39,9 @@ export interface IProcessFormAssociatedFormFillVO {
     /** 填充到的目标字段序号值 */
     fillFormFieldSerialNo?: string;
     /** 字段填充方式 */
-    fillWay?: string;
+    fillWay?: ('NONE' | 'LAST' | 'CONCAT' | 'SUM');
     /** 是否警用编辑 */
-    isDisableEdited?: string;
+    isDisableEdited?: ('Y' | 'N');
     /** 是否允许修改填充内容- 默认是 Y */
-    isAllowModificationOfFillContent?: string;
+    isAllowModificationOfFillContent?: ('Y' | 'N');
 }

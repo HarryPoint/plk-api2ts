@@ -26,7 +26,7 @@ export interface IExceptionTypeSearchVO {
     /** 名称 */
     name?: string;
     /** 类型 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 数据状态 */
     dataStatus?: number;
 }
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«异常类型返回VO»» */
 export interface IJSONResultPagingInformationExceptionTypeVOIsReturned {
@@ -63,9 +63,9 @@ export interface IPagingInformationExceptionTypeIsReturnedVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -76,7 +76,7 @@ export interface IExceptionTypeReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 所属分类 */
     typeDesc?: string;
     /** 类型名称 */

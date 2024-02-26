@@ -34,13 +34,13 @@ export interface IProductServicePageQueryObject {
     /** 创建时间 -- 开始 */
     createBeginTime?: string;
     /** 服务类型列表 */
-    typeList?: string[];
+    typeList?: ('TRIAL' | 'FORMAL')[];
     /** undefined */
     todayEndTime?: string;
     /** 到期时间 -- 开始 */
     expireBeginTime?: string;
     /** 服务状态列表 */
-    statusList?: string[];
+    statusList?: ('ON' | 'EXPIRE' | 'INVALID')[];
     /** 创建时间 -- 结束 */
     createEndTime?: string;
 }
@@ -49,7 +49,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«产品服务分页响应对象»» */
 export interface IJSONResultPagingInformationProductServicePagingResponseObject {
@@ -77,9 +77,9 @@ export interface IPagingInformationProductServicePagingResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,23 +92,23 @@ export interface IProductServicePagingResponseObject {
     /** 编号 */
     code?: string;
     /** 类型 */
-    type?: string;
+    type?: ('TRIAL' | 'FORMAL');
     /** 企业id */
     enterpriseId?: number;
     /** 企业名称 */
     enterpriseName?: string;
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 到期时间 */
     expireTime?: string;
     /** 账号数 */
     availableAccountQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('ON' | 'EXPIRE' | 'INVALID');
     /** 最近变动时间 */
     lastModifyTime?: string;
     /** 创建 */
     createTime?: string;
     /** 是否有新购的产品订单 */
-    hanNewBuyProductOrder?: string;
+    hanNewBuyProductOrder?: ('Y' | 'N');
 }

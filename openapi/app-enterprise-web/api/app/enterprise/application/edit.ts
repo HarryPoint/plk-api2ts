@@ -22,17 +22,17 @@ export interface IProcessEditingDTO {
     /** 编号 */
     code?: string;
     /** 应用类型 */
-    type?: string;
+    type?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
     /** 简介 */
     lastDescription?: string;
     /** 发布终端值合计 */
     lastPublishTotal?: number;
     /** 是否系统级流程 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 系统流程类型 */
-    flowPathSystemType?: string;
+    flowPathSystemType?: ('STOREHOUSE' | 'WAREHOUSE' | 'PRODUCE_ORDER' | 'ANDON' | 'EMPLOYEE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'AREA' | 'CUSTOMER' | 'ROUTING' | 'MATERIAL' | 'MATERIAL_BOM' | 'PROCESS' | 'POSITION' | 'BANK' | 'UNIT' | 'WAREHOUSE_MATERIAL_RP' | 'MOLD' | 'ALLOCATION_TYPE' | 'IN_STORAGE_TYPE' | 'OUT_STORAGE_TYPE' | 'OTHER_IN_STORAGE_ORDER' | 'OTHER_OUT_STORAGE_ORDER' | 'ALLOCATION_ORDER' | 'INVENTORY_LOSSES_ORDER' | 'INVENTORY_PROFIT_ORDER' | 'DEVICE' | 'DEVICE_TYPE' | 'DEVICE_PARTS' | 'DEVICE_EMPLOYEE_CAPACITY' | 'DEVICE_MAINTAIN_SCHEME' | 'DEVICE_MAINTAIN_PLAN' | 'DEVICE_MAINTAIN_TASK' | 'PRODUCTION_LINE' | 'SALES_PLAN' | 'QUOTE_BILL' | 'FOLLOW_RECORD' | 'FOLLOW_PLAN' | 'DAILY_WORK' | 'CONTRACT' | 'BUSINESS_CHANCE' | 'CUSTOMER_TRANSFER' | 'RECEIPT' | 'USER' | 'IMPROVEMENT_CATEGORY' | 'PROPOSAL' | 'KAIZEN_PROJECT_TASK' | 'KAIZEN_PROJECT' | 'PROPOSAL_SCORE' | 'DEPARTMENT_YEAR_TARGET_SETTING' | 'SUPPLIER' | 'PURCHASE_ORDER' | 'PAYMENT_ACCOUNT' | 'PURCHASE_IN_ORDER' | 'PURCHASE_RETURN_ORDER' | 'PAYMENT_ORDER' | 'PAYMENT_RETURN_ORDER' | 'PREPAID_ORDER' | 'SALES_ORDER' | 'SALES_OUT_STORAGE_ORDER' | 'SALES_RETURN_ORDER' | 'RECEIVABLE_ORDER' | 'RECEIVABLE_RETURN_ORDER' | 'PRE_RECEIVABLE_ORDER' | 'PRODUCTION_MATERIAL_ISSUANCE_ORDER' | 'PRODUCTION_MATERIAL_RETURN_ORDER' | 'PRODUCTION_STOCK_IN_ORDER' | 'PRODUCTION_STOCK_RETURN_ORDER' | 'PRODUCE_FEE_TYPE' | 'PRODUCE_FEE_COLLECT' | 'PROJECT' | 'PROJECT_TYPE' | 'PROJECT_RISK_TYPE' | 'PROJECT_RISK_FLAG' | 'PROJECT_PLAN' | 'PROJECT_STAGE' | 'PROJECT_TASK' | 'PROJECT_TASK_REVIEW' | 'PROJECT_TASK_DECISION' | 'PROJECT_TASK_TYPE' | 'PROJECT_MEMBER' | 'PROJECT_ROLE' | 'PROJECT_RISK' | 'PROJECT_FEE' | 'PROJECT_QUALITY_ISSUE' | 'PROJECT_QUALITY_TARGET' | 'PROJECT_MEETING_SUMMARY' | 'PROJECT_ACTION_ITEM' | 'PROJECT_LEADER_INSTRUCT' | 'PROJECT_MEMORABILIA' | 'PROJECT_BRIEF_REPORT' | 'PROJECT_MODIFICATION' | 'PROJECT_PLAN_MODIFICATION' | 'PROJECT_MEMBER_MODIFICATION' | 'QMS_ANNUAL_QUALITY_TARGET' | 'QMS_QUALITY_WORK_PLAN' | 'QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT' | 'QMS_INTERNAL_AUDIT_IMPLEMENTATION_PLAN' | 'QMS_INTERNAL_AUDIT_AND_INSPECTION_RECORDS' | 'QMS_INTERNAL_AUDIT_NON_CONFORMANCE_REPORT' | 'QMS_LIST_OF_INTERNAL_AUDIT_RECOMMENDATIONS' | 'QMS_INTERNAL_AUDIT_REPORT' | 'QMS_INTERNAL_AUDIT_NO_FIT_IN_CORRECTIVE' | 'QMS_TARGET_ITEM' | 'QMS_REGULATION_NO_AND_CONTENT' | 'QMS_EXTERNAL_AUDIT_IMPLEMENTATION_PLAN' | 'QMS_EXTERNAL_AUDIT_NON_CONFORMANCE_REPORT' | 'QMS_LIST_OF_EXTERNAL_AUDIT_RECOMMENDATIONS' | 'QMS_EXTERNAL_AUDIT_NO_FIT_IN_CORRECTIVE' | 'QMS_EXTERNAL_AUDIT_REPORT' | 'QMS_SPECIAL_AUDIT_IMPLEMENTATION_PLAN' | 'QMS_SPECIAL_AUDIT_AND_INSPECTION_RECORDS' | 'QMS_SPECIAL_AUDIT_NON_CONFORMANCE_REPORT' | 'QMS_SPECIAL_AUDIT_NO_FIT_IN_CORRECTIVE' | 'QMS_LIST_OF_SPECIAL_AUDIT_PROPOSALS' | 'QMS_SPECIAL_AUDIT_REPORT' | 'QMS_MANAGEMENT_REVIEW_PLAN' | 'QMS_MANAGEMENT_REVIEW_INPUT_MATERIAL' | 'QMS_MANAGEMENT_REVIEW_REPORT' | 'QMS_INSPECTION_CATEGORY' | 'QMS_INSPECTION_METHOD' | 'QMS_SAMPLING_STANDARDS' | 'QMS_INSPECTION_ITEMS' | 'QMS_INSPECTION_SCHEME' | 'QMS_INCOMING_INSPECTION_APPLY_FORM' | 'QMS_INCOMING_INSPECTION_TASK' | 'QMS_INCOMING_INSPECTION_REPORT' | 'QMS_FIRST_INSPECTION_APPLY_FORM' | 'QMS_FIRST_INSPECTION_TASK' | 'QMS_FIRST_INSPECTION_REPORT' | 'QMS_PROCESS_INSPECTION_APPLY_FORM' | 'QMS_PROCESS_INSPECTION_TASK' | 'QMS_PROCESS_INSPECTION_REPORT' | 'QMS_PRODUCT_INSPECTION_APPLY_FORM' | 'QMS_PRODUCT_INSPECTION_TASK' | 'QMS_PRODUCT_INSPECTION_REPORT' | 'QMS_SHIPMENT_INSPECTION_APPLY_FORM' | 'QMS_SHIPMENT_INSPECTION_TASK' | 'QMS_SHIPMENT_INSPECTION_REPORT' | 'QMS_QUALITY_PERSONNEL' | 'QMS_REASON_OF_NON_CONFORMANCE' | 'QMS_HANDLING_METHOD_OF_NONCONFORMING_PRODUCT' | 'QMS_HANDLING_OF_INCOMING_NON_CONFORMING' | 'QMS_HANDLING_OF_SHIPMENTS_NON_CONFORMING' | 'QMS_HANDLE_PRODUCT_NON_CONFORMING' | 'QMS_QUALITY_ISSUE_INFORMATION_REPORT' | 'QMS_QUALITY_PROBLEM_ANALYSIS_REPORT' | 'QMS_QUALITY_CORRECTIVE_ACTION_REPORT' | 'QMS_8D_REPORT' | 'QMS_TECHNICAL_ZEROING_REPORT' | 'QMS_MANAGE_ZEROING_REPORT' | 'QMS_FRACAS_REPORT' | 'QMS_IMPROVEMENT_PROJECT' | 'QMS_HANDLE_FIRST_INSPECT_DEFECTS' | 'QMS_HANDLE_PROCESS_INSPECT_DEFECTS' | 'QMS_HANDLE_PATROL_INSPECT_DEFECTS' | 'QMS_ADVANCE_TEAM_DECLARE' | 'QMS_ADVANCE_PERSONNEL_DECLARE' | 'QMS_QUALITY_MONTH_REPORT_FILL' | 'QMS_SEAL_STYLE' | 'QMS_SEAL_APPLY_FOR_RECEIVING' | 'QMS_SEAL_APPLY_FOR_REPORT_LOSS' | 'QMS_SEAL_LEDGER' | 'QMS_SEAL_APPLY_FOR_CANCELLATION' | 'QMS_SEAL_APPLY_FOR_REPLACEMENT' | 'QMS_PATROL_INSPECTION_PLAN' | 'QMS_PATROL_INSPECTION_TASK' | 'QMS_PATROL_INSPECTION_REPORT' | 'FILE_CATEGORY' | 'FILE_OBJECT');
     /** 是否是树状应用 */
-    isTree?: string;
+    isTree?: ('Y' | 'N');
     /** 表单集 */
     formFields?: IProcessFormFieldEditDTO[];
     /** 节点 */
@@ -50,13 +50,13 @@ export interface IProcessEditingDTO {
     /** 发布企业路由位置 */
     publishEnterpriseRouterList?: IPublishEnterpriseRouterEditDTO[];
     /** 流程结果通知 */
-    flowPathResultNotify?: string;
+    flowPathResultNotify?: ('Y' | 'N');
     /** 重新提交通知 */
-    recommitNotify?: string;
+    recommitNotify?: ('Y' | 'N');
     /** 作废停用通知 */
-    invalidNotify?: string;
+    invalidNotify?: ('Y' | 'N');
     /** 删除通知 */
-    deleteNotify?: string;
+    deleteNotify?: ('Y' | 'N');
     /** 应用访问链接 */
     accessUrl?: string;
     /** 代办设置 */
@@ -66,38 +66,38 @@ export interface IProcessEditingDTO {
     /** 应用服务包ID */
     appServicePackId?: number;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** undefined */
-    isInitAppServicePack?: string;
+    isInitAppServicePack?: ('Y' | 'N');
 }
 /** 流程表单字段编辑DTO */
 export interface IProcessFormFieldEditDTO {
     /** id */
     id?: number;
     /** 类型分组 */
-    typeGroup?: string;
+    typeGroup?: ('FORM' | 'STYLE');
     /** 类型 */
-    type: string;
+    type: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** 是否是系统表单字段 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 是否是系统预置字段 */
-    isSystemPreset?: string;
+    isSystemPreset?: ('Y' | 'N');
     /** 是否是系统必填字段 */
-    isSystemMust?: string;
+    isSystemMust?: ('Y' | 'N');
     /** 是否在表格中展示列 */
-    isTableShow?: string;
+    isTableShow?: ('Y' | 'N');
     /** 是否是表格内字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 是否是套件 */
-    isKit?: string;
+    isKit?: ('Y' | 'N');
     /** 套件类型 */
-    kitType?: string;
+    kitType?: ('STORAGE_IN' | 'STORAGE_OUT' | 'STORAGE_OUT_STORAGE' | 'STORAGE_MOVE' | 'STORAGE_MOVE_STORAGE' | 'RECEIVED' | 'RECEIVABLE' | 'RECEIVABLE_COLLECTION' | 'PAID' | 'PAYABLE' | 'PAYABLE_PAYMENT' | 'BILL_DATE');
     /** 套件字段类型 */
-    kitColumnType?: string;
+    kitColumnType?: ('MATERIAL_CODE' | 'MATERIAL' | 'MATERIAL_NAME' | 'WAREHOUSE_MATERIAL_RP_ID' | 'IN_STOREHOUSE' | 'OUT_STOREHOUSE' | 'IN_OUT_QUANTITY' | 'CUSTOMER' | 'BUSINESS_USER' | 'RECEIVED_AMOUNT' | 'RECEIVABLE_AMOUNT' | 'SUPPLIER' | 'PAID_AMOUNT' | 'PAYABLE_AMOUNT' | 'UNIT' | 'IN_STORE' | 'OUT_STORE' | 'USABLE_QUANTITY' | 'LOT_NO' | 'SERIAL_NO');
     /** 表格类型 */
-    tableType?: string;
+    tableType?: ('DEFAULT');
     /** 选择类型 */
-    selectorType?: string;
+    selectorType?: ('FLAT' | 'PULL_DOWN');
     /** 名称 */
     name: string;
     /** 编号 - 由前端生成，生成时和序号值(serialNo)一致 */
@@ -111,9 +111,9 @@ export interface IProcessFormFieldEditDTO {
     /** 宽度 */
     span?: number;
     /** 默认值类型 */
-    defaultType?: string;
+    defaultType?: ('FIXED' | 'FORMULA' | 'DATA_LINKAGE');
     /** 默认日期类型 */
-    defaultDateType?: string;
+    defaultDateType?: ('NONE' | 'SYSTEM' | 'FIX');
     /** 默认值 - 多选、起止时间、图片、附件，都以json数组对象传来，例如：["xxx", "xxx2", "xxx3"]  - 地址则 JSON数组是 ["region_code" : "XXX", "detail_address": "详细地址"] - 定位 JSON数组是：{"location":{"lat":xx, "lng":zzz}, "detail_address":""}  */
     defaultValue?: string;
     /** 计算公式 */
@@ -123,29 +123,29 @@ export interface IProcessFormFieldEditDTO {
     /** 编码规则 */
     codeNumberRules?: IEditTheDTOForProcessFormFieldEncodingRuleDetails[];
     /** 是否必填 */
-    isMust: string;
+    isMust: ('Y' | 'N');
     /** 允许扫码 */
-    isScan?: string;
+    isScan?: ('Y' | 'N');
     /** 数值类型 */
-    numberType?: string;
+    numberType?: ('INTEGER' | 'DECIMAL');
     /** 小数位数 */
     scaleDigit?: number;
     /** 是否允许负数 */
-    canNegative?: string;
+    canNegative?: ('Y' | 'N');
     /** 数值格式 */
-    numberFormat?: string;
+    numberFormat?: ('F1' | 'F2' | 'F3' | 'F4');
     /** 日期类型 */
-    dateType?: string;
+    dateType?: ('DAY' | 'MIN' | 'SECOND' | 'HOUR_MIN' | 'MONTH' | 'YEAR');
     /** 选项集 - 值为code、name的json对象集 */
     selectorList?: IFormFieldOption[];
     /** 选项集来源 */
-    selectorOptionSource?: string;
+    selectorOptionSource?: ('DEFAULT_FILL' | 'SYSTEM_DICTIONARY');
     /** 选项集来源业务编码 */
-    selectorOptionSourceBusinessCode?: string;
+    selectorOptionSourceBusinessCode?: ('MATERIAL_TYPE' | 'DEPARTMENT_ORG_CATEGORY' | 'DEPARTMENT_ORG_TYPE' | 'PROJECT_TYPE' | 'PROJECT_CATEGORY' | 'PROJECT_TASK_PRIORITY' | 'PROJECT_ACTION_ITEM_TYPE' | 'PROJECT_FEEDBACK_CYCLE' | 'PROJECT_MEETING_TYPE' | 'PROJECT_SECRET_TYPE' | 'QMS_ANNUAL_QUALITY_MONITOR_RATE' | 'QMS_QUALITATIVE_TARGET_VALUE' | 'QMS_QUALITY_WORK_PLAN_COMPLETE_STATUS' | 'QMS_INTERNAL_AUDIT_AND_INSPECTION_RESULT' | 'QMS_INTERNAL_AUDIT_LEVEL_OF_NON_CONFORMANCE' | 'QMS_INTERNAL_AUDIT_CORRECTIVE_RESULT' | 'QMS_EXTERNAL_AUDIT_CORRECTIVE_RESULT' | 'QMS_SPECIAL_AUDIT_CORRECTIVE_RESULT' | 'QMS_INTERNAL_AUDIT_IMPLEMENTATION_PLAN_WORK_TYPE' | 'QMS_EXTERNAL_AUDIT_NON_CONFORMANCE_REPORT_LEVEL_OF_NON_CONFORMANCE' | 'QMS_SPECIAL_AUDIT_AND_INSPECTION_RECORDS_INSPECTION_RESULT' | 'QMS_SPECIAL_AUDIT_NON_CONFORMANCE_REPORT_LEVEL_OF_NON_CONFORMANCE' | 'QMS_SAMPLING_STANDARDS_NATIONAL_DOCUMENTS' | 'QMS_QUALITY_PERSONNEL_AUTHORIZED_INSPECTION_DUTIES' | 'QMS_QUALITY_PERSONNEL_WORKING_FORM' | 'QMS_QUALITY_PERSONNEL_GROUP' | 'QMS_QUALITY_PERSONNEL_CERTIFICATE_NAME' | 'QMS_QUALITY_PERSONNEL_CERTIFICATE_STATUS' | 'QMS_SEAL_STYLE_QUALIFICATION' | 'QMS_SEAL_STATUS' | 'QMS_ANNUAL_QUALITY_TARGET_CATEGORY' | 'QMS_SAMPLING_STANDARDS_AQL' | 'QMS_SAMPLING_STANDARDS_CHARACTER_CODE' | 'QMS_SAMPLING_STANDARDS_LEVEL' | 'QMS_INSPECTION_INCOMING_TYPE' | 'QMS_PROJECT_TASK_REVIEW_RESULT' | 'QMS_PROJECT_TASK_DECISION_RESULT' | 'QMS_INSPECTION_BUSINESS_TYPE' | 'DEVICE_EMPLOYEE_MAINTAIN_LEVEL');
     /** 下拉选项关联显示列表 */
     selectorAssociateDisplayList?: IProcessFormFieldDropDownOptionAssociatedDisplayEditDTO[];
     /** 选项集是否可修改 */
-    isCanModifySelectorOption?: string;
+    isCanModifySelectorOption?: ('Y' | 'N');
     /** 关联表单code */
     formRpCode?: string;
     /** 关联详细表单编码 */
@@ -161,7 +161,7 @@ export interface IProcessFormFieldEditDTO {
     /** 表格字段集 */
     tableCustomFormFields?: IProcessFormFieldEditDTO[];
     /** 选择框样式 */
-    style?: string;
+    style?: ('ADVANCED' | 'CASCADE');
     /** 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}] */
     formRpShowFields?: Record<string, any>[];
     /** 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}] */
@@ -169,33 +169,33 @@ export interface IProcessFormFieldEditDTO {
     /** 前端配置拓展字段 */
     meta?: Record<string, Record<string, any>>;
     /** 组织类型 */
-    organizationType?: string;
+    organizationType?: ('NONE' | 'CLASS_GROUP' | 'DEPARTMENT' | 'USER' | 'PROCESSOR');
     /** 表格字段列表 */
     actualFields?: Record<string, any>[];
     /** 是否自动获取位置 */
-    isAutoGetLocation?: string;
+    isAutoGetLocation?: ('Y' | 'N');
     /** 地址类型 */
-    addressType?: string;
+    addressType?: ('REGION_AND_DETAIL_ADDRESS' | 'REGION' | 'STREET_AND_DETAIL_ADDRESS' | 'STREET');
     /** 全局不允许重复 */
-    unableRepeat?: string;
+    unableRepeat?: ('Y' | 'N');
     /** 表格内不允许重复 */
-    unableRepeatInTable?: string;
+    unableRepeatInTable?: ('Y' | 'N');
     /** 重复提示 */
     repeatTip?: string;
     /** 是否使用有账号的员工 */
-    isUseEmployeesWithAccounts?: string;
+    isUseEmployeesWithAccounts?: ('Y' | 'N');
     /** 排序 */
     sort?: number;
     /** 关联查询显示样式 */
-    associationQueryShowStyle?: string;
+    associationQueryShowStyle?: ('SINGLE' | 'TABLE');
     /** 数据联动 */
     dataLinkage?: IFlowPathFormFieldDataLinkageEditDTO;
     /** 字段值限制规则 */
     valueLimitRules?: IFlowPathFormFieldValueLimitRuleEditDTO[];
     /** 是否启用超链接, 默认为N */
-    isHyperlinkEnabled?: string;
+    isHyperlinkEnabled?: ('Y' | 'N');
     /** 是否表格内批量选择 */
-    isInsideTableBatchSelect?: string;
+    isInsideTableBatchSelect?: ('Y' | 'N');
     /** 当动态控件选择了当前字段后，对应取关联表单的值是 */
     dynamicControlValueFieldSerialNo?: string;
     /** 处理人显示字段序列号 */
@@ -206,18 +206,18 @@ export interface IProcessFormFieldEditDTO {
 /** 流程表单公式字段DTO */
 export interface IProcessFormFormulaFieldDTO {
     /** 类型 */
-    type: string;
+    type: ('CURRENT' | 'FORM_FIELD');
     /** 计算公式用到的表单序号值 */
     serialNo: string;
     /** 用到的函数类型 */
-    funType?: string;
+    funType?: ('DEFAULT' | 'SUM' | 'MAX' | 'MIN' | 'AVG' | 'CONCAT');
 }
 /** 流程表单字段编码规则明细编辑DTO */
 export interface IEditTheDTOForProcessFormFieldEncodingRuleDetails {
     /** 设置类型 */
-    type?: string;
+    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
     /** 日期格式 - 用于日期 */
-    dateFormat?: string;
+    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
     /** 固定值 - 用于固定值 */
     fixValue?: string;
     /** 位数 - 用于流水 */
@@ -227,7 +227,7 @@ export interface IEditTheDTOForProcessFormFieldEncodingRuleDetails {
     /** 递增值 - 用于流水 */
     stepValue?: number;
     /** 是否是编码依据 - 仅能配置一项为编码依据 */
-    isCodeAccording?: string;
+    isCodeAccording?: ('Y' | 'N');
     /** 所属流程表单code -- 针对引用字段类型 */
     flowPathCode?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
@@ -256,16 +256,16 @@ export interface IProcessFormAssociatedFormFilterGroupEditDTO {
     /** 条件集 */
     filters?: IProcessFormAssociatedFormFilterEditDTO[];
     /** 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组 */
-    isSystemDefault?: string;
+    isSystemDefault?: ('Y' | 'N');
 }
 /** 流程表单关联表单筛选条件编辑DTO */
 export interface IProcessFormAssociatedFormFilterEditDTO {
     /** 被判断的字段序号值 */
     columnSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断对象类型 */
-    compareObjType?: string;
+    compareObjType?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 判断对象字段序号值 */
     compareColumnSerialNo?: string;
     /** 判断对象字段的关联表单字段序列号 */
@@ -277,11 +277,11 @@ export interface IProcessFormAssociatedFormFilterEditDTO {
     /** 区间范围 -- 上限 */
     rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
     /** 是否使用日期的显示格式来做筛选 - Y 代表将使用显示格式来做数据筛选。-N 代表不使用显示格式作为数据筛选。  */
-    isUseDateShowFormat?: string;
+    isUseDateShowFormat?: ('Y' | 'N');
     /** 禁用编辑，不填或者N代表不禁止。Y代表禁止不能编辑 */
-    isDisableEdit?: string;
+    isDisableEdit?: ('Y' | 'N');
 }
 /** 流程表单关联表单填充编辑DTO */
 export interface IProcessFormAssociatedFormFillEditDTO {
@@ -294,11 +294,11 @@ export interface IProcessFormAssociatedFormFillEditDTO {
     /** 填充到的目标字段序号值 */
     fillFormFieldSerialNo?: string;
     /** 字段填充方式 */
-    fillWay?: string;
+    fillWay?: ('NONE' | 'LAST' | 'CONCAT' | 'SUM');
     /** 是否禁用编辑- 默认是 N */
-    isDisableEdited?: string;
+    isDisableEdited?: ('Y' | 'N');
     /** 是否允许修改填充内容- 默认是 Y */
-    isAllowModificationOfFillContent?: string;
+    isAllowModificationOfFillContent?: ('Y' | 'N');
 }
 /** FlowPathFormFieldDataLinkageEditDTO */
 export interface IFlowPathFormFieldDataLinkageEditDTO {
@@ -318,9 +318,9 @@ export interface IFlowPathFormFieldDataLinkageEditDTO {
 /** FlowPathFormFieldValueLimitRuleEditDTO */
 export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     /** 值限制规则条件 */
-    limitRuleCondition?: string;
+    limitRuleCondition?: ('EQ' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 值限制规则类型 */
-    limitRuleType?: string;
+    limitRuleType?: ('NO_LIMIT' | 'FIXED_VALUE' | 'FORMULA');
     /** 计算公式 */
     formula?: string;
     /** 计算公式用到的表单序号值集 */
@@ -333,7 +333,7 @@ export interface IProcessNodeEditDTO3 {
     /** id */
     id?: number;
     /** 节点类型 */
-    type: string;
+    type: ('EXECUTE' | 'APPROVAL' | 'BRANCHES' | 'CHILD');
     /** 名称 */
     name: string;
     /** 序号值 - 由前端生成，需要每个节点唯一，用于新增节点时，互相关联用 */
@@ -345,11 +345,11 @@ export interface IProcessNodeEditDTO3 {
     /** 抄送人集 */
     carbonCopyUsers?: ITheProcessNodeExecutiveEditsTheDTO[];
     /** 审批类型 */
-    approvalType?: string;
+    approvalType?: ('ONE' | 'ALL');
     /** 是否允许回退 */
-    isBack?: string;
+    isBack?: ('Y' | 'N');
     /** 回退类型 */
-    backType?: string;
+    backType?: ('ANY' | 'PREVIOUS' | 'APPOINT');
     /** 回退流程节点id - 返回指定节点时有值 */
     backFlowPathNodeId?: number;
     /** 回退流程节点序列值 - 返回指定节点时有值 */
@@ -359,11 +359,11 @@ export interface IProcessNodeEditDTO3 {
     /** 条件组集 - 节点类型是子分支节点时必传 */
     condiGroups?: IProcessNodeConditionBranchGroupEditDTO[];
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent: string;
+    isCustomSubmitContent: ('Y' | 'N');
     /** 自定义提交按钮文案 */
     customSubmitContent?: string;
     /** 是否开启超时设置 */
-    enabledTimeout: string;
+    enabledTimeout: ('Y' | 'N');
     /** 超时类型 */
     flowPathNodeTimeoutConfEditDtos?: IProcessNodeEditDTO1[];
     /** 下节点信息 */
@@ -371,70 +371,70 @@ export interface IProcessNodeEditDTO3 {
     /** 分支子节点 - 节点类型是分支节点时必传 */
     branches?: IProcessNodeEditDTO3[];
     /** 节点启动方式 */
-    launchType: string;
+    launchType: ('MANUAL_OPERATION' | 'AUTOMATIC');
     /** 执行类型 */
-    executeType: string;
+    executeType: ('ONE' | 'ALL');
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent: string;
+    isCustomAcceptContent: ('Y' | 'N');
     /** 自定义接受按钮文案 */
     customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton?: string;
+    isShowAcceptButton?: ('Y' | 'N');
     /** 是否自定义同意按钮文案 */
-    isCustomPassApprovalContent: string;
+    isCustomPassApprovalContent: ('Y' | 'N');
     /** 自定义同意按钮文案 */
     customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
-    isCustomRefuseApprovalContent: string;
+    isCustomRefuseApprovalContent: ('Y' | 'N');
     /** 自定义拒绝按钮文案 */
     customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton?: string;
+    isShowRefuseButton?: ('Y' | 'N');
     /** 是否自定义回退按钮文案 */
-    isCustomBackContent: string;
+    isCustomBackContent: ('Y' | 'N');
     /** 自定义回退按钮文案 */
     customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton?: string;
+    isShowBackButton?: ('Y' | 'N');
     /** 消息配置列表 */
     messageConfigList?: ITheProcessNodeEditsTheDTO[];
     /** 是否启用接受超时 */
-    isEnabledAcceptTimeout?: string;
+    isEnabledAcceptTimeout?: ('Y' | 'N');
     /** 审批人来自, 默认是当前节点审批 */
-    approverFrom?: string;
+    approverFrom?: ('CURRENT_NODE_ASSIGNMENT' | 'PREVIOUS_NODE_ASSIGNMENT');
     /** 上一节点限制指定范围 */
-    previousNodeAssignmentRange?: string;
+    previousNodeAssignmentRange?: ('NO_LIMIT' | 'LIMIT');
     /** 上一节点选项人员集合 */
     previousNodeUserOptions?: ITheProcessNodeExecutiveEditsTheDTO[];
     /** 是否启用转交 */
-    enabledTransfer?: string;
+    enabledTransfer?: ('Y' | 'N');
     /** 自定义转交按钮文案 */
     customTransferContent?: string;
     /** 转交人员范围 */
-    transferScopeType?: string;
+    transferScopeType?: ('CLASSIFIED' | 'ALL');
     /** 转交人集 */
     transferUsers?: ITheProcessNodeExecutiveEditsTheDTO[];
     /** 是否启用表单暂存 */
-    enableFormStaging?: string;
+    enableFormStaging?: ('Y' | 'N');
     /** 自定义表单暂存文本 */
     customFormStagingContent?: string;
     /** 是否自定义流程开始按钮文案 */
-    isCustomBeginningContent: string;
+    isCustomBeginningContent: ('Y' | 'N');
     /** 自定义流程开始按钮文案 */
     customBeginningContent?: string;
     /** 是否显示开始按钮 */
-    isShowBeginningButton?: string;
+    isShowBeginningButton?: ('Y' | 'N');
     /** 是否启用流程开始超时 */
-    isEnabledBeginningTimeout?: string;
+    isEnabledBeginningTimeout?: ('Y' | 'N');
 }
 /** 流程节点执行人编辑DTO */
 export interface ITheProcessNodeExecutiveEditsTheDTO {
     /** id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
     /** 执行人系统类型 */
-    executorSysType?: string;
+    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
 }
@@ -445,7 +445,7 @@ export interface IProcessNodeFormOperationPermissionEditDTO {
     /** 表单序号值(整数) - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 权限类型 */
-    permissionsType: string;
+    permissionsType: ('EDIT' | 'READONLY' | 'HIDDEN');
     /** 表格内权限类型 */
     tableFormFieldPermissions: IProcessNodeFormOperationPermissionEditDTO[];
 }
@@ -461,17 +461,17 @@ export interface IEditDtosForProcessNodeConditions {
     /** id */
     id?: number;
     /** 条件类型 */
-    type?: string;
+    type?: ('DEFAULT' | 'FORM_FIELD');
     /** 默认条件-条件类型为系统内置时有值 */
-    defaultCondi?: string;
+    defaultCondi?: ('HANDLE_USER');
     /** 表单字段id-条件类型为表单字段时有值 */
     flowPathFormFieldId?: number;
     /** 表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 判断方式 */
-    compareMode?: string;
+    compareMode?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断目标来源 */
-    compareTargetFromSource?: string;
+    compareTargetFromSource?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 关联表单-比较目标字段ID */
     targetFieldId?: number;
     /** 关联表单-比较目标字段序列 */
@@ -481,7 +481,7 @@ export interface IEditDtosForProcessNodeConditions {
     /** 自定义-比较值 */
     compareValue?: string;
     /** 自定义-日期动态区间 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
     /** 选项值 */
     selectorValues?: string[];
     /** 前端Meta */
@@ -492,35 +492,35 @@ export interface IProcessNodeEditDTO1 {
     /** id */
     id?: number;
     /** 超时的步骤类型 */
-    stepType?: string;
+    stepType?: ('COMMITTED' | 'ACCEPT' | 'BEGINNING');
     /** 超时类型 */
-    timeoutType?: string;
+    timeoutType?: ('CUSTOM' | 'FORM_FIELD');
     /** 超时值 - 超时类型为自定义时有值 */
     timeoutTimeValue?: number;
     /** 超时值类型 - 超时类型为自定义时有值 */
-    timeoutTimeType?: string;
+    timeoutTimeType?: ('DAY' | 'HOUR' | 'MINUTE');
     /** 超时表单字段id */
     timeoutFlowPathFormFieldId?: number;
     /** 超时表单字段序列值 */
     timeoutFlowPathFormFieldSerialNo?: string;
     /** 预警处理方式 */
-    earlyWarningHandleType?: string;
+    earlyWarningHandleType?: ('NOT_HANDLE' | 'SEND');
     /** 预警超时前发送通知 超时值 */
     earlyWarningTimeValue?: number;
     /** 预警超时前发送通知 超时值类型 */
-    earlyWarningTimeType?: string;
+    earlyWarningTimeType?: ('DAY' | 'HOUR' | 'MINUTE');
     /** 预警提醒人集 */
     earlyWarningUsers?: ITheProcessNodeExecutiveEditsTheDTO[];
     /** 预警提醒方式 */
-    earlyWarningSendType?: string;
+    earlyWarningSendType?: ('MESSAGE');
     /** 超时处理方式 */
-    timeoutHandleType?: string;
+    timeoutHandleType?: ('NOT_HANDLE' | 'AUTO');
     /** 超时后通知类型 */
-    timeoutAfterSendType?: string;
+    timeoutAfterSendType?: ('NOT_SEND' | 'AUTO');
     /** 超时提醒人集 */
     timeoutUsers?: ITheProcessNodeExecutiveEditsTheDTO[];
     /** 超时通知方式 */
-    timeoutSendType?: string;
+    timeoutSendType?: ('MESSAGE');
     /** 消息配置列表 */
     messageConfigList?: ITheProcessNodeEditsTheDTO[];
 }
@@ -529,11 +529,11 @@ export interface ITheProcessNodeEditsTheDTO {
     /** id */
     id?: number;
     /** 消息触发时机 */
-    triggerTiming?: string;
+    triggerTiming?: ('APPROVER_COMMIT_AFTER' | 'PROCESS_NODE_COMPLETED' | 'COMMIT_TIMEOUT_BEFORE' | 'COMMIT_TIMEOUT_AFTER' | 'ACCEPTANCE_AFTER' | 'ACCEPTANCE_TIMEOUT_BEFORE' | 'ACCEPTANCE_TIMEOUT_AFTER' | 'BEGINNING_AFTER' | 'BEGINNING_TIMEOUT_BEFORE' | 'BEGINNING_TIMEOUT_AFTER' | 'RETURN_AFTER' | 'APPROVER_APPROVAL_AFTER' | 'APPROVAL_NODE_COMPLETED' | 'APPROVER_APPROVAL_REJECTED' | 'TRANSFER_AFTER');
     /** 消息配置ID列表 */
     messageConfigIdList?: number[];
     /** 是否启用消息通知 */
-    isEnabledMessageNotification?: string;
+    isEnabledMessageNotification?: ('Y' | 'N');
     /** 引用的ID。比如超时配置 */
     refId?: number;
 }
@@ -564,7 +564,7 @@ export interface IProcessRolePermissionDTO {
 /** 流程角色数据权限DTO */
 export interface IProcessRoleDataPermissionDTO {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('SELF' | 'DEPT' | 'ALL' | 'FLOW_FIELD');
     /** 数据权限类型 */
     roleDataAuthFieldList?: IProcessRoleDataPermissionFieldDTO[];
 }
@@ -578,11 +578,11 @@ export interface IProcessRoleDataPermissionFieldDTO {
 /** FlowPathEditPermissionEditDTO */
 export interface IFlowPathEditPermissionEditDTO {
     /** 流程状态 */
-    flowStatus?: string;
+    flowStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 是否可编辑 */
-    isEditable?: string;
+    isEditable?: ('Y' | 'N');
     /** 是否禁用 */
-    isDisabled?: string;
+    isDisabled?: ('Y' | 'N');
 }
 /** FlowPathAddPermissionEditDTO */
 export interface IFlowPathAddPermissionEditDTO {
@@ -591,7 +591,7 @@ export interface IFlowPathAddPermissionEditDTO {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 权限类型 */
-    type?: string;
+    type?: ('EDIT' | 'READONLY' | 'HIDDEN');
 }
 /** FlowPathQueryPermissionEditDTO */
 export interface IFlowPathQueryPermissionEditDTO {
@@ -600,7 +600,7 @@ export interface IFlowPathQueryPermissionEditDTO {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可见 */
-    isVisible?: string;
+    isVisible?: ('Y' | 'N');
 }
 /** FlowPathCopyPermissionEditDTO */
 export interface IFlowPathCopyPermissionEditDTO {
@@ -609,39 +609,39 @@ export interface IFlowPathCopyPermissionEditDTO {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否能够复制 */
-    isCanCopy?: string;
+    isCanCopy?: ('Y' | 'N');
 }
 /** 流程事件编辑DTO */
 export interface IProcessEventEditDTO {
     /** 标题 */
     title?: string;
     /** 是否系统预设 */
-    isSystemPreset?: string;
+    isSystemPreset?: ('Y' | 'N');
     /** 触发流程节点序号值列表 */
     triggerFlowPathNodeSerialNoList?: string[];
     /** 触发事件的时机- 即事件不是由流程提交触发，而是因为某个事件发生触发-例如当流程完成后触发该事件 */
-    triggerEventTiming?: string;
+    triggerEventTiming?: ('FLOW_COMPLETED_POST');
     /** 操作表单类型 */
-    operateFormType?: string;
+    operateFormType?: ('FLOW' | 'FLOW_TABLE');
     /** 操作目标表单code */
     operateFormCode?: string;
     /** 操作方式 */
-    operateType?: string;
+    operateType?: ('UPDATE' | 'UPDATE_STORAGE_IN' | 'UPDATE_STORAGE_OUT' | 'UPDATE_RECEIVED' | 'UPDATE_RECEIVABLE' | 'UPDATE_PAID' | 'UPDATE_PAYABLE' | 'INSERT');
     /** 触发条件生效设置 */
     validSetting?: IProcessEventSettingsEditDTO;
     /** 触发条件失效设置 */
     invalidSetting?: IProcessEventSettingsEditDTO;
     /** 是否触发流程 -- 针对新增数据事件而言 */
-    isTriggerFlow?: string;
+    isTriggerFlow?: ('Y' | 'N');
     /** 套件类型-仅针对套件的事件有效 */
-    kitType?: string;
+    kitType?: ('STORAGE_IN' | 'STORAGE_OUT' | 'STORAGE_OUT_STORAGE' | 'STORAGE_MOVE' | 'STORAGE_MOVE_STORAGE' | 'RECEIVED' | 'RECEIVABLE' | 'RECEIVABLE_COLLECTION' | 'PAID' | 'PAYABLE' | 'PAYABLE_PAYMENT' | 'BILL_DATE');
 }
 /** 流程事件设置编辑DTO */
 export interface IProcessEventSettingsEditDTO {
     /** 子表新增方式 -- 针对新增事件 */
-    childFormInsertType?: string;
+    childFormInsertType?: ('ALL' | 'FILTER');
     /** 是否直接删除目标表单 -- 针对新增事件 */
-    isDirectDeleteTargetForm?: string;
+    isDirectDeleteTargetForm?: ('Y' | 'N');
     /** 在指定的表格编码的维度上新增数据 -- 针对新增事件。如果为空，则维度以主表的维度来新增数据，不为空，则以指定明细表的维度来新增数据） */
     addDataInDimensionWhereTableCode?: string;
     /** 新增业务事件-明细分组 */
@@ -658,7 +658,7 @@ export interface IProcessEventSettingsEditDTO {
 /** 插入业务事件-明细数据分组的依据 */
 export interface ITheBasisForInsertingTheServiceEventDetailDataGroup {
     /** 是否对明细数据进行分组 */
-    isGroup?: string;
+    isGroup?: ('Y' | 'N');
     /** 分组依据-表格字段类型编码 */
     groupingTableCode?: string;
     /** 分组依据-表格字段类型的序列号 */
@@ -671,7 +671,7 @@ export interface IProcessEventOperationSettingsEditTheDTO {
     /** 操作赋值字段序号值(目标.字段序列号）) */
     operateColumnSerialNo?: string;
     /** 值来源类型 */
-    sourceType?: string;
+    sourceType?: ('FORM' | 'FIXED' | 'FORMULA' | 'NULL');
     /** 表单字段序号值(源.一级字段序列号) */
     formFieldSerialNo?: string;
     /** 表单字段序号值(源.二级字段序列号) */
@@ -687,7 +687,7 @@ export interface IProcessEventOperationSettingsEditTheDTO {
     /** 前端配置拓展字段 */
     meta?: Record<string, Record<string, any>>;
     /** 禁用编辑，不填或者N代表不禁止。Y代表禁止不能编辑 */
-    isDisableEdit?: string;
+    isDisableEdit?: ('Y' | 'N');
 }
 /** 流程事件操作筛选条件组编辑DTO */
 export interface IEditTheDTOForTheProcessEventActionFilterGroup {
@@ -701,9 +701,9 @@ export interface IProcessEventActionFilterEditDTO {
     /** 被判断的字段序号值 */
     columnSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断对象类型 */
-    compareObjType?: string;
+    compareObjType?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 判断对象字段序号值 */
     compareColumnSerialNo?: string;
     /** 判断对象自定义值 */
@@ -713,7 +713,7 @@ export interface IProcessEventActionFilterEditDTO {
     /** 区间范围 -- 上限 */
     rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
 }
 /** 应用新增事件子表设置请求DTO */
 export interface IApplyTheNewEventSubtableToSetTheRequestDTO {
@@ -734,9 +734,9 @@ export interface IApplyTheNewEventSubtableFilterToRequestADTO {
     /** 被判断的字段序号值 */
     columnSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断对象类型 */
-    compareObjType?: string;
+    compareObjType?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 判断对象字段序号值 */
     compareColumnSerialNo?: string;
     /** 判断对象自定义值 */
@@ -748,7 +748,7 @@ export interface IApplyTheNewEventSubtableFilterToRequestADTO {
     /** 区间范围 -- 上限 */
     rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
 }
 /** 流程打印模板编辑DTO */
 export interface IProcessPrintTemplateEditDTO {
@@ -759,7 +759,7 @@ export interface IProcessPrintTemplateEditDTO {
     /** 模板结构代码 */
     templateStructure?: string;
     /** 打印类型 */
-    printType?: string;
+    printType?: ('SINGLE_LINE' | 'MULTI_LINE');
 }
 /** PublishEnterpriseRouterEditDTO */
 export interface IPublishEnterpriseRouterEditDTO {
@@ -810,9 +810,9 @@ export interface ISetOfConditions {
     /** 被判断的字段序列号 */
     columnSerialNo?: string;
     /** 判断方式 */
-    compareType?: string;
+    compareType?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
     /** 判断对象类型 */
-    compareObjType?: string;
+    compareObjType?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
     /** 判断对象字段code */
     compareColumnSerialNo?: string;
     /** 判断对象字段的关联表单字段序列号 */
@@ -824,9 +824,9 @@ export interface ISetOfConditions {
     /** 区间范围 -- 上限 */
     rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange?: string;
+    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
     /** 是否使用日期的显示格式来做为筛选条件 */
-    isUseDateShowFormat?: string;
+    isUseDateShowFormat?: ('Y' | 'N');
 }
 /** JSONResult«流程版本响应VO» */
 export interface IJSONResultProcessVersionRespondsToVO {
@@ -850,7 +850,7 @@ export interface ITheProcessVersionRespondsToVO {
     /** 版本排名 */
     versionRank?: number;
     /** 是否是系统流程 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 名称 */
     name?: string;
     /** 编号 */
@@ -860,5 +860,5 @@ export interface ITheProcessVersionRespondsToVO {
     /** 发布终端值合计 */
     publishTotal?: number;
     /** 是否是多流程 */
-    isMultiFlow?: string;
+    isMultiFlow?: ('Y' | 'N');
 }

@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITheOccupiedDTOWasAdded }, 
 /** 添加占用DTO */
 export interface ITheOccupiedDTOWasAdded {
     /** 占用类型 */
-    occupyType?: string;
+    occupyType?: ('TIME' | 'PROCESS');
     /** 占用工序id */
     processId?: number;
     /** 占用开始时间 */

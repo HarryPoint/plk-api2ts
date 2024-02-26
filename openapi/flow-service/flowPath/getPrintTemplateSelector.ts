@@ -33,7 +33,7 @@ export interface IProcessPrintTemplateReturnsVO {
     /** 模板结构代码 */
     templateStructure?: string;
     /** 打印类型 */
-    printType?: string;
+    printType?: ('SINGLE_LINE' | 'MULTI_LINE');
     /** 打印类型描述 */
     printTypeDesc?: string;
 }

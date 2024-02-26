@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IStandardProcessEnablesDeac
 /** 标准工艺启用、停用请求对象 */
 export interface IStandardProcessEnablesDeactivationOfRequestObjects {
     /** 启用 Y 停用 N */
-    valid: string;
+    valid: ('Y' | 'N');
     /** 是否 启用/停用 全部, Y 全部 */
-    validAll?: string;
+    validAll?: ('Y' | 'N');
     /** 标准工艺ids */
     standardTechnologyIds?: number[];
 }

@@ -39,11 +39,11 @@ export interface IProjectTaskResponseObject {
     /** 任务进度 */
     taskProgress?: number;
     /** 任务状态 */
-    taskStatus?: string;
+    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
     /** 任务状态描述 */
     taskStatusDesc?: string;
     /** 是否超期 */
-    isOverdue?: string;
+    isOverdue?: ('Y' | 'N');
     /** 任务类型id */
     projectTaskTypeId?: number;
     /** 任务类型 */

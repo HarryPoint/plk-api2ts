@@ -26,7 +26,7 @@ export interface IQueryDtosUsingSMSTemplates {
     /** 创建时间开始时间 */
     createBeginTime?: string;
     /** 审核状态 */
-    auditStatusList?: string[];
+    auditStatusList?: ('NONE' | 'AUDIT_STATE_INIT' | 'AUDIT_STATE_PASS' | 'AUDIT_STATE_NOT_PASS')[];
     /** 创建时间结束时间 */
     createEndTime?: string;
 }
@@ -56,9 +56,9 @@ export interface IPageInformationSMSTemplateQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -95,7 +95,7 @@ export interface ISMSTemplateQueryResponseDTO {
     /** 短信内容 */
     messageContent?: string;
     /** 审核状态 */
-    auditStatus?: string;
+    auditStatus?: ('NONE' | 'AUDIT_STATE_INIT' | 'AUDIT_STATE_PASS' | 'AUDIT_STATE_NOT_PASS');
     /** 失败原因 */
     failReason?: string;
     /** 显示信息内容 */

@@ -55,7 +55,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«宝晶销售发货报表表格统计返回VO» */
 export interface IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO {

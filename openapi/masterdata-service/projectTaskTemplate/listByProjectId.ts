@@ -31,7 +31,7 @@ export interface IProjectTaskTemplatesRespondToDtos {
     /** 项目id */
     projectId?: number;
     /** 是否是通用模板 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 模板名称 */
     name?: string;
     /** 应用编号 */

@@ -23,7 +23,7 @@ export interface ITheDTOCompletesTheInspectionTask {
 /** 质检结果物料信息 DTO */
 export interface IQualityInspectionResultMaterialInformationDTO {
     /** 质检结果类型 */
-    qualityInspectionResultType?: string;
+    qualityInspectionResultType?: ('PASS' | 'NOT_PASS' | 'CONCESSION');
     /** 每项物料填的质检结果集 */
     qualityTaskMaterialItems?: IQualityInspectionResultDTO[];
 }

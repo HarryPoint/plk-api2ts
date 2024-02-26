@@ -24,7 +24,7 @@ export interface IBatchOrderSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 当前流水类型(界面上的批次当前生产状态) */
-    lastFlowType?: string;
+    lastFlowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
     /** 批次订单号 */
     lotOrderNo?: string;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -36,18 +36,18 @@ export interface IBatchOrderSearchVO {
     /** 对应物料id */
     materialId?: number;
     /** 来源类型 */
-    sourceType?: string;
+    sourceType?: ('MAJOR_DATA' | 'MARGE' | 'SPLIT' | 'TRANSFER');
     /** 来源批次单号 */
     sourceLotNo?: string;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'ISSUE' | 'PRODUCE' | 'HOLD' | 'CANCEL' | 'CLOSE');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«批次订单返回VO»» */
 export interface IJSONResultPagingInformationBatchOrderReturnsVO {
@@ -75,9 +75,9 @@ export interface IPagingInformationBatchOrderReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -126,7 +126,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 生产工艺路径编号 */
     produceTechnologyRoutingCode?: string;
     /** 当前流水类型(界面上的当前生产状态) */
-    lastFlowType?: string;
+    lastFlowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
     /** 当前流水类型描述 */
     lastFlowTypeDesc?: string;
     /** 当前对应工艺路径步骤id */
@@ -142,7 +142,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 总工艺数 - 用于展示工艺进度条 */
     totalStepCount?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'ISSUE' | 'PRODUCE' | 'HOLD' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 来源集 */
@@ -159,7 +159,7 @@ export interface IBatchOrderIsReturnedToVO {
 /** 批次订单来源返回VO */
 export interface IBatchOrderSourceReturnedToVO {
     /** 来源类型 */
-    sourceType?: string;
+    sourceType?: ('MAJOR_DATA' | 'MARGE' | 'SPLIT' | 'TRANSFER');
     /** 来源类型描述 */
     sourceTypeDesc?: string;
     /** 来源批次单号 */

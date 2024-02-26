@@ -31,11 +31,11 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 任务号 */
     taskNo?: string;
     /** 任务下发方式 */
-    issueType?: string;
+    issueType?: ('PLAN' | 'DIRECT');
     /** 任务下发方式描述 */
     issueTypeDesc?: string;
     /** 任务类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'BACK');
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -99,7 +99,7 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
@@ -119,7 +119,7 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 创建时间 */
     createTime?: string;
     /** 可操作项列表 */
-    canOpItemList?: string[];
+    canOpItemList?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
     /** 可操作项列表拼接 */
     canOpItemListStr?: string;
     /** 生产任务记录 */
@@ -134,9 +134,9 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -156,7 +156,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 对应生产委外id */
     produceEntrustId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
@@ -195,7 +195,7 @@ export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 录入值 - 明细录入类型不是图片时，有值 */
     inputValue?: string;
     /** 图片上传key集合 - 明细录入类型是图片时，有值 */

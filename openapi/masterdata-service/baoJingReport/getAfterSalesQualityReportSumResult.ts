@@ -53,7 +53,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«售后质量分析返回VO»_1 */
 export interface IJSONResultAfterSalesQualityAnalysisReturnsVO1 {

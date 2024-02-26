@@ -67,15 +67,15 @@ export interface IProduceTechnologyRoutingStepCapacityResponseDTO {
     /** 所属生产工艺工艺卡id */
     produceTechnologyProcessSheetId?: number;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: string;
+    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
     /** 进站关键参数id */
     moveInKeyParameterId?: number;
     /** 出站关键参数id */
     moveOutKeyParameterId?: number;
     /** 进出站类型 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
 }
 /** ProduceTechnologyCapacityResponseDTO */
 export interface IProduceTechnologyCapacityResponseDTO {
@@ -108,11 +108,11 @@ export interface IProduceTechnologyCapacityResponseDTO {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }

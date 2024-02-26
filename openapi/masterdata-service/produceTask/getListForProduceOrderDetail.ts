@@ -49,7 +49,7 @@ export interface IProductionOrderDetailsProductionTaskVO {
     /** 任务进度分子(补单数量) */
     supplementCompleteQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 进料数量 */

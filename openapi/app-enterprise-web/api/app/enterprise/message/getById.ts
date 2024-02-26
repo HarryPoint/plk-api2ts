@@ -29,7 +29,7 @@ export interface IMessageDetailsAreReturnedToVO {
     /** id */
     id?: number;
     /** 消息类型 */
-    type?: string;
+    type?: ('BUSINESS_NOTIFICATION' | 'BUSINESS_EARLY_WARNING' | 'SYSTEM_NOTIFICATION');
     /** 消息类型描述 */
     typeDesc?: string;
     /** 消息标题 */
@@ -43,7 +43,7 @@ export interface IMessageDetailsAreReturnedToVO {
     /** 消息图片url集 */
     imageUrls?: string[];
     /** 是否已读 */
-    isRead?: string;
+    isRead?: ('Y' | 'N');
     /** pc端跳转路径 */
     webPath?: string;
     /** pc端操作建议 */
@@ -55,11 +55,11 @@ export interface IMessageDetailsAreReturnedToVO {
     /** 创建时间 */
     createTime?: string;
     /** 消息发送类型 */
-    sendType?: string;
+    sendType?: ('NORMAL' | 'CARBON_COPY');
     /** 消息发送类型描述 */
     sendTypeDesc?: string;
     /** 消息跳转类型 */
-    pathType?: string;
+    pathType?: ('NONE' | 'JUMP' | 'DOWNLOAD' | 'REEXPORT' | 'TODO' | 'APP_ADD_PAGE_LINK' | 'APP_LIST_PAGE_LINK');
     /** 消息跳转类型描述 */
     pathTypeDesc?: string;
 }

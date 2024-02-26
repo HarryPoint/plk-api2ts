@@ -29,7 +29,7 @@ export interface IProductionOrderMatchingTaskQueryRequest1 {
     /** ID */
     id?: number;
     /** 标准工艺匹配状态 */
-    status?: string;
+    status?: ('UNMATCHED' | 'MATCHING' | 'MATCH_COMPLETED' | 'MATCH_FAIL');
     /** 总数量 */
     totalQuantity?: number;
     /** 当前已处理数量 */
@@ -54,7 +54,7 @@ export interface IProductionOrderMatchingTaskQueryRequest {
     /** 标准工艺ID */
     standardTechnologyId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('UNMATCHED' | 'MATCHING' | 'MATCH_COMPLETED' | 'MATCH_FAIL');
     /** 错误原因 */
     failureReason?: string;
     /** 任务执行时间 */

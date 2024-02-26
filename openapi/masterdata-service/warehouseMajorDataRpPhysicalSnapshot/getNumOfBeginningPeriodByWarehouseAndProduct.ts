@@ -39,7 +39,7 @@ export interface IPositionMaterialInventoryAssociatedWithVO {
     /** 所属仓位id */
     warehouseId?: number;
     /** 仓位类型 */
-    warehouseType?: string;
+    warehouseType?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
     /** 库存总数 */
     storageTotalCount?: number;
     /** 库存锁定数 */

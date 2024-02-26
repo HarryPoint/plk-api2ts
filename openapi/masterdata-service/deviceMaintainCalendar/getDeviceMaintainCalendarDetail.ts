@@ -55,7 +55,7 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 任务编号 */
     taskCode?: string;
     /** 保养类型 */
-    maintainType?: string;
+    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
     /** 保养方案 */
     maintainSchemeName?: string;
     /** 计划开始时间 */
@@ -71,11 +71,11 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 执行人 */
     executorName?: string;
     /** 任务状态 */
-    taskStatus?: string;
+    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
     /** 返回类型 */
-    resultType?: string;
+    resultType?: ('MAINTAIN_PLAN' | 'MAINTAIN_TASK');
     /** 查询状态 */
-    queryStatus?: string;
+    queryStatus?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE');
     /** 保养内容 */
     maintainDetails?: IMaintenanceContentReturnedToDTO[];
     /** 消耗备件 */
@@ -90,7 +90,7 @@ export interface IMaintenanceContentReturnedToDTO {
     /** 保养执行记录 */
     executorRecord?: string;
     /** 保养情况 */
-    situation?: string;
+    situation?: ('UN_COMPLETE' | 'COMPLETE');
     /** 备注 */
     remark?: string;
 }

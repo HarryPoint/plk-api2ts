@@ -24,7 +24,7 @@ export interface ISalesDeliveryResponseHelpsCalculateDTO {
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
     beginTime: string;
     /** 是否优先级最高 */
-    isHighest: string;
+    isHighest: ('Y' | 'N');
     /** 设计开始时间 yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
     designBeginTime?: string;
     /** 设计结束时间 yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
@@ -75,7 +75,7 @@ export interface ISalesDeliveryResponseSupportMaterialReturnedToVO {
     /** 余量， 注：如果是正数，则显示 余量：xxx，  如果是负数，则显示 还需：xxx */
     allowanceCount?: number;
     /** 是否完整配置了产能信息 */
-    isSetCapacity?: string;
+    isSetCapacity?: ('Y' | 'N');
     /** 产能信息异常描述 */
     capacityWarning?: string;
     /** 子物料信息集 */

@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IUnifiedSecurityInventoryCo
 /** 安全库存统一设置配置 */
 export interface IUnifiedSecurityInventoryConfiguration {
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
     /** 是否开启预警 */
-    isWarning?: string;
+    isWarning?: ('Y' | 'N');
     /** 计数方式 */
-    computeType?: string;
+    computeType?: ('TOTAL' | 'CAN_USE');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

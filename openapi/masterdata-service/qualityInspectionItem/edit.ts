@@ -22,11 +22,11 @@ export interface IEditTheQualityInspectionClassificationDTO1 {
     /** 质检分类编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule: ('Y' | 'N');
     /** 质检方式 */
-    qualityMethod: string;
+    qualityMethod: ('NUMBER_COMPARE' | 'ARTIFICIAL');
     /** 选择方式 */
-    selectType?: string;
+    selectType?: ('SELECTOR' | 'CHECKBOX');
     /** 选项内容集合 */
     selectors?: IQualityInspectionItemEditDTO[];
     /** 备注 */

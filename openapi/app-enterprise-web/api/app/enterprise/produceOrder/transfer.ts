@@ -24,7 +24,7 @@ export interface IBatchTransferToOtherProductionOrderDTO {
     /** 备注 */
     remark?: string;
     /** 是否自动创建一个补充生产订单 */
-    isAutoCreateOrder: string;
+    isAutoCreateOrder: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

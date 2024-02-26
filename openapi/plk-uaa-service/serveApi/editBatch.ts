@@ -25,9 +25,9 @@ export interface IRequestdto {
     /** undefined */
     api?: string;
     /** undefined */
-    isLogin?: string;
+    isLogin?: ('Y' | 'N');
     /** undefined */
-    checkMode?: string;
+    checkMode?: ('AND' | 'OR');
     /** undefined */
     permissionCode?: string;
 }

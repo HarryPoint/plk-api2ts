@@ -26,9 +26,9 @@ export interface ISecurityInventorySearchVO {
     /** 物料名称 */
     name?: string;
     /** 库存预警类型 */
-    warningType?: string;
+    warningType?: ('NORMAL' | 'CLOSE_WARNING' | 'UPPER' | 'LOWER');
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
 }
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

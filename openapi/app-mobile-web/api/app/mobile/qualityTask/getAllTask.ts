@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getAllTaskUsingGET
 */
-export default function fetchMethod(options: { params: { status?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE') } }, extraOptions?: any) {
     return http<ITheJSONResultListSalesModuleReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getAllTask",
@@ -27,7 +27,7 @@ export interface ITheJSONResultListSalesModuleReturnsVO {
 /** 销售模块返回VO */
 export interface ITheSalesModuleReturnsToVO {
     /** 模块类型 */
-    modelType?: string;
+    modelType?: ('QUALITY_TASK' | 'PROCESS');
     /** 模块名称 */
     modelName?: string;
     /** 任务集 */
@@ -68,7 +68,7 @@ export interface ITheInspectionModuleTaskReturnsVO {
     /** 已检数 */
     inspectionQuantity?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 状态名称 */
     statusName?: string;
     /** 生产订单id */

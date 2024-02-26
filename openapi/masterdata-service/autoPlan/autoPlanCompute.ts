@@ -18,11 +18,11 @@ export interface IAutomaticProductionOrderSchedulingDTO {
     /** 待排产订单id集 */
     waitProduceOrderIds?: number[];
     /** 是否正向排产 */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
     /** 是否倒序排产 */
-    isDesc?: string;
+    isDesc?: ('Y' | 'N');
     /** 是否考虑自动提前 */
-    isAutoMoveUp?: string;
+    isAutoMoveUp?: ('Y' | 'N');
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 排产结束时间 yyyy-MM-dd HH:mm:ss */
@@ -57,15 +57,15 @@ export interface ICalculationResultOfSchedulingVO {
 /** 排产计算结果分析VO */
 export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
     /** 排产方式 */
-    autoPlanType?: string;
+    autoPlanType?: ('ASC' | 'DESC');
     /** 是否按期交付 */
-    isOnTime?: string;
+    isOnTime?: ('Y' | 'N');
     /** 影响订单个数 */
     affectOrderCount?: number;
     /** 超期订单个数 */
     overdueOrderCount?: number;
     /** 超期原因类型集 */
-    overdueTypes?: string[];
+    overdueTypes?: ('PROCESS' | 'OCCUPY' | 'CAPACITY')[];
     /** 超期原因分析集 */
     overdueReasons?: string[];
     /** 还需增加工时(小时) */
@@ -78,7 +78,7 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO {
     /** id */
     id?: number;
     /** 是否加急 */
-    isEmergentOrder?: string;
+    isEmergentOrder?: ('Y' | 'N');
     /** 生产订单编号 */
     code?: string;
     /** 父级订单编号 */
@@ -118,7 +118,7 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO {
     /** 交付数量 */
     totalCount?: number;
     /** 排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 排产状态描述 */
     planStatusDesc?: string;
     /** 步骤集 */
@@ -137,11 +137,11 @@ export interface IUnscheduledProductionOrderStepReturnToVO {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产能-生产时间 */
     capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 工序计划开始日期 */

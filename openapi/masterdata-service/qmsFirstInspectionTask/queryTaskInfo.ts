@@ -31,11 +31,11 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     code?: string;
     /** undefined */
-    businessType?: string;
+    businessType?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
     /** undefined */
-    isEmergent?: string;
+    isEmergent?: ('Y' | 'N');
     /** undefined */
-    isTemporarily?: string;
+    isTemporarily?: ('Y' | 'N');
     /** undefined */
     qmsInspectionApplyFormMaterialDetailId?: number;
     /** undefined */
@@ -71,7 +71,7 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     mutualInspectionEmployeeIds?: number[];
     /** undefined */
-    inspectionMethod?: string;
+    inspectionMethod?: ('SPOT_CHECK' | 'ALL_CHECK');
     /** undefined */
     inspectionQuantity?: number;
     /** undefined */
@@ -79,19 +79,19 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     selfUnQualifiedQuantity?: number;
     /** undefined */
-    selfInspectionResult?: string;
+    selfInspectionResult?: ('Y' | 'N');
     /** undefined */
     mutualQualifiedQuantity?: number;
     /** undefined */
     mutualUnQualifiedQuantity?: number;
     /** undefined */
-    mutualInspectionResult?: string;
+    mutualInspectionResult?: ('Y' | 'N');
     /** undefined */
     specialQualifiedQuantity?: number;
     /** undefined */
     specialUnQualifiedQuantity?: number;
     /** undefined */
-    specialInspectionResult?: string;
+    specialInspectionResult?: ('Y' | 'N');
     /** undefined */
     applyInspectAddress?: string;
     /** undefined */
@@ -113,7 +113,7 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     inspectionEmployees?: IAssociateFormDataVO[];
     /** undefined */
-    isAssignment?: string;
+    isAssignment?: ('Y' | 'N');
     /** undefined */
     inspectionEndDate?: string;
     /** undefined */
@@ -121,9 +121,9 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     taskStartDate?: string;
     /** undefined */
-    taskStatus?: string;
+    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
     /** undefined */
-    isOverdue?: string;
+    isOverdue?: ('Y' | 'N');
     /** undefined */
     overdueDay?: number;
     /** undefined */
@@ -142,7 +142,7 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: string;
+    isRemovedShowField?: ('Y' | 'N');
     /** 主数据ID */
     masterDataId?: number;
 }
@@ -153,7 +153,7 @@ export interface IFirstCheckCheckTaskMutualCheckRecordResponseObject {
     /** undefined */
     partNumber?: string;
     /** undefined */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** undefined */
     descriptionOfNonconformities?: string;
     /** undefined */
@@ -163,7 +163,7 @@ export interface IFirstCheckCheckTaskMutualCheckRecordResponseObject {
     /** undefined */
     inspectionActualValue?: string;
     /** undefined */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }
 /** 首检检验专检记录响应对象 */
 export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
@@ -172,7 +172,7 @@ export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
     /** undefined */
     partNumber?: string;
     /** undefined */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** undefined */
     descriptionOfNonconformities?: string;
     /** undefined */
@@ -182,7 +182,7 @@ export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
     /** undefined */
     inspectionActualValue?: string;
     /** undefined */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }
 /** 首检检验检验自检记录响应对象 */
 export interface IFirstCheckCheckSelfCheckRecordResponseObject {
@@ -191,7 +191,7 @@ export interface IFirstCheckCheckSelfCheckRecordResponseObject {
     /** undefined */
     partNumber?: string;
     /** undefined */
-    inspectionResultsOfIndividualParts?: string;
+    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
     /** undefined */
     descriptionOfNonconformities?: string;
     /** undefined */
@@ -201,5 +201,5 @@ export interface IFirstCheckCheckSelfCheckRecordResponseObject {
     /** undefined */
     inspectionActualValue?: string;
     /** undefined */
-    inspectionResult?: string;
+    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
 }

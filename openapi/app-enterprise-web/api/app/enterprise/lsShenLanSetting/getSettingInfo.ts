@@ -35,7 +35,7 @@ export interface IDeepBlueProductionLargeScreenSettingsReturnToVO {
     /** 大屏右侧质检数据 */
     rightQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetBackToVO;
     /** 大屏中部数据类型 */
-    centerProductionType?: string;
+    centerProductionType?: ('MATERIAL' | 'MATERIAL_GROUP');
     /** 大屏中部业务对象集 */
     centerBusinessList?: IDeepBlueProductionLargeScreenOutputSettingsReturnToVO[];
     /** 每日清零时间 */

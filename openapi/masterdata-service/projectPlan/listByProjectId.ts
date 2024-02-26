@@ -33,9 +33,9 @@ export interface IProjectPlanResponseObject {
     /** 计划名称 */
     name?: string;
     /** 计划状态 */
-    planStatus?: string;
+    planStatus?: ('HANDLING' | 'ISSUED' | 'NOT_PASS' | 'DRAFT' | 'INVALID');
     /** 流程状态 */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 计划开始日期 */
     planBeginTime?: string;
     /** 计划结束日期 */

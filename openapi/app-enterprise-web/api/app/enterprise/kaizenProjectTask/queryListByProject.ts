@@ -33,7 +33,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 名称 */
     name?: string;
     /** 项目任务状态 */
-    projectTaskStatus?: string;
+    projectTaskStatus?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED');
     /** 关联项目 */
     projectId?: IAssociateFormDataVO;
     /** 执行人 */
@@ -45,7 +45,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 结束时间 */
     endTime?: string;
     /** 优先级 */
-    priority?: string;
+    priority?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY');
     /** 备注 */
     remark?: string;
     /** 创建用户ID */
@@ -64,7 +64,7 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: string;
+    isRemovedShowField?: ('Y' | 'N');
     /** 主数据ID */
     masterDataId?: number;
 }

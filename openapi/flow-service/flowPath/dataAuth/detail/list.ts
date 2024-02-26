@@ -34,7 +34,7 @@ export interface IJSONResultListProcessRoleDataPermissionDetailsVO {
 /** 流程角色数据权限详情VO */
 export interface IProcessRoleDataPermissionDetailsVO {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('SELF' | 'DEPT' | 'ALL' | 'FLOW_FIELD');
     /** 流程角色数据权限字段详情列表 */
     flowPathDataAuthFieldDetailList?: IProcessRoleDataPermissionFieldDetailsVO[];
 }
@@ -45,11 +45,11 @@ export interface IProcessRoleDataPermissionFieldDetailsVO {
     /** 流程表单字段编号 */
     flowPathFieldCode?: string;
     /** 字段类型 */
-    fieldType?: string;
+    fieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** 字段组织类型 */
-    fieldOrganizationType?: string;
+    fieldOrganizationType?: ('NONE' | 'CLASS_GROUP' | 'DEPARTMENT' | 'USER' | 'PROCESSOR');
     /** 是否是表格内字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 父级流程表单code - 表格内字段有值 */
     parentFlowPathFormFieldCode?: string;
     /** 当动态控件选择了当前字段后，对应取关联表单的值是 */

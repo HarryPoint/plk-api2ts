@@ -22,9 +22,9 @@ export interface ITaskDeliverySearchesVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'ISSUE' | 'REVOKE' | 'CLOSE');
     /** 排产计划类型 */
-    type?: string;
+    type?: ('AUTO' | 'HAND' | 'VAGUE');
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«任务下发返回VO»» */
 export interface IJSONResultThePageInformationTaskIsDeliveredBackToVO {
@@ -77,9 +77,9 @@ export interface IThePageInformationTaskIsDeliveredBackToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -106,7 +106,7 @@ export interface ITheTaskIsDeliveredBackToVO {
     /** id */
     id?: number;
     /** 排产计划类型 */
-    type?: string;
+    type?: ('AUTO' | 'HAND' | 'VAGUE');
     /** 排产计划类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -136,9 +136,9 @@ export interface ITheTaskIsDeliveredBackToVO {
     /** 下发时间 */
     issueTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'ISSUE' | 'REVOKE' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 是否能撤回 */
-    canRevoke?: string;
+    canRevoke?: ('Y' | 'N');
 }

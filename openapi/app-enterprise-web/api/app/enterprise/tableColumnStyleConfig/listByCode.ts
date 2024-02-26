@@ -33,11 +33,11 @@ export interface IListColumnStyleConfigurationVO {
     /** 编码 */
     code?: string;
     /** 类型 */
-    type?: string;
+    type?: ('SYSTEM' | 'PERSON');
     /** 列配置JSON */
     config?: Record<string, Record<string, any>>;
     /** 排序 */
     sort?: number;
     /** 是否是当前用户选中的 */
-    isCurrentUserChoose?: string;
+    isCurrentUserChoose?: ('Y' | 'N');
 }

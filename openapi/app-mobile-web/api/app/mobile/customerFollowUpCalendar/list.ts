@@ -20,7 +20,7 @@ export interface ICustomerFollowUpCalendarInputVO {
     /** 客户ID */
     customerId?: string;
     /** 日历类型 */
-    calendarType?: string;
+    calendarType?: ('FOLLOW_PLAN' | 'BUSINESS_CHANCE' | 'FOLLOW_RECORD' | 'QUOTE_BILL' | 'CONTRACT');
     /** 填报月份，格式 yyyy-MM-dd HH:mm:ss */
     fillingMonth?: string;
 }
@@ -40,7 +40,7 @@ export interface ICustomerFollowUpCalendarOutputVO {
     /** 业务数据ID */
     refId?: number;
     /** 日历类型 */
-    calendarType?: string;
+    calendarType?: ('FOLLOW_PLAN' | 'BUSINESS_CHANCE' | 'FOLLOW_RECORD' | 'QUOTE_BILL' | 'CONTRACT');
     /** 发生时间 */
     dateOfOccurrence?: string;
     /** 客户信息 */

@@ -70,11 +70,11 @@ export interface IProductionSubMaterialInformation {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用批次 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }
 /** 子物料生产信息VO_1 */
 export interface ISubMaterialProductionInformationVO1 {
@@ -129,9 +129,9 @@ export interface ISubMaterialProductionInformationVO1 {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用批次 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }

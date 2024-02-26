@@ -20,7 +20,7 @@ export interface IProductionOrderSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 订单类型 */
-    orderType?: string;
+    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 生产订单号 */
@@ -30,11 +30,11 @@ export interface IProductionOrderSearchVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 对应物料id */
     materialId?: number;
     /** 订单排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 创建时间 - 开始, yyyy-MM-dd HH:mm:ss */
     createBeginTime?: string;
     /** 计划结束时间, yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«生产订单返回VO»» */
 export interface IJSONResultPageInformationProductionOrderReturnsVO {
@@ -77,9 +77,9 @@ export interface IPageInformationProductionOrderReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -98,7 +98,7 @@ export interface IProductionOrderReturnsVO2 {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 订单类型 */
-    orderType?: string;
+    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
     /** 订单类型描述 */
     orderTypeDesc?: string;
     /** 对应物料id */
@@ -140,11 +140,11 @@ export interface IProductionOrderReturnsVO2 {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 订单状态描述 */
     orderStatusDesc?: string;
     /** 订单排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 订单排产状态描述 */
     planStatusDesc?: string;
     /** 优先级 */

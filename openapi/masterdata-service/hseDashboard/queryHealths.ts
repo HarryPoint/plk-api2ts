@@ -42,5 +42,5 @@ export interface IHealthHQueryResponse {
     /** 新增职业病人数 */
     careerDiseaseQuantity?: number;
     /** 是否有异常 */
-    isException?: string;
+    isException?: ('Y' | 'N');
 }

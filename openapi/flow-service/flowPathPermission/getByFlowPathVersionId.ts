@@ -40,11 +40,11 @@ export interface IAddedPermissionEdit2 {
     /** ID */
     id?: number;
     /** 流程状态 */
-    flowStatus?: string;
+    flowStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 是否可编辑 */
-    isEditable?: string;
+    isEditable?: ('Y' | 'N');
     /** 是否禁用 */
-    isDisabled?: string;
+    isDisabled?: ('Y' | 'N');
 }
 /** 新增权限编辑 */
 export interface INewPermissionEdit {
@@ -57,7 +57,7 @@ export interface INewPermissionEdit {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 权限类型 */
-    type?: string;
+    type?: ('EDIT' | 'READONLY' | 'HIDDEN');
 }
 /** 查询权限编辑 */
 export interface IQueryPermissionEditing {
@@ -70,7 +70,7 @@ export interface IQueryPermissionEditing {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可见 */
-    isVisible?: string;
+    isVisible?: ('Y' | 'N');
 }
 /** 新增权限编辑_1 */
 export interface IAddedPermissionEdit1 {
@@ -83,5 +83,5 @@ export interface IAddedPermissionEdit1 {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可以复制 */
-    isCanCopy?: string;
+    isCanCopy?: ('Y' | 'N');
 }

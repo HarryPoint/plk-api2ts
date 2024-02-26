@@ -29,7 +29,7 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** id */
     id?: number;
     /** 任务类型 */
-    type?: string;
+    type?: ('EXECUTE' | 'APPROVAL');
     /** 自定义提交按钮文案 */
     customSubmitContent?: string;
     /** 任务号 */
@@ -63,7 +63,7 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 处理时间 - 状态为已处理、已关闭时有值 */
     handleTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLED' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 执行人id */
@@ -71,15 +71,15 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 超时开始时间 */
     timeoutBeginTime?: string;
     /** 任务接受状态 */
-    acceptStatus?: string;
+    acceptStatus?: ('ACCEPTED' | 'WAIT_ACCEPT');
     /** 开始状态 */
-    beginningStatus?: string;
+    beginningStatus?: ('NOT_BEGUN' | 'BEGUN');
     /** 开始时间 */
     beginningTime?: string;
     /** 单据创建人名称 */
     workOrderCreateUsername?: string;
     /** 任务状态 */
-    modelTaskStatus?: string;
+    modelTaskStatus?: ('WAIT_ACCEPT' | 'WAIT_HANDLE' | 'WAIT_APPROVE' | 'TIMEOUT' | 'HANDLED');
     /** 任务状态描述 */
     modelTaskStatusDesc?: string;
     /** 自定义字段 */
@@ -89,35 +89,35 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 工单信息 */
     workOrder?: IProcessTicketPreviewInformationIsReturnedToVO;
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent?: string;
+    isCustomSubmitContent?: ('Y' | 'N');
     /** 是否允许回退 */
-    isBack?: string;
+    isBack?: ('Y' | 'N');
     /** 回退类型 */
-    backType?: string;
+    backType?: ('ANY' | 'PREVIOUS' | 'APPOINT');
     /** 审批回退节点选择集 */
     backFlowPathNodeSelector?: IIdNameNumberVO[];
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent?: string;
+    isCustomAcceptContent?: ('Y' | 'N');
     /** 自定义接受按钮文案 */
     customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton?: string;
+    isShowAcceptButton?: ('Y' | 'N');
     /** 是否自定义同意按钮文案 */
-    isCustomPassApprovalContent: string;
+    isCustomPassApprovalContent: ('Y' | 'N');
     /** 自定义同意按钮文案 */
     customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
-    isCustomRefuseApprovalContent: string;
+    isCustomRefuseApprovalContent: ('Y' | 'N');
     /** 自定义拒绝按钮文案 */
     customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton?: string;
+    isShowRefuseButton?: ('Y' | 'N');
     /** 是否自定义回退按钮文案 */
-    isCustomBackContent: string;
+    isCustomBackContent: ('Y' | 'N');
     /** 自定义回退按钮文案 */
     customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton?: string;
+    isShowBackButton?: ('Y' | 'N');
     /** 审批意见/执行情况 */
     notes?: string;
 }
@@ -145,11 +145,11 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** 提交时间 */
     createTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 状态描述 */
     statusDesc?: string;
     /** 关闭类型 */
-    closeType?: string;
+    closeType?: ('COMPLETE' | 'REFUSE');
     /** 关闭类型描述 */
     closeTypeDesc?: string;
     /** 所属流程id */

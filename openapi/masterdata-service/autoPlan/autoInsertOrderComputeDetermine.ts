@@ -18,9 +18,9 @@ export interface IProductionOrderAutomaticInsertionCalculationResultsToDetermine
     /** 排产计划单名称 */
     planName?: string;
     /** 排产方式 */
-    autoPlanType?: string;
+    autoPlanType?: ('ASC' | 'DESC');
     /** 是否考虑自动提前（要传计算时的值） */
-    isAutoMoveUp?: string;
+    isAutoMoveUp?: ('Y' | 'N');
     /** 生产订单计划时间集 */
     produceOrderPlanTimes?: IAutomaticProductionOrderSchedulingTimeDTO[];
     /** 顺延订单计划时间集 */

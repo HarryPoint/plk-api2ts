@@ -40,5 +40,5 @@ export interface IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject {
     /** 单据名称 */
     name?: string;
     /** 出入库类型 */
-    storageLogType?: string;
+    storageLogType?: ('IN' | 'OUT' | 'CHECK' | 'LOCK' | 'SCRAP');
 }

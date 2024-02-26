@@ -34,7 +34,7 @@ export interface IProductionTreatment {
     /** 异常数量，报废/返工/暂扣时必填 */
     abnormalQuantity?: number;
     /** 返工生产后处理方式，返工逻辑必填 */
-    backProduceType?: string;
+    backProduceType?: ('RETURN' | 'ORDER');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

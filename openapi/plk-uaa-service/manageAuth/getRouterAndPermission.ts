@@ -53,7 +53,7 @@ export interface ITheRouteRespondsToTheDTO {
     /** 路由code */
     code?: string;
     /** 菜单类型 */
-    type?: string;
+    type?: ('GROUP' | 'PAGE');
     /** 图标 */
     icon?: string;
     /** 路由排序 */
@@ -61,18 +61,18 @@ export interface ITheRouteRespondsToTheDTO {
     /** 路由排序 */
     sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth?: string;
+    hasDataAuth?: ('Y' | 'N');
     /** 路由配置 */
     config?: ITheRouteConfigurationRespondsToTheDTO;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 子集 */
     children?: ITheRouteRespondsToTheDTO[];
 }
 /** 路由配置响应 DTO */
 export interface ITheRouteConfigurationRespondsToTheDTO {
     /** 菜单类型 */
-    menuType?: string;
+    menuType?: ('APP' | 'REPORT_EXTERNAL');
     /** 应用配置 */
     appConfig?: IApplicationRouteConfigurationRespondsToTheDTO;
 }

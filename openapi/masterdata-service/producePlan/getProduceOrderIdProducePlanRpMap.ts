@@ -37,7 +37,7 @@ export interface IProductionPlanProductionOrderAssociatedWithVO {
     /** 创建时间 */
     createTime?: string;
     /** 是否锁定 */
-    isLock?: string;
+    isLock?: ('Y' | 'N');
     /** 修改账户id */
     updateUserId?: number;
     /** 修改部门id */
@@ -76,17 +76,17 @@ export interface IProductionScheduleVO {
     /** 计划排产名称 */
     name?: string;
     /** 排产类型 */
-    planType?: string;
+    planType?: ('AUTO' | 'HAND' | 'VAGUE');
     /** 自动排产方式 */
-    autoPlanType?: string;
+    autoPlanType?: ('ASC' | 'DESC');
     /** 是否考虑自动提前 */
-    isAutoMoveUp?: string;
+    isAutoMoveUp?: ('Y' | 'N');
     /** 排产开始时间 */
     beginTime?: string;
     /** 排产结束时间 */
     endTime?: string;
     /** 手动排产维度 */
-    dimension?: string;
+    dimension?: ('ORDER' | 'PROCESS');
     /** 手动时间维度 */
-    timeDimension?: string;
+    timeDimension?: ('DAY' | 'CLASS_SHIFT');
 }

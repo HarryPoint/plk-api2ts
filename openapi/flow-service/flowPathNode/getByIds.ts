@@ -37,9 +37,9 @@ export interface IProcessNodeVO {
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 节点业务类型 */
-    businessType?: string;
+    businessType?: ('EXEC' | 'CONDI');
     /** 节点类型 */
-    type?: string;
+    type?: ('EXECUTE' | 'APPROVAL' | 'BRANCHES' | 'CHILD');
     /** 前节点id */
     previousFlowPathNodeId?: number;
     /** 后节点id */
@@ -55,15 +55,15 @@ export interface IProcessNodeVO {
     /** 序号值 */
     serialNo?: string;
     /** 审批类型 */
-    approvalType?: string;
+    approvalType?: ('ONE' | 'ALL');
     /** 是否允许回退 */
-    isBack?: string;
+    isBack?: ('Y' | 'N');
     /** 回退类型 */
-    backType?: string;
+    backType?: ('ANY' | 'PREVIOUS' | 'APPOINT');
     /** 回退流程节点id - 返回指定节点时有值 */
     backFlowPathNodeId?: number;
     /** 是否是首节点 */
-    isFirst?: string;
+    isFirst?: ('Y' | 'N');
     /** 节点级别 - 节点的深度 */
     level?: number;
     /** 节点步骤 - 节点横向步骤 */
@@ -71,55 +71,55 @@ export interface IProcessNodeVO {
     /** 排序 - 节点纵向步骤 */
     sort?: number;
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent?: string;
+    isCustomSubmitContent?: ('Y' | 'N');
     /** 自定义提交按钮文案 */
     customSubmitContent?: string;
     /** 是否开启超时设置 */
-    enabledTimeout?: string;
+    enabledTimeout?: ('Y' | 'N');
     /** 节点启动方式 */
-    launchType?: string;
+    launchType?: ('MANUAL_OPERATION' | 'AUTOMATIC');
     /** 执行类型 */
-    executeType?: string;
+    executeType?: ('ONE' | 'ALL');
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent?: string;
+    isCustomAcceptContent?: ('Y' | 'N');
     /** 自定义接受按钮文案 */
     customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton?: string;
+    isShowAcceptButton?: ('Y' | 'N');
     /** 是否自定义同意按钮文案 */
-    isCustomPassApprovalContent?: string;
+    isCustomPassApprovalContent?: ('Y' | 'N');
     /** 自定义同意按钮文案 */
     customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
-    isCustomRefuseApprovalContent?: string;
+    isCustomRefuseApprovalContent?: ('Y' | 'N');
     /** 自定义拒绝按钮文案 */
     customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton?: string;
+    isShowRefuseButton?: ('Y' | 'N');
     /** 是否自定义回退按钮文案 */
-    isCustomBackContent?: string;
+    isCustomBackContent?: ('Y' | 'N');
     /** 自定义回退按钮文案 */
     customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton?: string;
+    isShowBackButton?: ('Y' | 'N');
     /** 审批人来自 */
-    approverFrom?: string;
+    approverFrom?: ('CURRENT_NODE_ASSIGNMENT' | 'PREVIOUS_NODE_ASSIGNMENT');
     /** 是否启用转交 */
-    enabledTransfer?: string;
+    enabledTransfer?: ('Y' | 'N');
     /** 自定义转交按钮文案 */
     customTransferContent?: string;
     /** 转交人员范围 */
-    transferScopeType?: string;
+    transferScopeType?: ('CLASSIFIED' | 'ALL');
     /** 是否启用表单暂存 */
-    enableFormStaging?: string;
+    enableFormStaging?: ('Y' | 'N');
     /** 自定义表单暂存文本 */
     customFormStagingContent?: string;
     /** 是否自定义流程开始按钮文案 */
-    isCustomBeginningContent: string;
+    isCustomBeginningContent: ('Y' | 'N');
     /** 自定义流程开始按钮文案 */
     customBeginningContent?: string;
     /** 是否显示开始按钮 */
-    isShowBeginningButton?: string;
+    isShowBeginningButton?: ('Y' | 'N');
     /** 是否启用流程开始超时 */
-    isEnabledBeginningTimeout?: string;
+    isEnabledBeginningTimeout?: ('Y' | 'N');
 }

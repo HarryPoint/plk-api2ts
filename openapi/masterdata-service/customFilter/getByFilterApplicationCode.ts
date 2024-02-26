@@ -37,5 +37,5 @@ export interface ICustomFiltersReturnObjectDTO {
     /** 字段序列号 */
     formFieldSerialNo?: string;
     /** 是否动态表字段 */
-    isDynamicFormField?: string;
+    isDynamicFormField?: ('Y' | 'N');
 }

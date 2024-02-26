@@ -35,7 +35,7 @@ export interface ISilopusLargeScreenSettingsReturnToVO {
     /** 工序目标值设置集 */
     processTargetSettings?: ISilopusLargeScreenOperationTargetSettingReturnsVO[];
     /** 报废数据前五统计时间类型 */
-    scrapStatisticsTime?: string;
+    scrapStatisticsTime?: ('ONE_DAY' | 'SEVEN_DAY' | 'FIFTEEN_DAY' | 'THIRTY_DAY');
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

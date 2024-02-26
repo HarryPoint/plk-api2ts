@@ -39,9 +39,9 @@ export interface IPagingInformationTheProductionCostAllocatesPagingResponseObjec
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -58,7 +58,7 @@ export interface IProductionCostAllocatesPagingResponseObjects {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: string;
+    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
     /** 入库状态描述 */
     stockInStatusDesc?: string;
     /** 计划开工时间 */

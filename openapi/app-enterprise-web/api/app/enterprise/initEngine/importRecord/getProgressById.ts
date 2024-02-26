@@ -33,7 +33,7 @@ export interface IImportProgressQueryResponseDTO {
     /** 排在你前面的任务数 */
     numberOfTasksBefore?: number;
     /** 导入状态 */
-    status?: string;
+    status?: ('NONE' | 'QUEUING' | 'IMPORTING' | 'COMPLETE');
     /** 总数量 */
     totalNumber?: number;
     /** 已处理的数量 */

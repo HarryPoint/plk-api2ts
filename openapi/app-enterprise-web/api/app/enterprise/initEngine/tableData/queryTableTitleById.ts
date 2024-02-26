@@ -38,5 +38,5 @@ export interface ITableTitleDefineDTO {
     /** undefined */
     name?: string;
     /** undefined */
-    isMasterTableField?: string;
+    isMasterTableField?: ('Y' | 'N');
 }

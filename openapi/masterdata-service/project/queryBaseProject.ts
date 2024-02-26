@@ -102,15 +102,15 @@ export interface IProjectPhaseTaskQueryObject {
     /** 处理进度名称列表 */
     processStatusNames?: string[];
     /** 是否查询没有关联项目计划的任务 */
-    isQueryEmptyPlanTask?: string;
+    isQueryEmptyPlanTask?: ('Y' | 'N');
     /** 修改部门ids */
     updateDeptIds?: number[];
     /** 任务权重 -- 开始 */
     beginTaskWeight?: number;
     /** 是否仅查询当前登录用户 */
-    isQueryCurrentMember?: string;
+    isQueryCurrentMember?: ('Y' | 'N');
     /** 是否展示子任务 */
-    isShowChildTask?: string;
+    isShowChildTask?: ('Y' | 'N');
     /** undefined */
     fromAppIds?: number[];
     /** 项目类型id集 */
@@ -126,14 +126,14 @@ export interface IProjectPhaseTaskQueryObject {
     /** undefined */
     processStatusCodes?: string[];
     /** 项目状态 */
-    projectStatus?: string;
+    projectStatus?: ('DRAFT' | 'IN_APPROVE' | 'APPROVAL_DENIED' | 'IN_PROGRESS' | 'COMPLETE' | 'END');
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«项目基础查询响应对象»» */
 export interface IJSONResultListProjectBaseQueryResponseObject {

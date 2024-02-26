@@ -34,9 +34,9 @@ export interface IProductOrderPagingQueryObject {
     /** 下单时间 -- 结束 */
     placeOrderEndTime?: string;
     /** 订单类型列表 */
-    typeList?: string[];
+    typeList?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY')[];
     /** 订单状态列表 */
-    statusList?: string[];
+    statusList?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY')[];
     /** 下单时间 -- 开始 */
     placeOrderBeginTime?: string;
 }
@@ -45,7 +45,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«产品订单分页响应»» */
 export interface IJSONResultPagingInformationPagingResponseToProductOrders {
@@ -73,9 +73,9 @@ export interface IPagingInformationPagingResponseToProductOrders {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,9 +88,9 @@ export interface IProductOrderPagingResponse {
     /** 订单编号 */
     code?: string;
     /** 订单类型 */
-    type?: string;
+    type?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
     /** 购买产品 */
-    productType?: string;
+    productType?: ('MES');
     /** 企业id */
     enterpriseId?: number;
     /** 企业名称 */
@@ -98,7 +98,7 @@ export interface IProductOrderPagingResponse {
     /** 订单金额 */
     orderMoneyQuantity?: number;
     /** 订单状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY');
     /** 下单用户id */
     placeOrderUserId?: number;
     /** 下单用户名称 */

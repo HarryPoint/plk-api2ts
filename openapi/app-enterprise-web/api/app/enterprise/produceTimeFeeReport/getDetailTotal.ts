@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«工时工费报表合计返回VO» */
 export interface IJSONResultTotalLaborCostReportReturnedToVO {

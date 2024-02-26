@@ -53,7 +53,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«宝晶报表(成品日报表)合计返回VO» */
 export interface IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO {

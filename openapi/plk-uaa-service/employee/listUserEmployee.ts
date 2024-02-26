@@ -20,7 +20,7 @@ export interface IUserEmployeeQuery1 {
     /** 员工id集 */
     employeeIds?: number[];
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
@@ -44,7 +44,7 @@ export interface IUserEmployeeInformationResponse {
     /** 用户id */
     userId?: number;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */

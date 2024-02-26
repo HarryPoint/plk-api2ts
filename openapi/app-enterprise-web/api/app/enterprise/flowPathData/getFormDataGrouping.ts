@@ -37,7 +37,7 @@ export interface IFormDataGroupingDTO {
     /** 下级分组 */
     children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData?: string;
+    cascadeFormData?: ('Y' | 'N');
     /** 多级基础数据上级ID */
     treeDataParentId?: number;
 }

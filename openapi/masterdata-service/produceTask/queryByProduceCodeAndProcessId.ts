@@ -39,11 +39,11 @@ export interface IProduceTaskVO {
     /** 任务号 */
     taskNo?: string;
     /** 任务下发方式 */
-    issueType?: string;
+    issueType?: ('PLAN' | 'DIRECT');
     /** 任务类型 */
-    type?: string;
+    type?: ('PRODUCE' | 'BACK');
     /** 返工任务类型 */
-    backType?: string;
+    backType?: ('RECEIVE' | 'PASS');
     /** 生产订单id */
     produceOrderId?: number;
     /** 生产订单号 */
@@ -97,7 +97,7 @@ export interface IProduceTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 任务优先级，数值越大优先级越高 */
     priorityLevel?: number;
     /** 对应生产处理id */
@@ -117,9 +117,9 @@ export interface IProduceTaskVO {
     /** undefined */
     canQualityQuantity?: number;
     /** undefined */
-    moveInKeyParameterFillNeeds?: string;
+    moveInKeyParameterFillNeeds?: ('Y' | 'N');
     /** undefined */
-    moveOutKeyParameterFillNeeds?: string;
+    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
 }
 /** 工艺路径详情步骤Bom明细返回VO */
 export interface IProcessPathDetailsStepBomDetailsReturnToVO {

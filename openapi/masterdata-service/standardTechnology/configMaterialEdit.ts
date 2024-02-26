@@ -24,7 +24,7 @@ export interface IStandardProcessEditRequestObjectForAClassOfMaterial {
     /** 缩略图 */
     thumbnail?: string;
     /** 是否是暂存 Y暂存 N发布 */
-    isStaging: string;
+    isStaging: ('Y' | 'N');
     /** 标准工艺节点编辑请求对象 发布时传递 */
     nodeEditRequest: IStandardProcessNodeRespondsToObject1;
     /** 标准工艺画布快照 暂存时必须传递 */
@@ -41,11 +41,11 @@ export interface IStandardProcessNodeRespondsToObject1 {
     /** 节点名称 */
     name?: string;
     /** 节点类型 */
-    type?: string;
+    type?: ('MATERIAL' | 'ROUTING' | 'CONDITION' | 'BRANCH');
     /** 配置类型 */
-    configType?: string;
+    configType?: ('SPECIFIC' | 'CONFIGURED');
     /** 分支类型 -- 只有分支节点才会有值 */
-    branchType?: string;
+    branchType?: ('BOM' | 'CONDITION');
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */
@@ -60,11 +60,11 @@ export interface IStandardProcessNodeRespondsToObject2 {
     /** 节点名称 */
     name?: string;
     /** 节点类型 */
-    type?: string;
+    type?: ('MATERIAL' | 'ROUTING' | 'CONDITION' | 'BRANCH');
     /** 配置类型 */
-    configType?: string;
+    configType?: ('SPECIFIC' | 'CONFIGURED');
     /** 分支类型 -- 只有分支节点才会有值 */
-    branchType?: string;
+    branchType?: ('BOM' | 'CONDITION');
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */

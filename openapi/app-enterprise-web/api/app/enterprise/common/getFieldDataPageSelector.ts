@@ -28,7 +28,7 @@ export interface IProcessAssociationFormSearchVO {
     /** 通用：业务数据ID（也叫表单记录ID列表）列表 */
     businessDataIdList?: string[];
     /** 通用：来自表单过滤条件，当 值 = Y 时，系统将忽略应用引擎配置的筛选条件。 */
-    fromFormFilterCondition?: string;
+    fromFormFilterCondition?: ('Y' | 'N');
     /** 非通用：查询表单id， 即 用户正在操作的关联表单。其和查询表单编码、字段序列号处于互斥 */
     flowPathFormFieldId?: number;
     /** 非通用：字段序列号， 即 当flowPathFormFieldId = null时，可以 flowPathCode、fieldSerialNo联合使用来查询关联表单数据 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«流程关联表单查询返回VO» */
 export interface IJSONResultProcessAssociationFormQueryReturnsVO {
@@ -61,7 +61,7 @@ export interface IJSONResultProcessAssociationFormQueryReturnsVO {
 /** 流程关联表单查询返回VO */
 export interface ITheProcessAssociationFormQueryReturnsVO {
     /** 选择框样式 */
-    style?: string;
+    style?: ('ADVANCED' | 'CASCADE');
     /** 关联表单选项显示字段code */
     formRpSelectorShowFieldCode?: string;
     /** 关联表单选项显示字段Serial No */
@@ -82,9 +82,9 @@ export interface ITheProcessAssociationFormHeaderQueryReturnsVO {
     /** 选项集 */
     selectorList?: IFormFieldOption[];
     /** 表单类型 */
-    formFieldType?: string;
+    formFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** 日期类型 */
-    dateType?: string;
+    dateType?: ('DAY' | 'MIN' | 'SECOND' | 'HOUR_MIN' | 'MONTH' | 'YEAR');
 }
 /** FormFieldOption */
 export interface IFormFieldOption {

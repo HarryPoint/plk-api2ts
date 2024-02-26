@@ -61,7 +61,7 @@ export interface IProjectPhaseTasksDistributeResponseObjects {
     /** 项目任务开始日期 */
     planBeginTime?: string;
     /** 项目任务状态 */
-    taskStatus?: string;
+    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */

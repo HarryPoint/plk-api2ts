@@ -50,5 +50,5 @@ export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否有bom */
-    hasBom?: string;
+    hasBom?: ('Y' | 'N');
 }

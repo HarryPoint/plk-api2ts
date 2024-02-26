@@ -27,7 +27,7 @@ export interface IProcessTableColumnEditDTO {
     /** id */
     id: number;
     /** 是否显示，控制配置表单是否显示 */
-    isShow: string;
+    isShow: ('Y' | 'N');
     /** 子集 */
     children: IProcessTableColumnEditDTO[];
 }
@@ -38,7 +38,7 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

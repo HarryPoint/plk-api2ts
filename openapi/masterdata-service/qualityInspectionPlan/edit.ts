@@ -22,7 +22,7 @@ export interface IEditTheQualityInspectionSchemeDTO {
     /** 质检方案编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule: ('Y' | 'N');
     /** 所属质检分类id */
     qualityInspectionCategoryId?: number;
     /** 质检项清单 */
@@ -34,7 +34,7 @@ export interface IEditTheQualityInspectionSchemeDTO {
     /** 附件文件key */
     attachedFileKey?: string;
     /** 质检方式 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 质检比例（填多少传多少） */
     qualityInspectionRatio?: number;
     /** 质检数量 */
@@ -47,7 +47,7 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
     /** 所属质检项id */
     qualityInspectionItemId?: number;
     /** 数值质检标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */

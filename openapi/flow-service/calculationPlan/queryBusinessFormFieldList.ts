@@ -20,7 +20,7 @@ export interface IFormFieldQueryRequestDTO {
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否明细业务 */
-    isDetailFlow?: string;
+    isDetailFlow?: ('Y' | 'N');
 }
 /** JSONResult«List«FormFieldQueryResponseDTO»» */
 export interface IJSONResultListFormFieldQueryResponseDTO {
@@ -44,5 +44,5 @@ export interface IFormFieldQueryResponseDTO {
     /** 名称 */
     name?: string;
     /** 表单字段类型 */
-    formFieldType?: string;
+    formFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
 }

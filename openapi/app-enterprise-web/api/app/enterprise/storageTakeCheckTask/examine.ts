@@ -18,7 +18,7 @@ export interface IWarehouseInventoryTaskApprovalDTO {
     /** 任务id */
     id?: number;
     /** 审批类型 */
-    examineType?: string;
+    examineType?: ('PASS' | 'REFUSE');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

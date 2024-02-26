@@ -22,7 +22,7 @@ export interface IListColumnStyleConfigurationEditDTO {
     /** 编码 */
     code?: string;
     /** 类型 */
-    type?: string;
+    type?: ('SYSTEM' | 'PERSON');
     /** 列配置JSON */
     config?: Record<string, Record<string, any>>;
 }

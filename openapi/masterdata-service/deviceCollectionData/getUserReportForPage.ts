@@ -29,7 +29,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»» */
 export interface IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO {
@@ -57,9 +57,9 @@ export interface IPageInformationDeviceDataCollectionManualReportDataDetailsPage
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -80,9 +80,9 @@ export interface IDeviceDataAcquisitionManualReportDataCDRPageInformationIsRetur
     /** 设备型号类型 */
     deviceType?: string;
     /** 在线状态 */
-    onlineStatus?: string;
+    onlineStatus?: ('ONLINE' | 'OFFLINE');
     /** 设备状态 */
-    deviceStatus?: string;
+    deviceStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 是否有异常 */
-    hasError?: string;
+    hasError?: ('Y' | 'N');
 }

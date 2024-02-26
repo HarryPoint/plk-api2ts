@@ -60,7 +60,7 @@ export interface IEmailTaskQueryResponseDTO {
     /** 邮件主题 */
     title?: string;
     /** 发送方式 */
-    sendingMode?: string;
+    sendingMode?: ('SINGLE' | 'MULTIPLE');
     /** 任务状态 */
-    status?: string;
+    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
 }

@@ -42,7 +42,7 @@ export interface IProductionProcessNodeResponseObject {
     /** 生产工艺id */
     produceTechnologyId?: number;
     /** 节点类型 */
-    type?: string;
+    type?: ('MATERIAL' | 'ROUTING' | 'BRANCH');
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */

@@ -41,7 +41,7 @@ export interface IProductionOrder {
     /** 主生产订单号 */
     parentProduceOrderCode?: string;
     /** 订单类型 */
-    orderType?: string;
+    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
     /** 对应物料id */
     materialId?: number;
     /** 对应物料名称 */
@@ -83,11 +83,11 @@ export interface IProductionOrder {
     /** 交期日期 */
     deliveryDate?: string;
     /** 排产类型 */
-    planType?: string;
+    planType?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE');
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 订单排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 关闭人 */
     closeUserId?: number;
     /** 关闭时间 */

@@ -48,7 +48,7 @@ export interface IMaintenancePlanRespondsToDTO {
     /** 保养任务提前下发时间 */
     maintainPlanIssueTime?: number;
     /** 单位 */
-    maintainPlanIssueTimeUnit?: string;
+    maintainPlanIssueTimeUnit?: ('HOUR' | 'DAY' | 'WEEK' | 'MONTH');
     /** 备注 */
     remark?: string;
     /** 计划明细 */
@@ -82,7 +82,7 @@ export interface IMaintenancePlanDetailsRespondToDTO {
 /** 保养计划明细项响应DTO */
 export interface IMaintenancePlanDetailsRespondToDTO {
     /** 保养类型 */
-    maintainType?: string;
+    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
     /** 保养方案id */
     maintainSchemeId?: number;
     /** 保养方案名称 */
@@ -107,11 +107,11 @@ export interface IMaintenancePlanDetailsTimeResponseDTO {
     /** 所属区域id */
     areaId?: number;
     /** 保养类型 */
-    maintainType?: string;
+    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
     /** 保养方案id */
     maintainSchemeId?: number;
     /** 保养开始时间 */
     maintainStartTime?: string;
     /** 计划明细状态 */
-    planDetailStatus?: string;
+    planDetailStatus?: ('CREATED' | 'ISSUE' | 'CANCEL' | 'COMPLETE');
 }

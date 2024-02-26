@@ -18,7 +18,7 @@ export interface IDeviceDataAcquisitionCommunicationStatusDTO {
     /** id */
     id?: number;
     /** 通讯开关状态 */
-    apiSwitchStatus?: string;
+    apiSwitchStatus?: ('ON' | 'OFF');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

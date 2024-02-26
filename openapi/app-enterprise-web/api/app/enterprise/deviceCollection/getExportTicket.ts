@@ -24,7 +24,7 @@ export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 设备id */
     deviceId: number;
     /** 是否有异常 */
-    hasError?: string;
+    hasError?: ('Y' | 'N');
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {

@@ -70,7 +70,7 @@ export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: string;
+    type?: ('FILE' | 'TEXT' | 'INPUT');
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */

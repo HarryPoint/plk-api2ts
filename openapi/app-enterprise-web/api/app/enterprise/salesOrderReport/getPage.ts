@@ -34,14 +34,14 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: string;
+    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«订单进度统计响应VO»» */
 export interface IJSONResultPageInformationOrderProgressStatisticsResponseVO {
@@ -69,9 +69,9 @@ export interface IPageInformationOrderProgressStatisticsResponseVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -86,7 +86,7 @@ export interface IOrderProgressStatisticsRespondToVO {
     /** 客户名称-（销售订单维度 */
     customerName?: string;
     /** 销售订单状态-（销售订单维度 */
-    salesOrderStatus?: string;
+    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
     /** 销售订单创建时间 */
     salesOrderCreateTime?: string;
     /** 物料id-（销售订单明细维度 */
@@ -140,9 +140,9 @@ export interface IOrderProgressStatisticsRespondToVO {
     /** 生产数量-（生产订单维度 */
     convertQuantity?: number;
     /** 生产订单状态-（生产订单维度 */
-    produceOrderStatus?: string;
+    produceOrderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 排产状态-（生产订单维度 */
-    produceOrderPlanStatus?: string;
+    produceOrderPlanStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 计划生产开始时间-（生产订单维度 */
     planBeginTime?: string;
     /** 计划生产结束时间-（生产订单维度 */

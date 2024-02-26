@@ -24,13 +24,13 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 提交人id */
     createUserId?: number;
     /** 生产异常类型id */
     produceAbnormalCategoryId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 操作开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 批次号 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«生产处理分页响应对象»» */
 export interface IJSONResultPagingInformationProductionHandlesPagingResponseObjects {
@@ -73,9 +73,9 @@ export interface IPagingInformationProductionHandlesPagingResponseObjects {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -90,7 +90,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 所属生产任务工艺路径步骤 */
     routingStep?: number;
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -154,7 +154,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 返工工序编号 */
     backProcessCode?: string;
     /** 返工生产类型 */
-    backProduceType?: string;
+    backProduceType?: ('RETURN' | 'ORDER');
     /** 返工生产类型描述 */
     backProduceTypeDesc?: string;
     /** 处理时间 */
@@ -174,7 +174,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */
@@ -184,7 +184,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 创建时间 */
     createTime?: string;
     /** 是否启用启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 是否启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }

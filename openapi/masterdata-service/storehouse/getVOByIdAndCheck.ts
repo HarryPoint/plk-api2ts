@@ -41,11 +41,11 @@ export interface IWarehouseVO {
     /** 寄售客户id */
     customerId?: number;
     /** 是否默认仓库 - 针对整个工厂唯一默认有一个仓库 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
     /** 仓库类型 */
-    type?: string;
+    type?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
     /** WIP类型 - WIP时有值 */
-    wipType?: string;
+    wipType?: ('BEFORE' | 'IN');
     /** 所属工艺路径id - WIP时有值 */
     routingId?: number;
 }

@@ -47,9 +47,9 @@ export interface IEmployeeVO {
     /** 出生日期 */
     birthday?: string;
     /** 性别 */
-    gender?: string;
+    gender?: ('MAN' | 'WOMAN');
     /** 学历 */
-    educational?: string;
+    educational?: ('PRIMARY' | 'JUNIOR' | 'HIGH' | 'COLLEGE' | 'UNDERGRADUATE' | 'POSTGRADUATE' | 'INTERMEDIATE_TECHNICAL' | 'MASTER' | 'TECHNICAL_SECONDARY');
     /** 籍贯 */
     nativePlace?: string;
     /** 任职职位id */

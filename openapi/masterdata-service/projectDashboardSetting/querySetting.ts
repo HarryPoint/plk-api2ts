@@ -27,7 +27,7 @@ export interface IJSONResultProjectLargeScreenSettingsSaveRequestDto {
 /** 项目大屏设置保存请求dto */
 export interface IProjectLargeScreenSettingsSaveRequestDto {
     /** 统计范围 */
-    scope?: string;
+    scope?: ('ALL' | 'SPECIFY_PROJECT_TYPE' | 'EXCLUDE_PROJECT');
     /** 项目类型ids */
     projectTypeIds?: number[];
     /** 排除的项目ids */

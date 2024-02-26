@@ -35,5 +35,5 @@ export interface IQueryPermissionEditing {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可见 */
-    isVisible?: string;
+    isVisible?: ('Y' | 'N');
 }

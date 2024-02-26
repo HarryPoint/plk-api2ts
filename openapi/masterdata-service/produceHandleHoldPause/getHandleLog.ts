@@ -40,9 +40,9 @@ export interface IProductionProcessingWithholdProcessingRecordDetailsResponseObj
     /** 创建时间 */
     createTime?: string;
     /** 生产处理操作类型 */
-    handleOp?: string;
+    handleOp?: ('REPORT_ADD' | 'REPORT_SURE' | 'REPORT_IGNORE' | 'HOLD_RELEASE' | 'HOLD_BACK' | 'HOLD_PAUSE_ADD' | 'HOLD_PAUSE_RELEASE' | 'HOLD_PAUSE_BACK' | 'HOLD_PAUSE_SCRAP' | 'BACK_ADD' | 'BACK_APPROVAL' | 'BACK_REFUSE' | 'SCRAP_ADD' | 'SCRAP_APPROVAL' | 'SCRAP_REFUSE' | 'QUALITY_COMPLETE' | 'QUALITY_CANCEL' | 'MOVE_IN' | 'MOVE_OUT' | 'ENTRUST_ADD');
     /** 返工生产后处理方式 */
-    backProduceType?: string;
+    backProduceType?: ('RETURN' | 'ORDER');
     /** 返工工艺路径名称 */
     backProduceTechnologyRoutingStepName?: string;
     /** undefined */

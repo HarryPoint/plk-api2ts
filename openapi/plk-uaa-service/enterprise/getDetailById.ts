@@ -47,7 +47,7 @@ export interface IEnterpriseDetailsResponseObject {
     /** 交付经理用户名称 */
     deliveryManagerUserNameList?: string[];
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 到期时间 */
     productServiceExpireTime?: string;
     /** 可用账号数 */
@@ -61,7 +61,7 @@ export interface IEnterpriseDetailsResponseObject {
     /** 最近登录系统时间 */
     lastLoginTime?: string;
     /** 是否有企业服务 */
-    hasProductService?: string;
+    hasProductService?: ('Y' | 'N');
 }
 /** 产品订单响应对象 */
 export interface IProductOrderResponseObject {
@@ -72,11 +72,11 @@ export interface IProductOrderResponseObject {
     /** 企业id */
     enterpriseId?: number;
     /** 类型 */
-    type?: string;
+    type?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
     /** 状态 */
-    status?: string;
+    status?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY');
     /** 产品类型 */
-    productType?: string;
+    productType?: ('MES');
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 下单用户id */

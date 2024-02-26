@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISecurityStockSettingsSearc
 /** 安全库存设置搜索VO */
 export interface ISecurityStockSettingsSearchVO {
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
 }
@@ -34,7 +34,7 @@ export interface IJSONResultSecurityStockSettingsReturnVO {
 /** 安全库存设置返回VO */
 export interface ISafetyStockSettingsReturnVO {
     /** 是否开启预警 */
-    isWarning?: string;
+    isWarning?: ('Y' | 'N');
     /** 计数方式 */
-    computeType?: string;
+    computeType?: ('TOTAL' | 'CAN_USE');
 }

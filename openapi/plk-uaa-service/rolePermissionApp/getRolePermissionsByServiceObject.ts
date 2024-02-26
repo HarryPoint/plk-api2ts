@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IRoleRightsAuthorizationQue
 /** 角色权限授权查询请求DTO */
 export interface IRoleRightsAuthorizationQueryRequestDTO {
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 角色ids */
@@ -47,7 +47,7 @@ export interface IApplicationRolePermissionRespondsToTheDTO {
 /** 企业角色权限响应 */
 export interface IEnterpriseRolePermissionResponse {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
     /** 应用id */
     appId?: number;
     /** 企业路由code */

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getProduceTagUsingGET_1
 */
-export default function fetchMethod(options: { params: { type?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK') } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTagReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getProduceTag",
@@ -29,7 +29,7 @@ export interface ITheExceptionTagReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 所属分类 */
     typeDesc?: string;
     /** 标签名称 */

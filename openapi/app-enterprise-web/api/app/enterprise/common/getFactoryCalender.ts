@@ -67,5 +67,5 @@ export interface IFactoryCalendarScheduleShiftRelationshipVO {
     /** 结束时间 */
     endTime?: string;
     /** 结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
 }

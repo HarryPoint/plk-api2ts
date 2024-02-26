@@ -20,7 +20,7 @@ export interface IEmployeeAssociatedRoleSetRequestObject {
     /** 角色id集 */
     roleIds?: number[];
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
 }

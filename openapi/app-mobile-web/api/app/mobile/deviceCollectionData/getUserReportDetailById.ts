@@ -41,11 +41,11 @@ export interface IDeviceDataAcquisitionManualCDRIsReturnedToVO {
     /** 上报姓名 */
     reqUsername?: string;
     /** 在线状态 */
-    onlineStatus?: string;
+    onlineStatus?: ('ONLINE' | 'OFFLINE');
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    status?: string;
+    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 设备状态描述 */
     statusDesc?: string;
     /** 详情 */
@@ -70,7 +70,7 @@ export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 上限 */
     upperLimit?: number;
     /** 异常类型 */
-    errorType?: string;
+    errorType?: ('UPPER' | 'LOWER');
     /** 异常值 */
     errorResult?: number;
 }

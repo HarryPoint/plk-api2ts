@@ -24,14 +24,14 @@ export interface IProcessOperatorIdSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工类型 */
-    userType: string;
+    userType: ('PRODUCE' | 'QUALITY');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«long»» */
 export interface IJSONResultListlong {

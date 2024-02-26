@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IMaterialsBureauBatchSetEdi
 /** 物料全局批次设置编辑对象 */
 export interface IMaterialsBureauBatchSetEditObject {
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 物料批次出库规则 */
-    lotOutRule?: string;
+    lotOutRule?: ('BATCH_ORDER_FIFO' | 'MANUAL_SELECTION');
     /** 启用质量追溯 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
     /** 启用外部码 */
-    enableExternalCode?: string;
+    enableExternalCode?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

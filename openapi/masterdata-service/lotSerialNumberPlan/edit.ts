@@ -22,7 +22,7 @@ export interface ILotSerialNumberPlanEditRequestDTO {
     /** 批次方案名称 */
     name?: string;
     /** 方案类型 */
-    planType?: string;
+    planType?: ('SERIAL_NO' | 'BATCH_NO');
     /** 规则列表 */
     ruleList?: ILotSerialNumberPlanRuleEditRequestDTO[];
 }
@@ -31,9 +31,9 @@ export interface ILotSerialNumberPlanRuleEditRequestDTO {
     /** ID */
     id?: number;
     /** 规则类型 */
-    type?: string;
+    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
     /** 日期类型 */
-    dateFormat?: string;
+    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
     /** 应用引擎ID */
     flowPathId?: number;
     /** 应用引擎编码 */
@@ -43,7 +43,7 @@ export interface ILotSerialNumberPlanRuleEditRequestDTO {
     /** 字段序列号 */
     flowPathFormFiledSerialNo?: string;
     /** 值提取方法 */
-    valueExtractMethod?: string;
+    valueExtractMethod?: ('COMPLETE' | 'PART');
     /** 起始Index */
     startIndex?: number;
     /** 结束Index */
@@ -68,7 +68,7 @@ export interface IJSONResultstring1 {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

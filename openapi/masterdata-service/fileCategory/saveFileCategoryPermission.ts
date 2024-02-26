@@ -23,14 +23,14 @@ export interface IFileCategoryPermissionSaveRequestDTO {
 /** FileCategoryPermissionEditRequestDTO */
 export interface IFileCategoryPermissionEditRequestDTO {
     /** 权限类型 */
-    permissionTypeList?: string[];
+    permissionTypeList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
     /** 组织列表 */
     organizations?: IFileCategoryOrganizationEditRequestDTO[];
 }
 /** FileCategoryOrganizationEditRequestDTO */
 export interface IFileCategoryOrganizationEditRequestDTO {
     /** 组织 */
-    organization?: string;
+    organization?: ('USER' | 'DEPARTMENT' | 'ROLE' | 'ALL');
     /** 文件组织ID */
     organizationId?: number;
 }
@@ -41,7 +41,7 @@ export interface IJSONResultstring1 {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }

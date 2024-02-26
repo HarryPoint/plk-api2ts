@@ -22,7 +22,7 @@ export interface IServiceObjectRegistrationRequest1 {
     /** 名称 */
     name?: string;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 来源应用服务包id */
     fromAppServicePackId?: number;
 }

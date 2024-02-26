@@ -35,7 +35,7 @@ export interface ITheProcessVersionRespondsToVO {
     /** 版本排名 */
     versionRank?: number;
     /** 是否是系统流程 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 名称 */
     name?: string;
     /** 编号 */
@@ -45,5 +45,5 @@ export interface ITheProcessVersionRespondsToVO {
     /** 发布终端值合计 */
     publishTotal?: number;
     /** 是否是多流程 */
-    isMultiFlow?: string;
+    isMultiFlow?: ('Y' | 'N');
 }

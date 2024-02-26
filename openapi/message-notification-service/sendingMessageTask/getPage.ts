@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IMessageQueuePagingQueryReq
 /** 消息队列分页查询请求 */
 export interface IMessageQueuePagingQueryRequest {
     /** 消息发送方式 */
-    sendingModeList?: string[];
+    sendingModeList?: ('SYSTEM' | 'SMS' | 'EMAIL')[];
     /** 发送状态 */
-    executionStatusList?: string[];
+    executionStatusList?: ('NOT' | 'EXECUTED')[];
     /** 当前页面 */
     pageNo?: number;
     /** 所属方案 */
@@ -56,9 +56,9 @@ export interface IPageInformationMessageQueuePageResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -81,13 +81,13 @@ export interface IMessageQueuePagingResponseObject {
     /** 发送内容 */
     messageContent?: string;
     /** 发送模式 */
-    sendingMode?: string;
+    sendingMode?: ('SYSTEM' | 'SMS' | 'EMAIL');
     /** 发送状态 */
-    executionStatus?: string;
+    executionStatus?: ('NOT' | 'EXECUTED');
     /** 消息数量 */
     messageCount?: number;
     /** 是否用户确认 */
-    isUserConfirm?: string;
+    isUserConfirm?: ('Y' | 'N');
     /** 失败原因 */
     failReason?: string;
     /** 发送模式描述 */

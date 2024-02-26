@@ -20,7 +20,7 @@ export interface IProductionProcessingQueryVO {
     /** 分页大小 */
     pageSize?: number;
     /** 类型 */
-    types?: string[];
+    types?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN')[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 任务id */
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«生产处理基础信息响应DTO»» */
 export interface IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO {
@@ -65,9 +65,9 @@ export interface IPageInformationProductionProcessesBasicInformationInResponseTo
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -82,9 +82,9 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
     /** 异常分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -104,7 +104,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 对应生产委外id */
     produceEntrustId?: number;
     /** 状态 */
-    status?: string;
+    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
@@ -143,7 +143,7 @@ export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 录入值 - 明细录入类型不是图片时，有值 */
     inputValue?: string;
     /** 图片上传key集合 - 明细录入类型是图片时，有值 */

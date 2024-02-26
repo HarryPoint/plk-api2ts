@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«编码规则分页返回VO»» */
 export interface IJSONResultPagingInformationEncodingRulePagingReturnsVO {
@@ -61,9 +61,9 @@ export interface IPagingInformationEncodingRulePagingReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,9 +88,9 @@ export interface ITheEncodingRulePagingReturnsVO {
     /** id */
     id?: number;
     /** 规则类型 */
-    type?: string;
+    type?: ('FLOW_PATH' | 'BUSINESS');
     /** 业务类型 */
-    businessType?: string;
+    businessType?: ('PRODUCE_TASK' | 'STORAGE_TAKE_CHECK_TASK');
     /** 所属流程id */
     flowPathId?: number;
     /** 所属流程名称 */
@@ -102,7 +102,7 @@ export interface ITheEncodingRulePagingReturnsVO {
     /** 所属流程表单序列值 */
     flowPathFormFiledSerialNo?: string;
     /** 是否是表格内字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 编码规则明细 */
     details?: IProcessFormFieldEncodingRuleDetailsVO[];
 }
@@ -111,9 +111,9 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
     id?: number;
     /** 设置类型 */
-    type?: string;
+    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
     /** 日期格式 - 用于日期 */
-    dateFormat?: string;
+    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
     /** 固定值 - 用于固定值 */
     fixValue?: string;
     /** 位数 - 用于流水 */
@@ -123,7 +123,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 递增值 - 用于流水 */
     stepValue?: number;
     /** 是否是编码依据 - 仅能配置一项为编码依据 */
-    isCodeAccording?: string;
+    isCodeAccording?: ('Y' | 'N');
     /** 所属流程表单code -- 针对引用字段类型 */
     flowPathCode?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */

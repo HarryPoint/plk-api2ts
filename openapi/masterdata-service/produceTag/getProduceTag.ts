@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/getProduceTagUsingGET
 */
-export default function fetchMethod(options: { params: { type?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK'); enterpriseId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTagReturnsVO>(
         {
             url: "/masterdata-service/produceTag/getProduceTag",
@@ -29,7 +29,7 @@ export interface ITheExceptionTagReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: string;
+    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
     /** 所属分类 */
     typeDesc?: string;
     /** 标签名称 */

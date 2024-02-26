@@ -29,7 +29,7 @@ export interface ITheProductionOrderIsReturnedToVO1 {
     /** id */
     id?: number;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 订单状态描述 */
     orderStatusDesc?: string;
     /** 操作时间 */

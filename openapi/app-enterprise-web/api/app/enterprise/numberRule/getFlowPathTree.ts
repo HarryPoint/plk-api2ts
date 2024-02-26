@@ -35,7 +35,7 @@ export interface IProcessTreeVO {
     /** 流程id */
     flowPathId?: number;
     /** 流程树类型 */
-    treeType?: string;
+    treeType?: ('MENU' | 'FLOW' | 'FLOW_TABLE');
     /** 字段集 */
     columns?: IProcessTreeFieldInformationIsReturnedToVO[];
     /** 子集 */
@@ -43,7 +43,7 @@ export interface IProcessTreeVO {
     /** 流程code */
     flowPathCode?: string;
     /** 流程类型 */
-    flowPathType?: string;
+    flowPathType?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
 }
 /** 流程树字段信息返回VO */
 export interface IProcessTreeFieldInformationIsReturnedToVO {
@@ -56,19 +56,19 @@ export interface IProcessTreeFieldInformationIsReturnedToVO {
     /** 序号值 */
     serialNo?: string;
     /** 是否是系统字段 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 字段类型 */
-    flowPathFormFieldType?: string;
+    flowPathFormFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** 是否是表格内字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 选项集 传值传code，显示name */
     selector?: IFormFieldOption[];
     /** 日期类型 */
-    dateType?: string;
+    dateType?: ('DAY' | 'MIN' | 'SECOND' | 'HOUR_MIN' | 'MONTH' | 'YEAR');
     /** 宽度 */
     span?: number;
     /** 组织类型 */
-    organizationType?: string;
+    organizationType?: ('NONE' | 'CLASS_GROUP' | 'DEPARTMENT' | 'USER' | 'PROCESSOR');
     /** 关联表单编码 */
     formRpCode?: string;
     /** 关联表单选项显示字段code */
@@ -76,7 +76,7 @@ export interface IProcessTreeFieldInformationIsReturnedToVO {
     /** 关联表单选项显示字段SerialNo */
     formRpSelectorShowFieldSerialNo?: string;
     /** 是否必填 */
-    isMust?: string;
+    isMust?: ('Y' | 'N');
 }
 /** FormFieldOption */
 export interface IFormFieldOption {

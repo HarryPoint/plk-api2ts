@@ -103,7 +103,7 @@ export interface ISpecificMaterialNumberAssociatedProcessPathStepDataStructureRe
     /** 工费 */
     laborCost?: ICostResponseObject;
     /** 进出站确认类型 */
-    bomConsumeSureType?: string;
+    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
 }
 /** 标准工艺具体工艺卡详情对象_1 */
 export interface IStandardProcessSpecificProcessCardDetailsObject1 {
@@ -121,7 +121,7 @@ export interface IStandardProcessSpecificProcessCardDetailsObject {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: string;
+    type?: ('FILE' | 'TEXT' | 'INPUT');
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -135,9 +135,9 @@ export interface IStandardProcessSpecificProcessCardDetailsObject {
     /** 文件完整url */
     fileUrl?: string;
     /** 录入类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 文本类型 */
-    textType?: string;
+    textType?: ('INPUT' | 'COMPARE');
     /** 文本比较值集 */
     textCompareValueList?: string[];
     /** 下限 */
@@ -182,9 +182,9 @@ export interface IKeyParameterDetailsResponseObject {
     /** 帮助提示 */
     remark?: string;
     /** 字段类型 */
-    inputType?: string;
+    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
     /** 文本类型 */
-    textType?: string;
+    textType?: ('INPUT' | 'COMPARE');
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */
@@ -217,11 +217,11 @@ export interface IProductivityResponseObject {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }

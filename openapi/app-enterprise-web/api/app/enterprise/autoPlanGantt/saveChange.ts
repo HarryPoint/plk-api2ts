@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IChangeGanttChartPlanDTO[] 
 /** 变更甘特图计划DTO */
 export interface IChangeGanttChartPlanDTO {
     /** 排期类型 */
-    scheduleType?: string;
+    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
     /** 排期id */
     scheduleId?: number;
     /** 最新时间 - 开始 yyyy-MM-dd HH:mm:ss */

@@ -22,25 +22,25 @@ export interface ISchedulingParametersDTO {
     /** 倒排考虑因素值 */
     descFactorValue?: number;
     /** 是否开启日产能配置 */
-    enableDayCapacity?: string;
+    enableDayCapacity?: ('Y' | 'N');
     /** 日产能数量 */
     capacityDayQuantity?: number;
     /** 每日工作小时数 */
     dayWorkHours?: number;
     /** 是否开启锁定天数 */
-    enableLockDay?: string;
+    enableLockDay?: ('Y' | 'N');
     /** 锁定天数 */
     lockDay?: number;
     /** 是否展示预估工费/默认不展示 */
-    isShowForecastLaborCost?: string;
+    isShowForecastLaborCost?: ('Y' | 'N');
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: string;
+    isGtPlannedQuantity?: ('Y' | 'N');
     /** 是否自动进料 */
-    isAutoMoveIn?: string;
+    isAutoMoveIn?: ('Y' | 'N');
     /** 是否自动下发任务 */
-    isRobotIssue?: string;
+    isRobotIssue?: ('Y' | 'N');
     /** 排产方式 */
-    producePlanType?: string;
+    producePlanType?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE');
     /** 排产开始时间订单流程表单字段code */
     producePlanStartTimeFormFieldCode?: string;
     /** 排产开始时间订单流程表单字段序列号 */
@@ -50,7 +50,7 @@ export interface ISchedulingParametersDTO {
     /** 排产结束时间订单流程表单字段序列号 */
     producePlanEndTimeFormFieldSerialNo?: string;
     /** 是否入库前先领料 */
-    isBeforeStorageIssuanceMaterial?: string;
+    isBeforeStorageIssuanceMaterial?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

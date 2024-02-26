@@ -35,7 +35,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: string;
+    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -52,7 +52,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
@@ -67,7 +67,7 @@ export interface IFormDataGroupingDTO {
     /** 下级分组 */
     children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData?: string;
+    cascadeFormData?: ('Y' | 'N');
     /** 多级基础数据上级ID */
     treeDataParentId?: number;
 }
@@ -97,9 +97,9 @@ export interface IPageInformationDynamicExpansionDataVOScheduledProductionOrders
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -119,9 +119,9 @@ export interface ITheScheduledProductionOrderIsReturnedToVO {
     /** 生产计划名称 */
     producePlanName?: string;
     /** 排产类型 */
-    planType?: string;
+    planType?: ('AUTO' | 'HAND' | 'VAGUE');
     /** 是否锁定 */
-    isLock?: string;
+    isLock?: ('Y' | 'N');
     /** 步骤集【自动排产、模糊排产的信息回显在这里面】 */
     steps?: IScheduledProductionOrderStepReturnToVO[];
     /** 手动排产按日排产明细 */
@@ -181,11 +181,11 @@ export interface IProduceTechnologyCapacityResponseDTO {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }

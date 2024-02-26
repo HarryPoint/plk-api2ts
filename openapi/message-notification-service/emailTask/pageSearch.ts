@@ -32,11 +32,11 @@ export interface IPaging {
     /** 修改用户-精确匹配 */
     updateUserId?: number;
     /** 发送模式-精确匹配 */
-    sendingMode?: string;
+    sendingMode?: ('SINGLE' | 'MULTIPLE');
     /** 创建时间-结束范围 */
     createTimeEnd?: string;
     /** 任务状态-精确匹配 */
-    status?: string;
+    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
     /** 修改时间-结束范围 */
     updateTimeEnd?: string;
     /** 创建时间-起始范围 */
@@ -53,7 +53,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** EmailTaskAttachmentConfigQueryRequestDTO */
 export interface IEmailTaskAttachmentConfigQueryRequestDTO {
@@ -86,9 +86,9 @@ export interface IThePagingInformationEmailTaskQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -125,7 +125,7 @@ export interface IEmailTaskQueryResponseDTO {
     /** 邮件主题 */
     title?: string;
     /** 发送方式 */
-    sendingMode?: string;
+    sendingMode?: ('SINGLE' | 'MULTIPLE');
     /** 任务状态 */
-    status?: string;
+    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
 }

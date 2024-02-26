@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/getUserAreaProcessSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; type?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; type?: ('PRODUCE' | 'QUALITY') } }, extraOptions?: any) {
     return http<ITheJSONResultListAreaOperationSelectionReturnsVO1>(
         {
             url: "/masterdata-service/userProcess/getUserAreaProcessSelector",

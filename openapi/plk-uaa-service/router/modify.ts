@@ -28,7 +28,7 @@ export interface IModifyTheRouteDTO {
     /** 路由code */
     code: string;
     /** 类型 */
-    type?: string;
+    type?: ('GROUP' | 'PAGE');
     /** 图标 */
     icon?: string;
     /** 路由层级 */
@@ -36,18 +36,18 @@ export interface IModifyTheRouteDTO {
     /** 路由排序 */
     sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth?: string;
+    hasDataAuth?: ('Y' | 'N');
     /** 配置 */
     config?: IRouteConfigurationRequestsDTO;
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** id */
     id?: number;
 }
 /** 路由配置请求 DTO */
 export interface IRouteConfigurationRequestsDTO {
     /** 菜单类型 */
-    menuType?: string;
+    menuType?: ('APP' | 'REPORT_EXTERNAL');
     /** 应用配置 */
     appConfig?: IApplyTheRouteConfigurationRequestDTO;
 }

@@ -22,7 +22,7 @@ export interface IEditDeviceDataAcquisitionSchemeDTO {
     /** 编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule: ('Y' | 'N');
     /** 版次号 */
     issueCode?: string;
     /** 备注 */
@@ -37,9 +37,9 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationEdit
     /** 设备数采参数id */
     deviceCollectionParamId?: number;
     /** 统计类型 */
-    statisticType?: string;
+    statisticType?: ('AVG' | 'SUM' | 'MAX' | 'MIN' | 'SUBTRACT');
     /** 实时数值对比标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 实时比较数值 */
     compareNumber?: number;
     /** 实时下限 */
@@ -56,9 +56,9 @@ export interface IDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO {
     /** 关联id */
     id?: number;
     /** 时间粒度 */
-    timeType?: string;
+    timeType?: ('ALL' | 'HOUR' | 'DAY' | 'MONTH');
     /** 数值对比标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */

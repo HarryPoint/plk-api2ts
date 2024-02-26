@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcedureTaskSettingDefaul
 /** 工序任务设置默认操作员编辑DTO */
 export interface IProcedureTaskSettingDefaultOperatorEditsDTO {
     /** 员工类型 */
-    userType: string;
+    userType: ('PRODUCE' | 'QUALITY');
     /** 工序id */
     processId: number;
     /** 默认操作员ids */

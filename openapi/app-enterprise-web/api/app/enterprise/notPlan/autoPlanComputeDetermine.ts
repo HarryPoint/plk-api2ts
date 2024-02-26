@@ -18,9 +18,9 @@ export interface IProductionOrderAutomaticSchedulingCalculationResultsToDetermin
     /** 排产计划单名称 */
     planName?: string;
     /** 排产方式 */
-    autoPlanType?: string;
+    autoPlanType?: ('ASC' | 'DESC');
     /** 是否考虑自动提前（要传计算时的值） */
-    isAutoMoveUp?: string;
+    isAutoMoveUp?: ('Y' | 'N');
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss（要传计算时的值） */
     beginTime?: string;
     /** 排产结束时间 yyyy-MM-dd HH:mm:ss（要传计算时的值） */

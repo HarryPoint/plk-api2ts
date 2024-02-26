@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«宝晶应收账款分析报表返回VO» */
 export interface IJSONResultBaoJingAccountsReceivableAnalysisReportReturnedToVO {

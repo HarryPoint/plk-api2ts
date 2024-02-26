@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getFieldsByDataSourceIdUsingGET
 */
-export default function fetchMethod(options: { params: { dataSourceId?: string; printTemplateType?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { dataSourceId?: string; printTemplateType?: ('LIST' | 'FORM' | 'FORM_DETAIL') } }, extraOptions?: any) {
     return http<IJSONResultListDataSourceFieldResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/datasource/getFieldsByDataSourceId",
@@ -43,11 +43,11 @@ export interface IDataSourceFieldResponseObject {
     /** 字段名称 */
     fieldName?: string;
     /** 字段类型 */
-    fieldType?: string;
+    fieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** 是否子表字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 是否(列表、详情页面)查询时隐藏 */
-    isQueryHidden?: string;
+    isQueryHidden?: ('Y' | 'N');
     /** 原数据排序 */
     sort?: number;
     /** 明细字段集合 */

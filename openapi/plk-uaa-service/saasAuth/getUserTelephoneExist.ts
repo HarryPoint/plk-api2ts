@@ -32,5 +32,5 @@ export interface IJSONResultIndicatesWhetherTheInformationIsDisplayed {
 /** 是否 信息 */
 export interface IYesNoMessage {
     /** 是否 */
-    whether?: string;
+    whether?: ('Y' | 'N');
 }

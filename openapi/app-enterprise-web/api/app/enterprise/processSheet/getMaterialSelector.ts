@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getMaterialSelectorUsingPOST_2
 */
-export default function fetchMethod(options: { params: { materialTypeList?: string[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: string }[] } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialTypeList?: ('RAW' | 'SEMI_PRODUCT' | 'FINISH_GOODS' | 'KIT' | 'PARTS')[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: ('Y' | 'N') }[] } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processSheet/getMaterialSelector",
@@ -39,9 +39,9 @@ export interface IPageInformationMaterialMasterDataSelectionReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -68,5 +68,5 @@ export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否有bom */
-    hasBom?: string;
+    hasBom?: ('Y' | 'N');
 }

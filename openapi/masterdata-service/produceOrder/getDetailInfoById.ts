@@ -42,7 +42,7 @@ export interface IProductionOrderDetailsVO {
 /** 生产订单详情 - 排产VO */
 export interface IProductionOrderDetailsProductionVO {
     /** 排产类型 */
-    planType?: string;
+    planType?: ('AUTO' | 'HAND' | 'VAGUE');
     /** 计划开始时间 */
     beginTime?: string;
     /** 计划结束时间 */
@@ -62,7 +62,7 @@ export interface IProductionOrderDetailsProductionVO {
     /** 任务下发人名称 */
     issueUsername?: string;
     /** 状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 生产订单id */
     produceOrderId?: number;
 }
@@ -125,11 +125,11 @@ export interface IProductionOrderDetailsMaterialInformationVO {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: string;
+    enableSerialNo?: ('Y' | 'N');
     /** 启用批次 */
-    enableLot?: string;
+    enableLot?: ('Y' | 'N');
     /** 启用批次 */
-    enableQualityTraceability?: string;
+    enableQualityTraceability?: ('Y' | 'N');
 }
 /** 生产订单详情 - 补单VO */
 export interface IProductionOrderDetailsSupplementVO {

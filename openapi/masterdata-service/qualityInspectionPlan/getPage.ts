@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«质检方案返回VO»» */
 export interface IJSONResultPagingInformationVOIsReturned {
@@ -65,9 +65,9 @@ export interface IPagingInformationTheInspectionSchemeReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -110,7 +110,7 @@ export interface ITheInspectionSolutionReturnsVO {
     /** 创建时间 */
     createTime?: string;
     /** 质检方式 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 质检方式描述 */
     typeDesc?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
 */
-export default function fetchMethod(options: { params: { useValidationTypes?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { useValidationTypes?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER') } }, extraOptions?: any) {
     return http<IJSONResultListResponseObjectForHandlingNonconformingItems>(
         {
             url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByValidationType",
@@ -33,7 +33,7 @@ export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
     /** 处理方式 */
     handingMethod?: string;
     /** 适用检验类型 */
-    useValidationTypes?: string;
+    useValidationTypes?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
     /** 适用检验类型描述 */
     useValidationTypesDesc?: string;
 }

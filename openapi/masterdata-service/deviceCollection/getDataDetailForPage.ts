@@ -24,7 +24,7 @@ export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 设备id */
     deviceId: number;
     /** 是否有异常 */
-    hasError?: string;
+    hasError?: ('Y' | 'N');
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«设备数采数据详单返回VO» */
 export interface IJSONResultTheDeviceDataCollectionDetailsAreReturnedToVO {
@@ -70,9 +70,9 @@ export interface IPageInformationDeviceDataCollectionDetailsPageInformationIsRet
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -89,15 +89,15 @@ export interface IDeviceDataCollectionCDRPageInformationIsReturnedToVO {
     /** 请求员工姓名 */
     reqUsername?: string;
     /** 在线状态 */
-    deviceOnlineStatus?: string;
+    deviceOnlineStatus?: ('ONLINE' | 'OFFLINE');
     /** 设备状态 */
-    deviceStatus?: string;
+    deviceStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 拓展数据 */
     extData?: Record<string, Record<string, any>>;
     /** 详情 */
     details?: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
     /** 是否有异常 */
-    hasError?: string;
+    hasError?: ('Y' | 'N');
 }
 /** 设备数采数据明细返回VO */
 export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
@@ -118,7 +118,7 @@ export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 上限 */
     upperLimit?: number;
     /** 异常类型 */
-    errorType?: string;
+    errorType?: ('UPPER' | 'LOWER');
     /** 异常值 */
     errorResult?: number;
 }
@@ -137,11 +137,11 @@ export interface IDeviceDataAcquisitionStatusMessageVO {
     /** 设备数采方案编号 */
     deviceCollectionPlanCode?: string;
     /** 在线状态 */
-    onlineStatus?: string;
+    onlineStatus?: ('ONLINE' | 'OFFLINE');
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    status?: string;
+    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 设备状态描述 */
     statusDesc?: string;
     /** 最后通讯时间 */

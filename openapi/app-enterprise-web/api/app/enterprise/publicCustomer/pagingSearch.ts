@@ -20,7 +20,7 @@ export interface IPaging12 {
     /** 行政区划编码，精确匹配 */
     regionCode?: string;
     /** 客户级别，精确匹配 */
-    customerType?: string;
+    customerType?: ('A' | 'B' | 'C');
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -28,7 +28,7 @@ export interface IPaging12 {
     /** 客户名称，模糊匹配 */
     name?: string;
     /** 客户来源，精确匹配 */
-    customerSource?: string;
+    customerSource?: ('OLD_INTRODUCTION' | 'OFFICIAL_WEBSITE' | 'STRANGER_VISIT' | 'MARKETING_ACTIVITIES' | 'PHONE_CONSULTATION' | 'TELEPHONE_SALES' | 'NETWORK_PROMOTION');
     /** 开始时间起始， yyyy-MM-dd HH:mm:ss */
     createTimeBegin?: string;
     /** 开始时间截至， yyyy-MM-dd HH:mm:ss */
@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«PublicCustomerOutputVO»» */
 export interface IJSONResultPageInformationPublicCustomerOutputVO {
@@ -67,9 +67,9 @@ export interface IPageInformationPublicCustomerOutputVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */

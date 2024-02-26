@@ -24,9 +24,9 @@ export interface IDeviceStatisticsSearchVO {
     /** 结束时间，yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 时间粒度，设备数采统计只支持时、日、月 */
-    timeType?: string;
+    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
     /** 展示的时间单位的类型，hms */
-    deviceParamUnitTimeType?: string;
+    deviceParamUnitTimeType?: ('HOUR' | 'MINUTE' | 'SECOUN');
 }
 /** JSONResult«List«设备数采统计报表导出VO»» */
 export interface IJSONResultListExportDeviceDataCollectionStatisticsReportVO {

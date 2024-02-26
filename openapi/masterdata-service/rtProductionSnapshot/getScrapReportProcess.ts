@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: string;
+    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
 }
 /** JSONResult«产出类折线图返回VO«良品与报废报表返回VO»» */
 export interface IJSONResultOutputLineChartReturnsVOGoodAndScrapReportReturnsVO {
@@ -50,7 +50,7 @@ export interface IOutputLineChartReturnsVOGoodAndScrapReportReturnsVO {
     /** 查询物料集 */
     majorDataList?: IIdNameNumberVO[];
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
-    isConsistent?: string;
+    isConsistent?: ('Y' | 'N');
     /** 实际查询时间 - 开始 */
     actualBeginTime?: string;
     /** 实际查询时间 - 结束 */

@@ -41,11 +41,11 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** 提交时间 */
     createTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 状态描述 */
     statusDesc?: string;
     /** 关闭类型 */
-    closeType?: string;
+    closeType?: ('COMPLETE' | 'REFUSE');
     /** 关闭类型描述 */
     closeTypeDesc?: string;
     /** 所属流程id */

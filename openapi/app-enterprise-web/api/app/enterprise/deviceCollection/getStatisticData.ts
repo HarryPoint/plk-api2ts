@@ -24,9 +24,9 @@ export interface IDeviceStatisticsSearchVO {
     /** 结束时间，yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 时间粒度，设备数采统计只支持时、日、月 */
-    timeType?: string;
+    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
     /** 展示的时间单位的类型，hms */
-    deviceParamUnitTimeType?: string;
+    deviceParamUnitTimeType?: ('HOUR' | 'MINUTE' | 'SECOUN');
 }
 /** JSONResult«设备数采参数统计查询返回VO» */
 export interface IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStatisticsQuery {
@@ -42,7 +42,7 @@ export interface IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStat
 /** 设备数采参数统计查询返回VO */
 export interface IVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery {
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
-    isConsistent?: string;
+    isConsistent?: ('Y' | 'N');
     /** 实际查询时间 - 开始 */
     actualBeginTime?: string;
     /** 实际查询时间 - 结束 */

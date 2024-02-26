@@ -67,15 +67,15 @@ export interface IProduceTechnologyRoutingStepResponseDTO {
     /** 所属生产工艺工艺卡id */
     produceTechnologyProcessSheetId?: number;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: string;
+    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
     /** 进站关键参数id */
     moveInKeyParameterId?: number;
     /** 出站关键参数id */
     moveOutKeyParameterId?: number;
     /** 进出站类型 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** 配置块的顺序数组(前端用于保存每个配置块的顺序) */
     configModuleSortArray?: Record<string, any>[];
     /** 物料消耗 */

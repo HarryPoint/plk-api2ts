@@ -53,5 +53,5 @@ export interface IBasicVO2 {
     /** 所属主物料bomid */
     materialBomId?: number;
     /** 是否默认 */
-    isDefault?: string;
+    isDefault?: ('Y' | 'N');
 }

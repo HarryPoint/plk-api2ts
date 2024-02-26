@@ -32,7 +32,7 @@ export interface IIncomingInformationDTO {
     /** 拆分批次相关 */
     splitLots?: IIncomingBatchSplitRequestDTO[];
     /** undefined */
-    handleOtherAsync?: string;
+    handleOtherAsync?: ('Y' | 'N');
 }
 /** 成品物料填写请求DTO */
 export interface IFinishedMaterialFillRequestDTO {

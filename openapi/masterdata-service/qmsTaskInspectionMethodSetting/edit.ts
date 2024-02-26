@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISetTheCheckTaskCheckModeTo
 /** 设置检验任务检验方式请求DTO */
 export interface ISetTheCheckTaskCheckModeToRequestTheDTO {
     /** 检验方式 */
-    taskInspectionMethodType?: string;
+    taskInspectionMethodType?: ('SINGLE' | 'BATCH' | 'MATERIAL');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

@@ -35,13 +35,13 @@ export interface IProposalDashboardStatisticsConfigRequestDTO {
     /** ID */
     id?: number;
     /** 统计类型 */
-    type?: string;
+    type?: ('RANGE' | 'GE' | 'GT');
     /** 开始值 - 适用于数值区间、数值大于等于、数值大于 */
     beginValue?: number;
     /** 结束值 */
     endValue?: number;
     /** 项目归属的完成状态 - 未完成项目， 已完成项目 */
-    projectCompleteStatus?: string;
+    projectCompleteStatus?: ('UN_COMPLETED' | 'COMPLETED');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

@@ -33,11 +33,12 @@ export const createDefinitions = async (
 ) => {
   const { translate = true, prefix = "I", customContent } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
+  const enumMap: Record<string, any[]> = {};
   const formatEnumValue = (str: string) => {
     const newStrArr = str.trim().split("-");
     return newStrArr[0];
   };
-  const transFormType = (define: any): string => {
+  const transFormType = (define: any, parents: any[] = []): string => {
     if (define.originalRef) {
       if (!definitionsMap[define.originalRef]) {
         return define.originalRef;
@@ -46,7 +47,7 @@ export const createDefinitions = async (
     }
     const typeOrigin = typeMap[define.type as keyof typeof typeMap];
     if (typeOrigin === typeMap.array) {
-      return `(${transFormType(define.items)})[]`;
+      return `${transFormType(define.items, [...parents, define])}[]`;
     }
     if (typeOrigin === typeMap.object) {
       if (define.properties) {
@@ -56,20 +57,21 @@ export const createDefinitions = async (
             (key) =>
               `${formatName(key)}${
                 requiredKeys.includes(key) ? "" : "?"
-              }: ${transFormType(define.properties[key])}`
+              }: ${transFormType(define.properties[key], [...parents, define])}`
           )
           .join("; ")} }`;
       }
       return `Record<string, ${
         define?.additionalProperties
-          ? transFormType(define?.additionalProperties)
+          ? transFormType(define?.additionalProperties, [...parents, define])
           : "any"
       }>`;
     }
     if (typeOrigin === typeMap.string && define.enum) {
-      return define.enum
+      enumMap[parents.map((item) => item.name).join("_")] = define.enum;
+      return `(${define.enum
         ?.map((item: string) => `'${formatEnumValue(item)}'`)
-        .join(" | ");
+        .join(" | ")})`;
     }
     return typeOrigin;
   };

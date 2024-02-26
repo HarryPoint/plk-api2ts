@@ -31,11 +31,11 @@ export interface IUserProcessVo {
     /** undefined */
     processId?: number;
     /** undefined */
-    executorType?: string;
+    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
     /** undefined */
     refId?: number;
     /** undefined */
-    type?: string;
+    type?: ('PRODUCE' | 'QUALITY');
     /** undefined */
     refName?: string;
 }

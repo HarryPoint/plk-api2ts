@@ -41,7 +41,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsRe
     /** 设备数采参数单位 */
     deviceCollectionParamUnit?: string;
     /** 实时数值对比标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 实时数值对比标准描述 */
     numberStandardDesc?: string;
     /** 实时比较数值 */
@@ -53,7 +53,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsRe
     /** 备注 */
     remark?: string;
     /** 统计类型 */
-    statisticType?: string;
+    statisticType?: ('AVG' | 'SUM' | 'MAX' | 'MIN' | 'SUBTRACT');
     /** 统计类型描述 */
     statisticTypeDesc?: string;
     /** 统计范围配置项集 */
@@ -64,9 +64,9 @@ export interface IDeviceDataAcquisitionSchemeParameterWarningReturnVO {
     /** 预警id */
     id?: number;
     /** 时间粒度 */
-    timeType?: string;
+    timeType?: ('ALL' | 'HOUR' | 'DAY' | 'MONTH');
     /** 数值对比标准 */
-    numberStandard?: string;
+    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 数值对比标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */

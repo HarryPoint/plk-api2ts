@@ -34,14 +34,14 @@ export interface ISendAnEmailRecordQueryRequest {
     /** 邮件正文-模糊搜索 */
     content?: string;
     /** 发送状态-精确匹配 */
-    status?: string;
+    status?: ('NONE' | 'SENT_SUCCESS' | 'SENT_FAILURE');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«SendingEmailRecordQueryResponseDTO»» */
 export interface ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation {
@@ -69,9 +69,9 @@ export interface IThePagingInformationSendingEmailRecordQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -90,7 +90,7 @@ export interface ISendingEmailRecordQueryResponseDTO {
     /** 内容 */
     content?: string;
     /** 发送邮件状态 */
-    status?: string;
+    status?: ('NONE' | 'SENT_SUCCESS' | 'SENT_FAILURE');
     /** 发送时间 */
     sendingTime?: string;
     /** 发送来源 */
@@ -98,7 +98,7 @@ export interface ISendingEmailRecordQueryResponseDTO {
     /** 收件人地址 */
     addressee?: string;
     /**  是否已准备好数据，只有准备好的邮件才能重新发送 */
-    isReady?: string;
+    isReady?: ('Y' | 'N');
     /** 失败的原因 */
     failureReason?: string;
 }

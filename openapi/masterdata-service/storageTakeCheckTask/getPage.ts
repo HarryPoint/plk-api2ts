@@ -36,7 +36,7 @@ export interface IWarehouseInventoryTasksPageQueryObjects {
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
     planEndTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 完成结束时间 yyyy-MM-dd HH:mm:ss */
     completeEndTime?: string;
 }
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«仓库盘点任务返回DTO»» */
 export interface IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO {
@@ -73,9 +73,9 @@ export interface IThePageInformationWarehouseInventoryTaskReturnsTheDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -94,7 +94,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 盘点仓库编号 */
     storehouseCode?: string;
     /** 盘点范围 */
-    scopeType?: string;
+    scopeType?: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
     /** 盘点范围描述 */
     scopeTypeDesc?: string;
     /** 盘点物料种类(针对盘点范围是物料类型的) */
@@ -110,7 +110,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */

@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICcToDoChangeReadDTO }, ext
 /** 待办抄送变更已读DTO */
 export interface ICcToDoChangeReadDTO {
     /** 是否全部标记已读 */
-    isAll: string;
+    isAll: ('Y' | 'N');
     /** 单个标记id，isAll=N时必传 */
     id?: number;
 }

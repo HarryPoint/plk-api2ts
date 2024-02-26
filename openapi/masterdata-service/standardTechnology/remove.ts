@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IStandardProcessModificatio
 /** 标准工艺修改分类请求对象_1 */
 export interface IStandardProcessModificationClassificationRequestObject1 {
     /** 是否删除全部 */
-    removeAll?: string;
+    removeAll?: ('Y' | 'N');
     /** 标准工艺ids */
     standardTechnologyIds?: number[];
 }

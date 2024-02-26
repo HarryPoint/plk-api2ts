@@ -216,7 +216,7 @@ export interface IQualityMonthlyReportRespondsToDTO {
     /** 未填报部门 */
     notReportDepartments?: IIdCodeNameGenericTransportObject[];
     /** 上报状态 */
-    reportStatus?: string;
+    reportStatus?: ('REPORTED' | 'OVERDUE' | 'OVERDUE_REPORT');
     /** 上报状态描述 */
     reportStatusDesc?: string;
 }

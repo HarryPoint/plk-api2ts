@@ -18,13 +18,13 @@ export interface IStandardProcessPagingQueryObject {
     /** 当前页面 */
     pageNo?: number;
     /** 标准工艺状态列表 */
-    statusList?: string[];
+    statusList?: ('DRAFT' | 'VALID' | 'INVALID')[];
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 未分类 -- Y 就是查未分类，为空或者N 不起作用 */
-    unCategory?: string;
+    unCategory?: ('Y' | 'N');
     /** 标准工艺名称 -- 模糊查询 */
     name?: string;
     /** 标准工艺分类id */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«标准工艺分页响应对象»» */
 export interface IJSONResultPagingInformationStandardProcessPagingResponseObject {
@@ -63,9 +63,9 @@ export interface IPageInformationStandardProcessPageResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -102,7 +102,7 @@ export interface IStandardProcessPagingResponseObject {
     /** 所属分类名称 */
     standardTechnologyCategoryName?: string;
     /** 状态 */
-    status?: string;
+    status?: ('DRAFT' | 'VALID' | 'INVALID');
     /** 缩略图 */
     thumbnail?: string;
 }

@@ -27,13 +27,13 @@ export interface IMessageSchemaAddDTO {
     /** 标题 */
     title?: string;
     /** 已选择的时间类型 */
-    selectedTimeType?: string;
+    selectedTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 是否重复发送 */
-    isRepeatSending?: string;
+    isRepeatSending?: ('Y' | 'N');
     /** 间隔时间 */
     intervalTime?: number;
     /** 间隔时间类型 */
-    intervalTimeType?: string;
+    intervalTimeType?: ('HOUR' | 'DAY');
     /** 消息发送内容模板列表 */
     messageSendingContentTemplateList?: IMessageSendingContentTemplateAddDTO[];
     /** 消息接受人列表 */
@@ -43,16 +43,16 @@ export interface IMessageSchemaAddDTO {
     /** 消息触发节点列表 */
     messageTriggerNodeList?: IMessageTriggerNodeAddDTO[];
     /** 消息类型 */
-    messageType?: string;
+    messageType?: ('CONDITION_TRIGGER' | 'SCHEDULED_SENDING');
     /** 时间配置 */
     timeConfig?: IMessageSchemaTimeConfigAddDTO;
 }
 /** MessageSendingContentTemplateAddDTO */
 export interface IMessageSendingContentTemplateAddDTO {
     /** 消息发送模式 */
-    sendingMode?: string;
+    sendingMode?: ('SYSTEM' | 'SMS' | 'EMAIL');
     /** 是否使用消息模板 */
-    isUseSmsTemplate?: string;
+    isUseSmsTemplate?: ('Y' | 'N');
     /** 消息模板ID */
     smsTemplateId?: number;
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
@@ -62,13 +62,13 @@ export interface IMessageSendingContentTemplateAddDTO {
     /** 字段元数据 */
     fieldMetaList?: IMessageContentFieldMetaAddDTO[];
     /** 是否使用配置 */
-    isUseConfig?: string;
+    isUseConfig?: ('Y' | 'N');
     /** html 内容 */
     htmlContent?: string;
     /** 邮件主题 */
     emailSubject?: string;
     /** 消息链接 */
-    messageLink?: string;
+    messageLink?: ('ADD_PAGE' | 'LINK_PAGE');
 }
 /** MessageContentFieldMetaAddDTO */
 export interface IMessageContentFieldMetaAddDTO {
@@ -86,7 +86,7 @@ export interface IMessageContentFieldMetaAddDTO {
 /** MessageRecipientAddDTO */
 export interface IMessageRecipientAddDTO {
     /** 接收人类型 */
-    recipientType?: string;
+    recipientType?: ('USER' | 'CLASS_GROUP' | 'DEPARTMENT' | 'EMAIL' | 'BUSINESS');
     /** 部门ID列表 */
     departmentIdList?: Record<string, any>[];
     /** 班组ID列表 */
@@ -116,9 +116,9 @@ export interface IOriginalDataFilterConditionAddDTO {
 /** MessageTriggerNodeAddDTO */
 export interface IMessageTriggerNodeAddDTO {
     /** 节点类型 */
-    nodeType?: string;
+    nodeType?: ('LOGICAL_OPERATOR' | 'CONDITIONAL_EXPRESSION' | 'CONDITION_GROUP');
     /** 逻辑运算符类型 */
-    logicalType?: string;
+    logicalType?: ('AND' | 'OR');
     /** 当前触发节点条件ID */
     currentTriggerConditionId?: number;
     /** 上级触发节点ID */
@@ -131,11 +131,11 @@ export interface IMessageTriggerNodeAddDTO {
 /** MessageTriggerConditionAddDTO */
 export interface IMessageTriggerConditionAddDTO {
     /** 触发模式 */
-    triggerMode?: string;
+    triggerMode?: ('BUSINESS_EVENT' | 'MEET_FORMULA');
     /** 消息触发动作 */
-    triggerAction?: string;
+    triggerAction?: ('ADD' | 'REMOVE' | 'ENABLE' | 'DISABLE' | 'FLOW_COMPLETE' | 'RE_SUBMIT');
     /** 消息表达式类型 */
-    expressionType?: string;
+    expressionType?: ('NONE' | 'TIME_FUNCTION' | 'MATH_FUNCTION');
     /** 表-编码 */
     tableCode?: string;
     /** 流程字段编码 */
@@ -151,7 +151,7 @@ export interface IMessageTriggerConditionAddDTO {
     /** 公式字段列表。字段 ["fieldSerialNo"...] */
     formulaFieldList?: Record<string, any>[];
     /** 判断表达式 */
-    judgeExpression?: string;
+    judgeExpression?: ('EQ' | 'GT' | 'GE' | 'LT' | 'LE');
     /** 条件值 */
     value?: string;
     /** html 内容 */
@@ -160,21 +160,21 @@ export interface IMessageTriggerConditionAddDTO {
 /** MessageSchemaTimeConfigAddDTO */
 export interface IMessageSchemaTimeConfigAddDTO {
     /** 时间模式 */
-    timeMode?: string;
+    timeMode?: ('DAY' | 'WEEK' | 'MONTH' | 'QUARTER' | 'HALF_YEAR' | 'YEAR');
     /** 周号 */
     weekNo?: number;
     /** 每月的计时模式 */
-    monthCalcTimeMode?: string;
+    monthCalcTimeMode?: ('FROM_BEGINNING_OF_MONTH' | 'FROM_END_OF_MONTH');
     /** 第几天 */
     day?: number;
     /** 季度计时模式 */
-    quarterCalcTimeMode?: string;
+    quarterCalcTimeMode?: ('FROM_BEGINNING_OF_QUARTER' | 'FROM_END_OF_QUARTER');
     /** 每天第几天 */
     month?: number;
     /** 时间 */
     time?: string;
     /** 每半年计算模式 */
-    halfYearCalcTimeMode?: string;
+    halfYearCalcTimeMode?: ('FROM_BEGINNING_OF_HALF_YEAR' | 'FROM_END_OF_HALF_YEAR');
 }
 /** FormConfigAddDTO */
 export interface IFormConfigAddDTO {
@@ -187,9 +187,9 @@ export interface IFormConfigAddDTO {
     /** 详细流程字段序列号 */
     detailTableFieldSerialNo?: string;
     /** 是否详细流程表 */
-    isDetailFlowTable?: string;
+    isDetailFlowTable?: ('Y' | 'N');
     /** 是否动态表单 */
-    isDynamicForm?: string;
+    isDynamicForm?: ('Y' | 'N');
     /** 表 - 编码 */
     tableCode?: string;
 }

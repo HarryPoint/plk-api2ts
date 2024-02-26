@@ -44,7 +44,7 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     /** 班组ids */
     classGroupIds?: number[];
     /** 查询状态 */
-    queryStatusList?: string[];
+    queryStatusList?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE')[];
     /** 保养计划编号 */
     planCode?: string;
     /** 计划开始时间 */
@@ -57,7 +57,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«设备保养日历-人员模式响应DTO»» */
 export interface IJSONResultPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO {
@@ -85,9 +85,9 @@ export interface IPagingInformationDeviceMaintenanceCalendarPersonnelModeRespond
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -124,7 +124,7 @@ export interface IEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDT
     /** 设备名称 */
     deviceName?: string;
     /** 保养类型 */
-    maintainType?: string;
+    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
     /** 计划开始时间 */
     planTaskStartDate?: string;
     /** 计划结束时间 */
@@ -134,9 +134,9 @@ export interface IEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDT
     /** 任务结束时间 */
     taskEndDate?: string;
     /** 任务状态 */
-    taskStatus?: string;
+    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
     /** 是否执行人 */
-    isExecutor?: string;
+    isExecutor?: ('Y' | 'N');
     /** 查询状态 */
-    queryStatus?: string;
+    queryStatus?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE');
 }

@@ -41,7 +41,7 @@ export interface IProjectTaskResponseObject3 {
     /** 任务截止日期 */
     planEndTime?: string;
     /** 是否超期 */
-    isOverdue?: string;
+    isOverdue?: ('Y' | 'N');
     /** 项目id */
     projectId?: number;
     /** 项目名称 */

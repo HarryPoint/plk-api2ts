@@ -26,7 +26,7 @@ export interface IRoleAuthorizationEditRequest {
     /** 员工id集 */
     userIds?: number[];
     /** 是否是管理员 */
-    isAdmin?: string;
+    isAdmin?: ('Y' | 'N');
     /** 勾选的权限码集 */
     permissionCodes?: string[];
     /** 路由对应的数据权限集 */
@@ -34,7 +34,7 @@ export interface IRoleAuthorizationEditRequest {
     /** 勾选的全局权限码集 */
     globalPermissionCodes?: string[];
     /** 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
@@ -50,7 +50,7 @@ export interface IEnterpriseDataPermissionResponse1 {
 /** 企业数据权限列表响应_1 */
 export interface IEnterpriseDataPermissionListResponse1 {
     /** 数据权限类型 */
-    dataAuthType?: string;
+    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
     /** 数据权限对应的字段列表(只针对表单字段类型) */
     roleDataAuthFieldList?: IEditTheDTOForRoleDataPermissionField[];
 }

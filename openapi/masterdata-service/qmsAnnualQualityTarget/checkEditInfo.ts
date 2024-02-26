@@ -33,7 +33,7 @@ export interface IEditDTOForDetailedAnnualQualityObjectives {
     /** 所属目标项 */
     qmsTargetItemId?: number;
     /** 目标类型 */
-    targetType?: string;
+    targetType?: ('QUALITATIVE_OBJECTIVE' | 'QUANTITATIVE_OBJECTIVE');
     /** 定性目标值 */
     qualitativeTargetValue?: string;
     /** 定量目标值 */
@@ -43,7 +43,7 @@ export interface IEditDTOForDetailedAnnualQualityObjectives {
     /** 监视频率 */
     monitorRate?: string;
     /** 状态 */
-    detailStatus?: string;
+    detailStatus?: ('AUDITING' | 'COMPLETE' | 'NOT_PASS' | 'INVALID');
 }
 /** JSONResult«年度质量目标编辑校验返回DTO» */
 export interface IJSONResultAnnualQualityTargetEditCheckReturnsDTO {
@@ -59,7 +59,7 @@ export interface IJSONResultAnnualQualityTargetEditCheckReturnsDTO {
 /** 年度质量目标编辑校验返回DTO */
 export interface IAnnualQualityObjectiveEditCheckReturnsDTO {
     /** 能否提交 */
-    canSubmit?: string;
+    canSubmit?: ('Y' | 'N');
     /** 失败类型 */
-    checkFailType?: string;
+    checkFailType?: ('YEAR_EXIST' | 'QUALITY_WORK_PLAN_EXIT');
 }

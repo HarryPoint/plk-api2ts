@@ -24,7 +24,7 @@ export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 设备id */
     deviceId: number;
     /** 是否有异常 */
-    hasError?: string;
+    hasError?: ('Y' | 'N');
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«设备数采明细报表导出VO»» */
 export interface IJSONResultListExportDetailedDeviceDataCollectionReportVO {
@@ -73,7 +73,7 @@ export interface IExportDetailedDeviceDataCollectionReportVO {
     /** 上限 */
     upperLimit?: number;
     /** 异常类型 */
-    errorType?: string;
+    errorType?: ('UPPER' | 'LOWER');
     /** 异常值 */
     errorResult?: number;
 }

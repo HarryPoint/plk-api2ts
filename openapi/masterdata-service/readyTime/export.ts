@@ -28,14 +28,14 @@ export interface IPreparationPeriodQueryVO {
     /** 名称 */
     name?: string;
     /** 规则类型 */
-    ruleType?: string;
+    ruleType?: ('EQUAL' | 'NOT_EQUAL');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

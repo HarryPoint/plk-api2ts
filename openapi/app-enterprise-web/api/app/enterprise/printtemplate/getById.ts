@@ -33,13 +33,13 @@ export interface IPrintTemplateResponseObject1 {
     /** 数据状态 */
     dataStatus?: number;
     /** 打印模板类型 */
-    type?: string;
+    type?: ('LIST' | 'FORM' | 'FORM_DETAIL');
     /** 数据源权限码 */
     pcode?: string;
     /** 数据源名称 */
     name?: string;
     /** 数据源类型 */
-    dataSourceType?: string;
+    dataSourceType?: ('DYNAMIC_FORM' | 'FUN' | 'REPORT');
     /** 父级数据源id */
     parentId?: number;
     /** 应用流程id */
@@ -72,7 +72,7 @@ export interface IPrintTheTemplateResponseObject {
     /** 字段名称 */
     name?: string;
     /** 字段类型 */
-    type?: string;
+    type?: ('FIELD' | 'TEXT' | 'TABLE' | 'BAR_CODE' | 'QR_CODE' | 'IMAGE' | 'LINE' | 'HEADER' | 'FOOTER' | 'PAGE_NO');
     /** 关联表单字段id */
     fieldId?: number;
     /** 关联字段编码 */
@@ -84,15 +84,15 @@ export interface IPrintTheTemplateResponseObject {
     /** 文本内容 */
     textContent?: string;
     /** 是否表格内字段 */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** 扫码类型 */
-    scanCodeType?: string;
+    scanCodeType?: ('FORM_FIELD' | 'CUSTOM' | 'ADD_FORM_URL');
     /** 扫码内容 */
     scanCodeContent?: string;
     /** 图片key */
     imageKey?: string;
     /** 线条方向 */
-    lineDirection?: string;
+    lineDirection?: ('TRANSVERSE' | 'LONGITUDINAL');
     /** 页眉内容 */
     headerContent?: string;
     /** 页脚内容 */

@@ -31,5 +31,5 @@ export interface IFileCategoryListQueryResponseDTO {
     /** 分类名称 */
     name?: string;
     /** 用户权限列表 */
-    userPermissionList?: string[];
+    userPermissionList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
 }

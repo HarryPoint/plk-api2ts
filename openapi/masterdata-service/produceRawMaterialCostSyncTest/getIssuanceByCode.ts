@@ -33,7 +33,7 @@ export interface IProductionMaterialIssuanceOrderCostFetchBO {
     /** undefined */
     detailList?: IProductionMaterialIssuanceOrderCostFetchDetailBO[];
     /** undefined */
-    success?: string;
+    success?: ('Y' | 'N');
     /** undefined */
     errorInfo?: string;
 }

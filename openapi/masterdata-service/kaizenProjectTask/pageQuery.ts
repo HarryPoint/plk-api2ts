@@ -28,11 +28,11 @@ export interface IPagingInformation {
     /** 开始时间 - 结束范围 */
     beginTimeEnd?: string;
     /** 任务状态 - 下拉多选 */
-    projectTaskStatusList?: string[];
+    projectTaskStatusList?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED')[];
     /** 执行人 - 下拉多选 */
     leaderUserIdList?: number[];
     /** 优先级 - 下拉多选查询 */
-    priorityList?: string[];
+    priorityList?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY')[];
     /** 创建时间 - 结束范围 */
     createTimeEnd?: string;
     /** 备注 - 关键字查询 */
@@ -42,7 +42,7 @@ export interface IPagingInformation {
     /** 创建时间 - 开始范围 */
     createTimeBegin?: string;
     /** 创建时间 - Y - 正序， N - 倒序 */
-    createTimeAsc?: string;
+    createTimeAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«KaizenProjectTaskResponseDTO»» */
 export interface IKaizenProjectTaskResponseDTOJSONResultPagingInformation {
@@ -70,9 +70,9 @@ export interface IThePagingInformationKaizenProjectTaskResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -87,7 +87,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 名称 */
     name?: string;
     /** 项目任务状态 */
-    projectTaskStatus?: string;
+    projectTaskStatus?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED');
     /** 关联项目 */
     projectId?: IAssociateFormDataVO;
     /** 执行人 */
@@ -99,7 +99,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 结束时间 */
     endTime?: string;
     /** 优先级 */
-    priority?: string;
+    priority?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY');
     /** 备注 */
     remark?: string;
     /** 创建用户ID */
@@ -118,7 +118,7 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: string;
+    isRemovedShowField?: ('Y' | 'N');
     /** 主数据ID */
     masterDataId?: number;
 }

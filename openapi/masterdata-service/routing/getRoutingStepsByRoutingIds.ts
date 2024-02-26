@@ -59,13 +59,13 @@ export interface IBaseVO1 {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: string;
+    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
     /** 进出站方式 */
-    inOutType?: string;
+    inOutType?: ('PART' | 'ALL');
     /** 是否允许直接出站 */
-    allowDirectExit?: string;
+    allowDirectExit?: ('Y' | 'N');
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: string;
+    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
     /** 合格产出工费单价 */
     producePrice?: number;
     /** 返工产出工费单价 */
@@ -73,7 +73,7 @@ export interface IBaseVO1 {
     /** 产能-生产时间 */
     capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType?: string;
+    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 准备工费（元） */

@@ -28,7 +28,7 @@ export interface IInspectionTaskSearchesForVO {
     /** 采购收货单编号 */
     purchaseWorkOrderNo?: string;
     /** 任务类型 */
-    taskType?: string;
+    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
     /** 任务编号 */
     qualityStorageTaskNo?: string;
     /** 检验日期查询结束时间 */
@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

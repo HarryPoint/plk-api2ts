@@ -31,9 +31,9 @@ export interface IProcessDocumentationVO {
     /** 文档名称 */
     name?: string;
     /** 展示模块 */
-    displayModuleEnum?: string;
+    displayModuleEnum?: ('BAD_PRODUCT' | 'PACKAGE_WORK' | 'PRODUCE_WORK');
     /** 是否在大屏上展示 */
-    isDisplayEnum?: string;
+    isDisplayEnum?: ('Y' | 'N');
     /** 展示模块 -- 字符串 */
     displayModule?: string;
     /** 是否在大屏上展示 -- 字符串 */

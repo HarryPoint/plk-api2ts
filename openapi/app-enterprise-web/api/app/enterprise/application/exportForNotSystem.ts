@@ -22,7 +22,7 @@ export interface IProcessSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 是否是系统应用 */
-    isSystem?: string;
+    isSystem?: ('Y' | 'N');
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 名称 */
@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

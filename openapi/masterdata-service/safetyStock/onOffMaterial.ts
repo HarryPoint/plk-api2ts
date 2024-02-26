@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchW
 /** 安全库存物料开关预警 */
 export interface ISafetyStockMaterialSwitchWarning {
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
     /** 物料id */
     materialId: number;
     /** 是否开启预警 */
-    isWarning?: string;
+    isWarning?: ('Y' | 'N');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

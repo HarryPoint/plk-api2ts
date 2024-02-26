@@ -27,7 +27,7 @@ export interface IJSONResultListDeviceStatusVO {
 /** 设备状态VO */
 export interface IDeviceStatusVO {
     /** 设备状态 */
-    status?: string;
+    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 设备状态描述 */
     statusDesc?: string;
 }

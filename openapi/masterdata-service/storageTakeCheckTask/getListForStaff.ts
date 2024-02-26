@@ -24,13 +24,13 @@ export interface IPublicBacklogDataQuery {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList?: string[];
+    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
     /** 是否超时(生产任务) */
-    isTimeout?: string;
+    isTimeout?: ('Y' | 'N');
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList?: string[];
+    qualityProduceTaskStatusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
     /** 生产任务可操作类型 */
-    optTypes?: string[];
+    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
 }
 /** JSONResult«List«StorageTakeCheckTaskResponseDTO»» */
 export interface IJSONResultListStorageTakeCheckTaskResponseDTO {
@@ -52,7 +52,7 @@ export interface IStorageTakeCheckTaskResponseDTO {
     /** 盘点仓库id */
     storehouseId?: number;
     /** 盘点范围 */
-    scopeType?: string;
+    scopeType?: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
     /** 任务号 */
     taskNo?: string;
     /** 处理人id */
@@ -62,5 +62,5 @@ export interface IStorageTakeCheckTaskResponseDTO {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
 }

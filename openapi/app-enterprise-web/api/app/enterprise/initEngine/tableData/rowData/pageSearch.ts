@@ -22,26 +22,26 @@ export interface ISearchForRowData1 {
     /** 当前页面 */
     pageNo?: number;
     /** 错误数据 */
-    existsErrorData?: string;
+    existsErrorData?: ('Y' | 'N');
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 校验状态 */
-    verificationStatus?: string;
+    verificationStatus?: ('NOT' | 'FAILED_VERIFICATION' | 'VERIFICATION_PASSED');
     /** 操作模式 */
-    operationMode?: string;
+    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
     /** 生效状态 */
-    importStatus?: string;
+    importStatus?: ('NOT_IMPORTED' | 'IMPORTED' | 'IMPORT_FAIL');
     /** 存在重复的数据 */
-    existsRepeatData?: string;
+    existsRepeatData?: ('Y' | 'N');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«RowDataOutputDTO»» */
 export interface IJSONResultPageInformationRowDataOutputDTO {
@@ -69,9 +69,9 @@ export interface IPageInformationRowDataOutputDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -86,9 +86,9 @@ export interface IRowDataOutputDTO {
     /** 行下标 */
     rowIndex?: number;
     /** 导入状态 */
-    importStatus?: string;
+    importStatus?: ('NOT_IMPORTED' | 'IMPORTED' | 'IMPORT_FAIL');
     /** 操作方式 */
-    operationMode?: string;
+    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
     /** 是否存在业务数据 */
     existsBusinessData?: boolean;
     /** 错误消息 */
@@ -100,7 +100,7 @@ export interface IRowDataOutputDTO {
     /** 单元格数据 */
     cellDataList?: ICellData1[];
     /** 校验状态 */
-    verificationStatus?: string;
+    verificationStatus?: ('NOT' | 'FAILED_VERIFICATION' | 'VERIFICATION_PASSED');
 }
 /** 单元格数据_1 */
 export interface ICellData1 {
@@ -119,7 +119,7 @@ export interface ICellData1 {
     /** 原始数据 */
     originalData?: string;
     /** 是否校正数据 */
-    correctionValue?: string;
+    correctionValue?: ('Y' | 'N');
     /** 预警信息 */
     alarmLogList?: IAlarmLogOutputDTO[];
     /** 关联表单选项列表 */
@@ -135,7 +135,7 @@ export interface IAlarmLogOutputDTO {
     /** undefined */
     alarmMessage?: string;
     /** undefined */
-    alarmLevel?: string;
+    alarmLevel?: ('ERROR' | 'WARNING');
 }
 /** AssociationFormSelectedItemOutputDTO */
 export interface IAssociationFormSelectedItemOutputDTO {

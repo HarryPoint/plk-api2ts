@@ -34,20 +34,20 @@ export interface IProductionOrdersGanttChartSearchVO {
     /** 创建时间 - 结束, yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 生产部门id */
     placeOrderCombinationId?: number;
     /** 分组方式 */
-    groupType?: string;
+    groupType?: ('COMBINATION' | 'PRODUCE_ORDER');
     /** 订单排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«生产订单甘特返回VO» */
 export interface IJSONResultProductionOrderGanttReturnedToVO {
@@ -84,9 +84,9 @@ export interface IPageInformationProductionOrderGanttReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -133,11 +133,11 @@ export interface IProductionOrderGanttReturnedToVO {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 订单状态描述 */
     orderStatusDesc?: string;
     /** 订单排产状态 */
-    planStatus?: string;
+    planStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 订单排产状态描述 */
     planStatusDesc?: string;
     /** 优先级 */
@@ -165,7 +165,7 @@ export interface IProductionOrderGanttReturnedToVO {
     /** 对应物料单位 */
     materialUnitId?: number;
     /** 订单类型 */
-    orderType?: string;
+    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
     /** 订单类型描述 */
     orderTypeDesc?: string;
     /** 对应标准工艺路径id */

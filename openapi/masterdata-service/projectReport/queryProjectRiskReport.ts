@@ -39,9 +39,9 @@ export interface IPageInformationProjectRiskReportResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -74,11 +74,11 @@ export interface IProjectRiskReportResponseObject {
     /** 项目经理名称 */
     projectManagerName?: string;
     /** 是否超期 */
-    isOverdue?: string;
+    isOverdue?: ('Y' | 'N');
     /** 超期天数(天) */
     overdueDay?: number;
     /** 状态 */
-    status?: string;
+    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
@@ -90,7 +90,7 @@ export interface IProjectRiskReportResponseObject {
     /** 风险标识名称 */
     projectRiskFlagName?: string;
     /** 风险等级 */
-    level?: string;
+    level?: ('LOW' | 'MID' | 'HIGH');
     /** 责任单位 */
     responsibleDeptName?: string;
     /** 要求完成时间 */

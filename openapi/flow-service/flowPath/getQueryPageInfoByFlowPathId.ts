@@ -41,7 +41,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: string;
+    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -58,7 +58,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
@@ -73,7 +73,7 @@ export interface IFormDataGroupingDTO {
     /** 下级分组 */
     children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData?: string;
+    cascadeFormData?: ('Y' | 'N');
     /** 多级基础数据上级ID */
     treeDataParentId?: number;
 }
@@ -106,7 +106,7 @@ export interface IFlowPathBaseVO {
     /** undefined */
     lastName?: string;
     /** undefined */
-    type?: string;
+    type?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
 }
 /** FlowPathTableColumnBaseVO */
 export interface IFlowPathTableColumnBaseVO {
@@ -115,11 +115,11 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     code?: string;
     /** undefined */
-    isTableField?: string;
+    isTableField?: ('Y' | 'N');
     /** undefined */
-    formFieldType?: string;
+    formFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** undefined */
-    formFieldTypeGroup?: string;
+    formFieldTypeGroup?: ('FORM' | 'STYLE');
     /** undefined */
     parentFlowPathFormFieldCode?: string;
     /** undefined */
@@ -137,11 +137,11 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     actualFields?: Record<string, any>[];
     /** undefined */
-    isAutoGetLocation?: string;
+    isAutoGetLocation?: ('Y' | 'N');
     /** undefined */
-    addressType?: string;
+    addressType?: ('REGION_AND_DETAIL_ADDRESS' | 'REGION' | 'STREET_AND_DETAIL_ADDRESS' | 'STREET');
     /** undefined */
-    numberFormat?: string;
+    numberFormat?: ('F1' | 'F2' | 'F3' | 'F4');
     /** undefined */
     dynamicControlValueFieldSerialNo?: string;
     /** undefined */
@@ -149,14 +149,14 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     processorShowFieldCode?: string;
     /** undefined */
-    organizationType?: string;
+    organizationType?: ('NONE' | 'CLASS_GROUP' | 'DEPARTMENT' | 'USER' | 'PROCESSOR');
 }
 /** NumberRuleDetailBaseVO */
 export interface INumberRuleDetailBaseVO {
     /** undefined */
-    type?: string;
+    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
     /** undefined */
-    dateFormat?: string;
+    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
     /** undefined */
     fixValue?: string;
     /** undefined */
@@ -166,7 +166,7 @@ export interface INumberRuleDetailBaseVO {
     /** undefined */
     stepValue?: number;
     /** undefined */
-    isCodeAccording?: string;
+    isCodeAccording?: ('Y' | 'N');
     /** undefined */
     flowPathFormFieldCodeNumberRuleId?: number;
 }

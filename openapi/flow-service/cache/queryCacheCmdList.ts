@@ -38,7 +38,7 @@ export interface ICacheCmdQueryResponseDTO {
     /** undefined */
     id?: number;
     /** undefined */
-    cmdType?: string;
+    cmdType?: ('DELETE');
     /** undefined */
     cacheType?: string;
     /** undefined */

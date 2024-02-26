@@ -20,16 +20,16 @@ export interface ILotSerialNumberPlanAddRequestDTO {
     /** 批次方案名称 */
     name?: string;
     /** 方案类型 */
-    planType?: string;
+    planType?: ('SERIAL_NO' | 'BATCH_NO');
     /** 规则列表 */
     ruleList?: ILotSerialNumberPlanRuleAddRequestDTO[];
 }
 /** LotSerialNumberPlanRuleAddRequestDTO */
 export interface ILotSerialNumberPlanRuleAddRequestDTO {
     /** 规则类型 */
-    type?: string;
+    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
     /** 日期类型 */
-    dateFormat?: string;
+    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
     /** 应用引擎ID */
     flowPathId?: number;
     /** 应用引擎编码 */
@@ -39,7 +39,7 @@ export interface ILotSerialNumberPlanRuleAddRequestDTO {
     /** 字段序列号 */
     flowPathFormFiledSerialNo?: string;
     /** 值提取方法 */
-    valueExtractMethod?: string;
+    valueExtractMethod?: ('COMPLETE' | 'PART');
     /** 起始Index */
     startIndex?: number;
     /** 结束Index */

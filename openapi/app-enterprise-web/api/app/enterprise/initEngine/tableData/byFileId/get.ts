@@ -35,9 +35,9 @@ export interface ITabularData {
     /** 文件ID */
     fileId?: number;
     /** 状态 */
-    verificationStatus?: string;
+    verificationStatus?: ('NOT_VERIFIED' | 'CHECKING' | 'VERIFIED' | 'VERIFIED_FAIL');
     /** 数据导入状态 */
-    importStatus?: string;
+    importStatus?: ('NOT' | 'COMPLETE' | 'IMPORTING' | 'IMPORT_FAIL');
     /** 消息 */
     message?: string;
     /** 描述 */

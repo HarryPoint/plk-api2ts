@@ -18,7 +18,7 @@ export interface ISecurityInventoryChangeRequestReviewDTO {
     /** id */
     id?: number;
     /** 审核类型 */
-    examineType?: string;
+    examineType?: ('PASS' | 'REFUSE');
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {

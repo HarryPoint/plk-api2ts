@@ -52,11 +52,11 @@ export interface IQualityProduceTaskVO {
     /** 所属生产任务号 */
     produceTaskNo?: string;
     /** 生产任务类型 */
-    produceTaskType?: string;
+    produceTaskType?: ('PRODUCE' | 'BACK');
     /** 对应生产处理id */
     produceHandleId?: number;
     /** 质检任务类型 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 生产订单id */
     produceOrderId?: number;
     /** 生产订单号 */
@@ -84,7 +84,7 @@ export interface IQualityProduceTaskVO {
     /** 仓位物料库存关联id */
     warehouseMaterialRpId?: number;
     /** 仓位物料WIP关联数量状态 */
-    quantityStatus?: string;
+    quantityStatus?: ('NORMAL' | 'WAIT_INSPECTION' | 'INSPECTION_PASS' | 'INSPECTION_CONCESSION' | 'INSPECTION_NOT_PASS' | 'APPLY_BACK' | 'APPLY_SCRAP' | 'HOLD' | 'ENTRUST_BACK');
     /** 对应工厂日历id */
     factoryCalendarId?: number;
     /** 对应班组id */
@@ -114,7 +114,7 @@ export interface IQualityProduceTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 取消人 */
     cancelUserId?: number;
     /** 取消时间 */
@@ -133,7 +133,7 @@ export interface IQualityStorageTaskVO {
     /** 任务号 */
     taskNo?: string;
     /** 质检任务类型 */
-    type?: string;
+    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
     /** 采购收货单id */
     purchaseWorkOrderId?: number;
     /** 对应物料id */
@@ -169,13 +169,13 @@ export interface IQualityStorageTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
     /** 取消人 */
     cancelUserId?: number;
     /** 取消时间 */
     cancelTime?: string;
     /** 质检任务类型 */
-    taskType?: string;
+    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
 }
 /** 质检方案质检项idVO */
 export interface IQualityInspectionSolutionQualityInspectionItemIdVO {

@@ -33,9 +33,9 @@ export interface IProductionTaskCustomCardStyleResponseObjectDTO {
     /** 字段code */
     formFieldCode?: string;
     /** 字段类型 */
-    formFieldType?: string;
+    formFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
     /** 字段表 */
-    formFieldTable?: string;
+    formFieldTable?: ('PRODUCE_ORDER' | 'PRODUCE_TASK');
     /** 显示位置 */
     displayPosition?: string;
     /** 扩展元数据 */

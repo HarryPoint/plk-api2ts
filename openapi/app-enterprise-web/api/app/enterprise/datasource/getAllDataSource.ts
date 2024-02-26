@@ -35,7 +35,7 @@ export interface IDataSourceResponseObject {
     /** 数据源名称 */
     name?: string;
     /** 数据源类型 */
-    dataSourceType?: string;
+    dataSourceType?: ('DYNAMIC_FORM' | 'FUN' | 'REPORT');
     /** 父级数据源id */
     parentId?: number;
     /** 应用流程id */
@@ -43,7 +43,7 @@ export interface IDataSourceResponseObject {
     /** 应用流程状态 */
     flowPathDataStatus?: number;
     /** 是否主表 */
-    isMaster?: string;
+    isMaster?: ('Y' | 'N');
     /** 应用路由Id */
     enterpriseRouterId?: string;
     /** 应用路由code */
@@ -51,7 +51,7 @@ export interface IDataSourceResponseObject {
     /** 服务对象id */
     serviceObjectId?: number;
     /** 服务包类型 - 应用级别 */
-    applicationLevel?: string;
+    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
     /** 子数据源 */
     childDataSources?: IDataSourceResponseObject[];
 }

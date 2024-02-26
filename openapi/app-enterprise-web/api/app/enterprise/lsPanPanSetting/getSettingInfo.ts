@@ -31,9 +31,9 @@ export interface IPanpanProductionLargeScreenSettingsResponseDTO {
     /** 大屏展示工序id集 */
     processIds?: IIdNameNumberVO[];
     /** 延期订单判断类型 */
-    produceOrderOverdueType?: string;
+    produceOrderOverdueType?: ('PLAN_END_TIME' | 'THEORETIC_END_TIME');
     /** 开始时间月份类型 */
-    monthBeginType?: string;
+    monthBeginType?: ('LAST_MONTH' | 'CURRENT_MONTH');
     /** 开始时间月份日期 */
     monthBeginDay?: number;
     /** 结束时间月份日期 */
@@ -41,7 +41,7 @@ export interface IPanpanProductionLargeScreenSettingsResponseDTO {
     /** 大屏中上 - 本月计划数量 */
     thisMonthPlanQuantity?: number;
     /** 大屏左上 - 当日生产概览 - 各工序当日完工情况表 产出数 取值逻辑类型 */
-    panPanProduceOrderCompleteType?: string;
+    panPanProduceOrderCompleteType?: ('ACTUAL_MOVE_OUT_QUANTITY' | 'PLAN_ORDER_MOVE_OUT_QUANTITY');
     /** 大屏中上 - 本月累计订单量 */
     thisMonthOrderCount?: number;
 }

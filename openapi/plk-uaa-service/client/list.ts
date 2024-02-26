@@ -33,7 +33,7 @@ export interface ITheClientRespondsToTheDTO {
     /** 名称 */
     name?: string;
     /** 登录类型 */
-    loginType?: string;
+    loginType?: ('MANAGE' | 'SAAS');
     /** 客户端组 */
     clientGroup?: ITheClientGroupRespondsToTheDTO;
 }

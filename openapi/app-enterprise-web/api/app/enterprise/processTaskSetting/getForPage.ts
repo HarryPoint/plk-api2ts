@@ -18,7 +18,7 @@ export interface IProcessTaskSearchVO {
     /** 工序id集合 */
     processIds?: number[];
     /** 是否需要分配 */
-    isAssign?: string;
+    isAssign?: ('Y' | 'N');
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«分页信息«工序任务设置VO»» */
 export interface IJSONResultPagingInformationProcedureTaskSetVO {
@@ -59,9 +59,9 @@ export interface IPagingInformationProcedureTaskSetVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: string;
+    hasPreviousPage?: ('Y' | 'N');
     /** 是否有下一页 */
-    hasNextPage?: string;
+    hasNextPage?: ('Y' | 'N');
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -76,7 +76,7 @@ export interface IProcedureTaskSetVO {
     /** 工序编号 */
     processCode?: string;
     /** 是否需要分配 */
-    isAssign?: string;
+    isAssign?: ('Y' | 'N');
     /** 默认操作人员列表 */
     defaultUserList?: IIdNameNumberVO[];
 }

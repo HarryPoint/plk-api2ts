@@ -31,7 +31,7 @@ export interface ITheProcessTaskReturnsToVO {
     /** 所属企业id */
     enterpriseId?: number;
     /** 任务类型 */
-    type?: string;
+    type?: ('EXECUTE' | 'APPROVAL');
     /** 任务号 */
     taskNo?: string;
     /** 所属流程工单id */
@@ -63,13 +63,13 @@ export interface ITheProcessTaskReturnsToVO {
     /** 总超时秒 */
     totalTimeoutTime?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'HANDLED' | 'CLOSE');
     /** 审批状态 */
-    approvalStatus?: string;
+    approvalStatus?: ('PASS' | 'REFUSE' | 'BACK');
     /** 执行状态 */
-    executeStatus?: string;
+    executeStatus?: ('HANDLE' | 'BACK');
     /** 接受状态 */
-    acceptStatus?: string;
+    acceptStatus?: ('ACCEPTED' | 'WAIT_ACCEPT');
     /** 审批意见/执行情况 */
     notes?: string;
     /** 任务接受时间 */

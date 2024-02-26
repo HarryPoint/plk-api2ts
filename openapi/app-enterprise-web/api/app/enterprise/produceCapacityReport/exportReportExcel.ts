@@ -32,7 +32,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** undefined */
     produceTaskIds?: number[];
     /** undefined */
-    panPanProduceOrderCompleteType?: string;
+    panPanProduceOrderCompleteType?: ('ACTUAL_MOVE_OUT_QUANTITY' | 'PLAN_ORDER_MOVE_OUT_QUANTITY');
     /** 是否按天数过滤 */
     isFilterByDayCount?: boolean;
 }
@@ -41,7 +41,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

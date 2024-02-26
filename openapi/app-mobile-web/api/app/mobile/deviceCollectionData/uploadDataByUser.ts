@@ -20,9 +20,9 @@ export interface IDeviceDataAcquisitionDataUpload {
     /** 设备编号 */
     deviceCode: string;
     /** 设备连线状态 */
-    onlineStatus: string;
+    onlineStatus: ('ONLINE' | 'OFFLINE');
     /** 设备状态 */
-    status: string;
+    status: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
     /** 自定义参数，json对象，参数的编号为key键，参数值为value值 */
     ext: Record<string, Record<string, any>>;
 }

@@ -18,7 +18,7 @@ export interface ITheProductionTaskChangesTheStatusDTO {
     /** id */
     id?: number;
     /** 状态 */
-    status?: string;
+    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
     /** 生产异常类型id */
     produceAbnormalCategoryId: number;
     /** 备注 */

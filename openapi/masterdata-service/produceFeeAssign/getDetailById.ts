@@ -50,7 +50,7 @@ export interface IDurationResponseObject {
     /** 结束日期 */
     endDate?: string;
     /** 是否当前期间 */
-    isCurrentFiscalPeriod?: string;
+    isCurrentFiscalPeriod?: ('Y' | 'N');
 }
 /** 生产成本分配明细响应对象 */
 export interface IProductionCostAllocationDetailResponseObject {
@@ -63,7 +63,7 @@ export interface IProductionCostAllocationDetailResponseObject {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: string;
+    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
     /** 计划开工日期 */
     planBeginTime?: string;
     /** 物料id */

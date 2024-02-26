@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISafetyInventoryMaterialInv
 /** 安全库存物料库存配置信息搜索VO */
 export interface ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO {
     /** 设置类型 */
-    type: string;
+    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
     /** 对应业务id */
     businessId?: number;
     /** 物料id */

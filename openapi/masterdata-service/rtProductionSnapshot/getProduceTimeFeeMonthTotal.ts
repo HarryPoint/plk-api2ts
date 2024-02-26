@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«工时工费月度汇总统计报表返回VO» */
 export interface IJSONResultMonthlySummaryStatisticalReportOfManHourFeeReturnedToVO {

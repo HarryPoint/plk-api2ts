@@ -34,14 +34,14 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: string;
+    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«List«订单进度统计导出VO»» */
 export interface IJSONResultListExportOrderProgressStatisticsVO {
@@ -61,7 +61,7 @@ export interface IOrderProgressStatisticsAreDerivedVO2 {
     /** 客户名称 */
     customerName?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: string;
+    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
     /** 销售订单状态字符串 */
     salesOrderStatusDesc?: string;
     /** 销售订单明细 */
@@ -135,11 +135,11 @@ export interface IOrderProgressStatisticsAreExportedToVO {
     /** 生产数量 */
     convertQuantity?: number;
     /** 生产订单状态 */
-    produceOrderStatus?: string;
+    produceOrderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 生产订单状态描述 */
     produceOrderStatusStr?: string;
     /** 排产状态 */
-    produceOrderPlanStatus?: string;
+    produceOrderPlanStatus?: ('WAIT' | 'PART' | 'ALL');
     /** 排产状态描述 */
     produceOrderPlanStatusStr?: string;
     /** 计划生产开始时间 */

@@ -24,7 +24,7 @@ export interface ISilopusBigScreenSetUpTheDTO {
     /** 工序目标值设置集 */
     processTargetSettings: ISilopusProcessTargetValueLargeScreenSetDTO[];
     /** 报废数据前五统计时间类型 */
-    scrapStatisticsTime: string;
+    scrapStatisticsTime: ('ONE_DAY' | 'SEVEN_DAY' | 'FIFTEEN_DAY' | 'THIRTY_DAY');
 }
 /** 西偌帕斯大屏计划数设置DTO */
 export interface ISilopusLargeScreenProjectNumberSetDTO {

@@ -35,7 +35,7 @@ export interface IShiftBackVO {
     /** 开始时间 */
     beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType?: string;
+    endTimeType?: ('TODAY' | 'NEXT');
     /** 结束时间 */
     endTime?: string;
     /** 状态 */

@@ -95,9 +95,9 @@ export interface IPanpanProductionLargeScreenBackOrderResponseDTO {
     /** 订单编码 */
     produceOrderCode?: string;
     /** 订单状态 */
-    orderStatus?: string;
+    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
     /** 是否主订单 */
-    isMaster?: string;
+    isMaster?: ('Y' | 'N');
     /** 投产日期 */
     createDate?: string;
 }

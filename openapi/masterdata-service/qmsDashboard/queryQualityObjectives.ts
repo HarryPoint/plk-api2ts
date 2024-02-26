@@ -20,7 +20,7 @@ export interface IQmsLargeScreenTimeIntervalRequest {
     /** 查询日期的结束 */
     dateRangeEnd?: string;
     /** 查询日期区间类型 */
-    dateRangeType?: string;
+    dateRangeType?: ('YEAR' | 'QUARTER' | 'MONTH');
 }
 /** JSONResult«List«质量目标返回DTO»» */
 export interface IJSONResultListTheQualityTargetReturnsTheDTO {
@@ -38,7 +38,7 @@ export interface ITheQualityTargetReturnsTheDTO {
     /** 质量目标 */
     name?: string;
     /** 目标值类型 */
-    targetType?: string;
+    targetType?: ('QUALITATIVE_OBJECTIVE' | 'QUANTITATIVE_OBJECTIVE');
     /** 定性目标值 */
     qualitativeTargetValue?: string;
     /** 定量目标值 */

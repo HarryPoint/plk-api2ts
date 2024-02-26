@@ -38,14 +38,14 @@ export interface IFinancialPeriodQueryRequest {
     /** 天数 - End */
     daysEnd?: number;
     /** 结存状态列表 */
-    balanceStatusList?: string[];
+    balanceStatusList?: ('UNBALANCED' | 'BALANCED')[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: string;
+    isAsc?: ('Y' | 'N');
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {

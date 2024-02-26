@@ -20,21 +20,21 @@ export interface IProjectTaskRuleEditRequestDTO {
     /** 项目任务ID */
     projectTaskId?: number;
     /** 任务类型 */
-    taskType?: string;
+    taskType?: ('REVIEW_TASK' | 'DECISION_TASK' | 'GENERAL_TASK');
     /** 不通过比较类型 */
-    notPassCompareType?: string;
+    notPassCompareType?: ('GT' | 'GE');
     /** 不通过的临界值 */
     notPassRuleValue?: number;
     /** 通过的比较类型 */
-    passCompareType?: string;
+    passCompareType?: ('GT' | 'GE');
     /** 通过比较值 */
     passRuleValue?: number;
     /** 带风险通过的比较类型 */
-    takeRiskPassCompareType?: string;
+    takeRiskPassCompareType?: ('GT' | 'GE');
     /** 带风险通过比较值 */
     takeRiskPassRuleValue?: number;
     /** 修改比较类型 */
-    modifyCompareType?: string;
+    modifyCompareType?: ('GT' | 'GE');
     /** 修改规则值 */
     modifyRuleValue?: number;
     /** 修改任务ID列表 */
@@ -47,7 +47,7 @@ export interface IJSONResultstring1 {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: string;
+    data?: ('Y' | 'N');
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
 }
