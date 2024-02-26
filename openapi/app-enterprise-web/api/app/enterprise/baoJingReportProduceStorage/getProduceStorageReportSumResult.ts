@@ -53,7 +53,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«宝晶报表(成品日报表)合计返回VO» */
 export interface IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO {
@@ -94,4 +94,11 @@ export interface IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO {
     endRawQuantity?: number;
     /** 期末-待处理数 */
     endWaitQuantity?: number;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

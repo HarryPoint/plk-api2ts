@@ -18,7 +18,7 @@ export interface ITheProductionTaskChangesTheStatusDTO {
     /** id */
     id?: number;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: ETheProductionTaskChangesTheStatusDTO_status;
     /** 生产异常类型id */
     produceAbnormalCategoryId: number;
     /** 备注 */
@@ -34,4 +34,19 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETheProductionTaskChangesTheStatusDTO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

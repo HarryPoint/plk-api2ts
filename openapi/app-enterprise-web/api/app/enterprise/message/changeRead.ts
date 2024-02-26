@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IMessageChangeReadDTO }, ex
 /** 消息变更已读DTO */
 export interface IMessageChangeReadDTO {
     /** 是否全部标记已读 */
-    isAll: ('Y' | 'N');
+    isAll: EMessageChangeReadDTO_isAll;
     /** 单个标记id，isAll=N时必传 */
     id?: number;
 }
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EMessageChangeReadDTO_isAll {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

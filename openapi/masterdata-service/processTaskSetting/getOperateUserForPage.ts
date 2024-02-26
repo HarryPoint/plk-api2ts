@@ -24,7 +24,7 @@ export interface IProcessOperatorSearchesVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工类型 */
-    userType: ('PRODUCE' | 'QUALITY');
+    userType: EProcessOperatorSearchesVO_userType;
     /** 员工id集合 */
     userIds?: number[];
     /** 部门id集合 */
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«工序操作人员VO»» */
 export interface IJSONResultPagingInformationProcessOperatorVO {
@@ -65,9 +65,9 @@ export interface IPagingInformationProcessOperatorVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationProcessOperatorVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationProcessOperatorVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -93,4 +93,30 @@ export interface IProcessOperatorVO {
     classGroupName?: string;
     /** 班组编号 */
     classGroupCode?: string;
+}
+
+export enum EProcessOperatorSearchesVO_userType {
+    /** 生产 */
+    PRODUCE = "PRODUCE",
+    /** 质量 */
+    QUALITY = "QUALITY"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationProcessOperatorVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationProcessOperatorVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

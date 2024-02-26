@@ -26,7 +26,7 @@ export interface IRoleAuthorizationEditRequest {
     /** 员工id集 */
     userIds?: number[];
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: ERoleAuthorizationEditRequest_isAdmin;
     /** 勾选的权限码集 */
     permissionCodes?: string[];
     /** 路由对应的数据权限集 */
@@ -34,7 +34,7 @@ export interface IRoleAuthorizationEditRequest {
     /** 勾选的全局权限码集 */
     globalPermissionCodes?: string[];
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleAuthorizationEditRequest_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
@@ -50,7 +50,7 @@ export interface IEnterpriseDataPermissionResponse1 {
 /** 企业数据权限列表响应_1 */
 export interface IEnterpriseDataPermissionListResponse1 {
     /** 数据权限类型 */
-    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
+    dataAuthType?: EEnterpriseDataPermissionListResponse1_dataAuthType;
     /** 数据权限对应的字段列表(只针对表单字段类型) */
     roleDataAuthFieldList?: IEditTheDTOForRoleDataPermissionField[];
 }
@@ -71,4 +71,29 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ERoleAuthorizationEditRequest_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleAuthorizationEditRequest_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
+}
+
+export enum EEnterpriseDataPermissionListResponse1_dataAuthType {
+    /** 表单字段 */
+    FLOW_FIELD = "FLOW_FIELD",
+    /** 本人 */
+    SELF = "SELF",
+    /** 所属部门 */
+    DEPT = "DEPT",
+    /** 全部 */
+    ALL = "ALL"
 }

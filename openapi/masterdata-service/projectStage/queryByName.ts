@@ -20,9 +20,9 @@ export interface IProjectPhaseNumberQueryObject {
     /** 名称or编号 */
     nameOrCode?: string;
     /** 是否查询只在项目计划模块展示的阶段 */
-    isProjectPlanShow?: ('Y' | 'N');
+    isProjectPlanShow?: EProjectPhaseNumberQueryObject_isProjectPlanShow;
     /** 是否查询只在项目任务模块展示的阶段 */
-    isProjectTaskShow?: ('Y' | 'N');
+    isProjectTaskShow?: EProjectPhaseNumberQueryObject_isProjectTaskShow;
 }
 /** JSONResult«List«项目阶段响应对象»» */
 export interface IJSONResultListProjectPhaseResponseObject {
@@ -43,4 +43,18 @@ export interface IProjectPhaseResponseObject {
     name?: string;
     /** 项目计划ids */
     projectPlanIds?: number[];
+}
+
+export enum EProjectPhaseNumberQueryObject_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectPhaseNumberQueryObject_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

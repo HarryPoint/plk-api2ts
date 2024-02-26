@@ -22,25 +22,25 @@ export interface ISchedulingParametersDTO {
     /** 倒排考虑因素值 */
     descFactorValue?: number;
     /** 是否开启日产能配置 */
-    enableDayCapacity?: ('Y' | 'N');
+    enableDayCapacity?: ESchedulingParametersDTO_enableDayCapacity;
     /** 日产能数量 */
     capacityDayQuantity?: number;
     /** 每日工作小时数 */
     dayWorkHours?: number;
     /** 是否开启锁定天数 */
-    enableLockDay?: ('Y' | 'N');
+    enableLockDay?: ESchedulingParametersDTO_enableLockDay;
     /** 锁定天数 */
     lockDay?: number;
     /** 是否展示预估工费/默认不展示 */
-    isShowForecastLaborCost?: ('Y' | 'N');
+    isShowForecastLaborCost?: ESchedulingParametersDTO_isShowForecastLaborCost;
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: ('Y' | 'N');
+    isGtPlannedQuantity?: ESchedulingParametersDTO_isGtPlannedQuantity;
     /** 是否自动进料 */
-    isAutoMoveIn?: ('Y' | 'N');
+    isAutoMoveIn?: ESchedulingParametersDTO_isAutoMoveIn;
     /** 是否自动下发任务 */
-    isRobotIssue?: ('Y' | 'N');
+    isRobotIssue?: ESchedulingParametersDTO_isRobotIssue;
     /** 排产方式 */
-    producePlanType?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE');
+    producePlanType?: ESchedulingParametersDTO_producePlanType;
     /** 排产开始时间订单流程表单字段code */
     producePlanStartTimeFormFieldCode?: string;
     /** 排产开始时间订单流程表单字段序列号 */
@@ -50,7 +50,7 @@ export interface ISchedulingParametersDTO {
     /** 排产结束时间订单流程表单字段序列号 */
     producePlanEndTimeFormFieldSerialNo?: string;
     /** 是否入库前先领料 */
-    isBeforeStorageIssuanceMaterial?: ('Y' | 'N');
+    isBeforeStorageIssuanceMaterial?: ESchedulingParametersDTO_isBeforeStorageIssuanceMaterial;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -62,4 +62,64 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESchedulingParametersDTO_enableDayCapacity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESchedulingParametersDTO_enableLockDay {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESchedulingParametersDTO_isShowForecastLaborCost {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESchedulingParametersDTO_isGtPlannedQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESchedulingParametersDTO_isAutoMoveIn {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESchedulingParametersDTO_isRobotIssue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESchedulingParametersDTO_producePlanType {
+    /** 未排产 */
+    NOT_PLAN = "NOT_PLAN",
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum ESchedulingParametersDTO_isBeforeStorageIssuanceMaterial {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

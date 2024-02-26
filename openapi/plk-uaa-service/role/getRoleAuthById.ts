@@ -39,7 +39,7 @@ export interface IRoleRightsAndEmployeeInformationResponse {
     /** 路由对应的数据权限集 */
     dataAuths?: IEnterpriseDataPermissionResponse[];
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleRightsAndEmployeeInformationResponse_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
@@ -57,7 +57,7 @@ export interface IEnterpriseDataPermissionResponse {
 /** 企业数据权限列表响应 */
 export interface IEnterpriseDataPermissionListResponse {
     /** 数据权限类型 */
-    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
+    dataAuthType?: EEnterpriseDataPermissionListResponse_dataAuthType;
     /** 数据权限对应的字段列表(只针对表单字段类型) */
     roleDataAuthFieldList?: ITheRoleDataPermissionFieldRespondsToTheDTO[];
 }
@@ -115,4 +115,22 @@ export interface IEmployeeInformationResponse {
     telephone?: string;
     /** 邮件 */
     email?: string;
+}
+
+export enum ERoleRightsAndEmployeeInformationResponse_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
+}
+
+export enum EEnterpriseDataPermissionListResponse_dataAuthType {
+    /** 表单字段 */
+    FLOW_FIELD = "FLOW_FIELD",
+    /** 本人 */
+    SELF = "SELF",
+    /** 所属部门 */
+    DEPT = "DEPT",
+    /** 全部 */
+    ALL = "ALL"
 }

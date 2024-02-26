@@ -61,9 +61,28 @@ export interface IProjectPhaseTasksDistributeResponseObjects {
     /** 项目任务开始日期 */
     planBeginTime?: string;
     /** 项目任务状态 */
-    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
+    taskStatus?: EProjectPhaseTasksDistributeResponseObjects_taskStatus;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
     fromAppId?: number;
+}
+
+export enum EProjectPhaseTasksDistributeResponseObjects_taskStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 未下发 */
+    UN_ISSUE = "UN_ISSUE",
+    /** 未接受 */
+    UN_RECEIVE = "UN_RECEIVE",
+    /** 未开始 */
+    UN_START = "UN_START",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

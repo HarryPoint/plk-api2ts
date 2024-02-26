@@ -31,21 +31,21 @@ export interface IProjectTaskRulesDetailResponseDTO {
     /** 项目任务ID */
     projectTaskId?: number;
     /** 任务类型 */
-    taskType?: ('REVIEW_TASK' | 'DECISION_TASK' | 'GENERAL_TASK');
+    taskType?: EProjectTaskRulesDetailResponseDTO_taskType;
     /** 不通过比较类型 */
-    notPassCompareType?: ('GT' | 'GE');
+    notPassCompareType?: EProjectTaskRulesDetailResponseDTO_notPassCompareType;
     /** 不通过的临界值 */
     notPassRuleValue?: number;
     /** 通过的比较类型 */
-    passCompareType?: ('GT' | 'GE');
+    passCompareType?: EProjectTaskRulesDetailResponseDTO_passCompareType;
     /** 通过比较值 */
     passRuleValue?: number;
     /** 带风险通过的比较类型 */
-    takeRiskPassCompareType?: ('GT' | 'GE');
+    takeRiskPassCompareType?: EProjectTaskRulesDetailResponseDTO_takeRiskPassCompareType;
     /** 带风险通过比较值 */
     takeRiskPassRuleValue?: number;
     /** 修改比较类型 */
-    modifyCompareType?: ('GT' | 'GE');
+    modifyCompareType?: EProjectTaskRulesDetailResponseDTO_modifyCompareType;
     /** 修改规则值 */
     modifyRuleValue?: number;
     /** 修改任务ID列表 */
@@ -61,4 +61,41 @@ export interface IIdNameVO {
     id: number;
     /** 名称 */
     name: string;
+}
+
+export enum EProjectTaskRulesDetailResponseDTO_taskType {
+    /** 评审任务 */
+    REVIEW_TASK = "REVIEW_TASK",
+    /** 决策任务 */
+    DECISION_TASK = "DECISION_TASK",
+    /** 通用任务 */
+    GENERAL_TASK = "GENERAL_TASK"
+}
+
+export enum EProjectTaskRulesDetailResponseDTO_notPassCompareType {
+    /** 大于 */
+    GT = "GT",
+    /** 大于等于 */
+    GE = "GE"
+}
+
+export enum EProjectTaskRulesDetailResponseDTO_passCompareType {
+    /** 大于 */
+    GT = "GT",
+    /** 大于等于 */
+    GE = "GE"
+}
+
+export enum EProjectTaskRulesDetailResponseDTO_takeRiskPassCompareType {
+    /** 大于 */
+    GT = "GT",
+    /** 大于等于 */
+    GE = "GE"
+}
+
+export enum EProjectTaskRulesDetailResponseDTO_modifyCompareType {
+    /** 大于 */
+    GT = "GT",
+    /** 大于等于 */
+    GE = "GE"
 }

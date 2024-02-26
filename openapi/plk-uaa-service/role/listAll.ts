@@ -36,7 +36,7 @@ export interface IRoleQuery {
     /** 角色名称 */
     name?: string;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleQuery_applicationLevel;
     /** 创建时间结束 */
     createEndTime?: string;
     /** 服务业务ID */
@@ -47,7 +47,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«List«角色信息响应»» */
 export interface IJSONResultListResponseForRoleInformation {
@@ -83,15 +83,50 @@ export interface IRoleMessageResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: ERoleMessageResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: ERoleMessageResponse_isAdmin;
     /** 描述 */
     description?: string;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleMessageResponse_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
     serviceBusinessId?: number;
+}
+
+export enum ERoleQuery_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

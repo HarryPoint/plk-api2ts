@@ -31,9 +31,9 @@ export interface IProcessDocumentationVO {
     /** 文档名称 */
     name?: string;
     /** 展示模块 */
-    displayModuleEnum?: ('BAD_PRODUCT' | 'PACKAGE_WORK' | 'PRODUCE_WORK');
+    displayModuleEnum?: EProcessDocumentationVO_displayModuleEnum;
     /** 是否在大屏上展示 */
-    isDisplayEnum?: ('Y' | 'N');
+    isDisplayEnum?: EProcessDocumentationVO_isDisplayEnum;
     /** 展示模块 -- 字符串 */
     displayModule?: string;
     /** 是否在大屏上展示 -- 字符串 */
@@ -50,4 +50,20 @@ export interface IProcessDocumentationVO {
     applyProcessIdList?: number[];
     /** 文档内容 */
     content?: string;
+}
+
+export enum EProcessDocumentationVO_displayModuleEnum {
+    /** 不良品示例 */
+    BAD_PRODUCT = "BAD_PRODUCT",
+    /** 包装作业指导书 */
+    PACKAGE_WORK = "PACKAGE_WORK",
+    /** 生产作业指导书 */
+    PRODUCE_WORK = "PRODUCE_WORK"
+}
+
+export enum EProcessDocumentationVO_isDisplayEnum {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

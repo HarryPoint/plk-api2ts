@@ -26,7 +26,7 @@ export interface IAppMessageConfigDTO {
     /** 详细表格字段编码 */
     detailTableFieldCode?: string;
     /** 是否明细表, Y - 主表， N - 明细表 */
-    isDetailFlowTable?: ('Y' | 'N');
+    isDetailFlowTable?: EAppMessageConfigDTO_isDetailFlowTable;
     /** 表格编码 */
     tableCode?: string;
     /** 发送内容配置列表 */
@@ -41,7 +41,7 @@ export interface IAppMessageSentContentTemplateDTO {
     /** 消息发送内容模板ID */
     id?: number;
     /** 消息发送模式 */
-    sendingMode?: ('SYSTEM' | 'SMS' | 'EMAIL');
+    sendingMode?: EAppMessageSentContentTemplateDTO_sendingMode;
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
     messageContent?: string;
     /** undefined */
@@ -49,7 +49,7 @@ export interface IAppMessageSentContentTemplateDTO {
     /** 字段元数据 */
     fieldMetaList?: IMessageContentFieldMetaDTO[];
     /** 是否使用配置 */
-    isUseConfig?: ('Y' | 'N');
+    isUseConfig?: EAppMessageSentContentTemplateDTO_isUseConfig;
     /** html 内容 */
     htmlContent?: string;
     /** 邮件主题 */
@@ -77,7 +77,7 @@ export interface IAppMessageRecipientDTO {
     /** 消息接收人ID */
     id?: number;
     /** 接收人类型 */
-    recipientType?: ('USER' | 'CLASS_GROUP' | 'DEPARTMENT' | 'EMAIL' | 'BUSINESS');
+    recipientType?: EAppMessageRecipientDTO_recipientType;
     /** 部门ID列表 */
     departmentIdList?: Record<string, any>[];
     /** 班组ID列表 */
@@ -163,7 +163,48 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EAppMessageConfigDTO_isDetailFlowTable {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAppMessageSentContentTemplateDTO_sendingMode {
+    /** 系统消息 */
+    SYSTEM = "SYSTEM",
+    /** 短信 */
+    SMS = "SMS",
+    /** 邮件 */
+    EMAIL = "EMAIL"
+}
+
+export enum EAppMessageSentContentTemplateDTO_isUseConfig {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAppMessageRecipientDTO_recipientType {
+    /** 人员 */
+    USER = "USER",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 邮件 */
+    EMAIL = "EMAIL",
+    /** 业务 */
+    BUSINESS = "BUSINESS"
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

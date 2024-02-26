@@ -24,7 +24,7 @@ export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 设备id */
     deviceId: number;
     /** 是否有异常 */
-    hasError?: ('Y' | 'N');
+    hasError?: EDeviceDataAcquisitionDataListSearchVO_hasError;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
@@ -52,4 +52,16 @@ export interface IJSONResultExportedTicketInformation {
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
     ticket?: string;
+}
+
+export enum EDeviceDataAcquisitionDataListSearchVO_hasError {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

@@ -55,7 +55,7 @@ export interface IPortalQueryResponseDTO {
     /** 门户权限列表 */
     portalVisualPermissions?: IPortalVisualPermissionQueryResponseDTO[];
     /** 是否默认 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EPortalQueryResponseDTO_isDefault;
     /** 数据状态 */
     dataStatus?: number;
 }
@@ -75,4 +75,11 @@ export interface IPortalVisualPermissionQueryResponseDTO {
     roleName?: string;
     /** 超级管理员名称 */
     superManagerName?: string;
+}
+
+export enum EPortalQueryResponseDTO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

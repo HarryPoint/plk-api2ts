@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISetTheCheckTaskCheckModeTo
 /** 设置检验任务检验方式请求DTO */
 export interface ISetTheCheckTaskCheckModeToRequestTheDTO {
     /** 检验方式 */
-    taskInspectionMethodType?: ('SINGLE' | 'BATCH' | 'MATERIAL');
+    taskInspectionMethodType?: ESetTheCheckTaskCheckModeToRequestTheDTO_taskInspectionMethodType;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -28,4 +28,13 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESetTheCheckTaskCheckModeToRequestTheDTO_taskInspectionMethodType {
+    /** 个检验 */
+    SINGLE = "SINGLE",
+    /** 批检验 */
+    BATCH = "BATCH",
+    /** 物料检 */
+    MATERIAL = "MATERIAL"
 }

@@ -55,7 +55,7 @@ export interface IProcessTaskShiftUserInformationIsReturnedToVO {
     /** 班次开始时间 */
     flowPathShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EProcessTaskShiftUserInformationIsReturnedToVO_endTimeType;
     /** 班次结束时间 */
     flowPathShiftEndTime?: ILocalTime;
     /** 方案名称 */
@@ -80,4 +80,11 @@ export interface ILocalTime {
     second?: number;
     /** undefined */
     nano?: number;
+}
+
+export enum EProcessTaskShiftUserInformationIsReturnedToVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

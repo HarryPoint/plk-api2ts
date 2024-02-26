@@ -39,5 +39,12 @@ export interface IRoutingDeprecatedVO {
     /** 所属主物料bomid */
     materialBomId?: number;
     /** 是否默认 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: ERoutingDeprecatedVO_isDefault;
+}
+
+export enum ERoutingDeprecatedVO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

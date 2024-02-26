@@ -18,7 +18,7 @@ export interface IRowDataImportModeInputDTO {
     /** 行数据ID */
     id?: number;
     /** 操作模式 */
-    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
+    operationMode?: ERowDataImportModeInputDTO_operationMode;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
@@ -27,7 +27,19 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ERowDataImportModeInputDTO_operationMode {
+    /** 覆盖导入 */
+    OVERRIDE_IMPORT = "OVERRIDE_IMPORT",
+    /** 取消导入 */
+    CANCEL_IMPORT = "CANCEL_IMPORT"
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

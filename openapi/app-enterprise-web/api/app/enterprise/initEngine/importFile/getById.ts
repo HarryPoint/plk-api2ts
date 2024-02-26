@@ -33,7 +33,16 @@ export interface IImportFile {
     /** 文件名 */
     fileName?: string;
     /** 状态 */
-    status?: ('NOT_PARSE' | 'PARSED' | 'PARSE_FAIL');
+    status?: EImportFile_status;
     /** 错误原因 */
     failMessage?: string;
+}
+
+export enum EImportFile_status {
+    /** 未解析 */
+    NOT_PARSE = "NOT_PARSE",
+    /** 已解析 */
+    PARSED = "PARSED",
+    /** 解析失败 */
+    PARSE_FAIL = "PARSE_FAIL"
 }

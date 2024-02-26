@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -57,4 +57,9 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

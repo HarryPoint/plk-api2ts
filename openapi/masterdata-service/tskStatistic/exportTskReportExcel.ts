@@ -29,7 +29,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -51,4 +51,16 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
 }

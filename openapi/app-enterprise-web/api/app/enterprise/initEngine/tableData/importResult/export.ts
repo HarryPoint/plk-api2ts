@@ -20,17 +20,17 @@ export interface ISearchRowData {
     /** 字段查询条件 */
     fieldQueryCondition?: Record<string, string>;
     /** 空数据 */
-    existsEmptyData?: ('Y' | 'N');
+    existsEmptyData?: ESearchRowData_existsEmptyData;
     /** 错误数据 */
-    existsErrorData?: ('Y' | 'N');
+    existsErrorData?: ESearchRowData_existsErrorData;
     /** 存在重复的数据 */
-    existsRepeatData?: ('Y' | 'N');
+    existsRepeatData?: ESearchRowData_existsRepeatData;
     /** 校验状态 */
-    verificationStatus?: ('NOT' | 'FAILED_VERIFICATION' | 'VERIFICATION_PASSED');
+    verificationStatus?: ESearchRowData_verificationStatus;
     /** 操作模式 */
-    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
+    operationMode?: ESearchRowData_operationMode;
     /** 生效状态 */
-    importStatus?: ('NOT_IMPORTED' | 'IMPORTED' | 'IMPORT_FAIL');
+    importStatus?: ESearchRowData_importStatus;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
@@ -39,7 +39,58 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESearchRowData_existsEmptyData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESearchRowData_existsErrorData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESearchRowData_existsRepeatData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESearchRowData_verificationStatus {
+    /** 未校验 */
+    NOT = "NOT",
+    /** 未通过校验 */
+    FAILED_VERIFICATION = "FAILED_VERIFICATION",
+    /** 已通过校验 */
+    VERIFICATION_PASSED = "VERIFICATION_PASSED"
+}
+
+export enum ESearchRowData_operationMode {
+    /** 覆盖导入 */
+    OVERRIDE_IMPORT = "OVERRIDE_IMPORT",
+    /** 取消导入 */
+    CANCEL_IMPORT = "CANCEL_IMPORT"
+}
+
+export enum ESearchRowData_importStatus {
+    /** 未导入 */
+    NOT_IMPORTED = "NOT_IMPORTED",
+    /** 已导入 */
+    IMPORTED = "IMPORTED",
+    /** 导入失败 */
+    IMPORT_FAIL = "IMPORT_FAIL"
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

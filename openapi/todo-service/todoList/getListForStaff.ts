@@ -24,7 +24,7 @@ export interface IToDoListSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 查询状态 */
-    queryStatus?: ('NOT_HANDLE' | 'OVERDUE' | 'HANDLED' | 'CREATED_BY_ME' | 'CARBON_COPY_TO_ME' | 'NOT_READ' | 'IN_PROGRESS' | 'COMPLETE' | 'FAILED');
+    queryStatus?: EToDoListSearchVO_queryStatus;
     /** 创建时间 - 结束 yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
     /** 任务状态查询集合 */
@@ -43,7 +43,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«待办事项移动端返回DTO»» */
 export interface IJSONResultListMobileReturnToTheDTO {
@@ -79,7 +79,7 @@ export interface IToDoMobileReturnsDTO {
     /** 对应业务id */
     businessId?: number;
     /** 状态 */
-    status?: ('NOT_HANDLE' | 'NOT_READ' | 'HANDLED' | 'READ');
+    status?: EToDoMobileReturnsDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 节点处理状态描述 */
@@ -97,11 +97,11 @@ export interface IToDoMobileReturnsDTO {
     /** 当前处理人集合 */
     currentHandleUsers?: IProcessNodeExecutorVO[];
     /** 是否超时 */
-    isTimeout?: ('Y' | 'N');
+    isTimeout?: EToDoMobileReturnsDTO_isTimeout;
     /** 待办业务类型 */
-    businessType?: ('TODO' | 'PRODUCE_TASK' | 'QUALITY_PRODUCE_TASK' | 'QUALITY_STORAGE_TASK' | 'STORAGE_TAKE_CHECK_TASK');
+    businessType?: EToDoMobileReturnsDTO_businessType;
     /** 生产任务是否为返工 */
-    produceTaskIsBack?: ('Y' | 'N');
+    produceTaskIsBack?: EToDoMobileReturnsDTO_produceTaskIsBack;
     /** 当前完成数量 */
     currentCompleteQuantity?: number;
     /** 计划数量 */
@@ -111,17 +111,17 @@ export interface IToDoMobileReturnsDTO {
     /** 盘点范围 */
     storageTakeCheckScope?: string;
     /** 是否能跳转 */
-    canRedirect?: ('Y' | 'N');
+    canRedirect?: EToDoMobileReturnsDTO_canRedirect;
     /** pc端跳转路径 */
     webPath?: string;
     /** 移动端跳转路径 */
     mobilePath?: string;
     /** 生产任务状态 */
-    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    produceTaskStatus?: EToDoMobileReturnsDTO_produceTaskStatus;
     /** 生产任务状态描述 */
     produceTaskStatusDesc?: string;
     /** 质检任务状态 */
-    qualityTaskStatus?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    qualityTaskStatus?: EToDoMobileReturnsDTO_qualityTaskStatus;
     /** 质检任务状态描述 */
     qualityTaskStatusDesc?: string;
     /** 所属流程节点id */
@@ -153,9 +153,9 @@ export interface IProcessNodeExecutorVO {
     /** 执行人id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
+    executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
-    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
+    executorSysType?: EProcessNodeExecutorVO_executorSysType;
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
@@ -170,7 +170,7 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
-    type?: ('PRODUCE' | 'BACK');
+    type?: ETheProductionTaskIsReturnedToTheDTOForTheBacklog_type;
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -244,19 +244,19 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: ETheProductionTaskIsReturnedToTheDTOForTheBacklog_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
     priorityLevel?: number;
     /** 当前任务WIP是否有物料 */
-    isWip?: ('Y' | 'N');
+    isWip?: ETheProductionTaskIsReturnedToTheDTOForTheBacklog_isWip;
     /** 可操作项列表 */
     canOpItemList?: string[];
     /** 任务进站关键参数是否需要填写 */
-    moveInKeyParameterFillNeeds?: ('Y' | 'N');
+    moveInKeyParameterFillNeeds?: ETheProductionTaskIsReturnedToTheDTOForTheBacklog_moveInKeyParameterFillNeeds;
     /** 任务出站关键参数是否需要填写 */
-    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
+    moveOutKeyParameterFillNeeds?: ETheProductionTaskIsReturnedToTheDTOForTheBacklog_moveOutKeyParameterFillNeeds;
     /** 当前进料总数 */
     currentMoveInQuantity?: number;
     /** 当前还需进料数 */
@@ -290,47 +290,47 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EProductionProcessPathStepSettingsReturnVO_allowDirectExit;
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: ('Y' | 'N');
+    needConfirmMoveInQuantity?: EProductionProcessPathStepSettingsReturnVO_needConfirmMoveInQuantity;
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: ('Y' | 'N');
+    autoBringOutLastMold?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastMold;
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: ('Y' | 'N');
+    autoBringOutLastDevice?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastDevice;
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: ('Y' | 'N');
+    autoBringOutLastBomConsume?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastBomConsume;
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: ('Y' | 'N');
+    allowSplitLot?: EProductionProcessPathStepSettingsReturnVO_allowSplitLot;
     /** 是否强制拆分批次 */
-    forcedSplitLot?: ('Y' | 'N');
+    forcedSplitLot?: EProductionProcessPathStepSettingsReturnVO_forcedSplitLot;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionProcessPathStepSettingsReturnVO_enableQualityTraceability;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EProductionProcessPathStepSettingsReturnVO_enableLot;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EProductionProcessPathStepSettingsReturnVO_enableSerialNo;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EProductionProcessPathStepSettingsReturnVO_enableExternalCode;
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: ('Y' | 'N');
+    enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */
-    enableMold?: ('Y' | 'N');
+    enableMold?: EProductionProcessPathStepSettingsReturnVO_enableMold;
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: ('Y' | 'N');
+    enableMoveInBomConsume?: EProductionProcessPathStepSettingsReturnVO_enableMoveInBomConsume;
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: ('Y' | 'N');
+    enableMoveOutBomConsume?: EProductionProcessPathStepSettingsReturnVO_enableMoveOutBomConsume;
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: ('Y' | 'N');
+    enableMoveInKeyParameter?: EProductionProcessPathStepSettingsReturnVO_enableMoveInKeyParameter;
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: ('Y' | 'N');
+    enableMoveOutKeyParameter?: EProductionProcessPathStepSettingsReturnVO_enableMoveOutKeyParameter;
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: ('Y' | 'N');
+    isGtPlannedQuantity?: EProductionProcessPathStepSettingsReturnVO_isGtPlannedQuantity;
 }
 /** TableHeaderDTO */
 export interface ITableheaderdto {
@@ -345,4 +345,299 @@ export interface ITabledatadto {
     serialNo?: string;
     /** undefined */
     showValue?: string;
+}
+
+export enum EToDoListSearchVO_queryStatus {
+    /** 待处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 已逾期 */
+    OVERDUE = "OVERDUE",
+    /** 已完成 */
+    HANDLED = "HANDLED",
+    /** 我发起的 */
+    CREATED_BY_ME = "CREATED_BY_ME",
+    /** 抄送我的 */
+    CARBON_COPY_TO_ME = "CARBON_COPY_TO_ME",
+    /** 未读 */
+    NOT_READ = "NOT_READ",
+    /** 进行中的 */
+    IN_PROGRESS = "IN_PROGRESS",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    FAILED = "FAILED"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EToDoMobileReturnsDTO_status {
+    /** 待处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 未读 */
+    NOT_READ = "NOT_READ",
+    /** 已完成 */
+    HANDLED = "HANDLED",
+    /** 已读 */
+    READ = "READ"
+}
+
+export enum EToDoMobileReturnsDTO_isTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EToDoMobileReturnsDTO_businessType {
+    /** 待办 */
+    TODO = "TODO",
+    /** 生产任务 */
+    PRODUCE_TASK = "PRODUCE_TASK",
+    /** 生产质检任务 */
+    QUALITY_PRODUCE_TASK = "QUALITY_PRODUCE_TASK",
+    /** 库存质检任务 */
+    QUALITY_STORAGE_TASK = "QUALITY_STORAGE_TASK",
+    /** 盘点任务 */
+    STORAGE_TAKE_CHECK_TASK = "STORAGE_TAKE_CHECK_TASK"
+}
+
+export enum EToDoMobileReturnsDTO_produceTaskIsBack {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EToDoMobileReturnsDTO_canRedirect {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EToDoMobileReturnsDTO_produceTaskStatus {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EToDoMobileReturnsDTO_qualityTaskStatus {
+    /** 待质检 */
+    WAIT = "WAIT",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已撤销 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EProcessNodeExecutorVO_executorType {
+    /** 员工 */
+    USER = "USER",
+    /** 角色 */
+    ROLE = "ROLE",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 系统控件 */
+    SYS_CONTROL = "SYS_CONTROL"
+}
+
+export enum EProcessNodeExecutorVO_executorSysType {
+    /** 创建人 */
+    CREATE_BY = "CREATE_BY",
+    /** 创建部门 */
+    CREATE_DEPARTMENT = "CREATE_DEPARTMENT",
+    /** 任务方案 */
+    FLOW_PATH_TASK_PLAN = "FLOW_PATH_TASK_PLAN"
+}
+
+export enum ETheProductionTaskIsReturnedToTheDTOForTheBacklog_type {
+    /** 生产任务 */
+    PRODUCE = "PRODUCE",
+    /** 返工任务 */
+    BACK = "BACK"
+}
+
+export enum ETheProductionTaskIsReturnedToTheDTOForTheBacklog_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum ETheProductionTaskIsReturnedToTheDTOForTheBacklog_isWip {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheProductionTaskIsReturnedToTheDTOForTheBacklog_moveInKeyParameterFillNeeds {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheProductionTaskIsReturnedToTheDTOForTheBacklog_moveOutKeyParameterFillNeeds {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_needConfirmMoveInQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastMold {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastDevice {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_allowSplitLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_forcedSplitLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableDevice {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMold {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveInBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveOutBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveInKeyParameter {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveOutKeyParameter {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_isGtPlannedQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

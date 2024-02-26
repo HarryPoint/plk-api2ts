@@ -28,11 +28,11 @@ export interface IPagingInformation {
     /** 开始时间 - 结束范围 */
     beginTimeEnd?: string;
     /** 任务状态 - 下拉多选 */
-    projectTaskStatusList?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED')[];
+    projectTaskStatusList?: EPagingInformation_projectTaskStatusList_items[];
     /** 执行人 - 下拉多选 */
     leaderUserIdList?: number[];
     /** 优先级 - 下拉多选查询 */
-    priorityList?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY')[];
+    priorityList?: EPagingInformation_priorityList_items[];
     /** 创建时间 - 结束范围 */
     createTimeEnd?: string;
     /** 备注 - 关键字查询 */
@@ -42,7 +42,7 @@ export interface IPagingInformation {
     /** 创建时间 - 开始范围 */
     createTimeBegin?: string;
     /** 创建时间 - Y - 正序， N - 倒序 */
-    createTimeAsc?: ('Y' | 'N');
+    createTimeAsc?: EPagingInformation_createTimeAsc;
 }
 /** JSONResult«分页信息«KaizenProjectTaskResponseDTO»» */
 export interface IKaizenProjectTaskResponseDTOJSONResultPagingInformation {
@@ -70,9 +70,9 @@ export interface IThePagingInformationKaizenProjectTaskResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePagingInformationKaizenProjectTaskResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePagingInformationKaizenProjectTaskResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -87,7 +87,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 名称 */
     name?: string;
     /** 项目任务状态 */
-    projectTaskStatus?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED');
+    projectTaskStatus?: EKaizenProjectTaskResponseDTO_projectTaskStatus;
     /** 关联项目 */
     projectId?: IAssociateFormDataVO;
     /** 执行人 */
@@ -99,7 +99,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 结束时间 */
     endTime?: string;
     /** 优先级 */
-    priority?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY');
+    priority?: EKaizenProjectTaskResponseDTO_priority;
     /** 备注 */
     remark?: string;
     /** 创建用户ID */
@@ -118,7 +118,71 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: ('Y' | 'N');
+    isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
     masterDataId?: number;
+}
+
+export enum EPagingInformation_projectTaskStatusList_items {
+    WAIT = "WAIT",
+    HANDLING = "HANDLING",
+    COMPLETE = "COMPLETE",
+    CANCELED = "CANCELED"
+}
+
+export enum EPagingInformation_priorityList_items {
+    LOW = "LOW",
+    NORMAL = "NORMAL",
+    EMERGENCY = "EMERGENCY",
+    EXTREME_EMERGENCY = "EXTREME_EMERGENCY"
+}
+
+export enum EPagingInformation_createTimeAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationKaizenProjectTaskResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationKaizenProjectTaskResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EKaizenProjectTaskResponseDTO_projectTaskStatus {
+    /** 未开始 */
+    WAIT = "WAIT",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCELED = "CANCELED"
+}
+
+export enum EKaizenProjectTaskResponseDTO_priority {
+    /** 较低 */
+    LOW = "LOW",
+    /** 普通 */
+    NORMAL = "NORMAL",
+    /** 紧急 */
+    EMERGENCY = "EMERGENCY",
+    /** 非常紧急 */
+    EXTREME_EMERGENCY = "EXTREME_EMERGENCY"
+}
+
+export enum EAssociateFormDataVO_isRemovedShowField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

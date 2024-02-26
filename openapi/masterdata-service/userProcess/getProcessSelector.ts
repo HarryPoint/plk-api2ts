@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/getProcessSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; type?: ('PRODUCE' | 'QUALITY') } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: number; type?: Etype } }, extraOptions?: any) {
     return http<ITheJSONResultListOperationSelectsToReturnVO1>(
         {
             url: "/masterdata-service/userProcess/getProcessSelector",
@@ -36,4 +36,9 @@ export interface IProcedureSelectionReturnsVO1 {
     areaId?: string;
     /** 区域名称 */
     areaName?: string;
+}
+
+export enum Etype {
+    PRODUCE = "PRODUCE",
+    QUALITY = "QUALITY"
 }

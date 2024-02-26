@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«流程班次返回VO»» */
 export interface IJSONResultPagingInformationFlowShiftReturnsVO {
@@ -61,9 +61,9 @@ export interface IPagingInformationFlowShiftReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationFlowShiftReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationFlowShiftReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -80,7 +80,7 @@ export interface IProcessShiftBackToVO {
     /** 开始时间 */
     beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EProcessShiftBackToVO_endTimeType;
     /** 结束时间 */
     endTime?: string;
     /** 状态 */
@@ -105,13 +105,61 @@ export interface IProcessNodeExecutorVO {
     /** 执行人id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
+    executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
-    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
+    executorSysType?: EProcessNodeExecutorVO_executorSysType;
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
     flowPathId?: number;
     /** 节点ID */
     flowPathNodeId?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationFlowShiftReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationFlowShiftReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessShiftBackToVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
+}
+
+export enum EProcessNodeExecutorVO_executorType {
+    /** 员工 */
+    USER = "USER",
+    /** 角色 */
+    ROLE = "ROLE",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 系统控件 */
+    SYS_CONTROL = "SYS_CONTROL"
+}
+
+export enum EProcessNodeExecutorVO_executorSysType {
+    /** 创建人 */
+    CREATE_BY = "CREATE_BY",
+    /** 创建部门 */
+    CREATE_DEPARTMENT = "CREATE_DEPARTMENT",
+    /** 任务方案 */
+    FLOW_PATH_TASK_PLAN = "FLOW_PATH_TASK_PLAN"
 }

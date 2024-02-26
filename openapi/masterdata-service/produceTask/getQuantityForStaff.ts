@@ -24,13 +24,13 @@ export interface IPublicBacklogDataQuery {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
-    isTimeout?: ('Y' | 'N');
+    isTimeout?: EPublicBacklogDataQuery_isTimeout;
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
+    qualityProduceTaskStatusList?: EPublicBacklogDataQuery_qualityProduceTaskStatusList_items[];
     /** 生产任务可操作类型 */
-    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
+    optTypes?: EPublicBacklogDataQuery_optTypes_items[];
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -42,4 +42,33 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EPublicBacklogDataQuery_produceTaskStatusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EPublicBacklogDataQuery_isTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPublicBacklogDataQuery_qualityProduceTaskStatusList_items {
+    WAIT = "WAIT",
+    COMPLETE = "COMPLETE",
+    CANCEL = "CANCEL",
+    CLOSE = "CLOSE"
+}
+
+export enum EPublicBacklogDataQuery_optTypes_items {
+    CAN_MOVE_IN = "CAN_MOVE_IN",
+    CAN_QUALITY = "CAN_QUALITY",
+    CAN_MOVE_OUT = "CAN_MOVE_OUT"
 }

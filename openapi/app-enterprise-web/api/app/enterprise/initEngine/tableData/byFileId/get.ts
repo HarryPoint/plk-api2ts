@@ -35,9 +35,9 @@ export interface ITabularData {
     /** 文件ID */
     fileId?: number;
     /** 状态 */
-    verificationStatus?: ('NOT_VERIFIED' | 'CHECKING' | 'VERIFIED' | 'VERIFIED_FAIL');
+    verificationStatus?: ETabularData_verificationStatus;
     /** 数据导入状态 */
-    importStatus?: ('NOT' | 'COMPLETE' | 'IMPORTING' | 'IMPORT_FAIL');
+    importStatus?: ETabularData_importStatus;
     /** 消息 */
     message?: string;
     /** 描述 */
@@ -79,4 +79,26 @@ export interface ITitleDefineDTO {
     code?: string;
     /** undefined */
     name?: string;
+}
+
+export enum ETabularData_verificationStatus {
+    /** 未校验 */
+    NOT_VERIFIED = "NOT_VERIFIED",
+    /** 校验中 */
+    CHECKING = "CHECKING",
+    /** 校验完成 */
+    VERIFIED = "VERIFIED",
+    /** 校验失败 */
+    VERIFIED_FAIL = "VERIFIED_FAIL"
+}
+
+export enum ETabularData_importStatus {
+    /** 未导入 */
+    NOT = "NOT",
+    /** 完成导入 */
+    COMPLETE = "COMPLETE",
+    /** 导入中 */
+    IMPORTING = "IMPORTING",
+    /** 导入失败 */
+    IMPORT_FAIL = "IMPORT_FAIL"
 }

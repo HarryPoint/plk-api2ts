@@ -53,11 +53,11 @@ export interface IBasicVO {
     /** 准备时间 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EBasicVO_readyTimeUnit;
     /** 生产时间 */
     produceTime?: number;
     /** 生产时间单位 */
-    produceTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    produceTimeUnit?: EBasicVO_produceTimeUnit;
     /** 产出数量 */
     produceQuantity?: number;
     /** 准备工费（元） */
@@ -66,4 +66,22 @@ export interface IBasicVO {
     producePrice?: number;
     /** 返工产出工费（元） */
     backProducePrice?: number;
+}
+
+export enum EBasicVO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EBasicVO_produceTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

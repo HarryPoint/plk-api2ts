@@ -33,7 +33,7 @@ export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
+    status?: EProductOrderPaymentHistoryEditRequestObject_status;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -45,4 +45,13 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductOrderPaymentHistoryEditRequestObject_status {
+    /** 待支付 */
+    WAIT_PAY = "WAIT_PAY",
+    /** 已支付 */
+    ALREADY_PAY = "ALREADY_PAY",
+    /** 完成 */
+    COMPLETE_PAY = "COMPLETE_PAY"
 }

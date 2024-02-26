@@ -31,11 +31,11 @@ export interface IDtosAreStoredUnderStandardProcessConditions {
     /** 来源字段序列号 */
     fromFieldSerialNo: string;
     /** 判断方式 */
-    compareType: ('EQ' | 'NE' | 'CONTAIN' | 'NOT_CONTAIN');
+    compareType: EDtosAreStoredUnderStandardProcessConditions_compareType;
     /** 判断的值 */
     compareValue: string;
     /** 连接类型 */
-    joinType: ('AND' | 'OR');
+    joinType: EDtosAreStoredUnderStandardProcessConditions_joinType;
 }
 /** JSONResult«标准工艺条件组保存响应DTO» */
 export interface IJSONResultStandardProcessConditionGroupSavesResponseDtos {
@@ -52,4 +52,22 @@ export interface IJSONResultStandardProcessConditionGroupSavesResponseDtos {
 export interface IStandardProcessConditionGroupSavesResponseDTO {
     /** 条件组id */
     id?: number;
+}
+
+export enum EDtosAreStoredUnderStandardProcessConditions_compareType {
+    /** 等于 */
+    EQ = "EQ",
+    /** 不等于 */
+    NE = "NE",
+    /** 包含 */
+    CONTAIN = "CONTAIN",
+    /** 不包含 */
+    NOT_CONTAIN = "NOT_CONTAIN"
+}
+
+export enum EDtosAreStoredUnderStandardProcessConditions_joinType {
+    /** 且 */
+    AND = "AND",
+    /** 或 */
+    OR = "OR"
 }

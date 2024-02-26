@@ -49,7 +49,26 @@ export interface ISalesOrderProductionOrderReturnedToVO {
     /** 计划结束时间 */
     endTime?: string;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: ESalesOrderProductionOrderReturnedToVO_orderStatus;
     /** 订单状态描述 */
     orderStatusDesc?: string;
+}
+
+export enum ESalesOrderProductionOrderReturnedToVO_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

@@ -22,7 +22,7 @@ export interface IEditTheQualityInspectionSchemeDTO {
     /** 质检方案编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: ('Y' | 'N');
+    isCodeRule: EEditTheQualityInspectionSchemeDTO_isCodeRule;
     /** 所属质检分类id */
     qualityInspectionCategoryId?: number;
     /** 质检项清单 */
@@ -34,7 +34,7 @@ export interface IEditTheQualityInspectionSchemeDTO {
     /** 附件文件key */
     attachedFileKey?: string;
     /** 质检方式 */
-    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
+    type?: EEditTheQualityInspectionSchemeDTO_type;
     /** 质检比例（填多少传多少） */
     qualityInspectionRatio?: number;
     /** 质检数量 */
@@ -47,7 +47,7 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
     /** 所属质检项id */
     qualityInspectionItemId?: number;
     /** 数值质检标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO_numberStandard;
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */
@@ -67,4 +67,33 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEditTheQualityInspectionSchemeDTO_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEditTheQualityInspectionSchemeDTO_type {
+    /** 全检 */
+    ALL = "ALL",
+    /** 比例抽检 */
+    RADIO_SPOT_CHECK = "RADIO_SPOT_CHECK",
+    /** 固定抽检 */
+    FIX_SPOT_CHECK = "FIX_SPOT_CHECK"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
 }

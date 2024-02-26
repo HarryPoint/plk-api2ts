@@ -20,9 +20,9 @@ export interface ITaskBatchOperationDTO4 {
     /** 生产任务列表 */
     produceTaskList: ITaskBatchOperationDTO3[];
     /** 是否使用进出料信息，来作为实际出料的唯一依据 */
-    isUseMaterialMoveInOrOutInfo?: ('Y' | 'N');
+    isUseMaterialMoveInOrOutInfo?: ETaskBatchOperationDTO4_isUseMaterialMoveInOrOutInfo;
     /** undefined */
-    handleOtherAsync?: ('Y' | 'N');
+    handleOtherAsync?: ETaskBatchOperationDTO4_handleOtherAsync;
 }
 /** 任务批量操作DTO_3 */
 export interface ITaskBatchOperationDTO3 {
@@ -50,4 +50,16 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETaskBatchOperationDTO4_isUseMaterialMoveInOrOutInfo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETaskBatchOperationDTO4_handleOtherAsync {
+    Y = "Y",
+    N = "N"
 }

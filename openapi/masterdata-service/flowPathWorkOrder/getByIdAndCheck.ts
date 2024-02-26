@@ -59,7 +59,7 @@ export interface IProcessWorkOrderVO {
     /** 计划开始时间 */
     planBeginTime?: string;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProcessWorkOrderVO_status;
     /** 完成时间 */
     completeTime?: string;
     /** 总耗时秒 */
@@ -70,4 +70,17 @@ export interface IProcessWorkOrderVO {
     currentTotalTaskCount?: number;
     /** 当前总超时任务数量 */
     currentTotalTimeoutTaskCount?: number;
+}
+
+export enum EProcessWorkOrderVO_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
 }

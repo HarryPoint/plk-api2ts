@@ -20,7 +20,7 @@ export interface IQmsLargeScreenTimeIntervalRequest {
     /** 查询日期的结束 */
     dateRangeEnd?: string;
     /** 查询日期区间类型 */
-    dateRangeType?: ('YEAR' | 'QUARTER' | 'MONTH');
+    dateRangeType?: EQmsLargeScreenTimeIntervalRequest_dateRangeType;
 }
 /** JSONResult«List«质量绩效评价表返回DTO»» */
 export interface IJSONResultListReturnTheQualityPerformanceEvaluationTableToTheDTO {
@@ -39,4 +39,13 @@ export interface IQualityPerformanceEvaluationFormReturnedToDTO {
     score?: number;
     /** 部门 */
     departmentName?: string;
+}
+
+export enum EQmsLargeScreenTimeIntervalRequest_dateRangeType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
 }

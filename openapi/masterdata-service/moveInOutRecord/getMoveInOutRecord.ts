@@ -18,7 +18,7 @@ export interface IEntryAndExitRecordsSearchVO {
     /** 任务id */
     produceTaskId: number;
     /** 进出站记录状态 */
-    statusList?: ('STAGING' | 'MOVE_IN' | 'MOVE_OUT')[];
+    statusList?: EEntryAndExitRecordsSearchVO_statusList_items[];
 }
 /** JSONResult«List«进出站记录返回VO»» */
 export interface IJSONResultListInboundAndOutboundRecordsReturnVO {
@@ -36,9 +36,9 @@ export interface IInboundAndOutboundLogsReturnToVO {
     /** 记录id */
     id?: number;
     /** 进出站类型 */
-    type?: ('MOVE_IN' | 'MOVE_OUT');
+    type?: EInboundAndOutboundLogsReturnToVO_type;
     /** 状态 */
-    status?: ('STAGING' | 'MOVE_IN' | 'MOVE_OUT');
+    status?: EInboundAndOutboundLogsReturnToVO_status;
     /** 对应物料id */
     materialId?: number;
     /** 对应产出物料来料数 */
@@ -105,9 +105,9 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     /** 帮助提示 */
     remark?: string;
     /** 录入类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EProduceTechnologyKeyParameterDetailResponseDTO_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EProduceTechnologyKeyParameterDetailResponseDTO_textType;
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */
@@ -130,4 +130,46 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     imageKeys?: string[];
     /** 图片Url集合 - 明细录入类型是图片时，有值 */
     imageUrls?: string[];
+}
+
+export enum EEntryAndExitRecordsSearchVO_statusList_items {
+    STAGING = "STAGING",
+    MOVE_IN = "MOVE_IN",
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EInboundAndOutboundLogsReturnToVO_type {
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EInboundAndOutboundLogsReturnToVO_status {
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EProduceTechnologyKeyParameterDetailResponseDTO_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EProduceTechnologyKeyParameterDetailResponseDTO_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
 }

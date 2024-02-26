@@ -22,7 +22,7 @@ export interface IServiceObjectRegistrationRequest1 {
     /** 名称 */
     name?: string;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EServiceObjectRegistrationRequest1_applicationLevel;
     /** 来源应用服务包id */
     fromAppServicePackId?: number;
 }
@@ -36,4 +36,11 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EServiceObjectRegistrationRequest1_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

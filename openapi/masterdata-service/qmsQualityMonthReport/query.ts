@@ -216,7 +216,7 @@ export interface IQualityMonthlyReportRespondsToDTO {
     /** 未填报部门 */
     notReportDepartments?: IIdCodeNameGenericTransportObject[];
     /** 上报状态 */
-    reportStatus?: ('REPORTED' | 'OVERDUE' | 'OVERDUE_REPORT');
+    reportStatus?: EQualityMonthlyReportRespondsToDTO_reportStatus;
     /** 上报状态描述 */
     reportStatusDesc?: string;
 }
@@ -228,4 +228,13 @@ export interface IIdCodeNameGenericTransportObject {
     code?: string;
     /** name */
     name?: string;
+}
+
+export enum EQualityMonthlyReportRespondsToDTO_reportStatus {
+    /** 已上报 */
+    REPORTED = "REPORTED",
+    /** 逾期 */
+    OVERDUE = "OVERDUE",
+    /** 逾期上报 */
+    OVERDUE_REPORT = "OVERDUE_REPORT"
 }

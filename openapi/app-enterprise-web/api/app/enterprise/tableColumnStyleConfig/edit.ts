@@ -22,7 +22,7 @@ export interface IListColumnStyleConfigurationEditDTO {
     /** 编码 */
     code?: string;
     /** 类型 */
-    type?: ('SYSTEM' | 'PERSON');
+    type?: EListColumnStyleConfigurationEditDTO_type;
     /** 列配置JSON */
     config?: Record<string, Record<string, any>>;
 }
@@ -36,4 +36,11 @@ export interface IJSONResultListColumnStyleConfigurationEditDTO {
     data?: IListColumnStyleConfigurationEditDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EListColumnStyleConfigurationEditDTO_type {
+    /** 系统 */
+    SYSTEM = "SYSTEM",
+    /** 个人 */
+    PERSON = "PERSON"
 }

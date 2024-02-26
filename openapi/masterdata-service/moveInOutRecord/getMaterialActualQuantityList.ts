@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«物料产出VO»» */
 export interface IJSONResultListMaterialOutputVO {
@@ -52,4 +52,9 @@ export interface IMaterialOutputVO {
     materialId?: number;
     /** 物料产出(出站总数量) */
     actualQuantity?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

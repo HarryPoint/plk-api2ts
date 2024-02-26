@@ -33,9 +33,9 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
-    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
+    businessType?: EProductionProcessingBasicInformationDetailsReturnToVO_businessType;
     /** 异常分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
+    type?: EProductionProcessingBasicInformationDetailsReturnToVO_type;
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -55,7 +55,7 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 对应生产委外id */
     produceEntrustId?: number;
     /** 状态 */
-    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
+    status?: EProductionProcessingBasicInformationDetailsReturnToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
@@ -123,7 +123,7 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 返工工序编号 */
     backProcessCode?: string;
     /** 返工生产类型 */
-    backProduceType?: ('RETURN' | 'ORDER');
+    backProduceType?: EProductionProcessingBasicInformationDetailsReturnToVO_backProduceType;
     /** 返工生产类型描述 */
     backProduceTypeDesc?: string;
     /** 处理意见 */
@@ -134,7 +134,7 @@ export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: ('FILE' | 'TEXT' | 'INPUT');
+    type?: EProcessCardDetailsReturnVOWithInformationFilledIn_type;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -148,9 +148,9 @@ export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     /** 文件完整url */
     fileUrl?: string;
     /** 录入类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EProcessCardDetailsReturnVOWithInformationFilledIn_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EProcessCardDetailsReturnVOWithInformationFilledIn_textType;
     /** 文本比较值集 */
     textCompareValueList?: string[];
     /** 下限 */
@@ -169,4 +169,103 @@ export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     imageKeys?: string[];
     /** 图片Url集合 - 明细录入类型是图片时，有值 */
     imageUrls?: string[];
+}
+
+export enum EProductionProcessingBasicInformationDetailsReturnToVO_businessType {
+    /** 进出站 */
+    IN_OUT = "IN_OUT",
+    /** 质检 */
+    QUALITY = "QUALITY",
+    /** 异常 */
+    ABNORMAL = "ABNORMAL",
+    /** 系统 */
+    SYSTEM = "SYSTEM"
+}
+
+export enum EProductionProcessingBasicInformationDetailsReturnToVO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 申请质检 */
+    QUALITY_APPLY = "QUALITY_APPLY",
+    /** 任务下发 */
+    TASK_ISSUE = "TASK_ISSUE",
+    /** 委外加工 */
+    PRODUCE_ENTRUST = "PRODUCE_ENTRUST",
+    /** 任务分配 */
+    TASK_ASSIGN = "TASK_ASSIGN"
+}
+
+export enum EProductionProcessingBasicInformationDetailsReturnToVO_status {
+    /** 待处理 */
+    CREATED = "CREATED",
+    /** 已确认 */
+    SURE = "SURE",
+    /** 已忽略 */
+    IGNORE = "IGNORE",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 处理中 */
+    HANDING = "HANDING",
+    /** 处理完成 */
+    ALL_HANDLE = "ALL_HANDLE",
+    /** 批准 */
+    APPROVAL = "APPROVAL",
+    /** 拒绝 */
+    REFUSE = "REFUSE",
+    /** 撤销 */
+    REVOKE = "REVOKE",
+    /** 完成 */
+    COMPLETE = "COMPLETE",
+    /** 取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionProcessingBasicInformationDetailsReturnToVO_backProduceType {
+    /** 返回原工序 */
+    RETURN = "RETURN",
+    /** 顺序生产 */
+    ORDER = "ORDER"
+}
+
+export enum EProcessCardDetailsReturnVOWithInformationFilledIn_type {
+    /** 文件 */
+    FILE = "FILE",
+    /** 描述 */
+    TEXT = "TEXT",
+    /** 录入 */
+    INPUT = "INPUT"
+}
+
+export enum EProcessCardDetailsReturnVOWithInformationFilledIn_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EProcessCardDetailsReturnVOWithInformationFilledIn_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
 }

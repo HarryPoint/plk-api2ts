@@ -22,7 +22,7 @@ export interface IProcessSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 是否是系统应用 */
-    isSystem?: ('Y' | 'N');
+    isSystem?: EProcessSearchVO_isSystem;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 名称 */
@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -51,4 +51,16 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProcessSearchVO_isSystem {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

@@ -29,11 +29,30 @@ export interface ITheProductionOrderIsReturnedToVO1 {
     /** id */
     id?: number;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: ETheProductionOrderIsReturnedToVO1_orderStatus;
     /** 订单状态描述 */
     orderStatusDesc?: string;
     /** 操作时间 */
     createTime?: string;
     /** 描述 */
     remark?: string;
+}
+
+export enum ETheProductionOrderIsReturnedToVO1_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

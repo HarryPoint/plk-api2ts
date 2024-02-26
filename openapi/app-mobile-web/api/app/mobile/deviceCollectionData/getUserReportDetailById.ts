@@ -41,11 +41,11 @@ export interface IDeviceDataAcquisitionManualCDRIsReturnedToVO {
     /** 上报姓名 */
     reqUsername?: string;
     /** 在线状态 */
-    onlineStatus?: ('ONLINE' | 'OFFLINE');
+    onlineStatus?: EDeviceDataAcquisitionManualCDRIsReturnedToVO_onlineStatus;
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    status?: EDeviceDataAcquisitionManualCDRIsReturnedToVO_status;
     /** 设备状态描述 */
     statusDesc?: string;
     /** 详情 */
@@ -70,7 +70,40 @@ export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 上限 */
     upperLimit?: number;
     /** 异常类型 */
-    errorType?: ('UPPER' | 'LOWER');
+    errorType?: EDeviceDataCollectionDataDetailsAreReturnedToVO_errorType;
     /** 异常值 */
     errorResult?: number;
+}
+
+export enum EDeviceDataAcquisitionManualCDRIsReturnedToVO_onlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EDeviceDataAcquisitionManualCDRIsReturnedToVO_status {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
+}
+
+export enum EDeviceDataCollectionDataDetailsAreReturnedToVO_errorType {
+    /** 超上限 */
+    UPPER = "UPPER",
+    /** 超下限 */
+    LOWER = "LOWER"
 }

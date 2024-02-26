@@ -18,7 +18,7 @@ export interface ITrialProductOrderNewRequestObject {
     /** 企业id */
     enterpriseId?: number;
     /** 试用产品类型, 默认传 MES  */
-    productType?: ('MES');
+    productType?: ETrialProductOrderNewRequestObject_productType;
     /** 产品模块 */
     productModuleArray?: string[];
     /** 试用时长(天) */
@@ -38,4 +38,9 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETrialProductOrderNewRequestObject_productType {
+    /** MES系统 */
+    MES = "MES"
 }

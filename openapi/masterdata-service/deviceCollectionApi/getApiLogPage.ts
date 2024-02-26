@@ -27,7 +27,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«开放api请求日志返回VO»» */
 export interface IJSONResultPagingInformationOpenApiRequestLogReturnsVO {
@@ -55,9 +55,9 @@ export interface IPagingInformationOpenApiRequestLogReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationOpenApiRequestLogReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationOpenApiRequestLogReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -74,17 +74,50 @@ export interface IOpenApiRequestLogReturnsVO {
     /** 请求ip */
     clientIp?: string;
     /** 请求类型 */
-    reqType?: ('API' | 'HANDLE');
+    reqType?: EOpenApiRequestLogReturnsVO_reqType;
     /** 请求类型描述 */
     reqTypeDesc?: string;
     /** 请求内容 */
     reqBody?: string;
     /** 是否成功 */
-    isSuccess?: ('Y' | 'N');
+    isSuccess?: EOpenApiRequestLogReturnsVO_isSuccess;
     /** 异常码 */
     errorCode?: string;
     /** 异常信息 */
     errorInfo?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationOpenApiRequestLogReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationOpenApiRequestLogReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOpenApiRequestLogReturnsVO_reqType {
+    /** 接口传输 */
+    API = "API",
+    /** 手动上报 */
+    HANDLE = "HANDLE"
+}
+
+export enum EOpenApiRequestLogReturnsVO_isSuccess {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

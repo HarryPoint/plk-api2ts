@@ -70,7 +70,7 @@ export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: ('FILE' | 'TEXT' | 'INPUT');
+    type?: EProductionProcessProcessCardDetailsReturnedToDTO_type;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -92,4 +92,13 @@ export interface IOperationsCorrespondToFieldDetailsVO {
     fieldName?: string;
     /** 值 */
     value?: Record<string, any>;
+}
+
+export enum EProductionProcessProcessCardDetailsReturnedToDTO_type {
+    /** 文件 */
+    FILE = "FILE",
+    /** 描述 */
+    TEXT = "TEXT",
+    /** 录入 */
+    INPUT = "INPUT"
 }

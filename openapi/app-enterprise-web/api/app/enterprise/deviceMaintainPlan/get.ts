@@ -39,7 +39,7 @@ export interface IMaintenancePlanRespondsToDTO {
     /** 保养任务提前下发时间 */
     maintainPlanIssueTime?: number;
     /** 单位 */
-    maintainPlanIssueTimeUnit?: ('HOUR' | 'DAY' | 'WEEK' | 'MONTH');
+    maintainPlanIssueTimeUnit?: EMaintenancePlanRespondsToDTO_maintainPlanIssueTimeUnit;
     /** 备注 */
     remark?: string;
     /** 计划明细 */
@@ -73,7 +73,7 @@ export interface IMaintenancePlanDetailsRespondToDTO {
 /** 保养计划明细项响应DTO */
 export interface IMaintenancePlanDetailsRespondToDTO {
     /** 保养类型 */
-    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
+    maintainType?: EMaintenancePlanDetailsRespondToDTO_maintainType;
     /** 保养方案id */
     maintainSchemeId?: number;
     /** 保养方案名称 */
@@ -98,11 +98,55 @@ export interface IMaintenancePlanDetailsTimeResponseDTO {
     /** 所属区域id */
     areaId?: number;
     /** 保养类型 */
-    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
+    maintainType?: EMaintenancePlanDetailsTimeResponseDTO_maintainType;
     /** 保养方案id */
     maintainSchemeId?: number;
     /** 保养开始时间 */
     maintainStartTime?: string;
     /** 计划明细状态 */
-    planDetailStatus?: ('CREATED' | 'ISSUE' | 'CANCEL' | 'COMPLETE');
+    planDetailStatus?: EMaintenancePlanDetailsTimeResponseDTO_planDetailStatus;
+}
+
+export enum EMaintenancePlanRespondsToDTO_maintainPlanIssueTimeUnit {
+    /** 小时 */
+    HOUR = "HOUR",
+    /** 天 */
+    DAY = "DAY",
+    /** 周 */
+    WEEK = "WEEK",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EMaintenancePlanDetailsRespondToDTO_maintainType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 半年 */
+    HALF_YEAR = "HALF_YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EMaintenancePlanDetailsTimeResponseDTO_maintainType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 半年 */
+    HALF_YEAR = "HALF_YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EMaintenancePlanDetailsTimeResponseDTO_planDetailStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

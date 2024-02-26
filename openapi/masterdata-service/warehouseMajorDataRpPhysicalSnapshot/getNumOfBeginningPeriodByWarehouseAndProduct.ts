@@ -39,11 +39,20 @@ export interface IPositionMaterialInventoryAssociatedWithVO {
     /** 所属仓位id */
     warehouseId?: number;
     /** 仓位类型 */
-    warehouseType?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
+    warehouseType?: EPositionMaterialInventoryAssociatedWithVO_warehouseType;
     /** 库存总数 */
     storageTotalCount?: number;
     /** 库存锁定数 */
     storageLockCount?: number;
     /** 库存可使用数 */
     storageUseCount?: number;
+}
+
+export enum EPositionMaterialInventoryAssociatedWithVO_warehouseType {
+    /** 实体仓 */
+    PHYSICAL = "PHYSICAL",
+    /** 线边仓 */
+    LINE_SIDE = "LINE_SIDE",
+    /** WIP */
+    WIP = "WIP"
 }

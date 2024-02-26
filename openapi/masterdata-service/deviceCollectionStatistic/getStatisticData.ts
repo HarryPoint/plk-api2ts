@@ -24,9 +24,9 @@ export interface IDeviceStatisticsSearchVO {
     /** 结束时间，yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 时间粒度，设备数采统计只支持时、日、月 */
-    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
+    timeType?: EDeviceStatisticsSearchVO_timeType;
     /** 展示的时间单位的类型，hms */
-    deviceParamUnitTimeType?: ('HOUR' | 'MINUTE' | 'SECOUN');
+    deviceParamUnitTimeType?: EDeviceStatisticsSearchVO_deviceParamUnitTimeType;
 }
 /** JSONResult«设备数采参数统计查询返回VO» */
 export interface IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStatisticsQuery {
@@ -42,7 +42,7 @@ export interface IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStat
 /** 设备数采参数统计查询返回VO */
 export interface IVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery {
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
-    isConsistent?: ('Y' | 'N');
+    isConsistent?: EVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery_isConsistent;
     /** 实际查询时间 - 开始 */
     actualBeginTime?: string;
     /** 实际查询时间 - 结束 */
@@ -84,4 +84,31 @@ export interface ITheDeviceDataCollectionStatisticsDetailsAreReturnedToVO {
     dataValue?: number;
     /** 数据采集时间 */
     collectTime?: string;
+}
+
+export enum EDeviceStatisticsSearchVO_timeType {
+    /** 时 */
+    HOUR = "HOUR",
+    /** 日 */
+    DAY = "DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 年 */
+    YEAR = "YEAR"
+}
+
+export enum EDeviceStatisticsSearchVO_deviceParamUnitTimeType {
+    /** h */
+    HOUR = "HOUR",
+    /** m */
+    MINUTE = "MINUTE",
+    /** s */
+    SECOUN = "SECOUN"
+}
+
+export enum EVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery_isConsistent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -52,15 +52,36 @@ export interface IRoleMessageResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: ERoleMessageResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: ERoleMessageResponse_isAdmin;
     /** 描述 */
     description?: string;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleMessageResponse_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
     serviceBusinessId?: number;
+}
+
+export enum ERoleMessageResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

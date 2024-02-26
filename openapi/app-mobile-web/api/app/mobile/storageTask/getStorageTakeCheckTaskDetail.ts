@@ -45,7 +45,7 @@ export interface ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: ETheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 默认盘点清单 */
@@ -85,4 +85,21 @@ export interface IWarehouseInventoryTaskListReturnTheMaterialExecutionEndToTheDT
     materialUnit?: string;
     /** 盘点数量 */
     quantity?: number;
+}
+
+export enum ETheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails_status {
+    /** 待盘点 */
+    WAIT = "WAIT",
+    /** 盘点中 */
+    HANDLING = "HANDLING",
+    /** 待核对 */
+    WAIT_VERIFY = "WAIT_VERIFY",
+    /** 待盈亏处理 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

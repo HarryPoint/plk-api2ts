@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«工时工费报表返回VO»» */
 export interface IJSONResultListTheLaborCostReportReturnsToVO {
@@ -104,4 +104,9 @@ export interface ITheManHourReportReturnsToVO {
     produceTaskId?: number;
     /** 生产任务编码 */
     produceTaskNo?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

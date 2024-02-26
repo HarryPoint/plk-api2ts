@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IStandardProcessModificatio
 /** 标准工艺修改分类请求对象_1 */
 export interface IStandardProcessModificationClassificationRequestObject1 {
     /** 是否删除全部 */
-    removeAll?: ('Y' | 'N');
+    removeAll?: EStandardProcessModificationClassificationRequestObject1_removeAll;
     /** 标准工艺ids */
     standardTechnologyIds?: number[];
 }
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EStandardProcessModificationClassificationRequestObject1_removeAll {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -33,7 +33,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 名称 */
     name?: string;
     /** 项目任务状态 */
-    projectTaskStatus?: ('WAIT' | 'HANDLING' | 'COMPLETE' | 'CANCELED');
+    projectTaskStatus?: EKaizenProjectTaskResponseDTO_projectTaskStatus;
     /** 关联项目 */
     projectId?: IAssociateFormDataVO;
     /** 执行人 */
@@ -45,7 +45,7 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 结束时间 */
     endTime?: string;
     /** 优先级 */
-    priority?: ('LOW' | 'NORMAL' | 'EMERGENCY' | 'EXTREME_EMERGENCY');
+    priority?: EKaizenProjectTaskResponseDTO_priority;
     /** 备注 */
     remark?: string;
     /** 创建用户ID */
@@ -64,7 +64,36 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: ('Y' | 'N');
+    isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
     masterDataId?: number;
+}
+
+export enum EKaizenProjectTaskResponseDTO_projectTaskStatus {
+    /** 未开始 */
+    WAIT = "WAIT",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCELED = "CANCELED"
+}
+
+export enum EKaizenProjectTaskResponseDTO_priority {
+    /** 较低 */
+    LOW = "LOW",
+    /** 普通 */
+    NORMAL = "NORMAL",
+    /** 紧急 */
+    EMERGENCY = "EMERGENCY",
+    /** 非常紧急 */
+    EXTREME_EMERGENCY = "EXTREME_EMERGENCY"
+}
+
+export enum EAssociateFormDataVO_isRemovedShowField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

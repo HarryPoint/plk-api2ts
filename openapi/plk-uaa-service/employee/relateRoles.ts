@@ -20,7 +20,7 @@ export interface IEmployeeAssociatedRoleSetRequestObject {
     /** 角色id集 */
     roleIds?: number[];
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EEmployeeAssociatedRoleSetRequestObject_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
 }
@@ -34,4 +34,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEmployeeAssociatedRoleSetRequestObject_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

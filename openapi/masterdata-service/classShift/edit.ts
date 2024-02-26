@@ -24,7 +24,7 @@ export interface IShiftEditorDTO {
     /** 开始时间 HH:mm */
     beginTime: string;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EShiftEditorDTO_endTimeType;
     /** 结束时间 HH:mm */
     endTime: string;
 }
@@ -38,4 +38,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EShiftEditorDTO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

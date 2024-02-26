@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«宝晶报表(报废)相关返回VO»» */
 export interface IJSONResultPageInformationBaoJingReportScrapRelatedReturnVO {
@@ -73,9 +73,9 @@ export interface IPageInformationBaojingReportScrapRelatedReturnVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationBaojingReportScrapRelatedReturnVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationBaojingReportScrapRelatedReturnVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -103,4 +103,23 @@ export interface IBaojingReportScrapRelatedReturnToVO {
     storehousePurpose?: string;
     /** 报废数量 */
     scrapQuantity?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationBaojingReportScrapRelatedReturnVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationBaojingReportScrapRelatedReturnVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

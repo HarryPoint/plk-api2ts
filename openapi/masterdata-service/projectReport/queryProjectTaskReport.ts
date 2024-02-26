@@ -39,9 +39,9 @@ export interface IPageInformationItemTaskReportResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationItemTaskReportResponseObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationItemTaskReportResponseObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -74,11 +74,11 @@ export interface IProjectTaskReportResponseObject {
     /** 项目经理名称 */
     projectManagerName?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectTaskReportResponseObject_isOverdue;
     /** 超期天数(天) */
     overdueDay?: number;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectTaskReportResponseObject_status;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
@@ -90,7 +90,7 @@ export interface IProjectTaskReportResponseObject {
     /** 任务类型 */
     projectTaskTypeName?: string;
     /** 任务状态 */
-    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
+    taskStatus?: EProjectTaskReportResponseObject_taskStatus;
     /** 任务负责人名称 */
     leaderUserNameList?: string[];
     /** 任务开始日期 */
@@ -123,4 +123,57 @@ export interface IProjectTaskReportResponseObject {
     preTaskIds?: Record<string, any>[];
     /** undefined */
     priority?: string;
+}
+
+export enum EPageInformationItemTaskReportResponseObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationItemTaskReportResponseObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskReportResponseObject_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskReportResponseObject_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProjectTaskReportResponseObject_taskStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 未下发 */
+    UN_ISSUE = "UN_ISSUE",
+    /** 未接受 */
+    UN_RECEIVE = "UN_RECEIVE",
+    /** 未开始 */
+    UN_START = "UN_START",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

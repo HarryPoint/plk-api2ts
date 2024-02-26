@@ -55,7 +55,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«宝晶销售发货报表表格统计返回VO» */
 export interface IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO {
@@ -72,4 +72,9 @@ export interface IJSONResultBaojingSalesDeliveryReportFormStatisticsReturnedToVO
 export interface IBaojingSalesDeliveryReportFormStatisticsReturnedToVO {
     /** 发货数量总计 */
     actualQuantitySum?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

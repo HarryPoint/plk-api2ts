@@ -31,9 +31,23 @@ export interface ITheGlobalPermissionOfTheRoleRespondsToTheDTO {
     /** 权限code */
     permissionCode?: string;
     /** 权限分类 */
-    permissionType?: ('FUN' | 'DATA');
+    permissionType?: ETheGlobalPermissionOfTheRoleRespondsToTheDTO_permissionType;
     /** 权限说明 */
     permissionRemark?: string;
     /** 是否已勾选 */
-    isChoose?: ('Y' | 'N');
+    isChoose?: ETheGlobalPermissionOfTheRoleRespondsToTheDTO_isChoose;
+}
+
+export enum ETheGlobalPermissionOfTheRoleRespondsToTheDTO_permissionType {
+    /** 功能 */
+    FUN = "FUN",
+    /** 数据 */
+    DATA = "DATA"
+}
+
+export enum ETheGlobalPermissionOfTheRoleRespondsToTheDTO_isChoose {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

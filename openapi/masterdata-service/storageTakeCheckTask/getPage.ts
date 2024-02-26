@@ -36,7 +36,7 @@ export interface IWarehouseInventoryTasksPageQueryObjects {
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
     planEndTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: EWarehouseInventoryTasksPageQueryObjects_status;
     /** 完成结束时间 yyyy-MM-dd HH:mm:ss */
     completeEndTime?: string;
 }
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«仓库盘点任务返回DTO»» */
 export interface IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO {
@@ -73,9 +73,9 @@ export interface IThePageInformationWarehouseInventoryTaskReturnsTheDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationWarehouseInventoryTaskReturnsTheDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationWarehouseInventoryTaskReturnsTheDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -94,7 +94,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 盘点仓库编号 */
     storehouseCode?: string;
     /** 盘点范围 */
-    scopeType?: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
+    scopeType?: EWarehouseInventoryTaskReturnedToDTO_scopeType;
     /** 盘点范围描述 */
     scopeTypeDesc?: string;
     /** 盘点物料种类(针对盘点范围是物料类型的) */
@@ -110,7 +110,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: EWarehouseInventoryTaskReturnedToDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */
@@ -156,4 +156,66 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EWarehouseInventoryTasksPageQueryObjects_status {
+    /** 待盘点 */
+    WAIT = "WAIT",
+    /** 盘点中 */
+    HANDLING = "HANDLING",
+    /** 待核对 */
+    WAIT_VERIFY = "WAIT_VERIFY",
+    /** 待盈亏处理 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePageInformationWarehouseInventoryTaskReturnsTheDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationWarehouseInventoryTaskReturnsTheDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWarehouseInventoryTaskReturnedToDTO_scopeType {
+    /** 指定仓位 */
+    APPOINT = "APPOINT",
+    /** 物料类型 */
+    MATERIAL_TYPE = "MATERIAL_TYPE",
+    /** 全部物料 */
+    ALL = "ALL"
+}
+
+export enum EWarehouseInventoryTaskReturnedToDTO_status {
+    /** 待盘点 */
+    WAIT = "WAIT",
+    /** 盘点中 */
+    HANDLING = "HANDLING",
+    /** 待核对 */
+    WAIT_VERIFY = "WAIT_VERIFY",
+    /** 待盈亏处理 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

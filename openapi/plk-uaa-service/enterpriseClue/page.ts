@@ -41,7 +41,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«客户线索分页响应»» */
 export interface IJSONResultPagingInformationCustomerLeadPagingResponse {
@@ -69,9 +69,9 @@ export interface IPageInformationCustomerLeadPageResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationCustomerLeadPageResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationCustomerLeadPageResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -112,5 +112,33 @@ export interface ICustomerLeadPagingResponse {
     /** 备注 */
     remark?: string;
     /** 是否已开通试用 */
-    isTrialed?: ('Y' | 'N');
+    isTrialed?: ECustomerLeadPagingResponse_isTrialed;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationCustomerLeadPageResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationCustomerLeadPageResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ECustomerLeadPagingResponse_isTrialed {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

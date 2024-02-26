@@ -45,7 +45,7 @@ export interface IThirdApiRequestInfoResponseDTO {
 /** ThirdApiResponseInfoResponseDTO */
 export interface IThirdApiResponseInfoResponseDTO {
     /** undefined */
-    success?: ('Y' | 'N');
+    success?: EThirdApiResponseInfoResponseDTO_success;
     /** undefined */
     errorInfo?: string;
     /** undefined */
@@ -60,4 +60,9 @@ export interface IThirdApiResponseInfoResponseDTO {
     responseDataObj?: Record<string, Record<string, any>>;
     /** undefined */
     responseDataArray?: Record<string, any>[];
+}
+
+export enum EThirdApiResponseInfoResponseDTO_success {
+    Y = "Y",
+    N = "N"
 }

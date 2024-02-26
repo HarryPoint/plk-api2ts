@@ -43,7 +43,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«文件对象分页查询响应DTO»» */
 export interface IJSONResultPagingInformationFileObjectPagingQueryResponseDTO {
@@ -71,9 +71,9 @@ export interface IPageInformationFileObjectPageQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationFileObjectPageQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationFileObjectPageQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -116,5 +116,38 @@ export interface IFileObjectPagingQueryResponseDTO {
     /** 文件Key */
     fileKeys?: Record<string, any>[];
     /** 权限列表 */
-    permissionTypeList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
+    permissionTypeList?: EFileObjectPagingQueryResponseDTO_permissionTypeList_items[];
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationFileObjectPageQueryResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationFileObjectPageQueryResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EFileObjectPagingQueryResponseDTO_permissionTypeList_items {
+    CATEGORY_EDIT = "CATEGORY_EDIT",
+    CATEGORY_MOVE = "CATEGORY_MOVE",
+    CATEGORY_REMOVE = "CATEGORY_REMOVE",
+    UPLOAD_FILE = "UPLOAD_FILE",
+    CATEGORY_VIEW = "CATEGORY_VIEW",
+    FILE_RENAME = "FILE_RENAME",
+    FILE_DOWNLOAD = "FILE_DOWNLOAD",
+    FILE_MOVE = "FILE_MOVE",
+    FILE_REMOVE = "FILE_REMOVE"
 }

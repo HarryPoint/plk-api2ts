@@ -59,11 +59,27 @@ export interface IProposalDashboardStatisticsConfigResponseDTO {
     /** ID */
     id?: number;
     /** 统计类型 */
-    type?: ('RANGE' | 'GE' | 'GT');
+    type?: EProposalDashboardStatisticsConfigResponseDTO_type;
     /** 开始值 - 适用于数值区间、数值大于等于、数值大于 */
     beginValue?: number;
     /** 结束值 */
     endValue?: number;
     /** 项目归属的完成状态 - 未完成项目， 已完成项目 */
-    projectCompleteStatus?: ('UN_COMPLETED' | 'COMPLETED');
+    projectCompleteStatus?: EProposalDashboardStatisticsConfigResponseDTO_projectCompleteStatus;
+}
+
+export enum EProposalDashboardStatisticsConfigResponseDTO_type {
+    /** 数值区间 */
+    RANGE = "RANGE",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值大于 */
+    GT = "GT"
+}
+
+export enum EProposalDashboardStatisticsConfigResponseDTO_projectCompleteStatus {
+    /** 未完成 */
+    UN_COMPLETED = "UN_COMPLETED",
+    /** 已完成 */
+    COMPLETED = "COMPLETED"
 }

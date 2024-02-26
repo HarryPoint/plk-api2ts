@@ -32,11 +32,11 @@ export interface IPaging {
     /** 修改用户-精确匹配 */
     updateUserId?: number;
     /** 发送模式-精确匹配 */
-    sendingMode?: ('SINGLE' | 'MULTIPLE');
+    sendingMode?: EPaging_sendingMode;
     /** 创建时间-结束范围 */
     createTimeEnd?: string;
     /** 任务状态-精确匹配 */
-    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
+    status?: EPaging_status;
     /** 修改时间-结束范围 */
     updateTimeEnd?: string;
     /** 创建时间-起始范围 */
@@ -53,7 +53,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** EmailTaskAttachmentConfigQueryRequestDTO */
 export interface IEmailTaskAttachmentConfigQueryRequestDTO {
@@ -86,9 +86,9 @@ export interface IThePagingInformationEmailTaskQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePagingInformationEmailTaskQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePagingInformationEmailTaskQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -125,7 +125,58 @@ export interface IEmailTaskQueryResponseDTO {
     /** 邮件主题 */
     title?: string;
     /** 发送方式 */
-    sendingMode?: ('SINGLE' | 'MULTIPLE');
+    sendingMode?: EEmailTaskQueryResponseDTO_sendingMode;
     /** 任务状态 */
-    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
+    status?: EEmailTaskQueryResponseDTO_status;
+}
+
+export enum EPaging_sendingMode {
+    /** 单次 */
+    SINGLE = "SINGLE",
+    /** 多次 */
+    MULTIPLE = "MULTIPLE"
+}
+
+export enum EPaging_status {
+    /** 生效中 */
+    IN_ACTIVE = "IN_ACTIVE",
+    /** 已停用 */
+    DEACTIVATED = "DEACTIVATED",
+    /** 已完成 */
+    COMPLETED = "COMPLETED"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePagingInformationEmailTaskQueryResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationEmailTaskQueryResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEmailTaskQueryResponseDTO_sendingMode {
+    /** 单次 */
+    SINGLE = "SINGLE",
+    /** 多次 */
+    MULTIPLE = "MULTIPLE"
+}
+
+export enum EEmailTaskQueryResponseDTO_status {
+    /** 生效中 */
+    IN_ACTIVE = "IN_ACTIVE",
+    /** 已停用 */
+    DEACTIVATED = "DEACTIVATED",
+    /** 已完成 */
+    COMPLETED = "COMPLETED"
 }

@@ -35,7 +35,21 @@ export interface ISaasEnterprisesRespondToDTO1 {
     /** 企业编号 */
     code?: string;
     /** 是否是最后登录企业 */
-    isLastLogin?: ('Y' | 'N');
+    isLastLogin?: ESaasEnterprisesRespondToDTO1_isLastLogin;
     /** 服务类型 */
-    productServiceType?: ('TRIAL' | 'FORMAL');
+    productServiceType?: ESaasEnterprisesRespondToDTO1_productServiceType;
+}
+
+export enum ESaasEnterprisesRespondToDTO1_isLastLogin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESaasEnterprisesRespondToDTO1_productServiceType {
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式 */
+    FORMAL = "FORMAL"
 }

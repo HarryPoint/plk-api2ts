@@ -34,7 +34,7 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 计划开始日期查询结束时间 */
     endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE')[];
+    planTypeList?: EProductionSchedulingOrderSearchVO_planTypeList_items[];
     /** 计划结束日期查询结束时间 */
     endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -57,4 +57,16 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionSchedulingOrderSearchVO_planTypeList_items {
+    NOT_PLAN = "NOT_PLAN",
+    AUTO = "AUTO",
+    HAND = "HAND",
+    VAGUE = "VAGUE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

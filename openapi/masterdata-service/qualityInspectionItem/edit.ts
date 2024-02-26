@@ -22,11 +22,11 @@ export interface IEditTheQualityInspectionClassificationDTO1 {
     /** 质检分类编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: ('Y' | 'N');
+    isCodeRule: EEditTheQualityInspectionClassificationDTO1_isCodeRule;
     /** 质检方式 */
-    qualityMethod: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod: EEditTheQualityInspectionClassificationDTO1_qualityMethod;
     /** 选择方式 */
-    selectType?: ('SELECTOR' | 'CHECKBOX');
+    selectType?: EEditTheQualityInspectionClassificationDTO1_selectType;
     /** 选项内容集合 */
     selectors?: IQualityInspectionItemEditDTO[];
     /** 备注 */
@@ -49,4 +49,25 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEditTheQualityInspectionClassificationDTO1_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEditTheQualityInspectionClassificationDTO1_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum EEditTheQualityInspectionClassificationDTO1_selectType {
+    /** 单选 */
+    SELECTOR = "SELECTOR",
+    /** 多选 */
+    CHECKBOX = "CHECKBOX"
 }

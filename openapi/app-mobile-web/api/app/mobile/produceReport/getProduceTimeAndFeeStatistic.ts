@@ -24,7 +24,7 @@ export interface IUserProductionStatisticsSearchVO {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList?: ('PRODUCE' | 'BACK')[];
+    produceTaskTypeList?: EUserProductionStatisticsSearchVO_produceTaskTypeList_items[];
     /** 生产订单编码 */
     produceOrderCode?: string;
 }
@@ -80,5 +80,31 @@ export interface IUserProductionStatisticsReturnVO {
     /** 记录时间 */
     createTime?: string;
     /** 快照类型 */
-    type?: ('PRODUCE' | 'SCRAP' | 'BACK' | 'ENTRUST' | 'PRODUCE_MOVE_IN' | 'BACK_MOVE_IN' | 'BACK_APPROVE' | 'HOLD_BACK' | 'HOLD_PAUSE_BACK');
+    type?: EUserProductionStatisticsReturnVO_type;
+}
+
+export enum EUserProductionStatisticsSearchVO_produceTaskTypeList_items {
+    PRODUCE = "PRODUCE",
+    BACK = "BACK"
+}
+
+export enum EUserProductionStatisticsReturnVO_type {
+    /** 合格产出 */
+    PRODUCE = "PRODUCE",
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 返工产出 */
+    BACK = "BACK",
+    /** 委外 */
+    ENTRUST = "ENTRUST",
+    /** 生产进料 */
+    PRODUCE_MOVE_IN = "PRODUCE_MOVE_IN",
+    /** 返工进料 */
+    BACK_MOVE_IN = "BACK_MOVE_IN",
+    /** 返工审批 */
+    BACK_APPROVE = "BACK_APPROVE",
+    /** 扣留返工 */
+    HOLD_BACK = "HOLD_BACK",
+    /** 暂扣返工 */
+    HOLD_PAUSE_BACK = "HOLD_PAUSE_BACK"
 }

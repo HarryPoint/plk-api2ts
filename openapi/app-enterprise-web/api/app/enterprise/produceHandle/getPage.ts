@@ -24,13 +24,13 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 异常分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
+    type?: EProduceObjectsThatHandlePagingQueries_type;
     /** 提交人id */
     createUserId?: number;
     /** 生产异常类型id */
     produceAbnormalCategoryId?: number;
     /** 状态 */
-    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
+    status?: EProduceObjectsThatHandlePagingQueries_status;
     /** 操作开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 批次号 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«生产处理分页响应对象»» */
 export interface IJSONResultPagingInformationProductionHandlesPagingResponseObjects {
@@ -73,9 +73,9 @@ export interface IPagingInformationProductionHandlesPagingResponseObjects {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationProductionHandlesPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationProductionHandlesPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -90,7 +90,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 所属生产任务工艺路径步骤 */
     routingStep?: number;
     /** 异常分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
+    type?: EProductionHandlesPagingResponseObjects_type;
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -154,7 +154,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 返工工序编号 */
     backProcessCode?: string;
     /** 返工生产类型 */
-    backProduceType?: ('RETURN' | 'ORDER');
+    backProduceType?: EProductionHandlesPagingResponseObjects_backProduceType;
     /** 返工生产类型描述 */
     backProduceTypeDesc?: string;
     /** 处理时间 */
@@ -174,7 +174,7 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
+    status?: EProductionHandlesPagingResponseObjects_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */
@@ -184,7 +184,151 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 创建时间 */
     createTime?: string;
     /** 是否启用启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EProductionHandlesPagingResponseObjects_enableLot;
     /** 是否启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionHandlesPagingResponseObjects_enableQualityTraceability;
+}
+
+export enum EProduceObjectsThatHandlePagingQueries_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 申请质检 */
+    QUALITY_APPLY = "QUALITY_APPLY",
+    /** 任务下发 */
+    TASK_ISSUE = "TASK_ISSUE",
+    /** 委外加工 */
+    PRODUCE_ENTRUST = "PRODUCE_ENTRUST",
+    /** 任务分配 */
+    TASK_ASSIGN = "TASK_ASSIGN"
+}
+
+export enum EProduceObjectsThatHandlePagingQueries_status {
+    /** 待处理 */
+    CREATED = "CREATED",
+    /** 已确认 */
+    SURE = "SURE",
+    /** 已忽略 */
+    IGNORE = "IGNORE",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 处理中 */
+    HANDING = "HANDING",
+    /** 处理完成 */
+    ALL_HANDLE = "ALL_HANDLE",
+    /** 批准 */
+    APPROVAL = "APPROVAL",
+    /** 拒绝 */
+    REFUSE = "REFUSE",
+    /** 撤销 */
+    REVOKE = "REVOKE",
+    /** 完成 */
+    COMPLETE = "COMPLETE",
+    /** 取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationProductionHandlesPagingResponseObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationProductionHandlesPagingResponseObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionHandlesPagingResponseObjects_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 申请质检 */
+    QUALITY_APPLY = "QUALITY_APPLY",
+    /** 任务下发 */
+    TASK_ISSUE = "TASK_ISSUE",
+    /** 委外加工 */
+    PRODUCE_ENTRUST = "PRODUCE_ENTRUST",
+    /** 任务分配 */
+    TASK_ASSIGN = "TASK_ASSIGN"
+}
+
+export enum EProductionHandlesPagingResponseObjects_backProduceType {
+    /** 返回原工序 */
+    RETURN = "RETURN",
+    /** 顺序生产 */
+    ORDER = "ORDER"
+}
+
+export enum EProductionHandlesPagingResponseObjects_status {
+    /** 待处理 */
+    CREATED = "CREATED",
+    /** 已确认 */
+    SURE = "SURE",
+    /** 已忽略 */
+    IGNORE = "IGNORE",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 处理中 */
+    HANDING = "HANDING",
+    /** 处理完成 */
+    ALL_HANDLE = "ALL_HANDLE",
+    /** 批准 */
+    APPROVAL = "APPROVAL",
+    /** 拒绝 */
+    REFUSE = "REFUSE",
+    /** 撤销 */
+    REVOKE = "REVOKE",
+    /** 完成 */
+    COMPLETE = "COMPLETE",
+    /** 取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionHandlesPagingResponseObjects_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionHandlesPagingResponseObjects_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

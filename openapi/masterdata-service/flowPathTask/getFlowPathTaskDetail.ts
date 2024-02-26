@@ -29,7 +29,7 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** id */
     id?: number;
     /** 任务类型 */
-    type?: ('EXECUTE' | 'APPROVAL');
+    type?: EProcessTaskDetailsAreReturnedToVO_type;
     /** 自定义提交按钮文案 */
     customSubmitContent?: string;
     /** 任务号 */
@@ -63,7 +63,7 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 处理时间 - 状态为已处理、已关闭时有值 */
     handleTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLED' | 'CLOSE');
+    status?: EProcessTaskDetailsAreReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 执行人id */
@@ -71,15 +71,15 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 超时开始时间 */
     timeoutBeginTime?: string;
     /** 任务接受状态 */
-    acceptStatus?: ('ACCEPTED' | 'WAIT_ACCEPT');
+    acceptStatus?: EProcessTaskDetailsAreReturnedToVO_acceptStatus;
     /** 开始状态 */
-    beginningStatus?: ('NOT_BEGUN' | 'BEGUN');
+    beginningStatus?: EProcessTaskDetailsAreReturnedToVO_beginningStatus;
     /** 开始时间 */
     beginningTime?: string;
     /** 单据创建人名称 */
     workOrderCreateUsername?: string;
     /** 任务状态 */
-    modelTaskStatus?: ('WAIT_ACCEPT' | 'WAIT_HANDLE' | 'WAIT_APPROVE' | 'TIMEOUT' | 'HANDLED');
+    modelTaskStatus?: EProcessTaskDetailsAreReturnedToVO_modelTaskStatus;
     /** 任务状态描述 */
     modelTaskStatusDesc?: string;
     /** 自定义字段 */
@@ -89,35 +89,35 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 工单信息 */
     workOrder?: IProcessTicketPreviewInformationIsReturnedToVO;
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent?: ('Y' | 'N');
+    isCustomSubmitContent?: EProcessTaskDetailsAreReturnedToVO_isCustomSubmitContent;
     /** 是否允许回退 */
-    isBack?: ('Y' | 'N');
+    isBack?: EProcessTaskDetailsAreReturnedToVO_isBack;
     /** 回退类型 */
-    backType?: ('ANY' | 'PREVIOUS' | 'APPOINT');
+    backType?: EProcessTaskDetailsAreReturnedToVO_backType;
     /** 审批回退节点选择集 */
     backFlowPathNodeSelector?: IIdNameNumberVO[];
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent?: ('Y' | 'N');
+    isCustomAcceptContent?: EProcessTaskDetailsAreReturnedToVO_isCustomAcceptContent;
     /** 自定义接受按钮文案 */
     customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton?: ('Y' | 'N');
+    isShowAcceptButton?: EProcessTaskDetailsAreReturnedToVO_isShowAcceptButton;
     /** 是否自定义同意按钮文案 */
-    isCustomPassApprovalContent: ('Y' | 'N');
+    isCustomPassApprovalContent: EProcessTaskDetailsAreReturnedToVO_isCustomPassApprovalContent;
     /** 自定义同意按钮文案 */
     customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
-    isCustomRefuseApprovalContent: ('Y' | 'N');
+    isCustomRefuseApprovalContent: EProcessTaskDetailsAreReturnedToVO_isCustomRefuseApprovalContent;
     /** 自定义拒绝按钮文案 */
     customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton?: ('Y' | 'N');
+    isShowRefuseButton?: EProcessTaskDetailsAreReturnedToVO_isShowRefuseButton;
     /** 是否自定义回退按钮文案 */
-    isCustomBackContent: ('Y' | 'N');
+    isCustomBackContent: EProcessTaskDetailsAreReturnedToVO_isCustomBackContent;
     /** 自定义回退按钮文案 */
     customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton?: ('Y' | 'N');
+    isShowBackButton?: EProcessTaskDetailsAreReturnedToVO_isShowBackButton;
     /** 审批意见/执行情况 */
     notes?: string;
 }
@@ -145,11 +145,11 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** 提交时间 */
     createTime?: string;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProcessTicketPreviewInformationIsReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 关闭类型 */
-    closeType?: ('COMPLETE' | 'REFUSE');
+    closeType?: EProcessTicketPreviewInformationIsReturnedToVO_closeType;
     /** 关闭类型描述 */
     closeTypeDesc?: string;
     /** 所属流程id */
@@ -173,4 +173,139 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_type {
+    /** 执行任务 */
+    EXECUTE = "EXECUTE",
+    /** 审批任务 */
+    APPROVAL = "APPROVAL"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 已处理 */
+    HANDLED = "HANDLED",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_acceptStatus {
+    /** 已接受 */
+    ACCEPTED = "ACCEPTED",
+    /** 待接受 */
+    WAIT_ACCEPT = "WAIT_ACCEPT"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_beginningStatus {
+    /** 未开始 */
+    NOT_BEGUN = "NOT_BEGUN",
+    /** 已开始 */
+    BEGUN = "BEGUN"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_modelTaskStatus {
+    /** 待接受 */
+    WAIT_ACCEPT = "WAIT_ACCEPT",
+    /** 待处理 */
+    WAIT_HANDLE = "WAIT_HANDLE",
+    /** 待审批 */
+    WAIT_APPROVE = "WAIT_APPROVE",
+    /** 已超时 */
+    TIMEOUT = "TIMEOUT",
+    /** 已处理 */
+    HANDLED = "HANDLED"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isCustomSubmitContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isBack {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_backType {
+    /** 之前所有节点 */
+    ANY = "ANY",
+    /** 返回上一节点 */
+    PREVIOUS = "PREVIOUS",
+    /** 返回指定节点 */
+    APPOINT = "APPOINT"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isCustomAcceptContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isShowAcceptButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isCustomPassApprovalContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isCustomRefuseApprovalContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isShowRefuseButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isCustomBackContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTaskDetailsAreReturnedToVO_isShowBackButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessTicketPreviewInformationIsReturnedToVO_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProcessTicketPreviewInformationIsReturnedToVO_closeType {
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已拒绝 */
+    REFUSE = "REFUSE"
 }

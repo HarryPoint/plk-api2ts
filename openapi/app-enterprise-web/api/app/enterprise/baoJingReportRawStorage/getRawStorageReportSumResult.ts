@@ -53,7 +53,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«宝晶报表(原材料日报表)相关返回VO» */
 export interface IJSONResultBaoJingReportRawMaterialsDailyReportRelatedReturnVO {
@@ -76,4 +76,11 @@ export interface IBaojingReportRawMaterialsDailyReportRelatedReturnToVO1 {
     outQuantity?: number;
     /** 期末数 */
     endQuantity?: number;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

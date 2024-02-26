@@ -38,16 +38,39 @@ export interface IFileClassificationDetailsRespondToDTO {
 /** FileCategoryPermissionResponseDTO */
 export interface IFileCategoryPermissionResponseDTO {
     /** 权限类型 */
-    permissionTypeList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
+    permissionTypeList?: EFileCategoryPermissionResponseDTO_permissionTypeList_items[];
     /** 组织列表 */
     organizations?: IFileCategoryOrganizationResponseDTO[];
 }
 /** FileCategoryOrganizationResponseDTO */
 export interface IFileCategoryOrganizationResponseDTO {
     /** 组织 */
-    organization?: ('USER' | 'DEPARTMENT' | 'ROLE' | 'ALL');
+    organization?: EFileCategoryOrganizationResponseDTO_organization;
     /** 文件组织ID */
     organizationId?: number;
     /** 组织名称 */
     organizationName?: string;
+}
+
+export enum EFileCategoryPermissionResponseDTO_permissionTypeList_items {
+    CATEGORY_EDIT = "CATEGORY_EDIT",
+    CATEGORY_MOVE = "CATEGORY_MOVE",
+    CATEGORY_REMOVE = "CATEGORY_REMOVE",
+    UPLOAD_FILE = "UPLOAD_FILE",
+    CATEGORY_VIEW = "CATEGORY_VIEW",
+    FILE_RENAME = "FILE_RENAME",
+    FILE_DOWNLOAD = "FILE_DOWNLOAD",
+    FILE_MOVE = "FILE_MOVE",
+    FILE_REMOVE = "FILE_REMOVE"
+}
+
+export enum EFileCategoryOrganizationResponseDTO_organization {
+    /** 用户 */
+    USER = "USER",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 角色 */
+    ROLE = "ROLE",
+    /** 所有人 */
+    ALL = "ALL"
 }

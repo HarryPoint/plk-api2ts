@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«产能分页响应对象»» */
 export interface IJSONResultPagingInformationCapacityPagingResponseObject {
@@ -65,9 +65,9 @@ export interface IPagingInformationProducesPagingResponseObjects {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationProducesPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationProducesPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -108,11 +108,11 @@ export interface ICapacityPageResponseObject {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: ECapacityPageResponseObject_readyTimeUnit;
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: ECapacityPageResponseObject_capacityTimeType;
     /** 产出数量 */
     capacityProduceQuantity?: number;
     /** 状态 */
@@ -124,4 +124,41 @@ export interface IAssociatedDropDownResponseObjects {
     id?: number;
     /** 显示字段名称 */
     showFieldValue?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationProducesPagingResponseObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationProducesPagingResponseObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ECapacityPageResponseObject_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum ECapacityPageResponseObject_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

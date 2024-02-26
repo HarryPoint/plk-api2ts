@@ -31,11 +31,18 @@ export interface IProjectTaskTemplatesRespondToDtos {
     /** 项目id */
     projectId?: number;
     /** 是否是通用模板 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EProjectTaskTemplatesRespondToDtos_isDefault;
     /** 模板名称 */
     name?: string;
     /** 应用编号 */
     appCode?: string;
     /** 应用id */
     appId?: number;
+}
+
+export enum EProjectTaskTemplatesRespondToDtos_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

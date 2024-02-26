@@ -18,9 +18,9 @@ export interface IProductionOrderAutomaticInsertionCalculationResultsToDetermine
     /** 排产计划单名称 */
     planName?: string;
     /** 排产方式 */
-    autoPlanType?: ('ASC' | 'DESC');
+    autoPlanType?: EProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO_autoPlanType;
     /** 是否考虑自动提前（要传计算时的值） */
-    isAutoMoveUp?: ('Y' | 'N');
+    isAutoMoveUp?: EProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO_isAutoMoveUp;
     /** 生产订单计划时间集 */
     produceOrderPlanTimes?: IAutomaticProductionOrderSchedulingTimeDTO[];
     /** 顺延订单计划时间集 */
@@ -64,4 +64,18 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO_autoPlanType {
+    /** 正向排产 */
+    ASC = "ASC",
+    /** 倒序排产 */
+    DESC = "DESC"
+}
+
+export enum EProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO_isAutoMoveUp {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

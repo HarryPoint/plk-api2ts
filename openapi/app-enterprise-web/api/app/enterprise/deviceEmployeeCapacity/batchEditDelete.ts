@@ -44,7 +44,7 @@ export interface IEquipmentPersonnelCapabilityDetailsEditDTO {
     /** 维修能力 */
     maintainLevel?: string;
     /** 保养能力 */
-    canMaintain?: ('Y' | 'N');
+    canMaintain?: EEquipmentPersonnelCapabilityDetailsEditDTO_canMaintain;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -56,4 +56,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEquipmentPersonnelCapabilityDetailsEditDTO_canMaintain {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

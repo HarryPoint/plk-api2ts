@@ -24,14 +24,14 @@ export interface IProcessOperatorIdSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工类型 */
-    userType: ('PRODUCE' | 'QUALITY');
+    userType: EProcessOperatorIdSearchVO_userType;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«long»» */
 export interface IJSONResultListlong {
@@ -43,4 +43,16 @@ export interface IJSONResultListlong {
     data?: number[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProcessOperatorIdSearchVO_userType {
+    /** 生产 */
+    PRODUCE = "PRODUCE",
+    /** 质量 */
+    QUALITY = "QUALITY"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

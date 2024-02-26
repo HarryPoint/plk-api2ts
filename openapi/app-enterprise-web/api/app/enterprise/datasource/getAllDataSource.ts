@@ -35,7 +35,7 @@ export interface IDataSourceResponseObject {
     /** 数据源名称 */
     name?: string;
     /** 数据源类型 */
-    dataSourceType?: ('DYNAMIC_FORM' | 'FUN' | 'REPORT');
+    dataSourceType?: EDataSourceResponseObject_dataSourceType;
     /** 父级数据源id */
     parentId?: number;
     /** 应用流程id */
@@ -43,7 +43,7 @@ export interface IDataSourceResponseObject {
     /** 应用流程状态 */
     flowPathDataStatus?: number;
     /** 是否主表 */
-    isMaster?: ('Y' | 'N');
+    isMaster?: EDataSourceResponseObject_isMaster;
     /** 应用路由Id */
     enterpriseRouterId?: string;
     /** 应用路由code */
@@ -51,7 +51,30 @@ export interface IDataSourceResponseObject {
     /** 服务对象id */
     serviceObjectId?: number;
     /** 服务包类型 - 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EDataSourceResponseObject_applicationLevel;
     /** 子数据源 */
     childDataSources?: IDataSourceResponseObject[];
+}
+
+export enum EDataSourceResponseObject_dataSourceType {
+    /** 动态表单 */
+    DYNAMIC_FORM = "DYNAMIC_FORM",
+    /** 功能 */
+    FUN = "FUN",
+    /** 报表 */
+    REPORT = "REPORT"
+}
+
+export enum EDataSourceResponseObject_isMaster {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDataSourceResponseObject_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

@@ -24,7 +24,7 @@ export interface ISilopusBigScreenSetUpTheDTO {
     /** 工序目标值设置集 */
     processTargetSettings: ISilopusProcessTargetValueLargeScreenSetDTO[];
     /** 报废数据前五统计时间类型 */
-    scrapStatisticsTime: ('ONE_DAY' | 'SEVEN_DAY' | 'FIFTEEN_DAY' | 'THIRTY_DAY');
+    scrapStatisticsTime: ESilopusBigScreenSetUpTheDTO_scrapStatisticsTime;
 }
 /** 西偌帕斯大屏计划数设置DTO */
 export interface ISilopusLargeScreenProjectNumberSetDTO {
@@ -50,4 +50,15 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESilopusBigScreenSetUpTheDTO_scrapStatisticsTime {
+    /** 最近24小时 */
+    ONE_DAY = "ONE_DAY",
+    /** 最近7天 */
+    SEVEN_DAY = "SEVEN_DAY",
+    /** 最近15天 */
+    FIFTEEN_DAY = "FIFTEEN_DAY",
+    /** 最近30天 */
+    THIRTY_DAY = "THIRTY_DAY"
 }

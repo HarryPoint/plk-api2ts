@@ -38,14 +38,14 @@ export interface IFinancialPeriodQueryRequest {
     /** 天数 - End */
     daysEnd?: number;
     /** 结存状态列表 */
-    balanceStatusList?: ('UNBALANCED' | 'BALANCED')[];
+    balanceStatusList?: EFinancialPeriodQueryRequest_balanceStatusList_items[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«财务期间查询响应»» */
 export interface IJSONResultPagingInformationFinancialPeriodQueryResponse {
@@ -73,9 +73,9 @@ export interface IPagingInformationFinancialPeriodQueryResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationFinancialPeriodQueryResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationFinancialPeriodQueryResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -94,5 +94,36 @@ export interface IFinancialPeriodQueryResponse {
     /** 天数 */
     days?: number;
     /** 结存状态 */
-    balanceStatus?: ('UNBALANCED' | 'BALANCED');
+    balanceStatus?: EFinancialPeriodQueryResponse_balanceStatus;
+}
+
+export enum EFinancialPeriodQueryRequest_balanceStatusList_items {
+    UNBALANCED = "UNBALANCED",
+    BALANCED = "BALANCED"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationFinancialPeriodQueryResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationFinancialPeriodQueryResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EFinancialPeriodQueryResponse_balanceStatus {
+    /** 未结存 */
+    UNBALANCED = "UNBALANCED",
+    /** 已结存 */
+    BALANCED = "BALANCED"
 }

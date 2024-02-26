@@ -53,11 +53,11 @@ export interface IDeviceDataAcquisitionStatusMessageVO {
     /** 设备数采方案编号 */
     deviceCollectionPlanCode?: string;
     /** 在线状态 */
-    onlineStatus?: ('ONLINE' | 'OFFLINE');
+    onlineStatus?: EDeviceDataAcquisitionStatusMessageVO_onlineStatus;
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    status?: EDeviceDataAcquisitionStatusMessageVO_status;
     /** 设备状态描述 */
     statusDesc?: string;
     /** 最后通讯时间 */
@@ -86,4 +86,30 @@ export interface IDeviceDataAcquisitionDataIsReturnedToVO {
     time?: string;
     /** 结果值 */
     result?: number;
+}
+
+export enum EDeviceDataAcquisitionStatusMessageVO_onlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EDeviceDataAcquisitionStatusMessageVO_status {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
 }

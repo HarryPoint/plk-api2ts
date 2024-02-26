@@ -18,11 +18,11 @@ export interface IAutomaticProductionOrderSchedulingDTO {
     /** 待排产订单id集 */
     waitProduceOrderIds?: number[];
     /** 是否正向排产 */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EAutomaticProductionOrderSchedulingDTO_isAsc;
     /** 是否倒序排产 */
-    isDesc?: ('Y' | 'N');
+    isDesc?: EAutomaticProductionOrderSchedulingDTO_isDesc;
     /** 是否考虑自动提前 */
-    isAutoMoveUp?: ('Y' | 'N');
+    isAutoMoveUp?: EAutomaticProductionOrderSchedulingDTO_isAutoMoveUp;
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 排产结束时间 yyyy-MM-dd HH:mm:ss */
@@ -57,15 +57,15 @@ export interface ICalculationResultOfSchedulingVO {
 /** 排产计算结果分析VO */
 export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
     /** 排产方式 */
-    autoPlanType?: ('ASC' | 'DESC');
+    autoPlanType?: ETheResultsOfSchedulingCalculationWereAnalyzedVO_autoPlanType;
     /** 是否按期交付 */
-    isOnTime?: ('Y' | 'N');
+    isOnTime?: ETheResultsOfSchedulingCalculationWereAnalyzedVO_isOnTime;
     /** 影响订单个数 */
     affectOrderCount?: number;
     /** 超期订单个数 */
     overdueOrderCount?: number;
     /** 超期原因类型集 */
-    overdueTypes?: ('PROCESS' | 'OCCUPY' | 'CAPACITY')[];
+    overdueTypes?: ETheResultsOfSchedulingCalculationWereAnalyzedVO_overdueTypes_items[];
     /** 超期原因分析集 */
     overdueReasons?: string[];
     /** 还需增加工时(小时) */
@@ -78,7 +78,7 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
     /** id */
     id?: number;
     /** 是否加急 */
-    isEmergentOrder?: ('Y' | 'N');
+    isEmergentOrder?: EUnscheduledProductionOrdersAreReturnedToVO1_isEmergentOrder;
     /** 生产订单编号 */
     code?: string;
     /** 父级订单编号 */
@@ -118,7 +118,7 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
     /** 交付数量 */
     totalCount?: number;
     /** 排产状态 */
-    planStatus?: ('WAIT' | 'PART' | 'ALL');
+    planStatus?: EUnscheduledProductionOrdersAreReturnedToVO1_planStatus;
     /** 排产状态描述 */
     planStatusDesc?: string;
     /** 步骤集 */
@@ -137,11 +137,11 @@ export interface IUnscheduledProductionOrderStepReturnToVO1 {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EUnscheduledProductionOrderStepReturnToVO1_readyTimeUnit;
     /** 产能-生产时间 */
     capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EUnscheduledProductionOrderStepReturnToVO1_capacityTimeType;
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 工序计划开始日期 */
@@ -152,4 +152,79 @@ export interface IUnscheduledProductionOrderStepReturnToVO1 {
     currentBeginTime?: string;
     /** 工序当前计划结束日期 */
     currentEndTime?: string;
+}
+
+export enum EAutomaticProductionOrderSchedulingDTO_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAutomaticProductionOrderSchedulingDTO_isDesc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAutomaticProductionOrderSchedulingDTO_isAutoMoveUp {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheResultsOfSchedulingCalculationWereAnalyzedVO_autoPlanType {
+    /** 正向排产 */
+    ASC = "ASC",
+    /** 倒序排产 */
+    DESC = "DESC"
+}
+
+export enum ETheResultsOfSchedulingCalculationWereAnalyzedVO_isOnTime {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheResultsOfSchedulingCalculationWereAnalyzedVO_overdueTypes_items {
+    PROCESS = "PROCESS",
+    OCCUPY = "OCCUPY",
+    CAPACITY = "CAPACITY"
+}
+
+export enum EUnscheduledProductionOrdersAreReturnedToVO1_isEmergentOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EUnscheduledProductionOrdersAreReturnedToVO1_planStatus {
+    /** 待排产 */
+    WAIT = "WAIT",
+    /** 部分排产 */
+    PART = "PART",
+    /** 全部排产 */
+    ALL = "ALL"
+}
+
+export enum EUnscheduledProductionOrderStepReturnToVO1_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EUnscheduledProductionOrderStepReturnToVO1_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

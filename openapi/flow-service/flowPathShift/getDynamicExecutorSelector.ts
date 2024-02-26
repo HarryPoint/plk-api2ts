@@ -27,7 +27,7 @@ export interface IJSONResultListProcessNodeDynamicExecutorReturnsVO {
 /** 流程节点动态执行人返回VO */
 export interface ITheProcessNodeDynamicExecutorReturnsVO {
     /** 动态执行人类型 */
-    dynamicExecutorType?: ('TASK_PLAN');
+    dynamicExecutorType?: ETheProcessNodeDynamicExecutorReturnsVO_dynamicExecutorType;
     /** id */
     id: number;
     /** 动态执行人类型描述 */
@@ -37,7 +37,34 @@ export interface ITheProcessNodeDynamicExecutorReturnsVO {
     /** 编号 */
     code: string;
     /** 系统控件类型 */
-    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
+    executorSysType?: ETheProcessNodeDynamicExecutorReturnsVO_executorSysType;
     /** 配置类型 */
-    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
+    executorType?: ETheProcessNodeDynamicExecutorReturnsVO_executorType;
+}
+
+export enum ETheProcessNodeDynamicExecutorReturnsVO_dynamicExecutorType {
+    /** 任务方案 */
+    TASK_PLAN = "TASK_PLAN"
+}
+
+export enum ETheProcessNodeDynamicExecutorReturnsVO_executorSysType {
+    /** 创建人 */
+    CREATE_BY = "CREATE_BY",
+    /** 创建部门 */
+    CREATE_DEPARTMENT = "CREATE_DEPARTMENT",
+    /** 任务方案 */
+    FLOW_PATH_TASK_PLAN = "FLOW_PATH_TASK_PLAN"
+}
+
+export enum ETheProcessNodeDynamicExecutorReturnsVO_executorType {
+    /** 员工 */
+    USER = "USER",
+    /** 角色 */
+    ROLE = "ROLE",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 系统控件 */
+    SYS_CONTROL = "SYS_CONTROL"
 }

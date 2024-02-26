@@ -75,7 +75,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsRe
     /** 设备数采参数单位 */
     deviceCollectionParamUnit?: string;
     /** 实时数值对比标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO_numberStandard;
     /** 实时数值对比标准描述 */
     numberStandardDesc?: string;
     /** 实时比较数值 */
@@ -87,7 +87,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsRe
     /** 备注 */
     remark?: string;
     /** 统计类型 */
-    statisticType?: ('AVG' | 'SUM' | 'MAX' | 'MIN' | 'SUBTRACT');
+    statisticType?: EDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO_statisticType;
     /** 统计类型描述 */
     statisticTypeDesc?: string;
     /** 统计范围配置项集 */
@@ -98,9 +98,9 @@ export interface IDeviceDataAcquisitionSchemeParameterWarningReturnVO {
     /** 预警id */
     id?: number;
     /** 时间粒度 */
-    timeType?: ('ALL' | 'HOUR' | 'DAY' | 'MONTH');
+    timeType?: EDeviceDataAcquisitionSchemeParameterWarningReturnVO_timeType;
     /** 数值对比标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EDeviceDataAcquisitionSchemeParameterWarningReturnVO_numberStandard;
     /** 数值对比标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */
@@ -113,4 +113,54 @@ export interface IDeviceDataAcquisitionSchemeParameterWarningReturnVO {
     remark?: string;
     /** 数据预警说明 */
     standardDesc?: string;
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO_statisticType {
+    /** 平均值 */
+    AVG = "AVG",
+    /** 求和 */
+    SUM = "SUM",
+    /** 最大值 */
+    MAX = "MAX",
+    /** 最小值 */
+    MIN = "MIN",
+    /** 取前后数据差值 */
+    SUBTRACT = "SUBTRACT"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterWarningReturnVO_timeType {
+    /** 全部 */
+    ALL = "ALL",
+    /** 时 */
+    HOUR = "HOUR",
+    /** 日 */
+    DAY = "DAY",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterWarningReturnVO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
 }

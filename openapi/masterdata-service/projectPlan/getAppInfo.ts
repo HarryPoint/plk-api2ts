@@ -37,5 +37,16 @@ export interface ITheProjectPlanAppliesTheResponseObject {
     /** 任务流程状态 */
     flowStatus?: string;
     /** 数据状态 */
-    dataStatus?: ('INVALID' | 'VALID' | 'STAGING' | 'DELETED');
+    dataStatus?: ETheProjectPlanAppliesTheResponseObject_dataStatus;
+}
+
+export enum ETheProjectPlanAppliesTheResponseObject_dataStatus {
+    /** 停用 */
+    INVALID = "INVALID",
+    /** 启用 */
+    VALID = "VALID",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 已删除 */
+    DELETED = "DELETED"
 }

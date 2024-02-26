@@ -50,5 +50,12 @@ export interface IFormReferencingQueryResponseDTO {
     /** 当前表单编码 */
     currentFormRecordCode?: string;
     /** 单据类型 */
-    billType?: ('DYNAMIC_FORM' | 'STORAGE_TAKE_CHECK_TASK');
+    billType?: EFormReferencingQueryResponseDTO_billType;
+}
+
+export enum EFormReferencingQueryResponseDTO_billType {
+    /** 动态表单 */
+    DYNAMIC_FORM = "DYNAMIC_FORM",
+    /** 盘点单 */
+    STORAGE_TAKE_CHECK_TASK = "STORAGE_TAKE_CHECK_TASK"
 }

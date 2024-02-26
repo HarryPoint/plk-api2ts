@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»» */
 export interface IProduceOrderSelectionItemQueryResponseDTOJSONResultPagingInformation {
@@ -61,9 +61,9 @@ export interface IThePagingInformationProduceOrderSelectionItemQueryResponseDTO 
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePagingInformationProduceOrderSelectionItemQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePagingInformationProduceOrderSelectionItemQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,7 +88,7 @@ export interface IProduceOrderSelectionItemQueryResponseDTO {
     /** 计划生产数量 */
     totalCount?: number;
     /** 领料状态 */
-    materialIssuanceStatus?: ('NONE' | 'PARTIAL_ISSUE' | 'FULL_ISSUE');
+    materialIssuanceStatus?: EProduceOrderSelectionItemQueryResponseDTO_materialIssuanceStatus;
     /** 子物料ID */
     materialId?: number;
     /** 子物料编号 */
@@ -115,4 +115,32 @@ export interface IProduceOrderSelectionItemQueryResponseDTO {
     returnedQuantity?: number;
     /** 库存查询ID */
     warehouseMaterialRpId?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePagingInformationProduceOrderSelectionItemQueryResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationProduceOrderSelectionItemQueryResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProduceOrderSelectionItemQueryResponseDTO_materialIssuanceStatus {
+    /** 未领料 */
+    NONE = "NONE",
+    /** 部分领料 */
+    PARTIAL_ISSUE = "PARTIAL_ISSUE",
+    /** 完全领料 */
+    FULL_ISSUE = "FULL_ISSUE"
 }

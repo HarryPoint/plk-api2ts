@@ -20,7 +20,7 @@ export interface IBatchOrderHistorySearchVO {
     /** 批次订单id */
     lotOrderId?: number;
     /** 流水类型 */
-    flowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
+    flowType?: EBatchOrderHistorySearchVO_flowType;
 }
 /** JSONResult«List«批次订单流水基本信息响应DTO»» */
 export interface IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO {
@@ -38,11 +38,73 @@ export interface IBatchOrderFlowBasicInformationResponseDTO {
     /** id */
     id?: number;
     /** 流水类型 */
-    flowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
+    flowType?: EBatchOrderFlowBasicInformationResponseDTO_flowType;
     /** 当前流水类型描述 */
     flowTypeDesc?: string;
     /** 操作时间 */
     createTime?: string;
     /** 描述 */
     remark?: string;
+}
+
+export enum EBatchOrderHistorySearchVO_flowType {
+    /** 创建 */
+    CREATED = "CREATED",
+    /** 下发 */
+    ISSUE = "ISSUE",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER",
+    /** 切换工艺路径 */
+    CHANGE_ROUTING = "CHANGE_ROUTING",
+    /** 委外加工 */
+    ENTRUST = "ENTRUST"
+}
+
+export enum EBatchOrderFlowBasicInformationResponseDTO_flowType {
+    /** 创建 */
+    CREATED = "CREATED",
+    /** 下发 */
+    ISSUE = "ISSUE",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER",
+    /** 切换工艺路径 */
+    CHANGE_ROUTING = "CHANGE_ROUTING",
+    /** 委外加工 */
+    ENTRUST = "ENTRUST"
 }

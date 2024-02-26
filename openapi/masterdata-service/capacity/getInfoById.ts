@@ -39,11 +39,11 @@ export interface IProductivityResponseObject {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProductivityResponseObject_readyTimeUnit;
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProductivityResponseObject_capacityTimeType;
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }
@@ -53,4 +53,22 @@ export interface IAssociatedDropDownResponseObjects {
     id?: number;
     /** 显示字段名称 */
     showFieldValue?: string;
+}
+
+export enum EProductivityResponseObject_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProductivityResponseObject_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

@@ -41,7 +41,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«运营角色响应»» */
 export interface IJSONResultPagingInformationOperationRoleResponse {
@@ -69,9 +69,9 @@ export interface IPageInformationOperationRoleResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationOperationRoleResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationOperationRoleResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -100,11 +100,46 @@ export interface IOperationalRoleResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: EOperationalRoleResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: EOperationalRoleResponse_isAdmin;
     /** 描述 */
     description?: string;
     /** 关联的账号数 */
     relationUserCount?: number;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationOperationRoleResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationOperationRoleResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOperationalRoleResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOperationalRoleResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

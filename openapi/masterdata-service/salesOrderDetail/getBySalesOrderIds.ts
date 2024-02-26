@@ -55,9 +55,9 @@ export interface ISalesOrderDetail {
     /** 总销售金额 */
     totalAmount?: number;
     /** 销售订单详情状态 */
-    handleStatus?: ('CREATED' | 'PART' | 'ALL');
+    handleStatus?: ESalesOrderDetail_handleStatus;
     /** 销售订单生产状态 */
-    produceStatus?: ('CREATED' | 'PRODUCE' | 'CANCEL' | 'CLOSE');
+    produceStatus?: ESalesOrderDetail_produceStatus;
     /** 总计划数量 -  此销售订单下的 所有 生产订单 数量的和 */
     totalPlanQuantity?: number;
     /** 已排产数量 */
@@ -104,4 +104,24 @@ export interface ISalesOrderDetail {
     lastAreaTime?: string;
     /** 途径区域id集 - json */
     crossAreaIds?: string;
+}
+
+export enum ESalesOrderDetail_handleStatus {
+    /** 未转生产订单 */
+    CREATED = "CREATED",
+    /** 部分已转 */
+    PART = "PART",
+    /** 已转生产订单 */
+    ALL = "ALL"
+}
+
+export enum ESalesOrderDetail_produceStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

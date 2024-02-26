@@ -22,9 +22,9 @@ export interface ITaskDeliverySearchesVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 状态 */
-    status?: ('WAIT' | 'ISSUE' | 'REVOKE' | 'CLOSE');
+    status?: ETaskDeliverySearchesVO_status;
     /** 排产计划类型 */
-    type?: ('AUTO' | 'HAND' | 'VAGUE');
+    type?: ETaskDeliverySearchesVO_type;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -61,4 +61,29 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETaskDeliverySearchesVO_status {
+    /** 等待下发 */
+    WAIT = "WAIT",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 已撤回 */
+    REVOKE = "REVOKE",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum ETaskDeliverySearchesVO_type {
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

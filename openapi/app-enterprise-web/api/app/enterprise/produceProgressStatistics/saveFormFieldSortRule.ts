@@ -27,7 +27,7 @@ export interface IProcessTableColumnEditDTO {
     /** id */
     id: number;
     /** 是否显示，控制配置表单是否显示 */
-    isShow: ('Y' | 'N');
+    isShow: EProcessTableColumnEditDTO_isShow;
     /** 子集 */
     children: IProcessTableColumnEditDTO[];
 }
@@ -38,7 +38,19 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProcessTableColumnEditDTO_isShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

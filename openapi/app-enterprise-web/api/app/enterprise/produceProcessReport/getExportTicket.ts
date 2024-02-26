@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
+    timeType?: EOutputClassReportSearchVO_timeType;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
@@ -43,4 +43,15 @@ export interface IJSONResultExportedTicketInformation {
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
     ticket?: string;
+}
+
+export enum EOutputClassReportSearchVO_timeType {
+    /** 时 */
+    HOUR = "HOUR",
+    /** 日 */
+    DAY = "DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 年 */
+    YEAR = "YEAR"
 }

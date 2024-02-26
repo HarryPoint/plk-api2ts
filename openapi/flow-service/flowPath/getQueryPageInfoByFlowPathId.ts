@@ -41,7 +41,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -58,7 +58,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
@@ -73,7 +73,7 @@ export interface IFormDataGroupingDTO {
     /** 下级分组 */
     children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData?: ('Y' | 'N');
+    cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
     treeDataParentId?: number;
 }
@@ -106,7 +106,7 @@ export interface IFlowPathBaseVO {
     /** undefined */
     lastName?: string;
     /** undefined */
-    type?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
+    type?: EFlowPathBaseVO_type;
 }
 /** FlowPathTableColumnBaseVO */
 export interface IFlowPathTableColumnBaseVO {
@@ -115,11 +115,11 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     code?: string;
     /** undefined */
-    isTableField?: ('Y' | 'N');
+    isTableField?: EFlowPathTableColumnBaseVO_isTableField;
     /** undefined */
-    formFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
+    formFieldType?: EFlowPathTableColumnBaseVO_formFieldType;
     /** undefined */
-    formFieldTypeGroup?: ('FORM' | 'STYLE');
+    formFieldTypeGroup?: EFlowPathTableColumnBaseVO_formFieldTypeGroup;
     /** undefined */
     parentFlowPathFormFieldCode?: string;
     /** undefined */
@@ -137,11 +137,11 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     actualFields?: Record<string, any>[];
     /** undefined */
-    isAutoGetLocation?: ('Y' | 'N');
+    isAutoGetLocation?: EFlowPathTableColumnBaseVO_isAutoGetLocation;
     /** undefined */
-    addressType?: ('REGION_AND_DETAIL_ADDRESS' | 'REGION' | 'STREET_AND_DETAIL_ADDRESS' | 'STREET');
+    addressType?: EFlowPathTableColumnBaseVO_addressType;
     /** undefined */
-    numberFormat?: ('F1' | 'F2' | 'F3' | 'F4');
+    numberFormat?: EFlowPathTableColumnBaseVO_numberFormat;
     /** undefined */
     dynamicControlValueFieldSerialNo?: string;
     /** undefined */
@@ -149,14 +149,14 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     processorShowFieldCode?: string;
     /** undefined */
-    organizationType?: ('NONE' | 'CLASS_GROUP' | 'DEPARTMENT' | 'USER' | 'PROCESSOR');
+    organizationType?: EFlowPathTableColumnBaseVO_organizationType;
 }
 /** NumberRuleDetailBaseVO */
 export interface INumberRuleDetailBaseVO {
     /** undefined */
-    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
+    type?: ENumberRuleDetailBaseVO_type;
     /** undefined */
-    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
+    dateFormat?: ENumberRuleDetailBaseVO_dateFormat;
     /** undefined */
     fixValue?: string;
     /** undefined */
@@ -166,7 +166,124 @@ export interface INumberRuleDetailBaseVO {
     /** undefined */
     stepValue?: number;
     /** undefined */
-    isCodeAccording?: ('Y' | 'N');
+    isCodeAccording?: ENumberRuleDetailBaseVO_isCodeAccording;
     /** undefined */
     flowPathFormFieldCodeNumberRuleId?: number;
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFormDataGroupingDTO_cascadeFormData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EFlowPathBaseVO_type {
+    BILL = "BILL",
+    DATA = "DATA",
+    TREE_DATA = "TREE_DATA",
+    PAGE = "PAGE"
+}
+
+export enum EFlowPathTableColumnBaseVO_isTableField {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFlowPathTableColumnBaseVO_formFieldType {
+    INPUT_TEXT = "INPUT_TEXT",
+    TEXTAREA = "TEXTAREA",
+    NUMBER = "NUMBER",
+    DATE = "DATE",
+    SELECTOR = "SELECTOR",
+    CHECKBOX = "CHECKBOX",
+    IMAGE_UPLOAD = "IMAGE_UPLOAD",
+    FILE_UPLOAD = "FILE_UPLOAD",
+    TABLE = "TABLE",
+    FORM_RP = "FORM_RP",
+    FORM_RP_MULTI = "FORM_RP_MULTI",
+    CODE = "CODE",
+    ADDRESS = "ADDRESS",
+    POSITION = "POSITION",
+    EMAIL = "EMAIL",
+    MOBILE = "MOBILE",
+    ID_CARD = "ID_CARD",
+    RICH_TEXT = "RICH_TEXT",
+    ASSOCIATION_QUERY = "ASSOCIATION_QUERY",
+    DESC_TEXT = "DESC_TEXT",
+    SPLIT_LINE = "SPLIT_LINE",
+    LOT_NO = "LOT_NO",
+    SERIAL_NO = "SERIAL_NO",
+    FORMULA = "FORMULA"
+}
+
+export enum EFlowPathTableColumnBaseVO_formFieldTypeGroup {
+    FORM = "FORM",
+    STYLE = "STYLE"
+}
+
+export enum EFlowPathTableColumnBaseVO_isAutoGetLocation {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFlowPathTableColumnBaseVO_addressType {
+    REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
+    REGION = "REGION",
+    STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
+    STREET = "STREET"
+}
+
+export enum EFlowPathTableColumnBaseVO_numberFormat {
+    F1 = "F1",
+    F2 = "F2",
+    F3 = "F3",
+    F4 = "F4"
+}
+
+export enum EFlowPathTableColumnBaseVO_organizationType {
+    NONE = "NONE",
+    CLASS_GROUP = "CLASS_GROUP",
+    DEPARTMENT = "DEPARTMENT",
+    USER = "USER",
+    PROCESSOR = "PROCESSOR"
+}
+
+export enum ENumberRuleDetailBaseVO_type {
+    FIXED = "FIXED",
+    DATE = "DATE",
+    AUTO_NUMBER = "AUTO_NUMBER",
+    FLOW_PATH_FIELD = "FLOW_PATH_FIELD",
+    ID36 = "ID36"
+}
+
+export enum ENumberRuleDetailBaseVO_dateFormat {
+    YEAR = "YEAR",
+    YEAR_MONTH = "YEAR_MONTH",
+    YEAR_MONTH_DAY = "YEAR_MONTH_DAY",
+    MONTH = "MONTH",
+    MONTH_DAY = "MONTH_DAY",
+    DAY = "DAY"
+}
+
+export enum ENumberRuleDetailBaseVO_isCodeAccording {
+    Y = "Y",
+    N = "N"
 }

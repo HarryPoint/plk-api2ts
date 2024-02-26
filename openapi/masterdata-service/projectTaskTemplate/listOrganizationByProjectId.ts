@@ -31,7 +31,7 @@ export interface IProjectTaskTemplateOrganizationRespondsToTheDTO {
     /** 项目id */
     projectId?: number;
     /** 是否是通用模板 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EProjectTaskTemplateOrganizationRespondsToTheDTO_isDefault;
     /** 模板名称 */
     name?: string;
     /** 应用编号 */
@@ -48,5 +48,19 @@ export interface ITheProjectTaskTemplateOrganizesTheFieldResponseDTO {
     /** 应用字段名 */
     appFieldName?: string;
     /** 是否是表格内字段 */
-    isTableField?: ('Y' | 'N');
+    isTableField?: ETheProjectTaskTemplateOrganizesTheFieldResponseDTO_isTableField;
+}
+
+export enum EProjectTaskTemplateOrganizationRespondsToTheDTO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheProjectTaskTemplateOrganizesTheFieldResponseDTO_isTableField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

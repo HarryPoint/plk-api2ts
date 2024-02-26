@@ -35,7 +35,7 @@ export interface ITheProcessVersionRespondsToVO {
     /** 版本排名 */
     versionRank?: number;
     /** 是否是系统流程 */
-    isSystem?: ('Y' | 'N');
+    isSystem?: ETheProcessVersionRespondsToVO_isSystem;
     /** 名称 */
     name?: string;
     /** 编号 */
@@ -45,5 +45,19 @@ export interface ITheProcessVersionRespondsToVO {
     /** 发布终端值合计 */
     publishTotal?: number;
     /** 是否是多流程 */
-    isMultiFlow?: ('Y' | 'N');
+    isMultiFlow?: ETheProcessVersionRespondsToVO_isMultiFlow;
+}
+
+export enum ETheProcessVersionRespondsToVO_isSystem {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheProcessVersionRespondsToVO_isMultiFlow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

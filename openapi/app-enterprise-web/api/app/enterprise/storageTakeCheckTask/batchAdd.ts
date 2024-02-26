@@ -20,7 +20,7 @@ export interface IEditDTOForWarehouseInventoryTaskBatch {
     /** 计划开始时间，yyyy-MM-dd HH:mm:ss */
     planBeginTime?: string;
     /** 盘点范围 */
-    scopeType: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
+    scopeType: EEditDTOForWarehouseInventoryTaskBatch_scopeType;
     /** 物料大类列表，盘点范围为物料类型时必填 */
     handleMaterialTypes?: string[];
     /** 指定仓库仓位id集，盘点范围为指定仓位时必填，只传最底层仓位 */
@@ -52,4 +52,13 @@ export interface IJSONResultstring1 {
     data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEditDTOForWarehouseInventoryTaskBatch_scopeType {
+    /** 指定仓位 */
+    APPOINT = "APPOINT",
+    /** 物料类型 */
+    MATERIAL_TYPE = "MATERIAL_TYPE",
+    /** 全部物料 */
+    ALL = "ALL"
 }

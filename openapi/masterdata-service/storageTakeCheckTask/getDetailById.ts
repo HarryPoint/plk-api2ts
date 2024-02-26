@@ -46,7 +46,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 盘点仓库编号 */
     storehouseCode?: string;
     /** 盘点范围 */
-    scopeType?: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
+    scopeType?: EWarehouseInventoryTaskReturnedToDTO_scopeType;
     /** 盘点范围描述 */
     scopeTypeDesc?: string;
     /** 盘点物料种类(针对盘点范围是物料类型的) */
@@ -62,7 +62,7 @@ export interface IWarehouseInventoryTaskReturnedToDTO {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: EWarehouseInventoryTaskReturnedToDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */
@@ -158,11 +158,11 @@ export interface IWarehouseInventoryListReturnedToDTO {
     /** 批次号 */
     lotNo?: string;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EWarehouseInventoryListReturnedToDTO_enableLot;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EWarehouseInventoryListReturnedToDTO_enableSerialNo;
     /** 启用序列号 */
-    hasWarehouseMaterial?: ('Y' | 'N');
+    hasWarehouseMaterial?: EWarehouseInventoryListReturnedToDTO_hasWarehouseMaterial;
     /** 序列号集 */
     serialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 匹配序列号集 */
@@ -178,4 +178,51 @@ export interface IInventoryTaskInventoryDetailsSerialNumberDTO {
     serialNo?: string;
     /** 备注 */
     serialRemark?: string;
+}
+
+export enum EWarehouseInventoryTaskReturnedToDTO_scopeType {
+    /** 指定仓位 */
+    APPOINT = "APPOINT",
+    /** 物料类型 */
+    MATERIAL_TYPE = "MATERIAL_TYPE",
+    /** 全部物料 */
+    ALL = "ALL"
+}
+
+export enum EWarehouseInventoryTaskReturnedToDTO_status {
+    /** 待盘点 */
+    WAIT = "WAIT",
+    /** 盘点中 */
+    HANDLING = "HANDLING",
+    /** 待核对 */
+    WAIT_VERIFY = "WAIT_VERIFY",
+    /** 待盈亏处理 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EWarehouseInventoryListReturnedToDTO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWarehouseInventoryListReturnedToDTO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWarehouseInventoryListReturnedToDTO_hasWarehouseMaterial {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

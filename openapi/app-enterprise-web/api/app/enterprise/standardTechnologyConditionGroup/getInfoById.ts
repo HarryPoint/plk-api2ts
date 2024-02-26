@@ -44,11 +44,29 @@ export interface IStandardProcessConditionsRespondToDTO {
     /** 来源字段序列号 */
     fromFieldSerialNo?: string;
     /** 判断方式 */
-    compareType?: ('EQ' | 'NE' | 'CONTAIN' | 'NOT_CONTAIN');
+    compareType?: EStandardProcessConditionsRespondToDTO_compareType;
     /** 判断的值 */
     compareValue?: string;
     /** 连接类型 */
-    joinType?: ('AND' | 'OR');
+    joinType?: EStandardProcessConditionsRespondToDTO_joinType;
     /** 排序 */
     sort?: number;
+}
+
+export enum EStandardProcessConditionsRespondToDTO_compareType {
+    /** 等于 */
+    EQ = "EQ",
+    /** 不等于 */
+    NE = "NE",
+    /** 包含 */
+    CONTAIN = "CONTAIN",
+    /** 不包含 */
+    NOT_CONTAIN = "NOT_CONTAIN"
+}
+
+export enum EStandardProcessConditionsRespondToDTO_joinType {
+    /** 且 */
+    AND = "AND",
+    /** 或 */
+    OR = "OR"
 }

@@ -53,7 +53,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«售后质量分析返回VO» */
 export interface IJSONResultAfterSalesQualityAnalysisReturnedToVO {
@@ -90,9 +90,9 @@ export interface IPagingInformationAfterSalesQualityAnalysisReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationAfterSalesQualityAnalysisReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationAfterSalesQualityAnalysisReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -146,4 +146,23 @@ export interface IAfterSalesQualityAnalysisChartDataReturnedToVO {
     title?: string;
     /** 事故次数 */
     numOfAccidents?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationAfterSalesQualityAnalysisReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationAfterSalesQualityAnalysisReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

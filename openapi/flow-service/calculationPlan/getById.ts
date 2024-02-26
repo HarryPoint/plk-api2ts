@@ -35,17 +35,17 @@ export interface ICalculationSchemeDetailResponseDTO {
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否明细业务 */
-    isDetailFlow?: ('Y' | 'N');
+    isDetailFlow?: ECalculationSchemeDetailResponseDTO_isDetailFlow;
     /** 公式类型 */
-    formulaType?: ('TIME_FUNCTION' | 'MATH_FUNCTION');
+    formulaType?: ECalculationSchemeDetailResponseDTO_formulaType;
     /** 公式 */
     formula?: string;
     /** 计算模式 */
-    calculationMode?: ('FIXED_TIME' | 'PERIODICITY');
+    calculationMode?: ECalculationSchemeDetailResponseDTO_calculationMode;
     /** 固定时间 */
     fixedTime?: string;
     /** 计算周期 */
-    calculationPeriod?: ('EVERY_DAY' | 'EVERY_MONTH' | 'EVERY_QUARTER' | 'EVERY_YEAR');
+    calculationPeriod?: ECalculationSchemeDetailResponseDTO_calculationPeriod;
     /** 过滤条件列表 */
     filterConditionList?: ICalculationSchemeFilterConditionDTO1[];
     /** 业务名 */
@@ -63,4 +63,36 @@ export interface ICalculationSchemeFilterConditionDTO1 {
     fieldSerialNo?: string;
     /** 值列表 */
     values?: string[];
+}
+
+export enum ECalculationSchemeDetailResponseDTO_isDetailFlow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ECalculationSchemeDetailResponseDTO_formulaType {
+    /** 时间函数 */
+    TIME_FUNCTION = "TIME_FUNCTION",
+    /** 数学函数 */
+    MATH_FUNCTION = "MATH_FUNCTION"
+}
+
+export enum ECalculationSchemeDetailResponseDTO_calculationMode {
+    /** 固定时间 */
+    FIXED_TIME = "FIXED_TIME",
+    /** 周期性 */
+    PERIODICITY = "PERIODICITY"
+}
+
+export enum ECalculationSchemeDetailResponseDTO_calculationPeriod {
+    /** 每天 */
+    EVERY_DAY = "EVERY_DAY",
+    /** 每月 */
+    EVERY_MONTH = "EVERY_MONTH",
+    /** 每季度 */
+    EVERY_QUARTER = "EVERY_QUARTER",
+    /** 每年 */
+    EVERY_YEAR = "EVERY_YEAR"
 }

@@ -18,7 +18,7 @@ export interface IDeviceDataAcquisitionCommunicationStatusDTO {
     /** id */
     id?: number;
     /** 通讯开关状态 */
-    apiSwitchStatus?: ('ON' | 'OFF');
+    apiSwitchStatus?: EDeviceDataAcquisitionCommunicationStatusDTO_apiSwitchStatus;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EDeviceDataAcquisitionCommunicationStatusDTO_apiSwitchStatus {
+    /** 已开启 */
+    ON = "ON",
+    /** 已关闭 */
+    OFF = "OFF"
 }

@@ -42,7 +42,7 @@ export interface IProductionOrderDetailsVO {
 /** 生产订单详情 - 排产VO */
 export interface IProductionOrderDetailsProductionVO {
     /** 排产类型 */
-    planType?: ('AUTO' | 'HAND' | 'VAGUE');
+    planType?: EProductionOrderDetailsProductionVO_planType;
     /** 计划开始时间 */
     beginTime?: string;
     /** 计划结束时间 */
@@ -62,7 +62,7 @@ export interface IProductionOrderDetailsProductionVO {
     /** 任务下发人名称 */
     issueUsername?: string;
     /** 状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EProductionOrderDetailsProductionVO_orderStatus;
     /** 生产订单id */
     produceOrderId?: number;
 }
@@ -125,11 +125,11 @@ export interface IProductionOrderDetailsMaterialInformationVO {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EProductionOrderDetailsMaterialInformationVO_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EProductionOrderDetailsMaterialInformationVO_enableLot;
     /** 启用批次 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionOrderDetailsMaterialInformationVO_enableQualityTraceability;
 }
 /** 生产订单详情 - 补单VO */
 export interface IProductionOrderDetailsSupplementVO {
@@ -165,4 +165,53 @@ export interface IProductionOrderDetailsSupplementVO {
     beginTime?: string;
     /** 计划结束时间 */
     endTime?: string;
+}
+
+export enum EProductionOrderDetailsProductionVO_planType {
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum EProductionOrderDetailsProductionVO_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EProductionOrderDetailsMaterialInformationVO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionOrderDetailsMaterialInformationVO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionOrderDetailsMaterialInformationVO_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

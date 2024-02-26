@@ -32,14 +32,14 @@ export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     /** 物料ids */
     materialIds?: number[];
     /** 生产任务状态列表 */
-    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    produceTaskStatusList?: ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«任务汇总表(基于工序字段)明细信息VO»» */
 export interface ITheJSONResultListTaskSummaryTableIsBasedOnProcessFieldDetailsVO {
@@ -67,7 +67,7 @@ export interface ITheTaskSummaryTableIsBasedOnProcessFieldDetailsVO {
     /** 动态字段值列表 */
     fieldValueList?: IProcedureFieldValueVO[];
     /** 生产任务状态 */
-    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    produceTaskStatus?: ETheTaskSummaryTableIsBasedOnProcessFieldDetailsVO_produceTaskStatus;
 }
 /** 工序字段值VO */
 export interface IProcedureFieldValueVO {
@@ -75,4 +75,33 @@ export interface IProcedureFieldValueVO {
     code?: string;
     /** 字段值 */
     value?: string;
+}
+
+export enum ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheTaskSummaryTableIsBasedOnProcessFieldDetailsVO_produceTaskStatus {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

@@ -18,9 +18,9 @@ export interface IAddProductOrderAddedARequestObject {
     /** 企业id */
     enterpriseId?: number;
     /** 加购类型非法传递, 默认传 MES  */
-    appendType?: ('PRODUCT_MODULE' | 'DURATION' | 'USER_ACCOUNT');
+    appendType?: EAddProductOrderAddedARequestObject_appendType;
     /** 加购产品类型非法传递, 默认传 MES  */
-    productType?: ('MES');
+    productType?: EAddProductOrderAddedARequestObject_productType;
     /** 加购产品模块 */
     productModuleArray?: string[];
     /** 购买时长(天) */
@@ -51,7 +51,7 @@ export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
+    status?: EProductOrderPaymentHistoryEditRequestObject_status;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -63,4 +63,27 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EAddProductOrderAddedARequestObject_appendType {
+    /** 产品模块 */
+    PRODUCT_MODULE = "PRODUCT_MODULE",
+    /** 时长 */
+    DURATION = "DURATION",
+    /** 用户账号数 */
+    USER_ACCOUNT = "USER_ACCOUNT"
+}
+
+export enum EAddProductOrderAddedARequestObject_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EProductOrderPaymentHistoryEditRequestObject_status {
+    /** 待支付 */
+    WAIT_PAY = "WAIT_PAY",
+    /** 已支付 */
+    ALREADY_PAY = "ALREADY_PAY",
+    /** 完成 */
+    COMPLETE_PAY = "COMPLETE_PAY"
 }

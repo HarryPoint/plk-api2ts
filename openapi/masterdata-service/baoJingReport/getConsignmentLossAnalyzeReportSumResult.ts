@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«寄售损耗分析报表分页返回VO» */
 export interface IJSONResultConsignmentLossAnalysisReportPaginatedReturnsVO {
@@ -76,4 +76,9 @@ export interface IConsignmentLossAnalysisReportPagingBackToVO1 {
     remainingQtySum?: number;
     /** 损耗率 */
     lossRatioSum?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

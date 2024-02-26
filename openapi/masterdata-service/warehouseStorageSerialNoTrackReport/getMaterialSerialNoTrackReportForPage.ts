@@ -39,9 +39,9 @@ export interface IPageInformationMaterialSerialNumberTracksPageResponseObjects {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationMaterialSerialNumberTracksPageResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationMaterialSerialNumberTracksPageResponseObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -66,7 +66,7 @@ export interface ITheMaterialSerialNumberTracksPagingResponseObjects {
     /** 物料单位 */
     materialUnit?: string;
     /** 仓位操作类型 */
-    type?: ('IN' | 'OUT' | 'CHECK' | 'LOCK' | 'SCRAP');
+    type?: ETheMaterialSerialNumberTracksPagingResponseObjects_type;
     /** 操作仓位id */
     opWarehouseId?: number;
     /** 操作仓位名称 */
@@ -93,4 +93,31 @@ export interface ITheMaterialSerialNumberTracksPagingResponseObjects {
     serialNo?: string;
     /** 序列号备注 */
     serialRemark?: string;
+}
+
+export enum EPageInformationMaterialSerialNumberTracksPageResponseObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationMaterialSerialNumberTracksPageResponseObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheMaterialSerialNumberTracksPagingResponseObjects_type {
+    /** 入库 */
+    IN = "IN",
+    /** 出库 */
+    OUT = "OUT",
+    /** 盘点 */
+    CHECK = "CHECK",
+    /** 库存锁定 */
+    LOCK = "LOCK",
+    /** 报废 */
+    SCRAP = "SCRAP"
 }

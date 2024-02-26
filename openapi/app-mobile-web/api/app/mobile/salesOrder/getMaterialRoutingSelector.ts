@@ -33,7 +33,7 @@ export interface IProcessPathSelectionVO {
     /** 工艺路径编号 */
     code?: string;
     /** 是否物料默认 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EProcessPathSelectionVO_isDefault;
     /** 物料bomId */
     materialBomId?: number;
     /** 物料bom名称 */
@@ -42,4 +42,11 @@ export interface IProcessPathSelectionVO {
     materialBomCode?: string;
     /** 物料ID */
     materialId?: number;
+}
+
+export enum EProcessPathSelectionVO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

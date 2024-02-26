@@ -35,13 +35,13 @@ export interface IProposalDashboardStatisticsConfigRequestDTO {
     /** ID */
     id?: number;
     /** 统计类型 */
-    type?: ('RANGE' | 'GE' | 'GT');
+    type?: EProposalDashboardStatisticsConfigRequestDTO_type;
     /** 开始值 - 适用于数值区间、数值大于等于、数值大于 */
     beginValue?: number;
     /** 结束值 */
     endValue?: number;
     /** 项目归属的完成状态 - 未完成项目， 已完成项目 */
-    projectCompleteStatus?: ('UN_COMPLETED' | 'COMPLETED');
+    projectCompleteStatus?: EProposalDashboardStatisticsConfigRequestDTO_projectCompleteStatus;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -53,4 +53,20 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProposalDashboardStatisticsConfigRequestDTO_type {
+    /** 数值区间 */
+    RANGE = "RANGE",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值大于 */
+    GT = "GT"
+}
+
+export enum EProposalDashboardStatisticsConfigRequestDTO_projectCompleteStatus {
+    /** 未完成 */
+    UN_COMPLETED = "UN_COMPLETED",
+    /** 已完成 */
+    COMPLETED = "COMPLETED"
 }

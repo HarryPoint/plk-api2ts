@@ -66,7 +66,7 @@ export interface IInventoryFlowSearchVO {
     /** 创建部门 - 批量查询 */
     billCreateDeptIdList?: number[];
     /** 业务状态 - 批量查询 */
-    businessStatusList?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID')[];
+    businessStatusList?: EInventoryFlowSearchVO_businessStatusList_items[];
     /** 库存更新时间-结束 yyyy-MM-dd HH:mm:ss */
     updateTimeEnd?: string;
     /** 流程进度 - 模糊查询 */
@@ -81,7 +81,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -93,4 +93,17 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EInventoryFlowSearchVO_businessStatusList_items {
+    HANDLING = "HANDLING",
+    COMPLETE = "COMPLETE",
+    NOT_PASS = "NOT_PASS",
+    STAGING = "STAGING",
+    INVALID = "INVALID"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

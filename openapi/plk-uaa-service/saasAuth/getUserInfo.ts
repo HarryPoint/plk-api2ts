@@ -41,9 +41,9 @@ export interface ISaasUserInformationResponse {
     /** 部门信息 */
     department?: IDepartmentRespondsToDTO;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: ESaasUserInformationResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: ESaasUserInformationResponse_isAdmin;
 }
 /** Saas企业响应 DTO */
 export interface ISaasEnterprisesRespondToDtos {
@@ -70,7 +70,7 @@ export interface ISaasEnterprisesRespondToDtos {
     /** 企业名 */
     name?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: ('Y' | 'N');
+    isEnableBatchManagement?: ESaasEnterprisesRespondToDtos_isEnableBatchManagement;
 }
 /** 员工信息响应 */
 export interface IEmployeeInformationResponse {
@@ -107,4 +107,25 @@ export interface IDepartmentRespondsToDTO {
     code?: string;
     /** name */
     name?: string;
+}
+
+export enum ESaasUserInformationResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESaasUserInformationResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESaasEnterprisesRespondToDtos_isEnableBatchManagement {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -18,7 +18,7 @@ export interface IListDataQueryVO {
     /** 流程id */
     flowPathId?: number;
     /** 是否是明细表 */
-    isDetailTable?: ('Y' | 'N');
+    isDetailTable?: EListDataQueryVO_isDetailTable;
     /** 主数据ids */
     masterDataIds?: number[];
     /** 明细表格字段id集合 */
@@ -39,4 +39,11 @@ export interface IJSONResultListJSONObject {
 }
 /** JSONObject */
 export interface IJSONObject {
+}
+
+export enum EListDataQueryVO_isDetailTable {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

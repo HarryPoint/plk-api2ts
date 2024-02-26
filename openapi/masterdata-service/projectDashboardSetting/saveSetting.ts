@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProjectLargeScreenSettings
 /** 项目大屏设置保存请求dto_1 */
 export interface IProjectLargeScreenSettingsSaveRequestDto1 {
     /** 统计范围 */
-    scope: ('ALL' | 'SPECIFY_PROJECT_TYPE' | 'EXCLUDE_PROJECT');
+    scope: EProjectLargeScreenSettingsSaveRequestDto1_scope;
     /** 项目类型ids */
     projectTypeIds?: number[];
     /** 排除的项目ids */
@@ -32,4 +32,13 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProjectLargeScreenSettingsSaveRequestDto1_scope {
+    /** 全部项目 */
+    ALL = "ALL",
+    /** 指定项目类型 */
+    SPECIFY_PROJECT_TYPE = "SPECIFY_PROJECT_TYPE",
+    /** 指定不统计的项目 */
+    EXCLUDE_PROJECT = "EXCLUDE_PROJECT"
 }

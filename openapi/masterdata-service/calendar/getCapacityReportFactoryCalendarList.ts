@@ -32,7 +32,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** undefined */
     produceTaskIds?: number[];
     /** undefined */
-    panPanProduceOrderCompleteType?: ('ACTUAL_MOVE_OUT_QUANTITY' | 'PLAN_ORDER_MOVE_OUT_QUANTITY');
+    panPanProduceOrderCompleteType?: ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType;
     /** 是否按天数过滤 */
     isFilterByDayCount?: boolean;
 }
@@ -41,7 +41,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«产能利用率报表工厂日历VO»» */
 export interface IJSONResultListCapacityUtilizationReportFactoryCalendarVO {
@@ -62,4 +62,14 @@ export interface ICapacityUtilizationReportFactoryCalendarVO {
     workTimeQuantity?: number;
     /** 日程安排日期对应的班组人员统计 */
     workUserQuantity?: number;
+}
+
+export enum ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType {
+    ACTUAL_MOVE_OUT_QUANTITY = "ACTUAL_MOVE_OUT_QUANTITY",
+    PLAN_ORDER_MOVE_OUT_QUANTITY = "PLAN_ORDER_MOVE_OUT_QUANTITY"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

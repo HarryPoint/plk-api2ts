@@ -29,17 +29,17 @@ export interface IMaterialBatchSetEditObject {
     /** 物料id */
     materialId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EMaterialBatchSetEditObject_enableSerialNo;
     /** 序列号方案id */
     serialNoSchemeId?: number;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EMaterialBatchSetEditObject_enableLot;
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EMaterialBatchSetEditObject_enableQualityTraceability;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EMaterialBatchSetEditObject_enableExternalCode;
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
@@ -65,5 +65,46 @@ export interface IMaterialEditResponseInformation {
     /** 名称 */
     name?: string;
     /** 流程状态 */
-    processStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    processStatus?: EMaterialEditResponseInformation_processStatus;
+}
+
+export enum EMaterialBatchSetEditObject_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSetEditObject_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSetEditObject_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSetEditObject_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialEditResponseInformation_processStatus {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
 }

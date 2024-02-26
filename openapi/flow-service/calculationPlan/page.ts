@@ -37,7 +37,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«计算方案分页查询响应DTO»» */
 export interface IJSONResultPageInformationCalculationSchemePageQueryResponseDTO {
@@ -65,9 +65,9 @@ export interface IPageInformationCalculationSchemePageQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationCalculationSchemePageQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationCalculationSchemePageQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -105,4 +105,25 @@ export interface ICalculateTheSchemePageQueryResponseDTO {
     formula?: string;
     /** 更新频率 */
     updateFrequency?: string;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationCalculationSchemePageQueryResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationCalculationSchemePageQueryResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

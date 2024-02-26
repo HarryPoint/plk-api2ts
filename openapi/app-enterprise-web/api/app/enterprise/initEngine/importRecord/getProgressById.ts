@@ -33,7 +33,7 @@ export interface IImportProgressQueryResponseDTO {
     /** 排在你前面的任务数 */
     numberOfTasksBefore?: number;
     /** 导入状态 */
-    status?: ('NONE' | 'QUEUING' | 'IMPORTING' | 'COMPLETE');
+    status?: EImportProgressQueryResponseDTO_status;
     /** 总数量 */
     totalNumber?: number;
     /** 已处理的数量 */
@@ -42,4 +42,15 @@ export interface IImportProgressQueryResponseDTO {
     surplusTime?: number;
     /** 可以导入数量 */
     numberOfImport?: number;
+}
+
+export enum EImportProgressQueryResponseDTO_status {
+    /** 未导入 */
+    NONE = "NONE",
+    /** 排队中 */
+    QUEUING = "QUEUING",
+    /** 导入中 */
+    IMPORTING = "IMPORTING",
+    /** 完成导入 */
+    COMPLETE = "COMPLETE"
 }

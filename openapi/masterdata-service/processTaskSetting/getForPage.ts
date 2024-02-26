@@ -18,7 +18,7 @@ export interface IProcessTaskSearchVO {
     /** 工序id集合 */
     processIds?: number[];
     /** 是否需要分配 */
-    isAssign?: ('Y' | 'N');
+    isAssign?: EProcessTaskSearchVO_isAssign;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«工序任务设置VO»» */
 export interface IJSONResultPagingInformationProcedureTaskSetVO {
@@ -59,9 +59,9 @@ export interface IPagingInformationProcedureTaskSetVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationProcedureTaskSetVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationProcedureTaskSetVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -76,7 +76,7 @@ export interface IProcedureTaskSetVO {
     /** 工序编号 */
     processCode?: string;
     /** 是否需要分配 */
-    isAssign?: ('Y' | 'N');
+    isAssign?: EProcedureTaskSetVO_isAssign;
     /** 默认操作人员列表 */
     defaultUserList?: IIdNameNumberVO[];
 }
@@ -88,4 +88,37 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EProcessTaskSearchVO_isAssign {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationProcedureTaskSetVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationProcedureTaskSetVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcedureTaskSetVO_isAssign {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

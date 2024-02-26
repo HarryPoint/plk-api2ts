@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«质检方案返回VO»» */
 export interface IJSONResultPagingInformationVOIsReturned {
@@ -65,9 +65,9 @@ export interface IPagingInformationTheInspectionSchemeReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationTheInspectionSchemeReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationTheInspectionSchemeReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -110,7 +110,7 @@ export interface ITheInspectionSolutionReturnsVO {
     /** 创建时间 */
     createTime?: string;
     /** 质检方式 */
-    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
+    type?: ETheInspectionSolutionReturnsVO_type;
     /** 质检方式描述 */
     typeDesc?: string;
 }
@@ -139,4 +139,32 @@ export interface IIdNameVO {
     id: number;
     /** 名称 */
     name: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationTheInspectionSchemeReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationTheInspectionSchemeReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheInspectionSolutionReturnsVO_type {
+    /** 全检 */
+    ALL = "ALL",
+    /** 比例抽检 */
+    RADIO_SPOT_CHECK = "RADIO_SPOT_CHECK",
+    /** 固定抽检 */
+    FIX_SPOT_CHECK = "FIX_SPOT_CHECK"
 }

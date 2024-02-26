@@ -47,5 +47,12 @@ export interface IEnterpriseResponseObject {
     /** 企业名 */
     name?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: ('Y' | 'N');
+    isEnableBatchManagement?: EEnterpriseResponseObject_isEnableBatchManagement;
+}
+
+export enum EEnterpriseResponseObject_isEnableBatchManagement {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

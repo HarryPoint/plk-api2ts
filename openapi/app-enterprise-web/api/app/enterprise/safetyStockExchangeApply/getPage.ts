@@ -22,7 +22,7 @@ export interface ISecurityStockChangeRequestSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 设置类型 */
-    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
+    type: ESecurityStockChangeRequestSearchVO_type;
     /** 对应业务id */
     businessId?: number;
 }
@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«安全库存变更申请返回VO»» */
 export interface IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO {
@@ -59,9 +59,9 @@ export interface IPagingInformationSecurityInventoryChangeRequestReturnedToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationSecurityInventoryChangeRequestReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationSecurityInventoryChangeRequestReturnedToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,11 +88,11 @@ export interface ISecurityStockChangeRequestReturnedToVO {
     /** 通知人集 */
     sendUsers?: IIdNameNumberVO[];
     /** 通知类型 */
-    sendType?: ('MESSAGE');
+    sendType?: ESecurityStockChangeRequestReturnedToVO_sendType;
     /** 通知类型描述 */
     sendTypeDesc?: string;
     /** 状态 */
-    status?: ('WAIT_EXAMINE' | 'PASS' | 'REFUSE');
+    status?: ESecurityStockChangeRequestReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 审核时间 */
@@ -112,4 +112,48 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum ESecurityStockChangeRequestSearchVO_type {
+    /** 全工厂 */
+    ALL = "ALL",
+    /** 区域 */
+    AREA = "AREA",
+    /** 仓库 */
+    STOREHOUSE = "STOREHOUSE",
+    /** 仓位 */
+    WAREHOUSE = "WAREHOUSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationSecurityInventoryChangeRequestReturnedToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationSecurityInventoryChangeRequestReturnedToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESecurityStockChangeRequestReturnedToVO_sendType {
+    /** 应用内消息 */
+    MESSAGE = "MESSAGE"
+}
+
+export enum ESecurityStockChangeRequestReturnedToVO_status {
+    /** 待审核 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已通过 */
+    PASS = "PASS",
+    /** 已拒绝 */
+    REFUSE = "REFUSE"
 }

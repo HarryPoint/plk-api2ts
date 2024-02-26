@@ -51,7 +51,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«寄售入库分析报表合计返回VO» */
 export interface IJSONResultConsignmentInboundAnalysisReportTotalReturnVO {
@@ -74,4 +74,9 @@ export interface IConsignmentWarehousingAnalysisReportTotalReturnVO {
     inboundPriceSum?: number;
     /** 入库金额合计 */
     inboundAmountSum?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

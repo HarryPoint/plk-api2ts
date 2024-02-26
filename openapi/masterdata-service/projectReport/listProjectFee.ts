@@ -64,11 +64,11 @@ export interface IProjectExpenseReportResponseObject {
     /** 项目经理名称 */
     projectManagerName?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectExpenseReportResponseObject_isOverdue;
     /** 超期天数(天) */
     overdueDay?: number;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectExpenseReportResponseObject_status;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
@@ -99,4 +99,24 @@ export interface IProjectExpenseReportResponseObject {
     reportUserId?: number;
     /** undefined */
     reportDeptId?: number;
+}
+
+export enum EProjectExpenseReportResponseObject_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectExpenseReportResponseObject_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
 }

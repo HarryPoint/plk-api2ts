@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«深蓝折弯机报表»» */
 export interface IJSONResultListDarkBluePressReport {
@@ -64,4 +64,9 @@ export interface IDarkBlueBendingMachineReport {
     produceStatics?: string;
     /** 报警信号 */
     warnInfo?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

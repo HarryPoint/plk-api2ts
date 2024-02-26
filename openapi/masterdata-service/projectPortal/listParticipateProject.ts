@@ -33,7 +33,7 @@ export interface IProjectPortalResponseObject {
     /** 项目名称 */
     name?: string;
     /** 项目状态 */
-    projectStatus?: ('DRAFT' | 'IN_APPROVE' | 'APPROVAL_DENIED' | 'IN_PROGRESS' | 'COMPLETE' | 'END');
+    projectStatus?: EProjectPortalResponseObject_projectStatus;
     /** 项目类型名称 */
     projectTypeName?: string;
     /** 项目经理名称 */
@@ -42,4 +42,19 @@ export interface IProjectPortalResponseObject {
     projectTypeId?: number;
     /** undefined */
     projectManagerId?: number;
+}
+
+export enum EProjectPortalResponseObject_projectStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 审批中 */
+    IN_APPROVE = "IN_APPROVE",
+    /** 审批拒绝 */
+    APPROVAL_DENIED = "APPROVAL_DENIED",
+    /** 进行中 */
+    IN_PROGRESS = "IN_PROGRESS",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已终止 */
+    END = "END"
 }

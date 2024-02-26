@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«班次返回VO»» */
 export interface IJSONResultPagingInformationShiftReturnsVO {
@@ -61,9 +61,9 @@ export interface IPagingInformationShiftReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationShiftReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationShiftReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -80,7 +80,7 @@ export interface IShiftBackVO {
     /** 开始时间 */
     beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EShiftBackVO_endTimeType;
     /** 结束时间 */
     endTime?: string;
     /** 状态 */
@@ -91,4 +91,30 @@ export interface IShiftBackVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationShiftReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationShiftReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EShiftBackVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

@@ -28,14 +28,14 @@ export interface IPaging {
     /** 客户名称或Code，模糊匹配 */
     nameOrCode?: string;
     /** 是否包含销售用户，默认为 不包含(N) */
-    isContainSalesUser?: ('Y' | 'N');
+    isContainSalesUser?: EPaging_isContainSalesUser;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«Id，名称，编号VO»» */
 export interface IJSONResultListIdNameNumberVO {
@@ -56,4 +56,16 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EPaging_isContainSalesUser {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

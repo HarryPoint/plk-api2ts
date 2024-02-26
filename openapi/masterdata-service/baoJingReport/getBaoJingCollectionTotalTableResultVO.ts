@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«宝晶收款汇总分析报表表格返回VO»» */
 export interface IJSONResultPageInformationBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
@@ -67,9 +67,9 @@ export interface IPageInformationBaojingCollectionSummaryAnalysisReportFormRetur
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -98,7 +98,7 @@ export interface IBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     /** 业务员名称 */
     businessUserName?: string;
     /** 是否含税 */
-    isTax?: ('Y' | 'N');
+    isTax?: EBaojingCollectionSummaryAnalysisReportFormReturnedToVO_isTax;
     /** 期初金额 */
     beginAmount?: number;
     /** 应收金额 */
@@ -109,4 +109,30 @@ export interface IBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     otherLoss?: number;
     /** 应收余额 */
     receivableBalance?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EBaojingCollectionSummaryAnalysisReportFormReturnedToVO_isTax {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

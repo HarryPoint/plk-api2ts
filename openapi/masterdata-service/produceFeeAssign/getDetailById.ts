@@ -50,7 +50,7 @@ export interface IDurationResponseObject {
     /** 结束日期 */
     endDate?: string;
     /** 是否当前期间 */
-    isCurrentFiscalPeriod?: ('Y' | 'N');
+    isCurrentFiscalPeriod?: EDurationResponseObject_isCurrentFiscalPeriod;
 }
 /** 生产成本分配明细响应对象 */
 export interface IProductionCostAllocationDetailResponseObject {
@@ -63,7 +63,7 @@ export interface IProductionCostAllocationDetailResponseObject {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
+    stockInStatus?: EProductionCostAllocationDetailResponseObject_stockInStatus;
     /** 计划开工日期 */
     planBeginTime?: string;
     /** 物料id */
@@ -124,4 +124,20 @@ export interface IExpenseCollectionDetailsRespondToDTO {
     periodDate?: string;
     /** 指定生产订单 */
     produceOrderId?: number;
+}
+
+export enum EDurationResponseObject_isCurrentFiscalPeriod {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionCostAllocationDetailResponseObject_stockInStatus {
+    /** 未入库 */
+    NONE = "NONE",
+    /** 部分入库 */
+    PARTIAL_STOCK_IN = "PARTIAL_STOCK_IN",
+    /** 完全入库 */
+    FULL_STOCK_IN = "FULL_STOCK_IN"
 }

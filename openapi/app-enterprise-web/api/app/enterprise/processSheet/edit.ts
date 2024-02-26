@@ -83,7 +83,7 @@ export interface IProcessCardDetailsReturnedToVO {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: ('FILE' | 'TEXT' | 'INPUT');
+    type?: EProcessCardDetailsReturnedToVO_type;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -97,9 +97,9 @@ export interface IProcessCardDetailsReturnedToVO {
     /** 文件完整url */
     fileUrl?: string;
     /** 录入类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EProcessCardDetailsReturnedToVO_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EProcessCardDetailsReturnedToVO_textType;
     /** 文本比较值集 */
     textCompareValueList?: string[];
     /** 下限 */
@@ -112,4 +112,33 @@ export interface IProcessCardDetailsReturnedToVO {
     imageTotalCount?: number;
     /** 选项集 */
     selectorList?: string[];
+}
+
+export enum EProcessCardDetailsReturnedToVO_type {
+    /** 文件 */
+    FILE = "FILE",
+    /** 描述 */
+    TEXT = "TEXT",
+    /** 录入 */
+    INPUT = "INPUT"
+}
+
+export enum EProcessCardDetailsReturnedToVO_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EProcessCardDetailsReturnedToVO_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
 }

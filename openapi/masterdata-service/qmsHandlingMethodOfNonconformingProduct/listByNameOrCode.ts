@@ -38,7 +38,28 @@ export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
     /** 处理方式 */
     handingMethod?: string;
     /** 适用检验类型 */
-    useValidationTypes?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
+    useValidationTypes?: ETheNonconformingProductHandlingModeRespondsToTheObject_useValidationTypes;
     /** 适用检验类型描述 */
     useValidationTypesDesc?: string;
+}
+
+export enum ETheNonconformingProductHandlingModeRespondsToTheObject_useValidationTypes {
+    /** 客户投诉 */
+    CUSTOMER_COMPLAIN = "CUSTOMER_COMPLAIN",
+    /** 来料检 */
+    INCOMING_INSPECTION = "INCOMING_INSPECTION",
+    /** 首检 */
+    FIRST_INSPECTION = "FIRST_INSPECTION",
+    /** 巡检 */
+    PATROL_INSPECTION = "PATROL_INSPECTION",
+    /** 工序检 */
+    PROCESS_INSPECTION = "PROCESS_INSPECTION",
+    /** 成品检 */
+    PRODUCT_INSPECTION = "PRODUCT_INSPECTION",
+    /** 出货检 */
+    SHIPMENT_INSPECTION = "SHIPMENT_INSPECTION",
+    /** 试验 */
+    EXPERIMENT = "EXPERIMENT",
+    /** 其它 */
+    OTHER = "OTHER"
 }

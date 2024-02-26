@@ -33,13 +33,39 @@ export interface IProjectPlanResponseObject {
     /** 计划名称 */
     name?: string;
     /** 计划状态 */
-    planStatus?: ('HANDLING' | 'ISSUED' | 'NOT_PASS' | 'DRAFT' | 'INVALID');
+    planStatus?: EProjectPlanResponseObject_planStatus;
     /** 流程状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectPlanResponseObject_status;
     /** 计划开始日期 */
     planBeginTime?: string;
     /** 计划结束日期 */
     planEndTime?: string;
     /** 项目id */
     projectId?: number;
+}
+
+export enum EProjectPlanResponseObject_planStatus {
+    /** 审批中 */
+    HANDLING = "HANDLING",
+    /** 已下发 */
+    ISSUED = "ISSUED",
+    /** 审批拒绝 */
+    NOT_PASS = "NOT_PASS",
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 已作废 */
+    INVALID = "INVALID"
+}
+
+export enum EProjectPlanResponseObject_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
 }

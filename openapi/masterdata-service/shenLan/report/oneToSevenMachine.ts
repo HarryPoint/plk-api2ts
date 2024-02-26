@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«转塔或者1到7号机报表»» */
 export interface IJSONResultListTurretOrUnit1To7Report {
@@ -72,4 +72,9 @@ export interface ITurretOrEngine1Through7Report {
     feedSpeed?: string;
     /** 报警信息 */
     warnInfo?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

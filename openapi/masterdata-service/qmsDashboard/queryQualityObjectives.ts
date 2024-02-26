@@ -20,7 +20,7 @@ export interface IQmsLargeScreenTimeIntervalRequest {
     /** 查询日期的结束 */
     dateRangeEnd?: string;
     /** 查询日期区间类型 */
-    dateRangeType?: ('YEAR' | 'QUARTER' | 'MONTH');
+    dateRangeType?: EQmsLargeScreenTimeIntervalRequest_dateRangeType;
 }
 /** JSONResult«List«质量目标返回DTO»» */
 export interface IJSONResultListTheQualityTargetReturnsTheDTO {
@@ -38,7 +38,7 @@ export interface ITheQualityTargetReturnsTheDTO {
     /** 质量目标 */
     name?: string;
     /** 目标值类型 */
-    targetType?: ('QUALITATIVE_OBJECTIVE' | 'QUANTITATIVE_OBJECTIVE');
+    targetType?: ETheQualityTargetReturnsTheDTO_targetType;
     /** 定性目标值 */
     qualitativeTargetValue?: string;
     /** 定量目标值 */
@@ -51,4 +51,20 @@ export interface ITheQualityTargetReturnsTheDTO {
     q3?: string;
     /** q4实际值 */
     q4?: string;
+}
+
+export enum EQmsLargeScreenTimeIntervalRequest_dateRangeType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum ETheQualityTargetReturnsTheDTO_targetType {
+    /** 定性目标 */
+    QUALITATIVE_OBJECTIVE = "QUALITATIVE_OBJECTIVE",
+    /** 定量目标 */
+    QUANTITATIVE_OBJECTIVE = "QUANTITATIVE_OBJECTIVE"
 }

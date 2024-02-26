@@ -46,7 +46,7 @@ export interface ITheWarehouseTreeReturnsVO2 {
     /** 仓库编号 */
     code?: string;
     /** 仓库类型 */
-    type?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
+    type?: ETheWarehouseTreeReturnsVO2_type;
     /** 仓库类型描述 */
     typeDesc?: string;
     /** 仓位集 */
@@ -74,4 +74,13 @@ export interface IPositionTreeReturnsVO7 {
     storehouseName?: string;
     /** 子仓位 */
     children?: IPositionTreeReturnsVO7[];
+}
+
+export enum ETheWarehouseTreeReturnsVO2_type {
+    /** 实体仓 */
+    PHYSICAL = "PHYSICAL",
+    /** 线边仓 */
+    LINE_SIDE = "LINE_SIDE",
+    /** WIP */
+    WIP = "WIP"
 }

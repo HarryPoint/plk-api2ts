@@ -38,13 +38,34 @@ export interface IRoleAndUserIdInformationResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: ERoleAndUserIdInformationResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: ERoleAndUserIdInformationResponse_isAdmin;
     /** 描述 */
     description?: string;
     /** 用户id */
     userId?: number;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleAndUserIdInformationResponse_applicationLevel;
+}
+
+export enum ERoleAndUserIdInformationResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleAndUserIdInformationResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleAndUserIdInformationResponse_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

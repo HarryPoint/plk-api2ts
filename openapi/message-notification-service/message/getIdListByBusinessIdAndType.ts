@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IMessageQueryDTOparams: { e
 /** 消息查询DTO */
 export interface IMessageQueryDTO {
     /** 业务类型 */
-    businessType?: ('PRODUCE_TASK');
+    businessType?: EMessageQueryDTO_businessType;
     /** 业务id */
     businessIds?: number[];
 }
@@ -30,4 +30,9 @@ export interface IJSONResultListlong {
     data?: number[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EMessageQueryDTO_businessType {
+    /** 生产任务 */
+    PRODUCE_TASK = "PRODUCE_TASK"
 }

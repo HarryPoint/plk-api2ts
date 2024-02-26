@@ -18,7 +18,7 @@ export interface IExampleModifyTheEnterpriseBatchManagementInformationRequestObj
     /** 企业id */
     id?: number;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: ('Y' | 'N');
+    isEnableBatchManagement?: EExampleModifyTheEnterpriseBatchManagementInformationRequestObject_isEnableBatchManagement;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EExampleModifyTheEnterpriseBatchManagementInformationRequestObject_isEnableBatchManagement {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

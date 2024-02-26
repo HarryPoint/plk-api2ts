@@ -37,7 +37,7 @@ export interface IProjectTaskResponseObject6 {
     /** 任务负责人名称 */
     leaderUserNameList?: string[];
     /** 任务状态 */
-    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
+    taskStatus?: EProjectTaskResponseObject6_taskStatus;
     /** 前置任务列表 */
     preTaskList?: IProjectTaskPreTaskResponseObject[];
     /** 任务开始日期 */
@@ -67,7 +67,7 @@ export interface IProjectTaskResponseObject6 {
     /** 备注 */
     remark?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectTaskResponseObject6_isOverdue;
     /** 层级 */
     level?: number;
     /** 排序 */
@@ -81,9 +81,9 @@ export interface IProjectTaskResponseObject6 {
     /** 当前登录员工所属待办id */
     currentEmployeeTodoId?: number;
     /** 当前登录员工所属待办状态 */
-    currentEmployeeTodoStatus?: ('NOT_HANDLE' | 'NOT_READ' | 'HANDLED' | 'READ');
+    currentEmployeeTodoStatus?: EProjectTaskResponseObject6_currentEmployeeTodoStatus;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectTaskResponseObject6_status;
     /** 数据状态 0停用，1启用，2暂存 */
     dataStatus?: number;
     /** 创建员工名称 */
@@ -109,9 +109,9 @@ export interface IProjectTaskResponseObject6 {
     /** 任务权重 */
     taskWeight?: number;
     /** 项目计划模块是否展示 */
-    isProjectPlanShow?: ('Y' | 'N');
+    isProjectPlanShow?: EProjectTaskResponseObject6_isProjectPlanShow;
     /** 项目任务模块是否展示 */
-    isProjectTaskShow?: ('Y' | 'N');
+    isProjectTaskShow?: EProjectTaskResponseObject6_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
@@ -153,7 +153,7 @@ export interface IProjectTaskResponseObject9 {
     /** 任务负责人名称 */
     leaderUserNameList?: string[];
     /** 任务状态 */
-    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
+    taskStatus?: EProjectTaskResponseObject9_taskStatus;
     /** 前置任务列表 */
     preTaskList?: IProjectTaskPreTaskResponseObject[];
     /** 任务开始日期 */
@@ -183,7 +183,7 @@ export interface IProjectTaskResponseObject9 {
     /** 备注 */
     remark?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectTaskResponseObject9_isOverdue;
     /** 层级 */
     level?: number;
     /** 排序 */
@@ -197,9 +197,9 @@ export interface IProjectTaskResponseObject9 {
     /** 当前登录员工所属待办id */
     currentEmployeeTodoId?: number;
     /** 当前登录员工所属待办状态 */
-    currentEmployeeTodoStatus?: ('NOT_HANDLE' | 'NOT_READ' | 'HANDLED' | 'READ');
+    currentEmployeeTodoStatus?: EProjectTaskResponseObject9_currentEmployeeTodoStatus;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectTaskResponseObject9_status;
     /** 数据状态 0停用，1启用，2暂存 */
     dataStatus?: number;
     /** 创建员工名称 */
@@ -225,9 +225,9 @@ export interface IProjectTaskResponseObject9 {
     /** 任务权重 */
     taskWeight?: number;
     /** 项目计划模块是否展示 */
-    isProjectPlanShow?: ('Y' | 'N');
+    isProjectPlanShow?: EProjectTaskResponseObject9_isProjectPlanShow;
     /** 项目任务模块是否展示 */
-    isProjectTaskShow?: ('Y' | 'N');
+    isProjectTaskShow?: EProjectTaskResponseObject9_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
@@ -246,4 +246,132 @@ export interface IProjectTaskResponseObject9 {
     updateDeptId?: number;
     /** undefined */
     processStatus?: string;
+}
+
+export enum EProjectTaskResponseObject6_taskStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 未下发 */
+    UN_ISSUE = "UN_ISSUE",
+    /** 未接受 */
+    UN_RECEIVE = "UN_RECEIVE",
+    /** 未开始 */
+    UN_START = "UN_START",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProjectTaskResponseObject6_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject6_currentEmployeeTodoStatus {
+    /** 待处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 未读 */
+    NOT_READ = "NOT_READ",
+    /** 已完成 */
+    HANDLED = "HANDLED",
+    /** 已读 */
+    READ = "READ"
+}
+
+export enum EProjectTaskResponseObject6_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProjectTaskResponseObject6_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject6_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject9_taskStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 未下发 */
+    UN_ISSUE = "UN_ISSUE",
+    /** 未接受 */
+    UN_RECEIVE = "UN_RECEIVE",
+    /** 未开始 */
+    UN_START = "UN_START",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProjectTaskResponseObject9_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject9_currentEmployeeTodoStatus {
+    /** 待处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 未读 */
+    NOT_READ = "NOT_READ",
+    /** 已完成 */
+    HANDLED = "HANDLED",
+    /** 已读 */
+    READ = "READ"
+}
+
+export enum EProjectTaskResponseObject9_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProjectTaskResponseObject9_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject9_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

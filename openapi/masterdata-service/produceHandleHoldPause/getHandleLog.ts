@@ -40,9 +40,9 @@ export interface IProductionProcessingWithholdProcessingRecordDetailsResponseObj
     /** 创建时间 */
     createTime?: string;
     /** 生产处理操作类型 */
-    handleOp?: ('REPORT_ADD' | 'REPORT_SURE' | 'REPORT_IGNORE' | 'HOLD_RELEASE' | 'HOLD_BACK' | 'HOLD_PAUSE_ADD' | 'HOLD_PAUSE_RELEASE' | 'HOLD_PAUSE_BACK' | 'HOLD_PAUSE_SCRAP' | 'BACK_ADD' | 'BACK_APPROVAL' | 'BACK_REFUSE' | 'SCRAP_ADD' | 'SCRAP_APPROVAL' | 'SCRAP_REFUSE' | 'QUALITY_COMPLETE' | 'QUALITY_CANCEL' | 'MOVE_IN' | 'MOVE_OUT' | 'ENTRUST_ADD');
+    handleOp?: EProductionProcessingWithholdProcessingRecordDetailsResponseObject_handleOp;
     /** 返工生产后处理方式 */
-    backProduceType?: ('RETURN' | 'ORDER');
+    backProduceType?: EProductionProcessingWithholdProcessingRecordDetailsResponseObject_backProduceType;
     /** 返工工艺路径名称 */
     backProduceTechnologyRoutingStepName?: string;
     /** undefined */
@@ -51,4 +51,54 @@ export interface IProductionProcessingWithholdProcessingRecordDetailsResponseObj
     abnormalQuantity?: number;
     /** 处理意见 */
     handleRemark?: string;
+}
+
+export enum EProductionProcessingWithholdProcessingRecordDetailsResponseObject_handleOp {
+    /** 上报反馈 */
+    REPORT_ADD = "REPORT_ADD",
+    /** 上报反馈 */
+    REPORT_SURE = "REPORT_SURE",
+    /** 上报反馈 */
+    REPORT_IGNORE = "REPORT_IGNORE",
+    /** 扣留 */
+    HOLD_RELEASE = "HOLD_RELEASE",
+    /** 扣留 */
+    HOLD_BACK = "HOLD_BACK",
+    /** 暂扣 */
+    HOLD_PAUSE_ADD = "HOLD_PAUSE_ADD",
+    /** 暂扣 */
+    HOLD_PAUSE_RELEASE = "HOLD_PAUSE_RELEASE",
+    /** 暂扣 */
+    HOLD_PAUSE_BACK = "HOLD_PAUSE_BACK",
+    /** 暂扣 */
+    HOLD_PAUSE_SCRAP = "HOLD_PAUSE_SCRAP",
+    /** 返工 */
+    BACK_ADD = "BACK_ADD",
+    /** 返工 */
+    BACK_APPROVAL = "BACK_APPROVAL",
+    /** 返工 */
+    BACK_REFUSE = "BACK_REFUSE",
+    /** 报废 */
+    SCRAP_ADD = "SCRAP_ADD",
+    /** 报废 */
+    SCRAP_APPROVAL = "SCRAP_APPROVAL",
+    /** 报废 */
+    SCRAP_REFUSE = "SCRAP_REFUSE",
+    /** 质检 */
+    QUALITY_COMPLETE = "QUALITY_COMPLETE",
+    /** 质检 */
+    QUALITY_CANCEL = "QUALITY_CANCEL",
+    /** 进站 */
+    MOVE_IN = "MOVE_IN",
+    /** 出站 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 委外添加 */
+    ENTRUST_ADD = "ENTRUST_ADD"
+}
+
+export enum EProductionProcessingWithholdProcessingRecordDetailsResponseObject_backProduceType {
+    /** 返回原工序 */
+    RETURN = "RETURN",
+    /** 顺序生产 */
+    ORDER = "ORDER"
 }

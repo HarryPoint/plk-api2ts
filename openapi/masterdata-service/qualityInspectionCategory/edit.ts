@@ -22,7 +22,7 @@ export interface IEditTheQualityInspectionClassificationDTO {
     /** 质检分类编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: ('Y' | 'N');
+    isCodeRule: EEditTheQualityInspectionClassificationDTO_isCodeRule;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -34,4 +34,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEditTheQualityInspectionClassificationDTO_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -35,5 +35,12 @@ export interface IBusinessQueryResponse {
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否详细流程 */
-    isDetailFlow?: ('Y' | 'N');
+    isDetailFlow?: EBusinessQueryResponse_isDetailFlow;
+}
+
+export enum EBusinessQueryResponse_isDetailFlow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

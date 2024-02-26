@@ -29,7 +29,7 @@ export interface IProductionOrderMatchingTaskQueryRequest1 {
     /** ID */
     id?: number;
     /** 标准工艺匹配状态 */
-    status?: ('UNMATCHED' | 'MATCHING' | 'MATCH_COMPLETED' | 'MATCH_FAIL');
+    status?: EProductionOrderMatchingTaskQueryRequest1_status;
     /** 总数量 */
     totalQuantity?: number;
     /** 当前已处理数量 */
@@ -54,9 +54,31 @@ export interface IProductionOrderMatchingTaskQueryRequest {
     /** 标准工艺ID */
     standardTechnologyId?: number;
     /** 状态 */
-    status?: ('UNMATCHED' | 'MATCHING' | 'MATCH_COMPLETED' | 'MATCH_FAIL');
+    status?: EProductionOrderMatchingTaskQueryRequest_status;
     /** 错误原因 */
     failureReason?: string;
     /** 任务执行时间 */
     taskExecutionTime?: string;
+}
+
+export enum EProductionOrderMatchingTaskQueryRequest1_status {
+    /** 未匹配 */
+    UNMATCHED = "UNMATCHED",
+    /** 匹配中 */
+    MATCHING = "MATCHING",
+    /** 匹配完成 */
+    MATCH_COMPLETED = "MATCH_COMPLETED",
+    /** 匹配失败 */
+    MATCH_FAIL = "MATCH_FAIL"
+}
+
+export enum EProductionOrderMatchingTaskQueryRequest_status {
+    /** 未匹配 */
+    UNMATCHED = "UNMATCHED",
+    /** 匹配中 */
+    MATCHING = "MATCHING",
+    /** 匹配完成 */
+    MATCH_COMPLETED = "MATCH_COMPLETED",
+    /** 匹配失败 */
+    MATCH_FAIL = "MATCH_FAIL"
 }

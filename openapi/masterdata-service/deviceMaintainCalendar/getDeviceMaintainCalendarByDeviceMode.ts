@@ -44,7 +44,7 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     /** 班组ids */
     classGroupIds?: number[];
     /** 查询状态 */
-    queryStatusList?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE')[];
+    queryStatusList?: EEquipmentMaintenanceCalendarRequestDTO_queryStatusList_items[];
     /** 保养计划编号 */
     planCode?: string;
     /** 计划开始时间 */
@@ -57,7 +57,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«设备保养日历-设备模式响应DTO»» */
 export interface IJSONResultPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO {
@@ -85,9 +85,9 @@ export interface IPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsTo
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -111,7 +111,7 @@ export interface IDeviceMaintenanceCalendarDeviceModeRespondsToDTO {
 /** 设备保养日历-设备模式详情响应DTO */
 export interface IDeviceMaintenanceCalendarDeviceModeDetailsRespondToDTO {
     /** 保养类型 */
-    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
+    maintainType?: EDeviceMaintenanceCalendarDeviceModeDetailsRespondToDTO_maintainType;
     /** 时间详情 */
     timeDetails?: IDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO[];
 }
@@ -132,9 +132,83 @@ export interface IDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO {
     /** 任务结束时间 */
     taskEndDate?: string;
     /** 任务状态 */
-    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
+    taskStatus?: EDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO_taskStatus;
     /** 返回类型 */
-    resultType?: ('MAINTAIN_PLAN' | 'MAINTAIN_TASK');
+    resultType?: EDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO_resultType;
     /** 查询状态 */
-    queryStatus?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE');
+    queryStatus?: EDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO_queryStatus;
+}
+
+export enum EEquipmentMaintenanceCalendarRequestDTO_queryStatusList_items {
+    PLAN = "PLAN",
+    WAIT = "WAIT",
+    HANDLING = "HANDLING",
+    CANCEL = "CANCEL",
+    COMPLETE = "COMPLETE",
+    OVERDUE = "OVERDUE"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationDeviceMaintenanceCalendarDeviceModeRespondsToDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDeviceMaintenanceCalendarDeviceModeDetailsRespondToDTO_maintainType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 半年 */
+    HALF_YEAR = "HALF_YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO_taskStatus {
+    /** 待执行 */
+    WAIT = "WAIT",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO_resultType {
+    /** 保养计划 */
+    MAINTAIN_PLAN = "MAINTAIN_PLAN",
+    /** 保养任务 */
+    MAINTAIN_TASK = "MAINTAIN_TASK"
+}
+
+export enum EDeviceMaintenanceCalendarDeviceModeDetailsTimeResponseDTO_queryStatus {
+    /** 保养计划 */
+    PLAN = "PLAN",
+    /** 待执行任务 */
+    WAIT = "WAIT",
+    /** 进行中任务 */
+    HANDLING = "HANDLING",
+    /** 已取消任务 */
+    CANCEL = "CANCEL",
+    /** 已完成任务 */
+    COMPLETE = "COMPLETE",
+    /** 超期任务 */
+    OVERDUE = "OVERDUE"
 }

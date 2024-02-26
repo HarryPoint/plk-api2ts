@@ -39,9 +39,9 @@ export interface IPagingInformationCompletedAndFinishedProductsAreCollectedAsPag
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -56,7 +56,7 @@ export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObje
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
+    stockInStatus?: ETheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects_stockInStatus;
     /** 计划开工日期 */
     planBeginTime?: string;
     /** 计划完工日期 */
@@ -89,4 +89,27 @@ export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObje
     rawMaterialTotalCost?: number;
     /** 本期完工原材料成本 = 本期原材料总成本 * (本期完工数量/计划生产数量) */
     currentPeriodRawMaterialTotalCost?: number;
+}
+
+export enum EPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects_stockInStatus {
+    /** 未入库 */
+    NONE = "NONE",
+    /** 部分入库 */
+    PARTIAL_STOCK_IN = "PARTIAL_STOCK_IN",
+    /** 完全入库 */
+    FULL_STOCK_IN = "FULL_STOCK_IN"
 }

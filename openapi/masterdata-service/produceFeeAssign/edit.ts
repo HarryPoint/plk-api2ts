@@ -30,7 +30,7 @@ export interface IProductionExpensesAllocationEditDTO {
     /** 费用信息 */
     produceFeeCollectDetailList?: ICostCollectionDetailResponseDTO1[];
     /** undefined */
-    isDeleted?: ('Y' | 'N');
+    isDeleted?: EProductionExpensesAllocationEditDTO_isDeleted;
 }
 /** 生产费用分配明细编辑DTO */
 export interface IProductionExpenseAllocationDetailsEditDTO {
@@ -43,7 +43,7 @@ export interface IProductionExpenseAllocationDetailsEditDTO {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
+    stockInStatus?: EProductionExpenseAllocationDetailsEditDTO_stockInStatus;
     /** 计划开工日期 */
     planBeginTime?: string;
     /** 物料id */
@@ -71,7 +71,7 @@ export interface IProductionExpenseAllocationDetailsEditDTO {
     /** 费用合计 */
     totalFee?: number;
     /** undefined */
-    isDeleted?: ('Y' | 'N');
+    isDeleted?: EProductionExpenseAllocationDetailsEditDTO_isDeleted;
 }
 /** 生产成本分配动态数据 */
 export interface IProductionCostAllocationDynamicData {
@@ -109,4 +109,23 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionExpensesAllocationEditDTO_isDeleted {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EProductionExpenseAllocationDetailsEditDTO_stockInStatus {
+    /** 未入库 */
+    NONE = "NONE",
+    /** 部分入库 */
+    PARTIAL_STOCK_IN = "PARTIAL_STOCK_IN",
+    /** 完全入库 */
+    FULL_STOCK_IN = "FULL_STOCK_IN"
+}
+
+export enum EProductionExpenseAllocationDetailsEditDTO_isDeleted {
+    Y = "Y",
+    N = "N"
 }

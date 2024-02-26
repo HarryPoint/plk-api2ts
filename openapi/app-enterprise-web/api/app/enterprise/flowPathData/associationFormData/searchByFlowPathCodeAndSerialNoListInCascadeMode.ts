@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«FormCascadeQueryResultVO»» */
 export interface IJSONResultListFormCascadeQueryResultVO {
@@ -58,4 +58,9 @@ export interface IFormCascadeQueryResultVO {
     code?: string;
     /** 子集 */
     children?: IFormCascadeQueryResultVO[];
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

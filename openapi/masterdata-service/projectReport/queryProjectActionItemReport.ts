@@ -39,9 +39,9 @@ export interface IPageInformationItemActionItemReportResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationItemActionItemReportResponseObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationItemActionItemReportResponseObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -72,11 +72,11 @@ export interface IProjectActionItemReportResponseObject {
     /** 项目经理名称 */
     projectManagerName?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectActionItemReportResponseObject_isOverdue;
     /** 超期天数(天) */
     overdueDay?: number;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectActionItemReportResponseObject_status;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
@@ -107,4 +107,38 @@ export interface IProjectActionItemReportResponseObject {
     feedbackCycle?: string;
     /** undefined */
     type?: string;
+}
+
+export enum EPageInformationItemActionItemReportResponseObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationItemActionItemReportResponseObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectActionItemReportResponseObject_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectActionItemReportResponseObject_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
 }

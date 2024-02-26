@@ -31,9 +31,24 @@ export interface IProductionExceptionTypeVO {
     /** 所属企业id */
     enterpriseId?: number;
     /** 异常分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
+    type?: EProductionExceptionTypeVO_type;
     /** 类型名称 */
     name?: string;
     /** 类型编号 */
     code?: string;
+}
+
+export enum EProductionExceptionTypeVO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 撤销任务 */
+    CANCEL_TASK = "CANCEL_TASK"
 }

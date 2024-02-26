@@ -35,5 +35,12 @@ export interface IDurationResponseObject {
     /** 结束日期 */
     endDate?: string;
     /** 是否当前期间 */
-    isCurrentFiscalPeriod?: ('Y' | 'N');
+    isCurrentFiscalPeriod?: EDurationResponseObject_isCurrentFiscalPeriod;
+}
+
+export enum EDurationResponseObject_isCurrentFiscalPeriod {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

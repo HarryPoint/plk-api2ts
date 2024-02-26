@@ -36,14 +36,14 @@ export interface IUserManagementQuery {
     /** 手机号 */
     telephone?: string;
     /** 状态 */
-    statusList?: ('WAIT_ACTIVATE' | 'ACTIVATED' | 'DISABLED')[];
+    statusList?: EUserManagementQuery_statusList_items[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«用户管理响应»» */
 export interface IJSONResultPagingInformationUserManagementResponse {
@@ -71,9 +71,9 @@ export interface IPageInformationTheUserManagesTheResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationTheUserManagesTheResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationTheUserManagesTheResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -102,9 +102,9 @@ export interface IUserManagementResponse {
     /** 可访问企业集 */
     enterpriseList?: IIdCodeNameGenericTransportObject[];
     /** 状态 */
-    status?: ('WAIT_ACTIVATE' | 'ACTIVATED' | 'DISABLED');
+    status?: EUserManagementResponse_status;
     /** 创建方式 */
-    createType?: ('MANAGE' | 'ENTERPRISE' | 'SELF');
+    createType?: EUserManagementResponse_createType;
     /** 最后登录时间 */
     lastLoginTime?: string;
     /** 最后修改时间 */
@@ -118,4 +118,49 @@ export interface IIdCodeNameGenericTransportObject {
     code?: string;
     /** name */
     name?: string;
+}
+
+export enum EUserManagementQuery_statusList_items {
+    WAIT_ACTIVATE = "WAIT_ACTIVATE",
+    ACTIVATED = "ACTIVATED",
+    DISABLED = "DISABLED"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationTheUserManagesTheResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationTheUserManagesTheResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EUserManagementResponse_status {
+    /** 待激活 */
+    WAIT_ACTIVATE = "WAIT_ACTIVATE",
+    /** 已激活 */
+    ACTIVATED = "ACTIVATED",
+    /** 已禁用 */
+    DISABLED = "DISABLED"
+}
+
+export enum EUserManagementResponse_createType {
+    /** 后台创建 */
+    MANAGE = "MANAGE",
+    /** 企业创建 */
+    ENTERPRISE = "ENTERPRISE",
+    /** 本人创建 */
+    SELF = "SELF"
 }

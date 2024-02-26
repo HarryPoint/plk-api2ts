@@ -53,5 +53,12 @@ export interface IBasicVO2 {
     /** 所属主物料bomid */
     materialBomId?: number;
     /** 是否默认 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EBasicVO2_isDefault;
+}
+
+export enum EBasicVO2_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

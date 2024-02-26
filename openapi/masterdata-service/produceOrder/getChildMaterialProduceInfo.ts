@@ -91,11 +91,11 @@ export interface ISubMaterialProductionInformationVO {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: ESubMaterialProductionInformationVO_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: ESubMaterialProductionInformationVO_enableLot;
     /** 启用批次 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: ESubMaterialProductionInformationVO_enableQualityTraceability;
 }
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
@@ -115,4 +115,25 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     unitId?: number;
     /** 库存可使用数 */
     storageUseQuantity?: number;
+}
+
+export enum ESubMaterialProductionInformationVO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESubMaterialProductionInformationVO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESubMaterialProductionInformationVO_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

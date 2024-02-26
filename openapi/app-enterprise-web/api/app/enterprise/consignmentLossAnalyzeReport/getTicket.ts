@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
@@ -64,4 +64,9 @@ export interface IJSONResultExportedTicketInformation {
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
     ticket?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

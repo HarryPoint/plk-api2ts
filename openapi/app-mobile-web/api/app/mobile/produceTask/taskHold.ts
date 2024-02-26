@@ -34,7 +34,7 @@ export interface IProductionTreatment {
     /** 异常数量，报废/返工/暂扣时必填 */
     abnormalQuantity?: number;
     /** 返工生产后处理方式，返工逻辑必填 */
-    backProduceType?: ('RETURN' | 'ORDER');
+    backProduceType?: EProductionTreatment_backProduceType;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -46,4 +46,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionTreatment_backProduceType {
+    /** 返回原工序 */
+    RETURN = "RETURN",
+    /** 顺序生产 */
+    ORDER = "ORDER"
 }

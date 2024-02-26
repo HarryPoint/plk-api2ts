@@ -26,7 +26,7 @@ export interface IInboundAndOutboundInformationDTO {
     /** 关键参数信息填写 */
     keyParametersInfo?: IEntryAndExitProcessCardFilling;
     /** undefined */
-    handleOtherAsync?: ('Y' | 'N');
+    handleOtherAsync?: EInboundAndOutboundInformationDTO_handleOtherAsync;
 }
 /** 成品物料填写请求DTO */
 export interface IFinishedMaterialFillRequestDTO {
@@ -89,4 +89,9 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EInboundAndOutboundInformationDTO_handleOtherAsync {
+    Y = "Y",
+    N = "N"
 }

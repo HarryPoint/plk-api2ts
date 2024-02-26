@@ -34,15 +34,15 @@ export interface IProductionTaskSearchVO {
     /** 任务类型描述 */
     typeDesc?: string;
     /** 任务下发方式 */
-    issueType?: ('PLAN' | 'DIRECT');
+    issueType?: EProductionTaskSearchVO_issueType;
     /** 任务下发方式描述 */
     issueTypeDesc?: string;
     /** 任务类型 */
-    type?: ('PRODUCE' | 'BACK');
+    type?: EProductionTaskSearchVO_type;
     /** 计划开始-结束时间 yyyy-MM-dd HH:mm:ss */
     startEndTime?: string;
     /** 任务状态 */
-    statusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    statusList?: EProductionTaskSearchVO_statusList_items[];
     /** 任务优先级 */
     priorityLevel?: number;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -56,7 +56,7 @@ export interface IProductionTaskSearchVO {
     /** 创建结束时间 yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
     /** 可操作项 */
-    canOpItem?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT');
+    canOpItem?: EProductionTaskSearchVO_canOpItem;
     /** 生产订单字段搜索 */
     produceOrderSearchList?: IProcessDataDetailsSearchVO[];
 }
@@ -65,14 +65,14 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -110,9 +110,9 @@ export interface IPagingInformationJSONObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationJSONObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationJSONObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -120,4 +120,67 @@ export interface IPagingInformationJSONObject {
 }
 /** JSONObject */
 export interface IJSONObject {
+}
+
+export enum EProductionTaskSearchVO_issueType {
+    /** 排产下发 */
+    PLAN = "PLAN",
+    /** 直接下发 */
+    DIRECT = "DIRECT"
+}
+
+export enum EProductionTaskSearchVO_type {
+    /** 生产任务 */
+    PRODUCE = "PRODUCE",
+    /** 返工任务 */
+    BACK = "BACK"
+}
+
+export enum EProductionTaskSearchVO_statusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionTaskSearchVO_canOpItem {
+    /** 进料 */
+    CAN_MOVE_IN = "CAN_MOVE_IN",
+    /** 质检 */
+    CAN_QUALITY = "CAN_QUALITY",
+    /** 出料 */
+    CAN_MOVE_OUT = "CAN_MOVE_OUT"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingInformationJSONObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationJSONObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

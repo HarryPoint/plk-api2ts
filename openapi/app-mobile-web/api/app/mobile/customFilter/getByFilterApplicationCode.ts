@@ -37,5 +37,12 @@ export interface ICustomFiltersReturnObjectDTO {
     /** 字段序列号 */
     formFieldSerialNo?: string;
     /** 是否动态表字段 */
-    isDynamicFormField?: ('Y' | 'N');
+    isDynamicFormField?: ECustomFiltersReturnObjectDTO_isDynamicFormField;
+}
+
+export enum ECustomFiltersReturnObjectDTO_isDynamicFormField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

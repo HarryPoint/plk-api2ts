@@ -18,7 +18,7 @@ export interface ICheckItemCalculatesDTO {
     /** 抽样标准id */
     qmsSamplingStandardsId?: number;
     /** 检验方式 */
-    inspectionMethodType?: ('SPOT_CHECK' | 'ALL_CHECK');
+    inspectionMethodType?: ECheckItemCalculatesDTO_inspectionMethodType;
     /** 样本量 */
     sampleSize?: number;
 }
@@ -57,4 +57,11 @@ export interface ITheTestItemCalculatesTheResponseDTO {
     re?: number;
     /** undefined */
     inspectionSampleSize?: number;
+}
+
+export enum ECheckItemCalculatesDTO_inspectionMethodType {
+    /** 抽检 */
+    SPOT_CHECK = "SPOT_CHECK",
+    /** 全检 */
+    ALL_CHECK = "ALL_CHECK"
 }

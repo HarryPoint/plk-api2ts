@@ -30,11 +30,11 @@ export interface IEmployeeEditRequest {
     /** 邮件 */
     email?: string;
     /** 是否允许登录 */
-    isAllowLogin?: ('Y' | 'N');
+    isAllowLogin?: EEmployeeEditRequest_isAllowLogin;
     /** 是否处理账号信息 */
-    isHandleAccount?: ('Y' | 'N');
+    isHandleAccount?: EEmployeeEditRequest_isHandleAccount;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EEmployeeEditRequest_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
@@ -50,4 +50,25 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEmployeeEditRequest_isAllowLogin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEmployeeEditRequest_isHandleAccount {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEmployeeEditRequest_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

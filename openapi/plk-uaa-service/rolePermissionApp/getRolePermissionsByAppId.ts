@@ -38,7 +38,7 @@ export interface IApplicationRolePermissionRespondsToTheDTO {
 /** 企业角色权限响应 */
 export interface IEnterpriseRolePermissionResponse {
     /** 数据权限类型 */
-    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
+    dataAuthType?: EEnterpriseRolePermissionResponse_dataAuthType;
     /** 应用id */
     appId?: number;
     /** 企业路由code */
@@ -52,4 +52,15 @@ export interface ITheRoleDataPermissionFieldRespondsToTheDTO {
     appFieldSerialNo?: string;
     /** 流程表单字段名 */
     appFieldName?: string;
+}
+
+export enum EEnterpriseRolePermissionResponse_dataAuthType {
+    /** 表单字段 */
+    FLOW_FIELD = "FLOW_FIELD",
+    /** 本人 */
+    SELF = "SELF",
+    /** 所属部门 */
+    DEPT = "DEPT",
+    /** 全部 */
+    ALL = "ALL"
 }

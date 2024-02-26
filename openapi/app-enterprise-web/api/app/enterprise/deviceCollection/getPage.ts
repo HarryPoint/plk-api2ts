@@ -30,18 +30,18 @@ export interface IDeviceDataOverviewSearchVO {
     /** 名称 */
     name?: string;
     /** 设备状态 */
-    runningStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    runningStatus?: EDeviceDataOverviewSearchVO_runningStatus;
     /** 通讯开关状态 */
-    apiSwitchStatus?: ('ON' | 'OFF');
+    apiSwitchStatus?: EDeviceDataOverviewSearchVO_apiSwitchStatus;
     /** 在线状态 */
-    onlineStatus?: ('ONLINE' | 'OFFLINE');
+    onlineStatus?: EDeviceDataOverviewSearchVO_onlineStatus;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«设备数据概览返回VO»» */
 export interface IJSONResultPagingInformationDeviceDataOverviewReturnsVO {
@@ -69,9 +69,9 @@ export interface IPageInformationDeviceDataOverviewReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationDeviceDataOverviewReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationDeviceDataOverviewReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,19 +92,104 @@ export interface IDeviceDataOverviewBackToVO {
     /** 设备数采方案编号 */
     deviceCollectionPlanCode?: string;
     /** 通讯开关状态 */
-    apiSwitchStatus?: ('ON' | 'OFF');
+    apiSwitchStatus?: EDeviceDataOverviewBackToVO_apiSwitchStatus;
     /** 通讯开关状态描述 */
     apiSwitchStatusDesc?: string;
     /** 最后通讯时间 */
     lastApiTime?: string;
     /** 在线状态 */
-    onlineStatus?: ('ONLINE' | 'OFFLINE');
+    onlineStatus?: EDeviceDataOverviewBackToVO_onlineStatus;
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    runningStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    runningStatus?: EDeviceDataOverviewBackToVO_runningStatus;
     /** 设备状态描述 */
     runningStatusDesc?: string;
     /** 所属设备型号类型名称 */
     deviceType?: string;
+}
+
+export enum EDeviceDataOverviewSearchVO_runningStatus {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
+}
+
+export enum EDeviceDataOverviewSearchVO_apiSwitchStatus {
+    /** 已开启 */
+    ON = "ON",
+    /** 已关闭 */
+    OFF = "OFF"
+}
+
+export enum EDeviceDataOverviewSearchVO_onlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationDeviceDataOverviewReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationDeviceDataOverviewReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDeviceDataOverviewBackToVO_apiSwitchStatus {
+    /** 已开启 */
+    ON = "ON",
+    /** 已关闭 */
+    OFF = "OFF"
+}
+
+export enum EDeviceDataOverviewBackToVO_onlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EDeviceDataOverviewBackToVO_runningStatus {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
 }

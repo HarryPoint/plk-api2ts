@@ -22,7 +22,7 @@ export interface ITaskShiftEditDTO {
     /** 开始时间 HH:mm */
     beginTime: string;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: ETaskShiftEditDTO_endTimeType;
     /** 结束时间 HH:mm */
     endTime: string;
     /** 员工集合 */
@@ -35,9 +35,9 @@ export interface IExecutiveEditorDTO {
     /** id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
+    executorType?: EExecutiveEditorDTO_executorType;
     /** 执行人系统控件类型 */
-    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
+    executorSysType?: EExecutiveEditorDTO_executorSysType;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -49,4 +49,33 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETaskShiftEditDTO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
+}
+
+export enum EExecutiveEditorDTO_executorType {
+    /** 员工 */
+    USER = "USER",
+    /** 角色 */
+    ROLE = "ROLE",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 系统控件 */
+    SYS_CONTROL = "SYS_CONTROL"
+}
+
+export enum EExecutiveEditorDTO_executorSysType {
+    /** 创建人 */
+    CREATE_BY = "CREATE_BY",
+    /** 创建部门 */
+    CREATE_DEPARTMENT = "CREATE_DEPARTMENT",
+    /** 任务方案 */
+    FLOW_PATH_TASK_PLAN = "FLOW_PATH_TASK_PLAN"
 }

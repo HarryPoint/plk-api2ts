@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IStandardProcessEnablesDeac
 /** 标准工艺启用、停用请求对象 */
 export interface IStandardProcessEnablesDeactivationOfRequestObjects {
     /** 启用 Y 停用 N */
-    valid: ('Y' | 'N');
+    valid: EStandardProcessEnablesDeactivationOfRequestObjects_valid;
     /** 是否 启用/停用 全部, Y 全部 */
-    validAll?: ('Y' | 'N');
+    validAll?: EStandardProcessEnablesDeactivationOfRequestObjects_validAll;
     /** 标准工艺ids */
     standardTechnologyIds?: number[];
 }
@@ -32,4 +32,18 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EStandardProcessEnablesDeactivationOfRequestObjects_valid {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EStandardProcessEnablesDeactivationOfRequestObjects_validAll {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

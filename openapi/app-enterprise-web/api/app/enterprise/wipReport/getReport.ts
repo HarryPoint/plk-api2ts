@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«WIP统计报表返回VO»» */
 export interface IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO {
@@ -59,9 +59,9 @@ export interface IPageInformationTheWIPStatisticsReportReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationTheWIPStatisticsReportReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationTheWIPStatisticsReportReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -111,4 +111,23 @@ export interface IWIPProcessStatisticsReportReturnsVO {
     processCode?: string;
     /** 工序库存集 */
     warehouse?: IWIPInventoryStatisticsReportReturnsVO;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationTheWIPStatisticsReportReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationTheWIPStatisticsReportReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

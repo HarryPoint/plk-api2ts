@@ -27,5 +27,12 @@ export interface IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsARespons
 /** 设备人员能力等级是否存在响应DTO */
 export interface IEquipmentPersonnelCapabilityLevelWhetherThereIsAResponseDTO {
     /** 是否存在 */
-    isExist?: ('Y' | 'N');
+    isExist?: EEquipmentPersonnelCapabilityLevelWhetherThereIsAResponseDTO_isExist;
+}
+
+export enum EEquipmentPersonnelCapabilityLevelWhetherThereIsAResponseDTO_isExist {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

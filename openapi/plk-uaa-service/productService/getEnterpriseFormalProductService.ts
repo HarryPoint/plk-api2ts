@@ -29,11 +29,16 @@ export interface IProductServiceResponseObject {
     /** 产品服务id */
     id?: number;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductServiceResponseObject_productType;
     /** 到期时间 */
     expireTime?: string;
     /** 账号数 */
     availableAccountQuantity?: number;
     /** 产品模块数组 */
     productModuleArray?: string[];
+}
+
+export enum EProductServiceResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
 }

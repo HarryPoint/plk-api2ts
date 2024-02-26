@@ -78,7 +78,7 @@ export interface IOutputLineChartReturnsVOOutputAmountReportReturnsVO {
     /** 查询物料集 */
     majorDataList?: IIdNameNumberVO[];
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
-    isConsistent?: ('Y' | 'N');
+    isConsistent?: EOutputLineChartReturnsVOOutputAmountReportReturnsVO_isConsistent;
     /** 实际查询时间 - 开始 */
     actualBeginTime?: string;
     /** 实际查询时间 - 结束 */
@@ -116,4 +116,11 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EOutputLineChartReturnsVOOutputAmountReportReturnsVO_isConsistent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

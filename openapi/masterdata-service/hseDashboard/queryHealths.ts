@@ -42,5 +42,12 @@ export interface IHealthHQueryResponse {
     /** 新增职业病人数 */
     careerDiseaseQuantity?: number;
     /** 是否有异常 */
-    isException?: ('Y' | 'N');
+    isException?: EHealthHQueryResponse_isException;
+}
+
+export enum EHealthHQueryResponse_isException {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

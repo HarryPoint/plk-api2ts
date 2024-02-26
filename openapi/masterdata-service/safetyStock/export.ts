@@ -26,9 +26,9 @@ export interface ISecurityInventorySearchVO {
     /** 物料名称 */
     name?: string;
     /** 库存预警类型 */
-    warningType?: ('NORMAL' | 'CLOSE_WARNING' | 'UPPER' | 'LOWER');
+    warningType?: ESecurityInventorySearchVO_warningType;
     /** 设置类型 */
-    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
+    type: ESecurityInventorySearchVO_type;
     /** 对应业务id */
     businessId?: number;
 }
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -49,4 +49,31 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESecurityInventorySearchVO_warningType {
+    /** 正常 */
+    NORMAL = "NORMAL",
+    /** 已关闭预警 */
+    CLOSE_WARNING = "CLOSE_WARNING",
+    /** 已超上限 */
+    UPPER = "UPPER",
+    /** 已超下限 */
+    LOWER = "LOWER"
+}
+
+export enum ESecurityInventorySearchVO_type {
+    /** 全工厂 */
+    ALL = "ALL",
+    /** 区域 */
+    AREA = "AREA",
+    /** 仓库 */
+    STOREHOUSE = "STOREHOUSE",
+    /** 仓位 */
+    WAREHOUSE = "WAREHOUSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

@@ -37,13 +37,13 @@ export interface IProductOrderDetailsResponseObject {
     /** 产品模块数组 */
     productModuleArray?: string[];
     /** 类型 */
-    type?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
+    type?: EProductOrderDetailsResponseObject_type;
     /** 购买账号数 */
     buyAccountQuantity?: number;
     /** 状态 */
-    status?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY');
+    status?: EProductOrderDetailsResponseObject_status;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductOrderDetailsResponseObject_productType;
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 预计交付日期 */
@@ -65,9 +65,9 @@ export interface IProductOrderDetailsResponseObject {
     /** 合同签约时间 */
     contractTime?: string;
     /** 加购类型 */
-    appendType?: ('PRODUCT_MODULE' | 'DURATION' | 'USER_ACCOUNT');
+    appendType?: EProductOrderDetailsResponseObject_appendType;
     /** 延期类型 */
-    delayType?: ('TRIAL' | 'FORMAL');
+    delayType?: EProductOrderDetailsResponseObject_delayType;
     /** 延长时长(天) */
     delayDurationQuantity?: number;
     /** 延期原因 */
@@ -88,16 +88,73 @@ export interface IProductOrderPaymentHistoryDetailsResponseObject {
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
-    status?: ('WAIT_PAY' | 'ALREADY_PAY' | 'COMPLETE_PAY');
+    status?: EProductOrderPaymentHistoryDetailsResponseObject_status;
 }
 /** 产品订单服务信息响应对象 */
 export interface IProductOrderServiceInformationResponseObject {
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductOrderServiceInformationResponseObject_productType;
     /** 到期时间 */
     expireTime?: string;
     /** 账号数 */
     availableAccountQuantity?: number;
     /** 产品模块数组 */
     productModuleArray?: string[];
+}
+
+export enum EProductOrderDetailsResponseObject_type {
+    /** 新购 */
+    NEW_BUY = "NEW_BUY",
+    /** 加购 */
+    APPEND_BUY = "APPEND_BUY",
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式延期 */
+    FORMAL_DELAY = "FORMAL_DELAY",
+    /** 使用延期 */
+    TRIAL_DELAY = "TRIAL_DELAY"
+}
+
+export enum EProductOrderDetailsResponseObject_status {
+    /** 待支付 */
+    WAIT_PAY = "WAIT_PAY",
+    /** 部分支付 */
+    PART_PAY = "PART_PAY",
+    /** 完成 */
+    COMPLETE_PAY = "COMPLETE_PAY"
+}
+
+export enum EProductOrderDetailsResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EProductOrderDetailsResponseObject_appendType {
+    /** 产品模块 */
+    PRODUCT_MODULE = "PRODUCT_MODULE",
+    /** 时长 */
+    DURATION = "DURATION",
+    /** 用户账号数 */
+    USER_ACCOUNT = "USER_ACCOUNT"
+}
+
+export enum EProductOrderDetailsResponseObject_delayType {
+    /** 试用延期 */
+    TRIAL = "TRIAL",
+    /** 正式延期 */
+    FORMAL = "FORMAL"
+}
+
+export enum EProductOrderPaymentHistoryDetailsResponseObject_status {
+    /** 待支付 */
+    WAIT_PAY = "WAIT_PAY",
+    /** 已支付 */
+    ALREADY_PAY = "ALREADY_PAY",
+    /** 完成 */
+    COMPLETE_PAY = "COMPLETE_PAY"
+}
+
+export enum EProductOrderServiceInformationResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
 }

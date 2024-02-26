@@ -18,7 +18,7 @@ export interface IFlowPathFormFieldFormRpQueryConditionVo {
     /** undefined */
     flowPathIdList?: number[];
     /** undefined */
-    fillWayList?: ('NONE' | 'LAST' | 'CONCAT' | 'SUM')[];
+    fillWayList?: EFlowPathFormFieldFormRpQueryConditionVo_fillWayList_items[];
 }
 /** JSONResult«List«FlowPathFormFieldFormRpFillVo»» */
 export interface IJSONResultListFlowPathFormFieldFormRpFillVo {
@@ -52,7 +52,26 @@ export interface IFlowPathFormFieldFormRpFillVo {
     /** undefined */
     fillFormFieldSerialNo?: string;
     /** undefined */
-    fillWay?: ('NONE' | 'LAST' | 'CONCAT' | 'SUM');
+    fillWay?: EFlowPathFormFieldFormRpFillVo_fillWay;
     /** undefined */
-    isDisableEdited?: ('Y' | 'N');
+    isDisableEdited?: EFlowPathFormFieldFormRpFillVo_isDisableEdited;
+}
+
+export enum EFlowPathFormFieldFormRpQueryConditionVo_fillWayList_items {
+    NONE = "NONE",
+    LAST = "LAST",
+    CONCAT = "CONCAT",
+    SUM = "SUM"
+}
+
+export enum EFlowPathFormFieldFormRpFillVo_fillWay {
+    NONE = "NONE",
+    LAST = "LAST",
+    CONCAT = "CONCAT",
+    SUM = "SUM"
+}
+
+export enum EFlowPathFormFieldFormRpFillVo_isDisableEdited {
+    Y = "Y",
+    N = "N"
 }

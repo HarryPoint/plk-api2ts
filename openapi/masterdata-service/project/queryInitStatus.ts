@@ -20,7 +20,13 @@ export interface IJSONResultstring2 {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('INITIALIZING' | 'COMPLETE' | 'FAILED');
+    data?: EJSONResultstring2_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EJSONResultstring2_data {
+    INITIALIZING = "INITIALIZING",
+    COMPLETE = "COMPLETE",
+    FAILED = "FAILED"
 }

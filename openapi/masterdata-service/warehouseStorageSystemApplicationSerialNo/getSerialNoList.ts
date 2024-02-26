@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«仓位系统应用库存序列号分页返回对象»» */
 export interface IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnedObject {
@@ -65,9 +65,9 @@ export interface IPagingInformationTheWarehouseSystemAppliesInventorySerialNumbe
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -91,4 +91,23 @@ export interface ITheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnO
     serialNo?: string;
     /** 序列号备注 */
     serialRemark?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

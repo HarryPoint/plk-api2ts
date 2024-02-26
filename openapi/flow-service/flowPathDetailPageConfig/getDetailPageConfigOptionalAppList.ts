@@ -38,5 +38,12 @@ export interface IFlowPathBaseVO {
     /** undefined */
     lastName?: string;
     /** undefined */
-    type?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
+    type?: EFlowPathBaseVO_type;
+}
+
+export enum EFlowPathBaseVO_type {
+    BILL = "BILL",
+    DATA = "DATA",
+    TREE_DATA = "TREE_DATA",
+    PAGE = "PAGE"
 }

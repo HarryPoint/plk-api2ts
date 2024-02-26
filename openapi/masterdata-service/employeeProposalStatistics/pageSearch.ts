@@ -35,7 +35,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -52,7 +52,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
@@ -67,7 +67,7 @@ export interface IFormDataGroupingDTO {
     /** 下级分组 */
     children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData?: ('Y' | 'N');
+    cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
     treeDataParentId?: number;
 }
@@ -97,9 +97,9 @@ export interface IThePagingInformationEmployeeProposalStatisticsResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePagingInformationEmployeeProposalStatisticsResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePagingInformationEmployeeProposalStatisticsResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -126,4 +126,42 @@ export interface IEmployeeProposalStatisticsResponseDTO {
 }
 /** JSONObject */
 export interface IJSONObject {
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFormDataGroupingDTO_cascadeFormData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationEmployeeProposalStatisticsResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationEmployeeProposalStatisticsResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

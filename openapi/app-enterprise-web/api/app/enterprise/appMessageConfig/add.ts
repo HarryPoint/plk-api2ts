@@ -24,7 +24,7 @@ export interface IAppMessageConfigAddRequestDTO {
     /** 详细表格字段编码 */
     detailTableFieldCode?: string;
     /** 是否明细表, Y - 主表， N - 明细表 */
-    isDetailFlowTable?: ('Y' | 'N');
+    isDetailFlowTable?: EAppMessageConfigAddRequestDTO_isDetailFlowTable;
     /** 表格编码 */
     tableCode?: string;
     /** 发送内容配置列表 */
@@ -35,7 +35,7 @@ export interface IAppMessageConfigAddRequestDTO {
 /** AppMessageSentContentTemplateAddRequestDTO */
 export interface IAppMessageSentContentTemplateAddRequestDTO {
     /** 消息发送模式 */
-    sendingMode?: ('SYSTEM' | 'SMS' | 'EMAIL');
+    sendingMode?: EAppMessageSentContentTemplateAddRequestDTO_sendingMode;
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
     messageContent?: string;
     /** undefined */
@@ -43,7 +43,7 @@ export interface IAppMessageSentContentTemplateAddRequestDTO {
     /** 字段元数据 */
     fieldMetaList?: IMessageContentFieldMetaAddDTO[];
     /** 是否使用配置 */
-    isUseConfig?: ('Y' | 'N');
+    isUseConfig?: EAppMessageSentContentTemplateAddRequestDTO_isUseConfig;
     /** html 内容 */
     htmlContent?: string;
     /** 邮件主题 */
@@ -65,7 +65,7 @@ export interface IMessageContentFieldMetaAddDTO {
 /** AppMessageRecipientAddRequestDTO */
 export interface IAppMessageRecipientAddRequestDTO {
     /** 接收人类型 */
-    recipientType?: ('USER' | 'CLASS_GROUP' | 'DEPARTMENT' | 'EMAIL' | 'BUSINESS');
+    recipientType?: EAppMessageRecipientAddRequestDTO_recipientType;
     /** 部门ID列表 */
     departmentIdList?: Record<string, any>[];
     /** 班组ID列表 */
@@ -89,4 +89,40 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EAppMessageConfigAddRequestDTO_isDetailFlowTable {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAppMessageSentContentTemplateAddRequestDTO_sendingMode {
+    /** 系统消息 */
+    SYSTEM = "SYSTEM",
+    /** 短信 */
+    SMS = "SMS",
+    /** 邮件 */
+    EMAIL = "EMAIL"
+}
+
+export enum EAppMessageSentContentTemplateAddRequestDTO_isUseConfig {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAppMessageRecipientAddRequestDTO_recipientType {
+    /** 人员 */
+    USER = "USER",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 邮件 */
+    EMAIL = "EMAIL",
+    /** 业务 */
+    BUSINESS = "BUSINESS"
 }

@@ -24,7 +24,7 @@ export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 设备id */
     deviceId: number;
     /** 是否有异常 */
-    hasError?: ('Y' | 'N');
+    hasError?: EDeviceDataAcquisitionDataListSearchVO_hasError;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«设备数采数据详单返回VO» */
 export interface IJSONResultTheDeviceDataCollectionDetailsAreReturnedToVO {
@@ -70,9 +70,9 @@ export interface IPageInformationDeviceDataCollectionDetailsPageInformationIsRet
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -89,15 +89,15 @@ export interface IDeviceDataCollectionCDRPageInformationIsReturnedToVO {
     /** 请求员工姓名 */
     reqUsername?: string;
     /** 在线状态 */
-    deviceOnlineStatus?: ('ONLINE' | 'OFFLINE');
+    deviceOnlineStatus?: EDeviceDataCollectionCDRPageInformationIsReturnedToVO_deviceOnlineStatus;
     /** 设备状态 */
-    deviceStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    deviceStatus?: EDeviceDataCollectionCDRPageInformationIsReturnedToVO_deviceStatus;
     /** 拓展数据 */
     extData?: Record<string, Record<string, any>>;
     /** 详情 */
     details?: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
     /** 是否有异常 */
-    hasError?: ('Y' | 'N');
+    hasError?: EDeviceDataCollectionCDRPageInformationIsReturnedToVO_hasError;
 }
 /** 设备数采数据明细返回VO */
 export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
@@ -118,7 +118,7 @@ export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 上限 */
     upperLimit?: number;
     /** 异常类型 */
-    errorType?: ('UPPER' | 'LOWER');
+    errorType?: EDeviceDataCollectionDataDetailsAreReturnedToVO_errorType;
     /** 异常值 */
     errorResult?: number;
 }
@@ -137,13 +137,105 @@ export interface IDeviceDataAcquisitionStatusMessageVO {
     /** 设备数采方案编号 */
     deviceCollectionPlanCode?: string;
     /** 在线状态 */
-    onlineStatus?: ('ONLINE' | 'OFFLINE');
+    onlineStatus?: EDeviceDataAcquisitionStatusMessageVO_onlineStatus;
     /** 在线状态描述 */
     onlineStatusDesc?: string;
     /** 设备状态 */
-    status?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    status?: EDeviceDataAcquisitionStatusMessageVO_status;
     /** 设备状态描述 */
     statusDesc?: string;
     /** 最后通讯时间 */
     lastApiTime?: string;
+}
+
+export enum EDeviceDataAcquisitionDataListSearchVO_hasError {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDeviceDataCollectionCDRPageInformationIsReturnedToVO_deviceOnlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EDeviceDataCollectionCDRPageInformationIsReturnedToVO_deviceStatus {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
+}
+
+export enum EDeviceDataCollectionCDRPageInformationIsReturnedToVO_hasError {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDeviceDataCollectionDataDetailsAreReturnedToVO_errorType {
+    /** 超上限 */
+    UPPER = "UPPER",
+    /** 超下限 */
+    LOWER = "LOWER"
+}
+
+export enum EDeviceDataAcquisitionStatusMessageVO_onlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EDeviceDataAcquisitionStatusMessageVO_status {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
 }

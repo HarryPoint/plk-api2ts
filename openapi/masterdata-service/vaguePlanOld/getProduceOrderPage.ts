@@ -20,7 +20,7 @@ export interface IProductionOrderSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 订单类型 */
-    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
+    orderType?: EProductionOrderSearchVO_orderType;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 生产订单号 */
@@ -30,11 +30,11 @@ export interface IProductionOrderSearchVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EProductionOrderSearchVO_orderStatus;
     /** 对应物料id */
     materialId?: number;
     /** 订单排产状态 */
-    planStatus?: ('WAIT' | 'PART' | 'ALL');
+    planStatus?: EProductionOrderSearchVO_planStatus;
     /** 创建时间 - 开始, yyyy-MM-dd HH:mm:ss */
     createBeginTime?: string;
     /** 计划结束时间, yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«生产订单返回VO»» */
 export interface IJSONResultPageInformationProductionOrderReturnsVO {
@@ -77,9 +77,9 @@ export interface IPageInformationProductionOrderReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationProductionOrderReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationProductionOrderReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -98,7 +98,7 @@ export interface IProductionOrderReturnsVO2 {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 订单类型 */
-    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
+    orderType?: EProductionOrderReturnsVO2_orderType;
     /** 订单类型描述 */
     orderTypeDesc?: string;
     /** 对应物料id */
@@ -140,11 +140,11 @@ export interface IProductionOrderReturnsVO2 {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EProductionOrderReturnsVO2_orderStatus;
     /** 订单状态描述 */
     orderStatusDesc?: string;
     /** 订单排产状态 */
-    planStatus?: ('WAIT' | 'PART' | 'ALL');
+    planStatus?: EProductionOrderReturnsVO2_planStatus;
     /** 订单排产状态描述 */
     planStatusDesc?: string;
     /** 优先级 */
@@ -165,4 +165,113 @@ export interface IProductionOrderReturnsVO2 {
     placeOrderDepartmentCode?: string;
     /** 生产部门名称 */
     placeOrderDepartmentName?: string;
+}
+
+export enum EProductionOrderSearchVO_orderType {
+    /** 合同生产 */
+    CONTRACT = "CONTRACT",
+    /** 备库生产 */
+    STANDBY = "STANDBY",
+    /** 返工生产 */
+    REWORK = "REWORK",
+    /** 新产品实验生产 */
+    TEST = "TEST",
+    /** 虚拟订单 */
+    VIRTUAL = "VIRTUAL",
+    /** 其他订单 */
+    OTHER = "OTHER",
+    /** 报废补单 */
+    SCRAP_SUPPLEMENT = "SCRAP_SUPPLEMENT"
+}
+
+export enum EProductionOrderSearchVO_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EProductionOrderSearchVO_planStatus {
+    /** 待排产 */
+    WAIT = "WAIT",
+    /** 部分排产 */
+    PART = "PART",
+    /** 全部排产 */
+    ALL = "ALL"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationProductionOrderReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationProductionOrderReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionOrderReturnsVO2_orderType {
+    /** 合同生产 */
+    CONTRACT = "CONTRACT",
+    /** 备库生产 */
+    STANDBY = "STANDBY",
+    /** 返工生产 */
+    REWORK = "REWORK",
+    /** 新产品实验生产 */
+    TEST = "TEST",
+    /** 虚拟订单 */
+    VIRTUAL = "VIRTUAL",
+    /** 其他订单 */
+    OTHER = "OTHER",
+    /** 报废补单 */
+    SCRAP_SUPPLEMENT = "SCRAP_SUPPLEMENT"
+}
+
+export enum EProductionOrderReturnsVO2_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EProductionOrderReturnsVO2_planStatus {
+    /** 待排产 */
+    WAIT = "WAIT",
+    /** 部分排产 */
+    PART = "PART",
+    /** 全部排产 */
+    ALL = "ALL"
 }

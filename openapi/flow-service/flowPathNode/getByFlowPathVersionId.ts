@@ -37,9 +37,9 @@ export interface IProcessNodeDTO {
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 节点业务类型 */
-    businessType?: ('EXEC' | 'CONDI');
+    businessType?: EProcessNodeDTO_businessType;
     /** 节点类型 */
-    type?: ('EXECUTE' | 'APPROVAL' | 'BRANCHES' | 'CHILD');
+    type?: EProcessNodeDTO_type;
     /** 前节点id */
     previousFlowPathNodeId?: number;
     /** 后节点id */
@@ -55,17 +55,17 @@ export interface IProcessNodeDTO {
     /** 序号值 */
     serialNo?: string;
     /** 审批类型 */
-    approvalType?: ('ONE' | 'ALL');
+    approvalType?: EProcessNodeDTO_approvalType;
     /** 是否允许回退 */
-    isBack?: ('Y' | 'N');
+    isBack?: EProcessNodeDTO_isBack;
     /** 回退类型 */
-    backType?: ('ANY' | 'PREVIOUS' | 'APPOINT');
+    backType?: EProcessNodeDTO_backType;
     /** 回退流程节点id - 返回指定节点时有值 */
     backFlowPathNodeId?: number;
     /** 回退流程节点序列值 - 返回指定节点时有值 */
     backFlowPathNodeSerialNo?: string;
     /** 是否是首节点 */
-    isFirst?: ('Y' | 'N');
+    isFirst?: EProcessNodeDTO_isFirst;
     /** 节点级别 - 节点的深度 */
     level?: number;
     /** 节点步骤 - 节点横向步骤 */
@@ -73,45 +73,45 @@ export interface IProcessNodeDTO {
     /** 排序 - 节点纵向步骤 */
     sort?: number;
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent?: ('Y' | 'N');
+    isCustomSubmitContent?: EProcessNodeDTO_isCustomSubmitContent;
     /** 自定义提交按钮文案 */
     customSubmitContent?: string;
     /** 是否开启超时设置 */
-    enabledTimeout?: ('Y' | 'N');
+    enabledTimeout?: EProcessNodeDTO_enabledTimeout;
     /** 节点启动方式 */
-    launchType?: ('MANUAL_OPERATION' | 'AUTOMATIC');
+    launchType?: EProcessNodeDTO_launchType;
     /** 执行类型 */
-    executeType?: ('ONE' | 'ALL');
+    executeType?: EProcessNodeDTO_executeType;
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent?: ('Y' | 'N');
+    isCustomAcceptContent?: EProcessNodeDTO_isCustomAcceptContent;
     /** 自定义接受按钮文案 */
     customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton?: ('Y' | 'N');
+    isShowAcceptButton?: EProcessNodeDTO_isShowAcceptButton;
     /** 是否自定义同意按钮文案 */
-    isCustomPassApprovalContent?: ('Y' | 'N');
+    isCustomPassApprovalContent?: EProcessNodeDTO_isCustomPassApprovalContent;
     /** 自定义同意按钮文案 */
     customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
-    isCustomRefuseApprovalContent?: ('Y' | 'N');
+    isCustomRefuseApprovalContent?: EProcessNodeDTO_isCustomRefuseApprovalContent;
     /** 自定义拒绝按钮文案 */
     customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton?: ('Y' | 'N');
+    isShowRefuseButton?: EProcessNodeDTO_isShowRefuseButton;
     /** 是否自定义回退按钮文案 */
-    isCustomBackContent?: ('Y' | 'N');
+    isCustomBackContent?: EProcessNodeDTO_isCustomBackContent;
     /** 自定义回退按钮文案 */
     customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton?: ('Y' | 'N');
+    isShowBackButton?: EProcessNodeDTO_isShowBackButton;
     /** 审批人来自 */
-    approverFrom?: ('CURRENT_NODE_ASSIGNMENT' | 'PREVIOUS_NODE_ASSIGNMENT');
+    approverFrom?: EProcessNodeDTO_approverFrom;
     /** 是否启用转交 */
-    enabledTransfer?: ('Y' | 'N');
+    enabledTransfer?: EProcessNodeDTO_enabledTransfer;
     /** 自定义转交按钮文案 */
     customTransferContent?: string;
     /** 转交人员范围 */
-    transferScopeType?: ('CLASSIFIED' | 'ALL');
+    transferScopeType?: EProcessNodeDTO_transferScopeType;
     /** 字段权限列表 */
     permissionList?: IFlowPathNodeFormFieldPermissionsRpTreeVO[];
     /** 消息配置列表 */
@@ -125,11 +125,11 @@ export interface IProcessNodeDTO {
     /** 转交人集 */
     transferUsers?: IProcessNodeExecutorVO[];
     /** 上一节点限制指定范围 */
-    previousNodeAssignmentRange?: ('NO_LIMIT' | 'LIMIT');
+    previousNodeAssignmentRange?: EProcessNodeDTO_previousNodeAssignmentRange;
     /** 上个节点用户选项列表 */
     previousNodeUserOptions?: IProcessNodeExecutorVO[];
     /** 是否启用接受超时 */
-    isEnabledAcceptTimeout?: ('Y' | 'N');
+    isEnabledAcceptTimeout?: EProcessNodeDTO_isEnabledAcceptTimeout;
     /** 下节点信息 */
     nextNode?: IProcessNodeDTO;
     /** 分支子节点 */
@@ -137,15 +137,15 @@ export interface IProcessNodeDTO {
     /** 条件组集 */
     condiGroups?: ITheProcessNodeConditionGroupReturnsVO1ForEditing[];
     /** 是否自定义流程开始按钮文案 */
-    isCustomBeginningContent: ('Y' | 'N');
+    isCustomBeginningContent: EProcessNodeDTO_isCustomBeginningContent;
     /** 自定义流程开始按钮文案 */
     customBeginningContent?: string;
     /** 是否显示开始按钮 */
-    isShowBeginningButton?: ('Y' | 'N');
+    isShowBeginningButton?: EProcessNodeDTO_isShowBeginningButton;
     /** 是否启用流程开始超时 */
-    isEnabledBeginningTimeout?: ('Y' | 'N');
+    isEnabledBeginningTimeout?: EProcessNodeDTO_isEnabledBeginningTimeout;
     /** 是否启用表单暂存 */
-    enableFormStaging?: ('Y' | 'N');
+    enableFormStaging?: EProcessNodeDTO_enableFormStaging;
     /** 自定义表单暂存文本 */
     customFormStagingContent?: string;
 }
@@ -166,17 +166,17 @@ export interface IFlowPathNodeFormFieldPermissionsRpTreeVO {
     /** undefined */
     flowPathFormFieldCode?: string;
     /** undefined */
-    flowPathFormFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
+    flowPathFormFieldType?: EFlowPathNodeFormFieldPermissionsRpTreeVO_flowPathFormFieldType;
     /** undefined */
     parentFlowPathFormFieldId?: number;
     /** undefined */
     parentFlowPathFormFieldCode?: string;
     /** undefined */
-    isTableField?: ('Y' | 'N');
+    isTableField?: EFlowPathNodeFormFieldPermissionsRpTreeVO_isTableField;
     /** undefined */
     parentFlowPathNodeFormFieldPermissionsRpId?: number;
     /** undefined */
-    permissionsType?: ('EDIT' | 'READONLY' | 'HIDDEN');
+    permissionsType?: EFlowPathNodeFormFieldPermissionsRpTreeVO_permissionsType;
     /** undefined */
     tableFormFieldPermissionsRp?: IFlowPathNodeFormFieldPermissionsRpTreeVO[];
 }
@@ -185,11 +185,11 @@ export interface ITheProcessNodeEditsTheDTO {
     /** id */
     id?: number;
     /** 消息触发时机 */
-    triggerTiming?: ('APPROVER_COMMIT_AFTER' | 'PROCESS_NODE_COMPLETED' | 'COMMIT_TIMEOUT_BEFORE' | 'COMMIT_TIMEOUT_AFTER' | 'ACCEPTANCE_AFTER' | 'ACCEPTANCE_TIMEOUT_BEFORE' | 'ACCEPTANCE_TIMEOUT_AFTER' | 'BEGINNING_AFTER' | 'BEGINNING_TIMEOUT_BEFORE' | 'BEGINNING_TIMEOUT_AFTER' | 'RETURN_AFTER' | 'APPROVER_APPROVAL_AFTER' | 'APPROVAL_NODE_COMPLETED' | 'APPROVER_APPROVAL_REJECTED' | 'TRANSFER_AFTER');
+    triggerTiming?: ETheProcessNodeEditsTheDTO_triggerTiming;
     /** 消息配置ID列表 */
     messageConfigIdList?: number[];
     /** 是否启用消息通知 */
-    isEnabledMessageNotification?: ('Y' | 'N');
+    isEnabledMessageNotification?: ETheProcessNodeEditsTheDTO_isEnabledMessageNotification;
     /** 引用的ID。比如超时配置 */
     refId?: number;
 }
@@ -198,35 +198,35 @@ export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
     /** id */
     id?: number;
     /** 超时的步骤类型 */
-    stepType?: ('COMMITTED' | 'ACCEPT' | 'BEGINNING');
+    stepType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_stepType;
     /** 超时类型 */
-    timeoutType?: ('CUSTOM' | 'FORM_FIELD');
+    timeoutType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutType;
     /** 超时值 - 超时类型为自定义时有值 */
     timeoutTimeValue?: number;
     /** 超时值类型 - 超时类型为自定义时有值 */
-    timeoutTimeType?: ('DAY' | 'HOUR' | 'MINUTE');
+    timeoutTimeType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutTimeType;
     /** 超时表单字段id */
     timeoutFlowPathFormFieldId?: number;
     /** 超时表单字段序列值 */
     timeoutFlowPathFormFieldSerialNo?: string;
     /** 预警处理方式 */
-    earlyWarningHandleType?: ('NOT_HANDLE' | 'SEND');
+    earlyWarningHandleType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_earlyWarningHandleType;
     /** 预警超时前发送通知 超时值 */
     earlyWarningTimeValue?: number;
     /** 预警超时前发送通知 超时值类型 */
-    earlyWarningTimeType?: ('DAY' | 'HOUR' | 'MINUTE');
+    earlyWarningTimeType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_earlyWarningTimeType;
     /** 预警提醒人集 */
     earlyWarningUsers?: IProcessNodeExecutorVO[];
     /** 预警提醒方式 */
-    earlyWarningSendType?: ('MESSAGE');
+    earlyWarningSendType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_earlyWarningSendType;
     /** 超时处理方式 */
-    timeoutHandleType?: ('NOT_HANDLE' | 'AUTO');
+    timeoutHandleType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutHandleType;
     /** 超时后通知类型 */
-    timeoutAfterSendType?: ('NOT_SEND' | 'AUTO');
+    timeoutAfterSendType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutAfterSendType;
     /** 超时提醒人集 */
     timeoutUsers?: IProcessNodeExecutorVO[];
     /** 超时通知方式 */
-    timeoutSendType?: ('MESSAGE');
+    timeoutSendType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutSendType;
     /** 消息配置列表 */
     messageConfigList?: ITheProcessNodeEditsTheDTO[];
 }
@@ -239,9 +239,9 @@ export interface IProcessNodeExecutorVO {
     /** 执行人id */
     executorId?: number;
     /** 执行人类型 */
-    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
+    executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
-    executorSysType?: ('CREATE_BY' | 'CREATE_DEPARTMENT' | 'FLOW_PATH_TASK_PLAN');
+    executorSysType?: EProcessNodeExecutorVO_executorSysType;
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
@@ -261,9 +261,9 @@ export interface IFlowPathNodeCondiVO {
     /** undefined */
     id?: number;
     /** undefined */
-    type?: ('DEFAULT' | 'FORM_FIELD');
+    type?: EFlowPathNodeCondiVO_type;
     /** undefined */
-    defaultCondi?: ('HANDLE_USER');
+    defaultCondi?: EFlowPathNodeCondiVO_defaultCondi;
     /** undefined */
     flowPathFormFieldId?: number;
     /** undefined */
@@ -271,11 +271,11 @@ export interface IFlowPathNodeCondiVO {
     /** undefined */
     flowPathFormFieldSerialNo?: string;
     /** undefined */
-    flowPathFormFieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'IMAGE_UPLOAD' | 'FILE_UPLOAD' | 'TABLE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'CODE' | 'ADDRESS' | 'POSITION' | 'EMAIL' | 'MOBILE' | 'ID_CARD' | 'RICH_TEXT' | 'ASSOCIATION_QUERY' | 'DESC_TEXT' | 'SPLIT_LINE' | 'LOT_NO' | 'SERIAL_NO' | 'FORMULA');
+    flowPathFormFieldType?: EFlowPathNodeCondiVO_flowPathFormFieldType;
     /** undefined */
-    compareMode?: ('EQ' | 'NE' | 'GT' | 'GE' | 'LT' | 'LE' | 'IN' | 'NOT_IN' | 'IS_NULL' | 'NOT_NULL' | 'RANGE' | 'NOT_RANGE' | 'DYNAMIC_RANGE' | 'CONTAINER' | 'NOT_CONTAINER' | 'REGEXP' | 'NOT_REGEXP' | 'JSON_ARRAY_EQ' | 'JSON_ARRAY_NE' | 'JSON_ARRAY_IN' | 'JSON_ARRAY_NOT_IN' | 'JSON_ARRAY_CONTAINER' | 'JSON_ARRAY_NOT_CONTAINER' | 'JSON_IS_NULL' | 'JSON_NOT_NULL');
+    compareMode?: EFlowPathNodeCondiVO_compareMode;
     /** undefined */
-    compareTargetFromSource?: ('FORM_RP' | 'CURRENT' | 'CUSTOM' | 'CUSTOM_DATE');
+    compareTargetFromSource?: EFlowPathNodeCondiVO_compareTargetFromSource;
     /** undefined */
     targetFieldId?: number;
     /** undefined */
@@ -287,7 +287,442 @@ export interface IFlowPathNodeCondiVO {
     /** undefined */
     selectCompareValue?: string[];
     /** undefined */
-    dateDynamicRange?: ('YESTERDAY' | 'TODAY' | 'LAST_WEEK' | 'THIS_WEEK' | 'LAST_MONTH' | 'THIS_MONTH' | 'LAST_YEAR' | 'THIS_YEAR');
+    dateDynamicRange?: EFlowPathNodeCondiVO_dateDynamicRange;
     /** undefined */
     frontendMeta?: string;
+}
+
+export enum EProcessNodeDTO_businessType {
+    /** 执行 */
+    EXEC = "EXEC",
+    /** 条件 */
+    CONDI = "CONDI"
+}
+
+export enum EProcessNodeDTO_type {
+    /** 执行节点 */
+    EXECUTE = "EXECUTE",
+    /** 审批节点 */
+    APPROVAL = "APPROVAL",
+    /** 分支节点 */
+    BRANCHES = "BRANCHES",
+    /** 子分支节点 */
+    CHILD = "CHILD"
+}
+
+export enum EProcessNodeDTO_approvalType {
+    /** 一位负责人通过或者拒绝即可 */
+    ONE = "ONE",
+    /** 需所有负责人通过，任意一位拒绝将无法通过 */
+    ALL = "ALL"
+}
+
+export enum EProcessNodeDTO_isBack {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_backType {
+    /** 之前所有节点 */
+    ANY = "ANY",
+    /** 返回上一节点 */
+    PREVIOUS = "PREVIOUS",
+    /** 返回指定节点 */
+    APPOINT = "APPOINT"
+}
+
+export enum EProcessNodeDTO_isFirst {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isCustomSubmitContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_enabledTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_launchType {
+    /** 手动 */
+    MANUAL_OPERATION = "MANUAL_OPERATION",
+    /** 自动 */
+    AUTOMATIC = "AUTOMATIC"
+}
+
+export enum EProcessNodeDTO_executeType {
+    /** 只需一位执行人提交流程 */
+    ONE = "ONE",
+    /** 需所有执行人提交流程 */
+    ALL = "ALL"
+}
+
+export enum EProcessNodeDTO_isCustomAcceptContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isShowAcceptButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isCustomPassApprovalContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isCustomRefuseApprovalContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isShowRefuseButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isCustomBackContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isShowBackButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_approverFrom {
+    /** 当前节点指定 */
+    CURRENT_NODE_ASSIGNMENT = "CURRENT_NODE_ASSIGNMENT",
+    /** 上一个节点指定 */
+    PREVIOUS_NODE_ASSIGNMENT = "PREVIOUS_NODE_ASSIGNMENT"
+}
+
+export enum EProcessNodeDTO_enabledTransfer {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_transferScopeType {
+    /** 指定范围 */
+    CLASSIFIED = "CLASSIFIED",
+    /** 不限范围 */
+    ALL = "ALL"
+}
+
+export enum EProcessNodeDTO_previousNodeAssignmentRange {
+    /** 不限制 */
+    NO_LIMIT = "NO_LIMIT",
+    /** 指定限制 */
+    LIMIT = "LIMIT"
+}
+
+export enum EProcessNodeDTO_isEnabledAcceptTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isCustomBeginningContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isShowBeginningButton {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_isEnabledBeginningTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessNodeDTO_enableFormStaging {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EFlowPathNodeFormFieldPermissionsRpTreeVO_flowPathFormFieldType {
+    INPUT_TEXT = "INPUT_TEXT",
+    TEXTAREA = "TEXTAREA",
+    NUMBER = "NUMBER",
+    DATE = "DATE",
+    SELECTOR = "SELECTOR",
+    CHECKBOX = "CHECKBOX",
+    IMAGE_UPLOAD = "IMAGE_UPLOAD",
+    FILE_UPLOAD = "FILE_UPLOAD",
+    TABLE = "TABLE",
+    FORM_RP = "FORM_RP",
+    FORM_RP_MULTI = "FORM_RP_MULTI",
+    CODE = "CODE",
+    ADDRESS = "ADDRESS",
+    POSITION = "POSITION",
+    EMAIL = "EMAIL",
+    MOBILE = "MOBILE",
+    ID_CARD = "ID_CARD",
+    RICH_TEXT = "RICH_TEXT",
+    ASSOCIATION_QUERY = "ASSOCIATION_QUERY",
+    DESC_TEXT = "DESC_TEXT",
+    SPLIT_LINE = "SPLIT_LINE",
+    LOT_NO = "LOT_NO",
+    SERIAL_NO = "SERIAL_NO",
+    FORMULA = "FORMULA"
+}
+
+export enum EFlowPathNodeFormFieldPermissionsRpTreeVO_isTableField {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFlowPathNodeFormFieldPermissionsRpTreeVO_permissionsType {
+    EDIT = "EDIT",
+    READONLY = "READONLY",
+    HIDDEN = "HIDDEN"
+}
+
+export enum ETheProcessNodeEditsTheDTO_triggerTiming {
+    /** 处理人提交后 */
+    APPROVER_COMMIT_AFTER = "APPROVER_COMMIT_AFTER",
+    /** 处理节点完成后 */
+    PROCESS_NODE_COMPLETED = "PROCESS_NODE_COMPLETED",
+    /** 提交超时前 */
+    COMMIT_TIMEOUT_BEFORE = "COMMIT_TIMEOUT_BEFORE",
+    /** 提交超时后 */
+    COMMIT_TIMEOUT_AFTER = "COMMIT_TIMEOUT_AFTER",
+    /** 接受后 */
+    ACCEPTANCE_AFTER = "ACCEPTANCE_AFTER",
+    /** 接受超时前 */
+    ACCEPTANCE_TIMEOUT_BEFORE = "ACCEPTANCE_TIMEOUT_BEFORE",
+    /** 接受超时后 */
+    ACCEPTANCE_TIMEOUT_AFTER = "ACCEPTANCE_TIMEOUT_AFTER",
+    /** 开始后 */
+    BEGINNING_AFTER = "BEGINNING_AFTER",
+    /** 开始超时前 */
+    BEGINNING_TIMEOUT_BEFORE = "BEGINNING_TIMEOUT_BEFORE",
+    /** 开始超时后 */
+    BEGINNING_TIMEOUT_AFTER = "BEGINNING_TIMEOUT_AFTER",
+    /** 退回后 */
+    RETURN_AFTER = "RETURN_AFTER",
+    /** 审批人同意后 */
+    APPROVER_APPROVAL_AFTER = "APPROVER_APPROVAL_AFTER",
+    /** 审批人节点完成后 */
+    APPROVAL_NODE_COMPLETED = "APPROVAL_NODE_COMPLETED",
+    /** 审批人拒绝后 */
+    APPROVER_APPROVAL_REJECTED = "APPROVER_APPROVAL_REJECTED",
+    /** 转交后 */
+    TRANSFER_AFTER = "TRANSFER_AFTER"
+}
+
+export enum ETheProcessNodeEditsTheDTO_isEnabledMessageNotification {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_stepType {
+    /** 提交 */
+    COMMITTED = "COMMITTED",
+    /** 接受 */
+    ACCEPT = "ACCEPT",
+    /** 开始 */
+    BEGINNING = "BEGINNING"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutType {
+    /** 自定义 */
+    CUSTOM = "CUSTOM",
+    /** 来自流程表单 */
+    FORM_FIELD = "FORM_FIELD"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutTimeType {
+    /** 天 */
+    DAY = "DAY",
+    /** 小时 */
+    HOUR = "HOUR",
+    /** 分钟 */
+    MINUTE = "MINUTE"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_earlyWarningHandleType {
+    /** 不做任何处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 提前发送预警通知 */
+    SEND = "SEND"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_earlyWarningTimeType {
+    /** 天 */
+    DAY = "DAY",
+    /** 小时 */
+    HOUR = "HOUR",
+    /** 分钟 */
+    MINUTE = "MINUTE"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_earlyWarningSendType {
+    /** 应用内消息 */
+    MESSAGE = "MESSAGE"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutHandleType {
+    /** 不做任何处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 自动提交 */
+    AUTO = "AUTO"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutAfterSendType {
+    /** 不做任何处理 */
+    NOT_SEND = "NOT_SEND",
+    /** 自动通知 */
+    AUTO = "AUTO"
+}
+
+export enum ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutSendType {
+    /** 应用内消息 */
+    MESSAGE = "MESSAGE"
+}
+
+export enum EProcessNodeExecutorVO_executorType {
+    /** 员工 */
+    USER = "USER",
+    /** 角色 */
+    ROLE = "ROLE",
+    /** 部门 */
+    DEPARTMENT = "DEPARTMENT",
+    /** 班组 */
+    CLASS_GROUP = "CLASS_GROUP",
+    /** 系统控件 */
+    SYS_CONTROL = "SYS_CONTROL"
+}
+
+export enum EProcessNodeExecutorVO_executorSysType {
+    /** 创建人 */
+    CREATE_BY = "CREATE_BY",
+    /** 创建部门 */
+    CREATE_DEPARTMENT = "CREATE_DEPARTMENT",
+    /** 任务方案 */
+    FLOW_PATH_TASK_PLAN = "FLOW_PATH_TASK_PLAN"
+}
+
+export enum EFlowPathNodeCondiVO_type {
+    DEFAULT = "DEFAULT",
+    FORM_FIELD = "FORM_FIELD"
+}
+
+export enum EFlowPathNodeCondiVO_defaultCondi {
+    HANDLE_USER = "HANDLE_USER"
+}
+
+export enum EFlowPathNodeCondiVO_flowPathFormFieldType {
+    INPUT_TEXT = "INPUT_TEXT",
+    TEXTAREA = "TEXTAREA",
+    NUMBER = "NUMBER",
+    DATE = "DATE",
+    SELECTOR = "SELECTOR",
+    CHECKBOX = "CHECKBOX",
+    IMAGE_UPLOAD = "IMAGE_UPLOAD",
+    FILE_UPLOAD = "FILE_UPLOAD",
+    TABLE = "TABLE",
+    FORM_RP = "FORM_RP",
+    FORM_RP_MULTI = "FORM_RP_MULTI",
+    CODE = "CODE",
+    ADDRESS = "ADDRESS",
+    POSITION = "POSITION",
+    EMAIL = "EMAIL",
+    MOBILE = "MOBILE",
+    ID_CARD = "ID_CARD",
+    RICH_TEXT = "RICH_TEXT",
+    ASSOCIATION_QUERY = "ASSOCIATION_QUERY",
+    DESC_TEXT = "DESC_TEXT",
+    SPLIT_LINE = "SPLIT_LINE",
+    LOT_NO = "LOT_NO",
+    SERIAL_NO = "SERIAL_NO",
+    FORMULA = "FORMULA"
+}
+
+export enum EFlowPathNodeCondiVO_compareMode {
+    EQ = "EQ",
+    NE = "NE",
+    GT = "GT",
+    GE = "GE",
+    LT = "LT",
+    LE = "LE",
+    IN = "IN",
+    NOT_IN = "NOT_IN",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    RANGE = "RANGE",
+    NOT_RANGE = "NOT_RANGE",
+    DYNAMIC_RANGE = "DYNAMIC_RANGE",
+    CONTAINER = "CONTAINER",
+    NOT_CONTAINER = "NOT_CONTAINER",
+    REGEXP = "REGEXP",
+    NOT_REGEXP = "NOT_REGEXP",
+    JSON_ARRAY_EQ = "JSON_ARRAY_EQ",
+    JSON_ARRAY_NE = "JSON_ARRAY_NE",
+    JSON_ARRAY_IN = "JSON_ARRAY_IN",
+    JSON_ARRAY_NOT_IN = "JSON_ARRAY_NOT_IN",
+    JSON_ARRAY_CONTAINER = "JSON_ARRAY_CONTAINER",
+    JSON_ARRAY_NOT_CONTAINER = "JSON_ARRAY_NOT_CONTAINER",
+    JSON_IS_NULL = "JSON_IS_NULL",
+    JSON_NOT_NULL = "JSON_NOT_NULL"
+}
+
+export enum EFlowPathNodeCondiVO_compareTargetFromSource {
+    FORM_RP = "FORM_RP",
+    CURRENT = "CURRENT",
+    CUSTOM = "CUSTOM",
+    CUSTOM_DATE = "CUSTOM_DATE"
+}
+
+export enum EFlowPathNodeCondiVO_dateDynamicRange {
+    YESTERDAY = "YESTERDAY",
+    TODAY = "TODAY",
+    LAST_WEEK = "LAST_WEEK",
+    THIS_WEEK = "THIS_WEEK",
+    LAST_MONTH = "LAST_MONTH",
+    THIS_MONTH = "THIS_MONTH",
+    LAST_YEAR = "LAST_YEAR",
+    THIS_YEAR = "THIS_YEAR"
 }

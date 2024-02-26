@@ -33,7 +33,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -50,7 +50,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«JSONObject»» */
 export interface IJSONResultListJSONObject {
@@ -65,4 +65,21 @@ export interface IJSONResultListJSONObject {
 }
 /** JSONObject */
 export interface IJSONObject {
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

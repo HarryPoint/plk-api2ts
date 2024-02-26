@@ -18,7 +18,7 @@ export interface ITheInspectionTaskSearchesForVOOnTheEmployeeEnd {
     /** 当前页面 */
     pageNo?: number;
     /** 任务状态 */
-    statusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
+    statusList?: ETheInspectionTaskSearchesForVOOnTheEmployeeEnd_statusList_items[];
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«质检任务针对员工返回VO»» */
 export interface IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
@@ -67,9 +67,9 @@ export interface IPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationTheInspectionTaskReturnsVOForTheEmployee_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationTheInspectionTaskReturnsVOForTheEmployee_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -114,7 +114,7 @@ export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     /** 已检数 */
     inspectionQuantity?: number;
     /** 状态 */
-    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: ETheInspectionTaskIsReturnedToVOForTheEmployee_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 送检人id */
@@ -125,4 +125,41 @@ export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     createUserCode?: string;
     /** 送检时间 */
     createTime?: string;
+}
+
+export enum ETheInspectionTaskSearchesForVOOnTheEmployeeEnd_statusList_items {
+    WAIT = "WAIT",
+    COMPLETE = "COMPLETE",
+    CANCEL = "CANCEL",
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationTheInspectionTaskReturnsVOForTheEmployee_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationTheInspectionTaskReturnsVOForTheEmployee_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheInspectionTaskIsReturnedToVOForTheEmployee_status {
+    /** 待质检 */
+    WAIT = "WAIT",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已撤销 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

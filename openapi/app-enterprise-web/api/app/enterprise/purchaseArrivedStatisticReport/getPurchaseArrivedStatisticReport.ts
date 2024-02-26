@@ -51,7 +51,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«采购到货统计报表返回VO»» */
 export interface IJSONResultPagingInformationTheStatisticsReportOfPurchasedGoodsIsReturnedToVO {
@@ -79,9 +79,9 @@ export interface IPageInformationPurchaseArrivalStatisticsReportReturnToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationPurchaseArrivalStatisticsReportReturnToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationPurchaseArrivalStatisticsReportReturnToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -129,4 +129,23 @@ export interface IPurchaseArrivalStatisticsReportReturnedToVO {
     orderType?: string;
     /** 采购类型 */
     purchaseType?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationPurchaseArrivalStatisticsReportReturnToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationPurchaseArrivalStatisticsReportReturnToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

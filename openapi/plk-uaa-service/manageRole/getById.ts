@@ -54,11 +54,25 @@ export interface IOperationRolePermissionInformationResponseObject {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: EOperationRolePermissionInformationResponseObject_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: EOperationRolePermissionInformationResponseObject_isAdmin;
     /** 描述 */
     description?: string;
     /** 关联的账号数 */
     relationUserCount?: number;
+}
+
+export enum EOperationRolePermissionInformationResponseObject_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOperationRolePermissionInformationResponseObject_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

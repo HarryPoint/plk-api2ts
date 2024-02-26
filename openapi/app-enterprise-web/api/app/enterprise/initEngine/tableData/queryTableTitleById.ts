@@ -38,5 +38,10 @@ export interface ITableTitleDefineDTO {
     /** undefined */
     name?: string;
     /** undefined */
-    isMasterTableField?: ('Y' | 'N');
+    isMasterTableField?: ETableTitleDefineDTO_isMasterTableField;
+}
+
+export enum ETableTitleDefineDTO_isMasterTableField {
+    Y = "Y",
+    N = "N"
 }

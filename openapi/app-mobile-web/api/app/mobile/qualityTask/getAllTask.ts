@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getAllTaskUsingGET
 */
-export default function fetchMethod(options: { params: { status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE') } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { status?: Estatus } }, extraOptions?: any) {
     return http<ITheJSONResultListSalesModuleReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getAllTask",
@@ -27,7 +27,7 @@ export interface ITheJSONResultListSalesModuleReturnsVO {
 /** 销售模块返回VO */
 export interface ITheSalesModuleReturnsToVO {
     /** 模块类型 */
-    modelType?: ('QUALITY_TASK' | 'PROCESS');
+    modelType?: ETheSalesModuleReturnsToVO_modelType;
     /** 模块名称 */
     modelName?: string;
     /** 任务集 */
@@ -68,7 +68,7 @@ export interface ITheInspectionModuleTaskReturnsVO {
     /** 已检数 */
     inspectionQuantity?: number;
     /** 状态 */
-    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: ETheInspectionModuleTaskReturnsVO_status;
     /** 状态名称 */
     statusName?: string;
     /** 生产订单id */
@@ -83,4 +83,29 @@ export interface ITheInspectionModuleTaskReturnsVO {
     createUserCode?: string;
     /** 位置 */
     position?: string;
+}
+
+export enum Estatus {
+    WAIT = "WAIT",
+    COMPLETE = "COMPLETE",
+    CANCEL = "CANCEL",
+    CLOSE = "CLOSE"
+}
+
+export enum ETheSalesModuleReturnsToVO_modelType {
+    /** 质检任务 */
+    QUALITY_TASK = "QUALITY_TASK",
+    /** 工序检 */
+    PROCESS = "PROCESS"
+}
+
+export enum ETheInspectionModuleTaskReturnsVO_status {
+    /** 待质检 */
+    WAIT = "WAIT",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已撤销 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

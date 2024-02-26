@@ -24,13 +24,13 @@ export interface IPublicBacklogDataQuery {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
-    isTimeout?: ('Y' | 'N');
+    isTimeout?: EPublicBacklogDataQuery_isTimeout;
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
+    qualityProduceTaskStatusList?: EPublicBacklogDataQuery_qualityProduceTaskStatusList_items[];
     /** 生产任务可操作类型 */
-    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
+    optTypes?: EPublicBacklogDataQuery_optTypes_items[];
 }
 /** JSONResult«List«QualityStorageTaskVO»» */
 export interface IJSONResultListQualityStorageTaskVO {
@@ -52,7 +52,7 @@ export interface IQualityStorageTaskVO {
     /** 任务号 */
     taskNo?: string;
     /** 质检任务类型 */
-    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
+    type?: EQualityStorageTaskVO_type;
     /** 采购收货单id */
     purchaseWorkOrderId?: number;
     /** 对应物料id */
@@ -88,11 +88,67 @@ export interface IQualityStorageTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: EQualityStorageTaskVO_status;
     /** 取消人 */
     cancelUserId?: number;
     /** 取消时间 */
     cancelTime?: string;
     /** 质检任务类型 */
-    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
+    taskType?: EQualityStorageTaskVO_taskType;
+}
+
+export enum EPublicBacklogDataQuery_produceTaskStatusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EPublicBacklogDataQuery_isTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPublicBacklogDataQuery_qualityProduceTaskStatusList_items {
+    WAIT = "WAIT",
+    COMPLETE = "COMPLETE",
+    CANCEL = "CANCEL",
+    CLOSE = "CLOSE"
+}
+
+export enum EPublicBacklogDataQuery_optTypes_items {
+    CAN_MOVE_IN = "CAN_MOVE_IN",
+    CAN_QUALITY = "CAN_QUALITY",
+    CAN_MOVE_OUT = "CAN_MOVE_OUT"
+}
+
+export enum EQualityStorageTaskVO_type {
+    /** 全检 */
+    ALL = "ALL",
+    /** 比例抽检 */
+    RADIO_SPOT_CHECK = "RADIO_SPOT_CHECK",
+    /** 固定抽检 */
+    FIX_SPOT_CHECK = "FIX_SPOT_CHECK"
+}
+
+export enum EQualityStorageTaskVO_status {
+    /** 待质检 */
+    WAIT = "WAIT",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已撤销 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EQualityStorageTaskVO_taskType {
+    /** 入库质检任务 */
+    STORAGE_IN_QUALITY_TASK = "STORAGE_IN_QUALITY_TASK",
+    /** 存货质检任务 */
+    STORAGE_QUALITY_TASK = "STORAGE_QUALITY_TASK"
 }

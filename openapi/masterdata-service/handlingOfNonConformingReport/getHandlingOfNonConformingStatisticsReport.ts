@@ -39,9 +39,9 @@ export interface IThePageInformationIsInvalidTheDTOIsReturned {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationIsInvalidTheDTOIsReturned_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationIsInvalidTheDTOIsReturned_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -137,4 +137,18 @@ export interface ITheUnqualifiedReportIsReturnedToTheDTO {
     nonConformingRemark?: string;
     /** 发生日期 */
     dateOfOccurrence?: string;
+}
+
+export enum EThePageInformationIsInvalidTheDTOIsReturned_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationIsInvalidTheDTOIsReturned_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

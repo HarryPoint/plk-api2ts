@@ -51,7 +51,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«采购到货统计报表返回VO» */
 export interface IJSONResultPurchasedArrivalStatisticsReportReturnedToVO {
@@ -82,4 +82,9 @@ export interface IPurchaseArrivalStatisticsReportReturnedToVO1 {
     notInboundQty?: number;
     /** 未入库金额 */
     notInboundAmount?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

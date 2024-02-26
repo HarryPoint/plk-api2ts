@@ -53,7 +53,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«宝晶报表(成品日报表)相关返回VO»» */
 export interface IJSONResultPageInformationBaoJingReportFinishedDailyReportRelatedReturnVO {
@@ -81,9 +81,9 @@ export interface IPageInformationBaojingReportFinishedDailyReportRelatedReturnVO
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationBaojingReportFinishedDailyReportRelatedReturnVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationBaojingReportFinishedDailyReportRelatedReturnVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -133,4 +133,25 @@ export interface IBaojingReportFinishedDailyReportRelatedToReturnToVO {
     endWaitQuantity?: number;
     /** 数据来源 */
     source?: string;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationBaojingReportFinishedDailyReportRelatedReturnVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationBaojingReportFinishedDailyReportRelatedReturnVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

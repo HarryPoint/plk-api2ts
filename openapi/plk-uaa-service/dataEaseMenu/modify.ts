@@ -22,13 +22,13 @@ export interface ITheDataEaseMenuModifiesTheRequestObject {
     /** 链接地址 */
     originalLinkUrl?: string;
     /** 是否在PC端发布 */
-    isPcTerminal?: ('Y' | 'N');
+    isPcTerminal?: ETheDataEaseMenuModifiesTheRequestObject_isPcTerminal;
     /** PC端发布路由id */
     pcTerminalPublishRouteId?: number;
     /** PC端展示方式 */
-    pcTerminalDisplayMode?: ('EMBED_PAGE' | 'SINGLE_PAGE');
+    pcTerminalDisplayMode?: ETheDataEaseMenuModifiesTheRequestObject_pcTerminalDisplayMode;
     /** 是否在移动端发布 */
-    isMobileTerminal?: ('Y' | 'N');
+    isMobileTerminal?: ETheDataEaseMenuModifiesTheRequestObject_isMobileTerminal;
     /** 移动端发布路由id */
     mobileTerminalPublishRouteId?: number;
     /** id */
@@ -44,4 +44,25 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETheDataEaseMenuModifiesTheRequestObject_isPcTerminal {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheDataEaseMenuModifiesTheRequestObject_pcTerminalDisplayMode {
+    /** 嵌入页面 */
+    EMBED_PAGE = "EMBED_PAGE",
+    /** 单开页面 */
+    SINGLE_PAGE = "SINGLE_PAGE"
+}
+
+export enum ETheDataEaseMenuModifiesTheRequestObject_isMobileTerminal {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

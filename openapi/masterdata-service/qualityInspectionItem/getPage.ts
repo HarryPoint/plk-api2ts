@@ -33,7 +33,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«质检项返回VO»» */
 export interface IJSONResultPageInformationVOIsReturned {
@@ -61,9 +61,9 @@ export interface IPageInformationTheInspectionItemReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationTheInspectionItemReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationTheInspectionItemReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -78,11 +78,11 @@ export interface ITheInspectionItemIsReturnedToVO {
     /** 质检项编号 */
     code?: string;
     /** 质检方式 */
-    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod?: ETheInspectionItemIsReturnedToVO_qualityMethod;
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: ('SELECTOR' | 'CHECKBOX');
+    selectType?: ETheInspectionItemIsReturnedToVO_selectType;
     /** 选择方式描述 */
     selectTypeDesc?: string;
     /** 备注 */
@@ -103,4 +103,37 @@ export interface ITheInspectionItemIsReturnedToVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationTheInspectionItemReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationTheInspectionItemReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheInspectionItemIsReturnedToVO_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum ETheInspectionItemIsReturnedToVO_selectType {
+    /** 单选 */
+    SELECTOR = "SELECTOR",
+    /** 多选 */
+    CHECKBOX = "CHECKBOX"
 }

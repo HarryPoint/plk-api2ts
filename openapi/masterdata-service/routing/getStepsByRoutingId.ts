@@ -39,15 +39,15 @@ export interface IProcessPathDetailsStepsVO {
     /** 准备耗时(分钟) */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProcessPathDetailsStepsVO_readyTimeUnit;
     /** 进出站方式 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EProcessPathDetailsStepsVO_inOutType;
     /** 进出站方式描述 */
     inOutTypeDesc?: string;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EProcessPathDetailsStepsVO_allowDirectExit;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
+    bomConsumeSureType?: EProcessPathDetailsStepsVO_bomConsumeSureType;
     /** BOM物料消耗确认类型描述 */
     bomConsumeSureTypeDesc?: string;
     /** 合格产出工费 */
@@ -73,7 +73,7 @@ export interface IProcessPathDetailsStepsVO {
     /** 产能-生产时间 */
     capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProcessPathDetailsStepsVO_capacityTimeType;
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 准备工费（元） */
@@ -133,7 +133,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 创建时间 */
     createTime?: string;
     /** 质检方式 */
-    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
+    type?: ETheDetailsOfTheInspectionSchemeAreReturnedToVO_type;
     /** 质检比例 */
     qualityInspectionRatio?: number;
     /** 质检数量 */
@@ -173,17 +173,17 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
     /** 所属质检项编号 */
     qualityInspectionItemCode?: string;
     /** 质检方式 */
-    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_qualityMethod;
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: ('SELECTOR' | 'CHECKBOX');
+    selectType?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_selectType;
     /** 选择描述 */
     selectTypeDesc?: string;
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_numberStandard;
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */
@@ -201,4 +201,79 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
 export interface ITheInspectionItemOptionReturnsVO {
     /** 选择项名称 */
     name?: string;
+}
+
+export enum EProcessPathDetailsStepsVO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProcessPathDetailsStepsVO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EProcessPathDetailsStepsVO_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessPathDetailsStepsVO_bomConsumeSureType {
+    /** 在进站时确认 */
+    MOVE_IN = "MOVE_IN",
+    /** 在出站时确认 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EProcessPathDetailsStepsVO_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum ETheDetailsOfTheInspectionSchemeAreReturnedToVO_type {
+    /** 全检 */
+    ALL = "ALL",
+    /** 比例抽检 */
+    RADIO_SPOT_CHECK = "RADIO_SPOT_CHECK",
+    /** 固定抽检 */
+    FIX_SPOT_CHECK = "FIX_SPOT_CHECK"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_selectType {
+    /** 单选 */
+    SELECTOR = "SELECTOR",
+    /** 多选 */
+    CHECKBOX = "CHECKBOX"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
 }

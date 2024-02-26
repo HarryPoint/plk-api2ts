@@ -20,9 +20,9 @@ export interface IItemTaskNameNumberQueryObject {
     /** 项目计划id */
     projectPlanId?: number;
     /** 是否查询只在项目计划模块展示的任务 */
-    isProjectPlanShow?: ('Y' | 'N');
+    isProjectPlanShow?: EItemTaskNameNumberQueryObject_isProjectPlanShow;
     /** 是否查询只在项目任务模块展示的任务 */
-    isProjectTaskShow?: ('Y' | 'N');
+    isProjectTaskShow?: EItemTaskNameNumberQueryObject_isProjectTaskShow;
     /** 名称or编号 */
     nameOrCode?: string;
 }
@@ -45,4 +45,18 @@ export interface IIdCodeNameGenericTransportObject {
     code?: string;
     /** name */
     name?: string;
+}
+
+export enum EItemTaskNameNumberQueryObject_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EItemTaskNameNumberQueryObject_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

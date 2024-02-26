@@ -47,7 +47,7 @@ export interface IEnterpriseDetailsResponseObject {
     /** 交付经理用户名称 */
     deliveryManagerUserNameList?: string[];
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EEnterpriseDetailsResponseObject_productType;
     /** 到期时间 */
     productServiceExpireTime?: string;
     /** 可用账号数 */
@@ -61,7 +61,7 @@ export interface IEnterpriseDetailsResponseObject {
     /** 最近登录系统时间 */
     lastLoginTime?: string;
     /** 是否有企业服务 */
-    hasProductService?: ('Y' | 'N');
+    hasProductService?: EEnterpriseDetailsResponseObject_hasProductService;
 }
 /** 产品订单响应对象 */
 export interface IProductOrderResponseObject {
@@ -72,11 +72,11 @@ export interface IProductOrderResponseObject {
     /** 企业id */
     enterpriseId?: number;
     /** 类型 */
-    type?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
+    type?: EProductOrderResponseObject_type;
     /** 状态 */
-    status?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY');
+    status?: EProductOrderResponseObject_status;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductOrderResponseObject_productType;
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 下单用户id */
@@ -85,4 +85,43 @@ export interface IProductOrderResponseObject {
     placeOrderUserName?: string;
     /** 下单时间 */
     placeOrderTime?: string;
+}
+
+export enum EEnterpriseDetailsResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EEnterpriseDetailsResponseObject_hasProductService {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductOrderResponseObject_type {
+    /** 新购 */
+    NEW_BUY = "NEW_BUY",
+    /** 加购 */
+    APPEND_BUY = "APPEND_BUY",
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式延期 */
+    FORMAL_DELAY = "FORMAL_DELAY",
+    /** 使用延期 */
+    TRIAL_DELAY = "TRIAL_DELAY"
+}
+
+export enum EProductOrderResponseObject_status {
+    /** 待支付 */
+    WAIT_PAY = "WAIT_PAY",
+    /** 部分支付 */
+    PART_PAY = "PART_PAY",
+    /** 完成 */
+    COMPLETE_PAY = "COMPLETE_PAY"
+}
+
+export enum EProductOrderResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
 }

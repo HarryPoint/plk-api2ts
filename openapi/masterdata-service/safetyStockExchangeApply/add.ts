@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: ISecurityInventoryChangeReq
 /** 安全库存变更申请配置 */
 export interface ISecurityInventoryChangeRequestConfiguration {
     /** 设置类型 */
-    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
+    type: ESecurityInventoryChangeRequestConfiguration_type;
     /** 对应业务id */
     businessId?: number;
     /** 申请单号 */
     applyNo?: string;
     /** 是否应用编码规则 */
-    isCodeRule?: ('Y' | 'N');
+    isCodeRule?: ESecurityInventoryChangeRequestConfiguration_isCodeRule;
     /** 物料id */
     materialId?: number;
     /** 安全库存下限 */
@@ -34,7 +34,7 @@ export interface ISecurityInventoryChangeRequestConfiguration {
     /** 通知人id集 */
     sendUserIds?: number[];
     /** 通知类型 */
-    sendType?: ('MESSAGE');
+    sendType?: ESecurityInventoryChangeRequestConfiguration_sendType;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -46,4 +46,27 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESecurityInventoryChangeRequestConfiguration_type {
+    /** 全工厂 */
+    ALL = "ALL",
+    /** 区域 */
+    AREA = "AREA",
+    /** 仓库 */
+    STOREHOUSE = "STOREHOUSE",
+    /** 仓位 */
+    WAREHOUSE = "WAREHOUSE"
+}
+
+export enum ESecurityInventoryChangeRequestConfiguration_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESecurityInventoryChangeRequestConfiguration_sendType {
+    /** 应用内消息 */
+    MESSAGE = "MESSAGE"
 }

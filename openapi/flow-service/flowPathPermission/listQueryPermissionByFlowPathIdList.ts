@@ -35,5 +35,12 @@ export interface IQueryPermissionEditing {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可见 */
-    isVisible?: ('Y' | 'N');
+    isVisible?: EQueryPermissionEditing_isVisible;
+}
+
+export enum EQueryPermissionEditing_isVisible {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

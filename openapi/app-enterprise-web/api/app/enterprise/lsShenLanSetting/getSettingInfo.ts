@@ -35,7 +35,7 @@ export interface IDeepBlueProductionLargeScreenSettingsReturnToVO {
     /** 大屏右侧质检数据 */
     rightQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetBackToVO;
     /** 大屏中部数据类型 */
-    centerProductionType?: ('MATERIAL' | 'MATERIAL_GROUP');
+    centerProductionType?: EDeepBlueProductionLargeScreenSettingsReturnToVO_centerProductionType;
     /** 大屏中部业务对象集 */
     centerBusinessList?: IDeepBlueProductionLargeScreenOutputSettingsReturnToVO[];
     /** 每日清零时间 */
@@ -90,4 +90,11 @@ export interface ILocalTime {
     second?: number;
     /** undefined */
     nano?: number;
+}
+
+export enum EDeepBlueProductionLargeScreenSettingsReturnToVO_centerProductionType {
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 物料分组 */
+    MATERIAL_GROUP = "MATERIAL_GROUP"
 }

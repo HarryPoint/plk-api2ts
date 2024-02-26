@@ -55,7 +55,7 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 任务编号 */
     taskCode?: string;
     /** 保养类型 */
-    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
+    maintainType?: EEquipmentMaintenanceCalendarRespondsToDTO_maintainType;
     /** 保养方案 */
     maintainSchemeName?: string;
     /** 计划开始时间 */
@@ -71,11 +71,11 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 执行人 */
     executorName?: string;
     /** 任务状态 */
-    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
+    taskStatus?: EEquipmentMaintenanceCalendarRespondsToDTO_taskStatus;
     /** 返回类型 */
-    resultType?: ('MAINTAIN_PLAN' | 'MAINTAIN_TASK');
+    resultType?: EEquipmentMaintenanceCalendarRespondsToDTO_resultType;
     /** 查询状态 */
-    queryStatus?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE');
+    queryStatus?: EEquipmentMaintenanceCalendarRespondsToDTO_queryStatus;
     /** 保养内容 */
     maintainDetails?: IMaintenanceContentReturnedToDTO[];
     /** 消耗备件 */
@@ -90,7 +90,7 @@ export interface IMaintenanceContentReturnedToDTO {
     /** 保养执行记录 */
     executorRecord?: string;
     /** 保养情况 */
-    situation?: ('UN_COMPLETE' | 'COMPLETE');
+    situation?: EMaintenanceContentReturnedToDTO_situation;
     /** 备注 */
     remark?: string;
 }
@@ -110,4 +110,55 @@ export interface IMaintenanceSparePartsReturnedToDTO {
     planConsumerQuantity?: number;
     /** 实际消耗数量 */
     consumerQuantity?: number;
+}
+
+export enum EEquipmentMaintenanceCalendarRespondsToDTO_maintainType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 半年 */
+    HALF_YEAR = "HALF_YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EEquipmentMaintenanceCalendarRespondsToDTO_taskStatus {
+    /** 待执行 */
+    WAIT = "WAIT",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EEquipmentMaintenanceCalendarRespondsToDTO_resultType {
+    /** 保养计划 */
+    MAINTAIN_PLAN = "MAINTAIN_PLAN",
+    /** 保养任务 */
+    MAINTAIN_TASK = "MAINTAIN_TASK"
+}
+
+export enum EEquipmentMaintenanceCalendarRespondsToDTO_queryStatus {
+    /** 保养计划 */
+    PLAN = "PLAN",
+    /** 待执行任务 */
+    WAIT = "WAIT",
+    /** 进行中任务 */
+    HANDLING = "HANDLING",
+    /** 已取消任务 */
+    CANCEL = "CANCEL",
+    /** 已完成任务 */
+    COMPLETE = "COMPLETE",
+    /** 超期任务 */
+    OVERDUE = "OVERDUE"
+}
+
+export enum EMaintenanceContentReturnedToDTO_situation {
+    /** 未完成 */
+    UN_COMPLETE = "UN_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

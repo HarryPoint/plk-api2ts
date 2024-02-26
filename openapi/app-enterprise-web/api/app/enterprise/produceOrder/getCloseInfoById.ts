@@ -39,11 +39,44 @@ export interface IProductionOrderClosureInformationIsReturnedToVO {
     /** 任务处理数量 */
     taskCompleteQuantity?: number;
     /** 是否存在未处理的审批事件 */
-    hasWaitProduceHandle?: ('Y' | 'N');
+    hasWaitProduceHandle?: EProductionOrderClosureInformationIsReturnedToVO_hasWaitProduceHandle;
     /** 是否存在未处理完的委外订单 */
-    hasSurplusProduceEntrust?: ('Y' | 'N');
+    hasSurplusProduceEntrust?: EProductionOrderClosureInformationIsReturnedToVO_hasSurplusProduceEntrust;
     /** 关闭后的订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EProductionOrderClosureInformationIsReturnedToVO_orderStatus;
     /** 关闭后的订单状态描述 */
     orderStatusDesc?: string;
+}
+
+export enum EProductionOrderClosureInformationIsReturnedToVO_hasWaitProduceHandle {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionOrderClosureInformationIsReturnedToVO_hasSurplusProduceEntrust {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionOrderClosureInformationIsReturnedToVO_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

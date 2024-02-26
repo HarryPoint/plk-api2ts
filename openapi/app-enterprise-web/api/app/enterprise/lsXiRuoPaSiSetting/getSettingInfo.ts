@@ -35,7 +35,7 @@ export interface ISilopusLargeScreenSettingsReturnToVO {
     /** 工序目标值设置集 */
     processTargetSettings?: ISilopusLargeScreenOperationTargetSettingReturnsVO[];
     /** 报废数据前五统计时间类型 */
-    scrapStatisticsTime?: ('ONE_DAY' | 'SEVEN_DAY' | 'FIFTEEN_DAY' | 'THIRTY_DAY');
+    scrapStatisticsTime?: ESilopusLargeScreenSettingsReturnToVO_scrapStatisticsTime;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
@@ -65,4 +65,15 @@ export interface ISilopusLargeScreenOperationTargetSettingReturnsVO {
     processCode?: string;
     /** 产出目标数 */
     produceTargetQuantity?: number;
+}
+
+export enum ESilopusLargeScreenSettingsReturnToVO_scrapStatisticsTime {
+    /** 最近24小时 */
+    ONE_DAY = "ONE_DAY",
+    /** 最近7天 */
+    SEVEN_DAY = "SEVEN_DAY",
+    /** 最近15天 */
+    FIFTEEN_DAY = "FIFTEEN_DAY",
+    /** 最近30天 */
+    THIRTY_DAY = "THIRTY_DAY"
 }

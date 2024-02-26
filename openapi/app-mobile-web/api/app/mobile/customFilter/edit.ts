@@ -29,7 +29,7 @@ export interface ICustomFilterEditObjectDTO {
     /** 字段序列号 */
     formFieldSerialNo?: string;
     /** 是否动态表字段 */
-    isDynamicFormField?: ('Y' | 'N');
+    isDynamicFormField?: ECustomFilterEditObjectDTO_isDynamicFormField;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -41,4 +41,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ECustomFilterEditObjectDTO_isDynamicFormField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

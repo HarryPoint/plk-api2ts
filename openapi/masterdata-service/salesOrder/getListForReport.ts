@@ -34,14 +34,14 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
+    salesOrderStatus?: EOrderProgressStatisticsQueryVO_salesOrderStatus;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«销售订单VO»» */
 export interface IJSONResultListSalesOrderVO {
@@ -67,7 +67,7 @@ export interface ISalesOrderVO {
     /** 销售订单号 */
     code?: string;
     /** 订单类型 */
-    orderType?: ('DIRECT' | 'CONSIGN' | 'OTHER');
+    orderType?: ESalesOrderVO_orderType;
     /** 客户id */
     customerId?: number;
     /** 合同号 */
@@ -89,11 +89,11 @@ export interface ISalesOrderVO {
     /** 附件 */
     attachedFileKeys?: string;
     /** 是否完全转为生产订单 */
-    isConvertProduceOrder?: ('Y' | 'N');
+    isConvertProduceOrder?: ESalesOrderVO_isConvertProduceOrder;
     /** 销售订单状态 */
-    handleStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
+    handleStatus?: ESalesOrderVO_handleStatus;
     /** 销售订单生产状态 */
-    produceStatus?: ('CREATED' | 'PRODUCE' | 'CANCEL' | 'CLOSE');
+    produceStatus?: ESalesOrderVO_produceStatus;
     /** 关闭人 */
     closeUserId?: number;
     /** 关闭时间 */
@@ -122,4 +122,62 @@ export interface ISalesOrderVO {
     returnedAmount?: number;
     /** 应收余额 */
     receivableBalance?: number;
+}
+
+export enum EOrderProgressStatisticsQueryVO_salesOrderStatus {
+    /** 未转生产订单 */
+    CREATED = "CREATED",
+    /** 部分已转 */
+    CONVERTING = "CONVERTING",
+    /** 已转生产订单 */
+    CONVERED = "CONVERED",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ESalesOrderVO_orderType {
+    /** 直售 */
+    DIRECT = "DIRECT",
+    /** 寄售 */
+    CONSIGN = "CONSIGN",
+    /** 其他 */
+    OTHER = "OTHER"
+}
+
+export enum ESalesOrderVO_isConvertProduceOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESalesOrderVO_handleStatus {
+    /** 未转生产订单 */
+    CREATED = "CREATED",
+    /** 部分已转 */
+    CONVERTING = "CONVERTING",
+    /** 已转生产订单 */
+    CONVERED = "CONVERED",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum ESalesOrderVO_produceStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

@@ -22,26 +22,26 @@ export interface ISearchForRowData1 {
     /** 当前页面 */
     pageNo?: number;
     /** 错误数据 */
-    existsErrorData?: ('Y' | 'N');
+    existsErrorData?: ESearchForRowData1_existsErrorData;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 校验状态 */
-    verificationStatus?: ('NOT' | 'FAILED_VERIFICATION' | 'VERIFICATION_PASSED');
+    verificationStatus?: ESearchForRowData1_verificationStatus;
     /** 操作模式 */
-    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
+    operationMode?: ESearchForRowData1_operationMode;
     /** 生效状态 */
-    importStatus?: ('NOT_IMPORTED' | 'IMPORTED' | 'IMPORT_FAIL');
+    importStatus?: ESearchForRowData1_importStatus;
     /** 存在重复的数据 */
-    existsRepeatData?: ('Y' | 'N');
+    existsRepeatData?: ESearchForRowData1_existsRepeatData;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«RowDataOutputDTO»» */
 export interface IJSONResultPageInformationRowDataOutputDTO {
@@ -69,9 +69,9 @@ export interface IPageInformationRowDataOutputDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationRowDataOutputDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationRowDataOutputDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -86,9 +86,9 @@ export interface IRowDataOutputDTO {
     /** 行下标 */
     rowIndex?: number;
     /** 导入状态 */
-    importStatus?: ('NOT_IMPORTED' | 'IMPORTED' | 'IMPORT_FAIL');
+    importStatus?: ERowDataOutputDTO_importStatus;
     /** 操作方式 */
-    operationMode?: ('OVERRIDE_IMPORT' | 'CANCEL_IMPORT');
+    operationMode?: ERowDataOutputDTO_operationMode;
     /** 是否存在业务数据 */
     existsBusinessData?: boolean;
     /** 错误消息 */
@@ -100,7 +100,7 @@ export interface IRowDataOutputDTO {
     /** 单元格数据 */
     cellDataList?: ICellData1[];
     /** 校验状态 */
-    verificationStatus?: ('NOT' | 'FAILED_VERIFICATION' | 'VERIFICATION_PASSED');
+    verificationStatus?: ERowDataOutputDTO_verificationStatus;
 }
 /** 单元格数据_1 */
 export interface ICellData1 {
@@ -119,7 +119,7 @@ export interface ICellData1 {
     /** 原始数据 */
     originalData?: string;
     /** 是否校正数据 */
-    correctionValue?: ('Y' | 'N');
+    correctionValue?: ECellData1_correctionValue;
     /** 预警信息 */
     alarmLogList?: IAlarmLogOutputDTO[];
     /** 关联表单选项列表 */
@@ -135,7 +135,7 @@ export interface IAlarmLogOutputDTO {
     /** undefined */
     alarmMessage?: string;
     /** undefined */
-    alarmLevel?: ('ERROR' | 'WARNING');
+    alarmLevel?: EAlarmLogOutputDTO_alarmLevel;
 }
 /** AssociationFormSelectedItemOutputDTO */
 export interface IAssociationFormSelectedItemOutputDTO {
@@ -143,4 +143,99 @@ export interface IAssociationFormSelectedItemOutputDTO {
     id?: number;
     /** undefined */
     showFieldValue?: string;
+}
+
+export enum ESearchForRowData1_existsErrorData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESearchForRowData1_verificationStatus {
+    /** 未校验 */
+    NOT = "NOT",
+    /** 未通过校验 */
+    FAILED_VERIFICATION = "FAILED_VERIFICATION",
+    /** 已通过校验 */
+    VERIFICATION_PASSED = "VERIFICATION_PASSED"
+}
+
+export enum ESearchForRowData1_operationMode {
+    /** 覆盖导入 */
+    OVERRIDE_IMPORT = "OVERRIDE_IMPORT",
+    /** 取消导入 */
+    CANCEL_IMPORT = "CANCEL_IMPORT"
+}
+
+export enum ESearchForRowData1_importStatus {
+    /** 未导入 */
+    NOT_IMPORTED = "NOT_IMPORTED",
+    /** 已导入 */
+    IMPORTED = "IMPORTED",
+    /** 导入失败 */
+    IMPORT_FAIL = "IMPORT_FAIL"
+}
+
+export enum ESearchForRowData1_existsRepeatData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationRowDataOutputDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationRowDataOutputDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERowDataOutputDTO_importStatus {
+    /** 未导入 */
+    NOT_IMPORTED = "NOT_IMPORTED",
+    /** 已导入 */
+    IMPORTED = "IMPORTED",
+    /** 导入失败 */
+    IMPORT_FAIL = "IMPORT_FAIL"
+}
+
+export enum ERowDataOutputDTO_operationMode {
+    /** 覆盖导入 */
+    OVERRIDE_IMPORT = "OVERRIDE_IMPORT",
+    /** 取消导入 */
+    CANCEL_IMPORT = "CANCEL_IMPORT"
+}
+
+export enum ERowDataOutputDTO_verificationStatus {
+    /** 未校验 */
+    NOT = "NOT",
+    /** 未通过校验 */
+    FAILED_VERIFICATION = "FAILED_VERIFICATION",
+    /** 已通过校验 */
+    VERIFICATION_PASSED = "VERIFICATION_PASSED"
+}
+
+export enum ECellData1_correctionValue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAlarmLogOutputDTO_alarmLevel {
+    ERROR = "ERROR",
+    WARNING = "WARNING"
 }

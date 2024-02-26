@@ -24,7 +24,7 @@ export interface IBatchTransferToOtherProductionOrderDTO {
     /** 备注 */
     remark?: string;
     /** 是否自动创建一个补充生产订单 */
-    isAutoCreateOrder: ('Y' | 'N');
+    isAutoCreateOrder: EBatchTransferToOtherProductionOrderDTO_isAutoCreateOrder;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -36,4 +36,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EBatchTransferToOtherProductionOrderDTO_isAutoCreateOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

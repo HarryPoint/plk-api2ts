@@ -20,9 +20,9 @@ export interface IPanpanLargeScreenSetDTO {
     /** 大屏展示工序id集 */
     processIds?: number[];
     /** 延期订单判断类型 */
-    produceOrderOverdueType?: ('PLAN_END_TIME' | 'THEORETIC_END_TIME');
+    produceOrderOverdueType?: EPanpanLargeScreenSetDTO_produceOrderOverdueType;
     /** 开始时间月份类型 */
-    monthBeginType?: ('LAST_MONTH' | 'CURRENT_MONTH');
+    monthBeginType?: EPanpanLargeScreenSetDTO_monthBeginType;
     /** 开始时间月份日期 */
     monthBeginDay?: number;
     /** 结束时间月份日期 */
@@ -30,7 +30,7 @@ export interface IPanpanLargeScreenSetDTO {
     /** 大屏中上 - 本月计划数量 */
     thisMonthPlanQuantity?: number;
     /** 大屏左上 - 当日生产概览 - 各工序当日完工情况表 产出数 取值逻辑类型 */
-    panPanProduceOrderCompleteType?: ('ACTUAL_MOVE_OUT_QUANTITY' | 'PLAN_ORDER_MOVE_OUT_QUANTITY');
+    panPanProduceOrderCompleteType?: EPanpanLargeScreenSetDTO_panPanProduceOrderCompleteType;
     /** 大屏中上 - 本月累计订单量 */
     thisMonthOrderCount?: number;
 }
@@ -44,4 +44,25 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EPanpanLargeScreenSetDTO_produceOrderOverdueType {
+    /** 计划完工日期 */
+    PLAN_END_TIME = "PLAN_END_TIME",
+    /** 理论完工日期 */
+    THEORETIC_END_TIME = "THEORETIC_END_TIME"
+}
+
+export enum EPanpanLargeScreenSetDTO_monthBeginType {
+    /** 上月 */
+    LAST_MONTH = "LAST_MONTH",
+    /** 本月 */
+    CURRENT_MONTH = "CURRENT_MONTH"
+}
+
+export enum EPanpanLargeScreenSetDTO_panPanProduceOrderCompleteType {
+    /** 实际出料数量 */
+    ACTUAL_MOVE_OUT_QUANTITY = "ACTUAL_MOVE_OUT_QUANTITY",
+    /** 计划订单出料数量 */
+    PLAN_ORDER_MOVE_OUT_QUANTITY = "PLAN_ORDER_MOVE_OUT_QUANTITY"
 }

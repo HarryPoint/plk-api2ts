@@ -20,7 +20,7 @@ export interface ICustomerFollowUpCalendarInputVO {
     /** 客户ID */
     customerId?: string;
     /** 日历类型 */
-    calendarType?: ('FOLLOW_PLAN' | 'BUSINESS_CHANCE' | 'FOLLOW_RECORD' | 'QUOTE_BILL' | 'CONTRACT');
+    calendarType?: ECustomerFollowUpCalendarInputVO_calendarType;
     /** 填报月份，格式 yyyy-MM-dd HH:mm:ss */
     fillingMonth?: string;
 }
@@ -34,4 +34,17 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ECustomerFollowUpCalendarInputVO_calendarType {
+    /** 跟进计划 */
+    FOLLOW_PLAN = "FOLLOW_PLAN",
+    /** 商机填报 */
+    BUSINESS_CHANCE = "BUSINESS_CHANCE",
+    /** 跟进记录 */
+    FOLLOW_RECORD = "FOLLOW_RECORD",
+    /** 报价 */
+    QUOTE_BILL = "QUOTE_BILL",
+    /** 合同签订 */
+    CONTRACT = "CONTRACT"
 }

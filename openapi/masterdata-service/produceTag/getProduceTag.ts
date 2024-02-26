@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/getProduceTagUsingGET
 */
-export default function fetchMethod(options: { params: { type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK'); enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: number } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTagReturnsVO>(
         {
             url: "/masterdata-service/produceTag/getProduceTag",
@@ -29,7 +29,7 @@ export interface ITheExceptionTagReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
+    type?: ETheExceptionTagReturnsVO_type;
     /** 所属分类 */
     typeDesc?: string;
     /** 标签名称 */
@@ -44,4 +44,28 @@ export interface ITheExceptionTagReturnsVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum Etype {
+    SCRAP = "SCRAP",
+    HOLD = "HOLD",
+    HOLD_PAUSE = "HOLD_PAUSE",
+    REPORT = "REPORT",
+    BACK = "BACK",
+    CANCEL_TASK = "CANCEL_TASK"
+}
+
+export enum ETheExceptionTagReturnsVO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 撤销任务 */
+    CANCEL_TASK = "CANCEL_TASK"
 }

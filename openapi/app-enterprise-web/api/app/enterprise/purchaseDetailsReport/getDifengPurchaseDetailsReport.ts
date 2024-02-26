@@ -39,9 +39,9 @@ export interface IPageInformationProcurementDetailReturnObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationProcurementDetailReturnObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationProcurementDetailReturnObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -107,4 +107,18 @@ export interface IPurchaseDetailsReturnObject {
     invoiceAmount?: number;
     /** 未开票金额 */
     notInvoiceAmount?: number;
+}
+
+export enum EPageInformationProcurementDetailReturnObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationProcurementDetailReturnObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

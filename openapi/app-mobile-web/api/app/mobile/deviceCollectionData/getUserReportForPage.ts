@@ -29,7 +29,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»» */
 export interface IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO {
@@ -57,9 +57,9 @@ export interface IPageInformationDeviceDataCollectionManualReportDataDetailsPage
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -80,9 +80,61 @@ export interface IDeviceDataAcquisitionManualReportDataCDRPageInformationIsRetur
     /** 设备型号类型 */
     deviceType?: string;
     /** 在线状态 */
-    onlineStatus?: ('ONLINE' | 'OFFLINE');
+    onlineStatus?: EDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO_onlineStatus;
     /** 设备状态 */
-    deviceStatus?: ('DS1' | 'DS2' | 'DS3' | 'DS4' | 'DS5' | 'DS6' | 'DS7' | 'DS8');
+    deviceStatus?: EDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO_deviceStatus;
     /** 是否有异常 */
-    hasError?: ('Y' | 'N');
+    hasError?: EDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO_hasError;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO_onlineStatus {
+    /** 在线 */
+    ONLINE = "ONLINE",
+    /** 离线 */
+    OFFLINE = "OFFLINE"
+}
+
+export enum EDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO_deviceStatus {
+    /** 正常运行 */
+    DS1 = "DS1",
+    /** 降速运行 */
+    DS2 = "DS2",
+    /** 故障停机 */
+    DS3 = "DS3",
+    /** 保养 */
+    DS4 = "DS4",
+    /** 空闲待用 */
+    DS5 = "DS5",
+    /** 换型 */
+    DS6 = "DS6",
+    /** 关机 */
+    DS7 = "DS7",
+    /** 空运 */
+    DS8 = "DS8"
+}
+
+export enum EDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO_hasError {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

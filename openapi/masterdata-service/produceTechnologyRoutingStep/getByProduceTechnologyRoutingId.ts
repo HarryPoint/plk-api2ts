@@ -67,15 +67,15 @@ export interface IProduceTechnologyRoutingStepResponseDTO {
     /** 所属生产工艺工艺卡id */
     produceTechnologyProcessSheetId?: number;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
+    bomConsumeSureType?: EProduceTechnologyRoutingStepResponseDTO_bomConsumeSureType;
     /** 进站关键参数id */
     moveInKeyParameterId?: number;
     /** 出站关键参数id */
     moveOutKeyParameterId?: number;
     /** 进出站类型 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EProduceTechnologyRoutingStepResponseDTO_inOutType;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EProduceTechnologyRoutingStepResponseDTO_allowDirectExit;
     /** 配置块的顺序数组(前端用于保存每个配置块的顺序) */
     configModuleSortArray?: Record<string, any>[];
     /** 物料消耗 */
@@ -93,4 +93,25 @@ export interface IProduceTechnologyRoutingStepBomDetailResponseDTO {
     childMaterialCode?: string;
     /** 总消耗 */
     totalConsumeCount?: number;
+}
+
+export enum EProduceTechnologyRoutingStepResponseDTO_bomConsumeSureType {
+    /** 在进站时确认 */
+    MOVE_IN = "MOVE_IN",
+    /** 在出站时确认 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EProduceTechnologyRoutingStepResponseDTO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EProduceTechnologyRoutingStepResponseDTO_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

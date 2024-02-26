@@ -48,5 +48,12 @@ export interface IIncomingBomConsumptionScansInResponseToDTO {
     /** 序列号编号 */
     serialNoCode?: string;
     /** 是否有重复 */
-    hasRepeat?: ('Y' | 'N');
+    hasRepeat?: EIncomingBomConsumptionScansInResponseToDTO_hasRepeat;
+}
+
+export enum EIncomingBomConsumptionScansInResponseToDTO_hasRepeat {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

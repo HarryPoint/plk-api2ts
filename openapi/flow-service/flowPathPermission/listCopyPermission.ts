@@ -35,5 +35,12 @@ export interface IAddedPermissionEdit1 {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 是否可以复制 */
-    isCanCopy?: ('Y' | 'N');
+    isCanCopy?: EAddedPermissionEdit1_isCanCopy;
+}
+
+export enum EAddedPermissionEdit1_isCanCopy {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

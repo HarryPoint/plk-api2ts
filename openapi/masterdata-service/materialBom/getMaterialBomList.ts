@@ -52,7 +52,7 @@ export interface IBomRespondsToTheObject {
     /** 物料单位 */
     unit?: string;
     /** 是否是默认BOM */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EBomRespondsToTheObject_isDefault;
     /** 子物料列表 */
     childMaterialList?: IBomDetailsResponseObject[];
 }
@@ -76,4 +76,11 @@ export interface IBomDetailsResponseObject {
     unit?: string;
     /** 消耗数量 */
     totalConsumeCount?: number;
+}
+
+export enum EBomRespondsToTheObject_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

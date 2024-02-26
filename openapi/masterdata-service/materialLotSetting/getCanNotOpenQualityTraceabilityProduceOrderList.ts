@@ -31,5 +31,24 @@ export interface IQualityTraceabilityTheProductionOrderResponseObjectWasNotOpene
     /** 生产订单号 */
     code?: string;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EQualityTraceabilityTheProductionOrderResponseObjectWasNotOpened_orderStatus;
+}
+
+export enum EQualityTraceabilityTheProductionOrderResponseObjectWasNotOpened_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

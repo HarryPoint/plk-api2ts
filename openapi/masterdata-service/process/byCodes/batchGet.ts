@@ -39,11 +39,11 @@ export interface IProcessDeprecatedVO {
     /** 准备时间 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProcessDeprecatedVO_readyTimeUnit;
     /** 生产时间 */
     produceTime?: number;
     /** 生产时间单位 */
-    produceTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    produceTimeUnit?: EProcessDeprecatedVO_produceTimeUnit;
     /** 产出数量 */
     produceQuantity?: number;
     /** 准备工费（元） */
@@ -52,4 +52,22 @@ export interface IProcessDeprecatedVO {
     producePrice?: number;
     /** 返工产出工费（元） */
     backProducePrice?: number;
+}
+
+export enum EProcessDeprecatedVO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProcessDeprecatedVO_produceTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

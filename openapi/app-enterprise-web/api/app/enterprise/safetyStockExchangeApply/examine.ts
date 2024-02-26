@@ -18,7 +18,7 @@ export interface ISecurityInventoryChangeRequestReviewDTO {
     /** id */
     id?: number;
     /** 审核类型 */
-    examineType?: ('PASS' | 'REFUSE');
+    examineType?: ESecurityInventoryChangeRequestReviewDTO_examineType;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESecurityInventoryChangeRequestReviewDTO_examineType {
+    /** 审核通过 */
+    PASS = "PASS",
+    /** 审核拒绝 */
+    REFUSE = "REFUSE"
 }

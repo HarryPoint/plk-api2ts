@@ -18,9 +18,9 @@ export interface IProductionOrderAutomaticSchedulingCalculationResultsToDetermin
     /** 排产计划单名称 */
     planName?: string;
     /** 排产方式 */
-    autoPlanType?: ('ASC' | 'DESC');
+    autoPlanType?: EProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO_autoPlanType;
     /** 是否考虑自动提前（要传计算时的值） */
-    isAutoMoveUp?: ('Y' | 'N');
+    isAutoMoveUp?: EProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO_isAutoMoveUp;
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss（要传计算时的值） */
     beginTime?: string;
     /** 排产结束时间 yyyy-MM-dd HH:mm:ss（要传计算时的值） */
@@ -66,4 +66,18 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO_autoPlanType {
+    /** 正向排产 */
+    ASC = "ASC",
+    /** 倒序排产 */
+    DESC = "DESC"
+}
+
+export enum EProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO_isAutoMoveUp {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

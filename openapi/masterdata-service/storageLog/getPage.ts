@@ -66,7 +66,7 @@ export interface IInventoryFlowSearchVO {
     /** 创建部门 - 批量查询 */
     billCreateDeptIdList?: number[];
     /** 业务状态 - 批量查询 */
-    businessStatusList?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID')[];
+    businessStatusList?: EInventoryFlowSearchVO_businessStatusList_items[];
     /** 库存更新时间-结束 yyyy-MM-dd HH:mm:ss */
     updateTimeEnd?: string;
     /** 流程进度 - 模糊查询 */
@@ -81,7 +81,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«库存流水返回VO»» */
 export interface IJSONResultPagingInformationInventoryReturnsVO {
@@ -109,9 +109,9 @@ export interface IPagingInformationInventoryFlowReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationInventoryFlowReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationInventoryFlowReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -132,7 +132,7 @@ export interface IStockFlowBackToVO {
     /** 所属物料单位 */
     materialUnit?: string;
     /** 流水类型 */
-    flowType?: ('WORK_ORDER' | 'TAKE_CHECK');
+    flowType?: EStockFlowBackToVO_flowType;
     /** 流水类型描述 */
     flowTypeDesc?: string;
     /** 操作区域id */
@@ -144,7 +144,7 @@ export interface IStockFlowBackToVO {
     /** 仓库名称 */
     opStorehouseName?: string;
     /** 操作库类型 */
-    opWarehouseType?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
+    opWarehouseType?: EStockFlowBackToVO_opWarehouseType;
     /** 操作仓位id */
     opWarehouseId?: number;
     /** 操作仓位层级，从高至低排列 */
@@ -190,7 +190,7 @@ export interface IStockFlowBackToVO {
     /** 流程进度 */
     processStatus?: string;
     /** 业务状态 */
-    businessStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    businessStatus?: EStockFlowBackToVO_businessStatus;
     /** 业务状态描述 */
     businessStatusDesc?: string;
     /** 单位ID */
@@ -222,4 +222,60 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EInventoryFlowSearchVO_businessStatusList_items {
+    HANDLING = "HANDLING",
+    COMPLETE = "COMPLETE",
+    NOT_PASS = "NOT_PASS",
+    STAGING = "STAGING",
+    INVALID = "INVALID"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationInventoryFlowReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationInventoryFlowReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EStockFlowBackToVO_flowType {
+    /** 工单 */
+    WORK_ORDER = "WORK_ORDER",
+    /** 盘点 */
+    TAKE_CHECK = "TAKE_CHECK"
+}
+
+export enum EStockFlowBackToVO_opWarehouseType {
+    /** 实体仓 */
+    PHYSICAL = "PHYSICAL",
+    /** 线边仓 */
+    LINE_SIDE = "LINE_SIDE",
+    /** WIP */
+    WIP = "WIP"
+}
+
+export enum EStockFlowBackToVO_businessStatus {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
 }

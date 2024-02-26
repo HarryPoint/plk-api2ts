@@ -49,7 +49,7 @@ export interface IProductionOrderDetailsProductionTaskVO {
     /** 任务进度分子(补单数量) */
     supplementCompleteQuantity?: number;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: EProductionOrderDetailsProductionTaskVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 进料数量 */
@@ -60,4 +60,19 @@ export interface IProductionOrderDetailsProductionTaskVO {
     scrapQuantity?: number;
     /** 返工数量 */
     backQuantity?: number;
+}
+
+export enum EProductionOrderDetailsProductionTaskVO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

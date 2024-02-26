@@ -27,7 +27,7 @@ export interface IItemChangeSingleFieldExtensionParameterRequest {
     /** 字段编号 */
     fieldCode?: string;
     /** 操作类型 */
-    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
+    operateType?: EItemChangeSingleFieldExtensionParameterRequest_operateType;
     /** 旧值 */
     oldValue?: string;
     /** 新值 */
@@ -40,7 +40,7 @@ export interface IItemChangeListFieldExtensionParameterRequest1 {
     /** 行数据id */
     dataId?: string;
     /** 行操作类型 */
-    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
+    operateType?: EItemChangeListFieldExtensionParameterRequest1_operateType;
     /** 列数据 */
     columnData?: IItemChangeSingleFieldExtensionParameterRequest[];
 }
@@ -49,9 +49,42 @@ export interface IItemChangeFormExtensionParameterEditRequest {
     /** 应用id */
     appId?: number;
     /** 表单操作类型 */
-    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'MODIFY_PROJECT_MANGER');
+    operateType?: EItemChangeFormExtensionParameterEditRequest_operateType;
     /** 数据id */
     dataId?: string;
     /** 字段数据列表 */
     fieldDataList?: IItemChangeSingleFieldExtensionParameterRequest[];
+}
+
+export enum EItemChangeSingleFieldExtensionParameterRequest_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 记录值 */
+    RECORD = "RECORD"
+}
+
+export enum EItemChangeListFieldExtensionParameterRequest1_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 记录值 */
+    RECORD = "RECORD"
+}
+
+export enum EItemChangeFormExtensionParameterEditRequest_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 修改项目经理 */
+    MODIFY_PROJECT_MANGER = "MODIFY_PROJECT_MANGER"
 }

@@ -33,13 +33,13 @@ export interface IPrintTemplateResponseObject1 {
     /** 数据状态 */
     dataStatus?: number;
     /** 打印模板类型 */
-    type?: ('LIST' | 'FORM' | 'FORM_DETAIL');
+    type?: EPrintTemplateResponseObject1_type;
     /** 数据源权限码 */
     pcode?: string;
     /** 数据源名称 */
     name?: string;
     /** 数据源类型 */
-    dataSourceType?: ('DYNAMIC_FORM' | 'FUN' | 'REPORT');
+    dataSourceType?: EPrintTemplateResponseObject1_dataSourceType;
     /** 父级数据源id */
     parentId?: number;
     /** 应用流程id */
@@ -72,7 +72,7 @@ export interface IPrintTheTemplateResponseObject {
     /** 字段名称 */
     name?: string;
     /** 字段类型 */
-    type?: ('FIELD' | 'TEXT' | 'TABLE' | 'BAR_CODE' | 'QR_CODE' | 'IMAGE' | 'LINE' | 'HEADER' | 'FOOTER' | 'PAGE_NO');
+    type?: EPrintTheTemplateResponseObject_type;
     /** 关联表单字段id */
     fieldId?: number;
     /** 关联字段编码 */
@@ -84,19 +84,83 @@ export interface IPrintTheTemplateResponseObject {
     /** 文本内容 */
     textContent?: string;
     /** 是否表格内字段 */
-    isTableField?: ('Y' | 'N');
+    isTableField?: EPrintTheTemplateResponseObject_isTableField;
     /** 扫码类型 */
-    scanCodeType?: ('FORM_FIELD' | 'CUSTOM' | 'ADD_FORM_URL');
+    scanCodeType?: EPrintTheTemplateResponseObject_scanCodeType;
     /** 扫码内容 */
     scanCodeContent?: string;
     /** 图片key */
     imageKey?: string;
     /** 线条方向 */
-    lineDirection?: ('TRANSVERSE' | 'LONGITUDINAL');
+    lineDirection?: EPrintTheTemplateResponseObject_lineDirection;
     /** 页眉内容 */
     headerContent?: string;
     /** 页脚内容 */
     footerContent?: string;
     /** 字段配置 */
     fieldConfig?: string;
+}
+
+export enum EPrintTemplateResponseObject1_type {
+    /** 打印列表类型 */
+    LIST = "LIST",
+    /** 打印单据类型 */
+    FORM = "FORM",
+    /** 打印明细类型 */
+    FORM_DETAIL = "FORM_DETAIL"
+}
+
+export enum EPrintTemplateResponseObject1_dataSourceType {
+    /** 动态表单 */
+    DYNAMIC_FORM = "DYNAMIC_FORM",
+    /** 功能 */
+    FUN = "FUN",
+    /** 报表 */
+    REPORT = "REPORT"
+}
+
+export enum EPrintTheTemplateResponseObject_type {
+    /** 字段 */
+    FIELD = "FIELD",
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 表格 */
+    TABLE = "TABLE",
+    /** 条形码 */
+    BAR_CODE = "BAR_CODE",
+    /** 二维码 */
+    QR_CODE = "QR_CODE",
+    /** 图片 */
+    IMAGE = "IMAGE",
+    /** 线条 */
+    LINE = "LINE",
+    /** 页眉 */
+    HEADER = "HEADER",
+    /** 页脚 */
+    FOOTER = "FOOTER",
+    /** 页码 */
+    PAGE_NO = "PAGE_NO"
+}
+
+export enum EPrintTheTemplateResponseObject_isTableField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPrintTheTemplateResponseObject_scanCodeType {
+    /** 表单字段 */
+    FORM_FIELD = "FORM_FIELD",
+    /** 自定义内容 */
+    CUSTOM = "CUSTOM",
+    /** 表单添加跳转链接 */
+    ADD_FORM_URL = "ADD_FORM_URL"
+}
+
+export enum EPrintTheTemplateResponseObject_lineDirection {
+    /** 横向 */
+    TRANSVERSE = "TRANSVERSE",
+    /** 纵向 */
+    LONGITUDINAL = "LONGITUDINAL"
 }

@@ -26,7 +26,7 @@ export interface IExceptionTypeSearchVO {
     /** 名称 */
     name?: string;
     /** 类型 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
+    type?: EExceptionTypeSearchVO_type;
     /** 数据状态 */
     dataStatus?: number;
 }
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«异常类型返回VO»» */
 export interface IJSONResultPagingInformationExceptionTypeVOIsReturned {
@@ -63,9 +63,9 @@ export interface IPagingInformationExceptionTypeIsReturnedVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationExceptionTypeIsReturnedVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationExceptionTypeIsReturnedVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -76,7 +76,7 @@ export interface IExceptionTypeReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
+    type?: EExceptionTypeReturnsVO_type;
     /** 所属分类 */
     typeDesc?: string;
     /** 类型名称 */
@@ -91,4 +91,53 @@ export interface IExceptionTypeReturnsVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EExceptionTypeSearchVO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 撤销任务 */
+    CANCEL_TASK = "CANCEL_TASK"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationExceptionTypeIsReturnedVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationExceptionTypeIsReturnedVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EExceptionTypeReturnsVO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 撤销任务 */
+    CANCEL_TASK = "CANCEL_TASK"
 }

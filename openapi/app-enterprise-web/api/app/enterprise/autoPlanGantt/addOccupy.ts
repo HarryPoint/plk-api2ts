@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITheOccupiedDTOWasAdded }, 
 /** 添加占用DTO */
 export interface ITheOccupiedDTOWasAdded {
     /** 占用类型 */
-    occupyType?: ('TIME' | 'PROCESS');
+    occupyType?: ETheOccupiedDTOWasAdded_occupyType;
     /** 占用工序id */
     processId?: number;
     /** 占用开始时间 */
@@ -38,4 +38,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETheOccupiedDTOWasAdded_occupyType {
+    /** 时间占用 */
+    TIME = "TIME",
+    /** 工序占用 */
+    PROCESS = "PROCESS"
 }

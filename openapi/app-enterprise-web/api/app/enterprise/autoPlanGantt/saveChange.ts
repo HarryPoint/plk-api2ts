@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IChangeGanttChartPlanDTO[] 
 /** 变更甘特图计划DTO */
 export interface IChangeGanttChartPlanDTO {
     /** 排期类型 */
-    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
+    scheduleType?: EChangeGanttChartPlanDTO_scheduleType;
     /** 排期id */
     scheduleId?: number;
     /** 最新时间 - 开始 yyyy-MM-dd HH:mm:ss */
@@ -34,4 +34,15 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EChangeGanttChartPlanDTO_scheduleType {
+    /** 工序占用 */
+    OCCUPY_PROCESS = "OCCUPY_PROCESS",
+    /** 时间占用 */
+    OCCUPY_TIME = "OCCUPY_TIME",
+    /** 工序 */
+    PROCESS = "PROCESS",
+    /** 生产订单 */
+    ORDER = "ORDER"
 }

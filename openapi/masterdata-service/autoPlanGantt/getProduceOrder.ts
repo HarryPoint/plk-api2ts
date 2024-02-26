@@ -34,14 +34,14 @@ export interface IGanttChartSearchVO {
     /** 生产物料ID列表 */
     produceMaterialIdList?: number[];
     /** 订单状态列表 */
-    orderStatusList?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE')[];
+    orderStatusList?: EGanttChartSearchVO_orderStatusList_items[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«生产订单自动排产甘特图返回VO» */
 export interface IJSONResultProductionOrderAutomaticSchedulingGanttChartReturnsVO {
@@ -78,7 +78,7 @@ export interface IOccupiedReturnVO {
     /** 占用原因 */
     reason?: string;
     /** 排期类型 */
-    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
+    scheduleType?: EOccupiedReturnVO_scheduleType;
 }
 /** 分页信息«生产订单自动排产排期返回VO» */
 export interface IPageInformationAutomaticProductionOrderSchedulingReturnsVO {
@@ -95,9 +95,9 @@ export interface IPageInformationAutomaticProductionOrderSchedulingReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationAutomaticProductionOrderSchedulingReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationAutomaticProductionOrderSchedulingReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -122,7 +122,7 @@ export interface IProductionOrdersAreAutomaticallyScheduledBackToVO {
     /** 交付日期 */
     deliveryDate?: string;
     /** 生产订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EProductionOrdersAreAutomaticallyScheduledBackToVO_orderStatus;
     /** 工序占用时间集 */
     occupyTimes?: IOccupiedReturnVO[];
     /** 工序排期时间集 */
@@ -147,9 +147,102 @@ export interface IProcedureTimeReturnsToVO {
     /** 计划结束时间 */
     endTime?: string;
     /** 是否锁定 */
-    isLock?: ('Y' | 'N');
+    isLock?: EProcedureTimeReturnsToVO_isLock;
     /** 排期类型 */
-    scheduleType?: ('OCCUPY_PROCESS' | 'OCCUPY_TIME' | 'PROCESS' | 'ORDER');
+    scheduleType?: EProcedureTimeReturnsToVO_scheduleType;
     /** 生产任务状态 */
-    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    produceTaskStatus?: EProcedureTimeReturnsToVO_produceTaskStatus;
+}
+
+export enum EGanttChartSearchVO_orderStatusList_items {
+    CREATED = "CREATED",
+    PLAN = "PLAN",
+    ISSUE = "ISSUE",
+    PRODUCE = "PRODUCE",
+    CANCEL = "CANCEL",
+    CLOSE = "CLOSE",
+    PART_COMPLETE = "PART_COMPLETE",
+    COMPLETE = "COMPLETE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EOccupiedReturnVO_scheduleType {
+    /** 工序占用 */
+    OCCUPY_PROCESS = "OCCUPY_PROCESS",
+    /** 时间占用 */
+    OCCUPY_TIME = "OCCUPY_TIME",
+    /** 工序 */
+    PROCESS = "PROCESS",
+    /** 生产订单 */
+    ORDER = "ORDER"
+}
+
+export enum EPageInformationAutomaticProductionOrderSchedulingReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationAutomaticProductionOrderSchedulingReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionOrdersAreAutomaticallyScheduledBackToVO_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EProcedureTimeReturnsToVO_isLock {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcedureTimeReturnsToVO_scheduleType {
+    /** 工序占用 */
+    OCCUPY_PROCESS = "OCCUPY_PROCESS",
+    /** 时间占用 */
+    OCCUPY_TIME = "OCCUPY_TIME",
+    /** 工序 */
+    PROCESS = "PROCESS",
+    /** 生产订单 */
+    ORDER = "ORDER"
+}
+
+export enum EProcedureTimeReturnsToVO_produceTaskStatus {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

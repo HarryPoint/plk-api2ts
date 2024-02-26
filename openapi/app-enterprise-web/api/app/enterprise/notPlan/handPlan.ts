@@ -18,9 +18,9 @@ export interface IManualDTOSchedulingOfProductionOrders {
     /** 排产计划单名称 */
     planName?: string;
     /** 排产维度 */
-    dimension?: ('ORDER' | 'PROCESS');
+    dimension?: EManualDTOSchedulingOfProductionOrders_dimension;
     /** 时间维度 */
-    timeDimension?: ('DAY' | 'CLASS_SHIFT');
+    timeDimension?: EManualDTOSchedulingOfProductionOrders_timeDimension;
     /** 排产开始日期 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 排产结束日期 yyyy-MM-dd HH:mm:ss */
@@ -79,4 +79,18 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EManualDTOSchedulingOfProductionOrders_dimension {
+    /** 订单 */
+    ORDER = "ORDER",
+    /** 工序 */
+    PROCESS = "PROCESS"
+}
+
+export enum EManualDTOSchedulingOfProductionOrders_timeDimension {
+    /** 日 */
+    DAY = "DAY",
+    /** 班次 */
+    CLASS_SHIFT = "CLASS_SHIFT"
 }

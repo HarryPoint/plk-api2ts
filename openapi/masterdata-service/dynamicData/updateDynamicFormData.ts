@@ -26,7 +26,7 @@ export interface IDynamicFormDataUpdateRequestDTO {
     /** undefined */
     idFieldSerialNoToValueListMap?: Record<string, string[]>;
     /** undefined */
-    isUpdateDetailTable?: ('Y' | 'N');
+    isUpdateDetailTable?: EDynamicFormDataUpdateRequestDTO_isUpdateDetailTable;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -38,4 +38,9 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EDynamicFormDataUpdateRequestDTO_isUpdateDetailTable {
+    Y = "Y",
+    N = "N"
 }

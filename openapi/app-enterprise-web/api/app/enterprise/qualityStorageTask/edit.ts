@@ -28,7 +28,7 @@ export interface IEditTheInspectionTaskDTO {
     /** 质检分类id */
     qualityInspectionCategoryId: number;
     /** 是否应用编码规则 */
-    isCodeRule: ('Y' | 'N');
+    isCodeRule: EEditTheInspectionTaskDTO_isCodeRule;
     /** 物料位置id */
     qualityWarehouseId?: number;
     /** 检验位置id */
@@ -40,7 +40,7 @@ export interface IEditTheInspectionTaskDTO {
     /** 采购收货单id */
     purchaseWorkOrderId?: number;
     /** 质检任务类型 */
-    taskType: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
+    taskType: EEditTheInspectionTaskDTO_taskType;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -52,4 +52,18 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEditTheInspectionTaskDTO_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEditTheInspectionTaskDTO_taskType {
+    /** 入库质检任务 */
+    STORAGE_IN_QUALITY_TASK = "STORAGE_IN_QUALITY_TASK",
+    /** 存货质检任务 */
+    STORAGE_QUALITY_TASK = "STORAGE_QUALITY_TASK"
 }

@@ -63,7 +63,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 创建时间 */
     createTime?: string;
     /** 质检方式 */
-    type?: ('ALL' | 'RADIO_SPOT_CHECK' | 'FIX_SPOT_CHECK');
+    type?: ETheDetailsOfTheInspectionSchemeAreReturnedToVO_type;
     /** 质检比例 */
     qualityInspectionRatio?: number;
     /** 质检数量 */
@@ -103,17 +103,17 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
     /** 所属质检项编号 */
     qualityInspectionItemCode?: string;
     /** 质检方式 */
-    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_qualityMethod;
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: ('SELECTOR' | 'CHECKBOX');
+    selectType?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_selectType;
     /** 选择描述 */
     selectTypeDesc?: string;
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_numberStandard;
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */
@@ -131,4 +131,40 @@ export interface IQualityInspectionSolutionQualityInspectionItemAssociationInfor
 export interface ITheInspectionItemOptionReturnsVO {
     /** 选择项名称 */
     name?: string;
+}
+
+export enum ETheDetailsOfTheInspectionSchemeAreReturnedToVO_type {
+    /** 全检 */
+    ALL = "ALL",
+    /** 比例抽检 */
+    RADIO_SPOT_CHECK = "RADIO_SPOT_CHECK",
+    /** 固定抽检 */
+    FIX_SPOT_CHECK = "FIX_SPOT_CHECK"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_selectType {
+    /** 单选 */
+    SELECTOR = "SELECTOR",
+    /** 多选 */
+    CHECKBOX = "CHECKBOX"
+}
+
+export enum EQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
 }

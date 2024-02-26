@@ -20,7 +20,12 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

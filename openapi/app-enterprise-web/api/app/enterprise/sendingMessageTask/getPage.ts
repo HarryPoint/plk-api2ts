@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IMessageQueuePagingQueryReq
 /** 消息队列分页查询请求 */
 export interface IMessageQueuePagingQueryRequest {
     /** 消息发送方式 */
-    sendingModeList?: ('SYSTEM' | 'SMS' | 'EMAIL')[];
+    sendingModeList?: EMessageQueuePagingQueryRequest_sendingModeList_items[];
     /** 发送状态 */
-    executionStatusList?: ('NOT' | 'EXECUTED')[];
+    executionStatusList?: EMessageQueuePagingQueryRequest_executionStatusList_items[];
     /** 当前页面 */
     pageNo?: number;
     /** 所属方案 */
@@ -56,9 +56,9 @@ export interface IPageInformationMessageQueuePageResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationMessageQueuePageResponseObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationMessageQueuePageResponseObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -81,17 +81,65 @@ export interface IMessageQueuePagingResponseObject {
     /** 发送内容 */
     messageContent?: string;
     /** 发送模式 */
-    sendingMode?: ('SYSTEM' | 'SMS' | 'EMAIL');
+    sendingMode?: EMessageQueuePagingResponseObject_sendingMode;
     /** 发送状态 */
-    executionStatus?: ('NOT' | 'EXECUTED');
+    executionStatus?: EMessageQueuePagingResponseObject_executionStatus;
     /** 消息数量 */
     messageCount?: number;
     /** 是否用户确认 */
-    isUserConfirm?: ('Y' | 'N');
+    isUserConfirm?: EMessageQueuePagingResponseObject_isUserConfirm;
     /** 失败原因 */
     failReason?: string;
     /** 发送模式描述 */
     sendingModeDesc?: string;
     /** 发送状态描述 */
     executionStatusDesc?: string;
+}
+
+export enum EMessageQueuePagingQueryRequest_sendingModeList_items {
+    SYSTEM = "SYSTEM",
+    SMS = "SMS",
+    EMAIL = "EMAIL"
+}
+
+export enum EMessageQueuePagingQueryRequest_executionStatusList_items {
+    NOT = "NOT",
+    EXECUTED = "EXECUTED"
+}
+
+export enum EPageInformationMessageQueuePageResponseObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationMessageQueuePageResponseObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMessageQueuePagingResponseObject_sendingMode {
+    /** 系统消息 */
+    SYSTEM = "SYSTEM",
+    /** 短信 */
+    SMS = "SMS",
+    /** 邮件 */
+    EMAIL = "EMAIL"
+}
+
+export enum EMessageQueuePagingResponseObject_executionStatus {
+    /** 未执行 */
+    NOT = "NOT",
+    /** 已执行 */
+    EXECUTED = "EXECUTED"
+}
+
+export enum EMessageQueuePagingResponseObject_isUserConfirm {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

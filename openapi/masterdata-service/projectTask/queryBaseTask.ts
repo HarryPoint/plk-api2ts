@@ -100,13 +100,13 @@ export interface IProjectPhaseTaskQueryObject1 {
     /** 修改时间 --结束日期 */
     endUpdateTime?: string;
     /** 是否仅查询当前登录用户 */
-    isQueryCurrentMember?: ('Y' | 'N');
+    isQueryCurrentMember?: EProjectPhaseTaskQueryObject1_isQueryCurrentMember;
     /** 是否展示子任务 */
-    isShowChildTask?: ('Y' | 'N');
+    isShowChildTask?: EProjectPhaseTaskQueryObject1_isShowChildTask;
     /** 处理进度名称列表 */
     processStatusNames?: string[];
     /** 是否查询没有关联项目计划的任务 */
-    isQueryEmptyPlanTask?: ('Y' | 'N');
+    isQueryEmptyPlanTask?: EProjectPhaseTaskQueryObject1_isQueryEmptyPlanTask;
     /** 任务权重 -- 开始 */
     beginTaskWeight?: number;
     /** 任务权重 -- 结束 */
@@ -123,7 +123,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«List«项目任务基础查询响应对象»» */
 export interface IJSONResultListProjectTaskBaseQueryResponseObject {
@@ -150,4 +150,32 @@ export interface IProjectTaskBaseQueryResponseObject {
     leaderUserNameList?: string[];
     /** 项目名称 */
     projectName?: string;
+}
+
+export enum EProjectPhaseTaskQueryObject1_isQueryCurrentMember {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectPhaseTaskQueryObject1_isShowChildTask {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectPhaseTaskQueryObject1_isQueryEmptyPlanTask {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

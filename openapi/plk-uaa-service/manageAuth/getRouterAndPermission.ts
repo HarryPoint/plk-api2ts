@@ -53,7 +53,7 @@ export interface ITheRouteRespondsToTheDTO {
     /** 路由code */
     code?: string;
     /** 菜单类型 */
-    type?: ('GROUP' | 'PAGE');
+    type?: ETheRouteRespondsToTheDTO_type;
     /** 图标 */
     icon?: string;
     /** 路由排序 */
@@ -61,18 +61,18 @@ export interface ITheRouteRespondsToTheDTO {
     /** 路由排序 */
     sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth?: ('Y' | 'N');
+    hasDataAuth?: ETheRouteRespondsToTheDTO_hasDataAuth;
     /** 路由配置 */
     config?: ITheRouteConfigurationRespondsToTheDTO;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ETheRouteRespondsToTheDTO_applicationLevel;
     /** 子集 */
     children?: ITheRouteRespondsToTheDTO[];
 }
 /** 路由配置响应 DTO */
 export interface ITheRouteConfigurationRespondsToTheDTO {
     /** 菜单类型 */
-    menuType?: ('APP' | 'REPORT_EXTERNAL');
+    menuType?: ETheRouteConfigurationRespondsToTheDTO_menuType;
     /** 应用配置 */
     appConfig?: IApplicationRouteConfigurationRespondsToTheDTO;
 }
@@ -80,4 +80,30 @@ export interface ITheRouteConfigurationRespondsToTheDTO {
 export interface IApplicationRouteConfigurationRespondsToTheDTO {
     /** 系统应用类型 */
     appSystemType?: string;
+}
+
+export enum ETheRouteRespondsToTheDTO_type {
+    GROUP = "GROUP",
+    PAGE = "PAGE"
+}
+
+export enum ETheRouteRespondsToTheDTO_hasDataAuth {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheRouteRespondsToTheDTO_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
+}
+
+export enum ETheRouteConfigurationRespondsToTheDTO_menuType {
+    /** 应用 */
+    APP = "APP",
+    /** 外部报表 */
+    REPORT_EXTERNAL = "REPORT_EXTERNAL"
 }

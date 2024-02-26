@@ -35,7 +35,7 @@ export interface IShiftBackVO {
     /** 开始时间 */
     beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EShiftBackVO_endTimeType;
     /** 结束时间 */
     endTime?: string;
     /** 状态 */
@@ -46,4 +46,11 @@ export interface IShiftBackVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EShiftBackVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

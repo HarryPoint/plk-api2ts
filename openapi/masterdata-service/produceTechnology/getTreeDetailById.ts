@@ -42,7 +42,7 @@ export interface IProductionProcessNodeResponseObject {
     /** 生产工艺id */
     produceTechnologyId?: number;
     /** 节点类型 */
-    type?: ('MATERIAL' | 'ROUTING' | 'BRANCH');
+    type?: EProductionProcessNodeResponseObject_type;
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */
@@ -51,4 +51,13 @@ export interface IProductionProcessNodeResponseObject {
     branches?: IProductionProcessNodeResponseObject[];
     /** 序列号 */
     serialNo?: string;
+}
+
+export enum EProductionProcessNodeResponseObject_type {
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 工艺路径 */
+    ROUTING = "ROUTING",
+    /** 分支 */
+    BRANCH = "BRANCH"
 }

@@ -28,7 +28,7 @@ export interface IInspectionTaskSearchesForVO {
     /** 采购收货单编号 */
     purchaseWorkOrderNo?: string;
     /** 任务类型 */
-    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
+    taskType?: EInspectionTaskSearchesForVO_taskType;
     /** 任务编号 */
     qualityStorageTaskNo?: string;
     /** 检验日期查询结束时间 */
@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -59,4 +59,16 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EInspectionTaskSearchesForVO_taskType {
+    /** 入库质检任务 */
+    STORAGE_IN_QUALITY_TASK = "STORAGE_IN_QUALITY_TASK",
+    /** 存货质检任务 */
+    STORAGE_QUALITY_TASK = "STORAGE_QUALITY_TASK"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

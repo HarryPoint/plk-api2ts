@@ -39,9 +39,9 @@ export interface IPageInformationObjectsReturnedByTheSalesDailyReport {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationObjectsReturnedByTheSalesDailyReport_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationObjectsReturnedByTheSalesDailyReport_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -93,4 +93,18 @@ export interface IDailySalesReportReturnsObject {
     salesIntegral?: number;
     /** 退货率 */
     returnRate?: number;
+}
+
+export enum EPageInformationObjectsReturnedByTheSalesDailyReport_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationObjectsReturnedByTheSalesDailyReport_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

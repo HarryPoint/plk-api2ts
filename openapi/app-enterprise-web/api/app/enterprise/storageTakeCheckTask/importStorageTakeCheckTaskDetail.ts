@@ -73,11 +73,11 @@ export interface IWarehouseInventoryListReturnedToDTO {
     /** 批次号 */
     lotNo?: string;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EWarehouseInventoryListReturnedToDTO_enableLot;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EWarehouseInventoryListReturnedToDTO_enableSerialNo;
     /** 启用序列号 */
-    hasWarehouseMaterial?: ('Y' | 'N');
+    hasWarehouseMaterial?: EWarehouseInventoryListReturnedToDTO_hasWarehouseMaterial;
     /** 序列号集 */
     serialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 匹配序列号集 */
@@ -93,4 +93,25 @@ export interface IInventoryTaskInventoryDetailsSerialNumberDTO {
     serialNo?: string;
     /** 备注 */
     serialRemark?: string;
+}
+
+export enum EWarehouseInventoryListReturnedToDTO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWarehouseInventoryListReturnedToDTO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWarehouseInventoryListReturnedToDTO_hasWarehouseMaterial {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

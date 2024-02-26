@@ -55,9 +55,9 @@ export interface IKeyParameterDetailsResponseObject {
     /** 帮助提示 */
     remark?: string;
     /** 字段类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EKeyParameterDetailsResponseObject_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EKeyParameterDetailsResponseObject_textType;
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */
@@ -74,4 +74,24 @@ export interface IKeyParameterDetailsResponseObject {
     selector?: string;
     /** 选项集 */
     selectorList?: string[];
+}
+
+export enum EKeyParameterDetailsResponseObject_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EKeyParameterDetailsResponseObject_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
 }

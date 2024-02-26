@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getAbnormalTypeUsingGET_1
 */
-export default function fetchMethod(options: { params: { type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK') } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: Etype } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/getAbnormalType",
@@ -29,7 +29,7 @@ export interface IExceptionTypeReturnsVO {
     /** id */
     id?: number;
     /** 所属分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
+    type?: EExceptionTypeReturnsVO_type;
     /** 所属分类 */
     typeDesc?: string;
     /** 类型名称 */
@@ -44,4 +44,28 @@ export interface IExceptionTypeReturnsVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum Etype {
+    SCRAP = "SCRAP",
+    HOLD = "HOLD",
+    HOLD_PAUSE = "HOLD_PAUSE",
+    REPORT = "REPORT",
+    BACK = "BACK",
+    CANCEL_TASK = "CANCEL_TASK"
+}
+
+export enum EExceptionTypeReturnsVO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 撤销任务 */
+    CANCEL_TASK = "CANCEL_TASK"
 }

@@ -29,7 +29,7 @@ export interface IProduceOrderImportSynchronizationOutputDTO {
     /** undefined */
     id?: number;
     /** undefined */
-    importStatus?: ('NOT' | 'COMPLETE' | 'IMPORTING' | 'IMPORT_FAIL');
+    importStatus?: EProduceOrderImportSynchronizationOutputDTO_importStatus;
     /** undefined */
     failureMessage?: string;
     /** undefined */
@@ -55,4 +55,11 @@ export interface IProduceOrderImportFailureOutputDTO {
     produceOrderCode?: string;
     /** undefined */
     failureMessage?: string;
+}
+
+export enum EProduceOrderImportSynchronizationOutputDTO_importStatus {
+    NOT = "NOT",
+    COMPLETE = "COMPLETE",
+    IMPORTING = "IMPORTING",
+    IMPORT_FAIL = "IMPORT_FAIL"
 }

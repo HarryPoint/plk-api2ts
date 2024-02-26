@@ -40,7 +40,13 @@ export interface IPackagingMaterialsArrivalScheduleDetailsVO {
     /** 物料名称 */
     materialName?: string;
     /** 到达状态 */
-    arriveProgress?: ('UN_FINISHED_TEXT' | 'FINISHED_TEXT' | 'ARRIVE');
+    arriveProgress?: EPackagingMaterialsArrivalScheduleDetailsVO_arriveProgress;
     /** new标记 */
     newFlag?: boolean;
+}
+
+export enum EPackagingMaterialsArrivalScheduleDetailsVO_arriveProgress {
+    UN_FINISHED_TEXT = "UN_FINISHED_TEXT",
+    FINISHED_TEXT = "FINISHED_TEXT",
+    ARRIVE = "ARRIVE"
 }

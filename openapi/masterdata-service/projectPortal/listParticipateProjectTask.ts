@@ -41,7 +41,7 @@ export interface IProjectTaskResponseObject3 {
     /** 任务截止日期 */
     planEndTime?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectTaskResponseObject3_isOverdue;
     /** 项目id */
     projectId?: number;
     /** 项目名称 */
@@ -52,4 +52,11 @@ export interface IProjectTaskResponseObject3 {
     fromAppId?: number;
     /** undefined */
     projectTaskTypeId?: number;
+}
+
+export enum EProjectTaskResponseObject3_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

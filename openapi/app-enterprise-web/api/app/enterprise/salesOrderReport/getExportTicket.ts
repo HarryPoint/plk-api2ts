@@ -34,14 +34,14 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
+    salesOrderStatus?: EOrderProgressStatisticsQueryVO_salesOrderStatus;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
@@ -58,4 +58,22 @@ export interface IJSONResultExportedTicketInformation {
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
     ticket?: string;
+}
+
+export enum EOrderProgressStatisticsQueryVO_salesOrderStatus {
+    /** 未转生产订单 */
+    CREATED = "CREATED",
+    /** 部分已转 */
+    CONVERTING = "CONVERTING",
+    /** 已转生产订单 */
+    CONVERED = "CONVERED",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

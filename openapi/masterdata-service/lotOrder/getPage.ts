@@ -24,7 +24,7 @@ export interface IBatchOrderSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 当前流水类型(界面上的批次当前生产状态) */
-    lastFlowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
+    lastFlowType?: EBatchOrderSearchVO_lastFlowType;
     /** 批次订单号 */
     lotOrderNo?: string;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -36,18 +36,18 @@ export interface IBatchOrderSearchVO {
     /** 对应物料id */
     materialId?: number;
     /** 来源类型 */
-    sourceType?: ('MAJOR_DATA' | 'MARGE' | 'SPLIT' | 'TRANSFER');
+    sourceType?: EBatchOrderSearchVO_sourceType;
     /** 来源批次单号 */
     sourceLotNo?: string;
     /** 状态 */
-    status?: ('CREATED' | 'ISSUE' | 'PRODUCE' | 'HOLD' | 'CANCEL' | 'CLOSE');
+    status?: EBatchOrderSearchVO_status;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«批次订单返回VO»» */
 export interface IJSONResultPagingInformationBatchOrderReturnsVO {
@@ -75,9 +75,9 @@ export interface IPagingInformationBatchOrderReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationBatchOrderReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationBatchOrderReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -126,7 +126,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 生产工艺路径编号 */
     produceTechnologyRoutingCode?: string;
     /** 当前流水类型(界面上的当前生产状态) */
-    lastFlowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
+    lastFlowType?: EBatchOrderIsReturnedToVO_lastFlowType;
     /** 当前流水类型描述 */
     lastFlowTypeDesc?: string;
     /** 当前对应工艺路径步骤id */
@@ -142,7 +142,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 总工艺数 - 用于展示工艺进度条 */
     totalStepCount?: number;
     /** 状态 */
-    status?: ('CREATED' | 'ISSUE' | 'PRODUCE' | 'HOLD' | 'CANCEL' | 'CLOSE');
+    status?: EBatchOrderIsReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 来源集 */
@@ -159,9 +159,142 @@ export interface IBatchOrderIsReturnedToVO {
 /** 批次订单来源返回VO */
 export interface IBatchOrderSourceReturnedToVO {
     /** 来源类型 */
-    sourceType?: ('MAJOR_DATA' | 'MARGE' | 'SPLIT' | 'TRANSFER');
+    sourceType?: EBatchOrderSourceReturnedToVO_sourceType;
     /** 来源类型描述 */
     sourceTypeDesc?: string;
     /** 来源批次单号 */
     sourceLotNo?: string;
+}
+
+export enum EBatchOrderSearchVO_lastFlowType {
+    /** 创建 */
+    CREATED = "CREATED",
+    /** 下发 */
+    ISSUE = "ISSUE",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER",
+    /** 切换工艺路径 */
+    CHANGE_ROUTING = "CHANGE_ROUTING",
+    /** 委外加工 */
+    ENTRUST = "ENTRUST"
+}
+
+export enum EBatchOrderSearchVO_sourceType {
+    /** 物料 */
+    MAJOR_DATA = "MAJOR_DATA",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER"
+}
+
+export enum EBatchOrderSearchVO_status {
+    /** 待生产 */
+    CREATED = "CREATED",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 扣留中 */
+    HOLD = "HOLD",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationBatchOrderReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationBatchOrderReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EBatchOrderIsReturnedToVO_lastFlowType {
+    /** 创建 */
+    CREATED = "CREATED",
+    /** 下发 */
+    ISSUE = "ISSUE",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER",
+    /** 切换工艺路径 */
+    CHANGE_ROUTING = "CHANGE_ROUTING",
+    /** 委外加工 */
+    ENTRUST = "ENTRUST"
+}
+
+export enum EBatchOrderIsReturnedToVO_status {
+    /** 待生产 */
+    CREATED = "CREATED",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 扣留中 */
+    HOLD = "HOLD",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EBatchOrderSourceReturnedToVO_sourceType {
+    /** 物料 */
+    MAJOR_DATA = "MAJOR_DATA",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER"
 }

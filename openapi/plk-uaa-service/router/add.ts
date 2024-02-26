@@ -28,7 +28,7 @@ export interface ITheDTOWasAddedToTheRouteProcedure {
     /** 路由code */
     code: string;
     /** 类型 */
-    type?: ('GROUP' | 'PAGE');
+    type?: ETheDTOWasAddedToTheRouteProcedure_type;
     /** 图标 */
     icon?: string;
     /** 路由层级 */
@@ -36,16 +36,16 @@ export interface ITheDTOWasAddedToTheRouteProcedure {
     /** 路由排序 */
     sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth?: ('Y' | 'N');
+    hasDataAuth?: ETheDTOWasAddedToTheRouteProcedure_hasDataAuth;
     /** 配置 */
     config?: IRouteConfigurationRequestsDTO;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ETheDTOWasAddedToTheRouteProcedure_applicationLevel;
 }
 /** 路由配置请求 DTO */
 export interface IRouteConfigurationRequestsDTO {
     /** 菜单类型 */
-    menuType?: ('APP' | 'REPORT_EXTERNAL');
+    menuType?: ERouteConfigurationRequestsDTO_menuType;
     /** 应用配置 */
     appConfig?: IApplyTheRouteConfigurationRequestDTO;
 }
@@ -64,4 +64,30 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETheDTOWasAddedToTheRouteProcedure_type {
+    GROUP = "GROUP",
+    PAGE = "PAGE"
+}
+
+export enum ETheDTOWasAddedToTheRouteProcedure_hasDataAuth {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheDTOWasAddedToTheRouteProcedure_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
+}
+
+export enum ERouteConfigurationRequestsDTO_menuType {
+    /** 应用 */
+    APP = "APP",
+    /** 外部报表 */
+    REPORT_EXTERNAL = "REPORT_EXTERNAL"
 }

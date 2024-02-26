@@ -41,11 +41,34 @@ export interface IWarehouseVO {
     /** 寄售客户id */
     customerId?: number;
     /** 是否默认仓库 - 针对整个工厂唯一默认有一个仓库 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EWarehouseVO_isDefault;
     /** 仓库类型 */
-    type?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
+    type?: EWarehouseVO_type;
     /** WIP类型 - WIP时有值 */
-    wipType?: ('BEFORE' | 'IN');
+    wipType?: EWarehouseVO_wipType;
     /** 所属工艺路径id - WIP时有值 */
     routingId?: number;
+}
+
+export enum EWarehouseVO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWarehouseVO_type {
+    /** 实体仓 */
+    PHYSICAL = "PHYSICAL",
+    /** 线边仓 */
+    LINE_SIDE = "LINE_SIDE",
+    /** WIP */
+    WIP = "WIP"
+}
+
+export enum EWarehouseVO_wipType {
+    /** 在制前 */
+    BEFORE = "BEFORE",
+    /** 在制中 */
+    IN = "IN"
 }

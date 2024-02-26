@@ -32,5 +32,12 @@ export interface IJSONResultIndicatesWhetherTheInformationIsDisplayed {
 /** 是否 信息 */
 export interface IYesNoMessage {
     /** 是否 */
-    whether?: ('Y' | 'N');
+    whether?: EYesNoMessage_whether;
+}
+
+export enum EYesNoMessage_whether {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

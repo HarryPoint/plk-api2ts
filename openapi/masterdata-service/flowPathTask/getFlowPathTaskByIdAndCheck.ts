@@ -31,7 +31,7 @@ export interface ITheProcessTaskReturnsToVO {
     /** 所属企业id */
     enterpriseId?: number;
     /** 任务类型 */
-    type?: ('EXECUTE' | 'APPROVAL');
+    type?: ETheProcessTaskReturnsToVO_type;
     /** 任务号 */
     taskNo?: string;
     /** 所属流程工单id */
@@ -63,15 +63,54 @@ export interface ITheProcessTaskReturnsToVO {
     /** 总超时秒 */
     totalTimeoutTime?: number;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLED' | 'CLOSE');
+    status?: ETheProcessTaskReturnsToVO_status;
     /** 审批状态 */
-    approvalStatus?: ('PASS' | 'REFUSE' | 'BACK');
+    approvalStatus?: ETheProcessTaskReturnsToVO_approvalStatus;
     /** 执行状态 */
-    executeStatus?: ('HANDLE' | 'BACK');
+    executeStatus?: ETheProcessTaskReturnsToVO_executeStatus;
     /** 接受状态 */
-    acceptStatus?: ('ACCEPTED' | 'WAIT_ACCEPT');
+    acceptStatus?: ETheProcessTaskReturnsToVO_acceptStatus;
     /** 审批意见/执行情况 */
     notes?: string;
     /** 任务接受时间 */
     acceptTime?: string;
+}
+
+export enum ETheProcessTaskReturnsToVO_type {
+    /** 执行任务 */
+    EXECUTE = "EXECUTE",
+    /** 审批任务 */
+    APPROVAL = "APPROVAL"
+}
+
+export enum ETheProcessTaskReturnsToVO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 已处理 */
+    HANDLED = "HANDLED",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum ETheProcessTaskReturnsToVO_approvalStatus {
+    /** 同意 */
+    PASS = "PASS",
+    /** 拒绝 */
+    REFUSE = "REFUSE",
+    /** 回退 */
+    BACK = "BACK"
+}
+
+export enum ETheProcessTaskReturnsToVO_executeStatus {
+    /** 正常执行 */
+    HANDLE = "HANDLE",
+    /** 回退 */
+    BACK = "BACK"
+}
+
+export enum ETheProcessTaskReturnsToVO_acceptStatus {
+    /** 已接受 */
+    ACCEPTED = "ACCEPTED",
+    /** 待接受 */
+    WAIT_ACCEPT = "WAIT_ACCEPT"
 }

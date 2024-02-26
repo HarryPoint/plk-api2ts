@@ -35,7 +35,7 @@ export interface IToDoListVO {
     /** 待办编号 */
     code?: string;
     /** 流程处理类型 */
-    type?: ('HANDLE_BY_ME' | 'CARBON_COPY_TO_ME');
+    type?: EToDoListVO_type;
     /** 任务开始时间 */
     planBeginTime?: string;
     /** 预计结束时间（截止时间） */
@@ -43,13 +43,13 @@ export interface IToDoListVO {
     /** 对应业务id */
     businessId?: number;
     /** 状态 */
-    status?: ('NOT_HANDLE' | 'NOT_READ' | 'HANDLED' | 'READ');
+    status?: EToDoListVO_status;
     /** 完成时间 */
     completeTime?: string;
     /** 发起人id */
     workOrderCreateUserId?: number;
     /** 是否超时处理 */
-    isTimeout?: ('Y' | 'N');
+    isTimeout?: EToDoListVO_isTimeout;
     /** 节点处理状态描述 */
     flowPathNodeHandleStatus?: string;
     /** 工单处理状态描述 */
@@ -80,4 +80,29 @@ export interface ITabledatadto {
     serialNo?: string;
     /** undefined */
     showValue?: string;
+}
+
+export enum EToDoListVO_type {
+    /** 由我处理 */
+    HANDLE_BY_ME = "HANDLE_BY_ME",
+    /** 抄送给我 */
+    CARBON_COPY_TO_ME = "CARBON_COPY_TO_ME"
+}
+
+export enum EToDoListVO_status {
+    /** 待处理 */
+    NOT_HANDLE = "NOT_HANDLE",
+    /** 未读 */
+    NOT_READ = "NOT_READ",
+    /** 已完成 */
+    HANDLED = "HANDLED",
+    /** 已读 */
+    READ = "READ"
+}
+
+export enum EToDoListVO_isTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

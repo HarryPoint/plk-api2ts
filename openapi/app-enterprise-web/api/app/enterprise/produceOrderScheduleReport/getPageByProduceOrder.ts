@@ -34,7 +34,7 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 计划开始日期查询结束时间 */
     endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE')[];
+    planTypeList?: EProductionSchedulingOrderSearchVO_planTypeList_items[];
     /** 计划结束日期查询结束时间 */
     endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«排产订单报表VO(生产订单维度)»» */
 export interface IJSONResultPageInformationSchedulingProductionOrderReportVOProductionOrderDimension {
@@ -73,9 +73,9 @@ export interface IPageInformationSchedulingOrderReportVOProductionOrderDimension
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationSchedulingOrderReportVOProductionOrderDimension_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationSchedulingOrderReportVOProductionOrderDimension_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -140,9 +140,9 @@ export interface IProductionSchedulingOrderReportProcessStepPlanVO {
     /** 生产时间 -- 产能 */
     capacityProduceTime?: number;
     /** 时间单位 -- 产能 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProductionSchedulingOrderReportProcessStepPlanVO_capacityTimeType;
     /** 时间单位 -- 准备耗时 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProductionSchedulingOrderReportProcessStepPlanVO_readyTimeUnit;
     /** 准备耗时 -- 准备耗时 */
     readyTime?: number;
     /** 计划开始时间 */
@@ -151,4 +151,48 @@ export interface IProductionSchedulingOrderReportProcessStepPlanVO {
     endTime?: string;
     /** 计划产量列表 */
     routingStepPlanDayQuantityList?: IIdcodenameIndicatesTheValueVO[];
+}
+
+export enum EProductionSchedulingOrderSearchVO_planTypeList_items {
+    NOT_PLAN = "NOT_PLAN",
+    AUTO = "AUTO",
+    HAND = "HAND",
+    VAGUE = "VAGUE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationSchedulingOrderReportVOProductionOrderDimension_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationSchedulingOrderReportVOProductionOrderDimension_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionSchedulingOrderReportProcessStepPlanVO_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProductionSchedulingOrderReportProcessStepPlanVO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

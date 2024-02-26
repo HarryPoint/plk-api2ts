@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«工时工费月度汇总报表返回VO»» */
 export interface IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToVO {
@@ -66,4 +66,9 @@ export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
     backFee?: number;
     /** 合计工费 */
     totalFee?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

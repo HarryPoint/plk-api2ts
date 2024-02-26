@@ -35,7 +35,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -52,7 +52,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
@@ -67,7 +67,7 @@ export interface IFormDataGroupingDTO {
     /** 下级分组 */
     children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData?: ('Y' | 'N');
+    cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
     treeDataParentId?: number;
 }
@@ -97,9 +97,9 @@ export interface IPageInformationDynamicExpansionDataVOScheduledProductionOrders
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -119,9 +119,9 @@ export interface ITheScheduledProductionOrderIsReturnedToVO {
     /** 生产计划名称 */
     producePlanName?: string;
     /** 排产类型 */
-    planType?: ('AUTO' | 'HAND' | 'VAGUE');
+    planType?: ETheScheduledProductionOrderIsReturnedToVO_planType;
     /** 是否锁定 */
-    isLock?: ('Y' | 'N');
+    isLock?: ETheScheduledProductionOrderIsReturnedToVO_isLock;
     /** 步骤集【自动排产、模糊排产的信息回显在这里面】 */
     steps?: IScheduledProductionOrderStepReturnToVO[];
     /** 手动排产按日排产明细 */
@@ -181,11 +181,11 @@ export interface IProduceTechnologyCapacityResponseDTO {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProduceTechnologyCapacityResponseDTO_readyTimeUnit;
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProduceTechnologyCapacityResponseDTO_capacityTimeType;
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }
@@ -209,4 +209,76 @@ export interface IProductionPerShiftVO {
     classShiftId?: number;
     /** 产量 */
     quantity?: number;
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFormDataGroupingDTO_cascadeFormData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheScheduledProductionOrderIsReturnedToVO_planType {
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum ETheScheduledProductionOrderIsReturnedToVO_isLock {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProduceTechnologyCapacityResponseDTO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProduceTechnologyCapacityResponseDTO_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

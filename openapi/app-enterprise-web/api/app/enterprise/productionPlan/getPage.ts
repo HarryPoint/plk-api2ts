@@ -22,9 +22,9 @@ export interface ITaskDeliverySearchesVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 状态 */
-    status?: ('WAIT' | 'ISSUE' | 'REVOKE' | 'CLOSE');
+    status?: ETaskDeliverySearchesVO_status;
     /** 排产计划类型 */
-    type?: ('AUTO' | 'HAND' | 'VAGUE');
+    type?: ETaskDeliverySearchesVO_type;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«任务下发返回VO»» */
 export interface IJSONResultThePageInformationTaskIsDeliveredBackToVO {
@@ -77,9 +77,9 @@ export interface IThePageInformationTaskIsDeliveredBackToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationTaskIsDeliveredBackToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationTaskIsDeliveredBackToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -106,7 +106,7 @@ export interface ITheTaskIsDeliveredBackToVO {
     /** id */
     id?: number;
     /** 排产计划类型 */
-    type?: ('AUTO' | 'HAND' | 'VAGUE');
+    type?: ETheTaskIsDeliveredBackToVO_type;
     /** 排产计划类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -136,9 +136,75 @@ export interface ITheTaskIsDeliveredBackToVO {
     /** 下发时间 */
     issueTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'ISSUE' | 'REVOKE' | 'CLOSE');
+    status?: ETheTaskIsDeliveredBackToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 是否能撤回 */
-    canRevoke?: ('Y' | 'N');
+    canRevoke?: ETheTaskIsDeliveredBackToVO_canRevoke;
+}
+
+export enum ETaskDeliverySearchesVO_status {
+    /** 等待下发 */
+    WAIT = "WAIT",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 已撤回 */
+    REVOKE = "REVOKE",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum ETaskDeliverySearchesVO_type {
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePageInformationTaskIsDeliveredBackToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationTaskIsDeliveredBackToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheTaskIsDeliveredBackToVO_type {
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum ETheTaskIsDeliveredBackToVO_status {
+    /** 等待下发 */
+    WAIT = "WAIT",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 已撤回 */
+    REVOKE = "REVOKE",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum ETheTaskIsDeliveredBackToVO_canRevoke {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

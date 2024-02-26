@@ -22,7 +22,7 @@ export interface IFormCascadeQueryConditionVO {
     /** 当前表单选择的数据 */
     submitFieldsJsonObject?: Record<string, Record<string, any>>;
     /** 来自表单过滤条件 */
-    fromFormFilterCondition?: ('Y' | 'N');
+    fromFormFilterCondition?: EFormCascadeQueryConditionVO_fromFormFilterCondition;
     /** 应用编码 */
     flowPathCode?: string;
     /** 字段序列号 */
@@ -49,4 +49,11 @@ export interface IFormCascadeQueryResultVO {
     code?: string;
     /** 子集 */
     children?: IFormCascadeQueryResultVO[];
+}
+
+export enum EFormCascadeQueryConditionVO_fromFormFilterCondition {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

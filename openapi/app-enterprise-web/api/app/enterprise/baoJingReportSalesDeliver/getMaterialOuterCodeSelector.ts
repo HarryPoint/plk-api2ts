@@ -24,14 +24,14 @@ export interface IMaterialMasterDataSelectionListSearchVO {
     /** 物料名称/编号 */
     nameOrCode?: string;
     /** 物料类型数组 */
-    materialTypeList?: ('RAW' | 'SEMI_PRODUCT' | 'FINISH_GOODS' | 'KIT' | 'PARTS')[];
+    materialTypeList?: EMaterialMasterDataSelectionListSearchVO_materialTypeList_items[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«物料主数据外部编码选择返回DTO»» */
 export interface IJSONResultPagingInformationMaterialMasterDataExternalCodeSelectReturnDTO {
@@ -59,9 +59,9 @@ export interface IPageInformationMaterialMasterDataExternalCodeSelectReturnDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationMaterialMasterDataExternalCodeSelectReturnDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationMaterialMasterDataExternalCodeSelectReturnDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,7 +88,41 @@ export interface IMaterialMasterDataExternalCodeSelectReturnDTO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否有bom */
-    hasBom?: ('Y' | 'N');
+    hasBom?: EMaterialMasterDataExternalCodeSelectReturnDTO_hasBom;
     /** 外部编码 */
     outsideCode?: string;
+}
+
+export enum EMaterialMasterDataSelectionListSearchVO_materialTypeList_items {
+    RAW = "RAW",
+    SEMI_PRODUCT = "SEMI_PRODUCT",
+    FINISH_GOODS = "FINISH_GOODS",
+    KIT = "KIT",
+    PARTS = "PARTS"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationMaterialMasterDataExternalCodeSelectReturnDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationMaterialMasterDataExternalCodeSelectReturnDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialMasterDataExternalCodeSelectReturnDTO_hasBom {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -26,7 +26,7 @@ export interface IQueryDtosUsingSMSTemplates {
     /** 创建时间开始时间 */
     createBeginTime?: string;
     /** 审核状态 */
-    auditStatusList?: ('NONE' | 'AUDIT_STATE_INIT' | 'AUDIT_STATE_PASS' | 'AUDIT_STATE_NOT_PASS')[];
+    auditStatusList?: EQueryDtosUsingSMSTemplates_auditStatusList_items[];
     /** 创建时间结束时间 */
     createEndTime?: string;
 }
@@ -56,9 +56,9 @@ export interface IPageInformationSMSTemplateQueryResponseDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationSMSTemplateQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationSMSTemplateQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -95,11 +95,43 @@ export interface ISMSTemplateQueryResponseDTO {
     /** 短信内容 */
     messageContent?: string;
     /** 审核状态 */
-    auditStatus?: ('NONE' | 'AUDIT_STATE_INIT' | 'AUDIT_STATE_PASS' | 'AUDIT_STATE_NOT_PASS');
+    auditStatus?: ESMSTemplateQueryResponseDTO_auditStatus;
     /** 失败原因 */
     failReason?: string;
     /** 显示信息内容 */
     showMessageContent?: string;
     /** 字段序列号 */
     fieldSerialNoList?: Record<string, any>[];
+}
+
+export enum EQueryDtosUsingSMSTemplates_auditStatusList_items {
+    NONE = "NONE",
+    AUDIT_STATE_INIT = "AUDIT_STATE_INIT",
+    AUDIT_STATE_PASS = "AUDIT_STATE_PASS",
+    AUDIT_STATE_NOT_PASS = "AUDIT_STATE_NOT_PASS"
+}
+
+export enum EPageInformationSMSTemplateQueryResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationSMSTemplateQueryResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESMSTemplateQueryResponseDTO_auditStatus {
+    /** 未审核 */
+    NONE = "NONE",
+    /** 审核中 */
+    AUDIT_STATE_INIT = "AUDIT_STATE_INIT",
+    /** 通过 */
+    AUDIT_STATE_PASS = "AUDIT_STATE_PASS",
+    /** 未通过 */
+    AUDIT_STATE_NOT_PASS = "AUDIT_STATE_NOT_PASS"
 }

@@ -95,9 +95,9 @@ export interface IPanpanProductionLargeScreenBackOrderResponseDTO {
     /** 订单编码 */
     produceOrderCode?: string;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EPanpanProductionLargeScreenBackOrderResponseDTO_orderStatus;
     /** 是否主订单 */
-    isMaster?: ('Y' | 'N');
+    isMaster?: EPanpanProductionLargeScreenBackOrderResponseDTO_isMaster;
     /** 投产日期 */
     createDate?: string;
 }
@@ -148,4 +148,30 @@ export interface IPanpanProductionLargeScreen7DaysProcessCapacityResponseDTO {
     totalCapacity?: number;
     /** 产能利用率 */
     capacityRatio?: number;
+}
+
+export enum EPanpanProductionLargeScreenBackOrderResponseDTO_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EPanpanProductionLargeScreenBackOrderResponseDTO_isMaster {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

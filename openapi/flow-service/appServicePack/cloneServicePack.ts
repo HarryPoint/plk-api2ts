@@ -18,7 +18,7 @@ export interface IServiceObjectRegistrationRequest {
     /** 服务对象id */
     serviceObjectId?: number;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EServiceObjectRegistrationRequest_applicationLevel;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -30,4 +30,11 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EServiceObjectRegistrationRequest_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

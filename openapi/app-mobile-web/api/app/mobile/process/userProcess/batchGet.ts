@@ -31,11 +31,24 @@ export interface IUserProcessVo {
     /** undefined */
     processId?: number;
     /** undefined */
-    executorType?: ('USER' | 'ROLE' | 'DEPARTMENT' | 'CLASS_GROUP' | 'SYS_CONTROL');
+    executorType?: EUserProcessVo_executorType;
     /** undefined */
     refId?: number;
     /** undefined */
-    type?: ('PRODUCE' | 'QUALITY');
+    type?: EUserProcessVo_type;
     /** undefined */
     refName?: string;
+}
+
+export enum EUserProcessVo_executorType {
+    USER = "USER",
+    ROLE = "ROLE",
+    DEPARTMENT = "DEPARTMENT",
+    CLASS_GROUP = "CLASS_GROUP",
+    SYS_CONTROL = "SYS_CONTROL"
+}
+
+export enum EUserProcessVo_type {
+    PRODUCE = "PRODUCE",
+    QUALITY = "QUALITY"
 }

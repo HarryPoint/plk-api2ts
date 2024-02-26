@@ -59,13 +59,13 @@ export interface IBaseVO1 {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EBaseVO1_readyTimeUnit;
     /** 进出站方式 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EBaseVO1_inOutType;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EBaseVO1_allowDirectExit;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
+    bomConsumeSureType?: EBaseVO1_bomConsumeSureType;
     /** 合格产出工费单价 */
     producePrice?: number;
     /** 返工产出工费单价 */
@@ -73,9 +73,48 @@ export interface IBaseVO1 {
     /** 产能-生产时间 */
     capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EBaseVO1_capacityTimeType;
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 准备工费（元） */
     readyPrice?: number;
+}
+
+export enum EBaseVO1_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EBaseVO1_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EBaseVO1_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EBaseVO1_bomConsumeSureType {
+    /** 在进站时确认 */
+    MOVE_IN = "MOVE_IN",
+    /** 在出站时确认 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EBaseVO1_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

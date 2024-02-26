@@ -20,7 +20,7 @@ export interface ITheDTOIsAddedToTheClient {
     /** 名称 */
     name: string;
     /** 登录类型 */
-    loginType: ('MANAGE' | 'SAAS');
+    loginType: ETheDTOIsAddedToTheClient_loginType;
     /** 客户端组 */
     clientGroup?: IExampleModifyTheDTOOfAClientGroup;
 }
@@ -43,4 +43,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ETheDTOIsAddedToTheClient_loginType {
+    /** 运营管理 */
+    MANAGE = "MANAGE",
+    /** Saas系统 */
+    SAAS = "SAAS"
 }

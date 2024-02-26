@@ -127,7 +127,7 @@ export interface IProcessPathSelectionVO {
     /** 工艺路径编号 */
     code?: string;
     /** 是否物料默认 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EProcessPathSelectionVO_isDefault;
     /** 物料bomId */
     materialBomId?: number;
     /** 物料bom名称 */
@@ -179,4 +179,11 @@ export interface IOtherMaterialInformationRequiredForProductionVO {
     routingSelector?: IProcessPathSelectionVO[];
     /** 原物料信息 - 用于重置物料 */
     sourceMajorData?: IOtherMaterialInformationRequiredForProductionVO;
+}
+
+export enum EProcessPathSelectionVO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

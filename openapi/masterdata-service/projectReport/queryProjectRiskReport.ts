@@ -39,9 +39,9 @@ export interface IPageInformationProjectRiskReportResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationProjectRiskReportResponseObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationProjectRiskReportResponseObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -74,11 +74,11 @@ export interface IProjectRiskReportResponseObject {
     /** 项目经理名称 */
     projectManagerName?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectRiskReportResponseObject_isOverdue;
     /** 超期天数(天) */
     overdueDay?: number;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProjectRiskReportResponseObject_status;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
@@ -90,7 +90,7 @@ export interface IProjectRiskReportResponseObject {
     /** 风险标识名称 */
     projectRiskFlagName?: string;
     /** 风险等级 */
-    level?: ('LOW' | 'MID' | 'HIGH');
+    level?: EProjectRiskReportResponseObject_level;
     /** 责任单位 */
     responsibleDeptName?: string;
     /** 要求完成时间 */
@@ -105,4 +105,47 @@ export interface IProjectRiskReportResponseObject {
     responsibleDeptId?: number;
     /** undefined */
     handleUserIds?: Record<string, any>[];
+}
+
+export enum EPageInformationProjectRiskReportResponseObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationProjectRiskReportResponseObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectRiskReportResponseObject_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectRiskReportResponseObject_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProjectRiskReportResponseObject_level {
+    /** 低风险 */
+    LOW = "LOW",
+    /** 中分线 */
+    MID = "MID",
+    /** 高风险 */
+    HIGH = "HIGH"
 }

@@ -24,11 +24,11 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 任务类型 */
-    types?: ('PRODUCE' | 'BACK')[];
+    types?: EProductionTaskQueryDTOForMobileEnd_types_items[];
     /** 导出字段集 */
     exportFields?: string[];
     /** 生产任务可操作类型 */
-    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
+    optTypes?: EProductionTaskQueryDTOForMobileEnd_optTypes_items[];
     /** 工序id */
     processId: number;
     /** 生产订单号/生产任务编号(扫码查询时默认为生产订单号) */
@@ -36,7 +36,7 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 物料id */
     materialIds?: number[];
     /** 任务状态 */
-    statusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    statusList?: EProductionTaskQueryDTOForMobileEnd_statusList_items[];
     /** 工序id集合 */
     processIds?: number[];
     /** 开始时间 yyyy-MM-dd HH:mm:dd */
@@ -44,7 +44,7 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 结束时间 yyyy-MM-dd HH:mm:dd */
     endTime?: string;
     /** 任务进站关键参数是否需要填写 */
-    moveInKeyParameterFillNeeds?: ('Y' | 'N');
+    moveInKeyParameterFillNeeds?: EProductionTaskQueryDTOForMobileEnd_moveInKeyParameterFillNeeds;
     /** 生产任务编号集合(扫码查询切换进出料查询时传参) */
     taskNos?: string[];
     /** 计划生产数量最低数量 */
@@ -54,11 +54,11 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 计划生产数量最高数量 */
     planProduceMaxQuantity?: number;
     /** 任务出站关键参数是否需要填写 */
-    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
+    moveOutKeyParameterFillNeeds?: EProductionTaskQueryDTOForMobileEnd_moveOutKeyParameterFillNeeds;
     /** 生产订单字段搜索 */
     produceOrderSearchList?: IProcessDataDetailsSearchVO[];
     /** 查询类型 */
-    queryType?: ('MOVE_IN' | 'MOVE_OUT' | 'DEVICE' | 'MOLD');
+    queryType?: EProductionTaskQueryDTOForMobileEnd_queryType;
     /** undefined */
     userId?: number;
 }
@@ -67,14 +67,14 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -105,4 +105,68 @@ export interface INumberOfProductionTaskStatesReturnedForTheMobileEnd {
     produceQuantity?: number;
     /** 已关闭数量 */
     closeQuantity?: number;
+}
+
+export enum EProductionTaskQueryDTOForMobileEnd_types_items {
+    PRODUCE = "PRODUCE",
+    BACK = "BACK"
+}
+
+export enum EProductionTaskQueryDTOForMobileEnd_optTypes_items {
+    CAN_MOVE_IN = "CAN_MOVE_IN",
+    CAN_QUALITY = "CAN_QUALITY",
+    CAN_MOVE_OUT = "CAN_MOVE_OUT"
+}
+
+export enum EProductionTaskQueryDTOForMobileEnd_statusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionTaskQueryDTOForMobileEnd_moveInKeyParameterFillNeeds {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionTaskQueryDTOForMobileEnd_moveOutKeyParameterFillNeeds {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionTaskQueryDTOForMobileEnd_queryType {
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 设备 */
+    DEVICE = "DEVICE",
+    /** 模具 */
+    MOLD = "MOLD"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
 }

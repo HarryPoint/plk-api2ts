@@ -24,17 +24,17 @@ export interface IComputeSchemeEditRequestDTO {
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否明细业务 */
-    isDetailFlow?: ('Y' | 'N');
+    isDetailFlow?: EComputeSchemeEditRequestDTO_isDetailFlow;
     /** 公式类型 */
-    formulaType?: ('TIME_FUNCTION' | 'MATH_FUNCTION');
+    formulaType?: EComputeSchemeEditRequestDTO_formulaType;
     /** 公式 */
     formula?: string;
     /** 计算模式 */
-    calculationMode?: ('FIXED_TIME' | 'PERIODICITY');
+    calculationMode?: EComputeSchemeEditRequestDTO_calculationMode;
     /** 固定时间 */
     fixedTime?: string;
     /** 计算周期 */
-    calculationPeriod?: ('EVERY_DAY' | 'EVERY_MONTH' | 'EVERY_QUARTER' | 'EVERY_YEAR');
+    calculationPeriod?: EComputeSchemeEditRequestDTO_calculationPeriod;
     /** 过滤条件列表 */
     filterConditionList?: ICalculationSchemeFilterConditionDTO[];
 }
@@ -52,7 +52,44 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EComputeSchemeEditRequestDTO_isDetailFlow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EComputeSchemeEditRequestDTO_formulaType {
+    /** 时间函数 */
+    TIME_FUNCTION = "TIME_FUNCTION",
+    /** 数学函数 */
+    MATH_FUNCTION = "MATH_FUNCTION"
+}
+
+export enum EComputeSchemeEditRequestDTO_calculationMode {
+    /** 固定时间 */
+    FIXED_TIME = "FIXED_TIME",
+    /** 周期性 */
+    PERIODICITY = "PERIODICITY"
+}
+
+export enum EComputeSchemeEditRequestDTO_calculationPeriod {
+    /** 每天 */
+    EVERY_DAY = "EVERY_DAY",
+    /** 每月 */
+    EVERY_MONTH = "EVERY_MONTH",
+    /** 每季度 */
+    EVERY_QUARTER = "EVERY_QUARTER",
+    /** 每年 */
+    EVERY_YEAR = "EVERY_YEAR"
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

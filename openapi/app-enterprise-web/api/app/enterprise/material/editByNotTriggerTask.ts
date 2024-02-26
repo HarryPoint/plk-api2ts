@@ -29,17 +29,17 @@ export interface IMaterialBatchSetEditObject {
     /** 物料id */
     materialId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EMaterialBatchSetEditObject_enableSerialNo;
     /** 序列号方案id */
     serialNoSchemeId?: number;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EMaterialBatchSetEditObject_enableLot;
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EMaterialBatchSetEditObject_enableQualityTraceability;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EMaterialBatchSetEditObject_enableExternalCode;
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
@@ -55,4 +55,32 @@ export interface IJSONResultstring1 {
     data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EMaterialBatchSetEditObject_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSetEditObject_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSetEditObject_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSetEditObject_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -39,9 +39,9 @@ export interface IPagingInformationTheProductionCostAllocatesPagingResponseObjec
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationTheProductionCostAllocatesPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationTheProductionCostAllocatesPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -58,7 +58,7 @@ export interface IProductionCostAllocatesPagingResponseObjects {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus?: ('NONE' | 'PARTIAL_STOCK_IN' | 'FULL_STOCK_IN');
+    stockInStatus?: EProductionCostAllocatesPagingResponseObjects_stockInStatus;
     /** 入库状态描述 */
     stockInStatusDesc?: string;
     /** 计划开工时间 */
@@ -106,4 +106,27 @@ export interface IProductionCostAllocatesDynamicDataPagingResponseObjects {
     produceFeeTypeCode?: string;
     /** 费用 */
     produceFee?: number;
+}
+
+export enum EPagingInformationTheProductionCostAllocatesPagingResponseObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationTheProductionCostAllocatesPagingResponseObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionCostAllocatesPagingResponseObjects_stockInStatus {
+    /** 未入库 */
+    NONE = "NONE",
+    /** 部分入库 */
+    PARTIAL_STOCK_IN = "PARTIAL_STOCK_IN",
+    /** 完全入库 */
+    FULL_STOCK_IN = "FULL_STOCK_IN"
 }

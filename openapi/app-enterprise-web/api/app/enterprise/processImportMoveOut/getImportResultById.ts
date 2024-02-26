@@ -29,7 +29,7 @@ export interface IProcessMoveOutImportSynchronizationOutputDTO {
     /** undefined */
     id?: number;
     /** undefined */
-    importStatus?: ('NOT' | 'COMPLETE' | 'IMPORTING' | 'IMPORT_FAIL');
+    importStatus?: EProcessMoveOutImportSynchronizationOutputDTO_importStatus;
     /** undefined */
     failureMessage?: string;
     /** undefined */
@@ -55,4 +55,11 @@ export interface IProcessMoveOutImportFailureOutputDTO {
     processName?: string;
     /** undefined */
     failureMessage?: string;
+}
+
+export enum EProcessMoveOutImportSynchronizationOutputDTO_importStatus {
+    NOT = "NOT",
+    COMPLETE = "COMPLETE",
+    IMPORTING = "IMPORTING",
+    IMPORT_FAIL = "IMPORT_FAIL"
 }

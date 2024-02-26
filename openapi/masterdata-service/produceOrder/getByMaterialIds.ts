@@ -41,7 +41,7 @@ export interface IProductionOrder {
     /** 主生产订单号 */
     parentProduceOrderCode?: string;
     /** 订单类型 */
-    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
+    orderType?: EProductionOrder_orderType;
     /** 对应物料id */
     materialId?: number;
     /** 对应物料名称 */
@@ -83,11 +83,11 @@ export interface IProductionOrder {
     /** 交期日期 */
     deliveryDate?: string;
     /** 排产类型 */
-    planType?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE');
+    planType?: EProductionOrder_planType;
     /** 订单状态 */
-    orderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    orderStatus?: EProductionOrder_orderStatus;
     /** 订单排产状态 */
-    planStatus?: ('WAIT' | 'PART' | 'ALL');
+    planStatus?: EProductionOrder_planStatus;
     /** 关闭人 */
     closeUserId?: number;
     /** 关闭时间 */
@@ -104,4 +104,60 @@ export interface IProductionOrder {
     placeOrderDepartmentCode?: string;
     /** 下单业务部门名称 */
     placeOrderDepartmentName?: string;
+}
+
+export enum EProductionOrder_orderType {
+    /** 合同生产 */
+    CONTRACT = "CONTRACT",
+    /** 备库生产 */
+    STANDBY = "STANDBY",
+    /** 返工生产 */
+    REWORK = "REWORK",
+    /** 新产品实验生产 */
+    TEST = "TEST",
+    /** 虚拟订单 */
+    VIRTUAL = "VIRTUAL",
+    /** 其他订单 */
+    OTHER = "OTHER",
+    /** 报废补单 */
+    SCRAP_SUPPLEMENT = "SCRAP_SUPPLEMENT"
+}
+
+export enum EProductionOrder_planType {
+    /** 未排产 */
+    NOT_PLAN = "NOT_PLAN",
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum EProductionOrder_orderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EProductionOrder_planStatus {
+    /** 待排产 */
+    WAIT = "WAIT",
+    /** 部分排产 */
+    PART = "PART",
+    /** 全部排产 */
+    ALL = "ALL"
 }

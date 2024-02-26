@@ -26,7 +26,7 @@ export interface ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryO
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 可使用库存不为0---出库:Y 入库:N */
-    storageUseCountNotZero?: ('Y' | 'N');
+    storageUseCountNotZero?: ETheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects_storageUseCountNotZero;
     /** 仓库id */
     storehouseIds?: number[];
     /** 仓位id */
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«仓位系统应用库存批次号分页返回对象»» */
 export interface IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventoryBatchNumberPagingReturnObject {
@@ -65,9 +65,9 @@ export interface IPagingInformationTheWarehouseSystemAppliesInventoryBatchNumber
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationTheWarehouseSystemAppliesInventoryBatchNumberPagingToReturnObjects_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationTheWarehouseSystemAppliesInventoryBatchNumberPagingToReturnObjects_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -93,4 +93,30 @@ export interface ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingReturn
     storageLockCount?: number;
     /** 库存可使用数 */
     storageUseCount?: number;
+}
+
+export enum ETheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects_storageUseCountNotZero {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationTheWarehouseSystemAppliesInventoryBatchNumberPagingToReturnObjects_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationTheWarehouseSystemAppliesInventoryBatchNumberPagingToReturnObjects_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

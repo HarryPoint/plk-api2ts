@@ -26,7 +26,7 @@ export interface IProductionProcessesReworkAddingRequestObjects {
     /** 返工数量 */
     abnormalQuantity?: number;
     /** 返工生产后处理方式 */
-    backProduceType: ('RETURN' | 'ORDER');
+    backProduceType: EProductionProcessesReworkAddingRequestObjects_backProduceType;
     /** 标签id集合 */
     tagIds?: number[];
     /** 图片key集合 */
@@ -44,4 +44,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionProcessesReworkAddingRequestObjects_backProduceType {
+    /** 返回原工序 */
+    RETURN = "RETURN",
+    /** 顺序生产 */
+    ORDER = "ORDER"
 }

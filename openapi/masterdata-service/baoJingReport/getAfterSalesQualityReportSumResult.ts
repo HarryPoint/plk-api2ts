@@ -53,7 +53,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«售后质量分析返回VO»_1 */
 export interface IJSONResultAfterSalesQualityAnalysisReturnsVO1 {
@@ -70,4 +70,9 @@ export interface IJSONResultAfterSalesQualityAnalysisReturnsVO1 {
 export interface IAfterSalesQualityAnalysisReturnsVO2 {
     /** 数量 */
     quantitySum?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

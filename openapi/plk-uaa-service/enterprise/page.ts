@@ -26,7 +26,7 @@ export interface IEnterprisePagingQueryObject {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 服务状态列表 */
-    productServiceStatusList?: ('ON' | 'EXPIRE' | 'INVALID')[];
+    productServiceStatusList?: EEnterprisePagingQueryObject_productServiceStatusList_items[];
     /** 创建人ids */
     createUserIds?: number[];
     /** 导出字段集 */
@@ -34,7 +34,7 @@ export interface IEnterprisePagingQueryObject {
     /** 创建时间 -- 开始 */
     createBeginTime?: string;
     /** 服务类型列表 */
-    productServiceTypeList?: ('TRIAL' | 'FORMAL')[];
+    productServiceTypeList?: EEnterprisePagingQueryObject_productServiceTypeList_items[];
     /** 到期时间 -- 开始 */
     expireBeginTime?: string;
     /** 到期时间 -- 结束 */
@@ -47,7 +47,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«企业分页响应»» */
 export interface IJSONResultPagingInformationEnterprisePagingResponse {
@@ -75,9 +75,9 @@ export interface IPagingInformationEnterprisePagingResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationEnterprisePagingResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationEnterprisePagingResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,11 +92,11 @@ export interface IEnterprisePagingResponse {
     /** 企业名称 */
     name?: string;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EEnterprisePagingResponse_productType;
     /** 服务类型 */
-    productServiceType?: ('TRIAL' | 'FORMAL');
+    productServiceType?: EEnterprisePagingResponse_productServiceType;
     /** 服务状态 */
-    productServiceStatus?: ('ON' | 'EXPIRE' | 'INVALID');
+    productServiceStatus?: EEnterprisePagingResponse_productServiceStatus;
     /** 到期时间 */
     expireTime?: string;
     /** 可用账号数 */
@@ -110,9 +110,76 @@ export interface IEnterprisePagingResponse {
     /** 创建人 */
     createUserName?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement?: ('Y' | 'N');
+    isEnableBatchManagement?: EEnterprisePagingResponse_isEnableBatchManagement;
     /** 是否有新购的产品订单 */
-    hanNewBuyProductOrder?: ('Y' | 'N');
+    hanNewBuyProductOrder?: EEnterprisePagingResponse_hanNewBuyProductOrder;
     /** 系统当前版本号 */
     systemLastVersionCode?: string;
+}
+
+export enum EEnterprisePagingQueryObject_productServiceStatusList_items {
+    ON = "ON",
+    EXPIRE = "EXPIRE",
+    INVALID = "INVALID"
+}
+
+export enum EEnterprisePagingQueryObject_productServiceTypeList_items {
+    TRIAL = "TRIAL",
+    FORMAL = "FORMAL"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationEnterprisePagingResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationEnterprisePagingResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEnterprisePagingResponse_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EEnterprisePagingResponse_productServiceType {
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式 */
+    FORMAL = "FORMAL"
+}
+
+export enum EEnterprisePagingResponse_productServiceStatus {
+    /** 服务中 */
+    ON = "ON",
+    /** 服务过期 */
+    EXPIRE = "EXPIRE",
+    /** 服务已停用 */
+    INVALID = "INVALID"
+}
+
+export enum EEnterprisePagingResponse_isEnableBatchManagement {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEnterprisePagingResponse_hanNewBuyProductOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

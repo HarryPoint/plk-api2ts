@@ -38,7 +38,7 @@ export interface IStandardProcessCodingRulesDetailResponseDTO {
     /** id */
     id?: number;
     /** 类型 */
-    type?: ('PRODUCE_ORDER' | 'MATERIAL' | 'SERIAL_NO' | 'DATE' | 'FIX');
+    type?: EStandardProcessCodingRulesDetailResponseDTO_type;
     /** 应用表格列code - 类型是应用时有值 */
     flowPathTableColumnCode?: string;
     /** 流水号位数 - 类型是流水号时有值 */
@@ -48,7 +48,35 @@ export interface IStandardProcessCodingRulesDetailResponseDTO {
     /** 流水号步长值 - 类型是流水号时有值 */
     serialNoStepValue?: number;
     /** 日期格式 - 类型是日期时有值 */
-    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
+    dateFormat?: EStandardProcessCodingRulesDetailResponseDTO_dateFormat;
     /** 固定值 - 类型是固定值时有值 */
     fixValue?: string;
+}
+
+export enum EStandardProcessCodingRulesDetailResponseDTO_type {
+    /** 生产订单 */
+    PRODUCE_ORDER = "PRODUCE_ORDER",
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 流水号 */
+    SERIAL_NO = "SERIAL_NO",
+    /** 日期 */
+    DATE = "DATE",
+    /** 固定值 */
+    FIX = "FIX"
+}
+
+export enum EStandardProcessCodingRulesDetailResponseDTO_dateFormat {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 年月 */
+    YEAR_MONTH = "YEAR_MONTH",
+    /** 年月日 */
+    YEAR_MONTH_DAY = "YEAR_MONTH_DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 月日 */
+    MONTH_DAY = "MONTH_DAY",
+    /** 日 */
+    DAY = "DAY"
 }

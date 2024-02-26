@@ -27,13 +27,48 @@ export interface IJSONResultMaterialGlobalBatchSettingsEditResponseObject {
 /** 物料全局批次设置编辑响应对象 */
 export interface IMaterialGlobalBatchSettingsEditResponseObjects {
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EMaterialGlobalBatchSettingsEditResponseObjects_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EMaterialGlobalBatchSettingsEditResponseObjects_enableLot;
     /** 物料批次出库规则 */
-    lotOutRule?: ('BATCH_ORDER_FIFO' | 'MANUAL_SELECTION');
+    lotOutRule?: EMaterialGlobalBatchSettingsEditResponseObjects_lotOutRule;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EMaterialGlobalBatchSettingsEditResponseObjects_enableQualityTraceability;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EMaterialGlobalBatchSettingsEditResponseObjects_enableExternalCode;
+}
+
+export enum EMaterialGlobalBatchSettingsEditResponseObjects_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialGlobalBatchSettingsEditResponseObjects_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialGlobalBatchSettingsEditResponseObjects_lotOutRule {
+    /** 按批次顺序先进先出 */
+    BATCH_ORDER_FIFO = "BATCH_ORDER_FIFO",
+    /** 手动选择 */
+    MANUAL_SELECTION = "MANUAL_SELECTION"
+}
+
+export enum EMaterialGlobalBatchSettingsEditResponseObjects_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialGlobalBatchSettingsEditResponseObjects_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

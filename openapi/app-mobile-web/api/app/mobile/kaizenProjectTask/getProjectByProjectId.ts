@@ -45,11 +45,22 @@ export interface IKaizenProjectResponseDTO {
     /** 项目截止日期 */
     projectEndDate?: string;
     /** 项目状态 */
-    projectStatus?: ('DRAFT' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELED');
+    projectStatus?: EKaizenProjectResponseDTO_projectStatus;
     /** 项目状态描述 */
     projectStatusDesc?: string;
     /** 关联合理化建议 */
     proposalId?: number;
     /** 项目简介 */
     projectIntroduction?: string;
+}
+
+export enum EKaizenProjectResponseDTO_projectStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 进行中 */
+    IN_PROGRESS = "IN_PROGRESS",
+    /** 已完成 */
+    COMPLETED = "COMPLETED",
+    /** 已取消 */
+    CANCELED = "CANCELED"
 }

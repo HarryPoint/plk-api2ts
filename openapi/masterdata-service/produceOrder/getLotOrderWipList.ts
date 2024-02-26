@@ -18,7 +18,7 @@ export interface IBatchOrderWipSearchVO {
     /** 批次id集 */
     lotOrderIds?: number[];
     /** 批次操作类型 */
-    lotOpType?: ('SCRAP' | 'MARGE' | 'SPLIT' | 'TRANSFER');
+    lotOpType?: EBatchOrderWipSearchVO_lotOpType;
 }
 /** JSONResult«List«批次Wip信息返回VO»» */
 export interface IJSONResultListBatchWipInformationIsReturnedToVO {
@@ -57,11 +57,11 @@ export interface IBatchWipDetailsAreReturnedToVO {
     /** 工序编号 */
     processCode?: string;
     /** WIP类型 */
-    wipType?: ('BEFORE' | 'IN');
+    wipType?: EBatchWipDetailsAreReturnedToVO_wipType;
     /** WIP类型描述 */
     wipTypeDesc?: string;
     /** 任务类型 */
-    storageProduceType?: ('PRODUCE' | 'BACK');
+    storageProduceType?: EBatchWipDetailsAreReturnedToVO_storageProduceType;
     /** 任务类型描述 */
     storageProduceTypeDesc?: string;
     /** 生产任务id */
@@ -69,11 +69,64 @@ export interface IBatchWipDetailsAreReturnedToVO {
     /** 生产任务编号 */
     produceTaskNo?: string;
     /** 是否可用 */
-    canUse?: ('Y' | 'N');
+    canUse?: EBatchWipDetailsAreReturnedToVO_canUse;
     /** 数量状态 */
-    quantityStatus?: ('NORMAL' | 'WAIT_INSPECTION' | 'INSPECTION_PASS' | 'INSPECTION_CONCESSION' | 'INSPECTION_NOT_PASS' | 'APPLY_BACK' | 'APPLY_SCRAP' | 'HOLD' | 'ENTRUST_BACK');
+    quantityStatus?: EBatchWipDetailsAreReturnedToVO_quantityStatus;
     /** 数量状态描述 */
     quantityStatusDesc?: string;
     /** 数量 */
     quantity?: number;
+}
+
+export enum EBatchOrderWipSearchVO_lotOpType {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER"
+}
+
+export enum EBatchWipDetailsAreReturnedToVO_wipType {
+    /** 在制前 */
+    BEFORE = "BEFORE",
+    /** 在制中 */
+    IN = "IN"
+}
+
+export enum EBatchWipDetailsAreReturnedToVO_storageProduceType {
+    /** 生产 */
+    PRODUCE = "PRODUCE",
+    /** 返工 */
+    BACK = "BACK"
+}
+
+export enum EBatchWipDetailsAreReturnedToVO_canUse {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EBatchWipDetailsAreReturnedToVO_quantityStatus {
+    /** 正常 */
+    NORMAL = "NORMAL",
+    /** 等待质检 */
+    WAIT_INSPECTION = "WAIT_INSPECTION",
+    /** 质检合格 */
+    INSPECTION_PASS = "INSPECTION_PASS",
+    /** 质检让步接收 */
+    INSPECTION_CONCESSION = "INSPECTION_CONCESSION",
+    /** 质检不合格 */
+    INSPECTION_NOT_PASS = "INSPECTION_NOT_PASS",
+    /** 等待返工审批 */
+    APPLY_BACK = "APPLY_BACK",
+    /** 等待报废审批 */
+    APPLY_SCRAP = "APPLY_SCRAP",
+    /** 等待扣留审批 */
+    HOLD = "HOLD",
+    /** 委外返回 */
+    ENTRUST_BACK = "ENTRUST_BACK"
 }

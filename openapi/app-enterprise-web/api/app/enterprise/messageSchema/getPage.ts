@@ -18,11 +18,11 @@ export interface IMessageSchemeQueryRequest {
     /** 当前页面 */
     pageNo?: number;
     /** 消息发送方式 */
-    sendingModeList?: ('SYSTEM' | 'SMS' | 'EMAIL')[];
+    sendingModeList?: EMessageSchemeQueryRequest_sendingModeList_items[];
     /** 分页大小 */
     pageSize?: number;
     /** 发送状态 */
-    sendingContentStatusList?: ('NORMAL' | 'ABNORMAL')[];
+    sendingContentStatusList?: EMessageSchemeQueryRequest_sendingContentStatusList_items[];
     /** 消息标题 */
     messageSchemaTitle?: string;
     /** 创建员工 */
@@ -64,9 +64,9 @@ export interface IPageInformationPageQueryResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationPageQueryResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationPageQueryResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -85,7 +85,7 @@ export interface IPagingQueryResponse {
     /** 更新部门ID */
     updateDeptId?: number;
     /** 发送状态 */
-    sendingContentStatus?: ('NORMAL' | 'ABNORMAL');
+    sendingContentStatus?: EPagingQueryResponse_sendingContentStatus;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
@@ -116,4 +116,36 @@ export interface IPagingQueryResponse {
     applicationName?: string;
     /** 表单配置ID */
     formConfigId?: number;
+}
+
+export enum EMessageSchemeQueryRequest_sendingModeList_items {
+    SYSTEM = "SYSTEM",
+    SMS = "SMS",
+    EMAIL = "EMAIL"
+}
+
+export enum EMessageSchemeQueryRequest_sendingContentStatusList_items {
+    NORMAL = "NORMAL",
+    ABNORMAL = "ABNORMAL"
+}
+
+export enum EPageInformationPageQueryResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationPageQueryResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingQueryResponse_sendingContentStatus {
+    /** 正常 */
+    NORMAL = "NORMAL",
+    /** 异常 */
+    ABNORMAL = "ABNORMAL"
 }

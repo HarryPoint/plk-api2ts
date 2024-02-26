@@ -20,7 +20,7 @@ export interface ITaskBatchOperationDTO1 {
     /** 生产任务查询列表 */
     produceTaskDetails: ITaskBatchOperationDtos[];
     /** 查询类型 */
-    queryType: ('MOVE_IN' | 'MOVE_OUT' | 'DEVICE' | 'MOLD');
+    queryType: ETaskBatchOperationDTO1_queryType;
 }
 /** 任务批量操作DTO */
 export interface ITaskBatchOperationDtos {
@@ -85,7 +85,7 @@ export interface IBatchOpTaskMoveInOutResponseDTO {
     /** 生产任务ID */
     produceTaskId?: number;
     /** 进出站方式 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EBatchOpTaskMoveInOutResponseDTO_inOutType;
     /** 生产任务编码 */
     produceTaskNo?: string;
     /** 进料/出料数量(可用数量) */
@@ -105,4 +105,22 @@ export interface IBatchOperationTaskBatchOrderResponseDTO {
     waitQuantity?: number;
     /** 可进料数/可出料数 */
     canOptQuantity?: number;
+}
+
+export enum ETaskBatchOperationDTO1_queryType {
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 设备 */
+    DEVICE = "DEVICE",
+    /** 模具 */
+    MOLD = "MOLD"
+}
+
+export enum EBatchOpTaskMoveInOutResponseDTO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
 }

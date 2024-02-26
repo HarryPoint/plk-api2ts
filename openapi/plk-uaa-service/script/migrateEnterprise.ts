@@ -28,7 +28,7 @@ export interface IEnterpriseMigrateRequestDTO {
     /** undefined */
     expireTime: string;
     /** undefined */
-    isEnableBatchManagement?: ('Y' | 'N');
+    isEnableBatchManagement?: EEnterpriseMigrateRequestDTO_isEnableBatchManagement;
     /** undefined */
     accessKey?: string;
     /** undefined */
@@ -44,4 +44,9 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEnterpriseMigrateRequestDTO_isEnableBatchManagement {
+    Y = "Y",
+    N = "N"
 }

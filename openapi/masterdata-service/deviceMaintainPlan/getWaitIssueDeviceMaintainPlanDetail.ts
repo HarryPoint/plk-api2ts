@@ -28,11 +28,33 @@ export interface IMaintenancePlanDetailsToBeDeliveredResponseDTO {
     /** 所属区域id */
     areaId?: number;
     /** 保养类型 */
-    maintainType?: ('YEAR' | 'HALF_YEAR' | 'QUARTER' | 'MONTH');
+    maintainType?: EMaintenancePlanDetailsToBeDeliveredResponseDTO_maintainType;
     /** 保养方案id */
     maintainSchemeId?: number;
     /** 保养开始时间 */
     maintainStartTime?: string;
     /** 计划明细状态 */
-    planDetailStatus?: ('CREATED' | 'ISSUE' | 'CANCEL' | 'COMPLETE');
+    planDetailStatus?: EMaintenancePlanDetailsToBeDeliveredResponseDTO_planDetailStatus;
+}
+
+export enum EMaintenancePlanDetailsToBeDeliveredResponseDTO_maintainType {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 半年 */
+    HALF_YEAR = "HALF_YEAR",
+    /** 季度 */
+    QUARTER = "QUARTER",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EMaintenancePlanDetailsToBeDeliveredResponseDTO_planDetailStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
 }

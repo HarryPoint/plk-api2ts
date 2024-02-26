@@ -70,11 +70,11 @@ export interface IProductionSubMaterialInformation {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EProductionSubMaterialInformation_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EProductionSubMaterialInformation_enableLot;
     /** 启用批次 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionSubMaterialInformation_enableQualityTraceability;
 }
 /** 子物料生产信息VO_1 */
 export interface ISubMaterialProductionInformationVO1 {
@@ -129,9 +129,51 @@ export interface ISubMaterialProductionInformationVO1 {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: ESubMaterialProductionInformationVO1_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: ESubMaterialProductionInformationVO1_enableLot;
     /** 启用批次 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: ESubMaterialProductionInformationVO1_enableQualityTraceability;
+}
+
+export enum EProductionSubMaterialInformation_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionSubMaterialInformation_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionSubMaterialInformation_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESubMaterialProductionInformationVO1_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESubMaterialProductionInformationVO1_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESubMaterialProductionInformationVO1_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

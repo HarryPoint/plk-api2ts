@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchW
 /** 安全库存物料开关预警 */
 export interface ISafetyStockMaterialSwitchWarning {
     /** 设置类型 */
-    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
+    type: ESafetyStockMaterialSwitchWarning_type;
     /** 对应业务id */
     businessId?: number;
     /** 物料id */
     materialId: number;
     /** 是否开启预警 */
-    isWarning?: ('Y' | 'N');
+    isWarning?: ESafetyStockMaterialSwitchWarning_isWarning;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -34,4 +34,22 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESafetyStockMaterialSwitchWarning_type {
+    /** 全工厂 */
+    ALL = "ALL",
+    /** 区域 */
+    AREA = "AREA",
+    /** 仓库 */
+    STOREHOUSE = "STOREHOUSE",
+    /** 仓位 */
+    WAREHOUSE = "WAREHOUSE"
+}
+
+export enum ESafetyStockMaterialSwitchWarning_isWarning {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

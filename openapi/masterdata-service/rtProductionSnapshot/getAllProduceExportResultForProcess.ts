@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
+    timeType?: EOutputClassReportSearchVO_timeType;
 }
 /** JSONResult«List«产出报表导出VO»» */
 export interface IJSONResultListExportVOFromTheOutputReport {
@@ -61,4 +61,15 @@ export interface IOutputReportExportVO {
     scrapQuantity?: number;
     /** 返工产出 */
     backQuantity?: number;
+}
+
+export enum EOutputClassReportSearchVO_timeType {
+    /** 时 */
+    HOUR = "HOUR",
+    /** 日 */
+    DAY = "DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 年 */
+    YEAR = "YEAR"
 }

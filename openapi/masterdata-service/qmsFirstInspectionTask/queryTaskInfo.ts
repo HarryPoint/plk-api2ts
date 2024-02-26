@@ -31,11 +31,11 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     code?: string;
     /** undefined */
-    businessType?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
+    businessType?: ETheFirstCheckChecksTheTaskResponseObject_businessType;
     /** undefined */
-    isEmergent?: ('Y' | 'N');
+    isEmergent?: ETheFirstCheckChecksTheTaskResponseObject_isEmergent;
     /** undefined */
-    isTemporarily?: ('Y' | 'N');
+    isTemporarily?: ETheFirstCheckChecksTheTaskResponseObject_isTemporarily;
     /** undefined */
     qmsInspectionApplyFormMaterialDetailId?: number;
     /** undefined */
@@ -71,7 +71,7 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     mutualInspectionEmployeeIds?: number[];
     /** undefined */
-    inspectionMethod?: ('SPOT_CHECK' | 'ALL_CHECK');
+    inspectionMethod?: ETheFirstCheckChecksTheTaskResponseObject_inspectionMethod;
     /** undefined */
     inspectionQuantity?: number;
     /** undefined */
@@ -79,19 +79,19 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     selfUnQualifiedQuantity?: number;
     /** undefined */
-    selfInspectionResult?: ('Y' | 'N');
+    selfInspectionResult?: ETheFirstCheckChecksTheTaskResponseObject_selfInspectionResult;
     /** undefined */
     mutualQualifiedQuantity?: number;
     /** undefined */
     mutualUnQualifiedQuantity?: number;
     /** undefined */
-    mutualInspectionResult?: ('Y' | 'N');
+    mutualInspectionResult?: ETheFirstCheckChecksTheTaskResponseObject_mutualInspectionResult;
     /** undefined */
     specialQualifiedQuantity?: number;
     /** undefined */
     specialUnQualifiedQuantity?: number;
     /** undefined */
-    specialInspectionResult?: ('Y' | 'N');
+    specialInspectionResult?: ETheFirstCheckChecksTheTaskResponseObject_specialInspectionResult;
     /** undefined */
     applyInspectAddress?: string;
     /** undefined */
@@ -113,7 +113,7 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     inspectionEmployees?: IAssociateFormDataVO[];
     /** undefined */
-    isAssignment?: ('Y' | 'N');
+    isAssignment?: ETheFirstCheckChecksTheTaskResponseObject_isAssignment;
     /** undefined */
     inspectionEndDate?: string;
     /** undefined */
@@ -121,9 +121,9 @@ export interface ITheFirstCheckChecksTheTaskResponseObject {
     /** undefined */
     taskStartDate?: string;
     /** undefined */
-    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
+    taskStatus?: ETheFirstCheckChecksTheTaskResponseObject_taskStatus;
     /** undefined */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: ETheFirstCheckChecksTheTaskResponseObject_isOverdue;
     /** undefined */
     overdueDay?: number;
     /** undefined */
@@ -142,7 +142,7 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: ('Y' | 'N');
+    isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
     masterDataId?: number;
 }
@@ -153,7 +153,7 @@ export interface IFirstCheckCheckTaskMutualCheckRecordResponseObject {
     /** undefined */
     partNumber?: string;
     /** undefined */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: EFirstCheckCheckTaskMutualCheckRecordResponseObject_inspectionResultsOfIndividualParts;
     /** undefined */
     descriptionOfNonconformities?: string;
     /** undefined */
@@ -163,7 +163,7 @@ export interface IFirstCheckCheckTaskMutualCheckRecordResponseObject {
     /** undefined */
     inspectionActualValue?: string;
     /** undefined */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: EFirstCheckCheckTaskMutualCheckRecordResponseObject_inspectionResult;
 }
 /** 首检检验专检记录响应对象 */
 export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
@@ -172,7 +172,7 @@ export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
     /** undefined */
     partNumber?: string;
     /** undefined */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: EFirstCheckCheckSpecialCheckRecordResponseObject_inspectionResultsOfIndividualParts;
     /** undefined */
     descriptionOfNonconformities?: string;
     /** undefined */
@@ -182,7 +182,7 @@ export interface IFirstCheckCheckSpecialCheckRecordResponseObject {
     /** undefined */
     inspectionActualValue?: string;
     /** undefined */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: EFirstCheckCheckSpecialCheckRecordResponseObject_inspectionResult;
 }
 /** 首检检验检验自检记录响应对象 */
 export interface IFirstCheckCheckSelfCheckRecordResponseObject {
@@ -191,7 +191,7 @@ export interface IFirstCheckCheckSelfCheckRecordResponseObject {
     /** undefined */
     partNumber?: string;
     /** undefined */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: EFirstCheckCheckSelfCheckRecordResponseObject_inspectionResultsOfIndividualParts;
     /** undefined */
     descriptionOfNonconformities?: string;
     /** undefined */
@@ -201,5 +201,107 @@ export interface IFirstCheckCheckSelfCheckRecordResponseObject {
     /** undefined */
     inspectionActualValue?: string;
     /** undefined */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: EFirstCheckCheckSelfCheckRecordResponseObject_inspectionResult;
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_businessType {
+    CUSTOMER_COMPLAIN = "CUSTOMER_COMPLAIN",
+    INCOMING_INSPECTION = "INCOMING_INSPECTION",
+    FIRST_INSPECTION = "FIRST_INSPECTION",
+    PATROL_INSPECTION = "PATROL_INSPECTION",
+    PROCESS_INSPECTION = "PROCESS_INSPECTION",
+    PRODUCT_INSPECTION = "PRODUCT_INSPECTION",
+    SHIPMENT_INSPECTION = "SHIPMENT_INSPECTION",
+    EXPERIMENT = "EXPERIMENT",
+    OTHER = "OTHER"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_isEmergent {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_isTemporarily {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_inspectionMethod {
+    SPOT_CHECK = "SPOT_CHECK",
+    ALL_CHECK = "ALL_CHECK"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_selfInspectionResult {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_mutualInspectionResult {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_specialInspectionResult {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_isAssignment {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_taskStatus {
+    WAIT = "WAIT",
+    HANDLING = "HANDLING",
+    CANCEL = "CANCEL",
+    COMPLETE = "COMPLETE"
+}
+
+export enum ETheFirstCheckChecksTheTaskResponseObject_isOverdue {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EAssociateFormDataVO_isRemovedShowField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EFirstCheckCheckTaskMutualCheckRecordResponseObject_inspectionResultsOfIndividualParts {
+    QUALIFIED = "QUALIFIED",
+    UN_QUALIFIED = "UN_QUALIFIED",
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckCheckTaskMutualCheckRecordResponseObject_inspectionResult {
+    QUALIFIED = "QUALIFIED",
+    UN_QUALIFIED = "UN_QUALIFIED",
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckCheckSpecialCheckRecordResponseObject_inspectionResultsOfIndividualParts {
+    QUALIFIED = "QUALIFIED",
+    UN_QUALIFIED = "UN_QUALIFIED",
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckCheckSpecialCheckRecordResponseObject_inspectionResult {
+    QUALIFIED = "QUALIFIED",
+    UN_QUALIFIED = "UN_QUALIFIED",
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckCheckSelfCheckRecordResponseObject_inspectionResultsOfIndividualParts {
+    QUALIFIED = "QUALIFIED",
+    UN_QUALIFIED = "UN_QUALIFIED",
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckCheckSelfCheckRecordResponseObject_inspectionResult {
+    QUALIFIED = "QUALIFIED",
+    UN_QUALIFIED = "UN_QUALIFIED",
+    UNSUITED = "UNSUITED"
 }

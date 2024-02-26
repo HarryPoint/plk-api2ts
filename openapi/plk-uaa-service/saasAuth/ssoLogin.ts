@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ISingleSignOnRequestDTO }, 
 /** 单点登录请求 DTO */
 export interface ISingleSignOnRequestDTO {
     /** 单点登陆系统类型 */
-    ssoSystem: ('PLK' | 'KING_DEE_YZJ');
+    ssoSystem: ESingleSignOnRequestDTO_ssoSystem;
     /** 单点登陆目标模块 */
-    module?: ('QMS' | 'PROJECT');
+    module?: ESingleSignOnRequestDTO_module;
     /** 登陆企业id */
     enterpriseId: number;
     /** appId */
@@ -41,4 +41,18 @@ export interface IJSONResultLoginResponseDTO {
 export interface ILoginRespondsToDTO {
     /** token */
     accessToken?: string;
+}
+
+export enum ESingleSignOnRequestDTO_ssoSystem {
+    /** 普朗克云平台 */
+    PLK = "PLK",
+    /** 金蝶云之家 */
+    KING_DEE_YZJ = "KING_DEE_YZJ"
+}
+
+export enum ESingleSignOnRequestDTO_module {
+    /** 质量模块 */
+    QMS = "QMS",
+    /** 项目模块 */
+    PROJECT = "PROJECT"
 }

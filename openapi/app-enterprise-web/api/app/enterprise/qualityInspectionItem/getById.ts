@@ -33,11 +33,11 @@ export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检项编号 */
     code?: string;
     /** 质检方式 */
-    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod?: ECheckItemDetailsAreReturnedToVO_qualityMethod;
     /** 质检方式描述 */
     qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType?: ('SELECTOR' | 'CHECKBOX');
+    selectType?: ECheckItemDetailsAreReturnedToVO_selectType;
     /** 选择方式描述 */
     selectTypeDesc?: string;
     /** 备注 */
@@ -57,4 +57,18 @@ export interface ICheckItemDetailsAreReturnedToVO {
 export interface ITheInspectionItemOptionReturnsVO {
     /** 选择项名称 */
     name?: string;
+}
+
+export enum ECheckItemDetailsAreReturnedToVO_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum ECheckItemDetailsAreReturnedToVO_selectType {
+    /** 单选 */
+    SELECTOR = "SELECTOR",
+    /** 多选 */
+    CHECKBOX = "CHECKBOX"
 }

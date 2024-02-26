@@ -37,11 +37,11 @@ export interface IProductServiceDetailsResponseObject {
     /** 产品服务编号 */
     code?: string;
     /** 产品服务类型 */
-    type?: ('TRIAL' | 'FORMAL');
+    type?: EProductServiceDetailsResponseObject_type;
     /** 产品服务状态 */
-    status?: ('ON' | 'EXPIRE' | 'INVALID');
+    status?: EProductServiceDetailsResponseObject_status;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductServiceDetailsResponseObject_productType;
     /** 到期时间 */
     expireTime?: string;
     /** 账号数 */
@@ -62,11 +62,11 @@ export interface IProductOrderResponseObject {
     /** 企业id */
     enterpriseId?: number;
     /** 类型 */
-    type?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
+    type?: EProductOrderResponseObject_type;
     /** 状态 */
-    status?: ('WAIT_PAY' | 'PART_PAY' | 'COMPLETE_PAY');
+    status?: EProductOrderResponseObject_status;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductOrderResponseObject_productType;
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 下单用户id */
@@ -79,23 +79,129 @@ export interface IProductOrderResponseObject {
 /** 产品服务日志响应对象 */
 export interface IProductServiceLogResponseObject {
     /** 操作类型 */
-    type?: ('CREATE_FORMAL' | 'APPEND_FORMAL' | 'DELAY_FORMAL' | 'CREATE_TRIAL' | 'DELAY_TRIAL' | 'INVALID_FORMAL' | 'SWITCH_TRIAL_TO_FORMAL');
+    type?: EProductServiceLogResponseObject_type;
     /** 产品服务类型 */
-    productServiceType?: ('TRIAL' | 'FORMAL');
+    productServiceType?: EProductServiceLogResponseObject_productServiceType;
     /** 产品服务到期时间 */
     productServiceExpireTime?: string;
     /** 产品服务可用账号数 */
     productServiceAvailableAccountQuantity?: number;
     /** 产品类型 */
-    productType?: ('MES');
+    productType?: EProductServiceLogResponseObject_productType;
     /** 产品订单编号 */
     productOrderCode?: string;
     /** 产品订单类型 */
-    productOrderType?: ('NEW_BUY' | 'APPEND_BUY' | 'TRIAL' | 'FORMAL_DELAY' | 'TRIAL_DELAY');
+    productOrderType?: EProductServiceLogResponseObject_productOrderType;
     /** 产品订单加购类型 */
-    productOrderAppendType?: ('PRODUCT_MODULE' | 'DURATION' | 'USER_ACCOUNT');
+    productOrderAppendType?: EProductServiceLogResponseObject_productOrderAppendType;
     /** 产品订单延期类型 */
-    productOrderDelayType?: ('TRIAL' | 'FORMAL');
+    productOrderDelayType?: EProductServiceLogResponseObject_productOrderDelayType;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EProductServiceDetailsResponseObject_type {
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式 */
+    FORMAL = "FORMAL"
+}
+
+export enum EProductServiceDetailsResponseObject_status {
+    /** 服务中 */
+    ON = "ON",
+    /** 服务过期 */
+    EXPIRE = "EXPIRE",
+    /** 服务已停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProductServiceDetailsResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EProductOrderResponseObject_type {
+    /** 新购 */
+    NEW_BUY = "NEW_BUY",
+    /** 加购 */
+    APPEND_BUY = "APPEND_BUY",
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式延期 */
+    FORMAL_DELAY = "FORMAL_DELAY",
+    /** 使用延期 */
+    TRIAL_DELAY = "TRIAL_DELAY"
+}
+
+export enum EProductOrderResponseObject_status {
+    /** 待支付 */
+    WAIT_PAY = "WAIT_PAY",
+    /** 部分支付 */
+    PART_PAY = "PART_PAY",
+    /** 完成 */
+    COMPLETE_PAY = "COMPLETE_PAY"
+}
+
+export enum EProductOrderResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EProductServiceLogResponseObject_type {
+    /** 首次生成正式产品服务 */
+    CREATE_FORMAL = "CREATE_FORMAL",
+    /** 加购正式产品服务 */
+    APPEND_FORMAL = "APPEND_FORMAL",
+    /** 延期正式产品服务 */
+    DELAY_FORMAL = "DELAY_FORMAL",
+    /** 首次生成试用产品服务 */
+    CREATE_TRIAL = "CREATE_TRIAL",
+    /** 延期试用产品服务 */
+    DELAY_TRIAL = "DELAY_TRIAL",
+    /** 停用试用产品服务 */
+    INVALID_FORMAL = "INVALID_FORMAL",
+    /** 试用转正式服务 */
+    SWITCH_TRIAL_TO_FORMAL = "SWITCH_TRIAL_TO_FORMAL"
+}
+
+export enum EProductServiceLogResponseObject_productServiceType {
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式 */
+    FORMAL = "FORMAL"
+}
+
+export enum EProductServiceLogResponseObject_productType {
+    /** MES系统 */
+    MES = "MES"
+}
+
+export enum EProductServiceLogResponseObject_productOrderType {
+    /** 新购 */
+    NEW_BUY = "NEW_BUY",
+    /** 加购 */
+    APPEND_BUY = "APPEND_BUY",
+    /** 试用 */
+    TRIAL = "TRIAL",
+    /** 正式延期 */
+    FORMAL_DELAY = "FORMAL_DELAY",
+    /** 使用延期 */
+    TRIAL_DELAY = "TRIAL_DELAY"
+}
+
+export enum EProductServiceLogResponseObject_productOrderAppendType {
+    /** 产品模块 */
+    PRODUCT_MODULE = "PRODUCT_MODULE",
+    /** 时长 */
+    DURATION = "DURATION",
+    /** 用户账号数 */
+    USER_ACCOUNT = "USER_ACCOUNT"
+}
+
+export enum EProductServiceLogResponseObject_productOrderDelayType {
+    /** 试用延期 */
+    TRIAL = "TRIAL",
+    /** 正式延期 */
+    FORMAL = "FORMAL"
 }

@@ -60,7 +60,23 @@ export interface IEmailTaskQueryResponseDTO {
     /** 邮件主题 */
     title?: string;
     /** 发送方式 */
-    sendingMode?: ('SINGLE' | 'MULTIPLE');
+    sendingMode?: EEmailTaskQueryResponseDTO_sendingMode;
     /** 任务状态 */
-    status?: ('IN_ACTIVE' | 'DEACTIVATED' | 'COMPLETED');
+    status?: EEmailTaskQueryResponseDTO_status;
+}
+
+export enum EEmailTaskQueryResponseDTO_sendingMode {
+    /** 单次 */
+    SINGLE = "SINGLE",
+    /** 多次 */
+    MULTIPLE = "MULTIPLE"
+}
+
+export enum EEmailTaskQueryResponseDTO_status {
+    /** 生效中 */
+    IN_ACTIVE = "IN_ACTIVE",
+    /** 已停用 */
+    DEACTIVATED = "DEACTIVATED",
+    /** 已完成 */
+    COMPLETED = "COMPLETED"
 }

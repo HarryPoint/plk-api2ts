@@ -24,7 +24,7 @@ export interface IUserProductionStatisticsSearchVO {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList?: ('PRODUCE' | 'BACK')[];
+    produceTaskTypeList?: EUserProductionStatisticsSearchVO_produceTaskTypeList_items[];
     /** 生产订单编码 */
     produceOrderCode?: string;
 }
@@ -51,4 +51,9 @@ export interface IUserProductionTotalStatisticsAreReturnedToVO {
     totalScrapQuantity?: number;
     /** 总暂扣品个数 */
     totalHoldPauseQuantity?: number;
+}
+
+export enum EUserProductionStatisticsSearchVO_produceTaskTypeList_items {
+    PRODUCE = "PRODUCE",
+    BACK = "BACK"
 }

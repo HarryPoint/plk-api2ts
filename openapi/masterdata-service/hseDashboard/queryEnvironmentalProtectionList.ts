@@ -46,5 +46,12 @@ export interface IEnvironmentalProtectionSQueryResponse {
     /** 重大隐患处理数量 */
     majorHazardQuantity?: number;
     /** 是否有异常 */
-    isException?: ('Y' | 'N');
+    isException?: EEnvironmentalProtectionSQueryResponse_isException;
+}
+
+export enum EEnvironmentalProtectionSQueryResponse_isException {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

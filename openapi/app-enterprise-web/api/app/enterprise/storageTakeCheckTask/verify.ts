@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICheckTheDTOForInventoryTas
 /** 盘点任务核对DTO */
 export interface ICheckTheDTOForInventoryTasks {
     /** 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT) */
-    editType?: ('DEFAULT' | 'STAGING' | 'COMPLETE' | 'FLOW_PATH_TASK');
+    editType?: ECheckTheDTOForInventoryTasks_editType;
     /** 任务id */
     id: number;
     /** 盘点核对详情 */
@@ -50,4 +50,15 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ECheckTheDTOForInventoryTasks_editType {
+    /** 默认 */
+    DEFAULT = "DEFAULT",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 直接生效 */
+    COMPLETE = "COMPLETE",
+    /** 流程任务 */
+    FLOW_PATH_TASK = "FLOW_PATH_TASK"
 }

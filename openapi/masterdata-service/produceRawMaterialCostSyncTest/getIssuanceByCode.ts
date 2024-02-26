@@ -33,7 +33,7 @@ export interface IProductionMaterialIssuanceOrderCostFetchBO {
     /** undefined */
     detailList?: IProductionMaterialIssuanceOrderCostFetchDetailBO[];
     /** undefined */
-    success?: ('Y' | 'N');
+    success?: EProductionMaterialIssuanceOrderCostFetchBO_success;
     /** undefined */
     errorInfo?: string;
 }
@@ -47,4 +47,9 @@ export interface IProductionMaterialIssuanceOrderCostFetchDetailBO {
     unitCost?: number;
     /** undefined */
     totalCost?: number;
+}
+
+export enum EProductionMaterialIssuanceOrderCostFetchBO_success {
+    Y = "Y",
+    N = "N"
 }

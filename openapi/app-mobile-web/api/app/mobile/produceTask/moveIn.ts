@@ -32,7 +32,7 @@ export interface IIncomingInformationDTO {
     /** 拆分批次相关 */
     splitLots?: IIncomingBatchSplitRequestDTO[];
     /** undefined */
-    handleOtherAsync?: ('Y' | 'N');
+    handleOtherAsync?: EIncomingInformationDTO_handleOtherAsync;
 }
 /** 成品物料填写请求DTO */
 export interface IFinishedMaterialFillRequestDTO {
@@ -115,4 +115,9 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EIncomingInformationDTO_handleOtherAsync {
+    Y = "Y",
+    N = "N"
 }

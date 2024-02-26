@@ -54,7 +54,7 @@ export interface IProcessWorkOrderVO1 {
     /** undefined */
     planBeginTime?: string;
     /** undefined */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProcessWorkOrderVO1_status;
     /** undefined */
     processStatus?: string;
     /** undefined */
@@ -67,4 +67,12 @@ export interface IProcessWorkOrderVO1 {
     currentTotalTaskCount?: number;
     /** undefined */
     currentTotalTimeoutTaskCount?: number;
+}
+
+export enum EProcessWorkOrderVO1_status {
+    HANDLING = "HANDLING",
+    COMPLETE = "COMPLETE",
+    NOT_PASS = "NOT_PASS",
+    STAGING = "STAGING",
+    INVALID = "INVALID"
 }

@@ -36,9 +36,16 @@ export interface IUserEmployeeInformationResponse {
     /** 用户id */
     userId?: number;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EUserEmployeeInformationResponse_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
     serviceBusinessId?: number;
+}
+
+export enum EUserEmployeeInformationResponse_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

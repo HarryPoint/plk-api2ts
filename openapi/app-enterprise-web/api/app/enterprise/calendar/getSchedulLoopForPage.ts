@@ -27,7 +27,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«排班记录返回VO»» */
 export interface IJSONResultPagingInformationSchedulingRecordReturnsVO {
@@ -55,9 +55,9 @@ export interface IPagingInformationSchedulingRecordReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationSchedulingRecordReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationSchedulingRecordReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -98,7 +98,7 @@ export interface IScheduleBaseDetailsAreReturnedToVO {
     /** 班次开始时间 */
     classShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EScheduleBaseDetailsAreReturnedToVO_endTimeType;
     /** 班次结束时间 */
     classShiftEndTime?: ILocalTime;
     /** 班组列表信息 */
@@ -121,4 +121,30 @@ export interface ISchedulingBaseDetailGroupReturnsVO {
     classGroupId?: number;
     /** 班组名称 */
     classGroupName?: string;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationSchedulingRecordReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationSchedulingRecordReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EScheduleBaseDetailsAreReturnedToVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

@@ -43,7 +43,22 @@ export interface ITheProductionTaskSelectionInformationIsReturnedToVO {
     /** 对应班次编号 */
     classShiftCode?: string;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: ETheProductionTaskSelectionInformationIsReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
+}
+
+export enum ETheProductionTaskSelectionInformationIsReturnedToVO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

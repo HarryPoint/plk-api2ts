@@ -18,7 +18,7 @@ export interface IToDoMarkReadRequestDTO {
     /** 用户ID不能为空 */
     userId?: number;
     /** 是否全部标记已读 */
-    isAll: ('Y' | 'N');
+    isAll: EToDoMarkReadRequestDTO_isAll;
     /** 单个标记id，isAll=N时必传 */
     id?: number;
 }
@@ -32,4 +32,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EToDoMarkReadRequestDTO_isAll {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

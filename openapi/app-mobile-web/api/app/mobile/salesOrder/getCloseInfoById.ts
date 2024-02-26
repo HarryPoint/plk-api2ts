@@ -31,11 +31,11 @@ export interface ISalesOrderClosureInformationIsReturnedToVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 是否存在未关闭的生产订单 */
-    hasNotCloseProduceOrder?: ('Y' | 'N');
+    hasNotCloseProduceOrder?: ESalesOrderClosureInformationIsReturnedToVO_hasNotCloseProduceOrder;
     /** 是否存在未处理的审批事件 */
-    hasWaitProduceHandle?: ('Y' | 'N');
+    hasWaitProduceHandle?: ESalesOrderClosureInformationIsReturnedToVO_hasWaitProduceHandle;
     /** 是否存在未处理完的委外订单 */
-    hasSurplusProduceEntrust?: ('Y' | 'N');
+    hasSurplusProduceEntrust?: ESalesOrderClosureInformationIsReturnedToVO_hasSurplusProduceEntrust;
     /** 明细 */
     details?: ISalesOrderDetailsCloseInformationBackToVO[];
 }
@@ -55,4 +55,25 @@ export interface ISalesOrderDetailsCloseInformationBackToVO {
     totalProduceCount?: number;
     /** 未转换数量 */
     notConvertCount?: number;
+}
+
+export enum ESalesOrderClosureInformationIsReturnedToVO_hasNotCloseProduceOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESalesOrderClosureInformationIsReturnedToVO_hasWaitProduceHandle {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESalesOrderClosureInformationIsReturnedToVO_hasSurplusProduceEntrust {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

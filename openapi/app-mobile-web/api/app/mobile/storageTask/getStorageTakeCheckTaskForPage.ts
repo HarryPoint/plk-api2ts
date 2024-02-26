@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISearchVOOnTheExecutionSide
 /** 仓库盘点任务执行端搜索VO */
 export interface ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask {
     /** 处理类型 */
-    handleType?: ('WAIT' | 'HANDLED');
+    handleType?: ESearchVOOnTheExecutionSideOfTheWarehouseInventoryTask_handleType;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -29,7 +29,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«仓库盘点任务执行端返回DTO»» */
 export interface IJSONResultReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask {
@@ -57,9 +57,9 @@ export interface IPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouse
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -85,4 +85,30 @@ export interface ITheExecutionEndOfTheWarehouseInventoryTaskReturnsTheDTO {
     handleUserId?: number;
     /** 提交人 */
     handleUserName?: string;
+}
+
+export enum ESearchVOOnTheExecutionSideOfTheWarehouseInventoryTask_handleType {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 已处理 */
+    HANDLED = "HANDLED"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

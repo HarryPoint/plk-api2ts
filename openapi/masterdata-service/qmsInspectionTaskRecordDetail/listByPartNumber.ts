@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: ICheckTaskCheckRecordQueryR
 /** 检验任务检验记录查询请求DTO */
 export interface ICheckTaskCheckRecordQueryRequestDTO {
     /** 业务类型 */
-    businessType?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
+    businessType?: ECheckTaskCheckRecordQueryRequestDTO_businessType;
     /** 检验任务id */
     inspectionTaskId?: number;
     /** 零件号 */
     partNumber?: string;
     /** 三检制类型 */
-    threeInspectionSystem?: ('SELF_INSPECTION' | 'MUTUAL_INSPECTION' | 'SPECIAL_INSPECTION');
+    threeInspectionSystem?: ECheckTaskCheckRecordQueryRequestDTO_threeInspectionSystem;
 }
 /** JSONResult«List«检验任务检验记录查询响应DTO»» */
 export interface IJSONResultListValidationTaskValidatesTheRecordQueryResponseDTO {
@@ -40,7 +40,7 @@ export interface ICheckTaskCheckRecordQueryResponseDTO {
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: ECheckTaskCheckRecordQueryResponseDTO_inspectionResultsOfIndividualParts;
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -52,5 +52,53 @@ export interface ICheckTaskCheckRecordQueryResponseDTO {
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: ECheckTaskCheckRecordQueryResponseDTO_inspectionResult;
+}
+
+export enum ECheckTaskCheckRecordQueryRequestDTO_businessType {
+    /** 客户投诉 */
+    CUSTOMER_COMPLAIN = "CUSTOMER_COMPLAIN",
+    /** 来料检 */
+    INCOMING_INSPECTION = "INCOMING_INSPECTION",
+    /** 首检 */
+    FIRST_INSPECTION = "FIRST_INSPECTION",
+    /** 巡检 */
+    PATROL_INSPECTION = "PATROL_INSPECTION",
+    /** 工序检 */
+    PROCESS_INSPECTION = "PROCESS_INSPECTION",
+    /** 成品检 */
+    PRODUCT_INSPECTION = "PRODUCT_INSPECTION",
+    /** 出货检 */
+    SHIPMENT_INSPECTION = "SHIPMENT_INSPECTION",
+    /** 试验 */
+    EXPERIMENT = "EXPERIMENT",
+    /** 其它 */
+    OTHER = "OTHER"
+}
+
+export enum ECheckTaskCheckRecordQueryRequestDTO_threeInspectionSystem {
+    /** 自检 */
+    SELF_INSPECTION = "SELF_INSPECTION",
+    /** 互检 */
+    MUTUAL_INSPECTION = "MUTUAL_INSPECTION",
+    /** 专检 */
+    SPECIAL_INSPECTION = "SPECIAL_INSPECTION"
+}
+
+export enum ECheckTaskCheckRecordQueryResponseDTO_inspectionResultsOfIndividualParts {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
+}
+
+export enum ECheckTaskCheckRecordQueryResponseDTO_inspectionResult {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
 }

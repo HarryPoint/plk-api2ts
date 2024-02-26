@@ -22,11 +22,11 @@ export interface IDeviceDataAcquisitionCommunicationParametersEditDTO {
     /** 设备编号 */
     code?: string;
     /** 数据类型 */
-    dataType?: ('NUMBER' | 'TEXT');
+    dataType?: EDeviceDataAcquisitionCommunicationParametersEditDTO_dataType;
     /** 单位类型 */
-    unitType?: ('TIME' | 'QUANTITY');
+    unitType?: EDeviceDataAcquisitionCommunicationParametersEditDTO_unitType;
     /** 是否应用编码规则 */
-    isCodeRule: ('Y' | 'N');
+    isCodeRule: EDeviceDataAcquisitionCommunicationParametersEditDTO_isCodeRule;
     /** 单位 */
     unit?: string;
     /** 备注 */
@@ -42,4 +42,25 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EDeviceDataAcquisitionCommunicationParametersEditDTO_dataType {
+    /** 数字 */
+    NUMBER = "NUMBER",
+    /** 文本 */
+    TEXT = "TEXT"
+}
+
+export enum EDeviceDataAcquisitionCommunicationParametersEditDTO_unitType {
+    /** 时间 */
+    TIME = "TIME",
+    /** 数量 */
+    QUANTITY = "QUANTITY"
+}
+
+export enum EDeviceDataAcquisitionCommunicationParametersEditDTO_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -39,11 +39,11 @@ export interface IProjectTaskResponseObject {
     /** 任务进度 */
     taskProgress?: number;
     /** 任务状态 */
-    taskStatus?: ('DRAFT' | 'UN_ISSUE' | 'UN_RECEIVE' | 'UN_START' | 'HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'CANCEL');
+    taskStatus?: EProjectTaskResponseObject_taskStatus;
     /** 任务状态描述 */
     taskStatusDesc?: string;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProjectTaskResponseObject_isOverdue;
     /** 任务类型id */
     projectTaskTypeId?: number;
     /** 任务类型 */
@@ -85,4 +85,30 @@ export interface IIdCodeNameGenericTransportObject {
     code?: string;
     /** name */
     name?: string;
+}
+
+export enum EProjectTaskResponseObject_taskStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 未下发 */
+    UN_ISSUE = "UN_ISSUE",
+    /** 未接受 */
+    UN_RECEIVE = "UN_RECEIVE",
+    /** 未开始 */
+    UN_START = "UN_START",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProjectTaskResponseObject_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

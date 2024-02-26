@@ -39,9 +39,9 @@ export interface IThePageInformationQualityStatisticalAnalysisReportReturnsTheDT
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -105,4 +105,18 @@ export interface IQualityStatisticalAnalysisReportReturnedToDTO {
     ppm?: number;
     /** 检验及时率% */
     timelinessRate?: number;
+}
+
+export enum EThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationQualityStatisticalAnalysisReportReturnsTheDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

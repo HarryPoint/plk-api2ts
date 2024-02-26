@@ -22,7 +22,7 @@ export interface ISecurityStockChangeRequestSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 设置类型 */
-    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
+    type: ESecurityStockChangeRequestSearchVO_type;
     /** 对应业务id */
     businessId?: number;
 }
@@ -31,7 +31,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -43,4 +43,20 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ESecurityStockChangeRequestSearchVO_type {
+    /** 全工厂 */
+    ALL = "ALL",
+    /** 区域 */
+    AREA = "AREA",
+    /** 仓库 */
+    STOREHOUSE = "STOREHOUSE",
+    /** 仓位 */
+    WAREHOUSE = "WAREHOUSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

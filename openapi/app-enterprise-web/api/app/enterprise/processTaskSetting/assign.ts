@@ -18,7 +18,7 @@ export interface IProcessTaskAssignmentDTO {
     /** 工序ids */
     processIds: number[];
     /** 是否分配  Y 分配 N 不分配 */
-    isAssign: ('Y' | 'N');
+    isAssign: EProcessTaskAssignmentDTO_isAssign;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProcessTaskAssignmentDTO_isAssign {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

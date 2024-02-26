@@ -24,13 +24,13 @@ export interface IPublicBacklogDataQuery {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
-    isTimeout?: ('Y' | 'N');
+    isTimeout?: EPublicBacklogDataQuery_isTimeout;
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE')[];
+    qualityProduceTaskStatusList?: EPublicBacklogDataQuery_qualityProduceTaskStatusList_items[];
     /** 生产任务可操作类型 */
-    optTypes?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
+    optTypes?: EPublicBacklogDataQuery_optTypes_items[];
 }
 /** JSONResult«List«StorageTakeCheckTaskResponseDTO»» */
 export interface IJSONResultListStorageTakeCheckTaskResponseDTO {
@@ -52,7 +52,7 @@ export interface IStorageTakeCheckTaskResponseDTO {
     /** 盘点仓库id */
     storehouseId?: number;
     /** 盘点范围 */
-    scopeType?: ('APPOINT' | 'MATERIAL_TYPE' | 'ALL');
+    scopeType?: EStorageTakeCheckTaskResponseDTO_scopeType;
     /** 任务号 */
     taskNo?: string;
     /** 处理人id */
@@ -62,5 +62,60 @@ export interface IStorageTakeCheckTaskResponseDTO {
     /** 完成时间 */
     completeTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: EStorageTakeCheckTaskResponseDTO_status;
+}
+
+export enum EPublicBacklogDataQuery_produceTaskStatusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EPublicBacklogDataQuery_isTimeout {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPublicBacklogDataQuery_qualityProduceTaskStatusList_items {
+    WAIT = "WAIT",
+    COMPLETE = "COMPLETE",
+    CANCEL = "CANCEL",
+    CLOSE = "CLOSE"
+}
+
+export enum EPublicBacklogDataQuery_optTypes_items {
+    CAN_MOVE_IN = "CAN_MOVE_IN",
+    CAN_QUALITY = "CAN_QUALITY",
+    CAN_MOVE_OUT = "CAN_MOVE_OUT"
+}
+
+export enum EStorageTakeCheckTaskResponseDTO_scopeType {
+    /** 指定仓位 */
+    APPOINT = "APPOINT",
+    /** 物料类型 */
+    MATERIAL_TYPE = "MATERIAL_TYPE",
+    /** 全部物料 */
+    ALL = "ALL"
+}
+
+export enum EStorageTakeCheckTaskResponseDTO_status {
+    /** 待盘点 */
+    WAIT = "WAIT",
+    /** 盘点中 */
+    HANDLING = "HANDLING",
+    /** 待核对 */
+    WAIT_VERIFY = "WAIT_VERIFY",
+    /** 待盈亏处理 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
 }

@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProductionExceptionTypeSta
 /** 生产异常类型统计VO_1 */
 export interface IProductionExceptionTypeStatisticsVO1 {
     /** 所属分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'CANCEL_TASK');
+    type?: EProductionExceptionTypeStatisticsVO1_type;
     /** 处理状态 */
-    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
+    status?: EProductionExceptionTypeStatisticsVO1_status;
     /** 业务类型 */
-    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
+    businessType?: EProductionExceptionTypeStatisticsVO1_businessType;
     /** 所属物料ids */
     materialIds?: number[];
     /** 开始时间 */
@@ -47,4 +47,57 @@ export interface IProductionExceptionTypeStatisticsVO {
     categoryName?: string;
     /** 异常类型数量 */
     quantity?: number;
+}
+
+export enum EProductionExceptionTypeStatisticsVO1_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 撤销任务 */
+    CANCEL_TASK = "CANCEL_TASK"
+}
+
+export enum EProductionExceptionTypeStatisticsVO1_status {
+    /** 待处理 */
+    CREATED = "CREATED",
+    /** 已确认 */
+    SURE = "SURE",
+    /** 已忽略 */
+    IGNORE = "IGNORE",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 处理中 */
+    HANDING = "HANDING",
+    /** 处理完成 */
+    ALL_HANDLE = "ALL_HANDLE",
+    /** 批准 */
+    APPROVAL = "APPROVAL",
+    /** 拒绝 */
+    REFUSE = "REFUSE",
+    /** 撤销 */
+    REVOKE = "REVOKE",
+    /** 完成 */
+    COMPLETE = "COMPLETE",
+    /** 取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionExceptionTypeStatisticsVO1_businessType {
+    /** 进出站 */
+    IN_OUT = "IN_OUT",
+    /** 质检 */
+    QUALITY = "QUALITY",
+    /** 异常 */
+    ABNORMAL = "ABNORMAL",
+    /** 系统 */
+    SYSTEM = "SYSTEM"
 }

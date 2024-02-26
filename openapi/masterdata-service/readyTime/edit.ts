@@ -24,7 +24,7 @@ export interface IPreparatoryPeriodEditorDTO {
     /** 编号 */
     code?: string;
     /** 规则类型 */
-    ruleType: ('EQUAL' | 'NOT_EQUAL');
+    ruleType: EPreparatoryPeriodEditorDTO_ruleType;
     /** 耗时 */
     takeTime: number;
 }
@@ -38,4 +38,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EPreparatoryPeriodEditorDTO_ruleType {
+    /** 产出物料相同 */
+    EQUAL = "EQUAL",
+    /** 产出物料不相同 */
+    NOT_EQUAL = "NOT_EQUAL"
 }

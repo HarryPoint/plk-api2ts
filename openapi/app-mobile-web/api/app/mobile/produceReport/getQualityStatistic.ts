@@ -24,7 +24,7 @@ export interface IUserProductionStatisticsSearchVO {
     /** 工序id集合 */
     processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList?: ('PRODUCE' | 'BACK')[];
+    produceTaskTypeList?: EUserProductionStatisticsSearchVO_produceTaskTypeList_items[];
     /** 生产订单编码 */
     produceOrderCode?: string;
 }
@@ -71,4 +71,9 @@ export interface IUserInspectionStatisticsReturnVO {
     notPassQuantity?: number;
     /** 不合格数占比 */
     notPassQuantityRatio?: number;
+}
+
+export enum EUserProductionStatisticsSearchVO_produceTaskTypeList_items {
+    PRODUCE = "PRODUCE",
+    BACK = "BACK"
 }

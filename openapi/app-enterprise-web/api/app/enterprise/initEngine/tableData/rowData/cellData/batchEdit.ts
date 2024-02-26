@@ -39,7 +39,7 @@ export interface IAssociatedFieldDefinition1 {
     /** undefined */
     name?: string;
     /** undefined */
-    fieldType?: ('INPUT_TEXT' | 'TEXTAREA' | 'NUMBER' | 'DATE' | 'SELECTOR' | 'CHECKBOX' | 'CODE' | 'FORM_RP' | 'FORM_RP_MULTI' | 'EMAIL' | 'MOBILE' | 'ID_CARD');
+    fieldType?: EAssociatedFieldDefinition1_fieldType;
     /** undefined */
     applicationCode?: string;
 }
@@ -57,7 +57,27 @@ export interface IJSONResultstring {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: ('Y' | 'N');
+    data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EAssociatedFieldDefinition1_fieldType {
+    INPUT_TEXT = "INPUT_TEXT",
+    TEXTAREA = "TEXTAREA",
+    NUMBER = "NUMBER",
+    DATE = "DATE",
+    SELECTOR = "SELECTOR",
+    CHECKBOX = "CHECKBOX",
+    CODE = "CODE",
+    FORM_RP = "FORM_RP",
+    FORM_RP_MULTI = "FORM_RP_MULTI",
+    EMAIL = "EMAIL",
+    MOBILE = "MOBILE",
+    ID_CARD = "ID_CARD"
+}
+
+export enum EJSONResultstring_data {
+    Y = "Y",
+    N = "N"
 }

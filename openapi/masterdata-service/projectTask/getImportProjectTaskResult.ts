@@ -33,7 +33,7 @@ export interface IProjectTaskImportRecordQueryResponse {
     /** 项目计划id */
     projectPlanId?: number;
     /** 导入状态 */
-    importStatus?: ('CREATED' | 'IMPORTING' | 'COMPLETE' | 'IMPORT_FAIL');
+    importStatus?: EProjectTaskImportRecordQueryResponse_importStatus;
     /** 总数 */
     totalQuantity?: number;
     /** 成功条数 */
@@ -53,4 +53,15 @@ export interface IProjectTaskImportRecordErrorMessageQueryResponse {
     rowNo?: number;
     /** 失败信息 */
     failedMessage?: string;
+}
+
+export enum EProjectTaskImportRecordQueryResponse_importStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 导入中 */
+    IMPORTING = "IMPORTING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 导入失败 */
+    IMPORT_FAIL = "IMPORT_FAIL"
 }

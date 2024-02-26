@@ -123,11 +123,11 @@ export interface IBomBOMMaterialConfirmationVO {
     /** 实际数 */
     actualQuantity?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EBomBOMMaterialConfirmationVO_enableQualityTraceability;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EBomBOMMaterialConfirmationVO_enableLot;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EBomBOMMaterialConfirmationVO_enableSerialNo;
 }
 /** ProduceTechnologyKeyParameterResponseDTO */
 export interface IProduceTechnologyKeyParameterResponseDTO {
@@ -205,9 +205,9 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     /** 帮助提示 */
     remark?: string;
     /** 录入类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EProduceTechnologyKeyParameterDetailResponseDTO_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EProduceTechnologyKeyParameterDetailResponseDTO_textType;
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */
@@ -236,45 +236,219 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EProductionProcessPathStepSettingsReturnVO_allowDirectExit;
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: ('Y' | 'N');
+    needConfirmMoveInQuantity?: EProductionProcessPathStepSettingsReturnVO_needConfirmMoveInQuantity;
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: ('Y' | 'N');
+    autoBringOutLastMold?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastMold;
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: ('Y' | 'N');
+    autoBringOutLastDevice?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastDevice;
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: ('Y' | 'N');
+    autoBringOutLastBomConsume?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastBomConsume;
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: ('Y' | 'N');
+    allowSplitLot?: EProductionProcessPathStepSettingsReturnVO_allowSplitLot;
     /** 是否强制拆分批次 */
-    forcedSplitLot?: ('Y' | 'N');
+    forcedSplitLot?: EProductionProcessPathStepSettingsReturnVO_forcedSplitLot;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionProcessPathStepSettingsReturnVO_enableQualityTraceability;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EProductionProcessPathStepSettingsReturnVO_enableLot;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EProductionProcessPathStepSettingsReturnVO_enableSerialNo;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EProductionProcessPathStepSettingsReturnVO_enableExternalCode;
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: ('Y' | 'N');
+    enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */
-    enableMold?: ('Y' | 'N');
+    enableMold?: EProductionProcessPathStepSettingsReturnVO_enableMold;
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: ('Y' | 'N');
+    enableMoveInBomConsume?: EProductionProcessPathStepSettingsReturnVO_enableMoveInBomConsume;
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: ('Y' | 'N');
+    enableMoveOutBomConsume?: EProductionProcessPathStepSettingsReturnVO_enableMoveOutBomConsume;
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: ('Y' | 'N');
+    enableMoveInKeyParameter?: EProductionProcessPathStepSettingsReturnVO_enableMoveInKeyParameter;
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: ('Y' | 'N');
+    enableMoveOutKeyParameter?: EProductionProcessPathStepSettingsReturnVO_enableMoveOutKeyParameter;
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: ('Y' | 'N');
+    isGtPlannedQuantity?: EProductionProcessPathStepSettingsReturnVO_isGtPlannedQuantity;
+}
+
+export enum EBomBOMMaterialConfirmationVO_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EBomBOMMaterialConfirmationVO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EBomBOMMaterialConfirmationVO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProduceTechnologyKeyParameterDetailResponseDTO_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EProduceTechnologyKeyParameterDetailResponseDTO_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_needConfirmMoveInQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastMold {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastDevice {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_allowSplitLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_forcedSplitLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableDevice {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMold {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveInBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveOutBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveInKeyParameter {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveOutKeyParameter {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_isGtPlannedQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

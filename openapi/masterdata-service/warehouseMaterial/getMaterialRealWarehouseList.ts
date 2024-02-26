@@ -20,7 +20,7 @@ export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     /** 仓库ids */
     storehouseIds?: number[];
     /** 仓库类型 */
-    warehouseTypes?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP')[];
+    warehouseTypes?: EMaterialRealTimeInventoryQueryReturnedToVO_warehouseTypes_items[];
 }
 /** JSONResult«List«物料实时库从返回VO»» */
 export interface IJSONResultListMaterialRealTimeLibraryFromVO {
@@ -49,4 +49,10 @@ export interface IMaterialRealTimeLibraryFromBackToVO {
     storageLockQuantity?: number;
     /** 库存可用数量 */
     storageUseQuantity?: number;
+}
+
+export enum EMaterialRealTimeInventoryQueryReturnedToVO_warehouseTypes_items {
+    PHYSICAL = "PHYSICAL",
+    LINE_SIDE = "LINE_SIDE",
+    WIP = "WIP"
 }

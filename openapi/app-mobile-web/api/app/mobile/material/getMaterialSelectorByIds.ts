@@ -50,5 +50,12 @@ export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否有bom */
-    hasBom?: ('Y' | 'N');
+    hasBom?: EMaterialMasterDataSelectionIsReturnedToVO_hasBom;
+}
+
+export enum EMaterialMasterDataSelectionIsReturnedToVO_hasBom {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

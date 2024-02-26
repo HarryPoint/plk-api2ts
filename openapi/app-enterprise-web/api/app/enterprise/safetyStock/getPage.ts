@@ -26,9 +26,9 @@ export interface ISecurityInventorySearchVO {
     /** 物料名称 */
     name?: string;
     /** 库存预警类型 */
-    warningType?: ('NORMAL' | 'CLOSE_WARNING' | 'UPPER' | 'LOWER');
+    warningType?: ESecurityInventorySearchVO_warningType;
     /** 设置类型 */
-    type: ('ALL' | 'AREA' | 'STOREHOUSE' | 'WAREHOUSE');
+    type: ESecurityInventorySearchVO_type;
     /** 对应业务id */
     businessId?: number;
 }
@@ -37,7 +37,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«安全库存返回VO»» */
 export interface IJSONResultPagingInformationSecurityInventoryReturnsVO {
@@ -65,9 +65,9 @@ export interface IPagingInformationSecurityInventoryReturnedToVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationSecurityInventoryReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationSecurityInventoryReturnedToVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -92,9 +92,9 @@ export interface ISafetyStockReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否开启预警 */
-    isWarning?: ('Y' | 'N');
+    isWarning?: ESafetyStockReturnedToVO_isWarning;
     /** 库存预警类型 */
-    warningType?: ('NORMAL' | 'CLOSE_WARNING' | 'UPPER' | 'LOWER');
+    warningType?: ESafetyStockReturnedToVO_warningType;
     /** 库存预警类型描述 */
     warningTypeDesc?: string;
     /** 安全库存数-采购触发下限 */
@@ -103,4 +103,63 @@ export interface ISafetyStockReturnedToVO {
     maxStock?: number;
     /** 最小库存数 */
     minStock?: number;
+}
+
+export enum ESecurityInventorySearchVO_warningType {
+    /** 正常 */
+    NORMAL = "NORMAL",
+    /** 已关闭预警 */
+    CLOSE_WARNING = "CLOSE_WARNING",
+    /** 已超上限 */
+    UPPER = "UPPER",
+    /** 已超下限 */
+    LOWER = "LOWER"
+}
+
+export enum ESecurityInventorySearchVO_type {
+    /** 全工厂 */
+    ALL = "ALL",
+    /** 区域 */
+    AREA = "AREA",
+    /** 仓库 */
+    STOREHOUSE = "STOREHOUSE",
+    /** 仓位 */
+    WAREHOUSE = "WAREHOUSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationSecurityInventoryReturnedToVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationSecurityInventoryReturnedToVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESafetyStockReturnedToVO_isWarning {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESafetyStockReturnedToVO_warningType {
+    /** 正常 */
+    NORMAL = "NORMAL",
+    /** 已关闭预警 */
+    CLOSE_WARNING = "CLOSE_WARNING",
+    /** 已超上限 */
+    UPPER = "UPPER",
+    /** 已超下限 */
+    LOWER = "LOWER"
 }

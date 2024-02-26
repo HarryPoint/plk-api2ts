@@ -29,9 +29,36 @@ export interface IAddedPermissionEdit2 {
     /** ID */
     id?: number;
     /** 流程状态 */
-    flowStatus?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    flowStatus?: EAddedPermissionEdit2_flowStatus;
     /** 是否可编辑 */
-    isEditable?: ('Y' | 'N');
+    isEditable?: EAddedPermissionEdit2_isEditable;
     /** 是否禁用 */
-    isDisabled?: ('Y' | 'N');
+    isDisabled?: EAddedPermissionEdit2_isDisabled;
+}
+
+export enum EAddedPermissionEdit2_flowStatus {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EAddedPermissionEdit2_isEditable {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAddedPermissionEdit2_isDisabled {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

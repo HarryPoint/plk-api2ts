@@ -40,7 +40,7 @@ export interface IProcedureCompletionListQuery {
     /** 实际完工量 */
     realProduceNumRange?: number[];
     /** 是否主订单 */
-    isMaster?: ('Y' | 'N');
+    isMaster?: EProcedureCompletionListQuery_isMaster;
     /** 生产任务编号 */
     taskNo?: string;
     /** 报工人员集合 */
@@ -63,7 +63,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«工序完成明细表合计响应dto» */
 export interface IJSONResultProcessCompletionDetailsTotalResponseDto {
@@ -84,4 +84,18 @@ export interface IProcessCompletionDetailsTotalResponseDto {
     totalCurPlanCompleteNum?: number;
     /** 实际完工量 */
     totalRealProduceNum?: number;
+}
+
+export enum EProcedureCompletionListQuery_isMaster {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

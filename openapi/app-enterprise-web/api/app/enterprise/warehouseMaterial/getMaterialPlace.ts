@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«List«物料库存分布返回VO»» */
 export interface IJSONResultListReturnsTheInventoryDistributionToVO {
@@ -78,4 +78,9 @@ export interface IMaterialInventoryDistributionReturnedToVO {
     storageLockCount?: number;
     /** 库存可使用数 */
     storageUseCount?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

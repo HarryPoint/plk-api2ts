@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«寄售损耗分析报表返回VO» */
 export interface IJSONResultConsignmentLossAnalysisReportReturnedToVO {
@@ -82,9 +82,9 @@ export interface IPageInformationConsignmentLossAnalysisReportPageReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationConsignmentLossAnalysisReportPageReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationConsignmentLossAnalysisReportPageReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -133,4 +133,23 @@ export interface IConsignmentLossAnalysisChartDataReturnedToVO {
     title?: string;
     /** 未结数量 */
     remainingQty?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationConsignmentLossAnalysisReportPageReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationConsignmentLossAnalysisReportPageReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

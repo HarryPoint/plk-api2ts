@@ -31,11 +31,11 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 任务号 */
     taskNo?: string;
     /** 任务下发方式 */
-    issueType?: ('PLAN' | 'DIRECT');
+    issueType?: EProductionTaskDetailsReturnToVO_issueType;
     /** 任务下发方式描述 */
     issueTypeDesc?: string;
     /** 任务类型 */
-    type?: ('PRODUCE' | 'BACK');
+    type?: EProductionTaskDetailsReturnToVO_type;
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
@@ -99,7 +99,7 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: EProductionTaskDetailsReturnToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
@@ -119,7 +119,7 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 创建时间 */
     createTime?: string;
     /** 可操作项列表 */
-    canOpItemList?: ('CAN_MOVE_IN' | 'CAN_QUALITY' | 'CAN_MOVE_OUT')[];
+    canOpItemList?: EProductionTaskDetailsReturnToVO_canOpItemList_items[];
     /** 可操作项列表拼接 */
     canOpItemListStr?: string;
     /** 生产任务记录 */
@@ -134,9 +134,9 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
-    businessType?: ('IN_OUT' | 'QUALITY' | 'ABNORMAL' | 'SYSTEM');
+    businessType?: EProductionProcessingBasicInformationRespondsToDTO_businessType;
     /** 异常分类 */
-    type?: ('SCRAP' | 'HOLD' | 'HOLD_PAUSE' | 'REPORT' | 'BACK' | 'MOVE_IN' | 'MOVE_OUT' | 'QUALITY_APPLY' | 'TASK_ISSUE' | 'PRODUCE_ENTRUST' | 'TASK_ASSIGN');
+    type?: EProductionProcessingBasicInformationRespondsToDTO_type;
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
@@ -156,7 +156,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 对应生产委外id */
     produceEntrustId?: number;
     /** 状态 */
-    status?: ('CREATED' | 'SURE' | 'IGNORE' | 'RELEASE' | 'BACK' | 'HANDING' | 'ALL_HANDLE' | 'APPROVAL' | 'REFUSE' | 'REVOKE' | 'COMPLETE' | 'CANCEL');
+    status?: EProductionProcessingBasicInformationRespondsToDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
@@ -195,11 +195,122 @@ export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EKeyParametersInAndOutOfTheStationDetailResponseDTO_inputType;
     /** 录入值 - 明细录入类型不是图片时，有值 */
     inputValue?: string;
     /** 图片上传key集合 - 明细录入类型是图片时，有值 */
     imageKeys?: string[];
     /** 图片Url集合 - 明细录入类型是图片时，有值 */
     imageUrls?: string[];
+}
+
+export enum EProductionTaskDetailsReturnToVO_issueType {
+    /** 排产下发 */
+    PLAN = "PLAN",
+    /** 直接下发 */
+    DIRECT = "DIRECT"
+}
+
+export enum EProductionTaskDetailsReturnToVO_type {
+    /** 生产任务 */
+    PRODUCE = "PRODUCE",
+    /** 返工任务 */
+    BACK = "BACK"
+}
+
+export enum EProductionTaskDetailsReturnToVO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionTaskDetailsReturnToVO_canOpItemList_items {
+    CAN_MOVE_IN = "CAN_MOVE_IN",
+    CAN_QUALITY = "CAN_QUALITY",
+    CAN_MOVE_OUT = "CAN_MOVE_OUT"
+}
+
+export enum EProductionProcessingBasicInformationRespondsToDTO_businessType {
+    /** 进出站 */
+    IN_OUT = "IN_OUT",
+    /** 质检 */
+    QUALITY = "QUALITY",
+    /** 异常 */
+    ABNORMAL = "ABNORMAL",
+    /** 系统 */
+    SYSTEM = "SYSTEM"
+}
+
+export enum EProductionProcessingBasicInformationRespondsToDTO_type {
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 上报反馈 */
+    REPORT = "REPORT",
+    /** 返工 */
+    BACK = "BACK",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 申请质检 */
+    QUALITY_APPLY = "QUALITY_APPLY",
+    /** 任务下发 */
+    TASK_ISSUE = "TASK_ISSUE",
+    /** 委外加工 */
+    PRODUCE_ENTRUST = "PRODUCE_ENTRUST",
+    /** 任务分配 */
+    TASK_ASSIGN = "TASK_ASSIGN"
+}
+
+export enum EProductionProcessingBasicInformationRespondsToDTO_status {
+    /** 待处理 */
+    CREATED = "CREATED",
+    /** 已确认 */
+    SURE = "SURE",
+    /** 已忽略 */
+    IGNORE = "IGNORE",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 处理中 */
+    HANDING = "HANDING",
+    /** 处理完成 */
+    ALL_HANDLE = "ALL_HANDLE",
+    /** 批准 */
+    APPROVAL = "APPROVAL",
+    /** 拒绝 */
+    REFUSE = "REFUSE",
+    /** 撤销 */
+    REVOKE = "REVOKE",
+    /** 完成 */
+    COMPLETE = "COMPLETE",
+    /** 取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EKeyParametersInAndOutOfTheStationDetailResponseDTO_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
 }

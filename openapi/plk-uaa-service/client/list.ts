@@ -33,7 +33,7 @@ export interface ITheClientRespondsToTheDTO {
     /** 名称 */
     name?: string;
     /** 登录类型 */
-    loginType?: ('MANAGE' | 'SAAS');
+    loginType?: ETheClientRespondsToTheDTO_loginType;
     /** 客户端组 */
     clientGroup?: ITheClientGroupRespondsToTheDTO;
 }
@@ -45,4 +45,11 @@ export interface ITheClientGroupRespondsToTheDTO {
     code?: string;
     /** 名称 */
     name?: string;
+}
+
+export enum ETheClientRespondsToTheDTO_loginType {
+    /** 运营管理 */
+    MANAGE = "MANAGE",
+    /** Saas系统 */
+    SAAS = "SAAS"
 }

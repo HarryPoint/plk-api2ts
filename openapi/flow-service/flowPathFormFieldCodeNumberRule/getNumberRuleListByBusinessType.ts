@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleListByBusinessTypeUsingGET
 */
-export default function fetchMethod(options: { params: { businessType?: ('PRODUCE_TASK' | 'STORAGE_TAKE_CHECK_TASK'); enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessType?: EbusinessType; enterpriseId?: number } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldCodingRuleDetailsVO>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleListByBusinessType",
@@ -29,9 +29,9 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
     id?: number;
     /** 设置类型 */
-    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
+    type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
-    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
+    dateFormat?: EProcessFormFieldEncodingRuleDetailsVO_dateFormat;
     /** 固定值 - 用于固定值 */
     fixValue?: string;
     /** 位数 - 用于流水 */
@@ -41,7 +41,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 递增值 - 用于流水 */
     stepValue?: number;
     /** 是否是编码依据 - 仅能配置一项为编码依据 */
-    isCodeAccording?: ('Y' | 'N');
+    isCodeAccording?: EProcessFormFieldEncodingRuleDetailsVO_isCodeAccording;
     /** 所属流程表单code -- 针对引用字段类型 */
     flowPathCode?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
@@ -52,4 +52,44 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     flowPathFormFieldCodeNumberRuleId?: number;
     /** 排序 */
     sort?: number;
+}
+
+export enum EbusinessType {
+    PRODUCE_TASK = "PRODUCE_TASK",
+    STORAGE_TAKE_CHECK_TASK = "STORAGE_TAKE_CHECK_TASK"
+}
+
+export enum EProcessFormFieldEncodingRuleDetailsVO_type {
+    /** 固定值 */
+    FIXED = "FIXED",
+    /** 日期 */
+    DATE = "DATE",
+    /** 自动计数 */
+    AUTO_NUMBER = "AUTO_NUMBER",
+    /** 引用字段 */
+    FLOW_PATH_FIELD = "FLOW_PATH_FIELD",
+    /** ID的36进制 */
+    ID36 = "ID36"
+}
+
+export enum EProcessFormFieldEncodingRuleDetailsVO_dateFormat {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 年月 */
+    YEAR_MONTH = "YEAR_MONTH",
+    /** 年月日 */
+    YEAR_MONTH_DAY = "YEAR_MONTH_DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 月日 */
+    MONTH_DAY = "MONTH_DAY",
+    /** 日 */
+    DAY = "DAY"
+}
+
+export enum EProcessFormFieldEncodingRuleDetailsVO_isCodeAccording {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

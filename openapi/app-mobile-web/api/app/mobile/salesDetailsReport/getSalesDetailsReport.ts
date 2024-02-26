@@ -39,9 +39,9 @@ export interface IPageInformationSalesDetailsReturnObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationSalesDetailsReturnObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationSalesDetailsReturnObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -141,4 +141,18 @@ export interface ISalesDetailReturnObject {
     factoryPriceCoefficient?: number;
     /** 分类 */
     materialCategory?: string;
+}
+
+export enum EPageInformationSalesDetailsReturnObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationSalesDetailsReturnObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

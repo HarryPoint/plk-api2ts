@@ -44,7 +44,7 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     /** 班组ids */
     classGroupIds?: number[];
     /** 查询状态 */
-    queryStatusList?: ('PLAN' | 'WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE' | 'OVERDUE')[];
+    queryStatusList?: EEquipmentMaintenanceCalendarRequestDTO_queryStatusList_items[];
     /** 保养计划编号 */
     planCode?: string;
     /** 计划开始时间 */
@@ -57,7 +57,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -69,4 +69,20 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEquipmentMaintenanceCalendarRequestDTO_queryStatusList_items {
+    PLAN = "PLAN",
+    WAIT = "WAIT",
+    HANDLING = "HANDLING",
+    CANCEL = "CANCEL",
+    COMPLETE = "COMPLETE",
+    OVERDUE = "OVERDUE"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

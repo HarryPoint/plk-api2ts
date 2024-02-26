@@ -32,9 +32,9 @@ export interface IDataEaseMenuPagesQueryObjects {
     /** 菜单名称 */
     name?: string;
     /** 电脑端 -- 传Y */
-    isPcTerminal?: ('Y' | 'N');
+    isPcTerminal?: EDataEaseMenuPagesQueryObjects_isPcTerminal;
     /** 移动端 -- 传Y */
-    isMobileTerminal?: ('Y' | 'N');
+    isMobileTerminal?: EDataEaseMenuPagesQueryObjects_isMobileTerminal;
     /** 创建时间 -- 开始 */
     beginCreateTime?: string;
     /** 创建时间 -- 结束 */
@@ -45,7 +45,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«DataEase菜单分页响应对象»» */
 export interface IJSONResultPagingInformationDataEaseMenuPagingResponseObject {
@@ -73,9 +73,9 @@ export interface IPagingInformationDataEaseMenuPagingResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationDataEaseMenuPagingResponseObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationDataEaseMenuPagingResponseObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -106,9 +106,58 @@ export interface IDataEaseMenuPagingResponseObject {
     /** 链接地址 */
     originalLinkUrl?: string;
     /** 是否在PC端发布 */
-    isPcTerminal?: ('Y' | 'N');
+    isPcTerminal?: EDataEaseMenuPagingResponseObject_isPcTerminal;
     /** 是否在移动端发布 */
-    isMobileTerminal?: ('Y' | 'N');
+    isMobileTerminal?: EDataEaseMenuPagingResponseObject_isMobileTerminal;
     /** 状态 */
     dataStatus?: number;
+}
+
+export enum EDataEaseMenuPagesQueryObjects_isPcTerminal {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDataEaseMenuPagesQueryObjects_isMobileTerminal {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationDataEaseMenuPagingResponseObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationDataEaseMenuPagingResponseObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDataEaseMenuPagingResponseObject_isPcTerminal {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDataEaseMenuPagingResponseObject_isMobileTerminal {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

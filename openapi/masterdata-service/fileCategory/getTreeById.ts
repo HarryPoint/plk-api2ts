@@ -37,7 +37,7 @@ export interface IFileClassificationDetailsRespondToDTO1 {
     /** 下级树列表 */
     childList?: IFileClassificationDetailsRespondToDTO6[];
     /** 用户权限列表 */
-    userPermissionList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
+    userPermissionList?: EFileClassificationDetailsRespondToDTO1_userPermissionList_items[];
 }
 /** 文件分类明细响应DTO_6 */
 export interface IFileClassificationDetailsRespondToDTO6 {
@@ -52,5 +52,29 @@ export interface IFileClassificationDetailsRespondToDTO6 {
     /** 下级树列表 */
     childList?: IFileClassificationDetailsRespondToDTO6[];
     /** 用户权限列表 */
-    userPermissionList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
+    userPermissionList?: EFileClassificationDetailsRespondToDTO6_userPermissionList_items[];
+}
+
+export enum EFileClassificationDetailsRespondToDTO1_userPermissionList_items {
+    CATEGORY_EDIT = "CATEGORY_EDIT",
+    CATEGORY_MOVE = "CATEGORY_MOVE",
+    CATEGORY_REMOVE = "CATEGORY_REMOVE",
+    UPLOAD_FILE = "UPLOAD_FILE",
+    CATEGORY_VIEW = "CATEGORY_VIEW",
+    FILE_RENAME = "FILE_RENAME",
+    FILE_DOWNLOAD = "FILE_DOWNLOAD",
+    FILE_MOVE = "FILE_MOVE",
+    FILE_REMOVE = "FILE_REMOVE"
+}
+
+export enum EFileClassificationDetailsRespondToDTO6_userPermissionList_items {
+    CATEGORY_EDIT = "CATEGORY_EDIT",
+    CATEGORY_MOVE = "CATEGORY_MOVE",
+    CATEGORY_REMOVE = "CATEGORY_REMOVE",
+    UPLOAD_FILE = "UPLOAD_FILE",
+    CATEGORY_VIEW = "CATEGORY_VIEW",
+    FILE_RENAME = "FILE_RENAME",
+    FILE_DOWNLOAD = "FILE_DOWNLOAD",
+    FILE_MOVE = "FILE_MOVE",
+    FILE_REMOVE = "FILE_REMOVE"
 }

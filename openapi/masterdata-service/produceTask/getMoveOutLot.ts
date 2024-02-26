@@ -50,11 +50,11 @@ export interface IWipQuantityStatusInformationResponseObject {
     /** 数量 */
     quantity?: number;
     /** wip数量状态 */
-    quantityStatus?: ('NORMAL' | 'WAIT_INSPECTION' | 'INSPECTION_PASS' | 'INSPECTION_CONCESSION' | 'INSPECTION_NOT_PASS' | 'APPLY_BACK' | 'APPLY_SCRAP' | 'HOLD' | 'ENTRUST_BACK');
+    quantityStatus?: EWipQuantityStatusInformationResponseObject_quantityStatus;
     /** wip数量状态描述 */
     quantityStatusDesc?: string;
     /** 是否可用 */
-    canUse?: ('Y' | 'N');
+    canUse?: EWipQuantityStatusInformationResponseObject_canUse;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
     wmRpCreateTime?: string;
     /** 可委外数量 */
@@ -62,5 +62,40 @@ export interface IWipQuantityStatusInformationResponseObject {
     /** 可操作数量 */
     canOptQuantity?: number;
     /** 是否锁定 */
-    isLock?: ('Y' | 'N');
+    isLock?: EWipQuantityStatusInformationResponseObject_isLock;
+}
+
+export enum EWipQuantityStatusInformationResponseObject_quantityStatus {
+    /** 正常 */
+    NORMAL = "NORMAL",
+    /** 等待质检 */
+    WAIT_INSPECTION = "WAIT_INSPECTION",
+    /** 质检合格 */
+    INSPECTION_PASS = "INSPECTION_PASS",
+    /** 质检让步接收 */
+    INSPECTION_CONCESSION = "INSPECTION_CONCESSION",
+    /** 质检不合格 */
+    INSPECTION_NOT_PASS = "INSPECTION_NOT_PASS",
+    /** 等待返工审批 */
+    APPLY_BACK = "APPLY_BACK",
+    /** 等待报废审批 */
+    APPLY_SCRAP = "APPLY_SCRAP",
+    /** 等待扣留审批 */
+    HOLD = "HOLD",
+    /** 委外返回 */
+    ENTRUST_BACK = "ENTRUST_BACK"
+}
+
+export enum EWipQuantityStatusInformationResponseObject_canUse {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EWipQuantityStatusInformationResponseObject_isLock {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

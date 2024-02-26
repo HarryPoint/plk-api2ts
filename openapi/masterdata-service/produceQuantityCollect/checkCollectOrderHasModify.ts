@@ -27,7 +27,21 @@ export interface IJSONResultVerifiesTheResponseObject {
 /** 校验响应对象 */
 export interface ICheckResponseObject {
     /** 是否已创建, 当返回值为Y时, 已创建; 为N时, 没有创建 */
-    isCreated?: ('Y' | 'N');
+    isCreated?: ECheckResponseObject_isCreated;
     /** 是否变更过, 当返回值为Y时, 有变动; 为N时, 没有变动 */
-    isModify?: ('Y' | 'N');
+    isModify?: ECheckResponseObject_isModify;
+}
+
+export enum ECheckResponseObject_isCreated {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ECheckResponseObject_isModify {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

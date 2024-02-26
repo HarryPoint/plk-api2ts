@@ -29,19 +29,47 @@ export interface IMaterialBatchSettingsEditTheResponseObject {
     /** 物料id */
     materialId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EMaterialBatchSettingsEditTheResponseObject_enableSerialNo;
     /** 序列号方案id */
     serialNoSchemeId?: number;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EMaterialBatchSettingsEditTheResponseObject_enableLot;
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EMaterialBatchSettingsEditTheResponseObject_enableQualityTraceability;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EMaterialBatchSettingsEditTheResponseObject_enableExternalCode;
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
+}
+
+export enum EMaterialBatchSettingsEditTheResponseObject_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSettingsEditTheResponseObject_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSettingsEditTheResponseObject_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialBatchSettingsEditTheResponseObject_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

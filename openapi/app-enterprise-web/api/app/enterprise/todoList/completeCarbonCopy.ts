@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICcToDoChangeReadDTO }, ext
 /** 待办抄送变更已读DTO */
 export interface ICcToDoChangeReadDTO {
     /** 是否全部标记已读 */
-    isAll: ('Y' | 'N');
+    isAll: ECcToDoChangeReadDTO_isAll;
     /** 单个标记id，isAll=N时必传 */
     id?: number;
 }
@@ -30,4 +30,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ECcToDoChangeReadDTO_isAll {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

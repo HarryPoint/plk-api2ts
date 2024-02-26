@@ -18,7 +18,7 @@ export interface IEventTriggerTiming {
     /** 根据应用版本ID列表 */
     flowPathVersionIdList?: number[];
     /** 触发事件的时机 */
-    triggerEventTiming?: ('FLOW_COMPLETED_POST');
+    triggerEventTiming?: EEventTriggerTiming_triggerEventTiming;
 }
 /** JSONResult«List«FlowPathEventTriggerTimingQueryResponseDTO»» */
 export interface IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO {
@@ -42,5 +42,14 @@ export interface IFlowPathEventTriggerTimingQueryResponseDTO {
     /** undefined */
     flowPathEventId?: number;
     /** undefined */
-    eventTriggerTiming?: ('FLOW_COMPLETED_POST');
+    eventTriggerTiming?: EFlowPathEventTriggerTimingQueryResponseDTO_eventTriggerTiming;
+}
+
+export enum EEventTriggerTiming_triggerEventTiming {
+    /** 流程完成后触发 */
+    FLOW_COMPLETED_POST = "FLOW_COMPLETED_POST"
+}
+
+export enum EFlowPathEventTriggerTimingQueryResponseDTO_eventTriggerTiming {
+    FLOW_COMPLETED_POST = "FLOW_COMPLETED_POST"
 }

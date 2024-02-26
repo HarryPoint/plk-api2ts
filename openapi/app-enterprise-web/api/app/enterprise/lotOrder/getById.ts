@@ -67,7 +67,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 生产工艺路径编号 */
     produceTechnologyRoutingCode?: string;
     /** 当前流水类型(界面上的当前生产状态) */
-    lastFlowType?: ('CREATED' | 'ISSUE' | 'MOVE_IN' | 'MOVE_OUT' | 'SCRAP' | 'HOLD_PAUSE' | 'HOLD' | 'RELEASE' | 'BACK' | 'MARGE' | 'SPLIT' | 'TRANSFER' | 'CHANGE_ROUTING' | 'ENTRUST');
+    lastFlowType?: EBatchOrderIsReturnedToVO_lastFlowType;
     /** 当前流水类型描述 */
     lastFlowTypeDesc?: string;
     /** 当前对应工艺路径步骤id */
@@ -83,7 +83,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 总工艺数 - 用于展示工艺进度条 */
     totalStepCount?: number;
     /** 状态 */
-    status?: ('CREATED' | 'ISSUE' | 'PRODUCE' | 'HOLD' | 'CANCEL' | 'CLOSE');
+    status?: EBatchOrderIsReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 来源集 */
@@ -100,9 +100,66 @@ export interface IBatchOrderIsReturnedToVO {
 /** 批次订单来源返回VO */
 export interface IBatchOrderSourceReturnedToVO {
     /** 来源类型 */
-    sourceType?: ('MAJOR_DATA' | 'MARGE' | 'SPLIT' | 'TRANSFER');
+    sourceType?: EBatchOrderSourceReturnedToVO_sourceType;
     /** 来源类型描述 */
     sourceTypeDesc?: string;
     /** 来源批次单号 */
     sourceLotNo?: string;
+}
+
+export enum EBatchOrderIsReturnedToVO_lastFlowType {
+    /** 创建 */
+    CREATED = "CREATED",
+    /** 下发 */
+    ISSUE = "ISSUE",
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT",
+    /** 报废 */
+    SCRAP = "SCRAP",
+    /** 暂扣 */
+    HOLD_PAUSE = "HOLD_PAUSE",
+    /** 扣留 */
+    HOLD = "HOLD",
+    /** 放行 */
+    RELEASE = "RELEASE",
+    /** 返工 */
+    BACK = "BACK",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER",
+    /** 切换工艺路径 */
+    CHANGE_ROUTING = "CHANGE_ROUTING",
+    /** 委外加工 */
+    ENTRUST = "ENTRUST"
+}
+
+export enum EBatchOrderIsReturnedToVO_status {
+    /** 待生产 */
+    CREATED = "CREATED",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 扣留中 */
+    HOLD = "HOLD",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EBatchOrderSourceReturnedToVO_sourceType {
+    /** 物料 */
+    MAJOR_DATA = "MAJOR_DATA",
+    /** 合并 */
+    MARGE = "MARGE",
+    /** 拆分 */
+    SPLIT = "SPLIT",
+    /** 转移 */
+    TRANSFER = "TRANSFER"
 }

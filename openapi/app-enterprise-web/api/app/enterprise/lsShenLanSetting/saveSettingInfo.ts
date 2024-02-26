@@ -24,7 +24,7 @@ export interface IDarkBlueLargeScreenSetsTheDTO {
     /** 大屏右侧质检数据 */
     rightQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetEditDTO;
     /** 大屏中部数据类型 */
-    centerProductionType?: ('MATERIAL' | 'MATERIAL_GROUP');
+    centerProductionType?: EDarkBlueLargeScreenSetsTheDTO_centerProductionType;
     /** 大屏中部业务对象集 */
     centerBusinessList?: IDeepBlueProductionLargeScreenOutputSettingsEditDTO[];
     /** 每日清零时间 HH:mm */
@@ -75,4 +75,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EDarkBlueLargeScreenSetsTheDTO_centerProductionType {
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 物料分组 */
+    MATERIAL_GROUP = "MATERIAL_GROUP"
 }

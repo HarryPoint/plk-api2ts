@@ -54,9 +54,27 @@ export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     /** 生产时间 -- 产能 */
     capacityProduceTime?: number;
     /** 时间单位 -- 产能 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProductionPlanningProcessPathStepSchedulingProductionVO_capacityTimeType;
     /** 时间单位 -- 准备耗时 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProductionPlanningProcessPathStepSchedulingProductionVO_readyTimeUnit;
     /** 准备耗时 -- 准备耗时 */
     readyTime?: number;
+}
+
+export enum EProductionPlanningProcessPathStepSchedulingProductionVO_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProductionPlanningProcessPathStepSchedulingProductionVO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

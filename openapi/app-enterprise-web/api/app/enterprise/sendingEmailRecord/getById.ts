@@ -37,7 +37,7 @@ export interface ISendingEmailRecordDTO {
     /** 内容 */
     content?: string;
     /** 发送邮件状态 */
-    status?: ('NONE' | 'SENT_SUCCESS' | 'SENT_FAILURE');
+    status?: ESendingEmailRecordDTO_status;
     /** 发送时间 */
     sendingTime?: string;
     /** 发送来源 */
@@ -45,7 +45,7 @@ export interface ISendingEmailRecordDTO {
     /** 收件人地址 */
     addressee?: string;
     /**  是否已准备好数据，只有准备好的邮件才能重新发送 */
-    isReady?: ('Y' | 'N');
+    isReady?: ESendingEmailRecordDTO_isReady;
     /** 失败的原因 */
     failureReason?: string;
     /** 发送邮件附件列表 */
@@ -61,4 +61,20 @@ export interface ISendingEmailAttachmentDTO {
     fileKey?: number;
     /** 附件名称 */
     name?: string;
+}
+
+export enum ESendingEmailRecordDTO_status {
+    /** 待发送 */
+    NONE = "NONE",
+    /** 发送成功 */
+    SENT_SUCCESS = "SENT_SUCCESS",
+    /** 发送失败 */
+    SENT_FAILURE = "SENT_FAILURE"
+}
+
+export enum ESendingEmailRecordDTO_isReady {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

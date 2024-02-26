@@ -36,7 +36,7 @@ export interface IWarehouseInventoryTasksPageQueryObjects {
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
     planEndTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'HANDLING' | 'WAIT_VERIFY' | 'WAIT_EXAMINE' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: EWarehouseInventoryTasksPageQueryObjects_status;
     /** 完成结束时间 yyyy-MM-dd HH:mm:ss */
     completeEndTime?: string;
 }
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -57,4 +57,26 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EWarehouseInventoryTasksPageQueryObjects_status {
+    /** 待盘点 */
+    WAIT = "WAIT",
+    /** 盘点中 */
+    HANDLING = "HANDLING",
+    /** 待核对 */
+    WAIT_VERIFY = "WAIT_VERIFY",
+    /** 待盈亏处理 */
+    WAIT_EXAMINE = "WAIT_EXAMINE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

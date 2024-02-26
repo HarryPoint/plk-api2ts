@@ -153,7 +153,7 @@ export const createDefinitions = async (
         return {
           name,
           value: name,
-          leadingTrivia: `/** ${desc} */\n`,
+          leadingTrivia: desc ? `/** ${desc} */\n` : "",
         };
       }),
     });

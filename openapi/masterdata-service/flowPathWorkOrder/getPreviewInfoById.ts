@@ -41,11 +41,11 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** 提交时间 */
     createTime?: string;
     /** 状态 */
-    status?: ('HANDLING' | 'COMPLETE' | 'NOT_PASS' | 'STAGING' | 'INVALID');
+    status?: EProcessTicketPreviewInformationIsReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 关闭类型 */
-    closeType?: ('COMPLETE' | 'REFUSE');
+    closeType?: EProcessTicketPreviewInformationIsReturnedToVO_closeType;
     /** 关闭类型描述 */
     closeTypeDesc?: string;
     /** 所属流程id */
@@ -60,4 +60,24 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     businessId?: number;
     /** 业务数据code */
     businessCode?: string;
+}
+
+export enum EProcessTicketPreviewInformationIsReturnedToVO_status {
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 未通过 */
+    NOT_PASS = "NOT_PASS",
+    /** 暂存 */
+    STAGING = "STAGING",
+    /** 作废/停用 */
+    INVALID = "INVALID"
+}
+
+export enum EProcessTicketPreviewInformationIsReturnedToVO_closeType {
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已拒绝 */
+    REFUSE = "REFUSE"
 }

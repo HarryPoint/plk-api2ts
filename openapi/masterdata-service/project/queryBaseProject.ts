@@ -102,15 +102,15 @@ export interface IProjectPhaseTaskQueryObject {
     /** 处理进度名称列表 */
     processStatusNames?: string[];
     /** 是否查询没有关联项目计划的任务 */
-    isQueryEmptyPlanTask?: ('Y' | 'N');
+    isQueryEmptyPlanTask?: EProjectPhaseTaskQueryObject_isQueryEmptyPlanTask;
     /** 修改部门ids */
     updateDeptIds?: number[];
     /** 任务权重 -- 开始 */
     beginTaskWeight?: number;
     /** 是否仅查询当前登录用户 */
-    isQueryCurrentMember?: ('Y' | 'N');
+    isQueryCurrentMember?: EProjectPhaseTaskQueryObject_isQueryCurrentMember;
     /** 是否展示子任务 */
-    isShowChildTask?: ('Y' | 'N');
+    isShowChildTask?: EProjectPhaseTaskQueryObject_isShowChildTask;
     /** undefined */
     fromAppIds?: number[];
     /** 项目类型id集 */
@@ -126,14 +126,14 @@ export interface IProjectPhaseTaskQueryObject {
     /** undefined */
     processStatusCodes?: string[];
     /** 项目状态 */
-    projectStatus?: ('DRAFT' | 'IN_APPROVE' | 'APPROVAL_DENIED' | 'IN_PROGRESS' | 'COMPLETE' | 'END');
+    projectStatus?: EProjectPhaseTaskQueryObject_projectStatus;
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«List«项目基础查询响应对象»» */
 export interface IJSONResultListProjectBaseQueryResponseObject {
@@ -158,4 +158,47 @@ export interface IProjectBaseQueryResponseObject {
     projectTypeName?: string;
     /** 项目经理 */
     projectManagerName?: string;
+}
+
+export enum EProjectPhaseTaskQueryObject_isQueryEmptyPlanTask {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectPhaseTaskQueryObject_isQueryCurrentMember {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectPhaseTaskQueryObject_isShowChildTask {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectPhaseTaskQueryObject_projectStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 审批中 */
+    IN_APPROVE = "IN_APPROVE",
+    /** 审批拒绝 */
+    APPROVAL_DENIED = "APPROVAL_DENIED",
+    /** 进行中 */
+    IN_PROGRESS = "IN_PROGRESS",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已终止 */
+    END = "END"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

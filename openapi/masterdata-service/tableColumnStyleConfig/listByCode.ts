@@ -33,11 +33,25 @@ export interface IListColumnStyleConfigurationVO {
     /** 编码 */
     code?: string;
     /** 类型 */
-    type?: ('SYSTEM' | 'PERSON');
+    type?: EListColumnStyleConfigurationVO_type;
     /** 列配置JSON */
     config?: Record<string, Record<string, any>>;
     /** 排序 */
     sort?: number;
     /** 是否是当前用户选中的 */
-    isCurrentUserChoose?: ('Y' | 'N');
+    isCurrentUserChoose?: EListColumnStyleConfigurationVO_isCurrentUserChoose;
+}
+
+export enum EListColumnStyleConfigurationVO_type {
+    /** 系统 */
+    SYSTEM = "SYSTEM",
+    /** 个人 */
+    PERSON = "PERSON"
+}
+
+export enum EListColumnStyleConfigurationVO_isCurrentUserChoose {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

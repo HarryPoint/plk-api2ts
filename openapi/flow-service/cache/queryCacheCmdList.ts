@@ -38,7 +38,7 @@ export interface ICacheCmdQueryResponseDTO {
     /** undefined */
     id?: number;
     /** undefined */
-    cmdType?: ('DELETE');
+    cmdType?: ECacheCmdQueryResponseDTO_cmdType;
     /** undefined */
     cacheType?: string;
     /** undefined */
@@ -47,4 +47,8 @@ export interface ICacheCmdQueryResponseDTO {
     serviceInstance?: string;
     /** undefined */
     cacheKey?: string;
+}
+
+export enum ECacheCmdQueryResponseDTO_cmdType {
+    DELETE = "DELETE"
 }

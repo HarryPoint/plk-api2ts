@@ -27,5 +27,14 @@ export interface IJSONResultSetsTheCheckModeOfTheCheckTaskInResponseToTheDTO {
 /** 设置检验任务检验方式响应DTO */
 export interface ISetTheCheckModeResponseDTOForTheCheckTask {
     /** 检验方式 */
-    taskInspectionMethodType?: ('SINGLE' | 'BATCH' | 'MATERIAL');
+    taskInspectionMethodType?: ESetTheCheckModeResponseDTOForTheCheckTask_taskInspectionMethodType;
+}
+
+export enum ESetTheCheckModeResponseDTOForTheCheckTask_taskInspectionMethodType {
+    /** 个检验 */
+    SINGLE = "SINGLE",
+    /** 批检验 */
+    BATCH = "BATCH",
+    /** 物料检 */
+    MATERIAL = "MATERIAL"
 }

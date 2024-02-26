@@ -28,14 +28,14 @@ export interface IPreparationPeriodQueryVO {
     /** 名称 */
     name?: string;
     /** 规则类型 */
-    ruleType?: ('EQUAL' | 'NOT_EQUAL');
+    ruleType?: EPreparationPeriodQueryVO_ruleType;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«准备期返回VO»» */
 export interface IJSONResultPageInformationPreparationPeriodReturnsVO {
@@ -63,9 +63,9 @@ export interface IPagingInformationPreparationPeriodReturnVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationPreparationPeriodReturnVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationPreparationPeriodReturnVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -86,7 +86,7 @@ export interface IPreparationPeriodReturnVO {
     /** 编号 */
     code?: string;
     /** 规则类型 */
-    ruleType?: ('EQUAL' | 'NOT_EQUAL');
+    ruleType?: EPreparationPeriodReturnVO_ruleType;
     /** 规则类型描述 */
     ruleTypeDesc?: string;
     /** 耗时 */
@@ -99,4 +99,37 @@ export interface IPreparationPeriodReturnVO {
     createUsername?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EPreparationPeriodQueryVO_ruleType {
+    /** 产出物料相同 */
+    EQUAL = "EQUAL",
+    /** 产出物料不相同 */
+    NOT_EQUAL = "NOT_EQUAL"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationPreparationPeriodReturnVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationPreparationPeriodReturnVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPreparationPeriodReturnVO_ruleType {
+    /** 产出物料相同 */
+    EQUAL = "EQUAL",
+    /** 产出物料不相同 */
+    NOT_EQUAL = "NOT_EQUAL"
 }

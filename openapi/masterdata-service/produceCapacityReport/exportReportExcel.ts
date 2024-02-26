@@ -32,7 +32,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** undefined */
     produceTaskIds?: number[];
     /** undefined */
-    panPanProduceOrderCompleteType?: ('ACTUAL_MOVE_OUT_QUANTITY' | 'PLAN_ORDER_MOVE_OUT_QUANTITY');
+    panPanProduceOrderCompleteType?: ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType;
     /** 是否按天数过滤 */
     isFilterByDayCount?: boolean;
 }
@@ -41,7 +41,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -53,4 +53,14 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType {
+    ACTUAL_MOVE_OUT_QUANTITY = "ACTUAL_MOVE_OUT_QUANTITY",
+    PLAN_ORDER_MOVE_OUT_QUANTITY = "PLAN_ORDER_MOVE_OUT_QUANTITY"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

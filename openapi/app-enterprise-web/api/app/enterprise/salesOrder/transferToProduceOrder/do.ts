@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IBatchTransferToProductionO
 /** 批量转到生产订单 */
 export interface IBatchTransferToProductionOrder {
     /** 是否生产订单继承销售订单编号 */
-    isExtendSalesOrderCode?: ('Y' | 'N');
+    isExtendSalesOrderCode?: EBatchTransferToProductionOrder_isExtendSalesOrderCode;
     /** 转生产订单数据列表 */
     transferToProduceOrderDataList?: ISalesOrderToProductionOrderSubmaterialProductionInformationDTO[];
 }
@@ -27,7 +27,7 @@ export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO
     /** 生产交付数量 */
     produceTotalCount?: number;
     /** 订单类型 */
-    orderType: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
+    orderType: ESalesOrderToProductionOrderSubmaterialProductionInformationDTO_orderType;
     /** 订单优先级，数值越大优先级越高 */
     priorityLevel: number;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
@@ -49,7 +49,7 @@ export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO
     /** 下单业务部门名称 */
     placeOrderDepartmentName?: string;
     /** 是否紧急的单子 */
-    isEmergentOrder?: ('Y' | 'N');
+    isEmergentOrder?: ESalesOrderToProductionOrderSubmaterialProductionInformationDTO_isEmergentOrder;
     /** 交付日期 yyyy-MM-dd HH:mm:ss */
     deliveryDate?: string;
     /** 标准工艺ID */
@@ -102,4 +102,35 @@ export interface ISalesOrderToProductionOrderReturnedToDTO {
     matchTaskId?: number;
     /** 生产订单ids */
     produceOrderIds?: number[];
+}
+
+export enum EBatchTransferToProductionOrder_isExtendSalesOrderCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESalesOrderToProductionOrderSubmaterialProductionInformationDTO_orderType {
+    /** 合同生产 */
+    CONTRACT = "CONTRACT",
+    /** 备库生产 */
+    STANDBY = "STANDBY",
+    /** 返工生产 */
+    REWORK = "REWORK",
+    /** 新产品实验生产 */
+    TEST = "TEST",
+    /** 虚拟订单 */
+    VIRTUAL = "VIRTUAL",
+    /** 其他订单 */
+    OTHER = "OTHER",
+    /** 报废补单 */
+    SCRAP_SUPPLEMENT = "SCRAP_SUPPLEMENT"
+}
+
+export enum ESalesOrderToProductionOrderSubmaterialProductionInformationDTO_isEmergentOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

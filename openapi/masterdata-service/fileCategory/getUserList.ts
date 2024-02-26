@@ -31,5 +31,17 @@ export interface IFileCategoryListQueryResponseDTO {
     /** 分类名称 */
     name?: string;
     /** 用户权限列表 */
-    userPermissionList?: ('CATEGORY_EDIT' | 'CATEGORY_MOVE' | 'CATEGORY_REMOVE' | 'UPLOAD_FILE' | 'CATEGORY_VIEW' | 'FILE_RENAME' | 'FILE_DOWNLOAD' | 'FILE_MOVE' | 'FILE_REMOVE')[];
+    userPermissionList?: EFileCategoryListQueryResponseDTO_userPermissionList_items[];
+}
+
+export enum EFileCategoryListQueryResponseDTO_userPermissionList_items {
+    CATEGORY_EDIT = "CATEGORY_EDIT",
+    CATEGORY_MOVE = "CATEGORY_MOVE",
+    CATEGORY_REMOVE = "CATEGORY_REMOVE",
+    UPLOAD_FILE = "UPLOAD_FILE",
+    CATEGORY_VIEW = "CATEGORY_VIEW",
+    FILE_RENAME = "FILE_RENAME",
+    FILE_DOWNLOAD = "FILE_DOWNLOAD",
+    FILE_MOVE = "FILE_MOVE",
+    FILE_REMOVE = "FILE_REMOVE"
 }

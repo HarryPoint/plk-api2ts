@@ -22,7 +22,7 @@ export interface IMessageInformation {
     /** 消息内容 */
     content?: string;
     /** 消息类型 */
-    type?: ('BUSINESS_NOTIFICATION' | 'BUSINESS_EARLY_WARNING' | 'SYSTEM_NOTIFICATION');
+    type?: EMessageInformation_type;
     /** 消息发送人 */
     sendUserId?: number;
     /** 移动端跳转路径 */
@@ -34,11 +34,11 @@ export interface IMessageInformation {
     /** 消息发送端 */
     sendTarget?: number;
     /** 消息跳转类型 */
-    pathType?: ('NONE' | 'JUMP' | 'DOWNLOAD' | 'REEXPORT' | 'TODO' | 'APP_ADD_PAGE_LINK' | 'APP_LIST_PAGE_LINK');
+    pathType?: EMessageInformation_pathType;
     /** 消息业务id */
     businessId?: number;
     /** 消息业务类型 */
-    businessType?: ('PRODUCE_TASK');
+    businessType?: EMessageInformation_businessType;
     /** 来源应用编码 */
     fromAppCode?: string;
 }
@@ -52,4 +52,35 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EMessageInformation_type {
+    /** 业务通知 */
+    BUSINESS_NOTIFICATION = "BUSINESS_NOTIFICATION",
+    /** 业务预警 */
+    BUSINESS_EARLY_WARNING = "BUSINESS_EARLY_WARNING",
+    /** 系统消息 */
+    SYSTEM_NOTIFICATION = "SYSTEM_NOTIFICATION"
+}
+
+export enum EMessageInformation_pathType {
+    /** 无操作 */
+    NONE = "NONE",
+    /** 跳转 */
+    JUMP = "JUMP",
+    /** 下载 */
+    DOWNLOAD = "DOWNLOAD",
+    /** 重新导出 */
+    REEXPORT = "REEXPORT",
+    /** 代办 */
+    TODO = "TODO",
+    /** 应用新增页面链接 */
+    APP_ADD_PAGE_LINK = "APP_ADD_PAGE_LINK",
+    /** 应用详细页面链接 */
+    APP_LIST_PAGE_LINK = "APP_LIST_PAGE_LINK"
+}
+
+export enum EMessageInformation_businessType {
+    /** 生产任务 */
+    PRODUCE_TASK = "PRODUCE_TASK"
 }

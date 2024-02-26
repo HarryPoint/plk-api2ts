@@ -36,9 +36,9 @@ export interface IStandardProcessCanvasResponseObject {
     /** 标准工艺名称 */
     standardTechnologyName?: string;
     /** 标准工艺类型 */
-    standardTechnologyType?: ('SPECIFIC_MATERIAL' | 'CONFIG_MATERIAL');
+    standardTechnologyType?: EStandardProcessCanvasResponseObject_standardTechnologyType;
     /** 标准工艺状态 */
-    standardTechnologyStatus?: ('DRAFT' | 'VALID' | 'INVALID');
+    standardTechnologyStatus?: EStandardProcessCanvasResponseObject_standardTechnologyStatus;
     /** 所属分类id */
     standardTechnologyCategoryId?: number;
     /** 所属分类名称 */
@@ -73,15 +73,56 @@ export interface IStandardProcessNodeResponseObject {
     /** 节点名称 */
     name?: string;
     /** 节点类型 */
-    type?: ('MATERIAL' | 'ROUTING' | 'CONDITION' | 'BRANCH');
+    type?: EStandardProcessNodeResponseObject_type;
     /** 配置类型 */
-    configType?: ('SPECIFIC' | 'CONFIGURED');
+    configType?: EStandardProcessNodeResponseObject_configType;
     /** 分支类型 -- 只有分支节点才会有值 */
-    branchType?: ('BOM' | 'CONDITION');
+    branchType?: EStandardProcessNodeResponseObject_branchType;
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */
     nextNode?: IStandardProcessNodeResponseObject;
     /** 分支节点列表 */
     branches?: IStandardProcessNodeResponseObject[];
+}
+
+export enum EStandardProcessCanvasResponseObject_standardTechnologyType {
+    /** 具体物料 */
+    SPECIFIC_MATERIAL = "SPECIFIC_MATERIAL",
+    /** 某一类别 */
+    CONFIG_MATERIAL = "CONFIG_MATERIAL"
+}
+
+export enum EStandardProcessCanvasResponseObject_standardTechnologyStatus {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 已启用 */
+    VALID = "VALID",
+    /** 已停用 */
+    INVALID = "INVALID"
+}
+
+export enum EStandardProcessNodeResponseObject_type {
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 工艺路径 */
+    ROUTING = "ROUTING",
+    /** 条件 */
+    CONDITION = "CONDITION",
+    /** 分支 */
+    BRANCH = "BRANCH"
+}
+
+export enum EStandardProcessNodeResponseObject_configType {
+    /** 具体 */
+    SPECIFIC = "SPECIFIC",
+    /** 配置 */
+    CONFIGURED = "CONFIGURED"
+}
+
+export enum EStandardProcessNodeResponseObject_branchType {
+    /** BOM */
+    BOM = "BOM",
+    /** 条件 */
+    CONDITION = "CONDITION"
 }

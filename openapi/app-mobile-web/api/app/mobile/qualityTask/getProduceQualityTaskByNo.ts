@@ -75,7 +75,7 @@ export interface ICheckTaskDetailsAreReturnedToVOForEmployees {
     /** 实际质检结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: ECheckTaskDetailsAreReturnedToVOForEmployees_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 送检人id */
@@ -150,13 +150,13 @@ export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检项附件文件名 */
     qualityInspectionItemAttachedFileName?: string;
     /** 质检方式 */
-    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod?: EInspectionTaskTheInspectionItemIsReturnedToVO_qualityMethod;
     /** 选择方式 */
-    selectType?: ('SELECTOR' | 'CHECKBOX');
+    selectType?: EInspectionTaskTheInspectionItemIsReturnedToVO_selectType;
     /** 选择项 */
     selectorList?: ITheInspectionItemOptionReturnsVO[];
     /** 数值质检标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EInspectionTaskTheInspectionItemIsReturnedToVO_numberStandard;
     /** 数值质检标准描述 */
     numberStandardDesc?: string;
     /** 比较数值 */
@@ -195,7 +195,7 @@ export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检任务质检物料明细id */
     id?: number;
     /** 质检结果类型 */
-    qualityInspectionResultType?: ('PASS' | 'NOT_PASS' | 'CONCESSION');
+    qualityInspectionResultType?: ECheckItemDetailsAreReturnedToVO_qualityInspectionResultType;
     /** 质检结果类型名称 */
     qualityInspectionResultTypeName?: string;
     /** 质检项集 */
@@ -206,9 +206,9 @@ export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 质检方案质检项关联id */
     qualityInspectionPlanItemRpId?: number;
     /** 质检方式 */
-    qualityMethod?: ('NUMBER_COMPARE' | 'ARTIFICIAL');
+    qualityMethod?: EQcTaskQCMaterialQCItemDetailsVO_qualityMethod;
     /** 数值质检标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EQcTaskQCMaterialQCItemDetailsVO_numberStandard;
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */
@@ -225,4 +225,71 @@ export interface IQcTaskQCMaterialQCItemDetailsVO {
     qualityInspectionItemCode?: string;
     /** 质检值 */
     qualityInspectionValues?: string;
+}
+
+export enum ECheckTaskDetailsAreReturnedToVOForEmployees_status {
+    /** 待质检 */
+    WAIT = "WAIT",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已撤销 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EInspectionTaskTheInspectionItemIsReturnedToVO_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum EInspectionTaskTheInspectionItemIsReturnedToVO_selectType {
+    /** 单选 */
+    SELECTOR = "SELECTOR",
+    /** 多选 */
+    CHECKBOX = "CHECKBOX"
+}
+
+export enum EInspectionTaskTheInspectionItemIsReturnedToVO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
+}
+
+export enum ECheckItemDetailsAreReturnedToVO_qualityInspectionResultType {
+    /** 合格 */
+    PASS = "PASS",
+    /** 不合格 */
+    NOT_PASS = "NOT_PASS",
+    /** 让步接收 */
+    CONCESSION = "CONCESSION"
+}
+
+export enum EQcTaskQCMaterialQCItemDetailsVO_qualityMethod {
+    /** 数值比对 */
+    NUMBER_COMPARE = "NUMBER_COMPARE",
+    /** 人工判断 */
+    ARTIFICIAL = "ARTIFICIAL"
+}
+
+export enum EQcTaskQCMaterialQCItemDetailsVO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
 }

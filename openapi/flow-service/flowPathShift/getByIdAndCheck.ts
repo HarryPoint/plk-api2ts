@@ -37,7 +37,14 @@ export interface IFlowPathShiftVO {
     /** 结束时间 */
     endTime?: string;
     /** 结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EFlowPathShiftVO_endTimeType;
     /** 方案名称 */
     planName?: string;
+}
+
+export enum EFlowPathShiftVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

@@ -39,7 +39,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«List«员工响应对象»» */
 export interface IJSONResultListEmployeeResponseObject {
@@ -93,9 +93,9 @@ export interface IEmployeeResponseObject {
     /** 离职日期 */
     dimissionTime?: string;
     /** 性别 */
-    gender?: ('MAN' | 'WOMAN');
+    gender?: EEmployeeResponseObject_gender;
     /** 学历 */
-    educational?: ('PRIMARY' | 'JUNIOR' | 'HIGH' | 'COLLEGE' | 'UNDERGRADUATE' | 'POSTGRADUATE' | 'INTERMEDIATE_TECHNICAL' | 'MASTER' | 'TECHNICAL_SECONDARY');
+    educational?: EEmployeeResponseObject_educational;
     /** 籍贯 */
     nativePlace?: string;
     /** 任职部门id */
@@ -108,4 +108,39 @@ export interface IEmployeeResponseObject {
     higherUserId?: number;
     /** 邮箱 */
     email?: string;
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EEmployeeResponseObject_gender {
+    /** 男 */
+    MAN = "MAN",
+    /** 女 */
+    WOMAN = "WOMAN"
+}
+
+export enum EEmployeeResponseObject_educational {
+    /** 小学 */
+    PRIMARY = "PRIMARY",
+    /** 初中 */
+    JUNIOR = "JUNIOR",
+    /** 高中 */
+    HIGH = "HIGH",
+    /** 大专 */
+    COLLEGE = "COLLEGE",
+    /** 本科 */
+    UNDERGRADUATE = "UNDERGRADUATE",
+    /** 研究生 */
+    POSTGRADUATE = "POSTGRADUATE",
+    /** 中技 */
+    INTERMEDIATE_TECHNICAL = "INTERMEDIATE_TECHNICAL",
+    /** 硕士 */
+    MASTER = "MASTER",
+    /** 中专 */
+    TECHNICAL_SECONDARY = "TECHNICAL_SECONDARY"
 }

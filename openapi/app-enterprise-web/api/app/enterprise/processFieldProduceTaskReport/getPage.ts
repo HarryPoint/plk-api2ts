@@ -32,14 +32,14 @@ export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     /** 物料ids */
     materialIds?: number[];
     /** 生产任务状态列表 */
-    produceTaskStatusList?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL')[];
+    produceTaskStatusList?: ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«任务汇总表(基于工序字段)归纳信息VO»» */
 export interface ITheJSONResultPageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields {
@@ -67,9 +67,9 @@ export interface IThePageInformationTaskSummaryTableSummarizesInformationVOBased
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -88,7 +88,7 @@ export interface ITheTaskSummaryTableSummarizesInformationVOBasedOnProcessFields
     /** 动态字段值列表 */
     fieldValueList?: IProcedureFieldValueVO[];
     /** 生产任务状态 */
-    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    produceTaskStatus?: ETheTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_produceTaskStatus;
 }
 /** 工序字段值VO */
 export interface IProcedureFieldValueVO {
@@ -96,4 +96,47 @@ export interface IProcedureFieldValueVO {
     code?: string;
     /** 字段值 */
     value?: string;
+}
+
+export enum ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items {
+    WAIT = "WAIT",
+    PRODUCE = "PRODUCE",
+    PAUSE = "PAUSE",
+    STOP = "STOP",
+    CLOSE = "CLOSE",
+    CANCEL = "CANCEL"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_produceTaskStatus {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

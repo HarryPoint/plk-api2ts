@@ -40,7 +40,7 @@ export interface IProcedureCompletionListQuery {
     /** 实际完工量 */
     realProduceNumRange?: number[];
     /** 是否主订单 */
-    isMaster?: ('Y' | 'N');
+    isMaster?: EProcedureCompletionListQuery_isMaster;
     /** 生产任务编号 */
     taskNo?: string;
     /** 报工人员集合 */
@@ -63,7 +63,7 @@ export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«工序完成明细表响应dto»» */
 export interface IJSONResultPagingInformationOperationCompletionDetailTableResponseDto {
@@ -91,9 +91,9 @@ export interface IPageInformationProcessCompletionDetailTableResponseDto {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationProcessCompletionDetailTableResponseDto_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationProcessCompletionDetailTableResponseDto_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -118,4 +118,32 @@ export interface IProcessCompletionDetailsRespondToDto {
 }
 /** 工序完成明细表生产订单响应dto */
 export interface IProcessCompletionDetailsProductionOrderResponseDto {
+}
+
+export enum EProcedureCompletionListQuery_isMaster {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationProcessCompletionDetailTableResponseDto_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationProcessCompletionDetailTableResponseDto_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

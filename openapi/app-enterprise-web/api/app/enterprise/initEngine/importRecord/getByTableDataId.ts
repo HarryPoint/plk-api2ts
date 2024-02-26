@@ -63,7 +63,7 @@ export interface IImportRecordDTO {
     /** 应用名称 */
     applicationName?: string;
     /** 导入类型 */
-    importType?: ('FIRST_IMPORT' | 'FAILED_DATA_IMPORT');
+    importType?: EImportRecordDTO_importType;
     /** 表数据ID */
     tableDataId?: string;
     /** 开始时间 */
@@ -71,7 +71,7 @@ export interface IImportRecordDTO {
     /** 结束时间 */
     endTime?: string;
     /** 导入状态 */
-    importStatus?: ('NONE' | 'QUEUING' | 'IMPORTING' | 'COMPLETE');
+    importStatus?: EImportRecordDTO_importStatus;
     /** 失败数量 */
     numberOfFailure?: number;
     /** 操作用户ID */
@@ -88,4 +88,22 @@ export interface IImportRecordDTO {
     templateId?: number;
     /** 模板编码 */
     templateCode?: string;
+}
+
+export enum EImportRecordDTO_importType {
+    /** 首次导入 */
+    FIRST_IMPORT = "FIRST_IMPORT",
+    /** 失败数据导入 */
+    FAILED_DATA_IMPORT = "FAILED_DATA_IMPORT"
+}
+
+export enum EImportRecordDTO_importStatus {
+    /** 未导入 */
+    NONE = "NONE",
+    /** 排队中 */
+    QUEUING = "QUEUING",
+    /** 导入中 */
+    IMPORTING = "IMPORTING",
+    /** 完成导入 */
+    COMPLETE = "COMPLETE"
 }

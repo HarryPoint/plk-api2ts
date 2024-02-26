@@ -39,13 +39,36 @@ export interface IPositionVO {
     /** 仓位编号 */
     code?: string;
     /** 是否默认仓位 - 针对整个工厂唯一默认有一个仓位，非仓库下自动创建的默认仓位 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EPositionVO_isDefault;
     /** 仓位类型 */
-    type?: ('PHYSICAL' | 'LINE_SIDE' | 'WIP');
+    type?: EPositionVO_type;
     /** WIP类型 - WIP时有值 */
-    wipType?: ('BEFORE' | 'IN');
+    wipType?: EPositionVO_wipType;
     /** 所属工艺路径id - WIP时有值 */
     routingId?: number;
     /** 所属区域id */
     areaId?: number;
+}
+
+export enum EPositionVO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPositionVO_type {
+    /** 实体仓 */
+    PHYSICAL = "PHYSICAL",
+    /** 线边仓 */
+    LINE_SIDE = "LINE_SIDE",
+    /** WIP */
+    WIP = "WIP"
+}
+
+export enum EPositionVO_wipType {
+    /** 在制前 */
+    BEFORE = "BEFORE",
+    /** 在制中 */
+    IN = "IN"
 }

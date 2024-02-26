@@ -31,7 +31,14 @@ export interface IVivBatchPrintTemplateResponseObject2 {
     /** 模板名称 */
     name?: string;
     /** 模板类型 */
-    type?: ('BARCODE' | 'QRCODE');
+    type?: EVivBatchPrintTemplateResponseObject2_type;
     /** 打印模板 */
     printTemplate?: string;
+}
+
+export enum EVivBatchPrintTemplateResponseObject2_type {
+    /** 一维码 */
+    BARCODE = "BARCODE",
+    /** 二维码 */
+    QRCODE = "QRCODE"
 }

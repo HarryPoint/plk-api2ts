@@ -39,9 +39,9 @@ export interface IThePageInformationTaskVolumeStatisticsReportReturnsTheDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationTaskVolumeStatisticsReportReturnsTheDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationTaskVolumeStatisticsReportReturnsTheDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -97,4 +97,18 @@ export interface ITaskVolumeStatisticsReportReturnsTheDTO {
     completeQuantity?: number;
     /** 超期任务量 */
     overdueQuantity?: number;
+}
+
+export enum EThePageInformationTaskVolumeStatisticsReportReturnsTheDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationTaskVolumeStatisticsReportReturnsTheDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

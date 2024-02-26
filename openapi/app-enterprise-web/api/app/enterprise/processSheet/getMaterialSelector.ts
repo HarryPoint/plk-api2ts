@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getMaterialSelectorUsingPOST_2
 */
-export default function fetchMethod(options: { params: { materialTypeList?: ('RAW' | 'SEMI_PRODUCT' | 'FINISH_GOODS' | 'KIT' | 'PARTS')[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: ('Y' | 'N') }[] } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialTypeList?: EmaterialTypeList_items[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: Eorders_items_isAsc }[] } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processSheet/getMaterialSelector",
@@ -39,9 +39,9 @@ export interface IPageInformationMaterialMasterDataSelectionReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationMaterialMasterDataSelectionReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationMaterialMasterDataSelectionReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -68,5 +68,39 @@ export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 库存可使用数 */
     storageUseCount?: number;
     /** 是否有bom */
-    hasBom?: ('Y' | 'N');
+    hasBom?: EMaterialMasterDataSelectionIsReturnedToVO_hasBom;
+}
+
+export enum EmaterialTypeList_items {
+    RAW = "RAW",
+    SEMI_PRODUCT = "SEMI_PRODUCT",
+    FINISH_GOODS = "FINISH_GOODS",
+    KIT = "KIT",
+    PARTS = "PARTS"
+}
+
+export enum Eorders_items_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationMaterialMasterDataSelectionReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationMaterialMasterDataSelectionReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialMasterDataSelectionIsReturnedToVO_hasBom {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

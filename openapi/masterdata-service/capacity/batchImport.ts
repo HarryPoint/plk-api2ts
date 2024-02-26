@@ -28,11 +28,11 @@ export interface ICapacityPreservationDTO {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: ECapacityPreservationDTO_readyTimeUnit;
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: ECapacityPreservationDTO_capacityTimeType;
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }
@@ -46,4 +46,22 @@ export interface IJSONResultListstring {
     data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ECapacityPreservationDTO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum ECapacityPreservationDTO_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

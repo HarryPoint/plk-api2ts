@@ -35,5 +35,14 @@ export interface INewPermissionEdit {
     /** 流程字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 权限类型 */
-    type?: ('EDIT' | 'READONLY' | 'HIDDEN');
+    type?: ENewPermissionEdit_type;
+}
+
+export enum ENewPermissionEdit_type {
+    /** 可编辑 */
+    EDIT = "EDIT",
+    /** 只读 */
+    READONLY = "READONLY",
+    /** 隐藏 */
+    HIDDEN = "HIDDEN"
 }

@@ -28,17 +28,17 @@ export interface IProjectTemplateEditRequestDTO {
     /** 项目字段列表 */
     projectFields?: IIdCodeNameGenericTransportObject[];
     /** 项目团队是否勾选 */
-    checkProjectTeam?: ('Y' | 'N');
+    checkProjectTeam?: EProjectTemplateEditRequestDTO_checkProjectTeam;
     /** 项目成员是否勾选 */
-    checkProjectMember?: ('Y' | 'N');
+    checkProjectMember?: EProjectTemplateEditRequestDTO_checkProjectMember;
     /** 项目角色是否勾选 */
-    checkProjectRole?: ('Y' | 'N');
+    checkProjectRole?: EProjectTemplateEditRequestDTO_checkProjectRole;
     /** 项目计划是否勾选 */
-    checkProjectPlan?: ('Y' | 'N');
+    checkProjectPlan?: EProjectTemplateEditRequestDTO_checkProjectPlan;
     /** 项目计划字段 */
     projectPlanFields?: IIdCodeNameGenericTransportObject[];
     /** 项目计划自定义字段是否勾选 */
-    checkProjectPlanCustomField?: ('Y' | 'N');
+    checkProjectPlanCustomField?: EProjectTemplateEditRequestDTO_checkProjectPlanCustomField;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
@@ -59,4 +59,39 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProjectTemplateEditRequestDTO_checkProjectTeam {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTemplateEditRequestDTO_checkProjectMember {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTemplateEditRequestDTO_checkProjectRole {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTemplateEditRequestDTO_checkProjectPlan {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTemplateEditRequestDTO_checkProjectPlanCustomField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

@@ -36,7 +36,7 @@ export interface IRoleRightsApplyAuthorizationDetailsToRequestTheDTO {
 /** 企业数据权限列表响应_1 */
 export interface IEnterpriseDataPermissionListResponse1 {
     /** 数据权限类型 */
-    dataAuthType?: ('FLOW_FIELD' | 'SELF' | 'DEPT' | 'ALL');
+    dataAuthType?: EEnterpriseDataPermissionListResponse1_dataAuthType;
     /** 数据权限对应的字段列表(只针对表单字段类型) */
     roleDataAuthFieldList?: IEditTheDTOForRoleDataPermissionField[];
 }
@@ -57,4 +57,15 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEnterpriseDataPermissionListResponse1_dataAuthType {
+    /** 表单字段 */
+    FLOW_FIELD = "FLOW_FIELD",
+    /** 本人 */
+    SELF = "SELF",
+    /** 所属部门 */
+    DEPT = "DEPT",
+    /** 全部 */
+    ALL = "ALL"
 }

@@ -34,7 +34,7 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 计划开始日期查询结束时间 */
     endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE')[];
+    planTypeList?: EProductionSchedulingOrderSearchVO_planTypeList_items[];
     /** 计划结束日期查询结束时间 */
     endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
@@ -45,7 +45,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«报表生产订单返回VO»» */
 export interface IJSONResultPagingInformationReportProductionOrderReturnsVO {
@@ -73,9 +73,9 @@ export interface IPageInformationReportProductionOrderReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationReportProductionOrderReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationReportProductionOrderReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -110,11 +110,11 @@ export interface IReportProductionOrdersBackToVO {
     /** 优先级 */
     priorityLevel?: number;
     /** 订单排产状态 */
-    planStatus?: ('WAIT' | 'PART' | 'ALL');
+    planStatus?: EReportProductionOrdersBackToVO_planStatus;
     /** 订单排产状态描述 */
     planStatusDesc?: string;
     /** 订单排产方式 */
-    planType?: ('NOT_PLAN' | 'AUTO' | 'HAND' | 'VAGUE');
+    planType?: EReportProductionOrdersBackToVO_planType;
     /** 订单排产方式描述 */
     planTypeDesc?: string;
     /** 订单计划开始日期 */
@@ -129,4 +129,50 @@ export interface IReportProductionOrdersBackToVO {
     routingName?: string;
     /** 对应工艺路径编号 */
     routingCode?: string;
+}
+
+export enum EProductionSchedulingOrderSearchVO_planTypeList_items {
+    NOT_PLAN = "NOT_PLAN",
+    AUTO = "AUTO",
+    HAND = "HAND",
+    VAGUE = "VAGUE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationReportProductionOrderReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationReportProductionOrderReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EReportProductionOrdersBackToVO_planStatus {
+    /** 待排产 */
+    WAIT = "WAIT",
+    /** 部分排产 */
+    PART = "PART",
+    /** 全部排产 */
+    ALL = "ALL"
+}
+
+export enum EReportProductionOrdersBackToVO_planType {
+    /** 未排产 */
+    NOT_PLAN = "NOT_PLAN",
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
 }

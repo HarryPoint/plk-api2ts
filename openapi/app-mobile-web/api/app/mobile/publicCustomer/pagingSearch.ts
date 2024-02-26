@@ -20,7 +20,7 @@ export interface IPaging3 {
     /** 行政区划编码，精确匹配 */
     regionCode?: string;
     /** 客户级别，精确匹配 */
-    customerType?: ('A' | 'B' | 'C');
+    customerType?: EPaging3_customerType;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -28,7 +28,7 @@ export interface IPaging3 {
     /** 客户名称，模糊匹配 */
     name?: string;
     /** 客户来源，精确匹配 */
-    customerSource?: ('OLD_INTRODUCTION' | 'OFFICIAL_WEBSITE' | 'STRANGER_VISIT' | 'MARKETING_ACTIVITIES' | 'PHONE_CONSULTATION' | 'TELEPHONE_SALES' | 'NETWORK_PROMOTION');
+    customerSource?: EPaging3_customerSource;
     /** 开始时间起始， yyyy-MM-dd HH:mm:ss */
     createTimeBegin?: string;
     /** 开始时间截至， yyyy-MM-dd HH:mm:ss */
@@ -39,7 +39,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«PublicCustomerOutputVO»» */
 export interface IJSONResultPageInformationPublicCustomerOutputVO {
@@ -67,9 +67,9 @@ export interface IPageInformationPublicCustomerOutputVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationPublicCustomerOutputVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationPublicCustomerOutputVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -101,4 +101,49 @@ export interface IPublicCustomerOutputVO {
     createUserName?: string;
     /** 创建时间 */
     createTime?: string;
+}
+
+export enum EPaging3_customerType {
+    /** A类(重要客户) */
+    A = "A",
+    /** B类(普通客户) */
+    B = "B",
+    /** C类(低价值客户) */
+    C = "C"
+}
+
+export enum EPaging3_customerSource {
+    /** 老客户介绍 */
+    OLD_INTRODUCTION = "OLD_INTRODUCTION",
+    /** 官网 */
+    OFFICIAL_WEBSITE = "OFFICIAL_WEBSITE",
+    /** 陌拜 */
+    STRANGER_VISIT = "STRANGER_VISIT",
+    /** 市场活动 */
+    MARKETING_ACTIVITIES = "MARKETING_ACTIVITIES",
+    /** 电话咨询 */
+    PHONE_CONSULTATION = "PHONE_CONSULTATION",
+    /** 电销 */
+    TELEPHONE_SALES = "TELEPHONE_SALES",
+    /** 网络推广 */
+    NETWORK_PROMOTION = "NETWORK_PROMOTION"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationPublicCustomerOutputVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationPublicCustomerOutputVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

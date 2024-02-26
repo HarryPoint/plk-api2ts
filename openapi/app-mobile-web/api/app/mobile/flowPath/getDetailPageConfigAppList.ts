@@ -42,5 +42,16 @@ export interface IFlowPathDetailPageConfigItem {
     /** 页签名称/别名 */
     aliasName?: string;
     /** App/FlowPath类型 */
-    appType?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
+    appType?: EFlowPathDetailPageConfigItem_appType;
+}
+
+export enum EFlowPathDetailPageConfigItem_appType {
+    /** 单据 */
+    BILL = "BILL",
+    /** 基础数据 */
+    DATA = "DATA",
+    /** 多级基础数据 */
+    TREE_DATA = "TREE_DATA",
+    /** 页面 */
+    PAGE = "PAGE"
 }

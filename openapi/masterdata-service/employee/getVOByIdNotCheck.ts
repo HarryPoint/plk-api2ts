@@ -47,13 +47,41 @@ export interface IEmployeeVO {
     /** 出生日期 */
     birthday?: string;
     /** 性别 */
-    gender?: ('MAN' | 'WOMAN');
+    gender?: EEmployeeVO_gender;
     /** 学历 */
-    educational?: ('PRIMARY' | 'JUNIOR' | 'HIGH' | 'COLLEGE' | 'UNDERGRADUATE' | 'POSTGRADUATE' | 'INTERMEDIATE_TECHNICAL' | 'MASTER' | 'TECHNICAL_SECONDARY');
+    educational?: EEmployeeVO_educational;
     /** 籍贯 */
     nativePlace?: string;
     /** 任职职位id */
     positionId?: number;
     /** 任职开始日期 */
     positionDate?: string;
+}
+
+export enum EEmployeeVO_gender {
+    /** 男 */
+    MAN = "MAN",
+    /** 女 */
+    WOMAN = "WOMAN"
+}
+
+export enum EEmployeeVO_educational {
+    /** 小学 */
+    PRIMARY = "PRIMARY",
+    /** 初中 */
+    JUNIOR = "JUNIOR",
+    /** 高中 */
+    HIGH = "HIGH",
+    /** 大专 */
+    COLLEGE = "COLLEGE",
+    /** 本科 */
+    UNDERGRADUATE = "UNDERGRADUATE",
+    /** 研究生 */
+    POSTGRADUATE = "POSTGRADUATE",
+    /** 中技 */
+    INTERMEDIATE_TECHNICAL = "INTERMEDIATE_TECHNICAL",
+    /** 硕士 */
+    MASTER = "MASTER",
+    /** 中专 */
+    TECHNICAL_SECONDARY = "TECHNICAL_SECONDARY"
 }

@@ -24,7 +24,7 @@ export interface IStandardProcessEditRequestObjectForAClassOfMaterial {
     /** 缩略图 */
     thumbnail?: string;
     /** 是否是暂存 Y暂存 N发布 */
-    isStaging: ('Y' | 'N');
+    isStaging: EStandardProcessEditRequestObjectForAClassOfMaterial_isStaging;
     /** 标准工艺节点编辑请求对象 发布时传递 */
     nodeEditRequest: IStandardProcessNodeRespondsToObject1;
     /** 标准工艺画布快照 暂存时必须传递 */
@@ -41,11 +41,11 @@ export interface IStandardProcessNodeRespondsToObject1 {
     /** 节点名称 */
     name?: string;
     /** 节点类型 */
-    type?: ('MATERIAL' | 'ROUTING' | 'CONDITION' | 'BRANCH');
+    type?: EStandardProcessNodeRespondsToObject1_type;
     /** 配置类型 */
-    configType?: ('SPECIFIC' | 'CONFIGURED');
+    configType?: EStandardProcessNodeRespondsToObject1_configType;
     /** 分支类型 -- 只有分支节点才会有值 */
-    branchType?: ('BOM' | 'CONDITION');
+    branchType?: EStandardProcessNodeRespondsToObject1_branchType;
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */
@@ -60,11 +60,11 @@ export interface IStandardProcessNodeRespondsToObject2 {
     /** 节点名称 */
     name?: string;
     /** 节点类型 */
-    type?: ('MATERIAL' | 'ROUTING' | 'CONDITION' | 'BRANCH');
+    type?: EStandardProcessNodeRespondsToObject2_type;
     /** 配置类型 */
-    configType?: ('SPECIFIC' | 'CONFIGURED');
+    configType?: EStandardProcessNodeRespondsToObject2_configType;
     /** 分支类型 -- 只有分支节点才会有值 */
-    branchType?: ('BOM' | 'CONDITION');
+    branchType?: EStandardProcessNodeRespondsToObject2_branchType;
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */
     nodeData?: Record<string, Record<string, any>>;
     /** 下一节点 */
@@ -82,4 +82,61 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EStandardProcessEditRequestObjectForAClassOfMaterial_isStaging {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EStandardProcessNodeRespondsToObject1_type {
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 工艺路径 */
+    ROUTING = "ROUTING",
+    /** 条件 */
+    CONDITION = "CONDITION",
+    /** 分支 */
+    BRANCH = "BRANCH"
+}
+
+export enum EStandardProcessNodeRespondsToObject1_configType {
+    /** 具体 */
+    SPECIFIC = "SPECIFIC",
+    /** 配置 */
+    CONFIGURED = "CONFIGURED"
+}
+
+export enum EStandardProcessNodeRespondsToObject1_branchType {
+    /** BOM */
+    BOM = "BOM",
+    /** 条件 */
+    CONDITION = "CONDITION"
+}
+
+export enum EStandardProcessNodeRespondsToObject2_type {
+    /** 物料 */
+    MATERIAL = "MATERIAL",
+    /** 工艺路径 */
+    ROUTING = "ROUTING",
+    /** 条件 */
+    CONDITION = "CONDITION",
+    /** 分支 */
+    BRANCH = "BRANCH"
+}
+
+export enum EStandardProcessNodeRespondsToObject2_configType {
+    /** 具体 */
+    SPECIFIC = "SPECIFIC",
+    /** 配置 */
+    CONFIGURED = "CONFIGURED"
+}
+
+export enum EStandardProcessNodeRespondsToObject2_branchType {
+    /** BOM */
+    BOM = "BOM",
+    /** 条件 */
+    CONDITION = "CONDITION"
 }

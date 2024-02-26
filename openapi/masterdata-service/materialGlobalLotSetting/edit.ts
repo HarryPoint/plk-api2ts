@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IMaterialsBureauBatchSetEdi
 /** 物料全局批次设置编辑对象 */
 export interface IMaterialsBureauBatchSetEditObject {
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EMaterialsBureauBatchSetEditObject_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EMaterialsBureauBatchSetEditObject_enableLot;
     /** 物料批次出库规则 */
-    lotOutRule?: ('BATCH_ORDER_FIFO' | 'MANUAL_SELECTION');
+    lotOutRule?: EMaterialsBureauBatchSetEditObject_lotOutRule;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EMaterialsBureauBatchSetEditObject_enableQualityTraceability;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EMaterialsBureauBatchSetEditObject_enableExternalCode;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -36,4 +36,39 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EMaterialsBureauBatchSetEditObject_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialsBureauBatchSetEditObject_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialsBureauBatchSetEditObject_lotOutRule {
+    /** 按批次顺序先进先出 */
+    BATCH_ORDER_FIFO = "BATCH_ORDER_FIFO",
+    /** 手动选择 */
+    MANUAL_SELECTION = "MANUAL_SELECTION"
+}
+
+export enum EMaterialsBureauBatchSetEditObject_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMaterialsBureauBatchSetEditObject_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

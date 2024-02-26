@@ -23,7 +23,7 @@ export interface ITheDTOCompletesTheInspectionTask {
 /** 质检结果物料信息 DTO */
 export interface IQualityInspectionResultMaterialInformationDTO {
     /** 质检结果类型 */
-    qualityInspectionResultType?: ('PASS' | 'NOT_PASS' | 'CONCESSION');
+    qualityInspectionResultType?: EQualityInspectionResultMaterialInformationDTO_qualityInspectionResultType;
     /** 每项物料填的质检结果集 */
     qualityTaskMaterialItems?: IQualityInspectionResultDTO[];
 }
@@ -46,4 +46,13 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EQualityInspectionResultMaterialInformationDTO_qualityInspectionResultType {
+    /** 合格 */
+    PASS = "PASS",
+    /** 不合格 */
+    NOT_PASS = "NOT_PASS",
+    /** 让步接收 */
+    CONCESSION = "CONCESSION"
 }

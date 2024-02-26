@@ -31,7 +31,7 @@ export interface IItemMemberChangeOrderResponseParameter {
     /** 成员姓名 */
     employeeName?: string;
     /** 表单操作类型 */
-    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'MODIFY_PROJECT_MANGER');
+    operateType?: EItemMemberChangeOrderResponseParameter_operateType;
     /** 数据id */
     dataId?: string;
     /** 项目变更表单id */
@@ -44,7 +44,7 @@ export interface IItemChangeOrderFieldResponseParameter {
     /** 字段编号 */
     fieldCode?: string;
     /** 操作类型 */
-    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
+    operateType?: EItemChangeOrderFieldResponseParameter_operateType;
     /** 旧值 */
     oldValue?: string;
     /** 新值 */
@@ -57,7 +57,40 @@ export interface IItemChangeListFieldExtensionParameterRequest {
     /** 行数据id */
     dataId?: string;
     /** 操作类型 */
-    operateType?: ('ADD' | 'MODIFY' | 'DELETE' | 'RECORD');
+    operateType?: EItemChangeListFieldExtensionParameterRequest_operateType;
     /** 列数据 */
     columnData?: IItemChangeOrderFieldResponseParameter[];
+}
+
+export enum EItemMemberChangeOrderResponseParameter_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 修改项目经理 */
+    MODIFY_PROJECT_MANGER = "MODIFY_PROJECT_MANGER"
+}
+
+export enum EItemChangeOrderFieldResponseParameter_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 记录值 */
+    RECORD = "RECORD"
+}
+
+export enum EItemChangeListFieldExtensionParameterRequest_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 记录值 */
+    RECORD = "RECORD"
 }

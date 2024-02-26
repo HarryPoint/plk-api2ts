@@ -22,7 +22,7 @@ export interface IEditDeviceDataAcquisitionSchemeDTO {
     /** 编码 */
     code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: ('Y' | 'N');
+    isCodeRule: EEditDeviceDataAcquisitionSchemeDTO_isCodeRule;
     /** 版次号 */
     issueCode?: string;
     /** 备注 */
@@ -37,9 +37,9 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationEdit
     /** 设备数采参数id */
     deviceCollectionParamId?: number;
     /** 统计类型 */
-    statisticType?: ('AVG' | 'SUM' | 'MAX' | 'MIN' | 'SUBTRACT');
+    statisticType?: EDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO_statisticType;
     /** 实时数值对比标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO_numberStandard;
     /** 实时比较数值 */
     compareNumber?: number;
     /** 实时下限 */
@@ -56,9 +56,9 @@ export interface IDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO {
     /** 关联id */
     id?: number;
     /** 时间粒度 */
-    timeType?: ('ALL' | 'HOUR' | 'DAY' | 'MONTH');
+    timeType?: EDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO_timeType;
     /** 数值对比标准 */
-    numberStandard?: ('BETWEEN' | 'GT' | 'GE' | 'LT' | 'LE');
+    numberStandard?: EDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO_numberStandard;
     /** 比较数值 */
     compareNumber?: number;
     /** 下限 */
@@ -78,4 +78,61 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EEditDeviceDataAcquisitionSchemeDTO_isCodeRule {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO_statisticType {
+    /** 平均值 */
+    AVG = "AVG",
+    /** 求和 */
+    SUM = "SUM",
+    /** 最大值 */
+    MAX = "MAX",
+    /** 最小值 */
+    MIN = "MIN",
+    /** 取前后数据差值 */
+    SUBTRACT = "SUBTRACT"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO_timeType {
+    /** 全部 */
+    ALL = "ALL",
+    /** 时 */
+    HOUR = "HOUR",
+    /** 日 */
+    DAY = "DAY",
+    /** 月 */
+    MONTH = "MONTH"
+}
+
+export enum EDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO_numberStandard {
+    /** 数值区间 */
+    BETWEEN = "BETWEEN",
+    /** 数值大于 */
+    GT = "GT",
+    /** 数值大于等于 */
+    GE = "GE",
+    /** 数值小于 */
+    LT = "LT",
+    /** 数值小于等于 */
+    LE = "LE"
 }

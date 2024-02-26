@@ -34,14 +34,14 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
+    salesOrderStatus?: EOrderProgressStatisticsQueryVO_salesOrderStatus;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«订单进度统计响应VO»» */
 export interface IJSONResultPageInformationOrderProgressStatisticsResponseVO {
@@ -69,9 +69,9 @@ export interface IPageInformationOrderProgressStatisticsResponseVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationOrderProgressStatisticsResponseVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationOrderProgressStatisticsResponseVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -86,7 +86,7 @@ export interface IOrderProgressStatisticsRespondToVO {
     /** 客户名称-（销售订单维度 */
     customerName?: string;
     /** 销售订单状态-（销售订单维度 */
-    salesOrderStatus?: ('CREATED' | 'CONVERTING' | 'CONVERED' | 'CANCEL' | 'CLOSE');
+    salesOrderStatus?: EOrderProgressStatisticsRespondToVO_salesOrderStatus;
     /** 销售订单创建时间 */
     salesOrderCreateTime?: string;
     /** 物料id-（销售订单明细维度 */
@@ -140,9 +140,9 @@ export interface IOrderProgressStatisticsRespondToVO {
     /** 生产数量-（生产订单维度 */
     convertQuantity?: number;
     /** 生产订单状态-（生产订单维度 */
-    produceOrderStatus?: ('CREATED' | 'PLAN' | 'ISSUE' | 'PRODUCE' | 'CANCEL' | 'CLOSE' | 'PART_COMPLETE' | 'COMPLETE');
+    produceOrderStatus?: EOrderProgressStatisticsRespondToVO_produceOrderStatus;
     /** 排产状态-（生产订单维度 */
-    produceOrderPlanStatus?: ('WAIT' | 'PART' | 'ALL');
+    produceOrderPlanStatus?: EOrderProgressStatisticsRespondToVO_produceOrderPlanStatus;
     /** 计划生产开始时间-（生产订单维度 */
     planBeginTime?: string;
     /** 计划生产结束时间-（生产订单维度 */
@@ -161,4 +161,77 @@ export interface IOrderProgressStatisticsRespondToVO {
     entrustQuantity?: number;
     /** 合格产出进度 */
     produceRatio?: number;
+}
+
+export enum EOrderProgressStatisticsQueryVO_salesOrderStatus {
+    /** 未转生产订单 */
+    CREATED = "CREATED",
+    /** 部分已转 */
+    CONVERTING = "CONVERTING",
+    /** 已转生产订单 */
+    CONVERED = "CONVERED",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationOrderProgressStatisticsResponseVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationOrderProgressStatisticsResponseVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOrderProgressStatisticsRespondToVO_salesOrderStatus {
+    /** 未转生产订单 */
+    CREATED = "CREATED",
+    /** 部分已转 */
+    CONVERTING = "CONVERTING",
+    /** 已转生产订单 */
+    CONVERED = "CONVERED",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum EOrderProgressStatisticsRespondToVO_produceOrderStatus {
+    /** 已创建 */
+    CREATED = "CREATED",
+    /** 已排产 */
+    PLAN = "PLAN",
+    /** 已下发 */
+    ISSUE = "ISSUE",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 部分完成 */
+    PART_COMPLETE = "PART_COMPLETE",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EOrderProgressStatisticsRespondToVO_produceOrderPlanStatus {
+    /** 待排产 */
+    WAIT = "WAIT",
+    /** 部分排产 */
+    PART = "PART",
+    /** 全部排产 */
+    ALL = "ALL"
 }

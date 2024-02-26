@@ -103,7 +103,7 @@ export interface ISpecificMaterialNumberAssociatedProcessPathStepDataStructureRe
     /** 工费 */
     laborCost?: ICostResponseObject;
     /** 进出站确认类型 */
-    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
+    bomConsumeSureType?: ESpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject_bomConsumeSureType;
 }
 /** 标准工艺具体工艺卡详情对象_1 */
 export interface IStandardProcessSpecificProcessCardDetailsObject1 {
@@ -121,7 +121,7 @@ export interface IStandardProcessSpecificProcessCardDetailsObject {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: ('FILE' | 'TEXT' | 'INPUT');
+    type?: EStandardProcessSpecificProcessCardDetailsObject_type;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -135,9 +135,9 @@ export interface IStandardProcessSpecificProcessCardDetailsObject {
     /** 文件完整url */
     fileUrl?: string;
     /** 录入类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EStandardProcessSpecificProcessCardDetailsObject_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EStandardProcessSpecificProcessCardDetailsObject_textType;
     /** 文本比较值集 */
     textCompareValueList?: string[];
     /** 下限 */
@@ -182,9 +182,9 @@ export interface IKeyParameterDetailsResponseObject {
     /** 帮助提示 */
     remark?: string;
     /** 字段类型 */
-    inputType?: ('TEXT' | 'SELECTOR' | 'CHECKBOX' | 'NUMBER' | 'IMAGE');
+    inputType?: EKeyParameterDetailsResponseObject_inputType;
     /** 文本类型 */
-    textType?: ('INPUT' | 'COMPARE');
+    textType?: EKeyParameterDetailsResponseObject_textType;
     /** 文本比较值，多个英文逗号,分割 */
     textCompareValue?: string;
     /** 文本比较值集 */
@@ -217,11 +217,11 @@ export interface IProductivityResponseObject {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProductivityResponseObject_readyTimeUnit;
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProductivityResponseObject_capacityTimeType;
     /** 产出数量 */
     capacityProduceQuantity?: number;
 }
@@ -243,4 +243,78 @@ export interface ICostResponseObject {
     backProducePrice?: number;
     /** 准备工费（元） */
     readyPrice?: number;
+}
+
+export enum ESpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject_bomConsumeSureType {
+    /** 在进站时确认 */
+    MOVE_IN = "MOVE_IN",
+    /** 在出站时确认 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EStandardProcessSpecificProcessCardDetailsObject_type {
+    /** 文件 */
+    FILE = "FILE",
+    /** 描述 */
+    TEXT = "TEXT",
+    /** 录入 */
+    INPUT = "INPUT"
+}
+
+export enum EStandardProcessSpecificProcessCardDetailsObject_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EStandardProcessSpecificProcessCardDetailsObject_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
+}
+
+export enum EKeyParameterDetailsResponseObject_inputType {
+    /** 文本 */
+    TEXT = "TEXT",
+    /** 单选框 */
+    SELECTOR = "SELECTOR",
+    /** 多选框 */
+    CHECKBOX = "CHECKBOX",
+    /** 数值 */
+    NUMBER = "NUMBER",
+    /** 上传图片 */
+    IMAGE = "IMAGE"
+}
+
+export enum EKeyParameterDetailsResponseObject_textType {
+    /** 输入 */
+    INPUT = "INPUT",
+    /** 比较 */
+    COMPARE = "COMPARE"
+}
+
+export enum EProductivityResponseObject_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProductivityResponseObject_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

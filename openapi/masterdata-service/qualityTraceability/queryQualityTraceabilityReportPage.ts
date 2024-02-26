@@ -31,7 +31,7 @@ export interface IProcessDataDetailsSearchVO {
     /** 列code */
     code: string;
     /** 搜索类型 */
-    searchType: ('NONE' | 'EQ' | 'LIKE' | 'RANGE' | 'SELECTOR' | 'IS_NULL' | 'NOT_NULL' | 'NE' | 'REGEXP');
+    searchType: EProcessDataDetailsSearchVO_searchType;
     /** 搜索文本 - 针对文本搜索 */
     text?: string;
     /** 搜索起始值 - 针对范围搜索 */
@@ -48,7 +48,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«质量追溯报表响应DTO»» */
 export interface IJSONResultPagingInformationQualityTraceabilityReportRespondsToTheDTO {
@@ -76,9 +76,9 @@ export interface IPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPagingInformationQualityTraceabilityReportRespondsToTheDTO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPagingInformationQualityTraceabilityReportRespondsToTheDTO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -95,7 +95,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     /** 工序 */
     processId?: Record<string, any>[];
     /** 操作类型 */
-    optType?: ('MOVE_IN' | 'MOVE_OUT');
+    optType?: EQualityTraceabilityReportRespondsToDTO_optType;
     /** 操作员 */
     optEmployeeId?: Record<string, any>[];
     /** 操作时间 */
@@ -113,7 +113,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     /** 任务编号 */
     produceTaskNo?: string;
     /** 任务状态 */
-    produceTaskStatus?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    produceTaskStatus?: EQualityTraceabilityReportRespondsToDTO_produceTaskStatus;
     /** 生产订单号 */
     produceOrderCode?: string;
 }
@@ -129,4 +129,57 @@ export interface IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRes
     lotNoList?: string;
     /** 消耗物料序列号 */
     serialNoList?: string;
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPagingInformationQualityTraceabilityReportRespondsToTheDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingInformationQualityTraceabilityReportRespondsToTheDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EQualityTraceabilityReportRespondsToDTO_optType {
+    /** 进料 */
+    MOVE_IN = "MOVE_IN",
+    /** 出料 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EQualityTraceabilityReportRespondsToDTO_produceTaskStatus {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
 }

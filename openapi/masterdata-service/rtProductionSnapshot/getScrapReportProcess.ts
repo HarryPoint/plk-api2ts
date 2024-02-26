@@ -26,7 +26,7 @@ export interface IOutputClassReportSearchVO {
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 查询时间维度类型 */
-    timeType?: ('HOUR' | 'DAY' | 'MONTH' | 'YEAR');
+    timeType?: EOutputClassReportSearchVO_timeType;
 }
 /** JSONResult«产出类折线图返回VO«良品与报废报表返回VO»» */
 export interface IJSONResultOutputLineChartReturnsVOGoodAndScrapReportReturnsVO {
@@ -50,7 +50,7 @@ export interface IOutputLineChartReturnsVOGoodAndScrapReportReturnsVO {
     /** 查询物料集 */
     majorDataList?: IIdNameNumberVO[];
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
-    isConsistent?: ('Y' | 'N');
+    isConsistent?: EOutputLineChartReturnsVOGoodAndScrapReportReturnsVO_isConsistent;
     /** 实际查询时间 - 开始 */
     actualBeginTime?: string;
     /** 实际查询时间 - 结束 */
@@ -96,4 +96,22 @@ export interface IIdNameNumberVO {
     name: string;
     /** 编号 */
     code: string;
+}
+
+export enum EOutputClassReportSearchVO_timeType {
+    /** 时 */
+    HOUR = "HOUR",
+    /** 日 */
+    DAY = "DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 年 */
+    YEAR = "YEAR"
+}
+
+export enum EOutputLineChartReturnsVOGoodAndScrapReportReturnsVO_isConsistent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

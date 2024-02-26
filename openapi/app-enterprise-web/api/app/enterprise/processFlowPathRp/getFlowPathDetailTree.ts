@@ -33,11 +33,31 @@ export interface IProcessTreeVO1 {
     /** 流程id */
     flowPathId?: number;
     /** 流程树类型 */
-    treeType?: ('MENU' | 'FLOW' | 'FLOW_TABLE');
+    treeType?: EProcessTreeVO1_treeType;
     /** 流程code */
     flowPathCode?: string;
     /** 流程类型 */
-    flowPathType?: ('BILL' | 'DATA' | 'TREE_DATA' | 'PAGE');
+    flowPathType?: EProcessTreeVO1_flowPathType;
     /** 子集 */
     children?: IProcessTreeVO1[];
+}
+
+export enum EProcessTreeVO1_treeType {
+    /** 菜单 */
+    MENU = "MENU",
+    /** 流程 */
+    FLOW = "FLOW",
+    /** 流程明细表 */
+    FLOW_TABLE = "FLOW_TABLE"
+}
+
+export enum EProcessTreeVO1_flowPathType {
+    /** 单据 */
+    BILL = "BILL",
+    /** 基础数据 */
+    DATA = "DATA",
+    /** 多级基础数据 */
+    TREE_DATA = "TREE_DATA",
+    /** 页面 */
+    PAGE = "PAGE"
 }

@@ -31,11 +31,11 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 任务编号 */
     code?: string;
     /** 业务类型 */
-    businessType?: ('CUSTOMER_COMPLAIN' | 'INCOMING_INSPECTION' | 'FIRST_INSPECTION' | 'PATROL_INSPECTION' | 'PROCESS_INSPECTION' | 'PRODUCT_INSPECTION' | 'SHIPMENT_INSPECTION' | 'EXPERIMENT' | 'OTHER');
+    businessType?: EProcessCheckCheckTaskResponseObject_businessType;
     /** 是否紧急 */
-    isEmergent?: ('Y' | 'N');
+    isEmergent?: EProcessCheckCheckTaskResponseObject_isEmergent;
     /** 是否临检 */
-    isTemporarily?: ('Y' | 'N');
+    isTemporarily?: EProcessCheckCheckTaskResponseObject_isTemporarily;
     /** 报检单物料明细id */
     qmsInspectionApplyFormMaterialDetailId?: number;
     /** 报检日期 */
@@ -71,7 +71,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 互检员 */
     mutualInspectionEmployeeIds?: number[];
     /** 检验方式 */
-    inspectionMethod?: ('SPOT_CHECK' | 'ALL_CHECK');
+    inspectionMethod?: EProcessCheckCheckTaskResponseObject_inspectionMethod;
     /** 检验数量 */
     inspectionQuantity?: number;
     /** 自检合格数 */
@@ -79,19 +79,19 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 自检不合格数 */
     selfUnQualifiedQuantity?: number;
     /** 自检检验结果 */
-    selfInspectionResult?: ('Y' | 'N');
+    selfInspectionResult?: EProcessCheckCheckTaskResponseObject_selfInspectionResult;
     /** 互检合格数 */
     mutualQualifiedQuantity?: number;
     /** 互检不合格数 */
     mutualUnQualifiedQuantity?: number;
     /** 互检检验结果 */
-    mutualInspectionResult?: ('Y' | 'N');
+    mutualInspectionResult?: EProcessCheckCheckTaskResponseObject_mutualInspectionResult;
     /** 专检合格数 */
     specialQualifiedQuantity?: number;
     /** 专检不合格数 */
     specialUnQualifiedQuantity?: number;
     /** 专检检验结果 */
-    specialInspectionResult?: ('Y' | 'N');
+    specialInspectionResult?: EProcessCheckCheckTaskResponseObject_specialInspectionResult;
     /** 申请验收地点 */
     applyInspectAddress?: string;
     /** 申请验收日期 */
@@ -113,7 +113,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 检验员 */
     inspectionEmployees?: IAssociateFormDataVO[];
     /** 分配状态 */
-    isAssignment?: ('Y' | 'N');
+    isAssignment?: EProcessCheckCheckTaskResponseObject_isAssignment;
     /** 检验截止日期 */
     inspectionEndDate?: string;
     /** 检验完成日期 */
@@ -121,9 +121,9 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 开始时间 */
     taskStartDate?: string;
     /** 任务执行状态 */
-    taskStatus?: ('WAIT' | 'HANDLING' | 'CANCEL' | 'COMPLETE');
+    taskStatus?: EProcessCheckCheckTaskResponseObject_taskStatus;
     /** 是否超期 */
-    isOverdue?: ('Y' | 'N');
+    isOverdue?: EProcessCheckCheckTaskResponseObject_isOverdue;
     /** 超期天数 */
     overdueDay?: number;
     /** 互检记录 */
@@ -142,7 +142,7 @@ export interface IAssociateFormDataVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField?: ('Y' | 'N');
+    isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
     masterDataId?: number;
 }
@@ -153,7 +153,7 @@ export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: EProcessCheckCheckTaskMutualCheckRecordResponseObject_inspectionResultsOfIndividualParts;
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -163,7 +163,7 @@ export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: EProcessCheckCheckTaskMutualCheckRecordResponseObject_inspectionResult;
 }
 /** 首检自检记录响应对象 */
 export interface IFirstCheckSelfCheckRecordResponseObject {
@@ -172,7 +172,7 @@ export interface IFirstCheckSelfCheckRecordResponseObject {
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: EFirstCheckSelfCheckRecordResponseObject_inspectionResultsOfIndividualParts;
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -182,7 +182,7 @@ export interface IFirstCheckSelfCheckRecordResponseObject {
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: EFirstCheckSelfCheckRecordResponseObject_inspectionResult;
 }
 /** 工序检检验专检记录响应对象 */
 export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObject {
@@ -191,7 +191,7 @@ export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObje
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResultsOfIndividualParts?: EProcessInspectionInspectionSpecialInspectionRecordResponseObject_inspectionResultsOfIndividualParts;
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
@@ -201,5 +201,154 @@ export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObje
     /** 实测值 */
     inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult?: ('QUALIFIED' | 'UN_QUALIFIED' | 'UNSUITED');
+    inspectionResult?: EProcessInspectionInspectionSpecialInspectionRecordResponseObject_inspectionResult;
+}
+
+export enum EProcessCheckCheckTaskResponseObject_businessType {
+    /** 客户投诉 */
+    CUSTOMER_COMPLAIN = "CUSTOMER_COMPLAIN",
+    /** 来料检 */
+    INCOMING_INSPECTION = "INCOMING_INSPECTION",
+    /** 首检 */
+    FIRST_INSPECTION = "FIRST_INSPECTION",
+    /** 巡检 */
+    PATROL_INSPECTION = "PATROL_INSPECTION",
+    /** 工序检 */
+    PROCESS_INSPECTION = "PROCESS_INSPECTION",
+    /** 成品检 */
+    PRODUCT_INSPECTION = "PRODUCT_INSPECTION",
+    /** 出货检 */
+    SHIPMENT_INSPECTION = "SHIPMENT_INSPECTION",
+    /** 试验 */
+    EXPERIMENT = "EXPERIMENT",
+    /** 其它 */
+    OTHER = "OTHER"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_isEmergent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_isTemporarily {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_inspectionMethod {
+    /** 抽检 */
+    SPOT_CHECK = "SPOT_CHECK",
+    /** 全检 */
+    ALL_CHECK = "ALL_CHECK"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_selfInspectionResult {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_mutualInspectionResult {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_specialInspectionResult {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_isAssignment {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_taskStatus {
+    /** 待执行 */
+    WAIT = "WAIT",
+    /** 进行中 */
+    HANDLING = "HANDLING",
+    /** 已取消 */
+    CANCEL = "CANCEL",
+    /** 已完成 */
+    COMPLETE = "COMPLETE"
+}
+
+export enum EProcessCheckCheckTaskResponseObject_isOverdue {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EAssociateFormDataVO_isRemovedShowField {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessCheckCheckTaskMutualCheckRecordResponseObject_inspectionResultsOfIndividualParts {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
+}
+
+export enum EProcessCheckCheckTaskMutualCheckRecordResponseObject_inspectionResult {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckSelfCheckRecordResponseObject_inspectionResultsOfIndividualParts {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
+}
+
+export enum EFirstCheckSelfCheckRecordResponseObject_inspectionResult {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
+}
+
+export enum EProcessInspectionInspectionSpecialInspectionRecordResponseObject_inspectionResultsOfIndividualParts {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
+}
+
+export enum EProcessInspectionInspectionSpecialInspectionRecordResponseObject_inspectionResult {
+    /** 合格 */
+    QUALIFIED = "QUALIFIED",
+    /** 不合格 */
+    UN_QUALIFIED = "UN_QUALIFIED",
+    /** 不适用 */
+    UNSUITED = "UNSUITED"
 }

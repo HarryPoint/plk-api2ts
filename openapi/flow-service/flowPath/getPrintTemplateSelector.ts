@@ -33,7 +33,14 @@ export interface IProcessPrintTemplateReturnsVO {
     /** 模板结构代码 */
     templateStructure?: string;
     /** 打印类型 */
-    printType?: ('SINGLE_LINE' | 'MULTI_LINE');
+    printType?: EProcessPrintTemplateReturnsVO_printType;
     /** 打印类型描述 */
     printTypeDesc?: string;
+}
+
+export enum EProcessPrintTemplateReturnsVO_printType {
+    /** 单行 */
+    SINGLE_LINE = "SINGLE_LINE",
+    /** 多行 */
+    MULTI_LINE = "MULTI_LINE"
 }

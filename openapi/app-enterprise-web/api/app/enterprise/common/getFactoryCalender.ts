@@ -67,5 +67,12 @@ export interface IFactoryCalendarScheduleShiftRelationshipVO {
     /** 结束时间 */
     endTime?: string;
     /** 结束时间类型 */
-    endTimeType?: ('TODAY' | 'NEXT');
+    endTimeType?: EFactoryCalendarScheduleShiftRelationshipVO_endTimeType;
+}
+
+export enum EFactoryCalendarScheduleShiftRelationshipVO_endTimeType {
+    /** 当日 */
+    TODAY = "TODAY",
+    /** 次日 */
+    NEXT = "NEXT"
 }

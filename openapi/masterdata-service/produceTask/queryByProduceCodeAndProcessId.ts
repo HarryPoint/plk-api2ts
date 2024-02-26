@@ -39,11 +39,11 @@ export interface IProduceTaskVO {
     /** 任务号 */
     taskNo?: string;
     /** 任务下发方式 */
-    issueType?: ('PLAN' | 'DIRECT');
+    issueType?: EProduceTaskVO_issueType;
     /** 任务类型 */
-    type?: ('PRODUCE' | 'BACK');
+    type?: EProduceTaskVO_type;
     /** 返工任务类型 */
-    backType?: ('RECEIVE' | 'PASS');
+    backType?: EProduceTaskVO_backType;
     /** 生产订单id */
     produceOrderId?: number;
     /** 生产订单号 */
@@ -97,7 +97,7 @@ export interface IProduceTaskVO {
     /** 备注 */
     remark?: string;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: EProduceTaskVO_status;
     /** 任务优先级，数值越大优先级越高 */
     priorityLevel?: number;
     /** 对应生产处理id */
@@ -117,9 +117,9 @@ export interface IProduceTaskVO {
     /** undefined */
     canQualityQuantity?: number;
     /** undefined */
-    moveInKeyParameterFillNeeds?: ('Y' | 'N');
+    moveInKeyParameterFillNeeds?: EProduceTaskVO_moveInKeyParameterFillNeeds;
     /** undefined */
-    moveOutKeyParameterFillNeeds?: ('Y' | 'N');
+    moveOutKeyParameterFillNeeds?: EProduceTaskVO_moveOutKeyParameterFillNeeds;
 }
 /** 工艺路径详情步骤Bom明细返回VO */
 export interface IProcessPathDetailsStepBomDetailsReturnToVO {
@@ -135,4 +135,50 @@ export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     childMaterialCode?: string;
     /** 总消耗 */
     totalConsumeCount?: number;
+}
+
+export enum EProduceTaskVO_issueType {
+    /** 排产下发 */
+    PLAN = "PLAN",
+    /** 直接下发 */
+    DIRECT = "DIRECT"
+}
+
+export enum EProduceTaskVO_type {
+    /** 生产任务 */
+    PRODUCE = "PRODUCE",
+    /** 返工任务 */
+    BACK = "BACK"
+}
+
+export enum EProduceTaskVO_backType {
+    /** 接收方 */
+    RECEIVE = "RECEIVE",
+    /** 经过方 */
+    PASS = "PASS"
+}
+
+export enum EProduceTaskVO_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProduceTaskVO_moveInKeyParameterFillNeeds {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EProduceTaskVO_moveOutKeyParameterFillNeeds {
+    Y = "Y",
+    N = "N"
 }

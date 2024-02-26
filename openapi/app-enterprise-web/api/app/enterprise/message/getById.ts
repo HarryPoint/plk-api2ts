@@ -29,7 +29,7 @@ export interface IMessageDetailsAreReturnedToVO {
     /** id */
     id?: number;
     /** 消息类型 */
-    type?: ('BUSINESS_NOTIFICATION' | 'BUSINESS_EARLY_WARNING' | 'SYSTEM_NOTIFICATION');
+    type?: EMessageDetailsAreReturnedToVO_type;
     /** 消息类型描述 */
     typeDesc?: string;
     /** 消息标题 */
@@ -43,7 +43,7 @@ export interface IMessageDetailsAreReturnedToVO {
     /** 消息图片url集 */
     imageUrls?: string[];
     /** 是否已读 */
-    isRead?: ('Y' | 'N');
+    isRead?: EMessageDetailsAreReturnedToVO_isRead;
     /** pc端跳转路径 */
     webPath?: string;
     /** pc端操作建议 */
@@ -55,11 +55,51 @@ export interface IMessageDetailsAreReturnedToVO {
     /** 创建时间 */
     createTime?: string;
     /** 消息发送类型 */
-    sendType?: ('NORMAL' | 'CARBON_COPY');
+    sendType?: EMessageDetailsAreReturnedToVO_sendType;
     /** 消息发送类型描述 */
     sendTypeDesc?: string;
     /** 消息跳转类型 */
-    pathType?: ('NONE' | 'JUMP' | 'DOWNLOAD' | 'REEXPORT' | 'TODO' | 'APP_ADD_PAGE_LINK' | 'APP_LIST_PAGE_LINK');
+    pathType?: EMessageDetailsAreReturnedToVO_pathType;
     /** 消息跳转类型描述 */
     pathTypeDesc?: string;
+}
+
+export enum EMessageDetailsAreReturnedToVO_type {
+    /** 业务通知 */
+    BUSINESS_NOTIFICATION = "BUSINESS_NOTIFICATION",
+    /** 业务预警 */
+    BUSINESS_EARLY_WARNING = "BUSINESS_EARLY_WARNING",
+    /** 系统消息 */
+    SYSTEM_NOTIFICATION = "SYSTEM_NOTIFICATION"
+}
+
+export enum EMessageDetailsAreReturnedToVO_isRead {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EMessageDetailsAreReturnedToVO_sendType {
+    /** 普通消息 */
+    NORMAL = "NORMAL",
+    /** 抄送消息 */
+    CARBON_COPY = "CARBON_COPY"
+}
+
+export enum EMessageDetailsAreReturnedToVO_pathType {
+    /** 无操作 */
+    NONE = "NONE",
+    /** 跳转 */
+    JUMP = "JUMP",
+    /** 下载 */
+    DOWNLOAD = "DOWNLOAD",
+    /** 重新导出 */
+    REEXPORT = "REEXPORT",
+    /** 代办 */
+    TODO = "TODO",
+    /** 应用新增页面链接 */
+    APP_ADD_PAGE_LINK = "APP_ADD_PAGE_LINK",
+    /** 应用详细页面链接 */
+    APP_LIST_PAGE_LINK = "APP_LIST_PAGE_LINK"
 }

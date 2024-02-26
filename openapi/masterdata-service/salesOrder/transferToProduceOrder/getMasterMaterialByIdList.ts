@@ -61,7 +61,7 @@ export interface ITransferProductionOrderMainMaterialInformation {
     /** 优先级 */
     priorityLevel?: number;
     /** 是否紧急订单 */
-    isEmergentOrder?: ('Y' | 'N');
+    isEmergentOrder?: ETransferProductionOrderMainMaterialInformation_isEmergentOrder;
     /** 标准生产工艺可选列表 */
     standardTechnologyOptionalList?: IStandardTechnologyDTO[];
     /** 已选择标准工艺ID */
@@ -71,11 +71,11 @@ export interface ITransferProductionOrderMainMaterialInformation {
     /** 批次方案id */
     lotSchemeId?: number;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: ETransferProductionOrderMainMaterialInformation_enableSerialNo;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: ETransferProductionOrderMainMaterialInformation_enableLot;
     /** 启用批次 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: ETransferProductionOrderMainMaterialInformation_enableQualityTraceability;
 }
 /** StandardTechnologyDTO */
 export interface IStandardTechnologyDTO {
@@ -87,4 +87,32 @@ export interface IStandardTechnologyDTO {
     standardTechnologyCategoryName?: string;
     /** 标准工艺所属分类ID */
     standardTechnologyCategoryId?: number;
+}
+
+export enum ETransferProductionOrderMainMaterialInformation_isEmergentOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETransferProductionOrderMainMaterialInformation_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETransferProductionOrderMainMaterialInformation_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETransferProductionOrderMainMaterialInformation_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

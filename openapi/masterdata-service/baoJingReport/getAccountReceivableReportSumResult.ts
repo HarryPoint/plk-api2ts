@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«宝晶应收账款分析报表表格返回VO» */
 export interface IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO {
@@ -60,4 +60,9 @@ export interface IBaojingAccountsReceivableAnalysisReportFormReturnedToVO1 {
     otherLossAmountSum?: number;
     /** 应收余额 */
     receivableBalanceSum?: number;
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
 }

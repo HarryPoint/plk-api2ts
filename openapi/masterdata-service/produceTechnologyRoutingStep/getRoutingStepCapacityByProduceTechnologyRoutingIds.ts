@@ -67,15 +67,15 @@ export interface IProduceTechnologyRoutingStepCapacityResponseDTO {
     /** 所属生产工艺工艺卡id */
     produceTechnologyProcessSheetId?: number;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType?: ('MOVE_IN' | 'MOVE_OUT');
+    bomConsumeSureType?: EProduceTechnologyRoutingStepCapacityResponseDTO_bomConsumeSureType;
     /** 进站关键参数id */
     moveInKeyParameterId?: number;
     /** 出站关键参数id */
     moveOutKeyParameterId?: number;
     /** 进出站类型 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EProduceTechnologyRoutingStepCapacityResponseDTO_inOutType;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EProduceTechnologyRoutingStepCapacityResponseDTO_allowDirectExit;
 }
 /** ProduceTechnologyCapacityResponseDTO */
 export interface IProduceTechnologyCapacityResponseDTO {
@@ -108,11 +108,50 @@ export interface IProduceTechnologyCapacityResponseDTO {
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit?: ('SECOND' | 'MIN' | 'HOUR');
+    readyTimeUnit?: EProduceTechnologyCapacityResponseDTO_readyTimeUnit;
     /** 生产耗时 */
     capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType?: ('SECOND' | 'MIN' | 'HOUR');
+    capacityTimeType?: EProduceTechnologyCapacityResponseDTO_capacityTimeType;
     /** 产出数量 */
     capacityProduceQuantity?: number;
+}
+
+export enum EProduceTechnologyRoutingStepCapacityResponseDTO_bomConsumeSureType {
+    /** 在进站时确认 */
+    MOVE_IN = "MOVE_IN",
+    /** 在出站时确认 */
+    MOVE_OUT = "MOVE_OUT"
+}
+
+export enum EProduceTechnologyRoutingStepCapacityResponseDTO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EProduceTechnologyRoutingStepCapacityResponseDTO_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProduceTechnologyCapacityResponseDTO_readyTimeUnit {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
+}
+
+export enum EProduceTechnologyCapacityResponseDTO_capacityTimeType {
+    /** 秒 */
+    SECOND = "SECOND",
+    /** 分钟 */
+    MIN = "MIN",
+    /** 小时 */
+    HOUR = "HOUR"
 }

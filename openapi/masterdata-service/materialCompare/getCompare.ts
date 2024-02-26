@@ -64,7 +64,21 @@ export interface IProductionProcessPathBasicInformationVO {
     /** 编号 */
     code?: string;
     /** 是否默认 */
-    isDefault?: ('Y' | 'N');
+    isDefault?: EProductionProcessPathBasicInformationVO_isDefault;
     /** 是否可用 */
-    isValid?: ('Y' | 'N');
+    isValid?: EProductionProcessPathBasicInformationVO_isValid;
+}
+
+export enum EProductionProcessPathBasicInformationVO_isDefault {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathBasicInformationVO_isValid {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

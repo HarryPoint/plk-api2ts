@@ -22,7 +22,7 @@ export interface IProductionProcessingWithholdReworkRequestObject {
     /** 返工数量 */
     abnormalQuantity: number;
     /** 返工生产后处理方式 */
-    backProduceType: ('RETURN' | 'ORDER');
+    backProduceType: EProductionProcessingWithholdReworkRequestObject_backProduceType;
     /** 返工工艺路径步骤id */
     backProduceTechnologyRoutingStepId: number;
     /** 处理意见 */
@@ -38,4 +38,11 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EProductionProcessingWithholdReworkRequestObject_backProduceType {
+    /** 返回原工序 */
+    RETURN = "RETURN",
+    /** 顺序生产 */
+    ORDER = "ORDER"
 }

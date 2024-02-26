@@ -47,5 +47,16 @@ export interface IAutomaticProductionOrderSchedulingTaskDataVerificationDetailsA
     /** 物料名称 */
     materialName?: string;
     /** 校验失败错误类型 */
-    failType?: ('PRODUCE_PLAN_START_TIME_IS_NULL' | 'PRODUCE_PLAN_END_TIME_IS_NULL' | 'PRODUCE_PLAN_START_AND_END_TIME_IS_NULL' | 'PRODUCE_PLAN_START_GT_END_TIME');
+    failType?: EAutomaticProductionOrderSchedulingTaskDataVerificationDetailsAreReturnedToTheDTO_failType;
+}
+
+export enum EAutomaticProductionOrderSchedulingTaskDataVerificationDetailsAreReturnedToTheDTO_failType {
+    /** 排产开始时间为空 */
+    PRODUCE_PLAN_START_TIME_IS_NULL = "PRODUCE_PLAN_START_TIME_IS_NULL",
+    /** 排产结束时间为空 */
+    PRODUCE_PLAN_END_TIME_IS_NULL = "PRODUCE_PLAN_END_TIME_IS_NULL",
+    /** 排产开始时间和结束时间都为空 */
+    PRODUCE_PLAN_START_AND_END_TIME_IS_NULL = "PRODUCE_PLAN_START_AND_END_TIME_IS_NULL",
+    /** 排产开始时间大于排产结束时间 */
+    PRODUCE_PLAN_START_GT_END_TIME = "PRODUCE_PLAN_START_GT_END_TIME"
 }

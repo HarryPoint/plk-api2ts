@@ -38,14 +38,14 @@ export interface IAccountInquiry {
     /** 手机号码 */
     telephone?: string;
     /** 状态集 */
-    statusList?: ('WAIT_ACTIVATE' | 'ACTIVATED' | 'DISABLED')[];
+    statusList?: EAccountInquiry_statusList_items[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
     column?: string;
     /** 是否正序排列，默认Y */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSort_isAsc;
 }
 /** JSONResult«分页信息«运营用户信息响应»» */
 export interface IJSONResultPageInformationOperationUserInformationResponse {
@@ -73,9 +73,9 @@ export interface IPageInformationOperationUserInformationResponse {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationOperationUserInformationResponse_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationOperationUserInformationResponse_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -112,7 +112,7 @@ export interface IOperationUserInformationResponse {
     /** 最后登录时间 */
     lastLoginTime?: string;
     /** 状态 */
-    status?: ('WAIT_ACTIVATE' | 'ACTIVATED' | 'DISABLED');
+    status?: EOperationUserInformationResponse_status;
 }
 /** 运营员工信息响应 */
 export interface IOperationalEmployeeInformationResponse {
@@ -160,11 +160,61 @@ export interface IOperationalRoleResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: EOperationalRoleResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: EOperationalRoleResponse_isAdmin;
     /** 描述 */
     description?: string;
     /** 关联的账号数 */
     relationUserCount?: number;
+}
+
+export enum EAccountInquiry_statusList_items {
+    WAIT_ACTIVATE = "WAIT_ACTIVATE",
+    ACTIVATED = "ACTIVATED",
+    DISABLED = "DISABLED"
+}
+
+export enum EPagingSort_isAsc {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationOperationUserInformationResponse_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationOperationUserInformationResponse_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOperationUserInformationResponse_status {
+    /** 待激活 */
+    WAIT_ACTIVATE = "WAIT_ACTIVATE",
+    /** 已激活 */
+    ACTIVATED = "ACTIVATED",
+    /** 已禁用 */
+    DISABLED = "DISABLED"
+}
+
+export enum EOperationalRoleResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EOperationalRoleResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

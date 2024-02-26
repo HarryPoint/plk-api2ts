@@ -18,13 +18,13 @@ export interface IStandardProcessPagingQueryObject {
     /** 当前页面 */
     pageNo?: number;
     /** 标准工艺状态列表 */
-    statusList?: ('DRAFT' | 'VALID' | 'INVALID')[];
+    statusList?: EStandardProcessPagingQueryObject_statusList_items[];
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 未分类 -- Y 就是查未分类，为空或者N 不起作用 */
-    unCategory?: ('Y' | 'N');
+    unCategory?: EStandardProcessPagingQueryObject_unCategory;
     /** 标准工艺名称 -- 模糊查询 */
     name?: string;
     /** 标准工艺分类id */
@@ -35,7 +35,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«标准工艺分页响应对象»» */
 export interface IJSONResultPagingInformationStandardProcessPagingResponseObject {
@@ -63,9 +63,9 @@ export interface IPageInformationStandardProcessPageResponseObject {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EPageInformationStandardProcessPageResponseObject_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EPageInformationStandardProcessPageResponseObject_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -102,7 +102,48 @@ export interface IStandardProcessPagingResponseObject {
     /** 所属分类名称 */
     standardTechnologyCategoryName?: string;
     /** 状态 */
-    status?: ('DRAFT' | 'VALID' | 'INVALID');
+    status?: EStandardProcessPagingResponseObject_status;
     /** 缩略图 */
     thumbnail?: string;
+}
+
+export enum EStandardProcessPagingQueryObject_statusList_items {
+    DRAFT = "DRAFT",
+    VALID = "VALID",
+    INVALID = "INVALID"
+}
+
+export enum EStandardProcessPagingQueryObject_unCategory {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EPageInformationStandardProcessPageResponseObject_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EPageInformationStandardProcessPageResponseObject_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EStandardProcessPagingResponseObject_status {
+    /** 草稿 */
+    DRAFT = "DRAFT",
+    /** 已启用 */
+    VALID = "VALID",
+    /** 已停用 */
+    INVALID = "INVALID"
 }

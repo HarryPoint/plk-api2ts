@@ -31,7 +31,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
-    type?: ('PRODUCE' | 'BACK');
+    type?: EProductionTasksAreReturnedToVOForEmployeeDetails_type;
     /** 生产订单id */
     produceOrderId?: number;
     /** 生产订单号 */
@@ -115,7 +115,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 实际结束时间 */
     actualEndTime?: string;
     /** 状态 */
-    status?: ('WAIT' | 'PRODUCE' | 'PAUSE' | 'STOP' | 'CLOSE' | 'CANCEL');
+    status?: EProductionTasksAreReturnedToVOForEmployeeDetails_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 任务优先级 */
@@ -123,7 +123,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 可进料批次数 */
     canMoveInLotCount?: number;
     /** 是否需要质检 */
-    isQuality?: ('Y' | 'N');
+    isQuality?: EProductionTasksAreReturnedToVOForEmployeeDetails_isQuality;
     /** 可出料批次数 */
     canMoveOutLotCount?: number;
     /** 当前步骤配置信息 - 用于前端判断各种情况逻辑 */
@@ -137,54 +137,54 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 对应工艺卡信息 */
     produceTechnologyProcessSheetInfo?: IProductionProcessProcessCardInformationIsReturnedToDTO;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionTasksAreReturnedToVOForEmployeeDetails_enableQualityTraceability;
 }
 /** 生产工艺路径步骤设置返回VO */
 export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
     id?: number;
     /** 进出站方式 */
-    inOutType?: ('PART' | 'ALL');
+    inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
-    allowDirectExit?: ('Y' | 'N');
+    allowDirectExit?: EProductionProcessPathStepSettingsReturnVO_allowDirectExit;
     /** 进料时是否需要确认进料数量 */
-    needConfirmMoveInQuantity?: ('Y' | 'N');
+    needConfirmMoveInQuantity?: EProductionProcessPathStepSettingsReturnVO_needConfirmMoveInQuantity;
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastMold?: ('Y' | 'N');
+    autoBringOutLastMold?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastMold;
     /** 进料时是否自动带入上一次录入模具信息 */
-    autoBringOutLastDevice?: ('Y' | 'N');
+    autoBringOutLastDevice?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastDevice;
     /** 进料时是否自动带入上一次录入消耗物料信息 */
-    autoBringOutLastBomConsume?: ('Y' | 'N');
+    autoBringOutLastBomConsume?: EProductionProcessPathStepSettingsReturnVO_autoBringOutLastBomConsume;
     /** 进料时是否允许拆分批次 */
-    allowSplitLot?: ('Y' | 'N');
+    allowSplitLot?: EProductionProcessPathStepSettingsReturnVO_allowSplitLot;
     /** 是否强制拆分批次 */
-    forcedSplitLot?: ('Y' | 'N');
+    forcedSplitLot?: EProductionProcessPathStepSettingsReturnVO_forcedSplitLot;
     /** 启用质量追溯 */
-    enableQualityTraceability?: ('Y' | 'N');
+    enableQualityTraceability?: EProductionProcessPathStepSettingsReturnVO_enableQualityTraceability;
     /** 启用批次 */
-    enableLot?: ('Y' | 'N');
+    enableLot?: EProductionProcessPathStepSettingsReturnVO_enableLot;
     /** 启用序列号 */
-    enableSerialNo?: ('Y' | 'N');
+    enableSerialNo?: EProductionProcessPathStepSettingsReturnVO_enableSerialNo;
     /** 启用外部码 */
-    enableExternalCode?: ('Y' | 'N');
+    enableExternalCode?: EProductionProcessPathStepSettingsReturnVO_enableExternalCode;
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
     externalCodeLength?: number;
     /** 是否有设备 */
-    enableDevice?: ('Y' | 'N');
+    enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */
-    enableMold?: ('Y' | 'N');
+    enableMold?: EProductionProcessPathStepSettingsReturnVO_enableMold;
     /** 是否有进料bom消耗 */
-    enableMoveInBomConsume?: ('Y' | 'N');
+    enableMoveInBomConsume?: EProductionProcessPathStepSettingsReturnVO_enableMoveInBomConsume;
     /** 是否有出料bom消耗 */
-    enableMoveOutBomConsume?: ('Y' | 'N');
+    enableMoveOutBomConsume?: EProductionProcessPathStepSettingsReturnVO_enableMoveOutBomConsume;
     /** 是否有进站关键参数 */
-    enableMoveInKeyParameter?: ('Y' | 'N');
+    enableMoveInKeyParameter?: EProductionProcessPathStepSettingsReturnVO_enableMoveInKeyParameter;
     /** 是否有出站关键参数 */
-    enableMoveOutKeyParameter?: ('Y' | 'N');
+    enableMoveOutKeyParameter?: EProductionProcessPathStepSettingsReturnVO_enableMoveOutKeyParameter;
     /** 进出料数量是否大于计划数量 */
-    isGtPlannedQuantity?: ('Y' | 'N');
+    isGtPlannedQuantity?: EProductionProcessPathStepSettingsReturnVO_isGtPlannedQuantity;
 }
 /** 生产工艺工艺卡信息返回DTO */
 export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
@@ -232,7 +232,7 @@ export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
     id?: number;
     /** 明细类型 */
-    type?: ('FILE' | 'TEXT' | 'INPUT');
+    type?: EProductionProcessProcessCardDetailsReturnedToDTO_type;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
@@ -254,4 +254,182 @@ export interface IOperationsCorrespondToFieldDetailsVO {
     fieldName?: string;
     /** 值 */
     value?: Record<string, any>;
+}
+
+export enum EProductionTasksAreReturnedToVOForEmployeeDetails_type {
+    /** 生产任务 */
+    PRODUCE = "PRODUCE",
+    /** 返工任务 */
+    BACK = "BACK"
+}
+
+export enum EProductionTasksAreReturnedToVOForEmployeeDetails_status {
+    /** 待处理 */
+    WAIT = "WAIT",
+    /** 生产中 */
+    PRODUCE = "PRODUCE",
+    /** 暂停中 */
+    PAUSE = "PAUSE",
+    /** 停止 */
+    STOP = "STOP",
+    /** 已关闭 */
+    CLOSE = "CLOSE",
+    /** 已取消 */
+    CANCEL = "CANCEL"
+}
+
+export enum EProductionTasksAreReturnedToVOForEmployeeDetails_isQuality {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionTasksAreReturnedToVOForEmployeeDetails_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_inOutType {
+    /** 部分进出 */
+    PART = "PART",
+    /** 整进整出 */
+    ALL = "ALL"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_allowDirectExit {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_needConfirmMoveInQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastMold {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastDevice {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_autoBringOutLastBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_allowSplitLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_forcedSplitLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableQualityTraceability {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableLot {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableSerialNo {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableExternalCode {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableDevice {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMold {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveInBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveOutBomConsume {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveInKeyParameter {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_enableMoveOutKeyParameter {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessPathStepSettingsReturnVO_isGtPlannedQuantity {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionProcessProcessCardDetailsReturnedToDTO_type {
+    /** 文件 */
+    FILE = "FILE",
+    /** 描述 */
+    TEXT = "TEXT",
+    /** 录入 */
+    INPUT = "INPUT"
 }

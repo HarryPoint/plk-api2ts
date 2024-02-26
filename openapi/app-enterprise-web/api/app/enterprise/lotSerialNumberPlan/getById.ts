@@ -33,7 +33,7 @@ export interface ILotSerialNumberPlanDTO {
     /** 批次方案名称 */
     name?: string;
     /** 方案类型 */
-    planType?: ('SERIAL_NO' | 'BATCH_NO');
+    planType?: ELotSerialNumberPlanDTO_planType;
     /** 规则列表 */
     ruleList?: ILotSerialNumberPlanRuleDTO[];
 }
@@ -42,9 +42,9 @@ export interface ILotSerialNumberPlanRuleDTO {
     /** ID */
     id?: number;
     /** 规则类型 */
-    type?: ('FIXED' | 'DATE' | 'AUTO_NUMBER' | 'FLOW_PATH_FIELD' | 'ID36');
+    type?: ELotSerialNumberPlanRuleDTO_type;
     /** 日期类型 */
-    dateFormat?: ('YEAR' | 'YEAR_MONTH' | 'YEAR_MONTH_DAY' | 'MONTH' | 'MONTH_DAY' | 'DAY');
+    dateFormat?: ELotSerialNumberPlanRuleDTO_dateFormat;
     /** 应用引擎ID */
     flowPathId?: number;
     /** 应用引擎编码 */
@@ -54,7 +54,7 @@ export interface ILotSerialNumberPlanRuleDTO {
     /** 字段序列号 */
     flowPathFormFiledSerialNo?: string;
     /** 值提取方法 */
-    valueExtractMethod?: ('COMPLETE' | 'PART');
+    valueExtractMethod?: ELotSerialNumberPlanRuleDTO_valueExtractMethod;
     /** 起始Index */
     startIndex?: number;
     /** 结束Index */
@@ -73,4 +73,46 @@ export interface ILotSerialNumberPlanRuleDTO {
     sort?: number;
     /** 规则描述 */
     ruleDesc?: string;
+}
+
+export enum ELotSerialNumberPlanDTO_planType {
+    /** 序列号 */
+    SERIAL_NO = "SERIAL_NO",
+    /** 批次号 */
+    BATCH_NO = "BATCH_NO"
+}
+
+export enum ELotSerialNumberPlanRuleDTO_type {
+    /** 固定值 */
+    FIXED = "FIXED",
+    /** 日期 */
+    DATE = "DATE",
+    /** 自动计数 */
+    AUTO_NUMBER = "AUTO_NUMBER",
+    /** 引用字段 */
+    FLOW_PATH_FIELD = "FLOW_PATH_FIELD",
+    /** ID的36进制 */
+    ID36 = "ID36"
+}
+
+export enum ELotSerialNumberPlanRuleDTO_dateFormat {
+    /** 年 */
+    YEAR = "YEAR",
+    /** 年月 */
+    YEAR_MONTH = "YEAR_MONTH",
+    /** 年月日 */
+    YEAR_MONTH_DAY = "YEAR_MONTH_DAY",
+    /** 月 */
+    MONTH = "MONTH",
+    /** 月日 */
+    MONTH_DAY = "MONTH_DAY",
+    /** 日 */
+    DAY = "DAY"
+}
+
+export enum ELotSerialNumberPlanRuleDTO_valueExtractMethod {
+    /** 完全取值 */
+    COMPLETE = "COMPLETE",
+    /** 截断取值 */
+    PART = "PART"
 }

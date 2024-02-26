@@ -43,9 +43,9 @@ export interface IProduceWorkOrderVO {
     /** 计划完工日期 */
     endTime?: string;
     /** 是否急单 */
-    isEmergentOrder?: ('Y' | 'N');
+    isEmergentOrder?: EProduceWorkOrderVO_isEmergentOrder;
     /** 订单类型 */
-    orderType?: ('CONTRACT' | 'STANDBY' | 'REWORK' | 'TEST' | 'VIRTUAL' | 'OTHER' | 'SCRAP_SUPPLEMENT');
+    orderType?: EProduceWorkOrderVO_orderType;
     /** 订单类型描述 */
     orderTypeDesc?: string;
     /** 工序信息 */
@@ -82,4 +82,28 @@ export interface IProduceWorkOrderCustomFieldDataVO {
     name?: string;
     /** 值 */
     value?: string;
+}
+
+export enum EProduceWorkOrderVO_isEmergentOrder {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProduceWorkOrderVO_orderType {
+    /** 合同生产 */
+    CONTRACT = "CONTRACT",
+    /** 备库生产 */
+    STANDBY = "STANDBY",
+    /** 返工生产 */
+    REWORK = "REWORK",
+    /** 新产品实验生产 */
+    TEST = "TEST",
+    /** 虚拟订单 */
+    VIRTUAL = "VIRTUAL",
+    /** 其他订单 */
+    OTHER = "OTHER",
+    /** 报废补单 */
+    SCRAP_SUPPLEMENT = "SCRAP_SUPPLEMENT"
 }

@@ -40,5 +40,18 @@ export interface IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject {
     /** 单据名称 */
     name?: string;
     /** 出入库类型 */
-    storageLogType?: ('IN' | 'OUT' | 'CHECK' | 'LOCK' | 'SCRAP');
+    storageLogType?: EMaterialReceiptAndDeliveryDocumentListDocumentResponseObject_storageLogType;
+}
+
+export enum EMaterialReceiptAndDeliveryDocumentListDocumentResponseObject_storageLogType {
+    /** 入库 */
+    IN = "IN",
+    /** 出库 */
+    OUT = "OUT",
+    /** 盘点 */
+    CHECK = "CHECK",
+    /** 库存锁定 */
+    LOCK = "LOCK",
+    /** 报废 */
+    SCRAP = "SCRAP"
 }

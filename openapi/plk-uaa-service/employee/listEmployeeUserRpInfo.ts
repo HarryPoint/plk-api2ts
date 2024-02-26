@@ -18,7 +18,7 @@ export interface IBatchQueryEmployeeUserAssociationInformation {
     /** 员工id集 */
     employeeIds?: number[];
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: EBatchQueryEmployeeUserAssociationInformation_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
 }
@@ -38,7 +38,7 @@ export interface IEmployeeUserAssociationInformationResponse {
     /** 员工id */
     employeeId?: number;
     /** 是否允许登录 */
-    isAllowLogin?: ('Y' | 'N');
+    isAllowLogin?: EEmployeeUserAssociationInformationResponse_isAllowLogin;
     /** 角色集 */
     roles?: IRoleMessageResponse[];
     /** 用户id */
@@ -69,15 +69,50 @@ export interface IRoleMessageResponse {
     /** 名称 */
     name?: string;
     /** 是否是超级管理员 */
-    isManage?: ('Y' | 'N');
+    isManage?: ERoleMessageResponse_isManage;
     /** 是否是管理员 */
-    isAdmin?: ('Y' | 'N');
+    isAdmin?: ERoleMessageResponse_isAdmin;
     /** 描述 */
     description?: string;
     /** 应用级别 */
-    applicationLevel?: ('PROJECT_MANAGER' | 'ENTERPRISE');
+    applicationLevel?: ERoleMessageResponse_applicationLevel;
     /** 服务对象ID */
     serviceObjectId?: number;
     /** 服务业务ID */
     serviceBusinessId?: number;
+}
+
+export enum EBatchQueryEmployeeUserAssociationInformation_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
+}
+
+export enum EEmployeeUserAssociationInformationResponse_isAllowLogin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_isManage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_isAdmin {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ERoleMessageResponse_applicationLevel {
+    /** 项目管理 */
+    PROJECT_MANAGER = "PROJECT_MANAGER",
+    /** 企业 */
+    ENTERPRISE = "ENTERPRISE"
 }

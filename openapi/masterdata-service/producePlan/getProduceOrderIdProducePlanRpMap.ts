@@ -37,7 +37,7 @@ export interface IProductionPlanProductionOrderAssociatedWithVO {
     /** 创建时间 */
     createTime?: string;
     /** 是否锁定 */
-    isLock?: ('Y' | 'N');
+    isLock?: EProductionPlanProductionOrderAssociatedWithVO_isLock;
     /** 修改账户id */
     updateUserId?: number;
     /** 修改部门id */
@@ -76,17 +76,61 @@ export interface IProductionScheduleVO {
     /** 计划排产名称 */
     name?: string;
     /** 排产类型 */
-    planType?: ('AUTO' | 'HAND' | 'VAGUE');
+    planType?: EProductionScheduleVO_planType;
     /** 自动排产方式 */
-    autoPlanType?: ('ASC' | 'DESC');
+    autoPlanType?: EProductionScheduleVO_autoPlanType;
     /** 是否考虑自动提前 */
-    isAutoMoveUp?: ('Y' | 'N');
+    isAutoMoveUp?: EProductionScheduleVO_isAutoMoveUp;
     /** 排产开始时间 */
     beginTime?: string;
     /** 排产结束时间 */
     endTime?: string;
     /** 手动排产维度 */
-    dimension?: ('ORDER' | 'PROCESS');
+    dimension?: EProductionScheduleVO_dimension;
     /** 手动时间维度 */
-    timeDimension?: ('DAY' | 'CLASS_SHIFT');
+    timeDimension?: EProductionScheduleVO_timeDimension;
+}
+
+export enum EProductionPlanProductionOrderAssociatedWithVO_isLock {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionScheduleVO_planType {
+    /** 自动排产 */
+    AUTO = "AUTO",
+    /** 手动排产 */
+    HAND = "HAND",
+    /** 模糊排产 */
+    VAGUE = "VAGUE"
+}
+
+export enum EProductionScheduleVO_autoPlanType {
+    /** 正向排产 */
+    ASC = "ASC",
+    /** 倒序排产 */
+    DESC = "DESC"
+}
+
+export enum EProductionScheduleVO_isAutoMoveUp {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProductionScheduleVO_dimension {
+    /** 订单 */
+    ORDER = "ORDER",
+    /** 工序 */
+    PROCESS = "PROCESS"
+}
+
+export enum EProductionScheduleVO_timeDimension {
+    /** 日 */
+    DAY = "DAY",
+    /** 班次 */
+    CLASS_SHIFT = "CLASS_SHIFT"
 }

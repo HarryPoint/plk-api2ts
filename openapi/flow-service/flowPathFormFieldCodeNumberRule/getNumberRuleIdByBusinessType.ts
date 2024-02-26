@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleIdByBusinessTypeUsingGET
 */
-export default function fetchMethod(options: { params: { businessType?: ('PRODUCE_TASK' | 'STORAGE_TAKE_CHECK_TASK') } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessType?: EbusinessType } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleIdByBusinessType",
@@ -23,4 +23,9 @@ export interface IJSONResultlong {
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum EbusinessType {
+    PRODUCE_TASK = "PRODUCE_TASK",
+    STORAGE_TAKE_CHECK_TASK = "STORAGE_TAKE_CHECK_TASK"
 }

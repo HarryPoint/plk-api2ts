@@ -25,9 +25,9 @@ export interface IRequestdto {
     /** undefined */
     api?: string;
     /** undefined */
-    isLogin?: ('Y' | 'N');
+    isLogin?: ERequestdto_isLogin;
     /** undefined */
-    checkMode?: ('AND' | 'OR');
+    checkMode?: ERequestdto_checkMode;
     /** undefined */
     permissionCode?: string;
 }
@@ -41,4 +41,14 @@ export interface IJSONResultobject {
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: number;
+}
+
+export enum ERequestdto_isLogin {
+    Y = "Y",
+    N = "N"
+}
+
+export enum ERequestdto_checkMode {
+    AND = "AND",
+    OR = "OR"
 }

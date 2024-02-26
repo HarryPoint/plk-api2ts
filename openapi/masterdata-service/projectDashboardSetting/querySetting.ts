@@ -27,9 +27,18 @@ export interface IJSONResultProjectLargeScreenSettingsSaveRequestDto {
 /** 项目大屏设置保存请求dto */
 export interface IProjectLargeScreenSettingsSaveRequestDto {
     /** 统计范围 */
-    scope?: ('ALL' | 'SPECIFY_PROJECT_TYPE' | 'EXCLUDE_PROJECT');
+    scope?: EProjectLargeScreenSettingsSaveRequestDto_scope;
     /** 项目类型ids */
     projectTypeIds?: number[];
     /** 排除的项目ids */
     excludeProjectIds?: number[];
+}
+
+export enum EProjectLargeScreenSettingsSaveRequestDto_scope {
+    /** 全部项目 */
+    ALL = "ALL",
+    /** 指定项目类型 */
+    SPECIFY_PROJECT_TYPE = "SPECIFY_PROJECT_TYPE",
+    /** 指定不统计的项目 */
+    EXCLUDE_PROJECT = "EXCLUDE_PROJECT"
 }

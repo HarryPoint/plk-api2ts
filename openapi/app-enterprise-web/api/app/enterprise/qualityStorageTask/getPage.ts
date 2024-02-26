@@ -28,7 +28,7 @@ export interface IInspectionTaskSearchesForVO {
     /** 采购收货单编号 */
     purchaseWorkOrderNo?: string;
     /** 任务类型 */
-    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
+    taskType?: EInspectionTaskSearchesForVO_taskType;
     /** 任务编号 */
     qualityStorageTaskNo?: string;
     /** 检验日期查询结束时间 */
@@ -47,7 +47,7 @@ export interface IPagingSortVO {
     /** undefined */
     column?: string;
     /** undefined */
-    isAsc?: ('Y' | 'N');
+    isAsc?: EPagingSortVO_isAsc;
 }
 /** JSONResult«分页信息«质检任务返回VO»» */
 export interface IJSONResultThePageInformationInspectionTaskReturnsVO {
@@ -75,9 +75,9 @@ export interface IThePageInformationInspectionTaskReturnsVO {
     /** 最后页页码 */
     lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage?: ('Y' | 'N');
+    hasPreviousPage?: EThePageInformationInspectionTaskReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
-    hasNextPage?: ('Y' | 'N');
+    hasNextPage?: EThePageInformationInspectionTaskReturnsVO_hasNextPage;
     /** 上一页页码 */
     previousPage?: number;
     /** 下一页页码 */
@@ -128,17 +128,17 @@ export interface ITheInspectionTaskReturnsVO {
     /** 质检处理人名字 */
     handleUserName?: string;
     /** 状态 */
-    isValid?: ('Y' | 'N');
+    isValid?: ETheInspectionTaskReturnsVO_isValid;
     /** 计划开始时间 */
     planBeginTime?: string;
     /** 任务状态 */
-    status?: ('WAIT' | 'COMPLETE' | 'CANCEL' | 'CLOSE');
+    status?: ETheInspectionTaskReturnsVO_status;
     /** 任务状态名称 */
     statusDesc?: string;
     /** 完成时间 */
     completeTime?: string;
     /** 任务类型 */
-    taskType?: ('STORAGE_IN_QUALITY_TASK' | 'STORAGE_QUALITY_TASK');
+    taskType?: ETheInspectionTaskReturnsVO_taskType;
     /** 任务类型描述 */
     taskTypeDesc?: string;
     /** 检验位置id */
@@ -157,4 +157,55 @@ export interface ITheInspectionTaskReturnsVO {
     cancelUserId?: number;
     /** 关闭人名称 */
     cancelUserName?: string;
+}
+
+export enum EInspectionTaskSearchesForVO_taskType {
+    /** 入库质检任务 */
+    STORAGE_IN_QUALITY_TASK = "STORAGE_IN_QUALITY_TASK",
+    /** 存货质检任务 */
+    STORAGE_QUALITY_TASK = "STORAGE_QUALITY_TASK"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePageInformationInspectionTaskReturnsVO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePageInformationInspectionTaskReturnsVO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheInspectionTaskReturnsVO_isValid {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ETheInspectionTaskReturnsVO_status {
+    /** 待质检 */
+    WAIT = "WAIT",
+    /** 已完成 */
+    COMPLETE = "COMPLETE",
+    /** 已撤销 */
+    CANCEL = "CANCEL",
+    /** 已关闭 */
+    CLOSE = "CLOSE"
+}
+
+export enum ETheInspectionTaskReturnsVO_taskType {
+    /** 入库质检任务 */
+    STORAGE_IN_QUALITY_TASK = "STORAGE_IN_QUALITY_TASK",
+    /** 存货质检任务 */
+    STORAGE_QUALITY_TASK = "STORAGE_QUALITY_TASK"
 }

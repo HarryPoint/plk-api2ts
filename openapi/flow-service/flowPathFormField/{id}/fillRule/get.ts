@@ -39,9 +39,34 @@ export interface IProcessFormAssociatedFormFillVO {
     /** 填充到的目标字段序号值 */
     fillFormFieldSerialNo?: string;
     /** 字段填充方式 */
-    fillWay?: ('NONE' | 'LAST' | 'CONCAT' | 'SUM');
+    fillWay?: EProcessFormAssociatedFormFillVO_fillWay;
     /** 是否警用编辑 */
-    isDisableEdited?: ('Y' | 'N');
+    isDisableEdited?: EProcessFormAssociatedFormFillVO_isDisableEdited;
     /** 是否允许修改填充内容- 默认是 Y */
-    isAllowModificationOfFillContent?: ('Y' | 'N');
+    isAllowModificationOfFillContent?: EProcessFormAssociatedFormFillVO_isAllowModificationOfFillContent;
+}
+
+export enum EProcessFormAssociatedFormFillVO_fillWay {
+    /** 直接填充 */
+    NONE = "NONE",
+    /** 最新 */
+    LAST = "LAST",
+    /** 合并 */
+    CONCAT = "CONCAT",
+    /** 合计 */
+    SUM = "SUM"
+}
+
+export enum EProcessFormAssociatedFormFillVO_isDisableEdited {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProcessFormAssociatedFormFillVO_isAllowModificationOfFillContent {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }
