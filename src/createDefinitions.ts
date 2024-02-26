@@ -97,7 +97,7 @@ export const createDefinitions = async (
     const item = definitionsMap[name];
     const define = item.define;
     if (define.type === "object") {
-      definitionsFile.addStatements("// " + item.originName);
+      definitionsFile.addStatements(`/** ${item.originName} */\n`);
       const ins = definitionsFile.addInterface({
         name: item.name,
         isExported: true,
@@ -106,7 +106,8 @@ export const createDefinitions = async (
         >((key) => ({
           name: key,
           type: transFormType(define.properties[key]),
-          leadingTrivia: `// ${define.properties[key].description}`,
+          leadingTrivia: `/** ${define.properties[key].description} */\n`,
+          // leadingTrivia: `// ${define.properties[key].description}`,
           // trailingTrivia: `// ${define.properties[key].description}`,
         })),
       });

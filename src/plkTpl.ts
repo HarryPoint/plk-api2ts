@@ -13,13 +13,16 @@ export const customContent = async (
       definitionsFile.addStatements((writer) => {
         writer.writeLine(`import { http } from '@/api/http';`);
         writer.writeLine(" ");
-        const docUrl = `// http://${
+        writer.writeLine("/**");
+        const docUrl = `http://${
           data.host
         }/doc.html#/default/${methodDefine.tags?.join("/")}/${
           methodDefine.operationId
         }`;
+        writer.writeLine(`* @link ${docUrl}`);
+        writer.writeLine("*/");
         console.log("docUrl: ", docUrl);
-        writer.writeLine(docUrl);
+        // writer.writeLine(docUrl);
       });
       const functionDeclaration = definitionsFile.addFunction({
         name: "fetchMethod",
