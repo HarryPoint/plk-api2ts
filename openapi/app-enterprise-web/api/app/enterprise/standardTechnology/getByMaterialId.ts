@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/getByMaterialIdUsingGET
 */
-export default function fetchMethod(params: { materialId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { materialId?: number }, extraOptions?: any) {
     return http<IJSONResultListStandardProcessDropDownResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getByMaterialId",
@@ -16,18 +16,18 @@ export default function fetchMethod(params: { materialId: number }, extraOptions
 /** JSONResult«List«标准工艺下拉响应对象»» */
 export interface IJSONResultListStandardProcessDropDownResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IStandardProcessDropDownResponseObject[];
+    data?: IStandardProcessDropDownResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 标准工艺下拉响应对象 */
 export interface IStandardProcessDropDownResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
 }

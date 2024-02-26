@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存相关/getPageUsingPOST_26
 */
-export default function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ISecurityInventorySearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationSecurityInventoryReturnsVO>(
         {
             url: "/masterdata-service/safetyStock/getPage",
@@ -17,91 +17,91 @@ export default function fetchMethod(data: ISecurityInventorySearchVO, params: { 
 /** 安全库存搜索VO */
 export interface ISecurityInventorySearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 物料编号 */
-    code: string;
+    code?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 物料名称 */
-    name: string;
+    name?: string;
     /** 库存预警类型 */
-    warningType: string;
+    warningType?: string;
     /** 设置类型 */
     type: string;
     /** 对应业务id */
-    businessId: number;
+    businessId?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«安全库存返回VO»» */
 export interface IJSONResultPagingInformationSecurityInventoryReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationSecurityInventoryReturnedToVO;
+    data?: IPagingInformationSecurityInventoryReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«安全库存返回VO» */
 export interface IPagingInformationSecurityInventoryReturnedToVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ISafetyStockReturnedToVO[];
+    list?: ISafetyStockReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 安全库存返回VO */
 export interface ISafetyStockReturnedToVO {
     /** 物料id */
-    id: number;
+    id?: number;
     /** 物料名称 */
-    name: string;
+    name?: string;
     /** 物料编号 */
-    code: string;
+    code?: string;
     /** 规格 */
-    spec: string;
+    spec?: string;
     /** 单位 */
-    unit: string;
+    unit?: string;
     /** 库存总数 */
-    storageTotalCount: number;
+    storageTotalCount?: number;
     /** 库存锁定数 */
-    storageLockCount: number;
+    storageLockCount?: number;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
     /** 是否开启预警 */
-    isWarning: string;
+    isWarning?: string;
     /** 库存预警类型 */
-    warningType: string;
+    warningType?: string;
     /** 库存预警类型描述 */
-    warningTypeDesc: string;
+    warningTypeDesc?: string;
     /** 安全库存数-采购触发下限 */
-    safetyStock: number;
+    safetyStock?: number;
     /** 最大库存数 */
-    maxStock: number;
+    maxStock?: number;
     /** 最小库存数 */
-    minStock: number;
+    minStock?: number;
 }

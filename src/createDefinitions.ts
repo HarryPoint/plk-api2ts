@@ -47,11 +47,12 @@ export const createDefinitions = async (
     }
     if (typeOrigin === typeMap.object) {
       if (define.properties) {
+        const requiredKeys = define.required || [];
         return `{ ${Object.keys(define.properties || {})
           .map(
             (key) =>
               `${formatName(key)}${
-                define.properties[key].required === false ? "?" : ""
+                requiredKeys.includes(key) ? "" : "?"
               }: ${transFormType(define.properties[key])}`
           )
           .join("; ")} }`;
@@ -107,8 +108,7 @@ export const createDefinitions = async (
           name: key,
           type: transFormType(define.properties[key]),
           leadingTrivia: `/** ${define.properties[key].description} */\n`,
-          // leadingTrivia: `// ${define.properties[key].description}`,
-          // trailingTrivia: `// ${define.properties[key].description}`,
+          hasQuestionToken: !define.required?.includes(key),
         })),
       });
       definitionsMap[name].ins = ins;

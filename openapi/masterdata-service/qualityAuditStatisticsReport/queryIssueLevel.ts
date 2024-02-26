@@ -16,37 +16,37 @@ export default function fetchMethod(data: IBasicQualityAuditQueryRequest, extraO
 /** 基础质量审核查询请求 */
 export interface IBasicQualityAuditQueryRequest {
     /** 日期范围-起始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 日期范围-结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«List«问题等级查询响应»» */
 export interface IJSONResultListProblemLevelQueryResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IQuestionLevelQueryResponse[];
+    data?: IQuestionLevelQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 问题等级查询响应 */
 export interface IQuestionLevelQueryResponse {
     /** 问题等级 */
-    issueLevel: string;
+    issueLevel?: string;
     /** 问题等级名称 */
-    issueLevelName: string;
+    issueLevelName?: string;
     /** 不符合项数量 */
-    nonConformanceQuantity: number;
+    nonConformanceQuantity?: number;
     /** 未整改数量 */
-    unRectifiedQuantity: number;
+    unRectifiedQuantity?: number;
     /** 整改率 */
-    rectificationRate: number;
+    rectificationRate?: number;
     /** 内部审核不符合项数量 */
-    internalAuditNonConformanceQuantity: number;
+    internalAuditNonConformanceQuantity?: number;
     /** 外部审核不符合项数量 */
-    externalAuditNonConformanceQuantity: number;
+    externalAuditNonConformanceQuantity?: number;
     /** 专项审核不符合项数量 */
-    specialAuditNonConformanceQuantity: number;
+    specialAuditNonConformanceQuantity?: number;
 }

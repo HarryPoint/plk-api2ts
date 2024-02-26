@@ -16,27 +16,27 @@ export default function fetchMethod(data: IProjectCostBudgetQueryObject, extraOp
 /** 项目费用预算查询对象 */
 export interface IProjectCostBudgetQueryObject {
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 执行时间 yyyy-MM-dd HH:mm:ss */
-    executeTime: string;
+    executeTime?: string;
 }
 /** JSONResult«项目费用预算响应对象» */
 export interface IJSONResultProjectCostBudgetResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectCostBudgetResponseObject;
+    data?: IProjectCostBudgetResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目费用预算响应对象 */
 export interface IProjectCostBudgetResponseObject {
     /** 执行时间 */
-    executeTime: string;
+    executeTime?: string;
     /** 最新项目年度预算（元） */
-    lastProjectAnnualBudget: number;
+    lastProjectAnnualBudget?: number;
     /** 当年预算执行合计（元） */
-    totalBudgetExecute: number;
+    totalBudgetExecute?: number;
 }

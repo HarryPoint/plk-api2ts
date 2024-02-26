@@ -16,69 +16,69 @@ export default function fetchMethod(data: IProcessTaskSearchVO, extraOptions?: a
 /** 工序任务搜索VO */
 export interface IProcessTaskSearchVO {
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
     /** 是否需要分配 */
-    isAssign: string;
+    isAssign?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«工序任务设置VO»» */
 export interface IJSONResultPagingInformationProcedureTaskSetVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationProcedureTaskSetVO;
+    data?: IPagingInformationProcedureTaskSetVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«工序任务设置VO» */
 export interface IPagingInformationProcedureTaskSetVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProcedureTaskSetVO[];
+    list?: IProcedureTaskSetVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 工序任务设置VO */
 export interface IProcedureTaskSetVO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 是否需要分配 */
-    isAssign: string;
+    isAssign?: string;
     /** 默认操作人员列表 */
-    defaultUserList: IIdNameNumberVO[];
+    defaultUserList?: IIdNameNumberVO[];
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

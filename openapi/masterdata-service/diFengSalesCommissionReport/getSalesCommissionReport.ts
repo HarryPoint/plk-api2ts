@@ -16,61 +16,61 @@ export default function fetchMethod(data: GetSalesCommissionReport, extraOptions
 /** JSONResult«分页信息«佣金与提成统计表（帝丰定制）响应对象»» */
 export interface IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject;
+    data?: IPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«佣金与提成统计表（帝丰定制）响应对象» */
 export interface IPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ICommissionAndCommissionStatisticsTableDifengCustomizedResponseObject[];
+    list?: ICommissionAndCommissionStatisticsTableDifengCustomizedResponseObject[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 佣金与提成统计表（帝丰定制）响应对象 */
 export interface ICommissionAndCommissionStatisticsTableDifengCustomizedResponseObject {
     /** 业务员id */
-    businessUserId: number;
+    businessUserId?: number;
     /** 业务员名称 */
-    businessUserName: string;
+    businessUserName?: string;
     /** 客户id */
-    customerId: number;
+    customerId?: number;
     /** 客户名称 */
-    customerName: string;
+    customerName?: string;
     /** 其他应付单号 */
-    otherPayableCode: string;
+    otherPayableCode?: string;
     /** 挂账金额 */
-    registeredQuantity: string;
+    registeredQuantity?: string;
     /** 冲款金额 */
-    chargebackQuantity: string;
+    chargebackQuantity?: string;
     /** 未付金额 */
-    unpaidQuantity: string;
+    unpaidQuantity?: string;
     /** 销售出库单号 */
-    salesOutStorageOrderCode: string;
+    salesOutStorageOrderCode?: string;
     /** 销售出库单id */
-    salesOutStorageOrderId: number;
+    salesOutStorageOrderId?: number;
     /** 销售金额 */
-    saleQuantity: string;
+    saleQuantity?: string;
     /** 已收金额 */
-    receivedQuantity: string;
+    receivedQuantity?: string;
 }

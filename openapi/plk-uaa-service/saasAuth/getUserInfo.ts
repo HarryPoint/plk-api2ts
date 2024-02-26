@@ -15,95 +15,95 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«Saas 用户信息响应» */
 export interface IJSONResultSaasUserInformationResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISaasUserInformationResponse;
+    data?: ISaasUserInformationResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Saas 用户信息响应 */
 export interface ISaasUserInformationResponse {
     /** id */
-    id: number;
+    id?: number;
     /** 手机号 */
-    telephone: string;
+    telephone?: string;
     /** 用户名 */
-    username: string;
+    username?: string;
     /** 头像 */
-    avatar: string;
+    avatar?: string;
     /** 企业信息 */
-    enterprise: ISaasEnterprisesRespondToDtos;
+    enterprise?: ISaasEnterprisesRespondToDtos;
     /** 员工信息 */
-    employee: IEmployeeInformationResponse;
+    employee?: IEmployeeInformationResponse;
     /** 部门信息 */
-    department: IDepartmentRespondsToDTO;
+    department?: IDepartmentRespondsToDTO;
     /** 是否是超级管理员 */
-    isManage: string;
+    isManage?: string;
     /** 是否是管理员 */
-    isAdmin: string;
+    isAdmin?: string;
 }
 /** Saas企业响应 DTO */
 export interface ISaasEnterprisesRespondToDtos {
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 企业编号 */
-    code: string;
+    code?: string;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新人id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新人名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** 企业到期时间 */
-    expireTime: string;
+    expireTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 企业名 */
-    name: string;
+    name?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement: string;
+    isEnableBatchManagement?: string;
 }
 /** 员工信息响应 */
 export interface IEmployeeInformationResponse {
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新人id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新人名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 手机号 */
-    telephone: string;
+    telephone?: string;
     /** 邮件 */
-    email: string;
+    email?: string;
 }
 /** 部门响应 DTO */
 export interface IDepartmentRespondsToDTO {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

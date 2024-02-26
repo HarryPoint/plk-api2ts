@@ -16,36 +16,36 @@ export default function fetchMethod(data: IUserInfoQueryRequestDTO, extraOptions
 /** UserInfoQueryRequestDTO */
 export interface IUserInfoQueryRequestDTO {
     /** 员工ID列表不能为空 */
-    employeeIdList: number[];
+    employeeIdList?: number[];
     /** 企业ID */
-    enterpriseId: number;
+    enterpriseId?: number;
 }
 /** JSONResult«UserInfoQueryResponseDTO» */
 export interface IJSONResultUserInfoQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserInfoQueryResponseDTO;
+    data?: IUserInfoQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** UserInfoQueryResponseDTO */
 export interface IUserInfoQueryResponseDTO {
     /** 用户列表 */
-    userList: IEnterpriseUserDTO[];
+    userList?: IEnterpriseUserDTO[];
 }
 /** EnterpriseUserDTO */
 export interface IEnterpriseUserDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 手机号 */
-    telephone: string;
+    telephone?: string;
     /** 用户名 */
-    username: string;
+    username?: string;
     /** 头像 */
-    avatar: string;
+    avatar?: string;
     /** 员工ID */
-    employeeId: number;
+    employeeId?: number;
 }

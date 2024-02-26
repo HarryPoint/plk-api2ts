@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用权限相关/listAddPermissionUsingGET
 */
-export default function fetchMethod(params: { flowPathId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { flowPathId?: number }, extraOptions?: any) {
     return http<IJSONResultListAddsPermissionEditing>(
         {
             url: "/flow-service/flowPathPermission/listAddPermission",
@@ -16,24 +16,24 @@ export default function fetchMethod(params: { flowPathId: number }, extraOptions
 /** JSONResult«List«新增权限编辑»» */
 export interface IJSONResultListAddsPermissionEditing {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: INewPermissionEdit[];
+    data?: INewPermissionEdit[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 新增权限编辑 */
 export interface INewPermissionEdit {
     /** ID */
-    id: number;
+    id?: number;
     /** 流程字段ID */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 流程字段编码 */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** 权限类型 */
-    type: string;
+    type?: string;
 }

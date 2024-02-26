@@ -16,56 +16,56 @@ export default function fetchMethod(data: IConsignmentInboundAnalysisReportSearc
 /** 寄售入库分析报表搜索VO */
 export interface IConsignmentInboundAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 客户id */
-    customerId: number[];
+    customerId?: number[];
     /** 日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
     /** 仓库id */
-    warehouseId: number[];
+    warehouseId?: number[];
     /** 业务员id */
-    businessManId: number[];
+    businessManId?: number[];
     /** 日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 产品id */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds: number[];
+    outerCodeMajorDataIds?: number[];
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 单据编号 */
-    workOrderNo: string;
+    workOrderNo?: string;
     /** 销售订单编号 */
-    salesOrderNo: string;
+    salesOrderNo?: string;
     /** 入库类型 */
-    inboundType: string;
+    inboundType?: string;
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportingTicketInformation;
+    data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
-    ticket: string;
+    ticket?: string;
 }

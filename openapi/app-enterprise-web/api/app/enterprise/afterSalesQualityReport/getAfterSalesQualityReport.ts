@@ -16,134 +16,134 @@ export default function fetchMethod(data: IAfterSalesQualityAnalysisReportSearch
 /** 售后质量分析报表搜索VO */
 export interface IAfterSalesQualityAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 灌装日期开始时间 yyyy-MM-dd HH:mm:ss */
-    fillingBeginDate: string;
+    fillingBeginDate?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 灌装日期结束时间 yyyy-MM-dd HH:mm:ss */
-    fillingEndDate: string;
+    fillingEndDate?: string;
     /** 客户id */
-    customerId: number[];
+    customerId?: number[];
     /** 生产日期开始时间 yyyy-MM-dd HH:mm:ss */
-    productionBeginDate: string;
+    productionBeginDate?: string;
     /** 业务员id */
-    businessIds: number[];
+    businessIds?: number[];
     /** 生产日期结束时间 yyyy-MM-dd HH:mm:ss */
-    productionEndDate: string;
+    productionEndDate?: string;
     /** 记录日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
     /** 记录日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 产品id */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds: number[];
+    outerCodeMajorDataIds?: number[];
     /** 灌装线 */
-    fillingLine: string;
+    fillingLine?: string;
     /** 责任单位 */
-    responsibleUnit: string;
+    responsibleUnit?: string;
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«售后质量分析返回VO» */
 export interface IJSONResultAfterSalesQualityAnalysisReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IAfterSalesQualityAnalysisReturnsVO1;
+    data?: IAfterSalesQualityAnalysisReturnsVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 售后质量分析返回VO_1 */
 export interface IAfterSalesQualityAnalysisReturnsVO1 {
     /** 数据表 */
-    tablePage: IPagingInformationAfterSalesQualityAnalysisReturnsVO;
+    tablePage?: IPagingInformationAfterSalesQualityAnalysisReturnsVO;
     /** 客户维度 */
-    customerDimension: IAfterSalesQualityAnalysisChartDataReturnedToVO[];
+    customerDimension?: IAfterSalesQualityAnalysisChartDataReturnedToVO[];
     /** 趋势图 */
-    chartsOfAccident: IAfterSalesQualityAnalysisChartDataReturnedToVO[];
+    chartsOfAccident?: IAfterSalesQualityAnalysisChartDataReturnedToVO[];
 }
 /** 分页信息«售后质量分析返回VO» */
 export interface IPagingInformationAfterSalesQualityAnalysisReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IAfterSalesQualityAnalysisReturnedToVO[];
+    list?: IAfterSalesQualityAnalysisReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 售后质量分析返回VO */
 export interface IAfterSalesQualityAnalysisReturnedToVO {
     /** 客户 */
-    customer: string;
+    customer?: string;
     /** 业务员 */
-    businessMan: string;
+    businessMan?: string;
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 产品id集合 */
-    productIds: string;
+    productIds?: string;
     /** 灌装日期 */
-    fillingDate: string;
+    fillingDate?: string;
     /** 灌装日期 */
-    fillingDateStr: string;
+    fillingDateStr?: string;
     /** 生产日期 */
-    productionDate: string;
+    productionDate?: string;
     /** 灌装线 */
-    fillingLine: string;
+    fillingLine?: string;
     /** 责任单位 */
-    responsibleUnit: string;
+    responsibleUnit?: string;
     /** 事故描述 */
-    accidentDesc: string;
+    accidentDesc?: string;
     /** 数量 */
-    quantity: number;
+    quantity?: number;
     /** 图片 */
-    picUrls: IAnnexVO[];
+    picUrls?: IAnnexVO[];
     /** 备注 */
-    remark: string;
+    remark?: string;
 }
 /** 附件 VO */
 export interface IAnnexVO {
     /** 文件id */
-    id: number;
+    id?: number;
     /** 文件key */
-    fileKey: string;
+    fileKey?: string;
     /** 文件完整路径 */
-    fileUrl: string;
+    fileUrl?: string;
     /** 文件名 */
-    fileName: string;
+    fileName?: string;
     /** 文件大小 */
-    size: number;
+    size?: number;
 }
 /** 售后质量分析图表数据返回VO */
 export interface IAfterSalesQualityAnalysisChartDataReturnedToVO {
     /** 轴标 */
-    title: string;
+    title?: string;
     /** 事故次数 */
-    numOfAccidents: number;
+    numOfAccidents?: number;
 }

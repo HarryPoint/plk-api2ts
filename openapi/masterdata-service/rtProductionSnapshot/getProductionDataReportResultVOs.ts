@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProductionDataReportResultVOsUsingPOST
 */
-export default function fetchMethod(data: IOutputDataReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IOutputDataReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheOutputDataStatisticsToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProductionDataReportResultVOs",
@@ -17,61 +17,61 @@ export default function fetchMethod(data: IOutputDataReportSearchVO, params: { e
 /** 产出数据报表搜索VO */
 export interface IOutputDataReportSearchVO {
     /** 物料id集 */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds: number[];
+    userIds?: number[];
     /** 日期筛选 - 开始 */
-    beginTime: string;
+    beginTime?: string;
     /** 日期筛选 - 结束 */
-    endTime: string;
+    endTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«List«产出数据统计返回VO»» */
 export interface IJSONResultListReturnsTheOutputDataStatisticsToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IOutputDataStatisticsAreReturnedToVO[];
+    data?: IOutputDataStatisticsAreReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产出数据统计返回VO */
 export interface IOutputDataStatisticsAreReturnedToVO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 所有工序产出数 */
-    allQuantity: number;
+    allQuantity?: number;
     /** 工序产出信息集 */
-    processList: ITheProcessOutputStatisticsReportIsReturnedToVO[];
+    processList?: ITheProcessOutputStatisticsReportIsReturnedToVO[];
 }
 /** 工序产出统计报表返回VO */
 export interface ITheProcessOutputStatisticsReportIsReturnedToVO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 工序产出数 */
-    produceQuantity: number;
+    produceQuantity?: number;
 }

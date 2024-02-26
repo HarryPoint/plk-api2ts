@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/单位相关/getSelectorUsingGET_9
 */
-export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListIdNameVO>(
         {
             url: "/masterdata-service/unit/getSelector",
@@ -16,13 +16,13 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
 /** JSONResult«List«Id，名称VO»» */
 export interface IJSONResultListIdNameVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdNameVO[];
+    data?: IIdNameVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id，名称VO */
 export interface IIdNameVO {

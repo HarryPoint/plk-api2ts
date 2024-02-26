@@ -16,23 +16,23 @@ export default function fetchMethod(data: IUserAggregationDimensionConfiguration
 /** 用户聚合维度配置查询_1 */
 export interface IUserAggregationDimensionConfigurationQuery1 {
     /** 编码 */
-    code: string;
+    code?: string;
 }
 /** JSONResult«用户聚合维度配置查询» */
 export interface IJSONResultUserAggregationDimensionConfigurationQuery {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserAggregationDimensionConfigurationQuery;
+    data?: IUserAggregationDimensionConfigurationQuery;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 用户聚合维度配置查询 */
 export interface IUserAggregationDimensionConfigurationQuery {
     /** 编号 */
-    code: string;
+    code?: string;
     /** 配置信息 */
-    config: Record<string, Record<string, any>>;
+    config?: Record<string, Record<string, any>>;
 }

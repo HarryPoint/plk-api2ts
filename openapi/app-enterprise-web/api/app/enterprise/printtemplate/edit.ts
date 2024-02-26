@@ -16,87 +16,87 @@ export default function fetchMethod(data: IPrintTheTemplateRequestObject, extraO
 /** 打印模板请求对象 */
 export interface IPrintTheTemplateRequestObject {
     /** id */
-    id: number;
+    id?: number;
     /** 模板名称 */
-    name: string;
+    name?: string;
     /** 数据源id */
-    dataSourceId: number;
+    dataSourceId?: number;
     /** 企业路由id */
-    enterpriseRouterIds: number[];
+    enterpriseRouterIds?: number[];
     /** 模板类型 */
-    type: string;
+    type?: string;
     /** 画布大小类型 */
-    canvasSizeType: string;
+    canvasSizeType?: string;
     /** 画布高 */
-    height: number;
+    height?: number;
     /** 画布宽 */
-    width: number;
+    width?: number;
     /** 画布方向类型 */
-    canvasDirectionType: string;
+    canvasDirectionType?: string;
     /** 每页添加表头表尾 */
-    sameHeaderTail: string;
+    sameHeaderTail?: string;
     /** 每页添加表格列名称 */
-    sameColumn: string;
+    sameColumn?: string;
     /** 是否需要一页纸张打印多个模板 */
-    mutiTemplate: string;
+    mutiTemplate?: string;
     /** 背景图片key */
-    bgPicKey: string;
+    bgPicKey?: string;
     /** 模板JSON结构 */
-    printTemplateJson: Record<string, Record<string, any>>;
+    printTemplateJson?: Record<string, Record<string, any>>;
     /** 模板字段集合 */
-    printTemplateFields: IPrintTheTemplateFieldRequestObject[];
+    printTemplateFields?: IPrintTheTemplateFieldRequestObject[];
 }
 /** 打印模板字段请求对象 */
 export interface IPrintTheTemplateFieldRequestObject {
     /** id */
-    id: number;
+    id?: number;
     /** 字段编码 */
-    code: string;
+    code?: string;
     /** 字段名称 */
-    name: string;
+    name?: string;
     /** 字段类型 */
-    type: string;
+    type?: string;
     /** 数据源id */
-    dataSourceId: number;
+    dataSourceId?: number;
     /** 关联表单字段id */
-    fieldId: number;
+    fieldId?: number;
     /** 关联字段编码 */
-    fieldCode: string;
+    fieldCode?: string;
     /** 关联字段名称 */
-    fieldName: string;
+    fieldName?: string;
     /** serialNo */
-    serialNo: string;
+    serialNo?: string;
     /** 文本内容 */
-    textContent: string;
+    textContent?: string;
     /** 是否表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 扫码类型 */
-    scanCodeType: string;
+    scanCodeType?: string;
     /** 扫码内容 */
-    scanCodeContent: string;
+    scanCodeContent?: string;
     /** 图片key */
-    imageKey: string;
+    imageKey?: string;
     /** 线条方向 */
-    lineDirection: string;
+    lineDirection?: string;
     /** 页眉内容 */
-    headerContent: string;
+    headerContent?: string;
     /** 页脚内容 */
-    footerContent: string;
+    footerContent?: string;
     /** 字段配置 */
-    fieldConfig: string;
+    fieldConfig?: string;
     /** 表单字段数值格式类型 */
-    formFieldNumberFormat: string;
+    formFieldNumberFormat?: string;
     /** 子表字段 */
-    childPrintTemplateFields: IPrintTheTemplateFieldRequestObject[];
+    childPrintTemplateFields?: IPrintTheTemplateFieldRequestObject[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

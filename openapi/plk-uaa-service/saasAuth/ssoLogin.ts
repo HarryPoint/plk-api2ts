@@ -18,7 +18,7 @@ export interface ISingleSignOnRequestDTO {
     /** 单点登陆系统类型 */
     ssoSystem: string;
     /** 单点登陆目标模块 */
-    module: string;
+    module?: string;
     /** 登陆企业id */
     enterpriseId: number;
     /** appId */
@@ -29,16 +29,16 @@ export interface ISingleSignOnRequestDTO {
 /** JSONResult«登录响应 DTO» */
 export interface IJSONResultLoginResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ILoginRespondsToDTO;
+    data?: ILoginRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 登录响应 DTO */
 export interface ILoginRespondsToDTO {
     /** token */
-    accessToken: string;
+    accessToken?: string;
 }

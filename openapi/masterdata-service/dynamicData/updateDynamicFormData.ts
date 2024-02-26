@@ -16,26 +16,26 @@ export default function fetchMethod(data: IDynamicFormDataUpdateRequestDTO[], ex
 /** DynamicFormDataUpdateRequestDTO */
 export interface IDynamicFormDataUpdateRequestDTO {
     /** undefined */
-    tableRecordIdList: number[];
+    tableRecordIdList?: number[];
     /** undefined */
-    appCode: string;
+    appCode?: string;
     /** undefined */
-    detailTableCode: string;
+    detailTableCode?: string;
     /** undefined */
-    tableColumnSerialToValueListMap: Record<string, string[]>;
+    tableColumnSerialToValueListMap?: Record<string, string[]>;
     /** undefined */
-    idFieldSerialNoToValueListMap: Record<string, string[]>;
+    idFieldSerialNoToValueListMap?: Record<string, string[]>;
     /** undefined */
-    isUpdateDetailTable: string;
+    isUpdateDetailTable?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

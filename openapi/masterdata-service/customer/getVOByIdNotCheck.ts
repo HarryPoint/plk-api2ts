@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/getVOByIdNotCheckUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultCustomerVO>(
         {
             url: "/masterdata-service/customer/getVOByIdNotCheck",
@@ -16,32 +16,32 @@ export default function fetchMethod(params: { enterpriseId: number; id?: number 
 /** JSONResult«客户VO» */
 export interface IJSONResultCustomerVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICustomerVO;
+    data?: ICustomerVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 客户VO */
 export interface ICustomerVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 公司电话 */
-    companyPhone: string;
+    companyPhone?: string;
     /** 传真 */
-    fax: string;
+    fax?: string;
     /** 统一社会信用代码 */
-    unifiedSocialCreditCode: string;
+    unifiedSocialCreditCode?: string;
     /** 银行id */
-    bankId: number;
+    bankId?: number;
     /** 开户账号 */
-    bankAccount: string;
+    bankAccount?: string;
 }

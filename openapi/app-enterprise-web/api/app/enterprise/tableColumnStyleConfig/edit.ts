@@ -16,24 +16,24 @@ export default function fetchMethod(data: IListColumnStyleConfigurationEditDTO, 
 /** 列表列样式配置编辑DTO */
 export interface IListColumnStyleConfigurationEditDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 列配置JSON */
-    config: Record<string, Record<string, any>>;
+    config?: Record<string, Record<string, any>>;
 }
 /** JSONResult«列表列样式配置编辑DTO» */
 export interface IJSONResultListColumnStyleConfigurationEditDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IListColumnStyleConfigurationEditDTO;
+    data?: IListColumnStyleConfigurationEditDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

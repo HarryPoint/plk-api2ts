@@ -22,18 +22,18 @@ export interface IBatchTransferToOtherProductionOrderDTO {
     /** 转移生产工艺路径步骤id */
     produceTechnologyRoutingStepId: number;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 是否自动创建一个补充生产订单 */
     isAutoCreateOrder: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

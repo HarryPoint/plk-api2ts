@@ -16,29 +16,29 @@ export default function fetchMethod(data: IFeedMoldQueryDTO, extraOptions?: any)
 /** 进料模具查询DTO */
 export interface IFeedMoldQueryDTO {
     /** 生产任务ids */
-    produceTaskIds: number[];
+    produceTaskIds?: number[];
     /** 名称或者编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
 }
 /** JSONResult«List«进料模具响应DTO»» */
 export interface IJSONResultListFeedMoldResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFeedMoldRespondsToDTO[];
+    data?: IFeedMoldRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 进料模具响应DTO */
 export interface IFeedMoldRespondsToDTO {
     /** 模具id */
-    id: number;
+    id?: number;
     /** 模具名称 */
-    name: string;
+    name?: string;
     /** 模具编号 */
-    code: string;
+    code?: string;
     /** 生产工艺模具id */
-    produceTechnologyMoldId: number[];
+    produceTechnologyMoldId?: number[];
 }

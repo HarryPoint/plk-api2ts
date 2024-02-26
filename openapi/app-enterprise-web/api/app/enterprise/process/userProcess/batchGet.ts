@@ -16,26 +16,26 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«UserProcessVo»» */
 export interface IJSONResultListUserProcessVo {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserProcessVo[];
+    data?: IUserProcessVo[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** UserProcessVo */
 export interface IUserProcessVo {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    processId: number;
+    processId?: number;
     /** undefined */
-    executorType: string;
+    executorType?: string;
     /** undefined */
-    refId: number;
+    refId?: number;
     /** undefined */
-    type: string;
+    type?: string;
     /** undefined */
-    refName: string;
+    refName?: string;
 }

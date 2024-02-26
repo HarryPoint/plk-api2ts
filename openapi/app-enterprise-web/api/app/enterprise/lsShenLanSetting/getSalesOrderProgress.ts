@@ -15,40 +15,40 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«质检生产大屏订单完成进度返回VO»» */
 export interface IJSONResultListCheckTheCompletionProgressOfProductionLargeScreenOrdersReturnToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IQcProductionLargeScreenOrderCompletionProgressReturnToVO[];
+    data?: IQcProductionLargeScreenOrderCompletionProgressReturnToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质检生产大屏订单完成进度返回VO */
 export interface IQcProductionLargeScreenOrderCompletionProgressReturnToVO {
     /** id(销售订单明细id) */
-    id: number;
+    id?: number;
     /** 销售订单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 销售订单号(编号) */
-    salesOrderNo: string;
+    salesOrderNo?: string;
     /** 客户id */
-    customerId: number;
+    customerId?: number;
     /** 客户名称 */
-    customerName: string;
+    customerName?: string;
     /** 物料id */
-    majorDataId: number;
+    majorDataId?: number;
     /** 物料名称(产品名称) */
-    majorDataName: string;
+    majorDataName?: string;
     /** 物料型号(产品型号) */
-    majorDataSpec: string;
+    majorDataSpec?: string;
     /** 交货日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 计划结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 当前区域id */
-    lastAreaId: number;
+    lastAreaId?: number;
     /** 当前区域名称(当前工作组) */
-    lastAreaName: string;
+    lastAreaName?: string;
     /** 当前区域进入时间(进入工作组日期) */
-    lastAreaTime: string;
+    lastAreaTime?: string;
 }

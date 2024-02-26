@@ -16,18 +16,18 @@ export default function fetchMethod(data: IEmployeesDeleteRequestsInBatches, ext
 /** 员工批量删除请求 */
 export interface IEmployeesDeleteRequestsInBatches {
     /** 员工id集 */
-    employeeIds: number[];
+    employeeIds?: number[];
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

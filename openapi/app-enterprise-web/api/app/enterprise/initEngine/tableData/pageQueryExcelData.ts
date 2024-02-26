@@ -16,72 +16,72 @@ export default function fetchMethod(data: IPaging14, extraOptions?: any) {
 /** 分页_14 */
 export interface IPaging14 {
     /** 表数据ID */
-    tableDataId: number;
+    tableDataId?: number;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«ExcelRowDTO»» */
 export interface IJSONResultPageInformationExcelRowDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationExcelRowDTO;
+    data?: IPageInformationExcelRowDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«ExcelRowDTO» */
 export interface IPageInformationExcelRowDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IExcelRowDTO[];
+    list?: IExcelRowDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** ExcelRowDTO */
 export interface IExcelRowDTO {
     /** 行数据ID */
-    id: number;
+    id?: number;
     /** 行下标 */
-    rowIndex: number;
+    rowIndex?: number;
     /** 单元格列表 */
-    cellList: IExcelCellDTO[];
+    cellList?: IExcelCellDTO[];
 }
 /** ExcelCellDTO */
 export interface IExcelCellDTO {
     /** 单元格ID */
-    id: number;
+    id?: number;
     /** 列下标 */
-    columnIndex: number;
+    columnIndex?: number;
     /** 单元格编码 */
-    code: string;
+    code?: string;
     /** 单元格值 */
-    value: string;
+    value?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getByIdUsingGET_2
 */
-export default function fetchMethod(params: { enterpriseId: number; flowPathId: number; formRecordId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; flowPathId?: number; formRecordId?: number }, extraOptions?: any) {
     return http<IJSONResultJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getById",
@@ -16,11 +16,11 @@ export default function fetchMethod(params: { enterpriseId: number; flowPathId: 
 /** JSONResult«JSONObject» */
 export interface IJSONResultJSONObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, Record<string, any>>;
+    data?: Record<string, Record<string, any>>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

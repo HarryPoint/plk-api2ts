@@ -16,22 +16,22 @@ export default function fetchMethod(data: IProductionOrderStepSchedulingEditDTO1
 /** 生产订单步骤排产编辑DTO_1 */
 export interface IProductionOrderStepSchedulingEditDTO1 {
     /** 排产计划id */
-    id: number;
+    id?: number;
     /** 步骤排产集 */
-    stepPlans: IProductionOrderStepSchedulingEditDTO[];
+    stepPlans?: IProductionOrderStepSchedulingEditDTO[];
 }
 /** 生产订单步骤排产编辑DTO */
 export interface IProductionOrderStepSchedulingEditDTO {
     /** 步骤排产id */
-    id: number;
+    id?: number;
     /** 工艺路径步骤id */
-    routingStepId: number;
+    routingStepId?: number;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 计划开始时间, yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
     beginTime: string;
     /** 计划结束时间, yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
@@ -40,11 +40,11 @@ export interface IProductionOrderStepSchedulingEditDTO {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

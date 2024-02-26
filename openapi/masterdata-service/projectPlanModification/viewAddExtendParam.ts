@@ -16,42 +16,42 @@ export default function fetchMethod(data: IProjectPlanChangeOrderExtensionParame
 /** 项目计划变更单扩展参数请求 */
 export interface IProjectPlanChangeOrderExtensionParameterRequest {
     /** 项目计划变更信息列表 */
-    projectPlanList: IItemChangeSingleFieldExtensionParameterRequest[];
+    projectPlanList?: IItemChangeSingleFieldExtensionParameterRequest[];
     /** 项目阶段列表 */
-    projectStageList: IItemChangeFormExtensionParameterEditRequest[];
+    projectStageList?: IItemChangeFormExtensionParameterEditRequest[];
     /** 项目任务列表 */
-    projectTaskList: IItemChangeFormExtensionParameterEditRequest[];
+    projectTaskList?: IItemChangeFormExtensionParameterEditRequest[];
 }
 /** 项目变更单字段扩展参数请求 */
 export interface IItemChangeSingleFieldExtensionParameterRequest {
     /** 字段编号 */
-    fieldCode: string;
+    fieldCode?: string;
     /** 操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 旧值 */
-    oldValue: string;
+    oldValue?: string;
     /** 新值 */
-    newValue: string;
+    newValue?: string;
     /** 子表数据列表 */
-    childList: IItemChangeListFieldExtensionParameterRequest1[];
+    childList?: IItemChangeListFieldExtensionParameterRequest1[];
 }
 /** 项目变更单子表字段扩展参数请求_1 */
 export interface IItemChangeListFieldExtensionParameterRequest1 {
     /** 行数据id */
-    dataId: string;
+    dataId?: string;
     /** 行操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 列数据 */
-    columnData: IItemChangeSingleFieldExtensionParameterRequest[];
+    columnData?: IItemChangeSingleFieldExtensionParameterRequest[];
 }
 /** 项目变更表单扩展参数编辑请求 */
 export interface IItemChangeFormExtensionParameterEditRequest {
     /** 应用id */
-    appId: number;
+    appId?: number;
     /** 表单操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 数据id */
-    dataId: string;
+    dataId?: string;
     /** 字段数据列表 */
-    fieldDataList: IItemChangeSingleFieldExtensionParameterRequest[];
+    fieldDataList?: IItemChangeSingleFieldExtensionParameterRequest[];
 }

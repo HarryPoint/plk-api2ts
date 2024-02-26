@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionEntrustReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationOutsourcingReportExportVO>(
         {
             url: "/masterdata-service/exportAuth/getProductionEntrustReportExportInfoByTicket",
@@ -16,35 +16,35 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«委外报表导出VO»» */
 export interface IJSONResultExportInformationOutsourcingReportExportVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationOutsourcingReportExportVO;
+    data?: IExportInformationOutsourcingReportExportVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«委外报表导出VO» */
 export interface IExportInformationOutsourcingReportExportVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IOutsourcingReportExportVO[];
+    itemList?: IOutsourcingReportExportVO[];
 }
 /** 委外报表导出VO */
 export interface IOutsourcingReportExportVO {
     /** 数据分组名称 */
-    groupName: string;
+    groupName?: string;
     /** 数据分组编号 */
-    groupCode: string;
+    groupCode?: string;
     /** 数据时间 */
-    dataTime: string;
+    dataTime?: string;
     /** 委外总数(委外发出) */
-    produceEntrustQuantity: number;
+    produceEntrustQuantity?: number;
     /** 委外返回数量(委外返回) */
-    produceEntrustBackTotalQuantity: number;
+    produceEntrustBackTotalQuantity?: number;
     /** 委外返回数量(委外合格返回) */
-    produceEntrustBackQuantity: number;
+    produceEntrustBackQuantity?: number;
     /** 委外报废数量(委外报废) */
-    produceEntrustScrapQuantity: number;
+    produceEntrustScrapQuantity?: number;
 }

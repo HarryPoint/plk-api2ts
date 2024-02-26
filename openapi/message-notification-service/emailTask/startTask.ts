@@ -21,20 +21,20 @@ export interface IEmailTaskStartTaskRequestDTO {
 /** JSONResult«EmailTaskStartTaskResponseDTO» */
 export interface IJSONResultEmailTaskStartTaskResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmailTaskStartTaskResponseDTO;
+    data?: IEmailTaskStartTaskResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** EmailTaskStartTaskResponseDTO */
 export interface IEmailTaskStartTaskResponseDTO {
     /** 是否启动成功 */
-    startSuccess: boolean;
+    startSuccess?: boolean;
     /** 邮件任务ID */
-    emailTaskId: number;
+    emailTaskId?: number;
     /** 邮件记录ID */
-    mailRecordId: number;
+    mailRecordId?: number;
 }

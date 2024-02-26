@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeAndFeeQtyStatisticUsingPOST
 */
-export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultStatisticsOnLaborCostReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeAndFeeQtyStatistic",
@@ -21,29 +21,29 @@ export interface IUserProductionStatisticsSearchVO {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList: string[];
+    produceTaskTypeList?: string[];
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
 }
 /** JSONResult«工时工费统计返回VO» */
 export interface IJSONResultStatisticsOnLaborCostReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IStatisticsOnTimeSpentAreReturnedToVO;
+    data?: IStatisticsOnTimeSpentAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工时工费统计返回VO */
 export interface IStatisticsOnTimeSpentAreReturnedToVO {
     /** 总参考工时 */
-    totalTime: number;
+    totalTime?: number;
     /** 总参考工费 */
-    totalFee: number;
+    totalFee?: number;
 }

@@ -20,28 +20,28 @@ export interface IProductionProcessesReworkAddingRequestObjects {
     /** 返工类型id */
     produceAbnormalCategoryId: number;
     /** 对应批次id */
-    lotOrderId: number;
+    lotOrderId?: number;
     /** 返工工艺路径步骤id */
     backProduceTechnologyRoutingStepId: number;
     /** 返工数量 */
-    abnormalQuantity: number;
+    abnormalQuantity?: number;
     /** 返工生产后处理方式 */
     backProduceType: string;
     /** 标签id集合 */
-    tagIds: number[];
+    tagIds?: number[];
     /** 图片key集合 */
-    imageKeys: string[];
+    imageKeys?: string[];
     /** 描述 */
-    description: string;
+    description?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

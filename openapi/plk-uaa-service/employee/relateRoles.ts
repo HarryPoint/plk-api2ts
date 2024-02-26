@@ -16,22 +16,22 @@ export default function fetchMethod(data: IEmployeeAssociatedRoleSetRequestObjec
 /** 员工关联角色集请求对象 */
 export interface IEmployeeAssociatedRoleSetRequestObject {
     /** 员工id集 */
-    employeeId: number;
+    employeeId?: number;
     /** 角色id集 */
-    roleIds: number[];
+    roleIds?: number[];
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

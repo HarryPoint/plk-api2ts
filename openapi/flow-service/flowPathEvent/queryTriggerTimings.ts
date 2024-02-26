@@ -16,31 +16,31 @@ export default function fetchMethod(data: IEventTriggerTiming, extraOptions?: an
 /** 事件触发时机 */
 export interface IEventTriggerTiming {
     /** 根据应用版本ID列表 */
-    flowPathVersionIdList: number[];
+    flowPathVersionIdList?: number[];
     /** 触发事件的时机 */
-    triggerEventTiming: string;
+    triggerEventTiming?: string;
 }
 /** JSONResult«List«FlowPathEventTriggerTimingQueryResponseDTO»» */
 export interface IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFlowPathEventTriggerTimingQueryResponseDTO[];
+    data?: IFlowPathEventTriggerTimingQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** FlowPathEventTriggerTimingQueryResponseDTO */
 export interface IFlowPathEventTriggerTimingQueryResponseDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    flowPathId: number;
+    flowPathId?: number;
     /** undefined */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** undefined */
-    flowPathEventId: number;
+    flowPathEventId?: number;
     /** undefined */
-    eventTriggerTiming: string;
+    eventTriggerTiming?: string;
 }

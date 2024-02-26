@@ -18,18 +18,18 @@ export interface IEditDTOForWarehouseInventoryTaskBatch {
     /** 任务列表 */
     taskList: IEditDTOForWarehouseInventoryTask[];
     /** 计划开始时间，yyyy-MM-dd HH:mm:ss */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 盘点范围 */
     scopeType: string;
     /** 物料大类列表，盘点范围为物料类型时必填 */
-    handleMaterialTypes: string[];
+    handleMaterialTypes?: string[];
     /** 指定仓库仓位id集，盘点范围为指定仓位时必填，只传最底层仓位 */
-    warehouseList: IWarehouseInventoryTaskPositionEditingDTO[];
+    warehouseList?: IWarehouseInventoryTaskPositionEditingDTO[];
 }
 /** 仓库盘点任务编辑DTO */
 export interface IEditDTOForWarehouseInventoryTask {
     /** 盘点单号 */
-    taskNo: string;
+    taskNo?: string;
     /** 盘点仓库id */
     storehouseId: number;
     /** 处理人id集 */
@@ -38,18 +38,18 @@ export interface IEditDTOForWarehouseInventoryTask {
 /** 仓库盘点任务仓位编辑DTO */
 export interface IWarehouseInventoryTaskPositionEditingDTO {
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 仓位id */
-    warehouseId: number;
+    warehouseId?: number;
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

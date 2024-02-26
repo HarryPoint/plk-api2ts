@@ -16,46 +16,46 @@ export default function fetchMethod(params: { templateName?: string }, extraOpti
 /** JSONResult«List«ReportTemplateQueryResponseDTO»» */
 export interface IJSONResultListReportTemplateQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IReportTemplateQueryResponseDTO[];
+    data?: IReportTemplateQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ReportTemplateQueryResponseDTO */
 export interface IReportTemplateQueryResponseDTO {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** ID */
-    id: number;
+    id?: number;
     /** 模板名称 - 模糊查询 */
-    templateName: string;
+    templateName?: string;
     /** 报表类型 - 报表 */
-    report: string;
+    report?: string;
     /** 报表名称 - 模糊查询 */
-    reportName: string;
+    reportName?: string;
     /** 模板状态 - 精确匹配 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 报表统计时间区间描述 */
-    reportStatisticsTimeRangeDesc: string;
+    reportStatisticsTimeRangeDesc?: string;
 }

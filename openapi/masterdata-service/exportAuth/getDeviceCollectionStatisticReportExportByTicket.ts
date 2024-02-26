@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getDeviceCollectionStatisticReportExportByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationExportDeviceDataCollectionStatisticsReportVO>(
         {
             url: "/masterdata-service/exportAuth/getDeviceCollectionStatisticReportExportByTicket",
@@ -16,35 +16,35 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«设备数采统计报表导出VO»» */
 export interface IJSONResultExportInformationExportDeviceDataCollectionStatisticsReportVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationExportDeviceDataCollectionStatisticsReportVO;
+    data?: IExportInformationExportDeviceDataCollectionStatisticsReportVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«设备数采统计报表导出VO» */
 export interface IExportInformationExportDeviceDataCollectionStatisticsReportVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IExportDeviceDataCollectionStatisticsReportVO[];
+    itemList?: IExportDeviceDataCollectionStatisticsReportVO[];
 }
 /** 设备数采统计报表导出VO */
 export interface IExportDeviceDataCollectionStatisticsReportVO {
     /** 设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** 设备编号 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 参数名称 */
-    paramName: string;
+    paramName?: string;
     /** 参数编号 */
-    paramCode: string;
+    paramCode?: string;
     /** 时间 */
-    collectionTime: string;
+    collectionTime?: string;
     /** 数据值 */
-    result: string;
+    result?: string;
     /** 单位 */
-    unit: string;
+    unit?: string;
 }

@@ -16,51 +16,51 @@ export default function fetchMethod(data: ICacheInstanceRecordRequestDTO, extraO
 /** CacheInstanceRecordRequestDTO */
 export interface ICacheInstanceRecordRequestDTO {
     /** undefined */
-    cacheType: string;
+    cacheType?: string;
     /** undefined */
-    applicationName: string;
+    applicationName?: string;
     /** undefined */
-    serviceInstance: string;
+    serviceInstance?: string;
     /** undefined */
-    detailList: ICacheInstanceDetailRequestDTO[];
+    detailList?: ICacheInstanceDetailRequestDTO[];
 }
 /** CacheInstanceDetailRequestDTO */
 export interface ICacheInstanceDetailRequestDTO {
     /** undefined */
-    cacheKey: string;
+    cacheKey?: string;
     /** undefined */
-    estimatedSize: number;
+    estimatedSize?: number;
     /** undefined */
-    hitCount: number;
+    hitCount?: number;
     /** undefined */
-    missCount: number;
+    missCount?: number;
     /** undefined */
-    loadCount: number;
+    loadCount?: number;
     /** undefined */
-    loadSuccessCount: number;
+    loadSuccessCount?: number;
     /** undefined */
-    loadFailureCount: number;
+    loadFailureCount?: number;
     /** undefined */
-    evictionCount: number;
+    evictionCount?: number;
     /** undefined */
-    expireAfterWrite: number;
+    expireAfterWrite?: number;
     /** undefined */
-    expireAfterAccess: number;
+    expireAfterAccess?: number;
     /** undefined */
-    expireAfter: number;
+    expireAfter?: number;
     /** undefined */
-    maximumSize: number;
+    maximumSize?: number;
     /** undefined */
-    maximumWeight: number;
+    maximumWeight?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

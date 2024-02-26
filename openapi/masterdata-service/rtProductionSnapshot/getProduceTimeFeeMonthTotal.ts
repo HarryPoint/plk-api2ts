@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeMonthTotalUsingPOST
 */
-export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultMonthlySummaryStatisticalReportOfManHourFeeReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeMonthTotal",
@@ -17,44 +17,44 @@ export default function fetchMethod(data: IMonthlyReportOfHourlyLaborFeeSearchVO
 /** 工时工费月度报表搜索VO */
 export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds: number[];
+    userIds?: number[];
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«工时工费月度汇总统计报表返回VO» */
 export interface IJSONResultMonthlySummaryStatisticalReportOfManHourFeeReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMonthlySummaryStatisticalReportOfManHourFeeIsReturnedToVO;
+    data?: IMonthlySummaryStatisticalReportOfManHourFeeIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工时工费月度汇总统计报表返回VO */
 export interface IMonthlySummaryStatisticalReportOfManHourFeeIsReturnedToVO {
     /** 合格产出工费 */
-    produceFee: number;
+    produceFee?: number;
     /** 返工产出工费 */
-    backFee: number;
+    backFee?: number;
     /** 合计工费 */
-    totalFee: number;
+    totalFee?: number;
 }

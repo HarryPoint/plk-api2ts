@@ -16,75 +16,75 @@ export default function fetchMethod(data: IPositionTreeReturnsVO1, extraOptions?
 /** 仓位树返回VO_1 */
 export interface IPositionTreeReturnsVO1 {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** undefined */
-    nameOrCodeMatch: string;
+    nameOrCodeMatch?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«仓位查询DTO»» */
 export interface IJSONResultDTOForPagingInformationLocationQuery {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationLocationQueryDTO;
+    data?: IPageInformationLocationQueryDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«仓位查询DTO» */
 export interface IPageInformationLocationQueryDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IPositionQueryDTO[];
+    list?: IPositionQueryDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 仓位查询DTO */
 export interface IPositionQueryDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 仓位名称 */
-    name: string;
+    name?: string;
     /** 仓位编号 */
-    code: string;
+    code?: string;
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 仓库编号 */
-    storehouseCode: string;
+    storehouseCode?: string;
     /** 区域id */
-    areaId: number;
+    areaId?: number;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 区域编号 */
-    areaCode: string;
+    areaCode?: string;
     /** 库存数量 */
-    quantity: number;
+    quantity?: number;
 }

@@ -16,20 +16,20 @@ export default function fetchMethod(params: { materialId?: number }, extraOption
 /** JSONResult«List«质检方案选择VO»» */
 export interface IJSONResultListSelectVOAsTheInspectionSolution {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheInspectionSolutionIsVO[];
+    data?: ITheInspectionSolutionIsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质检方案选择VO */
 export interface ITheInspectionSolutionIsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 质检方案名称 */
-    name: string;
+    name?: string;
     /** 质检方案编号 */
-    code: string;
+    code?: string;
 }

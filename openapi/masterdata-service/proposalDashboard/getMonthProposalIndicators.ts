@@ -15,29 +15,29 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«MonthProposalIndicatorsResponseDTO» */
 export interface IJSONResultMonthProposalIndicatorsResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMonthProposalIndicatorsResponseDTO;
+    data?: IMonthProposalIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** MonthProposalIndicatorsResponseDTO */
 export interface IMonthProposalIndicatorsResponseDTO {
     /** 改善提案有效数量和员工参与率月目标 */
-    monthProposalIndicatorsList: IMonthProposalIndicatorsItemResponseDTO[];
+    monthProposalIndicatorsList?: IMonthProposalIndicatorsItemResponseDTO[];
 }
 /** MonthProposalIndicatorsItemResponseDTO */
 export interface IMonthProposalIndicatorsItemResponseDTO {
     /** 月份 */
-    month: number;
+    month?: number;
     /** 提案有效数量 */
-    proposalQuantity: number;
+    proposalQuantity?: number;
     /** 全公司提案数大于0的员工总数 */
-    employeeQuantity: number;
+    employeeQuantity?: number;
     /** 月目标 = 全公司改善提案参与人数年目标/12 */
-    currentMonthPlanQuantity: number;
+    currentMonthPlanQuantity?: number;
     /** 当月员工参与率 */
-    currentMonthEmployeeRate: number;
+    currentMonthEmployeeRate?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
 */
-export default function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultSchedulingResultVO>(
         {
             url: "/masterdata-service/autoPlan/autoPlanCompute",
@@ -17,140 +17,140 @@ export default function fetchMethod(data: IAutomaticProductionOrderSchedulingDTO
 /** 生产订单自动排产DTO */
 export interface IAutomaticProductionOrderSchedulingDTO {
     /** 待排产订单id集 */
-    waitProduceOrderIds: number[];
+    waitProduceOrderIds?: number[];
     /** 是否正向排产 */
-    isAsc: string;
+    isAsc?: string;
     /** 是否倒序排产 */
-    isDesc: string;
+    isDesc?: string;
     /** 是否考虑自动提前 */
-    isAutoMoveUp: string;
+    isAutoMoveUp?: string;
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 排产结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
 }
 /** JSONResult«排产计算结果VO» */
 export interface IJSONResultSchedulingResultVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICalculationResultOfSchedulingVO;
+    data?: ICalculationResultOfSchedulingVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 排产计算结果VO */
 export interface ICalculationResultOfSchedulingVO {
     /** 正向排产结果分析 */
-    ascAnalysis: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
+    ascAnalysis?: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
     /** 倒序排产结果分析 */
-    descAnalysis: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
+    descAnalysis?: ITheResultsOfSchedulingCalculationWereAnalyzedVO;
     /** 正向排产结果 */
-    ascList: IUnscheduledProductionOrdersAreReturnedToVO[];
+    ascList?: IUnscheduledProductionOrdersAreReturnedToVO[];
     /** 倒序排产结果 */
-    descList: IUnscheduledProductionOrdersAreReturnedToVO[];
+    descList?: IUnscheduledProductionOrdersAreReturnedToVO[];
     /** 正向顺延订单 */
-    ascPostponeList: IUnscheduledProductionOrdersAreReturnedToVO[];
+    ascPostponeList?: IUnscheduledProductionOrdersAreReturnedToVO[];
     /** 倒序顺延订单 */
-    descPostponeList: IUnscheduledProductionOrdersAreReturnedToVO[];
+    descPostponeList?: IUnscheduledProductionOrdersAreReturnedToVO[];
 }
 /** 排产计算结果分析VO */
 export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
     /** 排产方式 */
-    autoPlanType: string;
+    autoPlanType?: string;
     /** 是否按期交付 */
-    isOnTime: string;
+    isOnTime?: string;
     /** 影响订单个数 */
-    affectOrderCount: number;
+    affectOrderCount?: number;
     /** 超期订单个数 */
-    overdueOrderCount: number;
+    overdueOrderCount?: number;
     /** 超期原因类型集 */
-    overdueTypes: string[];
+    overdueTypes?: string[];
     /** 超期原因分析集 */
-    overdueReasons: string[];
+    overdueReasons?: string[];
     /** 还需增加工时(小时) */
-    needPlusTime: number;
+    needPlusTime?: number;
     /** 可增加工时日期集 */
-    canPlusDays: LocalDateTime[];
+    canPlusDays?: LocalDateTime[];
 }
 /** 未排产生产订单返回VO */
 export interface IUnscheduledProductionOrdersAreReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 是否加急 */
-    isEmergentOrder: string;
+    isEmergentOrder?: string;
     /** 生产订单编号 */
-    code: string;
+    code?: string;
     /** 父级订单编号 */
-    parentProduceOrderCode: string;
+    parentProduceOrderCode?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产物料id */
-    materialId: number;
+    materialId?: number;
     /** 生产物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 生产物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 物料单位id */
-    materialUnitId: number;
+    materialUnitId?: number;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 计划交付日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 订单计划开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 订单计划结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 订单当前计划开始日期 */
-    currentBeginTime: string;
+    currentBeginTime?: string;
     /** 订单当前计划结束日期 */
-    currentEndTime: string;
+    currentEndTime?: string;
     /** 订单优先级 */
-    priorityLevel: number;
+    priorityLevel?: number;
     /** 工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 工艺路径名称 */
-    routingName: string;
+    routingName?: string;
     /** 工艺路径编号 */
-    routingCode: string;
+    routingCode?: string;
     /** 交付数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 排产状态 */
-    planStatus: string;
+    planStatus?: string;
     /** 排产状态描述 */
-    planStatusDesc: string;
+    planStatusDesc?: string;
     /** 步骤集 */
-    steps: IUnscheduledProductionOrderStepReturnToVO[];
+    steps?: IUnscheduledProductionOrderStepReturnToVO[];
 }
 /** 未排产订单步骤返回VO */
 export interface IUnscheduledProductionOrderStepReturnToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 产能-生产时间 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 产能-生产数量 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
     /** 工序计划开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 工序计划结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 工序当前计划开始日期 */
-    currentBeginTime: string;
+    currentBeginTime?: string;
     /** 工序当前计划结束日期 */
-    currentEndTime: string;
+    currentEndTime?: string;
 }

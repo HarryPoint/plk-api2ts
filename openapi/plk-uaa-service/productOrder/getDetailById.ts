@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/getDetailByIdUsingGET_2
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProductOrderDetailsResponseObject>(
         {
             url: "/plk-uaa-service/productOrder/getDetailById",
@@ -16,88 +16,88 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«产品订单详情响应对象» */
 export interface IJSONResultProductOrderDetailsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductOrderDetailsResponseObject;
+    data?: IProductOrderDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产品订单详情响应对象 */
 export interface IProductOrderDetailsResponseObject {
     /** 订单id */
-    id: number;
+    id?: number;
     /** 订单编号 */
-    code: string;
+    code?: string;
     /** 企业编号 */
-    enterpriseCode: string;
+    enterpriseCode?: string;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 产品模块数组 */
-    productModuleArray: string[];
+    productModuleArray?: string[];
     /** 类型 */
-    type: string;
+    type?: string;
     /** 购买账号数 */
-    buyAccountQuantity: number;
+    buyAccountQuantity?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 订单金额(元) */
-    orderMoneyQuantity: number;
+    orderMoneyQuantity?: number;
     /** 预计交付日期 */
-    planDeliveryTime: string;
+    planDeliveryTime?: string;
     /** 下单用户id */
-    placeOrderUserId: number;
+    placeOrderUserId?: number;
     /** 预计到期日期 */
-    planExpireTime: string;
+    planExpireTime?: string;
     /** 下单用户名称 */
-    placeOrderUserName: string;
+    placeOrderUserName?: string;
     /** 下单时间 */
-    placeOrderTime: string;
+    placeOrderTime?: string;
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 付款记录列表 */
-    payRecordList: IProductOrderPaymentHistoryDetailsResponseObject[];
+    payRecordList?: IProductOrderPaymentHistoryDetailsResponseObject[];
     /** 购买时长(天) */
-    buyDurationQuantity: number;
+    buyDurationQuantity?: number;
     /** 合同签约时间 */
-    contractTime: string;
+    contractTime?: string;
     /** 加购类型 */
-    appendType: string;
+    appendType?: string;
     /** 延期类型 */
-    delayType: string;
+    delayType?: string;
     /** 延长时长(天) */
-    delayDurationQuantity: number;
+    delayDurationQuantity?: number;
     /** 延期原因 */
-    delayReason: string;
+    delayReason?: string;
     /** 服务信息 */
-    productOrderServiceSnapshot: IProductOrderServiceInformationResponseObject;
+    productOrderServiceSnapshot?: IProductOrderServiceInformationResponseObject;
 }
 /** 产品订单付款记录详情响应对象 */
 export interface IProductOrderPaymentHistoryDetailsResponseObject {
     /** 付款记录id */
-    id: number;
+    id?: number;
     /** 计划付款日期 */
-    planPayTime: string;
+    planPayTime?: string;
     /** 应付金额(元) */
-    payableQuantity: number;
+    payableQuantity?: number;
     /** 实际付款日期 */
-    realPayTime: string;
+    realPayTime?: string;
     /** 实付金额(元) */
-    actualPayQuantity: number;
+    actualPayQuantity?: number;
     /** 状态 */
-    status: string;
+    status?: string;
 }
 /** 产品订单服务信息响应对象 */
 export interface IProductOrderServiceInformationResponseObject {
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 到期时间 */
-    expireTime: string;
+    expireTime?: string;
     /** 账号数 */
-    availableAccountQuantity: number;
+    availableAccountQuantity?: number;
     /** 产品模块数组 */
-    productModuleArray: string[];
+    productModuleArray?: string[];
 }

@@ -16,39 +16,39 @@ export default function fetchMethod(data: IApplyTheEnterpriseRouteEditRequestDTO
 /** 应用企业路由编辑请求 DTO */
 export interface IApplyTheEnterpriseRouteEditRequestDTO {
     /** 应用id */
-    appId: number;
+    appId?: number;
     /** 应用名称 */
-    appName: string;
+    appName?: string;
     /** 应用编码 */
-    appCode: string;
+    appCode?: string;
     /** 是否是系统应用 */
-    isSystem: string;
+    isSystem?: string;
     /** 应用类型 */
-    appSystemType: string;
+    appSystemType?: string;
     /** 发布到的企业路由id集 */
-    enterpriseRouterPublishRequestList: IEnterpriseRouterPublishRequestDTO[];
+    enterpriseRouterPublishRequestList?: IEnterpriseRouterPublishRequestDTO[];
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务对象Code */
-    serviceObjectCode: string;
+    serviceObjectCode?: string;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
 }
 /** EnterpriseRouterPublishRequestDTO */
 export interface IEnterpriseRouterPublishRequestDTO {
     /** 上级路由ID */
-    parentRouteId: number;
+    parentRouteId?: number;
     /** 所属排序位置偏移量 */
-    sortOffset: number;
+    sortOffset?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

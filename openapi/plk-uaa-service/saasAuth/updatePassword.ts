@@ -16,18 +16,18 @@ export default function fetchMethod(data: IUpdatePasswordRequestDTO, extraOption
 /** 更新密码请求 DTO */
 export interface IUpdatePasswordRequestDTO {
     /** 旧密码 */
-    oldPassword: string;
+    oldPassword?: string;
     /** 新密码 */
     newPassword: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

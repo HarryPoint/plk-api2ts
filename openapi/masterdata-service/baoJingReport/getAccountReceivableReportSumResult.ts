@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAccountReceivableReportSumResultUsingPOST
 */
-export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getAccountReceivableReportSumResult",
@@ -17,48 +17,48 @@ export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisRepo
 /** 宝晶应收账款分析报表搜索VO */
 export interface IBaojingAccountsReceivableAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 业务员id集 */
-    businessUserIds: number[];
+    businessUserIds?: number[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    dateBegin: string;
+    dateBegin?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds: number[];
+    customerIds?: number[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    dateEnd: string;
+    dateEnd?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«宝晶应收账款分析报表表格返回VO» */
 export interface IJSONResultBaojingAccountsReceivableAnalysisReportFormReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBaojingAccountsReceivableAnalysisReportFormReturnedToVO1;
+    data?: IBaojingAccountsReceivableAnalysisReportFormReturnedToVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 宝晶应收账款分析报表表格返回VO_1 */
 export interface IBaojingAccountsReceivableAnalysisReportFormReturnedToVO1 {
     /** 期初金额 */
-    beginAmountSum: number;
+    beginAmountSum?: number;
     /** 应收金额 */
-    moveInAmountSum: number;
+    moveInAmountSum?: number;
     /** 已收金额 */
-    receivedAmountSum: number;
+    receivedAmountSum?: number;
     /** 其他损益 */
-    otherLossAmountSum: number;
+    otherLossAmountSum?: number;
     /** 应收余额 */
-    receivableBalanceSum: number;
+    receivableBalanceSum?: number;
 }

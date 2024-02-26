@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getImportCheckListUsingPOST
 */
-export default function fetchMethod(data: IImportDetailsListDTOForInventory, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IImportDetailsListDTOForInventory, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListReturnTheWarehouseInventoryListToTheDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getImportCheckList",
@@ -17,148 +17,148 @@ export default function fetchMethod(data: IImportDetailsListDTOForInventory, par
 /** 盘点导入明细列表DTO */
 export interface IImportDetailsListDTOForInventory {
     /** taskId */
-    taskId: number;
+    taskId?: number;
     /** 页面提交数据 */
-    submitCheckList: IImportTheWarehouseInventoryListIntoDTO[];
+    submitCheckList?: IImportTheWarehouseInventoryListIntoDTO[];
     /** 导入盘点明细数据 */
-    importCheckList: IImportTheWarehouseInventoryListIntoDTO[];
+    importCheckList?: IImportTheWarehouseInventoryListIntoDTO[];
 }
 /** 仓库盘点仓位清单导入DTO */
 export interface IImportTheWarehouseInventoryListIntoDTO {
     /** 盘点详情id */
-    id: number;
+    id?: number;
     /** 仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 仓位名称 */
-    warehouseName: string;
+    warehouseName?: string;
     /** 仓位编号 */
-    warehouseCode: string;
+    warehouseCode?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 区域编号 */
-    areaCode: string;
+    areaCode?: string;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 仓库编号 */
-    storehouseCode: string;
+    storehouseCode?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 物料种类 */
-    materialType: string;
+    materialType?: string;
     /** 物料种类描述 */
-    materialTypeDesc: string;
+    materialTypeDesc?: string;
     /** 原始数量(账面库存) */
-    originalQuantity: number;
+    originalQuantity?: number;
     /** 盘点数量 */
-    quantity: number;
+    quantity?: number;
     /** 核对数量 */
-    verifyQuantity: number;
+    verifyQuantity?: number;
     /** 核对调整数量 */
-    verifyDiffQuantity: number;
+    verifyDiffQuantity?: number;
     /** 盘点结果(盈亏数量) */
-    checkQuantity: number;
+    checkQuantity?: number;
     /** 差异原因 */
-    differenceReason: string;
+    differenceReason?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 序列号集 */
-    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
+    serialNos?: IInventoryTaskInventoryDetailSerialNumberDTO1[];
 }
 /** 盘点任务盘点明细序列号DTO_1 */
 export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 备注 */
-    serialRemark: string;
+    serialRemark?: string;
 }
 /** JSONResult«List«仓库盘点仓位清单返回DTO»» */
 export interface IJSONResultListReturnTheWarehouseInventoryListToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IWarehouseInventoryListReturnedToDTO[];
+    data?: IWarehouseInventoryListReturnedToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓库盘点仓位清单返回DTO */
 export interface IWarehouseInventoryListReturnedToDTO {
     /** 盘点详情id */
-    id: number;
+    id?: number;
     /** 仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 仓位名称 */
-    warehouseName: string;
+    warehouseName?: string;
     /** 仓位编号 */
-    warehouseCode: string;
+    warehouseCode?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 区域编号 */
-    areaCode: string;
+    areaCode?: string;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 仓库编号 */
-    storehouseCode: string;
+    storehouseCode?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 物料种类 */
-    materialType: string;
+    materialType?: string;
     /** 物料种类描述 */
-    materialTypeDesc: string;
+    materialTypeDesc?: string;
     /** 原始数量(账面库存) */
-    originalQuantity: number;
+    originalQuantity?: number;
     /** 盘点数量 */
-    quantity: number;
+    quantity?: number;
     /** 核对数量 */
-    verifyQuantity: number;
+    verifyQuantity?: number;
     /** 核对调整数量 */
-    verifyDiffQuantity: number;
+    verifyDiffQuantity?: number;
     /** 盘点结果(盈亏数量) */
-    checkQuantity: number;
+    checkQuantity?: number;
     /** 差异原因 */
-    differenceReason: string;
+    differenceReason?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 启用批次 */
-    enableLot: string;
+    enableLot?: string;
     /** 启用序列号 */
-    enableSerialNo: string;
+    enableSerialNo?: string;
     /** 启用序列号 */
-    hasWarehouseMaterial: string;
+    hasWarehouseMaterial?: string;
     /** 序列号集 */
-    serialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    serialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 匹配序列号集 */
-    pickSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    pickSerialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 盘盈序列号集 */
-    profitSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    profitSerialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 盘亏序列号集 */
-    lossSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    lossSerialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
 }
 /** 盘点任务盘点明细序列号DTO */
 export interface IInventoryTaskInventoryDetailsSerialNumberDTO {
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 备注 */
-    serialRemark: string;
+    serialRemark?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/销售订单相关/getCloseInfoByIdUsingGET
 */
-export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
     return http<IJSONResultSalesOrderClosureInformationIsReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/salesOrder/getCloseInfoById",
@@ -16,43 +16,43 @@ export default function fetchMethod(params: { id: string }, extraOptions?: any) 
 /** JSONResult«销售订单关闭信息返回VO» */
 export interface IJSONResultSalesOrderClosureInformationIsReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISalesOrderClosureInformationIsReturnedToVO;
+    data?: ISalesOrderClosureInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 销售订单关闭信息返回VO */
 export interface ISalesOrderClosureInformationIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 是否存在未关闭的生产订单 */
-    hasNotCloseProduceOrder: string;
+    hasNotCloseProduceOrder?: string;
     /** 是否存在未处理的审批事件 */
-    hasWaitProduceHandle: string;
+    hasWaitProduceHandle?: string;
     /** 是否存在未处理完的委外订单 */
-    hasSurplusProduceEntrust: string;
+    hasSurplusProduceEntrust?: string;
     /** 明细 */
-    details: ISalesOrderDetailsCloseInformationBackToVO[];
+    details?: ISalesOrderDetailsCloseInformationBackToVO[];
 }
 /** 销售订单明细关闭信息返回VO */
 export interface ISalesOrderDetailsCloseInformationBackToVO {
     /** 明细id */
-    id: number;
+    id?: number;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 对应物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 总销售数量(销售订单需求数量) */
-    totalCount: number;
+    totalCount?: number;
     /** 总合格产出数量(产出完成) */
-    totalProduceCount: number;
+    totalProduceCount?: number;
     /** 未转换数量 */
-    notConvertCount: number;
+    notConvertCount?: number;
 }

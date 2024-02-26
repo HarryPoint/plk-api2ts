@@ -16,56 +16,56 @@ export default function fetchMethod(data: IPurchaseArrivalStatisticsReportSearch
 /** 采购到货统计报表搜索VO */
 export interface IPurchaseArrivalStatisticsReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 采购订单编号 */
-    purchaseOrderNo: string;
+    purchaseOrderNo?: string;
     /** 最新到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    lastEndDate: string;
+    lastEndDate?: string;
     /** 供应商id */
-    supplierIds: number[];
+    supplierIds?: number[];
     /** 要求到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    requiredBeginDate: string;
+    requiredBeginDate?: string;
     /** 要求到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    requiredEndDate: string;
+    requiredEndDate?: string;
     /** 最新到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    lastBeginDate: string;
+    lastBeginDate?: string;
     /** 物料材质 */
-    texture: string;
+    texture?: string;
     /** 单据类型 */
-    orderType: string;
+    orderType?: string;
     /** 物料id */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 物料名称 */
-    majorDataName: string;
+    majorDataName?: string;
     /** 采购类型 */
-    purchaseType: string;
+    purchaseType?: string;
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportingTicketInformation;
+    data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
-    ticket: string;
+    ticket?: string;
 }

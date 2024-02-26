@@ -16,35 +16,35 @@ export default function fetchMethod(data: IProjectCostBudgetQueryObject, extraOp
 /** 项目费用预算查询对象 */
 export interface IProjectCostBudgetQueryObject {
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 执行时间 yyyy-MM-dd HH:mm:ss */
-    executeTime: string;
+    executeTime?: string;
 }
 /** JSONResult«项目费用累计响应对象» */
 export interface IJSONResultProjectCostAccumulationResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectCostCumulativeResponseObject;
+    data?: IProjectCostCumulativeResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目费用累计响应对象 */
 export interface IProjectCostCumulativeResponseObject {
     /** 累计预算 */
-    totalBudget: number;
+    totalBudget?: number;
     /** 累计预算执行 */
-    totalBudgetExecute: number;
+    totalBudgetExecute?: number;
     /** 累计预算执行率 */
-    totalBudgetExecuteRate: number;
+    totalBudgetExecuteRate?: number;
     /** 累计资金计划（元） */
-    totalFundPlan: number;
+    totalFundPlan?: number;
     /** 累计资金计划执行（元） */
-    totalFundPlanExecute: number;
+    totalFundPlanExecute?: number;
     /** 累计资金计划执行率 */
-    totalFundPlanExecuteRate: number;
+    totalFundPlanExecuteRate?: number;
     /** 月度资金计划 */
-    monthFundPlan: number;
+    monthFundPlan?: number;
 }

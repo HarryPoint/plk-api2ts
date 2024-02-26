@@ -16,34 +16,34 @@ export default function fetchMethod(data: GetPurchaseAccountPayableSummaryReport
 /** JSONResult«应付账款汇总表返回对象» */
 export interface IJSONResultAccountsPayableSummaryReturnObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IAccountsPayableSummaryReturnObject;
+    data?: IAccountsPayableSummaryReturnObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 应付账款汇总表返回对象 */
 export interface IAccountsPayableSummaryReturnObject {
     /** 供应商编号 */
-    code: string;
+    code?: string;
     /** 供应商名称 */
-    name: string;
+    name?: string;
     /** 期初预付款 */
-    beginPrepaidAmount: number;
+    beginPrepaidAmount?: number;
     /** 期初应付款 */
-    beginAccountsPayableAmount: number;
+    beginAccountsPayableAmount?: number;
     /** 本期预付款 */
-    prepaidAmount: number;
+    prepaidAmount?: number;
     /** 本期应付款 */
-    accountsPayableAmount: number;
+    accountsPayableAmount?: number;
     /** 本期已用预付款 */
-    paymentPrepaidAmount: number;
+    paymentPrepaidAmount?: number;
     /** 本期已付款 */
-    paymentAmount: number;
+    paymentAmount?: number;
     /** 期末预付款 */
-    endPrepaidAmount: number;
+    endPrepaidAmount?: number;
     /** 期末应付款 */
-    endAccountsPayableAmount: number;
+    endAccountsPayableAmount?: number;
 }

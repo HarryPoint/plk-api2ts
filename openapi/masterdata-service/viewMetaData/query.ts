@@ -16,29 +16,29 @@ export default function fetchMethod(data: IViewMetadataQueryRequestDTO, extraOpt
 /** ViewMetadataQueryRequestDTO */
 export interface IViewMetadataQueryRequestDTO {
     /** 应用编码 */
-    appCode: string;
+    appCode?: string;
     /** 实例ID */
-    instanceId: number;
+    instanceId?: number;
 }
 /** JSONResult«ViewMetadataQueryResponseDTO» */
 export interface IJSONResultViewMetadataQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IViewMetadataQueryResponseDTO;
+    data?: IViewMetadataQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ViewMetadataQueryResponseDTO */
 export interface IViewMetadataQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 应用编码 */
-    appCode: string;
+    appCode?: string;
     /** 实例ID */
-    instanceId: number;
+    instanceId?: number;
     /** 元数据 */
-    meta: Record<string, Record<string, any>>;
+    meta?: Record<string, Record<string, any>>;
 }

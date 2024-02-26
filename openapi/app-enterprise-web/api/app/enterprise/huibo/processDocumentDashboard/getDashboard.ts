@@ -23,33 +23,33 @@ export interface IProcessDocumentLargeScreenQueryDTO {
 /** JSONResult«工艺文档大屏结果VO» */
 export interface IJSONResultProcessDocumentLargeScreenResultVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessDocumentLargeScreenResultsVO;
+    data?: IProcessDocumentLargeScreenResultsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工艺文档大屏结果VO */
 export interface IProcessDocumentLargeScreenResultsVO {
     /** 不良品示例 列表 */
-    badProductItemList: IProcessDocumentLargeScreenForEachDocumentResultsVO[];
+    badProductItemList?: IProcessDocumentLargeScreenForEachDocumentResultsVO[];
     /** 包装作业指导书 列表 */
-    packageWorkItemList: IProcessDocumentLargeScreenForEachDocumentResultsVO[];
+    packageWorkItemList?: IProcessDocumentLargeScreenForEachDocumentResultsVO[];
     /** 生产作业指导书 列表 */
-    produceWorkItemList: IProcessDocumentLargeScreenForEachDocumentResultsVO[];
+    produceWorkItemList?: IProcessDocumentLargeScreenForEachDocumentResultsVO[];
 }
 /** 工艺文档大屏每一个文档的结果VO */
 export interface IProcessDocumentLargeScreenForEachDocumentResultsVO {
     /** 文档编号 */
-    documentCode: string;
+    documentCode?: string;
     /** 文档名称 */
-    documentName: string;
+    documentName?: string;
     /** 适用物料名称列表 */
-    applyMaterialNameList: string[];
+    applyMaterialNameList?: string[];
     /** 文档内容 */
-    content: string;
+    content?: string;
     /** 文档排序 */
-    sort: number;
+    sort?: number;
 }

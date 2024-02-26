@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/批次方案相关/getByIdUsingGET_9
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultLotSerialNumberPlanDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/getById",
@@ -16,61 +16,61 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«LotSerialNumberPlanDTO» */
 export interface IJSONResultLotSerialNumberPlanDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ILotSerialNumberPlanDTO;
+    data?: ILotSerialNumberPlanDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** LotSerialNumberPlanDTO */
 export interface ILotSerialNumberPlanDTO {
     /** 请选择方案ID */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 批次方案名称 */
-    name: string;
+    name?: string;
     /** 方案类型 */
-    planType: string;
+    planType?: string;
     /** 规则列表 */
-    ruleList: ILotSerialNumberPlanRuleDTO[];
+    ruleList?: ILotSerialNumberPlanRuleDTO[];
 }
 /** LotSerialNumberPlanRuleDTO */
 export interface ILotSerialNumberPlanRuleDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 规则类型 */
-    type: string;
+    type?: string;
     /** 日期类型 */
-    dateFormat: string;
+    dateFormat?: string;
     /** 应用引擎ID */
-    flowPathId: number;
+    flowPathId?: number;
     /** 应用引擎编码 */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 字段编码 */
-    flowPathFormFiledCode: string;
+    flowPathFormFiledCode?: string;
     /** 字段序列号 */
-    flowPathFormFiledSerialNo: string;
+    flowPathFormFiledSerialNo?: string;
     /** 值提取方法 */
-    valueExtractMethod: string;
+    valueExtractMethod?: string;
     /** 起始Index */
-    startIndex: number;
+    startIndex?: number;
     /** 结束Index */
-    endIndex: number;
+    endIndex?: number;
     /** 字符常量 */
-    fixValue: string;
+    fixValue?: string;
     /** 规则长度 - 用于流水 */
-    ruleLength: number;
+    ruleLength?: number;
     /** 起始值 - 用于流水 */
-    startValue: number;
+    startValue?: number;
     /** 步长值 - 用于流水 */
-    stepValue: number;
+    stepValue?: number;
     /** 方案ID */
-    lotSerialNumberPlanId: number;
+    lotSerialNumberPlanId?: number;
     /** 排序 */
-    sort: number;
+    sort?: number;
     /** 规则描述 */
-    ruleDesc: string;
+    ruleDesc?: string;
 }

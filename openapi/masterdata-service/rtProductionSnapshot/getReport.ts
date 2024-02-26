@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getReportUsingPOST
 */
-export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheOutputDataStatisticsToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getReport",
@@ -17,50 +17,50 @@ export default function fetchMethod(data: IOutputClassReportSearchVO, params: { 
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 查询时间维度类型 */
-    timeType: string;
+    timeType?: string;
 }
 /** JSONResult«List«产出数据统计返回VO»» */
 export interface IJSONResultListReturnsTheOutputDataStatisticsToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IOutputDataStatisticsAreReturnedToVO[];
+    data?: IOutputDataStatisticsAreReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产出数据统计返回VO */
 export interface IOutputDataStatisticsAreReturnedToVO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 所有工序产出数 */
-    allQuantity: number;
+    allQuantity?: number;
     /** 工序产出信息集 */
-    processList: ITheProcessOutputStatisticsReportIsReturnedToVO[];
+    processList?: ITheProcessOutputStatisticsReportIsReturnedToVO[];
 }
 /** 工序产出统计报表返回VO */
 export interface ITheProcessOutputStatisticsReportIsReturnedToVO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 工序产出数 */
-    produceQuantity: number;
+    produceQuantity?: number;
 }

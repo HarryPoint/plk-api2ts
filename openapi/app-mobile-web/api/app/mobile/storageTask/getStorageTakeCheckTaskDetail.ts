@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/仓库任务相关/getStorageTakeCheckTaskDetailUsingGET
 */
-export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
     return http<IJSONResultReturnsTheDTOFromTheExecutingEndOfTheWarehouseInventoryTaskDetails>(
         {
             url: "/app-mobile-web/api/app/mobile/storageTask/getStorageTakeCheckTaskDetail",
@@ -16,53 +16,53 @@ export default function fetchMethod(params: { id: string }, extraOptions?: any) 
 /** JSONResult«仓库盘点任务明细执行端返回DTO» */
 export interface IJSONResultReturnsTheDTOFromTheExecutingEndOfTheWarehouseInventoryTaskDetails {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails;
+    data?: ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓库盘点任务明细执行端返回DTO */
 export interface ITheExecutionEndReturnsTheDTOForWarehouseInventoryTaskDetails {
     /** id */
-    id: number;
+    id?: number;
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 处理人id */
-    handleUserId: number;
+    handleUserId?: number;
     /** 处理人姓名 */
-    handleUsername: string;
+    handleUsername?: string;
     /** 盘点仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 盘点仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 盘点仓库编号 */
-    storehouseCode: string;
+    storehouseCode?: string;
     /** 计划开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 完成时间 */
-    completeTime: string;
+    completeTime?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 默认盘点清单 */
-    list: ITheExecutionEndOfTheWarehouseInventoryTaskListReturnsVO[];
+    list?: ITheExecutionEndOfTheWarehouseInventoryTaskListReturnsVO[];
 }
 /** 仓库盘点任务清单执行端返回VO */
 export interface ITheExecutionEndOfTheWarehouseInventoryTaskListReturnsVO {
     /** 盘点仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 盘点仓位名称 */
-    warehouseName: string;
+    warehouseName?: string;
     /** 盘点仓位编号 */
-    warehouseCode: string;
+    warehouseCode?: string;
     /** 仓位层级，从高至低排列 */
-    warehouseList: IIdNameNumberVO[];
+    warehouseList?: IIdNameNumberVO[];
     /** 物料集 */
-    materialList: IWarehouseInventoryTaskListReturnTheMaterialExecutionEndToTheDTO[];
+    materialList?: IWarehouseInventoryTaskListReturnTheMaterialExecutionEndToTheDTO[];
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
@@ -76,13 +76,13 @@ export interface IIdNameNumberVO {
 /** 仓库盘点任务清单物料执行端返回DTO */
 export interface IWarehouseInventoryTaskListReturnTheMaterialExecutionEndToTheDTO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 盘点数量 */
-    quantity: number;
+    quantity?: number;
 }

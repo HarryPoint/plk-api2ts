@@ -18,138 +18,138 @@ export interface IGanttChartSearchVO {
     /** 开始日期 yyyy-MM-dd */
     beginDate: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 结束日期 yyyy-MM-dd */
     endDate: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 工艺路径ID列表 */
-    processIdList: number[];
+    processIdList?: number[];
     /** 销售订单编码 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产物料ID列表 */
-    produceMaterialIdList: number[];
+    produceMaterialIdList?: number[];
     /** 订单状态列表 */
-    orderStatusList: string[];
+    orderStatusList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«生产订单自动排产甘特图返回VO» */
 export interface IJSONResultProductionOrderAutomaticSchedulingGanttChartReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionOrdersAutomaticallyScheduleGanttChartBackToVO;
+    data?: IProductionOrdersAutomaticallyScheduleGanttChartBackToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产订单自动排产甘特图返回VO */
 export interface IProductionOrdersAutomaticallyScheduleGanttChartBackToVO {
     /** 全局时间占用集 */
-    timeOccupies: IOccupiedReturnVO[];
+    timeOccupies?: IOccupiedReturnVO[];
     /** 生产订单分页信息 */
-    produceOrders: IPageInformationAutomaticProductionOrderSchedulingReturnsVO;
+    produceOrders?: IPageInformationAutomaticProductionOrderSchedulingReturnsVO;
 }
 /** 占用返回VO */
 export interface IOccupiedReturnVO {
     /** 排期id */
-    id: number;
+    id?: number;
     /** 占用工序 */
-    processId: number;
+    processId?: number;
     /** 占用工序名称 */
-    processName: string;
+    processName?: string;
     /** 占用工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 占用时间 开始 */
-    beginTime: string;
+    beginTime?: string;
     /** 占用时间 结束 */
-    endTime: string;
+    endTime?: string;
     /** 占用原因 */
-    reason: string;
+    reason?: string;
     /** 排期类型 */
-    scheduleType: string;
+    scheduleType?: string;
 }
 /** 分页信息«生产订单自动排产排期返回VO» */
 export interface IPageInformationAutomaticProductionOrderSchedulingReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductionOrdersAreAutomaticallyScheduledBackToVO[];
+    list?: IProductionOrdersAreAutomaticallyScheduledBackToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 生产订单自动排产排期返回VO */
 export interface IProductionOrdersAreAutomaticallyScheduledBackToVO {
     /** 生产订单id */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 交付数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 交付数量 */
-    currentCount: number;
+    currentCount?: number;
     /** 交付日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 生产订单状态 */
-    orderStatus: string;
+    orderStatus?: string;
     /** 工序占用时间集 */
-    occupyTimes: IOccupiedReturnVO[];
+    occupyTimes?: IOccupiedReturnVO[];
     /** 工序排期时间集 */
-    processTimes: IProcedureTimeReturnsToVO[];
+    processTimes?: IProcedureTimeReturnsToVO[];
 }
 /** 工序时间返回VO */
 export interface IProcedureTimeReturnsToVO {
     /** 排期id */
-    scheduleId: number;
+    scheduleId?: number;
     /** 生产订单ID */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 步骤id */
-    produceTechnologyRoutingStepId: number;
+    produceTechnologyRoutingStepId?: number;
     /** 计划开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 计划结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 是否锁定 */
-    isLock: string;
+    isLock?: string;
     /** 排期类型 */
-    scheduleType: string;
+    scheduleType?: string;
     /** 生产任务状态 */
-    produceTaskStatus: string;
+    produceTaskStatus?: string;
 }

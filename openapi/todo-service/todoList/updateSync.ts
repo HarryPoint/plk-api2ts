@@ -16,82 +16,82 @@ export default function fetchMethod(data: IToDoListUpdateSyncRequestDTO, extraOp
 /** ToDoListUpdateSyncRequestDTO */
 export interface IToDoListUpdateSyncRequestDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属用户id */
-    userId: number;
+    userId?: number;
     /** 待办编号 */
-    code: string;
+    code?: string;
     /** 流程处理类型 */
-    type: string;
+    type?: string;
     /** 任务开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 预计结束时间 */
-    planEndTime: string;
+    planEndTime?: string;
     /** 对应业务id */
-    businessId: number;
+    businessId?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 完成时间 */
-    completeTime: string;
+    completeTime?: string;
     /** 发起人id */
-    workOrderCreateUserId: number;
+    workOrderCreateUserId?: number;
     /** 是否超时处理 */
-    isTimeout: string;
+    isTimeout?: string;
     /** 节点处理状态描述 */
-    flowPathNodeHandleStatus: string;
+    flowPathNodeHandleStatus?: string;
     /** 工单处理状态描述 */
-    flowPathWorkOrderHandleStatus: string;
+    flowPathWorkOrderHandleStatus?: string;
     /** 所属工单ID */
-    flowPathWorkOrderId: number;
+    flowPathWorkOrderId?: number;
     /** 所属工单编号 */
-    flowPathWorkOrderCode: string;
+    flowPathWorkOrderCode?: string;
     /** 所属工单业务ID(具体数据id) */
-    flowPathWorkOrderBusinessId: number;
+    flowPathWorkOrderBusinessId?: number;
     /** 所属流程节点id */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
     /** 工单状态 */
-    flowPathWorkOrderStatus: string;
+    flowPathWorkOrderStatus?: string;
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 流程名称 */
-    flowPathName: string;
+    flowPathName?: string;
     /** 节点名称 */
-    flowPathNodeName: string;
+    flowPathNodeName?: string;
     /** 是否能跳转 */
-    canRedirect: string;
+    canRedirect?: string;
     /** pc端跳转路径 */
-    webPath: string;
+    webPath?: string;
     /** 移动端跳转路径 */
-    mobilePath: string;
+    mobilePath?: string;
     /** 标题 */
-    title: string;
+    title?: string;
     /** 表头 */
-    tableHeaderList: ITableheaderdto[];
+    tableHeaderList?: ITableheaderdto[];
     /** 表数据 */
-    tableDataList: ITabledatadto[];
+    tableDataList?: ITabledatadto[];
 }
 /** TableHeaderDTO */
 export interface ITableheaderdto {
     /** undefined */
-    serialNo: string;
+    serialNo?: string;
     /** undefined */
-    name: string;
+    name?: string;
 }
 /** TableDataDTO */
 export interface ITabledatadto {
     /** undefined */
-    serialNo: string;
+    serialNo?: string;
     /** undefined */
-    showValue: string;
+    showValue?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -16,30 +16,30 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«WarehouseMaterialRpQueryResponseDTO»» */
 export interface IJSONResultListWarehouseMaterialRpQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IWarehouseMaterialRpQueryResponseDTO[];
+    data?: IWarehouseMaterialRpQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** WarehouseMaterialRpQueryResponseDTO */
 export interface IWarehouseMaterialRpQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 所属区域id */
-    areaId: number;
+    areaId?: number;
     /** 所属仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 所属仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 库存总数 */
-    storageTotalCount: number;
+    storageTotalCount?: number;
     /** 库存锁定数 */
-    storageLockCount: number;
+    storageLockCount?: number;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
 }

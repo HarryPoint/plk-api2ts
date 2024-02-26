@@ -23,20 +23,20 @@ export interface IFeedBomConsumptionScanRequestDTO {
 /** JSONResult«进料bom消耗物料扫描响应DTO» */
 export interface IJSONResultIncomingBomConsumedMaterialScanRespondsToDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIncomingBomConsumedMaterialScanRespondsToDTO;
+    data?: IIncomingBomConsumedMaterialScanRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 进料bom消耗物料扫描响应DTO */
 export interface IIncomingBomConsumedMaterialScanRespondsToDTO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
 }

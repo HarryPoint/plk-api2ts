@@ -16,89 +16,89 @@ export default function fetchMethod(data: IPaging12, extraOptions?: any) {
 /** 分页_12 */
 export interface IPaging12 {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 行政区划编码，精确匹配 */
-    regionCode: string;
+    regionCode?: string;
     /** 客户级别，精确匹配 */
-    customerType: string;
+    customerType?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 客户名称，模糊匹配 */
-    name: string;
+    name?: string;
     /** 客户来源，精确匹配 */
-    customerSource: string;
+    customerSource?: string;
     /** 开始时间起始， yyyy-MM-dd HH:mm:ss */
-    createTimeBegin: string;
+    createTimeBegin?: string;
     /** 开始时间截至， yyyy-MM-dd HH:mm:ss */
-    createTimeEnd: string;
+    createTimeEnd?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«PublicCustomerOutputVO»» */
 export interface IJSONResultPageInformationPublicCustomerOutputVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationPublicCustomerOutputVO;
+    data?: IPageInformationPublicCustomerOutputVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«PublicCustomerOutputVO» */
 export interface IPageInformationPublicCustomerOutputVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IPublicCustomerOutputVO[];
+    list?: IPublicCustomerOutputVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** PublicCustomerOutputVO */
 export interface IPublicCustomerOutputVO {
     /** 客户ID */
-    id: number;
+    id?: number;
     /** 客户编码 */
-    code: string;
+    code?: string;
     /** 客户名称 */
-    name: string;
+    name?: string;
     /** 客户地址 */
-    address: string;
+    address?: string;
     /** 客户地址-行政区划编码 */
-    addressRegionCode: string;
+    addressRegionCode?: string;
     /** 客户地址-详细地址 */
-    addressDetailAddress: string;
+    addressDetailAddress?: string;
     /** 客户状体 */
-    customerStatus: string;
+    customerStatus?: string;
     /** 客户级别 */
-    customerType: string;
+    customerType?: string;
     /** 客户来源 */
-    customerSource: string;
+    customerSource?: string;
     /** 创建人ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }

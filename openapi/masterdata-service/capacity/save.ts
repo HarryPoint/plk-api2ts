@@ -16,9 +16,9 @@ export default function fetchMethod(data: ICapacityPreservationDTO, extraOptions
 /** 产能保存DTO */
 export interface ICapacityPreservationDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
     name: string;
     /** 关联工序id */
@@ -26,54 +26,54 @@ export interface ICapacityPreservationDTO {
     /** 关联物料id */
     materialIds: number[];
     /** 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 生产耗时 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 产出数量 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
 }
 /** JSONResult«产能响应对象» */
 export interface IJSONResultProductivityResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductivityResponseObject;
+    data?: IProductivityResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产能响应对象 */
 export interface IProductivityResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 关联工序 */
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp?: IAssociatedDropDownResponseObjects[];
     /** 关联物料 */
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp?: IAssociatedDropDownResponseObjects[];
     /** 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 生产耗时 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 产出数量 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
 }
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id: number;
+    id?: number;
     /** 显示字段名称 */
-    showFieldValue: string;
+    showFieldValue?: string;
 }

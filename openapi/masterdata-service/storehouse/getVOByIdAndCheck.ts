@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库相关/getVOByIdAndCheckUsingGET_2
 */
-export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultWarehouseVO>(
         {
             url: "/masterdata-service/storehouse/getVOByIdAndCheck",
@@ -16,36 +16,36 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
 /** JSONResult«仓库VO» */
 export interface IJSONResultWarehouseVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IWarehouseVO;
+    data?: IWarehouseVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓库VO */
 export interface IWarehouseVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 所属区域id */
-    areaId: number;
+    areaId?: number;
     /** 仓库名称 */
-    name: string;
+    name?: string;
     /** 仓库编号 */
-    code: string;
+    code?: string;
     /** 仓库地址 */
-    address: string;
+    address?: string;
     /** 寄售客户id */
-    customerId: number;
+    customerId?: number;
     /** 是否默认仓库 - 针对整个工厂唯一默认有一个仓库 */
-    isDefault: string;
+    isDefault?: string;
     /** 仓库类型 */
-    type: string;
+    type?: string;
     /** WIP类型 - WIP时有值 */
-    wipType: string;
+    wipType?: string;
     /** 所属工艺路径id - WIP时有值 */
-    routingId: number;
+    routingId?: number;
 }

@@ -16,43 +16,43 @@ export default function fetchMethod(data: IDatabaseBitTreeQueryVO, extraOptions?
 /** 库位树查询VO */
 export interface IDatabaseBitTreeQueryVO {
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 库位ids */
-    warehouseIds: number[];
+    warehouseIds?: number[];
     /** 搜索值 */
-    searchValue: string;
+    searchValue?: string;
 }
 /** JSONResult«List«仓位树返回VO»» */
 export interface IJSONResultListPositionTreeReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPositionTreeReturnsVO[];
+    data?: IPositionTreeReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓位树返回VO */
 export interface IPositionTreeReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 仓位名称 */
-    name: string;
+    name?: string;
     /** 仓位编号 */
-    code: string;
+    code?: string;
     /** 状态(是否可用) */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 子仓位 */
-    children: IPositionTreeReturnsVO[];
+    children?: IPositionTreeReturnsVO[];
 }

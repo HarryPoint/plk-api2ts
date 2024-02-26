@@ -16,40 +16,40 @@ export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisRepo
 /** 宝晶应收账款分析报表搜索VO */
 export interface IBaojingAccountsReceivableAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 业务员id集 */
-    businessUserIds: number[];
+    businessUserIds?: number[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    dateBegin: string;
+    dateBegin?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds: number[];
+    customerIds?: number[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    dateEnd: string;
+    dateEnd?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportingTicketInformation;
+    data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
-    ticket: string;
+    ticket?: string;
 }

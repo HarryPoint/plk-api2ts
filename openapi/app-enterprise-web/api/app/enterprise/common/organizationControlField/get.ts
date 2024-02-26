@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getOrganizationControlFieldsUsingGET
 */
-export default function fetchMethod(params: { flowPathCode: string }, extraOptions?: any) {
+export default function fetchMethod(params: { flowPathCode?: string }, extraOptions?: any) {
     return http<IJSONResultListOrganizationControlFieldVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/organizationControlField/get",
@@ -16,38 +16,38 @@ export default function fetchMethod(params: { flowPathCode: string }, extraOptio
 /** JSONResult«List«OrganizationControlFieldVO»» */
 export interface IJSONResultListOrganizationControlFieldVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IOrganizationControlFieldVO[];
+    data?: IOrganizationControlFieldVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** OrganizationControlFieldVO */
 export interface IOrganizationControlFieldVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属流程id */
-    appId: number;
+    appId?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 序列 */
-    serialNo: string;
+    serialNo?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 排序 */
-    sort: number;
+    sort?: number;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 组织类型 */
-    organizationType: string;
+    organizationType?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId: number;
+    parentFlowPathFormFieldId?: number;
     /** 父级流程表单编码 */
-    parentFlowPathFormFieldCode: string;
+    parentFlowPathFormFieldCode?: string;
     /** 父级流程表单名称 */
-    parentFlowPathFormFieldName: string;
+    parentFlowPathFormFieldName?: string;
 }

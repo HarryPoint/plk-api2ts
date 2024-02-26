@@ -15,54 +15,54 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«完工及产成品归集分页响应对象»» */
 export interface IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects[];
+    data?: ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 完工及产成品归集分页响应对象 */
 export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     /** id */
-    id: number;
+    id?: number;
     /** 生产订单id */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 入库状态 */
-    stockInStatus: string;
+    stockInStatus?: string;
     /** 计划开工日期 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 计划完工日期 */
-    planEndTime: string;
+    planEndTime?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 物料单位id */
-    materialUnitId: number;
+    materialUnitId?: number;
     /** 物料单位名称 */
-    materialUnitName: string;
+    materialUnitName?: string;
     /** 物料单位编号 */
-    materialUnitCode: string;
+    materialUnitCode?: string;
     /** 计划生产数量 */
-    planProduceQuantity: number;
+    planProduceQuantity?: number;
     /** 期初在产数量 */
-    beginPeriodInProduceQuantity: number;
+    beginPeriodInProduceQuantity?: number;
     /** 本期投产数量 */
-    currentPeriodDeliveryQuantity: number;
+    currentPeriodDeliveryQuantity?: number;
     /** 本期完工数量 */
-    currentPeriodCompleteQuantity: number;
+    currentPeriodCompleteQuantity?: number;
     /** 期末在产数量 */
-    endPeriodInProduceQuantity: number;
+    endPeriodInProduceQuantity?: number;
     /** 本期原材料总成本 = (领料总成本 - 退料总成本) */
-    rawMaterialTotalCost: number;
+    rawMaterialTotalCost?: number;
     /** 本期完工原材料成本 = 本期原材料总成本 * (本期完工数量/计划生产数量) */
-    currentPeriodRawMaterialTotalCost: number;
+    currentPeriodRawMaterialTotalCost?: number;
 }

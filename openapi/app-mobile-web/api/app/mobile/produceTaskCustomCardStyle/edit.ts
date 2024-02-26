@@ -16,31 +16,31 @@ export default function fetchMethod(data: IProductionTaskCustomCardStyleEditList
 /** 生产任务自定义卡片样式编辑list对象DTO */
 export interface IProductionTaskCustomCardStyleEditListObjectDTO {
     /** undefined */
-    customCardStyleList: IProductionTaskCustomCardStyleEditObjectDTO[];
+    customCardStyleList?: IProductionTaskCustomCardStyleEditObjectDTO[];
 }
 /** 生产任务自定义卡片样式编辑对象DTO */
 export interface IProductionTaskCustomCardStyleEditObjectDTO {
     /** 字段名称 */
-    formFieldName: string;
+    formFieldName?: string;
     /** 字段code */
-    formFieldCode: string;
+    formFieldCode?: string;
     /** 字段类型 */
-    formFieldType: string;
+    formFieldType?: string;
     /** 字段表 */
-    formFieldTable: string;
+    formFieldTable?: string;
     /** 显示位置 */
-    displayPosition: string;
+    displayPosition?: string;
     /** 扩展元数据 */
-    metaData: string;
+    metaData?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingSalesDeliverReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationBaojingSalesDeliveryReportFormReturnedToVO>(
         {
             url: "/masterdata-service/exportAuth/getBaoJingSalesDeliverReportExportInfoByTicket",
@@ -16,73 +16,73 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«宝晶销售发货报表表格返回VO»» */
 export interface IJSONResultExportInformationBaojingSalesDeliveryReportFormReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationBaojingSalesDeliveryReportFormReturnToVO;
+    data?: IExportInformationBaojingSalesDeliveryReportFormReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«宝晶销售发货报表表格返回VO» */
 export interface IExportInformationBaojingSalesDeliveryReportFormReturnToVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IBaojingSalesDeliveryReportFormReturnedToVO[];
+    itemList?: IBaojingSalesDeliveryReportFormReturnedToVO[];
 }
 /** 宝晶销售发货报表表格返回VO */
 export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 发货日期 */
-    deliverDate: string;
+    deliverDate?: string;
     /** 单据编号 */
-    workOrderNo: string;
+    workOrderNo?: string;
     /** 销售订单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 销售订单编号 */
-    salesOrderNo: string;
+    salesOrderNo?: string;
     /** 业务员id */
-    businessUserId: number;
+    businessUserId?: number;
     /** 业务员名称 */
-    businessUserName: string;
+    businessUserName?: string;
     /** 客户id */
-    customerId: number;
+    customerId?: number;
     /** 客户名称 */
-    customerName: string;
+    customerName?: string;
     /** 产品id */
-    majorDataId: number;
+    majorDataId?: number;
     /** 产品名称 */
-    majorDataName: string;
+    majorDataName?: string;
     /** 产品编号 */
-    majorDataCode: string;
+    majorDataCode?: string;
     /** 产品规格 */
-    majorDataSpec: string;
+    majorDataSpec?: string;
     /** 产品材质 */
-    majorDataTexture: string;
+    majorDataTexture?: string;
     /** 发货地点 */
-    deliveryBeginPlace: string;
+    deliveryBeginPlace?: string;
     /** 交货地点 */
-    deliveryEndPlace: string;
+    deliveryEndPlace?: string;
     /** 承运人 */
-    contractor: string;
+    contractor?: string;
     /** 运单号 */
-    trackNo: string;
+    trackNo?: string;
     /** 单据类型 */
-    orderType: string;
+    orderType?: string;
     /** 需求日期 */
-    demandDate: string;
+    demandDate?: string;
     /** 需求数量 */
-    demandQuantity: number;
+    demandQuantity?: number;
     /** 实际送达数量 */
-    actualQuantity: number;
+    actualQuantity?: number;
     /** 包装方式 */
-    packingType: string;
+    packingType?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 数据id */
-    detailDataId: number;
+    detailDataId?: number;
     /** 包材数据列表 */
-    packagingMaterialValueList: IIdValueVO[];
+    packagingMaterialValueList?: IIdValueVO[];
 }
 /** Id，值VO */
 export interface IIdValueVO {

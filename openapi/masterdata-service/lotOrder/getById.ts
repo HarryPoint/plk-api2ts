@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getByIdUsingGET_6
 */
-export default function fetchMethod(params: { id: string; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: string; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultBatchOrderReturnsVO>(
         {
             url: "/masterdata-service/lotOrder/getById",
@@ -16,93 +16,93 @@ export default function fetchMethod(params: { id: string; enterpriseId: number }
 /** JSONResult«批次订单返回VO» */
 export interface IJSONResultBatchOrderReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBatchOrderIsReturnedToVO;
+    data?: IBatchOrderIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 批次订单返回VO */
 export interface IBatchOrderIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 批次名称 */
-    lotName: string;
+    lotName?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 来源批次号 */
-    originalLotNo: string;
+    originalLotNo?: string;
     /** 对应生产订单id */
-    produceOrderId: string;
+    produceOrderId?: string;
     /** 对应生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 对应销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 对应物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 对应物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 对应物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 总数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 当前生产数量 */
-    currentCount: number;
+    currentCount?: number;
     /** 总报废数量 */
-    scrapTotalCount: number;
+    scrapTotalCount?: number;
     /** 实际剩余数量 */
-    actualTotalCount: number;
+    actualTotalCount?: number;
     /** 拆出数量 */
-    changeTotalCount: number;
+    changeTotalCount?: number;
     /** 生产工艺路径id */
-    produceTechnologyRoutingId: number;
+    produceTechnologyRoutingId?: number;
     /** 生产工艺路径名称 */
-    produceTechnologyRoutingName: string;
+    produceTechnologyRoutingName?: string;
     /** 生产工艺路径编号 */
-    produceTechnologyRoutingCode: string;
+    produceTechnologyRoutingCode?: string;
     /** 当前流水类型(界面上的当前生产状态) */
-    lastFlowType: string;
+    lastFlowType?: string;
     /** 当前流水类型描述 */
-    lastFlowTypeDesc: string;
+    lastFlowTypeDesc?: string;
     /** 当前对应工艺路径步骤id */
-    lastProduceRoutingStepId: number;
+    lastProduceRoutingStepId?: number;
     /** 当前对应工序id */
-    lastProcessId: number;
+    lastProcessId?: number;
     /** 当前对应工序名称 */
-    lastProcessName: string;
+    lastProcessName?: string;
     /** 当前对应工序编号 */
-    lastProcessCode: string;
+    lastProcessCode?: string;
     /** 当前工艺步骤 - 用于展示工艺进度条 */
-    lastRoutingStep: number;
+    lastRoutingStep?: number;
     /** 总工艺数 - 用于展示工艺进度条 */
-    totalStepCount: number;
+    totalStepCount?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 来源集 */
-    sourceList: IBatchOrderSourceReturnedToVO[];
+    sourceList?: IBatchOrderSourceReturnedToVO[];
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 批次订单二维码值 */
-    lotOrderQrcode: string;
+    lotOrderQrcode?: string;
 }
 /** 批次订单来源返回VO */
 export interface IBatchOrderSourceReturnedToVO {
     /** 来源类型 */
-    sourceType: string;
+    sourceType?: string;
     /** 来源类型描述 */
-    sourceTypeDesc: string;
+    sourceTypeDesc?: string;
     /** 来源批次单号 */
-    sourceLotNo: string;
+    sourceLotNo?: string;
 }

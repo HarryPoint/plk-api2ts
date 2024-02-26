@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料收发汇总报表相关/getBillFlowPathCodeListUsingGET
 */
-export default function fetchMethod(params: { masterDataFlowPathCode: string }, extraOptions?: any) {
+export default function fetchMethod(params: { masterDataFlowPathCode?: string }, extraOptions?: any) {
     return http<IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials>(
         {
             url: "/masterdata-service/warehouseMaterialStorageInOutReport/getBillFlowPathCodeList",
@@ -16,29 +16,29 @@ export default function fetchMethod(params: { masterDataFlowPathCode: string }, 
 /** JSONResult«物料收发单据列表响应对象» */
 export interface IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialReceiptAndReceiptListResponseObject;
+    data?: IMaterialReceiptAndReceiptListResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料收发单据列表响应对象 */
 export interface IMaterialReceiptAndReceiptListResponseObject {
     /** 列表单据 */
-    billHeadCode: IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject[];
+    billHeadCode?: IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject[];
     /** 选择单据 */
-    billSelectCode: IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject[];
+    billSelectCode?: IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject[];
 }
 /** 物料收发单据列表单据响应对象 */
 export interface IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** 单据名称 */
-    name: string;
+    name?: string;
     /** 出入库类型 */
-    storageLogType: string;
+    storageLogType?: string;
 }

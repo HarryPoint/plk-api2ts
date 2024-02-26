@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getSalesOrderReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportOrderProgressStatisticsExportVO>(
         {
             url: "/masterdata-service/exportAuth/getSalesOrderReportExportInfoByTicket",
@@ -16,133 +16,133 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«订单进度统计导出VO»» */
 export interface IJSONResultExportOrderProgressStatisticsExportVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationOrderProgressStatisticsExportVO;
+    data?: IExportInformationOrderProgressStatisticsExportVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«订单进度统计导出VO» */
 export interface IExportInformationOrderProgressStatisticsExportVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IOrderProgressStatisticsAreDerivedVO2[];
+    itemList?: IOrderProgressStatisticsAreDerivedVO2[];
 }
 /** 订单进度统计导出VO_2 */
 export interface IOrderProgressStatisticsAreDerivedVO2 {
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 客户名称 */
-    customerName: string;
+    customerName?: string;
     /** 销售订单状态 */
-    salesOrderStatus: string;
+    salesOrderStatus?: string;
     /** 销售订单状态字符串 */
-    salesOrderStatusDesc: string;
+    salesOrderStatusDesc?: string;
     /** 销售订单明细 */
-    salesOrderDetails: IOrderProgressStatisticsAreExportedVO1[];
+    salesOrderDetails?: IOrderProgressStatisticsAreExportedVO1[];
     /** 销售订单中生产订单数量 */
-    produceOrderCount: number;
+    produceOrderCount?: number;
     /** 销售订单创建时间 */
-    salesOrderCreateTime: string;
+    salesOrderCreateTime?: string;
 }
 /** 订单进度统计导出VO_1 */
 export interface IOrderProgressStatisticsAreExportedVO1 {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料规格型号 */
-    spec: string;
+    spec?: string;
     /** 交付数量 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 交付日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 交付日期字符串 */
-    deliveryDateStr: string;
+    deliveryDateStr?: string;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
-    minPlanBeginTime: string;
+    minPlanBeginTime?: string;
     /** 计划开始时间字符串 */
-    minPlanBeginTimeStr: string;
+    minPlanBeginTimeStr?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
-    maxPlanEndTime: string;
+    maxPlanEndTime?: string;
     /** 计划结束时间字符串 */
-    maxPlanEndTimeStr: string;
+    maxPlanEndTimeStr?: string;
     /** 实际生产开始时间 */
-    minActualBeginTime: string;
+    minActualBeginTime?: string;
     /** 实际生产开始时间字符串 */
-    minActualBeginTimeStr: string;
+    minActualBeginTimeStr?: string;
     /** 实际生产完成时间 */
-    maxActualEndTime: string;
+    maxActualEndTime?: string;
     /** 实际生产完成时间字符串 */
-    maxActualEndTimeStr: string;
+    maxActualEndTimeStr?: string;
     /** 交付剩余天数 */
-    deliveryRemainingDays: number;
+    deliveryRemainingDays?: number;
     /** 已转换数量 */
-    totalConvertQuantity: number;
+    totalConvertQuantity?: number;
     /** 转生产进度 */
-    convertRatio: string;
+    convertRatio?: string;
     /** 订单完成进度 */
-    completeRatio: string;
+    completeRatio?: string;
     /** 排产进度 */
-    planRatio: string;
+    planRatio?: string;
     /** 总合格产出数量 */
-    totalProduceQuantity: number;
+    totalProduceQuantity?: number;
     /** 已排产数量 */
-    totalPlanQuantity: number;
+    totalPlanQuantity?: number;
     /** 生产订单 */
-    produceOrders: IOrderProgressStatisticsAreExportedToVO[];
+    produceOrders?: IOrderProgressStatisticsAreExportedToVO[];
 }
 /** 订单进度统计导出VO */
 export interface IOrderProgressStatisticsAreExportedToVO {
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 生产物料id */
-    produceMaterialId: number;
+    produceMaterialId?: number;
     /** 生产物料编码 */
-    produceMaterialCode: string;
+    produceMaterialCode?: string;
     /** 生产物料名称 */
-    produceMaterialName: string;
+    produceMaterialName?: string;
     /** 生产物料规格型号 */
-    produceMaterialSpec: string;
+    produceMaterialSpec?: string;
     /** 生产数量 */
-    convertQuantity: number;
+    convertQuantity?: number;
     /** 生产订单状态 */
-    produceOrderStatus: string;
+    produceOrderStatus?: string;
     /** 生产订单状态描述 */
-    produceOrderStatusStr: string;
+    produceOrderStatusStr?: string;
     /** 排产状态 */
-    produceOrderPlanStatus: string;
+    produceOrderPlanStatus?: string;
     /** 排产状态描述 */
-    produceOrderPlanStatusStr: string;
+    produceOrderPlanStatusStr?: string;
     /** 计划生产开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 计划生产结束时间 */
-    planEndTime: string;
+    planEndTime?: string;
     /** 计划生产开始时间字符串 */
-    planBeginTimeStr: string;
+    planBeginTimeStr?: string;
     /** 计划生产结束时间字符串 */
-    planEndTimeStr: string;
+    planEndTimeStr?: string;
     /** 计划生产数量 */
-    planQuantity: number;
+    planQuantity?: number;
     /** 实际生产开始时间 */
-    actualBeginTime: string;
+    actualBeginTime?: string;
     /** 实际生产结束时间 */
-    actualEndTime: string;
+    actualEndTime?: string;
     /** 实际生产开始时间字符串 */
-    actualBeginTimeStr: string;
+    actualBeginTimeStr?: string;
     /** 实际生产结束时间字符串 */
-    actualEndTimeStr: string;
+    actualEndTimeStr?: string;
     /** 合格产出数量 */
-    produceQuantity: number;
+    produceQuantity?: number;
     /** 报废数量 */
-    scrapQuantity: number;
+    scrapQuantity?: number;
     /** 委外数量 */
-    entrustQuantity: number;
+    entrustQuantity?: number;
     /** 合格产出进度 */
-    produceRatio: string;
+    produceRatio?: string;
 }

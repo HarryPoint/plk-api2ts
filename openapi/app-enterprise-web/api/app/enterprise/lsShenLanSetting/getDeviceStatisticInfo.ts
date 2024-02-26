@@ -15,119 +15,119 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«深蓝设备统计响应VO» */
 export interface IJSONResultDarkBlueDeviceStatisticalResponseVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDeepBlueDeviceStatisticalResponseVO;
+    data?: IDeepBlueDeviceStatisticalResponseVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 深蓝设备统计响应VO */
 export interface IDeepBlueDeviceStatisticalResponseVO {
     /** 左、中、右-设备运行信息 */
-    deviceRunInfos: Record<string, IDeepBlueDeviceOperationMessageRespondsToVO>;
+    deviceRunInfos?: Record<string, IDeepBlueDeviceOperationMessageRespondsToVO>;
     /** 报警信息-右上 */
-    alarmInfos: IDeepBlueAlarmStatisticsVO[];
+    alarmInfos?: IDeepBlueAlarmStatisticsVO[];
     /** 今日生产情况-右下 */
-    produceInfos: IDeepBlueEquipmentComprehensiveEfficiencyResponseVO1[];
+    produceInfos?: IDeepBlueEquipmentComprehensiveEfficiencyResponseVO1[];
     /** 在线结点数/节点率-右下 */
-    onlineInfos: IDeepBlueDevicesRespondToVOWhenOnline[];
+    onlineInfos?: IDeepBlueDevicesRespondToVOWhenOnline[];
 }
 /** 深蓝设备运行信息响应VO */
 export interface IDeepBlueDeviceOperationMessageRespondsToVO {
     /** 设备运行进度信息 */
-    runProcesses: IDeepBlueDeviceRunningProgressInformationRespondsToVO[];
+    runProcesses?: IDeepBlueDeviceRunningProgressInformationRespondsToVO[];
     /** 设备今日运行统计 */
-    todayRun: IDeepBlueDeviceOperationStatisticsResponseVO;
+    todayRun?: IDeepBlueDeviceOperationStatisticsResponseVO;
     /** 设备昨日运行统计 */
-    yesterdayRun: IDeepBlueDeviceOperationStatisticsResponseVO;
+    yesterdayRun?: IDeepBlueDeviceOperationStatisticsResponseVO;
     /** 设备本周运行统计 */
-    weekRun: IDeepBlueDeviceOperationStatisticsResponseVO;
+    weekRun?: IDeepBlueDeviceOperationStatisticsResponseVO;
     /** 设备上周运行统计 */
-    preWeekRun: IDeepBlueDeviceOperationStatisticsResponseVO;
+    preWeekRun?: IDeepBlueDeviceOperationStatisticsResponseVO;
     /** 设备综合效率 */
-    deviceEfficiencies: IDeepBlueEquipmentComprehensiveEfficiencyResponseVO;
+    deviceEfficiencies?: IDeepBlueEquipmentComprehensiveEfficiencyResponseVO;
 }
 /** 深蓝设备运行进度信息响应VO */
 export interface IDeepBlueDeviceRunningProgressInformationRespondsToVO {
     /** 设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 设备编码 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** OEE */
-    oee: number;
+    oee?: number;
     /** 进给速度/主轴转速 */
-    speed: number;
+    speed?: number;
     /** 加工产量 */
-    produceQty: number;
+    produceQty?: number;
     /** 正常运行时间 */
-    normalRunningTime: number;
+    normalRunningTime?: number;
     /** 停机时间 */
-    stopTime: number;
+    stopTime?: number;
     /** 当前执行程序名称 */
-    currentToolName: string;
+    currentToolName?: string;
     /** 进给倍率 */
-    feedRatio: number;
+    feedRatio?: number;
 }
 /** 深蓝设备运行统计响应VO */
 export interface IDeepBlueDeviceOperationStatisticsResponseVO {
     /** 平均出件耗时 */
-    averageTime: number;
+    averageTime?: number;
     /** 加工产量 */
-    produceQty: number;
+    produceQty?: number;
     /** 正常运行时间 */
-    normalRunningTime: number;
+    normalRunningTime?: number;
     /** 停机时间 */
-    stopTime: number;
+    stopTime?: number;
     /** 在线时间 */
-    onlineTime: number;
+    onlineTime?: number;
 }
 /** 深蓝设备综合效率响应VO */
 export interface IDeepBlueEquipmentComprehensiveEfficiencyResponseVO {
     /** 类型设备正常运行时间和 */
-    totalNormalRunningTime: number;
+    totalNormalRunningTime?: number;
     /** 类型设备工作时间和 */
-    totalTime: number;
+    totalTime?: number;
 }
 /** 深蓝报警统计信息VO */
 export interface IDeepBlueAlarmStatisticsVO {
     /** 报警时间 */
-    date: string;
+    date?: string;
     /** 报警设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 报警设备编码 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 报警设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** 报警信息 */
-    alarmInfo: string;
+    alarmInfo?: string;
 }
 /** 深蓝设备综合效率响应VO_1 */
 export interface IDeepBlueEquipmentComprehensiveEfficiencyResponseVO1 {
     /** 序号 */
-    serialNo: number;
+    serialNo?: number;
     /** 生产订单编号 */
-    productOrderNo: string;
+    productOrderNo?: string;
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 产品规格 */
-    productSpec: string;
+    productSpec?: string;
     /** 数量 */
-    productQuantity: number;
+    productQuantity?: number;
     /** 交期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 订单完成进度 */
-    completeRatio: number;
+    completeRatio?: number;
 }
 /** 深蓝设备在线情况响应VO */
 export interface IDeepBlueDevicesRespondToVOWhenOnline {
     /** 日期 */
-    date: string;
+    date?: string;
     /** 每日在线率 */
-    onlineRate: number;
+    onlineRate?: number;
     /** 每日离线率 */
-    offlineRate: number;
+    offlineRate?: number;
 }

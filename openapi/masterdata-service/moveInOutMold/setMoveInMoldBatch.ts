@@ -16,9 +16,9 @@ export default function fetchMethod(data: IProductionTaskBatchSetFeedMoldRequest
 /** 生产任务批量设置进料模具请求DTO */
 export interface IProductionTaskBatchSetFeedMoldRequestDTO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 生产任务详情 */
-    produceTaskDetails: IProductionTaskBatchSetFeedMoldTaskDetailsRequestDTO[];
+    produceTaskDetails?: IProductionTaskBatchSetFeedMoldTaskDetailsRequestDTO[];
     /** 模具ids */
     moldIds: number[];
 }
@@ -29,16 +29,16 @@ export interface IProductionTaskBatchSetFeedMoldTaskDetailsRequestDTO {
     /** 批次ids */
     lotIds: number[];
     /** undefined */
-    produceTechnologyMoldIds: number[];
+    produceTechnologyMoldIds?: number[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderScheduleReportPageUsingPOST
 */
-export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationReportProductionOrderReturnsVO>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderScheduleReportPage",
@@ -17,117 +17,117 @@ export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, pa
 /** 生产排产订单搜索VO */
 export interface IProductionSchedulingOrderSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 父级订单编号 */
-    parentProduceOrderCode: string;
+    parentProduceOrderCode?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 计划开始日期查询开始时间 */
-    startTimeOfBeginTime: string;
+    startTimeOfBeginTime?: string;
     /** 计划开始日期查询结束时间 */
-    endTimeOfBeginTime: string;
+    endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList: string[];
+    planTypeList?: string[];
     /** 计划结束日期查询结束时间 */
-    endTimeOfEndTime: string;
+    endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
-    startTimeOfEndTime: string;
+    startTimeOfEndTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«报表生产订单返回VO»» */
 export interface IJSONResultPagingInformationReportProductionOrderReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationReportProductionOrderReturnsVO;
+    data?: IPageInformationReportProductionOrderReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«报表生产订单返回VO» */
 export interface IPageInformationReportProductionOrderReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IReportProductionOrdersBackToVO[];
+    list?: IReportProductionOrdersBackToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 报表生产订单返回VO */
 export interface IReportProductionOrdersBackToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 生产订单号 */
-    code: string;
+    code?: string;
     /** 父生产订单号 */
-    parentProduceOrderCode: string;
+    parentProduceOrderCode?: string;
     /** 销售单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 销售详情id */
-    salesOrderDetailId: number;
+    salesOrderDetailId?: number;
     /** 销售详情物料名称 */
-    salesOrderMaterialName: string;
+    salesOrderMaterialName?: string;
     /** 订单类型描述 */
-    orderTypeDesc: string;
+    orderTypeDesc?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 交付日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 交付数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 优先级 */
-    priorityLevel: number;
+    priorityLevel?: number;
     /** 订单排产状态 */
-    planStatus: string;
+    planStatus?: string;
     /** 订单排产状态描述 */
-    planStatusDesc: string;
+    planStatusDesc?: string;
     /** 订单排产方式 */
-    planType: string;
+    planType?: string;
     /** 订单排产方式描述 */
-    planTypeDesc: string;
+    planTypeDesc?: string;
     /** 订单计划开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 订单计划结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 对应标准工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 生产工艺路径id */
-    produceTechnologyRoutingId: number;
+    produceTechnologyRoutingId?: number;
     /** 对应工艺路径名称 */
-    routingName: string;
+    routingName?: string;
     /** 对应工艺路径编号 */
-    routingCode: string;
+    routingCode?: string;
 }

@@ -16,42 +16,42 @@ export default function fetchMethod(data: IInventoryTaskInventoryProcessingDTO, 
 /** 盘点任务盘点处理DTO */
 export interface IInventoryTaskInventoryProcessingDTO {
     /** 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT) */
-    editType: string;
+    editType?: string;
     /** 任务id */
     id: number;
     /** 盘点明细 */
-    detailList: IInventoryTaskInventoryProcessingDetailsDTO[];
+    detailList?: IInventoryTaskInventoryProcessingDetailsDTO[];
 }
 /** 盘点任务盘点处理详情DTO */
 export interface IInventoryTaskInventoryProcessingDetailsDTO {
     /** 盘点仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 序列号集 */
-    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
+    serialNos?: IInventoryTaskInventoryDetailSerialNumberDTO1[];
     /** 盘点数量 */
-    quantity: number;
+    quantity?: number;
     /** 备注 */
-    remark: string;
+    remark?: string;
 }
 /** 盘点任务盘点明细序列号DTO_1 */
 export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 备注 */
-    serialRemark: string;
+    serialRemark?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

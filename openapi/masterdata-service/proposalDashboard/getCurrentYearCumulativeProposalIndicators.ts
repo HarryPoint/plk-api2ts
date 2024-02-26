@@ -15,30 +15,30 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«CumulativeProposalIndicatorsResponseDTO» */
 export interface IJSONResultCumulativeProposalIndicatorsResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICumulativeProposalIndicatorsResponseDTO;
+    data?: ICumulativeProposalIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** CumulativeProposalIndicatorsResponseDTO */
 export interface ICumulativeProposalIndicatorsResponseDTO {
     /** 本月/今年提案总数（不论是否通过） */
-    proposalTotalQuantity: number;
+    proposalTotalQuantity?: number;
     /** 本月/今年提案总数（审核通过） */
-    approvedProposalQuantity: number;
+    approvedProposalQuantity?: number;
     /** 本月/今年提案数大于0的数量 */
-    proposalEmployeeQuantity: number;
+    proposalEmployeeQuantity?: number;
     /** 本月/今年计划提员工案数 */
-    proposalEmployeePlanQuantity: number;
+    proposalEmployeePlanQuantity?: number;
     /** 本月/今年参与率 */
-    proposalRate: number;
+    proposalRate?: number;
     /** 全公司员工总数（已启用） */
-    employeeTotalQuantity: number;
+    employeeTotalQuantity?: number;
     /** 平均提案数 */
-    avgProposalQuantity: number;
+    avgProposalQuantity?: number;
     /** 项目完成数量 */
-    projectCompleteQuantity: number;
+    projectCompleteQuantity?: number;
 }

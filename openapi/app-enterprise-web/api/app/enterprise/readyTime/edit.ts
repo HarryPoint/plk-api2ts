@@ -16,13 +16,13 @@ export default function fetchMethod(data: IPreparatoryPeriodEditorDTO, extraOpti
 /** 准备期编辑DTO */
 export interface IPreparatoryPeriodEditorDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属工序id */
     processId: number;
     /** 名称 */
     name: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 规则类型 */
     ruleType: string;
     /** 耗时 */
@@ -31,11 +31,11 @@ export interface IPreparatoryPeriodEditorDTO {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -16,48 +16,48 @@ export default function fetchMethod(params: { number?: string }, extraOptions?: 
 /** JSONResult«ThirdApiResponseDTO» */
 export interface IJSONResultThirdApiResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IThirdApiResponseDTO;
+    data?: IThirdApiResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ThirdApiResponseDTO */
 export interface IThirdApiResponseDTO {
     /** undefined */
-    requestInfo: IThirdApiRequestInfoResponseDTO;
+    requestInfo?: IThirdApiRequestInfoResponseDTO;
     /** undefined */
-    responseInfo: IThirdApiResponseInfoResponseDTO;
+    responseInfo?: IThirdApiResponseInfoResponseDTO;
 }
 /** ThirdApiRequestInfoResponseDTO */
 export interface IThirdApiRequestInfoResponseDTO {
     /** undefined */
-    url: string;
+    url?: string;
     /** undefined */
-    headers: Record<string, string>;
+    headers?: Record<string, string>;
     /** undefined */
-    params: Record<string, string>;
+    params?: Record<string, string>;
     /** undefined */
-    body: string;
+    body?: string;
 }
 /** ThirdApiResponseInfoResponseDTO */
 export interface IThirdApiResponseInfoResponseDTO {
     /** undefined */
-    success: string;
+    success?: string;
     /** undefined */
-    errorInfo: string;
+    errorInfo?: string;
     /** undefined */
-    status: number;
+    status?: number;
     /** undefined */
-    responseCode: string;
+    responseCode?: string;
     /** undefined */
-    responseMsg: string;
+    responseMsg?: string;
     /** undefined */
-    responseBody: string;
+    responseBody?: string;
     /** undefined */
-    responseDataObj: Record<string, Record<string, any>>;
+    responseDataObj?: Record<string, Record<string, any>>;
     /** undefined */
-    responseDataArray: Record<string, any>[];
+    responseDataArray?: Record<string, any>[];
 }

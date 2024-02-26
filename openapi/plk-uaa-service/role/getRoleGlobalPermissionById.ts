@@ -16,24 +16,24 @@ export default function fetchMethod(params: { id?: number }, extraOptions?: any)
 /** JSONResult«List«角色全局权限响应DTO»» */
 export interface IJSONResultListRoleGlobalPermissionResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheGlobalPermissionOfTheRoleRespondsToTheDTO[];
+    data?: ITheGlobalPermissionOfTheRoleRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 角色全局权限响应DTO */
 export interface ITheGlobalPermissionOfTheRoleRespondsToTheDTO {
     /** 权限名 */
-    permissionName: string;
+    permissionName?: string;
     /** 权限code */
-    permissionCode: string;
+    permissionCode?: string;
     /** 权限分类 */
-    permissionType: string;
+    permissionType?: string;
     /** 权限说明 */
-    permissionRemark: string;
+    permissionRemark?: string;
     /** 是否已勾选 */
-    isChoose: string;
+    isChoose?: string;
 }

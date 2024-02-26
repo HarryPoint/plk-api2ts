@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getUserByAccountIdUsingGET
 */
-export default function fetchMethod(params: { accountId: number; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { accountId?: number; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultEmployeeAccountVO>(
         {
             url: "/masterdata-service/dynamicData/getUserByAccountId",
@@ -16,38 +16,38 @@ export default function fetchMethod(params: { accountId: number; enterpriseId: n
 /** JSONResult«员工账户VO» */
 export interface IJSONResultEmployeeAccountVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmployeeAccountVO;
+    data?: IEmployeeAccountVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 员工账户VO */
 export interface IEmployeeAccountVO {
     /** id */
-    id: number;
+    id?: number;
     /** 员工工号 */
-    code: string;
+    code?: string;
     /** 员工姓名 */
-    name: string;
+    name?: string;
     /** 所属部门id */
-    departmentId: number;
+    departmentId?: number;
     /** 所属部门名称 */
-    departmentName: string;
+    departmentName?: string;
     /** 所属账号id */
-    userId: number;
+    userId?: number;
     /** 职位id */
-    positionId: number;
+    positionId?: number;
     /** 职位名称 */
-    positionName: string;
+    positionName?: string;
     /** 手机号码 */
-    mobilePhone: string;
+    mobilePhone?: string;
     /** 过期时间 */
-    expireTime: string;
+    expireTime?: string;
     /** 最后登录时间 */
-    lastLoginTime: string;
+    lastLoginTime?: string;
     /** 所属角色id */
-    roleIds: number[];
+    roleIds?: number[];
 }

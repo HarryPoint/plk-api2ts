@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表相关/getPageUsingPOST_25
 */
-export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPageInformationOrderProgressStatisticsResponseVO>(
         {
             url: "/masterdata-service/report/getSalesOrderReport",
@@ -17,149 +17,149 @@ export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, param
 /** 订单进度统计查询VO */
 export interface IOrderProgressStatisticsQueryVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 交付日期 - 开始 yyyy-MM-dd HH:mm:ss */
-    deliveryDateBegin: string;
+    deliveryDateBegin?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 客户id集 */
-    customerIds: number[];
+    customerIds?: number[];
     /** 交付日期 - 结束 yyyy-MM-dd HH:mm:ss */
-    deliveryDateEnd: string;
+    deliveryDateEnd?: string;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus: string;
+    salesOrderStatus?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«订单进度统计响应VO»» */
 export interface IJSONResultPageInformationOrderProgressStatisticsResponseVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationOrderProgressStatisticsResponseVO;
+    data?: IPageInformationOrderProgressStatisticsResponseVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«订单进度统计响应VO» */
 export interface IPageInformationOrderProgressStatisticsResponseVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IOrderProgressStatisticsRespondToVO[];
+    list?: IOrderProgressStatisticsRespondToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 订单进度统计响应VO */
 export interface IOrderProgressStatisticsRespondToVO {
     /** 销售订单编号-（销售订单维度 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 客户id-（销售订单维度 */
-    customerId: number;
+    customerId?: number;
     /** 客户名称-（销售订单维度 */
-    customerName: string;
+    customerName?: string;
     /** 销售订单状态-（销售订单维度 */
-    salesOrderStatus: string;
+    salesOrderStatus?: string;
     /** 销售订单创建时间 */
-    salesOrderCreateTime: string;
+    salesOrderCreateTime?: string;
     /** 物料id-（销售订单明细维度 */
-    materialId: number;
+    materialId?: number;
     /** 物料编码-（销售订单明细维度 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料名称-（销售订单明细维度 */
-    materialName: string;
+    materialName?: string;
     /** 物料规格型号-（销售订单明细维度 */
-    spec: string;
+    spec?: string;
     /** 交付数量-（销售订单明细维度 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 交付日期-（销售订单明细维度 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss-（销售订单明细维度 */
-    minPlanBeginTime: string;
+    minPlanBeginTime?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss-（销售订单明细维度 */
-    maxPlanEndTime: string;
+    maxPlanEndTime?: string;
     /** 实际生产开始时间-（销售订单明细维度 */
-    minActualBeginTime: string;
+    minActualBeginTime?: string;
     /** 实际生产完成时间-（销售订单明细维度 */
-    maxActualEndTime: string;
+    maxActualEndTime?: string;
     /** 交付剩余天数-（销售订单明细维度 */
-    deliveryRemainingDays: number;
+    deliveryRemainingDays?: number;
     /** 已转换数量-（销售订单明细维度 */
-    totalConvertQuantity: number;
+    totalConvertQuantity?: number;
     /** 总合格产出数量-（销售订单明细维度 */
-    totalProduceQuantity: number;
+    totalProduceQuantity?: number;
     /** 已排产生产订单数量-（销售订单明细维度 */
-    totalPlanProduceOrderCount: number;
+    totalPlanProduceOrderCount?: number;
     /** 生产订单数量-（销售订单明细维度 */
-    totalProduceOrderCount: number;
+    totalProduceOrderCount?: number;
     /** 已排产数量-（销售订单明细维度 */
-    totalPlanQuantity: number;
+    totalPlanQuantity?: number;
     /** 转生产进度 */
-    convertRatio: number;
+    convertRatio?: number;
     /** 订单完成进度 */
-    completeRatio: number;
+    completeRatio?: number;
     /** 排产进度 */
-    planRatio: number;
+    planRatio?: number;
     /** 生产订单编号-（生产订单维度 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 生产物料id-（生产订单维度 */
-    produceMaterialId: number;
+    produceMaterialId?: number;
     /** 生产物料编码-（生产订单维度 */
-    produceMaterialCode: string;
+    produceMaterialCode?: string;
     /** 生产物料名称-（生产订单维度 */
-    produceMaterialName: string;
+    produceMaterialName?: string;
     /** 生产物料规格型号-（生产订单维度 */
-    produceMaterialSpec: string;
+    produceMaterialSpec?: string;
     /** 生产数量-（生产订单维度 */
-    convertQuantity: number;
+    convertQuantity?: number;
     /** 生产订单状态-（生产订单维度 */
-    produceOrderStatus: string;
+    produceOrderStatus?: string;
     /** 排产状态-（生产订单维度 */
-    produceOrderPlanStatus: string;
+    produceOrderPlanStatus?: string;
     /** 计划生产开始时间-（生产订单维度 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 计划生产结束时间-（生产订单维度 */
-    planEndTime: string;
+    planEndTime?: string;
     /** 计划生产数量-（生产订单维度 */
-    planQuantity: number;
+    planQuantity?: number;
     /** 实际生产开始时间-（生产订单维度 */
-    actualBeginTime: string;
+    actualBeginTime?: string;
     /** 实际生产结束时间-（生产订单维度 */
-    actualEndTime: string;
+    actualEndTime?: string;
     /** 合格产出数量-（生产订单维度 */
-    produceQuantity: number;
+    produceQuantity?: number;
     /** 报废数量-（生产订单维度 */
-    scrapQuantity: number;
+    scrapQuantity?: number;
     /** 委外数量-（生产订单维度 */
-    entrustQuantity: number;
+    entrustQuantity?: number;
     /** 合格产出进度 */
-    produceRatio: number;
+    produceRatio?: number;
 }

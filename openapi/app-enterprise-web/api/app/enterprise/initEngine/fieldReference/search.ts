@@ -16,36 +16,36 @@ export default function fetchMethod(data: ITheFieldRefersToTheQueryCondition, ex
 /** 字段引用查询条件 */
 export interface ITheFieldRefersToTheQueryCondition {
     /** 表定义编码 */
-    tableDefineCode: string;
+    tableDefineCode?: string;
     /** 字段定义编码 */
-    fieldDefineCode: string;
+    fieldDefineCode?: string;
     /** 搜索值 */
-    searchValue: string;
+    searchValue?: string;
 }
 /** JSONResult«字段引用搜索结果» */
 export interface ITheJSONResultFieldReferencesTheSearchResults {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFieldsReferToSearchResults;
+    data?: IFieldsReferToSearchResults;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 字段引用搜索结果 */
 export interface IFieldsReferToSearchResults {
     /** 字段列表 */
-    fieldList: IFormField[];
+    fieldList?: IFormField[];
     /** 数据列表 */
-    dataList: IMapstringstring[];
+    dataList?: IMapstringstring[];
 }
 /** 表单字段 */
 export interface IFormField {
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    name: string;
+    name?: string;
 }
 /** Map«string,string» */
 export interface IMapstringstring {

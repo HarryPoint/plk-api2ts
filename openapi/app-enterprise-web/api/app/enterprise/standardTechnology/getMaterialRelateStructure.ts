@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
 */
-export default function fetchMethod(params: { materialId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { materialId?: number }, extraOptions?: any) {
     return http<IJSONResultSpecificMaterialDataStructureResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getMaterialRelateStructure",
@@ -16,231 +16,231 @@ export default function fetchMethod(params: { materialId: number }, extraOptions
 /** JSONResult«具体物料数据结构响应对象» */
 export interface IJSONResultSpecificMaterialDataStructureResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheConcreteMaterialDataStructureRespondsToObject1;
+    data?: ITheConcreteMaterialDataStructureRespondsToObject1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 具体物料数据结构响应对象_1 */
 export interface ITheConcreteMaterialDataStructureRespondsToObject1 {
     /** 主物料id */
-    materialId: number;
+    materialId?: number;
     /** 主物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 主物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 主物料种类 */
-    materialType: string;
+    materialType?: string;
     /** 主物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 物料BOM */
-    materialBomStructure: IConcreteMaterialDataStructureResponseObject;
+    materialBomStructure?: IConcreteMaterialDataStructureResponseObject;
     /** 工艺路径 */
-    materialRoutingStructure: ISpecificMaterialNumberAssociatedProcessPathDataStructureResponseObject;
+    materialRoutingStructure?: ISpecificMaterialNumberAssociatedProcessPathDataStructureResponseObject;
 }
 /** 具体物料数据结构响应对象 */
 export interface IConcreteMaterialDataStructureResponseObject {
     /** bomId */
-    bomId: number;
+    bomId?: number;
     /** BOM名称 */
-    bomName: string;
+    bomName?: string;
     /** BOM编号 */
-    bomCode: string;
+    bomCode?: string;
     /** 消耗数量 */
-    totalConsumeCount: number;
+    totalConsumeCount?: number;
     /** Bom物料明细 */
-    bomDetailList: IStandardProcessSpecificMaterialBomDetailObject[];
+    bomDetailList?: IStandardProcessSpecificMaterialBomDetailObject[];
 }
 /** 标准工艺具体物料bom详情对象 */
 export interface IStandardProcessSpecificMaterialBomDetailObject {
     /** bom明细id */
-    bomDetailId: number;
+    bomDetailId?: number;
     /** 子物料id */
-    childMaterialId: number;
+    childMaterialId?: number;
     /** 子物料种类 */
-    childMaterialType: string;
+    childMaterialType?: string;
     /** 子物料名称 */
-    childMaterialName: string;
+    childMaterialName?: string;
     /** 子物料编号 */
-    childMaterialCode: string;
+    childMaterialCode?: string;
     /** 子物料单位 */
-    childMaterialUnit: string;
+    childMaterialUnit?: string;
     /** 消耗数量 */
-    totalConsumeCount: number;
+    totalConsumeCount?: number;
     /** 子物料信息 */
-    childMaterialStructure: ITheConcreteMaterialDataStructureRespondsToObject1;
+    childMaterialStructure?: ITheConcreteMaterialDataStructureRespondsToObject1;
 }
 /** 具体物料数关联工艺路径数据结构响应对象 */
 export interface ISpecificMaterialNumberAssociatedProcessPathDataStructureResponseObject {
     /** 工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 工艺路径名称 */
-    routingName: string;
+    routingName?: string;
     /** 工艺路径编码 */
-    routingCode: string;
+    routingCode?: string;
     /** 工艺路径步骤集合 */
-    materialRoutingStepList: ISpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject[];
+    materialRoutingStepList?: ISpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject[];
 }
 /** 具体物料数关联工艺路径步骤数据结构响应对象 */
 export interface ISpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject {
     /** 工艺路径步骤id */
-    routingStepId: number;
+    routingStepId?: number;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编码 */
-    processCode: string;
+    processCode?: string;
     /** 工艺卡 */
-    processSheet: IStandardProcessSpecificProcessCardDetailsObject1;
+    processSheet?: IStandardProcessSpecificProcessCardDetailsObject1;
     /** 关键参数 */
-    keyParameter: IKeyParameterInformationResponseObject;
+    keyParameter?: IKeyParameterInformationResponseObject;
     /** 产能 */
-    capacity: IProductivityResponseObject;
+    capacity?: IProductivityResponseObject;
     /** 工费 */
-    laborCost: ICostResponseObject;
+    laborCost?: ICostResponseObject;
     /** 进出站确认类型 */
-    bomConsumeSureType: string;
+    bomConsumeSureType?: string;
 }
 /** 标准工艺具体工艺卡详情对象_1 */
 export interface IStandardProcessSpecificProcessCardDetailsObject1 {
     /** 工艺卡id */
-    processSheetId: number;
+    processSheetId?: number;
     /** 工艺卡名称 */
     name: string;
     /** 工艺卡编号 */
-    code: string;
+    code?: string;
     /** 工艺卡明细 */
-    processSheetDetailStructureList: IStandardProcessSpecificProcessCardDetailsObject[];
+    processSheetDetailStructureList?: IStandardProcessSpecificProcessCardDetailsObject[];
 }
 /** 标准工艺具体工艺卡详情对象 */
 export interface IStandardProcessSpecificProcessCardDetailsObject {
     /** 明细id */
-    id: number;
+    id?: number;
     /** 明细类型 */
-    type: string;
+    type?: string;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
     code: string;
     /** 描述内容/备注 */
-    remark: string;
+    remark?: string;
     /** 文件名称 */
-    fileName: string;
+    fileName?: string;
     /** 文件key */
-    fileKey: string;
+    fileKey?: string;
     /** 文件完整url */
-    fileUrl: string;
+    fileUrl?: string;
     /** 录入类型 */
-    inputType: string;
+    inputType?: string;
     /** 文本类型 */
-    textType: string;
+    textType?: string;
     /** 文本比较值集 */
-    textCompareValueList: string[];
+    textCompareValueList?: string[];
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 数值单位 */
-    numberUnit: string;
+    numberUnit?: string;
     /** 图片最大上传量 */
-    imageTotalCount: number;
+    imageTotalCount?: number;
     /** 选项集 */
-    selectorList: string[];
+    selectorList?: string[];
 }
 /** 关键参数信息响应对象 */
 export interface IKeyParameterInformationResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 关联工序 */
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp?: IAssociatedDropDownResponseObjects[];
     /** 关联物料 */
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp?: IAssociatedDropDownResponseObjects[];
     /** 关键参数集合 */
-    parameterDetailList: IKeyParameterDetailsResponseObject[];
+    parameterDetailList?: IKeyParameterDetailsResponseObject[];
 }
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id: number;
+    id?: number;
     /** 显示字段名称 */
-    showFieldValue: string;
+    showFieldValue?: string;
 }
 /** 关键参数信息详情响应对象 */
 export interface IKeyParameterDetailsResponseObject {
     /** 字段id */
-    id: number;
+    id?: number;
     /** 字段名称 */
-    name: string;
+    name?: string;
     /** 帮助提示 */
-    remark: string;
+    remark?: string;
     /** 字段类型 */
-    inputType: string;
+    inputType?: string;
     /** 文本类型 */
-    textType: string;
+    textType?: string;
     /** 文本比较值，多个英文逗号,分割 */
-    textCompareValue: string;
+    textCompareValue?: string;
     /** 文本比较值集 */
-    textCompareValueList: string[];
+    textCompareValueList?: string[];
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 数值单位 */
-    numberUnit: string;
+    numberUnit?: string;
     /** 图片最大上传量 */
-    imageTotalCount: number;
+    imageTotalCount?: number;
     /** 选项集，多个英文逗号,分割 */
-    selector: string;
+    selector?: string;
     /** 选项集 */
-    selectorList: string[];
+    selectorList?: string[];
 }
 /** 产能响应对象 */
 export interface IProductivityResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 关联工序 */
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp?: IAssociatedDropDownResponseObjects[];
     /** 关联物料 */
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp?: IAssociatedDropDownResponseObjects[];
     /** 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 生产耗时 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 产出数量 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
 }
 /** 工费响应对象 */
 export interface ICostResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 关联工序 */
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp?: IAssociatedDropDownResponseObjects[];
     /** 关联物料 */
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp?: IAssociatedDropDownResponseObjects[];
     /** 合格产出工费单价（元） */
-    producePrice: number;
+    producePrice?: number;
     /** 返工产出工费单价（元） */
-    backProducePrice: number;
+    backProducePrice?: number;
     /** 准备工费（元） */
-    readyPrice: number;
+    readyPrice?: number;
 }

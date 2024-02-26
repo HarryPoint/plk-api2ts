@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionMaterialReturnOrderUsingGET
 */
-export default function fetchMethod(params: { fiscalPeriodId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { fiscalPeriodId?: string }, extraOptions?: any) {
     return http<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>(
         {
             url: "/masterdata-service/produceCost/checkProductionMaterialReturnOrder",
@@ -16,24 +16,24 @@ export default function fetchMethod(params: { fiscalPeriodId: string }, extraOpt
 /** JSONResult«List«生产成本核算单据状态校验响应DTO»» */
 export interface IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionCostAccountingDocumentStatusCheckResponseDTO[];
+    data?: IProductionCostAccountingDocumentStatusCheckResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产成本核算单据状态校验响应DTO */
 export interface IProductionCostAccountingDocumentStatusCheckResponseDTO {
     /** 单据id */
-    billId: number;
+    billId?: number;
     /** 单据编号 */
-    billCode: string;
+    billCode?: string;
     /** 当前处理人 */
-    handleUserNames: string[];
+    handleUserNames?: string[];
     /** 待办id */
-    todoId: number;
+    todoId?: number;
     /** 待办对应的流程任务id */
-    flowPathTaskId: number;
+    flowPathTaskId?: number;
 }

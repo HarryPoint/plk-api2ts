@@ -15,34 +15,34 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«班次返回VO»» */
 export interface IJSONResultListShiftsBackToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IShiftBackVO[];
+    data?: IShiftBackVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 班次返回VO */
 export interface IShiftBackVO {
     /** id */
-    id: number;
+    id?: number;
     /** 班次名称 */
-    name: string;
+    name?: string;
     /** 班次编号 */
-    code: string;
+    code?: string;
     /** 开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
     /** 结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人 */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }

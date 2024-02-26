@@ -16,56 +16,56 @@ export default function fetchMethod(data: IDateRangeQueryDTO, extraOptions?: any
 /** 日期范围查询 DTO */
 export interface IDateRangeQueryDTO {
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
 }
 /** JSONResult«List«工厂日历排期班次关系VO»» */
 export interface IJSONResultListFactoryCalendarScheduleShiftRelationshipVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFactoryCalendarSchedulingShiftRelationshipVO1[];
+    data?: IFactoryCalendarSchedulingShiftRelationshipVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工厂日历排期班次关系VO_1 */
 export interface IFactoryCalendarSchedulingShiftRelationshipVO1 {
     /** 日程安排日期 */
-    scheduleDate: string;
+    scheduleDate?: string;
     /** 对应班次信息集 */
-    classShifts: IFactoryCalendarScheduleShiftRelationshipVO[];
+    classShifts?: IFactoryCalendarScheduleShiftRelationshipVO[];
 }
 /** 工厂日历排期班次关系VO */
 export interface IFactoryCalendarScheduleShiftRelationshipVO {
     /** id */
-    id: number;
+    id?: number;
     /** 数据状态 0停用，1启用，-1已删除 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建员工id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建部门id */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 修改账户id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 修改部门id */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 班次名称 */
-    name: string;
+    name?: string;
     /** 班次编号 */
-    code: string;
+    code?: string;
     /** 开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getSchedulLoopForPageUsingPOST
 */
-export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationSchedulingRecordReturnsVO>(
         {
             url: "/masterdata-service/calendar/getSchedulLoopForPage",
@@ -17,109 +17,109 @@ export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { en
 /** 工厂日历搜索VO */
 export interface IFactoryCalendarSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«排班记录返回VO»» */
 export interface IJSONResultPagingInformationSchedulingRecordReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationSchedulingRecordReturnsVO;
+    data?: IPagingInformationSchedulingRecordReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«排班记录返回VO» */
 export interface IPagingInformationSchedulingRecordReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheSchedulingRecordIsReturnedToVO[];
+    list?: ITheSchedulingRecordIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 排班记录返回VO */
 export interface ITheSchedulingRecordIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 开始日期 */
-    beginDate: string;
+    beginDate?: string;
     /** 循环天数 */
-    loopDay: number;
+    loopDay?: number;
     /** 排班天数集 */
-    scheduleDays: ISchedulingBaseReturnsVO[];
+    scheduleDays?: ISchedulingBaseReturnsVO[];
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }
 /** 排班基数返回VO */
 export interface ISchedulingBaseReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 排班循环配置 */
-    scheduleDayDetails: IScheduleBaseDetailsAreReturnedToVO[];
+    scheduleDayDetails?: IScheduleBaseDetailsAreReturnedToVO[];
 }
 /** 排班基数明细返回VO */
 export interface IScheduleBaseDetailsAreReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 班次id */
-    classShiftId: number;
+    classShiftId?: number;
     /** 班次名称 */
-    classShiftName: string;
+    classShiftName?: string;
     /** 班次开始时间 */
-    classShiftBeginTime: ILocalTime;
+    classShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
     /** 班次结束时间 */
-    classShiftEndTime: ILocalTime;
+    classShiftEndTime?: ILocalTime;
     /** 班组列表信息 */
-    classGroupList: ISchedulingBaseDetailGroupReturnsVO[];
+    classGroupList?: ISchedulingBaseDetailGroupReturnsVO[];
 }
 /** LocalTime */
 export interface ILocalTime {
     /** undefined */
-    hour: number;
+    hour?: number;
     /** undefined */
-    minute: number;
+    minute?: number;
     /** undefined */
-    second: number;
+    second?: number;
     /** undefined */
-    nano: number;
+    nano?: number;
 }
 /** 排班基数明细班组返回VO */
 export interface ISchedulingBaseDetailGroupReturnsVO {
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 班组名称 */
-    classGroupName: string;
+    classGroupName?: string;
 }

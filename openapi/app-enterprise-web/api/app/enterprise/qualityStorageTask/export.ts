@@ -16,47 +16,47 @@ export default function fetchMethod(data: IInspectionTaskSearchesForVO, extraOpt
 /** 质检任务搜索VO */
 export interface IInspectionTaskSearchesForVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 检验日期查询开始时间 */
-    completeStartTime: string;
+    completeStartTime?: string;
     /** 质检分类 */
-    qualityInspectionCategoryId: number;
+    qualityInspectionCategoryId?: number;
     /** 采购收货单编号 */
-    purchaseWorkOrderNo: string;
+    purchaseWorkOrderNo?: string;
     /** 任务类型 */
-    taskType: string;
+    taskType?: string;
     /** 任务编号 */
-    qualityStorageTaskNo: string;
+    qualityStorageTaskNo?: string;
     /** 检验日期查询结束时间 */
-    completeEndTime: string;
+    completeEndTime?: string;
     /** 检验员id */
-    handleUserId: number;
+    handleUserId?: number;
     /** 检验位置id */
-    checkPositionId: number;
+    checkPositionId?: number;
     /** 仓位id */
-    qualityWarehouseId: number;
+    qualityWarehouseId?: number;
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

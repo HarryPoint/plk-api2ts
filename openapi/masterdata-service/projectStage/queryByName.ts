@@ -16,31 +16,31 @@ export default function fetchMethod(data: IProjectPhaseNumberQueryObject, extraO
 /** 项目阶段编号查询对象 */
 export interface IProjectPhaseNumberQueryObject {
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 名称or编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
     /** 是否查询只在项目计划模块展示的阶段 */
-    isProjectPlanShow: string;
+    isProjectPlanShow?: string;
     /** 是否查询只在项目任务模块展示的阶段 */
-    isProjectTaskShow: string;
+    isProjectTaskShow?: string;
 }
 /** JSONResult«List«项目阶段响应对象»» */
 export interface IJSONResultListProjectPhaseResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectPhaseResponseObject[];
+    data?: IProjectPhaseResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目阶段响应对象 */
 export interface IProjectPhaseResponseObject {
     /** 项目阶段id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 项目计划ids */
-    projectPlanIds: number[];
+    projectPlanIds?: number[];
 }

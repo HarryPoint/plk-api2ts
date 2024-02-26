@@ -16,74 +16,74 @@ export default function fetchMethod(data: IDeviceRealTimeDataSearchVO, extraOpti
 /** 设备实时数据搜索VO */
 export interface IDeviceRealTimeDataSearchVO {
     /** 设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 查询参数id集 */
-    paramIds: number[];
+    paramIds?: number[];
 }
 /** JSONResult«设备数采实时数据返回VO» */
 export interface IJSONResultDeviceDataCollectionRealTimeDataIsReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDeviceDataAcquisitionRealTimeDataReturnVO;
+    data?: IDeviceDataAcquisitionRealTimeDataReturnVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备数采实时数据返回VO */
 export interface IDeviceDataAcquisitionRealTimeDataReturnVO {
     /** 设备信息 */
-    deviceInfo: IDeviceDataAcquisitionStatusMessageVO;
+    deviceInfo?: IDeviceDataAcquisitionStatusMessageVO;
     /** 参数集 */
-    params: IDeviceDataAcquisitionRealTimeDataParametersReturnVO[];
+    params?: IDeviceDataAcquisitionRealTimeDataParametersReturnVO[];
 }
 /** 设备数采状态信息VO */
 export interface IDeviceDataAcquisitionStatusMessageVO {
     /** id */
-    id: number;
+    id?: number;
     /** 设备名称 */
-    name: string;
+    name?: string;
     /** 设备编号 */
-    code: string;
+    code?: string;
     /** 设备数采方案id */
-    deviceCollectionPlanId: number;
+    deviceCollectionPlanId?: number;
     /** 设备数采方案名称 */
-    deviceCollectionPlanName: string;
+    deviceCollectionPlanName?: string;
     /** 设备数采方案编号 */
-    deviceCollectionPlanCode: string;
+    deviceCollectionPlanCode?: string;
     /** 在线状态 */
-    onlineStatus: string;
+    onlineStatus?: string;
     /** 在线状态描述 */
-    onlineStatusDesc: string;
+    onlineStatusDesc?: string;
     /** 设备状态 */
-    status: string;
+    status?: string;
     /** 设备状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 最后通讯时间 */
-    lastApiTime: string;
+    lastApiTime?: string;
 }
 /** 设备数采实时数据参数返回VO */
 export interface IDeviceDataAcquisitionRealTimeDataParametersReturnVO {
     /** 参数id */
-    id: number;
+    id?: number;
     /** 参数名称 */
-    name: string;
+    name?: string;
     /** 参数编号 */
-    code: string;
+    code?: string;
     /** 参数单位 */
-    unit: string;
+    unit?: string;
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 最新50条实时数据 */
-    realTimeDatas: IDeviceDataAcquisitionDataIsReturnedToVO[];
+    realTimeDatas?: IDeviceDataAcquisitionDataIsReturnedToVO[];
 }
 /** 设备数采数据返回VO */
 export interface IDeviceDataAcquisitionDataIsReturnedToVO {
     /** 时间 */
-    time: string;
+    time?: string;
     /** 结果值 */
-    result: number;
+    result?: number;
 }

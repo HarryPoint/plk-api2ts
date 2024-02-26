@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/getCarbonCopyInfoByNodeAndWorkOrderUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; flowPathNodeId: number; flowPathWorkOrderId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; flowPathNodeId?: number; flowPathWorkOrderId?: number }, extraOptions?: any) {
     return http<IJSONResultListToDoListVO>(
         {
             url: "/todo-service/todoList/getCarbonCopyInfoByNodeAndWorkOrder",
@@ -16,68 +16,68 @@ export default function fetchMethod(params: { enterpriseId: number; flowPathNode
 /** JSONResult«List«ToDoListVO»» */
 export interface IJSONResultListToDoListVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IToDoListVO[];
+    data?: IToDoListVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ToDoListVO */
 export interface IToDoListVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 所属用户id */
-    userId: number;
+    userId?: number;
     /** 待办编号 */
-    code: string;
+    code?: string;
     /** 流程处理类型 */
-    type: string;
+    type?: string;
     /** 任务开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 预计结束时间（截止时间） */
-    planEndTime: string;
+    planEndTime?: string;
     /** 对应业务id */
-    businessId: number;
+    businessId?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 完成时间 */
-    completeTime: string;
+    completeTime?: string;
     /** 发起人id */
-    workOrderCreateUserId: number;
+    workOrderCreateUserId?: number;
     /** 是否超时处理 */
-    isTimeout: string;
+    isTimeout?: string;
     /** 节点处理状态描述 */
-    flowPathNodeHandleStatus: string;
+    flowPathNodeHandleStatus?: string;
     /** 工单处理状态描述 */
-    flowPathWorkOrderHandleStatus: string;
+    flowPathWorkOrderHandleStatus?: string;
     /** 所属工单ID */
-    flowPathWorkOrderId: number;
+    flowPathWorkOrderId?: number;
     /** 所属工单编号 */
-    flowPathWorkOrderCode: string;
+    flowPathWorkOrderCode?: string;
     /** 所属流程节点id */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
     /** 标题 */
-    title: string;
+    title?: string;
     /** 表头 */
-    tableHeaderList: ITableheaderdto[];
+    tableHeaderList?: ITableheaderdto[];
     /** 表数据 */
-    tableDataList: ITabledatadto[];
+    tableDataList?: ITabledatadto[];
 }
 /** TableHeaderDTO */
 export interface ITableheaderdto {
     /** undefined */
-    serialNo: string;
+    serialNo?: string;
     /** undefined */
-    name: string;
+    name?: string;
 }
 /** TableDataDTO */
 export interface ITabledatadto {
     /** undefined */
-    serialNo: string;
+    serialNo?: string;
     /** undefined */
-    showValue: string;
+    showValue?: string;
 }

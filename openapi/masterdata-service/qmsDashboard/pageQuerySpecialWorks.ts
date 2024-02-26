@@ -16,67 +16,67 @@ export default function fetchMethod(data: ISpecialWorkQueryRequest1, extraOption
 /** 专项工作查询请求_1 */
 export interface ISpecialWorkQueryRequest1 {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«专项工作查询请求»» */
 export interface IJSONResultSpecialTaskQueryRequestForPagingInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationSpecialWorkQueryRequest;
+    data?: IPagingInformationSpecialWorkQueryRequest;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«专项工作查询请求» */
 export interface IPagingInformationSpecialWorkQueryRequest {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ISpecialWorkInquiryRequest[];
+    list?: ISpecialWorkInquiryRequest[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 专项工作查询请求 */
 export interface ISpecialWorkInquiryRequest {
     /** ID */
-    id: number;
+    id?: number;
     /** 专项工作名称 */
-    specialWorkName: string;
+    specialWorkName?: string;
     /** 计划数 */
-    planTotalQuantity: number;
+    planTotalQuantity?: number;
     /** 计划完成数 */
-    planCompletedQuantity: number;
+    planCompletedQuantity?: number;
     /** 完成率 */
-    completedRate: number;
+    completedRate?: number;
 }

@@ -16,26 +16,26 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«ProduceTechnologyMaterialBomDTO»» */
 export interface IJSONResultListProduceTechnologyMaterialBomDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProduceTechnologyMaterialBomDTO[];
+    data?: IProduceTechnologyMaterialBomDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProduceTechnologyMaterialBomDTO */
 export interface IProduceTechnologyMaterialBomDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    materialId: number;
+    materialId?: number;
     /** undefined */
-    materialBomId: number;
+    materialBomId?: number;
     /** undefined */
-    name: string;
+    name?: string;
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    produceTechnologyId: number;
+    produceTechnologyId?: number;
 }

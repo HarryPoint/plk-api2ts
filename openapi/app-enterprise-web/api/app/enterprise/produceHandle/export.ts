@@ -16,45 +16,45 @@ export default function fetchMethod(data: IProduceObjectsThatHandlePagingQueries
 /** 生产处理分页查询的对象 */
 export interface IProduceObjectsThatHandlePagingQueries {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 异常分类 */
-    type: string;
+    type?: string;
     /** 提交人id */
-    createUserId: number;
+    createUserId?: number;
     /** 生产异常类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 操作开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 操作结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 处理人id */
-    handleUserId: number;
+    handleUserId?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

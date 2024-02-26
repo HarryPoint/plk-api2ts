@@ -23,22 +23,22 @@ export interface IFeedMoldScanRequestDTO {
 /** JSONResult«进料模具响应DTO» */
 export interface IJSONResultFeedMoldRespondsToDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFeedMoldRespondsToDTO;
+    data?: IFeedMoldRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 进料模具响应DTO */
 export interface IFeedMoldRespondsToDTO {
     /** 模具id */
-    id: number;
+    id?: number;
     /** 模具名称 */
-    name: string;
+    name?: string;
     /** 模具编号 */
-    code: string;
+    code?: string;
     /** 生产工艺模具id */
-    produceTechnologyMoldId: number[];
+    produceTechnologyMoldId?: number[];
 }

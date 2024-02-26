@@ -20,24 +20,24 @@ export interface IPermissionEditDtos {
     /** 名称 */
     name: string;
     /** 父级编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 权限类型 */
     type: string;
     /** 系统应用类型 */
-    applicationSystemType: string;
+    applicationSystemType?: string;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** id */
-    id: number;
+    id?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

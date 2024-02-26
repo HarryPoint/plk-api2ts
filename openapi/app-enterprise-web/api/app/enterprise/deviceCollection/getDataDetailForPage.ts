@@ -16,134 +16,134 @@ export default function fetchMethod(data: IDeviceDataAcquisitionDataListSearchVO
 /** 设备数采数据详单搜索VO */
 export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 设备id */
     deviceId: number;
     /** 是否有异常 */
-    hasError: string;
+    hasError?: string;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«设备数采数据详单返回VO» */
 export interface IJSONResultTheDeviceDataCollectionDetailsAreReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheDeviceDataCollectionDetailListIsReturnedToVO;
+    data?: ITheDeviceDataCollectionDetailListIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备数采数据详单返回VO */
 export interface ITheDeviceDataCollectionDetailListIsReturnedToVO {
     /** 分页信息 */
-    dataPages: IPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO;
+    dataPages?: IPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO;
     /** 设备信息 */
-    deviceInfo: IDeviceDataAcquisitionStatusMessageVO;
+    deviceInfo?: IDeviceDataAcquisitionStatusMessageVO;
 }
 /** 分页信息«设备数采数据详单分页信息返回VO» */
 export interface IPageInformationDeviceDataCollectionDetailsPageInformationIsReturnedToVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IDeviceDataCollectionCDRPageInformationIsReturnedToVO[];
+    list?: IDeviceDataCollectionCDRPageInformationIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 设备数采数据详单分页信息返回VO */
 export interface IDeviceDataCollectionCDRPageInformationIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 数据提交时间 */
-    collectTime: string;
+    collectTime?: string;
     /** 请求员工id */
-    reqUserId: number;
+    reqUserId?: number;
     /** 请求员工姓名 */
-    reqUsername: string;
+    reqUsername?: string;
     /** 在线状态 */
-    deviceOnlineStatus: string;
+    deviceOnlineStatus?: string;
     /** 设备状态 */
-    deviceStatus: string;
+    deviceStatus?: string;
     /** 拓展数据 */
-    extData: Record<string, Record<string, any>>;
+    extData?: Record<string, Record<string, any>>;
     /** 详情 */
-    details: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
+    details?: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
     /** 是否有异常 */
-    hasError: string;
+    hasError?: string;
 }
 /** 设备数采数据明细返回VO */
 export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 设备数采参数id */
-    deviceCollectionParamId: number;
+    deviceCollectionParamId?: number;
     /** 设备数采参数名称 */
-    deviceCollectionParamName: string;
+    deviceCollectionParamName?: string;
     /** 设备数采参数编号 */
-    deviceCollectionParamCode: string;
+    deviceCollectionParamCode?: string;
     /** 设备数采参数单位 */
-    deviceCollectionParamUnit: string;
+    deviceCollectionParamUnit?: string;
     /** 结果 */
-    result: number;
+    result?: number;
     /** 单位 */
-    unit: string;
+    unit?: string;
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 异常类型 */
-    errorType: string;
+    errorType?: string;
     /** 异常值 */
-    errorResult: number;
+    errorResult?: number;
 }
 /** 设备数采状态信息VO */
 export interface IDeviceDataAcquisitionStatusMessageVO {
     /** id */
-    id: number;
+    id?: number;
     /** 设备名称 */
-    name: string;
+    name?: string;
     /** 设备编号 */
-    code: string;
+    code?: string;
     /** 设备数采方案id */
-    deviceCollectionPlanId: number;
+    deviceCollectionPlanId?: number;
     /** 设备数采方案名称 */
-    deviceCollectionPlanName: string;
+    deviceCollectionPlanName?: string;
     /** 设备数采方案编号 */
-    deviceCollectionPlanCode: string;
+    deviceCollectionPlanCode?: string;
     /** 在线状态 */
-    onlineStatus: string;
+    onlineStatus?: string;
     /** 在线状态描述 */
-    onlineStatusDesc: string;
+    onlineStatusDesc?: string;
     /** 设备状态 */
-    status: string;
+    status?: string;
     /** 设备状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 最后通讯时间 */
-    lastApiTime: string;
+    lastApiTime?: string;
 }

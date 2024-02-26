@@ -16,16 +16,16 @@ export default function fetchMethod(data: IImportProduceOrderInputDTO, extraOpti
 /** ImportProduceOrderInputDTO */
 export interface IImportProduceOrderInputDTO {
     /** undefined */
-    fileId: string;
+    fileId?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

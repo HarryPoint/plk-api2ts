@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getProduceTimeFeeMonthByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationHourlyLaborFeeMonthlySummaryReportReturnedToVO>(
         {
             url: "/masterdata-service/exportAuth/getProduceTimeFeeMonthByTicket",
@@ -16,37 +16,37 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«工时工费月度汇总报表返回VO»» */
 export interface IJSONResultExportInformationHourlyLaborFeeMonthlySummaryReportReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationHourlyLaborFeeMonthlySummaryReportReturnToVO;
+    data?: IExportInformationHourlyLaborFeeMonthlySummaryReportReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«工时工费月度汇总报表返回VO» */
 export interface IExportInformationHourlyLaborFeeMonthlySummaryReportReturnToVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IMonthlySummaryReportOfManHourPaymentIsReturnedToVO[];
+    itemList?: IMonthlySummaryReportOfManHourPaymentIsReturnedToVO[];
 }
 /** 工时工费月度汇总报表返回VO */
 export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
     /** 月份 */
-    month: string;
+    month?: string;
     /** 员工id */
-    userId: number;
+    userId?: number;
     /** 员工姓名 */
-    username: string;
+    username?: string;
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 班组名称 */
-    classGroupName: string;
+    classGroupName?: string;
     /** 合格产出工费 */
-    produceFee: number;
+    produceFee?: number;
     /** 返工产出工费 */
-    backFee: number;
+    backFee?: number;
     /** 合计工费 */
-    totalFee: number;
+    totalFee?: number;
 }

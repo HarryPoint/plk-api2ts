@@ -15,57 +15,57 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«流程班次返回VO»» */
 export interface IJSONResultListProcessShiftReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessShiftBackToVO[];
+    data?: IProcessShiftBackToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程班次返回VO */
 export interface IProcessShiftBackToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 班次名称 */
-    name: string;
+    name?: string;
     /** 班次编号 */
-    code: string;
+    code?: string;
     /** 开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 班次结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
     /** 结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人 */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 方案名称 */
-    planName: string;
+    planName?: string;
     /** 班次配置的人员信息 */
-    users: IProcessNodeExecutorVO[];
+    users?: IProcessNodeExecutorVO[];
 }
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 执行人id */
-    executorId: number;
+    executorId?: number;
     /** 执行人类型 */
-    executorType: string;
+    executorType?: string;
     /** 执行人系统控件类型 */
-    executorSysType: string;
+    executorSysType?: string;
     /** 组织字段序列 - 即动态控件 */
-    organizationFieldSerialNo: string;
+    organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId: number;
+    flowPathId?: number;
     /** 节点ID */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
 }

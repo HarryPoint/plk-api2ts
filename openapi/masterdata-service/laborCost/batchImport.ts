@@ -16,9 +16,9 @@ export default function fetchMethod(data: ILaborCostsSaveDTO[], extraOptions?: a
 /** 工费保存DTO */
 export interface ILaborCostsSaveDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
     name: string;
     /** 关联工序id */
@@ -26,20 +26,20 @@ export interface ILaborCostsSaveDTO {
     /** 关联物料id */
     materialIds: number[];
     /** 合格产出工费单价（元） */
-    producePrice: number;
+    producePrice?: number;
     /** 返工产出工费单价（元） */
-    backProducePrice: number;
+    backProducePrice?: number;
     /** 准备工费（元） */
-    readyPrice: number;
+    readyPrice?: number;
 }
 /** JSONResult«List«string»» */
 export interface IJSONResultListstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string[];
+    data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

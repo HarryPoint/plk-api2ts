@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/checkProduceDataReportUsingPOST
 */
-export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultOutputDataReportSearchVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/checkProduceDataReport",
@@ -17,52 +17,52 @@ export default function fetchMethod(data: IOutputClassReportSearchVO, params: { 
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 查询时间维度类型 */
-    timeType: string;
+    timeType?: string;
 }
 /** JSONResult«产出数据报表搜索VO» */
 export interface IJSONResultOutputDataReportSearchVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IOutputDataReportSearchVO;
+    data?: IOutputDataReportSearchVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产出数据报表搜索VO */
 export interface IOutputDataReportSearchVO {
     /** 物料id集 */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds: number[];
+    userIds?: number[];
     /** 日期筛选 - 开始 */
-    beginTime: string;
+    beginTime?: string;
     /** 日期筛选 - 结束 */
-    endTime: string;
+    endTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }

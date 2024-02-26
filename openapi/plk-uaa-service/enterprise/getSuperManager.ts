@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/getSuperManagerUsingPOST
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultTheSuperAdministratorRespondsToTheDTO>(
         {
             url: "/plk-uaa-service/enterprise/getSuperManager",
@@ -16,20 +16,20 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«超级管理员用户响应 DTO» */
 export interface IJSONResultTheSuperAdministratorRespondsToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheSuperAdministratorRespondsToTheDTO;
+    data?: ITheSuperAdministratorRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 超级管理员用户响应 DTO */
 export interface ITheSuperAdministratorRespondsToTheDTO {
     /** 用户id */
-    userId: number;
+    userId?: number;
     /** 员工id */
-    employeeId: number;
+    employeeId?: number;
     /** 角色id */
-    roleId: number;
+    roleId?: number;
 }

@@ -16,7 +16,7 @@ export default function fetchMethod(data: IProjectTaskSortRequestObject, extraOp
 /** 项目任务排序请求对象 */
 export interface IProjectTaskSortRequestObject {
     /** 项目计划id */
-    projectPlanId: number;
+    projectPlanId?: number;
     /** 移动任务id */
     moveProjectTaskId: number;
     /** 移动到的排序,最小为1 */
@@ -25,11 +25,11 @@ export interface IProjectTaskSortRequestObject {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

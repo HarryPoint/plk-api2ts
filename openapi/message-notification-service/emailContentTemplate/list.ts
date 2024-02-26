@@ -15,18 +15,18 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«EmailContentTemplateDTO»» */
 export interface IJSONResultListEmailContentTemplateDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmailContentTemplateDTO[];
+    data?: IEmailContentTemplateDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** EmailContentTemplateDTO */
 export interface IEmailContentTemplateDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 邮件内容 */
-    content: string;
+    content?: string;
 }

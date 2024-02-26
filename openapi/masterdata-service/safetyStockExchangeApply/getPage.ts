@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getPageUsingPOST_27
 */
-export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO>(
         {
             url: "/masterdata-service/safetyStockExchangeApply/getPage",
@@ -17,93 +17,93 @@ export default function fetchMethod(data: ISecurityStockChangeRequestSearchVO, p
 /** 安全库存变更申请搜索VO */
 export interface ISecurityStockChangeRequestSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 设置类型 */
     type: string;
     /** 对应业务id */
-    businessId: number;
+    businessId?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«安全库存变更申请返回VO»» */
 export interface IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationSecurityInventoryChangeRequestReturnedToVO;
+    data?: IPagingInformationSecurityInventoryChangeRequestReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«安全库存变更申请返回VO» */
 export interface IPagingInformationSecurityInventoryChangeRequestReturnedToVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ISecurityStockChangeRequestReturnedToVO[];
+    list?: ISecurityStockChangeRequestReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 安全库存变更申请返回VO */
 export interface ISecurityStockChangeRequestReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 申请单号 */
-    applyNo: string;
+    applyNo?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 安全库存下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 安全库存上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 采购触发下限 */
-    purchaseLowerLimit: number;
+    purchaseLowerLimit?: number;
     /** 通知人集 */
-    sendUsers: IIdNameNumberVO[];
+    sendUsers?: IIdNameNumberVO[];
     /** 通知类型 */
-    sendType: string;
+    sendType?: string;
     /** 通知类型描述 */
-    sendTypeDesc: string;
+    sendTypeDesc?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 审核时间 */
-    examineTime: string;
+    examineTime?: string;
     /** 创建人 */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

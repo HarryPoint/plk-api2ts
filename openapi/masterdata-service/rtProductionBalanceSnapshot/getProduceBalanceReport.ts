@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getProduceBalanceReportUsingPOST
 */
-export default function fetchMethod(data: IProductionBalanceStatisticsReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProductionBalanceStatisticsReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionBalanceSnapshot/getProduceBalanceReport",
@@ -17,105 +17,105 @@ export default function fetchMethod(data: IProductionBalanceStatisticsReportSear
 /** 生产结存统计报表搜索VO */
 export interface IProductionBalanceStatisticsReportSearchVO {
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 开始日期 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 结束日期 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
 }
 /** JSONResult«生产结存物料统计报表返回VO» */
 export interface IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionBalanceMaterialStatisticsReportReturnedToVO;
+    data?: IProductionBalanceMaterialStatisticsReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产结存物料统计报表返回VO */
 export interface IProductionBalanceMaterialStatisticsReportReturnedToVO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 报表返回数据集 */
-    reportResults: ITheProductionBalanceStatisticsReportIsReturnedToVO[];
+    reportResults?: ITheProductionBalanceStatisticsReportIsReturnedToVO[];
 }
 /** 生产结存统计报表返回VO */
 export interface ITheProductionBalanceStatisticsReportIsReturnedToVO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 前日结存成品数 */
-    preDayFinishBalanceQuantity: number;
+    preDayFinishBalanceQuantity?: number;
     /** 前日结存半成品数 */
-    preDaySemiBalanceQuantity: number;
+    preDaySemiBalanceQuantity?: number;
     /** 前日结存返工品数 */
-    preDayBackBalanceQuantity: number;
+    preDayBackBalanceQuantity?: number;
     /** 接收数合计 */
-    totalReceiveQuantity: number;
+    totalReceiveQuantity?: number;
     /** 产出数合计 */
-    totalProduceQuantity: number;
+    totalProduceQuantity?: number;
     /** 转出数 - 合格转出合计 */
-    totalRollOutProduceQuantity: number;
+    totalRollOutProduceQuantity?: number;
     /** 转出数 - 返工转出合计 */
-    totalRollOutBackQuantity: number;
+    totalRollOutBackQuantity?: number;
     /** 转出数 - 委外转出合计 */
-    totalRollOutProduceEntrustQuantity: number;
+    totalRollOutProduceEntrustQuantity?: number;
     /** 当天结存成品数 */
-    finishBalanceQuantity: number;
+    finishBalanceQuantity?: number;
     /** 当天结存半成品数 */
-    semiBalanceQuantity: number;
+    semiBalanceQuantity?: number;
     /** 当天结存返工品数 */
-    backBalanceQuantity: number;
+    backBalanceQuantity?: number;
     /** 当天结存不良品数 */
-    scrapBalanceQuantity: number;
+    scrapBalanceQuantity?: number;
     /** 当天结存良品率 */
-    yieldRate: number;
+    yieldRate?: number;
     /** 日期信息集 */
-    dateList: IProductionBalanceStatisticsDateReportReturnsVO[];
+    dateList?: IProductionBalanceStatisticsDateReportReturnsVO[];
 }
 /** 生产结存统计日期报表返回VO */
 export interface IProductionBalanceStatisticsDateReportReturnsVO {
     /** 日期 */
-    produceDate: string;
+    produceDate?: string;
     /** 前日结存成品数 */
-    preDayFinishBalanceQuantity: number;
+    preDayFinishBalanceQuantity?: number;
     /** 前日结存半成品数 */
-    preDaySemiBalanceQuantity: number;
+    preDaySemiBalanceQuantity?: number;
     /** 前日结存返工品数 */
-    preDayBackBalanceQuantity: number;
+    preDayBackBalanceQuantity?: number;
     /** 接收数 */
-    receiveQuantity: number;
+    receiveQuantity?: number;
     /** 产出数 */
-    produceQuantity: number;
+    produceQuantity?: number;
     /** 转出数 */
-    rollOutQuantity: number;
+    rollOutQuantity?: number;
     /** 转出数 - 合格转出 */
-    rollOutProduceQuantity: number;
+    rollOutProduceQuantity?: number;
     /** 转出数 - 返工转出 */
-    rollOutBackQuantity: number;
+    rollOutBackQuantity?: number;
     /** 转出数 - 委外转出 */
-    rollOutProduceEntrustQuantity: number;
+    rollOutProduceEntrustQuantity?: number;
     /** 当天结存成品数 */
-    finishBalanceQuantity: number;
+    finishBalanceQuantity?: number;
     /** 当天结存半成品数 */
-    semiBalanceQuantity: number;
+    semiBalanceQuantity?: number;
     /** 当天结存返工品数 */
-    backBalanceQuantity: number;
+    backBalanceQuantity?: number;
     /** 当天结存不良品数 */
-    scrapBalanceQuantity: number;
+    scrapBalanceQuantity?: number;
     /** 当天结存良品率 */
-    yieldRate: number;
+    yieldRate?: number;
 }

@@ -15,24 +15,24 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«期间响应对象» */
 export interface IResponseObjectDuringJSONResult {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDurationResponseObject;
+    data?: IDurationResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 期间响应对象 */
 export interface IDurationResponseObject {
     /** 期间Id */
-    id: number;
+    id?: number;
     /** 期间 */
-    period: string;
+    period?: string;
     /** 开始日期 */
-    startDate: string;
+    startDate?: string;
     /** 结束日期 */
-    endDate: string;
+    endDate?: string;
     /** 是否当前期间 */
-    isCurrentFiscalPeriod: string;
+    isCurrentFiscalPeriod?: string;
 }

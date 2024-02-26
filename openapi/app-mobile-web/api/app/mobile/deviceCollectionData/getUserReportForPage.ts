@@ -16,73 +16,73 @@ export default function fetchMethod(data: IExampleQueryTheDataDTOReportedByAUser
 /** 查询用户上报数据DTO */
 export interface IExampleQueryTheDataDTOReportedByAUser {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 搜索关键字 */
-    searchKey: string;
+    searchKey?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»» */
 export interface IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO;
+    data?: IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«设备数采人工上报数据详单分页信息返回VO» */
 export interface IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO[];
+    list?: IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 设备数采人工上报数据详单分页信息返回VO */
 export interface IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 数据提交时间 */
-    collectTime: string;
+    collectTime?: string;
     /** 设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** 设备编号 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 设备型号类型 */
-    deviceType: string;
+    deviceType?: string;
     /** 在线状态 */
-    onlineStatus: string;
+    onlineStatus?: string;
     /** 设备状态 */
-    deviceStatus: string;
+    deviceStatus?: string;
     /** 是否有异常 */
-    hasError: string;
+    hasError?: string;
 }

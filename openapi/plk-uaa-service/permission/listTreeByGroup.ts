@@ -15,43 +15,43 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«权限组及权限树响应 DTO»» */
 export interface IJSONResultListPermissionGroupsAndPermissionTreesRespondToDtos {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPermissionGroupsAndPermissionTreesRespondToDtos[];
+    data?: IPermissionGroupsAndPermissionTreesRespondToDtos[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 权限组及权限树响应 DTO */
 export interface IPermissionGroupsAndPermissionTreesRespondToDtos {
     /** 权限组id */
-    id: number;
+    id?: number;
     /** 权限组编码 */
-    code: string;
+    code?: string;
     /** 权限组名称 */
-    name: string;
+    name?: string;
     /** 权限树 */
-    permissionTree: IThePermissionTreeRespondsToTheDTO[];
+    permissionTree?: IThePermissionTreeRespondsToTheDTO[];
 }
 /** 权限树响应 DTO */
 export interface IThePermissionTreeRespondsToTheDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 服务编码 */
-    serveCode: string;
+    serveCode?: string;
     /** 父级编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 权限类型 */
-    type: string;
+    type?: string;
     /** 系统应用类型 */
-    applicationSystemType: string;
+    applicationSystemType?: string;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 子集 */
-    children: IThePermissionTreeRespondsToTheDTO[];
+    children?: IThePermissionTreeRespondsToTheDTO[];
 }

@@ -16,50 +16,50 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«ProduceTechnologyRoutingResponseDTO»» */
 export interface IJSONResultListProduceTechnologyRoutingResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProduceTechnologyRoutingResponseDTO[];
+    data?: IProduceTechnologyRoutingResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProduceTechnologyRoutingResponseDTO */
 export interface IProduceTechnologyRoutingResponseDTO {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 生产工艺id */
-    produceTechnologyId: number;
+    produceTechnologyId?: number;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 所属工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 工艺路径编码 */
-    code: string;
+    code?: string;
     /** 工艺路径名称 */
-    name: string;
+    name?: string;
     /** 关联物料id */
-    materialId: number;
+    materialId?: number;
     /** 关联BOM id */
-    materialBomId: number;
+    materialBomId?: number;
     /** 所属生产工艺物料BOMid */
-    produceTechnologyMaterialBomId: number;
+    produceTechnologyMaterialBomId?: number;
 }

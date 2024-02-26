@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/getDetailByIdUsingGET_3
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProductServiceDetailsResponseObject>(
         {
             url: "/plk-uaa-service/productService/getDetailById",
@@ -16,86 +16,86 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«产品服务详情响应对象» */
 export interface IJSONResultProductServiceDetailsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductServiceDetailsResponseObject;
+    data?: IProductServiceDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产品服务详情响应对象 */
 export interface IProductServiceDetailsResponseObject {
     /** 产品服务id */
-    id: number;
+    id?: number;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 企业编号 */
-    enterpriseCode: string;
+    enterpriseCode?: string;
     /** 产品服务编号 */
-    code: string;
+    code?: string;
     /** 产品服务类型 */
-    type: string;
+    type?: string;
     /** 产品服务状态 */
-    status: string;
+    status?: string;
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 到期时间 */
-    expireTime: string;
+    expireTime?: string;
     /** 账号数 */
-    availableAccountQuantity: number;
+    availableAccountQuantity?: number;
     /** 产品模块数组 */
-    productModuleArray: string[];
+    productModuleArray?: string[];
     /** 产品订单列表 */
-    productOrderList: IProductOrderResponseObject[];
+    productOrderList?: IProductOrderResponseObject[];
     /** 产品服务日志列表 */
-    productServiceLogList: IProductServiceLogResponseObject[];
+    productServiceLogList?: IProductServiceLogResponseObject[];
 }
 /** 产品订单响应对象 */
 export interface IProductOrderResponseObject {
     /** 订单id */
-    id: number;
+    id?: number;
     /** 订单编号 */
-    code: string;
+    code?: string;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 订单金额(元) */
-    orderMoneyQuantity: number;
+    orderMoneyQuantity?: number;
     /** 下单用户id */
-    placeOrderUserId: number;
+    placeOrderUserId?: number;
     /** 下单用户名称 */
-    placeOrderUserName: string;
+    placeOrderUserName?: string;
     /** 下单时间 */
-    placeOrderTime: string;
+    placeOrderTime?: string;
 }
 /** 产品服务日志响应对象 */
 export interface IProductServiceLogResponseObject {
     /** 操作类型 */
-    type: string;
+    type?: string;
     /** 产品服务类型 */
-    productServiceType: string;
+    productServiceType?: string;
     /** 产品服务到期时间 */
-    productServiceExpireTime: string;
+    productServiceExpireTime?: string;
     /** 产品服务可用账号数 */
-    productServiceAvailableAccountQuantity: number;
+    productServiceAvailableAccountQuantity?: number;
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 产品订单编号 */
-    productOrderCode: string;
+    productOrderCode?: string;
     /** 产品订单类型 */
-    productOrderType: string;
+    productOrderType?: string;
     /** 产品订单加购类型 */
-    productOrderAppendType: string;
+    productOrderAppendType?: string;
     /** 产品订单延期类型 */
-    productOrderDelayType: string;
+    productOrderDelayType?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }

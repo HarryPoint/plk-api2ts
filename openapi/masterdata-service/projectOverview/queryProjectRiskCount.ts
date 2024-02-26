@@ -18,49 +18,49 @@ export interface IProjectOverviewQueryDto {
     /** 项目id */
     projectId: number;
     /** 开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 查询条数 */
-    limit: number;
+    limit?: number;
 }
 /** JSONResult«项目风险统计响应对象» */
 export interface IJSONResultProjectRiskStatisticsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectRiskStatisticalResponseObject;
+    data?: IProjectRiskStatisticalResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目风险统计响应对象 */
 export interface IProjectRiskStatisticalResponseObject {
     /** 风险总数量 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 已完成数量 */
-    completeQuantity: number;
+    completeQuantity?: number;
     /** 超期数量 */
-    overdueQuantity: number;
+    overdueQuantity?: number;
     /** 低风险数量 */
-    lowQuantity: number;
+    lowQuantity?: number;
     /** 中风险数量 */
-    midQuantity: number;
+    midQuantity?: number;
     /** 高风险数量 */
-    highQuantity: number;
+    highQuantity?: number;
     /** 未完成数量 */
-    unCompleteQuantity: number;
+    unCompleteQuantity?: number;
     /** 低风险完成数量 */
-    lowCompleteQuantity: number;
+    lowCompleteQuantity?: number;
     /** 中风险完成数量 */
-    midCompleteQuantity: number;
+    midCompleteQuantity?: number;
     /** 高风险完成数量 */
-    highCompleteQuantity: number;
+    highCompleteQuantity?: number;
     /** 低风险未完成数量 */
-    lowUnCompleteQuantity: number;
+    lowUnCompleteQuantity?: number;
     /** 中风险未完成数量 */
-    midUnCompleteQuantity: number;
+    midUnCompleteQuantity?: number;
     /** 高风险未完成数量 */
-    highUnCompleteQuantity: number;
+    highUnCompleteQuantity?: number;
 }

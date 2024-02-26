@@ -16,38 +16,38 @@ export default function fetchMethod(data: IRegionalMasterDataSelectionListSearch
 /** 区域主数据选择列表搜索VO */
 export interface IRegionalMasterDataSelectionListSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 名称/编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdCodeNameGenericTransportObject[];
+    data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

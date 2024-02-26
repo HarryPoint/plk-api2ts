@@ -16,40 +16,40 @@ export default function fetchMethod(params: { processId?: number }, extraOptions
 /** JSONResult«ProcessDeprecatedVO» */
 export interface IJSONResultProcessDeprecatedVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessDeprecatedVO;
+    data?: IProcessDeprecatedVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProcessDeprecatedVO */
 export interface IProcessDeprecatedVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 所属区域id */
-    areaId: number;
+    areaId?: number;
     /** 工序名称 */
-    name: string;
+    name?: string;
     /** 工序编号 */
-    code: string;
+    code?: string;
     /** 准备时间 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 生产时间 */
-    produceTime: number;
+    produceTime?: number;
     /** 生产时间单位 */
-    produceTimeUnit: string;
+    produceTimeUnit?: string;
     /** 产出数量 */
-    produceQuantity: number;
+    produceQuantity?: number;
     /** 准备工费（元） */
-    readyPrice: number;
+    readyPrice?: number;
     /** 合格产出工费（元） */
-    producePrice: number;
+    producePrice?: number;
     /** 返工产出工费（元） */
-    backProducePrice: number;
+    backProducePrice?: number;
 }

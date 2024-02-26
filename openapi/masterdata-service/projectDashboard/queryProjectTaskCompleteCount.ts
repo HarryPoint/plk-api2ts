@@ -16,43 +16,43 @@ export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?:
 /** 项目看板查询dto */
 export interface IProjectKanbanQueryDto {
     /** 开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 项目大类 */
-    projectCategory: string;
+    projectCategory?: string;
     /** undefined */
-    projectTypeIds: number[];
+    projectTypeIds?: number[];
     /** undefined */
-    excludeProjectIds: number[];
+    excludeProjectIds?: number[];
 }
 /** JSONResult«项目任务统计响应对象» */
 export interface IJSONResultProjectTaskStatisticsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskStatisticsResponseObject;
+    data?: IProjectTaskStatisticsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务统计响应对象 */
 export interface IProjectTaskStatisticsResponseObject {
     /** 任务总数量 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 已完成数量 */
-    completeQuantity: number;
+    completeQuantity?: number;
     /** 超期数量 */
-    overdueQuantity: number;
+    overdueQuantity?: number;
     /** 按期完成数量 */
-    onTimeCompleteQuantity: number;
+    onTimeCompleteQuantity?: number;
     /** 超期完成数量 */
-    overdueCompleteQuantity: number;
+    overdueCompleteQuantity?: number;
     /** 未完成数量 */
-    unCompleteQuantity: number;
+    unCompleteQuantity?: number;
     /** 正常进行数量 */
-    normalQuantity: number;
+    normalQuantity?: number;
     /** 超期未完成数量 */
-    overdueUnCompleteQuantity: number;
+    overdueUnCompleteQuantity?: number;
 }

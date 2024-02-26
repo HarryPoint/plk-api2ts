@@ -15,16 +15,16 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«设置期间开始月份Response» */
 export interface IJSONResultSetsResponseDuringTheStartMonth {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISetResponseDuringStartMonth;
+    data?: ISetResponseDuringStartMonth;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设置期间开始月份Response */
 export interface ISetResponseDuringStartMonth {
     /** ID */
-    startMonth: string;
+    startMonth?: string;
 }

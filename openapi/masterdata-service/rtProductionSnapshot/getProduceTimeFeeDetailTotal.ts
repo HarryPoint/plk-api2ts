@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeDetailTotalUsingPOST
 */
-export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultTotalLaborCostReportReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeDetailTotal",
@@ -17,56 +17,56 @@ export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params
 /** 工时工费报表搜索VO */
 export interface IHourlyLaborRateReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 员工id集 */
-    userIds: number[];
+    userIds?: number[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产任务编码 */
-    produceTaskNo: string;
+    produceTaskNo?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«工时工费报表合计返回VO» */
 export interface IJSONResultTotalLaborCostReportReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheTotalReportOfTimeAndExpenseIsReturnedToVO;
+    data?: ITheTotalReportOfTimeAndExpenseIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工时工费报表合计返回VO */
 export interface ITheTotalReportOfTimeAndExpenseIsReturnedToVO {
     /** 合格产出数量 */
-    produceQuantity: number;
+    produceQuantity?: number;
     /** 合格工费 */
-    produceFee: number;
+    produceFee?: number;
     /** 返工数量 */
-    backQuantity: number;
+    backQuantity?: number;
     /** 返工工费 */
-    backFee: number;
+    backFee?: number;
 }

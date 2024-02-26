@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/getVOByIdNotCheckUsingGET_1
 */
-export default function fetchMethod(params: { enterpriseId: number; id?: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultEmployeeVO>(
         {
             url: "/masterdata-service/employee/getVOByIdNotCheck",
@@ -16,44 +16,44 @@ export default function fetchMethod(params: { enterpriseId: number; id?: number 
 /** JSONResult«员工VO» */
 export interface IJSONResultEmployeeVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmployeeVO;
+    data?: IEmployeeVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 员工VO */
 export interface IEmployeeVO {
     /** id */
-    id: number;
+    id?: number;
     /** 员工工号 */
-    code: string;
+    code?: string;
     /** 员工姓名 */
-    name: string;
+    name?: string;
     /** 所属部门id */
-    departmentId: number;
+    departmentId?: number;
     /** 所属账号id */
-    userId: number;
+    userId?: number;
     /** 手机号码 */
-    mobilePhone: string;
+    mobilePhone?: string;
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 入职日期 */
-    entryTime: string;
+    entryTime?: string;
     /** 离职日期 */
-    dimissionTime: string;
+    dimissionTime?: string;
     /** 出生日期 */
-    birthday: string;
+    birthday?: string;
     /** 性别 */
-    gender: string;
+    gender?: string;
     /** 学历 */
-    educational: string;
+    educational?: string;
     /** 籍贯 */
-    nativePlace: string;
+    nativePlace?: string;
     /** 任职职位id */
-    positionId: number;
+    positionId?: number;
     /** 任职开始日期 */
-    positionDate: string;
+    positionDate?: string;
 }

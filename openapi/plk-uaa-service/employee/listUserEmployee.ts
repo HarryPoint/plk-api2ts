@@ -16,37 +16,37 @@ export default function fetchMethod(data: IUserEmployeeQuery1, extraOptions?: an
 /** 用户员工查询_1 */
 export interface IUserEmployeeQuery1 {
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 员工id集 */
-    employeeIds: number[];
+    employeeIds?: number[];
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务业务ID */
-    serviceBusinessId: number;
+    serviceBusinessId?: number;
 }
 /** JSONResult«List«用户员工信息响应»» */
 export interface IJSONResultListUserEmployeeInformationResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserEmployeeInformationResponse[];
+    data?: IUserEmployeeInformationResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 用户员工信息响应 */
 export interface IUserEmployeeInformationResponse {
     /** 员工id */
-    employeeId: number;
+    employeeId?: number;
     /** 用户id */
-    userId: number;
+    userId?: number;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务业务ID */
-    serviceBusinessId: number;
+    serviceBusinessId?: number;
 }

@@ -15,20 +15,20 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«ProjectManageAppQueryResponseDTO» */
 export interface IJSONResultProjectManageAppQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectManageAppQueryResponseDTO;
+    data?: IProjectManageAppQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProjectManageAppQueryResponseDTO */
 export interface IProjectManageAppQueryResponseDTO {
     /** 项目管理App id列表 */
-    projectManageAppList: IIdNameNumberVO[];
+    projectManageAppList?: IIdNameNumberVO[];
     /** 公共App id列表 */
-    publicAppList: IIdNameNumberVO[];
+    publicAppList?: IIdNameNumberVO[];
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

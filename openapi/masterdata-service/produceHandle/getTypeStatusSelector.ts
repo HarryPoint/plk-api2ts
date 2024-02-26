@@ -15,27 +15,27 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«生产处理类型状态二级联动VO»» */
 export interface IJSONResultListProductionProcessTypeStatusLevel2LinkageVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionProcessingTypeStatusSecondLevelLinkageVO[];
+    data?: IProductionProcessingTypeStatusSecondLevelLinkageVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产处理类型状态二级联动VO */
 export interface IProductionProcessingTypeStatusSecondLevelLinkageVO {
     /** 异常分类 */
-    type: string;
+    type?: string;
     /** 异常分类描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 关联状态集 */
-    statusList: IProductionProcessingStatusVO[];
+    statusList?: IProductionProcessingStatusVO[];
 }
 /** 生产处理状态VO */
 export interface IProductionProcessingStatusVO {
     /** 异常状态 */
-    status: string;
+    status?: string;
     /** 异常状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
 }

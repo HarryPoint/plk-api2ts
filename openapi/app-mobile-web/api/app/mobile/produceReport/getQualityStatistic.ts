@@ -20,55 +20,55 @@ export interface IUserProductionStatisticsSearchVO {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList: string[];
+    produceTaskTypeList?: string[];
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
 }
 /** JSONResult«List«用户质检统计返回VO»» */
 export interface IJSONResultListReturnsVOToTheUserInspectionStatistics {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserInspectionStatisticsReturnVO[];
+    data?: IUserInspectionStatisticsReturnVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 用户质检统计返回VO */
 export interface IUserInspectionStatisticsReturnVO {
     /** 所属员工id */
-    userId: number;
+    userId?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 总质检个数 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 合格数 */
-    passQuantity: number;
+    passQuantity?: number;
     /** 合格数占比 */
-    passQuantityRatio: number;
+    passQuantityRatio?: number;
     /** 让步接收数 */
-    concessionQuantity: number;
+    concessionQuantity?: number;
     /** 让步接收数占比 */
-    concessionQuantityRatio: number;
+    concessionQuantityRatio?: number;
     /** 不合格数 */
-    notPassQuantity: number;
+    notPassQuantity?: number;
     /** 不合格数占比 */
-    notPassQuantityRatio: number;
+    notPassQuantityRatio?: number;
 }

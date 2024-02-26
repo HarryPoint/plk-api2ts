@@ -16,18 +16,18 @@ export default function fetchMethod(data: INameNumberDTO, extraOptions?: any) {
 /** 名称、编号DTO */
 export interface INameNumberDTO {
     /** 名称or编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
 }
 /** JSONResult«List«名称编码响应 DTO»» */
 export interface IJSONResultListNameEncodesTheResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: INameEncodingResponseDTO[];
+    data?: INameEncodingResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 名称编码响应 DTO */
 export interface INameEncodingResponseDTO {

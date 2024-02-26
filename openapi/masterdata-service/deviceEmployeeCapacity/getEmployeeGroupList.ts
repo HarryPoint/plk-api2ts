@@ -16,58 +16,58 @@ export default function fetchMethod(data: IDevicePersonnelAbilityQueryDtosInGrou
 /** 设备人员能力分组查询DTO */
 export interface IDevicePersonnelAbilityQueryDtosInGroups {
     /** 人员id */
-    employeeIds: number[];
+    employeeIds?: number[];
     /** 班组id */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 部门id */
-    departmentIds: number[];
+    departmentIds?: number[];
     /** 维修能力 */
-    maintainLevels: string[];
+    maintainLevels?: string[];
     /** 保养能力 */
-    canMaintains: string[];
+    canMaintains?: string[];
 }
 /** JSONResult«List«设备人员能力分组响应DTO»» */
 export interface IJSONResultListDevicePersonnelAbilityToGroupResponseDtos {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEquipmentPersonnelAbilityToRespondToDTOInGroups[];
+    data?: IEquipmentPersonnelAbilityToRespondToDTOInGroups[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备人员能力分组响应DTO */
 export interface IEquipmentPersonnelAbilityToRespondToDTOInGroups {
     /** 人员能力id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 人员id */
-    employeeId: number;
+    employeeId?: number;
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 部门id */
-    departmentId: number;
+    departmentId?: number;
     /** 人员名称 */
-    employeeName: string;
+    employeeName?: string;
     /** 班组 */
-    classGroupName: string;
+    classGroupName?: string;
     /** 部门 */
-    departmentName: string;
+    departmentName?: string;
     /** 人员 */
-    items: IEquipmentPersonnelCapabilityGroupItemRespondsToDTO[];
+    items?: IEquipmentPersonnelCapabilityGroupItemRespondsToDTO[];
 }
 /** 设备人员能力分组项响应DTO */
 export interface IEquipmentPersonnelCapabilityGroupItemRespondsToDTO {
     /** 人员能力明细id */
-    detailId: number;
+    detailId?: number;
     /** 设备类型id */
-    deviceTypeId: number;
+    deviceTypeId?: number;
     /** 设备类型 */
-    deviceTypeName: string;
+    deviceTypeName?: string;
     /** 维修能力 */
-    maintainLevel: string;
+    maintainLevel?: string;
     /** 保养能力 */
-    canMaintain: string;
+    canMaintain?: string;
 }

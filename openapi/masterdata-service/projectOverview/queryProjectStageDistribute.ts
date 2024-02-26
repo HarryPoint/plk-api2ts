@@ -18,52 +18,52 @@ export interface IProjectOverviewQueryDto {
     /** 项目id */
     projectId: number;
     /** 开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 查询条数 */
-    limit: number;
+    limit?: number;
 }
 /** JSONResult«List«项目阶段分布响应对象»» */
 export interface IJSONResultListProjectPhaseDistributesResponseObjects {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProjectPhaseDistributesTheResponseObjects[];
+    data?: ITheProjectPhaseDistributesTheResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目阶段分布响应对象 */
 export interface ITheProjectPhaseDistributesTheResponseObjects {
     /** 项目阶段名称 */
-    projectStageName: string;
+    projectStageName?: string;
     /** 项目阶段id */
-    projectStageId: number;
+    projectStageId?: number;
     /** 项目阶段排序 */
-    sort: number;
+    sort?: number;
     /** 项目任务列表 */
-    projectTaskList: IProjectPhaseTasksDistributeResponseObjects[];
+    projectTaskList?: IProjectPhaseTasksDistributeResponseObjects[];
 }
 /** 项目阶段任务分布响应对象 */
 export interface IProjectPhaseTasksDistributeResponseObjects {
     /** 项目任务类型id */
-    projectTaskTypeId: number;
+    projectTaskTypeId?: number;
     /** 项目任务类型编号 */
-    projectTaskTypeCode: string;
+    projectTaskTypeCode?: string;
     /** 项目任务类型名称 */
-    projectTaskTypeName: string;
+    projectTaskTypeName?: string;
     /** 项目任务名称 */
-    projectTaskName: string;
+    projectTaskName?: string;
     /** 项目任务id */
-    projectTaskId: number;
+    projectTaskId?: number;
     /** 项目任务开始日期 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 项目任务状态 */
-    taskStatus: string;
+    taskStatus?: string;
     /** 来源应用编号 */
-    fromAppCode: string;
+    fromAppCode?: string;
     /** 来源应用id */
-    fromAppId: number;
+    fromAppId?: number;
 }

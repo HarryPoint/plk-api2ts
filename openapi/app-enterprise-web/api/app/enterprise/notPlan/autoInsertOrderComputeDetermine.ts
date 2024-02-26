@@ -16,15 +16,15 @@ export default function fetchMethod(data: IProductionOrderAutomaticInsertionCalc
 /** 生产订单自动插单计算结果确定DTO */
 export interface IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO {
     /** 排产计划单名称 */
-    planName: string;
+    planName?: string;
     /** 排产方式 */
-    autoPlanType: string;
+    autoPlanType?: string;
     /** 是否考虑自动提前（要传计算时的值） */
-    isAutoMoveUp: string;
+    isAutoMoveUp?: string;
     /** 生产订单计划时间集 */
-    produceOrderPlanTimes: IAutomaticProductionOrderSchedulingTimeDTO[];
+    produceOrderPlanTimes?: IAutomaticProductionOrderSchedulingTimeDTO[];
     /** 顺延订单计划时间集 */
-    produceOrderPostponeTimes: IAutomaticProductionOrderSchedulingTimeDTO[];
+    produceOrderPostponeTimes?: IAutomaticProductionOrderSchedulingTimeDTO[];
 }
 /** 生产订单自动排产计划时间DTO */
 export interface IAutomaticProductionOrderSchedulingTimeDTO {
@@ -37,7 +37,7 @@ export interface IAutomaticProductionOrderSchedulingTimeDTO {
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 步骤计划集 */
-    steps: IProductionOrderAutomaticSchedulingStepTimeDTO[];
+    steps?: IProductionOrderAutomaticSchedulingStepTimeDTO[];
 }
 /** 生产订单自动排产计划步骤时间DTO */
 export interface IProductionOrderAutomaticSchedulingStepTimeDTO {
@@ -57,11 +57,11 @@ export interface IProductionOrderAutomaticSchedulingStepTimeDTO {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

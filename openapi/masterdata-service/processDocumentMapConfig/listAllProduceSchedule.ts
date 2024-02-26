@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listAllProduceScheduleUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProductionScheduleVO>(
         {
             url: "/masterdata-service/processDocumentMapConfig/listAllProduceSchedule",
@@ -16,22 +16,22 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
 /** JSONResult«List«生产排期VO»» */
 export interface IJSONResultListProductionScheduleVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionScheduleVO[];
+    data?: IProductionScheduleVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产排期VO */
 export interface IProductionScheduleVO {
     /** 生产开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 生产结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 生产物料ids */
-    produceMaterialIdList: number[];
+    produceMaterialIdList?: number[];
     /** 生产区域ids */
-    produceAreaIdList: number[];
+    produceAreaIdList?: number[];
 }

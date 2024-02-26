@@ -15,28 +15,28 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«费用归集明细响应DTO»» */
 export interface IJSONResultListDetailedResponseDTOForCostCollection {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExpenseCollectionDetailsRespondToDTO[];
+    data?: IExpenseCollectionDetailsRespondToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 费用归集明细响应DTO */
 export interface IExpenseCollectionDetailsRespondToDTO {
     /** 费用归集明细id */
-    id: number;
+    id?: number;
     /** 费用类型id */
-    produceFeeTypeId: number;
+    produceFeeTypeId?: number;
     /** 费用编码 */
-    produceFeeCode: string;
+    produceFeeCode?: string;
     /** 费用名称 */
-    produceFeeName: string;
+    produceFeeName?: string;
     /** 费用金额 */
-    fee: number;
+    fee?: number;
     /** 所属期间 */
-    periodDate: string;
+    periodDate?: string;
     /** 指定生产订单 */
-    produceOrderId: number;
+    produceOrderId?: number;
 }

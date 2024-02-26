@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeAndFeeStatisticUsingPOST
 */
-export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IUserProductionStatisticsSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListUserProductionStatisticsReturnVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeAndFeeStatistic",
@@ -21,65 +21,65 @@ export interface IUserProductionStatisticsSearchVO {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产任务类型 */
-    produceTaskTypeList: string[];
+    produceTaskTypeList?: string[];
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
 }
 /** JSONResult«List«用户生产统计返回VO»» */
 export interface IJSONResultListUserProductionStatisticsReturnVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserProductionStatisticsReturnVO[];
+    data?: IUserProductionStatisticsReturnVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 用户生产统计返回VO */
 export interface IUserProductionStatisticsReturnVO {
     /** 所属员工id */
-    userId: number;
+    userId?: number;
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 总合格产出个数 */
-    totalProduceQuantity: number;
+    totalProduceQuantity?: number;
     /** 总生产进料个数 */
-    totalProduceMoveInQuantity: number;
+    totalProduceMoveInQuantity?: number;
     /** 总返工个数 */
-    totalBackQuantity: number;
+    totalBackQuantity?: number;
     /** 总报废个数 */
-    totalScrapQuantity: number;
+    totalScrapQuantity?: number;
     /** 总暂扣品个数 */
-    totalHoldPauseQuantity: number;
+    totalHoldPauseQuantity?: number;
     /** 合格产出参考工费 */
-    produceFee: number;
+    produceFee?: number;
     /** 合格产出参考工时 */
-    produceTaskTime: number;
+    produceTaskTime?: number;
     /** 返工产出参考工费 */
-    backFee: number;
+    backFee?: number;
     /** 返工产出参考工时 */
-    backTaskTime: number;
+    backTaskTime?: number;
     /** 记录时间 */
-    createTime: string;
+    createTime?: string;
     /** 快照类型 */
-    type: string;
+    type?: string;
 }

@@ -15,30 +15,30 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«项目门户响应对象»» */
 export interface IJSONResultListProjectPortalResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectPortalResponseObject[];
+    data?: IProjectPortalResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目门户响应对象 */
 export interface IProjectPortalResponseObject {
     /** 项目id */
-    id: number;
+    id?: number;
     /** 项目编号 */
-    code: string;
+    code?: string;
     /** 项目名称 */
-    name: string;
+    name?: string;
     /** 项目状态 */
-    projectStatus: string;
+    projectStatus?: string;
     /** 项目类型名称 */
-    projectTypeName: string;
+    projectTypeName?: string;
     /** 项目经理名称 */
-    projectManagerName: string;
+    projectManagerName?: string;
     /** undefined */
-    projectTypeId: number;
+    projectTypeId?: number;
     /** undefined */
-    projectManagerId: number;
+    projectManagerId?: number;
 }

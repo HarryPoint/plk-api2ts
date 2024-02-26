@@ -16,31 +16,31 @@ export default function fetchMethod(data: IOutputClassReportSearchVO, extraOptio
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 查询时间维度类型 */
-    timeType: string;
+    timeType?: string;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportingTicketInformation;
+    data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
-    ticket: string;
+    ticket?: string;
 }

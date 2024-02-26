@@ -16,97 +16,97 @@ export default function fetchMethod(data: ICapacityUtilizationReportQueryingDtos
 /** 产能利用率报表查询DTO */
 export interface ICapacityUtilizationReportQueryingDtos {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 工序id列表 */
-    processIdList: number[];
+    processIdList?: number[];
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 日期 -- 开始时间 */
     beginTime: string;
     /** 天数 */
-    dayCount: number;
+    dayCount?: number;
     /** 日期 -- 结束时间 */
     endTime: string;
     /** undefined */
-    produceTaskIds: number[];
+    produceTaskIds?: number[];
     /** undefined */
-    panPanProduceOrderCompleteType: string;
+    panPanProduceOrderCompleteType?: string;
     /** 是否按天数过滤 */
-    isFilterByDayCount: boolean;
+    isFilterByDayCount?: boolean;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«产能利用率报表VO»» */
 export interface IJSONResultPagingInformationCapacityUtilizationReportVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationCapacityUtilizationReportVO;
+    data?: IPagingInformationCapacityUtilizationReportVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«产能利用率报表VO» */
 export interface IPagingInformationCapacityUtilizationReportVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ICapacityUtilizationReportVO[];
+    list?: ICapacityUtilizationReportVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 产能利用率报表VO */
 export interface ICapacityUtilizationReportVO {
     /** 工序Id */
-    processId: number;
+    processId?: number;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 日均产能 */
-    dayCapacity: number;
+    dayCapacity?: number;
     /** 统计天数 */
-    dayNum: number;
+    dayNum?: number;
     /** 累计产能 */
-    totalCapacity: number;
+    totalCapacity?: number;
     /** 计划生产数量 */
-    planProduceNum: number;
+    planProduceNum?: number;
     /** 实际生产数量 */
-    realProduceNum: number;
+    realProduceNum?: number;
     /** 计划完成率 */
-    planCompleteRate: number;
+    planCompleteRate?: number;
     /** 产能利用率 */
-    capacityCompleteRate: number;
+    capacityCompleteRate?: number;
     /** 实际工作人数 */
-    realWorkUserQuantity: number;
+    realWorkUserQuantity?: number;
     /** 实际工时 */
-    realWorkTimeQuantity: number;
+    realWorkTimeQuantity?: number;
     /** undefined */
-    actualProduceOrderCount: number;
+    actualProduceOrderCount?: number;
     /** undefined */
-    planProduceOrderCount: number;
+    planProduceOrderCount?: number;
     /** 当日计划完工量 */
-    curPlanCompleteNum: number;
+    curPlanCompleteNum?: number;
 }

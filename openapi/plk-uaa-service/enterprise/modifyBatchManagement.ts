@@ -16,18 +16,18 @@ export default function fetchMethod(data: IExampleModifyTheEnterpriseBatchManage
 /** 修改企业批次管理信息请求对象 */
 export interface IExampleModifyTheEnterpriseBatchManagementInformationRequestObject {
     /** 企业id */
-    id: number;
+    id?: number;
     /** 是否启用批次关联 */
-    isEnableBatchManagement: string;
+    isEnableBatchManagement?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -16,21 +16,21 @@ export default function fetchMethod(data: IProcessDataBaseSearchVO2, extraOption
 /** 流程数据基础搜索VO_2 */
 export interface IProcessDataBaseSearchVO2 {
     /** 显示字段序列号 */
-    showFieldSerialNoList: string[];
+    showFieldSerialNoList?: string[];
     /** 全局搜索 */
-    allSearch: string;
+    allSearch?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 字段搜索 */
-    dataSearchList: IProcessDataDetailsSearchVO[];
+    dataSearchList?: IProcessDataDetailsSearchVO[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 明细表表code，传值后，将会查询明细表数据 */
-    tableColumnCode: string;
+    tableColumnCode?: string;
     /** 当前的表单分组 */
-    currentFormDataGrouping: IFormDataGroupingDTO;
+    currentFormDataGrouping?: IFormDataGroupingDTO;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
@@ -39,48 +39,48 @@ export interface IProcessDataDetailsSearchVO {
     /** 搜索类型 */
     searchType: string;
     /** 搜索文本 - 针对文本搜索 */
-    text: string;
+    text?: string;
     /** 搜索起始值 - 针对范围搜索 */
-    limitBegin: Record<string, any>;
+    limitBegin?: Record<string, any>;
     /** 搜索结束值 - 针对范围搜索 */
-    limitEnd: Record<string, any>;
+    limitEnd?: Record<string, any>;
     /** 搜索选项值 - 针对选择搜索 */
-    selectors: Record<string, any>[];
+    selectors?: Record<string, any>[];
     /** 表格编码 */
-    tableCode: string;
+    tableCode?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
     /** 分组字段序列 */
-    groupingFieldSerialNo: string;
+    groupingFieldSerialNo?: string;
     /** 分组字段编码 */
-    groupFieldCode: string;
+    groupFieldCode?: string;
     /** 分组的值， 如果是关联表单，则是ID */
-    groupingValue: string;
+    groupingValue?: string;
     /** 分组名称 */
-    groupingName: string;
+    groupingName?: string;
     /** 下级分组 */
-    children: IFormDataGroupingDTO[];
+    children?: IFormDataGroupingDTO[];
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
-    cascadeFormData: string;
+    cascadeFormData?: string;
     /** 多级基础数据上级ID */
-    treeDataParentId: number;
+    treeDataParentId?: number;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -15,30 +15,30 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«RegionVo»» */
 export interface IJSONResultListRegionVo {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IRegionVo[];
+    data?: IRegionVo[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** RegionVo */
 export interface IRegionVo {
     /** ID */
-    id: number;
+    id?: number;
     /** 行政区划编码 */
-    code: string;
+    code?: string;
     /** 行政区划名称 */
-    name: string;
+    name?: string;
     /** 行政区域名称拼英 ["bei", "jing"] */
-    pinYin: Record<string, any>[];
+    pinYin?: Record<string, any>[];
     /** 行政区域位置 */
-    location: Record<string, Record<string, any>>;
+    location?: Record<string, Record<string, any>>;
     /** 上级行政区域ID */
-    parentId: number;
+    parentId?: number;
     /** 上级行政区域编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 下级行政区域 */
-    children: IRegionVo[];
+    children?: IRegionVo[];
 }

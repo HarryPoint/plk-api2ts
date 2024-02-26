@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getMaterialSettingUsingPOST
 */
-export default function fetchMethod(data: ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultSafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/safetyStockExchangeApply/getMaterialSetting",
@@ -19,27 +19,27 @@ export interface ISafetyInventoryMaterialInventoryConfigurationInformationSearch
     /** 设置类型 */
     type: string;
     /** 对应业务id */
-    businessId: number;
+    businessId?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
 }
 /** JSONResult«安全库存物料库存配置信息返回VO» */
 export interface IJSONResultSafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO;
+    data?: ISafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 安全库存物料库存配置信息返回VO */
 export interface ISafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO {
     /** 安全库存下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 安全库存上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 采购触发下限 */
-    purchaseLowerLimit: number;
+    purchaseLowerLimit?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/getByIdUsingPOST
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultEmailTaskDTO>(
         {
             url: "/message-notification-service/emailTask/getById",
@@ -16,78 +16,78 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«EmailTaskDTO» */
 export interface IJSONResultEmailTaskDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmailTaskDTO;
+    data?: IEmailTaskDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** EmailTaskDTO */
 export interface IEmailTaskDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 邮件名称 */
-    emailName: string;
+    emailName?: string;
     /** 收件人 */
-    addressee: string;
+    addressee?: string;
     /** 标题 */
-    title: string;
+    title?: string;
     /** 邮件正文 */
-    content: string;
+    content?: string;
     /** 发送模式 */
-    sendingMode: string;
+    sendingMode?: string;
     /** 发送时间 */
-    sendingTime: string;
+    sendingTime?: string;
     /** 下次发送时间 */
-    nextSendingTime: string;
+    nextSendingTime?: string;
     /** 上次发送时间 */
-    lastSendingTime: string;
+    lastSendingTime?: string;
     /** 附件配置列表 */
-    attachmentConfigList: IEmailTaskAttachmentConfigDTO[];
+    attachmentConfigList?: IEmailTaskAttachmentConfigDTO[];
     /** 邮件状态 */
-    status: string;
+    status?: string;
     /** 发送时间配置 */
-    sendingTimeConfig: ISendingTimeConfigDTO;
+    sendingTimeConfig?: ISendingTimeConfigDTO;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 更新用户名 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 创建部门名 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门名 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
 }
 /** EmailTaskAttachmentConfigDTO */
 export interface IEmailTaskAttachmentConfigDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 其他对象引用ID */
-    refId: number;
+    refId?: number;
     /** 文件类型 */
-    fileType: string;
+    fileType?: string;
 }
 /** SendingTimeConfigDTO */
 export interface ISendingTimeConfigDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 时间模式 */
-    timeMode: string;
+    timeMode?: string;
     /** 周号 */
-    weekNo: number;
+    weekNo?: number;
     /** 每月的计时模式 */
-    monthCalcTimeMode: string;
+    monthCalcTimeMode?: string;
     /** 第几天 */
-    day: number;
+    day?: number;
     /** 季度计时模式 */
-    quarterCalcTimeMode: string;
+    quarterCalcTimeMode?: string;
     /** 每天第几天 */
-    month: number;
+    month?: number;
     /** 时间 */
-    time: string;
+    time?: string;
 }

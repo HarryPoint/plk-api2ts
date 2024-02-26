@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/发送邮件记录/getByIdUsingGET_20
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultSendingEmailRecordDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/sendingEmailRecord/getById",
@@ -16,49 +16,49 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«SendingEmailRecordDTO» */
 export interface IJSONResultSendingEmailRecordDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISendingEmailRecordDTO;
+    data?: ISendingEmailRecordDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** SendingEmailRecordDTO */
 export interface ISendingEmailRecordDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 邮件名称 */
-    emailName: string;
+    emailName?: string;
     /** 邮件任务ID */
-    emailTaskId: number;
+    emailTaskId?: number;
     /** 邮件任务-标题 */
-    title: string;
+    title?: string;
     /** 内容 */
-    content: string;
+    content?: string;
     /** 发送邮件状态 */
-    status: string;
+    status?: string;
     /** 发送时间 */
-    sendingTime: string;
+    sendingTime?: string;
     /** 发送来源 */
-    sendingFrom: string;
+    sendingFrom?: string;
     /** 收件人地址 */
-    addressee: string;
+    addressee?: string;
     /**  是否已准备好数据，只有准备好的邮件才能重新发送 */
-    isReady: string;
+    isReady?: string;
     /** 失败的原因 */
-    failureReason: string;
+    failureReason?: string;
     /** 发送邮件附件列表 */
-    attachmentList: ISendingEmailAttachmentDTO[];
+    attachmentList?: ISendingEmailAttachmentDTO[];
 }
 /** SendingEmailAttachmentDTO */
 export interface ISendingEmailAttachmentDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** 发送邮件记录ID */
-    sendingEmailRecordId: number;
+    sendingEmailRecordId?: number;
     /** 文件Key */
-    fileKey: number;
+    fileKey?: number;
     /** 附件名称 */
-    name: string;
+    name?: string;
 }

@@ -16,18 +16,18 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«目标应用查询请求»» */
 export interface IJSONResultListTheTargetApplicationQueryRequest {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITargetApplicationQueryRequest[];
+    data?: ITargetApplicationQueryRequest[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 目标应用查询请求 */
 export interface ITargetApplicationQueryRequest {
     /** undefined */
-    flowPathEventId: number;
+    flowPathEventId?: number;
     /** undefined */
-    targetAppId: number;
+    targetAppId?: number;
 }

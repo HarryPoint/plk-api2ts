@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/lotHoldUsingPOST
 */
-export default function fetchMethod(data: IBatchWithholdDTO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IBatchWithholdDTO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceOrder/lotHold",
@@ -23,16 +23,16 @@ export interface IBatchWithholdDTO {
     /** 生产异常类型id */
     produceAbnormalCategoryId: number;
     /** 备注 */
-    remark: string;
+    remark?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

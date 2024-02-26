@@ -16,81 +16,81 @@ export default function fetchMethod(data: IBaojingAccountsReceivableAnalysisRepo
 /** 宝晶应收账款分析报表搜索VO */
 export interface IBaojingAccountsReceivableAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 业务员id集 */
-    businessUserIds: number[];
+    businessUserIds?: number[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    dateBegin: string;
+    dateBegin?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds: number[];
+    customerIds?: number[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    dateEnd: string;
+    dateEnd?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«宝晶应收账款分析报表返回VO» */
 export interface IJSONResultBaoJingAccountsReceivableAnalysisReportReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBaojingAccountsReceivableAnalysisReportReturnedToVO;
+    data?: IBaojingAccountsReceivableAnalysisReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 宝晶应收账款分析报表返回VO */
 export interface IBaojingAccountsReceivableAnalysisReportReturnedToVO {
     /** 数据表 */
-    tables: IBaojingAccountsReceivableAnalysisReportFormReturnedToVO[];
+    tables?: IBaojingAccountsReceivableAnalysisReportFormReturnedToVO[];
     /** 业务员维度 */
-    businessUser: IBaojingAccountsReceivableAnalysisReportChartReturnedToVO[];
+    businessUser?: IBaojingAccountsReceivableAnalysisReportChartReturnedToVO[];
     /** 趋势图维度 */
-    trendChart: IBaojingAccountsReceivableAnalysisReportChartWithTimeReturnToVO[];
+    trendChart?: IBaojingAccountsReceivableAnalysisReportChartWithTimeReturnToVO[];
 }
 /** 宝晶应收账款分析报表表格返回VO */
 export interface IBaojingAccountsReceivableAnalysisReportFormReturnedToVO {
     /** 业务员id */
-    businessUserId: number;
+    businessUserId?: number;
     /** 业务员名称 */
-    businessUserName: string;
+    businessUserName?: string;
     /** 客户id */
-    customerId: number;
+    customerId?: number;
     /** 客户名称 */
-    customerName: string;
+    customerName?: string;
     /** 期初金额 */
-    beginAmount: number;
+    beginAmount?: number;
     /** 入库总额 */
-    moveInAmount: number;
+    moveInAmount?: number;
     /** 已收金额 */
-    receivedAmount: number;
+    receivedAmount?: number;
     /** 其他损益 */
-    otherLossAmount: number;
+    otherLossAmount?: number;
     /** 应收余额 */
-    receivableBalance: number;
+    receivableBalance?: number;
     /** 日期 */
-    dateTime: string;
+    dateTime?: string;
 }
 /** 宝晶应收账款分析报表图表返回VO */
 export interface IBaojingAccountsReceivableAnalysisReportChartReturnedToVO {
     /** x轴名称 */
-    title: string;
+    title?: string;
     /** 应收余额 */
-    amount: number;
+    amount?: number;
 }
 /** 宝晶应收账款分析报表图表含时间返回VO */
 export interface IBaojingAccountsReceivableAnalysisReportChartWithTimeReturnToVO {
     /** 时间 */
-    time: string;
+    time?: string;
     /** 应收余额 */
-    receivableBalance: number;
+    receivableBalance?: number;
 }

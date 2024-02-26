@@ -16,29 +16,29 @@ export default function fetchMethod(data: ICustomFiltersEditTheListObjectDTO, ex
 /** 自定义筛选项编辑list对象DTO */
 export interface ICustomFiltersEditTheListObjectDTO {
     /** undefined */
-    customFilterList: ICustomFilterEditObjectDTO[];
+    customFilterList?: ICustomFilterEditObjectDTO[];
 }
 /** 自定义筛选项编辑对象DTO */
 export interface ICustomFilterEditObjectDTO {
     /** 筛选应用code */
-    filterApplicationCode: string;
+    filterApplicationCode?: string;
     /** 字段名称 */
-    formFieldName: string;
+    formFieldName?: string;
     /** 字段code */
-    formFieldCode: string;
+    formFieldCode?: string;
     /** 字段序列号 */
-    formFieldSerialNo: string;
+    formFieldSerialNo?: string;
     /** 是否动态表字段 */
-    isDynamicFormField: string;
+    isDynamicFormField?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

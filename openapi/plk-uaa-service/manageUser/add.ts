@@ -16,22 +16,22 @@ export default function fetchMethod(data: IOperationUserAddedARequest, extraOpti
 /** 运营用户新增请求 */
 export interface IOperationUserAddedARequest {
     /** 运营员工 */
-    manageEmployee: IIdCodeNameGenericTransportObject;
+    manageEmployee?: IIdCodeNameGenericTransportObject;
     /** 手机号 */
-    telephone: string;
+    telephone?: string;
     /** 密码 */
-    password: string;
+    password?: string;
     /** 角色集 */
-    manageRoleList: IIdInformation1[];
+    manageRoleList?: IIdInformation1[];
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }
 /** Id 信息_1 */
 export interface IIdInformation1 {
@@ -41,11 +41,11 @@ export interface IIdInformation1 {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

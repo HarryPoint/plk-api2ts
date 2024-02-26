@@ -16,20 +16,20 @@ export default function fetchMethod(data: IProposalDepartmentStatisticsQueryRequ
 /** ProposalDepartmentStatisticsQueryRequestDTO */
 export interface IProposalDepartmentStatisticsQueryRequestDTO {
     /** 年份 */
-    year: number;
+    year?: number;
     /** 部门ID列表 */
-    departmentIdList: number[];
+    departmentIdList?: number[];
     /** 部门责任人列表 */
-    departmentOwnerIdList: number[];
+    departmentOwnerIdList?: number[];
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

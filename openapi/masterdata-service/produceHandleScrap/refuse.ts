@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/refuseUsingPOST_1
 */
-export default function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProductionProcessingScrapChangeStatusDTO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleScrap/refuse",
@@ -19,16 +19,16 @@ export interface IProductionProcessingScrapChangeStatusDTO {
     /** 生产处理id */
     id: number;
     /** 处理意见 */
-    handleRemark: string;
+    handleRemark?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskPageForStaffUsingPOST
 */
-export default function fetchMethod(data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee>(
         {
             url: "/masterdata-service/qualityProduceTask/getQualityTaskPageForStaff",
@@ -17,113 +17,113 @@ export default function fetchMethod(data: ITheInspectionTaskSearchesForVOOnTheEm
 /** 质检任务针对员工端搜索VO */
 export interface ITheInspectionTaskSearchesForVOOnTheEmployeeEnd {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 任务状态 */
-    statusList: string[];
+    statusList?: string[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 送检人id */
-    createUserId: number;
+    createUserId?: number;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 送检物料id */
-    materialId: number;
+    materialId?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«质检任务针对员工返回VO»» */
 export interface IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationTheInspectionTaskReturnsVOForTheEmployee;
+    data?: IPagingInformationTheInspectionTaskReturnsVOForTheEmployee;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«质检任务针对员工返回VO» */
 export interface IPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheInspectionTaskIsReturnedToVOForTheEmployee[];
+    list?: ITheInspectionTaskIsReturnedToVOForTheEmployee[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 质检任务针对员工返回VO */
 export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     /** id */
-    id: number;
+    id?: number;
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 所属生产任务id */
-    produceTaskId: number;
+    produceTaskId?: number;
     /** 所属生产任务号 */
-    produceTaskNo: string;
+    produceTaskNo?: string;
     /** 生产订单id */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 对应物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 对应物料版次号 */
-    materialIssueCode: string;
+    materialIssueCode?: string;
     /** 对应物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 对应工艺路径步骤id */
-    routingStepId: number;
+    routingStepId?: number;
     /** 对应工序id */
-    processId: number;
+    processId?: number;
     /** 对应工序名称 */
-    processName: string;
+    processName?: string;
     /** 对应工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 总质检数 */
-    totalInspectionQuantity: number;
+    totalInspectionQuantity?: number;
     /** 待检数 */
-    waitInspectionQuantity: number;
+    waitInspectionQuantity?: number;
     /** 已检数 */
-    inspectionQuantity: number;
+    inspectionQuantity?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 送检人id */
-    createUserId: number;
+    createUserId?: number;
     /** 送检人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 送检人工号 */
-    createUserCode: string;
+    createUserCode?: string;
     /** 送检时间 */
-    createTime: string;
+    createTime?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getProduceOrderMatchTaskDetailByIdUsingGET
 */
-export default function fetchMethod(params: { taskId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { taskId?: number }, extraOptions?: any) {
     return http<IJSONResultQueryRequestForProductionOrderMatchingTasks>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/getProduceOrderMatchTaskById",
@@ -16,47 +16,47 @@ export default function fetchMethod(params: { taskId: number }, extraOptions?: a
 /** JSONResult«生产订单匹配任务查询请求» */
 export interface IJSONResultQueryRequestForProductionOrderMatchingTasks {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionOrderMatchingTaskQueryRequest1;
+    data?: IProductionOrderMatchingTaskQueryRequest1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产订单匹配任务查询请求_1 */
 export interface IProductionOrderMatchingTaskQueryRequest1 {
     /** ID */
-    id: number;
+    id?: number;
     /** 标准工艺匹配状态 */
-    status: string;
+    status?: string;
     /** 总数量 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 当前已处理数量 */
-    currentProcessedQuantity: number;
+    currentProcessedQuantity?: number;
     /** 失败原因 */
-    failureReason: string;
+    failureReason?: string;
     /** 匹配项 */
-    itemList: IProductionOrderMatchingTaskQueryRequest[];
+    itemList?: IProductionOrderMatchingTaskQueryRequest[];
 }
 /** 生产订单匹配任务查询请求 */
 export interface IProductionOrderMatchingTaskQueryRequest {
     /** ID */
-    id: number;
+    id?: number;
     /** 任务ID */
-    matchTaskId: number;
+    matchTaskId?: number;
     /** 生产订单ID */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 标准工艺名称 */
-    standardTechnologyName: string;
+    standardTechnologyName?: string;
     /** 标准工艺ID */
-    standardTechnologyId: number;
+    standardTechnologyId?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 错误原因 */
-    failureReason: string;
+    failureReason?: string;
     /** 任务执行时间 */
-    taskExecutionTime: string;
+    taskExecutionTime?: string;
 }

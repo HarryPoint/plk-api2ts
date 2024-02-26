@@ -18,25 +18,25 @@ export interface IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches {
     /** 生产任务id */
     produceTaskId: number;
     /** 批次号 */
-    lotOrderCode: string;
+    lotOrderCode?: string;
 }
 /** JSONResult«List«可出料批次响应dto»» */
 export interface IJSONResultListDeliverableBatchResponseDto {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IReleasableBatchResponseDto[];
+    data?: IReleasableBatchResponseDto[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 可出料批次响应dto */
 export interface IReleasableBatchResponseDto {
     /** 批次id */
-    id: number;
+    id?: number;
     /** 批次号 */
-    lotOrderCode: string;
+    lotOrderCode?: string;
     /** 可出料数量 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
 }

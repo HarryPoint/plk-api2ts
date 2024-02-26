@@ -18,18 +18,18 @@ export interface IVerifyWhetherTheApplicationSuccessfullyAdvertisesTheRequestObj
     /** 项目id */
     projectId: number;
     /** 应用流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 应用流程名称 */
-    flowPathName: string;
+    flowPathName?: string;
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

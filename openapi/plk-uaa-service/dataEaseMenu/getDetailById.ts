@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/getDetailByIdUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultDataEaseMenuDetailsResponseObject>(
         {
             url: "/plk-uaa-service/dataEaseMenu/getDetailById",
@@ -16,34 +16,34 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«DataEase菜单详情响应对象» */
 export interface IJSONResultDataEaseMenuDetailsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDataEaseMenuDetailsResponseObject;
+    data?: IDataEaseMenuDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** DataEase菜单详情响应对象 */
 export interface IDataEaseMenuDetailsResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 菜单名称 */
-    name: string;
+    name?: string;
     /** 链接地址 */
-    originalLinkUrl: string;
+    originalLinkUrl?: string;
     /** 是否在PC端发布 */
-    isPcTerminal: string;
+    isPcTerminal?: string;
     /** 是否在移动端发布 */
-    isMobileTerminal: string;
+    isMobileTerminal?: string;
     /** PC端发布路由id */
-    pcTerminalPublishRouteId: number;
+    pcTerminalPublishRouteId?: number;
     /** PC端展示方式 */
-    pcTerminalDisplayMode: string;
+    pcTerminalDisplayMode?: string;
     /** 移动端发布路由id */
-    mobileTerminalPublishRouteId: number;
+    mobileTerminalPublishRouteId?: number;
 }

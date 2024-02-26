@@ -15,26 +15,26 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«Saas企业响应 DTO»» */
 export interface IJSONResultListSaasEnterpriseResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISaasEnterprisesRespondToDTO1[];
+    data?: ISaasEnterprisesRespondToDTO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Saas企业响应 DTO_1 */
 export interface ISaasEnterprisesRespondToDTO1 {
     /** 企业id */
-    id: number;
+    id?: number;
     /** 企业到期时间 */
-    expireTime: string;
+    expireTime?: string;
     /** 企业名称 */
-    name: string;
+    name?: string;
     /** 企业编号 */
-    code: string;
+    code?: string;
     /** 是否是最后登录企业 */
-    isLastLogin: string;
+    isLastLogin?: string;
     /** 服务类型 */
-    productServiceType: string;
+    productServiceType?: string;
 }

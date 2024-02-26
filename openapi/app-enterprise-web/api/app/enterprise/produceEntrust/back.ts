@@ -20,7 +20,7 @@ export interface IProductionOutsourcingDesignatedProcessingDTO {
     /** 投料步骤id */
     produceTechnologyRoutingStepId: number;
     /** 供应商id */
-    supplierId: number;
+    supplierId?: number;
     /** 实际投料数量(委外合格产出) */
     backQuantity: number;
     /** 报废数量 */
@@ -29,11 +29,11 @@ export interface IProductionOutsourcingDesignatedProcessingDTO {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

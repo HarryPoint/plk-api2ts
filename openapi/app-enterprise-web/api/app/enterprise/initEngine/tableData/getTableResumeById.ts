@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableResumeByIdUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultTableData>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/getTableResumeById",
@@ -16,53 +16,53 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«表格数据» */
 export interface IJSONResultTableData {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITabularData;
+    data?: ITabularData;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 表格数据 */
 export interface ITabularData {
     /** ID */
-    id: number;
+    id?: number;
     /** 表定义 */
-    tableDefine: IAssociationTableDefinition1;
+    tableDefine?: IAssociationTableDefinition1;
     /** 模板 */
-    template: IAssociationTemplate;
+    template?: IAssociationTemplate;
     /** 文件ID */
-    fileId: number;
+    fileId?: number;
     /** 状态 */
-    verificationStatus: string;
+    verificationStatus?: string;
     /** 数据导入状态 */
-    importStatus: string;
+    importStatus?: string;
     /** 消息 */
-    message: string;
+    message?: string;
     /** 描述 */
-    desc: string;
+    desc?: string;
     /** 自定义列标题 */
-    customColumnTitle: Record<string, ITitleDefineDTO>;
+    customColumnTitle?: Record<string, ITitleDefineDTO>;
     /** 重复数据数量 */
-    repeatDataQuantity: number;
+    repeatDataQuantity?: number;
     /** 重复数据中的覆盖导入数量 */
-    overrideImportQuantityInRepeat: number;
+    overrideImportQuantityInRepeat?: number;
     /** 重复数据中的取消导入数据 */
-    cancelImportQuantityInRepeat: number;
+    cancelImportQuantityInRepeat?: number;
     /** 错误数据数量 */
-    errorQuantity: number;
+    errorQuantity?: number;
     /** 可以导入的数量 */
-    importsQuantity: number;
+    importsQuantity?: number;
 }
 /** 关联表定义_1 */
 export interface IAssociationTableDefinition1 {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    name: string;
+    name?: string;
 }
 /** 关联模板 */
 export interface IAssociationTemplate {
@@ -71,12 +71,12 @@ export interface IAssociationTemplate {
     /** undefined */
     code: string;
     /** undefined */
-    name: string;
+    name?: string;
 }
 /** TitleDefineDTO */
 export interface ITitleDefineDTO {
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    name: string;
+    name?: string;
 }

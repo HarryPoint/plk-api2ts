@@ -16,25 +16,25 @@ export default function fetchMethod(data: IPollutantQueryRequest, extraOptions?:
 /** 污染物查询请求 */
 export interface IPollutantQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 查询日期的结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«List«污染物查询响应»» */
 export interface IJSONResultListPollutantQueryResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPollutantQueryResponse[];
+    data?: IPollutantQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 污染物查询响应 */
 export interface IPollutantQueryResponse {
     /** 污染物排放类别 */
-    pollutantEmissionCategory: string;
+    pollutantEmissionCategory?: string;
     /** 数量 */
-    quantity: number;
+    quantity?: number;
 }

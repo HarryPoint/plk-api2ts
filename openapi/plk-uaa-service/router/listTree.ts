@@ -16,61 +16,61 @@ export default function fetchMethod(data: IRouteQuery, extraOptions?: any) {
 /** 路由查询 */
 export interface IRouteQuery {
     /** 客户端组编码 */
-    clientGroupCode: string;
+    clientGroupCode?: string;
 }
 /** JSONResult«List«路由响应 DTO»» */
 export interface IJSONResultListRouteResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheRouteRespondsToTheDTO[];
+    data?: ITheRouteRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 路由响应 DTO */
 export interface ITheRouteRespondsToTheDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 客户端组编码 */
-    clientGroupCode: string;
+    clientGroupCode?: string;
     /** 所属权限编码 */
-    permissionCode: string;
+    permissionCode?: string;
     /** 父级路由id */
-    parentId: number;
+    parentId?: number;
     /** 父级路由编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 路由name */
-    name: string;
+    name?: string;
     /** 路由code */
-    code: string;
+    code?: string;
     /** 菜单类型 */
-    type: string;
+    type?: string;
     /** 图标 */
-    icon: string;
+    icon?: string;
     /** 路由排序 */
-    level: number;
+    level?: number;
     /** 路由排序 */
-    sort: number;
+    sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth: string;
+    hasDataAuth?: string;
     /** 路由配置 */
-    config: ITheRouteConfigurationRespondsToTheDTO;
+    config?: ITheRouteConfigurationRespondsToTheDTO;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 子集 */
-    children: ITheRouteRespondsToTheDTO[];
+    children?: ITheRouteRespondsToTheDTO[];
 }
 /** 路由配置响应 DTO */
 export interface ITheRouteConfigurationRespondsToTheDTO {
     /** 菜单类型 */
-    menuType: string;
+    menuType?: string;
     /** 应用配置 */
-    appConfig: IApplicationRouteConfigurationRespondsToTheDTO;
+    appConfig?: IApplicationRouteConfigurationRespondsToTheDTO;
 }
 /** 应用路由配置响应 DTO */
 export interface IApplicationRouteConfigurationRespondsToTheDTO {
     /** 系统应用类型 */
-    appSystemType: string;
+    appSystemType?: string;
 }

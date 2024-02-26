@@ -16,18 +16,18 @@ export default function fetchMethod(data: IUserAggregationDimensionConfiguration
 /** 用户聚合维度配置请求 */
 export interface IUserAggregationDimensionConfigurationRequest {
     /** 编码 */
-    code: string;
+    code?: string;
     /** 列配置JSON */
-    config: Record<string, Record<string, any>>;
+    config?: Record<string, Record<string, any>>;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

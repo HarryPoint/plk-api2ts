@@ -15,22 +15,22 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«部门DTO»» */
 export interface IJSONResultListDepartmentDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDepartmentDTO[];
+    data?: IDepartmentDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 部门DTO */
 export interface IDepartmentDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 部门名 */
-    name: string;
+    name?: string;
     /** 部门编码 */
-    code: string;
+    code?: string;
     /** 父级部门id */
-    parentId: number;
+    parentId?: number;
 }

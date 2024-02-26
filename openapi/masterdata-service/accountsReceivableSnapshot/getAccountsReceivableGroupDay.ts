@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getAccountsReceivableGroupDayUsingGET
 */
-export default function fetchMethod(params: { day: string; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { day?: string; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultAccountsReceivableVO>(
         {
             url: "/masterdata-service/accountsReceivableSnapshot/getAccountsReceivableGroupDay",
@@ -16,18 +16,18 @@ export default function fetchMethod(params: { day: string; enterpriseId: number 
 /** JSONResult«AccountsReceivableVO» */
 export interface IJSONResultAccountsReceivableVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IAccountsReceivableVO;
+    data?: IAccountsReceivableVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** AccountsReceivableVO */
 export interface IAccountsReceivableVO {
     /** undefined */
-    amountReceivable: number;
+    amountReceivable?: number;
     /** undefined */
-    amountReceived: number;
+    amountReceived?: number;
 }

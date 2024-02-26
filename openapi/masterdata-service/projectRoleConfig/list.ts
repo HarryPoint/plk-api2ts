@@ -16,29 +16,29 @@ export default function fetchMethod(data: IProjectRoleConfigureTheQueryObject, e
 /** 项目角色配置查询对象 */
 export interface IProjectRoleConfigureTheQueryObject {
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目角色id */
-    projectRoleIds: number[];
+    projectRoleIds?: number[];
     /** 查询配置code集 */
-    codes: string[];
+    codes?: string[];
 }
 /** JSONResult«List«项目角色配置返回对象»» */
 export interface IJSONResultListProjectRoleConfigurationReturnObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProjectRoleConfigurationReturnsTheObject[];
+    data?: ITheProjectRoleConfigurationReturnsTheObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目角色配置返回对象 */
 export interface ITheProjectRoleConfigurationReturnsTheObject {
     /** 配置code */
-    code: string;
+    code?: string;
     /** 配置名称 */
-    name: string;
+    name?: string;
     /** 配置值 */
-    configValue: string;
+    configValue?: string;
 }

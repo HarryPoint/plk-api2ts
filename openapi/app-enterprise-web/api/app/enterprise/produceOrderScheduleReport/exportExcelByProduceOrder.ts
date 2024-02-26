@@ -16,45 +16,45 @@ export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, ex
 /** 生产排产订单搜索VO */
 export interface IProductionSchedulingOrderSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 父级订单编号 */
-    parentProduceOrderCode: string;
+    parentProduceOrderCode?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 计划开始日期查询开始时间 */
-    startTimeOfBeginTime: string;
+    startTimeOfBeginTime?: string;
     /** 计划开始日期查询结束时间 */
-    endTimeOfBeginTime: string;
+    endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList: string[];
+    planTypeList?: string[];
     /** 计划结束日期查询结束时间 */
-    endTimeOfEndTime: string;
+    endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
-    startTimeOfEndTime: string;
+    startTimeOfEndTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

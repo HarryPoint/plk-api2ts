@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getBomByMaterialIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; materialId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; materialId?: number }, extraOptions?: any) {
     return http<IJSONResultListMaterialBomBaseVo>(
         {
             url: "/masterdata-service/materialCompare/getBomByMaterialId",
@@ -16,24 +16,24 @@ export default function fetchMethod(params: { enterpriseId: number; materialId: 
 /** JSONResult«List«MaterialBomBaseVo»» */
 export interface IJSONResultListMaterialBomBaseVo {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialBomBaseVo[];
+    data?: IMaterialBomBaseVo[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** MaterialBomBaseVo */
 export interface IMaterialBomBaseVo {
     /** 物料ID */
-    materialId: number;
+    materialId?: number;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** ID */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
 }

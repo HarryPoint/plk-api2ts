@@ -16,22 +16,22 @@ export default function fetchMethod(data: string, extraOptions?: any) {
 /** JSONResult«维联批次打印模板响应对象» */
 export interface IJSONResultVirtualizedBatchPrintTemplateResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IVTLBatchPrintsTemplateResponseObjects;
+    data?: IVTLBatchPrintsTemplateResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 维联批次打印模板响应对象 */
 export interface IVTLBatchPrintsTemplateResponseObjects {
     /** 没有配置打印模板的生产订单编号 */
-    notConfigPrintTemplateProduceOrderCodes: string[];
+    notConfigPrintTemplateProduceOrderCodes?: string[];
     /** 没有批次的生产订单编号 */
-    notLotProduceOrderCodes: string[];
+    notLotProduceOrderCodes?: string[];
     /** 不能生成一维码的生产订单编号 */
-    canNotGenerateBarcodeProduceOrderCodes: string[];
+    canNotGenerateBarcodeProduceOrderCodes?: string[];
     /** 校验通过的生产订单编号 */
-    checkPassProduceOrderCodes: string[];
+    checkPassProduceOrderCodes?: string[];
 }

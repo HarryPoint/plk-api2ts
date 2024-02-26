@@ -16,24 +16,24 @@ export default function fetchMethod(data: IProductionLabelEditingDTO, extraOptio
 /** 生产标签编辑DTO */
 export interface IProductionLabelEditingDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属分类 */
     type: string;
     /** 标签名称 */
     name: string;
     /** 标签编号 */
-    code: string;
+    code?: string;
     /** 是否应用编码规则 */
-    isCodeRule: string;
+    isCodeRule?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

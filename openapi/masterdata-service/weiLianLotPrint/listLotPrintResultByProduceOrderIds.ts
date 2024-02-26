@@ -16,30 +16,30 @@ export default function fetchMethod(data: string, extraOptions?: any) {
 /** JSONResult«List«维联批次打印模板响应对象»» */
 export interface IJSONResultListPrintsTemplateResponseObjectsForTheVTLBatch {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IVivBatchPrintTemplateResponseObject1[];
+    data?: IVivBatchPrintTemplateResponseObject1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 维联批次打印模板响应对象_1 */
 export interface IVivBatchPrintTemplateResponseObject1 {
     /** id */
-    printTemplateId: number;
+    printTemplateId?: number;
     /** 模板类型 */
-    type: string;
+    type?: string;
     /** 打印模板 */
-    printTemplate: string;
+    printTemplate?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 批次数量 */
-    actualTotalCount: number;
+    actualTotalCount?: number;
     /** 条码值 */
-    universalCode: string;
+    universalCode?: string;
     /** 打印次数 */
-    printCount: number;
+    printCount?: number;
 }

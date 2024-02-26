@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/getIdCodeByIdUsingGET_1
 */
-export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
             url: "/masterdata-service/employee/getIdCodeById",
@@ -16,13 +16,13 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
 /** JSONResult«Id，名称，编号VO» */
 export interface IJSONResultIdNameNumberVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdNameNumberVO;
+    data?: IIdNameNumberVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

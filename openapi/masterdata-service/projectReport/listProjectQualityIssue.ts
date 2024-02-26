@@ -16,73 +16,73 @@ export default function fetchMethod(data: IItemNameNumberPublicQueryObject, extr
 /** 项目名称编号公共查询对象 */
 export interface IItemNameNumberPublicQueryObject {
     /** 名称or编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
     /** 条数 */
-    limit: number;
+    limit?: number;
     /** 项目计划ids */
-    projectPlanIds: number[];
+    projectPlanIds?: number[];
     /** undefined */
-    ids: number[];
+    ids?: number[];
     /** undefined */
-    projectIds: number[];
+    projectIds?: number[];
     /** undefined */
-    statusList: string[];
+    statusList?: string[];
 }
 /** JSONResult«List«项目质量问题报表响应对象»» */
 export interface IJSONResultListProjectQualityProblemReportResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectQualityProblemReportResponseObject[];
+    data?: IProjectQualityProblemReportResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目质量问题报表响应对象 */
 export interface IProjectQualityProblemReportResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目名称 */
-    projectName: string;
+    projectName?: string;
     /** 项目编号 */
-    projectCode: string;
+    projectCode?: string;
     /** 项目类型id */
-    projectTypeId: number;
+    projectTypeId?: number;
     /** 项目类型名称 */
-    projectTypeName: string;
+    projectTypeName?: string;
     /** 项目大类 */
-    projectCategory: string;
+    projectCategory?: string;
     /** 项目大类名称 */
-    projectCategoryName: string;
+    projectCategoryName?: string;
     /** 项目经理名称 */
-    projectManagerName: string;
+    projectManagerName?: string;
     /** 是否超期 */
-    isOverdue: string;
+    isOverdue?: string;
     /** 超期天数(天) */
-    overdueDay: number;
+    overdueDay?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 来源应用编号 */
-    fromAppCode: string;
+    fromAppCode?: string;
     /** 来源应用id */
-    fromAppId: number;
+    fromAppId?: number;
     /** undefined */
-    projectManagerId: number;
+    projectManagerId?: number;
     /** 负责人名称列表 */
-    responsibleNameList: string[];
+    responsibleNameList?: string[];
     /** 开始处理日期 */
-    beginHandleTime: string;
+    beginHandleTime?: string;
     /** 结束处理日期 */
-    endHandleTime: string;
+    endHandleTime?: string;
     /** 实际完成时间 */
-    actualCompleteTime: string;
+    actualCompleteTime?: string;
     /** undefined */
-    responsibleUserIds: Record<string, any>[];
+    responsibleUserIds?: Record<string, any>[];
 }

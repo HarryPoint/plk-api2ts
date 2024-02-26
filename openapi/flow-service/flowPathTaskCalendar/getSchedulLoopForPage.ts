@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务排班相关/getSchedulLoopForPageUsingPOST
 */
-export default function fetchMethod(data: IProcessFactoryCalendarSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProcessFactoryCalendarSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO>(
         {
             url: "/flow-service/flowPathTaskCalendar/getSchedulLoopForPage",
@@ -17,104 +17,104 @@ export default function fetchMethod(data: IProcessFactoryCalendarSearchVO, param
 /** 流程工厂日历搜索VO */
 export interface IProcessFactoryCalendarSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«流程排班记录返回VO»» */
 export interface IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationProcessSchedulingRecordsAreReturnedToVO;
+    data?: IPagingInformationProcessSchedulingRecordsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«流程排班记录返回VO» */
 export interface IPagingInformationProcessSchedulingRecordsAreReturnedToVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheProcessSchedulingRecordIsReturnedToVO[];
+    list?: ITheProcessSchedulingRecordIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 流程排班记录返回VO */
 export interface ITheProcessSchedulingRecordIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 开始日期 */
-    beginDate: string;
+    beginDate?: string;
     /** 循环天数 */
-    loopDay: number;
+    loopDay?: number;
     /** 排班天数集 */
-    schedulDays: IProcessSchedulingBaseReturnsVO[];
+    schedulDays?: IProcessSchedulingBaseReturnsVO[];
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }
 /** 流程排班基数返回VO */
 export interface IProcessSchedulingBaseReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 流程排班循环配置 */
-    schedulDayDetails: IProcessSchedulingBaseDetailsAreReturnedToVO[];
+    schedulDayDetails?: IProcessSchedulingBaseDetailsAreReturnedToVO[];
 }
 /** 流程排班基数明细返回VO */
 export interface IProcessSchedulingBaseDetailsAreReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 班组名称 */
-    classGroupName: string;
+    classGroupName?: string;
     /** 班次id */
-    classShiftId: number;
+    classShiftId?: number;
     /** 班次名称 */
-    classShiftName: string;
+    classShiftName?: string;
     /** 班次开始时间 */
-    classShiftBeginTime: ILocalTime;
+    classShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
     /** 班次结束时间 */
-    classShiftEndTime: ILocalTime;
+    classShiftEndTime?: ILocalTime;
 }
 /** LocalTime */
 export interface ILocalTime {
     /** undefined */
-    hour: number;
+    hour?: number;
     /** undefined */
-    minute: number;
+    minute?: number;
     /** undefined */
-    second: number;
+    second?: number;
     /** undefined */
-    nano: number;
+    nano?: number;
 }

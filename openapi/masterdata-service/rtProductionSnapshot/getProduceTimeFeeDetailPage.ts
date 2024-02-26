@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeDetailPageUsingPOST
 */
-export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheLaborCostReportReturnsVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeDetailPage",
@@ -17,115 +17,115 @@ export default function fetchMethod(data: IHourlyLaborRateReportSearchVO, params
 /** 工时工费报表搜索VO */
 export interface IHourlyLaborRateReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 员工id集 */
-    userIds: number[];
+    userIds?: number[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产任务编码 */
-    produceTaskNo: string;
+    produceTaskNo?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«工时工费报表返回VO»» */
 export interface IJSONResultPagingInformationTheLaborCostReportReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationTheTimeSpentReportReturnsVO;
+    data?: IPageInformationTheTimeSpentReportReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«工时工费报表返回VO» */
 export interface IPageInformationTheTimeSpentReportReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheManHourReportReturnsToVO[];
+    list?: ITheManHourReportReturnsToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 工时工费报表返回VO */
 export interface ITheManHourReportReturnsToVO {
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 员工id */
-    userId: number;
+    userId?: number;
     /** 员工姓名 */
-    username: string;
+    username?: string;
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 班组名称 */
-    classGroupName: string;
+    classGroupName?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 订单id */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 订单数量(工单数量) */
-    produceOrderTotalCount: number;
+    produceOrderTotalCount?: number;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 合格产出数量 */
-    produceQuantity: number;
+    produceQuantity?: number;
     /** 合格产出工费 */
-    produceFee: number;
+    produceFee?: number;
     /** 返工数量 */
-    backQuantity: number;
+    backQuantity?: number;
     /** 返工产出工费 */
-    backFee: number;
+    backFee?: number;
     /** 销售订单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId?: number;
     /** 生产任务编码 */
-    produceTaskNo: string;
+    produceTaskNo?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathDataAuthDetailListUsingPOST
 */
-export default function fetchMethod(data: IProcessRoleDataPermissionDetailsSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProcessRoleDataPermissionDetailsSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProcessRoleDataPermissionDetailsVO>(
         {
             url: "/flow-service/flowPath/dataAuth/detail/list",
@@ -17,42 +17,42 @@ export default function fetchMethod(data: IProcessRoleDataPermissionDetailsSearc
 /** 流程角色数据权限详情搜索VO */
 export interface IProcessRoleDataPermissionDetailsSearchVO {
     /** 角色id集 */
-    roleIds: number[];
+    roleIds?: number[];
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
 }
 /** JSONResult«List«流程角色数据权限详情VO»» */
 export interface IJSONResultListProcessRoleDataPermissionDetailsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessRoleDataPermissionDetailsVO[];
+    data?: IProcessRoleDataPermissionDetailsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程角色数据权限详情VO */
 export interface IProcessRoleDataPermissionDetailsVO {
     /** 数据权限类型 */
-    dataAuthType: string;
+    dataAuthType?: string;
     /** 流程角色数据权限字段详情列表 */
-    flowPathDataAuthFieldDetailList: IProcessRoleDataPermissionFieldDetailsVO[];
+    flowPathDataAuthFieldDetailList?: IProcessRoleDataPermissionFieldDetailsVO[];
 }
 /** 流程角色数据权限字段详情VO */
 export interface IProcessRoleDataPermissionFieldDetailsVO {
     /** 流程表单字段序列号 */
-    flowPathFieldSerialNo: string;
+    flowPathFieldSerialNo?: string;
     /** 流程表单字段编号 */
-    flowPathFieldCode: string;
+    flowPathFieldCode?: string;
     /** 字段类型 */
-    fieldType: string;
+    fieldType?: string;
     /** 字段组织类型 */
-    fieldOrganizationType: string;
+    fieldOrganizationType?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 父级流程表单code - 表格内字段有值 */
-    parentFlowPathFormFieldCode: string;
+    parentFlowPathFormFieldCode?: string;
     /** 当动态控件选择了当前字段后，对应取关联表单的值是 */
-    dynamicControlValueFieldSerialNo: string;
+    dynamicControlValueFieldSerialNo?: string;
 }

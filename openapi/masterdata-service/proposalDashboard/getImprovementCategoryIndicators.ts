@@ -15,25 +15,25 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«ImprovementCategoryIndicatorsResponseDTO» */
 export interface IJSONResultImprovementCategoryIndicatorsResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IImprovementCategoryIndicatorsResponseDTO;
+    data?: IImprovementCategoryIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ImprovementCategoryIndicatorsResponseDTO */
 export interface IImprovementCategoryIndicatorsResponseDTO {
     /** 改善类别列表 */
-    indicatorsList: IImprovementCategoryIndicatorsItemResponseDTO[];
+    indicatorsList?: IImprovementCategoryIndicatorsItemResponseDTO[];
 }
 /** ImprovementCategoryIndicatorsItemResponseDTO */
 export interface IImprovementCategoryIndicatorsItemResponseDTO {
     /** 改善类别ID */
-    improvementCategoryId: number;
+    improvementCategoryId?: number;
     /** 改善类别名称 */
-    improvementCategoryName: string;
+    improvementCategoryName?: string;
     /** 改善类别数量 */
-    quantity: number;
+    quantity?: number;
 }

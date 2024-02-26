@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检管理/getListForStaffUsingPOST_2
 */
-export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultListQualityStorageTaskVO>(
         {
             url: "/masterdata-service/qualityStorageTask/getListForStaff",
@@ -17,83 +17,83 @@ export default function fetchMethod(data: IPublicBacklogDataQuery, params: { ent
 /** 公共待办数据查询 */
 export interface IPublicBacklogDataQuery {
     /** 编码 */
-    code: string;
+    code?: string;
     /** 创建时间--开始时间 */
-    createBeginTime: string;
+    createBeginTime?: string;
     /** 创建时间--结束时间 */
-    createEndTime: string;
+    createEndTime?: string;
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList: string[];
+    produceTaskStatusList?: string[];
     /** 是否超时(生产任务) */
-    isTimeout: string;
+    isTimeout?: string;
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList: string[];
+    qualityProduceTaskStatusList?: string[];
     /** 生产任务可操作类型 */
-    optTypes: string[];
+    optTypes?: string[];
 }
 /** JSONResult«List«QualityStorageTaskVO»» */
 export interface IJSONResultListQualityStorageTaskVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IQualityStorageTaskVO[];
+    data?: IQualityStorageTaskVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** QualityStorageTaskVO */
 export interface IQualityStorageTaskVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 质检任务类型 */
-    type: string;
+    type?: string;
     /** 采购收货单id */
-    purchaseWorkOrderId: number;
+    purchaseWorkOrderId?: number;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 采购收货单物料明细id */
-    purchaseWorkOrderDetailId: number;
+    purchaseWorkOrderDetailId?: number;
     /** 对应质检方案id */
-    qualityInspectionPlanId: number;
+    qualityInspectionPlanId?: number;
     /** 对应质检分类id */
-    qualityInspectionCategoryId: number;
+    qualityInspectionCategoryId?: number;
     /** 质检仓位id */
-    qualityWarehouseId: number;
+    qualityWarehouseId?: number;
     /** 检验位置id */
-    checkPositionId: number;
+    checkPositionId?: number;
     /** 质检处理人 */
-    handleUserId: number;
+    handleUserId?: number;
     /** 计划开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 总质检数 */
-    totalInspectionQuantity: number;
+    totalInspectionQuantity?: number;
     /** 待检数 */
-    waitInspectionQuantity: number;
+    waitInspectionQuantity?: number;
     /** 已检数 */
-    inspectionQuantity: number;
+    inspectionQuantity?: number;
     /** 合格数 */
-    passQuantity: number;
+    passQuantity?: number;
     /** 不合格数 */
-    notPassQuantity: number;
+    notPassQuantity?: number;
     /** 让步接收数 */
-    concessionQuantity: number;
+    concessionQuantity?: number;
     /** 完成时间 */
-    completeTime: string;
+    completeTime?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 取消人 */
-    cancelUserId: number;
+    cancelUserId?: number;
     /** 取消时间 */
-    cancelTime: string;
+    cancelTime?: string;
     /** 质检任务类型 */
-    taskType: string;
+    taskType?: string;
 }

@@ -16,13 +16,13 @@ export default function fetchMethod(data: string[], extraOptions?: any) {
 /** JSONResult«List«JSONObject»» */
 export interface IJSONResultListJSONObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IJSONObject[];
+    data?: IJSONObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** JSONObject */
 export interface IJSONObject {

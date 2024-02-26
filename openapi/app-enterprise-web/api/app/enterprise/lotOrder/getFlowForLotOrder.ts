@@ -16,24 +16,24 @@ export default function fetchMethod(params: { flowType?: string; lotOrderId?: nu
 /** JSONResult«List«批次订单流水基本信息响应DTO»» */
 export interface IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBatchOrderFlowBasicInformationResponseDTO[];
+    data?: IBatchOrderFlowBasicInformationResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 批次订单流水基本信息响应DTO */
 export interface IBatchOrderFlowBasicInformationResponseDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 流水类型 */
-    flowType: string;
+    flowType?: string;
     /** 当前流水类型描述 */
-    flowTypeDesc: string;
+    flowTypeDesc?: string;
     /** 操作时间 */
-    createTime: string;
+    createTime?: string;
     /** 描述 */
-    remark: string;
+    remark?: string;
 }

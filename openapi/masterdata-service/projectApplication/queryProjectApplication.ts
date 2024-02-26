@@ -23,32 +23,32 @@ export interface IProjectApplicationRequestObject {
 /** JSONResult«项目应用返回对象» */
 export interface ITheJSONResultProjectApplicationReturnsTheObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProjectApplicationReturnsTheObject;
+    data?: ITheProjectApplicationReturnsTheObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目应用返回对象 */
 export interface ITheProjectApplicationReturnsTheObject {
     /** id */
-    id: number;
+    id?: number;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 流程应用id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 流程应用code */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 应用名称 */
-    flowPathName: string;
+    flowPathName?: string;
     /** 应用类型 */
-    flowPathSystemType: string;
+    flowPathSystemType?: string;
     /** 应用类型 */
-    projectApplicationType: string;
+    projectApplicationType?: string;
     /** 导航排序 */
-    navigationSort: number;
+    navigationSort?: number;
     /** 数据状态 0停用，1启用，2暂存，-1已删除 */
-    dataStatus: number;
+    dataStatus?: number;
 }

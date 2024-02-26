@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/getProjectByProjectIdUsingPOST
 */
-export default function fetchMethod(params: { projectId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { projectId?: number }, extraOptions?: any) {
     return http<IJSONResultKaizenProjectResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getProjectByProjectId",
@@ -16,40 +16,40 @@ export default function fetchMethod(params: { projectId: number }, extraOptions?
 /** JSONResult«KaizenProjectResponseDTO» */
 export interface IJSONResultKaizenProjectResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IKaizenProjectResponseDTO;
+    data?: IKaizenProjectResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** KaizenProjectResponseDTO */
 export interface IKaizenProjectResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 项目编号 */
-    code: string;
+    code?: string;
     /** 项目名称 */
-    name: string;
+    name?: string;
     /** 项目类型 */
-    type: string;
+    type?: string;
     /** 项目类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 项目负责人 */
-    projectLeaderId: number;
+    projectLeaderId?: number;
     /** 项目负责人名称 */
-    projectLeaderName: string;
+    projectLeaderName?: string;
     /** 项目开始日期 */
-    projectStartDate: string;
+    projectStartDate?: string;
     /** 项目截止日期 */
-    projectEndDate: string;
+    projectEndDate?: string;
     /** 项目状态 */
-    projectStatus: string;
+    projectStatus?: string;
     /** 项目状态描述 */
-    projectStatusDesc: string;
+    projectStatusDesc?: string;
     /** 关联合理化建议 */
-    proposalId: number;
+    proposalId?: number;
     /** 项目简介 */
-    projectIntroduction: string;
+    projectIntroduction?: string;
 }

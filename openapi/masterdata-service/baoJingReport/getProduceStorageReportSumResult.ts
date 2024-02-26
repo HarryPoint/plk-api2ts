@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getProduceStorageReportSumResultUsingPOST
 */
-export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getProduceStorageReportSumResult",
@@ -17,82 +17,82 @@ export default function fetchMethod(data: IBaojingReportInventoryRelatedSearchDT
 /** 宝晶报表(库存)相关搜索DTO */
 export interface IBaojingReportInventoryRelatedSearchDTO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 物料规格 */
-    majorDataSpec: string;
+    majorDataSpec?: string;
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 外部编码 */
-    materialOutsideCode: string;
+    materialOutsideCode?: string;
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
     /** 物料id集 */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 物料名称 */
-    majorDataName: string;
+    majorDataName?: string;
     /** 业务员ids */
-    businessUserIds: number[];
+    businessUserIds?: number[];
     /** 区域id */
-    areaIds: number[];
+    areaIds?: number[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
     /** 单据名称 */
-    billNames: string[];
+    billNames?: string[];
     /** 保管员 */
-    materialCurators: string[];
+    materialCurators?: string[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«宝晶报表(成品日报表)合计返回VO» */
 export interface IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO;
+    data?: IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 宝晶报表(成品日报表)合计返回VO */
 export interface IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO {
     /** 期初-成品数 */
-    beginProduceQuantity: number;
+    beginProduceQuantity?: number;
     /** 期初-半成品数 */
-    beginRawQuantity: number;
+    beginRawQuantity?: number;
     /** 期初-待处理数 */
-    beginWaitQuantity: number;
+    beginWaitQuantity?: number;
     /** 入库-成品数 */
-    inProduceQuantity: number;
+    inProduceQuantity?: number;
     /** 入库-半成品数 */
-    inRawQuantity: number;
+    inRawQuantity?: number;
     /** 入库-待处理数 */
-    inWaitQuantity: number;
+    inWaitQuantity?: number;
     /** 出库-成品数 */
-    outProduceQuantity: number;
+    outProduceQuantity?: number;
     /** 出库-半成品数 */
-    outRawQuantity: number;
+    outRawQuantity?: number;
     /** 出库-待处理数 */
-    outWaitQuantity: number;
+    outWaitQuantity?: number;
     /** 报废数 */
-    scrapQuantity: number;
+    scrapQuantity?: number;
     /** 期末-成品数 */
-    endProduceQuantity: number;
+    endProduceQuantity?: number;
     /** 期末-半成品数 */
-    endRawQuantity: number;
+    endRawQuantity?: number;
     /** 期末-待处理数 */
-    endWaitQuantity: number;
+    endWaitQuantity?: number;
 }

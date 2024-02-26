@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialRealWarehouseListUsingPOST
 */
-export default function fetchMethod(data: IMaterialRealTimeInventoryQueryReturnedToVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IMaterialRealTimeInventoryQueryReturnedToVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListMaterialRealTimeLibraryFromVO>(
         {
             url: "/masterdata-service/warehouseMaterial/getMaterialRealWarehouseList",
@@ -17,37 +17,37 @@ export default function fetchMethod(data: IMaterialRealTimeInventoryQueryReturne
 /** 物料实时库存查询返回VO */
 export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     /** 物料ids */
-    materialIds: number[];
+    materialIds?: number[];
     /** 仓库ids */
-    storehouseIds: number[];
+    storehouseIds?: number[];
     /** 仓库类型 */
-    warehouseTypes: string[];
+    warehouseTypes?: string[];
 }
 /** JSONResult«List«物料实时库从返回VO»» */
 export interface IJSONResultListMaterialRealTimeLibraryFromVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialRealTimeLibraryFromBackToVO[];
+    data?: IMaterialRealTimeLibraryFromBackToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料实时库从返回VO */
 export interface IMaterialRealTimeLibraryFromBackToVO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 库存总数量 */
-    storageTotalQuantity: number;
+    storageTotalQuantity?: number;
     /** 库存锁定数量 */
-    storageLockQuantity: number;
+    storageLockQuantity?: number;
     /** 库存可用数量 */
-    storageUseQuantity: number;
+    storageUseQuantity?: number;
 }

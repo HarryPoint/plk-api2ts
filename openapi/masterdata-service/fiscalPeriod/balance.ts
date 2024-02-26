@@ -16,16 +16,16 @@ export default function fetchMethod(data: IFinancialPeriodBalanceRequest, extraO
 /** 财务期间结存请求 */
 export interface IFinancialPeriodBalanceRequest {
     /** ID */
-    id: number;
+    id?: number;
 }
 /** JSONResult«boolean» */
 export interface IJSONResultboolean {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: boolean;
+    data?: boolean;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

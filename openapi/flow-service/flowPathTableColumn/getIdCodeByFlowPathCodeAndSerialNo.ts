@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getIdCodeByFlowPathCodeAndSerialNoUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; flowPathCode: string; serialNo: string }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; flowPathCode?: string; serialNo?: string }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
             url: "/flow-service/flowPathTableColumn/getIdCodeByFlowPathCodeAndSerialNo",
@@ -16,13 +16,13 @@ export default function fetchMethod(params: { enterpriseId: number; flowPathCode
 /** JSONResult«Id，名称，编号VO» */
 export interface IJSONResultIdNameNumberVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdNameNumberVO;
+    data?: IIdNameNumberVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

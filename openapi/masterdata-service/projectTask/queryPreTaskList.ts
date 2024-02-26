@@ -16,33 +16,33 @@ export default function fetchMethod(data: IItemTaskNameNumberQueryObject, extraO
 /** 项目任务名称编号查询对象 */
 export interface IItemTaskNameNumberQueryObject {
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目计划id */
-    projectPlanId: number;
+    projectPlanId?: number;
     /** 是否查询只在项目计划模块展示的任务 */
-    isProjectPlanShow: string;
+    isProjectPlanShow?: string;
     /** 是否查询只在项目任务模块展示的任务 */
-    isProjectTaskShow: string;
+    isProjectTaskShow?: string;
     /** 名称or编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
 }
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdCodeNameGenericTransportObject[];
+    data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

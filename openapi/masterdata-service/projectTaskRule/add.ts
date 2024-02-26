@@ -16,36 +16,36 @@ export default function fetchMethod(data: IProjectTaskRulesAddRequestDTO, extraO
 /** 项目任务规则新增请求DTO */
 export interface IProjectTaskRulesAddRequestDTO {
     /** 项目任务ID */
-    projectTaskId: number;
+    projectTaskId?: number;
     /** 任务类型 */
-    taskType: string;
+    taskType?: string;
     /** 不通过比较类型 */
-    notPassCompareType: string;
+    notPassCompareType?: string;
     /** 不通过的临界值 */
-    notPassRuleValue: number;
+    notPassRuleValue?: number;
     /** 通过的比较类型 */
-    passCompareType: string;
+    passCompareType?: string;
     /** 通过比较值 */
-    passRuleValue: number;
+    passRuleValue?: number;
     /** 带风险通过的比较类型 */
-    takeRiskPassCompareType: string;
+    takeRiskPassCompareType?: string;
     /** 带风险通过比较值 */
-    takeRiskPassRuleValue: number;
+    takeRiskPassRuleValue?: number;
     /** 修改比较类型 */
-    modifyCompareType: string;
+    modifyCompareType?: string;
     /** 修改规则值 */
-    modifyRuleValue: number;
+    modifyRuleValue?: number;
     /** 修改任务ID列表 */
-    modifyTaskIdList: number[];
+    modifyTaskIdList?: number[];
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

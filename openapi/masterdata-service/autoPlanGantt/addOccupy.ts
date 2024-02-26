@@ -16,26 +16,26 @@ export default function fetchMethod(data: ITheOccupiedDTOWasAdded, extraOptions?
 /** 添加占用DTO */
 export interface ITheOccupiedDTOWasAdded {
     /** 占用类型 */
-    occupyType: string;
+    occupyType?: string;
     /** 占用工序id */
-    processId: number;
+    processId?: number;
     /** 占用开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 占用结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 占用原因 */
-    reason: string;
+    reason?: string;
     /** 循环次数 */
-    loopCount: number;
+    loopCount?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getForPageUsingPOST
 */
-export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getForPage",
@@ -17,122 +17,122 @@ export default function fetchMethod(data: ICodeRulePagingQueryVO, params: { ente
 /** 编码规则分页查询VO */
 export interface ICodeRulePagingQueryVO {
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 字段名称 */
-    fieldName: string;
+    fieldName?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 流程表单序列值集合 */
-    flowPathFormFiledSerialNoList: string[];
+    flowPathFormFiledSerialNoList?: string[];
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«编码规则分页返回VO»» */
 export interface IJSONResultPagingInformationEncodingRulePagingReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationEncodingRulePagingReturnsVO;
+    data?: IPagingInformationEncodingRulePagingReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«编码规则分页返回VO» */
 export interface IPagingInformationEncodingRulePagingReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheEncodingRulePagingReturnsVO[];
+    list?: ITheEncodingRulePagingReturnsVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 编码规则分页返回VO */
 export interface ITheEncodingRulePagingReturnsVO {
     /** 数据状态 0停用，1启用，-1已删除 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建员工id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建员工名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新员工id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新员工名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 规则类型 */
-    type: string;
+    type?: string;
     /** 业务类型 */
-    businessType: string;
+    businessType?: string;
     /** 所属流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 所属流程名称 */
-    flowPathName: string;
+    flowPathName?: string;
     /** 所属流程表单code */
-    flowPathFormFiledCode: string;
+    flowPathFormFiledCode?: string;
     /** 所属流程表单名称 */
-    flowPathFormFiledName: string;
+    flowPathFormFiledName?: string;
     /** 所属流程表单序列值 */
-    flowPathFormFiledSerialNo: string;
+    flowPathFormFiledSerialNo?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 编码规则明细 */
-    details: IProcessFormFieldEncodingRuleDetailsVO[];
+    details?: IProcessFormFieldEncodingRuleDetailsVO[];
 }
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 设置类型 */
-    type: string;
+    type?: string;
     /** 日期格式 - 用于日期 */
-    dateFormat: string;
+    dateFormat?: string;
     /** 固定值 - 用于固定值 */
-    fixValue: string;
+    fixValue?: string;
     /** 位数 - 用于流水 */
-    ruleLength: number;
+    ruleLength?: number;
     /** 初始值 - 用于流水 */
-    startValue: number;
+    startValue?: number;
     /** 递增值 - 用于流水 */
-    stepValue: number;
+    stepValue?: number;
     /** 是否是编码依据 - 仅能配置一项为编码依据 */
-    isCodeAccording: string;
+    isCodeAccording?: string;
     /** 所属流程表单code -- 针对引用字段类型 */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
-    flowPathFormFiledSerialNo: string;
+    flowPathFormFiledSerialNo?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
-    flowPathFormFiledCode: string;
+    flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId: number;
+    flowPathFormFieldCodeNumberRuleId?: number;
     /** 排序 */
-    sort: number;
+    sort?: number;
 }

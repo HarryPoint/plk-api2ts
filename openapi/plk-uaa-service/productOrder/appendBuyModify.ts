@@ -16,53 +16,53 @@ export default function fetchMethod(data: IAdditionalProductOrderModificationReq
 /** 加购产品订单修改请求对象 */
 export interface IAdditionalProductOrderModificationRequestObject {
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 加购类型非法传递, 默认传 MES  */
-    appendType: string;
+    appendType?: string;
     /** 加购产品类型非法传递, 默认传 MES  */
-    productType: string;
+    productType?: string;
     /** 加购产品模块 */
-    productModuleArray: string[];
+    productModuleArray?: string[];
     /** 购买时长(天) */
-    buyDurationQuantity: number;
+    buyDurationQuantity?: number;
     /** 购买账号数 */
-    buyAccountQuantity: number;
+    buyAccountQuantity?: number;
     /** 订单金额(元) */
-    orderMoneyQuantity: number;
+    orderMoneyQuantity?: number;
     /** 合同签约时间 */
-    contractTime: string;
+    contractTime?: string;
     /** 预计交付日期 */
-    planDeliveryTime: string;
+    planDeliveryTime?: string;
     /** 预计到期日期 */
-    planExpireTime: string;
+    planExpireTime?: string;
     /** 付款记录列表 */
-    payRecordList: IProductOrderPaymentHistoryEditRequestObject[];
+    payRecordList?: IProductOrderPaymentHistoryEditRequestObject[];
     /** 企业id */
-    id: number;
+    id?: number;
 }
 /** 产品订单付款记录编辑请求对象 */
 export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 付款记录id */
-    id: number;
+    id?: number;
     /** 计划付款日期 */
-    planPayTime: string;
+    planPayTime?: string;
     /** 应付金额(元) */
-    payableQuantity: number;
+    payableQuantity?: number;
     /** 实际付款日期 */
-    realPayTime: string;
+    realPayTime?: string;
     /** 实付金额(元) */
-    actualPayQuantity: number;
+    actualPayQuantity?: number;
     /** 状态 */
-    status: string;
+    status?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

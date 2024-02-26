@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产工艺工艺卡相关/getByIdUsingGET_11
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProcessCardInformationIsReturnedToTheDTO>(
         {
             url: "/masterdata-service/produceTechnologyProcessSheet/getById",
@@ -16,80 +16,80 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«生产工艺工艺卡信息返回DTO» */
 export interface IJSONResultProcessCardInformationIsReturnedToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionProcessProcessCardInformationIsReturnedToDTO;
+    data?: IProductionProcessProcessCardInformationIsReturnedToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产工艺工艺卡信息返回DTO */
 export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 生产工艺id */
-    produceTechnologyId: number;
+    produceTechnologyId?: number;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 描述集合 */
-    textList: IProductionProcessProcessCardDetailsReturnedToDTO[];
+    textList?: IProductionProcessProcessCardDetailsReturnedToDTO[];
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 工艺卡名称 */
-    name: string;
+    name?: string;
     /** 工艺卡编号 */
-    code: string;
+    code?: string;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 文件集合 */
-    fileList: IProductionProcessProcessCardDetailsReturnedToDTO[];
+    fileList?: IProductionProcessProcessCardDetailsReturnedToDTO[];
     /** 工序对应字段信息 */
-    processFlowPathRpDatas: IOperationsCorrespondToFieldDetailsVO[];
+    processFlowPathRpDatas?: IOperationsCorrespondToFieldDetailsVO[];
 }
 /** 生产工艺工艺卡明细返回DTO */
 export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
-    id: number;
+    id?: number;
     /** 明细类型 */
-    type: string;
+    type?: string;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
     code: string;
     /** 描述内容/备注 */
-    remark: string;
+    remark?: string;
     /** 文件名称 */
-    fileName: string;
+    fileName?: string;
     /** 文件key */
-    fileKey: string;
+    fileKey?: string;
     /** 文件完整url */
-    fileUrl: string;
+    fileUrl?: string;
 }
 /** 工序对应字段详情VO */
 export interface IOperationsCorrespondToFieldDetailsVO {
     /** 关联字段code */
-    fieldCode: string;
+    fieldCode?: string;
     /** 关联字段名称 */
-    fieldName: string;
+    fieldName?: string;
     /** 值 */
-    value: Record<string, any>;
+    value?: Record<string, any>;
 }

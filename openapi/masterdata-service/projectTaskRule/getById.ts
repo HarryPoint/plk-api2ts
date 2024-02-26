@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/getByIdUsingGET_12
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProjectTaskRuleDetailResponseDTO>(
         {
             url: "/masterdata-service/projectTaskRule/getById",
@@ -16,44 +16,44 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«项目任务规则明细响应DTO» */
 export interface IJSONResultProjectTaskRuleDetailResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskRulesDetailResponseDTO;
+    data?: IProjectTaskRulesDetailResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务规则明细响应DTO */
 export interface IProjectTaskRulesDetailResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 项目任务ID */
-    projectTaskId: number;
+    projectTaskId?: number;
     /** 任务类型 */
-    taskType: string;
+    taskType?: string;
     /** 不通过比较类型 */
-    notPassCompareType: string;
+    notPassCompareType?: string;
     /** 不通过的临界值 */
-    notPassRuleValue: number;
+    notPassRuleValue?: number;
     /** 通过的比较类型 */
-    passCompareType: string;
+    passCompareType?: string;
     /** 通过比较值 */
-    passRuleValue: number;
+    passRuleValue?: number;
     /** 带风险通过的比较类型 */
-    takeRiskPassCompareType: string;
+    takeRiskPassCompareType?: string;
     /** 带风险通过比较值 */
-    takeRiskPassRuleValue: number;
+    takeRiskPassRuleValue?: number;
     /** 修改比较类型 */
-    modifyCompareType: string;
+    modifyCompareType?: string;
     /** 修改规则值 */
-    modifyRuleValue: number;
+    modifyRuleValue?: number;
     /** 修改任务ID列表 */
-    modifyTaskIdList: number[];
+    modifyTaskIdList?: number[];
     /** 修改任务列表 */
-    modifyTaskList: IIdNameVO[];
+    modifyTaskList?: IIdNameVO[];
     /** 最终评审或决策结果 */
-    finalReviewOrReviewResult: string;
+    finalReviewOrReviewResult?: string;
 }
 /** Id，名称VO */
 export interface IIdNameVO {

@@ -16,51 +16,51 @@ export default function fetchMethod(data: IEmailTaskAttachmentConfigQueryRequest
 /** EmailTaskAttachmentConfigQueryRequestDTO */
 export interface IEmailTaskAttachmentConfigQueryRequestDTO {
     /** 应用ID列表-精确匹配 */
-    refIdList: number[];
+    refIdList?: number[];
 }
 /** JSONResult«List«EmailTaskQueryResponseDTO»» */
 export interface IJSONResultListEmailTaskQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmailTaskQueryResponseDTO[];
+    data?: IEmailTaskQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** EmailTaskQueryResponseDTO */
 export interface IEmailTaskQueryResponseDTO {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** undefined */
-    id: number;
+    id?: number;
     /** 邮件名称 */
-    emailName: string;
+    emailName?: string;
     /** 收件人 */
-    addressee: string;
+    addressee?: string;
     /** 邮件主题 */
-    title: string;
+    title?: string;
     /** 发送方式 */
-    sendingMode: string;
+    sendingMode?: string;
     /** 任务状态 */
-    status: string;
+    status?: string;
 }

@@ -16,39 +16,39 @@ export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?:
 /** 项目看板查询dto */
 export interface IProjectKanbanQueryDto {
     /** 开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 项目大类 */
-    projectCategory: string;
+    projectCategory?: string;
     /** undefined */
-    projectTypeIds: number[];
+    projectTypeIds?: number[];
     /** undefined */
-    excludeProjectIds: number[];
+    excludeProjectIds?: number[];
 }
 /** JSONResult«项目费用统计响应对象» */
 export interface IJSONResultProjectCostStatisticsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectCostStatisticsResponseObject;
+    data?: IProjectCostStatisticsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目费用统计响应对象 */
 export interface IProjectCostStatisticsResponseObject {
     /** 项目预算（元） */
-    projectAnnualBudget: number;
+    projectAnnualBudget?: number;
     /** 预算执行（元） */
-    budgetExecute: number;
+    budgetExecute?: number;
     /** 预算执行率 */
-    budgetExecuteRate: number;
+    budgetExecuteRate?: number;
     /** 资金计划（元） */
-    monthFundPlan: number;
+    monthFundPlan?: number;
     /** 资金计划执行（元） */
-    monthFundPlanExecute: number;
+    monthFundPlanExecute?: number;
     /** 资金计划执行率 */
-    fundPlanExecuteRate: number;
+    fundPlanExecuteRate?: number;
 }

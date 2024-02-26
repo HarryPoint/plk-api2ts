@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/序列号跟踪报表相关/getBillFlowPathCodeListUsingGET_2
 */
-export default function fetchMethod(params: { masterDataFlowPathCode: string }, extraOptions?: any) {
+export default function fetchMethod(params: { masterDataFlowPathCode?: string }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/warehouseStorageSerialNoTrackReport/getBillFlowPathCodeList",
@@ -16,20 +16,20 @@ export default function fetchMethod(params: { masterDataFlowPathCode: string }, 
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdCodeNameGenericTransportObject[];
+    data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

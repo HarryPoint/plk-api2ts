@@ -15,62 +15,62 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«仓库区域树返回VO»» */
 export interface ITheJSONResultListRepositoryAreaTreeReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheWarehouseAreaTreeReturnsVO[];
+    data?: ITheWarehouseAreaTreeReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓库区域树返回VO */
 export interface ITheWarehouseAreaTreeReturnsVO {
     /** 区域id */
-    id: number;
+    id?: number;
     /** 区域名称 */
-    name: string;
+    name?: string;
     /** 区域编号 */
-    code: string;
+    code?: string;
     /** 下级区域集 */
-    areaChildren: ITheWarehouseAreaTreeReturnsVO[];
+    areaChildren?: ITheWarehouseAreaTreeReturnsVO[];
     /** 仓库集 */
-    storehouseChildren: ITheWarehouseTreeReturnsVO[];
+    storehouseChildren?: ITheWarehouseTreeReturnsVO[];
 }
 /** 仓库树返回VO */
 export interface ITheWarehouseTreeReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 仓库名称 */
-    name: string;
+    name?: string;
     /** 仓库编号 */
-    code: string;
+    code?: string;
     /** 仓库类型 */
-    type: string;
+    type?: string;
     /** 仓库类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 仓位集 */
-    warehouseChildren: IPositionTreeReturnsVO[];
+    warehouseChildren?: IPositionTreeReturnsVO[];
 }
 /** 仓位树返回VO */
 export interface IPositionTreeReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 仓位名称 */
-    name: string;
+    name?: string;
     /** 仓位编号 */
-    code: string;
+    code?: string;
     /** 状态(是否可用) */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 子仓位 */
-    children: IPositionTreeReturnsVO[];
+    children?: IPositionTreeReturnsVO[];
 }

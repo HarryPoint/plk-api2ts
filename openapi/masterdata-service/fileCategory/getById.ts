@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/getByIdUsingGET_3
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultFileClassificationDetailsResponseDTO>(
         {
             url: "/masterdata-service/fileCategory/getById",
@@ -16,38 +16,38 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«文件分类明细响应DTO» */
 export interface IJSONResultFileClassificationDetailsResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFileClassificationDetailsRespondToDTO;
+    data?: IFileClassificationDetailsRespondToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 文件分类明细响应DTO */
 export interface IFileClassificationDetailsRespondToDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 分类名称 */
-    name: string;
+    name?: string;
     /** 上级ID */
-    parentId: number;
+    parentId?: number;
     /** 权限列表 */
-    permissionList: IFileCategoryPermissionResponseDTO[];
+    permissionList?: IFileCategoryPermissionResponseDTO[];
 }
 /** FileCategoryPermissionResponseDTO */
 export interface IFileCategoryPermissionResponseDTO {
     /** 权限类型 */
-    permissionTypeList: string[];
+    permissionTypeList?: string[];
     /** 组织列表 */
-    organizations: IFileCategoryOrganizationResponseDTO[];
+    organizations?: IFileCategoryOrganizationResponseDTO[];
 }
 /** FileCategoryOrganizationResponseDTO */
 export interface IFileCategoryOrganizationResponseDTO {
     /** 组织 */
-    organization: string;
+    organization?: string;
     /** 文件组织ID */
-    organizationId: number;
+    organizationId?: number;
     /** 组织名称 */
-    organizationName: string;
+    organizationName?: string;
 }

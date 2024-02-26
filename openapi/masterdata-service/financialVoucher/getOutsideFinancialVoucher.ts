@@ -16,39 +16,39 @@ export default function fetchMethod(params: { applicationId?: number; id?: numbe
 /** JSONResult«外部财务凭证响应对象» */
 export interface IJSONResultExternalFinancialCertificateResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExternalFinancialCertificateResponseObject;
+    data?: IExternalFinancialCertificateResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 外部财务凭证响应对象 */
 export interface IExternalFinancialCertificateResponseObject {
     /** 凭证号 */
-    voucherNo: string;
+    voucherNo?: string;
     /** 凭证字号 */
-    voucherType: string;
+    voucherType?: string;
     /** 日期 */
-    date: string;
+    date?: string;
     /** 凭证期间 */
-    voucherPeriod: string;
+    voucherPeriod?: string;
     /** 借方合计 */
-    debitEntryTotalAmount: string;
+    debitEntryTotalAmount?: string;
     /** 贷方合计 */
-    creditEntryTotalAmount: string;
+    creditEntryTotalAmount?: string;
     /** 明细 */
-    details: IExternalFinancialCertificateDetailsResponseObject[];
+    details?: IExternalFinancialCertificateDetailsResponseObject[];
 }
 /** 外部财务凭证详情响应对象 */
 export interface IExternalFinancialCertificateDetailsResponseObject {
     /** 摘要 */
-    summary: string;
+    summary?: string;
     /** 科目 */
-    accountName: string;
+    accountName?: string;
     /** 借方 */
-    debitEntry: string;
+    debitEntry?: string;
     /** 贷方 */
-    creditEntry: string;
+    creditEntry?: string;
 }

@@ -16,33 +16,33 @@ export default function fetchMethod(data: ITaskShiftSearchVO, extraOptions?: any
 /** 任务班次搜索VO */
 export interface ITaskShiftSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 名称 */
-    name: string;
+    name?: string;
     /** 状态 */
-    dataStatus: number;
+    dataStatus?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

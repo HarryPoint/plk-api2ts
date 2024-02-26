@@ -16,26 +16,26 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«FlowPathEventTriggerNodeQueryResponseDTO»» */
 export interface IJSONResultListFlowPathEventTriggerNodeQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFlowPathEventTriggerNodeQueryResponseDTO[];
+    data?: IFlowPathEventTriggerNodeQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** FlowPathEventTriggerNodeQueryResponseDTO */
 export interface IFlowPathEventTriggerNodeQueryResponseDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    flowPathId: number;
+    flowPathId?: number;
     /** undefined */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** undefined */
-    flowPathEventId: number;
+    flowPathEventId?: number;
     /** undefined */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
     /** undefined */
-    flowPathNodeSerialNo: string;
+    flowPathNodeSerialNo?: string;
 }

@@ -18,25 +18,25 @@ export interface IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches {
     /** 生产任务id */
     produceTaskId: number;
     /** 批次号 */
-    lotOrderCode: string;
+    lotOrderCode?: string;
 }
 /** JSONResult«List«可异常处理批次响应dto»» */
 export interface IJSONResultListHandlesBatchResponseDtosAbnormally {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBatchResponseDtosCanBeHandledAbnormally[];
+    data?: IBatchResponseDtosCanBeHandledAbnormally[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 可异常处理批次响应dto */
 export interface IBatchResponseDtosCanBeHandledAbnormally {
     /** 批次id */
-    id: number;
+    id?: number;
     /** 批次号 */
-    lotOrderCode: string;
+    lotOrderCode?: string;
     /** 可异常处理数量 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
 }

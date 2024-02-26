@@ -16,45 +16,45 @@ export default function fetchMethod(params: { id?: number }, extraOptions?: any)
 /** JSONResult«质检项详细返回VO» */
 export interface IJSONResultCheckItemDetailsVOIsReturned {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICheckItemDetailsAreReturnedToVO;
+    data?: ICheckItemDetailsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质检项详细返回VO */
 export interface ICheckItemDetailsAreReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 质检项名称 */
-    name: string;
+    name?: string;
     /** 质检项编号 */
-    code: string;
+    code?: string;
     /** 质检方式 */
-    qualityMethod: string;
+    qualityMethod?: string;
     /** 质检方式描述 */
-    qualityMethodDesc: string;
+    qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType: string;
+    selectType?: string;
     /** 选择方式描述 */
-    selectTypeDesc: string;
+    selectTypeDesc?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 附件文件id */
-    attachedFileId: number;
+    attachedFileId?: number;
     /** 附件文件key */
-    attachedFileKey: string;
+    attachedFileKey?: string;
     /** 附件文件完整路径 */
-    attachedFileUrl: string;
+    attachedFileUrl?: string;
     /** 附件文件名 */
-    attachedFileName: string;
+    attachedFileName?: string;
     /** 选项内容集合 */
-    selectors: ITheInspectionItemOptionReturnsVO[];
+    selectors?: ITheInspectionItemOptionReturnsVO[];
 }
 /** 质检项选择项返回VO */
 export interface ITheInspectionItemOptionReturnsVO {
     /** 选择项名称 */
-    name: string;
+    name?: string;
 }

@@ -18,33 +18,33 @@ export interface IProjectEventsLargeScreenQueryDto {
     /** 项目大类 */
     projectCategory: string;
     /** 查询条数 */
-    limit: number;
+    limit?: number;
     /** undefined */
-    projectIds: number[];
+    projectIds?: number[];
 }
 /** JSONResult«List«项目大事记响应对象»» */
 export interface IJSONResultListProjectEventResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectEventResponseObject[];
+    data?: IProjectEventResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目大事记响应对象 */
 export interface IProjectEventResponseObject {
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 大事记内容 */
-    content: string;
+    content?: string;
     /** 项目大事记id */
-    projectMemorabiliaId: number;
+    projectMemorabiliaId?: number;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 来源应用编号 */
-    fromAppCode: string;
+    fromAppCode?: string;
     /** 来源应用id */
-    fromAppId: number;
+    fromAppId?: number;
 }

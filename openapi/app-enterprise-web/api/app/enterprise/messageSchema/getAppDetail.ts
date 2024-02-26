@@ -16,97 +16,97 @@ export default function fetchMethod(data: IApplyTheServiceTreeToQueryTheDTO, ext
 /** 应用业务树查询请求DTO */
 export interface IApplyTheServiceTreeToQueryTheDTO {
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 明细表字段id - treeType = FLOW_TABLE时有值 */
-    detailTableFieldId: number;
+    detailTableFieldId?: number;
     /** 明细表字段编码 - treeType = FLOW_TABLE时有值 */
-    detailTableFieldCode: string;
+    detailTableFieldCode?: string;
     /** 明细表字段序列号 - treeType = FLOW_TABLE时有值 */
-    detailTableFieldSerialNo: string;
+    detailTableFieldSerialNo?: string;
 }
 /** JSONResult«应用业务树DTO» */
 export interface IJSONResultApplicationServiceTreeDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IApplyTheServiceTreeDTO;
+    data?: IApplyTheServiceTreeDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 应用业务树DTO */
 export interface IApplyTheServiceTreeDTO {
     /** 路由id */
-    routerId: number;
+    routerId?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 应用名称 */
-    flowPathName: string;
+    flowPathName?: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 流程树类型 */
-    treeType: string;
+    treeType?: string;
     /** 字段集 */
-    columns: IApplicationServiceTreeFieldInformationReturnsTheDTO[];
+    columns?: IApplicationServiceTreeFieldInformationReturnsTheDTO[];
     /** 子集 */
-    children: IApplyTheServiceTreeDTO[];
+    children?: IApplyTheServiceTreeDTO[];
     /** 流程code */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 明细表字段id - treeType = FLOW_TABLE时有值 */
-    detailTableFieldId: number;
+    detailTableFieldId?: number;
     /** 明细表字段编码 - treeType = FLOW_TABLE时有值 */
-    detailTableFieldCode: string;
+    detailTableFieldCode?: string;
     /** 明细表字段序列号 - treeType = FLOW_TABLE时有值 */
-    detailTableFieldSerialNo: string;
+    detailTableFieldSerialNo?: string;
 }
 /** 应用业务树字段信息返回DTO */
 export interface IApplicationServiceTreeFieldInformationReturnsTheDTO {
     /** 字段id */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 流程编码 */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 序号值 */
-    serialNo: string;
+    serialNo?: string;
     /** 是否是系统字段 */
-    isSystem: string;
+    isSystem?: string;
     /** 字段类型 */
-    flowPathFormFieldType: string;
+    flowPathFormFieldType?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 选项集 传值传code，显示name */
-    selector: IFormFieldOption[];
+    selector?: IFormFieldOption[];
     /** 日期类型 */
-    dateType: string;
+    dateType?: string;
     /** 宽度 */
-    span: number;
+    span?: number;
     /** 组织类型 */
-    organizationType: string;
+    organizationType?: string;
     /** 关联表单编码 */
-    formRpCode: string;
+    formRpCode?: string;
     /** 关联表单详细表格编码 */
-    formDetailRpCode: string;
+    formDetailRpCode?: string;
     /** 所属关联表单编码 */
-    sourceFormRpCode: string;
+    sourceFormRpCode?: string;
     /** 所属关联表单字段serialNo */
-    sourceSerialNo: string;
+    sourceSerialNo?: string;
     /** 关联表单字段集 */
-    columns: IApplicationServiceTreeFieldInformationReturnsTheDTO[];
+    columns?: IApplicationServiceTreeFieldInformationReturnsTheDTO[];
 }
 /** FormFieldOption */
 export interface IFormFieldOption {
     /** undefined */
-    name: string;
+    name?: string;
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    color: string;
+    color?: string;
 }

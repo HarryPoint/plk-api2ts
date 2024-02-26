@@ -16,47 +16,47 @@ export default function fetchMethod(data: IProjectTemplateEditRequestDTO, extraO
 /** 项目模板编辑请求DTO */
 export interface IProjectTemplateEditRequestDTO {
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目模板id */
-    id: number;
+    id?: number;
     /** 项目模板名称 */
-    name: string;
+    name?: string;
     /** 项目模板大类 */
-    projectCategory: string;
+    projectCategory?: string;
     /** 项目模板简介 */
-    intro: string;
+    intro?: string;
     /** 项目字段列表 */
-    projectFields: IIdCodeNameGenericTransportObject[];
+    projectFields?: IIdCodeNameGenericTransportObject[];
     /** 项目团队是否勾选 */
-    checkProjectTeam: string;
+    checkProjectTeam?: string;
     /** 项目成员是否勾选 */
-    checkProjectMember: string;
+    checkProjectMember?: string;
     /** 项目角色是否勾选 */
-    checkProjectRole: string;
+    checkProjectRole?: string;
     /** 项目计划是否勾选 */
-    checkProjectPlan: string;
+    checkProjectPlan?: string;
     /** 项目计划字段 */
-    projectPlanFields: IIdCodeNameGenericTransportObject[];
+    projectPlanFields?: IIdCodeNameGenericTransportObject[];
     /** 项目计划自定义字段是否勾选 */
-    checkProjectPlanCustomField: string;
+    checkProjectPlanCustomField?: string;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

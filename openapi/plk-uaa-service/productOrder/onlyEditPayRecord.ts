@@ -16,33 +16,33 @@ export default function fetchMethod(data: IProductOrdersOnlyModifyThePaymentReco
 /** 产品订单只修改付款记录请求对象 */
 export interface IProductOrdersOnlyModifyThePaymentRecordRequestObject {
     /** 企业id */
-    id: number;
+    id?: number;
     /** 付款记录列表 */
-    payRecordList: IProductOrderPaymentHistoryEditRequestObject[];
+    payRecordList?: IProductOrderPaymentHistoryEditRequestObject[];
 }
 /** 产品订单付款记录编辑请求对象 */
 export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 付款记录id */
-    id: number;
+    id?: number;
     /** 计划付款日期 */
-    planPayTime: string;
+    planPayTime?: string;
     /** 应付金额(元) */
-    payableQuantity: number;
+    payableQuantity?: number;
     /** 实际付款日期 */
-    realPayTime: string;
+    realPayTime?: string;
     /** 实付金额(元) */
-    actualPayQuantity: number;
+    actualPayQuantity?: number;
     /** 状态 */
-    status: string;
+    status?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

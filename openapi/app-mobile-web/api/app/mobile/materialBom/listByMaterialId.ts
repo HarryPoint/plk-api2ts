@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/物料bom相关/listByMaterialIdAndMaterialBomIdUsingGET
 */
-export default function fetchMethod(params: { materialBomId: number; materialId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { materialBomId?: number; materialId?: number }, extraOptions?: any) {
     return http<IJSONResultListMaterialBomResponseObject>(
         {
             url: "/app-mobile-web/api/app/mobile/materialBom/listByMaterialId",
@@ -16,59 +16,59 @@ export default function fetchMethod(params: { materialBomId: number; materialId:
 /** JSONResult«List«物料bom响应对象»» */
 export interface IJSONResultListMaterialBomResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBomRespondsToTheObject[];
+    data?: IBomRespondsToTheObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料bom响应对象 */
 export interface IBomRespondsToTheObject {
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** bomId */
-    bomId: number;
+    bomId?: number;
     /** bom名称 */
-    bomName: string;
+    bomName?: string;
     /** bom编号 */
-    bomCode: string;
+    bomCode?: string;
     /** 主物料Id */
-    id: number;
+    id?: number;
     /** 主物料名称 */
-    name: string;
+    name?: string;
     /** 主物料编号 */
-    code: string;
+    code?: string;
     /** 主物料类型 */
-    type: string;
+    type?: string;
     /** 主物料类型名称 */
-    typeName: string;
+    typeName?: string;
     /** 物料单位 */
-    unit: string;
+    unit?: string;
     /** 是否是默认BOM */
-    isDefault: string;
+    isDefault?: string;
     /** 子物料列表 */
-    childMaterialList: IBomDetailsResponseObject[];
+    childMaterialList?: IBomDetailsResponseObject[];
 }
 /** 物料bom详情响应对象 */
 export interface IBomDetailsResponseObject {
     /** 物料BOM详情id */
-    materialBomDetailId: number;
+    materialBomDetailId?: number;
     /** 所属物料bom id */
-    materialBomId: number;
+    materialBomId?: number;
     /** 子物料id */
-    id: number;
+    id?: number;
     /** 子物料名称 */
-    name: string;
+    name?: string;
     /** 子物料编号 */
-    code: string;
+    code?: string;
     /** 子物料类型 */
-    type: string;
+    type?: string;
     /** 子物料类型名称 */
-    typeName: string;
+    typeName?: string;
     /** 物料单位 */
-    unit: string;
+    unit?: string;
     /** 消耗数量 */
-    totalConsumeCount: number;
+    totalConsumeCount?: number;
 }

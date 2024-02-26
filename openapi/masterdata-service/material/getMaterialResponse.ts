@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialResponseUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultMaterialReturnInformation>(
         {
             url: "/masterdata-service/material/getMaterialResponse",
@@ -16,26 +16,26 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«物料返回信息» */
 export interface IJSONResultMaterialReturnInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialReturnInformation;
+    data?: IMaterialReturnInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料返回信息 */
 export interface IMaterialReturnInformation {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 物料类型 */
-    type: string;
+    type?: string;
     /** 物料类型名称 */
-    typeName: string;
+    typeName?: string;
     /** 物料规格 */
-    spec: string;
+    spec?: string;
 }

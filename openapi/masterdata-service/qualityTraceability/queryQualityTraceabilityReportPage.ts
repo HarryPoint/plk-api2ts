@@ -16,15 +16,15 @@ export default function fetchMethod(data: IQualityTraceabilityReportQueryDTO, ex
 /** 质量追溯报表查询DTO */
 export interface IQualityTraceabilityReportQueryDTO {
     /** 字段搜索 */
-    dataSearchList: IProcessDataDetailsSearchVO[];
+    dataSearchList?: IProcessDataDetailsSearchVO[];
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 显示字段序列号 */
-    showFieldSerialNoList: string[];
+    showFieldSerialNoList?: string[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
@@ -33,100 +33,100 @@ export interface IProcessDataDetailsSearchVO {
     /** 搜索类型 */
     searchType: string;
     /** 搜索文本 - 针对文本搜索 */
-    text: string;
+    text?: string;
     /** 搜索起始值 - 针对范围搜索 */
-    limitBegin: Record<string, any>;
+    limitBegin?: Record<string, any>;
     /** 搜索结束值 - 针对范围搜索 */
-    limitEnd: Record<string, any>;
+    limitEnd?: Record<string, any>;
     /** 搜索选项值 - 针对选择搜索 */
-    selectors: Record<string, any>[];
+    selectors?: Record<string, any>[];
     /** 表格编码 */
-    tableCode: string;
+    tableCode?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«质量追溯报表响应DTO»» */
 export interface IJSONResultPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationQualityTraceabilityReportRespondsToTheDTO;
+    data?: IPagingInformationQualityTraceabilityReportRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«质量追溯报表响应DTO» */
 export interface IPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IQualityTraceabilityReportRespondsToDTO[];
+    list?: IQualityTraceabilityReportRespondsToDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 质量追溯报表响应DTO */
 export interface IQualityTraceabilityReportRespondsToDTO {
     /** 批次 */
-    lotNo: string;
+    lotNo?: string;
     /** 原批次 */
-    originalLotNo: string;
+    originalLotNo?: string;
     /** 批次操作时间 */
-    lotNoOptDateTime: string;
+    lotNoOptDateTime?: string;
     /** 工序 */
-    processId: Record<string, any>[];
+    processId?: Record<string, any>[];
     /** 操作类型 */
-    optType: string;
+    optType?: string;
     /** 操作员 */
-    optEmployeeId: Record<string, any>[];
+    optEmployeeId?: Record<string, any>[];
     /** 操作时间 */
-    optDateTime: string;
+    optDateTime?: string;
     /** 生产物料 */
-    materialId: Record<string, any>[];
+    materialId?: Record<string, any>[];
     /** 操作数量 */
-    optQuantity: number;
+    optQuantity?: number;
     /** 生产设备 */
-    deviceList: Record<string, any>[];
+    deviceList?: Record<string, any>[];
     /** 生产模具 */
-    moldList: Record<string, any>[];
+    moldList?: Record<string, any>[];
     /** 进料BOM消耗确认 */
-    bomConsumeList: IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO[];
+    bomConsumeList?: IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO[];
     /** 任务编号 */
-    produceTaskNo: string;
+    produceTaskNo?: string;
     /** 任务状态 */
-    produceTaskStatus: string;
+    produceTaskStatus?: string;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
 }
 /** 质量追溯进料BOM消耗确认报表响应DTO */
 export interface IQualityTraceabilityIncomingBOMConsumptionConfirmationReportRespondsToDTO {
     /** 消耗物料 */
-    consumeMaterialId: Record<string, any>[];
+    consumeMaterialId?: Record<string, any>[];
     /** 消耗数量 */
-    consumeQuantity: number;
+    consumeQuantity?: number;
     /** 外部码 */
-    externalCodeList: string;
+    externalCodeList?: string;
     /** 消耗物料批次 */
-    lotNoList: string;
+    lotNoList?: string;
     /** 消耗物料序列号 */
-    serialNoList: string;
+    serialNoList?: string;
 }

@@ -16,29 +16,29 @@ export default function fetchMethod(data: ICapacityDropDownListToSearchForDtos, 
 /** 产能下拉选择列表搜索DTO */
 export interface ICapacityDropDownListToSearchForDtos {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 产能名称 */
-    capacityName: string;
+    capacityName?: string;
 }
 /** JSONResult«List«产能下拉选择列表搜索响应对象»» */
 export interface IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheCapacityDropDownSelectionListSearchesForResponseObjects[];
+    data?: ITheCapacityDropDownSelectionListSearchesForResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 产能下拉选择列表搜索响应对象 */
 export interface ITheCapacityDropDownSelectionListSearchesForResponseObjects {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编号 */
-    code: string;
+    code?: string;
 }

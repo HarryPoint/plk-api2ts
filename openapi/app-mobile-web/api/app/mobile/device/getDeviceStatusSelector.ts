@@ -15,18 +15,18 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«设备状态VO»» */
 export interface IJSONResultListDeviceStatusVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDeviceStatusVO[];
+    data?: IDeviceStatusVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备状态VO */
 export interface IDeviceStatusVO {
     /** 设备状态 */
-    status: string;
+    status?: string;
     /** 设备状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
 }

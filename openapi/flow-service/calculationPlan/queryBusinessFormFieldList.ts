@@ -16,33 +16,33 @@ export default function fetchMethod(data: IFormFieldQueryRequestDTO, extraOption
 /** FormFieldQueryRequestDTO */
 export interface IFormFieldQueryRequestDTO {
     /** 应用ID */
-    appId: number;
+    appId?: number;
     /** 表格字段编码 */
-    tableFieldCode: string;
+    tableFieldCode?: string;
     /** 是否明细业务 */
-    isDetailFlow: string;
+    isDetailFlow?: string;
 }
 /** JSONResult«List«FormFieldQueryResponseDTO»» */
 export interface IJSONResultListFormFieldQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFormFieldQueryResponseDTO[];
+    data?: IFormFieldQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** FormFieldQueryResponseDTO */
 export interface IFormFieldQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 表单字段类型 */
-    formFieldType: string;
+    formFieldType?: string;
 }

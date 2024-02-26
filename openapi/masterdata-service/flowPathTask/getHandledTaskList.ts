@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getHandledTaskListUsingPOST
 */
-export default function fetchMethod(data: IProcessTaskResultQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProcessTaskResultQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProcessTaskResultVO>(
         {
             url: "/masterdata-service/flowPathTask/getHandledTaskList",
@@ -17,39 +17,39 @@ export default function fetchMethod(data: IProcessTaskResultQueryVO, params: { e
 /** 流程任务处理结果查询VO */
 export interface IProcessTaskResultQueryVO {
     /** 业务流程系统类型 */
-    flowPathSystemType: string;
+    flowPathSystemType?: string;
     /** 业务数据ID列表 */
-    businessDataId: number;
+    businessDataId?: number;
 }
 /** JSONResult«List«流程任务处理结果VO»» */
 export interface IJSONResultListProcessTaskResultVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessTaskProcessingResultVO[];
+    data?: IProcessTaskProcessingResultVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程任务处理结果VO */
 export interface IProcessTaskProcessingResultVO {
     /** 任务类型 */
-    type: string;
+    type?: string;
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 所属流程节点名称 */
-    flowPathNodeName: string;
+    flowPathNodeName?: string;
     /** 处理人id */
-    handleUserId: number;
+    handleUserId?: number;
     /** 处理人名称 */
-    handleUserName: string;
+    handleUserName?: string;
     /** 处理时间 */
-    handleTime: string;
+    handleTime?: string;
     /** 审批状态 */
-    approvalStatus: string;
+    approvalStatus?: string;
     /** 执行状态 */
-    executeStatus: string;
+    executeStatus?: string;
     /** 审批意见/执行情况 */
-    notes: string;
+    notes?: string;
 }

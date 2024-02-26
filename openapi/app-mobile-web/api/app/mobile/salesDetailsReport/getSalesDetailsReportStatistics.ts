@@ -16,28 +16,28 @@ export default function fetchMethod(data: GetSalesDetailsReportStatistics, extra
 /** JSONResult«销售明细表统计返回对象» */
 export interface IJSONResultSalesStatisticsReturnObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISalesStatementStatisticsReturnObject;
+    data?: ISalesStatementStatisticsReturnObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 销售明细表统计返回对象 */
 export interface ISalesStatementStatisticsReturnObject {
     /** 数量 */
-    quantity: number;
+    quantity?: number;
     /** 含税金额 */
-    amountWithTax: number;
+    amountWithTax?: number;
     /** 销售收入 */
-    amountWithDiscounted: number;
+    amountWithDiscounted?: number;
     /** 销售金额 */
-    amountWithDiscountedTax: number;
+    amountWithDiscountedTax?: number;
     /** 销售成本 */
-    salesCost: number;
+    salesCost?: number;
     /** 销售毛利 */
-    salesGrossProfit: number;
+    salesGrossProfit?: number;
     /** 佣金金额 */
-    commissionAmount: number;
+    commissionAmount?: number;
 }

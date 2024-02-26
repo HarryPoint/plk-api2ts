@@ -18,22 +18,22 @@ export interface IProjectOverviewQueryDto {
     /** 项目id */
     projectId: number;
     /** 开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 查询条数 */
-    limit: number;
+    limit?: number;
 }
 /** JSONResult«List«项目角色统计响应对象»» */
 export interface IJSONResultListProjectRoleStatisticsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectRoleStatisticsResponseObjects[];
+    data?: IProjectRoleStatisticsResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目角色统计响应对象 */
 export interface IProjectRoleStatisticsResponseObjects {

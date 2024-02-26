@@ -23,24 +23,24 @@ export interface IDtoCanBeCheckedByBatchScanning {
 /** JSONResult«可进料批次响应dto» */
 export interface IJSONResultCanRespondToDtoWithIncomingBatch {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICanRespondToDtoWithIncomingBatch;
+    data?: ICanRespondToDtoWithIncomingBatch;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 可进料批次响应dto */
 export interface ICanRespondToDtoWithIncomingBatch {
     /** 批次id */
-    id: number;
+    id?: number;
     /** 批次号 */
-    lotOrderCode: string;
+    lotOrderCode?: string;
     /** 需进料数量 */
-    needOptQuantity: number;
+    needOptQuantity?: number;
     /** 可进料数量 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
     /** 来料时间 */
-    wmRpCreateTime: string;
+    wmRpCreateTime?: string;
 }

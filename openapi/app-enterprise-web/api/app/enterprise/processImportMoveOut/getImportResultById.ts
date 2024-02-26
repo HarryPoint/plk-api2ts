@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/出料数据导入相关/getImportResultByIdUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProcessMoveOutImportSynchronizationOutputDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processImportMoveOut/getImportResultById",
@@ -16,43 +16,43 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«ProcessMoveOutImportSynchronizationOutputDTO» */
 export interface IJSONResultProcessMoveOutImportSynchronizationOutputDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessMoveOutImportSynchronizationOutputDTO;
+    data?: IProcessMoveOutImportSynchronizationOutputDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProcessMoveOutImportSynchronizationOutputDTO */
 export interface IProcessMoveOutImportSynchronizationOutputDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    importStatus: string;
+    importStatus?: string;
     /** undefined */
-    failureMessage: string;
+    failureMessage?: string;
     /** undefined */
-    totalCount: number;
+    totalCount?: number;
     /** undefined */
-    importedCount: number;
+    importedCount?: number;
     /** undefined */
-    importSuccessQuantity: number;
+    importSuccessQuantity?: number;
     /** undefined */
-    importFailureQuantity: number;
+    importFailureQuantity?: number;
     /** undefined */
-    failureProcessMoveOutList: IProcessMoveOutImportFailureOutputDTO[];
+    failureProcessMoveOutList?: IProcessMoveOutImportFailureOutputDTO[];
     /** undefined */
-    repeatProcessMoveOutList: IProcessMoveOutImportFailureOutputDTO[];
+    repeatProcessMoveOutList?: IProcessMoveOutImportFailureOutputDTO[];
     /** undefined */
-    optedProduceTaskIdList: number[];
+    optedProduceTaskIdList?: number[];
 }
 /** ProcessMoveOutImportFailureOutputDTO */
 export interface IProcessMoveOutImportFailureOutputDTO {
     /** undefined */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** undefined */
-    processName: string;
+    processName?: string;
     /** undefined */
-    failureMessage: string;
+    failureMessage?: string;
 }

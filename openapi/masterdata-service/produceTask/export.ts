@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/exportUsingPOST_22
 */
-export default function fetchMethod(data: IExportTheDTOOfAProductionTask, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IExportTheDTOOfAProductionTask, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceTask/export",
@@ -17,58 +17,58 @@ export default function fetchMethod(data: IExportTheDTOOfAProductionTask, params
 /** 生产任务导出DTO */
 export interface IExportTheDTOOfAProductionTask {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 对应工序id */
-    processIds: number[];
+    processIds?: number[];
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 对应物料id */
-    materialIds: number[];
+    materialIds?: number[];
     /** 任务类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 任务下发方式 */
-    issueType: string;
+    issueType?: string;
     /** 任务下发方式描述 */
-    issueTypeDesc: string;
+    issueTypeDesc?: string;
     /** 任务类型 */
-    type: string;
+    type?: string;
     /** 计划开始-结束时间 yyyy-MM-dd HH:mm:ss */
-    startEndTime: string;
+    startEndTime?: string;
     /** 任务状态 */
-    statusList: string[];
+    statusList?: string[];
     /** 任务优先级 */
-    priorityLevel: number;
+    priorityLevel?: number;
     /** 创建开始时间 yyyy-MM-dd HH:mm:ss */
-    createBeginTime: string;
+    createBeginTime?: string;
     /** 计划开始-开始时间 yyyy-MM-dd HH:mm:ss */
-    startBeginTime: string;
+    startBeginTime?: string;
     /** 计划结束-开始时间 yyyy-MM-dd HH:mm:ss */
-    endBeginTime: string;
+    endBeginTime?: string;
     /** 计划结束-结束时间 yyyy-MM-dd HH:mm:ss */
-    endEndTime: string;
+    endEndTime?: string;
     /** 创建结束时间 yyyy-MM-dd HH:mm:ss */
-    createEndTime: string;
+    createEndTime?: string;
     /** 导出字段code */
-    exportFieldCodes: string[];
+    exportFieldCodes?: string[];
     /** 可操作项 */
-    canOpItem: string;
+    canOpItem?: string;
     /** 生产订单字段搜索 */
-    produceOrderSearchList: IProcessDataDetailsSearchVO[];
+    produceOrderSearchList?: IProcessDataDetailsSearchVO[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
@@ -77,24 +77,24 @@ export interface IProcessDataDetailsSearchVO {
     /** 搜索类型 */
     searchType: string;
     /** 搜索文本 - 针对文本搜索 */
-    text: string;
+    text?: string;
     /** 搜索起始值 - 针对范围搜索 */
-    limitBegin: Record<string, any>;
+    limitBegin?: Record<string, any>;
     /** 搜索结束值 - 针对范围搜索 */
-    limitEnd: Record<string, any>;
+    limitEnd?: Record<string, any>;
     /** 搜索选项值 - 针对选择搜索 */
-    selectors: Record<string, any>[];
+    selectors?: Record<string, any>[];
     /** 表格编码 */
-    tableCode: string;
+    tableCode?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

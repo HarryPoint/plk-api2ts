@@ -16,26 +16,26 @@ export default function fetchMethod(data: ITheEnterpriseModifiesTheRequestObject
 /** 企业修改请求对象 */
 export interface ITheEnterpriseModifiesTheRequestObject {
     /** 企业名 */
-    name: string;
+    name?: string;
     /** 管理员手机号 */
-    adminPhone: string;
+    adminPhone?: string;
     /** 专家ids */
-    expertUserIdArray: number[];
+    expertUserIdArray?: number[];
     /** 销售经理ids */
-    salesManagerUserIdArray: number[];
+    salesManagerUserIdArray?: number[];
     /** 交付经理用户ids */
-    deliveryManagerUserIdArray: number[];
+    deliveryManagerUserIdArray?: number[];
     /** 企业id */
-    id: number;
+    id?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listAllProcessDocumentUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProcessDocumentVO>(
         {
             url: "/masterdata-service/processDocumentMapConfig/listAllProcessDocument",
@@ -16,38 +16,38 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
 /** JSONResult«List«工艺文档VO»» */
 export interface IJSONResultListProcessDocumentVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessDocumentationVO[];
+    data?: IProcessDocumentationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工艺文档VO */
 export interface IProcessDocumentationVO {
     /** 文档编号 */
-    code: string;
+    code?: string;
     /** 文档名称 */
-    name: string;
+    name?: string;
     /** 展示模块 */
-    displayModuleEnum: string;
+    displayModuleEnum?: string;
     /** 是否在大屏上展示 */
-    isDisplayEnum: string;
+    isDisplayEnum?: string;
     /** 展示模块 -- 字符串 */
-    displayModule: string;
+    displayModule?: string;
     /** 是否在大屏上展示 -- 字符串 */
-    isDisplay: string;
+    isDisplay?: string;
     /** 排序 */
-    sort: number;
+    sort?: number;
     /** 适用物料ids */
-    applyMaterialIdList: number[];
+    applyMaterialIdList?: number[];
     /** 适用物料名称列表 */
-    applyMaterialNameList: string[];
+    applyMaterialNameList?: string[];
     /** 适用车间ids */
-    applyAreaIdList: number[];
+    applyAreaIdList?: number[];
     /** 适用工序ids */
-    applyProcessIdList: number[];
+    applyProcessIdList?: number[];
     /** 文档内容 */
-    content: string;
+    content?: string;
 }

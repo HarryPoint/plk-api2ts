@@ -16,13 +16,13 @@ export default function fetchMethod(data: IKeyParametersSaveTheDTO, extraOptions
 /** 关键参数保存DTO */
 export interface IKeyParametersSaveTheDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
     name: string;
     /** 关联物料 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 关联工序 */
     processIds: number[];
     /** 关键参数集合 */
@@ -31,87 +31,87 @@ export interface IKeyParametersSaveTheDTO {
 /** 关键参数明细保存DTO */
 export interface ISaveTheDTOForKeyParameterDetails {
     /** 字段id */
-    id: number;
+    id?: number;
     /** 字段名称 */
-    name: string;
+    name?: string;
     /** 帮助提示 */
-    remark: string;
+    remark?: string;
     /** 字段类型 */
-    inputType: string;
+    inputType?: string;
     /** 文本类型 */
-    textType: string;
+    textType?: string;
     /** 文本比较值，多个英文逗号,分割 */
-    textCompareValue: string;
+    textCompareValue?: string;
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 数值单位 */
-    numberUnit: string;
+    numberUnit?: string;
     /** 图片最大上传量 */
-    imageTotalCount: number;
+    imageTotalCount?: number;
     /** 选项集，多个英文逗号,分割 */
-    selector: string;
+    selector?: string;
 }
 /** JSONResult«关键参数信息响应对象» */
 export interface IJSONResultKeyParameterInformationResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IKeyParameterInformationResponseObject;
+    data?: IKeyParameterInformationResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 关键参数信息响应对象 */
 export interface IKeyParameterInformationResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 关联工序 */
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp?: IAssociatedDropDownResponseObjects[];
     /** 关联物料 */
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp?: IAssociatedDropDownResponseObjects[];
     /** 关键参数集合 */
-    parameterDetailList: IKeyParameterDetailsResponseObject[];
+    parameterDetailList?: IKeyParameterDetailsResponseObject[];
 }
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id: number;
+    id?: number;
     /** 显示字段名称 */
-    showFieldValue: string;
+    showFieldValue?: string;
 }
 /** 关键参数信息详情响应对象 */
 export interface IKeyParameterDetailsResponseObject {
     /** 字段id */
-    id: number;
+    id?: number;
     /** 字段名称 */
-    name: string;
+    name?: string;
     /** 帮助提示 */
-    remark: string;
+    remark?: string;
     /** 字段类型 */
-    inputType: string;
+    inputType?: string;
     /** 文本类型 */
-    textType: string;
+    textType?: string;
     /** 文本比较值，多个英文逗号,分割 */
-    textCompareValue: string;
+    textCompareValue?: string;
     /** 文本比较值集 */
-    textCompareValueList: string[];
+    textCompareValueList?: string[];
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 数值单位 */
-    numberUnit: string;
+    numberUnit?: string;
     /** 图片最大上传量 */
-    imageTotalCount: number;
+    imageTotalCount?: number;
     /** 选项集，多个英文逗号,分割 */
-    selector: string;
+    selector?: string;
     /** 选项集 */
-    selectorList: string[];
+    selectorList?: string[];
 }

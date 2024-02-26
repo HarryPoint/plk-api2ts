@@ -16,41 +16,41 @@ export default function fetchMethod(data: ICheckTaskCheckRecordQueryRequestDTO, 
 /** 检验任务检验记录查询请求DTO */
 export interface ICheckTaskCheckRecordQueryRequestDTO {
     /** 业务类型 */
-    businessType: string;
+    businessType?: string;
     /** 检验任务id */
-    inspectionTaskId: number;
+    inspectionTaskId?: number;
     /** 零件号 */
-    partNumber: string;
+    partNumber?: string;
     /** 三检制类型 */
-    threeInspectionSystem: string;
+    threeInspectionSystem?: string;
 }
 /** JSONResult«List«检验任务检验记录查询响应DTO»» */
 export interface IJSONResultListValidationTaskValidatesTheRecordQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICheckTaskCheckRecordQueryResponseDTO[];
+    data?: ICheckTaskCheckRecordQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 检验任务检验记录查询响应DTO */
 export interface ICheckTaskCheckRecordQueryResponseDTO {
     /** 零件号 */
-    partNumber: string;
+    partNumber?: string;
     /** 零件检验结果 */
-    inspectionResultsOfIndividualParts: string;
+    inspectionResultsOfIndividualParts?: string;
     /** 不合格情况描述 */
-    descriptionOfNonconformities: string;
+    descriptionOfNonconformities?: string;
     /** 检验项id */
-    qmsInspectionItemsId: number;
+    qmsInspectionItemsId?: number;
     /** 检验项名称 */
-    inspectionItemsName: string;
+    inspectionItemsName?: string;
     /** 标准值 */
-    inspectionStandardValue: string;
+    inspectionStandardValue?: string;
     /** 实测值 */
-    inspectionActualValue: string;
+    inspectionActualValue?: string;
     /** 检验结果 */
-    inspectionResult: string;
+    inspectionResult?: string;
 }

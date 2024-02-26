@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/上报反馈服务相关/addReportUsingPOST
 */
-export default function fetchMethod(data: IReportTheFeedbackProcessingDTO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IReportTheFeedbackProcessingDTO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleReport/addReport",
@@ -21,20 +21,20 @@ export interface IReportTheFeedbackProcessingDTO {
     /** 生产异常类型id */
     produceAbnormalCategoryId: number;
     /** 标签id集合 */
-    tagIds: number[];
+    tagIds?: number[];
     /** 图片key集合 */
-    imageKeys: string[];
+    imageKeys?: string[];
     /** 描述 */
-    description: string;
+    description?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

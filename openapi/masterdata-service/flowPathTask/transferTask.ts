@@ -16,22 +16,22 @@ export default function fetchMethod(data: IProcessTasksAreTransferredToTheDTO, e
 /** 流程任务转交DTO */
 export interface IProcessTasksAreTransferredToTheDTO {
     /** 任务ID */
-    id: number;
+    id?: number;
     /** 表单数据 */
-    data: Record<string, Record<string, any>>;
+    data?: Record<string, Record<string, any>>;
     /** 审批意见/执行情况 */
-    notes: string;
+    notes?: string;
     /** 转交人id */
-    userId: number;
+    userId?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

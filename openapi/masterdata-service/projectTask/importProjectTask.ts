@@ -16,18 +16,18 @@ export default function fetchMethod(data: IProjectTaskImportRequestDTO, extraOpt
 /** 项目任务导入请求DTO */
 export interface IProjectTaskImportRequestDTO {
     /** 项目计划id */
-    projectPlanId: number;
+    projectPlanId?: number;
     /** 导入文件id */
-    importFileId: string;
+    importFileId?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

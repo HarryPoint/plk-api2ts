@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getListForReportUsingPOST
 */
-export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListSalesOrderVO>(
         {
             url: "/masterdata-service/salesOrder/getListForReport",
@@ -17,110 +17,110 @@ export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, param
 /** 订单进度统计查询VO */
 export interface IOrderProgressStatisticsQueryVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 交付日期 - 开始 yyyy-MM-dd HH:mm:ss */
-    deliveryDateBegin: string;
+    deliveryDateBegin?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 客户id集 */
-    customerIds: number[];
+    customerIds?: number[];
     /** 交付日期 - 结束 yyyy-MM-dd HH:mm:ss */
-    deliveryDateEnd: string;
+    deliveryDateEnd?: string;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus: string;
+    salesOrderStatus?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«List«销售订单VO»» */
 export interface IJSONResultListSalesOrderVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISalesOrderVO[];
+    data?: ISalesOrderVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 销售订单VO */
 export interface ISalesOrderVO {
     /** id */
-    id: number;
+    id?: number;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 销售订单名称 */
-    name: string;
+    name?: string;
     /** 销售订单号 */
-    code: string;
+    code?: string;
     /** 订单类型 */
-    orderType: string;
+    orderType?: string;
     /** 客户id */
-    customerId: number;
+    customerId?: number;
     /** 合同号 */
-    contractNo: string;
+    contractNo?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 下单日期(销售日期) */
-    placeOrderTime: string;
+    placeOrderTime?: string;
     /** 下单业务部门id */
-    placeOrderDepartmentId: number;
+    placeOrderDepartmentId?: number;
     /** 业务员id */
-    businessUserId: number;
+    businessUserId?: number;
     /** 收货地址 */
-    receivingAddress: string;
+    receivingAddress?: string;
     /** 客户联系人名称 */
-    customerContactsName: string;
+    customerContactsName?: string;
     /** 客户联系人手机 */
-    customerContactsPhone: string;
+    customerContactsPhone?: string;
     /** 附件 */
-    attachedFileKeys: string;
+    attachedFileKeys?: string;
     /** 是否完全转为生产订单 */
-    isConvertProduceOrder: string;
+    isConvertProduceOrder?: string;
     /** 销售订单状态 */
-    handleStatus: string;
+    handleStatus?: string;
     /** 销售订单生产状态 */
-    produceStatus: string;
+    produceStatus?: string;
     /** 关闭人 */
-    closeUserId: number;
+    closeUserId?: number;
     /** 关闭时间 */
-    closeTime: string;
+    closeTime?: string;
     /** 关闭原因 */
-    closeRemark: string;
+    closeRemark?: string;
     /** 发货数量 */
-    deliveryQuantity: number;
+    deliveryQuantity?: number;
     /** 未发货数量 */
-    notDeliveryQuantity: number;
+    notDeliveryQuantity?: number;
     /** 出库数量 */
-    storageOutQuantity: number;
+    storageOutQuantity?: number;
     /** 未出库数量 */
-    notStorageOutQuantity: number;
+    notStorageOutQuantity?: number;
     /** 退货数量 */
-    returnQuantity: number;
+    returnQuantity?: number;
     /** 未退货数量 */
-    notReturnQuantity: number;
+    notReturnQuantity?: number;
     /** 应收金额 */
-    receivableAmount: number;
+    receivableAmount?: number;
     /** 已收金额 */
-    receivedAmount: number;
+    receivedAmount?: number;
     /** 应退金额 */
-    refundableAmount: number;
+    refundableAmount?: number;
     /** 已退金额 */
-    returnedAmount: number;
+    returnedAmount?: number;
     /** 应收余额 */
-    receivableBalance: number;
+    receivableBalance?: number;
 }

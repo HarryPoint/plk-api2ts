@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检方案/editUsingPOST_18
 */
-export default function fetchMethod(data: IEditTheQualityInspectionSchemeDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IEditTheQualityInspectionSchemeDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityInspectionPlan/edit",
@@ -17,55 +17,55 @@ export default function fetchMethod(data: IEditTheQualityInspectionSchemeDTO, pa
 /** 编辑质检方案 DTO */
 export interface IEditTheQualityInspectionSchemeDTO {
     /** id，如果不传就是新增 */
-    id: number;
+    id?: number;
     /** 质检方案名 */
     name: string;
     /** 质检方案编码 */
-    code: string;
+    code?: string;
     /** 是否应用编码规则 */
     isCodeRule: string;
     /** 所属质检分类id */
-    qualityInspectionCategoryId: number;
+    qualityInspectionCategoryId?: number;
     /** 质检项清单 */
-    itemList: IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO[];
+    itemList?: IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO[];
     /** 版次号 */
-    issueCode: string;
+    issueCode?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 附件文件key */
-    attachedFileKey: string;
+    attachedFileKey?: string;
     /** 质检方式 */
-    type: string;
+    type?: string;
     /** 质检比例（填多少传多少） */
-    qualityInspectionRatio: number;
+    qualityInspectionRatio?: number;
     /** 质检数量 */
-    qualityInspectionQuantity: number;
+    qualityInspectionQuantity?: number;
 }
 /** 质检方案质检项关联信息编辑DTO */
 export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO {
     /** 关联id */
-    id: number;
+    id?: number;
     /** 所属质检项id */
-    qualityInspectionItemId: number;
+    qualityInspectionItemId?: number;
     /** 数值质检标准 */
-    numberStandard: string;
+    numberStandard?: string;
     /** 比较数值 */
-    compareNumber: number;
+    compareNumber?: number;
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 数值单位 */
-    numberUnit: string;
+    numberUnit?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

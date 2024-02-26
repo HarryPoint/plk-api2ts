@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划相关/getAppInfoUsingGET
 */
-export default function fetchMethod(params: { projectId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { projectId?: string }, extraOptions?: any) {
     return http<ITheJSONResultProjectPlansToApplyTheResponseObject>(
         {
             url: "/masterdata-service/projectPlan/getAppInfo",
@@ -16,26 +16,26 @@ export default function fetchMethod(params: { projectId: string }, extraOptions?
 /** JSONResult«项目计划应用响应对象» */
 export interface ITheJSONResultProjectPlansToApplyTheResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProjectPlanAppliesTheResponseObject;
+    data?: ITheProjectPlanAppliesTheResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目计划应用响应对象 */
 export interface ITheProjectPlanAppliesTheResponseObject {
     /** 应用id */
-    appId: number;
+    appId?: number;
     /** 应用code */
-    appCode: string;
+    appCode?: string;
     /** 项目计划id */
-    id: number;
+    id?: number;
     /** 项目计划编号 */
-    code: string;
+    code?: string;
     /** 任务流程状态 */
-    flowStatus: string;
+    flowStatus?: string;
     /** 数据状态 */
-    dataStatus: string;
+    dataStatus?: string;
 }

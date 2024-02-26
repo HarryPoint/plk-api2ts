@@ -16,31 +16,31 @@ export default function fetchMethod(data: ICellBatchEditRequest, extraOptions?: 
 /** 单元格批量编辑请求 */
 export interface ICellBatchEditRequest {
     /** 表格数据ID */
-    rowDataIdList: number[];
+    rowDataIdList?: number[];
     /** 字段定义编码 */
-    fieldDefineCode: string;
+    fieldDefineCode?: string;
     /** 表数据ID */
-    tableDataId: number;
+    tableDataId?: number;
     /** 输入值 */
-    value: string;
+    value?: string;
     /** 关联表单选项列表 */
-    selectedItemList: IAssociationFormSelectedItemInputputDTO[];
+    selectedItemList?: IAssociationFormSelectedItemInputputDTO[];
 }
 /** AssociationFormSelectedItemInputputDTO */
 export interface IAssociationFormSelectedItemInputputDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    showFieldValue: string;
+    showFieldValue?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

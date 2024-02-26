@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingAuditStatisticsUsingGET
 */
-export default function fetchMethod(params: { dateBegin: string; dateEnd: string }, extraOptions?: any) {
+export default function fetchMethod(params: { dateBegin?: string; dateEnd?: string }, extraOptions?: any) {
     return http<IJSONResultLargeScreenNonconformingProductStatisticsRespondToDTOAccordingToTheTrialSituation>(
         {
             url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingAuditStatistics",
@@ -16,18 +16,18 @@ export default function fetchMethod(params: { dateBegin: string; dateEnd: string
 /** JSONResult«大屏不合格品统计按审理情况响应DTO» */
 export interface IJSONResultLargeScreenNonconformingProductStatisticsRespondToDTOAccordingToTheTrialSituation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ILargeScreenNonconformingProductStatisticsAccordingToTheTrialSituationResponseDTO;
+    data?: ILargeScreenNonconformingProductStatisticsAccordingToTheTrialSituationResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 大屏不合格品统计按审理情况响应DTO */
 export interface ILargeScreenNonconformingProductStatisticsAccordingToTheTrialSituationResponseDTO {
     /** 未关闭数量 */
-    handlingQuantity: number;
+    handlingQuantity?: number;
     /** 已关闭数量 */
-    completeQuantity: number;
+    completeQuantity?: number;
 }

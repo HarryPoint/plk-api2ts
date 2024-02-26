@@ -15,45 +15,45 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«DepartmentProposalDashboardResponseDTO» */
 export interface IJSONResultDepartmentProposalDashboardResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDepartmentProposalDashboardResponseDTO;
+    data?: IDepartmentProposalDashboardResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** DepartmentProposalDashboardResponseDTO */
 export interface IDepartmentProposalDashboardResponseDTO {
     /** 年份 */
-    year: number;
+    year?: number;
     /** 部门年目标设置ID */
-    departmentYearTargetSettingId: number;
+    departmentYearTargetSettingId?: number;
     /** 部门提案指标 */
-    departmentProposalIndicatorsList: IDepartmentProposalIndicatorsResponseDTO[];
+    departmentProposalIndicatorsList?: IDepartmentProposalIndicatorsResponseDTO[];
 }
 /** DepartmentProposalIndicatorsResponseDTO */
 export interface IDepartmentProposalIndicatorsResponseDTO {
     /** 部门ID */
-    departmentId: number;
+    departmentId?: number;
     /** 部门名称 */
-    departmentName: string;
+    departmentName?: string;
     /** 提案数量 */
-    proposalQuantity: number;
+    proposalQuantity?: number;
     /** 完成数量 */
-    completeProjectQuantity: number;
+    completeProjectQuantity?: number;
     /** 员工参与数量 */
-    userQuantity: number;
+    userQuantity?: number;
     /** （部门年改善提案数量目标/12*当前月份） */
-    proposalPlanQuantity: number;
+    proposalPlanQuantity?: number;
     /** （部门改善实施年目标/12*当前月份） */
-    proposalImplementationQuantity: number;
+    proposalImplementationQuantity?: number;
     /** （部门改善提案参与人数目标/12*当前月份） */
-    participantsQuantity: number;
+    participantsQuantity?: number;
     /** 提案完成率 (小数，未乘以 * 100%) */
-    proposalCompleteRate: number;
+    proposalCompleteRate?: number;
     /** 实际实施率(小数，未乘以 * 100%) */
-    proposalImplementationRate: number;
+    proposalImplementationRate?: number;
     /** 员工参与率(小数，未乘以 * 100%) */
-    participantsQuantityRate: number;
+    participantsQuantityRate?: number;
 }

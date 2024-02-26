@@ -15,74 +15,74 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«流程树VO»» */
 export interface IJSONResultListProcessTreeVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessTreeVO[];
+    data?: IProcessTreeVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程树VO */
 export interface IProcessTreeVO {
     /** 路由id */
-    routerId: number;
+    routerId?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 流程树类型 */
-    treeType: string;
+    treeType?: string;
     /** 字段集 */
-    columns: IProcessTreeFieldInformationIsReturnedToVO[];
+    columns?: IProcessTreeFieldInformationIsReturnedToVO[];
     /** 子集 */
-    children: IProcessTreeVO[];
+    children?: IProcessTreeVO[];
     /** 流程code */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 流程类型 */
-    flowPathType: string;
+    flowPathType?: string;
 }
 /** 流程树字段信息返回VO */
 export interface IProcessTreeFieldInformationIsReturnedToVO {
     /** 字段id */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 序号值 */
-    serialNo: string;
+    serialNo?: string;
     /** 是否是系统字段 */
-    isSystem: string;
+    isSystem?: string;
     /** 字段类型 */
-    flowPathFormFieldType: string;
+    flowPathFormFieldType?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 选项集 传值传code，显示name */
-    selector: IFormFieldOption[];
+    selector?: IFormFieldOption[];
     /** 日期类型 */
-    dateType: string;
+    dateType?: string;
     /** 宽度 */
-    span: number;
+    span?: number;
     /** 组织类型 */
-    organizationType: string;
+    organizationType?: string;
     /** 关联表单编码 */
-    formRpCode: string;
+    formRpCode?: string;
     /** 关联表单选项显示字段code */
-    formRpSelectorShowFieldCode: string;
+    formRpSelectorShowFieldCode?: string;
     /** 关联表单选项显示字段SerialNo */
-    formRpSelectorShowFieldSerialNo: string;
+    formRpSelectorShowFieldSerialNo?: string;
     /** 是否必填 */
-    isMust: string;
+    isMust?: string;
 }
 /** FormFieldOption */
 export interface IFormFieldOption {
     /** undefined */
-    name: string;
+    name?: string;
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    color: string;
+    color?: string;
 }

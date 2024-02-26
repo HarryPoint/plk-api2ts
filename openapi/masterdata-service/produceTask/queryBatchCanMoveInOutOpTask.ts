@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryBatchCanMoveInOutOpTaskUsingPOST
 */
-export default function fetchMethod(data: ITaskBatchOperationDTO1, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ITaskBatchOperationDTO1, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheDTOReturnedFromABatchOperationTask>(
         {
             url: "/masterdata-service/produceTask/queryBatchCanMoveInOutOpTask",
@@ -28,82 +28,82 @@ export interface ITaskBatchOperationDtos {
     /** 生产任务id */
     produceTaskId: number;
     /** 批次订单id集 */
-    lotIds: number[];
+    lotIds?: number[];
 }
 /** JSONResult«批量操作任务返回信息DTO» */
 export interface IJSONResultIndicatesTheDTOReturnedFromABatchOperationTask {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBatchOperationTaskReturnInformationDTO;
+    data?: IBatchOperationTaskReturnInformationDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 批量操作任务返回信息DTO */
 export interface IBatchOperationTaskReturnInformationDTO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 区域id */
-    areaId: number;
+    areaId?: number;
     /** 区域编码 */
-    areaCode: string;
+    areaCode?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 操作任务id集 */
-    taskIds: number[];
+    taskIds?: number[];
     /** 需进料数/需出料数 */
-    waitQuantity: number;
+    waitQuantity?: number;
     /** 可进料数/可出料数 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
     /** 物料数据 */
-    materials: IBatchOperationTaskMaterialResponseDTO[];
+    materials?: IBatchOperationTaskMaterialResponseDTO[];
 }
 /** 批量操作任务物料响应DTO */
 export interface IBatchOperationTaskMaterialResponseDTO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 进料/出料数量 */
-    quantity: number;
+    quantity?: number;
     /** 生产任务列表 */
-    produceTaskList: IBatchOpTaskMoveInOutResponseDTO[];
+    produceTaskList?: IBatchOpTaskMoveInOutResponseDTO[];
 }
 /** BatchOpTaskMoveInOutResponseDTO */
 export interface IBatchOpTaskMoveInOutResponseDTO {
     /** undefined */
-    materialId: number;
+    materialId?: number;
     /** 生产任务ID */
-    produceTaskId: number;
+    produceTaskId?: number;
     /** 进出站方式 */
-    inOutType: string;
+    inOutType?: string;
     /** 生产任务编码 */
-    produceTaskNo: string;
+    produceTaskNo?: string;
     /** 进料/出料数量(可用数量) */
-    quantity: number;
+    quantity?: number;
     /** 需生产数量 */
-    needProduceQuantity: number;
+    needProduceQuantity?: number;
     /** 批次订单列表 */
-    lotOrders: IBatchOperationTaskBatchOrderResponseDTO[];
+    lotOrders?: IBatchOperationTaskBatchOrderResponseDTO[];
 }
 /** 批量操作任务批次订单响应DTO */
 export interface IBatchOperationTaskBatchOrderResponseDTO {
     /** 批次id */
-    lotId: number;
+    lotId?: number;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 需进料数/需出料数 */
-    waitQuantity: number;
+    waitQuantity?: number;
     /** 可进料数/可出料数 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
 }

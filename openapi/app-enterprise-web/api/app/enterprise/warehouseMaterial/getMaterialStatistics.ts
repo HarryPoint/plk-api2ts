@@ -16,90 +16,90 @@ export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, 
 /** 物料主数据库存搜索VO */
 export interface IMaterialMasterDataInventorySearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 仓库id */
-    storehouseIds: number[];
+    storehouseIds?: number[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«物料库存统计VO» */
 export interface IJSONResultMaterialInventoryStatisticsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialInventoryStatisticsVO;
+    data?: IMaterialInventoryStatisticsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料库存统计VO */
 export interface IMaterialInventoryStatisticsVO {
     /** 库存总数 */
-    storageTotalCount: number;
+    storageTotalCount?: number;
     /** 库存锁定数 */
-    storageLockCount: number;
+    storageLockCount?: number;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
     /** 物料库存分页 */
-    materialStorages: IPagingInformationMaterialMasterDataInventoryReturnsVO;
+    materialStorages?: IPagingInformationMaterialMasterDataInventoryReturnsVO;
 }
 /** 分页信息«物料主数据库存返回VO» */
 export interface IPagingInformationMaterialMasterDataInventoryReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IMaterialMasterDataInventoryReturnedToVO[];
+    list?: IMaterialMasterDataInventoryReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 物料主数据库存返回VO */
 export interface IMaterialMasterDataInventoryReturnedToVO {
     /** 物料id */
-    id: number;
+    id?: number;
     /** 物料名称 */
-    name: string;
+    name?: string;
     /** 物料编号 */
-    code: string;
+    code?: string;
     /** 规格 */
-    spec: string;
+    spec?: string;
     /** 单位 */
-    unit: string;
+    unit?: string;
     /** 库存总数 */
-    storageTotalCount: number;
+    storageTotalCount?: number;
     /** 库存锁定数 */
-    storageLockCount: number;
+    storageLockCount?: number;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
 }

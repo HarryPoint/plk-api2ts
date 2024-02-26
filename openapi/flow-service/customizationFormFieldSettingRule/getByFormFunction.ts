@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/定制表单字段设置规则 - 相关/getByFormFunctionUsingGET
 */
-export default function fetchMethod(params: { formFunctionType: string }, extraOptions?: any) {
+export default function fetchMethod(params: { formFunctionType?: string }, extraOptions?: any) {
     return http<IJSONResultListCustomizedFormFieldSettingRuleVO>(
         {
             url: "/flow-service/customizationFormFieldSettingRule/getByFormFunction",
@@ -16,30 +16,30 @@ export default function fetchMethod(params: { formFunctionType: string }, extraO
 /** JSONResult«List«CustomizedFormFieldSettingRuleVO»» */
 export interface IJSONResultListCustomizedFormFieldSettingRuleVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICustomizedFormFieldSettingRuleVO[];
+    data?: ICustomizedFormFieldSettingRuleVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** CustomizedFormFieldSettingRuleVO */
 export interface ICustomizedFormFieldSettingRuleVO {
     /** ID */
-    id: number;
+    id?: number;
     /** 表单功能 */
-    formFunction: string;
+    formFunction?: string;
     /** 定位类型 */
-    fixType: string;
+    fixType?: string;
     /** 定位序列 */
-    fixSort: number;
+    fixSort?: number;
     /** 是否显示 */
-    isShow: string;
+    isShow?: string;
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 系统类型 */
-    systemType: string;
+    systemType?: string;
     /** 排序 */
-    sort: number;
+    sort?: number;
 }

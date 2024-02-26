@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程自定义字段相关/getByFlowPathVersionIdUsingPOST
 */
-export default function fetchMethod(params: { enterpriseId: number; flowPathVersionId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; flowPathVersionId?: number }, extraOptions?: any) {
     return http<ITheJSONResultListProcessCustomNotificationFieldRespondsToVO>(
         {
             url: "/flow-service/flowPathCustomerNotice/getByFlowPathVersionId",
@@ -16,26 +16,26 @@ export default function fetchMethod(params: { enterpriseId: number; flowPathVers
 /** JSONResult«List«流程自定义通知字段响应VO»» */
 export interface ITheJSONResultListProcessCustomNotificationFieldRespondsToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProcessCustomNotificationFieldRespondsToVO1[];
+    data?: ITheProcessCustomNotificationFieldRespondsToVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程自定义通知字段响应VO_1 */
 export interface ITheProcessCustomNotificationFieldRespondsToVO1 {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 所属流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 所属流程版本id */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** 流程版本号 */
-    flowPathVersionRank: number;
+    flowPathVersionRank?: number;
     /** 关联字段SerialNo */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
 }

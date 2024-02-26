@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/editByNotTriggerTaskUsingPOST_1
 */
-export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/masterdata-service/material/editByNotTriggerTask",
@@ -17,43 +17,43 @@ export default function fetchMethod(data: IMaterialEditorRequestDTO, params: { e
 /** 物料编辑请求DTO */
 export interface IMaterialEditorRequestDTO {
     /** 编辑数据 */
-    data: Record<string, Record<string, any>>;
+    data?: Record<string, Record<string, any>>;
     /** 流程任务id - 新增/重新编辑业务，要设置为null */
-    flowPathTaskId: number;
+    flowPathTaskId?: number;
     /** 扩展参数 */
-    extensionParam: Record<string, Record<string, any>>;
+    extensionParam?: Record<string, Record<string, any>>;
     /** 物料批次设置 */
-    lotSetting: IMaterialBatchSetEditObject;
+    lotSetting?: IMaterialBatchSetEditObject;
 }
 /** 物料批次设置编辑对象 */
 export interface IMaterialBatchSetEditObject {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 启用序列号 */
-    enableSerialNo: string;
+    enableSerialNo?: string;
     /** 序列号方案id */
-    serialNoSchemeId: number;
+    serialNoSchemeId?: number;
     /** 启用批次 */
-    enableLot: string;
+    enableLot?: string;
     /** 批次方案id */
-    lotSchemeId: number;
+    lotSchemeId?: number;
     /** 启用质量追溯 */
-    enableQualityTraceability: string;
+    enableQualityTraceability?: string;
     /** 启用外部码 */
-    enableExternalCode: string;
+    enableExternalCode?: string;
     /** 外部码字段名称 */
-    externalCodeFieldName: string;
+    externalCodeFieldName?: string;
     /** 外部码长度 */
-    externalCodeLength: number;
+    externalCodeLength?: number;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

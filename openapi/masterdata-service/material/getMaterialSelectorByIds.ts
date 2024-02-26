@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialSelectorByIdsUsingPOST
 */
-export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IIdCollectionInformation, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListReturnVOToTheMaterialMasterDataSelection>(
         {
             url: "/masterdata-service/material/getMaterialSelectorByIds",
@@ -17,39 +17,39 @@ export default function fetchMethod(data: IIdCollectionInformation, params: { en
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids: number[];
+    ids?: number[];
 }
 /** JSONResult«List«物料主数据选择返回VO»» */
 export interface IJSONResultListReturnVOToTheMaterialMasterDataSelection {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialMasterDataSelectionIsReturnedToVO[];
+    data?: IMaterialMasterDataSelectionIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料主数据选择返回VO */
 export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 物料id */
-    id: number;
+    id?: number;
     /** 物料名称 */
-    name: string;
+    name?: string;
     /** 物料编号 */
-    code: string;
+    code?: string;
     /** 物料类型 */
-    type: string;
+    type?: string;
     /** 物料类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 单位 */
-    unit: string;
+    unit?: string;
     /** 规格 */
-    spec: string;
+    spec?: string;
     /** 版次号 */
-    issueCode: string;
+    issueCode?: string;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
     /** 是否有bom */
-    hasBom: string;
+    hasBom?: string;
 }

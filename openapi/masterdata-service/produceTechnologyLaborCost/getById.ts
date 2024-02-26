@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产工艺工费相关/getByIdUsingGET_10
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProduceTechnologyLaborCostResponseDTO>(
         {
             url: "/masterdata-service/produceTechnologyLaborCost/getById",
@@ -16,52 +16,52 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«ProduceTechnologyLaborCostResponseDTO» */
 export interface IJSONResultProduceTechnologyLaborCostResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProduceTechnologyLaborCostResponseDTO;
+    data?: IProduceTechnologyLaborCostResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProduceTechnologyLaborCostResponseDTO */
 export interface IProduceTechnologyLaborCostResponseDTO {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 生产工艺id */
-    produceTechnologyId: number;
+    produceTechnologyId?: number;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 所属工艺路径步骤id */
-    produceTechnologyRoutingStepId: number;
+    produceTechnologyRoutingStepId?: number;
     /** 工费名称 */
-    name: string;
+    name?: string;
     /** 工费编号 */
-    code: string;
+    code?: string;
     /** 合格产出工费单价 */
-    producePrice: number;
+    producePrice?: number;
     /** 返工产出工费单价 */
-    backProducePrice: number;
+    backProducePrice?: number;
     /** 准备工费 */
-    readyPrice: number;
+    readyPrice?: number;
     /** 关联工费id */
-    laborCostId: number;
+    laborCostId?: number;
 }

@@ -16,18 +16,18 @@ export default function fetchMethod(data: ICustomerClaimInputVO, extraOptions?: 
 /** CustomerClaimInputVO */
 export interface ICustomerClaimInputVO {
     /** 客户ID列表 */
-    customerIdList: number[];
+    customerIdList?: number[];
     /** 用户ID */
-    userId: number;
+    userId?: number;
 }
 /** JSONResult«boolean» */
 export interface IJSONResultboolean {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: boolean;
+    data?: boolean;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

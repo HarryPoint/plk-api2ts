@@ -16,31 +16,31 @@ export default function fetchMethod(data: ISecurityRiskQueryRequest, extraOption
 /** 安全隐患查询请求 */
 export interface ISecurityRiskQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 查询日期的结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«List«安全隐患查询响应»» */
 export interface IJSONResultListResponseToASecurityHazardQuery {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISecurityRiskQueryResponse[];
+    data?: ISecurityRiskQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 安全隐患查询响应 */
 export interface ISecurityRiskQueryResponse {
     /** 检查类型-key */
-    checkTypeKey: string;
+    checkTypeKey?: string;
     /** 检查类型-名称 */
-    checkTypeName: string;
+    checkTypeName?: string;
     /** 已完成数量 */
-    completedQuantity: number;
+    completedQuantity?: number;
     /** 进行中数量 */
-    progressQuantity: number;
+    progressQuantity?: number;
     /** 超期数量 */
-    overdueQuantity: number;
+    overdueQuantity?: number;
 }

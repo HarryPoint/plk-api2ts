@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getConsignmentInboundAnalyzeReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationConsignmentInboundAnalysisReportReturnsVO>(
         {
             url: "/masterdata-service/exportAuth/getConsignmentInboundAnalyzeReportExportInfoByTicket",
@@ -16,51 +16,51 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«寄售入库分析报表返回VO»» */
 export interface IJSONResultExportInformationConsignmentInboundAnalysisReportReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO;
+    data?: IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«寄售入库分析报表返回VO» */
 export interface IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IConsignmentInboundAnalysisReportReturnedToVO[];
+    itemList?: IConsignmentInboundAnalysisReportReturnedToVO[];
 }
 /** 寄售入库分析报表返回VO */
 export interface IConsignmentInboundAnalysisReportReturnedToVO {
     /** 单据编号 */
-    workOrderNo: string;
+    workOrderNo?: string;
     /** 销售订单编号 */
-    salesOrderNo: string;
+    salesOrderNo?: string;
     /** 客户 */
-    customer: string;
+    customer?: string;
     /** 业务员 */
-    businessMan: string;
+    businessMan?: string;
     /** 入库日期 */
-    inboundDate: string;
+    inboundDate?: string;
     /** 入库类型 */
-    inboundType: string;
+    inboundType?: string;
     /** 入库单价 */
-    inboundPrice: number;
+    inboundPrice?: number;
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 规格型号 */
-    productSpec: string;
+    productSpec?: string;
     /** 仓库 */
-    warehouse: string;
+    warehouse?: string;
     /** 入库数量 */
-    inboundQty: number;
+    inboundQty?: number;
     /** 损耗数量 */
-    numOfLoss: number;
+    numOfLoss?: number;
     /** 入库金额 */
-    inboundAmount: number;
+    inboundAmount?: number;
     /** 产品编号 */
-    productNo: string;
+    productNo?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
 }

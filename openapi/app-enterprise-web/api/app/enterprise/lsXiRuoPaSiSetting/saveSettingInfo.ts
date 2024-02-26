@@ -29,9 +29,9 @@ export interface ISilopusBigScreenSetUpTheDTO {
 /** 西偌帕斯大屏计划数设置DTO */
 export interface ISilopusLargeScreenProjectNumberSetDTO {
     /** 日程安排日期 yyyy-MM-dd */
-    scheduleDate: string;
+    scheduleDate?: string;
     /** 计划数 */
-    planQuantity: number;
+    planQuantity?: number;
 }
 /** 西偌帕斯工序目标值大屏设置DTO */
 export interface ISilopusProcessTargetValueLargeScreenSetDTO {
@@ -43,11 +43,11 @@ export interface ISilopusProcessTargetValueLargeScreenSetDTO {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

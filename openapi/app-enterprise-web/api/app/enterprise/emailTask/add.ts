@@ -16,68 +16,68 @@ export default function fetchMethod(data: IEmailTaskAddRequestDTO, extraOptions?
 /** EmailTaskAddRequestDTO */
 export interface IEmailTaskAddRequestDTO {
     /** 邮件名称 */
-    emailName: string;
+    emailName?: string;
     /** 收件人 */
-    addressee: string;
+    addressee?: string;
     /** 标题 */
-    title: string;
+    title?: string;
     /** 邮件正文 */
-    content: string;
+    content?: string;
     /** 发送模式 */
-    sendingMode: string;
+    sendingMode?: string;
     /** 发送时间 */
-    sendingTime: string;
+    sendingTime?: string;
     /** 下次发送时间 */
-    nextSendingTime: string;
+    nextSendingTime?: string;
     /** 上次发送时间 */
-    lastSendingTime: string;
+    lastSendingTime?: string;
     /** 附件配置列表 */
-    attachmentConfigList: IEmailTaskAttachmentConfigAddRequestDTO[];
+    attachmentConfigList?: IEmailTaskAttachmentConfigAddRequestDTO[];
     /** 邮件状态 */
-    status: string;
+    status?: string;
     /** 发送时间配置 */
-    sendingTimeConfig: ISendingTimeConfigAddRequestDTO;
+    sendingTimeConfig?: ISendingTimeConfigAddRequestDTO;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 更新用户名 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 创建部门名 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门名 */
-    updateDeptName: string;
+    updateDeptName?: string;
 }
 /** EmailTaskAttachmentConfigAddRequestDTO */
 export interface IEmailTaskAttachmentConfigAddRequestDTO {
     /** 其他对象引用ID */
-    refId: number;
+    refId?: number;
     /** 文件类型 */
-    fileType: string;
+    fileType?: string;
 }
 /** SendingTimeConfigAddRequestDTO */
 export interface ISendingTimeConfigAddRequestDTO {
     /** 时间模式 */
-    timeMode: string;
+    timeMode?: string;
     /** 周号 */
-    weekNo: number;
+    weekNo?: number;
     /** 每月的计时模式 */
-    monthCalcTimeMode: string;
+    monthCalcTimeMode?: string;
     /** 第几天 */
-    day: number;
+    day?: number;
     /** 季度计时模式 */
-    quarterCalcTimeMode: string;
+    quarterCalcTimeMode?: string;
     /** 每天第几天 */
-    month: number;
+    month?: number;
     /** 时间 */
-    time: string;
+    time?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

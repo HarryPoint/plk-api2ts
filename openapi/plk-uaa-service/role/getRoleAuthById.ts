@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/getRoleAuthByIdUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultResponseToRolePermissionsAndEmployeeInformation>(
         {
             url: "/plk-uaa-service/role/getRoleAuthById",
@@ -16,103 +16,103 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«角色权限及员工信息响应» */
 export interface IJSONResultResponseToRolePermissionsAndEmployeeInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IRoleRightsAndEmployeeInformationResponse;
+    data?: IRoleRightsAndEmployeeInformationResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 角色权限及员工信息响应 */
 export interface IRoleRightsAndEmployeeInformationResponse {
     /** id */
-    id: number;
+    id?: number;
     /** 角色名 */
-    name: string;
+    name?: string;
     /** 角色编码 */
-    code: string;
+    code?: string;
     /** 角色描述 */
-    description: string;
+    description?: string;
     /** 勾选的权限码集 */
-    permissionCodes: string[];
+    permissionCodes?: string[];
     /** 路由对应的数据权限集 */
-    dataAuths: IEnterpriseDataPermissionResponse[];
+    dataAuths?: IEnterpriseDataPermissionResponse[];
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务业务ID */
-    serviceBusinessId: number;
+    serviceBusinessId?: number;
     /** 用户集 */
-    users: IEnterpriseUserEmployeeInformationResponse[];
+    users?: IEnterpriseUserEmployeeInformationResponse[];
 }
 /** 企业数据权限响应 */
 export interface IEnterpriseDataPermissionResponse {
     /** 路由code */
-    routerCode: string;
+    routerCode?: string;
     /** 数据权限集 */
-    dataAuthList: IEnterpriseDataPermissionListResponse[];
+    dataAuthList?: IEnterpriseDataPermissionListResponse[];
 }
 /** 企业数据权限列表响应 */
 export interface IEnterpriseDataPermissionListResponse {
     /** 数据权限类型 */
-    dataAuthType: string;
+    dataAuthType?: string;
     /** 数据权限对应的字段列表(只针对表单字段类型) */
-    roleDataAuthFieldList: ITheRoleDataPermissionFieldRespondsToTheDTO[];
+    roleDataAuthFieldList?: ITheRoleDataPermissionFieldRespondsToTheDTO[];
 }
 /** 角色数据权限字段响应DTO */
 export interface ITheRoleDataPermissionFieldRespondsToTheDTO {
     /** 流程表单字段序列号 */
-    appFieldSerialNo: string;
+    appFieldSerialNo?: string;
     /** 流程表单字段名 */
-    appFieldName: string;
+    appFieldName?: string;
 }
 /** 企业用户员工信息响应 */
 export interface IEnterpriseUserEmployeeInformationResponse {
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新人id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新人名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** 用户id */
-    userId: number;
+    userId?: number;
     /** 员工 */
-    employee: IEmployeeInformationResponse;
+    employee?: IEmployeeInformationResponse;
 }
 /** 员工信息响应 */
 export interface IEmployeeInformationResponse {
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新人id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新人名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 手机号 */
-    telephone: string;
+    telephone?: string;
     /** 邮件 */
-    email: string;
+    email?: string;
 }

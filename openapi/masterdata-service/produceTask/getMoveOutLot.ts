@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveOutLotUsingGET
 */
-export default function fetchMethod(params: { taskId: string; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { taskId?: string; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials>(
         {
             url: "/masterdata-service/produceTask/getMoveOutLot",
@@ -16,51 +16,51 @@ export default function fetchMethod(params: { taskId: string; enterpriseId: numb
 /** JSONResult«List«wip可进出料响应dto»» */
 export interface IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IWipCanRespondToDto[];
+    data?: IWipCanRespondToDto[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** wip可进出料响应dto */
 export interface IWipCanRespondToDto {
     /** 批次id -- 有批次时有值 */
-    lotOrderId: number;
+    lotOrderId?: number;
     /** 批次名称  -- 有批次时有值 */
-    lotName: string;
+    lotName?: string;
     /** 批次号  -- 有批次时有值 */
-    lotNo: string;
+    lotNo?: string;
     /** 原始数量 -- 有批次时为批次原始数量，无批次时为任务计划量 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
-    wmRpCreateTime: string;
+    wmRpCreateTime?: string;
     /** 可委外数量 */
-    canEntrustQuantity: number;
+    canEntrustQuantity?: number;
     /** 可操作数量 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
     /** wip状态信息集 */
-    wipQuantityStatusList: IWipQuantityStatusInformationResponseObject[];
+    wipQuantityStatusList?: IWipQuantityStatusInformationResponseObject[];
 }
 /** Wip数量状态信息响应对象 */
 export interface IWipQuantityStatusInformationResponseObject {
     /** wip状态记录id */
-    wipRpId: number;
+    wipRpId?: number;
     /** 数量 */
-    quantity: number;
+    quantity?: number;
     /** wip数量状态 */
-    quantityStatus: string;
+    quantityStatus?: string;
     /** wip数量状态描述 */
-    quantityStatusDesc: string;
+    quantityStatusDesc?: string;
     /** 是否可用 */
-    canUse: string;
+    canUse?: string;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
-    wmRpCreateTime: string;
+    wmRpCreateTime?: string;
     /** 可委外数量 */
-    canEntrustQuantity: number;
+    canEntrustQuantity?: number;
     /** 可操作数量 */
-    canOptQuantity: number;
+    canOptQuantity?: number;
     /** 是否锁定 */
-    isLock: string;
+    isLock?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskDetailUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultProcessTaskDetailsAreReturnedToVO>(
         {
             url: "/masterdata-service/flowPathTask/getFlowPathTaskDetail",
@@ -16,154 +16,154 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
 /** JSONResult«流程任务明细返回VO» */
 export interface IJSONResultProcessTaskDetailsAreReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessTaskDetailsAreReturnedToVO;
+    data?: IProcessTaskDetailsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程任务明细返回VO */
 export interface IProcessTaskDetailsAreReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 任务类型 */
-    type: string;
+    type?: string;
     /** 自定义提交按钮文案 */
-    customSubmitContent: string;
+    customSubmitContent?: string;
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 所属流程工单id */
-    flowPathWorkOrderId: number;
+    flowPathWorkOrderId?: number;
     /** 所属流程工单号 */
-    flowPathWorkOrderCode: string;
+    flowPathWorkOrderCode?: string;
     /** 流程工单发起人id */
-    workOrderCreateUserId: number;
+    workOrderCreateUserId?: number;
     /** 工单发起部门id */
-    workOrderCreateCombinationId: number;
+    workOrderCreateCombinationId?: number;
     /** 所属流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 所属流程版本id */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** 流程名称(计划名称) */
-    flowPathName: string;
+    flowPathName?: string;
     /** 流程编号 */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 所属流程节点id */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
     /** 所属流程节点名称 */
-    flowPathNodeName: string;
+    flowPathNodeName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 实际开始时间 */
-    actualBeginTime: string;
+    actualBeginTime?: string;
     /** 执行人id */
-    handleUserId: number;
+    handleUserId?: number;
     /** 处理时间 - 状态为已处理、已关闭时有值 */
-    handleTime: string;
+    handleTime?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 执行人id */
-    executorId: number;
+    executorId?: number;
     /** 超时开始时间 */
-    timeoutBeginTime: string;
+    timeoutBeginTime?: string;
     /** 任务接受状态 */
-    acceptStatus: string;
+    acceptStatus?: string;
     /** 开始状态 */
-    beginningStatus: string;
+    beginningStatus?: string;
     /** 开始时间 */
-    beginningTime: string;
+    beginningTime?: string;
     /** 单据创建人名称 */
-    workOrderCreateUsername: string;
+    workOrderCreateUsername?: string;
     /** 任务状态 */
-    modelTaskStatus: string;
+    modelTaskStatus?: string;
     /** 任务状态描述 */
-    modelTaskStatusDesc: string;
+    modelTaskStatusDesc?: string;
     /** 自定义字段 */
-    customValues: IWorkOrderDetailsReturnInformationVO[];
+    customValues?: IWorkOrderDetailsReturnInformationVO[];
     /** 创建部门 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 工单信息 */
-    workOrder: IProcessTicketPreviewInformationIsReturnedToVO;
+    workOrder?: IProcessTicketPreviewInformationIsReturnedToVO;
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent: string;
+    isCustomSubmitContent?: string;
     /** 是否允许回退 */
-    isBack: string;
+    isBack?: string;
     /** 回退类型 */
-    backType: string;
+    backType?: string;
     /** 审批回退节点选择集 */
-    backFlowPathNodeSelector: IIdNameNumberVO[];
+    backFlowPathNodeSelector?: IIdNameNumberVO[];
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent: string;
+    isCustomAcceptContent?: string;
     /** 自定义接受按钮文案 */
-    customAcceptContent: string;
+    customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton: string;
+    isShowAcceptButton?: string;
     /** 是否自定义同意按钮文案 */
     isCustomPassApprovalContent: string;
     /** 自定义同意按钮文案 */
-    customPassApprovalContent: string;
+    customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
     isCustomRefuseApprovalContent: string;
     /** 自定义拒绝按钮文案 */
-    customRefuseApprovalContent: string;
+    customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton: string;
+    isShowRefuseButton?: string;
     /** 是否自定义回退按钮文案 */
     isCustomBackContent: string;
     /** 自定义回退按钮文案 */
-    customBackContent: string;
+    customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton: string;
+    isShowBackButton?: string;
     /** 审批意见/执行情况 */
-    notes: string;
+    notes?: string;
 }
 /** 工单明细数据返回信息VO */
 export interface IWorkOrderDetailsReturnInformationVO {
     /** 列code */
-    code: string;
+    code?: string;
     /** 列值 */
-    value: Record<string, any>;
+    value?: Record<string, any>;
 }
 /** 流程工单预览信息返回VO */
 export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 工单号 */
-    workOrderCode: string;
+    workOrderCode?: string;
     /** 提交用户id */
-    createUserId: number;
+    createUserId?: number;
     /** 提交人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 提交人部门id */
-    createDeptId: number;
+    createDeptId?: number;
     /** 提交人部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 提交时间 */
-    createTime: string;
+    createTime?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 关闭类型 */
-    closeType: string;
+    closeType?: string;
     /** 关闭类型描述 */
-    closeTypeDesc: string;
+    closeTypeDesc?: string;
     /** 所属流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 所属流程版本id */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** 流程版本号 */
-    flowPathVersionRank: number;
+    flowPathVersionRank?: number;
     /** 当前节点id */
-    currentFlowPathNodeId: number;
+    currentFlowPathNodeId?: number;
     /** 业务数据id */
-    businessId: number;
+    businessId?: number;
     /** 业务数据code */
-    businessCode: string;
+    businessCode?: string;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

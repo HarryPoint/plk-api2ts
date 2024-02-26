@@ -16,16 +16,16 @@ export default function fetchMethod(data: ICalculationSchemeDeleteRequestDTO, ex
 /** 计算方案删除请求DTO */
 export interface ICalculationSchemeDeleteRequestDTO {
     /** 计算方案ID列表 */
-    idList: number[];
+    idList?: number[];
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

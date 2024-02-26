@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByFlowPathVersionIdUsingGET
 */
-export default function fetchMethod(params: { flowPathVersionId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { flowPathVersionId?: number }, extraOptions?: any) {
     return http<IJSONResultProcessNodeDTO>(
         {
             url: "/flow-service/flowPathNode/getByFlowPathVersionId",
@@ -16,278 +16,278 @@ export default function fetchMethod(params: { flowPathVersionId: number }, extra
 /** JSONResult«流程节点DTO» */
 export interface IJSONResultProcessNodeDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessNodeDTO;
+    data?: IProcessNodeDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程节点DTO */
 export interface IProcessNodeDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 所属流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 所属流程版本id */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** 流程版本号 */
-    flowPathVersionRank: number;
+    flowPathVersionRank?: number;
     /** 节点业务类型 */
-    businessType: string;
+    businessType?: string;
     /** 节点类型 */
-    type: string;
+    type?: string;
     /** 前节点id */
-    previousFlowPathNodeId: number;
+    previousFlowPathNodeId?: number;
     /** 后节点id */
-    nextFlowPathNodeId: number;
+    nextFlowPathNodeId?: number;
     /** 父节点id - 子节点有值 */
-    parentFlowPathNodeId: number;
+    parentFlowPathNodeId?: number;
     /** 所属分支节点id - 子分支下的所有流程节点均属于当前子分支 */
-    branchesFlowPathNodeId: number;
+    branchesFlowPathNodeId?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 名称 */
-    code: string;
+    code?: string;
     /** 序号值 */
-    serialNo: string;
+    serialNo?: string;
     /** 审批类型 */
-    approvalType: string;
+    approvalType?: string;
     /** 是否允许回退 */
-    isBack: string;
+    isBack?: string;
     /** 回退类型 */
-    backType: string;
+    backType?: string;
     /** 回退流程节点id - 返回指定节点时有值 */
-    backFlowPathNodeId: number;
+    backFlowPathNodeId?: number;
     /** 回退流程节点序列值 - 返回指定节点时有值 */
-    backFlowPathNodeSerialNo: string;
+    backFlowPathNodeSerialNo?: string;
     /** 是否是首节点 */
-    isFirst: string;
+    isFirst?: string;
     /** 节点级别 - 节点的深度 */
-    level: number;
+    level?: number;
     /** 节点步骤 - 节点横向步骤 */
-    step: number;
+    step?: number;
     /** 排序 - 节点纵向步骤 */
-    sort: number;
+    sort?: number;
     /** 是否自定义提交按钮文案 */
-    isCustomSubmitContent: string;
+    isCustomSubmitContent?: string;
     /** 自定义提交按钮文案 */
-    customSubmitContent: string;
+    customSubmitContent?: string;
     /** 是否开启超时设置 */
-    enabledTimeout: string;
+    enabledTimeout?: string;
     /** 节点启动方式 */
-    launchType: string;
+    launchType?: string;
     /** 执行类型 */
-    executeType: string;
+    executeType?: string;
     /** 是否自定义接受按钮文案 */
-    isCustomAcceptContent: string;
+    isCustomAcceptContent?: string;
     /** 自定义接受按钮文案 */
-    customAcceptContent: string;
+    customAcceptContent?: string;
     /** 是否显示流程接受按钮 */
-    isShowAcceptButton: string;
+    isShowAcceptButton?: string;
     /** 是否自定义同意按钮文案 */
-    isCustomPassApprovalContent: string;
+    isCustomPassApprovalContent?: string;
     /** 自定义同意按钮文案 */
-    customPassApprovalContent: string;
+    customPassApprovalContent?: string;
     /** 是否自定义拒绝按钮文案 */
-    isCustomRefuseApprovalContent: string;
+    isCustomRefuseApprovalContent?: string;
     /** 自定义拒绝按钮文案 */
-    customRefuseApprovalContent: string;
+    customRefuseApprovalContent?: string;
     /** 是否显示流程拒绝按钮 */
-    isShowRefuseButton: string;
+    isShowRefuseButton?: string;
     /** 是否自定义回退按钮文案 */
-    isCustomBackContent: string;
+    isCustomBackContent?: string;
     /** 自定义回退按钮文案 */
-    customBackContent: string;
+    customBackContent?: string;
     /** 是否显示流程回退按钮 */
-    isShowBackButton: string;
+    isShowBackButton?: string;
     /** 审批人来自 */
-    approverFrom: string;
+    approverFrom?: string;
     /** 是否启用转交 */
-    enabledTransfer: string;
+    enabledTransfer?: string;
     /** 自定义转交按钮文案 */
-    customTransferContent: string;
+    customTransferContent?: string;
     /** 转交人员范围 */
-    transferScopeType: string;
+    transferScopeType?: string;
     /** 字段权限列表 */
-    permissionList: IFlowPathNodeFormFieldPermissionsRpTreeVO[];
+    permissionList?: IFlowPathNodeFormFieldPermissionsRpTreeVO[];
     /** 消息配置列表 */
-    messageConfigList: ITheProcessNodeEditsTheDTO[];
+    messageConfigList?: ITheProcessNodeEditsTheDTO[];
     /** 超时配置 */
-    timeoutConfigList: ITheProcessNodeTimeoutConfigurationReturnsVOForEditing[];
+    timeoutConfigList?: ITheProcessNodeTimeoutConfigurationReturnsVOForEditing[];
     /** 负责人集 */
-    leaderUsers: IProcessNodeExecutorVO[];
+    leaderUsers?: IProcessNodeExecutorVO[];
     /** 抄送人集 */
-    carbonCopyUsers: IProcessNodeExecutorVO[];
+    carbonCopyUsers?: IProcessNodeExecutorVO[];
     /** 转交人集 */
-    transferUsers: IProcessNodeExecutorVO[];
+    transferUsers?: IProcessNodeExecutorVO[];
     /** 上一节点限制指定范围 */
-    previousNodeAssignmentRange: string;
+    previousNodeAssignmentRange?: string;
     /** 上个节点用户选项列表 */
-    previousNodeUserOptions: IProcessNodeExecutorVO[];
+    previousNodeUserOptions?: IProcessNodeExecutorVO[];
     /** 是否启用接受超时 */
-    isEnabledAcceptTimeout: string;
+    isEnabledAcceptTimeout?: string;
     /** 下节点信息 */
-    nextNode: IProcessNodeDTO;
+    nextNode?: IProcessNodeDTO;
     /** 分支子节点 */
-    branches: IProcessNodeDTO[];
+    branches?: IProcessNodeDTO[];
     /** 条件组集 */
-    condiGroups: ITheProcessNodeConditionGroupReturnsVO1ForEditing[];
+    condiGroups?: ITheProcessNodeConditionGroupReturnsVO1ForEditing[];
     /** 是否自定义流程开始按钮文案 */
     isCustomBeginningContent: string;
     /** 自定义流程开始按钮文案 */
-    customBeginningContent: string;
+    customBeginningContent?: string;
     /** 是否显示开始按钮 */
-    isShowBeginningButton: string;
+    isShowBeginningButton?: string;
     /** 是否启用流程开始超时 */
-    isEnabledBeginningTimeout: string;
+    isEnabledBeginningTimeout?: string;
     /** 是否启用表单暂存 */
-    enableFormStaging: string;
+    enableFormStaging?: string;
     /** 自定义表单暂存文本 */
-    customFormStagingContent: string;
+    customFormStagingContent?: string;
 }
 /** FlowPathNodeFormFieldPermissionsRpTreeVO */
 export interface IFlowPathNodeFormFieldPermissionsRpTreeVO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    flowPathId: number;
+    flowPathId?: number;
     /** undefined */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
     /** undefined */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 表单字段名称 */
-    flowPathFormFieldName: string;
+    flowPathFormFieldName?: string;
     /** undefined */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** undefined */
-    flowPathFormFieldType: string;
+    flowPathFormFieldType?: string;
     /** undefined */
-    parentFlowPathFormFieldId: number;
+    parentFlowPathFormFieldId?: number;
     /** undefined */
-    parentFlowPathFormFieldCode: string;
+    parentFlowPathFormFieldCode?: string;
     /** undefined */
-    isTableField: string;
+    isTableField?: string;
     /** undefined */
-    parentFlowPathNodeFormFieldPermissionsRpId: number;
+    parentFlowPathNodeFormFieldPermissionsRpId?: number;
     /** undefined */
-    permissionsType: string;
+    permissionsType?: string;
     /** undefined */
-    tableFormFieldPermissionsRp: IFlowPathNodeFormFieldPermissionsRpTreeVO[];
+    tableFormFieldPermissionsRp?: IFlowPathNodeFormFieldPermissionsRpTreeVO[];
 }
 /** 流程节点编辑DTO */
 export interface ITheProcessNodeEditsTheDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 消息触发时机 */
-    triggerTiming: string;
+    triggerTiming?: string;
     /** 消息配置ID列表 */
-    messageConfigIdList: number[];
+    messageConfigIdList?: number[];
     /** 是否启用消息通知 */
-    isEnabledMessageNotification: string;
+    isEnabledMessageNotification?: string;
     /** 引用的ID。比如超时配置 */
-    refId: number;
+    refId?: number;
 }
 /** 流程节点超时配置针对编辑返回VO */
 export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
     /** id */
-    id: number;
+    id?: number;
     /** 超时的步骤类型 */
-    stepType: string;
+    stepType?: string;
     /** 超时类型 */
-    timeoutType: string;
+    timeoutType?: string;
     /** 超时值 - 超时类型为自定义时有值 */
-    timeoutTimeValue: number;
+    timeoutTimeValue?: number;
     /** 超时值类型 - 超时类型为自定义时有值 */
-    timeoutTimeType: string;
+    timeoutTimeType?: string;
     /** 超时表单字段id */
-    timeoutFlowPathFormFieldId: number;
+    timeoutFlowPathFormFieldId?: number;
     /** 超时表单字段序列值 */
-    timeoutFlowPathFormFieldSerialNo: string;
+    timeoutFlowPathFormFieldSerialNo?: string;
     /** 预警处理方式 */
-    earlyWarningHandleType: string;
+    earlyWarningHandleType?: string;
     /** 预警超时前发送通知 超时值 */
-    earlyWarningTimeValue: number;
+    earlyWarningTimeValue?: number;
     /** 预警超时前发送通知 超时值类型 */
-    earlyWarningTimeType: string;
+    earlyWarningTimeType?: string;
     /** 预警提醒人集 */
-    earlyWarningUsers: IProcessNodeExecutorVO[];
+    earlyWarningUsers?: IProcessNodeExecutorVO[];
     /** 预警提醒方式 */
-    earlyWarningSendType: string;
+    earlyWarningSendType?: string;
     /** 超时处理方式 */
-    timeoutHandleType: string;
+    timeoutHandleType?: string;
     /** 超时后通知类型 */
-    timeoutAfterSendType: string;
+    timeoutAfterSendType?: string;
     /** 超时提醒人集 */
-    timeoutUsers: IProcessNodeExecutorVO[];
+    timeoutUsers?: IProcessNodeExecutorVO[];
     /** 超时通知方式 */
-    timeoutSendType: string;
+    timeoutSendType?: string;
     /** 消息配置列表 */
-    messageConfigList: ITheProcessNodeEditsTheDTO[];
+    messageConfigList?: ITheProcessNodeEditsTheDTO[];
 }
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 执行人id */
-    executorId: number;
+    executorId?: number;
     /** 执行人类型 */
-    executorType: string;
+    executorType?: string;
     /** 执行人系统控件类型 */
-    executorSysType: string;
+    executorSysType?: string;
     /** 组织字段序列 - 即动态控件 */
-    organizationFieldSerialNo: string;
+    organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId: number;
+    flowPathId?: number;
     /** 节点ID */
-    flowPathNodeId: number;
+    flowPathNodeId?: number;
 }
 /** 流程节点条件组针对编辑返回VO_1 */
 export interface ITheProcessNodeConditionGroupReturnsVO1ForEditing {
     /** id */
-    id: number;
+    id?: number;
     /** 条件集 */
-    conditions: IFlowPathNodeCondiVO[];
+    conditions?: IFlowPathNodeCondiVO[];
 }
 /** FlowPathNodeCondiVO */
 export interface IFlowPathNodeCondiVO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    type: string;
+    type?: string;
     /** undefined */
-    defaultCondi: string;
+    defaultCondi?: string;
     /** undefined */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** undefined */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** undefined */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** undefined */
-    flowPathFormFieldType: string;
+    flowPathFormFieldType?: string;
     /** undefined */
-    compareMode: string;
+    compareMode?: string;
     /** undefined */
-    compareTargetFromSource: string;
+    compareTargetFromSource?: string;
     /** undefined */
-    targetFieldId: number;
+    targetFieldId?: number;
     /** undefined */
-    targetFieldSerialNo: string;
+    targetFieldSerialNo?: string;
     /** undefined */
-    targetFieldCode: string;
+    targetFieldCode?: string;
     /** undefined */
-    compareValue: string;
+    compareValue?: string;
     /** undefined */
-    selectCompareValue: string[];
+    selectCompareValue?: string[];
     /** undefined */
-    dateDynamicRange: string;
+    dateDynamicRange?: string;
     /** undefined */
-    frontendMeta: string;
+    frontendMeta?: string;
 }

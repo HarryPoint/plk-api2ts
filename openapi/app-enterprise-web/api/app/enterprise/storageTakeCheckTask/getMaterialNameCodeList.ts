@@ -16,33 +16,33 @@ export default function fetchMethod(data: IMaterialNameNumberQueryVO, extraOptio
 /** 物料名称编号查询VO */
 export interface IMaterialNameNumberQueryVO {
     /** 物料名称/编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
     /** 物料类型数组 */
-    materialTypeList: string[];
+    materialTypeList?: string[];
 }
 /** JSONResult«List«物料返回信息»» */
 export interface IJSONResultListReturnInformationAboutTheMaterial {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaterialReturnInformation[];
+    data?: IMaterialReturnInformation[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 物料返回信息 */
 export interface IMaterialReturnInformation {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 物料类型 */
-    type: string;
+    type?: string;
     /** 物料类型名称 */
-    typeName: string;
+    typeName?: string;
     /** 物料规格 */
-    spec: string;
+    spec?: string;
 }

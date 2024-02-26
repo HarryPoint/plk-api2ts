@@ -16,22 +16,22 @@ export default function fetchMethod(data: ITheProductionTaskChangesTheStatusDTO,
 /** 生产任务变更状态DTO */
 export interface ITheProductionTaskChangesTheStatusDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 生产异常类型id */
     produceAbnormalCategoryId: number;
     /** 备注 */
-    remark: string;
+    remark?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

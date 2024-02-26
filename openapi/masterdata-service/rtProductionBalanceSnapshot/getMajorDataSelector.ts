@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产结存快照相关/getMajorDataSelectorUsingPOST
 */
-export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IMaterialMasterDataSelectionListSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/masterdata-service/rtProductionBalanceSnapshot/getMajorDataSelector",
@@ -17,77 +17,77 @@ export default function fetchMethod(data: IMaterialMasterDataSelectionListSearch
 /** 物料主数据选择列表搜索VO */
 export interface IMaterialMasterDataSelectionListSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 物料名称/编号 */
-    nameOrCode: string;
+    nameOrCode?: string;
     /** 物料类型数组 */
-    materialTypeList: string[];
+    materialTypeList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«物料主数据选择返回VO»» */
 export interface IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationMaterialMasterDataSelectionReturnsVO;
+    data?: IPageInformationMaterialMasterDataSelectionReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«物料主数据选择返回VO» */
 export interface IPageInformationMaterialMasterDataSelectionReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IMaterialMasterDataSelectionIsReturnedToVO[];
+    list?: IMaterialMasterDataSelectionIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 物料主数据选择返回VO */
 export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 物料id */
-    id: number;
+    id?: number;
     /** 物料名称 */
-    name: string;
+    name?: string;
     /** 物料编号 */
-    code: string;
+    code?: string;
     /** 物料类型 */
-    type: string;
+    type?: string;
     /** 物料类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 单位 */
-    unit: string;
+    unit?: string;
     /** 规格 */
-    spec: string;
+    spec?: string;
     /** 版次号 */
-    issueCode: string;
+    issueCode?: string;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
     /** 是否有bom */
-    hasBom: string;
+    hasBom?: string;
 }

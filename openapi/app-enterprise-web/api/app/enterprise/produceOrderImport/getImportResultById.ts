@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单导入相关/getImportResultByIdUsingGET_1
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProduceOrderImportSynchronizationOutputDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderImport/getImportResultById",
@@ -16,43 +16,43 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«ProduceOrderImportSynchronizationOutputDTO» */
 export interface IJSONResultProduceOrderImportSynchronizationOutputDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProduceOrderImportSynchronizationOutputDTO;
+    data?: IProduceOrderImportSynchronizationOutputDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProduceOrderImportSynchronizationOutputDTO */
 export interface IProduceOrderImportSynchronizationOutputDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    importStatus: string;
+    importStatus?: string;
     /** undefined */
-    failureMessage: string;
+    failureMessage?: string;
     /** undefined */
-    totalCount: number;
+    totalCount?: number;
     /** undefined */
-    importedCount: number;
+    importedCount?: number;
     /** undefined */
-    existsSystemQuantity: number;
+    existsSystemQuantity?: number;
     /** undefined */
-    importSuccessQuantity: number;
+    importSuccessQuantity?: number;
     /** undefined */
-    importFailureQuantity: number;
+    importFailureQuantity?: number;
     /** undefined */
-    failureProduceOrderList: IProduceOrderImportFailureOutputDTO[];
+    failureProduceOrderList?: IProduceOrderImportFailureOutputDTO[];
     /** undefined */
-    repeatProduceOrderList: Record<string, any>[];
+    repeatProduceOrderList?: Record<string, any>[];
     /** undefined */
-    savedProduceOrderIdList: number[];
+    savedProduceOrderIdList?: number[];
 }
 /** ProduceOrderImportFailureOutputDTO */
 export interface IProduceOrderImportFailureOutputDTO {
     /** undefined */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** undefined */
-    failureMessage: string;
+    failureMessage?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getByProduceOrderIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; produceOrderId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; produceOrderId?: number }, extraOptions?: any) {
     return http<IJSONResultListBatchInformationVO>(
         {
             url: "/masterdata-service/lotOrder/getByProduceOrderId",
@@ -16,22 +16,22 @@ export default function fetchMethod(params: { enterpriseId: number; produceOrder
 /** JSONResult«List«批次信息VO»» */
 export interface IJSONResultListBatchInformationVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBatchInformationVO[];
+    data?: IBatchInformationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 批次信息VO */
 export interface IBatchInformationVO {
     /** id */
-    id: number;
+    id?: number;
     /** 批次名称 */
-    lotName: string;
+    lotName?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 总数量 */
-    totalCount: number;
+    totalCount?: number;
 }

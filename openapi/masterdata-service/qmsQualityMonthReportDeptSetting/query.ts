@@ -16,38 +16,38 @@ export default function fetchMethod(data: IQualityMonthlyReportDepartmentSetting
 /** 质量月报部门设置查询DTO */
 export interface IQualityMonthlyReportDepartmentSettingsQueryDTO {
     /** 年份开始时间 */
-    yearBegin: string;
+    yearBegin?: string;
     /** 年份结束时间 */
-    yearEnd: string;
+    yearEnd?: string;
 }
 /** JSONResult«质量月报部门设置响应DTO» */
 export interface IJSONResultTheQualityMonthlyReportDepartmentSetsTheResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IQualityMonthlyReportDepartmentSetResponseDTO;
+    data?: IQualityMonthlyReportDepartmentSetResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质量月报部门设置响应DTO */
 export interface IQualityMonthlyReportDepartmentSetResponseDTO {
     /** 年份开始时间 */
-    yearBegin: string;
+    yearBegin?: string;
     /** 年份结束时间 */
-    yearEnd: string;
+    yearEnd?: string;
     /** 部门id集合 */
-    departmentIds: number[];
+    departmentIds?: number[];
     /** 部门集合 */
-    departments: IIdCodeNameGenericTransportObject[];
+    departments?: IIdCodeNameGenericTransportObject[];
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

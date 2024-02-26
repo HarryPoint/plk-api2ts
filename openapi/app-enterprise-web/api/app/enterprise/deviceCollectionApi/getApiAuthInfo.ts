@@ -15,20 +15,20 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«Saas企业Ak Sk响应 DTO» */
 export interface IJSONResultSaasEnterpriseAkSkRespondsToDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISaasEnterpriseAkSkRespondsToDTO;
+    data?: ISaasEnterpriseAkSkRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Saas企业Ak Sk响应 DTO */
 export interface ISaasEnterpriseAkSkRespondsToDTO {
     /** id */
-    id: number;
+    id?: number;
     /** accessKey */
-    accessKey: string;
+    accessKey?: string;
     /** accessSecret */
-    accessSecret: string;
+    accessSecret?: string;
 }

@@ -16,31 +16,31 @@ export default function fetchMethod(data: IHealthHQueryRequest, extraOptions?: a
 /** 健康H查询请求 */
 export interface IHealthHQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 查询日期的结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«List«健康H查询响应»» */
 export interface IJSONResultListHealthHQueryResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IHealthHQueryResponse[];
+    data?: IHealthHQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 健康H查询响应 */
 export interface IHealthHQueryResponse {
     /** ID */
-    id: number;
+    id?: number;
     /** 健康日期 */
-    healthDate: string;
+    healthDate?: string;
     /** 轻伤及以上事故数 */
-    accidentsQuantity: number;
+    accidentsQuantity?: number;
     /** 新增职业病人数 */
-    careerDiseaseQuantity: number;
+    careerDiseaseQuantity?: number;
     /** 是否有异常 */
-    isException: string;
+    isException?: string;
 }

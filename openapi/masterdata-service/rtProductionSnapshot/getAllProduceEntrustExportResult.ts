@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceEntrustExportResultUsingPOST
 */
-export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IOutputClassReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListOutsourcedReportExportVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getAllProduceEntrustExportResult",
@@ -17,43 +17,43 @@ export default function fetchMethod(data: IOutputClassReportSearchVO, params: { 
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds: number[];
+    classGroupIds?: number[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 查询时间维度类型 */
-    timeType: string;
+    timeType?: string;
 }
 /** JSONResult«List«委外报表导出VO»» */
 export interface IJSONResultListOutsourcedReportExportVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IOutsourcingReportExportVO[];
+    data?: IOutsourcingReportExportVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 委外报表导出VO */
 export interface IOutsourcingReportExportVO {
     /** 数据分组名称 */
-    groupName: string;
+    groupName?: string;
     /** 数据分组编号 */
-    groupCode: string;
+    groupCode?: string;
     /** 数据时间 */
-    dataTime: string;
+    dataTime?: string;
     /** 委外总数(委外发出) */
-    produceEntrustQuantity: number;
+    produceEntrustQuantity?: number;
     /** 委外返回数量(委外返回) */
-    produceEntrustBackTotalQuantity: number;
+    produceEntrustBackTotalQuantity?: number;
     /** 委外返回数量(委外合格返回) */
-    produceEntrustBackQuantity: number;
+    produceEntrustBackQuantity?: number;
     /** 委外报废数量(委外报废) */
-    produceEntrustScrapQuantity: number;
+    produceEntrustScrapQuantity?: number;
 }

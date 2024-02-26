@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目简报相关/queryFillingProjectTaskUsingGET
 */
-export default function fetchMethod(params: { projectId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { projectId?: string }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskResponseObject>(
         {
             url: "/masterdata-service/projectBriefReport/queryFillingProjectTask",
@@ -16,73 +16,73 @@ export default function fetchMethod(params: { projectId: string }, extraOptions?
 /** JSONResult«List«项目任务响应对象»» */
 export interface IJSONResultListProjectTaskResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskResponseObject[];
+    data?: IProjectTaskResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务响应对象 */
 export interface IProjectTaskResponseObject {
     /** 任务id */
-    id: number;
+    id?: number;
     /** 任务编码 */
-    code: string;
+    code?: string;
     /** 任务名称 */
-    name: string;
+    name?: string;
     /** 任务负责人 */
-    leaderUserIds: Record<string, any>[];
+    leaderUserIds?: Record<string, any>[];
     /** 任务负责人 */
-    leaderUserList: IIdCodeNameGenericTransportObject[];
+    leaderUserList?: IIdCodeNameGenericTransportObject[];
     /** 任务进度 */
-    taskProgress: number;
+    taskProgress?: number;
     /** 任务状态 */
-    taskStatus: string;
+    taskStatus?: string;
     /** 任务状态描述 */
-    taskStatusDesc: string;
+    taskStatusDesc?: string;
     /** 是否超期 */
-    isOverdue: string;
+    isOverdue?: string;
     /** 任务类型id */
-    projectTaskTypeId: number;
+    projectTaskTypeId?: number;
     /** 任务类型 */
-    projectTaskTypeName: string;
+    projectTaskTypeName?: string;
     /** 任务开始日期 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 任务截止日期 */
-    planEndTime: string;
+    planEndTime?: string;
     /** 上级任务id */
-    parentId: number;
+    parentId?: number;
     /** 上级任务名称 */
-    parentName: string;
+    parentName?: string;
     /** 前置任务ids */
-    preTaskIds: Record<string, any>[];
+    preTaskIds?: Record<string, any>[];
     /** 前置任务列表 */
-    preTaskList: IIdCodeNameGenericTransportObject[];
+    preTaskList?: IIdCodeNameGenericTransportObject[];
     /** 项目阶段id */
-    projectStageId: number;
+    projectStageId?: number;
     /** 项目阶段名称 */
-    projectStageName: string;
+    projectStageName?: string;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目名称 */
-    projectName: string;
+    projectName?: string;
     /** 交付物名称 */
-    deliverableName: string;
+    deliverableName?: string;
     /** 完成事项 */
-    completeItem: string;
+    completeItem?: string;
     /** 问题与措施 */
-    issueAndMeasure: string;
+    issueAndMeasure?: string;
     /** undefined */
-    sort: number;
+    sort?: number;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

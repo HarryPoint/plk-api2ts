@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getSalesOrderProduceOrderBySalesOrderIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; salesOrderId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; salesOrderId?: number }, extraOptions?: any) {
     return http<IJSONResultListSalesOrderProductionOrderReturnVO>(
         {
             url: "/masterdata-service/produceOrder/getSalesOrderProduceOrderBySalesOrderId",
@@ -16,40 +16,40 @@ export default function fetchMethod(params: { enterpriseId: number; salesOrderId
 /** JSONResult«List«销售订单 - 生产订单返回VO»» */
 export interface IJSONResultListSalesOrderProductionOrderReturnVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISalesOrderProductionOrderReturnedToVO[];
+    data?: ISalesOrderProductionOrderReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 销售订单 - 生产订单返回VO */
 export interface ISalesOrderProductionOrderReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 对应物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 对应物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 对应物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 总生产数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 当前生产数量 */
-    currentCount: number;
+    currentCount?: number;
     /** 计划开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 计划结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 订单状态 */
-    orderStatus: string;
+    orderStatus?: string;
     /** 订单状态描述 */
-    orderStatusDesc: string;
+    orderStatusDesc?: string;
 }

@@ -16,7 +16,7 @@ export default function fetchMethod(data: IUpdateMobileNumberBasedOnPasswordRequ
 /** 根据密码更新手机号码请求 DTO */
 export interface IUpdateMobileNumberBasedOnPasswordRequestDTO {
     /** 密码 */
-    password: string;
+    password?: string;
     /** 新手机号码 */
     newTelephone: string;
     /** 新手机验证码 */
@@ -25,11 +25,11 @@ export interface IUpdateMobileNumberBasedOnPasswordRequestDTO {
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

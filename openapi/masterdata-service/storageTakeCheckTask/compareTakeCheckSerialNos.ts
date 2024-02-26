@@ -20,49 +20,49 @@ export interface IInventorySerialNumberComparisonRequestDTO {
     /** 物料id */
     materialId: number;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 序列号集合 */
-    serialNos: IInventoryTaskInventoryDetailSerialNumberDTO1[];
+    serialNos?: IInventoryTaskInventoryDetailSerialNumberDTO1[];
 }
 /** 盘点任务盘点明细序列号DTO_1 */
 export interface IInventoryTaskInventoryDetailSerialNumberDTO1 {
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 备注 */
-    serialRemark: string;
+    serialRemark?: string;
 }
 /** JSONResult«盘点序列号比较结果DTO» */
 export interface IJSONResultInventorySerialNumberComparisonResultDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IInventorySerialNumberComparisonResultsDTO;
+    data?: IInventorySerialNumberComparisonResultsDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 盘点序列号比较结果DTO */
 export interface IInventorySerialNumberComparisonResultsDTO {
     /** 仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 序列号集 */
-    serialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    serialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 盘盈序列号集 */
-    profitSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    profitSerialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 盘亏序列号集 */
-    lossSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    lossSerialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
     /** 序列号集合 */
-    pickSerialNos: IInventoryTaskInventoryDetailsSerialNumberDTO[];
+    pickSerialNos?: IInventoryTaskInventoryDetailsSerialNumberDTO[];
 }
 /** 盘点任务盘点明细序列号DTO */
 export interface IInventoryTaskInventoryDetailsSerialNumberDTO {
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 备注 */
-    serialRemark: string;
+    serialRemark?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/getByIdUsingGET_1
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultResponseToRoleInformation>(
         {
             url: "/plk-uaa-service/role/getById",
@@ -16,46 +16,46 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«角色信息响应» */
 export interface IJSONResultResponseToRoleInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IRoleMessageResponse;
+    data?: IRoleMessageResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 角色信息响应 */
 export interface IRoleMessageResponse {
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新人id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新人名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 是否是超级管理员 */
-    isManage: string;
+    isManage?: string;
     /** 是否是管理员 */
-    isAdmin: string;
+    isAdmin?: string;
     /** 描述 */
-    description: string;
+    description?: string;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务业务ID */
-    serviceBusinessId: number;
+    serviceBusinessId?: number;
 }

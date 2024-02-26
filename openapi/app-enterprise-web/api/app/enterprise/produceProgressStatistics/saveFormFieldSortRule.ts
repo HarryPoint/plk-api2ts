@@ -16,11 +16,11 @@ export default function fetchMethod(data: IProcessTableColumnLocationGroupEditDT
 /** 流程表格列定位分组编辑DTO */
 export interface IProcessTableColumnLocationGroupEditDTO {
     /** 左侧固定表格列 */
-    leftFixColumns: IProcessTableColumnEditDTO[];
+    leftFixColumns?: IProcessTableColumnEditDTO[];
     /** 不固定表格列 */
-    normalFixColumns: IProcessTableColumnEditDTO[];
+    normalFixColumns?: IProcessTableColumnEditDTO[];
     /** 右侧固定表格列 */
-    rightFixColumns: IProcessTableColumnEditDTO[];
+    rightFixColumns?: IProcessTableColumnEditDTO[];
 }
 /** 流程表格列编辑DTO */
 export interface IProcessTableColumnEditDTO {
@@ -34,11 +34,11 @@ export interface IProcessTableColumnEditDTO {
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -15,16 +15,16 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«生产开始日期-查询响应» */
 export interface IJSONResultResponseToTheProductionStartDateQuery {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionStartDateQueryResponse;
+    data?: IProductionStartDateQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产开始日期-查询响应 */
 export interface IProductionStartDateQueryResponse {
     /** 生产开始日期 */
-    productionStartDate: string;
+    productionStartDate?: string;
 }

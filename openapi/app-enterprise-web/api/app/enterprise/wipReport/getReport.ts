@@ -16,99 +16,99 @@ export default function fetchMethod(data: IWIPStatisticsReportSearchForVO, extra
 /** WIP统计报表搜索VO */
 export interface IWIPStatisticsReportSearchForVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 工序id集 */
-    processIds: number[];
+    processIds?: number[];
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«WIP统计报表返回VO»» */
 export interface IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationTheWIPStatisticsReportReturnsVO;
+    data?: IPageInformationTheWIPStatisticsReportReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«WIP统计报表返回VO» */
 export interface IPageInformationTheWIPStatisticsReportReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheWIPStatisticsReportReturnsVO[];
+    list?: ITheWIPStatisticsReportReturnsVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** WIP统计报表返回VO */
 export interface ITheWIPStatisticsReportReturnsVO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 所有工序库存信息 */
-    allProcessWarehouse: IWIPInventoryStatisticsReportReturnsVO;
+    allProcessWarehouse?: IWIPInventoryStatisticsReportReturnsVO;
     /** 工序信息集 */
-    processList: IWIPProcessStatisticsReportReturnsVO[];
+    processList?: IWIPProcessStatisticsReportReturnsVO[];
 }
 /** WIP库存统计报表返回VO */
 export interface IWIPInventoryStatisticsReportReturnsVO {
     /** 总数 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 正常总数 */
-    normalTotalQuantity: number;
+    normalTotalQuantity?: number;
     /** 异常总数 */
-    exceptionTotalQuantity: number;
+    exceptionTotalQuantity?: number;
     /** 在制前总数 */
-    beforeTotalQuantity: number;
+    beforeTotalQuantity?: number;
     /** 在制前正常数 */
-    beforeNormalQuantity: number;
+    beforeNormalQuantity?: number;
     /** 在制前异常数 */
-    beforeExceptionQuantity: number;
+    beforeExceptionQuantity?: number;
     /** 在制中总数 */
-    inTotalQuantity: number;
+    inTotalQuantity?: number;
     /** 在制中正常数 */
-    inNormalQuantity: number;
+    inNormalQuantity?: number;
     /** 在制中异常数 */
-    inExceptionQuantity: number;
+    inExceptionQuantity?: number;
 }
 /** WIP工序统计报表返回VO */
 export interface IWIPProcessStatisticsReportReturnsVO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 工序库存集 */
-    warehouse: IWIPInventoryStatisticsReportReturnsVO;
+    warehouse?: IWIPInventoryStatisticsReportReturnsVO;
 }

@@ -15,36 +15,36 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«UnCompleteProjectResponseDTO» */
 export interface IJSONResultUnCompleteProjectResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUnCompleteProjectResponseDTO;
+    data?: IUnCompleteProjectResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** UnCompleteProjectResponseDTO */
 export interface IUnCompleteProjectResponseDTO {
     /** 项目目标值 */
-    projectTargetValue: number;
+    projectTargetValue?: number;
     /** 项目指标区间配置 */
-    projectIndicatorsRangeConfigList: IProjectIndicatorsRangeConfigResponseDTO[];
+    projectIndicatorsRangeConfigList?: IProjectIndicatorsRangeConfigResponseDTO[];
     /** 部门的各个项目指标 */
-    departmentProjectIndicatorsList: IDepartmentProjectIndicatorsResponseDTO[];
+    departmentProjectIndicatorsList?: IDepartmentProjectIndicatorsResponseDTO[];
 }
 /** ProjectIndicatorsRangeConfigResponseDTO */
 export interface IProjectIndicatorsRangeConfigResponseDTO {
     /** 指标Key -> 项目指标Key */
-    indicatorsKey: string;
+    indicatorsKey?: string;
     /** 指标名称 */
-    indicatorsName: string;
+    indicatorsName?: string;
 }
 /** DepartmentProjectIndicatorsResponseDTO */
 export interface IDepartmentProjectIndicatorsResponseDTO {
     /** undefined */
-    departmentId: number;
+    departmentId?: number;
     /** undefined */
-    departmentName: string;
+    departmentName?: string;
     /** 指标Key => Project Quantity Map */
-    indicatorsToProjectQuantityMap: Record<string, number>;
+    indicatorsToProjectQuantityMap?: Record<string, number>;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentLossAnalyzeReportSumResultUsingPOST
 */
-export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultConsignmentLossAnalysisReportPaginatedReturnsVO>(
         {
             url: "/masterdata-service/baoJingReport/getConsignmentLossAnalyzeReportSumResult",
@@ -17,64 +17,64 @@ export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO
 /** 寄售损耗分析报表搜索VO */
 export interface IConsignmentLossAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 仓库id */
-    warehouseId: number[];
+    warehouseId?: number[];
     /** 日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
     /** 客户id */
-    customerId: number[];
+    customerId?: number[];
     /** 产品id */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds: number[];
+    outerCodeMajorDataIds?: number[];
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 规格型号 */
-    productSpec: string;
+    productSpec?: string;
     /** 业务员ID列表 */
-    businessUserIdList: number[];
+    businessUserIdList?: number[];
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«寄售损耗分析报表分页返回VO» */
 export interface IJSONResultConsignmentLossAnalysisReportPaginatedReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IConsignmentLossAnalysisReportPagingBackToVO1;
+    data?: IConsignmentLossAnalysisReportPagingBackToVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 寄售损耗分析报表分页返回VO_1 */
 export interface IConsignmentLossAnalysisReportPagingBackToVO1 {
     /** 期初数量 */
-    numOfBeginningPeriodSum: number;
+    numOfBeginningPeriodSum?: number;
     /** 送货数量 */
-    sendQtySum: number;
+    sendQtySum?: number;
     /** 入库数量 */
-    inboundQtySum: number;
+    inboundQtySum?: number;
     /** 退货数量 */
-    returnQtySum: number;
+    returnQtySum?: number;
     /** 损耗数量 */
-    numOfLossSum: number;
+    numOfLossSum?: number;
     /** 未结余量 */
-    remainingQtySum: number;
+    remainingQtySum?: number;
     /** 损耗率 */
-    lossRatioSum: number;
+    lossRatioSum?: number;
 }

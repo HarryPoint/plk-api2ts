@@ -16,155 +16,155 @@ export default function fetchMethod(data: IProductionCostingPagingRequestObject,
 /** 生产成本核算分页请求对象 */
 export interface IProductionCostingPagingRequestObject {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 计划开始时间查询结束时间 */
-    endPlanBeginTime: string;
+    endPlanBeginTime?: string;
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
     /** 期间id集合 */
-    fiscalPeriodIdList: number[];
+    fiscalPeriodIdList?: number[];
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 计划开始时间查询开始时间 */
-    beginPlanBeginTime: string;
+    beginPlanBeginTime?: string;
     /** 物料id集合 */
-    materialIdList: number[];
+    materialIdList?: number[];
     /** 期初在产品 - 数量 - 开始数量 */
-    beginBeginPeriodInProduceQuantity: number;
+    beginBeginPeriodInProduceQuantity?: number;
     /** 期初在产品 - 数量 - 结束数量 */
-    endBeginPeriodInProduceQuantity: number;
+    endBeginPeriodInProduceQuantity?: number;
     /** 期初在产品 - 总成本 - 开始成本 */
-    beginBeginPeriodInProduceTotalCost: number;
+    beginBeginPeriodInProduceTotalCost?: number;
     /** 期初在产品 - 总成本 - 结束成本 */
-    endBeginPeriodInProduceTotalCost: number;
+    endBeginPeriodInProduceTotalCost?: number;
     /** 本期投产 - 数量 - 开始数量 */
-    beginCurrentPeriodDeliveryQuantity: number;
+    beginCurrentPeriodDeliveryQuantity?: number;
     /** 本期投产 - 数量 - 结束数量 */
-    endCurrentPeriodDeliveryQuantity: number;
+    endCurrentPeriodDeliveryQuantity?: number;
     /** 本期投产 - 材料成本 - 开始成本 */
-    beginCurrentPeriodDeliveryMaterialCost: number;
+    beginCurrentPeriodDeliveryMaterialCost?: number;
     /** 本期完工 - 数量 - 结束数量 */
-    endCurrentPeriodCompleteQuantity: number;
+    endCurrentPeriodCompleteQuantity?: number;
     /** 本期投产 - 材料成本 - 结束成本 */
-    endCurrentPeriodDeliveryMaterialCost: number;
+    endCurrentPeriodDeliveryMaterialCost?: number;
     /** 本期投产 - 费用 - 开始费用 */
-    beginCurrentPeriodDeliveryFee: number;
+    beginCurrentPeriodDeliveryFee?: number;
     /** 本期投产 - 费用 - 结束费用 */
-    endCurrentPeriodDeliveryFee: number;
+    endCurrentPeriodDeliveryFee?: number;
     /** 本期投产 - 总成本 - 开始总成本 */
-    beginCurrentPeriodDeliveryTotalCost: number;
+    beginCurrentPeriodDeliveryTotalCost?: number;
     /** 本期投产 - 总成本 - 结束总成本 */
-    endCurrentPeriodDeliveryTotalCost: number;
+    endCurrentPeriodDeliveryTotalCost?: number;
     /** 本期完工 - 数量 - 开始数量 */
-    beginCurrentPeriodCompleteQuantity: number;
+    beginCurrentPeriodCompleteQuantity?: number;
     /** 期末在产品 - 数量 - 开始数量 */
-    beginEndPeriodInProduceQuantity: number;
+    beginEndPeriodInProduceQuantity?: number;
     /** 本期完工 - 单位成本 - 开始单位成本 */
-    beginCurrentPeriodCompleteUnitCost: number;
+    beginCurrentPeriodCompleteUnitCost?: number;
     /** 期末在产品 - 总成本 - 开始总成本 */
-    beginEndPeriodInProduceTotalCost: number;
+    beginEndPeriodInProduceTotalCost?: number;
     /** 本期完工 - 单位成本 - 结束单位成本 */
-    endCurrentPeriodCompleteUnitCost: number;
+    endCurrentPeriodCompleteUnitCost?: number;
     /** 本期完工 - 总成本 - 开始总成本 */
-    beginCurrentPeriodCompleteTotalCost: number;
+    beginCurrentPeriodCompleteTotalCost?: number;
     /** 本期完工 - 总成本 - 结束总成本 */
-    endCurrentPeriodCompleteTotalCost: number;
+    endCurrentPeriodCompleteTotalCost?: number;
     /** 期末在产品 - 数量 - 结束数量 */
-    endEndPeriodInProduceQuantity: number;
+    endEndPeriodInProduceQuantity?: number;
     /** 期末在产品 - 总成本 - 结束总成本 */
-    endEndPeriodInProduceTotalCost: number;
+    endEndPeriodInProduceTotalCost?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«生产成本核算分页响应对象»» */
 export interface IJSONResultPageInformationPageResponseObjectForProductionCosting {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationProductionCostAccountingPageResponseObject;
+    data?: IPageInformationProductionCostAccountingPageResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«生产成本核算分页响应对象» */
 export interface IPageInformationProductionCostAccountingPageResponseObject {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductionCostingPagingResponseObject[];
+    list?: IProductionCostingPagingResponseObject[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 生产成本核算分页响应对象 */
 export interface IProductionCostingPagingResponseObject {
     /** 所属期间id */
-    fiscalPeriodId: number;
+    fiscalPeriodId?: number;
     /** 所属期间 */
-    fiscalPeriodDate: string;
+    fiscalPeriodDate?: string;
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 计划开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 期初在产品 - 数量 */
-    beginPeriodInProduceQuantity: number;
+    beginPeriodInProduceQuantity?: number;
     /** 期初在产品 - 总成本 */
-    beginPeriodInProduceTotalCost: number;
+    beginPeriodInProduceTotalCost?: number;
     /** 本期投产 - 数量 */
-    currentPeriodDeliveryQuantity: number;
+    currentPeriodDeliveryQuantity?: number;
     /** 本期投产 - 材料成本 */
-    currentPeriodDeliveryMaterialCost: number;
+    currentPeriodDeliveryMaterialCost?: number;
     /** 本期投产 - 费用 */
-    currentPeriodDeliveryFee: number;
+    currentPeriodDeliveryFee?: number;
     /** 本期投产 - 总成本 */
-    currentPeriodDeliveryTotalCost: number;
+    currentPeriodDeliveryTotalCost?: number;
     /** 本期完工 - 数量 */
-    currentPeriodCompleteQuantity: number;
+    currentPeriodCompleteQuantity?: number;
     /** 本期完工 - 单位成本 */
-    currentPeriodCompleteUnitCost: number;
+    currentPeriodCompleteUnitCost?: number;
     /** 本期完工 - 总成本 */
-    currentPeriodCompleteTotalCost: number;
+    currentPeriodCompleteTotalCost?: number;
     /** 期末在产品 - 数量 */
-    endPeriodInProduceQuantity: number;
+    endPeriodInProduceQuantity?: number;
     /** 期末在产品 - 总成本 */
-    endPeriodInProduceTotalCost: number;
+    endPeriodInProduceTotalCost?: number;
 }

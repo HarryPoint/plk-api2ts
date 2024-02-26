@@ -16,18 +16,18 @@ export default function fetchMethod(data: IBasicQualityAuditQueryRequest1, extra
 /** 基础质量审核查询请求_1 */
 export interface IBasicQualityAuditQueryRequest1 {
     /** 日期范围-起始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 日期范围-结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

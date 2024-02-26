@@ -16,101 +16,101 @@ export default function fetchMethod(data: IPagingQueryOfCustomerLeads, extraOpti
 /** 客户线索分页查询 */
 export interface IPagingQueryOfCustomerLeads {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 申请时间结束 */
-    applyEndTime: string;
+    applyEndTime?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 联系人 */
-    contactUserName: string;
+    contactUserName?: string;
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 申请时间开始 */
-    applyBeginTime: string;
+    applyBeginTime?: string;
     /** 联系电话 */
-    contactPhone: string;
+    contactPhone?: string;
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«客户线索分页响应»» */
 export interface IJSONResultPagingInformationCustomerLeadPagingResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationCustomerLeadPageResponse;
+    data?: IPageInformationCustomerLeadPageResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«客户线索分页响应» */
 export interface IPageInformationCustomerLeadPageResponse {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ICustomerLeadPagingResponse[];
+    list?: ICustomerLeadPagingResponse[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 客户线索分页响应 */
 export interface ICustomerLeadPagingResponse {
     /** 企业线索id */
-    id: number;
+    id?: number;
     /** 申请时间 */
-    applyTime: string;
+    applyTime?: string;
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 省份编码 */
-    provinceCode: string;
+    provinceCode?: string;
     /** 省份名称 */
-    provinceName: string;
+    provinceName?: string;
     /** 市级编码 */
-    cityCode: string;
+    cityCode?: string;
     /** 市级名称 */
-    cityName: string;
+    cityName?: string;
     /** 行业id */
-    industryId: number;
+    industryId?: number;
     /** 行业名称 */
-    industryName: string;
+    industryName?: string;
     /** 联系人姓名 */
-    contactUserName: string;
+    contactUserName?: string;
     /** 联系电话 */
-    contactPhone: string;
+    contactPhone?: string;
     /** 职位 */
-    position: string;
+    position?: string;
     /** 试用模块列表 */
-    trialModules: string[];
+    trialModules?: string[];
     /** 利用当前客户线索创建的企业id(为空则说明该条线索没有创建企业, 不为空则说明该条线索已经创建过了 */
-    toEnterpriseId: number;
+    toEnterpriseId?: number;
     /** 利用当前客户线索创建的企业名称(为空则说明该条线索没有创建企业, 不为空则说明该条线索已经创建过了 */
-    toEnterpriseName: string;
+    toEnterpriseName?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 是否已开通试用 */
-    isTrialed: string;
+    isTrialed?: string;
 }

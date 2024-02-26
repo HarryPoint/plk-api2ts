@@ -15,22 +15,22 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«维联批次打印模板响应对象»»_1 */
 export interface IJSONResultListVirtualizedBatchPrintTemplateResponseObject1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IVivBatchPrintTemplateResponseObject2[];
+    data?: IVivBatchPrintTemplateResponseObject2[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 维联批次打印模板响应对象_2 */
 export interface IVivBatchPrintTemplateResponseObject2 {
     /** id */
-    id: number;
+    id?: number;
     /** 模板名称 */
-    name: string;
+    name?: string;
     /** 模板类型 */
-    type: string;
+    type?: string;
     /** 打印模板 */
-    printTemplate: string;
+    printTemplate?: string;
 }

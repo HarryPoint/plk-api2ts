@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getByMaterialIdsUsingPOST
 */
-export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: number[], params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProductionOrder>(
         {
             url: "/masterdata-service/produceOrder/getByMaterialIds",
@@ -17,92 +17,92 @@ export default function fetchMethod(data: number[], params: { enterpriseId: numb
 /** JSONResult«List«生产订单»» */
 export interface IJSONResultListProductionOrder {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionOrder[];
+    data?: IProductionOrder[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产订单 */
 export interface IProductionOrder {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 生产订单号 */
-    code: string;
+    code?: string;
     /** 所属销售订单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 所属销售订单详情id */
-    salesOrderDetailId: number;
+    salesOrderDetailId?: number;
     /** 主生产订单号 */
-    parentProduceOrderCode: string;
+    parentProduceOrderCode?: string;
     /** 订单类型 */
-    orderType: string;
+    orderType?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 对应物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 对应物料规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 对应物料单位 */
-    materialUnitId: number;
+    materialUnitId?: number;
     /** 物料种类 */
-    materialType: string;
+    materialType?: string;
     /** 对应工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 对应物料主数据bomid */
-    materialBomId: number;
+    materialBomId?: number;
     /** 总生产数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 当前生产数量 */
-    currentCount: number;
+    currentCount?: number;
     /** 当前累积报废数量 */
-    currentScrapCount: number;
+    currentScrapCount?: number;
     /** 累积生产报废数量 */
-    produceScrapCount: number;
+    produceScrapCount?: number;
     /** 累积委外报废数量 */
-    produceEntrustScrapCount: number;
+    produceEntrustScrapCount?: number;
     /** 当前累积转移数量 - 针对批次转移到其他生产订单 */
-    currentChangeCount: number;
+    currentChangeCount?: number;
     /** 计划开工日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 实际开工日期 */
-    actualBeginTime: string;
+    actualBeginTime?: string;
     /** 计划完工日期 */
-    endTime: string;
+    endTime?: string;
     /** 实际完工日期 */
-    actualEndTime: string;
+    actualEndTime?: string;
     /** 生产完成时间 */
-    produceCompleteTime: string;
+    produceCompleteTime?: string;
     /** 交期日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 排产类型 */
-    planType: string;
+    planType?: string;
     /** 订单状态 */
-    orderStatus: string;
+    orderStatus?: string;
     /** 订单排产状态 */
-    planStatus: string;
+    planStatus?: string;
     /** 关闭人 */
-    closeUserId: number;
+    closeUserId?: number;
     /** 关闭时间 */
-    closeTime: string;
+    closeTime?: string;
     /** 关闭原因 */
-    closeRemark: string;
+    closeRemark?: string;
     /** 订单优先级，数值越大优先级越高 */
-    priorityLevel: number;
+    priorityLevel?: number;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 下单业务部门id */
-    placeOrderDepartmentId: number;
+    placeOrderDepartmentId?: number;
     /** 下单业务部门编号 */
-    placeOrderDepartmentCode: string;
+    placeOrderDepartmentCode?: string;
     /** 下单业务部门名称 */
-    placeOrderDepartmentName: string;
+    placeOrderDepartmentName?: string;
 }

@@ -16,89 +16,89 @@ export default function fetchMethod(data: ISendAnEmailRecordQueryRequest, extraO
 /** 发送邮件记录查询请求 */
 export interface ISendAnEmailRecordQueryRequest {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 邮件名称-模糊搜索 */
-    emailName: string;
+    emailName?: string;
     /** 发送时间-起始 */
-    sendingTimeBegin: string;
+    sendingTimeBegin?: string;
     /** 发送时间-截止 */
-    sendingTimeEnd: string;
+    sendingTimeEnd?: string;
     /** 邮件标题-模糊搜索 */
-    title: string;
+    title?: string;
     /** 收件人地址-模糊搜索 */
-    addressee: string;
+    addressee?: string;
     /** 邮件正文-模糊搜索 */
-    content: string;
+    content?: string;
     /** 发送状态-精确匹配 */
-    status: string;
+    status?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«SendingEmailRecordQueryResponseDTO»» */
 export interface ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IThePagingInformationSendingEmailRecordQueryResponseDTO;
+    data?: IThePagingInformationSendingEmailRecordQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«SendingEmailRecordQueryResponseDTO» */
 export interface IThePagingInformationSendingEmailRecordQueryResponseDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ISendingEmailRecordQueryResponseDTO[];
+    list?: ISendingEmailRecordQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** SendingEmailRecordQueryResponseDTO */
 export interface ISendingEmailRecordQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 邮件名称 */
-    emailName: string;
+    emailName?: string;
     /** 邮件任务ID */
-    emailTaskId: number;
+    emailTaskId?: number;
     /** 邮件任务-标题 */
-    title: string;
+    title?: string;
     /** 内容 */
-    content: string;
+    content?: string;
     /** 发送邮件状态 */
-    status: string;
+    status?: string;
     /** 发送时间 */
-    sendingTime: string;
+    sendingTime?: string;
     /** 发送来源 */
-    sendingFrom: string;
+    sendingFrom?: string;
     /** 收件人地址 */
-    addressee: string;
+    addressee?: string;
     /**  是否已准备好数据，只有准备好的邮件才能重新发送 */
-    isReady: string;
+    isReady?: string;
     /** 失败的原因 */
-    failureReason: string;
+    failureReason?: string;
 }

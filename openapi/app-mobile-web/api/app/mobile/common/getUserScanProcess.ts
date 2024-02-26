@@ -15,22 +15,22 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«UserScanProcessVO» */
 export interface IJSONResultUserScanProcessVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IUserScanProcessVO;
+    data?: IUserScanProcessVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** UserScanProcessVO */
 export interface IUserScanProcessVO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** undefined */
-    userId: number;
+    userId?: number;
     /** undefined */
-    processId: number;
+    processId?: number;
 }

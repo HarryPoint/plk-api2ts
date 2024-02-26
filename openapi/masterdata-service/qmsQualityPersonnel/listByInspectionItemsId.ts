@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/listByInspectionItemsIdUsingGET
 */
-export default function fetchMethod(params: { inspectionItemsId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { inspectionItemsId?: number }, extraOptions?: any) {
     return http<IJSONResultListQualityPersonnelDropDownResponseDtos>(
         {
             url: "/masterdata-service/qmsQualityPersonnel/listByInspectionItemsId",
@@ -16,22 +16,22 @@ export default function fetchMethod(params: { inspectionItemsId: number }, extra
 /** JSONResult«List«质量人员下拉响应DTO»» */
 export interface IJSONResultListQualityPersonnelDropDownResponseDtos {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IQualityPersonnelDropDownResponseDTO[];
+    data?: IQualityPersonnelDropDownResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质量人员下拉响应DTO */
 export interface IQualityPersonnelDropDownResponseDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 员工编号 */
-    employeeCode: string;
+    employeeCode?: string;
     /** 员工姓名 */
-    employeeName: string;
+    employeeName?: string;
     /** 可检验项目 */
-    qmsInspectionItemName: string;
+    qmsInspectionItemName?: string;
 }

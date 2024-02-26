@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务排班相关/getCalendarUsingPOST
 */
-export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListTaskSchedulingReturnsVO>(
         {
             url: "/flow-service/flowPathTaskCalendar/getCalendar",
@@ -17,50 +17,50 @@ export default function fetchMethod(data: IFactoryCalendarSearchVO, params: { en
 /** 工厂日历搜索VO */
 export interface IFactoryCalendarSearchVO {
     /** 月份 yyyy-MM, 如果月份不为空则优先按照月份查询，如果为空，则按照开始日期-结束日期查询 */
-    month: string;
+    month?: string;
     /** 开始日期 yyyy-MM-dd, 如果月份不为空则优先按照月份查询，如果为空，则按照开始日期-结束日期查询 */
-    beginDate: string;
+    beginDate?: string;
     /** 结束日期 yyyy-MM-dd, 如果月份不为空则优先按照月份查询，如果为空，则按照开始日期-结束日期查询 */
-    endDate: string;
+    endDate?: string;
 }
 /** JSONResult«List«任务排班返回VO»» */
 export interface IJSONResultListTaskSchedulingReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITaskSchedulingReturnsToVO[];
+    data?: ITaskSchedulingReturnsToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 任务排班返回VO */
 export interface ITaskSchedulingReturnsToVO {
     /** 任务排班id */
-    id: number;
+    id?: number;
     /** 日程安排日期 */
-    scheduleDate: string;
+    scheduleDate?: string;
     /** 对应班次集 */
-    shifts: IProcessTaskShiftUserInformationIsReturnedToVO[];
+    shifts?: IProcessTaskShiftUserInformationIsReturnedToVO[];
 }
 /** 流程任务班次用户信息返回VO */
 export interface IProcessTaskShiftUserInformationIsReturnedToVO {
     /** 任务排班与任务班次关联id */
-    id: number;
+    id?: number;
     /** 对应的员工信息集 */
-    userInfos: IIdNameNumberVO[];
+    userInfos?: IIdNameNumberVO[];
     /** 班次id */
-    flowPathShiftId: number;
+    flowPathShiftId?: number;
     /** 班次名称 */
-    flowPathShiftName: string;
+    flowPathShiftName?: string;
     /** 班次开始时间 */
-    flowPathShiftBeginTime: ILocalTime;
+    flowPathShiftBeginTime?: ILocalTime;
     /** 班次结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
     /** 班次结束时间 */
-    flowPathShiftEndTime: ILocalTime;
+    flowPathShiftEndTime?: ILocalTime;
     /** 方案名称 */
-    planName: string;
+    planName?: string;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
@@ -74,11 +74,11 @@ export interface IIdNameNumberVO {
 /** LocalTime */
 export interface ILocalTime {
     /** undefined */
-    hour: number;
+    hour?: number;
     /** undefined */
-    minute: number;
+    minute?: number;
     /** undefined */
-    second: number;
+    second?: number;
     /** undefined */
-    nano: number;
+    nano?: number;
 }

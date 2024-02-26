@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/工序相关/setProductionPersonUsingPOST
 */
-export default function fetchMethod(data: ISetExecutorDTO[], params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(data: ISetExecutorDTO[], params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-mobile-web/api/app/mobile/process/setProductionPerson",
@@ -17,18 +17,18 @@ export default function fetchMethod(data: ISetExecutorDTO[], params: { id: numbe
 /** SetExecutorDTO */
 export interface ISetExecutorDTO {
     /** undefined */
-    executorType: string;
+    executorType?: string;
     /** undefined */
-    refIdList: number[];
+    refIdList?: number[];
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

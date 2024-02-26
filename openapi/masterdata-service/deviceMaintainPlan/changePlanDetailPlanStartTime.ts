@@ -16,18 +16,18 @@ export default function fetchMethod(data: IMaintenancePlanDetailsMaintenanceStar
 /** 保养计划明细保养开始时间编辑DTO */
 export interface IMaintenancePlanDetailsMaintenanceStartTimeEditDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 保养开始时间 */
-    maintainStartTime: string;
+    maintainStartTime?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

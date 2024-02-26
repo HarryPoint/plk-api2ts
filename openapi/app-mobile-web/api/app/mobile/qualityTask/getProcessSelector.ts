@@ -15,24 +15,24 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«工序选择返回VO»» */
 export interface ITheJSONResultListOperationSelectsToReturnVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcedureSelectionReturnsVO[];
+    data?: IProcedureSelectionReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工序选择返回VO */
 export interface IProcedureSelectionReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 工序名称 */
-    name: string;
+    name?: string;
     /** 工序编号 */
-    code: string;
+    code?: string;
     /** 区域id */
-    areaId: string;
+    areaId?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
 }

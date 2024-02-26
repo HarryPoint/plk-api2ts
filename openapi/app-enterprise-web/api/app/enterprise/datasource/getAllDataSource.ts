@@ -15,42 +15,42 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«数据源响应对象»» */
 export interface IJSONResultListDataSourceResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDataSourceResponseObject[];
+    data?: IDataSourceResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 数据源响应对象 */
 export interface IDataSourceResponseObject {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 数据源权限码 */
-    pcode: string;
+    pcode?: string;
     /** 数据源名称 */
-    name: string;
+    name?: string;
     /** 数据源类型 */
-    dataSourceType: string;
+    dataSourceType?: string;
     /** 父级数据源id */
-    parentId: number;
+    parentId?: number;
     /** 应用流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 应用流程状态 */
-    flowPathDataStatus: number;
+    flowPathDataStatus?: number;
     /** 是否主表 */
-    isMaster: string;
+    isMaster?: string;
     /** 应用路由Id */
-    enterpriseRouterId: string;
+    enterpriseRouterId?: string;
     /** 应用路由code */
-    enterpriseRouterPermissionCode: string;
+    enterpriseRouterPermissionCode?: string;
     /** 服务对象id */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务包类型 - 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 子数据源 */
-    childDataSources: IDataSourceResponseObject[];
+    childDataSources?: IDataSourceResponseObject[];
 }

@@ -16,44 +16,44 @@ export default function fetchMethod(data: IProjectKanbanQueryDto, extraOptions?:
 /** 项目看板查询dto */
 export interface IProjectKanbanQueryDto {
     /** 开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束日期 */
-    endTime: string;
+    endTime?: string;
     /** 项目大类 */
-    projectCategory: string;
+    projectCategory?: string;
     /** undefined */
-    projectTypeIds: number[];
+    projectTypeIds?: number[];
     /** undefined */
-    excludeProjectIds: number[];
+    excludeProjectIds?: number[];
 }
 /** JSONResult«List«项目地图响应对象»» */
 export interface IJSONResultListProjectMapResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectMapResponseObject[];
+    data?: IProjectMapResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目地图响应对象 */
 export interface IProjectMapResponseObject {
     /** 省份编码 */
-    provinceCode: string;
+    provinceCode?: string;
     /** 省份名称 */
-    provinceName: string;
+    provinceName?: string;
     /** 项目数量 */
-    projectQuantity: number;
+    projectQuantity?: number;
     /** 项目列表 */
-    projectList: IIdCodeNameGenericTransportObject[];
+    projectList?: IIdCodeNameGenericTransportObject[];
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

@@ -16,18 +16,18 @@ export default function fetchMethod(data: IEmailContentTemplateEditRequestDTO, e
 /** EmailContentTemplateEditRequestDTO */
 export interface IEmailContentTemplateEditRequestDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 邮件内容 */
-    content: string;
+    content?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

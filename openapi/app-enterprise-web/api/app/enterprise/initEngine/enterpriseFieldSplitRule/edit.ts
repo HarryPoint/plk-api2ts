@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎-企业字段分割规则/editUsingPOST_9
 */
-export default function fetchMethod(data: ISaveTheEnterpriseFieldSeparationRule, params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(data: ISaveTheEnterpriseFieldSeparationRule, params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/enterpriseFieldSplitRule/edit",
@@ -17,13 +17,13 @@ export default function fetchMethod(data: ISaveTheEnterpriseFieldSeparationRule,
 /** 保存企业字段分隔规则 */
 export interface ISaveTheEnterpriseFieldSeparationRule {
     /** 表定义 */
-    tableDefine: IAssociationTableDefinition;
+    tableDefine?: IAssociationTableDefinition;
     /** 字段定义 */
-    fieldDefine: IAssociatedFieldDefinition;
+    fieldDefine?: IAssociatedFieldDefinition;
     /** 模板 */
-    template: IAssociationTemplate;
+    template?: IAssociationTemplate;
     /** 分隔字符 */
-    splitChar: string;
+    splitChar?: string;
 }
 /** 关联表定义 */
 export interface IAssociationTableDefinition {
@@ -42,16 +42,16 @@ export interface IAssociationTemplate {
     /** undefined */
     code: string;
     /** undefined */
-    name: string;
+    name?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

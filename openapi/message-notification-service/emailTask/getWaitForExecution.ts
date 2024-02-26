@@ -21,32 +21,32 @@ export interface IEmailTaskWaitForExecutionQueryRequestDTO {
 /** JSONResult«EmailTaskWaitForExecutionQueryResponseDTO» */
 export interface IJSONResultEmailTaskWaitForExecutionQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmailTaskWaitForExecutionQueryResponseDTO;
+    data?: IEmailTaskWaitForExecutionQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** EmailTaskWaitForExecutionQueryResponseDTO */
 export interface IEmailTaskWaitForExecutionQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 邮件名称 */
-    emailName: string;
+    emailName?: string;
     /** 收件人 */
-    addressee: string;
+    addressee?: string;
     /** 标题 */
-    title: string;
+    title?: string;
     /** 邮件正文 */
-    content: string;
+    content?: string;
     /** 发送时间 */
-    sendingTime: string;
+    sendingTime?: string;
     /** 下次发送时间 */
-    nextSendingTime: string;
+    nextSendingTime?: string;
     /** 上次发送时间 */
-    lastSendingTime: string;
+    lastSendingTime?: string;
     /** 引用ID列表- 这里指的是报表模板的ID列表 */
-    refIdList: number[];
+    refIdList?: number[];
 }

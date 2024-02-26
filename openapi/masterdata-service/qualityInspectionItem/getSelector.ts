@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检项/getSelectorUsingGET_6
 */
-export default function fetchMethod(params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned>(
         {
             url: "/masterdata-service/qualityInspectionItem/getSelector",
@@ -16,35 +16,35 @@ export default function fetchMethod(params: { enterpriseId: number }, extraOptio
 /** JSONResult«List«质检项基础信息返回VO»» */
 export interface IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheBasicInformationAboutQualityInspectionItemsIsReturnedToVO[];
+    data?: ITheBasicInformationAboutQualityInspectionItemsIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质检项基础信息返回VO */
 export interface ITheBasicInformationAboutQualityInspectionItemsIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 质检项名称 */
-    name: string;
+    name?: string;
     /** 质检项编号 */
-    code: string;
+    code?: string;
     /** 质检方式 */
-    qualityMethod: string;
+    qualityMethod?: string;
     /** 质检方式描述 */
-    qualityMethodDesc: string;
+    qualityMethodDesc?: string;
     /** 选择方式 */
-    selectType: string;
+    selectType?: string;
     /** 选择方式描述 */
-    selectTypeDesc: string;
+    selectTypeDesc?: string;
     /** 选项内容集合 */
-    selectors: ITheInspectionItemOptionReturnsVO[];
+    selectors?: ITheInspectionItemOptionReturnsVO[];
 }
 /** 质检项选择项返回VO */
 export interface ITheInspectionItemOptionReturnsVO {
     /** 选择项名称 */
-    name: string;
+    name?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportScrapResultVOExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO>(
         {
             url: "/masterdata-service/exportAuth/getBaoJingReportScrapResultVOExportInfoByTicket",
@@ -16,41 +16,41 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«宝晶报表(报废)相关返回VO»» */
 export interface IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationBaojingReportScrapRelatedReturnToVO;
+    data?: IExportInformationBaojingReportScrapRelatedReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«宝晶报表(报废)相关返回VO» */
 export interface IExportInformationBaojingReportScrapRelatedReturnToVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IBaojingReportScrapRelatedReturnToVO[];
+    itemList?: IBaojingReportScrapRelatedReturnToVO[];
 }
 /** 宝晶报表(报废)相关返回VO */
 export interface IBaojingReportScrapRelatedReturnToVO {
     /** 报废类型 */
-    scrapType: string;
+    scrapType?: string;
     /** 物料id */
-    majorDataId: number;
+    majorDataId?: number;
     /** 物料编码 */
-    majorDataCode: string;
+    majorDataCode?: string;
     /** 物料名称 */
-    majorDataName: string;
+    majorDataName?: string;
     /** 物料规格 */
-    spec: string;
+    spec?: string;
     /** 外部编码 */
-    materialOutsideCode: string;
+    materialOutsideCode?: string;
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 仓库用途 */
-    storehousePurpose: string;
+    storehousePurpose?: string;
     /** 报废数量 */
-    scrapQuantity: number;
+    scrapQuantity?: number;
 }

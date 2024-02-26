@@ -16,58 +16,58 @@ export default function fetchMethod(data: IAfterSalesQualityAnalysisReportSearch
 /** 售后质量分析报表搜索VO */
 export interface IAfterSalesQualityAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 灌装日期开始时间 yyyy-MM-dd HH:mm:ss */
-    fillingBeginDate: string;
+    fillingBeginDate?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 灌装日期结束时间 yyyy-MM-dd HH:mm:ss */
-    fillingEndDate: string;
+    fillingEndDate?: string;
     /** 客户id */
-    customerId: number[];
+    customerId?: number[];
     /** 生产日期开始时间 yyyy-MM-dd HH:mm:ss */
-    productionBeginDate: string;
+    productionBeginDate?: string;
     /** 业务员id */
-    businessIds: number[];
+    businessIds?: number[];
     /** 生产日期结束时间 yyyy-MM-dd HH:mm:ss */
-    productionEndDate: string;
+    productionEndDate?: string;
     /** 记录日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
     /** 记录日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 产品id */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds: number[];
+    outerCodeMajorDataIds?: number[];
     /** 灌装线 */
-    fillingLine: string;
+    fillingLine?: string;
     /** 责任单位 */
-    responsibleUnit: string;
+    responsibleUnit?: string;
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«售后质量分析返回VO»_1 */
 export interface IJSONResultAfterSalesQualityAnalysisReturnsVO1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IAfterSalesQualityAnalysisReturnsVO2;
+    data?: IAfterSalesQualityAnalysisReturnsVO2;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 售后质量分析返回VO_2 */
 export interface IAfterSalesQualityAnalysisReturnsVO2 {
     /** 数量 */
-    quantitySum: number;
+    quantitySum?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/getHandlingWorkOrderListByBusinessIdListUsingGET
 */
-export default function fetchMethod(data: IHandlingWorkOrderQueryRequest, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IHandlingWorkOrderQueryRequest, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProcessWorkorderVO>(
         {
             url: "/masterdata-service/flowPathWorkOrder/getHandlingWorkOrderListByBusinessIdList",
@@ -17,55 +17,55 @@ export default function fetchMethod(data: IHandlingWorkOrderQueryRequest, params
 /** HandlingWorkOrderQueryRequest */
 export interface IHandlingWorkOrderQueryRequest {
     /** 应用ID */
-    flowPathId: number;
+    flowPathId?: number;
     /** 业务数据ID列表 */
-    businessIdList: number[];
+    businessIdList?: number[];
 }
 /** JSONResult«List«流程工单VO»» */
 export interface IJSONResultListProcessWorkorderVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessWorkOrderVO1[];
+    data?: IProcessWorkOrderVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程工单VO_1 */
 export interface IProcessWorkOrderVO1 {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    businessId: number;
+    businessId?: number;
     /** undefined */
-    businessCode: string;
+    businessCode?: string;
     /** undefined */
-    flowPathId: number;
+    flowPathId?: number;
     /** undefined */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** undefined */
-    flowPathVersionRank: number;
+    flowPathVersionRank?: number;
     /** undefined */
-    currentFlowPathNodeId: number;
+    currentFlowPathNodeId?: number;
     /** undefined */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** undefined */
-    status: string;
+    status?: string;
     /** undefined */
-    processStatus: string;
+    processStatus?: string;
     /** undefined */
-    completeTime: string;
+    completeTime?: string;
     /** undefined */
-    totalTime: number;
+    totalTime?: number;
     /** undefined */
-    totalTimeoutTime: number;
+    totalTimeoutTime?: number;
     /** undefined */
-    currentTotalTaskCount: number;
+    currentTotalTaskCount?: number;
     /** undefined */
-    currentTotalTimeoutTaskCount: number;
+    currentTotalTimeoutTaskCount?: number;
 }

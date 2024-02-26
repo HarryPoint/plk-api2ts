@@ -16,49 +16,49 @@ export default function fetchMethod(data: IDeviceProductionLineSelectsRequestDTO
 /** 设备产线选择请求DTO */
 export interface IDeviceProductionLineSelectsRequestDTO {
     /** 搜索参数 */
-    searchValue: string;
+    searchValue?: string;
     /** 设备ids */
-    deviceIds: number[];
+    deviceIds?: number[];
     /** 设备类型ids */
-    deviceTypeIds: number[];
+    deviceTypeIds?: number[];
     /** 产线ids */
-    productionLineIds: number[];
+    productionLineIds?: number[];
     /** 区域ids */
-    areaIds: number[];
+    areaIds?: number[];
     /** 设备状态 */
-    dataStatusList: number[];
+    dataStatusList?: number[];
 }
 /** JSONResult«List«设备产线选择响应DTO»» */
 export interface IJSONResultListSelectResponseDtosForTheDeviceProductionLine {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheEquipmentProductionLineSelectsResponseDTO[];
+    data?: ITheEquipmentProductionLineSelectsResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备产线选择响应DTO */
 export interface ITheEquipmentProductionLineSelectsResponseDTO {
     /** 设备id */
-    id: number;
+    id?: number;
     /** 设备code */
-    code: string;
+    code?: string;
     /** 设备名称 */
-    name: string;
+    name?: string;
     /** 设备状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 设备类型id */
-    deviceTypeId: number;
+    deviceTypeId?: number;
     /** 设备类型名称 */
-    deviceTypeName: string;
+    deviceTypeName?: string;
     /** 产线id */
-    productionLineId: number;
+    productionLineId?: number;
     /** 产线名称 */
-    productionLineName: string;
+    productionLineName?: string;
     /** 区域id */
-    areaId: number;
+    areaId?: number;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
 }

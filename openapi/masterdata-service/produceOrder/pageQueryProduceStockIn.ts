@@ -16,89 +16,89 @@ export default function fetchMethod(data: IPaging9, extraOptions?: any) {
 /** 分页_9 */
 export interface IPaging9 {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单ID */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产物料ID */
-    materialId: number;
+    materialId?: number;
     /** 批次好 */
-    lotNoList: string[];
+    lotNoList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«ProductionStockInQueryResponseDTO»» */
 export interface IProductionStockInQueryResponseDTOJSONResultPagingInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IThePagingInformationProductionStockInQueryResponseDTO;
+    data?: IThePagingInformationProductionStockInQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«ProductionStockInQueryResponseDTO» */
 export interface IThePagingInformationProductionStockInQueryResponseDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductionStockInQueryResponseDTO[];
+    list?: IProductionStockInQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** ProductionStockInQueryResponseDTO */
 export interface IProductionStockInQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 主数据ID/生产入库单ID */
-    masterDataId: number;
+    masterDataId?: number;
     /** 生产入库单编码 */
-    produceStockInOrderCode: string;
+    produceStockInOrderCode?: string;
     /** 单据日期 */
-    billDate: string;
+    billDate?: string;
     /** 交易人 */
-    deliveryEmployeeId: number;
+    deliveryEmployeeId?: number;
     /** 交易人名称 */
-    deliveryEmployeeName: string;
+    deliveryEmployeeName?: string;
     /** 交易部门ID */
-    deliveryDepartmentId: number;
+    deliveryDepartmentId?: number;
     /** 交易部门名称 */
-    deliveryDepartmentName: string;
+    deliveryDepartmentName?: string;
     /** 物料ID */
-    materialId: number;
+    materialId?: number;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料类型 */
-    materialType: string;
+    materialType?: string;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 入库数量 */
-    stockInQuantity: number;
+    stockInQuantity?: number;
     /** 入库序列号列表 */
-    serialNoList: Record<string, any>[];
+    serialNoList?: Record<string, any>[];
 }

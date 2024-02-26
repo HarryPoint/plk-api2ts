@@ -16,11 +16,11 @@ export default function fetchMethod(data: string[], extraOptions?: any) {
 /** JSONResult«Map«string,string»» */
 export interface IJSONResultMapstringstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, string>;
+    data?: Record<string, string>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

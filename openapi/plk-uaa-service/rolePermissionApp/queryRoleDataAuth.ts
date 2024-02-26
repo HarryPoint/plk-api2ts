@@ -16,36 +16,36 @@ export default function fetchMethod(data: IRoleQuery1, extraOptions?: any) {
 /** 角色查询_1 */
 export interface IRoleQuery1 {
     /** 角色id集 */
-    roleIds: number[];
+    roleIds?: number[];
     /** 应用id */
-    appId: number;
+    appId?: number;
 }
 /** JSONResult«List«企业角色权限响应»» */
 export interface IJSONResultListEnterpriseRolePermissionResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEnterpriseRolePermissionResponse[];
+    data?: IEnterpriseRolePermissionResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 企业角色权限响应 */
 export interface IEnterpriseRolePermissionResponse {
     /** 数据权限类型 */
-    dataAuthType: string;
+    dataAuthType?: string;
     /** 应用id */
-    appId: number;
+    appId?: number;
     /** 企业路由code */
-    enterpriseRouterCode: string;
+    enterpriseRouterCode?: string;
     /** 数据权限对应的字段列表(只针对表单字段类型) */
-    roleDataAuthFieldList: ITheRoleDataPermissionFieldRespondsToTheDTO[];
+    roleDataAuthFieldList?: ITheRoleDataPermissionFieldRespondsToTheDTO[];
 }
 /** 角色数据权限字段响应DTO */
 export interface ITheRoleDataPermissionFieldRespondsToTheDTO {
     /** 流程表单字段序列号 */
-    appFieldSerialNo: string;
+    appFieldSerialNo?: string;
     /** 流程表单字段名 */
-    appFieldName: string;
+    appFieldName?: string;
 }

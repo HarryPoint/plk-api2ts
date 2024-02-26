@@ -16,93 +16,93 @@ export default function fetchMethod(data: IProductOrderPagingQueryObject, extraO
 /** 产品订单分页查询对象 */
 export interface IProductOrderPagingQueryObject {
     /** 产品订单编号 */
-    code: string;
+    code?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 企业ids */
-    enterpriseIds: number[];
+    enterpriseIds?: number[];
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
     /** 下单用户ids */
-    placeOrderUserIds: number[];
+    placeOrderUserIds?: number[];
     /** 下单时间 -- 结束 */
-    placeOrderEndTime: string;
+    placeOrderEndTime?: string;
     /** 订单类型列表 */
-    typeList: string[];
+    typeList?: string[];
     /** 订单状态列表 */
-    statusList: string[];
+    statusList?: string[];
     /** 下单时间 -- 开始 */
-    placeOrderBeginTime: string;
+    placeOrderBeginTime?: string;
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«产品订单分页响应»» */
 export interface IJSONResultPagingInformationPagingResponseToProductOrders {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationPagingResponseToProductOrders;
+    data?: IPagingInformationPagingResponseToProductOrders;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«产品订单分页响应» */
 export interface IPagingInformationPagingResponseToProductOrders {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductOrderPagingResponse[];
+    list?: IProductOrderPagingResponse[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 产品订单分页响应 */
 export interface IProductOrderPagingResponse {
     /** 订单id */
-    id: number;
+    id?: number;
     /** 订单编号 */
-    code: string;
+    code?: string;
     /** 订单类型 */
-    type: string;
+    type?: string;
     /** 购买产品 */
-    productType: string;
+    productType?: string;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 订单金额 */
-    orderMoneyQuantity: number;
+    orderMoneyQuantity?: number;
     /** 订单状态 */
-    status: string;
+    status?: string;
     /** 下单用户id */
-    placeOrderUserId: number;
+    placeOrderUserId?: number;
     /** 下单用户名称 */
-    placeOrderUserName: string;
+    placeOrderUserName?: string;
     /** 下单时间 */
-    placeOrderTime: string;
+    placeOrderTime?: string;
 }

@@ -16,18 +16,18 @@ export default function fetchMethod(data: INewRequestDTOForStandardProcessClassi
 /** 标准工艺分类新增请求DTO */
 export interface INewRequestDTOForStandardProcessClassification {
     /** 父级分类id */
-    parentCategoryId: number;
+    parentCategoryId?: number;
     /** 分类名称 */
     name: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -16,30 +16,30 @@ export default function fetchMethod(data: ICustomerLeadsAddRequestObject, extraO
 /** 客户线索添加请求对象 */
 export interface ICustomerLeadsAddRequestObject {
     /** 企业名称 */
-    enterpriseName: string;
+    enterpriseName?: string;
     /** 省份编码 */
-    provinceCode: string;
+    provinceCode?: string;
     /** 市级编码 */
-    cityCode: string;
+    cityCode?: string;
     /** 行业id */
-    industryId: number;
+    industryId?: number;
     /** 联系人姓名 */
-    contactUserName: string;
+    contactUserName?: string;
     /** 联系电话 */
-    contactPhone: string;
+    contactPhone?: string;
     /** 职位 */
-    position: string;
+    position?: string;
     /** 试用模块ids */
-    trialModuleIds: number[];
+    trialModuleIds?: number[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

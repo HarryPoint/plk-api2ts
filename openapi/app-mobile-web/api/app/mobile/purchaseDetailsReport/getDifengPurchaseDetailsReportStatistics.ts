@@ -16,20 +16,20 @@ export default function fetchMethod(data: GetDifengPurchaseDetailsReportStatisti
 /** JSONResult«采购明细表统计返回对象» */
 export interface IJSONResultPurchaseDetailsStatisticsReturnedObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPurchaseDetailsStatisticsReturnedObject;
+    data?: IPurchaseDetailsStatisticsReturnedObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 采购明细表统计返回对象 */
 export interface IPurchaseDetailsStatisticsReturnedObject {
     /** 数量 */
-    quantity: number;
+    quantity?: number;
     /** 含税金额 */
-    amountWithTax: number;
+    amountWithTax?: number;
     /** 采购金额 */
-    amountWithDiscountedTax: number;
+    amountWithDiscountedTax?: number;
 }

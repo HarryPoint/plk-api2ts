@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/listByProjectIdUsingGET_1
 */
-export default function fetchMethod(params: { projectId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { projectId?: string }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskTemplateRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTaskTemplate/listByProjectId",
@@ -16,26 +16,26 @@ export default function fetchMethod(params: { projectId: string }, extraOptions?
 /** JSONResult«List«项目任务模板响应DTO»» */
 export interface IJSONResultListProjectTaskTemplateRespondsToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskTemplatesRespondToDtos[];
+    data?: IProjectTaskTemplatesRespondToDtos[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务模板响应DTO */
 export interface IProjectTaskTemplatesRespondToDtos {
     /** 项目任务模板id */
-    id: number;
+    id?: number;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 是否是通用模板 */
-    isDefault: string;
+    isDefault?: string;
     /** 模板名称 */
-    name: string;
+    name?: string;
     /** 应用编号 */
-    appCode: string;
+    appCode?: string;
     /** 应用id */
-    appId: number;
+    appId?: number;
 }

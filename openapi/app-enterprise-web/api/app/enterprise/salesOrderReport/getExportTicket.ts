@@ -16,46 +16,46 @@ export default function fetchMethod(data: IOrderProgressStatisticsQueryVO, extra
 /** 订单进度统计查询VO */
 export interface IOrderProgressStatisticsQueryVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 交付日期 - 开始 yyyy-MM-dd HH:mm:ss */
-    deliveryDateBegin: string;
+    deliveryDateBegin?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 客户id集 */
-    customerIds: number[];
+    customerIds?: number[];
     /** 交付日期 - 结束 yyyy-MM-dd HH:mm:ss */
-    deliveryDateEnd: string;
+    deliveryDateEnd?: string;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** 销售订单状态 */
-    salesOrderStatus: string;
+    salesOrderStatus?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«导出ticket信息» */
 export interface IJSONResultExportedTicketInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportingTicketInformation;
+    data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {
     /** 导出凭证ticket */
-    ticket: string;
+    ticket?: string;
 }

@@ -16,18 +16,18 @@ export default function fetchMethod(data: GetPurchaseSummaryReportStatistics, ex
 /** JSONResult«采购汇总报表合计返回对象» */
 export interface IJSONResultPurchaseSummaryReportTotalReturnedObjects {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPurchaseSummaryReportTotalReturnedObjects;
+    data?: IPurchaseSummaryReportTotalReturnedObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 采购汇总报表合计返回对象 */
 export interface IPurchaseSummaryReportTotalReturnedObjects {
     /** 采购数量 */
-    purchaseQuantity: number;
+    purchaseQuantity?: number;
     /** 采购金额 */
-    purchaseAmount: number;
+    purchaseAmount?: number;
 }

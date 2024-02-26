@@ -16,36 +16,36 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«SalesStatisticsItemOutputVO»» */
 export interface IJSONResultListSalesStatisticsItemOutputVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISalesStatisticsItemOutputVO[];
+    data?: ISalesStatisticsItemOutputVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** SalesStatisticsItemOutputVO */
 export interface ISalesStatisticsItemOutputVO {
     /** 销售用户ID */
-    salesUserId: number;
+    salesUserId?: number;
     /** 销售用户名 */
-    salesUserName: string;
+    salesUserName?: string;
     /** 需求确认数量 */
-    confirmRequireQuantity: number;
+    confirmRequireQuantity?: number;
     /** 方案报价数量 */
-    schemeQuotationQuantity: number;
+    schemeQuotationQuantity?: number;
     /** 商务谈判数量 */
-    businessNegotiationQuantity: number;
+    businessNegotiationQuantity?: number;
     /** 合同签订数量 */
-    contractSigningQuantity: number;
+    contractSigningQuantity?: number;
     /** 回款数量 */
-    paymentReturnQuantity: number;
+    paymentReturnQuantity?: number;
     /** 售后服务数量 */
-    afterServiceQuantity: number;
+    afterServiceQuantity?: number;
     /** 输单数量 */
-    inputOrderQuantity: number;
+    inputOrderQuantity?: number;
     /** 无效数量 */
-    invalidQuantity: number;
+    invalidQuantity?: number;
     /** 合计 */
-    total: number;
+    total?: number;
 }

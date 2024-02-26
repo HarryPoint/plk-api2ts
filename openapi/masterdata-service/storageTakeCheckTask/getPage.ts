@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getPageUsingPOST_31
 */
-export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getPage",
@@ -17,137 +17,137 @@ export default function fetchMethod(data: IWarehouseInventoryTasksPageQueryObjec
 /** 仓库盘点任务分页查询对象 */
 export interface IWarehouseInventoryTasksPageQueryObjects {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 任务编号 */
-    taskNo: string;
+    taskNo?: string;
     /** 盘点仓库id */
-    storehouseIds: number[];
+    storehouseIds?: number[];
     /** 物料id */
-    materialIds: number[];
+    materialIds?: number[];
     /** 完成开始时间 yyyy-MM-dd HH:mm:ss */
-    completeBeginTime: string;
+    completeBeginTime?: string;
     /** 处理人id */
-    handleUserIds: number[];
+    handleUserIds?: number[];
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
-    planEndTime: string;
+    planEndTime?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 完成结束时间 yyyy-MM-dd HH:mm:ss */
-    completeEndTime: string;
+    completeEndTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«仓库盘点任务返回DTO»» */
 export interface IJSONResultThePageInformationWarehouseInventoryTaskReturnsTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IThePageInformationWarehouseInventoryTaskReturnsTheDTO;
+    data?: IThePageInformationWarehouseInventoryTaskReturnsTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«仓库盘点任务返回DTO» */
 export interface IThePageInformationWarehouseInventoryTaskReturnsTheDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IWarehouseInventoryTaskReturnedToDTO[];
+    list?: IWarehouseInventoryTaskReturnedToDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 仓库盘点任务返回DTO */
 export interface IWarehouseInventoryTaskReturnedToDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 盘点单号 */
-    taskNo: string;
+    taskNo?: string;
     /** 盘点仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 盘点仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 盘点仓库编号 */
-    storehouseCode: string;
+    storehouseCode?: string;
     /** 盘点范围 */
-    scopeType: string;
+    scopeType?: string;
     /** 盘点范围描述 */
-    scopeTypeDesc: string;
+    scopeTypeDesc?: string;
     /** 盘点物料种类(针对盘点范围是物料类型的) */
-    handleMaterialTypeList: string[];
+    handleMaterialTypeList?: string[];
     /** 盘点物料种类描述(针对盘点范围是物料类型的) */
-    handleMaterialTypeDescList: string[];
+    handleMaterialTypeDescList?: string[];
     /** 处理人id集合 -- 指派 */
-    handleUserIdList: number[];
+    handleUserIdList?: number[];
     /** 处理人姓名集合 -- 指派 */
-    handleUsernameList: string[];
+    handleUsernameList?: string[];
     /** 计划开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 完成时间 */
-    completeTime: string;
+    completeTime?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 创建人 */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 初盘提交人id */
-    lastHandleUserId: number;
+    lastHandleUserId?: number;
     /** 初盘提交人姓名 */
-    lastHandleUsername: string;
+    lastHandleUsername?: string;
     /** 初盘完成时间 */
-    lastHandleTime: string;
+    lastHandleTime?: string;
     /** 核对人id */
-    verifyUserId: number;
+    verifyUserId?: number;
     /** 核对提交人 */
-    verifyUsername: string;
+    verifyUsername?: string;
     /** 核对完成时间 */
-    verifyTime: string;
+    verifyTime?: string;
     /** 审核人id */
-    examineUserId: number;
+    examineUserId?: number;
     /** 审核人 */
-    examineUsername: string;
+    examineUsername?: string;
     /** 审核完成时间 */
-    examineTime: string;
+    examineTime?: string;
     /** 指定仓位数组(指定仓位类型时有值) */
-    warehouseList: IIdNameNumberVO[];
+    warehouseList?: IIdNameNumberVO[];
     /** 盘盈单编号 */
-    inventoryProfitOrderCode: string;
+    inventoryProfitOrderCode?: string;
     /** 盘亏单编号 */
-    inventoryLossOrderCode: string;
+    inventoryLossOrderCode?: string;
     /** 盘盈单id */
-    inventoryProfitOrderId: number;
+    inventoryProfitOrderId?: number;
     /** 盘亏单id */
-    inventoryLossOrderId: number;
+    inventoryLossOrderId?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {

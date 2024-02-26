@@ -16,17 +16,17 @@ export default function fetchMethod(data: IProcessFormCodeOrNameSearchesForVO, e
 /** 流程表单Code或Name搜索VO */
 export interface IProcessFormCodeOrNameSearchesForVO {
     /** 应用code */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 字段搜索 */
-    dataSearchList: IProcessDataDetailsSearchVO[];
+    dataSearchList?: IProcessDataDetailsSearchVO[];
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 搜索值 */
-    searchValue: string;
+    searchValue?: string;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
@@ -35,33 +35,33 @@ export interface IProcessDataDetailsSearchVO {
     /** 搜索类型 */
     searchType: string;
     /** 搜索文本 - 针对文本搜索 */
-    text: string;
+    text?: string;
     /** 搜索起始值 - 针对范围搜索 */
-    limitBegin: Record<string, any>;
+    limitBegin?: Record<string, any>;
     /** 搜索结束值 - 针对范围搜索 */
-    limitEnd: Record<string, any>;
+    limitEnd?: Record<string, any>;
     /** 搜索选项值 - 针对选择搜索 */
-    selectors: Record<string, any>[];
+    selectors?: Record<string, any>[];
     /** 表格编码 */
-    tableCode: string;
+    tableCode?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«List«JSONObject»» */
 export interface IJSONResultListJSONObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IJSONObject[];
+    data?: IJSONObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** JSONObject */
 export interface IJSONObject {

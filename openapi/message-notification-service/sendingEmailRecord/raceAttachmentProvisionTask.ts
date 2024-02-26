@@ -16,29 +16,29 @@ export default function fetchMethod(data: IRaceAttachmentProvisionTaskRequestDTO
 /** RaceAttachmentProvisionTaskRequestDTO */
 export interface IRaceAttachmentProvisionTaskRequestDTO {
     /** undefined */
-    fileTypeList: string[];
+    fileTypeList?: string[];
 }
 /** JSONResult«RaceAttachmentProvisionTaskResponseDTO» */
 export interface IJSONResultRaceAttachmentProvisionTaskResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IRaceAttachmentProvisionTaskResponseDTO;
+    data?: IRaceAttachmentProvisionTaskResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** RaceAttachmentProvisionTaskResponseDTO */
 export interface IRaceAttachmentProvisionTaskResponseDTO {
     /** undefined */
-    emailTaskId: number;
+    emailTaskId?: number;
     /** undefined */
-    sendingEmailRecordId: number;
+    sendingEmailRecordId?: number;
     /** undefined */
-    sendingEmailAttachmentId: number;
+    sendingEmailAttachmentId?: number;
     /** undefined */
-    refId: number;
+    refId?: number;
     /** undefined */
-    fileType: string;
+    fileType?: string;
 }

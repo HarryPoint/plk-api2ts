@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getTreeByWarehouseUsingGET_1
 */
-export default function fetchMethod(params: { storehouseId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { storehouseId?: string }, extraOptions?: any) {
     return http<IJSONResultListPositionTreeReturnsVO2>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getTreeByWarehouse",
@@ -16,57 +16,57 @@ export default function fetchMethod(params: { storehouseId: string }, extraOptio
 /** JSONResult«List«仓位树返回VO»»_2 */
 export interface IJSONResultListPositionTreeReturnsVO2 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPositionTreeReturnsVO6[];
+    data?: IPositionTreeReturnsVO6[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓位树返回VO_6 */
 export interface IPositionTreeReturnsVO6 {
     /** id */
-    id: number;
+    id?: number;
     /** 仓位名称 */
-    name: string;
+    name?: string;
     /** 仓位编号 */
-    code: string;
+    code?: string;
     /** 状态(是否可用) */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 子仓位 */
-    children: IPositionTreeReturnsVO7[];
+    children?: IPositionTreeReturnsVO7[];
 }
 /** 仓位树返回VO_7 */
 export interface IPositionTreeReturnsVO7 {
     /** id */
-    id: number;
+    id?: number;
     /** 仓位名称 */
-    name: string;
+    name?: string;
     /** 仓位编号 */
-    code: string;
+    code?: string;
     /** 状态(是否可用) */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 子仓位 */
-    children: IPositionTreeReturnsVO7[];
+    children?: IPositionTreeReturnsVO7[];
 }

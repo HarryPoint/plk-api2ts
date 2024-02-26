@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存流水相关/exportUsingPOST_51
 */
-export default function fetchMethod(data: IInventoryFlowSearchVO, params: { masterDataFlowPathCode: string }, extraOptions?: any) {
+export default function fetchMethod(data: IInventoryFlowSearchVO, params: { masterDataFlowPathCode?: string }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageLog/export",
@@ -17,81 +17,81 @@ export default function fetchMethod(data: IInventoryFlowSearchVO, params: { mast
 /** 库存流水搜索VO */
 export interface IInventoryFlowSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 业务主数据id（eg:物料id） */
-    masterDataIdList: number[];
+    masterDataIdList?: number[];
     /** 流程id(工单类型) */
-    flowPathId: number;
+    flowPathId?: number;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 创建时间-开始 yyyy-MM-dd HH:mm:ss */
-    billCreateTimeBegin: string;
+    billCreateTimeBegin?: string;
     /** 创建时间-结束 yyyy-MM-dd HH:mm:ss */
-    billCreateTimeEnd: string;
+    billCreateTimeEnd?: string;
     /** 单据名称 - 模糊匹配 */
-    billNameMatch: string;
+    billNameMatch?: string;
     /** 仓位id集 */
-    warehouseIds: number[];
+    warehouseIds?: number[];
     /** 单据时间-开始 yyyy-MM-dd HH:mm:ss */
-    billDateBegin: string;
+    billDateBegin?: string;
     /** 单据时间-结束 yyyy-MM-dd HH:mm:ss */
-    billDateEnd: string;
+    billDateEnd?: string;
     /** 单据编号 - 模糊匹配 */
-    businessNoMatch: string;
+    businessNoMatch?: string;
     /** 仓库ID-批量查询 */
-    storehouseIdList: number[];
+    storehouseIdList?: number[];
     /** 区域ID-批量查询 */
-    opAreaIdList: number[];
+    opAreaIdList?: number[];
     /** 计量单位ID-批量查询 */
-    unitIdList: number[];
+    unitIdList?: number[];
     /** 收入数量-开始 */
-    inQuantityBegin: number;
+    inQuantityBegin?: number;
     /** 收入数量-结束 */
-    inQuantityEnd: number;
+    inQuantityEnd?: number;
     /** 操作人 - 批量查询 */
-    operatorUserIdList: number[];
+    operatorUserIdList?: number[];
     /** 发出数量-开始 */
-    outQuantityBegin: number;
+    outQuantityBegin?: number;
     /** 发出数量-结束 */
-    outQuantityEnd: number;
+    outQuantityEnd?: number;
     /** 创建用户 - 批量查询 */
-    billCreateUserIdList: number[];
+    billCreateUserIdList?: number[];
     /** 剩余量-开始 */
-    storageTotalCountBegin: number;
+    storageTotalCountBegin?: number;
     /** 剩余量-结束 */
-    storageTotalCountEnd: number;
+    storageTotalCountEnd?: number;
     /** 创建部门 - 批量查询 */
-    billCreateDeptIdList: number[];
+    billCreateDeptIdList?: number[];
     /** 业务状态 - 批量查询 */
-    businessStatusList: string[];
+    businessStatusList?: string[];
     /** 库存更新时间-结束 yyyy-MM-dd HH:mm:ss */
-    updateTimeEnd: string;
+    updateTimeEnd?: string;
     /** 流程进度 - 模糊查询 */
-    processStatusMatch: string;
+    processStatusMatch?: string;
     /** 库存更新部门ID */
-    updateDeptIdList: number[];
+    updateDeptIdList?: number[];
     /** 库存更新时间-开始 yyyy-MM-dd HH:mm:ss */
-    updateTimeBegin: string;
+    updateTimeBegin?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

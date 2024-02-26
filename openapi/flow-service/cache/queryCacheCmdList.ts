@@ -16,35 +16,35 @@ export default function fetchMethod(data: ICacheCmdQueryRequestDTO, extraOptions
 /** CacheCmdQueryRequestDTO */
 export interface ICacheCmdQueryRequestDTO {
     /** undefined */
-    cacheType: string;
+    cacheType?: string;
     /** undefined */
-    applicationName: string;
+    applicationName?: string;
     /** undefined */
-    serviceInstance: string;
+    serviceInstance?: string;
 }
 /** JSONResult«List«CacheCmdQueryResponseDTO»» */
 export interface IJSONResultListCacheCmdQueryResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ICacheCmdQueryResponseDTO[];
+    data?: ICacheCmdQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** CacheCmdQueryResponseDTO */
 export interface ICacheCmdQueryResponseDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    cmdType: string;
+    cmdType?: string;
     /** undefined */
-    cacheType: string;
+    cacheType?: string;
     /** undefined */
-    applicationName: string;
+    applicationName?: string;
     /** undefined */
-    serviceInstance: string;
+    serviceInstance?: string;
     /** undefined */
-    cacheKey: string;
+    cacheKey?: string;
 }

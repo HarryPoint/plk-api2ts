@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_5
 */
-export default function fetchMethod(params: { projectCategory: string }, extraOptions?: any) {
+export default function fetchMethod(params: { projectCategory?: string }, extraOptions?: any) {
     return http<IJSONResultListProjectTemplateRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTemplate/list",
@@ -16,42 +16,42 @@ export default function fetchMethod(params: { projectCategory: string }, extraOp
 /** JSONResult«List«项目模板响应DTO»» */
 export interface IJSONResultListProjectTemplateRespondsToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTemplatesRespondToDtos[];
+    data?: IProjectTemplatesRespondToDtos[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目模板响应DTO */
 export interface IProjectTemplatesRespondToDtos {
     /** 项目模板id */
-    id: number;
+    id?: number;
     /** 项目名称 */
-    name: string;
+    name?: string;
     /** 项目大类 */
-    projectCategory: string;
+    projectCategory?: string;
     /** 项目模板简介 */
-    intro: string;
+    intro?: string;
     /** 项目名称 */
-    projectName: string;
+    projectName?: string;
     /** 项目类型id */
-    projectTypeId: number;
+    projectTypeId?: number;
     /** 项目经理id */
-    projectManagerId: number;
+    projectManagerId?: number;
     /** 主责部门 */
-    mainDutyDeptId: number;
+    mainDutyDeptId?: number;
     /** 项目开始日期 */
-    projectBeginDate: string;
+    projectBeginDate?: string;
     /** 项目结束日期 */
-    projectEndDate: string;
+    projectEndDate?: string;
     /** 项目目的 */
-    projectGoal: string;
+    projectGoal?: string;
     /** 项目地址区域编码 */
-    projectLocationRegionCode: string;
+    projectLocationRegionCode?: string;
     /** 项目地址明细地址 */
-    projectLocationDetailAddress: string;
+    projectLocationDetailAddress?: string;
     /** 项目简介 */
-    projectIntro: string;
+    projectIntro?: string;
 }

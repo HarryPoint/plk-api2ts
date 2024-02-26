@@ -15,22 +15,22 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«试用模块响应DTO»» */
 export interface IJSONResultListTheTrialModuleRespondsToTheDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITrialModuleRespondsToDTO[];
+    data?: ITrialModuleRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 试用模块响应DTO */
 export interface ITrialModuleRespondsToDTO {
     /** 试用模块id */
-    id: number;
+    id?: number;
     /** 试用模块名称 */
-    name: string;
+    name?: string;
     /** pc端的图标 */
-    pcIcon: string;
+    pcIcon?: string;
     /** 移动端的图标 */
-    appIcon: string;
+    appIcon?: string;
 }

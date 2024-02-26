@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getFpyRateReportResultVOForDayUsingGET
 */
-export default function fetchMethod(params: { beginTime: string; endTime: string; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { beginTime?: string; endTime?: string; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListReturnVOToThePassthroughReport>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getFpyRateReportResultVOForDay",
@@ -16,24 +16,24 @@ export default function fetchMethod(params: { beginTime: string; endTime: string
 /** JSONResult«List«直通报表返回VO»» */
 export interface IJSONResultListReturnVOToThePassthroughReport {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IThePassThroughReportReturnsVO[];
+    data?: IThePassThroughReportReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 直通报表返回VO */
 export interface IThePassThroughReportReturnsVO {
     /** 数据时间（时间戳），根据当前选中的时间粒度去转换时间 */
-    dataTime: string;
+    dataTime?: string;
     /** 所有工序报废 */
-    scrapQuantity: number;
+    scrapQuantity?: number;
     /** 最后工序合格产出 */
-    completeProduceQuantity: number;
+    completeProduceQuantity?: number;
     /** 直通率 */
-    fpyRatio: number;
+    fpyRatio?: number;
     /** 直通率-大屏展示 */
-    fpyRatioScale2: number;
+    fpyRatioScale2?: number;
 }

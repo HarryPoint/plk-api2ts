@@ -16,53 +16,53 @@ export default function fetchMethod(data: IBasicQualityAuditQueryRequest1, extra
 /** 基础质量审核查询请求_1 */
 export interface IBasicQualityAuditQueryRequest1 {
     /** 日期范围-起始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 日期范围-结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«质量审核类型查询响应» */
 export interface IJSONResultResponseToTheQualityAuditTypeQuery {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IQualityAuditTypeQueryResponse;
+    data?: IQualityAuditTypeQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 质量审核类型查询响应 */
 export interface IQualityAuditTypeQueryResponse {
     /** 标题列表-仅包含XX不符合项数量,XX 不符合占比 */
-    titleList: IAuditTypeHeading[];
+    titleList?: IAuditTypeHeading[];
     /** 内审清单 */
-    internalAudit: IQualityAuditTypeValueResponse;
+    internalAudit?: IQualityAuditTypeValueResponse;
     /** 外审清单 */
-    externalAudit: IQualityAuditTypeValueResponse;
+    externalAudit?: IQualityAuditTypeValueResponse;
     /** 专审清单 */
-    specialAudit: IQualityAuditTypeValueResponse;
+    specialAudit?: IQualityAuditTypeValueResponse;
 }
 /** 审核类型标题 */
 export interface IAuditTypeHeading {
     /** 标题的Key */
-    key: string;
+    key?: string;
     /** 标题的名称 */
-    name: string;
+    name?: string;
 }
 /** 质量审核类型的值响应 */
 export interface IQualityAuditTypeValueResponse {
     /** 不符合项数量 */
-    nonConformanceQuantity: number;
+    nonConformanceQuantity?: number;
     /** 不符合项 - 动态指标。 key - 为 titleList[].key。指标为表格的值 */
-    dynamicIndicators: Record<string, number>;
+    dynamicIndicators?: Record<string, number>;
     /** 不符合项 - 未整改数量 */
-    nonConformanceUnRectifiedQuantity: number;
+    nonConformanceUnRectifiedQuantity?: number;
     /** 不符合项 - 整改率 */
-    nonConformanceRectificationRate: number;
+    nonConformanceRectificationRate?: number;
     /** 建议项数量 */
-    suggestedItemsQuantity: number;
+    suggestedItemsQuantity?: number;
     /** 建议项 - 未整改数量 */
-    suggestedItemsUnRectifiedQuantity: number;
+    suggestedItemsUnRectifiedQuantity?: number;
     /** 建议项 - 整改率 */
-    suggestedItemsRectificationRate: number;
+    suggestedItemsRectificationRate?: number;
 }

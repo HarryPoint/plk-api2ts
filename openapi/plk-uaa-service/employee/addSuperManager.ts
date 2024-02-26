@@ -16,45 +16,45 @@ export default function fetchMethod(data: INewRequestForOvermanagementEmployee, 
 /** 超管员工新增请求 */
 export interface INewRequestForOvermanagementEmployee {
     /** 员工 */
-    employee: IEmployeeEditRequest;
+    employee?: IEmployeeEditRequest;
     /** 密码 */
-    password: string;
+    password?: string;
 }
 /** 员工编辑请求 */
 export interface IEmployeeEditRequest {
     /** id */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 角色id集 */
-    roleIds: number[];
+    roleIds?: number[];
     /** 部门id */
-    departmentId: number;
+    departmentId?: number;
     /** 手机号码 */
-    telephone: string;
+    telephone?: string;
     /** 邮件 */
-    email: string;
+    email?: string;
     /** 是否允许登录 */
-    isAllowLogin: string;
+    isAllowLogin?: string;
     /** 是否处理账号信息 */
-    isHandleAccount: string;
+    isHandleAccount?: string;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
     /** 服务业务ID */
-    serviceBusinessId: number;
+    serviceBusinessId?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

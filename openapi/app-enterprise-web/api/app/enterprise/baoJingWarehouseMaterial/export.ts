@@ -16,57 +16,57 @@ export default function fetchMethod(data: IBaojingMaterialMasterDataInventorySea
 /** 宝晶物料主数据库存搜索VO */
 export interface IBaojingMaterialMasterDataInventorySearchVO {
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 外部编码 */
-    materialOutsideCode: string;
+    materialOutsideCode?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 仓库id */
-    storehouseIds: number[];
+    storehouseIds?: number[];
     /** 物料种类 */
-    materialTypes: string[];
+    materialTypes?: string[];
     /** 编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 仓库用途 */
-    storehousePurposeList: string[];
+    storehousePurposeList?: string[];
     /** 保管员 */
-    materialCurators: string[];
+    materialCurators?: string[];
     /** 仓位用途 */
-    warehousePurposeList: string[];
+    warehousePurposeList?: string[];
     /** 材质 */
-    materialTexture: string[];
+    materialTexture?: string[];
     /** 业务员id集合 */
-    businessUserIdList: number[];
+    businessUserIdList?: number[];
     /** 工艺 */
-    materialTechnology: string[];
+    materialTechnology?: string[];
     /** 客户id集合 */
-    customerIdList: number[];
+    customerIdList?: number[];
     /** 仓位id */
-    warehouseIds: number[];
+    warehouseIds?: number[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

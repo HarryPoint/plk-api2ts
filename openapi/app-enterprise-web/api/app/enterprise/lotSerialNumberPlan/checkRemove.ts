@@ -16,25 +16,25 @@ export default function fetchMethod(data: ILotSerialNumberPlanRemoveCheckRequest
 /** LotSerialNumberPlanRemoveCheckRequestDTO */
 export interface ILotSerialNumberPlanRemoveCheckRequestDTO {
     /** 批次方案ID列表 */
-    idList: number[];
+    idList?: number[];
 }
 /** JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO» */
 export interface IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ILotSerialNumberPlanRemoveCheckResponseDTO;
+    data?: ILotSerialNumberPlanRemoveCheckResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** LotSerialNumberPlanRemoveCheckResponseDTO */
 export interface ILotSerialNumberPlanRemoveCheckResponseDTO {
     /** 允许删除的ID列表 */
-    allowDeletionIdList: number[];
+    allowDeletionIdList?: number[];
     /** 不允许删除的ID列表 */
-    notAllowDeletionIdList: number[];
+    notAllowDeletionIdList?: number[];
     /** 已使用的ID列表 */
-    usedIdList: number[];
+    usedIdList?: number[];
 }

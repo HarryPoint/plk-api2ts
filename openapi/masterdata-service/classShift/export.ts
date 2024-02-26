@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/班次相关/exportUsingPOST_3
 */
-export default function fetchMethod(data: IShiftSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IShiftSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/classShift/export",
@@ -17,33 +17,33 @@ export default function fetchMethod(data: IShiftSearchVO, params: { enterpriseId
 /** 班次搜索VO */
 export interface IShiftSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 名称 */
-    name: string;
+    name?: string;
     /** 状态 */
-    dataStatus: number;
+    dataStatus?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

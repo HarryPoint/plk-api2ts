@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检分类/editUsingPOST_16
 */
-export default function fetchMethod(data: IEditTheQualityInspectionClassificationDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IEditTheQualityInspectionClassificationDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityInspectionCategory/edit",
@@ -17,22 +17,22 @@ export default function fetchMethod(data: IEditTheQualityInspectionClassificatio
 /** 编辑质检分类 DTO */
 export interface IEditTheQualityInspectionClassificationDTO {
     /** id，如果不传就是新增 */
-    id: number;
+    id?: number;
     /** 质检分类名 */
     name: string;
     /** 质检分类编码 */
-    code: string;
+    code?: string;
     /** 是否应用编码规则 */
     isCodeRule: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

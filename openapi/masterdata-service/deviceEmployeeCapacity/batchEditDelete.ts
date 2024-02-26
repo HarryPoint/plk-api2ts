@@ -16,44 +16,44 @@ export default function fetchMethod(data: IEquipmentPersonnelAbilityToBatchEditD
 /** 设备人员能力批量编辑DTO */
 export interface IEquipmentPersonnelAbilityToBatchEditDtos {
     /** 编辑项列表 */
-    edits: IEquipmentPersonnelAbilityToEditDTO[];
+    edits?: IEquipmentPersonnelAbilityToEditDTO[];
     /** 删除项列表 */
-    deleteIds: number[];
+    deleteIds?: number[];
 }
 /** 设备人员能力编辑DTO */
 export interface IEquipmentPersonnelAbilityToEditDTO {
     /** 人员能力id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 人员id */
-    employeeId: number;
+    employeeId?: number;
     /** 班组id */
-    classGroupId: number;
+    classGroupId?: number;
     /** 部门id */
-    departmentId: number;
+    departmentId?: number;
     /** 编辑能力明细 */
-    detailEdits: IEquipmentPersonnelCapabilityDetailsEditDTO[];
+    detailEdits?: IEquipmentPersonnelCapabilityDetailsEditDTO[];
 }
 /** 设备人员能力明细编辑DTO */
 export interface IEquipmentPersonnelCapabilityDetailsEditDTO {
     /** 人员能力明细id */
-    detailId: number;
+    detailId?: number;
     /** 设备类型id */
-    deviceTypeId: number;
+    deviceTypeId?: number;
     /** 维修能力 */
-    maintainLevel: string;
+    maintainLevel?: string;
     /** 保养能力 */
-    canMaintain: string;
+    canMaintain?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

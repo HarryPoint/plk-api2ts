@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/getByIdUsingGET_7
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultKaizenProjectTaskResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/getById",
@@ -16,55 +16,55 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«KaizenProjectTaskResponseDTO» */
 export interface IJSONResultKaizenProjectTaskResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IKaizenProjectTaskResponseDTO;
+    data?: IKaizenProjectTaskResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** KaizenProjectTaskResponseDTO */
 export interface IKaizenProjectTaskResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 项目任务状态 */
-    projectTaskStatus: string;
+    projectTaskStatus?: string;
     /** 关联项目 */
-    projectId: IAssociateFormDataVO;
+    projectId?: IAssociateFormDataVO;
     /** 执行人 */
-    leaderUserId: IAssociateFormDataVO;
+    leaderUserId?: IAssociateFormDataVO;
     /** 上级ID */
-    parentId: number;
+    parentId?: number;
     /** 开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 优先级 */
-    priority: string;
+    priority?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 创建用户ID */
-    createUserId: IAssociateFormDataVO;
+    createUserId?: IAssociateFormDataVO;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 下级任务列表 */
-    childTaskList: IKaizenProjectTaskResponseDTO[];
+    childTaskList?: IKaizenProjectTaskResponseDTO[];
 }
 /** 关联表单数据VO */
 export interface IAssociateFormDataVO {
     /** id */
-    id: number;
+    id?: number;
     /** 关联表单显示值 */
-    showFieldValue: string;
+    showFieldValue?: string;
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 是否已删除显示字段 */
-    isRemovedShowField: string;
+    isRemovedShowField?: string;
     /** 主数据ID */
-    masterDataId: number;
+    masterDataId?: number;
 }

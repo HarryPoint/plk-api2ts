@@ -18,25 +18,25 @@ export interface IFormReferencingQueryRequestDTO {
     /** undefined */
     flowPathId: number;
     /** undefined */
-    formRecordIdList: number[];
+    formRecordIdList?: number[];
 }
 /** JSONResult«List«库存基础数据关联数据查询响应»» */
 export interface IJSONResultListInventoryBasicDataAssociationDataQueryResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IInventoryBasicDataAssociatedDataQueryResponse[];
+    data?: IInventoryBasicDataAssociatedDataQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 库存基础数据关联数据查询响应 */
 export interface IInventoryBasicDataAssociatedDataQueryResponse {
     /** 数据id */
-    id: number;
+    id?: number;
     /** 数据编码 */
-    code: string;
+    code?: string;
     /** 数据名称 */
-    name: string;
+    name?: string;
 }

@@ -20,29 +20,29 @@ export interface IPanpanReportsStatisticsToQueryObjects {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
 }
 /** JSONResult«盼盼上报统计汇总响应对象» */
 export interface IJSONResultReportStatisticsSummaryResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPanpanReportsStatisticalSummaryResponseObjects;
+    data?: IPanpanReportsStatisticalSummaryResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 盼盼上报统计汇总响应对象 */
 export interface IPanpanReportsStatisticalSummaryResponseObjects {
     /** 计划数 */
-    totalPlanQuantity: number;
+    totalPlanQuantity?: number;
     /** 出料数 */
-    totalProduceQuantity: number;
+    totalProduceQuantity?: number;
     /** 返工数 */
-    totalBackQuantity: number;
+    totalBackQuantity?: number;
     /** 报废个数 */
-    totalScrapQuantity: number;
+    totalScrapQuantity?: number;
 }

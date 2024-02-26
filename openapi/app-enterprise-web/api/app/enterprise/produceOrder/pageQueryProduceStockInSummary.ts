@@ -16,87 +16,87 @@ export default function fetchMethod(data: IPaging10, extraOptions?: any) {
 /** 分页_10 */
 export interface IPaging10 {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单ID */
-    produceOrderId: number;
+    produceOrderId?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«ProductionStockInSummaryQueryResponseDTO»» */
 export interface IProductionStockInSummaryQueryResponseDTOJSONResultPagingInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IThePagingInformationProductionStockInSummaryQueryResponseDTO;
+    data?: IThePagingInformationProductionStockInSummaryQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«ProductionStockInSummaryQueryResponseDTO» */
 export interface IThePagingInformationProductionStockInSummaryQueryResponseDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductionStockInSummaryQueryResponseDTO[];
+    list?: IProductionStockInSummaryQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** ProductionStockInSummaryQueryResponseDTO */
 export interface IProductionStockInSummaryQueryResponseDTO {
     /** ID */
-    id: number;
+    id?: number;
     /** 物料ID */
-    materialId: number;
+    materialId?: number;
     /** 物料编码 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料类型 */
-    materialType: string;
+    materialType?: string;
     /** 生产批次号 */
-    productionLotNo: string;
+    productionLotNo?: string;
     /** 原批次号 */
-    originalProductionLotNo: string;
+    originalProductionLotNo?: string;
     /** 计划生产的数量 */
-    plannedProductionQuantity: number;
+    plannedProductionQuantity?: number;
     /** 拆出数量 */
-    dismantledQuantity: number;
+    dismantledQuantity?: number;
     /** 剩余数量 */
-    remainingQuantity: number;
+    remainingQuantity?: number;
     /** 需入库数量 */
-    toBeStockInQuantity: number;
+    toBeStockInQuantity?: number;
     /** 已入库数量 */
-    stockInQuantity: number;
+    stockInQuantity?: number;
     /** 入库序列号 */
-    stockInSerialNoList: Record<string, any>[];
+    stockInSerialNoList?: Record<string, any>[];
     /** 未入库数量 */
-    notStockInQuantity: number;
+    notStockInQuantity?: number;
     /** 已退库数量 */
-    stockReturnedQuantity: number;
+    stockReturnedQuantity?: number;
     /** 退库序列号 */
-    stockReturnSerialNoList: Record<string, any>[];
+    stockReturnSerialNoList?: Record<string, any>[];
 }

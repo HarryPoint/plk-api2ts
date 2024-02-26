@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskWipByIdUsingGET
 */
-export default function fetchMethod(params: { taskId: string; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { taskId?: string; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskWipById",
@@ -16,37 +16,37 @@ export default function fetchMethod(params: { taskId: string; enterpriseId: numb
 /** JSONResult«生产任务WIP信息响应DTO» */
 export interface IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProductionTaskWIPInformationRespondsToTheDTO;
+    data?: ITheProductionTaskWIPInformationRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产任务WIP信息响应DTO */
 export interface ITheProductionTaskWIPInformationRespondsToTheDTO {
     /** 在制前WIP数 */
-    wipBeforeQuantity: number;
+    wipBeforeQuantity?: number;
     /** 在制前WIP信息 */
-    wipBeforeLots: IProductionTaskWIPBatchInformationVO[];
+    wipBeforeLots?: IProductionTaskWIPBatchInformationVO[];
     /** 在制中WIP数 */
-    wipAfterQuantity: number;
+    wipAfterQuantity?: number;
     /** 在制中WIP信息 */
-    wipAfterLots: IProductionTaskWIPBatchInformationVO[];
+    wipAfterLots?: IProductionTaskWIPBatchInformationVO[];
 }
 /** 生产任务WIP批次信息VO */
 export interface IProductionTaskWIPBatchInformationVO {
     /** 批次id */
-    lotOrderId: number;
+    lotOrderId?: number;
     /** 批次名称 */
-    lotOrderName: string;
+    lotOrderName?: string;
     /** 批次号 */
-    lotOrderNo: string;
+    lotOrderNo?: string;
     /** 总数量 */
-    storageTotalCount: number;
+    storageTotalCount?: number;
     /** 锁定数量 */
-    storageLockCount: number;
+    storageLockCount?: number;
     /** 可使用数量 */
-    storageUseCount: number;
+    storageUseCount?: number;
 }

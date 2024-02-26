@@ -16,37 +16,37 @@ export default function fetchMethod(data: ISecurityInventorySearchVO, extraOptio
 /** 安全库存搜索VO */
 export interface ISecurityInventorySearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 物料编号 */
-    code: string;
+    code?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 物料名称 */
-    name: string;
+    name?: string;
     /** 库存预警类型 */
-    warningType: string;
+    warningType?: string;
     /** 设置类型 */
     type: string;
     /** 对应业务id */
-    businessId: number;
+    businessId?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

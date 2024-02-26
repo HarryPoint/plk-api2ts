@@ -15,38 +15,38 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«员工基础响应 DTO»» */
 export interface IJSONResultListEmployeeBaseResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEmployeeBaseRespondsToDTO[];
+    data?: IEmployeeBaseRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 员工基础响应 DTO */
 export interface IEmployeeBaseRespondsToDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 员工工号 */
-    code: string;
+    code?: string;
     /** 员工姓名 */
-    name: string;
+    name?: string;
     /** 手机号码 */
-    mobilePhone: string;
+    mobilePhone?: string;
     /** 入职日期 */
-    entryTime: string;
+    entryTime?: string;
     /** 离职日期 */
-    dimissionTime: string;
+    dimissionTime?: string;
     /** 出生日期 */
-    birthday: string;
+    birthday?: string;
     /** 性别 */
-    gender: string;
+    gender?: string;
     /** 学历 */
-    educational: string;
+    educational?: string;
     /** 籍贯 */
-    nativePlace: string;
+    nativePlace?: string;
     /** 任职部门id */
-    departmentId: number;
+    departmentId?: number;
     /** 邮箱 */
-    email: string;
+    email?: string;
 }

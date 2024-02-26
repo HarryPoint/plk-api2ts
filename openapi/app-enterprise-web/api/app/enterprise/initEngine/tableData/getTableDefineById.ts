@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDefineByIdUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultTableDefinition>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/getTableDefineById",
@@ -16,103 +16,103 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«表格定义» */
 export interface IJSONResultTableDefinition {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITableDefinition;
+    data?: ITableDefinition;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 表格定义 */
 export interface ITableDefinition {
     /** ID */
-    id: number;
+    id?: number;
     /** 表格编码 */
-    code: string;
+    code?: string;
     /** 表格名称 */
-    name: string;
+    name?: string;
     /** 应用 */
-    application: IApplicationDTO;
+    application?: IApplicationDTO;
     /** 主要的业务字段编码 */
-    mainBusinessFieldCode: string;
+    mainBusinessFieldCode?: string;
     /** 预置应用类型 */
-    presetApplicationType: string;
+    presetApplicationType?: string;
     /** 预置应用类型 */
-    importType: string;
+    importType?: string;
     /** 是否静态表格 */
-    staticTable: boolean;
+    staticTable?: boolean;
     /** 字段定义列表 */
-    fieldDefineList: IFieldDefinition[];
+    fieldDefineList?: IFieldDefinition[];
 }
 /** ApplicationDTO */
 export interface IApplicationDTO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    code: string;
+    code?: string;
 }
 /** 字段定义 */
 export interface IFieldDefinition {
     /** ID */
-    id: number;
+    id?: number;
     /** 字段编码 */
-    code: string;
+    code?: string;
     /** 字段名称 */
-    name: string;
+    name?: string;
     /** 原始字段编码(应用引擎的原始字段) */
-    originalFieldCode: string;
+    originalFieldCode?: string;
     /** 原始字段序列号(应用引擎的原始字段) */
-    originalFieldSerialNo: string;
+    originalFieldSerialNo?: string;
     /** 原始字段名词 */
-    originalFieldName: string;
+    originalFieldName?: string;
     /** 组名 */
-    groupName: string;
+    groupName?: string;
     /** 当前应用 */
-    currentApplication: IApplicationDTO;
+    currentApplication?: IApplicationDTO;
     /** 关联应用 */
-    associationApplication: IApplicationDTO;
+    associationApplication?: IApplicationDTO;
     /** 是否必填 */
-    required: boolean;
+    required?: boolean;
     /** 字段类型 */
-    fieldType: string;
+    fieldType?: string;
     /** 业务类型序列 */
-    fieldGroupSequence: number;
+    fieldGroupSequence?: number;
     /** 默认分隔正则 */
-    defaultSplitRegx: string;
+    defaultSplitRegx?: string;
     /** 序列 */
-    sequence: number;
+    sequence?: number;
     /** 别名列表 */
-    aliasList: string[];
+    aliasList?: string[];
     /** 明细字段 */
-    detailField: boolean;
+    detailField?: boolean;
     /** 表定义ID */
-    tableDefineId: number;
+    tableDefineId?: number;
     /** 选项值列表 */
-    optionalValues: IDictionaryDTO[];
+    optionalValues?: IDictionaryDTO[];
     /** 上级字段编码 */
-    parentFieldCode: string;
+    parentFieldCode?: string;
     /** 上级字段名称 */
-    parentFieldName: string;
+    parentFieldName?: string;
     /** 应用引擎原始字段ID */
-    originalFieldId: number;
+    originalFieldId?: number;
     /** 显示内容字段编码 */
-    showContentFieldCode: string;
+    showContentFieldCode?: string;
     /** 显示字段名称 */
-    showContentFieldName: string;
+    showContentFieldName?: string;
     /** 默认值 */
-    defaultValue: string;
+    defaultValue?: string;
     /** 选择框数据来源 */
-    selectionBoxDataSource: string;
+    selectionBoxDataSource?: string;
     /** 应用关联表单 */
-    refAssociatedFormData: boolean;
+    refAssociatedFormData?: boolean;
     /** 是否自定义字段 */
-    isCustomFields: string;
+    isCustomFields?: string;
 }
 /** DictionaryDTO */
 export interface IDictionaryDTO {
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    name: string;
+    name?: string;
 }

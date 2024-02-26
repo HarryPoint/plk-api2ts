@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/列表列样式配置/listByCodeUsingGET
 */
-export default function fetchMethod(params: { code: string }, extraOptions?: any) {
+export default function fetchMethod(params: { code?: string }, extraOptions?: any) {
     return http<IJSONResultListListColumnStyleConfigurationVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/listByCode",
@@ -16,28 +16,28 @@ export default function fetchMethod(params: { code: string }, extraOptions?: any
 /** JSONResult«List«列表列样式配置VO»» */
 export interface IJSONResultListListColumnStyleConfigurationVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IListColumnStyleConfigurationVO[];
+    data?: IListColumnStyleConfigurationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 列表列样式配置VO */
 export interface IListColumnStyleConfigurationVO {
     /** id */
-    id: number;
+    id?: number;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 编码 */
-    code: string;
+    code?: string;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 列配置JSON */
-    config: Record<string, Record<string, any>>;
+    config?: Record<string, Record<string, any>>;
     /** 排序 */
-    sort: number;
+    sort?: number;
     /** 是否是当前用户选中的 */
-    isCurrentUserChoose: string;
+    isCurrentUserChoose?: string;
 }

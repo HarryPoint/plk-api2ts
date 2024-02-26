@@ -16,109 +16,109 @@ export default function fetchMethod(data: IEnterpriseRoutingTreeQueryDTO1, extra
 /** 企业路由树查询 DTO_1 */
 export interface IEnterpriseRoutingTreeQueryDTO1 {
     /** 客户端组编码 */
-    clientGroupCode: string;
+    clientGroupCode?: string;
     /** 最大级别(包含) */
-    maxLevel: number;
+    maxLevel?: number;
     /** 权限码集合 */
-    permissionCodeSet: string[];
+    permissionCodeSet?: string[];
     /** 查询模式 */
-    queryModel: string;
+    queryModel?: string;
     /** 父级路由code */
-    parentRouterCode: string;
+    parentRouterCode?: string;
     /** 应用级别 */
-    applicationLevel: string;
+    applicationLevel?: string;
     /** 服务对象ID */
-    serviceObjectId: number;
+    serviceObjectId?: number;
 }
 /** JSONResult«List«企业路由树响应 DTO»» */
 export interface IJSONResultListEnterpriseRoutingTreeResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheEnterpriseRoutingTreeRespondsToTheDTO[];
+    data?: ITheEnterpriseRoutingTreeRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 企业路由树响应 DTO */
 export interface ITheEnterpriseRoutingTreeRespondsToTheDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 路由id */
-    routerId: number;
+    routerId?: number;
     /** 是否系统路由 */
-    isSystem: string;
+    isSystem?: string;
     /** 客户端组编码 */
-    clientGroupCode: string;
+    clientGroupCode?: string;
     /** 所属权限编码 */
-    permissionCode: string;
+    permissionCode?: string;
     /** 父级路由id */
-    parentId: number;
+    parentId?: number;
     /** 父级路由编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 路由name */
-    name: string;
+    name?: string;
     /** 路由code */
-    code: string;
+    code?: string;
     /** 菜单类型 */
-    type: string;
+    type?: string;
     /** 图标 */
-    icon: string;
+    icon?: string;
     /** 级别 */
-    level: number;
+    level?: number;
     /** 路由排序 */
-    sort: number;
+    sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth: string;
+    hasDataAuth?: string;
     /** 配置 */
-    config: ITheEnterpriseRouteConfigurationRespondsToTheDTO;
+    config?: ITheEnterpriseRouteConfigurationRespondsToTheDTO;
     /** 子集 */
-    children: ITheEnterpriseRoutingTreeRespondsToTheDTO[];
+    children?: ITheEnterpriseRoutingTreeRespondsToTheDTO[];
 }
 /** 企业路由配置响应 DTO */
 export interface ITheEnterpriseRouteConfigurationRespondsToTheDTO {
     /** 菜单类型 */
-    menuType: string;
+    menuType?: string;
     /** 应用配置 */
-    appConfig: ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO;
+    appConfig?: ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO;
     /** 外部报表配置 */
-    rpExtConfig: ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1;
+    rpExtConfig?: ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1;
     /** 应用对应的组织字段列表 */
-    appOrganizationFiledList: ITheEnterpriseRouteApplicationFieldRespondsToTheDTO[];
+    appOrganizationFiledList?: ITheEnterpriseRouteApplicationFieldRespondsToTheDTO[];
 }
 /** 企业应用路由配置响应 DTO */
 export interface ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO {
     /** 系统应用类型 */
-    appSystemType: string;
+    appSystemType?: string;
     /** 应用id */
-    appId: number;
+    appId?: number;
 }
 /** 企业应用路由配置响应 DTO_1 */
 export interface ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1 {
     /** 外部报表id */
-    extReportId: number;
+    extReportId?: number;
     /** 链接地址 */
-    link: string;
+    link?: string;
     /** 展示方式 */
-    displayMode: string;
+    displayMode?: string;
 }
 /** 企业路由应用字段响应 DTO */
 export interface ITheEnterpriseRouteApplicationFieldRespondsToTheDTO {
     /** 应用字段序列号 */
-    appFieldSerialNo: string;
+    appFieldSerialNo?: string;
     /** 应用字段名 */
-    appFieldName: string;
+    appFieldName?: string;
     /** 应用字段编码 */
-    appFieldCode: string;
+    appFieldCode?: string;
     /** 应用字段排序 */
-    appFieldSort: number;
+    appFieldSort?: number;
     /** 应用字段类型 */
-    appFieldType: string;
+    appFieldType?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 父级流程表单编码 */
-    parentFlowPathFormFieldCode: string;
+    parentFlowPathFormFieldCode?: string;
 }

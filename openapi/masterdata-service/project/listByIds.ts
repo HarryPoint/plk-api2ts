@@ -16,46 +16,46 @@ export default function fetchMethod(data: number[], extraOptions?: any) {
 /** JSONResult«List«项目响应»» */
 export interface IJSONResultListProjectResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectResponse[];
+    data?: IProjectResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目响应 */
 export interface IProjectResponse {
     /** id */
-    id: number;
+    id?: number;
     /** 项目编号 */
-    code: string;
+    code?: string;
     /** 项目名称 */
-    name: string;
+    name?: string;
     /** 项目状态 */
-    projectStatus: string;
+    projectStatus?: string;
     /** 初始化状态 */
-    projectInitStatus: string;
+    projectInitStatus?: string;
     /** 是否超期 */
-    isOverdue: string;
+    isOverdue?: string;
     /** 超期天数（天） */
-    overdueDayCount: number;
+    overdueDayCount?: number;
     /** 项目类型id */
-    projectTypeId: number;
+    projectTypeId?: number;
     /** 项目经理id */
-    projectManagerId: number;
+    projectManagerId?: number;
     /** 主责部门 */
-    mainDutyDeptId: number;
+    mainDutyDeptId?: number;
     /** 项目开始日期 */
-    projectBeginDate: string;
+    projectBeginDate?: string;
     /** 项目结束日期 */
-    projectEndDate: string;
+    projectEndDate?: string;
     /** 项目目的 */
-    projectGoal: string;
+    projectGoal?: string;
     /** 项目文件key */
-    projectFileKey: string;
+    projectFileKey?: string;
     /** 项目简介 */
-    projectIntro: string;
+    projectIntro?: string;
     /** 项目大类 */
-    projectCategory: string;
+    projectCategory?: string;
 }

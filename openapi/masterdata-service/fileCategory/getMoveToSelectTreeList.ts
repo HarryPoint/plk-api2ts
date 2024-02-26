@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/getMoveToSelectTreeListUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailResponseDTO1>(
         {
             url: "/masterdata-service/fileCategory/getMoveToSelectTreeList",
@@ -16,26 +16,26 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«List«文件分类明细响应DTO»»_1 */
 export interface IJSONResultListFileClassificationDetailResponseDTO1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFileClassificationDetailsRespondToDTO6[];
+    data?: IFileClassificationDetailsRespondToDTO6[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 文件分类明细响应DTO_6 */
 export interface IFileClassificationDetailsRespondToDTO6 {
     /** ID */
-    id: number;
+    id?: number;
     /** 分类名称 */
-    name: string;
+    name?: string;
     /** 上级ID */
-    parentId: number;
+    parentId?: number;
     /** 创建人ID */
-    createUserId: number;
+    createUserId?: number;
     /** 下级树列表 */
-    childList: IFileClassificationDetailsRespondToDTO6[];
+    childList?: IFileClassificationDetailsRespondToDTO6[];
     /** 用户权限列表 */
-    userPermissionList: string[];
+    userPermissionList?: string[];
 }

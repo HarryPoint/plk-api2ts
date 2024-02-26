@@ -16,21 +16,21 @@ export default function fetchMethod(data: IDevicePersonnelCapabilityWhetherThere
 /** 设备人员能力是否存在任务请求DTO */
 export interface IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO {
     /** 员工能力ids */
-    deviceEmployeeCapacityIds: number[];
+    deviceEmployeeCapacityIds?: number[];
 }
 /** JSONResult«List«设备人员能力是否存在任务响应DTO»» */
 export interface IJSONResultListDevicePersonnelCapabilityWhetherATaskResponseDTOExists {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDevicePersonnelCapabilityWhetherThereIsATaskResponseDTO[];
+    data?: IDevicePersonnelCapabilityWhetherThereIsATaskResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备人员能力是否存在任务响应DTO */
 export interface IDevicePersonnelCapabilityWhetherThereIsATaskResponseDTO {
     /** 员工名称 */
-    employeeName: string;
+    employeeName?: string;
 }

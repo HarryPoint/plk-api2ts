@@ -15,30 +15,30 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«区域树返回VO»» */
 export interface ITheJSONResultListAreaTreeReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IAreaTreeReturnsVO[];
+    data?: IAreaTreeReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 区域树返回VO */
 export interface IAreaTreeReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 区域名称 */
-    name: string;
+    name?: string;
     /** 区域编号 */
-    code: string;
+    code?: string;
     /** 状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人 */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 区域子集 */
-    children: IAreaTreeReturnsVO[];
+    children?: IAreaTreeReturnsVO[];
 }

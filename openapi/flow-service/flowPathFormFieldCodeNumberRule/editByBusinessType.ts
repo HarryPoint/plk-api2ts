@@ -16,39 +16,39 @@ export default function fetchMethod(data: IBusinessCodingRulesEditDto, extraOpti
 /** 业务编码规则编辑dto */
 export interface IBusinessCodingRulesEditDto {
     /** businessType */
-    businessType: string;
+    businessType?: string;
     /** 明细 */
-    details: IEditTheDTOForProcessFormFieldEncodingRuleDetails[];
+    details?: IEditTheDTOForProcessFormFieldEncodingRuleDetails[];
 }
 /** 流程表单字段编码规则明细编辑DTO */
 export interface IEditTheDTOForProcessFormFieldEncodingRuleDetails {
     /** 设置类型 */
-    type: string;
+    type?: string;
     /** 日期格式 - 用于日期 */
-    dateFormat: string;
+    dateFormat?: string;
     /** 固定值 - 用于固定值 */
-    fixValue: string;
+    fixValue?: string;
     /** 位数 - 用于流水 */
-    ruleLength: number;
+    ruleLength?: number;
     /** 初始值 - 用于流水 */
-    startValue: number;
+    startValue?: number;
     /** 递增值 - 用于流水 */
-    stepValue: number;
+    stepValue?: number;
     /** 是否是编码依据 - 仅能配置一项为编码依据 */
-    isCodeAccording: string;
+    isCodeAccording?: string;
     /** 所属流程表单code -- 针对引用字段类型 */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
-    flowPathFormFiledSerialNo: string;
+    flowPathFormFiledSerialNo?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

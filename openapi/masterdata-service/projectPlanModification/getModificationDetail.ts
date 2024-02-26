@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/getModificationDetailUsingGET_2
 */
-export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
     return http<IJSONResultProjectPlanChangeResponseObject>(
         {
             url: "/masterdata-service/projectPlanModification/getModificationDetail",
@@ -16,74 +16,74 @@ export default function fetchMethod(params: { id: string }, extraOptions?: any) 
 /** JSONResult«项目计划变更响应对象» */
 export interface IJSONResultProjectPlanChangeResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheProjectPlanChangesTheResponseObject;
+    data?: ITheProjectPlanChangesTheResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目计划变更响应对象 */
 export interface ITheProjectPlanChangesTheResponseObject {
     /** 项目阶段响应列表 */
-    projectStageList: IChangeOrderResponseParametersInProjectPhase[];
+    projectStageList?: IChangeOrderResponseParametersInProjectPhase[];
     /** 项目任务响应列表 */
-    projectTaskList: IProjectTaskChangeOrderResponseParameters[];
+    projectTaskList?: IProjectTaskChangeOrderResponseParameters[];
     /** 项目计划变更信息响应列表 */
-    projectPlanList: IItemChangeOrderFieldResponseParameter[];
+    projectPlanList?: IItemChangeOrderFieldResponseParameter[];
 }
 /** 项目阶段变更单响应参数 */
 export interface IChangeOrderResponseParametersInProjectPhase {
     /** 名称 */
-    name: string;
+    name?: string;
     /** 表单操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 项目变更表单id */
-    projectModificationFormId: number;
+    projectModificationFormId?: number;
     /** 数据id */
-    dataId: string;
+    dataId?: string;
     /** 字段数据列表 */
-    fieldDataList: IItemChangeOrderFieldResponseParameter[];
+    fieldDataList?: IItemChangeOrderFieldResponseParameter[];
 }
 /** 项目变更单字段响应参数 */
 export interface IItemChangeOrderFieldResponseParameter {
     /** 字段编号 */
-    fieldCode: string;
+    fieldCode?: string;
     /** 操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 旧值 */
-    oldValue: string;
+    oldValue?: string;
     /** 新值 */
-    newValue: string;
+    newValue?: string;
     /** 子表数据列表 */
-    childList: IItemChangeListFieldExtensionParameterRequest[];
+    childList?: IItemChangeListFieldExtensionParameterRequest[];
 }
 /** 项目变更单子表字段扩展参数请求 */
 export interface IItemChangeListFieldExtensionParameterRequest {
     /** 行数据id */
-    dataId: string;
+    dataId?: string;
     /** 操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 列数据 */
-    columnData: IItemChangeOrderFieldResponseParameter[];
+    columnData?: IItemChangeOrderFieldResponseParameter[];
 }
 /** 项目任务变更单响应参数 */
 export interface IProjectTaskChangeOrderResponseParameters {
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 项目阶段名称 */
-    projectStageName: string;
+    projectStageName?: string;
     /** 表单操作类型 */
-    operateType: string;
+    operateType?: string;
     /** 项目变更表单id */
-    projectModificationFormId: number;
+    projectModificationFormId?: number;
     /** 数据id */
-    dataId: string;
+    dataId?: string;
     /** 应用id */
-    appId: number;
+    appId?: number;
     /** 字段数据列表 */
-    fieldDataList: IItemChangeOrderFieldResponseParameter[];
+    fieldDataList?: IItemChangeOrderFieldResponseParameter[];
 }

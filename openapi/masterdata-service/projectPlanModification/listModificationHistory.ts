@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/listModificationHistoryUsingGET_2
 */
-export default function fetchMethod(params: { projectId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { projectId?: string }, extraOptions?: any) {
     return http<IJSONResultListProjectCollectionChangeInformation>(
         {
             url: "/masterdata-service/projectPlanModification/listModificationHistory",
@@ -16,32 +16,32 @@ export default function fetchMethod(params: { projectId: string }, extraOptions?
 /** JSONResult«List«项目集合变更信息»» */
 export interface IJSONResultListProjectCollectionChangeInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectCollectionChangeInformation[];
+    data?: IProjectCollectionChangeInformation[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目集合变更信息 */
 export interface IProjectCollectionChangeInformation {
     /** id */
-    id: number;
+    id?: number;
     /** 来源应用编号 */
-    fromAppCode: string;
+    fromAppCode?: string;
     /** 来源应用id */
-    fromAppId: number;
+    fromAppId?: number;
     /** code */
-    code: string;
+    code?: string;
     /** 项目名称 */
-    projectId: number;
+    projectId?: number;
     /** 项目编号 */
-    projectCode: string;
+    projectCode?: string;
     /** 发起变更人员 */
-    modifyUserId: number;
+    modifyUserId?: number;
     /** 版本创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 版本更新时间 */
-    updateTime: string;
+    updateTime?: string;
 }

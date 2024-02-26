@@ -16,21 +16,21 @@ export default function fetchMethod(data: IBatchOrderVerificationCanMergeSearchV
 /** 批次订单校验能否合并搜索VO */
 export interface IBatchOrderVerificationCanMergeSearchVO {
     /** 批次id集 */
-    lotOrderIds: number[];
+    lotOrderIds?: number[];
 }
 /** JSONResult«是否信息» */
 export interface IJSONResultIndicatesWhetherTheInformationIsDisplayed {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IYesNoMessage;
+    data?: IYesNoMessage;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 是否信息 */
 export interface IYesNoMessage {
     /** 是否 */
-    whether: string;
+    whether?: string;
 }

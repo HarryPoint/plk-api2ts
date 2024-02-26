@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getDetailByIdUsingGET
 */
-export default function fetchMethod(params: { id: string }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: string }, extraOptions?: any) {
     return http<IJSONResultProcessCardInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processSheet/getDetailById",
@@ -16,65 +16,65 @@ export default function fetchMethod(params: { id: string }, extraOptions?: any) 
 /** JSONResult«工艺卡信息返回VO» */
 export interface IJSONResultProcessCardInformationIsReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessCardInformationIsReturnedToVO;
+    data?: IProcessCardInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工艺卡信息返回VO */
 export interface IProcessCardInformationIsReturnedToVO {
     /** id */
-    id: number;
+    id?: number;
     /** 工艺卡名称 */
-    name: string;
+    name?: string;
     /** 工艺卡编号 */
-    code: string;
+    code?: string;
     /** 物料ids */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序ids */
-    processIds: number[];
+    processIds?: number[];
     /** 文件集合 */
-    fileList: IProcessCardDetailsReturnedToVO[];
+    fileList?: IProcessCardDetailsReturnedToVO[];
     /** 描述集合 */
-    textList: IProcessCardDetailsReturnedToVO[];
+    textList?: IProcessCardDetailsReturnedToVO[];
     /** 录入集合 */
-    inputList: IProcessCardDetailsReturnedToVO[];
+    inputList?: IProcessCardDetailsReturnedToVO[];
 }
 /** 工艺卡明细返回VO */
 export interface IProcessCardDetailsReturnedToVO {
     /** 明细id */
-    id: number;
+    id?: number;
     /** 明细类型 */
-    type: string;
+    type?: string;
     /** 明细名称/标题 */
     name: string;
     /** 明细编号 */
     code: string;
     /** 描述内容/备注 */
-    remark: string;
+    remark?: string;
     /** 文件名称 */
-    fileName: string;
+    fileName?: string;
     /** 文件key */
-    fileKey: string;
+    fileKey?: string;
     /** 文件完整url */
-    fileUrl: string;
+    fileUrl?: string;
     /** 录入类型 */
-    inputType: string;
+    inputType?: string;
     /** 文本类型 */
-    textType: string;
+    textType?: string;
     /** 文本比较值集 */
-    textCompareValueList: string[];
+    textCompareValueList?: string[];
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 数值单位 */
-    numberUnit: string;
+    numberUnit?: string;
     /** 图片最大上传量 */
-    imageTotalCount: number;
+    imageTotalCount?: number;
     /** 选项集 */
-    selectorList: string[];
+    selectorList?: string[];
 }

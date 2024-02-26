@@ -16,9 +16,9 @@ export default function fetchMethod(data: ICapacityPreservationDTO[], extraOptio
 /** 产能保存DTO */
 export interface ICapacityPreservationDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
     name: string;
     /** 关联工序id */
@@ -26,24 +26,24 @@ export interface ICapacityPreservationDTO {
     /** 关联物料id */
     materialIds: number[];
     /** 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 生产耗时 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 生产时间单位 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 产出数量 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
 }
 /** JSONResult«List«string»» */
 export interface IJSONResultListstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string[];
+    data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/手动排产/handPlanUsingPOST
 */
-export default function fetchMethod(data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/handPlan/handPlan",
@@ -17,67 +17,67 @@ export default function fetchMethod(data: IManualDTOSchedulingOfProductionOrders
 /** 生产订单手动排产DTO */
 export interface IManualDTOSchedulingOfProductionOrders {
     /** 排产计划单名称 */
-    planName: string;
+    planName?: string;
     /** 排产维度 */
-    dimension: string;
+    dimension?: string;
     /** 时间维度 */
-    timeDimension: string;
+    timeDimension?: string;
     /** 排产开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 排产结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 排产明细订单维度 */
-    orders: IManualProductionOrderSchedulingDetailsOrderDimensionsDTO[];
+    orders?: IManualProductionOrderSchedulingDetailsOrderDimensionsDTO[];
 }
 /** 生产订单手动排产明细订单维度DTO */
 export interface IManualProductionOrderSchedulingDetailsOrderDimensionsDTO {
     /** 生产订单id */
-    id: number;
+    id?: number;
     /** 按日排产明细 */
-    dayQuantities: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
+    dayQuantities?: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
     /** 按班次排产明细 */
-    classShiftQuantities: IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift[];
+    classShiftQuantities?: IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift[];
     /** 步骤产量集 */
-    steps: IProductionOrderManualSchedulingDetailStepOutputDTO[];
+    steps?: IProductionOrderManualSchedulingDetailStepOutputDTO[];
 }
 /** 生产订单手动排产按日排产DTO */
 export interface IManualSchedulingOfProductionOrdersDTOSchedulingDaily {
     /** 日期 */
-    scheduleDate: string;
+    scheduleDate?: string;
     /** 产量 */
-    quantity: number;
+    quantity?: number;
 }
 /** 生产订单手动排产按班次排产DTO */
 export interface IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift {
     /** 日期 yyyy-MM-dd */
-    scheduleDate: string;
+    scheduleDate?: string;
     /** 班次产量集 */
-    classShifts: IProductionDTOPerShift[];
+    classShifts?: IProductionDTOPerShift[];
 }
 /** 班次产量DTO */
 export interface IProductionDTOPerShift {
     /** 班次id */
-    classShiftId: number;
+    classShiftId?: number;
     /** 产量 */
-    quantity: number;
+    quantity?: number;
 }
 /** 生产订单手动排产明细步骤产量DTO */
 export interface IProductionOrderManualSchedulingDetailStepOutputDTO {
     /** 步骤id */
-    id: number;
+    id?: number;
     /** 按日排产明细 */
-    dayQuantities: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
+    dayQuantities?: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
     /** 按班次排产明细 */
-    classShiftQuantities: IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift[];
+    classShiftQuantities?: IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

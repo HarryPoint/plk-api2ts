@@ -16,147 +16,147 @@ export default function fetchMethod(data: IProductionSchedulingOrderSearchVO, ex
 /** 生产排产订单搜索VO */
 export interface IProductionSchedulingOrderSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单编号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 父级订单编号 */
-    parentProduceOrderCode: string;
+    parentProduceOrderCode?: string;
     /** 销售订单编号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 计划开始日期查询开始时间 */
-    startTimeOfBeginTime: string;
+    startTimeOfBeginTime?: string;
     /** 计划开始日期查询结束时间 */
-    endTimeOfBeginTime: string;
+    endTimeOfBeginTime?: string;
     /** 排产方式集合 */
-    planTypeList: string[];
+    planTypeList?: string[];
     /** 计划结束日期查询结束时间 */
-    endTimeOfEndTime: string;
+    endTimeOfEndTime?: string;
     /** 计划结束日期查询开始时间 */
-    startTimeOfEndTime: string;
+    startTimeOfEndTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«排产订单报表VO(销售单维度)»» */
 export interface IJSONResultPageInformationSchedulingOrderReportVOSalesSingleDimension {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationSchedulingOrderReportVOSalesSingleDimension;
+    data?: IPageInformationSchedulingOrderReportVOSalesSingleDimension;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«排产订单报表VO(销售单维度)» */
 export interface IPageInformationSchedulingOrderReportVOSalesSingleDimension {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductionSchedulingOrderReportVOSalesSingleDimension[];
+    list?: IProductionSchedulingOrderReportVOSalesSingleDimension[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 排产订单报表VO(销售单维度) */
 export interface IProductionSchedulingOrderReportVOSalesSingleDimension {
     /** 生产订单id */
-    id: number;
+    id?: number;
     /** 销售单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 生产订单号 */
-    code: string;
+    code?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 对应物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 计划交付日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 优先级 */
-    priorityLevel: number;
+    priorityLevel?: number;
     /** 对应标准工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 工艺路径 */
-    routingName: string;
+    routingName?: string;
     /** 交付数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 排产状态描述 */
-    planStatusDesc: string;
+    planStatusDesc?: string;
     /** 排产方式描述 */
-    planTypeDesc: string;
+    planTypeDesc?: string;
     /** 订单计划开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 订单计划结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 计划产量列表 */
-    orderDayPlanQuantityList: IIdcodenameIndicatesTheValueVO[];
+    orderDayPlanQuantityList?: IIdcodenameIndicatesTheValueVO[];
     /** 工序完成进度列表 */
-    routingStepCompleteProgressList: IIdcodenameIndicatesTheValueVO[];
+    routingStepCompleteProgressList?: IIdcodenameIndicatesTheValueVO[];
     /** 工序步骤计划列表 */
-    routingStepPlanList: IProductionSchedulingOrderReportProcessStepPlanVO[];
+    routingStepPlanList?: IProductionSchedulingOrderReportProcessStepPlanVO[];
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 销售单详情id */
-    salesOrderDetailId: number;
+    salesOrderDetailId?: number;
     /** 产品名称 */
-    salesOrderMaterialName: string;
+    salesOrderMaterialName?: string;
 }
 /** Id，code, name, 值VO */
 export interface IIdcodenameIndicatesTheValueVO {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 名称 */
-    name: string;
+    name?: string;
     /** 值 */
-    value: number;
+    value?: number;
 }
 /** 排产订单报表工序步骤计划VO */
 export interface IProductionSchedulingOrderReportProcessStepPlanVO {
     /** 工艺路径步骤id */
-    routingStepId: number;
+    routingStepId?: number;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 生产数量 -- 产能 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
     /** 生产时间 -- 产能 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 时间单位 -- 产能 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 时间单位 -- 准备耗时 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 准备耗时 -- 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 计划开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 计划结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 计划产量列表 */
-    routingStepPlanDayQuantityList: IIdcodenameIndicatesTheValueVO[];
+    routingStepPlanDayQuantityList?: IIdcodenameIndicatesTheValueVO[];
 }

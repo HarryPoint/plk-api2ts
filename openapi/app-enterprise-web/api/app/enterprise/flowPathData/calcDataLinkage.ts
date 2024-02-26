@@ -16,23 +16,23 @@ export default function fetchMethod(data: IDataLinkageCalcRequestDTO, extraOptio
 /** DataLinkageCalcRequestDTO */
 export interface IDataLinkageCalcRequestDTO {
     /** 表单字段ID */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 表单记录ID */
-    fromRecord: Record<string, Record<string, any>>;
+    fromRecord?: Record<string, Record<string, any>>;
 }
 /** JSONResult«DataLinkageCalcResponseDTO» */
 export interface IJSONResultDataLinkageCalcResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDataLinkageCalcResponseDTO;
+    data?: IDataLinkageCalcResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** DataLinkageCalcResponseDTO */
 export interface IDataLinkageCalcResponseDTO {
     /** 默认值 */
-    defaultValue: string;
+    defaultValue?: string;
 }

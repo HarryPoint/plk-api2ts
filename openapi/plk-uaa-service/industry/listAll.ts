@@ -15,24 +15,24 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«行业响应对象DTO»» */
 export interface IJSONResultListIndustryResponseObjectDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIndustryResponseObjectDTO[];
+    data?: IIndustryResponseObjectDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 行业响应对象DTO */
 export interface IIndustryResponseObjectDTO {
     /** 行业id */
-    id: number;
+    id?: number;
     /** 父级行业id */
-    parentId: number;
+    parentId?: number;
     /** 行业名称 */
-    name: string;
+    name?: string;
     /** 排序 */
-    sort: number;
+    sort?: number;
     /** 子行业列表 */
-    children: IIndustryResponseObjectDTO[];
+    children?: IIndustryResponseObjectDTO[];
 }

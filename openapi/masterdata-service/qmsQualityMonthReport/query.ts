@@ -16,216 +16,216 @@ export default function fetchMethod(data: Query, extraOptions?: any) {
 /** 质量月报响应DTO */
 export interface IQualityMonthlyReportRespondsToDTO {
     /** 月份 */
-    month: number;
+    month?: number;
     /** 进货损失 - 批产 */
-    purchaseLossBatchProduction: number;
+    purchaseLossBatchProduction?: number;
     /** 进货损失 - 科研 */
-    purchaseLossScientificResearch: number;
+    purchaseLossScientificResearch?: number;
     /** 废品损失 - 批产 */
-    wasteLossBatchProduction: number;
+    wasteLossBatchProduction?: number;
     /** 废品损失 - 科研 */
-    wasteLossScientificResearch: number;
+    wasteLossScientificResearch?: number;
     /** 返工和返修损失 - 批产 */
-    reworkAndRepairLossBatchProduction: number;
+    reworkAndRepairLossBatchProduction?: number;
     /** 返工和返修损失 - 科研 */
-    reworkAndRepairLossScientificResearch: number;
+    reworkAndRepairLossScientificResearch?: number;
     /** 停工损失 - 批产 */
-    shutdownLossBatchProduction: number;
+    shutdownLossBatchProduction?: number;
     /** 停工损失 - 科研 */
-    shutdownLossScientificResearch: number;
+    shutdownLossScientificResearch?: number;
     /** 降级损失 - 批产 */
-    downgradingLossBatchProduction: number;
+    downgradingLossBatchProduction?: number;
     /** 降级损失 - 科研 */
-    downgradingLossScientificResearch: number;
+    downgradingLossScientificResearch?: number;
     /** 不合格处理费 - 批产 */
-    nonConformanceHandlingFeeBatchProduction: number;
+    nonConformanceHandlingFeeBatchProduction?: number;
     /** 不合格处理费 - 科研 */
-    nonConformanceHandlingFeeScientificResearch: number;
+    nonConformanceHandlingFeeScientificResearch?: number;
     /** 其它与内部故障相关的支出 - 批产 */
-    otherInternalFailBatchProduction: number;
+    otherInternalFailBatchProduction?: number;
     /** 其它与内部故障相关的支出 - 科研 */
-    otherInternalFailScientificResearch: number;
+    otherInternalFailScientificResearch?: number;
     /** 一合计 - 批产 */
-    sumOneBatchProduction: number;
+    sumOneBatchProduction?: number;
     /** 一合计 - 科研 */
-    sumOneScientificResearch: number;
+    sumOneScientificResearch?: number;
     /** 索赔费 - 批产 */
-    claimFeeBatchProduction: number;
+    claimFeeBatchProduction?: number;
     /** 索赔费 - 科研 */
-    claimFeeScientificResearch: number;
+    claimFeeScientificResearch?: number;
     /** 退货损失 - 批产 */
-    returnLossBatchProduction: number;
+    returnLossBatchProduction?: number;
     /** 退货损失 - 科研 */
-    returnLossScientificResearch: number;
+    returnLossScientificResearch?: number;
     /** 降价损失 - 批产 */
-    priceReductionLossBatchProduction: number;
+    priceReductionLossBatchProduction?: number;
     /** 降价损失 - 科研 */
-    priceReductionLossScientificResearch: number;
+    priceReductionLossScientificResearch?: number;
     /** 维修费 - 批产 */
-    maintenanceCostBatchProduction: number;
+    maintenanceCostBatchProduction?: number;
     /** 维修费 - 科研 */
-    maintenanceCostScientificResearch: number;
+    maintenanceCostScientificResearch?: number;
     /** 其它与外部故障相关的支出 - 批产 */
-    otherExternalFailBatchProduction: number;
+    otherExternalFailBatchProduction?: number;
     /** 其它与外部故障相关的支出 - 科研 */
-    otherExternalFailScientificResearch: number;
+    otherExternalFailScientificResearch?: number;
     /** 二合计 - 批产 */
-    sumTwoBatchProduction: number;
+    sumTwoBatchProduction?: number;
     /** 二合计 - 科研 */
-    sumTwoScientificResearch: number;
+    sumTwoScientificResearch?: number;
     /** 内、外部故障成本合计 - 批产 */
-    internalAndExternalFailCostSumBatchProduction: number;
+    internalAndExternalFailCostSumBatchProduction?: number;
     /** 内、外部故障成本合计 - 科研 */
-    internalAndExternalFailCostSumScientificResearch: number;
+    internalAndExternalFailCostSumScientificResearch?: number;
     /** 需求分析与合同评审费 - 批产 */
-    demandAnalysisAndContractReviewFeeBatchProduction: number;
+    demandAnalysisAndContractReviewFeeBatchProduction?: number;
     /** 需求分析与合同评审费 - 科研 */
-    demandAnalysisAndContractReviewFeeScientificResearch: number;
+    demandAnalysisAndContractReviewFeeScientificResearch?: number;
     /** 设计质量控制费 - 批产 */
-    designQualityControlFeeBatchProduction: number;
+    designQualityControlFeeBatchProduction?: number;
     /** 设计质量控制费 - 科研 */
-    designQualityControlFeeScientificResearch: number;
+    designQualityControlFeeScientificResearch?: number;
     /** 采购质量控制费 - 批产 */
-    purchaseQualityControlFeeBatchProduction: number;
+    purchaseQualityControlFeeBatchProduction?: number;
     /** 采购质量控制费 - 科研 */
-    purchaseQualityControlFeeScientificResearch: number;
+    purchaseQualityControlFeeScientificResearch?: number;
     /** 生产质量控制费 - 批产 */
-    produceQualityControlFeeBatchProduction: number;
+    produceQualityControlFeeBatchProduction?: number;
     /** 生产质量控制费 - 科研 */
-    produceQualityControlFeeScientificResearch: number;
+    produceQualityControlFeeScientificResearch?: number;
     /** 成品质量控制费 - 批产 */
-    productQualityControlFeeBatchProduction: number;
+    productQualityControlFeeBatchProduction?: number;
     /** 成品质量控制费 - 科研 */
-    productQualityControlFeeScientificResearch: number;
+    productQualityControlFeeScientificResearch?: number;
     /** 顾客服务费 - 批产 */
-    customerServiceFeeBatchProduction: number;
+    customerServiceFeeBatchProduction?: number;
     /** 顾客服务费 - 科研 */
-    customerServiceFeeScientificResearch: number;
+    customerServiceFeeScientificResearch?: number;
     /** 质量改进费 - 批产 */
-    qualityImprovementFeeBatchProduction: number;
+    qualityImprovementFeeBatchProduction?: number;
     /** 质量改进费 - 科研 */
-    qualityImprovementFeeScientificResearch: number;
+    qualityImprovementFeeScientificResearch?: number;
     /** 质量管理费 - 批产 */
-    qualityManagementFeeBatchProduction: number;
+    qualityManagementFeeBatchProduction?: number;
     /** 质量管理费 - 科研 */
-    qualityManagementFeeScientificResearch: number;
+    qualityManagementFeeScientificResearch?: number;
     /** 质量奖励费 - 批产 */
-    qualityRewardFeeBatchProduction: number;
+    qualityRewardFeeBatchProduction?: number;
     /** 质量奖励费 - 科研 */
-    qualityRewardFeeScientificResearch: number;
+    qualityRewardFeeScientificResearch?: number;
     /** 职工薪酬 - 批产 */
-    preventCostStaffSalaryBatchProduction: number;
+    preventCostStaffSalaryBatchProduction?: number;
     /** 职工薪酬 - 科研 */
-    preventCostStaffSalaryScientificResearch: number;
+    preventCostStaffSalaryScientificResearch?: number;
     /** 其他与质量预防相关的支出 - 批产 */
-    otherPreventBatchProduction: number;
+    otherPreventBatchProduction?: number;
     /** 其他与质量预防相关的支出 - 科研 */
-    otherPreventScientificResearch: number;
+    otherPreventScientificResearch?: number;
     /** 三合计 - 批产 */
-    sumThreeBatchProduction: number;
+    sumThreeBatchProduction?: number;
     /** 三合计 - 科研 */
-    sumThreeScientificResearch: number;
+    sumThreeScientificResearch?: number;
     /** 进货检验费 - 批产 */
-    incomingInspectionFeeBatchProduction: number;
+    incomingInspectionFeeBatchProduction?: number;
     /** 进货检验费 - 科研 */
-    incomingInspectionFeeScientificResearch: number;
+    incomingInspectionFeeScientificResearch?: number;
     /** 工序检验费 - 批产 */
-    processInspectionFeeBatchProduction: number;
+    processInspectionFeeBatchProduction?: number;
     /** 工序检验费 - 科研 */
-    processInspectionFeeScientificResearch: number;
+    processInspectionFeeScientificResearch?: number;
     /** 成品检验费 - 批产 */
-    productInspectionFeeBatchProduction: number;
+    productInspectionFeeBatchProduction?: number;
     /** 成品检验费 - 科研 */
-    productInspectionFeeScientificResearch: number;
+    productInspectionFeeScientificResearch?: number;
     /** 安装检验费 - 批产 */
-    installationInspectionFeeBatchProduction: number;
+    installationInspectionFeeBatchProduction?: number;
     /** 安装检验费 - 科研 */
-    installationInspectionFeeScientificResearch: number;
+    installationInspectionFeeScientificResearch?: number;
     /** 交付检验费 - 批产 */
-    deliveryInspectionFeeBatchProduction: number;
+    deliveryInspectionFeeBatchProduction?: number;
     /** 交付检验费 - 科研 */
-    deliveryInspectionFeeScientificResearch: number;
+    deliveryInspectionFeeScientificResearch?: number;
     /** 检验、验证试验和测量管理费 - 批产 */
-    inspectionAndProofTestAndSurveyManagementFeeBatchProduction: number;
+    inspectionAndProofTestAndSurveyManagementFeeBatchProduction?: number;
     /** 检验、验证试验和测量管理费 - 科研 */
-    inspectionAndProofTestAndSurveyManagementFeeScientificResearch: number;
+    inspectionAndProofTestAndSurveyManagementFeeScientificResearch?: number;
     /** 检验、验证试验和测量设备费 - 批产 */
-    inspectionAndProofTestAndSurveyDeviceFeeBatchProduction: number;
+    inspectionAndProofTestAndSurveyDeviceFeeBatchProduction?: number;
     /** 检验、验证试验和测量设备费 - 科研 */
-    inspectionAndProofTestAndSurveyDeviceFeeScientificResearch: number;
+    inspectionAndProofTestAndSurveyDeviceFeeScientificResearch?: number;
     /** 职工薪酬 - 批产 */
-    identifyCostStaffSalaryBatchProduction: number;
+    identifyCostStaffSalaryBatchProduction?: number;
     /** 职工薪酬 - 科研 */
-    identifyCostStaffSalaryScientificResearch: number;
+    identifyCostStaffSalaryScientificResearch?: number;
     /** 其他与质量鉴定相关的支出 - 批产 */
-    otherIdentifyBatchProduction: number;
+    otherIdentifyBatchProduction?: number;
     /** 其他与质量鉴定相关的支出 - 科研 */
-    otherIdentifyScientificResearch: number;
+    otherIdentifyScientificResearch?: number;
     /** 四合计 - 批产 */
-    sumFourBatchProduction: number;
+    sumFourBatchProduction?: number;
     /** 四合计 - 科研 */
-    sumFourScientificResearch: number;
+    sumFourScientificResearch?: number;
     /** 预防和鉴定成本合计 - 批产 */
-    preventAndIdentifyCostSumBatchProduction: number;
+    preventAndIdentifyCostSumBatchProduction?: number;
     /** 预防和鉴定成本合计 - 科研 */
-    preventAndIdentifyCostSumScientificResearch: number;
+    preventAndIdentifyCostSumScientificResearch?: number;
     /** 质量保证措施费 - 批产 */
-    qualityAssuranceMeasuresFeeBatchProduction: number;
+    qualityAssuranceMeasuresFeeBatchProduction?: number;
     /** 质量保证措施费 - 科研 */
-    qualityAssuranceMeasuresFeeScientificResearch: number;
+    qualityAssuranceMeasuresFeeScientificResearch?: number;
     /** 产品质量证实实验和评定费 - 批产 */
-    productQualityVerificationExperimentAndAssessmentFeeBatchProduction: number;
+    productQualityVerificationExperimentAndAssessmentFeeBatchProduction?: number;
     /** 产品质量证实实验和评定费 - 科研 */
-    productQualityVerificationExperimentAndAssessmentFeeScientificResearch: number;
+    productQualityVerificationExperimentAndAssessmentFeeScientificResearch?: number;
     /** 质量认证费 - 批产 */
-    qualityCertificationFeeBatchProduction: number;
+    qualityCertificationFeeBatchProduction?: number;
     /** 质量认证费 - 科研 */
-    qualityCertificationFeeScientificResearch: number;
+    qualityCertificationFeeScientificResearch?: number;
     /** 五合计 - 批产 */
-    sumFiveBatchProduction: number;
+    sumFiveBatchProduction?: number;
     /** 五合计 - 科研 */
-    sumFiveScientificResearch: number;
+    sumFiveScientificResearch?: number;
     /** （同期）本期销售收入 */
-    lastYearCurrentSalesIncome: number;
+    lastYearCurrentSalesIncome?: number;
     /** 本期销售收入 */
-    currentSalesIncome: number;
+    currentSalesIncome?: number;
     /** （同期）本期总成本 */
-    lastYearCurrentTotalCost: number;
+    lastYearCurrentTotalCost?: number;
     /** 本期总成本 */
-    currentTotalCost: number;
+    currentTotalCost?: number;
     /** （同期）本期生产成本 */
-    lastYearCurrentProduceCost: number;
+    lastYearCurrentProduceCost?: number;
     /** 本期生产成本 */
-    currentProduceCost: number;
+    currentProduceCost?: number;
     /** （同期）本期工业总产值 */
-    lastYearCurrentTotalIndustrialOutputValue: number;
+    lastYearCurrentTotalIndustrialOutputValue?: number;
     /** 本期工业总产值 */
-    currentTotalIndustrialOutputValue: number;
+    currentTotalIndustrialOutputValue?: number;
     /** （同期）本期民品产值 */
-    lastYearCurrentTotalCivilProductOutputValue: number;
+    lastYearCurrentTotalCivilProductOutputValue?: number;
     /** 本期民品产值 */
-    currentTotalCivilProductOutputValue: number;
+    currentTotalCivilProductOutputValue?: number;
     /** 民品质量损失率 */
-    currentCivilProductQualityLossRatio: number;
+    currentCivilProductQualityLossRatio?: number;
     /** 民品内部质量损失率 */
-    currentCivilProductInternalQualityLossRatio: number;
+    currentCivilProductInternalQualityLossRatio?: number;
     /** 民品外部质量损失率 */
-    currentCivilProductExternalQualityLossRatio: number;
+    currentCivilProductExternalQualityLossRatio?: number;
     /** 成本质量损失率 */
-    currentCostQualityLossRatio: number;
+    currentCostQualityLossRatio?: number;
     /** 未填报部门 */
-    notReportDepartments: IIdCodeNameGenericTransportObject[];
+    notReportDepartments?: IIdCodeNameGenericTransportObject[];
     /** 上报状态 */
-    reportStatus: string;
+    reportStatus?: string;
     /** 上报状态描述 */
-    reportStatusDesc: string;
+    reportStatusDesc?: string;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id: number;
+    id?: number;
     /** code */
-    code: string;
+    code?: string;
     /** name */
-    name: string;
+    name?: string;
 }

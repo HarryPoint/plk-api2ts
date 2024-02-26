@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getVOByIdAndCheckUsingGET_1
 */
-export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheProductionExceptionTypeVO>(
         {
             url: "/masterdata-service/produceAbnormalCategory/getVOByIdAndCheck",
@@ -16,24 +16,24 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
 /** JSONResult«生产异常类型VO» */
 export interface IJSONResultIndicatesTheProductionExceptionTypeVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionExceptionTypeVO;
+    data?: IProductionExceptionTypeVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产异常类型VO */
 export interface IProductionExceptionTypeVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 异常分类 */
-    type: string;
+    type?: string;
     /** 类型名称 */
-    name: string;
+    name?: string;
     /** 类型编号 */
-    code: string;
+    code?: string;
 }

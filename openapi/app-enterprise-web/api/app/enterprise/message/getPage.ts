@@ -16,93 +16,93 @@ export default function fetchMethod(data: IMessageSearchVO, extraOptions?: any) 
 /** 消息搜索VO */
 export interface IMessageSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 消息标题/内容 */
-    searchData: string;
+    searchData?: string;
     /** 消息类型 */
-    type: string;
+    type?: string;
     /** 时间开始 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime?: string;
     /** 时间结束 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime?: string;
     /** 忽略应用编码列表 */
-    ignoreAppCodeList: string[];
+    ignoreAppCodeList?: string[];
     /** 是否已读 */
-    isRead: string;
+    isRead?: string;
     /** 最新发布终端值合计 */
-    sendTarget: number;
+    sendTarget?: number;
     /** 应用编码列表 */
-    appCodeList: string[];
+    appCodeList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«消息返回VO»» */
 export interface IJSONResultPagingInformationMessageReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationMessageReturnsVO;
+    data?: IPagingInformationMessageReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«消息返回VO» */
 export interface IPagingInformationMessageReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IMessageReturnVO[];
+    list?: IMessageReturnVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 消息返回VO */
 export interface IMessageReturnVO {
     /** id */
-    id: number;
+    id?: number;
     /** 消息类型 */
-    type: string;
+    type?: string;
     /** 消息类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 消息标题 */
-    title: string;
+    title?: string;
     /** 消息摘要 */
-    digest: string;
+    digest?: string;
     /** 是否已读 */
-    isRead: string;
+    isRead?: string;
     /** pc端跳转路径 */
-    webPath: string;
+    webPath?: string;
     /** 移动端跳转路径 */
-    mobilePath: string;
+    mobilePath?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 消息跳转类型 */
-    pathType: string;
+    pathType?: string;
     /** 消息跳转类型描述 */
-    pathTypeDesc: string;
+    pathTypeDesc?: string;
     /** 最新发布终端值合计 */
-    sendTarget: number;
+    sendTarget?: number;
 }

@@ -16,102 +16,102 @@ export default function fetchMethod(data: IKeyParameterPageQueryObject, extraOpt
 /** 关键参数分页查询对象 */
 export interface IKeyParameterPageQueryObject {
     /** 编号 */
-    code: string;
+    code?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 所属工序id */
-    processId: number;
+    processId?: number;
     /** 名称 -- 模糊查询 */
-    name: string;
+    name?: string;
     /** 所属物料id */
-    materialId: number;
+    materialId?: number;
     /** 状态(是否可用) */
-    dataStatus: number;
+    dataStatus?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«关键参数分页响应对象»» */
 export interface IJSONResultPagingInformationKeyParameterPagingResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationKeyParameterPageResponseObject;
+    data?: IPageInformationKeyParameterPageResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«关键参数分页响应对象» */
 export interface IPageInformationKeyParameterPageResponseObject {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IKeyParameterPagingResponseObject[];
+    list?: IKeyParameterPagingResponseObject[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 关键参数分页响应对象 */
 export interface IKeyParameterPagingResponseObject {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 关键参数编号 */
-    code: string;
+    code?: string;
     /** 关键参数名称 */
-    name: string;
+    name?: string;
     /** 关联工序 */
-    processRp: IAssociatedDropDownResponseObjects[];
+    processRp?: IAssociatedDropDownResponseObjects[];
     /** 关联物料 */
-    materialRp: IAssociatedDropDownResponseObjects[];
+    materialRp?: IAssociatedDropDownResponseObjects[];
     /** 状态 */
-    dataStatus: number;
+    dataStatus?: number;
 }
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id: number;
+    id?: number;
     /** 显示字段名称 */
-    showFieldValue: string;
+    showFieldValue?: string;
 }

@@ -21,18 +21,18 @@ export interface ICraftCanvasSnapshotAcquisitionRequestDTO {
 /** JSONResult«工艺画布快照获取响应DTO» */
 export interface IJSONResultProcessCanvasSnapshotGetsResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProcessCanvasSnapshotToGetResponseDTO;
+    data?: IProcessCanvasSnapshotToGetResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 工艺画布快照获取响应DTO */
 export interface IProcessCanvasSnapshotToGetResponseDTO {
     /** 工艺id */
-    technologyId: number;
+    technologyId?: number;
     /** 快照保存json数据 */
-    canvasSnapshot: Record<string, Record<string, any>>;
+    canvasSnapshot?: Record<string, Record<string, any>>;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单操作日志相关/getListByProduceOrderIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; produceOrderId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; produceOrderId?: number }, extraOptions?: any) {
     return http<IJSONResultListProductionOrderDetailsOperationLogVO>(
         {
             url: "/masterdata-service/produceOrderOperateLog/getListByProduceOrderId",
@@ -16,22 +16,22 @@ export default function fetchMethod(params: { enterpriseId: number; produceOrder
 /** JSONResult«List«生产订单详情 - 操作日志VO»» */
 export interface IJSONResultListProductionOrderDetailsOperationLogVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionOrderDetailsOperationLogVO[];
+    data?: IProductionOrderDetailsOperationLogVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产订单详情 - 操作日志VO */
 export interface IProductionOrderDetailsOperationLogVO {
     /** 操作人id */
-    operateUserId: number;
+    operateUserId?: number;
     /** 操作人名称 */
-    operateUsername: string;
+    operateUsername?: string;
     /** 操作时间 */
-    operateTime: string;
+    operateTime?: string;
     /** 操作内容 */
-    operateContent: string;
+    operateContent?: string;
 }

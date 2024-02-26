@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getWipReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationWIPStatisticsReportReturnsVO>(
         {
             url: "/masterdata-service/exportAuth/getWipReportExportInfoByTicket",
@@ -16,63 +16,63 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«WIP统计报表返回VO»» */
 export interface IJSONResultExportInformationWIPStatisticsReportReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationWIPStatisticsReportReturnsVO;
+    data?: IExportInformationWIPStatisticsReportReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«WIP统计报表返回VO» */
 export interface IExportInformationWIPStatisticsReportReturnsVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: ITheWIPStatisticsReportReturnsVO[];
+    itemList?: ITheWIPStatisticsReportReturnsVO[];
 }
 /** WIP统计报表返回VO */
 export interface ITheWIPStatisticsReportReturnsVO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 所有工序库存信息 */
-    allProcessWarehouse: IWIPInventoryStatisticsReportReturnsVO;
+    allProcessWarehouse?: IWIPInventoryStatisticsReportReturnsVO;
     /** 工序信息集 */
-    processList: IWIPProcessStatisticsReportReturnsVO[];
+    processList?: IWIPProcessStatisticsReportReturnsVO[];
 }
 /** WIP库存统计报表返回VO */
 export interface IWIPInventoryStatisticsReportReturnsVO {
     /** 总数 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 正常总数 */
-    normalTotalQuantity: number;
+    normalTotalQuantity?: number;
     /** 异常总数 */
-    exceptionTotalQuantity: number;
+    exceptionTotalQuantity?: number;
     /** 在制前总数 */
-    beforeTotalQuantity: number;
+    beforeTotalQuantity?: number;
     /** 在制前正常数 */
-    beforeNormalQuantity: number;
+    beforeNormalQuantity?: number;
     /** 在制前异常数 */
-    beforeExceptionQuantity: number;
+    beforeExceptionQuantity?: number;
     /** 在制中总数 */
-    inTotalQuantity: number;
+    inTotalQuantity?: number;
     /** 在制中正常数 */
-    inNormalQuantity: number;
+    inNormalQuantity?: number;
     /** 在制中异常数 */
-    inExceptionQuantity: number;
+    inExceptionQuantity?: number;
 }
 /** WIP工序统计报表返回VO */
 export interface IWIPProcessStatisticsReportReturnsVO {
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 工序库存集 */
-    warehouse: IWIPInventoryStatisticsReportReturnsVO;
+    warehouse?: IWIPInventoryStatisticsReportReturnsVO;
 }

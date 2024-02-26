@@ -16,98 +16,98 @@ export default function fetchMethod(data: IEquipmentMaintenanceCalendarDetailsRe
 /** 设备保养日历详情请求DTO */
 export interface IEquipmentMaintenanceCalendarDetailsRequestDTO {
     /** 保养任务id */
-    taskId: number;
+    taskId?: number;
     /** 设备保养计划明细id */
-    deviceMaintainDetailPlanId: number;
+    deviceMaintainDetailPlanId?: number;
 }
 /** JSONResult«设备保养日历响应DTO» */
 export interface IJSONResultDeviceMaintenanceCalendarRespondsToDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEquipmentMaintenanceCalendarRespondsToDTO1;
+    data?: IEquipmentMaintenanceCalendarRespondsToDTO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备保养日历响应DTO_1 */
 export interface IEquipmentMaintenanceCalendarRespondsToDTO1 {
     /** 天 */
-    day: string;
+    day?: string;
     /** 天详情 */
-    dayDetails: IEquipmentMaintenanceCalendarRespondsToDTO[];
+    dayDetails?: IEquipmentMaintenanceCalendarRespondsToDTO[];
 }
 /** 设备保养日历响应DTO */
 export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 保养任务id */
-    taskId: number;
+    taskId?: number;
     /** 设备保养计划id */
-    deviceMaintainPlanId: number;
+    deviceMaintainPlanId?: number;
     /** 设备保养计划明细id */
-    deviceMaintainDetailPlanId: number;
+    deviceMaintainDetailPlanId?: number;
     /** 设备编号 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** 保养计划编号 */
-    planCode: string;
+    planCode?: string;
     /** 任务编号 */
-    taskCode: string;
+    taskCode?: string;
     /** 保养类型 */
-    maintainType: string;
+    maintainType?: string;
     /** 保养方案 */
-    maintainSchemeName: string;
+    maintainSchemeName?: string;
     /** 计划开始时间 */
-    planTaskStartDate: string;
+    planTaskStartDate?: string;
     /** 计划结束时间 */
-    planTaskEndDate: string;
+    planTaskEndDate?: string;
     /** 任务开始时间 */
-    taskStartDate: string;
+    taskStartDate?: string;
     /** 任务结束时间 */
-    taskEndDate: string;
+    taskEndDate?: string;
     /** 保养人 */
-    deviceEmployeeCapacityNames: string[];
+    deviceEmployeeCapacityNames?: string[];
     /** 执行人 */
-    executorName: string;
+    executorName?: string;
     /** 任务状态 */
-    taskStatus: string;
+    taskStatus?: string;
     /** 返回类型 */
-    resultType: string;
+    resultType?: string;
     /** 查询状态 */
-    queryStatus: string;
+    queryStatus?: string;
     /** 保养内容 */
-    maintainDetails: IMaintenanceContentReturnedToDTO[];
+    maintainDetails?: IMaintenanceContentReturnedToDTO[];
     /** 消耗备件 */
-    maintainPartsDetails: IMaintenanceSparePartsReturnedToDTO[];
+    maintainPartsDetails?: IMaintenanceSparePartsReturnedToDTO[];
 }
 /** 保养内容返回DTO */
 export interface IMaintenanceContentReturnedToDTO {
     /** 保养项目 */
-    maintainName: string;
+    maintainName?: string;
     /** 具体描述 */
-    maintainDesc: string;
+    maintainDesc?: string;
     /** 保养执行记录 */
-    executorRecord: string;
+    executorRecord?: string;
     /** 保养情况 */
-    situation: string;
+    situation?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
 }
 /** 保养消耗备件返回DTO */
 export interface IMaintenanceSparePartsReturnedToDTO {
     /** 备件id */
-    devicePartsId: number;
+    devicePartsId?: number;
     /** 备件名称 */
-    devicePartsName: string;
+    devicePartsName?: string;
     /** 备件编号 */
-    devicePartsCode: string;
+    devicePartsCode?: string;
     /** 备件单位 */
-    devicePartsUnit: string;
+    devicePartsUnit?: string;
     /** 单位id */
-    devicePartsUnitId: number;
+    devicePartsUnitId?: number;
     /** 计划消耗数量 */
-    planConsumerQuantity: number;
+    planConsumerQuantity?: number;
     /** 实际消耗数量 */
-    consumerQuantity: number;
+    consumerQuantity?: number;
 }

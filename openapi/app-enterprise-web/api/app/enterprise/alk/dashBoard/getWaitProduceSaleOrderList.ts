@@ -15,26 +15,26 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«待生产销售单VO»» */
 export interface IJSONResultListSalesVOToBeProduced {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ISingleVOToBeProducedAndSold[];
+    data?: ISingleVOToBeProducedAndSold[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 待生产销售单VO */
 export interface ISingleVOToBeProducedAndSold {
     /** 订单号 */
-    saleOrderCode: string;
+    saleOrderCode?: string;
     /** 客户名称 */
-    customerName: string;
+    customerName?: string;
     /** 订单数量 */
-    saleOrderQuantity: number;
+    saleOrderQuantity?: number;
     /** 排产进度 */
-    scheduleProgress: number;
+    scheduleProgress?: number;
     /** 合格产出进度 */
-    passProgress: number;
+    passProgress?: number;
     /** 整体交付日期 */
-    salesOrderDeliveryDate: string;
+    salesOrderDeliveryDate?: string;
 }

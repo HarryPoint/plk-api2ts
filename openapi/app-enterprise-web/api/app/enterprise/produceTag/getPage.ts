@@ -16,79 +16,79 @@ export default function fetchMethod(data: IExceptionTagSearchVO, extraOptions?: 
 /** 异常标签搜索VO */
 export interface IExceptionTagSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 名称 */
-    name: string;
+    name?: string;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 状态(是否启用) */
-    isValid: string;
+    isValid?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«异常标签返回VO»» */
 export interface IJSONResultPagingInformationExceptionLabelReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPagingInformationExceptionLabelReturnsVO;
+    data?: IPagingInformationExceptionLabelReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«异常标签返回VO» */
 export interface IPagingInformationExceptionLabelReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheExceptionTagReturnsVO[];
+    list?: ITheExceptionTagReturnsVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 异常标签返回VO */
 export interface ITheExceptionTagReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属分类 */
-    type: string;
+    type?: string;
     /** 所属分类 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 标签名称 */
-    name: string;
+    name?: string;
     /** 标签编号 */
-    code: string;
+    code?: string;
     /** 是否启用 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人 */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人姓名 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
 }

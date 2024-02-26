@@ -20,43 +20,43 @@ export interface IPanpanReportsStatisticsToQueryObjects {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
 }
 /** JSONResult«List«盼盼上报统计响应对象»» */
 export interface IJSONResultListIndicatesTheResponseObjectForPanpanToReportStatistics {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPanpanReportsStatisticsOnResponseObjects[];
+    data?: IPanpanReportsStatisticsOnResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 盼盼上报统计响应对象 */
 export interface IPanpanReportsStatisticsOnResponseObjects {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 物料单位 */
-    materialUnit: string;
+    materialUnit?: string;
     /** 工序id */
-    processId: number;
+    processId?: number;
     /** 工序名称 */
-    processName: string;
+    processName?: string;
     /** 工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 计划数 */
-    totalPlanQuantity: number;
+    totalPlanQuantity?: number;
     /** 出料数 */
-    totalProduceQuantity: number;
+    totalProduceQuantity?: number;
     /** 返工数 */
-    totalBackQuantity: number;
+    totalBackQuantity?: number;
     /** 报废个数 */
-    totalScrapQuantity: number;
+    totalScrapQuantity?: number;
 }

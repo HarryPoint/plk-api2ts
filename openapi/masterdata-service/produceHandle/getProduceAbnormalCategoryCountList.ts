@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryCountListUsingPOST
 */
-export default function fetchMethod(data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListProductionExceptionTypeStatisticsVO>(
         {
             url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryCountList",
@@ -17,35 +17,35 @@ export default function fetchMethod(data: IProductionExceptionTypeStatisticsVO1,
 /** 生产异常类型统计VO_1 */
 export interface IProductionExceptionTypeStatisticsVO1 {
     /** 所属分类 */
-    type: string;
+    type?: string;
     /** 处理状态 */
-    status: string;
+    status?: string;
     /** 业务类型 */
-    businessType: string;
+    businessType?: string;
     /** 所属物料ids */
-    materialIds: number[];
+    materialIds?: number[];
     /** 开始时间 */
-    startTime: string;
+    startTime?: string;
     /** 结束时间 */
-    endTime: string;
+    endTime?: string;
 }
 /** JSONResult«List«生产异常类型统计VO»» */
 export interface IJSONResultListProductionExceptionTypeStatisticsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionExceptionTypeStatisticsVO[];
+    data?: IProductionExceptionTypeStatisticsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产异常类型统计VO */
 export interface IProductionExceptionTypeStatisticsVO {
     /** 异常类型id */
-    categoryId: number;
+    categoryId?: number;
     /** 异常类型名 */
-    categoryName: string;
+    categoryName?: string;
     /** 异常类型数量 */
-    quantity: number;
+    quantity?: number;
 }

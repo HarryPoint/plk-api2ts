@@ -16,18 +16,18 @@ export default function fetchMethod(data: IFileCategoryMoveRequestDTO, extraOpti
 /** FileCategoryMoveRequestDTO */
 export interface IFileCategoryMoveRequestDTO {
     /** 当前文件分类ID */
-    id: number;
+    id?: number;
     /** 移动目标文件分类ID */
-    targetFileCategoryId: number;
+    targetFileCategoryId?: number;
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

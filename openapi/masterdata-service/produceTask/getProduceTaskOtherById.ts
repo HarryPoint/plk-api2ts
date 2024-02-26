@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskOtherByIdUsingGET
 */
-export default function fetchMethod(params: { taskId: string; enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { taskId?: string; enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultOtherInformationAboutTheProductionTaskVO>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskOtherById",
@@ -16,52 +16,52 @@ export default function fetchMethod(params: { taskId: string; enterpriseId: numb
 /** JSONResult«生产任务其他信息VO» */
 export interface IJSONResultOtherInformationAboutTheProductionTaskVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionTaskAdditionalInformationVO;
+    data?: IProductionTaskAdditionalInformationVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产任务其他信息VO */
 export interface IProductionTaskAdditionalInformationVO {
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 优先级 */
-    priorityLevel: number;
+    priorityLevel?: number;
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 成品物料id */
-    materialId: number;
+    materialId?: number;
     /** 成品物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 成品物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 对应工序id */
-    processId: number;
+    processId?: number;
     /** 对应工序名称 */
-    processName: string;
+    processName?: string;
     /** 对应工序编号 */
-    processCode: string;
+    processCode?: string;
     /** 对应标准工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 对应工艺路径名称 */
-    routingName: string;
+    routingName?: string;
     /** 对应工艺路径编号 */
-    routingCode: string;
+    routingCode?: string;
     /** 累积报废数量 */
-    totalScrapCount: number;
+    totalScrapCount?: number;
     /** 扣留数量 */
-    holdCount: number;
+    holdCount?: number;
     /** 返工数量 */
-    totalBackCount: number;
+    totalBackCount?: number;
     /** 计划开始时间 */
-    beginTime: string;
+    beginTime?: string;
     /** 计划结束时间 */
-    endTime: string;
+    endTime?: string;
     /** 下发任务时间 */
-    issuingTaskTime: string;
+    issuingTaskTime?: string;
 }

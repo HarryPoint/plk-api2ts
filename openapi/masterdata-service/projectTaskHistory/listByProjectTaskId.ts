@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
 */
-export default function fetchMethod(params: { projectTaskId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { projectTaskId?: number }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskHistoryQueryResponse>(
         {
             url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
@@ -16,56 +16,56 @@ export default function fetchMethod(params: { projectTaskId: number }, extraOpti
 /** JSONResult«List«项目任务历史查询响应»» */
 export interface IJSONResultListProjectTaskHistoryQueryResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskHistoryQueryResponse[];
+    data?: IProjectTaskHistoryQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务历史查询响应 */
 export interface IProjectTaskHistoryQueryResponse {
     /** 创建用户ID */
-    createUserId: number;
+    createUserId?: number;
     /** 创建用户名 */
-    createUserName: string;
+    createUserName?: string;
     /** 创建部门ID */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建部门名称 */
-    createDeptName: string;
+    createDeptName?: string;
     /** 项目任务名称 */
-    projectTaskName: string;
+    projectTaskName?: string;
     /** 更新部门ID */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 应用版本ID */
-    appVersionId: number;
+    appVersionId?: number;
     /** 更新部门名称 */
-    updateDeptName: string;
+    updateDeptName?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新用户ID */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新用户名称 */
-    updateUserName: string;
+    updateUserName?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** ID */
-    id: number;
+    id?: number;
     /** 版本号 */
-    versionNo: string;
+    versionNo?: string;
     /** 项目任务ID */
-    projectTaskId: number;
+    projectTaskId?: number;
     /** 应用ID */
-    appId: number;
+    appId?: number;
     /** 禁用来源任务名称 */
-    disableFromTaskName: string;
+    disableFromTaskName?: string;
     /** 应用系统类型 */
-    appSystemType: string;
+    appSystemType?: string;
     /** 变更应用id */
-    modificationAppId: number;
+    modificationAppId?: number;
     /** 变更单id */
-    modificationId: number;
+    modificationId?: number;
     /** 变更单编号 */
-    modificationCode: string;
+    modificationCode?: string;
 }

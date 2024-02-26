@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产报废服务相关/addScrapUsingPOST
 */
-export default function fetchMethod(data: IProductionScrapTreatment, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProductionScrapTreatment, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleScrap/addScrap",
@@ -23,22 +23,22 @@ export interface IProductionScrapTreatment {
     /** 报废数量 */
     abnormalQuantity: number;
     /** 标签id集合 */
-    tagIds: number[];
+    tagIds?: number[];
     /** 图片key集合 */
-    imageKeys: string[];
+    imageKeys?: string[];
     /** 描述 */
-    description: string;
+    description?: string;
     /** 对应批次id */
-    lotOrderId: number;
+    lotOrderId?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

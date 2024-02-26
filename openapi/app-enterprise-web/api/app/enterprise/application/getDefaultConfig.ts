@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用相关/getDefaultConfigUsingGET
 */
-export default function fetchMethod(params: { type: string }, extraOptions?: any) {
+export default function fetchMethod(params: { type?: string }, extraOptions?: any) {
     return http<IJSONResultTheDefaultValueIsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/application/getDefaultConfig",
@@ -16,175 +16,175 @@ export default function fetchMethod(params: { type: string }, extraOptions?: any
 /** JSONResult«流程默认配置VO» */
 export interface IJSONResultTheDefaultValueIsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheDefaultValueIsVO;
+    data?: ITheDefaultValueIsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 流程默认配置VO */
 export interface ITheDefaultValueIsVO {
     /** 流程编号 - 在新增时，系统会默认生成一个code */
-    code: string;
+    code?: string;
     /** 应用类型 */
-    type: string;
+    type?: string;
     /** 主表表单集 */
-    masterFormFields: IProcessFormVO[];
+    masterFormFields?: IProcessFormVO[];
     /** 明细表表单集 */
-    detailFormFields: IProcessFormVO[];
+    detailFormFields?: IProcessFormVO[];
     /** 权限设置 */
-    permission: IProcessPermissionsVO;
+    permission?: IProcessPermissionsVO;
 }
 /** 流程表单VO */
 export interface IProcessFormVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属流程id */
-    flowPathId: number;
+    flowPathId?: number;
     /** 所属流程版本id */
-    flowPathVersionId: number;
+    flowPathVersionId?: number;
     /** 流程版本号 */
-    flowPathVersionRank: number;
+    flowPathVersionRank?: number;
     /** 类型分组 */
-    typeGroup: string;
+    typeGroup?: string;
     /** 类型 */
     type: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 类型描述 */
-    typeDesc: string;
+    typeDesc?: string;
     /** 表格类型 */
-    tableType: string;
+    tableType?: string;
     /** 是否是系统表单字段 */
-    isSystem: string;
+    isSystem?: string;
     /** 是否是系统预置字段 */
-    isSystemPreset: string;
+    isSystemPreset?: string;
     /** 是否是系统必填字段 */
-    isSystemMust: string;
+    isSystemMust?: string;
     /** 是否在表格中展示列 */
-    isTableShow: string;
+    isTableShow?: string;
     /** 是否是套件 */
-    isKit: string;
+    isKit?: string;
     /** 套件类型 */
-    kitType: string;
+    kitType?: string;
     /** 套件字段类型 */
-    kitColumnType: string;
+    kitColumnType?: string;
     /** 选择类型 */
-    selectorType: string;
+    selectorType?: string;
     /** 名称 */
     name: string;
     /** code */
-    code: string;
+    code?: string;
     /** 序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     serialNo: string;
     /** 提示 */
-    tip: string;
+    tip?: string;
     /** 说明描述 */
-    description: string;
+    description?: string;
     /** 宽度 */
-    span: number;
+    span?: number;
     /** 默认值类型 */
-    defaultType: string;
+    defaultType?: string;
     /** 默认日期类型 */
-    defaultDateType: string;
+    defaultDateType?: string;
     /** 默认值 - 多选、起止时间、图片、附件，都以json数组对象传来，例如：["xxx", "xxx2", "xxx3"] */
-    defaultValue: string;
+    defaultValue?: string;
     /** 计算公式 */
-    formula: string;
+    formula?: string;
     /** 计算公式用到的表单序号值集 */
-    formulaFormFieldSerialNos: ITheProcessFormFormulaFieldReturnsVO[];
+    formulaFormFieldSerialNos?: ITheProcessFormFormulaFieldReturnsVO[];
     /** 编码规则 */
-    codeNumberRules: IProcessFormFieldEncodingRuleDetailsVO[];
+    codeNumberRules?: IProcessFormFieldEncodingRuleDetailsVO[];
     /** 是否必填 */
-    isMust: string;
+    isMust?: string;
     /** 允许扫码 */
-    isScan: string;
+    isScan?: string;
     /** 数值类型 */
-    numberType: string;
+    numberType?: string;
     /** 小数位数 */
-    scaleDigit: number;
+    scaleDigit?: number;
     /** 是否允许负数 */
-    canNegative: string;
+    canNegative?: string;
     /** 数值格式 */
-    numberFormat: string;
+    numberFormat?: string;
     /** 日期类型 */
-    dateType: string;
+    dateType?: string;
     /** 选项集 - json数组 */
-    selectors: string;
+    selectors?: string;
     /** 选项集 */
-    selectorList: IFormFieldOption[];
+    selectorList?: IFormFieldOption[];
     /** 选项集字典 */
-    selectorDictionaryList: IProcessFormFieldAssociationDictionaryOptionSetVO[];
+    selectorDictionaryList?: IProcessFormFieldAssociationDictionaryOptionSetVO[];
     /** 下拉选项关联显示列表 */
-    selectorAssociateDisplayList: ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO[];
+    selectorAssociateDisplayList?: ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO[];
     /** 选项值来源 */
-    selectorOptionSource: string;
+    selectorOptionSource?: string;
     /** 选项值来源业务编码 */
-    selectorOptionSourceBusinessCode: string;
+    selectorOptionSourceBusinessCode?: string;
     /** 选项值是否可修改 */
-    isCanModifySelectorOption: string;
+    isCanModifySelectorOption?: string;
     /** 关联表单code */
-    formRpCode: string;
+    formRpCode?: string;
     /** 关联详细表单的编码 */
-    formDetailRpCode: string;
+    formDetailRpCode?: string;
     /** 关联表单选项显示字段code */
-    formRpSelectorShowFieldCode: string;
+    formRpSelectorShowFieldCode?: string;
     /** 关联表单选项显示字段Serial No */
-    formRpSelectorShowFieldSerialNo: string;
+    formRpSelectorShowFieldSerialNo?: string;
     /** 关联表单筛选条件组集 */
-    formRpFilterGroups: IProcessFormsAssociateFormFilterGroupVO[];
+    formRpFilterGroups?: IProcessFormsAssociateFormFilterGroupVO[];
     /** 关联表单填充规则集 */
-    formRpFills: IProcessFormAssociatedFormFillVO[];
+    formRpFills?: IProcessFormAssociatedFormFillVO[];
     /** 表格自定义字段集 */
-    tableCustomFormFields: IProcessFormVO[];
+    tableCustomFormFields?: IProcessFormVO[];
     /** 选择框样式 */
-    style: string;
+    style?: string;
     /** 关联表单展示code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"}] */
-    formRpShowFields: Record<string, any>[];
+    formRpShowFields?: Record<string, any>[];
     /** 关联表单多选分组字段code集合 --数据格式[{"code":"字段1编码", serialNo:"字段1SerialNo", "name":"字段1名称"},{"code":"字段2编码", serialNo:"字段2SerialNo", "name":"字段2名称"}] */
-    formRpMultiGroupFields: Record<string, any>[];
+    formRpMultiGroupFields?: Record<string, any>[];
     /** 排序 */
-    sort: number;
+    sort?: number;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId: number;
+    parentFlowPathFormFieldId?: number;
     /** 父级流程表单编码 */
-    parentFlowPathFormFieldCode: string;
+    parentFlowPathFormFieldCode?: string;
     /** 前端配置拓展字段 */
-    meta: Record<string, Record<string, any>>;
+    meta?: Record<string, Record<string, any>>;
     /** 组织类型 */
-    organizationType: string;
+    organizationType?: string;
     /** 表格字段列表 */
-    actualFields: Record<string, any>[];
+    actualFields?: Record<string, any>[];
     /** 是否自动获取位置 */
-    isAutoGetLocation: string;
+    isAutoGetLocation?: string;
     /** 地址类型 */
-    addressType: string;
+    addressType?: string;
     /** 不允许重复 */
-    unableRepeat: string;
+    unableRepeat?: string;
     /** 表格内不允许重复 */
-    unableRepeatInTable: string;
+    unableRepeatInTable?: string;
     /** 重复提示 */
-    repeatTip: string;
+    repeatTip?: string;
     /** 是否使用有账号的员工 */
-    isUseEmployeesWithAccounts: string;
+    isUseEmployeesWithAccounts?: string;
     /** 关联查询显示样式 */
-    associationQueryShowStyle: string;
+    associationQueryShowStyle?: string;
     /** 数据联动 */
-    dataLinkage: IFlowPathFormFieldDataLinkageVO;
+    dataLinkage?: IFlowPathFormFieldDataLinkageVO;
     /** 字段值限制规则 */
-    valueLimitRules: IFlowPathFormFieldValueLimitRuleEditDTO[];
+    valueLimitRules?: IFlowPathFormFieldValueLimitRuleEditDTO[];
     /** 是否启用超链接 */
-    isHyperlinkEnabled: string;
+    isHyperlinkEnabled?: string;
     /** 是否表格内批量选择 */
-    isInsideTableBatchSelect: string;
+    isInsideTableBatchSelect?: string;
     /** 当动态控件选择了当前字段后，对应取关联表单的值是 */
-    dynamicControlValueFieldSerialNo: string;
+    dynamicControlValueFieldSerialNo?: string;
     /** 处理人显示字段序列号 */
-    processorShowFieldSerialNo: string;
+    processorShowFieldSerialNo?: string;
     /** 处理人显示字段编码 */
-    processorShowFieldCode: string;
+    processorShowFieldCode?: string;
 }
 /** 流程表单公式字段返回VO */
 export interface ITheProcessFormFormulaFieldReturnsVO {
@@ -193,275 +193,275 @@ export interface ITheProcessFormFormulaFieldReturnsVO {
     /** 计算公式用到的表单序号值 */
     serialNo: string;
     /** 用到的函数类型 */
-    funType: string;
+    funType?: string;
 }
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 设置类型 */
-    type: string;
+    type?: string;
     /** 日期格式 - 用于日期 */
-    dateFormat: string;
+    dateFormat?: string;
     /** 固定值 - 用于固定值 */
-    fixValue: string;
+    fixValue?: string;
     /** 位数 - 用于流水 */
-    ruleLength: number;
+    ruleLength?: number;
     /** 初始值 - 用于流水 */
-    startValue: number;
+    startValue?: number;
     /** 递增值 - 用于流水 */
-    stepValue: number;
+    stepValue?: number;
     /** 是否是编码依据 - 仅能配置一项为编码依据 */
-    isCodeAccording: string;
+    isCodeAccording?: string;
     /** 所属流程表单code -- 针对引用字段类型 */
-    flowPathCode: string;
+    flowPathCode?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
-    flowPathFormFiledSerialNo: string;
+    flowPathFormFiledSerialNo?: string;
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
-    flowPathFormFiledCode: string;
+    flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId: number;
+    flowPathFormFieldCodeNumberRuleId?: number;
     /** 排序 */
-    sort: number;
+    sort?: number;
 }
 /** FormFieldOption */
 export interface IFormFieldOption {
     /** undefined */
-    name: string;
+    name?: string;
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    color: string;
+    color?: string;
 }
 /** 流程表单字段关联字典选项集VO */
 export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
     /** undefined */
-    color: string;
+    color?: string;
     /** undefined */
-    name: string;
+    name?: string;
     /** 预设名称 */
-    presetName: string;
+    presetName?: string;
     /** undefined */
-    code: string;
+    code?: string;
     /** 是否预设 */
-    isPreset: string;
+    isPreset?: string;
     /** 能否修改 */
-    isCanModify: string;
+    isCanModify?: string;
     /** 能否删除 */
-    isCanDelete: string;
+    isCanDelete?: string;
 }
 /** 流程表单字段下拉选项关联显示VO */
 export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     /** 所属流程表单字段id */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 所属流程表单字段编号 */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** 所属流程表单字段序列号 */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** 下拉选项的code */
-    selectorItemCode: string;
+    selectorItemCode?: string;
     /** 关联显示字段的序列号集合 */
-    associateDisplayFieldSerialNos: Record<string, any>[];
+    associateDisplayFieldSerialNos?: Record<string, any>[];
 }
 /** 流程表单关联表单筛选条件组VO */
 export interface IProcessFormsAssociateFormFilterGroupVO {
     /** id */
-    id: number;
+    id?: number;
     /** 条件组名称 */
-    name: string;
+    name?: string;
     /** 条件集 */
-    filters: IProcessFormsAssociateFormFilterVO[];
+    filters?: IProcessFormsAssociateFormFilterVO[];
     /** 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组 */
-    isSystemDefault: string;
+    isSystemDefault?: string;
     /** 数据联动ID */
-    dataLinkageId: number;
+    dataLinkageId?: number;
     /** 表单字段ID */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
 }
 /** 流程表单关联表单筛选条件VO */
 export interface IProcessFormsAssociateFormFilterVO {
     /** id */
-    id: string;
+    id?: string;
     /** 被判断的字段序号值 */
-    columnSerialNo: string;
+    columnSerialNo?: string;
     /** 判断方式 */
-    compareType: string;
+    compareType?: string;
     /** 判断对象类型 */
-    compareObjType: string;
+    compareObjType?: string;
     /** 判断对象字段序号值 */
-    compareColumnSerialNo: string;
+    compareColumnSerialNo?: string;
     /** 判断对象字段的关联表单字段序列号 */
-    compareColumnRpFormFieldSerialNo: string;
+    compareColumnRpFormFieldSerialNo?: string;
     /** 判断对象自定义值 */
-    compareCustomValue: string;
+    compareCustomValue?: string;
     /** 自定义值回显 */
-    compareCustomValueEcho: string;
+    compareCustomValueEcho?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathFormFieldFormRpFilterGroupId: number;
+    flowPathFormFieldFormRpFilterGroupId?: number;
     /** 区间范围 -- 下限 */
-    rangeLowerLimit: string;
+    rangeLowerLimit?: string;
     /** 区间范围 -- 上限 */
-    rangeUpperLimit: string;
+    rangeUpperLimit?: string;
     /** 日期动态范围 */
-    dateDynamicRange: string;
+    dateDynamicRange?: string;
     /** 是否使用日期的显示格式来做筛选 - Y 代表将使用显示格式来做数据筛选。-N 代表不使用显示格式作为数据筛选。  */
-    isUseDateShowFormat: string;
+    isUseDateShowFormat?: string;
     /** 禁用编辑，不填或者N代表不禁止。Y代表禁止不能编辑 */
-    isDisableEdit: string;
+    isDisableEdit?: string;
 }
 /** 流程表单关联表单填充VO */
 export interface IProcessFormAssociatedFormFillVO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属流程表单字段id */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 被采取的字段序号值 */
-    columnSerialNo: string;
+    columnSerialNo?: string;
     /** 被采取的字段序号值的下级字段序号值 */
-    secondarySourceFieldSerialNo: string;
+    secondarySourceFieldSerialNo?: string;
     /** 被采取的字段序号值的下级字段编码 */
-    secondarySourceFieldCode: string;
+    secondarySourceFieldCode?: string;
     /** 填充到的目标字段序号值 */
-    fillFormFieldSerialNo: string;
+    fillFormFieldSerialNo?: string;
     /** 字段填充方式 */
-    fillWay: string;
+    fillWay?: string;
     /** 是否警用编辑 */
-    isDisableEdited: string;
+    isDisableEdited?: string;
     /** 是否允许修改填充内容- 默认是 Y */
-    isAllowModificationOfFillContent: string;
+    isAllowModificationOfFillContent?: string;
 }
 /** FlowPathFormFieldDataLinkageVO */
 export interface IFlowPathFormFieldDataLinkageVO {
     /** id */
-    id: number;
+    id?: number;
     /** 数据来源应用编码（即联动表单） */
-    sourceFormRpCode: string;
+    sourceFormRpCode?: string;
     /** 数据来源应用表格编码（即联动表单） */
-    sourceFormDetailRpCode: string;
+    sourceFormDetailRpCode?: string;
     /** 数据来源字段编码（取值字段编号） */
-    sourceFieldCode: string;
+    sourceFieldCode?: string;
     /** 数据来源字段序列号（取值字段的序列号） */
-    sourceFieldSerialNo: string;
+    sourceFieldSerialNo?: string;
     /** 筛选条件组集 */
-    filterGroups: IProcessFormsAssociateFormFilterGroupVO[];
+    filterGroups?: IProcessFormsAssociateFormFilterGroupVO[];
 }
 /** FlowPathFormFieldValueLimitRuleEditDTO */
 export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     /** 值限制规则条件 */
-    limitRuleCondition: string;
+    limitRuleCondition?: string;
     /** 值限制规则类型 */
-    limitRuleType: string;
+    limitRuleType?: string;
     /** 计算公式 */
-    formula: string;
+    formula?: string;
     /** 计算公式用到的表单序号值集 */
-    formulaFormFieldSerialNos: Record<string, any>[];
+    formulaFormFieldSerialNos?: Record<string, any>[];
     /** 前端配置拓展字段 */
-    meta: Record<string, Record<string, any>>;
+    meta?: Record<string, Record<string, any>>;
 }
 /** 流程权限VO */
 export interface IProcessPermissionsVO {
     /** 按钮权限集 */
-    buttons: ITheRouteButtonReturnsVO[];
+    buttons?: ITheRouteButtonReturnsVO[];
     /** 角色权限集 */
-    rolePermissions: IProcessRolePermissionVO[];
+    rolePermissions?: IProcessRolePermissionVO[];
     /** 表单控制 - 编辑权限列表 */
-    editPermissionList: IAddedPermissionEdit2[];
+    editPermissionList?: IAddedPermissionEdit2[];
     /** 表单控制 - 新增权限列表 */
-    addPermissionList: INewPermissionEdit[];
+    addPermissionList?: INewPermissionEdit[];
     /** 表单控制 - 查询权限列表 */
-    queryPermissionList: IQueryPermissionEditing[];
+    queryPermissionList?: IQueryPermissionEditing[];
     /** 表单控制 - 复制权限列表 */
-    copyPermissionList: IAddedPermissionEdit1[];
+    copyPermissionList?: IAddedPermissionEdit1[];
 }
 /** 路由按钮返回VO */
 export interface ITheRouteButtonReturnsVO {
     /** id */
-    id: number;
+    id?: number;
     /** 企业路由id */
-    enterpriseRouterId: number;
+    enterpriseRouterId?: number;
     /** 按钮名称 */
-    name: string;
+    name?: string;
     /** 所属权限编码 */
-    permissionCode: string;
+    permissionCode?: string;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 定位 */
-    pos: string;
+    pos?: string;
     /** url */
-    url: string;
+    url?: string;
 }
 /** 流程角色权限VO */
 export interface IProcessRolePermissionVO {
     /** 角色id */
-    roleId: number;
+    roleId?: number;
     /** 角色名称 */
-    roleName: string;
+    roleName?: string;
     /** 权限码集 */
-    permissionCodes: string[];
+    permissionCodes?: string[];
     /** 数据权限集 */
-    dataAuthList: IProcessRoleDataPermissionVO[];
+    dataAuthList?: IProcessRoleDataPermissionVO[];
 }
 /** 流程角色数据权限VO */
 export interface IProcessRoleDataPermissionVO {
     /** 数据权限类型 */
-    dataAuthType: string;
+    dataAuthType?: string;
     /** 数据权限类型 */
-    roleDataAuthFieldList: IProcessRoleDataPermissionFieldVO[];
+    roleDataAuthFieldList?: IProcessRoleDataPermissionFieldVO[];
 }
 /** 流程角色数据权限字段VO */
 export interface IProcessRoleDataPermissionFieldVO {
     /** 流程表单字段序列号 */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** 流程表单字段名 */
-    flowPathFormFieldName: string;
+    flowPathFormFieldName?: string;
 }
 /** 新增权限编辑_2 */
 export interface IAddedPermissionEdit2 {
     /** ID */
-    id: number;
+    id?: number;
     /** 流程状态 */
-    flowStatus: string;
+    flowStatus?: string;
     /** 是否可编辑 */
-    isEditable: string;
+    isEditable?: string;
     /** 是否禁用 */
-    isDisabled: string;
+    isDisabled?: string;
 }
 /** 新增权限编辑 */
 export interface INewPermissionEdit {
     /** ID */
-    id: number;
+    id?: number;
     /** 流程字段ID */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 流程字段编码 */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** 权限类型 */
-    type: string;
+    type?: string;
 }
 /** 查询权限编辑 */
 export interface IQueryPermissionEditing {
     /** ID */
-    id: number;
+    id?: number;
     /** 流程字段ID */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 流程字段编码 */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** 是否可见 */
-    isVisible: string;
+    isVisible?: string;
 }
 /** 新增权限编辑_1 */
 export interface IAddedPermissionEdit1 {
     /** ID */
-    id: number;
+    id?: number;
     /** 流程字段ID */
-    flowPathFormFieldId: number;
+    flowPathFormFieldId?: number;
     /** 流程字段编码 */
-    flowPathFormFieldCode: string;
+    flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
-    flowPathFormFieldSerialNo: string;
+    flowPathFormFieldSerialNo?: string;
     /** 是否可以复制 */
-    isCanCopy: string;
+    isCanCopy?: string;
 }

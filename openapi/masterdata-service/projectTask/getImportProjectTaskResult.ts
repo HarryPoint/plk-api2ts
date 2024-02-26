@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/getImportProjectTaskResultUsingGET
 */
-export default function fetchMethod(params: { importRecordId: string }, extraOptions?: any) {
+export default function fetchMethod(params: { importRecordId?: string }, extraOptions?: any) {
     return http<IJSONResultProjectTaskImportRecordQueryResponse>(
         {
             url: "/masterdata-service/projectTask/getImportProjectTaskResult",
@@ -16,41 +16,41 @@ export default function fetchMethod(params: { importRecordId: string }, extraOpt
 /** JSONResult«项目任务导入记录查询响应» */
 export interface IJSONResultProjectTaskImportRecordQueryResponse {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskImportRecordQueryResponse;
+    data?: IProjectTaskImportRecordQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务导入记录查询响应 */
 export interface IProjectTaskImportRecordQueryResponse {
     /** 导入文件id */
-    importFileId: string;
+    importFileId?: string;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目计划id */
-    projectPlanId: number;
+    projectPlanId?: number;
     /** 导入状态 */
-    importStatus: string;
+    importStatus?: string;
     /** 总数 */
-    totalQuantity: number;
+    totalQuantity?: number;
     /** 成功条数 */
-    successQuantity: number;
+    successQuantity?: number;
     /** 失败条数 */
-    failedQuantity: number;
+    failedQuantity?: number;
     /** 进度 */
-    progress: number;
+    progress?: number;
     /** 行数据失败信息列表 */
-    failedMessageList: IProjectTaskImportRecordErrorMessageQueryResponse[];
+    failedMessageList?: IProjectTaskImportRecordErrorMessageQueryResponse[];
     /** 系统失败信息 */
-    failedMessage: string;
+    failedMessage?: string;
 }
 /** 项目任务导入记录错误信息查询响应 */
 export interface IProjectTaskImportRecordErrorMessageQueryResponse {
     /** 行下标 */
-    rowNo: number;
+    rowNo?: number;
     /** 失败信息 */
-    failedMessage: string;
+    failedMessage?: string;
 }

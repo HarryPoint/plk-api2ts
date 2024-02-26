@@ -16,33 +16,33 @@ export default function fetchMethod(data: IFiscalPeriodCheckRequestDTO[], extraO
 /** FiscalPeriodCheckRequestDTO */
 export interface IFiscalPeriodCheckRequestDTO {
     /** 单据ID */
-    id: number;
+    id?: number;
     /** 单据编码 */
-    code: string;
+    code?: string;
     /** 单据日期 */
-    billDate: string;
+    billDate?: string;
 }
 /** JSONResult«List«FiscalPeriodCheckResponseDTO»» */
 export interface IJSONResultListFiscalPeriodCheckResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFiscalPeriodCheckResponseDTO[];
+    data?: IFiscalPeriodCheckResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** FiscalPeriodCheckResponseDTO */
 export interface IFiscalPeriodCheckResponseDTO {
     /** 单据ID */
-    id: number;
+    id?: number;
     /** 单据编码 */
-    code: string;
+    code?: string;
     /** 单据日期 */
-    billDate: string;
+    billDate?: string;
     /** 结存状态 - 如果没有区间则返回空、如果区间存在则返回实际值 */
-    balanceStatus: string;
+    balanceStatus?: string;
     /** 期间/所属期间- 如果没有区间则返回空、如果区间存在则返回实际值 */
-    period: string;
+    period?: string;
 }

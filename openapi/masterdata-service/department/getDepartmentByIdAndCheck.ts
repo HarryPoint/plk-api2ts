@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/部门相关/getDepartmentByIdAndCheckUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number }, extraOptions?: any) {
     return http<IJSONResultDepartmentVO>(
         {
             url: "/masterdata-service/department/getDepartmentByIdAndCheck",
@@ -16,26 +16,26 @@ export default function fetchMethod(params: { enterpriseId: number; id: number }
 /** JSONResult«部门VO» */
 export interface IJSONResultDepartmentVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDepartmentVO;
+    data?: IDepartmentVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 部门VO */
 export interface IDepartmentVO {
     /** id */
-    id: number;
+    id?: number;
     /** 部门名 */
-    name: string;
+    name?: string;
     /** 部门编码 */
-    code: string;
+    code?: string;
     /** 父级组织结构id */
-    parentId: number;
+    parentId?: number;
     /** 父级组织结构编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 排序 */
-    sort: number;
+    sort?: number;
 }

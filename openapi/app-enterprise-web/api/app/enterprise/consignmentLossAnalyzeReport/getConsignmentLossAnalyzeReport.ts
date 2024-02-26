@@ -16,121 +16,121 @@ export default function fetchMethod(data: IConsignmentLossAnalysisReportSearchVO
 /** 寄售损耗分析报表搜索VO */
 export interface IConsignmentLossAnalysisReportSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 仓库id */
-    warehouseId: number[];
+    warehouseId?: number[];
     /** 日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate: string;
+    beginDate?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate: string;
+    endDate?: string;
     /** 客户id */
-    customerId: number[];
+    customerId?: number[];
     /** 产品id */
-    majorDataIds: number[];
+    majorDataIds?: number[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds: number[];
+    outerCodeMajorDataIds?: number[];
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 规格型号 */
-    productSpec: string;
+    productSpec?: string;
     /** 业务员ID列表 */
-    businessUserIdList: number[];
+    businessUserIdList?: number[];
     /** 物料类型 */
-    materialTypes: string[];
+    materialTypes?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«寄售损耗分析报表返回VO» */
 export interface IJSONResultConsignmentLossAnalysisReportReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IConsignmentLossAnalysisReportReturnedToVO;
+    data?: IConsignmentLossAnalysisReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 寄售损耗分析报表返回VO */
 export interface IConsignmentLossAnalysisReportReturnedToVO {
     /** 数据表 */
-    tablePage: IPageInformationConsignmentLossAnalysisReportPageReturnsVO;
+    tablePage?: IPageInformationConsignmentLossAnalysisReportPageReturnsVO;
     /** 未提数量 */
-    productDimension: IConsignmentLossAnalysisChartDataReturnedToVO[];
+    productDimension?: IConsignmentLossAnalysisChartDataReturnedToVO[];
 }
 /** 分页信息«寄售损耗分析报表分页返回VO» */
 export interface IPageInformationConsignmentLossAnalysisReportPageReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IConsignmentLossAnalysisReportPagingReturnsVO[];
+    list?: IConsignmentLossAnalysisReportPagingReturnsVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 寄售损耗分析报表分页返回VO */
 export interface IConsignmentLossAnalysisReportPagingReturnsVO {
     /** 客户ids json */
-    customerIdsJson: string;
+    customerIdsJson?: string;
     /** 销售发货子表ids json */
-    salesDeliveryIdsJson: Record<string, any>[];
+    salesDeliveryIdsJson?: Record<string, any>[];
     /** 客户ids */
-    customerIds: number[];
+    customerIds?: number[];
     /** 客户id */
-    customerId: number;
+    customerId?: number;
     /** 销售发货子表ids */
-    salesDeliveryIds: number[];
+    salesDeliveryIds?: number[];
     /** 客户 */
-    customer: string;
+    customer?: string;
     /** 仓库 */
-    warehouse: string;
+    warehouse?: string;
     /** 产品编码 */
-    productNo: string;
+    productNo?: string;
     /** 产品名称 */
-    productName: string;
+    productName?: string;
     /** 规格型号 */
-    productSpec: string;
+    productSpec?: string;
     /** 期初数量 */
-    numOfBeginningPeriod: number;
+    numOfBeginningPeriod?: number;
     /** 送货数量 */
-    sendQty: number;
+    sendQty?: number;
     /** 入库数量 */
-    inboundQty: number;
+    inboundQty?: number;
     /** 损耗数量 */
-    numOfLoss: number;
+    numOfLoss?: number;
     /** 退货数量 */
-    returnQty: number;
+    returnQty?: number;
     /** 未结余量 */
-    remainingQty: number;
+    remainingQty?: number;
     /** 损耗率 */
-    lossRatio: number;
+    lossRatio?: number;
 }
 /** 寄售损耗分析图表数据返回VO */
 export interface IConsignmentLossAnalysisChartDataReturnedToVO {
     /** 纵轴 */
-    title: string;
+    title?: string;
     /** 未结数量 */
-    remainingQty: number;
+    remainingQty?: number;
 }

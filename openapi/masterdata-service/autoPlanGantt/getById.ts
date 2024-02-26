@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/甘特图相关/getByIdUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultProducePlanAutoScheduleOutputVO>(
         {
             url: "/masterdata-service/autoPlanGantt/getById",
@@ -16,38 +16,38 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«ProducePlanAutoScheduleOutputVO» */
 export interface IJSONResultProducePlanAutoScheduleOutputVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProducePlanAutoScheduleOutputVO;
+    data?: IProducePlanAutoScheduleOutputVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProducePlanAutoScheduleOutputVO */
 export interface IProducePlanAutoScheduleOutputVO {
     /** undefined */
-    id: number;
+    id?: number;
     /** undefined */
-    producePlanId: number;
+    producePlanId?: number;
     /** undefined */
-    scheduleType: string;
+    scheduleType?: string;
     /** undefined */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** undefined */
-    routingStepId: number;
+    routingStepId?: number;
     /** undefined */
-    routingStep: number;
+    routingStep?: number;
     /** undefined */
-    processId: number;
+    processId?: number;
     /** undefined */
-    beginTime: string;
+    beginTime?: string;
     /** undefined */
-    endTime: string;
+    endTime?: string;
     /** undefined */
-    occupyReason: string;
+    occupyReason?: string;
     /** undefined */
-    isLock: string;
+    isLock?: string;
     /** undefined */
-    priorityLevel: number;
+    priorityLevel?: number;
 }

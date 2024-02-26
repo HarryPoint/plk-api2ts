@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportDetailByIdUsingGET
 */
-export default function fetchMethod(params: { enterpriseId: number; id: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(params: { enterpriseId?: number; id?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getUserReportDetailById",
@@ -16,61 +16,61 @@ export default function fetchMethod(params: { enterpriseId: number; id: number; 
 /** JSONResult«设备数采数据人工上报详单返回VO» */
 export interface IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IDeviceDataAcquisitionManualCDRIsReturnedToVO;
+    data?: IDeviceDataAcquisitionManualCDRIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 设备数采数据人工上报详单返回VO */
 export interface IDeviceDataAcquisitionManualCDRIsReturnedToVO {
     /** 记录id */
-    id: number;
+    id?: number;
     /** 数据采集时间 */
-    collectTime: string;
+    collectTime?: string;
     /** 设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** 设备编号 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 上报人 */
-    reqUserId: number;
+    reqUserId?: number;
     /** 上报姓名 */
-    reqUsername: string;
+    reqUsername?: string;
     /** 在线状态 */
-    onlineStatus: string;
+    onlineStatus?: string;
     /** 在线状态描述 */
-    onlineStatusDesc: string;
+    onlineStatusDesc?: string;
     /** 设备状态 */
-    status: string;
+    status?: string;
     /** 设备状态描述 */
-    statusDesc: string;
+    statusDesc?: string;
     /** 详情 */
-    details: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
+    details?: IDeviceDataCollectionDataDetailsAreReturnedToVO[];
 }
 /** 设备数采数据明细返回VO */
 export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 设备数采参数id */
-    deviceCollectionParamId: number;
+    deviceCollectionParamId?: number;
     /** 设备数采参数名称 */
-    deviceCollectionParamName: string;
+    deviceCollectionParamName?: string;
     /** 设备数采参数编号 */
-    deviceCollectionParamCode: string;
+    deviceCollectionParamCode?: string;
     /** 设备数采参数单位 */
-    deviceCollectionParamUnit: string;
+    deviceCollectionParamUnit?: string;
     /** 结果 */
-    result: number;
+    result?: number;
     /** 单位 */
-    unit: string;
+    unit?: string;
     /** 下限 */
-    lowerLimit: number;
+    lowerLimit?: number;
     /** 上限 */
-    upperLimit: number;
+    upperLimit?: number;
     /** 异常类型 */
-    errorType: string;
+    errorType?: string;
     /** 异常值 */
-    errorResult: number;
+    errorResult?: number;
 }

@@ -16,144 +16,144 @@ export default function fetchMethod(data: IQueryTheDTOFromTheEnterpriseRoutingTr
 /** 企业路由树查询 DTO */
 export interface IQueryTheDTOFromTheEnterpriseRoutingTree {
     /** 客户端组编码 */
-    clientGroupCode: string;
+    clientGroupCode?: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«用户收藏企业路由 DTO»» */
 export interface IJSONResultPageInformationUserCollectsEnterpriseRoutingDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationTheUserCollectsTheEnterpriseRoutingDTO;
+    data?: IPageInformationTheUserCollectsTheEnterpriseRoutingDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«用户收藏企业路由 DTO» */
 export interface IPageInformationTheUserCollectsTheEnterpriseRoutingDTO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: ITheUserCollectsTheEnterpriseRouteDTO[];
+    list?: ITheUserCollectsTheEnterpriseRouteDTO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 用户收藏企业路由 DTO */
 export interface ITheUserCollectsTheEnterpriseRouteDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 企业路由 */
-    enterpriseRouter: ITheEnterpriseRouteRespondsToTheDTO;
+    enterpriseRouter?: ITheEnterpriseRouteRespondsToTheDTO;
     /** 排序 */
-    sort: number;
+    sort?: number;
 }
 /** 企业路由响应 DTO */
 export interface ITheEnterpriseRouteRespondsToTheDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 路由id */
-    routerId: number;
+    routerId?: number;
     /** 是否系统路由 */
-    isSystem: string;
+    isSystem?: string;
     /** 客户端组编码 */
-    clientGroupCode: string;
+    clientGroupCode?: string;
     /** 所属权限编码 */
-    permissionCode: string;
+    permissionCode?: string;
     /** 父级路由id */
-    parentId: number;
+    parentId?: number;
     /** 父级路由编码 */
-    parentCode: string;
+    parentCode?: string;
     /** 路由name */
-    name: string;
+    name?: string;
     /** 路由code */
-    code: string;
+    code?: string;
     /** 菜单类型 */
-    type: string;
+    type?: string;
     /** 图标 */
-    icon: string;
+    icon?: string;
     /** 级别 */
-    level: number;
+    level?: number;
     /** 路由排序 */
-    sort: number;
+    sort?: number;
     /** 是否存在数据权限 */
-    hasDataAuth: string;
+    hasDataAuth?: string;
     /** 配置 */
-    config: ITheEnterpriseRouteConfigurationRespondsToTheDTO;
+    config?: ITheEnterpriseRouteConfigurationRespondsToTheDTO;
 }
 /** 企业路由配置响应 DTO */
 export interface ITheEnterpriseRouteConfigurationRespondsToTheDTO {
     /** 菜单类型 */
-    menuType: string;
+    menuType?: string;
     /** 应用配置 */
-    appConfig: ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO;
+    appConfig?: ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO;
     /** 外部报表配置 */
-    rpExtConfig: ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1;
+    rpExtConfig?: ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1;
     /** 应用对应的组织字段列表 */
-    appOrganizationFiledList: ITheEnterpriseRouteApplicationFieldRespondsToTheDTO[];
+    appOrganizationFiledList?: ITheEnterpriseRouteApplicationFieldRespondsToTheDTO[];
 }
 /** 企业应用路由配置响应 DTO */
 export interface ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO {
     /** 系统应用类型 */
-    appSystemType: string;
+    appSystemType?: string;
     /** 应用id */
-    appId: number;
+    appId?: number;
 }
 /** 企业应用路由配置响应 DTO_1 */
 export interface ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1 {
     /** 外部报表id */
-    extReportId: number;
+    extReportId?: number;
     /** 链接地址 */
-    link: string;
+    link?: string;
     /** 展示方式 */
-    displayMode: string;
+    displayMode?: string;
 }
 /** 企业路由应用字段响应 DTO */
 export interface ITheEnterpriseRouteApplicationFieldRespondsToTheDTO {
     /** 应用字段序列号 */
-    appFieldSerialNo: string;
+    appFieldSerialNo?: string;
     /** 应用字段名 */
-    appFieldName: string;
+    appFieldName?: string;
     /** 应用字段编码 */
-    appFieldCode: string;
+    appFieldCode?: string;
     /** 应用字段排序 */
-    appFieldSort: number;
+    appFieldSort?: number;
     /** 应用字段类型 */
-    appFieldType: string;
+    appFieldType?: string;
     /** 是否是表格内字段 */
-    isTableField: string;
+    isTableField?: string;
     /** 父级流程表单编码 */
-    parentFlowPathFormFieldCode: string;
+    parentFlowPathFormFieldCode?: string;
 }

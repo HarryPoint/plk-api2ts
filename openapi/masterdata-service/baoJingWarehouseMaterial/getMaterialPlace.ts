@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialPlaceUsingPOST
 */
-export default function fetchMethod(data: IBaojingMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IBaojingMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListReturnTheInventoryDistributionToVO>(
         {
             url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialPlace",
@@ -17,80 +17,80 @@ export default function fetchMethod(data: IBaojingMaterialMasterDataInventoryDis
 /** 宝晶物料主数据库存分布搜索VO */
 export interface IBaojingMaterialMasterDataInventoryDistributionSearchVO {
     /** 物料id集 */
-    materialIds: number[];
+    materialIds?: number[];
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 仓库id */
-    storehouseIds: number[];
+    storehouseIds?: number[];
     /** 仓位id集合 */
-    warehouseIdList: number[];
+    warehouseIdList?: number[];
     /** 规格 */
-    materialSpec: string;
+    materialSpec?: string;
     /** 仓库用途 */
-    storehousePurposeList: string[];
+    storehousePurposeList?: string[];
     /** 仓位用途 */
-    warehousePurposeList: string[];
+    warehousePurposeList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«List«宝晶物料库存分布返回VO»» */
 export interface IJSONResultListReturnTheInventoryDistributionToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBaojingMaterialInventoryDistributionReturnedToVO[];
+    data?: IBaojingMaterialInventoryDistributionReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 宝晶物料库存分布返回VO */
 export interface IBaojingMaterialInventoryDistributionReturnedToVO {
     /** 区域id */
-    areaId: number;
+    areaId?: number;
     /** 区域名称 */
-    areaName: string;
+    areaName?: string;
     /** 区域编号 */
-    areaCode: string;
+    areaCode?: string;
     /** 物料类型code */
-    materialType: string;
+    materialType?: string;
     /** 物料类型 */
-    materialTypeName: string;
+    materialTypeName?: string;
     /** 物料保管员 */
-    materialCurator: string;
+    materialCurator?: string;
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 仓库编号 */
-    storehouseCode: string;
+    storehouseCode?: string;
     /** 仓库用途 */
-    storehousePurpose: string;
+    storehousePurpose?: string;
     /** 仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 仓位名称 */
-    warehouseName: string;
+    warehouseName?: string;
     /** 仓位编号 */
-    warehouseCode: string;
+    warehouseCode?: string;
     /** 库存总数 */
-    storageTotalCount: number;
+    storageTotalCount?: number;
     /** 库存锁定数 */
-    storageLockCount: number;
+    storageLockCount?: number;
     /** 库存可使用数 */
-    storageUseCount: number;
+    storageUseCount?: number;
 }

@@ -16,35 +16,35 @@ export default function fetchMethod(data: ITheWarehouseSystemAppliesTheInventory
 /** 仓位系统应用库存序列号查询对象 */
 export interface ITheWarehouseSystemAppliesTheInventorySerialNumberQueryObject {
     /** 序列号 */
-    serialNos: string[];
+    serialNos?: string[];
 }
 /** JSONResult«List«仓位系统应用库存序列号分页返回对象»» */
 export interface IJSONResultListTheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: ITheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject[];
+    data?: ITheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 仓位系统应用库存序列号分页返回对象 */
 export interface ITheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject {
     /** 仓位系统应用关联数据id(eg：物料id) */
-    warehouseSystemApplicationId: number;
+    warehouseSystemApplicationId?: number;
     /** 批次号 */
-    lotNo: string;
+    lotNo?: string;
     /** 仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 仓库名称 */
-    storehouseName: string;
+    storehouseName?: string;
     /** 仓位id */
-    warehouseId: number;
+    warehouseId?: number;
     /** 仓位名称 */
-    warehouseName: string;
+    warehouseName?: string;
     /** 序列号 */
-    serialNo: string;
+    serialNo?: string;
     /** 序列号备注 */
-    serialRemark: string;
+    serialRemark?: string;
 }

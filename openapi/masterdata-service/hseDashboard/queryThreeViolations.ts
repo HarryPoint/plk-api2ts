@@ -16,31 +16,31 @@ export default function fetchMethod(data: I3DInformationQueryRequest, extraOptio
 /** 三维信息查询请求 */
 export interface I3DInformationQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin: string;
+    dateRangeBegin?: string;
     /** 查询日期的结束 */
-    dateRangeEnd: string;
+    dateRangeEnd?: string;
 }
 /** JSONResult«List«三维信息查询响应»» */
 export interface IJSONResultListResponseToQuerying3DInformation {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: I3DInformationQueryResponse[];
+    data?: I3DInformationQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 三维信息查询响应 */
 export interface I3DInformationQueryResponse {
     /** 违规Key */
-    violationKey: string;
+    violationKey?: string;
     /** 违规名称 */
-    violationName: string;
+    violationName?: string;
     /** 整改完成数量 */
-    rectificationQuantity: number;
+    rectificationQuantity?: number;
     /** 违规数量 */
-    violationQuantity: number;
+    violationQuantity?: number;
     /** 整改完成率 = 整改完成数量 / 违规数量 */
-    rectificationCompletionRare: number;
+    rectificationCompletionRare?: number;
 }

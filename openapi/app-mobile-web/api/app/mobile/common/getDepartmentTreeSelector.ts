@@ -15,13 +15,13 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«Id，名称，编号树状VO»» */
 export interface IJSONResultListIdNameNumberTreeVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIdNameNumberTreeVO[];
+    data?: IIdNameNumberTreeVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** Id，名称，编号树状VO */
 export interface IIdNameNumberTreeVO {

@@ -20,20 +20,20 @@ export interface IProductionOutsourcingSubmitDTO {
     /** 批次id */
     lotOrderId: number;
     /** 委外单单号 */
-    entrustNo: string;
+    entrustNo?: string;
     /** 委外数量 */
     totalQuantity: number;
     /** 供应商id */
-    supplierId: number;
+    supplierId?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

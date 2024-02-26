@@ -15,36 +15,36 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«企业响应对象» */
 export interface IJSONResultEnterpriseResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEnterpriseResponseObject;
+    data?: IEnterpriseResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 企业响应对象 */
 export interface IEnterpriseResponseObject {
     /** 数据状态 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建人id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建人名称 */
-    createUsername: string;
+    createUsername?: string;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 更新人id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 更新人名称 */
-    updateUsername: string;
+    updateUsername?: string;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** id */
-    id: number;
+    id?: number;
     /** 企业编号 */
-    code: string;
+    code?: string;
     /** 企业名 */
-    name: string;
+    name?: string;
     /** 是否启用批次关联 */
-    isEnableBatchManagement: string;
+    isEnableBatchManagement?: string;
 }

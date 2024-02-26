@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getDetailPageConfigAppListUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigAppResponseDTO>(
         {
             url: "/flow-service/flowPathDetailPageConfig/getDetailPageConfigAppList",
@@ -16,31 +16,31 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«FlowPathDetailPageConfigAppResponseDTO» */
 export interface IJSONResultFlowPathDetailPageConfigAppResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IFlowPathDetailPageConfigAppResponseDTO;
+    data?: IFlowPathDetailPageConfigAppResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** FlowPathDetailPageConfigAppResponseDTO */
 export interface IFlowPathDetailPageConfigAppResponseDTO {
     /** app列表 */
-    appList: IFlowPathDetailPageConfigItem[];
+    appList?: IFlowPathDetailPageConfigItem[];
 }
 /** FlowPathDetailPageConfigItem */
 export interface IFlowPathDetailPageConfigItem {
     /** 详细页配置ID */
-    id: number;
+    id?: number;
     /** App/FlowPath的ID */
-    appId: number;
+    appId?: number;
     /** App/FlowPath编号 */
-    appCode: string;
+    appCode?: string;
     /** App/FlowPath名称 */
-    appName: string;
+    appName?: string;
     /** 页签名称/别名 */
-    aliasName: string;
+    aliasName?: string;
     /** App/FlowPath类型 */
-    appType: string;
+    appType?: string;
 }

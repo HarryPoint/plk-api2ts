@@ -16,18 +16,18 @@ export default function fetchMethod(data: ICustomerLeadsUpdateNoteRequestObject,
 /** 客户线索更新备注请求对象 */
 export interface ICustomerLeadsUpdateNoteRequestObject {
     /** 企业线索id */
-    enterpriseClueId: number;
+    enterpriseClueId?: number;
     /** 备注 */
-    remark: string;
+    remark?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

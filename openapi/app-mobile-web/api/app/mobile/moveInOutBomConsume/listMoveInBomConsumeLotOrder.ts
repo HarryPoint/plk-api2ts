@@ -18,29 +18,29 @@ export interface IIncomingBomConsumptionBatchOrderQueryDTO {
     /** 生产任务id */
     produceTaskId: number;
     /** 批次号、物料编号 */
-    code: string;
+    code?: string;
 }
 /** JSONResult«List«进料bom消耗批次响应DTO»» */
 export interface IJSONResultListIncomingBomConsumedBatchResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IIncomingBomConsumesBatchResponseDTO[];
+    data?: IIncomingBomConsumesBatchResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 进料bom消耗批次响应DTO */
 export interface IIncomingBomConsumesBatchResponseDTO {
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 批次id */
-    lotOrderId: number;
+    lotOrderId?: number;
     /** 批次编号 */
-    lotOrderCode: string;
+    lotOrderCode?: string;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/getDetailByIdUsingGET_1
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultEnterpriseDetailsResponseObject>(
         {
             url: "/plk-uaa-service/enterprise/getDetailById",
@@ -16,73 +16,73 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«企业详情响应对象» */
 export interface IJSONResultEnterpriseDetailsResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IEnterpriseDetailsResponseObject;
+    data?: IEnterpriseDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 企业详情响应对象 */
 export interface IEnterpriseDetailsResponseObject {
     /** 企业id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 企业名称 */
-    name: string;
+    name?: string;
     /** 管理员手机号 */
-    adminPhone: string;
+    adminPhone?: string;
     /** 专家ids */
-    expertUserIdArray: number[];
+    expertUserIdArray?: number[];
     /** 销售经理用户ids */
-    salesManagerUserIdArray: number[];
+    salesManagerUserIdArray?: number[];
     /** 交付经理用户ids */
-    deliveryManagerUserIdArray: number[];
+    deliveryManagerUserIdArray?: number[];
     /** 专家名称 */
-    expertUserNameList: string[];
+    expertUserNameList?: string[];
     /** 销售经理用户名称 */
-    salesManagerUserNameList: string[];
+    salesManagerUserNameList?: string[];
     /** 交付经理用户名称 */
-    deliveryManagerUserNameList: string[];
+    deliveryManagerUserNameList?: string[];
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 到期时间 */
-    productServiceExpireTime: string;
+    productServiceExpireTime?: string;
     /** 可用账号数 */
-    availableAccountQuantity: number;
+    availableAccountQuantity?: number;
     /** 产品模块数组 */
-    productModuleArray: string[];
+    productModuleArray?: string[];
     /** 产品订单列表 */
-    productOrderList: IProductOrderResponseObject[];
+    productOrderList?: IProductOrderResponseObject[];
     /** 已使用账号数 */
-    usedAccountQuantity: number;
+    usedAccountQuantity?: number;
     /** 最近登录系统时间 */
-    lastLoginTime: string;
+    lastLoginTime?: string;
     /** 是否有企业服务 */
-    hasProductService: string;
+    hasProductService?: string;
 }
 /** 产品订单响应对象 */
 export interface IProductOrderResponseObject {
     /** 订单id */
-    id: number;
+    id?: number;
     /** 订单编号 */
-    code: string;
+    code?: string;
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 类型 */
-    type: string;
+    type?: string;
     /** 状态 */
-    status: string;
+    status?: string;
     /** 产品类型 */
-    productType: string;
+    productType?: string;
     /** 订单金额(元) */
-    orderMoneyQuantity: number;
+    orderMoneyQuantity?: number;
     /** 下单用户id */
-    placeOrderUserId: number;
+    placeOrderUserId?: number;
     /** 下单用户名称 */
-    placeOrderUserName: string;
+    placeOrderUserName?: string;
     /** 下单时间 */
-    placeOrderTime: string;
+    placeOrderTime?: string;
 }

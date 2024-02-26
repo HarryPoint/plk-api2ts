@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getListForStaffUsingPOST_3
 */
-export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IPublicBacklogDataQuery, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultListStorageTakeCheckTaskResponseDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getListForStaff",
@@ -17,51 +17,51 @@ export default function fetchMethod(data: IPublicBacklogDataQuery, params: { ent
 /** 公共待办数据查询 */
 export interface IPublicBacklogDataQuery {
     /** 编码 */
-    code: string;
+    code?: string;
     /** 创建时间--开始时间 */
-    createBeginTime: string;
+    createBeginTime?: string;
     /** 创建时间--结束时间 */
-    createEndTime: string;
+    createEndTime?: string;
     /** 工序id集合 */
-    processIds: number[];
+    processIds?: number[];
     /** 生产任务状态集合 */
-    produceTaskStatusList: string[];
+    produceTaskStatusList?: string[];
     /** 是否超时(生产任务) */
-    isTimeout: string;
+    isTimeout?: string;
     /** 质检任务状态集合 */
-    qualityProduceTaskStatusList: string[];
+    qualityProduceTaskStatusList?: string[];
     /** 生产任务可操作类型 */
-    optTypes: string[];
+    optTypes?: string[];
 }
 /** JSONResult«List«StorageTakeCheckTaskResponseDTO»» */
 export interface IJSONResultListStorageTakeCheckTaskResponseDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IStorageTakeCheckTaskResponseDTO[];
+    data?: IStorageTakeCheckTaskResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** StorageTakeCheckTaskResponseDTO */
 export interface IStorageTakeCheckTaskResponseDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 所属企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 盘点仓库id */
-    storehouseId: number;
+    storehouseId?: number;
     /** 盘点范围 */
-    scopeType: string;
+    scopeType?: string;
     /** 任务号 */
-    taskNo: string;
+    taskNo?: string;
     /** 处理人id */
-    handleUserId: number;
+    handleUserId?: number;
     /** 计划开始时间 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 完成时间 */
-    completeTime: string;
+    completeTime?: string;
     /** 状态 */
-    status: string;
+    status?: string;
 }

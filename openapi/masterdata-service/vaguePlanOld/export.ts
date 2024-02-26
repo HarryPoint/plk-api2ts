@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/模糊排产相关/exportUsingPOST_33
 */
-export default function fetchMethod(data: IProductionOrderSearchVO, params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: IProductionOrderSearchVO, params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/vaguePlanOld/export",
@@ -17,49 +17,49 @@ export default function fetchMethod(data: IProductionOrderSearchVO, params: { en
 /** 生产订单搜索VO */
 export interface IProductionOrderSearchVO {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 订单类型 */
-    orderType: string;
+    orderType?: string;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 计划开始时间, yyyy-MM-dd HH:mm:ss */
-    workingBeginTime: string;
+    workingBeginTime?: string;
     /** 销售订单号 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 订单状态 */
-    orderStatus: string;
+    orderStatus?: string;
     /** 对应物料id */
-    materialId: number;
+    materialId?: number;
     /** 订单排产状态 */
-    planStatus: string;
+    planStatus?: string;
     /** 创建时间 - 开始, yyyy-MM-dd HH:mm:ss */
-    createBeginTime: string;
+    createBeginTime?: string;
     /** 计划结束时间, yyyy-MM-dd HH:mm:ss */
-    workingEndTime: string;
+    workingEndTime?: string;
     /** 生产部门id */
-    placeOrderDepartmentId: number;
+    placeOrderDepartmentId?: number;
     /** 创建时间 - 结束, yyyy-MM-dd HH:mm:ss */
-    createEndTime: string;
+    createEndTime?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备保养计划相关/getUsingGET
 */
-export default function fetchMethod(params: { id: number }, extraOptions?: any) {
+export default function fetchMethod(params: { id?: number }, extraOptions?: any) {
     return http<IJSONResultMaintenancePlanRespondsToDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceMaintainPlan/get",
@@ -16,93 +16,93 @@ export default function fetchMethod(params: { id: number }, extraOptions?: any) 
 /** JSONResult«保养计划响应DTO» */
 export interface IJSONResultMaintenancePlanRespondsToDTO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IMaintenancePlanRespondsToDTO;
+    data?: IMaintenancePlanRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 保养计划响应DTO */
 export interface IMaintenancePlanRespondsToDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 编号 */
-    code: string;
+    code?: string;
     /** 保养计划名称 */
-    name: string;
+    name?: string;
     /** 保养计划开始日期 */
-    maintainPlanStartDate: string;
+    maintainPlanStartDate?: string;
     /** 保养计划截止日期 */
-    maintainPlanEndDate: string;
+    maintainPlanEndDate?: string;
     /** 保养任务提前下发时间 */
-    maintainPlanIssueTime: number;
+    maintainPlanIssueTime?: number;
     /** 单位 */
-    maintainPlanIssueTimeUnit: string;
+    maintainPlanIssueTimeUnit?: string;
     /** 备注 */
-    remark: string;
+    remark?: string;
     /** 计划明细 */
-    planDetailList: IMaintenancePlanDetailsRespondToDTO[];
+    planDetailList?: IMaintenancePlanDetailsRespondToDTO[];
 }
 /** 保养计划明细响应DTO */
 export interface IMaintenancePlanDetailsRespondToDTO {
     /** 设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 设备编号 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 设备名称 */
-    deviceName: string;
+    deviceName?: string;
     /** 设备数据状态(0:停用，1:启用) */
-    deviceDataStatus: number;
+    deviceDataStatus?: number;
     /** 设备类型id */
-    deviceTypeId: number;
+    deviceTypeId?: number;
     /** 设备类型名称 */
-    deviceTypeName: string;
+    deviceTypeName?: string;
     /** 产线id */
-    productionLineId: number;
+    productionLineId?: number;
     /** 产线名称 */
-    productionLineName: string;
+    productionLineName?: string;
     /** 所属区域id */
-    areaId: number;
+    areaId?: number;
     /** 所属区域 */
-    areaName: string;
+    areaName?: string;
     /** 保养明细 */
-    planDetails: IMaintenancePlanDetailsRespondToDTO[];
+    planDetails?: IMaintenancePlanDetailsRespondToDTO[];
 }
 /** 保养计划明细项响应DTO */
 export interface IMaintenancePlanDetailsRespondToDTO {
     /** 保养类型 */
-    maintainType: string;
+    maintainType?: string;
     /** 保养方案id */
-    maintainSchemeId: number;
+    maintainSchemeId?: number;
     /** 保养方案名称 */
-    maintainSchemeName: string;
+    maintainSchemeName?: string;
     /** 保养时间 */
-    times: IMaintenancePlanDetailsTimeResponseDTO[];
+    times?: IMaintenancePlanDetailsTimeResponseDTO[];
 }
 /** 保养计划明细项时间响应DTO */
 export interface IMaintenancePlanDetailsTimeResponseDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 设备保养计划id */
-    deviceMaintainPlanId: number;
+    deviceMaintainPlanId?: number;
     /** 设备id */
-    deviceId: number;
+    deviceId?: number;
     /** 设备编号 */
-    deviceCode: string;
+    deviceCode?: string;
     /** 设备类型id */
-    deviceTypeId: number;
+    deviceTypeId?: number;
     /** 产线id */
-    productionLineId: number;
+    productionLineId?: number;
     /** 所属区域id */
-    areaId: number;
+    areaId?: number;
     /** 保养类型 */
-    maintainType: string;
+    maintainType?: string;
     /** 保养方案id */
-    maintainSchemeId: number;
+    maintainSchemeId?: number;
     /** 保养开始时间 */
-    maintainStartTime: string;
+    maintainStartTime?: string;
     /** 计划明细状态 */
-    planDetailStatus: string;
+    planDetailStatus?: string;
 }

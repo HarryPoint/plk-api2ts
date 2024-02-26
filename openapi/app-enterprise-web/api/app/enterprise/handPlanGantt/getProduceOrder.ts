@@ -18,91 +18,91 @@ export interface IGanttChartSearchVO {
     /** 开始日期 yyyy-MM-dd */
     beginDate: string;
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 结束日期 yyyy-MM-dd */
     endDate: string;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 排序字段集 */
-    orders: IPagingSortVO[];
+    orders?: IPagingSortVO[];
     /** 生产订单编码 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 工艺路径ID列表 */
-    processIdList: number[];
+    processIdList?: number[];
     /** 销售订单编码 */
-    salesOrderCode: string;
+    salesOrderCode?: string;
     /** 生产物料ID列表 */
-    produceMaterialIdList: number[];
+    produceMaterialIdList?: number[];
     /** 订单状态列表 */
-    orderStatusList: string[];
+    orderStatusList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
     /** undefined */
-    column: string;
+    column?: string;
     /** undefined */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«生产订单手动排产甘特图返回VO»» */
 export interface IJSONResultPageInformationProductionOrderManualSchedulingGanttChartReturnsVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationProductionOrdersManualSchedulingGanttChartReturnsVO;
+    data?: IPageInformationProductionOrdersManualSchedulingGanttChartReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«生产订单手动排产甘特图返回VO» */
 export interface IPageInformationProductionOrdersManualSchedulingGanttChartReturnsVO {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProductionOrderManualSchedulingGanttChartBackToVO[];
+    list?: IProductionOrderManualSchedulingGanttChartBackToVO[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 生产订单手动排产甘特图返回VO */
 export interface IProductionOrderManualSchedulingGanttChartBackToVO {
     /** 生产订单id */
-    produceOrderId: number;
+    produceOrderId?: number;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 销售订单id */
-    salesOrderId: number;
+    salesOrderId?: number;
     /** 销售明细id */
-    salesOrderDetailId: number;
+    salesOrderDetailId?: number;
     /** 物料id */
-    materialId: number;
+    materialId?: number;
     /** 物料名称 */
-    materialName: string;
+    materialName?: string;
     /** 物料编号 */
-    materialCode: string;
+    materialCode?: string;
     /** 交付数量 */
-    totalCount: number;
+    totalCount?: number;
     /** 已生产数量 */
-    currentCount: number;
+    currentCount?: number;
     /** 交付日期 */
-    deliveryDate: string;
+    deliveryDate?: string;
     /** 生产订单状态 */
-    orderStatus: string;
+    orderStatus?: string;
     /** 计划开始日期 */
-    beginTime: string;
+    beginTime?: string;
     /** 计划结束日期 */
-    endTime: string;
+    endTime?: string;
 }

@@ -16,18 +16,18 @@ export default function fetchMethod(data: IRowDataImportModeInputDTO, extraOptio
 /** RowDataImportModeInputDTO */
 export interface IRowDataImportModeInputDTO {
     /** 行数据ID */
-    id: number;
+    id?: number;
     /** 操作模式 */
-    operationMode: string;
+    operationMode?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

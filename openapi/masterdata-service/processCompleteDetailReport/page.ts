@@ -16,105 +16,105 @@ export default function fetchMethod(data: IProcedureCompletionListQuery, extraOp
 /** 工序完成明细表查询 */
 export interface IProcedureCompletionListQuery {
     /** 当前页面 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 工序ids */
-    processIds: number[];
+    processIds?: number[];
     /** 排序字段集 */
-    orders: IPagingSort[];
+    orders?: IPagingSort[];
     /** 配置号 */
-    configNo: string;
+    configNo?: string;
     /** 汇总聚合维度字段集 */
-    groupBys: string[];
+    groupBys?: string[];
     /** 导出字段集 */
-    exportFields: string[];
+    exportFields?: string[];
     /** 日期 -- 开始 */
     beginTime: string;
     /** 日期 -- 结束 */
     endTime: string;
     /** 生产订单号 */
-    produceOrderCode: string;
+    produceOrderCode?: string;
     /** 物料id集合 */
-    materialIdList: number[];
+    materialIdList?: number[];
     /** 实际完工量 */
-    realProduceNumRange: number[];
+    realProduceNumRange?: number[];
     /** 是否主订单 */
-    isMaster: string;
+    isMaster?: string;
     /** 生产任务编号 */
-    taskNo: string;
+    taskNo?: string;
     /** 报工人员集合 */
-    reportUserList: Record<string, any>[];
+    reportUserList?: Record<string, any>[];
     /** 当日计划量 */
-    planProduceNumRange: number[];
+    planProduceNumRange?: number[];
     /** 当日计划完工量 */
-    curPlanCompleteNumRange: number[];
+    curPlanCompleteNumRange?: number[];
     /** 任务计划开工日期 */
-    taskBeginTime: string;
+    taskBeginTime?: string;
     /** 任务计划开工日期 */
-    taskEndTime: string;
+    taskEndTime?: string;
     /** 是否根据排班日期查询 */
-    isQueryByCalendar: boolean;
+    isQueryByCalendar?: boolean;
     /** 排班日期集合 */
-    calendarDayList: LocalDate[];
+    calendarDayList?: LocalDate[];
 }
 /** 分页排序 */
 export interface IPagingSort {
     /** 需要进行排序的字段 */
-    column: string;
+    column?: string;
     /** 是否正序排列，默认Y */
-    isAsc: string;
+    isAsc?: string;
 }
 /** JSONResult«分页信息«工序完成明细表响应dto»» */
 export interface IJSONResultPagingInformationOperationCompletionDetailTableResponseDto {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IPageInformationProcessCompletionDetailTableResponseDto;
+    data?: IPageInformationProcessCompletionDetailTableResponseDto;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 分页信息«工序完成明细表响应dto» */
 export interface IPageInformationProcessCompletionDetailTableResponseDto {
     /** 当前页码 */
-    pageNo: number;
+    pageNo?: number;
     /** 分页大小 */
-    pageSize: number;
+    pageSize?: number;
     /** 总页数 */
-    totalPage: number;
+    totalPage?: number;
     /** 总的记录数 */
-    totalCount: number;
+    totalCount?: number;
     /** 分页列表 */
-    list: IProcessCompletionDetailsRespondToDto[];
+    list?: IProcessCompletionDetailsRespondToDto[];
     /** 最后页页码 */
-    lastPage: number;
+    lastPage?: number;
     /** 是否有上一页 */
-    hasPreviousPage: string;
+    hasPreviousPage?: string;
     /** 是否有下一页 */
-    hasNextPage: string;
+    hasNextPage?: string;
     /** 上一页页码 */
-    previousPage: number;
+    previousPage?: number;
     /** 下一页页码 */
-    nextPage: number;
+    nextPage?: number;
 }
 /** 工序完成明细表响应dto */
 export interface IProcessCompletionDetailsRespondToDto {
     /** 日期 */
-    day: string;
+    day?: string;
     /** 生产工序id */
-    processId: number;
+    processId?: number;
     /** 生产工序名 */
-    processName: string;
+    processName?: string;
     /** 当日计划量 */
-    planProduceNum: number;
+    planProduceNum?: number;
     /** 当日计划完工量 */
-    curPlanCompleteNum: number;
+    curPlanCompleteNum?: number;
     /** 实际完工量 */
-    realProduceNum: number;
+    realProduceNum?: number;
     /** 生产订单列表 */
-    produceOrderList: IProcessCompletionDetailsProductionOrderResponseDto[];
+    produceOrderList?: IProcessCompletionDetailsProductionOrderResponseDto[];
 }
 /** 工序完成明细表生产订单响应dto */
 export interface IProcessCompletionDetailsProductionOrderResponseDto {

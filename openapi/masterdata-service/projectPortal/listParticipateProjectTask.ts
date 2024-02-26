@@ -15,40 +15,40 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«项目任务响应对象»»_2 */
 export interface IJSONResultListProjectTaskResponseObject2 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProjectTaskResponseObject3[];
+    data?: IProjectTaskResponseObject3[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 项目任务响应对象_3 */
 export interface IProjectTaskResponseObject3 {
     /** 项目任务id */
-    id: number;
+    id?: number;
     /** 任务编号 */
-    code: string;
+    code?: string;
     /** 任务名称 */
-    name: string;
+    name?: string;
     /** 项目任务类型名称 */
-    projectTaskTypeName: string;
+    projectTaskTypeName?: string;
     /** 任务进度 */
-    taskProgress: number;
+    taskProgress?: number;
     /** 任务开始日期 */
-    planBeginTime: string;
+    planBeginTime?: string;
     /** 任务截止日期 */
-    planEndTime: string;
+    planEndTime?: string;
     /** 是否超期 */
-    isOverdue: string;
+    isOverdue?: string;
     /** 项目id */
-    projectId: number;
+    projectId?: number;
     /** 项目名称 */
-    projectName: string;
+    projectName?: string;
     /** 来源应用编号 */
-    fromAppCode: string;
+    fromAppCode?: string;
     /** 来源应用id */
-    fromAppId: number;
+    fromAppId?: number;
     /** undefined */
-    projectTaskTypeId: number;
+    projectTaskTypeId?: number;
 }

@@ -16,7 +16,7 @@ export default function fetchMethod(data: IDtosAreStoredInStandardProcessConditi
 /** 标准工艺条件组保存DTO */
 export interface IDtosAreStoredInStandardProcessConditionsGroup {
     /** id */
-    id: number;
+    id?: number;
     /** 条件组名称 */
     name: string;
     /** 标准工艺条件 */
@@ -40,16 +40,16 @@ export interface IDtosAreStoredUnderStandardProcessConditions {
 /** JSONResult«标准工艺条件组保存响应DTO» */
 export interface IJSONResultStandardProcessConditionGroupSavesResponseDtos {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IStandardProcessConditionGroupSavesResponseDTO;
+    data?: IStandardProcessConditionGroupSavesResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 标准工艺条件组保存响应DTO */
 export interface IStandardProcessConditionGroupSavesResponseDTO {
     /** 条件组id */
-    id: number;
+    id?: number;
 }

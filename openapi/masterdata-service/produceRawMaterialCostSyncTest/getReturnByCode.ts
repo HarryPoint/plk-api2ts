@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产原材料成本同步测试相关/getReturnByCodeUsingGET
 */
-export default function fetchMethod(params: { code: string }, extraOptions?: any) {
+export default function fetchMethod(params: { code?: string }, extraOptions?: any) {
     return http<IJSONResultProductionMaterialReturnOrderCostFetchBO>(
         {
             url: "/masterdata-service/produceRawMaterialCostSyncTest/getReturnByCode",
@@ -16,35 +16,35 @@ export default function fetchMethod(params: { code: string }, extraOptions?: any
 /** JSONResult«ProductionMaterialReturnOrderCostFetchBO» */
 export interface IJSONResultProductionMaterialReturnOrderCostFetchBO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionMaterialReturnOrderCostFetchBO;
+    data?: IProductionMaterialReturnOrderCostFetchBO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** ProductionMaterialReturnOrderCostFetchBO */
 export interface IProductionMaterialReturnOrderCostFetchBO {
     /** undefined */
-    code: string;
+    code?: string;
     /** undefined */
-    billDate: string;
+    billDate?: string;
     /** undefined */
-    detailList: IProductionMaterialReturnOrderCostFetchDetailBO[];
+    detailList?: IProductionMaterialReturnOrderCostFetchDetailBO[];
     /** undefined */
-    success: string;
+    success?: string;
     /** undefined */
-    errorInfo: string;
+    errorInfo?: string;
 }
 /** ProductionMaterialReturnOrderCostFetchDetailBO */
 export interface IProductionMaterialReturnOrderCostFetchDetailBO {
     /** undefined */
-    materialCode: string;
+    materialCode?: string;
     /** undefined */
-    materialReturnQuantity: number;
+    materialReturnQuantity?: number;
     /** undefined */
-    unitCost: number;
+    unitCost?: number;
     /** undefined */
-    totalCost: number;
+    totalCost?: number;
 }

@@ -15,20 +15,20 @@ export default function fetchMethod(extraOptions?: any) {
 /** JSONResult«List«生产成本分配动态表头响应对象»» */
 export interface IJSONResultListProductionCostAllocationDynamicTableHeaderResponseObject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IProductionCostAllocationDynamicTableHeaderResponseObject[];
+    data?: IProductionCostAllocationDynamicTableHeaderResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 生产成本分配动态表头响应对象 */
 export interface IProductionCostAllocationDynamicTableHeaderResponseObject {
     /** 费用类型id */
-    produceFeeTypeId: number;
+    produceFeeTypeId?: number;
     /** 费用类型code */
-    produceFeeTypeCode: string;
+    produceFeeTypeCode?: string;
     /** 费用类型name */
-    produceFeeTypeName: string;
+    produceFeeTypeName?: string;
 }

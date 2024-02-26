@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/editUsingPOST_3
 */
-export default function fetchMethod(data: ITaskShiftEditDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ITaskShiftEditDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathShift/edit",
@@ -17,37 +17,37 @@ export default function fetchMethod(data: ITaskShiftEditDTO, params: { enterpris
 /** 任务班次编辑DTO */
 export interface ITaskShiftEditDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 班次编号 */
-    code: string;
+    code?: string;
     /** 开始时间 HH:mm */
     beginTime: string;
     /** 班次结束时间类型 */
-    endTimeType: string;
+    endTimeType?: string;
     /** 结束时间 HH:mm */
     endTime: string;
     /** 员工集合 */
-    users: IExecutiveEditorDTO[];
+    users?: IExecutiveEditorDTO[];
     /** 方案名称 */
-    planName: string;
+    planName?: string;
 }
 /** 执行人编辑DTO */
 export interface IExecutiveEditorDTO {
     /** id */
-    executorId: number;
+    executorId?: number;
     /** 执行人类型 */
-    executorType: string;
+    executorType?: string;
     /** 执行人系统控件类型 */
-    executorSysType: string;
+    executorSysType?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

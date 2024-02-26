@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getRoutingStepsByRoutingIdsUsingPOST
 */
-export default function fetchMethod(data: number[], params: { enterpriseId: number }, extraOptions?: any) {
+export default function fetchMethod(data: number[], params: { enterpriseId?: number }, extraOptions?: any) {
     return http<IJSONResultListBaseVO1>(
         {
             url: "/masterdata-service/routing/getRoutingStepsByRoutingIds",
@@ -17,66 +17,66 @@ export default function fetchMethod(data: number[], params: { enterpriseId: numb
 /** JSONResult«List«基础VO»»_1 */
 export interface IJSONResultListBaseVO1 {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IBaseVO1[];
+    data?: IBaseVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 基础VO_1 */
 export interface IBaseVO1 {
     /** id */
-    id: number;
+    id?: number;
     /** 数据状态 0停用，1启用，-1已删除 */
-    dataStatus: number;
+    dataStatus?: number;
     /** 创建员工id */
-    createUserId: number;
+    createUserId?: number;
     /** 创建部门id */
-    createDeptId: number;
+    createDeptId?: number;
     /** 创建时间 */
-    createTime: string;
+    createTime?: string;
     /** 修改账户id */
-    updateUserId: number;
+    updateUserId?: number;
     /** 修改部门id */
-    updateDeptId: number;
+    updateDeptId?: number;
     /** 更新时间 */
-    updateTime: string;
+    updateTime?: string;
     /** 所属工艺路径id */
-    routingId: number;
+    routingId?: number;
     /** 所属工艺路径步骤 */
-    routingStep: number;
+    routingStep?: number;
     /** 所属工序id */
-    processId: number;
+    processId?: number;
     /** 所属主物料id */
-    materialId: number;
+    materialId?: number;
     /** 所属主物料bomid */
-    materialBomId: number;
+    materialBomId?: number;
     /** 所属进料工艺卡id */
-    processSheetBeforeId: number;
+    processSheetBeforeId?: number;
     /** 所属出料工艺卡id */
-    processSheetAfterId: number;
+    processSheetAfterId?: number;
     /** 准备耗时 */
-    readyTime: number;
+    readyTime?: number;
     /** 准备时间单位 */
-    readyTimeUnit: string;
+    readyTimeUnit?: string;
     /** 进出站方式 */
-    inOutType: string;
+    inOutType?: string;
     /** 是否允许直接出站 */
-    allowDirectExit: string;
+    allowDirectExit?: string;
     /** BOM物料消耗确认类型 */
-    bomConsumeSureType: string;
+    bomConsumeSureType?: string;
     /** 合格产出工费单价 */
-    producePrice: number;
+    producePrice?: number;
     /** 返工产出工费单价 */
-    backProducePrice: number;
+    backProducePrice?: number;
     /** 产能-生产时间 */
-    capacityProduceTime: number;
+    capacityProduceTime?: number;
     /** 产能-时间类型 */
-    capacityTimeType: string;
+    capacityTimeType?: string;
     /** 产能-生产数量 */
-    capacityProduceQuantity: number;
+    capacityProduceQuantity?: number;
     /** 准备工费（元） */
-    readyPrice: number;
+    readyPrice?: number;
 }

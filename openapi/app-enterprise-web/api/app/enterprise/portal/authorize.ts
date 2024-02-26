@@ -16,20 +16,20 @@ export default function fetchMethod(data: IPortalAuthorizationRequestDTO, extraO
 /** PortalAuthorizationRequestDTO */
 export interface IPortalAuthorizationRequestDTO {
     /** 门户ID */
-    id: number;
+    id?: number;
     /** 员工ID列表 */
-    employeeIdList: number[];
+    employeeIdList?: number[];
     /** 角色ID列表 */
-    roleIdList: number[];
+    roleIdList?: number[];
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: string;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

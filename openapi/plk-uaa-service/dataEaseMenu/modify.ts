@@ -16,32 +16,32 @@ export default function fetchMethod(data: ITheDataEaseMenuModifiesTheRequestObje
 /** DataEase菜单修改请求对象 */
 export interface ITheDataEaseMenuModifiesTheRequestObject {
     /** 企业id */
-    enterpriseId: number;
+    enterpriseId?: number;
     /** 菜单名称 */
-    name: string;
+    name?: string;
     /** 链接地址 */
-    originalLinkUrl: string;
+    originalLinkUrl?: string;
     /** 是否在PC端发布 */
-    isPcTerminal: string;
+    isPcTerminal?: string;
     /** PC端发布路由id */
-    pcTerminalPublishRouteId: number;
+    pcTerminalPublishRouteId?: number;
     /** PC端展示方式 */
-    pcTerminalDisplayMode: string;
+    pcTerminalDisplayMode?: string;
     /** 是否在移动端发布 */
-    isMobileTerminal: string;
+    isMobileTerminal?: string;
     /** 移动端发布路由id */
-    mobileTerminalPublishRouteId: number;
+    mobileTerminalPublishRouteId?: number;
     /** id */
-    id: number;
+    id?: number;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }

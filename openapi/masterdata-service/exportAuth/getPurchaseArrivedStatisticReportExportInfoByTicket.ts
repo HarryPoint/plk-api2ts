@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getPurchaseArrivedStatisticReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(params: { ticket: string }, extraOptions?: any) {
+export default function fetchMethod(params: { ticket?: string }, extraOptions?: any) {
     return http<IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO>(
         {
             url: "/masterdata-service/exportAuth/getPurchaseArrivedStatisticReportExportInfoByTicket",
@@ -16,61 +16,61 @@ export default function fetchMethod(params: { ticket: string }, extraOptions?: a
 /** JSONResult«导出信息«采购到货统计报表返回VO»» */
 export interface IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: IExportInformationPurchaseArrivalStatisticsReportReturnToVO;
+    data?: IExportInformationPurchaseArrivalStatisticsReportReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
 /** 导出信息«采购到货统计报表返回VO» */
 export interface IExportInformationPurchaseArrivalStatisticsReportReturnToVO {
     /** 导出类型 */
-    exportType: string;
+    exportType?: string;
     /** 数据 */
-    itemList: IPurchaseArrivalStatisticsReportReturnedToVO[];
+    itemList?: IPurchaseArrivalStatisticsReportReturnedToVO[];
 }
 /** 采购到货统计报表返回VO */
 export interface IPurchaseArrivalStatisticsReportReturnedToVO {
     /** 采购订单编号 */
-    purchaseOrderNo: string;
+    purchaseOrderNo?: string;
     /** 供应商 */
-    supplier: string;
+    supplier?: string;
     /** 物料编号 */
-    majorDataCode: string;
+    majorDataCode?: string;
     /** 物料名称 */
-    majorDataName: string;
+    majorDataName?: string;
     /** 规格型号 */
-    spec: string;
+    spec?: string;
     /** 物料材质 */
-    texture: string;
+    texture?: string;
     /** 要求到货日期 */
-    requiredArriveDate: string;
+    requiredArriveDate?: string;
     /** 要求到货日期字符串 */
-    requiredArriveDateStr: string;
+    requiredArriveDateStr?: string;
     /** 最新到货日期 */
-    lastArrivedDate: string;
+    lastArrivedDate?: string;
     /** 最新到货日期字符串 */
-    lastArrivedDateStr: string;
+    lastArrivedDateStr?: string;
     /** 订单数量 */
-    orderNum: number;
+    orderNum?: number;
     /** 订单金额 */
-    orderAmount: number;
+    orderAmount?: number;
     /** 已到货数量 */
-    arrivedQty: number;
+    arrivedQty?: number;
     /** 未到货数量 */
-    waitQty: number;
+    waitQty?: number;
     /** 入库数量 */
-    inboundQty: number;
+    inboundQty?: number;
     /** 入库金额 */
-    inboundAmount: number;
+    inboundAmount?: number;
     /** 未入库数量 */
-    notInboundQty: number;
+    notInboundQty?: number;
     /** 未入库金额 */
-    notInboundAmount: number;
+    notInboundAmount?: number;
     /** 单据类型 */
-    orderType: string;
+    orderType?: string;
     /** 采购类型 */
-    purchaseType: string;
+    purchaseType?: string;
 }

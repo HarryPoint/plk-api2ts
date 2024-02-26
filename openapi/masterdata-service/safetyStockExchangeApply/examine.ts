@@ -3,7 +3,7 @@ import { http } from '@/api/http';
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/examineUsingPOST
 */
-export default function fetchMethod(data: ISecurityInventoryChangeRequestReviewDTO, params: { enterpriseId: number; userId: number }, extraOptions?: any) {
+export default function fetchMethod(data: ISecurityInventoryChangeRequestReviewDTO, params: { enterpriseId?: number; userId?: number }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/safetyStockExchangeApply/examine",
@@ -17,18 +17,18 @@ export default function fetchMethod(data: ISecurityInventoryChangeRequestReviewD
 /** 安全库存变更申请审核DTO */
 export interface ISecurityInventoryChangeRequestReviewDTO {
     /** id */
-    id: number;
+    id?: number;
     /** 审核类型 */
-    examineType: string;
+    examineType?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: Record<string, any>;
+    data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: number;
 }
