@@ -5,6 +5,7 @@ import { customContent } from "./plkTpl";
 
 export type IConfig = {
   prefix: string;
+  enumPrefix: string;
   translate: boolean;
   translateCacheFileName: string;
   translateApiUri: string;
@@ -31,6 +32,7 @@ const defaultConfig: IConfig = {
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
   prefix: "I",
+  enumPrefix: "E",
   serviceMap: {},
   serviceNameToPath: false,
   output,

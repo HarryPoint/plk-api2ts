@@ -17,9 +17,15 @@ const formatName = (name: string) =>
 
 type IDefinitionsMapItem = {
   name: string;
+  translateName: string;
   originName: string;
   ins: any;
   define: any;
+};
+
+const formatEnumValue = (str: string) => {
+  const newStrArr = str.trim().split("-");
+  return newStrArr;
 };
 
 export const createDefinitions = async (
@@ -28,17 +34,20 @@ export const createDefinitions = async (
   option?: {
     translate?: boolean;
     prefix?: string;
+    enumPrefix?: string;
     customContent?: IConfig["customContent"];
   }
 ) => {
-  const { translate = true, prefix = "I", customContent } = option || {};
+  const {
+    translate = true,
+    prefix = "I",
+    enumPrefix = "E",
+    customContent,
+  } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
   const enumMap: Record<string, any[]> = {};
-  const formatEnumValue = (str: string) => {
-    const newStrArr = str.trim().split("-");
-    return newStrArr[0];
-  };
-  const transFormType = (define: any, parents: any[] = []): string => {
+
+  const transFormType = (define: any, pathKeys: string[] = []): string => {
     if (define.originalRef) {
       if (!definitionsMap[define.originalRef]) {
         return define.originalRef;
@@ -47,31 +56,36 @@ export const createDefinitions = async (
     }
     const typeOrigin = typeMap[define.type as keyof typeof typeMap];
     if (typeOrigin === typeMap.array) {
-      return `${transFormType(define.items, [...parents, define])}[]`;
+      return `${transFormType(define.items, [...pathKeys, "items"])}[]`;
     }
     if (typeOrigin === typeMap.object) {
       if (define.properties) {
         const requiredKeys = define.required || [];
         return `{ ${Object.keys(define.properties || {})
-          .map(
-            (key) =>
-              `${formatName(key)}${
-                requiredKeys.includes(key) ? "" : "?"
-              }: ${transFormType(define.properties[key], [...parents, define])}`
-          )
+          .map((key) => {
+            const formatKey = formatName(key);
+            return `${formatKey}${
+              requiredKeys.includes(key) ? "" : "?"
+            }: ${transFormType(define.properties[key], [
+              ...pathKeys,
+              formatKey,
+            ])}`;
+          })
           .join("; ")} }`;
       }
       return `Record<string, ${
         define?.additionalProperties
-          ? transFormType(define?.additionalProperties, [...parents, define])
+          ? transFormType(define?.additionalProperties, [
+              ...pathKeys,
+              "additionalProperties",
+            ])
           : "any"
       }>`;
     }
     if (typeOrigin === typeMap.string && define.enum) {
-      enumMap[parents.map((item) => item.name).join("_")] = define.enum;
-      return `(${define.enum
-        ?.map((item: string) => `'${formatEnumValue(item)}'`)
-        .join(" | ")})`;
+      const enumName = `${enumPrefix}${pathKeys.map((item) => item).join("_")}`;
+      enumMap[enumName] = define.enum;
+      return enumName;
     }
     return typeOrigin;
   };
@@ -83,6 +97,7 @@ export const createDefinitions = async (
     if (define.type === "object") {
       definitionsMap[name] = {
         name: formatName(name),
+        translateName: formatName(name),
         originName: name,
         ins: null,
         define,
@@ -96,7 +111,9 @@ export const createDefinitions = async (
   const result = translate ? await translateFn(names) : names;
   // 所有的定义名称修正
   translateItemArr.forEach((item, index) => {
-    item.name = `${prefix}${formatName(result[index])}`;
+    const translateName = formatName(result[index]);
+    item.name = `${prefix}${translateName}`;
+    item.translateName = translateName;
     // console.log("item.name: ", item.name);
   });
 
@@ -116,7 +133,10 @@ export const createDefinitions = async (
           OptionalKind<PropertySignatureStructure>
         >((key) => ({
           name: key,
-          type: transFormType(define.properties[key]),
+          type: transFormType(define.properties[key], [
+            item.translateName,
+            key,
+          ]),
           leadingTrivia: `/** ${define.properties[key].description} */\n`,
           hasQuestionToken: !define.required?.includes(key),
         })),
@@ -124,5 +144,19 @@ export const createDefinitions = async (
       definitionsMap[name].ins = ins;
     }
   }
+  Object.keys(enumMap).forEach((key) => {
+    definitionsFile.addEnum({
+      name: key,
+      isExported: true,
+      members: enumMap[key].map((enumKey) => {
+        const [name, desc] = formatEnumValue(enumKey);
+        return {
+          name,
+          value: name,
+          leadingTrivia: `/** ${desc} */\n`,
+        };
+      }),
+    });
+  });
   definitionsFile.formatText();
 };
