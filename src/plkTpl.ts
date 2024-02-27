@@ -19,6 +19,7 @@ export const customContent = async (
         }/doc.html#/default/${methodDefine.tags?.join("/")}/${
           methodDefine.operationId
         }`;
+        writer.writeLine(`* @author ${methodDefine?.["x-author"]}`);
         writer.writeLine(`* @link ${docUrl}`);
         writer.writeLine("*/");
         console.log("docUrl: ", docUrl);
