@@ -4,7 +4,10 @@ import { translate as translateFn } from "./translate";
 
 const typeMap = {
   string: "string",
+  "string(date-time)": "number",
   integer: "number",
+  "integer(int64)": "string",
+  "integer(int32)": "number",
   number: "number",
   boolean: "boolean",
   array: "[]",
@@ -53,11 +56,14 @@ export const createDefinitions = async (
       }
       return definitionsMap[define.originalRef].name;
     }
-    const typeOrigin = typeMap[define.type as keyof typeof typeMap];
-    if (typeOrigin === typeMap.array) {
+    const typeName = `${define.type}${
+      define.format ? `(${define.format})` : ""
+    }`;
+    const typeOrigin = typeMap[typeName as keyof typeof typeMap];
+    if (typeOrigin === "[]") {
       return `${transFormType(define.items, [...pathKeys, "items"])}[]`;
     }
-    if (typeOrigin === typeMap.object) {
+    if (typeOrigin === "{}") {
       if (define.properties) {
         const requiredKeys = define.required || [];
         return `{ ${Object.keys(define.properties || {})
@@ -81,7 +87,7 @@ export const createDefinitions = async (
           : "any"
       }>`;
     }
-    if (typeOrigin === typeMap.string && define.enum) {
+    if (typeOrigin === "string" && define.enum) {
       const enumName = `${enumPrefix}${pathKeys.map((item) => item).join("_")}`;
       enumMap[enumName] = define.enum;
       return enumName;
