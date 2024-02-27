@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getByIdUsingGET_3
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigVO>(
         {
             url: "/flow-service/flowPathDetailPageConfig/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultFlowPathDetailPageConfigVO {
     /** 响应结果 */
     data?: IFlowPathDetailPageConfigVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathDetailPageConfigVO */
 export interface IFlowPathDetailPageConfigVO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 引用当前表单的应用引擎编码 */
     refFlowPathCode?: string;
     /** 页签名称/别名 */
@@ -38,20 +38,20 @@ export interface IFlowPathDetailPageConfigVO {
 /** 条件组_2 */
 export interface IConditionGroup2 {
     /** 过滤组的ID */
-    id?: number;
+    id?: string;
     /** 分页配置ID */
-    flowPathDetailPageConfigId?: number;
+    flowPathDetailPageConfigId?: string;
     /** 过滤列表 */
     filterList?: IConditions[];
 }
 /** 条件 */
 export interface IConditions {
     /** 过滤条件的ID */
-    id?: number;
+    id?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathDetailPageFilterGroupId?: number;
+    flowPathDetailPageFilterGroupId?: string;
     /** 所属流程表单字段id */
-    flowPathDetailPageConfigId?: number;
+    flowPathDetailPageConfigId?: string;
     /** 被判断的字段序列号 */
     columnSerialNo?: string;
     /** 判断方式 */

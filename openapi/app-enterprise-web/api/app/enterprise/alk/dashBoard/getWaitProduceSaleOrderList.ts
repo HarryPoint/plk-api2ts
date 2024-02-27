@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getWaitProduceSaleOrderListUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultListSalesVOToBeProduced {
     /** 响应结果 */
     data?: ISingleVOToBeProducedAndSold[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 待生产销售单VO */
 export interface ISingleVOToBeProducedAndSold {
@@ -37,5 +37,5 @@ export interface ISingleVOToBeProducedAndSold {
     /** 合格产出进度 */
     passProgress?: number;
     /** 整体交付日期 */
-    salesOrderDeliveryDate?: string;
+    salesOrderDeliveryDate?: number;
 }

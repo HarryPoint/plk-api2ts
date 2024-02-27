@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getDeviceCollectionStatisticReportExportByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationExportDeviceDataCollectionStatistic
     /** 响应结果 */
     data?: IExportInformationExportDeviceDataCollectionStatisticsReportVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«设备数采统计报表导出VO» */
 export interface IExportInformationExportDeviceDataCollectionStatisticsReportVO {

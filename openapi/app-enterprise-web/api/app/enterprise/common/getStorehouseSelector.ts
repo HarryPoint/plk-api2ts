@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getStorehouseSelectorUsingPOST
@@ -40,12 +40,12 @@ export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 响应结果 */
     data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

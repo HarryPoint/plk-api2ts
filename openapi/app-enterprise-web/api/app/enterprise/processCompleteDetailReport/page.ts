@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序完成明细表/pageUsingPOST_1
@@ -20,7 +20,7 @@ export interface IProcedureCompletionListQuery {
     /** 分页大小 */
     pageSize?: number;
     /** 工序ids */
-    processIds?: number[];
+    processIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 配置号 */
@@ -30,13 +30,13 @@ export interface IProcedureCompletionListQuery {
     /** 导出字段集 */
     exportFields?: string[];
     /** 日期 -- 开始 */
-    beginTime: string;
+    beginTime: number;
     /** 日期 -- 结束 */
-    endTime: string;
+    endTime: number;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 物料id集合 */
-    materialIdList?: number[];
+    materialIdList?: string[];
     /** 实际完工量 */
     realProduceNumRange?: number[];
     /** 是否主订单 */
@@ -50,9 +50,9 @@ export interface IProcedureCompletionListQuery {
     /** 当日计划完工量 */
     curPlanCompleteNumRange?: number[];
     /** 任务计划开工日期 */
-    taskBeginTime?: string;
+    taskBeginTime?: number;
     /** 任务计划开工日期 */
-    taskEndTime?: string;
+    taskEndTime?: number;
     /** 是否根据排班日期查询 */
     isQueryByCalendar?: boolean;
     /** 排班日期集合 */
@@ -74,37 +74,37 @@ export interface IJSONResultPagingInformationOperationCompletionDetailTableRespo
     /** 响应结果 */
     data?: IPageInformationProcessCompletionDetailTableResponseDto;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工序完成明细表响应dto» */
 export interface IPageInformationProcessCompletionDetailTableResponseDto {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcessCompletionDetailsRespondToDto[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationProcessCompletionDetailTableResponseDto_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationProcessCompletionDetailTableResponseDto_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工序完成明细表响应dto */
 export interface IProcessCompletionDetailsRespondToDto {
     /** 日期 */
-    day?: string;
+    day?: number;
     /** 生产工序id */
-    processId?: number;
+    processId?: string;
     /** 生产工序名 */
     processName?: string;
     /** 当日计划量 */

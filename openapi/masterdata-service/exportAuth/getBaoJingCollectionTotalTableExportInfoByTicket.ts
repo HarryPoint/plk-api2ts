@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingCollectionTotalTableExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationBaojingCollectionSummaryAnalysisRep
     /** 响应结果 */
     data?: IExportInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«宝晶收款汇总分析报表表格返回VO» */
 export interface IExportInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO {
@@ -34,23 +34,23 @@ export interface IExportInformationBaojingCollectionSummaryAnalysisReportFormRet
 /** 宝晶收款汇总分析报表表格返回VO */
 export interface IBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 付款单位id(客户id) */
     payCustomerIdsJson?: string;
     /** 付款单位id(客户id) */
-    payCustomerIds?: number[];
+    payCustomerIds?: string[];
     /** 付款单位名称(客户名称) */
     payCustomerName?: string;
     /** 收款组织id(部门id) */
     collectionOrganizationIdsJson?: string;
     /** 收款组织id(部门id) */
-    collectionOrganizationIds?: number[];
+    collectionOrganizationIds?: string[];
     /** 收款组织(部门名称) */
     collectionOrganization?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
     /** 是否含税 */

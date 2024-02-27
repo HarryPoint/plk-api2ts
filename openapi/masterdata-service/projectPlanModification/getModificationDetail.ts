@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/getModificationDetailUsingGET_2
@@ -22,7 +22,7 @@ export interface IJSONResultProjectPlanChangeResponseObject {
     /** 响应结果 */
     data?: ITheProjectPlanChangesTheResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目计划变更响应对象 */
 export interface ITheProjectPlanChangesTheResponseObject {
@@ -30,8 +30,6 @@ export interface ITheProjectPlanChangesTheResponseObject {
     projectStageList?: IChangeOrderResponseParametersInProjectPhase[];
     /** 项目任务响应列表 */
     projectTaskList?: IProjectTaskChangeOrderResponseParameters[];
-    /** 项目计划变更信息响应列表 */
-    projectPlanList?: IItemChangeOrderFieldResponseParameter[];
 }
 /** 项目阶段变更单响应参数 */
 export interface IChangeOrderResponseParametersInProjectPhase {
@@ -40,7 +38,7 @@ export interface IChangeOrderResponseParametersInProjectPhase {
     /** 表单操作类型 */
     operateType?: EChangeOrderResponseParametersInProjectPhase_operateType;
     /** 项目变更表单id */
-    projectModificationFormId?: number;
+    projectModificationFormId?: string;
     /** 数据id */
     dataId?: string;
     /** 字段数据列表 */
@@ -79,11 +77,11 @@ export interface IProjectTaskChangeOrderResponseParameters {
     /** 表单操作类型 */
     operateType?: EProjectTaskChangeOrderResponseParameters_operateType;
     /** 项目变更表单id */
-    projectModificationFormId?: number;
+    projectModificationFormId?: string;
     /** 数据id */
     dataId?: string;
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 字段数据列表 */
     fieldDataList?: IItemChangeOrderFieldResponseParameter[];
 }

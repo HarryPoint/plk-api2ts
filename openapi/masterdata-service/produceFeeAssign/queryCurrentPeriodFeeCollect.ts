@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodFeeCollectUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListDetailedResponseDTOForCostCollection {
     /** 响应结果 */
     data?: IExpenseCollectionDetailsRespondToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 费用归集明细响应DTO */
 export interface IExpenseCollectionDetailsRespondToDTO {
     /** 费用归集明细id */
-    id?: number;
+    id?: string;
     /** 费用类型id */
-    produceFeeTypeId?: number;
+    produceFeeTypeId?: string;
     /** 费用编码 */
     produceFeeCode?: string;
     /** 费用名称 */
@@ -37,7 +37,7 @@ export interface IExpenseCollectionDetailsRespondToDTO {
     /** 费用金额 */
     fee?: number;
     /** 所属期间 */
-    periodDate?: string;
+    periodDate?: number;
     /** 指定生产订单 */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getAllTaskUsingGET
@@ -22,7 +22,7 @@ export interface ITheJSONResultListSalesModuleReturnsVO {
     /** 响应结果 */
     data?: ITheSalesModuleReturnsToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售模块返回VO */
 export interface ITheSalesModuleReturnsToVO {
@@ -38,19 +38,19 @@ export interface ITheSalesModuleReturnsToVO {
 /** 质检模块任务返回VO */
 export interface ITheInspectionModuleTaskReturnsVO {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     taskName?: string;
     /** 任务编号 */
     taskNo?: string;
     /** 计划质检时间/送检时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -72,11 +72,11 @@ export interface ITheInspectionModuleTaskReturnsVO {
     /** 状态名称 */
     statusName?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 送检人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 送检人姓名 */
     createUsername?: string;
     /** 送检人工号 */

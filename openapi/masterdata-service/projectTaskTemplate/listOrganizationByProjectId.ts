@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务模板相关/listOrganizationByProjectIdUsingGET
@@ -22,14 +22,14 @@ export interface ITheJSONResultListProjectTaskTemplateOrganizesTheResponseDTO {
     /** 响应结果 */
     data?: IProjectTaskTemplateOrganizationRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务模板组织响应DTO */
 export interface IProjectTaskTemplateOrganizationRespondsToTheDTO {
     /** 项目任务模板id */
-    id?: number;
+    id?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 是否是通用模板 */
     isDefault?: EProjectTaskTemplateOrganizationRespondsToTheDTO_isDefault;
     /** 模板名称 */
@@ -37,7 +37,7 @@ export interface IProjectTaskTemplateOrganizationRespondsToTheDTO {
     /** 应用编号 */
     appCode?: string;
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 组织字段集 */
     fields?: ITheProjectTaskTemplateOrganizesTheFieldResponseDTO[];
 }

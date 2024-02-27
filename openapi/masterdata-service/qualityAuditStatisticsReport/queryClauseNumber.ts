@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryClauseNumberUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBasicQualityAuditQueryRequ
 /** 基础质量审核查询请求 */
 export interface IBasicQualityAuditQueryRequest {
     /** 日期范围-起始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 日期范围-结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«不符合项统计-条款号» */
 export interface IJSONResultIndicatesTheStatisticalItemNumberOfTheIncompatibilityItem {
@@ -29,7 +29,7 @@ export interface IJSONResultIndicatesTheStatisticalItemNumberOfTheIncompatibilit
     /** 响应结果 */
     data?: INonConformanceStatisticsClauseNumber;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 不符合项统计-条款号 */
 export interface INonConformanceStatisticsClauseNumber {
@@ -48,7 +48,7 @@ export interface IAuditTypeHeading {
 /** QualityAuditClauseNumberQueryItemResponseDTO */
 export interface IQualityAuditClauseNumberQueryItemResponseDTO {
     /** 条款号ID */
-    clauseNumberId?: number;
+    clauseNumberId?: string;
     /** 条款号 */
     clauseNumber?: string;
     /** 不符合项数量 */

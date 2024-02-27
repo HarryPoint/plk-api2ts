@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/exportUsingPOST_14
@@ -24,11 +24,11 @@ export interface IProductionCostingPagingRequestObject {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 计划开始时间查询结束时间 */
-    endPlanBeginTime?: string;
+    endPlanBeginTime?: number;
     /** 导出字段集 */
     exportFields?: string[];
     /** 期间id集合 */
-    fiscalPeriodIdList?: number[];
+    fiscalPeriodIdList?: string[];
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 销售订单编号 */
@@ -36,9 +36,9 @@ export interface IProductionCostingPagingRequestObject {
     /** 物料规格 */
     materialSpec?: string;
     /** 计划开始时间查询开始时间 */
-    beginPlanBeginTime?: string;
+    beginPlanBeginTime?: number;
     /** 物料id集合 */
-    materialIdList?: number[];
+    materialIdList?: string[];
     /** 期初在产品 - 数量 - 开始数量 */
     beginBeginPeriodInProduceQuantity?: number;
     /** 期初在产品 - 数量 - 结束数量 */
@@ -98,9 +98,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSort_isAsc {

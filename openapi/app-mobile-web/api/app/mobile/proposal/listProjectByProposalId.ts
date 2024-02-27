@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/合理化建议相关/listByProposalIdUsingPOST
 */
-export default function fetchMethod(options: { params: { proposalId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { proposalId?: string } }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/proposal/listProjectByProposalId",
@@ -22,12 +22,12 @@ export interface IJSONResultListKaizenProjectResponseDTO {
     /** 响应结果 */
     data?: IKaizenProjectResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** KaizenProjectResponseDTO */
 export interface IKaizenProjectResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 项目编号 */
     code?: string;
     /** 项目名称 */
@@ -37,19 +37,19 @@ export interface IKaizenProjectResponseDTO {
     /** 项目类型描述 */
     typeDesc?: string;
     /** 项目负责人 */
-    projectLeaderId?: number;
+    projectLeaderId?: string;
     /** 项目负责人名称 */
     projectLeaderName?: string;
     /** 项目开始日期 */
-    projectStartDate?: string;
+    projectStartDate?: number;
     /** 项目截止日期 */
-    projectEndDate?: string;
+    projectEndDate?: number;
     /** 项目状态 */
     projectStatus?: EKaizenProjectResponseDTO_projectStatus;
     /** 项目状态描述 */
     projectStatusDesc?: string;
     /** 关联合理化建议 */
-    proposalId?: number;
+    proposalId?: string;
     /** 项目简介 */
     projectIntroduction?: string;
 }

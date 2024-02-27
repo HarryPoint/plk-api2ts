@@ -119,6 +119,22 @@
           "type": "integer",
           "format": "int64",
           "description": "应用ID"
+        },
+        "flowPathIdList": {
+          "type": "array",
+          "description": "应用ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "ignoreFlowPathIdList": {
+          "type": "array",
+          "description": "忽略应用ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
         }
       },
       "title": "待办事项搜索VO"

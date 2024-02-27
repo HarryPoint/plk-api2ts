@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印模板相关/getAllPrintTemplateUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListPrintsTheTemplateResponseObject {
     /** 响应结果 */
     data?: IPrintTemplateResponseObject1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 打印模板响应对象_1 */
 export interface IPrintTemplateResponseObject1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 数据状态 */
     dataStatus?: number;
     /** 打印模板类型 */
@@ -41,13 +41,13 @@ export interface IPrintTemplateResponseObject1 {
     /** 数据源类型 */
     dataSourceType?: EPrintTemplateResponseObject1_dataSourceType;
     /** 父级数据源id */
-    parentId?: number;
+    parentId?: string;
     /** 应用流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用流程状态 */
     flowPathDataStatus?: number;
     /** 发布位置路由id */
-    enterpriseRouterId?: number;
+    enterpriseRouterId?: string;
     /** 发布位置 */
     publishPosition?: string;
     /** 发布位置路由 */
@@ -57,16 +57,16 @@ export interface IPrintTemplateResponseObject1 {
     /** 模板字段信息 */
     printTemplateFields?: IPrintTheTemplateResponseObject[];
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
 }
 /** 打印模板响应对象 */
 export interface IPrintTheTemplateResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 打印模板id */
-    printTemplateId?: number;
+    printTemplateId?: string;
     /** 字段编码 */
     code?: string;
     /** 字段名称 */
@@ -74,7 +74,7 @@ export interface IPrintTheTemplateResponseObject {
     /** 字段类型 */
     type?: EPrintTheTemplateResponseObject_type;
     /** 关联表单字段id */
-    fieldId?: number;
+    fieldId?: string;
     /** 关联字段编码 */
     fieldCode?: string;
     /** 字段序列号 */

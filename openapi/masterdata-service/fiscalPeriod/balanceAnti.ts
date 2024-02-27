@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/balanceAntiUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICounterbalanceRequestForFi
 /** 财务期间反结存请求 */
 export interface ICounterbalanceRequestForFinancialPeriod {
     /** ID */
-    id?: number;
+    id?: string;
 }
 /** JSONResult«boolean» */
 export interface IJSONResultboolean {
@@ -27,5 +27,5 @@ export interface IJSONResultboolean {
     /** 响应结果 */
     data?: boolean;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

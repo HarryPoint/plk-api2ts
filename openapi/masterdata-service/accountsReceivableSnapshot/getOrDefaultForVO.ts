@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getOrDefaultForVOUsingGET
 */
-export default function fetchMethod(options: { params: { businessUserId?: number; customerId?: number; day?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessUserId?: string; customerId?: string; day?: number; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultAccountsReceivableSnapshotVO>(
         {
             url: "/masterdata-service/accountsReceivableSnapshot/getOrDefaultForVO",
@@ -22,20 +22,20 @@ export interface IJSONResultAccountsReceivableSnapshotVO {
     /** 响应结果 */
     data?: IAccountsReceivableSnapshotVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** AccountsReceivableSnapshotVO */
 export interface IAccountsReceivableSnapshotVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 快照日期 */
-    snapshotDate?: string;
+    snapshotDate?: number;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 所属业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 应收金额 */
     amountReceivable?: number;
     /** 已收金额 */

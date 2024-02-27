@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentInboundAnalyzeReportSumResultUsingPOST
 */
-export default function fetchMethod(options: { data: IConsignmentInboundAnalysisReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IConsignmentInboundAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultConsignmentInboundAnalysisReportTotalReturnVO>(
         {
             url: "/masterdata-service/baoJingReport/getConsignmentInboundAnalyzeReportSumResult",
@@ -22,19 +22,19 @@ export interface IConsignmentInboundAnalysisReportSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 客户id */
-    customerId?: number[];
+    customerId?: string[];
     /** 日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 仓库id */
-    warehouseId?: number[];
+    warehouseId?: string[];
     /** 业务员id */
-    businessManId?: number[];
+    businessManId?: string[];
     /** 日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 产品id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 产品名称 */
     productName?: string;
     /** 单据编号 */
@@ -62,7 +62,7 @@ export interface IJSONResultConsignmentInboundAnalysisReportTotalReturnVO {
     /** 响应结果 */
     data?: IConsignmentWarehousingAnalysisReportTotalReturnVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 寄售入库分析报表合计返回VO */
 export interface IConsignmentWarehousingAnalysisReportTotalReturnVO {

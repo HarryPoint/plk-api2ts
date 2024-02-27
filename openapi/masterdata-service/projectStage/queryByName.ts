@@ -1,10 +1,10 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/queryByNameUsingPOST
 */
-export default function fetchMethod(options: { data: IProjectPhaseNumberQueryObject }, extraOptions?: any) {
-    return http<IJSONResultListProjectPhaseResponseObject>(
+export default function fetchMethod(options: { data: IItemNameNumberPublicQueryObject1 }, extraOptions?: any) {
+    return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/projectStage/queryByName",
             method: "post",
@@ -13,48 +13,39 @@ export default function fetchMethod(options: { data: IProjectPhaseNumberQueryObj
         extraOptions,
     );
 }
-/** 项目阶段编号查询对象 */
-export interface IProjectPhaseNumberQueryObject {
+/** 项目名称编号公共查询对象_1 */
+export interface IItemNameNumberPublicQueryObject1 {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
+    /** 项目计划id */
+    projectPlanId?: string;
     /** 名称or编号 */
     nameOrCode?: string;
-    /** 是否查询只在项目计划模块展示的阶段 */
-    isProjectPlanShow?: EProjectPhaseNumberQueryObject_isProjectPlanShow;
-    /** 是否查询只在项目任务模块展示的阶段 */
-    isProjectTaskShow?: EProjectPhaseNumberQueryObject_isProjectTaskShow;
+    /** undefined */
+    projectPlanFlowIsComplete?: EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete;
 }
-/** JSONResult«List«项目阶段响应对象»» */
-export interface IJSONResultListProjectPhaseResponseObject {
+/** JSONResult«List«Id Code Name 通用传输对象»» */
+export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 返回码 */
     code?: number;
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: IProjectPhaseResponseObject[];
+    data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
-/** 项目阶段响应对象 */
-export interface IProjectPhaseResponseObject {
-    /** 项目阶段id */
-    id?: number;
-    /** 名称 */
+/** Id Code Name 通用传输对象 */
+export interface IIdCodeNameGenericTransportObject {
+    /** id */
+    id?: string;
+    /** code */
+    code?: string;
+    /** name */
     name?: string;
-    /** 项目计划ids */
-    projectPlanIds?: number[];
 }
 
-export enum EProjectPhaseNumberQueryObject_isProjectPlanShow {
-    /** 是 */
+export enum EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete {
     Y = "Y",
-    /** 否 */
-    N = "N"
-}
-
-export enum EProjectPhaseNumberQueryObject_isProjectTaskShow {
-    /** 是 */
-    Y = "Y",
-    /** 否 */
     N = "N"
 }

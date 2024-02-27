@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/getUserProcessAndAreaSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; type?: Etype } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; type?: Etype } }, extraOptions?: any) {
     return http<ITheJSONResultListAreaOperationSelectsToReturnVO>(
         {
             url: "/masterdata-service/userProcess/getUserProcessAndAreaSelector",
@@ -22,18 +22,18 @@ export interface ITheJSONResultListAreaOperationSelectsToReturnVO {
     /** 响应结果 */
     data?: ITheRegionalOperationSelectionReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 区域工序选择返回VO */
 export interface ITheRegionalOperationSelectionReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序名称 */
     name?: string;
     /** 工序编号 */
     code?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
 }

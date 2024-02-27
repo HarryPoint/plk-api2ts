@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/手动排产/handPlanUsingPOST
 */
-export default function fetchMethod(options: { data: IManualDTOSchedulingOfProductionOrdersparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/handPlan/handPlan",
@@ -22,16 +22,16 @@ export interface IManualDTOSchedulingOfProductionOrders {
     /** 时间维度 */
     timeDimension?: EManualDTOSchedulingOfProductionOrders_timeDimension;
     /** 排产开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 排产结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
     /** 排产明细订单维度 */
     orders?: IManualProductionOrderSchedulingDetailsOrderDimensionsDTO[];
 }
 /** 生产订单手动排产明细订单维度DTO */
 export interface IManualProductionOrderSchedulingDetailsOrderDimensionsDTO {
     /** 生产订单id */
-    id?: number;
+    id?: string;
     /** 按日排产明细 */
     dayQuantities?: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
     /** 按班次排产明细 */
@@ -42,28 +42,28 @@ export interface IManualProductionOrderSchedulingDetailsOrderDimensionsDTO {
 /** 生产订单手动排产按日排产DTO */
 export interface IManualSchedulingOfProductionOrdersDTOSchedulingDaily {
     /** 日期 */
-    scheduleDate?: string;
+    scheduleDate?: number;
     /** 产量 */
     quantity?: number;
 }
 /** 生产订单手动排产按班次排产DTO */
 export interface IManualProductionSchedulingOfProductionOrdersDTOSchedulingByShift {
     /** 日期 yyyy-MM-dd */
-    scheduleDate?: string;
+    scheduleDate?: number;
     /** 班次产量集 */
     classShifts?: IProductionDTOPerShift[];
 }
 /** 班次产量DTO */
 export interface IProductionDTOPerShift {
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 产量 */
     quantity?: number;
 }
 /** 生产订单手动排产明细步骤产量DTO */
 export interface IProductionOrderManualSchedulingDetailStepOutputDTO {
     /** 步骤id */
-    id?: number;
+    id?: string;
     /** 按日排产明细 */
     dayQuantities?: IManualSchedulingOfProductionOrdersDTOSchedulingDaily[];
     /** 按班次排产明细 */
@@ -78,7 +78,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EManualDTOSchedulingOfProductionOrders_dimension {

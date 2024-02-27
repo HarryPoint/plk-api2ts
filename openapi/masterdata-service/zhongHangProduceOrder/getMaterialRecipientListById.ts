@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/中航机器人生产订单相关/getMaterialRecipientListByIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder>(
         {
             url: "/masterdata-service/zhongHangProduceOrder/getMaterialRecipientListById",
@@ -22,28 +22,28 @@ export interface IJSONResultListResponseDtoForObtainingMaterialsForAProductionOr
     /** 响应结果 */
     data?: IProductionOrderMaterialRequisitionResponseDto[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单物料领用响应dto */
 export interface IProductionOrderMaterialRequisitionResponseDto {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 生产物料id */
-    masterMaterialId?: number;
+    masterMaterialId?: string;
     /** 生产物料名称 */
     masterMaterialName?: string;
     /** 生产物料编号 */
     masterMaterialCode?: string;
     /** 生产物料单位id */
-    masterMaterialUnitId?: number;
+    masterMaterialUnitId?: string;
     /** 生产物料单位名称 */
     masterMaterialUnitName?: string;
     /** 计划生产数量 */
     totalCount?: number;
     /** 子物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 子物料名称 */
     childMaterialName?: string;
     /** 子物料编号 */
@@ -51,7 +51,7 @@ export interface IProductionOrderMaterialRequisitionResponseDto {
     /** 规格型号 */
     childMaterialSpec?: string;
     /** 子物料单位id */
-    childMaterialUnitId?: number;
+    childMaterialUnitId?: string;
     /** 子物料单位名称 */
     childMaterialUnitName?: string;
     /** 当前库存 */
@@ -70,7 +70,7 @@ export interface IProductionOrderMaterialRequisitionResponseDto {
 /** 生产订单物料领用明细响应dto */
 export interface IProductionOrderMaterialRequisitionDetailsRespondToDto {
     /** 领用单id */
-    recipientOrderId?: number;
+    recipientOrderId?: string;
     /** 领用单编号 */
     recipientOrderCode?: string;
 }

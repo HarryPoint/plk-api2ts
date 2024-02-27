@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getConsignmentLossAnalyzeReportExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationConsignmentLossAnalysisReportPagina
     /** 响应结果 */
     data?: IExportInformationConsignmentLossAnalysisReportPagingBackToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«寄售损耗分析报表分页返回VO» */
 export interface IExportInformationConsignmentLossAnalysisReportPagingBackToVO {
@@ -38,11 +38,11 @@ export interface IConsignmentLossAnalysisReportPagingReturnsVO {
     /** 销售发货子表ids json */
     salesDeliveryIdsJson?: Record<string, any>[];
     /** 客户ids */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 销售发货子表ids */
-    salesDeliveryIds?: number[];
+    salesDeliveryIds?: string[];
     /** 客户 */
     customer?: string;
     /** 仓库 */

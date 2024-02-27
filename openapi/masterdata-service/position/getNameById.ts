@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/职位相关/getNameByIdUsingGET_3
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/masterdata-service/position/getNameById",
@@ -22,5 +22,5 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

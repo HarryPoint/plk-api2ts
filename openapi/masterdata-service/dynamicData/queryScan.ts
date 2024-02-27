@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryScanUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IAssociationFormScanQueryRe
 /** AssociationFormScanQueryRequestDTO */
 export interface IAssociationFormScanQueryRequestDTO {
     /** 应用ID */
-    appId?: number;
+    appId?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 编码列表 */
     codeList?: string[];
     /** 表单数据 */
@@ -33,12 +33,12 @@ export interface IJSONResultListAssociationFormScanQueryResponseDTO {
     /** 响应结果 */
     data?: IAssociationFormScanQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** AssociationFormScanQueryResponseDTO */
 export interface IAssociationFormScanQueryResponseDTO {
     /** 表单记录ID */
-    id?: number;
+    id?: string;
     /** 表单记录编码 */
     code?: string;
     /** 显示字段值 */

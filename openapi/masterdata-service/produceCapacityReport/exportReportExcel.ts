@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/exportReportExcelUsingPOST_1
@@ -20,7 +20,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** 分页大小 */
     pageSize?: number;
     /** 工序id列表 */
-    processIdList?: number[];
+    processIdList?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 日期 -- 开始时间 */
@@ -30,7 +30,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** 日期 -- 结束时间 */
     endTime: string;
     /** undefined */
-    produceTaskIds?: number[];
+    produceTaskIds?: string[];
     /** undefined */
     panPanProduceOrderCompleteType?: ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType;
     /** 是否按天数过滤 */
@@ -50,9 +50,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType {

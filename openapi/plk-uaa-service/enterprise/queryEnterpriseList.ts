@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/queryEnterpriseListUsingPOST
@@ -27,12 +27,12 @@ export interface IJSONResultListEnterpriseNameNumberResponseObject {
     /** 响应结果 */
     data?: IBusinessNameNumberResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 企业名称编号响应对象 */
 export interface IBusinessNameNumberResponseObject {
     /** 企业id */
-    id?: number;
+    id?: string;
     /** 企业名称 */
     name?: string;
     /** 企业编号 */

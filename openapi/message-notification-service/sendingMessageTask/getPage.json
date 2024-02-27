@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/消息队列分页查询请求",
-              "originalRef": "消息队列分页查询请求"
+              "originalRef": "消息队列分页查询请求",
+              "$ref": "#/definitions/消息队列分页查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«消息队列分页响应对象»»",
-              "originalRef": "JSONResult«分页信息«消息队列分页响应对象»»"
+              "originalRef": "JSONResult«分页信息«消息队列分页响应对象»»",
+              "$ref": "#/definitions/JSONResult«分页信息«消息队列分页响应对象»»"
             }
           },
           "201": {
@@ -134,8 +134,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«消息队列分页响应对象»",
-          "originalRef": "分页信息«消息队列分页响应对象»"
+          "originalRef": "分页信息«消息队列分页响应对象»",
+          "$ref": "#/definitions/分页信息«消息队列分页响应对象»"
         },
         "ts": {
           "type": "integer",
@@ -173,8 +173,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/消息队列分页响应对象",
-            "originalRef": "消息队列分页响应对象"
+            "originalRef": "消息队列分页响应对象",
+            "$ref": "#/definitions/消息队列分页响应对象"
           }
         },
         "lastPage": {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/queryProjectManagerAppListUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultProjectManageAppQueryResponseDTO {
     /** 响应结果 */
     data?: IProjectManageAppQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProjectManageAppQueryResponseDTO */
 export interface IProjectManageAppQueryResponseDTO {
@@ -34,7 +34,7 @@ export interface IProjectManageAppQueryResponseDTO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

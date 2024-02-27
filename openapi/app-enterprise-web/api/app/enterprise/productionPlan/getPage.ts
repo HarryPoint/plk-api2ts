@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/getPageUsingPOST_21
@@ -32,7 +32,7 @@ export interface ITaskDeliverySearchesVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
     planBeginTime?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
@@ -60,63 +60,63 @@ export interface IJSONResultThePageInformationTaskIsDeliveredBackToVO {
     /** 响应结果 */
     data?: IThePageInformationTaskIsDeliveredBackToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«任务下发返回VO» */
 export interface IThePageInformationTaskIsDeliveredBackToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheTaskIsDeliveredBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePageInformationTaskIsDeliveredBackToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePageInformationTaskIsDeliveredBackToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 任务下发返回VO */
 export interface ITheTaskIsDeliveredBackToVO {
     /** 数据状态 0停用，1启用，-1已删除 */
     dataStatus?: number;
     /** 创建员工id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建员工名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 更新员工id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新员工名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 排产计划类型 */
     type?: ETheTaskIsDeliveredBackToVO_type;
     /** 排产计划类型描述 */
     typeDesc?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -126,15 +126,15 @@ export interface ITheTaskIsDeliveredBackToVO {
     /** 计划生产数量 */
     planCount?: number;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 计划结束时间 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 下发人id */
-    issueUserId?: number;
+    issueUserId?: string;
     /** 下发人姓名 */
     issueUsername?: string;
     /** 下发时间 */
-    issueTime?: string;
+    issueTime?: number;
     /** 状态 */
     status?: ETheTaskIsDeliveredBackToVO_status;
     /** 状态描述 */

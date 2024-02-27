@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件对象相关/pageUsingPOST_1
@@ -26,17 +26,17 @@ export interface IFileObjectPagingQueryRequestDTO {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 创建用户ID列表 */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 导出字段集 */
     exportFields?: string[];
     /** 文件名 */
     name?: string;
     /** 文件分类ID列表 */
-    fileCategoryIdList?: number[];
+    fileCategoryIdList?: string[];
     /** 创建时间-开始 */
-    createTimeBegin?: string;
+    createTimeBegin?: number;
     /** 创建时间-开始 */
-    createTimeEnd?: string;
+    createTimeEnd?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -54,63 +54,63 @@ export interface IJSONResultPagingInformationFileObjectPagingQueryResponseDTO {
     /** 响应结果 */
     data?: IPageInformationFileObjectPageQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«文件对象分页查询响应DTO» */
 export interface IPageInformationFileObjectPageQueryResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IFileObjectPagingQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationFileObjectPageQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationFileObjectPageQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 文件对象分页查询响应DTO */
 export interface IFileObjectPagingQueryResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** ID */
-    id?: number;
+    id?: string;
     /** 文件名 */
     name?: string;
     /** 文件分类ID */
-    fileCategoryId?: number;
+    fileCategoryId?: string;
     /** 文件分类名称 */
     fileCategoryName?: string;
     /** 文件大小 */
-    fileSize?: number;
+    fileSize?: string;
     /** 文件来源 */
     fileForm?: string;
     /** 文件Key */

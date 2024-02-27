@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/运营管理端授权相关/getRouterAndPermissionUsingPOST
@@ -27,7 +27,7 @@ export interface IJSONResultOperationRoutePermissionResponseDTO {
     /** 响应结果 */
     data?: IOperationRoutePermissionRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 运营路由权限响应 DTO */
 export interface IOperationRoutePermissionRespondsToTheDTO {
@@ -39,13 +39,13 @@ export interface IOperationRoutePermissionRespondsToTheDTO {
 /** 路由响应 DTO */
 export interface ITheRouteRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 客户端组编码 */
     clientGroupCode?: string;
     /** 所属权限编码 */
     permissionCode?: string;
     /** 父级路由id */
-    parentId?: number;
+    parentId?: string;
     /** 父级路由编码 */
     parentCode?: string;
     /** 路由name */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/robotIssueDataCheckUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IAutomaticProductionSchedul
 /** 生产订单自动排产下发任务数据校验请求DTO */
 export interface IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO {
     /** 生产订单ids */
-    produceOrderIds: number[];
+    produceOrderIds: string[];
 }
 /** JSONResult«生产订单自动排产下发任务数据校验返回DTO» */
 export interface IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO {
@@ -27,7 +27,7 @@ export interface IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificati
     /** 响应结果 */
     data?: IAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单自动排产下发任务数据校验返回DTO */
 export interface IAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO {
@@ -41,7 +41,7 @@ export interface IAutomaticProductionOrderSchedulingTaskDataVerificationReturnDT
 /** 生产订单自动排产下发任务数据校验明细返回DTO */
 export interface IAutomaticProductionOrderSchedulingTaskDataVerificationDetailsAreReturnedToTheDTO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 物料名称 */

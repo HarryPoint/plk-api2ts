@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskDetailUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessTaskDetailsAreReturnedToVO>(
         {
             url: "/masterdata-service/flowPathTask/getFlowPathTaskDetail",
@@ -22,12 +22,12 @@ export interface IJSONResultProcessTaskDetailsAreReturnedToVO {
     /** 响应结果 */
     data?: IProcessTaskDetailsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程任务明细返回VO */
 export interface IProcessTaskDetailsAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务类型 */
     type?: EProcessTaskDetailsAreReturnedToVO_type;
     /** 自定义提交按钮文案 */
@@ -35,47 +35,47 @@ export interface IProcessTaskDetailsAreReturnedToVO {
     /** 任务号 */
     taskNo?: string;
     /** 所属流程工单id */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 所属流程工单号 */
     flowPathWorkOrderCode?: string;
     /** 流程工单发起人id */
-    workOrderCreateUserId?: number;
+    workOrderCreateUserId?: string;
     /** 工单发起部门id */
-    workOrderCreateCombinationId?: number;
+    workOrderCreateCombinationId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程名称(计划名称) */
     flowPathName?: string;
     /** 流程编号 */
     flowPathCode?: string;
     /** 所属流程节点id */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** 所属流程节点名称 */
     flowPathNodeName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 执行人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理时间 - 状态为已处理、已关闭时有值 */
-    handleTime?: string;
+    handleTime?: number;
     /** 状态 */
     status?: EProcessTaskDetailsAreReturnedToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 超时开始时间 */
-    timeoutBeginTime?: string;
+    timeoutBeginTime?: number;
     /** 任务接受状态 */
     acceptStatus?: EProcessTaskDetailsAreReturnedToVO_acceptStatus;
     /** 开始状态 */
     beginningStatus?: EProcessTaskDetailsAreReturnedToVO_beginningStatus;
     /** 开始时间 */
-    beginningTime?: string;
+    beginningTime?: number;
     /** 单据创建人名称 */
     workOrderCreateUsername?: string;
     /** 任务状态 */
@@ -131,19 +131,19 @@ export interface IWorkOrderDetailsReturnInformationVO {
 /** 流程工单预览信息返回VO */
 export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工单号 */
     workOrderCode?: string;
     /** 提交用户id */
-    createUserId?: number;
+    createUserId?: string;
     /** 提交人姓名 */
     createUsername?: string;
     /** 提交人部门id */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 提交人部门名称 */
     createDeptName?: string;
     /** 提交时间 */
-    createTime?: string;
+    createTime?: number;
     /** 状态 */
     status?: EProcessTicketPreviewInformationIsReturnedToVO_status;
     /** 状态描述 */
@@ -153,22 +153,22 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** 关闭类型描述 */
     closeTypeDesc?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 当前节点id */
-    currentFlowPathNodeId?: number;
+    currentFlowPathNodeId?: string;
     /** 业务数据id */
-    businessId?: number;
+    businessId?: string;
     /** 业务数据code */
     businessCode?: string;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

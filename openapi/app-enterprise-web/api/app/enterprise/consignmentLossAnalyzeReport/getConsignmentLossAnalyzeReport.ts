@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶寄售损耗报表相关/getConsignmentLossAnalyzeReportUsingPOST
@@ -20,25 +20,25 @@ export interface IConsignmentLossAnalysisReportSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 仓库id */
-    warehouseId?: number[];
+    warehouseId?: string[];
     /** 日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 客户id */
-    customerId?: number[];
+    customerId?: string[];
     /** 产品id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 产品名称 */
     productName?: string;
     /** 规格型号 */
     productSpec?: string;
     /** 业务员ID列表 */
-    businessUserIdList?: number[];
+    businessUserIdList?: string[];
     /** 物料类型 */
     materialTypes?: string[];
 }
@@ -58,7 +58,7 @@ export interface IJSONResultConsignmentLossAnalysisReportReturnedToVO {
     /** 响应结果 */
     data?: IConsignmentLossAnalysisReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 寄售损耗分析报表返回VO */
 export interface IConsignmentLossAnalysisReportReturnedToVO {
@@ -70,25 +70,25 @@ export interface IConsignmentLossAnalysisReportReturnedToVO {
 /** 分页信息«寄售损耗分析报表分页返回VO» */
 export interface IPageInformationConsignmentLossAnalysisReportPageReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IConsignmentLossAnalysisReportPagingReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationConsignmentLossAnalysisReportPageReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationConsignmentLossAnalysisReportPageReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 寄售损耗分析报表分页返回VO */
 export interface IConsignmentLossAnalysisReportPagingReturnsVO {
@@ -97,11 +97,11 @@ export interface IConsignmentLossAnalysisReportPagingReturnsVO {
     /** 销售发货子表ids json */
     salesDeliveryIdsJson?: Record<string, any>[];
     /** 客户ids */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 销售发货子表ids */
-    salesDeliveryIds?: number[];
+    salesDeliveryIds?: string[];
     /** 客户 */
     customer?: string;
     /** 仓库 */

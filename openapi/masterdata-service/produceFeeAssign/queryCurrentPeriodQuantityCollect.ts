@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodQuantityCollectUsingGET
@@ -22,24 +22,24 @@ export interface IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishe
     /** 响应结果 */
     data?: ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 完工及产成品归集分页响应对象 */
 export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
     stockInStatus?: ETheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects_stockInStatus;
     /** 计划开工日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 计划完工日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -47,7 +47,7 @@ export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObje
     /** 物料规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位名称 */
     materialUnitName?: string;
     /** 物料单位编号 */

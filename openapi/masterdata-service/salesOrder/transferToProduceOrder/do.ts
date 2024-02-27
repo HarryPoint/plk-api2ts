@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/doBatchTransferToProduceOrderUsingPOST
@@ -23,7 +23,7 @@ export interface IBatchTransferToProductionOrder {
 /** 销售订单转生产订单子物料生产信息DTO */
 export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO {
     /** 详情id */
-    id?: number;
+    id?: string;
     /** 生产交付数量 */
     produceTotalCount?: number;
     /** 订单类型 */
@@ -41,9 +41,9 @@ export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO
     /** 子物料生产信息 */
     childMaterialProduces?: ISubProductionOrderConfigurationRequest[];
     /** 不需要生产物料的-标准工艺节点ID列表 */
-    notNeedProduceMaterialStandardTechnologyNodeIdList?: number[];
+    notNeedProduceMaterialStandardTechnologyNodeIdList?: string[];
     /** 下单业务部门id */
-    placeOrderDepartmentId?: number;
+    placeOrderDepartmentId?: string;
     /** 下单业务部门编码 */
     placeOrderDepartmentCode?: string;
     /** 下单业务部门名称 */
@@ -53,14 +53,14 @@ export interface ISalesOrderToProductionOrderSubmaterialProductionInformationDTO
     /** 交付日期 yyyy-MM-dd HH:mm:ss */
     deliveryDate?: string;
     /** 标准工艺ID */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 产线 */
-    productionLineId?: number;
+    productionLineId?: string;
 }
 /** 批次编辑DTO */
 export interface IBatchEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 批次号 */
     lotNo?: string;
     /** 批次名称 */
@@ -71,7 +71,7 @@ export interface IBatchEditDTO {
 /** 子生产订单配置请求 */
 export interface ISubProductionOrderConfigurationRequest {
     /** 标准工艺路径，节点ID */
-    standardTechnologyNodeId?: number;
+    standardTechnologyNodeId?: string;
     /** 订单优先级，数值越大优先级越高 */
     priorityLevel: number;
     /** 总生产数量 */
@@ -81,7 +81,7 @@ export interface ISubProductionOrderConfigurationRequest {
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 产线 */
-    productionLineId?: number;
+    productionLineId?: string;
     /** 批次信息列表 */
     lotOrders: IBatchEditDTO[];
 }
@@ -94,14 +94,14 @@ export interface IJSONResultSalesOrderToProductionOrderReturnedToDTO {
     /** 响应结果 */
     data?: ISalesOrderToProductionOrderReturnedToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售订单转生产订单返回DTO */
 export interface ISalesOrderToProductionOrderReturnedToDTO {
     /** 匹配任务id */
-    matchTaskId?: number;
+    matchTaskId?: string;
     /** 生产订单ids */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
 }
 
 export enum EBatchTransferToProductionOrder_isExtendSalesOrderCode {

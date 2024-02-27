@@ -98,14 +98,6 @@
             "originalRef": "项目任务变更单响应参数",
             "$ref": "#/definitions/项目任务变更单响应参数"
           }
-        },
-        "projectPlanList": {
-          "type": "array",
-          "description": "项目计划变更信息响应列表",
-          "items": {
-            "originalRef": "项目变更单字段响应参数",
-            "$ref": "#/definitions/项目变更单字段响应参数"
-          }
         }
       },
       "title": "项目计划变更响应对象"

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getPageUsingPOST_18
 */
-export default function fetchMethod(options: { data: IProductionTaskSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/produceTask/getPage",
@@ -22,7 +22,7 @@ export interface IProductionTaskSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 对应工序id */
-    processIds?: number[];
+    processIds?: string[];
     /** 任务号 */
     taskNo?: string;
     /** 生产订单号 */
@@ -30,7 +30,7 @@ export interface IProductionTaskSearchVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 任务类型描述 */
     typeDesc?: string;
     /** 任务下发方式 */
@@ -93,30 +93,30 @@ export interface IJSONResultPagingInformationJSONObject {
     /** 响应结果 */
     data?: IPagingInformationJSONObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«JSONObject» */
 export interface IPagingInformationJSONObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IJSONObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationJSONObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationJSONObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** JSONObject */
 export interface IJSONObject {

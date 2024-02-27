@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryDepartmentUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBasicQualityAuditQueryRequ
 /** 基础质量审核查询请求 */
 export interface IBasicQualityAuditQueryRequest {
     /** 日期范围-起始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 日期范围-结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«不符合项统计-部门» */
 export interface IJSONResultStatisticalDepartmentOfInconsistencies {
@@ -29,7 +29,7 @@ export interface IJSONResultStatisticalDepartmentOfInconsistencies {
     /** 响应结果 */
     data?: INonConformanceStatisticsDepartment;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 不符合项统计-部门 */
 export interface INonConformanceStatisticsDepartment {
@@ -48,7 +48,7 @@ export interface IAuditTypeHeading {
 /** 生产部门统计项目 */
 export interface IProductionDepartmentStatisticsProject {
     /** 部门ID */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 不符合项数量 */
@@ -60,9 +60,9 @@ export interface IProductionDepartmentStatisticsProject {
     /** 整改率 */
     rectificationRate?: number;
     /** 不符合项分布 - 内部审核不符合项数量 */
-    internalAuditNonConformanceQuantity?: number;
+    internalAuditNonConformanceQuantity?: string;
     /** 不符合项分布 - 外部审核不符合项数量 */
-    externalAuditNonConformanceQuantity?: number;
+    externalAuditNonConformanceQuantity?: string;
     /** 不符合项分布 - 专项审核不符合项数量 */
-    specialAuditNonConformanceQuantity?: number;
+    specialAuditNonConformanceQuantity?: string;
 }

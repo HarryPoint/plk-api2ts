@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/上报反馈服务相关/addReportUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IReportTheFeedbackProcessin
 /** 上报反馈处理DTO */
 export interface IReportTheFeedbackProcessingDTO {
     /** 生产任务id，任务外的上报反馈可不传 */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 生产异常类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 标签id集合 */
-    tagIds?: number[];
+    tagIds?: string[];
     /** 图片key集合 */
     imageKeys?: string[];
     /** 描述 */
@@ -35,5 +35,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

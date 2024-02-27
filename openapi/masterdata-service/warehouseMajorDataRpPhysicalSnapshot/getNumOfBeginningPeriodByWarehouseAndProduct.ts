@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位物料库存关联实体仓快照相关/getNumOfBeginningPeriodByWarehouseAndProductUsingPOST
 */
-export default function fetchMethod(options: { params: { date?: string; enterpriseId?: number; materialId?: number; warehouseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { date?: number; enterpriseId?: string; materialId?: string; warehouseId?: string } }, extraOptions?: any) {
     return http<IJSONResultWarehouseMaterialInventoryAssociatedVO>(
         {
             url: "/masterdata-service/warehouseMajorDataRpPhysicalSnapshot/getNumOfBeginningPeriodByWarehouseAndProduct",
@@ -22,22 +22,22 @@ export interface IJSONResultWarehouseMaterialInventoryAssociatedVO {
     /** 响应结果 */
     data?: IPositionMaterialInventoryAssociatedWithVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓位物料库存关联VO */
 export interface IPositionMaterialInventoryAssociatedWithVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 快照日期 */
-    snapshotDate?: string;
+    snapshotDate?: number;
     /** 所属物料主数据id */
-    materialId?: number;
+    materialId?: string;
     /** 所属仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 所属仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位类型 */
     warehouseType?: EPositionMaterialInventoryAssociatedWithVO_warehouseType;
     /** 库存总数 */

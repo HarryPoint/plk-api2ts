@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/claimCustomerUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ICustomerClaimInputVO }, ex
 /** CustomerClaimInputVO */
 export interface ICustomerClaimInputVO {
     /** 客户ID列表 */
-    customerIdList?: number[];
+    customerIdList?: string[];
     /** 用户ID */
-    userId?: number;
+    userId?: string;
 }
 /** JSONResult«boolean» */
 export interface IJSONResultboolean {
@@ -29,5 +29,5 @@ export interface IJSONResultboolean {
     /** 响应结果 */
     data?: boolean;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

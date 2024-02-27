@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getBeforeRoutingStepsUsingGET
 */
-export default function fetchMethod(options: { params: { id?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessPathStepsSelectVO>(
         {
             url: "/masterdata-service/produceHandle/getBeforeRoutingSteps",
@@ -22,16 +22,16 @@ export interface IJSONResultListProcessPathStepsSelectVO {
     /** 响应结果 */
     data?: IProcessPathStepSelectVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺路径步骤选择VO */
 export interface IProcessPathStepSelectVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 对应步骤 */
     routingStep?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */

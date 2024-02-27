@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationReferenceRecordListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IFormReferencingQueryReques
 /** FormReferencingQueryRequestDTO */
 export interface IFormReferencingQueryRequestDTO {
     /** undefined */
-    flowPathId: number;
+    flowPathId: string;
     /** undefined */
-    formRecordIdList?: number[];
+    formRecordIdList?: string[];
 }
 /** JSONResult«List«FormReferencingQueryResponseDTO»» */
 export interface IJSONResultListFormReferencingQueryResponseDTO {
@@ -29,7 +29,7 @@ export interface IJSONResultListFormReferencingQueryResponseDTO {
     /** 响应结果 */
     data?: IFormReferencingQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FormReferencingQueryResponseDTO */
 export interface IFormReferencingQueryResponseDTO {
@@ -38,15 +38,15 @@ export interface IFormReferencingQueryResponseDTO {
     /** 表单应用的APP编码 */
     associationRefAppCode?: string;
     /** 表单应用的APP的ID */
-    associationRefAppId?: number;
+    associationRefAppId?: string;
     /** 关联引用的表单记录编码 */
     associationRefFormRecordCode?: string;
     /** 关联引用的表单记录ID */
-    associationRefFormRecordId?: number;
+    associationRefFormRecordId?: string;
     /** 关联引用的表单的单据日期 */
-    associationRefFormBillData?: string;
+    associationRefFormBillData?: number;
     /** 当前表单ID */
-    currentFormRecordId?: number;
+    currentFormRecordId?: string;
     /** 当前表单编码 */
     currentFormRecordCode?: string;
     /** 单据类型 */

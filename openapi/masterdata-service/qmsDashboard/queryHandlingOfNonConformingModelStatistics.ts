@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingModelStatisticsUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultListLargeScreenDefectiveProductStatisticsReturnByIte
     /** 响应结果 */
     data?: ILargeScreenNonconformingProductStatisticsAreReturnedByItem[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 大屏不合格品统计按项目返回 */
 export interface ILargeScreenNonconformingProductStatisticsAreReturnedByItem {

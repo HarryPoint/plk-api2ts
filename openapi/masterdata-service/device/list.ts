@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备相关/listUsingGET_1
@@ -22,12 +22,12 @@ export interface IJSONResultListDeviceDTO {
     /** 响应结果 */
     data?: IDeviceDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备DTO */
 export interface IDeviceDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设备名称 */
     name?: string;
     /** 设备编号 */
@@ -35,9 +35,9 @@ export interface IDeviceDTO {
     /** 设备厂商 */
     firm?: string;
     /** 入厂日期 */
-    enteringDate?: string;
+    enteringDate?: number;
     /** 出厂日期 */
-    leaveDate?: string;
+    leaveDate?: number;
     /** 设备出厂编号 */
     leaveCode?: string;
     /** 备注 */

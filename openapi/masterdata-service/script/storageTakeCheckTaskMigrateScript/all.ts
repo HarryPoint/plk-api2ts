@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/盘点单数据迁移服务/allUsingGET_1
 */
-export default function fetchMethod(options: { params: { enterpriseIds?: number[] } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseIds?: string[] } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/script/storageTakeCheckTaskMigrateScript/all",
@@ -22,5 +22,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

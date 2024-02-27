@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/validUsingPOST
@@ -20,7 +20,7 @@ export interface IStandardProcessEnablesDeactivationOfRequestObjects {
     /** 是否 启用/停用 全部, Y 全部 */
     validAll?: EStandardProcessEnablesDeactivationOfRequestObjects_validAll;
     /** 标准工艺ids */
-    standardTechnologyIds?: number[];
+    standardTechnologyIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -31,7 +31,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EStandardProcessEnablesDeactivationOfRequestObjects_valid {

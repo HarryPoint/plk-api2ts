@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点负责人相关/getLeaderUserVoByFlowPathNodeIdUsingPOST
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathNodeId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathNodeId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessNodeExecutorVO>(
         {
             url: "/flow-service/flowPathNodeLeaderUser/getLeaderUserVoByFlowPathNodeId",
@@ -22,16 +22,16 @@ export interface IJSONResultListProcessNodeExecutorVO {
     /** 响应结果 */
     data?: IProcessNodeExecutorVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
@@ -39,9 +39,9 @@ export interface IProcessNodeExecutorVO {
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 节点ID */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
 }
 
 export enum EProcessNodeExecutorVO_executorType {

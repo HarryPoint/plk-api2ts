@@ -28,8 +28,8 @@
             "description": "reEmailSendingEmailRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ReEmailSendingEmailRequestDTO",
-              "originalRef": "ReEmailSendingEmailRequestDTO"
+              "originalRef": "ReEmailSendingEmailRequestDTO",
+              "$ref": "#/definitions/ReEmailSendingEmailRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {

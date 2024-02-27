@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务模板用户相关/addUserProjectTaskTemplateUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProjectTaskTemplateUserAdd
 /** 项目任务模板用户添加请求DTO */
 export interface IProjectTaskTemplateUserAddsRequestDTO {
     /** 项目id */
-    projectId: number;
+    projectId: string;
     /** 项目任务模板id */
-    projectTaskTemplateId: number;
+    projectTaskTemplateId: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

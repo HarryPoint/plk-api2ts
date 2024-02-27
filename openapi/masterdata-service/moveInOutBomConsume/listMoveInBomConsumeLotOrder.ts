@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeLotOrderUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIncomingBomConsumptionBatc
 /** 进料bom消耗批次订单查询DTO */
 export interface IIncomingBomConsumptionBatchOrderQueryDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 批次号、物料编号 */
     code?: string;
 }
@@ -29,18 +29,18 @@ export interface IJSONResultListIncomingBomConsumedBatchResponseDTO {
     /** 响应结果 */
     data?: IIncomingBomConsumesBatchResponseDTO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进料bom消耗批次响应DTO_1 */
 export interface IIncomingBomConsumesBatchResponseDTO1 {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次编号 */
     lotOrderCode?: string;
 }

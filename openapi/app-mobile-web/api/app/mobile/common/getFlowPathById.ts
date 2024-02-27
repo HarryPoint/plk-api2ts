@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/getFlowPathByIdAndCheckUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessRespondsToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/common/getFlowPathById",
@@ -22,14 +22,14 @@ export interface IJSONResultProcessRespondsToVO {
     /** 响应结果 */
     data?: IProcessResponseVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程响应VO */
 export interface IProcessResponseVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 编号 */
     code?: string;
     /** 应用类型 */
@@ -59,7 +59,7 @@ export interface IProcessResponseVO {
     /** 数据状态 0停用，1启用，2暂存，-1已删除 */
     dataStatus?: number;
     /** 应用服务包ID */
-    appServicePackId?: number;
+    appServicePackId?: string;
     /** 应用级别 */
     applicationLevel?: EProcessResponseVO_applicationLevel;
 }
@@ -271,6 +271,10 @@ export enum EProcessResponseVO_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */
@@ -418,7 +422,11 @@ export enum EProcessResponseVO_flowPathSystemType {
     /** 巡检任务 */
     QMS_PATROL_INSPECTION_TASK = "QMS_PATROL_INSPECTION_TASK",
     /** 巡检报告 */
-    QMS_PATROL_INSPECTION_REPORT = "QMS_PATROL_INSPECTION_REPORT"
+    QMS_PATROL_INSPECTION_REPORT = "QMS_PATROL_INSPECTION_REPORT",
+    /** 文件分类 */
+    FILE_CATEGORY = "FILE_CATEGORY",
+    /** 文件对象 */
+    FILE_OBJECT = "FILE_OBJECT"
 }
 
 export enum EProcessResponseVO_flowPathResultNotify {

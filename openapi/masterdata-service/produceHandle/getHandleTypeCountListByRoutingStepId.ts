@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getHandleTypeCountListByRoutingStepIdUsingGET
 */
-export default function fetchMethod(options: { params: { beginTime?: string; routingStepIds?: string; endTime?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: string; routingStepIds?: string; endTime?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionProcessingStatisticsVO>(
         {
             url: "/masterdata-service/produceHandle/getHandleTypeCountListByRoutingStepId",
@@ -22,7 +22,7 @@ export interface IJSONResultProductionProcessingStatisticsVO {
     /** 响应结果 */
     data?: IProductionProcessingStatisticsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产处理统计VO */
 export interface IProductionProcessingStatisticsVO {

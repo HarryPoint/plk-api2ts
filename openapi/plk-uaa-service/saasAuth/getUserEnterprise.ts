@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserEnterpriseUsingPOST
@@ -22,14 +22,14 @@ export interface IJSONResultListSaasEnterpriseResponseDTO {
     /** 响应结果 */
     data?: ISaasEnterprisesRespondToDTO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Saas企业响应 DTO_1 */
 export interface ISaasEnterprisesRespondToDTO1 {
     /** 企业id */
-    id?: number;
+    id?: string;
     /** 企业到期时间 */
-    expireTime?: string;
+    expireTime?: number;
     /** 企业名称 */
     name?: string;
     /** 企业编号 */

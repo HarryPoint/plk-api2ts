@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getCloseInfoByIdUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultProductionOrderClosureInformationIsReturnedToVO {
     /** 响应结果 */
     data?: IProductionOrderClosureInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单关闭信息返回VO */
 export interface IProductionOrderClosureInformationIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 总生产数量(计划生产数量) */

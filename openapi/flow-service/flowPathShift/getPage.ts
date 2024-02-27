@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/getPageUsingPOST_1
 */
-export default function fetchMethod(options: { data: ITaskShiftSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITaskShiftSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationFlowShiftReturnsVO>(
         {
             url: "/flow-service/flowPathShift/getPage",
@@ -44,53 +44,53 @@ export interface IJSONResultPagingInformationFlowShiftReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationFlowShiftReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«流程班次返回VO» */
 export interface IPagingInformationFlowShiftReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcessShiftBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationFlowShiftReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationFlowShiftReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 流程班次返回VO */
 export interface IProcessShiftBackToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次名称 */
     name?: string;
     /** 班次编号 */
     code?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 班次结束时间类型 */
     endTimeType?: EProcessShiftBackToVO_endTimeType;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 状态 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 方案名称 */
     planName?: string;
     /** 班次配置的人员信息 */
@@ -99,11 +99,11 @@ export interface IProcessShiftBackToVO {
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
@@ -111,9 +111,9 @@ export interface IProcessNodeExecutorVO {
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 节点ID */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
 }
 
 export enum EPagingSortVO_isAsc {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryRecentProjectMemorabiliaUsingPOST
@@ -20,7 +20,7 @@ export interface IProjectEventsLargeScreenQueryDto {
     /** 查询条数 */
     limit?: number;
     /** undefined */
-    projectIds?: number[];
+    projectIds?: string[];
 }
 /** JSONResult«List«项目大事记响应对象»» */
 export interface IJSONResultListProjectEventResponseObject {
@@ -31,20 +31,20 @@ export interface IJSONResultListProjectEventResponseObject {
     /** 响应结果 */
     data?: IProjectEventResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目大事记响应对象 */
 export interface IProjectEventResponseObject {
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 大事记内容 */
     content?: string;
     /** 项目大事记id */
-    projectMemorabiliaId?: number;
+    projectMemorabiliaId?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产处理暂扣相关/addUsingPOST_1
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: ITheProductionProcessingWit
 /** 生产处理暂扣添加请求对象 */
 export interface ITheProductionProcessingWithholdAddsTheRequestObject {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 返工类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 对应批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 暂扣数量 */
     abnormalQuantity?: number;
     /** 标签id集合 */
-    tagIds?: number[];
+    tagIds?: string[];
     /** 图片key集合 */
     imageKeys?: string[];
     /** 描述 */
@@ -39,5 +39,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

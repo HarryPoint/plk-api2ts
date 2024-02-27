@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/已排产订单相关/getPlanedProduceOrderUsingPOST
@@ -69,7 +69,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 /** JSONResult«分页信息«动态拓展数据VO«已排产生产订单返回VO»»» */
 export interface IJSONResultPageInformationDynamicExpansionDataVOScheduledProductionOrdersReturnedToVO {
@@ -80,30 +80,30 @@ export interface IJSONResultPageInformationDynamicExpansionDataVOScheduledProduc
     /** 响应结果 */
     data?: IPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«动态拓展数据VO«已排产生产订单返回VO»» */
 export interface IPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDynamicExpansionDataVOScheduledProductionOrderReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDynamicExpansionDataVOScheduledProductionOrdersAreReturnedToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 动态拓展数据VO«已排产生产订单返回VO» */
 export interface IDynamicExpansionDataVOScheduledProductionOrderReturnedToVO {
@@ -115,7 +115,7 @@ export interface IDynamicExpansionDataVOScheduledProductionOrderReturnedToVO {
 /** 已排产生产订单返回VO */
 export interface ITheScheduledProductionOrderIsReturnedToVO {
     /** 生产计划id */
-    producePlanId?: number;
+    producePlanId?: string;
     /** 生产计划名称 */
     producePlanName?: string;
     /** 排产类型 */
@@ -132,9 +132,9 @@ export interface ITheScheduledProductionOrderIsReturnedToVO {
 /** 已排产订单步骤返回VO */
 export interface IScheduledProductionOrderStepReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -142,9 +142,9 @@ export interface IScheduledProductionOrderStepReturnToVO {
     /** 产能 */
     capacity?: IProduceTechnologyCapacityResponseDTO;
     /** 工序计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 工序计划结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 按日排产明细 */
     dayQuantities?: IProductionOrderManualSchedulingVODailyScheduling[];
     /** 按班次排产明细 */
@@ -153,27 +153,27 @@ export interface IScheduledProductionOrderStepReturnToVO {
 /** ProduceTechnologyCapacityResponseDTO */
 export interface IProduceTechnologyCapacityResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 产能编号 */
     code?: string;
     /** 产能名称 */
@@ -192,21 +192,21 @@ export interface IProduceTechnologyCapacityResponseDTO {
 /** 生产订单手动排产按日排产VO */
 export interface IProductionOrderManualSchedulingVODailyScheduling {
     /** 日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 产量 */
     quantity?: number;
 }
 /** 生产订单手动排产按班次排产VO */
 export interface IManualProductionSchedulingOfProductionOrdersVOByShift {
     /** 日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 班次产量集 */
     classShifts?: IProductionPerShiftVO[];
 }
 /** 班次产量VO */
 export interface IProductionPerShiftVO {
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 产量 */
     quantity?: number;
 }

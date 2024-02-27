@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getProductionDataReportExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationOutputDataStatisticsReturnVO {
     /** 响应结果 */
     data?: IExportInformationOutputDataStatisticsReturnVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«产出数据统计返回VO» */
 export interface IExportInformationOutputDataStatisticsReturnVO {
@@ -34,7 +34,7 @@ export interface IExportInformationOutputDataStatisticsReturnVO {
 /** 产出数据统计返回VO */
 export interface IOutputDataStatisticsAreReturnedToVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -47,7 +47,7 @@ export interface IOutputDataStatisticsAreReturnedToVO {
 /** 工序产出统计报表返回VO */
 export interface ITheProcessOutputStatisticsReportIsReturnedToVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

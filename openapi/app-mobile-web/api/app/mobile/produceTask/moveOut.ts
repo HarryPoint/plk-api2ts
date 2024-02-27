@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/moveOutUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IInboundAndOutboundInformat
 /** 进出站信息DTO */
 export interface IInboundAndOutboundInformationDTO {
     /** 进出站记录id - 如果是从进出站记录里面点进来的，则必传 */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 成品物料填写信息列表 */
     finishedMaterialInputList: IFinishedMaterialFillRequestDTO[];
     /** BOM消耗列表 */
@@ -31,20 +31,20 @@ export interface IInboundAndOutboundInformationDTO {
 /** 成品物料填写请求DTO */
 export interface IFinishedMaterialFillRequestDTO {
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 实际数(质检数) */
     actualQuantity?: number;
     /** 再次申请质检数 */
     applyQualityAgainQuantity?: number;
     /** 操作时间 */
-    optTime?: string;
+    optTime?: number;
 }
 /** BOM消耗请求DTO */
 export interface IBOMConsumptionRequestDTO {
     /** 生产工艺路径步骤bom明细关联id */
-    id: number;
+    id: string;
     /** 对应物料id */
-    materialId: number;
+    materialId: string;
     /** 实际数 */
     actualQuantity: number;
     /** 进料批次列表 */
@@ -55,25 +55,25 @@ export interface IBOMConsumptionRequestDTO {
 /** bom消耗批次订单请求对象 */
 export interface IBomConsumesTheBatchOrderRequestObject {
     /** 批次订单id */
-    id: number;
+    id: string;
     /** undefined */
     lotNo?: string;
     /** 实际数 */
     actualQuantity: number;
     /** 序列号ids */
-    serialNoIds?: number[];
+    serialNoIds?: string[];
 }
 /** 进出站工艺卡填写 */
 export interface IEntryAndExitProcessCardFilling {
     /** 关键参数id */
-    id?: number;
+    id?: string;
     /** 录入集合 - 带录入信息 */
     keyParameterDetailList?: IDetailsOnKeyParameters[];
 }
 /** 关键参数明细填写信息 */
 export interface IDetailsOnKeyParameters {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 录入值 - 明细录入类型不是图片时，有值 */
     inputValue?: string;
     /** 图片上传key集合 - 明细录入类型是图片时，有值 */
@@ -88,7 +88,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EInboundAndOutboundInformationDTO_handleOtherAsync {

@@ -24,12 +24,12 @@
         "parameters": [
           {
             "in": "body",
-            "name": "projectStageQuery",
-            "description": "projectStageQuery",
+            "name": "nameOrCodeQuery",
+            "description": "nameOrCodeQuery",
             "required": true,
             "schema": {
-              "originalRef": "项目阶段编号查询对象",
-              "$ref": "#/definitions/项目阶段编号查询对象"
+              "originalRef": "项目名称编号公共查询对象_1",
+              "$ref": "#/definitions/项目名称编号公共查询对象_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目阶段响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目阶段响应对象»»"
+              "originalRef": "JSONResult«List«Id Code Name 通用传输对象»»",
+              "$ref": "#/definitions/JSONResult«List«Id Code Name 通用传输对象»»"
             }
           },
           "201": {
@@ -61,7 +61,7 @@
     }
   },
   "definitions": {
-    "项目阶段编号查询对象": {
+    "项目名称编号公共查询对象_1": {
       "type": "object",
       "properties": {
         "projectId": {
@@ -69,30 +69,26 @@
           "format": "int64",
           "description": "项目id"
         },
+        "projectPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目计划id"
+        },
         "nameOrCode": {
           "type": "string",
           "description": "名称or编号"
         },
-        "isProjectPlanShow": {
+        "projectPlanFlowIsComplete": {
           "type": "string",
-          "description": "是否查询只在项目计划模块展示的阶段",
           "enum": [
-            "  Y-是",
-            "  N-否"
-          ]
-        },
-        "isProjectTaskShow": {
-          "type": "string",
-          "description": "是否查询只在项目任务模块展示的阶段",
-          "enum": [
-            "  Y-是",
-            "  N-否"
+            "Y",
+            "N"
           ]
         }
       },
-      "title": "项目阶段编号查询对象"
+      "title": "项目名称编号公共查询对象_1"
     },
-    "JSONResult«List«项目阶段响应对象»»": {
+    "JSONResult«List«Id Code Name 通用传输对象»»": {
       "type": "object",
       "properties": {
         "code": {
@@ -110,8 +106,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目阶段响应对象",
-            "$ref": "#/definitions/项目阶段响应对象"
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
           }
         },
         "ts": {
@@ -121,30 +117,26 @@
           "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
         }
       },
-      "title": "JSONResult«List«项目阶段响应对象»»"
+      "title": "JSONResult«List«Id Code Name 通用传输对象»»"
     },
-    "项目阶段响应对象": {
+    "Id Code Name 通用传输对象": {
       "type": "object",
       "properties": {
         "id": {
           "type": "integer",
           "format": "int64",
-          "description": "项目阶段id"
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "code"
         },
         "name": {
           "type": "string",
-          "description": "名称"
-        },
-        "projectPlanIds": {
-          "type": "array",
-          "description": "项目计划ids",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
+          "description": "name"
         }
       },
-      "title": "项目阶段响应对象"
+      "title": "Id Code Name 通用传输对象"
     }
   }
 }

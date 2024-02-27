@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/排产全局参数配置相关/getSettingUsingPOST
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSchedulingParameterVO>(
         {
             url: "/masterdata-service/planGlobalConfig/getSetting",
@@ -22,7 +22,7 @@ export interface IJSONResultSchedulingParameterVO {
     /** 响应结果 */
     data?: ISchedulingParametersVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 排产参数VO */
 export interface ISchedulingParametersVO {

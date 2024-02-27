@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表模板/disableBatchUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IReportTemplateDisableReque
 /** ReportTemplateDisableRequestDTO */
 export interface IReportTemplateDisableRequestDTO {
     /** ID列表 */
-    idList?: number[];
+    idList?: string[];
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
@@ -27,7 +27,7 @@ export interface IJSONResultstring1 {
     /** 响应结果 */
     data?: EJSONResultstring1_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring1_data {

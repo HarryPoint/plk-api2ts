@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getReportUsingPOST_4
@@ -22,13 +22,13 @@ export interface IBaojingSalesDeliveryReportSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 产品名称 */
     majorDataName?: string;
     /** 产品id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 运单号 */
     trackNo?: string;
     /** 销售订单编号 */
@@ -36,17 +36,17 @@ export interface IBaojingSalesDeliveryReportSearchVO {
     /** 单据号 */
     workOrderNo?: string;
     /** 发货日期-开始 yyyy-MM-dd HH:mm:ss */
-    deliverDateBegin?: string;
+    deliverDateBegin?: number;
     /** 单据类型 */
     orderType?: string;
     /** 发货日期-结束 yyyy-MM-dd HH:mm:ss */
-    deliverDateEnd?: string;
+    deliverDateEnd?: number;
     /** 需求日期-开始 yyyy-MM-dd HH:mm:ss */
-    demandDateBegin?: string;
+    demandDateBegin?: number;
     /** 需求日期-结束 yyyy-MM-dd HH:mm:ss */
-    demandDateEnd?: string;
+    demandDateEnd?: number;
     /** 业务员ID列表 */
-    businessUserIdList?: number[];
+    businessUserIdList?: string[];
     /** 物料类型 */
     materialTypes?: string[];
 }
@@ -66,7 +66,7 @@ export interface IJSONResultBaojingSalesDeliveryReportReturnedToVO {
     /** 响应结果 */
     data?: IBaojingSalesDeliveryReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶销售发货报表返回VO */
 export interface IBaojingSalesDeliveryReportReturnedToVO {
@@ -86,46 +86,46 @@ export interface IBaojingSalesDeliveryReportReturnedToVO {
 /** 分页信息«宝晶销售发货报表表格返回VO» */
 export interface IPaginationInformationBaojingSalesDeliveryReportFormReturnsToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBaojingSalesDeliveryReportFormReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPaginationInformationBaojingSalesDeliveryReportFormReturnsToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPaginationInformationBaojingSalesDeliveryReportFormReturnsToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 宝晶销售发货报表表格返回VO */
 export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 发货日期 */
-    deliverDate?: string;
+    deliverDate?: number;
     /** 单据编号 */
     workOrderNo?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单编号 */
     salesOrderNo?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 产品id */
-    majorDataId?: number;
+    majorDataId?: string;
     /** 产品名称 */
     majorDataName?: string;
     /** 产品编号 */
@@ -145,7 +145,7 @@ export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 单据类型 */
     orderType?: string;
     /** 需求日期 */
-    demandDate?: string;
+    demandDate?: number;
     /** 需求数量 */
     demandQuantity?: number;
     /** 实际送达数量 */
@@ -155,14 +155,14 @@ export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 备注 */
     remark?: string;
     /** 数据id */
-    detailDataId?: number;
+    detailDataId?: string;
     /** 包材数据列表 */
     packagingMaterialValueList?: IIdValueVO[];
 }
 /** Id，值VO */
 export interface IIdValueVO {
     /** id */
-    id: number;
+    id: string;
     /** 值 */
     value: number;
 }
@@ -178,7 +178,7 @@ export interface IBaojingSalesDeliveryReportChartReturnedToVO {
 /** 宝晶销售发货报表图表时间返回VO */
 export interface IBaojingSalesDeliveryReportChartTimeReturnVO {
     /** 时间 */
-    time?: string;
+    time?: number;
     /** 数量 */
     quantity?: number;
     /** 比例 */

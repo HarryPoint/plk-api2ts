@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务排班相关/getCalendarUsingPOST
 */
-export default function fetchMethod(options: { data: IFactoryCalendarSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFactoryCalendarSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTaskSchedulingReturnsVO>(
         {
             url: "/flow-service/flowPathTaskCalendar/getCalendar",
@@ -31,25 +31,25 @@ export interface IJSONResultListTaskSchedulingReturnsVO {
     /** 响应结果 */
     data?: ITaskSchedulingReturnsToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 任务排班返回VO */
 export interface ITaskSchedulingReturnsToVO {
     /** 任务排班id */
-    id?: number;
+    id?: string;
     /** 日程安排日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 对应班次集 */
     shifts?: IProcessTaskShiftUserInformationIsReturnedToVO[];
 }
 /** 流程任务班次用户信息返回VO */
 export interface IProcessTaskShiftUserInformationIsReturnedToVO {
     /** 任务排班与任务班次关联id */
-    id?: number;
+    id?: string;
     /** 对应的员工信息集 */
     userInfos?: IIdNameNumberVO[];
     /** 班次id */
-    flowPathShiftId?: number;
+    flowPathShiftId?: string;
     /** 班次名称 */
     flowPathShiftName?: string;
     /** 班次开始时间 */
@@ -64,7 +64,7 @@ export interface IProcessTaskShiftUserInformationIsReturnedToVO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

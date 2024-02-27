@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/splitUsingPOST_1
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IBatchOrderSplitDTO }, extr
 /** 批次订单拆分DTO */
 export interface IBatchOrderSplitDTO {
     /** wipRpId */
-    wipRpId?: number;
+    wipRpId?: string;
     /** 原批次数量 */
     sourceCount?: number;
     /** 拆分批次信息 */
@@ -40,5 +40,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFromDataGroupingUsingGET
 */
-export default function fetchMethod(options: { params: { flowPathId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFormDataGroupingDTO>(
         {
             url: "/masterdata-service/dynamicData/getFormDataGrouping",
@@ -22,7 +22,7 @@ export interface IJSONResultListFormDataGroupingDTO {
     /** 响应结果 */
     data?: IFormDataGroupingDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 表单数据分组DTO */
 export interface IFormDataGroupingDTO {
@@ -39,7 +39,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 
 export enum EFormDataGroupingDTO_cascadeFormData {

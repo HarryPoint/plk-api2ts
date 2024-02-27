@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getBaseByIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultBasicFlowInformationResponseDTO>(
         {
             url: "/flow-service/flowPath/getBaseById",
@@ -22,12 +22,12 @@ export interface IJSONResultBasicFlowInformationResponseDTO {
     /** 响应结果 */
     data?: IProcessBasicInformationRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程基本信息响应DTO */
 export interface IProcessBasicInformationRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 应用类型 */
@@ -61,7 +61,7 @@ export interface IProcessBasicInformationRespondsToTheDTO {
     /** 应用访问链接 */
     accessUrl?: string;
     /** 应用服务包ID */
-    appServicePackId?: number;
+    appServicePackId?: string;
     /** 应用级别 */
     applicationLevel?: EProcessBasicInformationRespondsToTheDTO_applicationLevel;
 }
@@ -233,6 +233,8 @@ export enum EProcessBasicInformationRespondsToTheDTO_flowPathSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -273,6 +275,14 @@ export enum EProcessBasicInformationRespondsToTheDTO_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/queryProjectInfoUsingGET
 */
-export default function fetchMethod(options: { params: { projectTemplateId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectTemplateId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectTemplateProjectInformationRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTemplate/queryProjectInfo",
@@ -22,12 +22,12 @@ export interface IJSONResultProjectTemplateProjectInformationRespondsToTheDTO {
     /** 响应结果 */
     data?: IProjectTemplateProjectInformationRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目模板项目信息响应DTO */
 export interface IProjectTemplateProjectInformationRespondsToTheDTO {
     /** 项目模板id */
-    projectTemplateId?: number;
+    projectTemplateId?: string;
     /** 项目数据 */
     projectData?: Record<string, Record<string, any>>;
     /** 项目取值字段 */
@@ -36,7 +36,7 @@ export interface IProjectTemplateProjectInformationRespondsToTheDTO {
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

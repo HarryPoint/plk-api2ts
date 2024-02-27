@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryCalcPlanSelectionItemUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListCalcPlanSelectionItemQueryResponseDTO {
     /** 响应结果 */
     data?: ICalcPlanSelectionItemQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** CalcPlanSelectionItemQueryResponseDTO */
 export interface ICalcPlanSelectionItemQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 方案名称 */
     name?: string;
 }

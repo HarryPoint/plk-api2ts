@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产结存报表相关/getReportUsingPOST_6
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProductionBalanceStatistic
 /** 生产结存统计报表搜索VO */
 export interface IProductionBalanceStatisticsReportSearchVO {
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 开始日期 yyyy-MM-dd HH:mm:ss */
     beginDate?: string;
     /** 结束日期 yyyy-MM-dd HH:mm:ss */
@@ -33,12 +33,12 @@ export interface IJSONResultProductionBalanceMaterialStatisticsReportReturnedToV
     /** 响应结果 */
     data?: IProductionBalanceMaterialStatisticsReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产结存物料统计报表返回VO */
 export interface IProductionBalanceMaterialStatisticsReportReturnedToVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -51,7 +51,7 @@ export interface IProductionBalanceMaterialStatisticsReportReturnedToVO {
 /** 生产结存统计报表返回VO */
 export interface ITheProductionBalanceStatisticsReportIsReturnedToVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -88,7 +88,7 @@ export interface ITheProductionBalanceStatisticsReportIsReturnedToVO {
 /** 生产结存统计日期报表返回VO */
 export interface IProductionBalanceStatisticsDateReportReturnsVO {
     /** 日期 */
-    produceDate?: string;
+    produceDate?: number;
     /** 前日结存成品数 */
     preDayFinishBalanceQuantity?: number;
     /** 前日结存半成品数 */

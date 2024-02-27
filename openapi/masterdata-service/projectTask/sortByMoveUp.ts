@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/sortByMoveUpUsingPOST_1
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProjectTaskSortRequestObje
 /** 项目任务排序请求对象 */
 export interface IProjectTaskSortRequestObject {
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 移动任务id */
-    moveProjectTaskId: number;
+    moveProjectTaskId: string;
     /** 移动到的排序,最小为1 */
     moveToSort: number;
 }
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

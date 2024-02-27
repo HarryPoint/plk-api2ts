@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/getByIdUsingGET_2
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultSpecifiesTheResponseDTOForTheCalculationScheme>(
         {
             url: "/app-enterprise-web/api/app/enterprise/calculationPlan/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultSpecifiesTheResponseDTOForTheCalculationScheme {
     /** 响应结果 */
     data?: ICalculationSchemeDetailResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 计算方案明细响应DTO */
 export interface ICalculationSchemeDetailResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 应用编码 */
@@ -43,7 +43,7 @@ export interface ICalculationSchemeDetailResponseDTO {
     /** 计算模式 */
     calculationMode?: ECalculationSchemeDetailResponseDTO_calculationMode;
     /** 固定时间 */
-    fixedTime?: string;
+    fixedTime?: number;
     /** 计算周期 */
     calculationPeriod?: ECalculationSchemeDetailResponseDTO_calculationPeriod;
     /** 过滤条件列表 */
@@ -56,9 +56,9 @@ export interface ICalculationSchemeDetailResponseDTO {
 /** 计算方案过滤条件DTO_1 */
 export interface ICalculationSchemeFilterConditionDTO1 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 计算方案ID */
-    calculationPlanId?: number;
+    calculationPlanId?: string;
     /** 字段序列号 */
     fieldSerialNo?: string;
     /** 值列表 */

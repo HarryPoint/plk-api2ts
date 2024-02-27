@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单进度统计报表相关/getExportTicketUsingPOST_15
@@ -22,15 +22,15 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 交付日期 - 开始 yyyy-MM-dd HH:mm:ss */
-    deliveryDateBegin?: string;
+    deliveryDateBegin?: number;
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 客户id集 */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 交付日期 - 结束 yyyy-MM-dd HH:mm:ss */
-    deliveryDateEnd?: string;
+    deliveryDateEnd?: number;
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
@@ -52,7 +52,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

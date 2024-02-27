@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/采购明细报表相关/getDifengPurchaseDetailsReportStatisticsUsingPOST
@@ -22,7 +22,7 @@ export interface IJSONResultPurchaseDetailsStatisticsReturnedObject {
     /** 响应结果 */
     data?: IPurchaseDetailsStatisticsReturnedObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 采购明细表统计返回对象 */
 export interface IPurchaseDetailsStatisticsReturnedObject {

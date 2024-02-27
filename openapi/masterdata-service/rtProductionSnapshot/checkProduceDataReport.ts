@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/checkProduceDataReportUsingPOST
 */
-export default function fetchMethod(options: { data: IOutputClassReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputClassReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultOutputDataReportSearchVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/checkProduceDataReport",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOutputClassReportSearchVOp
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
@@ -37,22 +37,22 @@ export interface IJSONResultOutputDataReportSearchVO {
     /** 响应结果 */
     data?: IOutputDataReportSearchVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产出数据报表搜索VO */
 export interface IOutputDataReportSearchVO {
     /** 物料id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds?: number[];
+    userIds?: string[];
     /** 日期筛选 - 开始 */
     beginTime?: string;
     /** 日期筛选 - 结束 */

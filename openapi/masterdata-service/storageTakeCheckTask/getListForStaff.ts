@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getListForStaffUsingPOST_3
 */
-export default function fetchMethod(options: { data: IPublicBacklogDataQueryparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultListStorageTakeCheckTaskResponseDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getListForStaff",
@@ -22,7 +22,7 @@ export interface IPublicBacklogDataQuery {
     /** 创建时间--结束时间 */
     createEndTime?: string;
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产任务状态集合 */
     produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
@@ -41,26 +41,26 @@ export interface IJSONResultListStorageTakeCheckTaskResponseDTO {
     /** 响应结果 */
     data?: IStorageTakeCheckTaskResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** StorageTakeCheckTaskResponseDTO */
 export interface IStorageTakeCheckTaskResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 盘点仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 盘点范围 */
     scopeType?: EStorageTakeCheckTaskResponseDTO_scopeType;
     /** 任务号 */
     taskNo?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 状态 */
     status?: EStorageTakeCheckTaskResponseDTO_status;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionReportUsingPOST
@@ -22,39 +22,39 @@ export interface IJSONResultPagingInformationCommissionAndCommissionStatisticsTa
     /** 响应结果 */
     data?: IPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«佣金与提成统计表（帝丰定制）响应对象» */
 export interface IPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ICommissionAndCommissionStatisticsTableDifengCustomizedResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationCommissionAndCommissionStatisticsTableDifengCustomizedResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 佣金与提成统计表（帝丰定制）响应对象 */
 export interface ICommissionAndCommissionStatisticsTableDifengCustomizedResponseObject {
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 其他应付单号 */
@@ -68,7 +68,7 @@ export interface ICommissionAndCommissionStatisticsTableDifengCustomizedResponse
     /** 销售出库单号 */
     salesOutStorageOrderCode?: string;
     /** 销售出库单id */
-    salesOutStorageOrderId?: number;
+    salesOutStorageOrderId?: string;
     /** 销售金额 */
     saleQuantity?: string;
     /** 已收金额 */

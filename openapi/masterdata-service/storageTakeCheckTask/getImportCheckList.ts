@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getImportCheckListUsingPOST
 */
-export default function fetchMethod(options: { data: IImportDetailsListDTOForInventoryparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IImportDetailsListDTOForInventory, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnTheWarehouseInventoryListToTheDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getImportCheckList",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IImportDetailsListDTOForInv
 /** 盘点导入明细列表DTO */
 export interface IImportDetailsListDTOForInventory {
     /** taskId */
-    taskId?: number;
+    taskId?: string;
     /** 页面提交数据 */
     submitCheckList?: IImportTheWarehouseInventoryListIntoDTO[];
     /** 导入盘点明细数据 */
@@ -25,9 +25,9 @@ export interface IImportDetailsListDTOForInventory {
 /** 仓库盘点仓位清单导入DTO */
 export interface IImportTheWarehouseInventoryListIntoDTO {
     /** 盘点详情id */
-    id?: number;
+    id?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 仓位编号 */
@@ -41,7 +41,7 @@ export interface IImportTheWarehouseInventoryListIntoDTO {
     /** 仓库编号 */
     storehouseCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -89,14 +89,14 @@ export interface IJSONResultListReturnTheWarehouseInventoryListToTheDTO {
     /** 响应结果 */
     data?: IWarehouseInventoryListReturnedToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓库盘点仓位清单返回DTO */
 export interface IWarehouseInventoryListReturnedToDTO {
     /** 盘点详情id */
-    id?: number;
+    id?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 仓位编号 */
@@ -110,7 +110,7 @@ export interface IWarehouseInventoryListReturnedToDTO {
     /** 仓库编号 */
     storehouseCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */

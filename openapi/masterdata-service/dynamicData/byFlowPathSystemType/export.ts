@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/exportByFlowPathSystemTypeUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVO2params: { enterpriseId?: number; systemType?: EsystemType, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO2, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/dynamicData/byFlowPathSystemType/export",
@@ -32,11 +32,11 @@ export interface IProcessDataSearchVO2 {
     /** 当前的表单分组 */
     currentFormDataGrouping?: IFormDataGroupingDTO;
     /** 操作员工id */
-    opUserId?: number;
+    opUserId?: string;
     /** 操作角色id集 */
-    opRoleIds?: number[];
+    opRoleIds?: string[];
     /** 操作部门id */
-    opDeptId?: number;
+    opDeptId?: string;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
@@ -77,7 +77,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -86,9 +86,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EsystemType {
@@ -166,6 +166,7 @@ export enum EsystemType {
     PROJECT_TYPE = "PROJECT_TYPE",
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     PROJECT_PLAN = "PROJECT_PLAN",
     PROJECT_STAGE = "PROJECT_STAGE",
     PROJECT_TASK = "PROJECT_TASK",
@@ -186,6 +187,10 @@ export enum EsystemType {
     PROJECT_MODIFICATION = "PROJECT_MODIFICATION",
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    PROJECT_FILE = "PROJECT_FILE",
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

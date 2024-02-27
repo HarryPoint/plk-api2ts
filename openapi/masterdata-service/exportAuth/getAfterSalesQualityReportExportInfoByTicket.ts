@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getAfterSalesQualityReportExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationAfterSalesQualityAnalysisReturnsVO 
     /** 响应结果 */
     data?: IExportInformationAfterSalesQualityAnalysisReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«售后质量分析返回VO» */
 export interface IExportInformationAfterSalesQualityAnalysisReturnToVO {
@@ -42,11 +42,11 @@ export interface IAfterSalesQualityAnalysisReturnedToVO {
     /** 产品id集合 */
     productIds?: string;
     /** 灌装日期 */
-    fillingDate?: string;
+    fillingDate?: number;
     /** 灌装日期 */
     fillingDateStr?: string;
     /** 生产日期 */
-    productionDate?: string;
+    productionDate?: number;
     /** 灌装线 */
     fillingLine?: string;
     /** 责任单位 */
@@ -63,7 +63,7 @@ export interface IAfterSalesQualityAnalysisReturnedToVO {
 /** 附件 VO */
 export interface IAnnexVO {
     /** 文件id */
-    id?: number;
+    id?: string;
     /** 文件key */
     fileKey?: string;
     /** 文件完整路径 */
@@ -71,7 +71,7 @@ export interface IAnnexVO {
     /** 文件名 */
     fileName?: string;
     /** 文件大小 */
-    size?: number;
+    size?: string;
 }
 
 export enum EExportInformationAfterSalesQualityAnalysisReturnToVO_exportType {

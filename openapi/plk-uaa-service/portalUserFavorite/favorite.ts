@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/favoriteUsingPOST_1
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IPortalUserFavoriteRequestD
 /** PortalUserFavoriteRequestDTO */
 export interface IPortalUserFavoriteRequestDTO {
     /** Qms门户id */
-    qmsPortalId: number;
+    qmsPortalId: string;
     /** Hse门户id */
-    hsePortalId: number;
+    hsePortalId: string;
     /** 路由id */
-    routerId: number;
+    routerId: string;
     /** 客户端组编码 */
     clientGroupCode: string;
 }
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

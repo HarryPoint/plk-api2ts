@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/getPageUsingPOST_17
@@ -26,9 +26,9 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 异常分类 */
     type?: EProduceObjectsThatHandlePagingQueries_type;
     /** 提交人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 生产异常类型id */
-    produceAbnormalCategoryId?: number;
+    produceAbnormalCategoryId?: string;
     /** 状态 */
     status?: EProduceObjectsThatHandlePagingQueries_status;
     /** 操作开始时间 yyyy-MM-dd HH:mm:ss */
@@ -38,7 +38,7 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 操作结束时间 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -56,37 +56,37 @@ export interface IJSONResultPagingInformationProductionHandlesPagingResponseObje
     /** 响应结果 */
     data?: IPagingInformationProductionHandlesPagingResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«生产处理分页响应对象» */
 export interface IPagingInformationProductionHandlesPagingResponseObjects {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProductionHandlesPagingResponseObjects[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationProductionHandlesPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationProductionHandlesPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 生产处理分页响应对象 */
 export interface IProductionHandlesPagingResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 所属生产任务工艺路径步骤 */
     routingStep?: number;
     /** 异常分类 */
@@ -94,9 +94,9 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产异常类型id */
-    produceAbnormalCategoryId?: number;
+    produceAbnormalCategoryId?: string;
     /** 生产异常类型名称 */
     produceAbnormalName?: string;
     /** 生产异常类型编号 */
@@ -106,17 +106,17 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 对应生产订单号 */
     produceOrderCode?: string;
     /** 对应批次订单id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次名称 */
     lotName?: string;
     /** 批次号 */
     lotNo?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -124,9 +124,9 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 物料规格 */
     materialSpec?: string;
     /** 对应工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
@@ -144,11 +144,11 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 放行数量 */
     releaseQuantity?: number;
     /** 返工工艺路径步骤id */
-    backRoutingStepId?: number;
+    backRoutingStepId?: string;
     /** 返工工艺路径步骤 */
     backRoutingStep?: number;
     /** 返工工序id */
-    backProcessId?: number;
+    backProcessId?: string;
     /** 返工工序名称 */
     backProcessName?: string;
     /** 返工工序编号 */
@@ -158,9 +158,9 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 返工生产类型描述 */
     backProduceTypeDesc?: string;
     /** 处理时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 处理人 */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理人姓名 */
     handleUsername?: string;
     /** 处理意见 */
@@ -178,11 +178,11 @@ export interface IProductionHandlesPagingResponseObjects {
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 是否启用启用批次 */
     enableLot?: EProductionHandlesPagingResponseObjects_enableLot;
     /** 是否启用质量追溯 */

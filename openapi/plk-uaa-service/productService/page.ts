@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/pageUsingPOST_6
@@ -22,27 +22,27 @@ export interface IProductServicePageQueryObject {
     /** 分页大小 */
     pageSize?: number;
     /** 企业ids */
-    enterpriseIds?: number[];
+    enterpriseIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 到期时间 -- 结束 */
-    expireEndTime?: string;
+    expireEndTime?: number;
     /** 导出字段集 */
     exportFields?: string[];
     /** 创建时间 -- 开始 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 服务类型列表 */
     typeList?: EProductServicePageQueryObject_typeList_items[];
     /** undefined */
-    todayEndTime?: string;
+    todayEndTime?: number;
     /** 到期时间 -- 开始 */
-    expireBeginTime?: string;
+    expireBeginTime?: number;
     /** 服务状态列表 */
     statusList?: EProductServicePageQueryObject_statusList_items[];
     /** 创建时间 -- 结束 */
-    createEndTime?: string;
+    createEndTime?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -60,55 +60,55 @@ export interface IJSONResultPagingInformationProductServicePagingResponseObject 
     /** 响应结果 */
     data?: IPagingInformationProductServicePagingResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«产品服务分页响应对象» */
 export interface IPagingInformationProductServicePagingResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProductServicePagingResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationProductServicePagingResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationProductServicePagingResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 产品服务分页响应对象 */
 export interface IProductServicePagingResponseObject {
     /** 产品服务id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 类型 */
     type?: EProductServicePagingResponseObject_type;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 企业名称 */
     enterpriseName?: string;
     /** 产品类型 */
     productType?: EProductServicePagingResponseObject_productType;
     /** 到期时间 */
-    expireTime?: string;
+    expireTime?: number;
     /** 账号数 */
     availableAccountQuantity?: number;
     /** 状态 */
     status?: EProductServicePagingResponseObject_status;
     /** 最近变动时间 */
-    lastModifyTime?: string;
+    lastModifyTime?: number;
     /** 创建 */
-    createTime?: string;
+    createTime?: number;
     /** 是否有新购的产品订单 */
     hanNewBuyProductOrder?: EProductServicePagingResponseObject_hanNewBuyProductOrder;
 }

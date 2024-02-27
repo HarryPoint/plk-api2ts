@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdUsingGET_5
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessNodeDTO>(
         {
             url: "/flow-service/flowPathNode/getById",
@@ -22,18 +22,18 @@ export interface IJSONResultProcessNodeDTO {
     /** 响应结果 */
     data?: IProcessNodeDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程节点DTO */
 export interface IProcessNodeDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 节点业务类型 */
@@ -41,13 +41,13 @@ export interface IProcessNodeDTO {
     /** 节点类型 */
     type?: EProcessNodeDTO_type;
     /** 前节点id */
-    previousFlowPathNodeId?: number;
+    previousFlowPathNodeId?: string;
     /** 后节点id */
-    nextFlowPathNodeId?: number;
+    nextFlowPathNodeId?: string;
     /** 父节点id - 子节点有值 */
-    parentFlowPathNodeId?: number;
+    parentFlowPathNodeId?: string;
     /** 所属分支节点id - 子分支下的所有流程节点均属于当前子分支 */
-    branchesFlowPathNodeId?: number;
+    branchesFlowPathNodeId?: string;
     /** 名称 */
     name?: string;
     /** 名称 */
@@ -61,7 +61,7 @@ export interface IProcessNodeDTO {
     /** 回退类型 */
     backType?: EProcessNodeDTO_backType;
     /** 回退流程节点id - 返回指定节点时有值 */
-    backFlowPathNodeId?: number;
+    backFlowPathNodeId?: string;
     /** 回退流程节点序列值 - 返回指定节点时有值 */
     backFlowPathNodeSerialNo?: string;
     /** 是否是首节点 */
@@ -152,13 +152,13 @@ export interface IProcessNodeDTO {
 /** FlowPathNodeFormFieldPermissionsRpTreeVO */
 export interface IFlowPathNodeFormFieldPermissionsRpTreeVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    flowPathId?: number;
+    flowPathId?: string;
     /** undefined */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** undefined */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 表单字段名称 */
@@ -168,13 +168,13 @@ export interface IFlowPathNodeFormFieldPermissionsRpTreeVO {
     /** undefined */
     flowPathFormFieldType?: EFlowPathNodeFormFieldPermissionsRpTreeVO_flowPathFormFieldType;
     /** undefined */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** undefined */
     parentFlowPathFormFieldCode?: string;
     /** undefined */
     isTableField?: EFlowPathNodeFormFieldPermissionsRpTreeVO_isTableField;
     /** undefined */
-    parentFlowPathNodeFormFieldPermissionsRpId?: number;
+    parentFlowPathNodeFormFieldPermissionsRpId?: string;
     /** undefined */
     permissionsType?: EFlowPathNodeFormFieldPermissionsRpTreeVO_permissionsType;
     /** undefined */
@@ -183,20 +183,20 @@ export interface IFlowPathNodeFormFieldPermissionsRpTreeVO {
 /** 流程节点编辑DTO */
 export interface ITheProcessNodeEditsTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 消息触发时机 */
     triggerTiming?: ETheProcessNodeEditsTheDTO_triggerTiming;
     /** 消息配置ID列表 */
-    messageConfigIdList?: number[];
+    messageConfigIdList?: string[];
     /** 是否启用消息通知 */
     isEnabledMessageNotification?: ETheProcessNodeEditsTheDTO_isEnabledMessageNotification;
     /** 引用的ID。比如超时配置 */
-    refId?: number;
+    refId?: string;
 }
 /** 流程节点超时配置针对编辑返回VO */
 export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
     /** id */
-    id?: number;
+    id?: string;
     /** 超时的步骤类型 */
     stepType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_stepType;
     /** 超时类型 */
@@ -206,7 +206,7 @@ export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
     /** 超时值类型 - 超时类型为自定义时有值 */
     timeoutTimeType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutTimeType;
     /** 超时表单字段id */
-    timeoutFlowPathFormFieldId?: number;
+    timeoutFlowPathFormFieldId?: string;
     /** 超时表单字段序列值 */
     timeoutFlowPathFormFieldSerialNo?: string;
     /** 预警处理方式 */
@@ -233,11 +233,11 @@ export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
@@ -245,27 +245,27 @@ export interface IProcessNodeExecutorVO {
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 节点ID */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
 }
 /** 流程节点条件组针对编辑返回VO_1 */
 export interface ITheProcessNodeConditionGroupReturnsVO1ForEditing {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件集 */
     conditions?: IFlowPathNodeCondiVO[];
 }
 /** FlowPathNodeCondiVO */
 export interface IFlowPathNodeCondiVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     type?: EFlowPathNodeCondiVO_type;
     /** undefined */
     defaultCondi?: EFlowPathNodeCondiVO_defaultCondi;
     /** undefined */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** undefined */
     flowPathFormFieldCode?: string;
     /** undefined */
@@ -277,7 +277,7 @@ export interface IFlowPathNodeCondiVO {
     /** undefined */
     compareTargetFromSource?: EFlowPathNodeCondiVO_compareTargetFromSource;
     /** undefined */
-    targetFieldId?: number;
+    targetFieldId?: string;
     /** undefined */
     targetFieldSerialNo?: string;
     /** undefined */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/exportUsingPOST_36
@@ -22,7 +22,7 @@ export interface IExportTheDTOOfAProductionTask {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 对应工序id */
-    processIds?: number[];
+    processIds?: string[];
     /** 任务号 */
     taskNo?: string;
     /** 生产订单号 */
@@ -30,7 +30,7 @@ export interface IExportTheDTOOfAProductionTask {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 任务类型描述 */
     typeDesc?: string;
     /** 任务下发方式 */
@@ -93,9 +93,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EExportTheDTOOfAProductionTask_issueType {

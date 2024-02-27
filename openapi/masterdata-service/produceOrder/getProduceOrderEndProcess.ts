@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderEndProcessUsingPOST
 */
-export default function fetchMethod(options: { data: IQueryVOForTheLastStepOfTheProductionOrderparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryVOForTheLastStepOfTheProductionOrder, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheLastProcessVOOfTheProductionOrder>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderEndProcess",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IQueryVOForTheLastStepOfThe
 /** 生产订单最后一道工序查询VO */
 export interface IQueryVOForTheLastStepOfTheProductionOrder {
     /** 物料ids */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 物料种类 */
     materialType?: string;
 }
@@ -29,14 +29,14 @@ export interface IJSONResultListTheLastProcessVOOfTheProductionOrder {
     /** 响应结果 */
     data?: ITheLastStepOfProductionOrderVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单最后一道工序VO */
 export interface ITheLastStepOfProductionOrderVO {
     /** 生产订单id */
-    orderId?: number;
+    orderId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */
@@ -46,9 +46,9 @@ export interface ITheLastStepOfProductionOrderVO {
     /** 物料规格 */
     materialSpec?: string;
     /** 生产订单的工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 生产订单的生产工艺工艺路径最后一个工艺步骤id */
-    endProduceTechnologyRoutingStepId?: number;
+    endProduceTechnologyRoutingStepId?: string;
     /** 最后一个工艺步骤对应的工序id */
-    endProcessId?: number;
+    endProcessId?: string;
 }

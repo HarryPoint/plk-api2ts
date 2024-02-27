@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/addUsingPOST_2
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITheDataEaseMenuAddsTheRequ
 /** DataEase菜单添加请求对象 */
 export interface ITheDataEaseMenuAddsTheRequestObject {
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 菜单名称 */
     name?: string;
     /** 链接地址 */
@@ -24,13 +24,13 @@ export interface ITheDataEaseMenuAddsTheRequestObject {
     /** 是否在PC端发布 */
     isPcTerminal?: ETheDataEaseMenuAddsTheRequestObject_isPcTerminal;
     /** PC端发布路由id */
-    pcTerminalPublishRouteId?: number;
+    pcTerminalPublishRouteId?: string;
     /** PC端展示方式 */
     pcTerminalDisplayMode?: ETheDataEaseMenuAddsTheRequestObject_pcTerminalDisplayMode;
     /** 是否在移动端发布 */
     isMobileTerminal?: ETheDataEaseMenuAddsTheRequestObject_isMobileTerminal;
     /** 移动端发布路由id */
-    mobileTerminalPublishRouteId?: number;
+    mobileTerminalPublishRouteId?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -39,9 +39,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETheDataEaseMenuAddsTheRequestObject_isPcTerminal {

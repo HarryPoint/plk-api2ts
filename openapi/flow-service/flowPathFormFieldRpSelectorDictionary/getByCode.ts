@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/getByCodeUsingGET
 */
-export default function fetchMethod(options: { params: { businessCode?: EbusinessCode; code?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessCode?: EbusinessCode; code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO>(
         {
             url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getByCode",
@@ -22,7 +22,7 @@ export interface IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO {
     /** 响应结果 */
     data?: IProcessFormFieldAssociationDictionaryOptionSetVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程表单字段关联字典选项集VO */
 export interface IProcessFormFieldAssociationDictionaryOptionSetVO {

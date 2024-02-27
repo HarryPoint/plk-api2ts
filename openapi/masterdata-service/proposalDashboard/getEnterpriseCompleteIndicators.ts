@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getEnterpriseCompleteIndicatorsUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultEnterpriseIndicatorsResponseDTO {
     /** 响应结果 */
     data?: IEnterpriseIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EnterpriseIndicatorsResponseDTO */
 export interface IEnterpriseIndicatorsResponseDTO {
     /** 全公式提案数量 */
-    proposalQuantity?: number;
+    proposalQuantity?: string;
     /** （部门年改善提案数量目标/12*当前月份） */
     proposalPlanQuantity?: number;
     /** 全公司提案完成率 */

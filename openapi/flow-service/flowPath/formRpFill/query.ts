@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/queryFormRpFillByConditionUsingPOST
 */
-export default function fetchMethod(options: { data: IFlowPathFormFieldFormRpQueryConditionVoparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFlowPathFormFieldFormRpQueryConditionVo, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFlowPathFormFieldFormRpFillVo>(
         {
             url: "/flow-service/flowPath/formRpFill/query",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IFlowPathFormFieldFormRpQue
 /** FlowPathFormFieldFormRpQueryConditionVo */
 export interface IFlowPathFormFieldFormRpQueryConditionVo {
     /** undefined */
-    flowPathIdList?: number[];
+    flowPathIdList?: string[];
     /** undefined */
     fillWayList?: EFlowPathFormFieldFormRpQueryConditionVo_fillWayList_items[];
 }
@@ -29,20 +29,20 @@ export interface IJSONResultListFlowPathFormFieldFormRpFillVo {
     /** 响应结果 */
     data?: IFlowPathFormFieldFormRpFillVo[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathFormFieldFormRpFillVo */
 export interface IFlowPathFormFieldFormRpFillVo {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    flowPathId?: number;
+    flowPathId?: string;
     /** undefined */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** undefined */
     flowPathVersionRank?: number;
     /** undefined */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** undefined */
     columnSerialNo?: string;
     /** undefined */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据概览相关/changeApiSwitchUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IDeviceDataAcquisitionCommu
 /** 设备数采通讯状态DTO */
 export interface IDeviceDataAcquisitionCommunicationStatusDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 通讯开关状态 */
     apiSwitchStatus?: EDeviceDataAcquisitionCommunicationStatusDTO_apiSwitchStatus;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EDeviceDataAcquisitionCommunicationStatusDTO_apiSwitchStatus {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位系统应用库存序列号相关/getWarehouseStorageSystemApplicationSerialNoUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITheWarehouseSystemAppliesT
 /** 仓位系统应用库存序列号分页查询对象 */
 export interface ITheWarehouseSystemAppliesTheInventorySerialNumberPagingQueryObject {
     /** 仓位系统应用id(eg：物料id) */
-    warehouseSystemApplicationId?: number;
+    warehouseSystemApplicationId?: string;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -26,9 +26,9 @@ export interface ITheWarehouseSystemAppliesTheInventorySerialNumberPagingQueryOb
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 仓库id */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
     /** 仓位id */
-    warehouseIds?: number[];
+    warehouseIds?: string[];
     /** 序列号 */
     serialNo?: string;
 }
@@ -48,43 +48,43 @@ export interface IJSONResultPagingInformationTheWarehouseSystemAppliesTheInvento
     /** 响应结果 */
     data?: IPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«仓位系统应用库存序列号分页返回对象» */
 export interface IPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationTheWarehouseSystemAppliesInventorySerialNumberPagingToReturnObjects_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 仓位系统应用库存序列号分页返回对象 */
 export interface ITheWarehouseSystemAppliesTheInventorySerialNumberPagingReturnObject {
     /** 仓位系统应用关联数据id(eg：物料id) */
-    warehouseSystemApplicationId?: number;
+    warehouseSystemApplicationId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 序列号 */

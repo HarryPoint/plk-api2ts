@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/准备期相关/editUsingPOST_20
 */
-export default function fetchMethod(options: { data: IPreparatoryPeriodEditorDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPreparatoryPeriodEditorDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/readyTime/edit",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IPreparatoryPeriodEditorDTO
 /** 准备期编辑DTO */
 export interface IPreparatoryPeriodEditorDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属工序id */
-    processId: number;
+    processId: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -37,7 +37,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPreparatoryPeriodEditorDTO_ruleType {

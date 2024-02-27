@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/editProcessOperateUserUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessOperatorsEditTheDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessOperatorsEditTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/processTaskSetting/editProcessOperateUser",
@@ -18,9 +18,9 @@ export interface IProcessOperatorsEditTheDTO {
     /** 员工类型 */
     userType: EProcessOperatorsEditTheDTO_userType;
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 操作员id */
-    userIds?: number[];
+    userIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -31,7 +31,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcessOperatorsEditTheDTO_userType {

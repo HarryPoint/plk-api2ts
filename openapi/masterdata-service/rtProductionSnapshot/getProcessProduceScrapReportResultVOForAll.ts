@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProcessProduceScrapReportResultVOForAllUsingPOST
 */
-export default function fetchMethod(options: { data: number[]params: { beginTime?: string; endTime?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { beginTime?: number; endTime?: number; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessOutputScrapStatisticsAreReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProcessProduceScrapReportResultVOForAll",
@@ -22,12 +22,12 @@ export interface IJSONResultListProcessOutputScrapStatisticsAreReturnedToVO {
     /** 响应结果 */
     data?: IProcessOutputScrapStatisticsAreReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工序产出报废统计返回VO */
 export interface IProcessOutputScrapStatisticsAreReturnedToVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

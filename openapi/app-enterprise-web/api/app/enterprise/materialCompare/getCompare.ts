@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/09-02-04-物料主数据比对相关/getMaterialCompareUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IMaterialMasterDataBomidCol
 /** 物料主数据bom id集合VO */
 export interface IMaterialMasterDataBomidCollectionVO {
     /** bomId集合 */
-    bomIds?: number[];
+    bomIds?: string[];
 }
 /** JSONResult«List«物料主数据比对返回VO»» */
 export interface IJSONResultListReturnVOForMaterialMasterDataComparison {
@@ -27,12 +27,12 @@ export interface IJSONResultListReturnVOForMaterialMasterDataComparison {
     /** 响应结果 */
     data?: IMaterialMasterDataComparisonReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料主数据比对返回VO */
 export interface IMaterialMasterDataComparisonReturnsVO {
     /** 比对物料id */
-    compareMaterialId?: number;
+    compareMaterialId?: string;
     /** 比对物料名 */
     compareMaterialName?: string;
     /** 比对物料编号 */
@@ -47,7 +47,7 @@ export interface IMaterialMasterDataComparisonReturnsVO {
 /** 物料主数据比对详情返回VO */
 export interface IMaterialMasterDataComparisonDetailsReturnedToVO {
     /** 对应bomId */
-    bomId?: number;
+    bomId?: string;
     /** 对应bom名称 */
     bomName?: string;
     /** 计算消耗 */
@@ -58,7 +58,7 @@ export interface IMaterialMasterDataComparisonDetailsReturnedToVO {
 /** 生产工艺路径基础信息VO */
 export interface IProductionProcessPathBasicInformationVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

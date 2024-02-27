@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产工艺产能相关/getByIdUsingGET_15
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProduceTechnologyLaborCostResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTechnologyLaborCost/getById",
@@ -22,36 +22,36 @@ export interface IJSONResultProduceTechnologyLaborCostResponseDTO {
     /** 响应结果 */
     data?: IProduceTechnologyLaborCostResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProduceTechnologyLaborCostResponseDTO */
 export interface IProduceTechnologyLaborCostResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 所属工艺路径步骤id */
-    produceTechnologyRoutingStepId?: number;
+    produceTechnologyRoutingStepId?: string;
     /** 工费名称 */
     name?: string;
     /** 工费编号 */
@@ -63,5 +63,5 @@ export interface IProduceTechnologyLaborCostResponseDTO {
     /** 准备工费 */
     readyPrice?: number;
     /** 关联工费id */
-    laborCostId?: number;
+    laborCostId?: string;
 }

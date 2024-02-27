@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/kaizen项目任务相关/batchRemoveUsingPOST_2
 */
-export default function fetchMethod(options: { data: IIdCollectionInformationparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformation, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/kaizenProjectTask/batchRemove",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdCollectionInformationpar
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -27,5 +27,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/关键参数相关/getInfoByIdUsingGET_1
@@ -22,12 +22,12 @@ export interface IJSONResultKeyParameterInformationResponseObject {
     /** 响应结果 */
     data?: IKeyParameterInformationResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 关键参数信息响应对象 */
 export interface IKeyParameterInformationResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
@@ -42,14 +42,14 @@ export interface IKeyParameterInformationResponseObject {
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示字段名称 */
     showFieldValue?: string;
 }
 /** 关键参数信息详情响应对象 */
 export interface IKeyParameterDetailsResponseObject {
     /** 字段id */
-    id?: number;
+    id?: string;
     /** 字段名称 */
     name?: string;
     /** 帮助提示 */

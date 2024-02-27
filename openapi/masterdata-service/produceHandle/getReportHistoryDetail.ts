@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryDetailUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionProcessingBasicInformationDetailsAreReturnedToVO>(
         {
             url: "/masterdata-service/produceHandle/getReportHistoryDetail",
@@ -22,14 +22,14 @@ export interface IJSONResultProductionProcessingBasicInformationDetailsAreReturn
     /** 响应结果 */
     data?: IProductionProcessingBasicInformationDetailsReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产处理基础信息详情返回VO */
 export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
@@ -39,7 +39,7 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产异常类型名称 */
     produceAbnormalName?: string;
     /** 生产异常类型编号 */
@@ -53,17 +53,17 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 备注 */
     remark?: string;
     /** 对应生产委外id */
-    produceEntrustId?: number;
+    produceEntrustId?: string;
     /** 状态 */
     status?: EProductionProcessingBasicInformationDetailsReturnToVO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 图片上传key集合 */
     imageKeys?: string;
     /** 图片Url集合 */
@@ -73,29 +73,29 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 异常描述 */
     desc?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理人 */
     handleUsername?: string;
     /** 处理时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序 */
     processName?: string;
     /** 对应工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 所属生产任务工艺路径步骤 */
     routingStep?: number;
     /** 标签集合 */
     tags?: string[];
     /** 对应生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 对应生产订单号 */
     produceOrderCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -113,11 +113,11 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
     /** 放行数量 */
     releaseQuantity?: number;
     /** 返工工艺路径步骤id */
-    backRoutingStepId?: number;
+    backRoutingStepId?: string;
     /** 返工工艺路径步骤 */
     backRoutingStep?: number;
     /** 返工工序id */
-    backProcessId?: number;
+    backProcessId?: string;
     /** 返工工序名称 */
     backProcessName?: string;
     /** 返工工序编号 */
@@ -132,7 +132,7 @@ export interface IProductionProcessingBasicInformationDetailsReturnToVO {
 /** 工艺卡明细返回VO(含填写的信息) */
 export interface IProcessCardDetailsReturnVOWithInformationFilledIn {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细类型 */
     type?: EProcessCardDetailsReturnVOWithInformationFilledIn_type;
     /** 明细名称/标题 */

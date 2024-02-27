@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
@@ -44,35 +44,35 @@ export interface IJSONResultPagingInformationBaoJingReportMaterialSelectionRespo
     /** 响应结果 */
     data?: IPageInformationTreasureReportMaterialSelectionResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«宝晶报表物料选择响应» */
 export interface IPageInformationTreasureReportMaterialSelectionResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBaojingReportMaterialSelectionResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTreasureReportMaterialSelectionResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTreasureReportMaterialSelectionResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 宝晶报表物料选择响应 */
 export interface IBaojingReportMaterialSelectionResponse {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */

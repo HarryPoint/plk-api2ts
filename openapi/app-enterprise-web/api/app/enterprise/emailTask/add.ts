@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/邮件任务/addUsingPOST_3
@@ -26,11 +26,11 @@ export interface IEmailTaskAddRequestDTO {
     /** 发送模式 */
     sendingMode?: EEmailTaskAddRequestDTO_sendingMode;
     /** 发送时间 */
-    sendingTime?: string;
+    sendingTime?: number;
     /** 下次发送时间 */
-    nextSendingTime?: string;
+    nextSendingTime?: number;
     /** 上次发送时间 */
-    lastSendingTime?: string;
+    lastSendingTime?: number;
     /** 附件配置列表 */
     attachmentConfigList?: IEmailTaskAttachmentConfigAddRequestDTO[];
     /** 邮件状态 */
@@ -49,7 +49,7 @@ export interface IEmailTaskAddRequestDTO {
 /** EmailTaskAttachmentConfigAddRequestDTO */
 export interface IEmailTaskAttachmentConfigAddRequestDTO {
     /** 其他对象引用ID */
-    refId?: number;
+    refId?: string;
     /** 文件类型 */
     fileType?: string;
 }
@@ -79,7 +79,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEmailTaskAddRequestDTO_sendingMode {

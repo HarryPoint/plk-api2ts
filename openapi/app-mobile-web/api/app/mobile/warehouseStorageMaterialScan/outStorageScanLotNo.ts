@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITheBatchNumberOfTheScanCod
 /** 物料出库扫码批次号查询对象 */
 export interface ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried {
     /** 流程id */
-    appId?: number;
+    appId?: string;
     /** 通用：提交项， 用户编辑的数据 */
     formData?: Record<string, Record<string, any>>;
     /** 批次号 */
@@ -31,21 +31,21 @@ export interface IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrieving
     /** 响应结果 */
     data?: IObjectReturnedByTheBatchNumberGroupOfMaterialOutboundScanCode[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料出库扫码批次号分组返回对象 */
 export interface IObjectReturnedByTheBatchNumberGroupOfMaterialOutboundScanCode {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 明细数据 */
     details?: IObjectReturnedByTheBatchNumberOfMaterialOutboundScanCode[];
 }
 /** 物料出库扫码批次号返回对象 */
 export interface IObjectReturnedByTheBatchNumberOfMaterialOutboundScanCode {
     /** 库存id */
-    warehouseMaterialRpId?: number;
+    warehouseMaterialRpId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编码 */
@@ -55,19 +55,19 @@ export interface IObjectReturnedByTheBatchNumberOfMaterialOutboundScanCode {
     /** 物料种类 */
     materialType?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位名称 */
     materialUnitName?: string;
     /** 批次号 */
     lotNo?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库编号 */
     storehouseCode?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位code */
     warehouseCode?: string;
     /** 仓位名称 */

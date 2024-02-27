@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/checkUsingGET_2
@@ -22,7 +22,7 @@ export interface IJSONResultIndicatesTheResultOfVerifyingProjectChangeInformatio
     /** 响应结果 */
     data?: IProjectChangeInformationVerificationResult;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目变更信息校验结果 */
 export interface IProjectChangeInformationVerificationResult {
@@ -31,5 +31,5 @@ export interface IProjectChangeInformationVerificationResult {
     /** 变更单单号 */
     modificationCode?: string;
     /** 变更单id */
-    modificationId?: number;
+    modificationId?: string;
 }

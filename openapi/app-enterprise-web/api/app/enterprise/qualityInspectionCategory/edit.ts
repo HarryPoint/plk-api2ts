@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检分类/editUsingPOST_20
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEditTheQualityInspectionCl
 /** 编辑质检分类 DTO */
 export interface IEditTheQualityInspectionClassificationDTO {
     /** id，如果不传就是新增 */
-    id?: number;
+    id?: string;
     /** 质检分类名 */
     name: string;
     /** 质检分类编码 */
@@ -33,7 +33,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEditTheQualityInspectionClassificationDTO_isCodeRule {

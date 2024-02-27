@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/queryTodoProcessorUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITodoProcessorQueryRequestD
 /** TodoProcessorQueryRequestDTO */
 export interface ITodoProcessorQueryRequestDTO {
     /** 代办ID列表 */
-    todoIdList?: number[];
+    todoIdList?: string[];
 }
 /** JSONResult«TodoProcessorQueryResponseDTO» */
 export interface IJSONResultTodoProcessorQueryResponseDTO {
@@ -27,7 +27,7 @@ export interface IJSONResultTodoProcessorQueryResponseDTO {
     /** 响应结果 */
     data?: ITodoProcessorQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** TodoProcessorQueryResponseDTO */
 export interface ITodoProcessorQueryResponseDTO {
@@ -37,7 +37,7 @@ export interface ITodoProcessorQueryResponseDTO {
 /** TodoProcessorDTO */
 export interface ITodoProcessorDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 代办处理人ID */
-    userId?: number;
+    userId?: string;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialRealWarehouseListUsingPOST
 */
-export default function fetchMethod(options: { data: IMaterialRealTimeInventoryQueryReturnedToVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialRealTimeInventoryQueryReturnedToVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListMaterialRealTimeLibraryFromVO>(
         {
             url: "/masterdata-service/warehouseMaterial/getMaterialRealWarehouseList",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IMaterialRealTimeInventoryQ
 /** 物料实时库存查询返回VO */
 export interface IMaterialRealTimeInventoryQueryReturnedToVO {
     /** 物料ids */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 仓库ids */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
     /** 仓库类型 */
     warehouseTypes?: EMaterialRealTimeInventoryQueryReturnedToVO_warehouseTypes_items[];
 }
@@ -31,18 +31,18 @@ export interface IJSONResultListMaterialRealTimeLibraryFromVO {
     /** 响应结果 */
     data?: IMaterialRealTimeLibraryFromBackToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料实时库从返回VO */
 export interface IMaterialRealTimeLibraryFromBackToVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料规格 */
     materialSpec?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 库存总数量 */
     storageTotalQuantity?: number;
     /** 库存锁定数量 */

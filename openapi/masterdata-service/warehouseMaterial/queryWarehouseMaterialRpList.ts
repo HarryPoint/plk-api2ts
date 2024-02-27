@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/库存查询相关/queryWarehouseMaterialRpListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IWarehouseMaterialRpQueryRe
 /** WarehouseMaterialRpQueryRequestDTO */
 export interface IWarehouseMaterialRpQueryRequestDTO {
     /** 物料ID */
-    materialId?: number;
+    materialId?: string;
     /** 仓位ID */
-    warehouseId?: number;
+    warehouseId?: string;
 }
 /** JSONResult«List«WarehouseMaterialRpQueryResponseDTO»» */
 export interface IJSONResultListWarehouseMaterialRpQueryResponseDTO {
@@ -29,20 +29,20 @@ export interface IJSONResultListWarehouseMaterialRpQueryResponseDTO {
     /** 响应结果 */
     data?: IWarehouseMaterialRpQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** WarehouseMaterialRpQueryResponseDTO */
 export interface IWarehouseMaterialRpQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 所属区域id */
-    areaId?: number;
+    areaId?: string;
     /** 所属仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 所属仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 库存总数 */
     storageTotalCount?: number;
     /** 库存锁定数 */

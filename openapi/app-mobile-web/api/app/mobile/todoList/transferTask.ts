@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/transferTaskUsingPOST
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IProcessTasksAreTransferred
 /** 流程任务转交DTO */
 export interface IProcessTasksAreTransferredToTheDTO {
     /** 任务ID */
-    id?: number;
+    id?: string;
     /** 表单数据 */
     data?: Record<string, Record<string, any>>;
     /** 审批意见/执行情况 */
     notes?: string;
     /** 转交人id */
-    userId?: number;
+    userId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

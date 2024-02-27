@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchInvalidUsingPOST
 */
-export default function fetchMethod(options: { data: IDynamicFormDisabledRequestDTOparams: { flowPathId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDynamicFormDisabledRequestDTO, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/dynamicData/batchInvalid",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IDynamicFormDisabledRequest
 /** DynamicFormDisabledRequestDTO */
 export interface IDynamicFormDisabledRequestDTO {
     /** ID列表 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -27,5 +27,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

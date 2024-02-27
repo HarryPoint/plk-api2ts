@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/batchAddUsingPOST
@@ -31,16 +31,16 @@ export interface IEditDTOForWarehouseInventoryTask {
     /** 盘点单号 */
     taskNo?: string;
     /** 盘点仓库id */
-    storehouseId: number;
+    storehouseId: string;
     /** 处理人id集 */
-    handleUserIds: number[];
+    handleUserIds: string[];
 }
 /** 仓库盘点任务仓位编辑DTO */
 export interface IWarehouseInventoryTaskPositionEditingDTO {
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
@@ -51,7 +51,7 @@ export interface IJSONResultstring1 {
     /** 响应结果 */
     data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEditDTOForWarehouseInventoryTaskBatch_scopeType {

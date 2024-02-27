@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务分配相关/assignUsingPOST_1
 */
-export default function fetchMethod(options: { data: IProductionTaskAssignmentVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskAssignmentVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTaskAssign/assign",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProductionTaskAssignmentVO
 /** 生产任务分配VO */
 export interface IProductionTaskAssignmentVO {
     /** 生产任务ids -- 单个分配时, 传递一个即可 */
-    produceTaskIds: number[];
+    produceTaskIds: string[];
     /** 分配人员ids -- 单个分配时, 传递一个即可 */
-    assignUserIds?: number[];
+    assignUserIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

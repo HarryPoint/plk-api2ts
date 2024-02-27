@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/发送邮件记录/pagingSearchUsingPOST_1
@@ -24,9 +24,9 @@ export interface ISendAnEmailRecordQueryRequest {
     /** 邮件名称-模糊搜索 */
     emailName?: string;
     /** 发送时间-起始 */
-    sendingTimeBegin?: string;
+    sendingTimeBegin?: number;
     /** 发送时间-截止 */
-    sendingTimeEnd?: string;
+    sendingTimeEnd?: number;
     /** 邮件标题-模糊搜索 */
     title?: string;
     /** 收件人地址-模糊搜索 */
@@ -52,39 +52,39 @@ export interface ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation 
     /** 响应结果 */
     data?: IThePagingInformationSendingEmailRecordQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«SendingEmailRecordQueryResponseDTO» */
 export interface IThePagingInformationSendingEmailRecordQueryResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ISendingEmailRecordQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationSendingEmailRecordQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationSendingEmailRecordQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** SendingEmailRecordQueryResponseDTO */
 export interface ISendingEmailRecordQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件名称 */
     emailName?: string;
     /** 邮件任务ID */
-    emailTaskId?: number;
+    emailTaskId?: string;
     /** 邮件任务-标题 */
     title?: string;
     /** 内容 */
@@ -92,7 +92,7 @@ export interface ISendingEmailRecordQueryResponseDTO {
     /** 发送邮件状态 */
     status?: ESendingEmailRecordQueryResponseDTO_status;
     /** 发送时间 */
-    sendingTime?: string;
+    sendingTime?: number;
     /** 发送来源 */
     sendingFrom?: string;
     /** 收件人地址 */

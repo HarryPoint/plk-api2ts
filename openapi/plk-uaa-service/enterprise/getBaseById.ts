@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/getBaseByIdUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdInformation1 }, extraOpt
 /** Id 信息_1 */
 export interface IIdInformation1 {
     /** id */
-    id: number;
+    id: string;
 }
 /** JSONResult«企业响应对象» */
 export interface IJSONResultEnterpriseResponseObject {
@@ -27,26 +27,26 @@ export interface IJSONResultEnterpriseResponseObject {
     /** 响应结果 */
     data?: IEnterpriseResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 企业响应对象 */
 export interface IEnterpriseResponseObject {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 企业编号 */
     code?: string;
     /** 企业名 */

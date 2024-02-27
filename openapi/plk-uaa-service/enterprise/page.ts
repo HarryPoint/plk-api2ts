@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/pageUsingPOST_2
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEnterprisePagingQueryObjec
 /** 企业分页查询对象 */
 export interface IEnterprisePagingQueryObject {
     /** 企业ids */
-    enterpriseIds?: number[];
+    enterpriseIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -28,19 +28,19 @@ export interface IEnterprisePagingQueryObject {
     /** 服务状态列表 */
     productServiceStatusList?: EEnterprisePagingQueryObject_productServiceStatusList_items[];
     /** 创建人ids */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 导出字段集 */
     exportFields?: string[];
     /** 创建时间 -- 开始 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 服务类型列表 */
     productServiceTypeList?: EEnterprisePagingQueryObject_productServiceTypeList_items[];
     /** 到期时间 -- 开始 */
-    expireBeginTime?: string;
+    expireBeginTime?: number;
     /** 到期时间 -- 结束 */
-    expireEndTime?: string;
+    expireEndTime?: number;
     /** 创建时间 -- 结束 */
-    createEndTime?: string;
+    createEndTime?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -58,35 +58,35 @@ export interface IJSONResultPagingInformationEnterprisePagingResponse {
     /** 响应结果 */
     data?: IPagingInformationEnterprisePagingResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«企业分页响应» */
 export interface IPagingInformationEnterprisePagingResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IEnterprisePagingResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationEnterprisePagingResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationEnterprisePagingResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 企业分页响应 */
 export interface IEnterprisePagingResponse {
     /** 企业id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 企业名称 */
@@ -98,15 +98,15 @@ export interface IEnterprisePagingResponse {
     /** 服务状态 */
     productServiceStatus?: EEnterprisePagingResponse_productServiceStatus;
     /** 到期时间 */
-    expireTime?: string;
+    expireTime?: number;
     /** 可用账号数 */
     availableAccountQuantity?: number;
     /** 已使用账号数 */
     usedAccountQuantity?: number;
     /** 最近登录系统时间 */
-    lastLoginTime?: string;
+    lastLoginTime?: number;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 创建人 */
     createUserName?: string;
     /** 是否启用批次关联 */

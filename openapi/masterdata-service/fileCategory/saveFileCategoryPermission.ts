@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/saveFileCategoryPermissionUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IFileCategoryPermissionSave
 /** FileCategoryPermissionSaveRequestDTO */
 export interface IFileCategoryPermissionSaveRequestDTO {
     /** 文件分类ID */
-    fileCategoryId?: number;
+    fileCategoryId?: string;
     /** 权限列表 */
     permissionList?: IFileCategoryPermissionEditRequestDTO[];
 }
@@ -32,7 +32,7 @@ export interface IFileCategoryOrganizationEditRequestDTO {
     /** 组织 */
     organization?: EFileCategoryOrganizationEditRequestDTO_organization;
     /** 文件组织ID */
-    organizationId?: number;
+    organizationId?: string;
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
@@ -43,7 +43,7 @@ export interface IJSONResultstring1 {
     /** 响应结果 */
     data?: EJSONResultstring1_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EFileCategoryPermissionEditRequestDTO_permissionTypeList_items {

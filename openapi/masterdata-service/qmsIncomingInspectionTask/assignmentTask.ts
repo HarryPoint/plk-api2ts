@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/来料检验任务相关/assignmentTaskUsingPOST_1
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IVerifyTaskAssignmentReques
 /** 检验任务分配请求DTO */
 export interface IVerifyTaskAssignmentRequestDTO {
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 任务id */
-    taskIds?: number[];
+    taskIds?: string[];
     /** 质量人员id */
-    qualityPersonnelIds?: number[];
+    qualityPersonnelIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

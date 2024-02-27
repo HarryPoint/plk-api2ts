@@ -14,7 +14,7 @@
           "质检方案"
         ],
         "summary": "根据id查询详情",
-        "operationId": "getByIdUsingGET_14",
+        "operationId": "getByIdUsingGET_16",
         "produces": [
           "*/*"
         ],

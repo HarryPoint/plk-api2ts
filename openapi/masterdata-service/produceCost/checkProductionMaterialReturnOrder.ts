@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionMaterialReturnOrderUsingGET
@@ -22,18 +22,18 @@ export interface IJSONResultListProductionCostAccountingDocumentStatusVerificati
     /** 响应结果 */
     data?: IProductionCostAccountingDocumentStatusCheckResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产成本核算单据状态校验响应DTO */
 export interface IProductionCostAccountingDocumentStatusCheckResponseDTO {
     /** 单据id */
-    billId?: number;
+    billId?: string;
     /** 单据编号 */
     billCode?: string;
     /** 当前处理人 */
     handleUserNames?: string[];
     /** 待办id */
-    todoId?: number;
+    todoId?: string;
     /** 待办对应的流程任务id */
-    flowPathTaskId?: number;
+    flowPathTaskId?: string;
 }

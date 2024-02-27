@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存相关/onOffMaterialUsingPOST
 */
-export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchWarningparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchWarning, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/safetyStock/onOffMaterial",
@@ -18,9 +18,9 @@ export interface ISafetyStockMaterialSwitchWarning {
     /** 设置类型 */
     type: ESafetyStockMaterialSwitchWarning_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
     /** 物料id */
-    materialId: number;
+    materialId: string;
     /** 是否开启预警 */
     isWarning?: ESafetyStockMaterialSwitchWarning_isWarning;
 }
@@ -33,7 +33,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ESafetyStockMaterialSwitchWarning_type {

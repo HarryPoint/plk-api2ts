@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产统计相关/getProduceQtyStatisticUsingPOST
@@ -20,9 +20,9 @@ export interface IUserProductionStatisticsSearchVO {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产任务类型 */
     produceTaskTypeList?: EUserProductionStatisticsSearchVO_produceTaskTypeList_items[];
     /** 生产订单编码 */
@@ -37,7 +37,7 @@ export interface IJSONResultTotalUserProductionStatisticsReturnVO {
     /** 响应结果 */
     data?: IUserProductionTotalStatisticsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 用户生产合计统计返回VO */
 export interface IUserProductionTotalStatisticsAreReturnedToVO {

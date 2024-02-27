@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnergyConsumptionsUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IEnergyConsumptionQueryRequ
 /** 能源消耗查询请求 */
 export interface IEnergyConsumptionQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«能源消耗查询响应»» */
 export interface IJSONResultListEnergyConsumptionQueryResponse {
@@ -29,12 +29,12 @@ export interface IJSONResultListEnergyConsumptionQueryResponse {
     /** 响应结果 */
     data?: IEnergyConsumptionQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 能源消耗查询响应 */
 export interface IEnergyConsumptionQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 年份 */
     year?: string;
     /** 能源消耗总量（万吨标煤） */

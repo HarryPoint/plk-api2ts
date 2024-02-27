@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16400/doc.html#/default/库存流水相关/getPageUsingPOST_33
+* @link http://47.108.139.107:16400/doc.html#/default/库存流水相关/getPageUsingPOST_34
 */
-export default function fetchMethod(options: { data: IInventoryFlowSearchVOparams: { masterDataFlowPathCode?: string, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInventoryFlowSearchVO, params: { masterDataFlowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationInventoryReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageLog/getPage",
@@ -22,9 +22,9 @@ export interface IInventoryFlowSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 业务主数据id（eg:物料id） */
-    masterDataIdList?: number[];
+    masterDataIdList?: string[];
     /** 流程id(工单类型) */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 创建时间-开始 yyyy-MM-dd HH:mm:ss */
@@ -34,7 +34,7 @@ export interface IInventoryFlowSearchVO {
     /** 单据名称 - 模糊匹配 */
     billNameMatch?: string;
     /** 仓位id集 */
-    warehouseIds?: number[];
+    warehouseIds?: string[];
     /** 单据时间-开始 yyyy-MM-dd HH:mm:ss */
     billDateBegin?: string;
     /** 单据时间-结束 yyyy-MM-dd HH:mm:ss */
@@ -42,29 +42,29 @@ export interface IInventoryFlowSearchVO {
     /** 单据编号 - 模糊匹配 */
     businessNoMatch?: string;
     /** 仓库ID-批量查询 */
-    storehouseIdList?: number[];
+    storehouseIdList?: string[];
     /** 区域ID-批量查询 */
-    opAreaIdList?: number[];
+    opAreaIdList?: string[];
     /** 计量单位ID-批量查询 */
-    unitIdList?: number[];
+    unitIdList?: string[];
     /** 收入数量-开始 */
     inQuantityBegin?: number;
     /** 收入数量-结束 */
     inQuantityEnd?: number;
     /** 操作人 - 批量查询 */
-    operatorUserIdList?: number[];
+    operatorUserIdList?: string[];
     /** 发出数量-开始 */
     outQuantityBegin?: number;
     /** 发出数量-结束 */
     outQuantityEnd?: number;
     /** 创建用户 - 批量查询 */
-    billCreateUserIdList?: number[];
+    billCreateUserIdList?: string[];
     /** 剩余量-开始 */
     storageTotalCountBegin?: number;
     /** 剩余量-结束 */
     storageTotalCountEnd?: number;
     /** 创建部门 - 批量查询 */
-    billCreateDeptIdList?: number[];
+    billCreateDeptIdList?: string[];
     /** 业务状态 - 批量查询 */
     businessStatusList?: EInventoryFlowSearchVO_businessStatusList_items[];
     /** 库存更新时间-结束 yyyy-MM-dd HH:mm:ss */
@@ -72,7 +72,7 @@ export interface IInventoryFlowSearchVO {
     /** 流程进度 - 模糊查询 */
     processStatusMatch?: string;
     /** 库存更新部门ID */
-    updateDeptIdList?: number[];
+    updateDeptIdList?: string[];
     /** 库存更新时间-开始 yyyy-MM-dd HH:mm:ss */
     updateTimeBegin?: string;
 }
@@ -92,37 +92,37 @@ export interface IJSONResultPagingInformationInventoryReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationInventoryFlowReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«库存流水返回VO» */
 export interface IPagingInformationInventoryFlowReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IStockFlowBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationInventoryFlowReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationInventoryFlowReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 库存流水返回VO */
 export interface IStockFlowBackToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属业务主数据id */
-    masterDataId?: number;
+    masterDataId?: string;
     /** 所属物料名称 */
     materialName?: string;
     /** 所属物料编号 */
@@ -136,31 +136,31 @@ export interface IStockFlowBackToVO {
     /** 流水类型描述 */
     flowTypeDesc?: string;
     /** 操作区域id */
-    opAreaId?: number;
+    opAreaId?: string;
     /** 操作区域名称 */
     opAreaName?: string;
     /** 操作仓库id */
-    opStorehouseId?: number;
+    opStorehouseId?: string;
     /** 仓库名称 */
     opStorehouseName?: string;
     /** 操作库类型 */
     opWarehouseType?: EStockFlowBackToVO_opWarehouseType;
     /** 操作仓位id */
-    opWarehouseId?: number;
+    opWarehouseId?: string;
     /** 操作仓位层级，从高至低排列 */
     warehouseList?: IIdNameNumberVO[];
     /** 对应工单id */
-    workOrderId?: number;
+    workOrderId?: string;
     /** 对应工单数据id */
-    workOrderDataId?: number;
+    workOrderDataId?: string;
     /** 业务id */
-    businessId?: number;
+    businessId?: string;
     /** 业务编号(工单编号) */
     businessNo?: string;
     /** 对应流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 对应流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 对应流程名称 */
     flowPathName?: string;
     /** 对应流程编号 */
@@ -176,11 +176,11 @@ export interface IStockFlowBackToVO {
     /** 库存剩余可使用数 */
     storageUseCount?: number;
     /** 操作人ID */
-    operatorUserId?: number;
+    operatorUserId?: string;
     /** 操作人姓名 */
     operatorUserName?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 单据名称 */
     billName?: string;
     /** 发入数量 */
@@ -194,30 +194,30 @@ export interface IStockFlowBackToVO {
     /** 业务状态描述 */
     businessStatusDesc?: string;
     /** 单位ID */
-    unitId?: number;
+    unitId?: string;
     /** 单位名称 */
     unitName?: string;
     /** 单据创建人 */
-    billCreateUserId?: number;
+    billCreateUserId?: string;
     /** 单据创建人名称 */
     billCreateUserName?: string;
     /** 单据创建部门ID */
-    billCreateDeptId?: number;
+    billCreateDeptId?: string;
     /** 单据创建部门名称 */
     billCreateDeptName?: string;
     /** undefined */
-    billCreateTime?: string;
+    billCreateTime?: number;
     /** 库存更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 库存更新部门名称 */
     updateDeptName?: string;
     /** 库存更新时间 */
-    updateTime?: string;
+    updateTime?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

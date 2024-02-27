@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/getListForStaffUsingPOST_1
 */
-export default function fetchMethod(options: { data: IPublicBacklogDataQueryparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultListQualityProduceTaskVO>(
         {
             url: "/masterdata-service/qualityProduceTask/getListForStaff",
@@ -22,7 +22,7 @@ export interface IPublicBacklogDataQuery {
     /** 创建时间--结束时间 */
     createEndTime?: string;
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产任务状态集合 */
     produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
@@ -41,60 +41,60 @@ export interface IJSONResultListQualityProduceTaskVO {
     /** 响应结果 */
     data?: IQualityProduceTaskVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** QualityProduceTaskVO */
 export interface IQualityProduceTaskVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 任务号 */
     taskNo?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 所属生产任务号 */
     produceTaskNo?: string;
     /** 生产任务类型 */
     produceTaskType?: EQualityProduceTaskVO_produceTaskType;
     /** 对应生产处理id */
-    produceHandleId?: number;
+    produceHandleId?: string;
     /** 质检任务类型 */
     type?: EQualityProduceTaskVO_type;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 所属销售订单详情id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 批次订单id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次订单号 */
     lotOrderNo?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 仓位物料库存关联id */
-    warehouseMaterialRpId?: number;
+    warehouseMaterialRpId?: string;
     /** 仓位物料WIP关联数量状态 */
     quantityStatus?: EQualityProduceTaskVO_quantityStatus;
     /** 对应工厂日历id */
-    factoryCalendarId?: number;
+    factoryCalendarId?: string;
     /** 对应班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 总质检数 */
     totalInspectionQuantity?: number;
     /** 待检数 */
@@ -108,25 +108,25 @@ export interface IQualityProduceTaskVO {
     /** 让步接收数 */
     concessionQuantity?: number;
     /** 实际质检开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际质检结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 质检人 */
-    inspectionUserId?: number;
+    inspectionUserId?: string;
     /** 质检时间 */
-    inspectionTime?: string;
+    inspectionTime?: number;
     /** 备注 */
     remark?: string;
     /** 状态 */
     status?: EQualityProduceTaskVO_status;
     /** 取消人 */
-    cancelUserId?: number;
+    cancelUserId?: string;
     /** 取消时间 */
-    cancelTime?: string;
+    cancelTime?: number;
     /** 取消原因 */
     cancelRemark?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPublicBacklogDataQuery_produceTaskStatusList_items {

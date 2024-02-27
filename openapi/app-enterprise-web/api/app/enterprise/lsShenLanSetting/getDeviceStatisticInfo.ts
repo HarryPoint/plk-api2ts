@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getDeviceStatisticInfoUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultDarkBlueDeviceStatisticalResponseVO {
     /** 响应结果 */
     data?: IDeepBlueDeviceStatisticalResponseVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 深蓝设备统计响应VO */
 export interface IDeepBlueDeviceStatisticalResponseVO {
@@ -53,7 +53,7 @@ export interface IDeepBlueDeviceOperationMessageRespondsToVO {
 /** 深蓝设备运行进度信息响应VO */
 export interface IDeepBlueDeviceRunningProgressInformationRespondsToVO {
     /** 设备id */
-    deviceId?: number;
+    deviceId?: string;
     /** 设备编码 */
     deviceCode?: string;
     /** 设备名称 */
@@ -61,13 +61,13 @@ export interface IDeepBlueDeviceRunningProgressInformationRespondsToVO {
     /** OEE */
     oee?: number;
     /** 进给速度/主轴转速 */
-    speed?: number;
+    speed?: string;
     /** 加工产量 */
-    produceQty?: number;
+    produceQty?: string;
     /** 正常运行时间 */
-    normalRunningTime?: number;
+    normalRunningTime?: string;
     /** 停机时间 */
-    stopTime?: number;
+    stopTime?: string;
     /** 当前执行程序名称 */
     currentToolName?: string;
     /** 进给倍率 */
@@ -78,27 +78,27 @@ export interface IDeepBlueDeviceOperationStatisticsResponseVO {
     /** 平均出件耗时 */
     averageTime?: number;
     /** 加工产量 */
-    produceQty?: number;
+    produceQty?: string;
     /** 正常运行时间 */
-    normalRunningTime?: number;
+    normalRunningTime?: string;
     /** 停机时间 */
-    stopTime?: number;
+    stopTime?: string;
     /** 在线时间 */
-    onlineTime?: number;
+    onlineTime?: string;
 }
 /** 深蓝设备综合效率响应VO */
 export interface IDeepBlueEquipmentComprehensiveEfficiencyResponseVO {
     /** 类型设备正常运行时间和 */
-    totalNormalRunningTime?: number;
+    totalNormalRunningTime?: string;
     /** 类型设备工作时间和 */
-    totalTime?: number;
+    totalTime?: string;
 }
 /** 深蓝报警统计信息VO */
 export interface IDeepBlueAlarmStatisticsVO {
     /** 报警时间 */
-    date?: string;
+    date?: number;
     /** 报警设备id */
-    deviceId?: number;
+    deviceId?: string;
     /** 报警设备编码 */
     deviceCode?: string;
     /** 报警设备名称 */
@@ -119,7 +119,7 @@ export interface IDeepBlueEquipmentComprehensiveEfficiencyResponseVO1 {
     /** 数量 */
     productQuantity?: number;
     /** 交期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 订单完成进度 */
     completeRatio?: number;
 }

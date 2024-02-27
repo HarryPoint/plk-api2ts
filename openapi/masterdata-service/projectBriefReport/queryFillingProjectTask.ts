@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目简报相关/queryFillingProjectTaskUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListProjectTaskResponseObject {
     /** 响应结果 */
     data?: IProjectTaskResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务响应对象 */
 export interface IProjectTaskResponseObject {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务编码 */
     code?: string;
     /** 任务名称 */
@@ -45,15 +45,15 @@ export interface IProjectTaskResponseObject {
     /** 是否超期 */
     isOverdue?: EProjectTaskResponseObject_isOverdue;
     /** 任务类型id */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
     /** 任务类型 */
     projectTaskTypeName?: string;
     /** 任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务截止日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 上级任务id */
-    parentId?: number;
+    parentId?: string;
     /** 上级任务名称 */
     parentName?: string;
     /** 前置任务ids */
@@ -61,11 +61,11 @@ export interface IProjectTaskResponseObject {
     /** 前置任务列表 */
     preTaskList?: IIdCodeNameGenericTransportObject[];
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 交付物名称 */
@@ -80,7 +80,7 @@ export interface IProjectTaskResponseObject {
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

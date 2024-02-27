@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/pageUsingPOST
@@ -20,11 +20,11 @@ export interface IDataEaseMenuPagesQueryObjects {
     /** 分页大小 */
     pageSize?: number;
     /** 企业ids */
-    enterpriseIds?: number[];
+    enterpriseIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 创建人ids */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 导出字段集 */
@@ -36,9 +36,9 @@ export interface IDataEaseMenuPagesQueryObjects {
     /** 移动端 -- 传Y */
     isMobileTerminal?: EDataEaseMenuPagesQueryObjects_isMobileTerminal;
     /** 创建时间 -- 开始 */
-    beginCreateTime?: string;
+    beginCreateTime?: number;
     /** 创建时间 -- 结束 */
-    endCreateTime?: string;
+    endCreateTime?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -56,49 +56,49 @@ export interface IJSONResultPagingInformationDataEaseMenuPagingResponseObject {
     /** 响应结果 */
     data?: IPagingInformationDataEaseMenuPagingResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«DataEase菜单分页响应对象» */
 export interface IPagingInformationDataEaseMenuPagingResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDataEaseMenuPagingResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationDataEaseMenuPagingResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationDataEaseMenuPagingResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** DataEase菜单分页响应对象 */
 export interface IDataEaseMenuPagingResponseObject {
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 企业名称 */
     enterpriseName?: string;
     /** 菜单名称 */

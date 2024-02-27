@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/getForPageUsingPOST_20
@@ -69,7 +69,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 /** JSONResult«分页信息«动态拓展数据VO«生产订单下发扩展信息VO»»» */
 export interface IJSONResultPageInformationDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO {
@@ -80,30 +80,30 @@ export interface IJSONResultPageInformationDynamicExpansionDataVOProductionOrder
     /** 响应结果 */
     data?: IPageInformationDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«动态拓展数据VO«生产订单下发扩展信息VO»» */
 export interface IPageInformationDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 动态拓展数据VO«生产订单下发扩展信息VO» */
 export interface IDynamicExpansionDataVOProductionOrderDeliveryExpansionInformationVO {
@@ -115,19 +115,19 @@ export interface IDynamicExpansionDataVOProductionOrderDeliveryExpansionInformat
 /** 生产订单下发扩展信息VO */
 export interface IProductionOrderDeliveryExtendedMessageVO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 下发人id */
-    issueUserId?: number;
+    issueUserId?: string;
     /** 下发人 */
     issueUser?: string;
     /** 下发时间 */
-    issueTime?: string;
+    issueTime?: number;
     /** 下发人id */
-    planUserId?: number;
+    planUserId?: string;
     /** 计划人 */
     planUser?: string;
     /** 计划时间 */
-    planTime?: string;
+    planTime?: number;
 }
 
 export enum EProcessDataDetailsSearchVO_searchType {

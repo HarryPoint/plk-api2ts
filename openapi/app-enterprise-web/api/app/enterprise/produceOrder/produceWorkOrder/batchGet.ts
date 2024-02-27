@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/batchGetProduceWorkOrderUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProduceWorkOrderVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/produceWorkOrder/batchGet",
@@ -22,12 +22,12 @@ export interface IJSONResultListProduceWorkOrderVO {
     /** 响应结果 */
     data?: IProduceWorkOrderVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProduceWorkOrderVO */
 export interface IProduceWorkOrderVO {
     /** 生产订单ID */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编码 */
@@ -39,9 +39,9 @@ export interface IProduceWorkOrderVO {
     /** 销售订单号 */
     salesOrderNo?: string;
     /** 计划开工日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划完工日期 */
-    endTime?: string;
+    endTime?: number;
     /** 是否急单 */
     isEmergentOrder?: EProduceWorkOrderVO_isEmergentOrder;
     /** 订单类型 */
@@ -56,7 +56,7 @@ export interface IProduceWorkOrderVO {
 /** ProduceWorkOrderProcessVO */
 export interface IProduceWorkOrderProcessVO {
     /** 生产任务ID */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 生产任务号 */
     produceTaskNo?: string;
     /** 区域编码 */
@@ -68,11 +68,11 @@ export interface IProduceWorkOrderProcessVO {
     /** 工序名称 */
     processName?: string;
     /** 任务下发时间 */
-    taskIssueTime?: string;
+    taskIssueTime?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划完成时间 */
-    endTime?: string;
+    endTime?: number;
 }
 /** ProduceWorkOrderCustomFieldDataVO */
 export interface IProduceWorkOrderCustomFieldDataVO {

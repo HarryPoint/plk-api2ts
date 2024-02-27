@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检项/exportUsingPOST_25
 */
-export default function fetchMethod(options: { data: ICheckItemSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICheckItemSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qualityInspectionItem/export",
@@ -42,9 +42,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSortVO_isAsc {

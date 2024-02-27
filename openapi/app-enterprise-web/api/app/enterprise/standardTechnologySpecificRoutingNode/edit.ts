@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺具体工艺路径节点相关/editUsingPOST_27
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IStandardProcessSpecificPro
 /** 标准工艺具体工艺路径节点编辑请求对象 */
 export interface IStandardProcessSpecificProcessPathNodeEditRequestObject {
     /** 当前的标准工艺id, 创建标准工艺阶段 传递null, 编辑标准工艺阶段 传递编辑的标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 物料id */
-    materialId: number;
+    materialId: string;
     /** bomId */
-    bomId?: number;
+    bomId?: string;
     /** 工艺路径id --新增时传递为null, 修改时传递id */
-    routingId?: number;
+    routingId?: string;
     /** 工艺路径编号 */
     routingCode?: string;
     /** 工艺路径名称 */
@@ -33,9 +33,9 @@ export interface IStandardProcessSpecificProcessPathNodeEditRequestObject {
 /** 标准工艺具体工艺路径节点详情编辑请求对象 */
 export interface IStandardProcessSpecificProcessPathNodeDetailsEditRequestObject {
     /** 工艺路径步骤id, 新增时传递为null, 修改时传递id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 所属工序id */
-    processId: number;
+    processId: string;
 }
 /** JSONResult«工艺路径节点编辑响应对象» */
 export interface IJSONResultProcessPathNodeEditsTheResponseObject {
@@ -46,12 +46,12 @@ export interface IJSONResultProcessPathNodeEditsTheResponseObject {
     /** 响应结果 */
     data?: ITheProcessPathNodeEditsResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺路径节点编辑响应对象 */
 export interface ITheProcessPathNodeEditsResponseObjects {
     /** 工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 工艺路径编号 */
     routingCode?: string;
     /** 工艺路径名称 */
@@ -62,7 +62,7 @@ export interface ITheProcessPathNodeEditsResponseObjects {
 /** 工艺路径节点详情编辑响应对象 */
 export interface IProcessPathNodeDetailsEditResponseObject {
     /** 工艺步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
 }

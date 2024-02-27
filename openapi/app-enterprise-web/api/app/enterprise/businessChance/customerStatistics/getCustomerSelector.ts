@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-客户统计报表相关/getCustomerSelectorUsingGET_7
@@ -22,12 +22,12 @@ export interface IJSONResultListClientSelectsToReturnVO {
     /** 响应结果 */
     data?: ITheCustomerChoosesToReturnToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 客户选择返回VO */
 export interface ITheCustomerChoosesToReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

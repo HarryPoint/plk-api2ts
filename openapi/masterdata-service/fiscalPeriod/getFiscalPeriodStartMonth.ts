@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/getFiscalPeriodStartMonthUsingGET
@@ -22,10 +22,10 @@ export interface IJSONResultSetsResponseDuringTheStartMonth {
     /** 响应结果 */
     data?: ISetResponseDuringStartMonth;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设置期间开始月份Response */
 export interface ISetResponseDuringStartMonth {
     /** ID */
-    startMonth?: string;
+    startMonth?: number;
 }

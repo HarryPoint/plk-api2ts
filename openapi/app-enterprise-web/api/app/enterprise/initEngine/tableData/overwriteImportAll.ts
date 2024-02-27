@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/overwriteImportAllUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IAllOverwriteImportRequestD
 /** AllOverwriteImportRequestDTO */
 export interface IAllOverwriteImportRequestDTO {
     /** 表数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
@@ -27,7 +27,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

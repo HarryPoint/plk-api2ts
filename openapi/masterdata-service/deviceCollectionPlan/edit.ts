@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/editUsingPOST_4
 */
-export default function fetchMethod(options: { data: IEditDeviceDataAcquisitionSchemeDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEditDeviceDataAcquisitionSchemeDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/deviceCollectionPlan/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEditDeviceDataAcquisitionS
 /** 编辑设备数采方案 DTO */
 export interface IEditDeviceDataAcquisitionSchemeDTO {
     /** id，如果不传就是新增 */
-    id?: number;
+    id?: string;
     /** 名称 */
     name: string;
     /** 编码 */
@@ -33,9 +33,9 @@ export interface IEditDeviceDataAcquisitionSchemeDTO {
 /** 设备数采方案参数关联信息编辑DTO */
 export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 设备数采参数id */
-    deviceCollectionParamId?: number;
+    deviceCollectionParamId?: string;
     /** 统计类型 */
     statisticType?: EDeviceDataAcquisitionSchemeParameterAssociationInformationEditDTO_statisticType;
     /** 实时数值对比标准 */
@@ -54,7 +54,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationEdit
 /** 设备数采方案参数预警编辑DTO */
 export interface IDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 时间粒度 */
     timeType?: EDeviceDataAcquisitionSchemeParameterEarlyWarningEditDTO_timeType;
     /** 数值对比标准 */
@@ -77,7 +77,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEditDeviceDataAcquisitionSchemeDTO_isCodeRule {

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getFactoryCalendarScheduleClassUsingPOST
 */
-export default function fetchMethod(options: { data: IDateRangeQueryDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDateRangeQueryDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFactoryCalendarScheduleShiftRelationshipVO>(
         {
             url: "/masterdata-service/calendar/getFactoryCalendarScheduleClass",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IDateRangeQueryDTOparams: {
 /** 日期范围查询 DTO */
 export interface IDateRangeQueryDTO {
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** JSONResult«List«工厂日历排期班次关系VO»» */
 export interface IJSONResultListFactoryCalendarScheduleShiftRelationshipVO {
@@ -29,43 +29,43 @@ export interface IJSONResultListFactoryCalendarScheduleShiftRelationshipVO {
     /** 响应结果 */
     data?: IFactoryCalendarSchedulingShiftRelationshipVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工厂日历排期班次关系VO_1 */
 export interface IFactoryCalendarSchedulingShiftRelationshipVO1 {
     /** 日程安排日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 对应班次信息集 */
     classShifts?: IFactoryCalendarScheduleShiftRelationshipVO[];
 }
 /** 工厂日历排期班次关系VO */
 export interface IFactoryCalendarScheduleShiftRelationshipVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据状态 0停用，1启用，-1已删除 */
     dataStatus?: number;
     /** 创建员工id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建部门id */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 修改账户id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 修改部门id */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 班次名称 */
     name?: string;
     /** 班次编号 */
     code?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 结束时间类型 */
     endTimeType?: EFactoryCalendarScheduleShiftRelationshipVO_endTimeType;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/listModificationHistoryUsingGET_2
@@ -22,26 +22,26 @@ export interface IJSONResultListProjectCollectionChangeInformation {
     /** 响应结果 */
     data?: IProjectCollectionChangeInformation[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目集合变更信息 */
 export interface IProjectCollectionChangeInformation {
     /** id */
-    id?: number;
+    id?: string;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** code */
     code?: string;
     /** 项目名称 */
-    projectId?: number;
+    projectId?: string;
     /** 项目编号 */
     projectCode?: string;
     /** 发起变更人员 */
-    modifyUserId?: number;
+    modifyUserId?: string;
     /** 版本创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 版本更新时间 */
-    updateTime?: string;
+    updateTime?: number;
 }

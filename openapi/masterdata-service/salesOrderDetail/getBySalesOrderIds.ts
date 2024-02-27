@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单明细相关/getBySalesOrderIdsUsingPOST
 */
-export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListSalesOrderDetails>(
         {
             url: "/masterdata-service/salesOrderDetail/getBySalesOrderIds",
@@ -22,28 +22,28 @@ export interface IJSONResultListSalesOrderDetails {
     /** 响应结果 */
     data?: ISalesOrderDetail[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售订单明细 */
 export interface ISalesOrderDetail {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料code */
     materialCode?: string;
     /** 对应物料规格 */
     materialSpec?: string;
     /** 计量单位 */
-    unitId?: number;
+    unitId?: string;
     /** 对应工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应物料主数据bomid */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 总销售数量 */
     totalQuantity?: number;
     /** 销售单价 */
@@ -69,11 +69,11 @@ export interface ISalesOrderDetail {
     /** 总合格产出数量 */
     totalProduceQuantity?: number;
     /** 交货日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 关闭人 */
-    closeUserId?: number;
+    closeUserId?: string;
     /** 关闭时间 */
-    closeTime?: string;
+    closeTime?: number;
     /** 关闭原因 */
     closeRemark?: string;
     /** 发货数量 */
@@ -99,9 +99,9 @@ export interface ISalesOrderDetail {
     /** 应收余额 */
     receivableBalance?: number;
     /** 途径最后一道区域id */
-    lastAreaId?: number;
+    lastAreaId?: string;
     /** 途径最后一道区域时间 */
-    lastAreaTime?: string;
+    lastAreaTime?: number;
     /** 途径区域id集 - json */
     crossAreaIds?: string;
 }

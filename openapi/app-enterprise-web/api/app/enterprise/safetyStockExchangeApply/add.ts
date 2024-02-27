@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/addUsingPOST_7
@@ -18,13 +18,13 @@ export interface ISecurityInventoryChangeRequestConfiguration {
     /** 设置类型 */
     type: ESecurityInventoryChangeRequestConfiguration_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
     /** 申请单号 */
     applyNo?: string;
     /** 是否应用编码规则 */
     isCodeRule?: ESecurityInventoryChangeRequestConfiguration_isCodeRule;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 安全库存下限 */
     lowerLimit?: number;
     /** 安全库存上限 */
@@ -32,7 +32,7 @@ export interface ISecurityInventoryChangeRequestConfiguration {
     /** 采购触发下限 */
     purchaseLowerLimit?: number;
     /** 通知人id集 */
-    sendUserIds?: number[];
+    sendUserIds?: string[];
     /** 通知类型 */
     sendType?: ESecurityInventoryChangeRequestConfiguration_sendType;
 }
@@ -45,7 +45,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ESecurityInventoryChangeRequestConfiguration_type {

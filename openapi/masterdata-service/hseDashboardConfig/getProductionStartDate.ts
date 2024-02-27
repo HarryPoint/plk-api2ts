@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/getProductionStartDateUsingGET
@@ -22,10 +22,10 @@ export interface IJSONResultResponseToTheProductionStartDateQuery {
     /** 响应结果 */
     data?: IProductionStartDateQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产开始日期-查询响应 */
 export interface IProductionStartDateQueryResponse {
     /** 生产开始日期 */
-    productionStartDate?: string;
+    productionStartDate?: number;
 }

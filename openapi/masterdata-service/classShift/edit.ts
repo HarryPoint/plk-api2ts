@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/班次相关/editUsingPOST_1
 */
-export default function fetchMethod(options: { data: IShiftEditorDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IShiftEditorDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/classShift/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IShiftEditorDTOparams: { en
 /** 班次编辑DTO */
 export interface IShiftEditorDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次名称 */
     name: string;
     /** 班次编号 */
@@ -37,7 +37,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EShiftEditorDTO_endTimeType {

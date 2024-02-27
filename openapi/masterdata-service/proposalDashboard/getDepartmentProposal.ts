@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getDepartmentProposalUsingGET
@@ -22,21 +22,21 @@ export interface IJSONResultDepartmentProposalDashboardResponseDTO {
     /** 响应结果 */
     data?: IDepartmentProposalDashboardResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** DepartmentProposalDashboardResponseDTO */
 export interface IDepartmentProposalDashboardResponseDTO {
     /** 年份 */
     year?: number;
     /** 部门年目标设置ID */
-    departmentYearTargetSettingId?: number;
+    departmentYearTargetSettingId?: string;
     /** 部门提案指标 */
     departmentProposalIndicatorsList?: IDepartmentProposalIndicatorsResponseDTO[];
 }
 /** DepartmentProposalIndicatorsResponseDTO */
 export interface IDepartmentProposalIndicatorsResponseDTO {
     /** 部门ID */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 提案数量 */

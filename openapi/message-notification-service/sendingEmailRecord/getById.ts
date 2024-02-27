@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/getByIdUsingGET_2
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultSendingEmailRecordDTO>(
         {
             url: "/message-notification-service/sendingEmailRecord/getById",
@@ -22,16 +22,16 @@ export interface IJSONResultSendingEmailRecordDTO {
     /** 响应结果 */
     data?: ISendingEmailRecordDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** SendingEmailRecordDTO */
 export interface ISendingEmailRecordDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件名称 */
     emailName?: string;
     /** 邮件任务ID */
-    emailTaskId?: number;
+    emailTaskId?: string;
     /** 邮件任务-标题 */
     title?: string;
     /** 内容 */
@@ -39,7 +39,7 @@ export interface ISendingEmailRecordDTO {
     /** 发送邮件状态 */
     status?: ESendingEmailRecordDTO_status;
     /** 发送时间 */
-    sendingTime?: string;
+    sendingTime?: number;
     /** 发送来源 */
     sendingFrom?: string;
     /** 收件人地址 */
@@ -54,11 +54,11 @@ export interface ISendingEmailRecordDTO {
 /** SendingEmailAttachmentDTO */
 export interface ISendingEmailAttachmentDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** 发送邮件记录ID */
-    sendingEmailRecordId?: number;
+    sendingEmailRecordId?: string;
     /** 文件Key */
-    fileKey?: number;
+    fileKey?: string;
     /** 附件名称 */
     name?: string;
 }

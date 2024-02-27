@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工时工费相关/getMonthTotalUsingPOST
@@ -22,13 +22,13 @@ export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds?: number[];
+    userIds?: string[];
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -46,7 +46,7 @@ export interface IJSONResultMonthlySummaryStatisticalReportOfManHourFeeReturnedT
     /** 响应结果 */
     data?: IMonthlySummaryStatisticalReportOfManHourFeeIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工时工费月度汇总统计报表返回VO */
 export interface IMonthlySummaryStatisticalReportOfManHourFeeIsReturnedToVO {

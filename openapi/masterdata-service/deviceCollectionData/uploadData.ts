@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/uploadDataUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataUpload[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataUpload[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/deviceCollectionData/uploadData",
@@ -35,7 +35,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EDeviceDataAcquisitionDataUpload_onlineStatus {

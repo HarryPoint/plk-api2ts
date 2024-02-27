@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/getByIdUsingGET_3
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFileClassificationDetailsResponseDTO>(
         {
             url: "/masterdata-service/fileCategory/getById",
@@ -22,16 +22,16 @@ export interface IJSONResultFileClassificationDetailsResponseDTO {
     /** 响应结果 */
     data?: IFileClassificationDetailsRespondToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 文件分类明细响应DTO */
 export interface IFileClassificationDetailsRespondToDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 分类名称 */
     name?: string;
     /** 上级ID */
-    parentId?: number;
+    parentId?: string;
     /** 权限列表 */
     permissionList?: IFileCategoryPermissionResponseDTO[];
 }
@@ -47,7 +47,7 @@ export interface IFileCategoryOrganizationResponseDTO {
     /** 组织 */
     organization?: EFileCategoryOrganizationResponseDTO_organization;
     /** 文件组织ID */
-    organizationId?: number;
+    organizationId?: string;
     /** 组织名称 */
     organizationName?: string;
 }

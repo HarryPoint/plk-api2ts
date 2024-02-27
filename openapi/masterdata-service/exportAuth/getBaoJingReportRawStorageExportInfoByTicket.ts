@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportRawStorageExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationBaojingReportDailyReportOfRawMateri
     /** 响应结果 */
     data?: IExportInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«宝晶报表(原材料日报表)相关返回VO» */
 export interface IExportInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO {
@@ -34,7 +34,7 @@ export interface IExportInformationBaojingReportRawMaterialsDailyReportRelatedRe
 /** 宝晶报表(原材料日报表)相关返回VO */
 export interface IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO {
     /** 物料id */
-    majorDataId?: number;
+    majorDataId?: string;
     /** 物料编号 */
     majorDataCode?: string;
     /** 物料名称 */
@@ -44,7 +44,7 @@ export interface IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO {
     /** 外部编码 */
     materialOutsideCode?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
     /** 期初数 */

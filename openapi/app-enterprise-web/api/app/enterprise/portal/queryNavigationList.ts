@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/门户相关/queryNavigationListUsingGET
@@ -22,32 +22,32 @@ export interface IJSONResultListPortalQueryResponseDTO {
     /** 响应结果 */
     data?: IPortalQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 门户查询响应DTO */
 export interface IPortalQueryResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** ID */
-    id?: number;
+    id?: string;
     /** 门户编码 */
     code?: string;
     /** 门户名称 */
@@ -62,15 +62,15 @@ export interface IPortalQueryResponseDTO {
 /** PortalVisualPermissionQueryResponseDTO */
 export interface IPortalVisualPermissionQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 门户ID */
-    portalId?: number;
+    portalId?: string;
     /** 员工ID */
-    employeeId?: number;
+    employeeId?: string;
     /** 员工名称 */
     employeeName?: string;
     /** 角色ID */
-    roleId?: number;
+    roleId?: string;
     /** 角色名称 */
     roleName?: string;
     /** 超级管理员名称 */

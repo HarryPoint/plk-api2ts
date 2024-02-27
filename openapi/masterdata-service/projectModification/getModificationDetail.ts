@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目变更相关/getModificationDetailUsingGET_1
@@ -22,7 +22,7 @@ export interface IJSONResultListProjectChangeOrderFieldResponseParameters {
     /** 响应结果 */
     data?: IItemChangeOrderFieldResponseParameter[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目变更单字段响应参数 */
 export interface IItemChangeOrderFieldResponseParameter {

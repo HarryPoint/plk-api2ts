@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/batchPrintUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListBatchOrderPrintInformationIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/batchPrint",
@@ -22,7 +22,7 @@ export interface IJSONResultListBatchOrderPrintInformationIsReturnedToVO {
     /** 响应结果 */
     data?: IBatchOrderPrintingInformationIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 批次订单打印信息返回VO */
 export interface IBatchOrderPrintingInformationIsReturnedToVO {
@@ -35,7 +35,7 @@ export interface IBatchOrderPrintingInformationIsReturnedToVO {
     /** 数量 */
     totalCount?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 物料名称 */
@@ -43,7 +43,7 @@ export interface IBatchOrderPrintingInformationIsReturnedToVO {
     /** 物料规格 */
     materialSpec?: string;
     /** 打印日期 */
-    printDate?: string;
+    printDate?: number;
     /** 批次号二维码 */
     lotNoQrCode?: string;
 }

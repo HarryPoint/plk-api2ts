@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印模板相关/getListByIdsAndFlowPathIdUsingPOST
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IPrintTemplateDataQueryObje
 /** 打印模板数据查询对象 */
 export interface IPrintTemplateDataQueryObjects {
     /** 数据id集合 */
-    masterDataIds?: number[];
+    masterDataIds?: string[];
     /** 明细表格字段id集合 */
-    detailFlowPathFormFieldIds?: number[];
+    detailFlowPathFormFieldIds?: string[];
     /** 数据源id */
-    dataSourceId?: number;
+    dataSourceId?: string;
     /** 打印模板id */
-    printTemplateId?: number;
+    printTemplateId?: string;
     /** 明细表格字段serialNo集合 */
     detailFlowPathFormFieldSerialNos?: string[];
 }
@@ -35,7 +35,7 @@ export interface IJSONResultListJSONObject {
     /** 响应结果 */
     data?: IJSONObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** JSONObject */
 export interface IJSONObject {

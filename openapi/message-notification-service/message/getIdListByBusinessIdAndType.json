@@ -36,8 +36,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/消息查询DTO",
-              "originalRef": "消息查询DTO"
+              "originalRef": "消息查询DTO",
+              "$ref": "#/definitions/消息查询DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«long»»",
-              "originalRef": "JSONResult«List«long»»"
+              "originalRef": "JSONResult«List«long»»",
+              "$ref": "#/definitions/JSONResult«List«long»»"
             }
           },
           "201": {

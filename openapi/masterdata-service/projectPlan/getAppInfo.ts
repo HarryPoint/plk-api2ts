@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划相关/getAppInfoUsingGET
@@ -22,16 +22,16 @@ export interface ITheJSONResultProjectPlansToApplyTheResponseObject {
     /** 响应结果 */
     data?: ITheProjectPlanAppliesTheResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目计划应用响应对象 */
 export interface ITheProjectPlanAppliesTheResponseObject {
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 应用code */
     appCode?: string;
     /** 项目计划id */
-    id?: number;
+    id?: string;
     /** 项目计划编号 */
     code?: string;
     /** 任务流程状态 */

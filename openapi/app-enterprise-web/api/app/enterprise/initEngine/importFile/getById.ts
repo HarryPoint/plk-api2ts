@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入文件相关/getByIdUsingGET_4
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultImportFile>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importFile/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultImportFile {
     /** 响应结果 */
     data?: IImportFile;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导入文件 */
 export interface IImportFile {
     /** ID */
-    id?: number;
+    id?: string;
     /** 文件Key */
     fileKey?: string;
     /** 文件名 */

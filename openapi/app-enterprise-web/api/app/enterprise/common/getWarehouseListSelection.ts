@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getWarehouseListSelectionUsingPOST
@@ -40,47 +40,47 @@ export interface IJSONResultDTOForPagingInformationLocationQuery {
     /** 响应结果 */
     data?: IPageInformationLocationQueryDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«仓位查询DTO» */
 export interface IPageInformationLocationQueryDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IPositionQueryDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationLocationQueryDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationLocationQueryDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 仓位查询DTO */
 export interface IPositionQueryDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 仓位名称 */
     name?: string;
     /** 仓位编号 */
     code?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓库编号 */
     storehouseCode?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
     /** 区域编号 */

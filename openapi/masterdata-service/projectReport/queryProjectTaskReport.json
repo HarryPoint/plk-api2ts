@@ -303,19 +303,6 @@
           "type": "number",
           "description": "任务进度"
         },
-        "projectPlanId": {
-          "type": "integer",
-          "format": "int64",
-          "description": "项目计划id"
-        },
-        "projectPlanCode": {
-          "type": "string",
-          "description": "项目计划编号"
-        },
-        "projectPlanName": {
-          "type": "string",
-          "description": "项目计划名称"
-        },
         "parentId": {
           "type": "integer",
           "format": "int64"

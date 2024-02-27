@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/getExportTicketUsingPOST_4
@@ -26,17 +26,17 @@ export interface IBaojingReportInventoryRelatedSearchVO {
     /** 外部编码 */
     materialOutsideCode?: string;
     /** 物料id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 区域id */
-    areaIds?: number[];
+    areaIds?: string[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 业务员ids */
-    businessUserIds?: number[];
+    businessUserIds?: string[];
     /** 物料类型 */
     materialTypes?: string[];
     /** 单据名称 */
@@ -60,7 +60,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

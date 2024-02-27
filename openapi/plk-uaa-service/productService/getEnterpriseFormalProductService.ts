@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/getEnterpriseFormalProductServiceUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductServiceResponseObject>(
         {
             url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",
@@ -22,16 +22,16 @@ export interface IJSONResultProductServiceResponseObject {
     /** 响应结果 */
     data?: IProductServiceResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产品服务响应对象 */
 export interface IProductServiceResponseObject {
     /** 产品服务id */
-    id?: number;
+    id?: string;
     /** 产品类型 */
     productType?: EProductServiceResponseObject_productType;
     /** 到期时间 */
-    expireTime?: string;
+    expireTime?: number;
     /** 账号数 */
     availableAccountQuantity?: number;
     /** 产品模块数组 */

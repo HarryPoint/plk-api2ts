@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/pageBomConsumeLotOrderUsingGET
@@ -28,9 +28,9 @@ export interface IFeedBomConsumptionBatchPagingQueryObject {
     /** 导出字段集 */
     exportFields?: string[];
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** undefined */
-    materialIds?: number[];
+    materialIds?: string[];
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -48,41 +48,41 @@ export interface IJSONResultPagingInformationFeedBomConsumesBatchResponseDTO {
     /** 响应结果 */
     data?: IPagingInformationFeedBomConsumesBatchResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«进料bom消耗批次响应DTO» */
 export interface IPagingInformationFeedBomConsumesBatchResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IIncomingBomConsumesBatchResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationFeedBomConsumesBatchResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationFeedBomConsumesBatchResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 进料bom消耗批次响应DTO */
 export interface IIncomingBomConsumesBatchResponseDTO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次编号 */
     lotOrderCode?: string;
 }

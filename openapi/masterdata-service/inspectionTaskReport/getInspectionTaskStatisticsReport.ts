@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/检验任务统计报表相关/getInspectionTaskStatisticsReportUsingPOST
@@ -22,30 +22,30 @@ export interface IJSONResultThePageInformationTaskVolumeStatisticsReportReturnsT
     /** 响应结果 */
     data?: IThePageInformationTaskVolumeStatisticsReportReturnsTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«任务量统计报表返回DTO» */
 export interface IThePageInformationTaskVolumeStatisticsReportReturnsTheDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITaskVolumeStatisticsReportReturnsTheDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePageInformationTaskVolumeStatisticsReportReturnsTheDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePageInformationTaskVolumeStatisticsReportReturnsTheDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 任务量统计报表返回DTO */
 export interface ITaskVolumeStatisticsReportReturnsTheDTO {
@@ -58,11 +58,11 @@ export interface ITaskVolumeStatisticsReportReturnsTheDTO {
     /** 天 */
     day?: string;
     /** 物料检验类别id */
-    qmsInspectionCategoryId?: number;
+    qmsInspectionCategoryId?: string;
     /** 物料检验类别 */
     qmsInspectionCategoryName?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料code */
@@ -70,11 +70,11 @@ export interface ITaskVolumeStatisticsReportReturnsTheDTO {
     /** 规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位 */
     materialUnitName?: string;
     /** 供应商id */
-    supplierId?: number;
+    supplierId?: string;
     /** 供应商code */
     supplierCode?: string;
     /** 供应商名称 */
@@ -82,11 +82,11 @@ export interface ITaskVolumeStatisticsReportReturnsTheDTO {
     /** 批次 */
     lot?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 检验员id */
-    inspectionEmployeeId?: number;
+    inspectionEmployeeId?: string;
     /** 检验员名称 */
     inspectionEmployeeName?: string;
     /** 总任务量 */

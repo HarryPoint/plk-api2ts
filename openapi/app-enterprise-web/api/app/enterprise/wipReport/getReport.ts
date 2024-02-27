@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/WIP报表相关/getWipReportPageUsingPOST
@@ -18,13 +18,13 @@ export interface IWIPStatisticsReportSearchForVO {
     /** 当前页面 */
     pageNo?: number;
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -42,35 +42,35 @@ export interface IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO {
     /** 响应结果 */
     data?: IPageInformationTheWIPStatisticsReportReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«WIP统计报表返回VO» */
 export interface IPageInformationTheWIPStatisticsReportReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheWIPStatisticsReportReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTheWIPStatisticsReportReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTheWIPStatisticsReportReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** WIP统计报表返回VO */
 export interface ITheWIPStatisticsReportReturnsVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -104,7 +104,7 @@ export interface IWIPInventoryStatisticsReportReturnsVO {
 /** WIP工序统计报表返回VO */
 export interface IWIPProcessStatisticsReportReturnsVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

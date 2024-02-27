@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAllUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListVirtualizedBatchPrintTemplateResponseObject1 {
     /** 响应结果 */
     data?: IVivBatchPrintTemplateResponseObject2[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 维联批次打印模板响应对象_2 */
 export interface IVivBatchPrintTemplateResponseObject2 {
     /** id */
-    id?: number;
+    id?: string;
     /** 模板名称 */
     name?: string;
     /** 模板类型 */

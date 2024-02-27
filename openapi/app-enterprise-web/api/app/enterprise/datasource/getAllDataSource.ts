@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getAllDataSourceUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListDataSourceResponseObject {
     /** 响应结果 */
     data?: IDataSourceResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 数据源响应对象 */
 export interface IDataSourceResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 数据源权限码 */
     pcode?: string;
     /** 数据源名称 */
@@ -37,9 +37,9 @@ export interface IDataSourceResponseObject {
     /** 数据源类型 */
     dataSourceType?: EDataSourceResponseObject_dataSourceType;
     /** 父级数据源id */
-    parentId?: number;
+    parentId?: string;
     /** 应用流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用流程状态 */
     flowPathDataStatus?: number;
     /** 是否主表 */
@@ -49,7 +49,7 @@ export interface IDataSourceResponseObject {
     /** 应用路由code */
     enterpriseRouterPermissionCode?: string;
     /** 服务对象id */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务包类型 - 应用级别 */
     applicationLevel?: EDataSourceResponseObject_applicationLevel;
     /** 子数据源 */

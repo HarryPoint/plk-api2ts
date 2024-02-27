@@ -14,7 +14,7 @@
           "质检统计"
         ],
         "summary": "查询良品报废分页数据",
-        "operationId": "getPageUsingPOST_22",
+        "operationId": "getPageUsingPOST_23",
         "consumes": [
           "application/json"
         ],

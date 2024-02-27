@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathTreeUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTreeVO>(
         {
             url: "/flow-service/flowPath/getFlowPathTree",
@@ -22,18 +22,18 @@ export interface IJSONResultListProcessTreeVO {
     /** 响应结果 */
     data?: IProcessTreeVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程树VO */
 export interface IProcessTreeVO {
     /** 路由id */
-    routerId?: number;
+    routerId?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
     code?: string;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程树类型 */
     treeType?: EProcessTreeVO_treeType;
     /** 字段集 */
@@ -48,7 +48,7 @@ export interface IProcessTreeVO {
 /** 流程树字段信息返回VO */
 export interface IProcessTreeFieldInformationIsReturnedToVO {
     /** 字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
@@ -174,15 +174,15 @@ export enum EProcessTreeFieldInformationIsReturnedToVO_isTableField {
 }
 
 export enum EProcessTreeFieldInformationIsReturnedToVO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"

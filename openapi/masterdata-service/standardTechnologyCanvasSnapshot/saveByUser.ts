@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺画布快照相关/saveCanvasSnapshotByUserUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcessCanvasSnapshotAcqui
 /** 工艺画布快照获取请求DTO_1 */
 export interface IProcessCanvasSnapshotAcquisitionRequestDTO1 {
     /** 工艺id - 新增场景传值-1 */
-    technologyId: number;
+    technologyId: string;
     /** 快照保存json数据 */
     canvasSnapshot?: Record<string, Record<string, any>>;
 }
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

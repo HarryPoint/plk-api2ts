@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用相关/exportForNotSystemUsingPOST
@@ -30,9 +30,9 @@ export interface IProcessSearchVO {
     /** 状态 */
     dataStatus?: number[];
     /** 创建时间-开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 创建时间-结束时间 */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -48,9 +48,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcessSearchVO_isSystem {

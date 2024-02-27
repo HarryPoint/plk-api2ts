@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getProduceQualityTaskByNoUsingGET
@@ -22,26 +22,26 @@ export interface IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees {
     /** 响应结果 */
     data?: ICheckTaskDetailsAreReturnedToVOForEmployees;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 质检任务明细针对员工返回VO */
 export interface ICheckTaskDetailsAreReturnedToVOForEmployees {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 所属生产任务号 */
     produceTaskNo?: string;
     /** 对应生产处理id */
-    produceHandleId?: number;
+    produceHandleId?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -51,9 +51,9 @@ export interface ICheckTaskDetailsAreReturnedToVOForEmployees {
     /** 对应物料单位 */
     materialUnit?: string;
     /** 对应工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
@@ -71,21 +71,21 @@ export interface ICheckTaskDetailsAreReturnedToVOForEmployees {
     /** 让步接收数 */
     concessionQuantity?: number;
     /** 实际质检开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际质检结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 状态 */
     status?: ECheckTaskDetailsAreReturnedToVOForEmployees_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 送检人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 送检人姓名 */
     createUsername?: string;
     /** 送检人工号 */
     createUserCode?: string;
     /** 送检时间 */
-    createTime?: string;
+    createTime?: number;
     /** 质检方案质检项填写信息 */
     planItemInput?: IQualityInspectionTaskQualityInspectionSolutionQualityInspectionItemReturnToVO;
     /** 质检任务撤销信息 - 状态是已撤销时有值 */
@@ -103,13 +103,13 @@ export interface IQualityInspectionTaskQualityInspectionSolutionQualityInspectio
 /** 质检任务质检方案返回VO */
 export interface IInspectionTaskInspectionSolutionReturnToVO {
     /** 质检方案id */
-    id?: number;
+    id?: string;
     /** 质检方案名称 */
     name?: string;
     /** 质检方案编号 */
     code?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
@@ -119,7 +119,7 @@ export interface IInspectionTaskInspectionSolutionReturnToVO {
     /** 备注 */
     remark?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */
@@ -130,11 +130,11 @@ export interface IInspectionTaskInspectionSolutionReturnToVO {
 /** 质检任务质检项返回VO */
 export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检方案质检项关联id */
-    qualityInspectionPlanItemRpId?: number;
+    qualityInspectionPlanItemRpId?: string;
     /** 质检方案id */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 质检项名称 */
     qualityInspectionItemName?: string;
     /** 质检项编号 */
@@ -142,7 +142,7 @@ export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检项备注 */
     qualityInspectionItemRemark?: string;
     /** 质检项附件文件id */
-    qualityInspectionItemAttachedFileId?: number;
+    qualityInspectionItemAttachedFileId?: string;
     /** 质检项附件文件key */
     qualityInspectionItemAttachedFileKey?: string;
     /** 质检项附件文件完整路径 */
@@ -178,11 +178,11 @@ export interface ITheInspectionItemOptionReturnsVO {
 /** 质检任务撤销信息返回VO */
 export interface ITheQualityInspectionTaskCancellationInformationIsReturnedToVO {
     /** 所属生产处理id */
-    produceHandleId?: number;
+    produceHandleId?: string;
     /** 撤销时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 撤销处理人 */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 撤销处理人姓名 */
     handleUsername?: string;
     /** 撤销处理人工号 */
@@ -193,7 +193,7 @@ export interface ITheQualityInspectionTaskCancellationInformationIsReturnedToVO 
 /** 质检任务质检物料明细返回VO */
 export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检任务质检物料明细id */
-    id?: number;
+    id?: string;
     /** 质检结果类型 */
     qualityInspectionResultType?: ECheckItemDetailsAreReturnedToVO_qualityInspectionResultType;
     /** 质检结果类型名称 */
@@ -204,7 +204,7 @@ export interface ICheckItemDetailsAreReturnedToVO {
 /** 质检任务质检物料质检项明细VO */
 export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 质检方案质检项关联id */
-    qualityInspectionPlanItemRpId?: number;
+    qualityInspectionPlanItemRpId?: string;
     /** 质检方式 */
     qualityMethod?: EQcTaskQCMaterialQCItemDetailsVO_qualityMethod;
     /** 数值质检标准 */
@@ -218,7 +218,7 @@ export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 数值单位 */
     numberUnit?: string;
     /** 质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 质检项名称 */
     qualityInspectionItemName?: string;
     /** 质检项编号 */

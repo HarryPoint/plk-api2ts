@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getDynamicExecutorSelectorUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListProcessNodeDynamicExecutorReturnsVO {
     /** 响应结果 */
     data?: ITheProcessNodeDynamicExecutorReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程节点动态执行人返回VO */
 export interface ITheProcessNodeDynamicExecutorReturnsVO {
     /** 动态执行人类型 */
     dynamicExecutorType?: ETheProcessNodeDynamicExecutorReturnsVO_dynamicExecutorType;
     /** id */
-    id: number;
+    id: string;
     /** 动态执行人类型描述 */
     dynamicExecutorTypeDesc?: string;
     /** 名称 */

@@ -1,7 +1,7 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/质检统计/getPageUsingPOST_19
+* @link http://47.108.139.107:16700/doc.html#/default/质检统计/getPageUsingPOST_20
 */
 export default function fetchMethod(options: { data: IScrapDataSheetSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationGoodScrapDataTableResultVO>(
@@ -22,11 +22,11 @@ export interface IScrapDataSheetSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 时间筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 时间筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料种类 */
     materialType?: string;
 }
@@ -46,35 +46,35 @@ export interface IJSONResultPagingInformationGoodScrapDataTableResultVO {
     /** 响应结果 */
     data?: IPagingInformationGoodScrapDataTableResultsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«良品报废数据表结果VO» */
 export interface IPagingInformationGoodScrapDataTableResultsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IGoodProductScrapDataTableResultsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationGoodScrapDataTableResultsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationGoodScrapDataTableResultsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 良品报废数据表结果VO */
 export interface IGoodProductScrapDataTableResultsVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */
@@ -105,7 +105,7 @@ export interface IGoodProductScrapDataTableResultsVO {
 /** Id，值VO */
 export interface IIdValueVO {
     /** id */
-    id: number;
+    id: string;
     /** 值 */
     value: number;
 }

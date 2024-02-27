@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/班次相关/editUsingPOST_3
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IShiftEditorDTO }, extraOpt
 /** 班次编辑DTO */
 export interface IShiftEditorDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次名称 */
     name: string;
     /** 班次编号 */
@@ -37,7 +37,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EShiftEditorDTO_endTimeType {

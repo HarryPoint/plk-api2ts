@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getByIdUsingGET_5
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultImportRecordDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getById",
@@ -22,32 +22,32 @@ export interface IJSONResultImportRecordDTO {
     /** 响应结果 */
     data?: IImportRecordDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ImportRecordDTO */
 export interface IImportRecordDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 导入记录ID */
-    id?: number;
+    id?: string;
     /** 总数量 */
     totalNumber?: number;
     /** 导入文件名 */
@@ -55,9 +55,9 @@ export interface IImportRecordDTO {
     /** 成功数量 */
     numberOfSuccess?: number;
     /** 导入文件ID */
-    importFileId?: number;
+    importFileId?: string;
     /** 应用ID */
-    applicationId?: number;
+    applicationId?: string;
     /** 应用编码 */
     applicationCode?: string;
     /** 应用名称 */
@@ -67,25 +67,25 @@ export interface IImportRecordDTO {
     /** 表数据ID */
     tableDataId?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 导入状态 */
     importStatus?: EImportRecordDTO_importStatus;
     /** 失败数量 */
     numberOfFailure?: number;
     /** 操作用户ID */
-    operatorUserId?: number;
+    operatorUserId?: string;
     /** 操作用户名 */
     operatorUserName?: string;
     /** 可以导入的数量 */
-    numberOfImport?: number;
+    numberOfImport?: string;
     /** 是否继续导入失败数据 */
     continueImportFailureData?: boolean;
     /** 失败表数据ID */
-    failureTableDataId?: number;
+    failureTableDataId?: string;
     /** 模板ID */
-    templateId?: number;
+    templateId?: string;
     /** 模板编码 */
     templateCode?: string;
 }

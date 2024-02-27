@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/listEmployeeUserRpInfoUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IBatchQueryEmployeeUserAsso
 /** 员工用户关联信息批量查询 */
 export interface IBatchQueryEmployeeUserAssociationInformation {
     /** 员工id集 */
-    employeeIds?: number[];
+    employeeIds?: string[];
     /** 应用级别 */
     applicationLevel?: EBatchQueryEmployeeUserAssociationInformation_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
 }
 /** JSONResult«List«员工用户关联信息响应»» */
 export interface IJSONResultListEmployeeUserAssociationInformationResponse {
@@ -31,18 +31,18 @@ export interface IJSONResultListEmployeeUserAssociationInformationResponse {
     /** 响应结果 */
     data?: IEmployeeUserAssociationInformationResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 员工用户关联信息响应 */
 export interface IEmployeeUserAssociationInformationResponse {
     /** 员工id */
-    employeeId?: number;
+    employeeId?: string;
     /** 是否允许登录 */
     isAllowLogin?: EEmployeeUserAssociationInformationResponse_isAllowLogin;
     /** 角色集 */
     roles?: IRoleMessageResponse[];
     /** 用户id */
-    userId?: number;
+    userId?: string;
     /** 用户手机号 */
     userTelephone?: string;
 }
@@ -51,19 +51,19 @@ export interface IRoleMessageResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -77,9 +77,9 @@ export interface IRoleMessageResponse {
     /** 应用级别 */
     applicationLevel?: ERoleMessageResponse_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 
 export enum EBatchQueryEmployeeUserAssociationInformation_applicationLevel {

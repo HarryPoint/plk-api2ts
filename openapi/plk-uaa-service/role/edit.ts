@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/editUsingPOST_2
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IRoleAuthorizationEditReque
 /** 角色授权编辑请求 */
 export interface IRoleAuthorizationEditRequest {
     /** id */
-    id?: number;
+    id?: string;
     /** 角色名 */
     name?: string;
     /** 角色编码 */
@@ -24,7 +24,7 @@ export interface IRoleAuthorizationEditRequest {
     /** 角色描述 */
     description?: string;
     /** 员工id集 */
-    userIds?: number[];
+    userIds?: string[];
     /** 是否是管理员 */
     isAdmin?: ERoleAuthorizationEditRequest_isAdmin;
     /** 勾选的权限码集 */
@@ -36,9 +36,9 @@ export interface IRoleAuthorizationEditRequest {
     /** 应用级别 */
     applicationLevel?: ERoleAuthorizationEditRequest_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 /** 企业数据权限响应_1 */
 export interface IEnterpriseDataPermissionResponse1 {
@@ -68,9 +68,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ERoleAuthorizationEditRequest_isAdmin {

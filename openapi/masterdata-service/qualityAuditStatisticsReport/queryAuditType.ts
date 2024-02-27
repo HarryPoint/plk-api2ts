@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryAuditTypeUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBasicQualityAuditQueryRequ
 /** 基础质量审核查询请求_1 */
 export interface IBasicQualityAuditQueryRequest1 {
     /** 日期范围-起始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 日期范围-结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«质量审核类型查询响应» */
 export interface IJSONResultResponseToTheQualityAuditTypeQuery {
@@ -29,7 +29,7 @@ export interface IJSONResultResponseToTheQualityAuditTypeQuery {
     /** 响应结果 */
     data?: IQualityAuditTypeQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 质量审核类型查询响应 */
 export interface IQualityAuditTypeQueryResponse {
@@ -56,7 +56,7 @@ export interface IQualityAuditTypeValueResponse {
     /** 不符合项 - 动态指标。 key - 为 titleList[].key。指标为表格的值 */
     dynamicIndicators?: Record<string, number>;
     /** 不符合项 - 未整改数量 */
-    nonConformanceUnRectifiedQuantity?: number;
+    nonConformanceUnRectifiedQuantity?: string;
     /** 不符合项 - 整改率 */
     nonConformanceRectificationRate?: number;
     /** 建议项数量 */

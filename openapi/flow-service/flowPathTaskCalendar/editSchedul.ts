@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务排班相关/editSchedulUsingPOST
 */
-export default function fetchMethod(options: { data: ITaskSchedulingDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITaskSchedulingDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathTaskCalendar/editSchedul",
@@ -25,7 +25,7 @@ export interface ITaskSchedulingDTO {
 /** 任务排班天数DTO */
 export interface ITaskSchedulingDaysDTO {
     /** 排班明细 */
-    flowPathTaskShiftIds?: number[];
+    flowPathTaskShiftIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -36,5 +36,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

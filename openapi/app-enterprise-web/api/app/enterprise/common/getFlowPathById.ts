@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getFlowPathByIdAndCheckUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessRespondsToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/getFlowPathById",
@@ -22,14 +22,14 @@ export interface IJSONResultProcessRespondsToVO {
     /** 响应结果 */
     data?: ITheFlowRespondsToVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程响应VO_1 */
 export interface ITheFlowRespondsToVO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 编号 */
     code?: string;
     /** 应用类型 */
@@ -59,7 +59,7 @@ export interface ITheFlowRespondsToVO1 {
     /** 数据状态 0停用，1启用，2暂存，-1已删除 */
     dataStatus?: number;
     /** 应用服务包ID */
-    appServicePackId?: number;
+    appServicePackId?: string;
     /** 应用级别 */
     applicationLevel?: ETheFlowRespondsToVO1_applicationLevel;
 }
@@ -271,6 +271,10 @@ export enum ETheFlowRespondsToVO1_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/getUserScanProcessUsingGET
@@ -22,16 +22,16 @@ export interface IJSONResultUserScanProcessVO {
     /** 响应结果 */
     data?: IUserScanProcessVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** UserScanProcessVO */
 export interface IUserScanProcessVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** undefined */
-    userId?: number;
+    userId?: string;
     /** undefined */
-    processId?: number;
+    processId?: string;
 }

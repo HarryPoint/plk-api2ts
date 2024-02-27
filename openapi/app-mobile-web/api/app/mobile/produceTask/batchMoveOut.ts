@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/batchMoveOutUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITaskBatchOperationDTO4 }, 
 /** 任务批量操作DTO_4 */
 export interface ITaskBatchOperationDTO4 {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 生产任务列表 */
     produceTaskList: ITaskBatchOperationDTO3[];
     /** 是否使用进出料信息，来作为实际出料的唯一依据 */
@@ -27,7 +27,7 @@ export interface ITaskBatchOperationDTO4 {
 /** 任务批量操作DTO_3 */
 export interface ITaskBatchOperationDTO3 {
     /** 生产任务id */
-    taskId: number;
+    taskId: string;
     /** 实际数量 */
     actualQuantity?: number;
     /** 批次订单id集 */
@@ -36,7 +36,7 @@ export interface ITaskBatchOperationDTO3 {
 /** 任务批量操作DTO_2 */
 export interface ITaskBatchOperationDTO2 {
     /** 批次id */
-    lotId?: number;
+    lotId?: string;
     /** 实际数量 */
     actualQuantity?: number;
 }
@@ -49,7 +49,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETaskBatchOperationDTO4_isUseMaterialMoveInOrOutInfo {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/addUsingPOST_5
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProjectTaskRulesAddRequest
 /** 项目任务规则新增请求DTO */
 export interface IProjectTaskRulesAddRequestDTO {
     /** 项目任务ID */
-    projectTaskId?: number;
+    projectTaskId?: string;
     /** 任务类型 */
     taskType?: EProjectTaskRulesAddRequestDTO_taskType;
     /** 不通过比较类型 */
@@ -36,7 +36,7 @@ export interface IProjectTaskRulesAddRequestDTO {
     /** 修改规则值 */
     modifyRuleValue?: number;
     /** 修改任务ID列表 */
-    modifyTaskIdList?: number[];
+    modifyTaskIdList?: string[];
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -45,9 +45,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProjectTaskRulesAddRequestDTO_taskType {

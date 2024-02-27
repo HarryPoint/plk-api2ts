@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDataByFileIdUsingGET
 */
-export default function fetchMethod(options: { params: { fileId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { fileId?: string } }, extraOptions?: any) {
     return http<IJSONResultTableData>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/byFileId/get",
@@ -22,18 +22,18 @@ export interface IJSONResultTableData {
     /** 响应结果 */
     data?: ITabularData;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 表格数据 */
 export interface ITabularData {
     /** ID */
-    id?: number;
+    id?: string;
     /** 表定义 */
     tableDefine?: IAssociationTableDefinition1;
     /** 模板 */
     template?: IAssociationTemplate;
     /** 文件ID */
-    fileId?: number;
+    fileId?: string;
     /** 状态 */
     verificationStatus?: ETabularData_verificationStatus;
     /** 数据导入状态 */
@@ -45,20 +45,20 @@ export interface ITabularData {
     /** 自定义列标题 */
     customColumnTitle?: Record<string, ITitleDefineDTO>;
     /** 重复数据数量 */
-    repeatDataQuantity?: number;
+    repeatDataQuantity?: string;
     /** 重复数据中的覆盖导入数量 */
-    overrideImportQuantityInRepeat?: number;
+    overrideImportQuantityInRepeat?: string;
     /** 重复数据中的取消导入数据 */
-    cancelImportQuantityInRepeat?: number;
+    cancelImportQuantityInRepeat?: string;
     /** 错误数据数量 */
-    errorQuantity?: number;
+    errorQuantity?: string;
     /** 可以导入的数量 */
-    importsQuantity?: number;
+    importsQuantity?: string;
 }
 /** 关联表定义_1 */
 export interface IAssociationTableDefinition1 {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
     /** undefined */
@@ -67,7 +67,7 @@ export interface IAssociationTableDefinition1 {
 /** 关联模板 */
 export interface IAssociationTemplate {
     /** undefined */
-    id: number;
+    id: string;
     /** undefined */
     code: string;
     /** undefined */

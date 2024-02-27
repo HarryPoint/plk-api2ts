@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getIdBySystemTypeUsingPOST
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; systemType?: EsystemType } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/flowPath/getIdBySystemType",
@@ -20,9 +20,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EsystemType {
@@ -100,6 +100,7 @@ export enum EsystemType {
     PROJECT_TYPE = "PROJECT_TYPE",
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     PROJECT_PLAN = "PROJECT_PLAN",
     PROJECT_STAGE = "PROJECT_STAGE",
     PROJECT_TASK = "PROJECT_TASK",
@@ -120,6 +121,10 @@ export enum EsystemType {
     PROJECT_MODIFICATION = "PROJECT_MODIFICATION",
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    PROJECT_FILE = "PROJECT_FILE",
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

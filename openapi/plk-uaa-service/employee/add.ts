@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/addUsingPOST_4
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IEmployeeEditRequest }, ext
 /** 员工编辑请求 */
 export interface IEmployeeEditRequest {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
     name?: string;
     /** 角色id集 */
-    roleIds?: number[];
+    roleIds?: string[];
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 手机号码 */
     telephone?: string;
     /** 邮件 */
@@ -36,9 +36,9 @@ export interface IEmployeeEditRequest {
     /** 应用级别 */
     applicationLevel?: EEmployeeEditRequest_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -49,7 +49,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEmployeeEditRequest_isAllowLogin {

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/销售订单相关/getMasterMaterialByDetailIdUsingGET
 */
-export default function fetchMethod(options: { params: { detailId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { detailId?: string } }, extraOptions?: any) {
     return http<IJSONResultMainMaterialInformationOfTheProductionOrder>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesOrder/transferToProduceOrder/getMasterMaterialByDetailId",
@@ -22,20 +22,20 @@ export interface IJSONResultMainMaterialInformationOfTheProductionOrder {
     /** 响应结果 */
     data?: ITransferProductionOrderMainMaterialInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 转生产订单主物料信息 */
 export interface ITransferProductionOrderMainMaterialInformation {
     /** 详情id */
-    id?: number;
+    id?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单名称 */
     salesOrderName?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 主物料id */
-    materialId?: number;
+    materialId?: string;
     /** 主物料名称 */
     materialName?: string;
     /** 主物料编号 */
@@ -55,7 +55,7 @@ export interface ITransferProductionOrderMainMaterialInformation {
     /** 未转换数量 */
     notConvertCount?: number;
     /** 交货日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 层级 */
     level?: number;
     /** 优先级 */
@@ -65,11 +65,11 @@ export interface ITransferProductionOrderMainMaterialInformation {
     /** 标准生产工艺可选列表 */
     standardTechnologyOptionalList?: IStandardTechnologyDTO[];
     /** 已选择标准工艺ID */
-    selectedStandardTechnologyId?: number;
+    selectedStandardTechnologyId?: string;
     /** 序列号方案id */
-    serialNoSchemeId?: number;
+    serialNoSchemeId?: string;
     /** 批次方案id */
-    lotSchemeId?: number;
+    lotSchemeId?: string;
     /** 启用序列号 */
     enableSerialNo?: ETransferProductionOrderMainMaterialInformation_enableSerialNo;
     /** 启用批次 */
@@ -80,13 +80,13 @@ export interface ITransferProductionOrderMainMaterialInformation {
 /** StandardTechnologyDTO */
 export interface IStandardTechnologyDTO {
     /** 标准工艺ID */
-    id?: number;
+    id?: string;
     /** 标准工艺名称 */
     name?: string;
     /** 标准工艺所属分类名称 */
     standardTechnologyCategoryName?: string;
     /** 标准工艺所属分类ID */
-    standardTechnologyCategoryId?: number;
+    standardTechnologyCategoryId?: string;
 }
 
 export enum ETransferProductionOrderMainMaterialInformation_isEmergentOrder {

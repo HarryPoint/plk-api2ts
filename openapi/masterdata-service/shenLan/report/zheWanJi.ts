@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanZheWanJiReportUsingGET
 */
-export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReportparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListDarkBluePressReport>(
         {
             url: "/masterdata-service/shenLan/report/zheWanJi",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBl
 /** 深蓝报表查询条件 */
 export interface IQueryConditionsOfTheDarkBlueReport {
     /** 日期 */
-    date?: string;
+    date?;
     /** 当前页面 */
     pageNo?: number;
     /** 当前执行的程序名称 */
@@ -50,12 +50,12 @@ export interface IJSONResultListDarkBluePressReport {
     /** 响应结果 */
     data?: IDarkBlueBendingMachineReport[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 深蓝折弯机报表 */
 export interface IDarkBlueBendingMachineReport {
     /** 日期 */
-    date?: string;
+    date?;
     /** 设备名称 */
     deviceName?: string;
     /** 运行信号 */

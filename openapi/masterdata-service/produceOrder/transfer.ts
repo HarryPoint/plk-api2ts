@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/transferUsingPOST_1
 */
-export default function fetchMethod(options: { data: IBatchTransferToOtherProductionOrderDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchTransferToOtherProductionOrderDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceOrder/transfer",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IBatchTransferToOtherProduc
 /** 批次转移到其他生产订单DTO */
 export interface IBatchTransferToOtherProductionOrderDTO {
     /** wipRpId */
-    wipRpId: number;
+    wipRpId: string;
     /** 转移生产订单id */
-    transferProduceOrderId: number;
+    transferProduceOrderId: string;
     /** 转移生产工艺路径步骤id */
-    produceTechnologyRoutingStepId: number;
+    produceTechnologyRoutingStepId: string;
     /** 备注 */
     remark?: string;
     /** 是否自动创建一个补充生产订单 */
@@ -35,7 +35,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EBatchTransferToOtherProductionOrderDTO_isAutoCreateOrder {

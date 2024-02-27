@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/报表模板/addUsingPOST_6
@@ -83,7 +83,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EReportTemplateAddRequestDTO_report {
@@ -125,9 +125,9 @@ export enum EReportTemplateAddRequestDTO_report {
     PRODUCE_PROCESS_REPORT = "PRODUCE_PROCESS_REPORT",
     /** 按物料统计报表 */
     PRODUCE_MATERIAL_REPORT = "PRODUCE_MATERIAL_REPORT",
-    /** 工费统计表 */
+    /** 工费统计表-明细表报表 */
     PRODUCE_TIME_FEE_DETAIL_REPORT = "PRODUCE_TIME_FEE_DETAIL_REPORT",
-    /** 工费统计表 */
+    /** 工费统计表-月度统计表报表 */
     PRODUCE_TIME_FEE_MONTH_REPORT = "PRODUCE_TIME_FEE_MONTH_REPORT",
     /** 委外统计报表 */
     PRODUCE_ENTRUST_MAJOR_DATA_REPORT = "PRODUCE_ENTRUST_MAJOR_DATA_REPORT",

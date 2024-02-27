@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/getVaguePlansUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnsVOBasedOnTheSchedulingStep>(
         {
             url: "/app-enterprise-web/api/app/enterprise/productionPlan/getVaguePlans",
@@ -22,22 +22,22 @@ export interface IJSONResultListReturnsVOBasedOnTheSchedulingStep {
     /** 响应结果 */
     data?: ISchedulingStepBaseReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 排产步骤基础返回VO */
 export interface ISchedulingStepBaseReturnsVO {
     /** 步骤排产id */
-    id?: number;
+    id?: string;
     /** 工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
     processCode?: string;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/运营角色相关/getByIdUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdInformation }, extraOpti
 /** Id 信息 */
 export interface IIdInformation {
     /** id */
-    id?: number;
+    id?: string;
 }
 /** JSONResult«运营角色权限信息响应对象» */
 export interface IJSONResultOperationRolePermissionInformationResponseObject {
@@ -27,26 +27,26 @@ export interface IJSONResultOperationRolePermissionInformationResponseObject {
     /** 响应结果 */
     data?: IOperationRolePermissionInformationResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 运营角色权限信息响应对象 */
 export interface IOperationRolePermissionInformationResponseObject {
     /** 数据状态 */
     dataStatus?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 角色权限码集 */
     permissionCodeList?: string[];
     /** 编码 */

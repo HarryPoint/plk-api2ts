@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺画布编辑锁定相关/lockTechnologyCanvasEditUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICraftCanvasEditLockRequest
 /** 工艺画布编辑锁定请求DTO */
 export interface ICraftCanvasEditLockRequestDTO {
     /** 工艺id */
-    technologyId: number;
+    technologyId: string;
 }
 /** JSONResult«工艺画布编辑锁定响应DTO» */
 export interface IJSONResultProcessCanvasEditsLockResponseDTO {
@@ -27,12 +27,12 @@ export interface IJSONResultProcessCanvasEditsLockResponseDTO {
     /** 响应结果 */
     data?: ICraftCanvasEditsLockResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺画布编辑锁定响应DTO */
 export interface ICraftCanvasEditsLockResponseDTO {
     /** 工艺id */
-    technologyId?: number;
+    technologyId?: string;
     /** 锁定结果 Y:锁定成功可以编辑、N:锁定失败不能编辑 */
     lockSuccess?: ECraftCanvasEditsLockResponseDTO_lockSuccess;
     /** 锁定用户 */

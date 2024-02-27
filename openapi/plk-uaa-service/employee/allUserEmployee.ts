@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/allUserEmployeeUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IUserEmployeeQuery }, extra
 /** 用户员工查询 */
 export interface IUserEmployeeQuery {
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
 }
 /** JSONResult«List«用户员工信息响应»» */
 export interface IJSONResultListUserEmployeeInformationResponse {
@@ -27,20 +27,20 @@ export interface IJSONResultListUserEmployeeInformationResponse {
     /** 响应结果 */
     data?: IUserEmployeeInformationResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 用户员工信息响应 */
 export interface IUserEmployeeInformationResponse {
     /** 员工id */
-    employeeId?: number;
+    employeeId?: string;
     /** 用户id */
-    userId?: number;
+    userId?: string;
     /** 应用级别 */
     applicationLevel?: EUserEmployeeInformationResponse_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 
 export enum EUserEmployeeInformationResponse_applicationLevel {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/exportConsignmentLossAnalyzeExcelUsingGET_1

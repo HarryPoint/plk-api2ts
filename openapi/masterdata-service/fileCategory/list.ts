@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/listUsingGET_3
@@ -22,12 +22,12 @@ export interface IJSONResultListFileCategoryListQueryResponseDTO {
     /** 响应结果 */
     data?: IFileCategoryListQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FileCategoryListQueryResponseDTO */
 export interface IFileCategoryListQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 分类名称 */
     name?: string;
     /** 用户权限列表 */

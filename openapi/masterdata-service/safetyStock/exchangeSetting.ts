@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
 */
-export default function fetchMethod(options: { data: IUnifiedSecurityInventoryConfigurationparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUnifiedSecurityInventoryConfiguration, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/safetyStock/exchangeSetting",
@@ -18,7 +18,7 @@ export interface IUnifiedSecurityInventoryConfiguration {
     /** 设置类型 */
     type: EUnifiedSecurityInventoryConfiguration_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
     /** 是否开启预警 */
     isWarning?: EUnifiedSecurityInventoryConfiguration_isWarning;
     /** 计数方式 */
@@ -33,7 +33,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EUnifiedSecurityInventoryConfiguration_type {

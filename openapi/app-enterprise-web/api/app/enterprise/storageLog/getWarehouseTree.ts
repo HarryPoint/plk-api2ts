@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存流水相关/getWarehouseTreeUsingGET_3
@@ -22,12 +22,12 @@ export interface IJSONResultListAreaWarehouseLocationTreeReturnsVO {
     /** 响应结果 */
     data?: ITheRegionalWarehouseLocationTreeReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 区域仓库仓位树返回VO */
 export interface ITheRegionalWarehouseLocationTreeReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 区域名称 */
     name?: string;
     /** 区域名称 */
@@ -40,7 +40,7 @@ export interface ITheRegionalWarehouseLocationTreeReturnsVO {
 /** 仓库仓位树返回VO */
 export interface ITheWarehouseLocationTreeReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 仓库/仓位名称 */
     name?: string;
     /** 仓库/仓位编号 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/abnormalRevokeUsingPOST
 */
-export default function fetchMethod(options: { data: IIdInformationparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdInformation, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandle/abnormalRevoke",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdInformationparams: { ent
 /** id信息 */
 export interface IIdInformation {
     /** id */
-    id?: number;
+    id?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -27,5 +27,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

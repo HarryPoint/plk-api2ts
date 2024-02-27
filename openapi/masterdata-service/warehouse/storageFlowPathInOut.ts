@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/storageFlowPathInOutUsingPOST
 */
-export default function fetchMethod(options: { data: IWarehouseProcessInboundAndOutboundDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IWarehouseProcessInboundAndOutboundDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/warehouse/storageFlowPathInOut",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IWarehouseProcessInboundAnd
 /** 仓库流程出入库DTO */
 export interface IWarehouseProcessInboundAndOutboundDTO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 入库仓位id */
-    inWarehouseId?: number;
+    inWarehouseId?: string;
     /** 出库仓位id */
-    outWarehouseId?: number;
+    outWarehouseId?: string;
     /** 数量 */
     quantity?: number;
     /** 出入库类型 */
@@ -35,7 +35,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EWarehouseProcessInboundAndOutboundDTO_inOutType {

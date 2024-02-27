@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getQueryPageInfoByFlowPathSystemTypeUsingGET
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVOparams: { enterpriseId?: number; systemType?: EsystemType, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultDynamicDataQueryPageVO>(
         {
             url: "/flow-service/flowPath/getQueryPageInfoByFlowPathSystemType",
@@ -30,11 +30,11 @@ export interface IProcessDataSearchVO {
     /** 当前的表单分组 */
     currentFormDataGrouping?: IFormDataGroupingDTO;
     /** 操作员工id */
-    opUserId?: number;
+    opUserId?: string;
     /** 操作角色id集 */
-    opRoleIds?: number[];
+    opRoleIds?: string[];
     /** 操作部门id */
-    opDeptId?: number;
+    opDeptId?: string;
 }
 /** 流程数据明细搜索VO */
 export interface IProcessDataDetailsSearchVO {
@@ -75,7 +75,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 /** JSONResult«DynamicDataQueryPageVO» */
 export interface IJSONResultDynamicDataQueryPageVO {
@@ -86,7 +86,7 @@ export interface IJSONResultDynamicDataQueryPageVO {
     /** 响应结果 */
     data?: IDynamicDataQueryPageVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** DynamicDataQueryPageVO */
 export interface IDynamicDataQueryPageVO {
@@ -100,7 +100,7 @@ export interface IDynamicDataQueryPageVO {
 /** FlowPathBaseVO */
 export interface IFlowPathBaseVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
     /** undefined */
@@ -111,7 +111,7 @@ export interface IFlowPathBaseVO {
 /** FlowPathTableColumnBaseVO */
 export interface IFlowPathTableColumnBaseVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
     /** undefined */
@@ -125,7 +125,7 @@ export interface IFlowPathTableColumnBaseVO {
     /** undefined */
     numberRuleDetails?: INumberRuleDetailBaseVO[];
     /** undefined */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** undefined */
     formRpCode?: string;
     /** undefined */
@@ -168,7 +168,7 @@ export interface INumberRuleDetailBaseVO {
     /** undefined */
     isCodeAccording?: ENumberRuleDetailBaseVO_isCodeAccording;
     /** undefined */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
 }
 
 export enum EsystemType {
@@ -246,6 +246,7 @@ export enum EsystemType {
     PROJECT_TYPE = "PROJECT_TYPE",
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     PROJECT_PLAN = "PROJECT_PLAN",
     PROJECT_STAGE = "PROJECT_STAGE",
     PROJECT_TASK = "PROJECT_TASK",
@@ -266,6 +267,10 @@ export enum EsystemType {
     PROJECT_MODIFICATION = "PROJECT_MODIFICATION",
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    PROJECT_FILE = "PROJECT_FILE",
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

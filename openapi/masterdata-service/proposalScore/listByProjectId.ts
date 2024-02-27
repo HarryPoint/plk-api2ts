@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议评分相关/listByProjectIdUsingPOST
 */
-export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProposalScoreResponseDTO>(
         {
             url: "/masterdata-service/proposalScore/listByProjectId",
@@ -22,22 +22,22 @@ export interface IJSONResultListProposalScoreResponseDTO {
     /** 响应结果 */
     data?: IProposalScoreResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProposalScoreResponseDTO */
 export interface IProposalScoreResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 评分编码 */
     code?: string;
     /** 项目ID */
-    projectId?: number;
+    projectId?: string;
     /** 合理化建议ID */
-    proposalId?: number;
+    proposalId?: string;
     /** 初评者的得分 */
     preliminaryEvaluationScore?: number;
     /** 初评人员 */
-    preliminaryEvaluationUserId?: number;
+    preliminaryEvaluationUserId?: string;
     /** 初评人员名称 */
     preliminaryEvaluationUserName?: string;
     /** 初评意见 */
@@ -45,7 +45,7 @@ export interface IProposalScoreResponseDTO {
     /** 复评得分 */
     reEvaluationScore?: number;
     /** 复评人员 */
-    reEvaluationUserId?: number;
+    reEvaluationUserId?: string;
     /** 复评人员名称 */
     reEvaluationUserName?: string;
     /** 复评意见 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工费相关/saveUsingPOST_2
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: ILaborCostsSaveDTO }, extra
 /** 工费保存DTO */
 export interface ILaborCostsSaveDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
     name: string;
     /** 关联工序id */
-    processIds: number[];
+    processIds: string[];
     /** 关联物料id */
-    materialIds: number[];
+    materialIds: string[];
     /** 合格产出工费单价（元） */
     producePrice?: number;
     /** 返工产出工费单价（元） */
@@ -41,12 +41,12 @@ export interface IJSONResultLaborResponseObject {
     /** 响应结果 */
     data?: ICostResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工费响应对象 */
 export interface ICostResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
@@ -65,7 +65,7 @@ export interface ICostResponseObject {
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示字段名称 */
     showFieldValue?: string;
 }

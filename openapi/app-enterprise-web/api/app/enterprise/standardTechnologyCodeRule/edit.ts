@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/editUsingPOST_26
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IStandardProcessCodingRules
 /** 标准工艺编码规则请求 DTO */
 export interface IStandardProcessCodingRulesRequestDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name: string;
     /** 规则明细 */
@@ -25,7 +25,7 @@ export interface IStandardProcessCodingRulesRequestDTO {
 /** 标准工艺编码规则明细请求 DTO */
 export interface IStandardProcessCodingRulesDetailRequestDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 类型 */
     type: EStandardProcessCodingRulesDetailRequestDTO_type;
     /** 应用表格列code - 类型是应用时有值 */
@@ -50,12 +50,12 @@ export interface IJSONResultidIndicatesTheInformation {
     /** 响应结果 */
     data?: IIdInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** id信息 */
 export interface IIdInformation {
     /** id */
-    id?: number;
+    id?: string;
 }
 
 export enum EStandardProcessCodingRulesDetailRequestDTO_type {

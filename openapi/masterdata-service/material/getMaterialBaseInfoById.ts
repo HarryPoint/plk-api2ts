@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialBaseInfoByIdUsingPOST
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturnedToVO>(
         {
             url: "/masterdata-service/material/getMaterialBaseInfoById",
@@ -22,12 +22,12 @@ export interface IJSONResultBasicInformationAboutTheMaterialMasterDataIsReturned
     /** 响应结果 */
     data?: IMaterialMasterDataBasicInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */
@@ -39,7 +39,7 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料规格 */
     spec?: string;
     /** 计量单位id */
-    unitId?: number;
+    unitId?: string;
     /** 库存可使用数 */
     storageUseQuantity?: number;
 }

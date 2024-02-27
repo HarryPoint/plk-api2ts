@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/editVisitEnterpriseUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IUserEditsCanAccessEnterpri
 /** 用户编辑可访问企业请求 */
 export interface IUserEditsCanAccessEnterpriseRequests {
     /** 用户id */
-    userId: number;
+    userId: string;
     /** 可访问企业id集 */
-    enterpriseIdList?: number[];
+    enterpriseIdList?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

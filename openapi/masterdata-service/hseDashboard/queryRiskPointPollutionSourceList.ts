@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryRiskPointPollutionSourceListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IRiskPointPollutionSourceQu
 /** 风险点污染源查询请求 */
 export interface IRiskPointPollutionSourceQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«风险点污染源查询响应»» */
 export interface IJSONResultListIndicatesTheResponseToTheSourceQueryAtTheRiskPoint {
@@ -29,12 +29,12 @@ export interface IJSONResultListIndicatesTheResponseToTheSourceQueryAtTheRiskPoi
     /** 响应结果 */
     data?: IRiskPointPollutionSourceQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 风险点污染源查询响应 */
 export interface IRiskPointPollutionSourceQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 年份 */
     year?: string;
     /** 风险点数量 */

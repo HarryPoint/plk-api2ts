@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务泳道图相关/querySwimLaneChartUsingGET
 */
-export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectTaskLaneMapResponseObject>(
         {
             url: "/masterdata-service/projectTaskSwimLaneChart/querySwimLaneChart",
@@ -22,7 +22,7 @@ export interface IJSONResultProjectTaskLaneMapResponseObject {
     /** 响应结果 */
     data?: IItemTaskLaneMapResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务泳道图响应对象 */
 export interface IItemTaskLaneMapResponseObject {
@@ -36,7 +36,7 @@ export interface IItemTaskLaneMapResponseObject {
 /** 项目任务泳道图任务响应对象 */
 export interface IItemTaskLaneMapTaskResponseObject {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
@@ -48,27 +48,27 @@ export interface IItemTaskLaneMapTaskResponseObject {
     /** 应用类型 */
     appType?: EItemTaskLaneMapTaskResponseObject_appType;
     /** 任务负责人角色ids */
-    leaderUserProjectRoleIds?: number[];
+    leaderUserProjectRoleIds?: string[];
     /** 任务状态 */
     taskStatus?: EItemTaskLaneMapTaskResponseObject_taskStatus;
     /** 前置任务ids */
-    preTaskIds?: number[];
+    preTaskIds?: string[];
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 评审不通过，任务返回至 */
-    returnTaskIds?: number[];
+    returnTaskIds?: string[];
 }
 /** 项目任务泳道图角色响应对象 */
 export interface IProjectTaskLaneDiagramRoleResponseObject {
     /** 项目角色id */
-    projectRoleId?: number;
+    projectRoleId?: string;
     /** 项目角色名称 */
     projectRoleName?: string;
 }
 /** 项目任务泳道图阶段响应对象 */
 export interface IProjectTaskLaneDiagramPhaseResponseObject {
     /** 阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 阶段名称 */
     projectStageName?: string;
     /** 排序 */
@@ -224,6 +224,8 @@ export enum EItemTaskLaneMapTaskResponseObject_appType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -264,6 +266,14 @@ export enum EItemTaskLaneMapTaskResponseObject_appType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
 */
-export default function fetchMethod(options: { data: IOutsourcingSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutsourcingSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceEntrust/export",
@@ -26,7 +26,7 @@ export interface IOutsourcingSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 发起时间开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 发起时间结束 yyyy-MM-dd HH:mm:ss */
@@ -46,9 +46,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSortVO_isAsc {

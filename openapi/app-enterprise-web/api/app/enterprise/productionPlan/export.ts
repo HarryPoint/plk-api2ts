@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/exportUsingPOST_37
@@ -32,7 +32,7 @@ export interface ITaskDeliverySearchesVO {
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
     planBeginTime?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
@@ -58,9 +58,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETaskDeliverySearchesVO_status {

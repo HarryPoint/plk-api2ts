@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/getForPageUsingPOST_18
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcessTaskSearchVO }, ext
 /** 工序任务搜索VO */
 export interface IProcessTaskSearchVO {
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 是否需要分配 */
     isAssign?: EProcessTaskSearchVO_isAssign;
     /** 当前页面 */
@@ -42,35 +42,35 @@ export interface IJSONResultPagingInformationProcedureTaskSetVO {
     /** 响应结果 */
     data?: IPagingInformationProcedureTaskSetVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工序任务设置VO» */
 export interface IPagingInformationProcedureTaskSetVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcedureTaskSetVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationProcedureTaskSetVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationProcedureTaskSetVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工序任务设置VO */
 export interface IProcedureTaskSetVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -83,7 +83,7 @@ export interface IProcedureTaskSetVO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

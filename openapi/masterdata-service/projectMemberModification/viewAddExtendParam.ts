@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目成员变更相关/viewAddExtendParamUsingPOST
@@ -21,7 +21,7 @@ export interface IProjectMemberChangeOrderExtensionParameterRequest {
 /** 项目变更表单扩展参数编辑请求 */
 export interface IItemChangeFormExtensionParameterEditRequest {
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 表单操作类型 */
     operateType?: EItemChangeFormExtensionParameterEditRequest_operateType;
     /** 数据id */

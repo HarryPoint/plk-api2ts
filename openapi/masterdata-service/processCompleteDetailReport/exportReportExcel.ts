@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序完成明细表/exportReportExcelUsingPOST
@@ -20,7 +20,7 @@ export interface IProcedureCompletionListQuery {
     /** 分页大小 */
     pageSize?: number;
     /** 工序ids */
-    processIds?: number[];
+    processIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 配置号 */
@@ -30,13 +30,13 @@ export interface IProcedureCompletionListQuery {
     /** 导出字段集 */
     exportFields?: string[];
     /** 日期 -- 开始 */
-    beginTime: string;
+    beginTime: number;
     /** 日期 -- 结束 */
-    endTime: string;
+    endTime: number;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 物料id集合 */
-    materialIdList?: number[];
+    materialIdList?: string[];
     /** 实际完工量 */
     realProduceNumRange?: number[];
     /** 是否主订单 */
@@ -50,9 +50,9 @@ export interface IProcedureCompletionListQuery {
     /** 当日计划完工量 */
     curPlanCompleteNumRange?: number[];
     /** 任务计划开工日期 */
-    taskBeginTime?: string;
+    taskBeginTime?: number;
     /** 任务计划开工日期 */
-    taskEndTime?: string;
+    taskEndTime?: number;
     /** 是否根据排班日期查询 */
     isQueryByCalendar?: boolean;
     /** 排班日期集合 */
@@ -72,9 +72,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcedureCompletionListQuery_isMaster {

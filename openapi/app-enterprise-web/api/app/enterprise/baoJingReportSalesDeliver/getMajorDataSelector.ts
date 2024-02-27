@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getMajorDataSelectorUsingPOST_6
@@ -42,35 +42,35 @@ export interface IJSONResultPagingInformationMaterialMasterDataSelectionReturnsV
     /** 响应结果 */
     data?: IPageInformationMaterialMasterDataSelectionReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«物料主数据选择返回VO» */
 export interface IPageInformationMaterialMasterDataSelectionReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMaterialMasterDataSelectionIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationMaterialMasterDataSelectionReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationMaterialMasterDataSelectionReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 物料主数据选择返回VO */
 export interface IMaterialMasterDataSelectionIsReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */

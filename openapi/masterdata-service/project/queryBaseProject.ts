@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目相关/queryBaseProjectUsingPOST
@@ -20,27 +20,25 @@ export interface IProjectPhaseTaskQueryObject {
     /** 分页大小 */
     pageSize?: number;
     /** 项目id集 */
-    projectIds?: number[];
+    projectIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
-    /** 导出字段集 */
-    exportFields?: string[];
     /** 任务名称 */
     name?: string;
-    /** 项目id */
-    projectId?: number;
+    /** 导出字段集 */
+    exportFields?: string[];
     /** 是否超期（Y是 N:否） */
     isOverdueList?: string[];
+    /** 项目id */
+    projectId?: string;
+    /** 项目阶段ids列表 */
+    projectStageIds?: string[];
     /** 项目经理id集 */
     projectManagerIds?: string[];
-    /** 项目计划id集 */
-    projectPlanIds?: number[];
-    /** 项目阶段ids列表 */
-    projectStageIds?: number[];
     /** 任务编号 */
     code?: string;
     /** 任务负责人列表 */
@@ -54,73 +52,71 @@ export interface IProjectPhaseTaskQueryObject {
     /** 是否超期（Y是 N:否） */
     isOverdueGroupList?: string[];
     /** 项目任务类型ids列表 */
-    projectTaskTypeIds?: number[];
+    projectTaskTypeIds?: string[];
     /** 任务开始日期 --开始日期 */
-    beginPlanBeginTime?: string;
+    beginPlanBeginTime?: number;
     /** 任务状态（DRAFT:草稿,UN_ISSUE:未下发,UN_RECEIVE:未接受,UN_START:未开始,HANDLING:进行中,COMPLETE:已完成,NOT_PASS:未通过,CANCEL:已取消） */
     taskStatusGroupList?: string[];
     /** 超期天数结束 */
     endOverdueDay?: number;
     /** 任务查询日期 --开始日期 */
-    beginTaskTime?: string;
+    beginTaskTime?: number;
     /** 任务id集 */
-    taskIds?: number[];
+    taskIds?: string[];
     /** 任务查询日期 --开始日期 */
-    endTaskTime?: string;
+    endTaskTime?: number;
     /** 前置任务列表 */
     preTaskIds?: string[];
     /** 任务开始日期 --结束日期 */
-    endPlanBeginTime?: string;
+    endPlanBeginTime?: number;
     /** 上级任务列表 */
-    parentIds?: number[];
+    parentIds?: string[];
     /** 任务截止日期 --开始日期 */
-    beginPlanEndTime?: string;
+    beginPlanEndTime?: number;
     /** 备注 */
     remark?: string;
     /** 任务截止日期 --结束日期 */
-    endPlanEndTime?: string;
+    endPlanEndTime?: number;
     /** 状态 HANDLING进行中，COMPLETE已完成，NOT_PASS未通过, STAGING暂存, INVALID作废/停用 */
     statusList?: string[];
     /** 数据状态 0停用，1启用，2暂存 */
     dataStatusList?: number[];
     /** 创建员工ids */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 优先级列表 */
     priorityList?: string[];
     /** 创建时间 --开始日期 */
-    beginCreateTime?: string;
+    beginCreateTime?: number;
     /** 创建时间 --结束日期 */
-    endCreateTime?: string;
+    endCreateTime?: number;
     /** 修改员工ids */
-    updateUserIds?: number[];
+    updateUserIds?: string[];
     /** 修改时间 --开始日期 */
-    beginUpdateTime?: string;
+    beginUpdateTime?: number;
     /** 创建部门ids */
-    createDeptIds?: number[];
+    createDeptIds?: string[];
     /** 修改时间 --结束日期 */
-    endUpdateTime?: string;
+    endUpdateTime?: number;
     /** 处理进度名称列表 */
     processStatusNames?: string[];
-    /** 是否查询没有关联项目计划的任务 */
-    isQueryEmptyPlanTask?: EProjectPhaseTaskQueryObject_isQueryEmptyPlanTask;
     /** 修改部门ids */
-    updateDeptIds?: number[];
-    /** 任务权重 -- 开始 */
-    beginTaskWeight?: number;
+    updateDeptIds?: string[];
     /** 是否仅查询当前登录用户 */
     isQueryCurrentMember?: EProjectPhaseTaskQueryObject_isQueryCurrentMember;
+    /** undefined */
+    fromAppIds?: string[];
     /** 是否展示子任务 */
     isShowChildTask?: EProjectPhaseTaskQueryObject_isShowChildTask;
     /** undefined */
-    fromAppIds?: number[];
+    projectPlanFlowIsComplete?: EProjectPhaseTaskQueryObject_projectPlanFlowIsComplete;
     /** 项目类型id集 */
-    projectTypeIds?: number[];
-    /** 任务权重 -- 结束 */
-    endTaskWeight?: number;
+    projectTypeIds?: string[];
+    /** undefined */
+    notEmptyCondition?: boolean;
     /** 项目大类集 */
     projectCategories?: string[];
     /** undefined */
-    notEmptyCondition?: boolean;
+    filterDraftStatus?: EProjectPhaseTaskQueryObject_filterDraftStatus;
     /** 项目管理员id集 */
     projectAdminUserIds?: string[];
     /** undefined */
@@ -144,12 +140,12 @@ export interface IJSONResultListProjectBaseQueryResponseObject {
     /** 响应结果 */
     data?: IProjectBaseQueryResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目基础查询响应对象 */
 export interface IProjectBaseQueryResponseObject {
     /** 项目id */
-    id?: number;
+    id?: string;
     /** 项目名称 */
     name?: string;
     /** 项目编号 */
@@ -158,13 +154,6 @@ export interface IProjectBaseQueryResponseObject {
     projectTypeName?: string;
     /** 项目经理 */
     projectManagerName?: string;
-}
-
-export enum EProjectPhaseTaskQueryObject_isQueryEmptyPlanTask {
-    /** 是 */
-    Y = "Y",
-    /** 否 */
-    N = "N"
 }
 
 export enum EProjectPhaseTaskQueryObject_isQueryCurrentMember {
@@ -181,6 +170,16 @@ export enum EProjectPhaseTaskQueryObject_isShowChildTask {
     N = "N"
 }
 
+export enum EProjectPhaseTaskQueryObject_projectPlanFlowIsComplete {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EProjectPhaseTaskQueryObject_filterDraftStatus {
+    Y = "Y",
+    N = "N"
+}
+
 export enum EProjectPhaseTaskQueryObject_projectStatus {
     /** 草稿 */
     DRAFT = "DRAFT",
@@ -190,7 +189,7 @@ export enum EProjectPhaseTaskQueryObject_projectStatus {
     APPROVAL_DENIED = "APPROVAL_DENIED",
     /** 进行中 */
     IN_PROGRESS = "IN_PROGRESS",
-    /** 已完成 */
+    /** 已关闭 */
     COMPLETE = "COMPLETE",
     /** 已终止 */
     END = "END"

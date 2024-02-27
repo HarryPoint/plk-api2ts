@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getDetailPageConfigOptionalAppListUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigOptionalAppResponseDTO>(
         {
             url: "/flow-service/flowPathDetailPageConfig/getDetailPageConfigOptionalAppList",
@@ -22,7 +22,7 @@ export interface IJSONResultFlowPathDetailPageConfigOptionalAppResponseDTO {
     /** 响应结果 */
     data?: IFlowPathDetailPageConfigOptionalAppResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathDetailPageConfigOptionalAppResponseDTO */
 export interface IFlowPathDetailPageConfigOptionalAppResponseDTO {
@@ -32,7 +32,7 @@ export interface IFlowPathDetailPageConfigOptionalAppResponseDTO {
 /** FlowPathBaseVO */
 export interface IFlowPathBaseVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
     /** undefined */

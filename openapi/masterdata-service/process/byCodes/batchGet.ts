@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序相关/listByCodesUsingPOST
 */
-export default function fetchMethod(options: { data: string[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessDeprecatedVO>(
         {
             url: "/masterdata-service/process/byCodes/batchGet",
@@ -22,16 +22,16 @@ export interface IJSONResultListProcessDeprecatedVO {
     /** 响应结果 */
     data?: IProcessDeprecatedVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProcessDeprecatedVO */
 export interface IProcessDeprecatedVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属区域id */
-    areaId?: number;
+    areaId?: string;
     /** 工序名称 */
     name?: string;
     /** 工序编号 */

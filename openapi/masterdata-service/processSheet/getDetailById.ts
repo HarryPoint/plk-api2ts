@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getDetailByIdUsingGET
 */
-export default function fetchMethod(options: { params: { id?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessCardInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/processSheet/getDetailById",
@@ -22,20 +22,20 @@ export interface IJSONResultProcessCardInformationIsReturnedToVO {
     /** 响应结果 */
     data?: IProcessCardInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺卡信息返回VO */
 export interface IProcessCardInformationIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工艺卡名称 */
     name?: string;
     /** 工艺卡编号 */
     code?: string;
     /** 物料ids */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序ids */
-    processIds?: number[];
+    processIds?: string[];
     /** 文件集合 */
     fileList?: IProcessCardDetailsReturnedToVO[];
     /** 描述集合 */
@@ -46,7 +46,7 @@ export interface IProcessCardInformationIsReturnedToVO {
 /** 工艺卡明细返回VO */
 export interface IProcessCardDetailsReturnedToVO {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细类型 */
     type?: EProcessCardDetailsReturnedToVO_type;
     /** 明细名称/标题 */

@@ -28,8 +28,8 @@
             "description": "removeBatchRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/EmailContentTemplateBatchRemoveRequestDTO",
-              "originalRef": "EmailContentTemplateBatchRemoveRequestDTO"
+              "originalRef": "EmailContentTemplateBatchRemoveRequestDTO",
+              "$ref": "#/definitions/EmailContentTemplateBatchRemoveRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {

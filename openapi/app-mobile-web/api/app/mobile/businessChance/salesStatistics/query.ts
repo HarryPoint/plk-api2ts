@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/CRM-商机销售统计报表相关/querySalesStatisticsUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListSalesStatisticsItemOutputVO>(
         {
             url: "/app-mobile-web/api/app/mobile/businessChance/salesStatistics/query",
@@ -22,12 +22,12 @@ export interface IJSONResultListSalesStatisticsItemOutputVO {
     /** 响应结果 */
     data?: ISalesStatisticsItemOutputVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** SalesStatisticsItemOutputVO */
 export interface ISalesStatisticsItemOutputVO {
     /** 销售用户ID */
-    salesUserId?: number;
+    salesUserId?: string;
     /** 销售用户名 */
     salesUserName?: string;
     /** 需求确认数量 */

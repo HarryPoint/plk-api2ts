@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportDetailByIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number; userId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getUserReportDetailById",
@@ -22,22 +22,22 @@ export interface IJSONResultDeviceDataCollectionDataManualReportIsReturnedToVO {
     /** 响应结果 */
     data?: IDeviceDataAcquisitionManualCDRIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备数采数据人工上报详单返回VO */
 export interface IDeviceDataAcquisitionManualCDRIsReturnedToVO {
     /** 记录id */
-    id?: number;
+    id?: string;
     /** 数据采集时间 */
-    collectTime?: string;
+    collectTime?: number;
     /** 设备id */
-    deviceId?: number;
+    deviceId?: string;
     /** 设备名称 */
     deviceName?: string;
     /** 设备编号 */
     deviceCode?: string;
     /** 上报人 */
-    reqUserId?: number;
+    reqUserId?: string;
     /** 上报姓名 */
     reqUsername?: string;
     /** 在线状态 */
@@ -54,7 +54,7 @@ export interface IDeviceDataAcquisitionManualCDRIsReturnedToVO {
 /** 设备数采数据明细返回VO */
 export interface IDeviceDataCollectionDataDetailsAreReturnedToVO {
     /** 设备数采参数id */
-    deviceCollectionParamId?: number;
+    deviceCollectionParamId?: string;
     /** 设备数采参数名称 */
     deviceCollectionParamName?: string;
     /** 设备数采参数编号 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/changePlanDetailPlanStartTimeUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IMaintenancePlanDetailsMain
 /** 保养计划明细保养开始时间编辑DTO */
 export interface IMaintenancePlanDetailsMaintenanceStartTimeEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 保养开始时间 */
-    maintainStartTime?: string;
+    maintainStartTime?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

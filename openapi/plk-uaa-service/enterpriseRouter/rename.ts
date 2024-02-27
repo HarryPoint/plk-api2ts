@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/renameUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEnterpriseRouteRenamingReq
 /** 企业路由重命名请求 DTO */
 export interface IEnterpriseRouteRenamingRequestDTO {
     /** 路由id */
-    id: number;
+    id: string;
     /** 新名称 */
     newName: string;
     /** 客户端组编码 */
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

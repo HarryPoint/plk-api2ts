@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/autoInsertOrderComputeUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionOrderAutomaticIn
 /** 生产订单自动插单DTO */
 export interface IProductionOrderAutomaticInsertionDTO {
     /** 待排产订单id集 */
-    waitProduceOrderIds?: number[];
+    waitProduceOrderIds?: string[];
     /** 是否正向排产 */
     isAsc?: EProductionOrderAutomaticInsertionDTO_isAsc;
     /** 是否倒序排产 */
@@ -26,9 +26,9 @@ export interface IProductionOrderAutomaticInsertionDTO {
     /** 插单类型 */
     insertOrderType?: EProductionOrderAutomaticInsertionDTO_insertOrderType;
     /** 插单时间 yyyy-MM-dd HH:mm:ss */
-    insertTime?: string;
+    insertTime?: number;
     /** 插单生产订单id */
-    insertProduceOrderId?: number;
+    insertProduceOrderId?: string;
     /** 插单位置 */
     insertOrderPosition?: EProductionOrderAutomaticInsertionDTO_insertOrderPosition;
 }
@@ -41,7 +41,7 @@ export interface IJSONResultSchedulingResultVO {
     /** 响应结果 */
     data?: ICalculationResultOfSchedulingVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 排产计算结果VO */
 export interface ICalculationResultOfSchedulingVO {
@@ -80,7 +80,7 @@ export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
 /** 未排产生产订单返回VO_1 */
 export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 是否加急 */
     isEmergentOrder?: EUnscheduledProductionOrdersAreReturnedToVO1_isEmergentOrder;
     /** 生产订单编号 */
@@ -90,7 +90,7 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 生产物料id */
-    materialId?: number;
+    materialId?: string;
     /** 生产物料名称 */
     materialName?: string;
     /** 生产物料编号 */
@@ -98,23 +98,23 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
     /** 物料规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位 */
     materialUnit?: string;
     /** 计划交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 订单计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 订单计划结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 订单当前计划开始日期 */
-    currentBeginTime?: string;
+    currentBeginTime?: number;
     /** 订单当前计划结束日期 */
-    currentEndTime?: string;
+    currentEndTime?: number;
     /** 订单优先级 */
     priorityLevel?: number;
     /** 工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 工艺路径名称 */
     routingName?: string;
     /** 工艺路径编号 */
@@ -131,9 +131,9 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO1 {
 /** 未排产订单步骤返回VO_1 */
 export interface IUnscheduledProductionOrderStepReturnToVO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -149,13 +149,13 @@ export interface IUnscheduledProductionOrderStepReturnToVO1 {
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 工序计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 工序计划结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 工序当前计划开始日期 */
-    currentBeginTime?: string;
+    currentBeginTime?: number;
     /** 工序当前计划结束日期 */
-    currentEndTime?: string;
+    currentEndTime?: number;
 }
 
 export enum EProductionOrderAutomaticInsertionDTO_isAsc {

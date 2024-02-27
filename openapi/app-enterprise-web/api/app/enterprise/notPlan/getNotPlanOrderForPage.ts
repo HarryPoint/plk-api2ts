@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/getForPageUsingPOST_13
@@ -69,7 +69,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 /** JSONResult«分页信息«动态拓展数据VO«未排产生产订单返回VO»»» */
 export interface IJSONResultPageInformationDynamicExpansionDataVOUnscheduledProductionOrderReturnedToVO {
@@ -80,30 +80,30 @@ export interface IJSONResultPageInformationDynamicExpansionDataVOUnscheduledProd
     /** 响应结果 */
     data?: IPageInformationDynamicExpansionDataVOUnscheduledProductionOrdersReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«动态拓展数据VO«未排产生产订单返回VO»» */
 export interface IPageInformationDynamicExpansionDataVOUnscheduledProductionOrdersReturnToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDynamicExpansionDataVOUnscheduledProductionOrderReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDynamicExpansionDataVOUnscheduledProductionOrdersReturnToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDynamicExpansionDataVOUnscheduledProductionOrdersReturnToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 动态拓展数据VO«未排产生产订单返回VO» */
 export interface IDynamicExpansionDataVOUnscheduledProductionOrderReturnedToVO {
@@ -120,9 +120,9 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO {
 /** 未排产订单步骤返回VO */
 export interface IUnscheduledProductionOrderStepReturnToVO {
     /** 步骤id */
-    id?: number;
+    id?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

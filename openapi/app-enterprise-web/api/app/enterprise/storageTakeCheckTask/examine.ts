@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/examineUsingPOST_1
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IWarehouseInventoryTaskAppr
 /** 仓库盘点任务审批DTO */
 export interface IWarehouseInventoryTaskApprovalDTO {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 审批类型 */
     examineType?: EWarehouseInventoryTaskApprovalDTO_examineType;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EWarehouseInventoryTaskApprovalDTO_examineType {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeSerialNoUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IFeedBomConsumptionSerialNu
 /** 进料bom消耗序列号查询DTO */
 export interface IFeedBomConsumptionSerialNumberQueryDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 批次号、物料编号、序列号 */
     code?: string;
 }
@@ -29,22 +29,22 @@ export interface IJSONResultListIncomingBomConsumptionSerialNumberRespondsToDTO 
     /** 响应结果 */
     data?: IFeedBomConsumptionSerialNumberRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进料bom消耗序列号响应DTO */
 export interface IFeedBomConsumptionSerialNumberRespondsToDTO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
-    materialName?: number;
+    materialName?: string;
     /** 物料编号 */
-    materialCode?: number;
+    materialCode?: string;
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次编号 */
-    lotOrderCode?: number;
+    lotOrderCode?: string;
     /** 序列号id */
-    serialNoId?: number;
+    serialNoId?: string;
     /** 序列号编号 */
-    serialNoCode?: number;
+    serialNoCode?: string;
 }

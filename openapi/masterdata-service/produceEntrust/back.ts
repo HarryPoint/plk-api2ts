@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/委外加工管理/backUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionOutsourcingDesignatedProcessingDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOutsourcingDesignatedProcessingDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceEntrust/back",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProductionOutsourcingDesig
 /** 生产委外指定加工DTO */
 export interface IProductionOutsourcingDesignatedProcessingDTO {
     /** 委外记录id */
-    id: number;
+    id: string;
     /** 投料步骤id */
-    produceTechnologyRoutingStepId: number;
+    produceTechnologyRoutingStepId: string;
     /** 供应商id */
-    supplierId?: number;
+    supplierId?: string;
     /** 实际投料数量(委外合格产出) */
     backQuantity: number;
     /** 报废数量 */
@@ -35,5 +35,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

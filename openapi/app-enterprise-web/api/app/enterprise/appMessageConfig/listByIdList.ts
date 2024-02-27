@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用消息配置相关/listByIdListUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IAppMessageConfigBatchQuery
 /** AppMessageConfigBatchQueryRequestDTO */
 export interface IAppMessageConfigBatchQueryRequestDTO {
     /** 应用消息配置ID列表 */
-    idList?: number[];
+    idList?: string[];
 }
 /** JSONResult«List«AppMessageConfigDTO»» */
 export interface IJSONResultListAppMessageConfigDTO {
@@ -27,12 +27,12 @@ export interface IJSONResultListAppMessageConfigDTO {
     /** 响应结果 */
     data?: IAppMessageConfigDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** AppMessageConfigDTO */
 export interface IAppMessageConfigDTO {
     /** 消息配置ID */
-    id?: number;
+    id?: string;
     /** 标题 */
     title?: string;
     /** 应用编码 */
@@ -50,12 +50,12 @@ export interface IAppMessageConfigDTO {
     /** 接受人列表 */
     recipientList?: IAppMessageRecipientDTO[];
     /** undefined */
-    applicationId?: number;
+    applicationId?: string;
 }
 /** AppMessageSentContentTemplateDTO */
 export interface IAppMessageSentContentTemplateDTO {
     /** 消息发送内容模板ID */
-    id?: number;
+    id?: string;
     /** 消息发送模式 */
     sendingMode?: EAppMessageSentContentTemplateDTO_sendingMode;
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
@@ -74,7 +74,7 @@ export interface IAppMessageSentContentTemplateDTO {
 /** MessageContentFieldMetaDTO */
 export interface IMessageContentFieldMetaDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 应用编码 */
     applicationCode?: string;
     /** 当前表单字段序列号 */
@@ -86,12 +86,12 @@ export interface IMessageContentFieldMetaDTO {
     /** 显示字段名 */
     showFieldName?: string;
     /** 引用消息模板ID */
-    refMessageTemplateId?: number;
+    refMessageTemplateId?: string;
 }
 /** AppMessageRecipientDTO */
 export interface IAppMessageRecipientDTO {
     /** 消息接收人ID */
-    id?: number;
+    id?: string;
     /** 接收人类型 */
     recipientType?: EAppMessageRecipientDTO_recipientType;
     /** 部门ID列表 */
@@ -116,7 +116,7 @@ export interface IAppMessageRecipientDTO {
 /** 部门响应对象_1 */
 export interface IDepartmentResponseObject1 {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -127,29 +127,29 @@ export interface IDepartmentResponseObject1 {
 /** 人员响应对象 */
 export interface IPersonnelResponseObject {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 员工工号 */
     code?: string;
     /** 员工姓名 */
@@ -157,14 +157,14 @@ export interface IPersonnelResponseObject {
     /** 手机号码 */
     mobilePhone?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 邮箱 */
     email?: string;
 }
 /** 部门响应对象 */
 export interface IDepartmentResponseObject {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialStatisticsUsingPOST
 */
-export default function fetchMethod(options: { data: IBaojingMaterialMasterDataInventorySearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingMaterialMasterDataInventorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaojingMaterialInventoryStatisticsVO>(
         {
             url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialStatistics",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IBaojingMaterialMasterDataI
 /** 宝晶物料主数据库存搜索VO */
 export interface IBaojingMaterialMasterDataInventorySearchVO {
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 外部编码 */
     materialOutsideCode?: string;
     /** 当前页面 */
@@ -30,7 +30,7 @@ export interface IBaojingMaterialMasterDataInventorySearchVO {
     /** 规格 */
     materialSpec?: string;
     /** 仓库id */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
     /** 物料种类 */
     materialTypes?: string[];
     /** 编号 */
@@ -44,13 +44,13 @@ export interface IBaojingMaterialMasterDataInventorySearchVO {
     /** 材质 */
     materialTexture?: string[];
     /** 业务员id集合 */
-    businessUserIdList?: number[];
+    businessUserIdList?: string[];
     /** 工艺 */
     materialTechnology?: string[];
     /** 客户id集合 */
-    customerIdList?: number[];
+    customerIdList?: string[];
     /** 仓位id */
-    warehouseIds?: number[];
+    warehouseIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -68,7 +68,7 @@ export interface IJSONResultBaojingMaterialInventoryStatisticsVO {
     /** 响应结果 */
     data?: IBaojingMaterialInventoryStatisticsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶物料库存统计VO */
 export interface IBaojingMaterialInventoryStatisticsVO {
@@ -84,30 +84,30 @@ export interface IBaojingMaterialInventoryStatisticsVO {
 /** 分页信息«宝晶物料主数据库存返回VO» */
 export interface IPagingInformationBaojingMaterialMasterDataInventoryReturnedToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBaojingMaterialMasterDataInventoryReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationBaojingMaterialMasterDataInventoryReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationBaojingMaterialMasterDataInventoryReturnedToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 宝晶物料主数据库存返回VO */
 export interface IBaojingMaterialMasterDataInventoryReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */
@@ -135,11 +135,11 @@ export interface IBaojingMaterialMasterDataInventoryReturnedToVO {
     /** 工艺 */
     materialTechnology?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
 }

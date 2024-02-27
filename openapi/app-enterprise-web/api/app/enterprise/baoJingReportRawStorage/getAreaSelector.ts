@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（原材料）日报表/getAreaSelectorUsingGET_1
@@ -22,12 +22,12 @@ export interface ITheJSONResultListAreaTreeReturnsVO {
     /** 响应结果 */
     data?: IAreaTreeReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 区域树返回VO */
 export interface IAreaTreeReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 区域名称 */
     name?: string;
     /** 区域编号 */
@@ -35,11 +35,11 @@ export interface IAreaTreeReturnsVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 区域子集 */
     children?: IAreaTreeReturnsVO[];
 }

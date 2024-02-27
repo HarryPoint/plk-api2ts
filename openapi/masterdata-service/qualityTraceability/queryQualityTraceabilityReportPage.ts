@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量追溯/queryQualityTraceabilityReportPageUsingPOST
@@ -59,30 +59,30 @@ export interface IJSONResultPagingInformationQualityTraceabilityReportRespondsTo
     /** 响应结果 */
     data?: IPagingInformationQualityTraceabilityReportRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质量追溯报表响应DTO» */
 export interface IPagingInformationQualityTraceabilityReportRespondsToTheDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IQualityTraceabilityReportRespondsToDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationQualityTraceabilityReportRespondsToTheDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationQualityTraceabilityReportRespondsToTheDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质量追溯报表响应DTO */
 export interface IQualityTraceabilityReportRespondsToDTO {
@@ -91,7 +91,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     /** 原批次 */
     originalLotNo?: string;
     /** 批次操作时间 */
-    lotNoOptDateTime?: string;
+    lotNoOptDateTime?: number;
     /** 工序 */
     processId?: Record<string, any>[];
     /** 操作类型 */
@@ -99,7 +99,7 @@ export interface IQualityTraceabilityReportRespondsToDTO {
     /** 操作员 */
     optEmployeeId?: Record<string, any>[];
     /** 操作时间 */
-    optDateTime?: string;
+    optDateTime?: number;
     /** 生产物料 */
     materialId?: Record<string, any>[];
     /** 操作数量 */

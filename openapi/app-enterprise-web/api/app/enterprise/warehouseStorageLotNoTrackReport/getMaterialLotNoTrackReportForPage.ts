@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/批次跟踪报表相关/getMaterialLotNoTrackReportForPageUsingPOST
@@ -22,37 +22,37 @@ export interface IJSONResultPagingInformationMaterialBatchTrackingPagingResponse
     /** 响应结果 */
     data?: IPagingInformationMaterialBatchTracksPagingResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«物料批次跟踪分页响应对象» */
 export interface IPagingInformationMaterialBatchTracksPagingResponseObjects {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMaterialBatchTrackingPagingResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationMaterialBatchTracksPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationMaterialBatchTracksPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 物料批次跟踪分页响应对象 */
 export interface IMaterialBatchTrackingPagingResponseObject {
     /** 流程应用code */
     masterDataFlowPathCode?: string;
     /** 所属主数据id (eg:物料id) */
-    masterDataId?: number;
+    masterDataId?: string;
     /** 物料code */
     materialCode?: string;
     /** 物料名称 */
@@ -64,21 +64,21 @@ export interface IMaterialBatchTrackingPagingResponseObject {
     /** 仓位操作类型 */
     storageLogType?: EMaterialBatchTrackingPagingResponseObject_storageLogType;
     /** 操作仓位id */
-    opWarehouseId?: number;
+    opWarehouseId?: string;
     /** 操作仓位名称 */
     opWarehouseName?: string;
     /** 操作仓库id */
-    opStorehouseId?: number;
+    opStorehouseId?: string;
     /** 操作仓库名称 */
     opStorehouseName?: string;
     /** 批次号 */
     lotNo?: string;
     /** 业务id */
-    businessId?: number;
+    businessId?: string;
     /** 单据编号 */
     businessNo?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 单据类型 */
     billName?: string;
     /** 单据流程code */

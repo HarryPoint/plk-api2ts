@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-商机销售统计报表相关/exportSalesStatisticsUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/businessChance/salesStatistics/export",
@@ -20,7 +20,7 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

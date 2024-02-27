@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getAllClassShiftUsingGET
@@ -22,30 +22,30 @@ export interface IJSONResultListShiftsBackToVO {
     /** 响应结果 */
     data?: IShiftBackVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 班次返回VO */
 export interface IShiftBackVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次名称 */
     name?: string;
     /** 班次编号 */
     code?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 班次结束时间类型 */
     endTimeType?: EShiftBackVO_endTimeType;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 状态 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EShiftBackVO_endTimeType {

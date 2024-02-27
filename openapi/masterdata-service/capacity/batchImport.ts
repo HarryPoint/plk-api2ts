@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/产能相关/batchImportUsingPOST
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: ICapacityPreservationDTO[] 
 /** 产能保存DTO */
 export interface ICapacityPreservationDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
     name: string;
     /** 关联工序id */
-    processIds: number[];
+    processIds: string[];
     /** 关联物料id */
-    materialIds: number[];
+    materialIds: string[];
     /** 准备耗时 */
     readyTime?: number;
     /** 准备时间单位 */
@@ -45,7 +45,7 @@ export interface IJSONResultListstring {
     /** 响应结果 */
     data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ECapacityPreservationDTO_readyTimeUnit {

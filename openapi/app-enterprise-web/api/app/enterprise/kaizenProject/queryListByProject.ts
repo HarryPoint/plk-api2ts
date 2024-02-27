@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目相关/queryListByProjectUsingGET
 */
-export default function fetchMethod(options: { params: { projectId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectTaskResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProject/queryListByProject",
@@ -22,12 +22,12 @@ export interface IJSONResultListKaizenProjectTaskResponseDTO {
     /** 响应结果 */
     data?: IKaizenProjectTaskResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** KaizenProjectTaskResponseDTO */
 export interface IKaizenProjectTaskResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -39,11 +39,11 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 执行人 */
     leaderUserId?: IAssociateFormDataVO;
     /** 上级ID */
-    parentId?: number;
+    parentId?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 优先级 */
     priority?: EKaizenProjectTaskResponseDTO_priority;
     /** 备注 */
@@ -51,14 +51,14 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 创建用户ID */
     createUserId?: IAssociateFormDataVO;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 下级任务列表 */
     childTaskList?: IKaizenProjectTaskResponseDTO[];
 }
 /** 关联表单数据VO */
 export interface IAssociateFormDataVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 关联表单显示值 */
     showFieldValue?: string;
     /** 数据状态 */
@@ -66,7 +66,7 @@ export interface IAssociateFormDataVO {
     /** 是否已删除显示字段 */
     isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
-    masterDataId?: number;
+    masterDataId?: string;
 }
 
 export enum EKaizenProjectTaskResponseDTO_projectTaskStatus {

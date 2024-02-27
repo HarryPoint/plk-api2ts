@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/运营角色相关/pageUsingPOST_3
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOperationRoleQuery }, extr
 /** 运营角色查询 */
 export interface IOperationRoleQuery {
     /** 创建人 */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 创建时间开始 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -34,7 +34,7 @@ export interface IOperationRoleQuery {
     /** 角色名称 */
     name?: string;
     /** 创建时间结束 */
-    createEndTime?: string;
+    createEndTime?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -52,49 +52,49 @@ export interface IJSONResultPagingInformationOperationRoleResponse {
     /** 响应结果 */
     data?: IPageInformationOperationRoleResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«运营角色响应» */
 export interface IPageInformationOperationRoleResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IOperationalRoleResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationOperationRoleResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationOperationRoleResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 运营角色响应 */
 export interface IOperationalRoleResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */

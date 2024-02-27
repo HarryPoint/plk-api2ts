@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/editMaintainLevelUsingPOST
 */
-export default function fetchMethod(options: { data: ISelectorJsonInfo[]params: { flowPathId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISelectorJsonInfo[], params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/editMaintainLevel",
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

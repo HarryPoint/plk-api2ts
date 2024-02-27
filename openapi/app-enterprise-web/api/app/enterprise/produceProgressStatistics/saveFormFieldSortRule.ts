@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产进度统计报表 - 相关/saveFormFieldSortRuleUsingPOST
@@ -25,7 +25,7 @@ export interface IProcessTableColumnLocationGroupEditDTO {
 /** 流程表格列编辑DTO */
 export interface IProcessTableColumnEditDTO {
     /** id */
-    id: number;
+    id: string;
     /** 是否显示，控制配置表单是否显示 */
     isShow: EProcessTableColumnEditDTO_isShow;
     /** 子集 */
@@ -40,7 +40,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcessTableColumnEditDTO_isShow {

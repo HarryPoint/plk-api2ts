@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/assignUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessTaskAssignmentDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTaskAssignmentDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/processTaskSetting/assign",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcessTaskAssignmentDTOpa
 /** 工序任务分配DTO */
 export interface IProcessTaskAssignmentDTO {
     /** 工序ids */
-    processIds: number[];
+    processIds: string[];
     /** 是否分配  Y 分配 N 不分配 */
     isAssign: EProcessTaskAssignmentDTO_isAssign;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcessTaskAssignmentDTO_isAssign {

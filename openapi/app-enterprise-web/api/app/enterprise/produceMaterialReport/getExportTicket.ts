@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/产出报表(按物料统计)相关/getExportTicketUsingPOST_13
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOutputClassReportSearchVO 
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
@@ -37,7 +37,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

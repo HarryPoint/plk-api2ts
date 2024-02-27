@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getCollectionTotalReportSumResultUsingPOST
 */
-export default function fetchMethod(options: { data: IBaojingCollectionSummaryAnalysisReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingCollectionSummaryAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getCollectionTotalReportSumResult",
@@ -20,19 +20,19 @@ export interface IBaojingCollectionSummaryAnalysisReportSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 业务员id集 */
-    businessUserIds?: number[];
+    businessUserIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    dateBegin?: string;
+    dateBegin?: number;
     /** 付款单位id集(客户id) */
-    payCustomerIds?: number[];
+    payCustomerIds?: string[];
     /** 收款组织 */
     collectionOrganization?: string;
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    dateEnd?: string;
+    dateEnd?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,7 +50,7 @@ export interface IJSONResultBaojingCollectionSummaryAnalysisReportFormReturnedTo
     /** 响应结果 */
     data?: IBaojingCollectionSummaryAnalysisReportFormReturnedToVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶收款汇总分析报表表格返回VO_1 */
 export interface IBaojingCollectionSummaryAnalysisReportFormReturnedToVO1 {

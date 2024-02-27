@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/getPageUsingPOST_14
@@ -22,39 +22,39 @@ export interface IJSONResultPagingInformationTheProductionCostAssignsPagingRespo
     /** 响应结果 */
     data?: IPagingInformationTheProductionCostAllocatesPagingResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«生产成本分配分页响应对象» */
 export interface IPagingInformationTheProductionCostAllocatesPagingResponseObjects {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProductionCostAllocatesPagingResponseObjects[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationTheProductionCostAllocatesPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationTheProductionCostAllocatesPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 生产成本分配分页响应对象 */
 export interface IProductionCostAllocatesPagingResponseObjects {
     /** 费用分配id */
-    produceFeeAssignId?: number;
+    produceFeeAssignId?: string;
     /** 单据编号 */
     code?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
@@ -62,11 +62,11 @@ export interface IProductionCostAllocatesPagingResponseObjects {
     /** 入库状态描述 */
     stockInStatusDesc?: string;
     /** 计划开工时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 计划生产数量 */
     planProduceQuantity?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -74,7 +74,7 @@ export interface IProductionCostAllocatesPagingResponseObjects {
     /** 物料规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位名称 */
     materialUnitName?: string;
     /** 物料单位编号 */

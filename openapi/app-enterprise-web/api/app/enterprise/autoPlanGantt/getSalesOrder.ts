@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/getSalesOrderUsingPOST
@@ -28,11 +28,11 @@ export interface IGanttChartSearchVO {
     /** 生产订单编码 */
     produceOrderCode?: string;
     /** 工艺路径ID列表 */
-    processIdList?: number[];
+    processIdList?: string[];
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 生产物料ID列表 */
-    produceMaterialIdList?: number[];
+    produceMaterialIdList?: string[];
     /** 订单状态列表 */
     orderStatusList?: EGanttChartSearchVO_orderStatusList_items[];
 }
@@ -52,7 +52,7 @@ export interface IJSONResultSalesOrdersGanttChartBackToVO {
     /** 响应结果 */
     data?: ISalesOrdersGanttChartBackToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售订单甘特图返回VO */
 export interface ISalesOrdersGanttChartBackToVO {
@@ -64,17 +64,17 @@ export interface ISalesOrdersGanttChartBackToVO {
 /** 占用返回VO */
 export interface IOccupiedReturnVO {
     /** 排期id */
-    id?: number;
+    id?: string;
     /** 占用工序 */
-    processId?: number;
+    processId?: string;
     /** 占用工序名称 */
     processName?: string;
     /** 占用工序编号 */
     processCode?: string;
     /** 占用时间 开始 */
-    beginTime?: string;
+    beginTime?: number;
     /** 占用时间 结束 */
-    endTime?: string;
+    endTime?: number;
     /** 占用原因 */
     reason?: string;
     /** 排期类型 */
@@ -83,30 +83,30 @@ export interface IOccupiedReturnVO {
 /** 分页信息«销售订单排期返回VO» */
 export interface IPageInformationSalesOrderSchedulingReturnsToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ISalesOrdersAreScheduledBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationSalesOrderSchedulingReturnsToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationSalesOrderSchedulingReturnsToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 销售订单排期返回VO */
 export interface ISalesOrdersAreScheduledBackToVO {
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单名称 */
     salesOrderName?: string;
     /** 销售订单编号 */
@@ -117,26 +117,26 @@ export interface ISalesOrdersAreScheduledBackToVO {
 /** 销售订单明细排期返回VO */
 export interface ISalesOrderDetailsAreScheduledBackToVO {
     /** 销售订单明细id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 交货日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 销售订单ID */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 生产订单集 */
     produceOrderTimes?: IProductionOrderTimeBackToVO[];
 }
 /** 生产订单时间返回VO */
 export interface IProductionOrderTimeBackToVO {
     /** 排期id */
-    scheduleId?: number;
+    scheduleId?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 生产订单状态 */
@@ -146,19 +146,19 @@ export interface IProductionOrderTimeBackToVO {
     /** 已生产数量 */
     currentCount?: number;
     /** 交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 应用ID - 工序甘特图 代表 工序ID， 销售订单，则代表销售订单明细ID */
-    refId?: number;
+    refId?: string;
     /** 是否锁定 */
     isLock?: EProductionOrderTimeBackToVO_isLock;
     /** 排期类型 */

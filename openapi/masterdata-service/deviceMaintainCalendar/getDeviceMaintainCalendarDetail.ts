@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarDetailUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IEquipmentMaintenanceCalend
 /** 设备保养日历详情请求DTO */
 export interface IEquipmentMaintenanceCalendarDetailsRequestDTO {
     /** 保养任务id */
-    taskId?: number;
+    taskId?: string;
     /** 设备保养计划明细id */
-    deviceMaintainDetailPlanId?: number;
+    deviceMaintainDetailPlanId?: string;
 }
 /** JSONResult«设备保养日历响应DTO» */
 export interface IJSONResultDeviceMaintenanceCalendarRespondsToDTO {
@@ -29,23 +29,23 @@ export interface IJSONResultDeviceMaintenanceCalendarRespondsToDTO {
     /** 响应结果 */
     data?: IEquipmentMaintenanceCalendarRespondsToDTO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备保养日历响应DTO_1 */
 export interface IEquipmentMaintenanceCalendarRespondsToDTO1 {
     /** 天 */
-    day?: string;
+    day?;
     /** 天详情 */
     dayDetails?: IEquipmentMaintenanceCalendarRespondsToDTO[];
 }
 /** 设备保养日历响应DTO */
 export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 保养任务id */
-    taskId?: number;
+    taskId?: string;
     /** 设备保养计划id */
-    deviceMaintainPlanId?: number;
+    deviceMaintainPlanId?: string;
     /** 设备保养计划明细id */
-    deviceMaintainDetailPlanId?: number;
+    deviceMaintainDetailPlanId?: string;
     /** 设备编号 */
     deviceCode?: string;
     /** 设备名称 */
@@ -59,13 +59,13 @@ export interface IEquipmentMaintenanceCalendarRespondsToDTO {
     /** 保养方案 */
     maintainSchemeName?: string;
     /** 计划开始时间 */
-    planTaskStartDate?: string;
+    planTaskStartDate?: number;
     /** 计划结束时间 */
-    planTaskEndDate?: string;
+    planTaskEndDate?: number;
     /** 任务开始时间 */
-    taskStartDate?: string;
+    taskStartDate?: number;
     /** 任务结束时间 */
-    taskEndDate?: string;
+    taskEndDate?: number;
     /** 保养人 */
     deviceEmployeeCapacityNames?: string[];
     /** 执行人 */
@@ -97,7 +97,7 @@ export interface IMaintenanceContentReturnedToDTO {
 /** 保养消耗备件返回DTO */
 export interface IMaintenanceSparePartsReturnedToDTO {
     /** 备件id */
-    devicePartsId?: number;
+    devicePartsId?: string;
     /** 备件名称 */
     devicePartsName?: string;
     /** 备件编号 */
@@ -105,7 +105,7 @@ export interface IMaintenanceSparePartsReturnedToDTO {
     /** 备件单位 */
     devicePartsUnit?: string;
     /** 单位id */
-    devicePartsUnitId?: number;
+    devicePartsUnitId?: string;
     /** 计划消耗数量 */
     planConsumerQuantity?: number;
     /** 实际消耗数量 */

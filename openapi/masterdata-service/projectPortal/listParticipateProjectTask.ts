@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateProjectTaskUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListProjectTaskResponseObject2 {
     /** 响应结果 */
     data?: IProjectTaskResponseObject3[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务响应对象_3 */
 export interface IProjectTaskResponseObject3 {
     /** 项目任务id */
-    id?: number;
+    id?: string;
     /** 任务编号 */
     code?: string;
     /** 任务名称 */
@@ -37,21 +37,21 @@ export interface IProjectTaskResponseObject3 {
     /** 任务进度 */
     taskProgress?: number;
     /** 任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务截止日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 是否超期 */
     isOverdue?: EProjectTaskResponseObject3_isOverdue;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** undefined */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
 }
 
 export enum EProjectTaskResponseObject3_isOverdue {

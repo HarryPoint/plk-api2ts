@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/权限组相关/addUsingPOST_9
@@ -20,7 +20,7 @@ export interface ITheDTOIsAddedToThePermissionGroup {
     /** 名称 */
     name?: string;
     /** 权限码集 */
-    permissionIds?: number[];
+    permissionIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

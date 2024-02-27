@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/moveInUsingPOST
 */
-export default function fetchMethod(options: { data: IIncomingInformationDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIncomingInformationDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTask/moveIn",
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IIncomingInformationDTOpara
 /** 进料信息DTO */
 export interface IIncomingInformationDTO {
     /** 进出站记录id - 如果是从进出站记录里面点进来的，则必传 */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 成品物料填写信息列表 */
     finishedMaterialInputList?: IFinishedMaterialFillRequestDTO[];
     /** 进料生产工艺设备ids */
-    moveInProduceTechnologyDeviceIds?: number[];
+    moveInProduceTechnologyDeviceIds?: string[];
     /** 生产工艺模具ids */
-    moveInProduceTechnologyMoldIds?: number[];
+    moveInProduceTechnologyMoldIds?: string[];
     /** BOM消耗列表 */
     bomMaterials?: IBOMConsumptionRequestDTO[];
     /** 关键参数信息填写 */
@@ -37,20 +37,20 @@ export interface IIncomingInformationDTO {
 /** 成品物料填写请求DTO */
 export interface IFinishedMaterialFillRequestDTO {
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 实际数(质检数) */
     actualQuantity?: number;
     /** 再次申请质检数 */
     applyQualityAgainQuantity?: number;
     /** 操作时间 */
-    optTime?: string;
+    optTime?: number;
 }
 /** BOM消耗请求DTO */
 export interface IBOMConsumptionRequestDTO {
     /** 生产工艺路径步骤bom明细关联id */
-    id: number;
+    id: string;
     /** 对应物料id */
-    materialId: number;
+    materialId: string;
     /** 实际数 */
     actualQuantity: number;
     /** 进料批次列表 */
@@ -61,25 +61,25 @@ export interface IBOMConsumptionRequestDTO {
 /** bom消耗批次订单请求对象 */
 export interface IBomConsumesTheBatchOrderRequestObject {
     /** 批次订单id */
-    id: number;
+    id: string;
     /** undefined */
     lotNo?: string;
     /** 实际数 */
     actualQuantity: number;
     /** 序列号ids */
-    serialNoIds?: number[];
+    serialNoIds?: string[];
 }
 /** 进出站工艺卡填写 */
 export interface IEntryAndExitProcessCardFilling {
     /** 关键参数id */
-    id?: number;
+    id?: string;
     /** 录入集合 - 带录入信息 */
     keyParameterDetailList?: IDetailsOnKeyParameters[];
 }
 /** 关键参数明细填写信息 */
 export interface IDetailsOnKeyParameters {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 录入值 - 明细录入类型不是图片时，有值 */
     inputValue?: string;
     /** 图片上传key集合 - 明细录入类型是图片时，有值 */
@@ -88,7 +88,7 @@ export interface IDetailsOnKeyParameters {
 /** 进料批次拆分请求DTO */
 export interface IIncomingBatchSplitRequestDTO {
     /** 原始批次id */
-    originalLotOrderId: number;
+    originalLotOrderId: string;
     /** 拆分数量 */
     splitQuantity?: number;
     /** 原始批次id */
@@ -101,9 +101,9 @@ export interface IRequestDTOForIncomingBatchSplitDetails {
     /** 实际数 */
     actualQuantity: number;
     /** 操作时间 */
-    optTime?: string;
+    optTime?: number;
     /** undefined */
-    splitLotOrderId?: number;
+    splitLotOrderId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -114,7 +114,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EIncomingInformationDTO_handleOtherAsync {

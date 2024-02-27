@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检项/getSelectorUsingGET_6
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned>(
         {
             url: "/masterdata-service/qualityInspectionItem/getSelector",
@@ -22,12 +22,12 @@ export interface IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned
     /** 响应结果 */
     data?: ITheBasicInformationAboutQualityInspectionItemsIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 质检项基础信息返回VO */
 export interface ITheBasicInformationAboutQualityInspectionItemsIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检项名称 */
     name?: string;
     /** 质检项编号 */

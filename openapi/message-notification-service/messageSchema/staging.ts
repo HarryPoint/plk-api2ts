@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/stagingUsingPOST_1
@@ -25,7 +25,7 @@ export interface IMessageSchemaStagingRequestDTO {
 /** MessageSchemaDTO */
 export interface IMessageSchemaDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 标题 */
@@ -58,15 +58,15 @@ export interface IMessageSchemaDTO {
 /** MessageSendingContentTemplateDTO */
 export interface IMessageSendingContentTemplateDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
     /** 消息发送模式 */
     sendingMode?: EMessageSendingContentTemplateDTO_sendingMode;
     /** 是否使用消息模板 */
     isUseSmsTemplate?: EMessageSendingContentTemplateDTO_isUseSmsTemplate;
     /** 消息模板ID */
-    smsTemplateId?: number;
+    smsTemplateId?: string;
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
     messageContent?: string;
     /** 字段序列号列表 */
@@ -85,7 +85,7 @@ export interface IMessageSendingContentTemplateDTO {
 /** MessageContentFieldMetaDTO */
 export interface IMessageContentFieldMetaDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 应用编码 */
     applicationCode?: string;
     /** 当前表单字段序列号 */
@@ -97,14 +97,14 @@ export interface IMessageContentFieldMetaDTO {
     /** 显示字段名 */
     showFieldName?: string;
     /** 引用消息模板ID */
-    refMessageTemplateId?: number;
+    refMessageTemplateId?: string;
 }
 /** MessageRecipientDTO */
 export interface IMessageRecipientDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
     /** 接收人类型 */
     recipientType?: EMessageRecipientDTO_recipientType;
     /** 部门ID列表 */
@@ -129,7 +129,7 @@ export interface IMessageRecipientDTO {
 /** 部门响应对象_1 */
 export interface IDepartmentResponseObject1 {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -140,29 +140,29 @@ export interface IDepartmentResponseObject1 {
 /** 人员响应对象 */
 export interface IPersonnelResponseObject {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 员工工号 */
     code?: string;
     /** 员工姓名 */
@@ -170,14 +170,14 @@ export interface IPersonnelResponseObject {
     /** 手机号码 */
     mobilePhone?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 邮箱 */
     email?: string;
 }
 /** 部门响应对象 */
 export interface IDepartmentResponseObject {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -195,9 +195,9 @@ export interface IFieldSerialNoToNameMappingDTO {
 /** OriginalDataFilterConditionDTO */
 export interface IOriginalDataFilterConditionDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
     /** 表-编码 */
     tableCode?: string;
     /** 流程编码 */
@@ -214,17 +214,17 @@ export interface IOriginalDataFilterConditionDTO {
 /** MessageTriggerNodeDTO */
 export interface IMessageTriggerNodeDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
     /** 节点类型 */
     nodeType?: EMessageTriggerNodeDTO_nodeType;
     /** 逻辑运算符类型 */
     logicalType?: EMessageTriggerNodeDTO_logicalType;
     /** 当前触发节点条件ID */
-    currentTriggerConditionId?: number;
+    currentTriggerConditionId?: string;
     /** 上级触发节点ID */
-    parentTriggerNodeId?: number;
+    parentTriggerNodeId?: string;
     /** 当前节点表达式 */
     currentConditionExpression?: IMessageTriggerConditionDTO;
     /** 下级节点表达式列表 */
@@ -235,9 +235,9 @@ export interface IMessageTriggerNodeDTO {
 /** MessageTriggerConditionDTO */
 export interface IMessageTriggerConditionDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
     /** 触发模式 */
     triggerMode?: EMessageTriggerConditionDTO_triggerMode;
     /** 消息触发动作 */
@@ -268,7 +268,7 @@ export interface IMessageTriggerConditionDTO {
 /** MessageSchemaTimeConfigDTO */
 export interface IMessageSchemaTimeConfigDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 时间模式 */
     timeMode?: EMessageSchemaTimeConfigDTO_timeMode;
     /** 周号 */
@@ -286,18 +286,18 @@ export interface IMessageSchemaTimeConfigDTO {
     /** 每半年计算模式 */
     halfYearCalcTimeMode?: EMessageSchemaTimeConfigDTO_halfYearCalcTimeMode;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
 }
 /** FormConfigDTO */
 export interface IFormConfigDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 应用编码 */
     applicationCode?: string;
     /** 详细流程字段编码 */
     detailTableFieldCode?: string;
     /** 详细流程字段ID */
-    detailTableFieldId?: number;
+    detailTableFieldId?: string;
     /** 详细流程字段序列号 */
     detailTableFieldSerialNo?: string;
     /** 是否详细流程表 */
@@ -310,7 +310,7 @@ export interface IFormConfigDTO {
 /** SmsTemplateDTO */
 export interface ISmsTemplateDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** 审核状态 */
     auditStatus?: ESmsTemplateDTO_auditStatus;
     /** 失败原因 */
@@ -322,7 +322,7 @@ export interface ISmsTemplateDTO {
     /** 字段序列号列表 */
     fieldSerialNoList?: Record<string, any>[];
     /** 表单配置ID */
-    formConfigId?: number;
+    formConfigId?: string;
     /** 是否使用配置 */
     isUseConfig?: ESmsTemplateDTO_isUseConfig;
     /** 字段元数据 */
@@ -335,9 +335,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EMessageSchemaDTO_sendingContentStatus {
@@ -463,7 +463,7 @@ export enum EMessageTriggerConditionDTO_expressionType {
     NONE = "NONE",
     /** 日期函数表达式，即有NOW(), TODAY() */
     TIME_FUNCTION = "TIME_FUNCTION",
-    /** 聚合函数表达式，即有SUM/MAX/MIN/AVG/COUNT/+, */
+    /** 聚合函数表达式，即有SUM/MAX/MIN/AVG/COUNT/+,-,*,/ */
     MATH_FUNCTION = "MATH_FUNCTION"
 }
 

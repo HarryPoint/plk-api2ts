@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/订单排产报表/getRoutingStepDayDateListUsingGET
@@ -22,5 +22,5 @@ export interface IJSONResultListstring {
     /** 响应结果 */
     data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

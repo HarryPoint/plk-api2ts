@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/表单数据分组规则相关/editGroupingUsingPOST
 */
-export default function fetchMethod(options: { data: IFormDataGroupingSettingsAreRelatedparams: { id?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFormDataGroupingSettingsAreRelated, params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/formDataGroupingRule/edit",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IFormDataGroupingSettingsAr
 /** 表单数据分组设置相关 */
 export interface IFormDataGroupingSettingsAreRelated {
     /** ID */
-    id?: number;
+    id?: string;
     /** 应用ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 分组字段序列号 */
     groupingFieldSerialNo?: Record<string, any>[];
 }
@@ -31,7 +31,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

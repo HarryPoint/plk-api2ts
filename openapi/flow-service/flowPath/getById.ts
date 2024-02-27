@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getByIdUsingGET_2
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessDetailsReturnVOForEditing>(
         {
             url: "/flow-service/flowPath/getById",
@@ -22,32 +22,32 @@ export interface IJSONResultProcessDetailsReturnVOForEditing {
     /** 响应结果 */
     data?: IProcessDetailsAreReturnedToVOForEditing;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程明细针对编辑返回VO */
 export interface IProcessDetailsAreReturnedToVOForEditing {
     /** 数据状态 0停用，1启用，-1已删除 */
     dataStatus?: number;
     /** 创建员工id */
-    createUserId?: number;
+    createUserId?: string;
     /** 名称 */
     lastName?: string;
     /** 创建员工名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新员工id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新员工名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 是否是树状应用 */
     isTree?: EProcessDetailsAreReturnedToVOForEditing_isTree;
     /** 流程版本id(这里是最后一个版本) */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 编号 */
     code?: string;
     /** 应用类型 */
@@ -95,18 +95,18 @@ export interface IProcessDetailsAreReturnedToVOForEditing {
     /** 详细页配置列表 */
     detailPageConfigList?: IFlowPathDetailPageConfigVO[];
     /** 应用服务包ID */
-    appServicePackId?: number;
+    appServicePackId?: string;
     /** 应用级别 */
     applicationLevel?: EProcessDetailsAreReturnedToVOForEditing_applicationLevel;
 }
 /** 流程表单VO */
 export interface IProcessFormVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 类型分组 */
@@ -210,7 +210,7 @@ export interface IProcessFormVO {
     /** 排序 */
     sort?: number;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** 父级流程表单编码 */
     parentFlowPathFormFieldCode?: string;
     /** 前端配置拓展字段 */
@@ -260,7 +260,7 @@ export interface ITheProcessFormFormulaFieldReturnsVO {
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -282,7 +282,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -315,7 +315,7 @@ export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
 /** 流程表单字段下拉选项关联显示VO */
 export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 所属流程表单字段编号 */
     flowPathFormFieldCode?: string;
     /** 所属流程表单字段序列号 */
@@ -328,7 +328,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
 /** 流程表单关联表单筛选条件组VO */
 export interface IProcessFormsAssociateFormFilterGroupVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -336,9 +336,9 @@ export interface IProcessFormsAssociateFormFilterGroupVO {
     /** 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组 */
     isSystemDefault?: EProcessFormsAssociateFormFilterGroupVO_isSystemDefault;
     /** 数据联动ID */
-    dataLinkageId?: number;
+    dataLinkageId?: string;
     /** 表单字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
 }
 /** 流程表单关联表单筛选条件VO */
 export interface IProcessFormsAssociateFormFilterVO {
@@ -359,7 +359,7 @@ export interface IProcessFormsAssociateFormFilterVO {
     /** 自定义值回显 */
     compareCustomValueEcho?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathFormFieldFormRpFilterGroupId?: number;
+    flowPathFormFieldFormRpFilterGroupId?: string;
     /** 区间范围 -- 下限 */
     rangeLowerLimit?: string;
     /** 区间范围 -- 上限 */
@@ -374,9 +374,9 @@ export interface IProcessFormsAssociateFormFilterVO {
 /** 流程表单关联表单填充VO */
 export interface IProcessFormAssociatedFormFillVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 被采取的字段序号值 */
     columnSerialNo?: string;
     /** 被采取的字段序号值的下级字段序号值 */
@@ -395,7 +395,7 @@ export interface IProcessFormAssociatedFormFillVO {
 /** FlowPathFormFieldDataLinkageVO */
 export interface IFlowPathFormFieldDataLinkageVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据来源应用编码（即联动表单） */
     sourceFormRpCode?: string;
     /** 数据来源应用表格编码（即联动表单） */
@@ -423,17 +423,17 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
 /** 流程节点针对编辑返回VO */
 export interface ITheProcessNodeReturnsVOForEditing {
     /** id */
-    id?: number;
+    id?: string;
     /** 节点类型 */
     type: ETheProcessNodeReturnsVOForEditing_type;
     /** 前节点id */
-    previousFlowPathNodeId?: number;
+    previousFlowPathNodeId?: string;
     /** 后节点id */
-    nextFlowPathNodeId?: number;
+    nextFlowPathNodeId?: string;
     /** 父节点id - 子节点有值 */
-    parentFlowPathNodeId?: number;
+    parentFlowPathNodeId?: string;
     /** 所属分支节点id - 子分支下的所有流程节点均属于当前子分支 */
-    branchesFlowPathNodeId?: number;
+    branchesFlowPathNodeId?: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -451,7 +451,7 @@ export interface ITheProcessNodeReturnsVOForEditing {
     /** 回退类型 */
     backType?: ETheProcessNodeReturnsVOForEditing_backType;
     /** 回退流程节点id - 返回指定节点时有值 */
-    backFlowPathNodeId?: number;
+    backFlowPathNodeId?: string;
     /** 回退流程节点序列值 - 返回指定节点时有值 */
     backFlowPathNodeSerialNo?: string;
     /** 表单操作权限集 */
@@ -530,11 +530,11 @@ export interface ITheProcessNodeReturnsVOForEditing {
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
@@ -542,16 +542,16 @@ export interface IProcessNodeExecutorVO {
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 节点ID */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
 }
 /** 流程表单操作权限集返回VO */
 export interface IProcessFormActionPermissionSetReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 表单字段名称 */
@@ -566,20 +566,20 @@ export interface IProcessFormActionPermissionSetReturnsVO {
 /** 流程节点条件组针对编辑返回VO */
 export interface ITheProcessNodeConditionGroupReturnsVOForEditing {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件集 */
     condis?: ITheProcessNodeConditionReturnsVOForEditing[];
 }
 /** 流程节点条件针对编辑返回VO */
 export interface ITheProcessNodeConditionReturnsVOForEditing {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件类型 */
     type?: ETheProcessNodeConditionReturnsVOForEditing_type;
     /** 默认条件-条件类型为系统内置时有值 */
     defaultCondi?: ETheProcessNodeConditionReturnsVOForEditing_defaultCondi;
     /** 表单字段id-条件类型为表单字段时有值 */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 对比值 - 暂时仅对数值内有效 */
@@ -595,7 +595,7 @@ export interface ITheProcessNodeConditionReturnsVOForEditing {
     /** 判断目标来源 */
     compareTargetFromSource?: ETheProcessNodeConditionReturnsVOForEditing_compareTargetFromSource;
     /** 关联表单-比较目标字段ID */
-    targetFieldId?: number;
+    targetFieldId?: string;
     /** 关联表单-比较目标字段序列 */
     targetFieldSerialNo?: string;
     /** 关联表单-比较目标字段编码 */
@@ -615,7 +615,7 @@ export interface INameNumberVO {
 /** 流程节点超时配置针对编辑返回VO */
 export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
     /** id */
-    id?: number;
+    id?: string;
     /** 超时的步骤类型 */
     stepType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_stepType;
     /** 超时类型 */
@@ -625,7 +625,7 @@ export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
     /** 超时值类型 - 超时类型为自定义时有值 */
     timeoutTimeType?: ETheProcessNodeTimeoutConfigurationReturnsVOForEditing_timeoutTimeType;
     /** 超时表单字段id */
-    timeoutFlowPathFormFieldId?: number;
+    timeoutFlowPathFormFieldId?: string;
     /** 超时表单字段序列值 */
     timeoutFlowPathFormFieldSerialNo?: string;
     /** 预警处理方式 */
@@ -652,15 +652,15 @@ export interface ITheProcessNodeTimeoutConfigurationReturnsVOForEditing {
 /** 流程节点编辑DTO */
 export interface ITheProcessNodeEditsTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 消息触发时机 */
     triggerTiming?: ETheProcessNodeEditsTheDTO_triggerTiming;
     /** 消息配置ID列表 */
-    messageConfigIdList?: number[];
+    messageConfigIdList?: string[];
     /** 是否启用消息通知 */
     isEnabledMessageNotification?: ETheProcessNodeEditsTheDTO_isEnabledMessageNotification;
     /** 引用的ID。比如超时配置 */
-    refId?: number;
+    refId?: string;
 }
 /** 流程权限VO */
 export interface IProcessPermissionsVO {
@@ -680,9 +680,9 @@ export interface IProcessPermissionsVO {
 /** 路由按钮返回VO */
 export interface ITheRouteButtonReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 企业路由id */
-    enterpriseRouterId?: number;
+    enterpriseRouterId?: string;
     /** 按钮名称 */
     name?: string;
     /** 所属权限编码 */
@@ -697,7 +697,7 @@ export interface ITheRouteButtonReturnsVO {
 /** 流程角色权限VO */
 export interface IProcessRolePermissionVO {
     /** 角色id */
-    roleId?: number;
+    roleId?: string;
     /** 角色名称 */
     roleName?: string;
     /** 权限码集 */
@@ -722,7 +722,7 @@ export interface IProcessRoleDataPermissionFieldVO {
 /** 新增权限编辑_2 */
 export interface IAddedPermissionEdit2 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程状态 */
     flowStatus?: EAddedPermissionEdit2_flowStatus;
     /** 是否可编辑 */
@@ -733,9 +733,9 @@ export interface IAddedPermissionEdit2 {
 /** 新增权限编辑 */
 export interface INewPermissionEdit {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
@@ -746,9 +746,9 @@ export interface INewPermissionEdit {
 /** 查询权限编辑 */
 export interface IQueryPermissionEditing {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
@@ -759,9 +759,9 @@ export interface IQueryPermissionEditing {
 /** 新增权限编辑_1 */
 export interface IAddedPermissionEdit1 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
@@ -772,7 +772,7 @@ export interface IAddedPermissionEdit1 {
 /** 流程事件编辑VO */
 export interface IProcessEventEditVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 标题 */
     title?: string;
     /** 是否系统预设 */
@@ -824,7 +824,7 @@ export interface IProcessEventSettingsEditVO {
 /** 流程事件操作设置编辑VO */
 export interface IProcessEventActionSettingsEditVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 操作赋值字段序号值 */
     operateColumnSerialNo?: string;
     /** 值来源类型 */
@@ -851,7 +851,7 @@ export interface IProcessEventActionSettingsEditVO {
 /** 流程事件操作筛选条件组编辑VO */
 export interface IProcessEventActionFilterGroupEditVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -860,7 +860,7 @@ export interface IProcessEventActionFilterGroupEditVO {
 /** 流程事件操作筛选条件编辑VO */
 export interface IProcessEventActionFilterEditVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 被判断的字段序号值 */
     columnSerialNo?: string;
     /** 判断方式 */
@@ -883,7 +883,7 @@ export interface IProcessEventActionFilterEditVO {
 /** 应用新增事件子表设置响应DTO */
 export interface IApplyTheNewEventSubtableToSetTheResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 字段序列号 */
@@ -892,7 +892,7 @@ export interface IApplyTheNewEventSubtableToSetTheResponseDTO {
 /** 应用新增事件子表条件组响应DTO */
 export interface IApplyTheNewEventSubtableConditionGroupResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -912,7 +912,7 @@ export interface IInsertBasis1ForTheServiceEventDetailsDataGroup {
 /** 流程打印模板返回VO */
 export interface IProcessPrintTemplateReturnsVO {
     /** 模板id */
-    id?: number;
+    id?: string;
     /** 模板名称 */
     name?: string;
     /** 模板结构代码 */
@@ -925,22 +925,22 @@ export interface IProcessPrintTemplateReturnsVO {
 /** PublishEnterpriseRouterResultDTO */
 export interface IPublishEnterpriseRouterResultDTO {
     /** 上级路由ID */
-    parentRouteId?: number;
+    parentRouteId?: string;
     /** 所属排序位置-前端给的值不代表真实的顺序，仅仅代表该应用在第几号位置, 排在第一个，则排序位置为1，排在第二个则排序位置为2，依次类推 */
     sortOffset?: number;
     /** 当前路由ID */
-    routeId?: number;
+    routeId?: string;
 }
 /** 流程自定义通知字段响应VO */
 export interface ITheProcessCustomNotificationFieldRespondsToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 标题定义 */
@@ -953,7 +953,7 @@ export interface ITheProcessCustomNotificationFieldRespondsToVO {
 /** FlowPathDetailPageConfigVO */
 export interface IFlowPathDetailPageConfigVO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 引用当前表单的应用引擎编码 */
     refFlowPathCode?: string;
     /** 页签名称/别名 */
@@ -964,20 +964,20 @@ export interface IFlowPathDetailPageConfigVO {
 /** 条件组_2 */
 export interface IConditionGroup2 {
     /** 过滤组的ID */
-    id?: number;
+    id?: string;
     /** 分页配置ID */
-    flowPathDetailPageConfigId?: number;
+    flowPathDetailPageConfigId?: string;
     /** 过滤列表 */
     filterList?: IConditions[];
 }
 /** 条件 */
 export interface IConditions {
     /** 过滤条件的ID */
-    id?: number;
+    id?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathDetailPageFilterGroupId?: number;
+    flowPathDetailPageFilterGroupId?: string;
     /** 所属流程表单字段id */
-    flowPathDetailPageConfigId?: number;
+    flowPathDetailPageConfigId?: string;
     /** 被判断的字段序列号 */
     columnSerialNo?: string;
     /** 判断方式 */
@@ -1176,6 +1176,8 @@ export enum EProcessDetailsAreReturnedToVOForEditing_flowPathSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -1216,6 +1218,14 @@ export enum EProcessDetailsAreReturnedToVOForEditing_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */
@@ -1645,15 +1655,15 @@ export enum EProcessFormVO_numberFormat {
 }
 
 export enum EProcessFormVO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"
@@ -1782,13 +1792,13 @@ export enum EProcessFormVO_isAutoGetLocation {
 }
 
 export enum EProcessFormVO_addressType {
-    /** 省 */
+    /** 省-市-区-详细地址 */
     REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区 */
     REGION = "REGION",
-    /** 省 */
+    /** 省-市-区-街道-详细地址 */
     STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区-街道 */
     STREET = "STREET"
 }
 

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/exportNewTableDataAndImportResultUsingPOST
 */
-export default function fetchMethod(options: { data: ISearchRowDataparams: { id?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISearchRowData, params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/importResult/export",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISearchRowDataparams: { id?
 /** 搜索行数据 */
 export interface ISearchRowData {
     /** 表数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 字段查询条件 */
     fieldQueryCondition?: Record<string, string>;
     /** 空数据 */
@@ -41,7 +41,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ESearchRowData_existsEmptyData {

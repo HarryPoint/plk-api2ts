@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/querySettingUsingPOST
@@ -22,16 +22,16 @@ export interface IJSONResultProjectLargeScreenSettingsSaveRequestDto {
     /** 响应结果 */
     data?: IProjectLargeScreenSettingsSaveRequestDto;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目大屏设置保存请求dto */
 export interface IProjectLargeScreenSettingsSaveRequestDto {
     /** 统计范围 */
     scope?: EProjectLargeScreenSettingsSaveRequestDto_scope;
     /** 项目类型ids */
-    projectTypeIds?: number[];
+    projectTypeIds?: string[];
     /** 排除的项目ids */
-    excludeProjectIds?: number[];
+    excludeProjectIds?: string[];
 }
 
 export enum EProjectLargeScreenSettingsSaveRequestDto_scope {

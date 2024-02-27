@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/applyForQualityUsingPOST
 */
-export default function fetchMethod(options: { data: IApplyForTheDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IApplyForTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTask/applyForQuality",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IApplyForTheDTOparams: { en
 /** 质检申请DTO */
 export interface IApplyForTheDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 批次id */
-    lotOrderId: number;
+    lotOrderId: string;
     /** wip状态记录id */
-    wipRpId: number;
+    wipRpId: string;
     /** 成品物料信息 */
     finishedMaterial: IFillInTheDTOForFinishedMaterials;
 }
@@ -40,5 +40,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

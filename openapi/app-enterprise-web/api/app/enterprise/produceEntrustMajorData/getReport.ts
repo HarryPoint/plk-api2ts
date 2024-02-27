@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/委外报表相关/getReportUsingPOST_7
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOutputClassReportSearchVO 
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
@@ -37,7 +37,7 @@ export interface IJSONResultOutputLineChartReturnsVOOutsourcedOutputReportReturn
     /** 响应结果 */
     data?: IOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产出类折线图返回VO«委外产出报表返回VO» */
 export interface IOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO {
@@ -52,16 +52,16 @@ export interface IOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO {
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
     isConsistent?: EOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO_isConsistent;
     /** 实际查询时间 - 开始 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际查询时间 - 结束 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 实际数据条数 */
     actualDataCount?: number;
 }
 /** 产出类折线图分组返回VO«委外产出报表返回VO» */
 export interface IOutputLineChartGroupReturnsVOOutsourcedOutputReportReturnsVO {
     /** 数据分组id */
-    groupId?: number;
+    groupId?: string;
     /** 数据分组名称 */
     groupName?: string;
     /** 数据分组编号 */
@@ -72,7 +72,7 @@ export interface IOutputLineChartGroupReturnsVOOutsourcedOutputReportReturnsVO {
 /** 委外产出报表返回VO */
 export interface ITheOutsourcingOutputReportIsReturnedToVO {
     /** 数据时间（时间戳），根据当前选中的时间粒度去转换时间 */
-    dataTime?: string;
+    dataTime?: number;
     /** 委外总数(委外发出) */
     produceEntrustQuantity?: number;
     /** 委外返回数量(委外返回) */
@@ -85,7 +85,7 @@ export interface ITheOutsourcingOutputReportIsReturnedToVO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

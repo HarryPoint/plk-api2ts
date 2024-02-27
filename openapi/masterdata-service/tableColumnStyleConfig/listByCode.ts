@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/列表列样式配置/listByCodeUsingGET
 */
-export default function fetchMethod(options: { params: { code?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListListColumnStyleConfigurationVO>(
         {
             url: "/masterdata-service/tableColumnStyleConfig/listByCode",
@@ -22,12 +22,12 @@ export interface IJSONResultListListColumnStyleConfigurationVO {
     /** 响应结果 */
     data?: IListColumnStyleConfigurationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 列表列样式配置VO */
 export interface IListColumnStyleConfigurationVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编码 */

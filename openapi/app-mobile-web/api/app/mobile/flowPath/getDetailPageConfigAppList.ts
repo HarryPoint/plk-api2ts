@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/流程相关/getDetailPageConfigAppListUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigAppResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/flowPath/getDetailPageConfigAppList",
@@ -22,7 +22,7 @@ export interface IJSONResultFlowPathDetailPageConfigAppResponseDTO {
     /** 响应结果 */
     data?: IFlowPathDetailPageConfigAppResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathDetailPageConfigAppResponseDTO */
 export interface IFlowPathDetailPageConfigAppResponseDTO {
@@ -32,9 +32,9 @@ export interface IFlowPathDetailPageConfigAppResponseDTO {
 /** FlowPathDetailPageConfigItem */
 export interface IFlowPathDetailPageConfigItem {
     /** 详细页配置ID */
-    id?: number;
+    id?: string;
     /** App/FlowPath的ID */
-    appId?: number;
+    appId?: string;
     /** App/FlowPath编号 */
     appCode?: string;
     /** App/FlowPath名称 */

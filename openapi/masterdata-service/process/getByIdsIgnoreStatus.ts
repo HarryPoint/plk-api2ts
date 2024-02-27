@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
 */
-export default function fetchMethod(options: { data: IIdCollectionInformationparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IIdCollectionInformation, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListOperationSelectsToReturnVO>(
         {
             url: "/masterdata-service/process/getByIdsIgnoreStatus",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdCollectionInformationpar
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«List«工序选择返回VO»» */
 export interface ITheJSONResultListOperationSelectsToReturnVO {
@@ -27,29 +27,29 @@ export interface ITheJSONResultListOperationSelectsToReturnVO {
     /** 响应结果 */
     data?: IProcedureSelectionReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工序选择返回VO */
 export interface IProcedureSelectionReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序名称 */
     name?: string;
     /** 工序编号 */
     code?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域 */
     area?: IRegionVO1;
 }
 /** 区域VO_1 */
 export interface IRegionVO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 区域名称 */
     name?: string;
     /** 区域编号 */
     code?: string;
     /** 父级id */
-    parentId?: number;
+    parentId?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/缓存相关/queryCacheCmdListUsingPOST
@@ -31,12 +31,12 @@ export interface IJSONResultListCacheCmdQueryResponseDTO {
     /** 响应结果 */
     data?: ICacheCmdQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** CacheCmdQueryResponseDTO */
 export interface ICacheCmdQueryResponseDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     cmdType?: ECacheCmdQueryResponseDTO_cmdType;
     /** undefined */

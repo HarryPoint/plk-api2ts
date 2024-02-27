@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/pageSearchRowDataUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISearchForRowData1 }, extra
 /** 搜索行数据_1 */
 export interface ISearchForRowData1 {
     /** 表数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 字段查询条件 */
     fieldQueryCondition?: Record<string, string>;
     /** 当前页面 */
@@ -52,39 +52,39 @@ export interface IJSONResultPageInformationRowDataOutputDTO {
     /** 响应结果 */
     data?: IPageInformationRowDataOutputDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«RowDataOutputDTO» */
 export interface IPageInformationRowDataOutputDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IRowDataOutputDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationRowDataOutputDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationRowDataOutputDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** RowDataOutputDTO */
 export interface IRowDataOutputDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 表格数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 行下标 */
-    rowIndex?: number;
+    rowIndex?: string;
     /** 导入状态 */
     importStatus?: ERowDataOutputDTO_importStatus;
     /** 操作方式 */
@@ -105,11 +105,11 @@ export interface IRowDataOutputDTO {
 /** 单元格数据_1 */
 export interface ICellData1 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 表格数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 行数据ID */
-    rowDataId?: number;
+    rowDataId?: string;
     /** 单元格下标 */
     cellIndex?: number;
     /** 关联字段信息 */
@@ -140,7 +140,7 @@ export interface IAlarmLogOutputDTO {
 /** AssociationFormSelectedItemOutputDTO */
 export interface IAssociationFormSelectedItemOutputDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     showFieldValue?: string;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getPageUsingPOST_10
 */
-export default function fetchMethod(options: { data: IExceptionTypeSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExceptionTypeSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationExceptionTypeVOIsReturned>(
         {
             url: "/masterdata-service/produceAbnormalCategory/getPage",
@@ -46,35 +46,35 @@ export interface IJSONResultPagingInformationExceptionTypeVOIsReturned {
     /** 响应结果 */
     data?: IPagingInformationExceptionTypeIsReturnedVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«异常类型返回VO» */
 export interface IPagingInformationExceptionTypeIsReturnedVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IExceptionTypeReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationExceptionTypeIsReturnedVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationExceptionTypeIsReturnedVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 异常类型返回VO */
 export interface IExceptionTypeReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属分类 */
     type?: EExceptionTypeReturnsVO_type;
     /** 所属分类 */
@@ -86,11 +86,11 @@ export interface IExceptionTypeReturnsVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EExceptionTypeSearchVO_type {

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
 */
-export default function fetchMethod(options: { params: { materialId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultSpecificMaterialDataStructureResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnology/getMaterialRelateStructure",
@@ -22,12 +22,12 @@ export interface IJSONResultSpecificMaterialDataStructureResponseObject {
     /** 响应结果 */
     data?: ITheConcreteMaterialDataStructureRespondsToObject1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 具体物料数据结构响应对象_1 */
 export interface ITheConcreteMaterialDataStructureRespondsToObject1 {
     /** 主物料id */
-    materialId?: number;
+    materialId?: string;
     /** 主物料名称 */
     materialName?: string;
     /** 主物料编号 */
@@ -44,7 +44,7 @@ export interface ITheConcreteMaterialDataStructureRespondsToObject1 {
 /** 具体物料数据结构响应对象 */
 export interface IConcreteMaterialDataStructureResponseObject {
     /** bomId */
-    bomId?: number;
+    bomId?: string;
     /** BOM名称 */
     bomName?: string;
     /** BOM编号 */
@@ -57,9 +57,9 @@ export interface IConcreteMaterialDataStructureResponseObject {
 /** 标准工艺具体物料bom详情对象 */
 export interface IStandardProcessSpecificMaterialBomDetailObject {
     /** bom明细id */
-    bomDetailId?: number;
+    bomDetailId?: string;
     /** 子物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 子物料种类 */
     childMaterialType?: string;
     /** 子物料名称 */
@@ -76,7 +76,7 @@ export interface IStandardProcessSpecificMaterialBomDetailObject {
 /** 具体物料数关联工艺路径数据结构响应对象 */
 export interface ISpecificMaterialNumberAssociatedProcessPathDataStructureResponseObject {
     /** 工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 工艺路径名称 */
     routingName?: string;
     /** 工艺路径编码 */
@@ -87,9 +87,9 @@ export interface ISpecificMaterialNumberAssociatedProcessPathDataStructureRespon
 /** 具体物料数关联工艺路径步骤数据结构响应对象 */
 export interface ISpecificMaterialNumberAssociatedProcessPathStepDataStructureResponseObject {
     /** 工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编码 */
@@ -108,7 +108,7 @@ export interface ISpecificMaterialNumberAssociatedProcessPathStepDataStructureRe
 /** 标准工艺具体工艺卡详情对象_1 */
 export interface IStandardProcessSpecificProcessCardDetailsObject1 {
     /** 工艺卡id */
-    processSheetId?: number;
+    processSheetId?: string;
     /** 工艺卡名称 */
     name: string;
     /** 工艺卡编号 */
@@ -119,7 +119,7 @@ export interface IStandardProcessSpecificProcessCardDetailsObject1 {
 /** 标准工艺具体工艺卡详情对象 */
 export interface IStandardProcessSpecificProcessCardDetailsObject {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细类型 */
     type?: EStandardProcessSpecificProcessCardDetailsObject_type;
     /** 明细名称/标题 */
@@ -154,7 +154,7 @@ export interface IStandardProcessSpecificProcessCardDetailsObject {
 /** 关键参数信息响应对象 */
 export interface IKeyParameterInformationResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
@@ -169,14 +169,14 @@ export interface IKeyParameterInformationResponseObject {
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示字段名称 */
     showFieldValue?: string;
 }
 /** 关键参数信息详情响应对象 */
 export interface IKeyParameterDetailsResponseObject {
     /** 字段id */
-    id?: number;
+    id?: string;
     /** 字段名称 */
     name?: string;
     /** 帮助提示 */
@@ -205,7 +205,7 @@ export interface IKeyParameterDetailsResponseObject {
 /** 产能响应对象 */
 export interface IProductivityResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
@@ -228,7 +228,7 @@ export interface IProductivityResponseObject {
 /** 工费响应对象 */
 export interface ICostResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */

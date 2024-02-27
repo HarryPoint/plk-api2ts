@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskOtherByIdUsingGET
 */
-export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultOtherInformationAboutTheProductionTaskVO>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskOtherById",
@@ -22,7 +22,7 @@ export interface IJSONResultOtherInformationAboutTheProductionTaskVO {
     /** 响应结果 */
     data?: IProductionTaskAdditionalInformationVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务其他信息VO */
 export interface IProductionTaskAdditionalInformationVO {
@@ -35,19 +35,19 @@ export interface IProductionTaskAdditionalInformationVO {
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 成品物料id */
-    materialId?: number;
+    materialId?: string;
     /** 成品物料名称 */
     materialName?: string;
     /** 成品物料编号 */
     materialCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 对应标准工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应工艺路径名称 */
     routingName?: string;
     /** 对应工艺路径编号 */
@@ -59,9 +59,9 @@ export interface IProductionTaskAdditionalInformationVO {
     /** 返工数量 */
     totalBackCount?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 下发任务时间 */
-    issuingTaskTime?: string;
+    issuingTaskTime?: number;
 }

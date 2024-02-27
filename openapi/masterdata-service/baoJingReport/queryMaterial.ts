@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/queryMaterialUsingPOST
@@ -44,35 +44,35 @@ export interface IJSONResultPageInformationBaojingReportMaterialResponseDTO {
     /** 响应结果 */
     data?: IPageInformationBaojingReportMaterialResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«宝晶报表物料响应DTO» */
 export interface IPageInformationBaojingReportMaterialResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBaojingReportMaterialResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationBaojingReportMaterialResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationBaojingReportMaterialResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 宝晶报表物料响应DTO */
 export interface IBaojingReportMaterialResponseDTO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 外部编码 */
     materialOutsideCode?: string;
     /** 物料编码 */
@@ -86,7 +86,7 @@ export interface IBaojingReportMaterialResponseDTO {
     /** 物料种类描述 */
     materialTypeDesc?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
 }

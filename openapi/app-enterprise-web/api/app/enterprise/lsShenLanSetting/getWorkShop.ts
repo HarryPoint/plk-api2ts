@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/getWorkShopUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultDarkBlueWorkshopKanbanRespondsToVO {
     /** 响应结果 */
     data?: IDeepBlueWorkshopKanbanRespondsToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 深蓝车间看板响应VO */
 export interface IDeepBlueWorkshopKanbanRespondsToVO {
@@ -83,9 +83,9 @@ export interface IWorkCenterProductionScheduleRespondsToVO {
     /** 完工工序 */
     completeProcess?: string;
     /** 完工工序id */
-    completeProcessId?: number;
+    completeProcessId?: string;
     /** 当前工序id */
-    currentProcessId?: number;
+    currentProcessId?: string;
     /** 当前工序步骤 */
     currentRoutingStep?: number;
     /** 总工序步骤 */

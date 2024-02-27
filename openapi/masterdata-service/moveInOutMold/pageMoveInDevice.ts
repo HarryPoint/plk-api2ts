@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料模具相关/pageMoveInDeviceUsingPOST_1
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IFeedMoldPagingQueryObject 
 /** 进料模具分页查询对象 */
 export interface IFeedMoldPagingQueryObject {
     /** 生产任务ids */
-    produceTaskIds?: number[];
+    produceTaskIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -46,41 +46,41 @@ export interface IJSONResultPagingInformationFeedMoldRespondsToDTO {
     /** 响应结果 */
     data?: IPagingInformationFeedMoldRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«进料模具响应DTO» */
 export interface IPagingInformationFeedMoldRespondsToDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IFeedMoldRespondsToDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationFeedMoldRespondsToDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationFeedMoldRespondsToDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 进料模具响应DTO */
 export interface IFeedMoldRespondsToDTO {
     /** 模具id */
-    id?: number;
+    id?: string;
     /** 模具名称 */
     name?: string;
     /** 模具编号 */
     code?: string;
     /** 生产工艺模具id */
-    produceTechnologyMoldId?: number[];
+    produceTechnologyMoldId?: string[];
 }
 
 export enum EPagingSort_isAsc {

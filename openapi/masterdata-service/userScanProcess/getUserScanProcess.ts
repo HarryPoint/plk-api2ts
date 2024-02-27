@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工扫码报工工序相关/getUserScanProcessUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; userId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultUserScanProcessVO>(
         {
             url: "/masterdata-service/userScanProcess/getUserScanProcess",
@@ -22,16 +22,16 @@ export interface IJSONResultUserScanProcessVO {
     /** 响应结果 */
     data?: IUserScanProcessVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** UserScanProcessVO */
 export interface IUserScanProcessVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** undefined */
-    userId?: number;
+    userId?: string;
     /** undefined */
-    processId?: number;
+    processId?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getLotOrderWipListUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IBatchOrderWipSearchVO }, e
 /** 批次订单Wip搜索VO */
 export interface IBatchOrderWipSearchVO {
     /** 批次id集 */
-    lotOrderIds?: number[];
+    lotOrderIds?: string[];
     /** 批次操作类型 */
     lotOpType?: EBatchOrderWipSearchVO_lotOpType;
 }
@@ -29,12 +29,12 @@ export interface IJSONResultListBatchWipInformationIsReturnedToVO {
     /** 响应结果 */
     data?: IBatchWipInformationIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 批次Wip信息返回VO */
 export interface IBatchWipInformationIsReturnedToVO {
     /** 批次id */
-    id?: number;
+    id?: string;
     /** 批次号 */
     lotOrderNo?: string;
     /** 批次名 */
@@ -45,13 +45,13 @@ export interface IBatchWipInformationIsReturnedToVO {
 /** 批次Wip明细返回VO */
 export interface IBatchWipDetailsAreReturnedToVO {
     /** wip状态记录id */
-    wipRpId?: number;
+    wipRpId?: string;
     /** 对应标准工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -65,7 +65,7 @@ export interface IBatchWipDetailsAreReturnedToVO {
     /** 任务类型描述 */
     storageProduceTypeDesc?: string;
     /** 生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 生产任务编号 */
     produceTaskNo?: string;
     /** 是否可用 */

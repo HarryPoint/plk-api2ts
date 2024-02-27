@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByPrintTemplateIdUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatch
     /** 响应结果 */
     data?: IVTLBatchPrintTemplateBindingMaterialResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 维联批次打印模板绑定物料响应对象 */
 export interface IVTLBatchPrintTemplateBindingMaterialResponseObject {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchUseLotNoUsingPOST
@@ -22,7 +22,7 @@ export interface IJSONResultTheBatchNumberIsDTO1 {
     /** 响应结果 */
     data?: ITheBatchNumberIsDTO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 批次号使用DTO_1 */
 export interface ITheBatchNumberIsDTO1 {

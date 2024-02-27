@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/应用相关/getPageUsingPOST
@@ -30,9 +30,9 @@ export interface IProcessSearchVO {
     /** 状态 */
     dataStatus?: number[];
     /** 创建时间-开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 创建时间-结束时间 */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,53 +50,53 @@ export interface IJSONResultPagingInformationFlowRespondsToVO {
     /** 响应结果 */
     data?: IThePagingInformationFlowRespondsToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«流程响应VO» */
 export interface IThePagingInformationFlowRespondsToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcessResponseVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationFlowRespondsToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationFlowRespondsToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 流程响应VO */
 export interface IProcessResponseVO {
     /** 数据状态 0停用，1启用，-1已删除 */
     dataStatus?: number;
     /** 创建员工id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建员工名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新员工id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 最新版本流程名称 */
     lastName?: string;
     /** 更新员工名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 编号 */
     code?: string;
     /** 应用类型 */
@@ -352,6 +352,10 @@ export enum EProcessResponseVO_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/项目相关/getProposalByIdUsingPOST
 */
-export default function fetchMethod(options: { params: { proposalId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { proposalId?: string } }, extraOptions?: any) {
     return http<IJSONResultProposalResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/kaizenProject/getProposalById",
@@ -22,26 +22,26 @@ export interface IJSONResultProposalResponseDTO {
     /** 响应结果 */
     data?: IProposalResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProposalResponseDTO */
 export interface IProposalResponseDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 建议名称 */
     name?: string;
     /** 改善类别ID */
-    improvementCategoryId?: number;
+    improvementCategoryId?: string;
     /** 改善类别名称 */
     improvementCategoryName?: string;
     /** 改善部门 */
-    improvementDeptId?: number;
+    improvementDeptId?: string;
     /** 改善部门负责人 */
-    improvementDeptLeaderId?: number;
+    improvementDeptLeaderId?: string;
     /** 提议部门负责人 */
-    createDeptLeaderId?: number;
+    createDeptLeaderId?: string;
     /** 问题描述 */
     problemDesc?: string;
     /** 解决方案 */

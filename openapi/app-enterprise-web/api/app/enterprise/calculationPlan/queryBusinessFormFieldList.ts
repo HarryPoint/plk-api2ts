@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/queryBusinessFormFieldListUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IFormFieldQueryRequestDTO }
 /** FormFieldQueryRequestDTO */
 export interface IFormFieldQueryRequestDTO {
     /** 应用ID */
-    appId?: number;
+    appId?: string;
     /** 表格字段编码 */
     tableFieldCode?: string;
     /** 是否明细业务 */
@@ -31,12 +31,12 @@ export interface IJSONResultListFormFieldQueryResponseDTO {
     /** 响应结果 */
     data?: IFormFieldQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FormFieldQueryResponseDTO */
 export interface IFormFieldQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 序列号 */

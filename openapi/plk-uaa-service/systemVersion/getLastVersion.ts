@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/系统版本相关/getLastVersionUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultSystemVersionResponseDTO {
     /** 响应结果 */
     data?: ISystemVersionRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 系统版本响应 DTO */
 export interface ISystemVersionRespondsToDTO {

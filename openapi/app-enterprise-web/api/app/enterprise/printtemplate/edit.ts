@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印模板相关/editUsingPOST_15
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IPrintTheTemplateRequestObj
 /** 打印模板请求对象 */
 export interface IPrintTheTemplateRequestObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 模板名称 */
     name?: string;
     /** 数据源id */
-    dataSourceId?: number;
+    dataSourceId?: string;
     /** 企业路由id */
-    enterpriseRouterIds?: number[];
+    enterpriseRouterIds?: string[];
     /** 模板类型 */
     type?: EPrintTheTemplateRequestObject_type;
     /** 画布大小类型 */
@@ -49,7 +49,7 @@ export interface IPrintTheTemplateRequestObject {
 /** 打印模板字段请求对象 */
 export interface IPrintTheTemplateFieldRequestObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 字段编码 */
     code?: string;
     /** 字段名称 */
@@ -57,9 +57,9 @@ export interface IPrintTheTemplateFieldRequestObject {
     /** 字段类型 */
     type?: EPrintTheTemplateFieldRequestObject_type;
     /** 数据源id */
-    dataSourceId?: number;
+    dataSourceId?: string;
     /** 关联表单字段id */
-    fieldId?: number;
+    fieldId?: string;
     /** 关联字段编码 */
     fieldCode?: string;
     /** 关联字段名称 */
@@ -98,7 +98,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPrintTheTemplateRequestObject_type {

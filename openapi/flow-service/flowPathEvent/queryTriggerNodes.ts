@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTriggerNodesUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListFlowPathEventTriggerNodeQueryResponseDTO>(
         {
             url: "/flow-service/flowPathEvent/queryTriggerNodes",
@@ -22,20 +22,20 @@ export interface IJSONResultListFlowPathEventTriggerNodeQueryResponseDTO {
     /** 响应结果 */
     data?: IFlowPathEventTriggerNodeQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathEventTriggerNodeQueryResponseDTO */
 export interface IFlowPathEventTriggerNodeQueryResponseDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    flowPathId?: number;
+    flowPathId?: string;
     /** undefined */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** undefined */
-    flowPathEventId?: number;
+    flowPathEventId?: string;
     /** undefined */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** undefined */
     flowPathNodeSerialNo?: string;
 }

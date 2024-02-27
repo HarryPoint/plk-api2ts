@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/getPageUsingPOST_5
@@ -22,7 +22,7 @@ export interface IDeviceDataSchemeSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 设备id集 */
-    deviceIds?: number[];
+    deviceIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 名称 */
@@ -46,35 +46,35 @@ export interface IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO
     /** 响应结果 */
     data?: IPagingInformationDeviceDataCollectionSchemeReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«设备数采方案返回VO» */
 export interface IPagingInformationDeviceDataCollectionSchemeReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDeviceDataAcquisitionSchemeReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationDeviceDataCollectionSchemeReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationDeviceDataCollectionSchemeReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 设备数采方案返回VO */
 export interface IDeviceDataAcquisitionSchemeReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 方案名称 */
     name?: string;
     /** 方案编号 */
@@ -90,16 +90,16 @@ export interface IDeviceDataAcquisitionSchemeReturnsVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

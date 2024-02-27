@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/setNavigationSortUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProjectApplicationNavigati
 /** 项目应用导航排序请求对象 */
 export interface IProjectApplicationNavigationSortRequestObjects {
     /** undefined */
-    projectId: number;
+    projectId: string;
     /** undefined */
-    projectApplicationIds?: number[];
+    projectApplicationIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

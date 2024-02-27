@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/approveUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionProcessesTheRewo
 /** 生产处理返工批准请求对象 */
 export interface IProductionProcessesTheReworkApprovalRequestObject {
     /** 生产处理id */
-    id?: number;
+    id?: string;
     /** 处理意见 */
     handleRemark?: string;
 }
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

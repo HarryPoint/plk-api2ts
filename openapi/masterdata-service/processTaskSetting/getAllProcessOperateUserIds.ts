@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序任务设置相关/getAllProcessOperateUserIdsUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessOperatorIdSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessOperatorIdSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/masterdata-service/processTaskSetting/getAllProcessOperateUserIds",
@@ -18,7 +18,7 @@ export interface IProcessOperatorIdSearchVO {
     /** 当前页面 */
     pageNo?: number;
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -40,9 +40,9 @@ export interface IJSONResultListlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number[];
+    data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcessOperatorIdSearchVO_userType {

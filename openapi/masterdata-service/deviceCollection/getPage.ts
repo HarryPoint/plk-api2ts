@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据概览相关/getPageUsingPOST_2
 */
-export default function fetchMethod(options: { data: IDeviceDataOverviewSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataOverviewSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationDeviceDataOverviewReturnsVO>(
         {
             url: "/masterdata-service/deviceCollection/getPage",
@@ -52,41 +52,41 @@ export interface IJSONResultPagingInformationDeviceDataOverviewReturnsVO {
     /** 响应结果 */
     data?: IPageInformationDeviceDataOverviewReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«设备数据概览返回VO» */
 export interface IPageInformationDeviceDataOverviewReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDeviceDataOverviewBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDeviceDataOverviewReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDeviceDataOverviewReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 设备数据概览返回VO */
 export interface IDeviceDataOverviewBackToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设备名称 */
     name?: string;
     /** 设备编号 */
     code?: string;
     /** 设备数采方案id */
-    deviceCollectionPlanId?: number;
+    deviceCollectionPlanId?: string;
     /** 设备数采方案名称 */
     deviceCollectionPlanName?: string;
     /** 设备数采方案编号 */
@@ -96,7 +96,7 @@ export interface IDeviceDataOverviewBackToVO {
     /** 通讯开关状态描述 */
     apiSwitchStatusDesc?: string;
     /** 最后通讯时间 */
-    lastApiTime?: string;
+    lastApiTime?: number;
     /** 在线状态 */
     onlineStatus?: EDeviceDataOverviewBackToVO_onlineStatus;
     /** 在线状态描述 */

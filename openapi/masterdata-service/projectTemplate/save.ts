@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/saveUsingPOST_5
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProjectTemplateEditRequest
 /** 项目模板编辑请求DTO */
 export interface IProjectTemplateEditRequestDTO {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目模板id */
-    id?: number;
+    id?: string;
     /** 项目模板名称 */
     name?: string;
     /** 项目模板大类 */
@@ -43,7 +43,7 @@ export interface IProjectTemplateEditRequestDTO {
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */
@@ -58,7 +58,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProjectTemplateEditRequestDTO_checkProjectTeam {

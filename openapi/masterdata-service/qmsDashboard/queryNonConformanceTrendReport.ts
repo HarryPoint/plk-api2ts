@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNonConformanceTrendReportUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: INonConformanceTrendReportR
 /** NonConformanceTrendReportRequestDTO */
 export interface INonConformanceTrendReportRequestDTO {
     /** 当前的时间 */
-    currentYear?: string;
+    currentYear?: number;
 }
 /** JSONResult«不符合项目趋势报告» */
 export interface IJSONResultDoesNotMatchTheProjectTrendReport {
@@ -27,7 +27,7 @@ export interface IJSONResultDoesNotMatchTheProjectTrendReport {
     /** 响应结果 */
     data?: IDoesNotMatchTheProjectTrendReport;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 不符合项目趋势报告 */
 export interface IDoesNotMatchTheProjectTrendReport {
@@ -50,7 +50,7 @@ export interface IQueryResponseOfNonMatchItems {
 /** 条款号查询响应 */
 export interface ITermsNumberQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 条款号 */
     clauseNo?: string;
 }

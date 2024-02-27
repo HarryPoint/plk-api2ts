@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getAssociationFormEchoDataUsingPOST
 */
-export default function fetchMethod(options: { data: IAssociationFormQueryEchoInputVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAssociationFormQueryEchoInputVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getAssociationFormEchoData",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IAssociationFormQueryEchoIn
 /** AssociationFormQueryEchoInputVO */
 export interface IAssociationFormQueryEchoInputVO {
     /** undefined */
-    formFieldId?: number;
+    formFieldId?: string;
     /** undefined */
-    formDataIdList?: number[];
+    formDataIdList?: string[];
 }
 /** JSONResult«List«JSONObject»» */
 export interface IJSONResultListJSONObject {
@@ -29,7 +29,7 @@ export interface IJSONResultListJSONObject {
     /** 响应结果 */
     data?: IJSONObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** JSONObject */
 export interface IJSONObject {

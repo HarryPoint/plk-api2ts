@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/getFlowPathTaskShiftSelectorUsingGET
@@ -22,30 +22,30 @@ export interface IJSONResultListProcessShiftReturnsVO {
     /** 响应结果 */
     data?: IProcessShiftBackToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程班次返回VO */
 export interface IProcessShiftBackToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次名称 */
     name?: string;
     /** 班次编号 */
     code?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 班次结束时间类型 */
     endTimeType?: EProcessShiftBackToVO_endTimeType;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 状态 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 方案名称 */
     planName?: string;
     /** 班次配置的人员信息 */
@@ -54,11 +54,11 @@ export interface IProcessShiftBackToVO {
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
@@ -66,9 +66,9 @@ export interface IProcessNodeExecutorVO {
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 节点ID */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
 }
 
 export enum EProcessShiftBackToVO_endTimeType {

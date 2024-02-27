@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产计划工艺路径步骤排产/getListByProduceOrderIdsUsingPOST_2
 */
-export default function fetchMethod(options: { data: IProductionPlanningProcessPathStepSchedulingProductionVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionPlanningProcessPathStepSchedulingProductionVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionPlanProcessPathStepScheduleProductionVO>(
         {
             url: "/masterdata-service/producePlan/routingStep/getListByProduceOrderIds",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionPlanningProcessP
 /** 生产计划工艺路径步骤排产 VO */
 export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     /** 生产订单ids */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
 }
 /** JSONResult«List«生产计划工艺路径步骤排产  VO»» */
 export interface IJSONResultListProductionPlanProcessPathStepScheduleProductionVO {
@@ -27,24 +27,24 @@ export interface IJSONResultListProductionPlanProcessPathStepScheduleProductionV
     /** 响应结果 */
     data?: IProductionPlanningProcessPathStepSchedulingProductionVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产计划工艺路径步骤排产  VO */
 export interface IProductionPlanningProcessPathStepSchedulingProductionVO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 工艺路径步骤 */
     produceTechnologyRoutingStep?: number;
     /** 工艺路径步骤id */
-    produceTechnologyRoutingStepId?: number;
+    produceTechnologyRoutingStepId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 工序编号 */
     processCode?: string;
     /** 工序名称 */

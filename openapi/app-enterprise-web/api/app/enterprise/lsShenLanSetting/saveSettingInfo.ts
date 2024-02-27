@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/深蓝大屏相关/saveSettingInfoUsingPOST_1
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IDarkBlueLargeScreenSetsThe
 /** 深蓝大屏设置DTO */
 export interface IDarkBlueLargeScreenSetsTheDTO {
     /** 大屏左侧质检合格率工序id */
-    leftQualityPassRatioProcessId?: number;
+    leftQualityPassRatioProcessId?: string;
     /** 大屏左侧质检数据 */
     leftQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetEditDTO;
     /** 大屏右侧质检合格率工序id */
-    rightQualityPassRatioProcessId?: number;
+    rightQualityPassRatioProcessId?: string;
     /** 大屏右侧质检数据 */
     rightQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetEditDTO;
     /** 大屏中部数据类型 */
@@ -48,7 +48,7 @@ export interface IDeepBlueProductionLargeScreenPassRateDataSetEditDTO {
 /** 深蓝生产大屏产出设置编辑DTO */
 export interface IDeepBlueProductionLargeScreenOutputSettingsEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 物料分组编码 */
     materialGroupCode?: string;
     /** 过去12个月明细 */
@@ -74,7 +74,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EDarkBlueLargeScreenSetsTheDTO_centerProductionType {

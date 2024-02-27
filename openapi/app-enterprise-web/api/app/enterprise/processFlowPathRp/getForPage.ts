@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序字段对应表相关/getForPageUsingPOST_17
@@ -30,9 +30,9 @@ export interface IProcedureFieldMappingTableListQueryVO {
     /** 数据状态 -- 0停用 1启用 */
     dataStatus?: number;
     /** 创建日期---开始时间 */
-    startTime?: string;
+    startTime?: number;
     /** 创建日期---结束时间 */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,43 +50,43 @@ export interface IJSONResultPageInformationOperationFieldsCorrespondToTableListV
     /** 响应结果 */
     data?: IThePageInformationOperationFieldCorrespondsToTheTableListVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工序字段对应表列表VO» */
 export interface IThePageInformationOperationFieldCorrespondsToTheTableListVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcedureFieldsCorrespondToTableListVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePageInformationOperationFieldCorrespondsToTheTableListVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePageInformationOperationFieldCorrespondsToTheTableListVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工序字段对应表列表VO */
 export interface IProcedureFieldsCorrespondToTableListVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 关联表单id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 关联单据名称 */
     flowPathName?: string;
     /** 关联字段序列号列表 */
@@ -98,7 +98,7 @@ export interface IProcedureFieldsCorrespondToTableListVO {
     /** 创建人 */
     createUserName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPagingSortVO_isAsc {

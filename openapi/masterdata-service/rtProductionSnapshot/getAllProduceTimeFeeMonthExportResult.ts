@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceTimeFeeMonthExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getAllProduceTimeFeeMonthExportResult",
@@ -22,13 +22,13 @@ export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds?: number[];
+    userIds?: string[];
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -46,18 +46,18 @@ export interface IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToV
     /** 响应结果 */
     data?: IMonthlySummaryReportOfManHourPaymentIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工时工费月度汇总报表返回VO */
 export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
     /** 月份 */
-    month?: string;
+    month?: number;
     /** 员工id */
-    userId?: number;
+    userId?: string;
     /** 员工姓名 */
     username?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 合格产出工费 */

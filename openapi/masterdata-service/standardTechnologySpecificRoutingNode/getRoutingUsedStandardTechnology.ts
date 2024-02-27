@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺具体工艺路径节点相关/getRoutingUsedStandardTechnologyUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IStandardProcessQueryObject
 /** 工艺路径占用的标准工艺查询对象 */
 export interface IStandardProcessQueryObjectOccupiedByProcessPath {
     /** routingId */
-    routingId: number;
+    routingId: string;
     /** 当前的标准工艺id, 创建标准工艺阶段 传递null, 编辑标准工艺阶段 传递编辑的标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
 }
 /** JSONResult«List«工艺路径占用的标准工艺响应»» */
 export interface IJSONResultListStandardProcessResponseOccupiedByTheProcessPath {
@@ -29,12 +29,12 @@ export interface IJSONResultListStandardProcessResponseOccupiedByTheProcessPath 
     /** 响应结果 */
     data?: IStandardProcessResponseForProcessPathOccupancy[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺路径占用的标准工艺响应 */
 export interface IStandardProcessResponseForProcessPathOccupancy {
     /** 标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 标准工艺名称 */
     standardTechnologyName?: string;
     /** 所属分类名称 */

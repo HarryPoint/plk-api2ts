@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料收发汇总报表相关/getBillFlowPathCodeListUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMat
     /** 响应结果 */
     data?: IMaterialReceiptAndReceiptListResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料收发单据列表响应对象 */
 export interface IMaterialReceiptAndReceiptListResponseObject {
@@ -34,7 +34,7 @@ export interface IMaterialReceiptAndReceiptListResponseObject {
 /** 物料收发单据列表单据响应对象 */
 export interface IMaterialReceiptAndDeliveryDocumentListDocumentResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** 单据名称 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultReportTemplateDTO>(
         {
             url: "/masterdata-service/reportTemplate/getById",
@@ -22,34 +22,34 @@ export interface IJSONResultReportTemplateDTO {
     /** 响应结果 */
     data?: IReportTemplateDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ReportTemplateDTO */
 export interface IReportTemplateDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 结束时间字段编码 */
     endTimeFieldCode?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** ID */
-    id?: number;
+    id?: string;
     /** 模板名称 */
     templateName?: string;
     /** 报表类型 */
@@ -68,7 +68,7 @@ export interface IReportTemplateDTO {
 /** ReportTemplateConditionDTO */
 export interface IReportTemplateConditionDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 条件字段编码 */
     code?: string;
     /** 条件字段值 */
@@ -79,7 +79,7 @@ export interface IReportTemplateConditionDTO {
 /** ReportStatisticsTimeRangeDTO */
 export interface IReportStatisticsTimeRangeDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 时间模式- 今天、本周、本月、本季度、本年、发邮件前 */
     timeMode?: EReportStatisticsTimeRangeDTO_timeMode;
     /** 发邮件前的时间模式（只有timeMode = SENDING_EMAIL_BEFORE该配置才是有效配置）- 今天、本周、本月、本季度、本年 */
@@ -153,9 +153,9 @@ export enum EReportTemplateDTO_report {
     PRODUCE_PROCESS_REPORT = "PRODUCE_PROCESS_REPORT",
     /** 按物料统计报表 */
     PRODUCE_MATERIAL_REPORT = "PRODUCE_MATERIAL_REPORT",
-    /** 工费统计表 */
+    /** 工费统计表-明细表报表 */
     PRODUCE_TIME_FEE_DETAIL_REPORT = "PRODUCE_TIME_FEE_DETAIL_REPORT",
-    /** 工费统计表 */
+    /** 工费统计表-月度统计表报表 */
     PRODUCE_TIME_FEE_MONTH_REPORT = "PRODUCE_TIME_FEE_MONTH_REPORT",
     /** 委外统计报表 */
     PRODUCE_ENTRUST_MAJOR_DATA_REPORT = "PRODUCE_ENTRUST_MAJOR_DATA_REPORT",

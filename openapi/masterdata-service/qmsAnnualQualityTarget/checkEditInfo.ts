@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/年度质量目标相关/checkEditInfoUsingPOST
@@ -16,22 +16,22 @@ export default function fetchMethod(options: { data: IAnnualQualityObjectivesEdi
 /** 年度质量目标编辑校验DTO */
 export interface IAnnualQualityObjectivesEditAndVerifyDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 年份 */
-    year?: string;
+    year?: number;
     /** 明细数据 */
     details?: IEditDTOForDetailedAnnualQualityObjectives[];
 }
 /** 年度质量目标明细编辑DTO */
 export interface IEditDTOForDetailedAnnualQualityObjectives {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属年度质量目标id */
-    qmsAnnualQualityTargetId?: number;
+    qmsAnnualQualityTargetId?: string;
     /** 所属目标项 */
-    qmsTargetItemId?: number;
+    qmsTargetItemId?: string;
     /** 目标类型 */
     targetType?: EEditDTOForDetailedAnnualQualityObjectives_targetType;
     /** 定性目标值 */
@@ -54,7 +54,7 @@ export interface IJSONResultAnnualQualityTargetEditCheckReturnsDTO {
     /** 响应结果 */
     data?: IAnnualQualityObjectiveEditCheckReturnsDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 年度质量目标编辑校验返回DTO */
 export interface IAnnualQualityObjectiveEditCheckReturnsDTO {

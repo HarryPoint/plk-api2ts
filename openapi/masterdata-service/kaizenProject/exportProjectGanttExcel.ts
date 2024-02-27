@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/exportProjectGanttExcelUsingPOST
@@ -28,19 +28,19 @@ export interface IProjectGanttChartQueryObject {
     /** 任务状态 */
     projectTaskStatusList?: EProjectGanttChartQueryObject_projectTaskStatusList_items[];
     /** 项目负责人id集合 */
-    projectLeaderIdList?: number[];
+    projectLeaderIdList?: string[];
     /** 任务执行人id集合 */
-    projectTaskLeaderIdList?: number[];
+    projectTaskLeaderIdList?: string[];
     /** 项目查询开始日期 */
-    projectStartDate?: string;
+    projectStartDate?: number;
     /** 项目查询截止日期 */
-    projectEndDate?: string;
+    projectEndDate?: number;
     /** 项目任务查询开始日期 */
-    projectTaskStartDate?: string;
+    projectTaskStartDate?: number;
     /** 项目任务查询截止日期 */
-    projectTaskEndDate?: string;
+    projectTaskEndDate?: number;
     /** 项目id集合 */
-    projectIdList?: number[];
+    projectIdList?: string[];
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -49,9 +49,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProjectGanttChartQueryObject_priorityList_items {

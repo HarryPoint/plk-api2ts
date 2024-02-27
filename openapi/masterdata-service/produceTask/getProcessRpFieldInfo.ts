@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessRpFieldInfoUsingPOST
 */
-export default function fetchMethod(options: { data: IProcedureAssociatedFieldQueryRequestObjectparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcedureAssociatedFieldQueryRequestObject, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO>(
         {
             url: "/masterdata-service/produceTask/getProcessRpFieldInfo",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProcedureAssociatedFieldQu
 /** 工序关联字段查询请求对象 */
 export interface IProcedureAssociatedFieldQueryRequestObject {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 工序ID */
-    processId?: number;
+    processId?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
 }
 /** JSONResult«List«工序对应字段详情VO»» */
 export interface ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO {
@@ -31,7 +31,7 @@ export interface ITheJSONResultListOperationCorrespondsToTheFieldDetailsVO {
     /** 响应结果 */
     data?: IOperationsCorrespondToFieldDetailsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工序对应字段详情VO */
 export interface IOperationsCorrespondToFieldDetailsVO {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageQueryOfReviewTaskTypeUsingPOST
@@ -26,7 +26,7 @@ export interface IItemTaskPagingQueryResponse1 {
     /** 导出字段集 */
     exportFields?: string[];
     /** 项目ID */
-    projectId?: number;
+    projectId?: string;
     /** 系统类型 */
     systemType?: EItemTaskPagingQueryResponse1_systemType;
 }
@@ -46,45 +46,45 @@ export interface IJSONResultPageInformationItemTaskPageQueryResponse {
     /** 响应结果 */
     data?: IPageInformationItemTaskPageQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«项目任务分页查询响应» */
 export interface IPageInformationItemTaskPageQueryResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProjectTaskPagingQueryResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationItemTaskPageQueryResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationItemTaskPageQueryResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 项目任务分页查询响应 */
 export interface IProjectTaskPagingQueryResponse {
     /** Id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
     code?: string;
     /** 任务类型ID */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
     /** 任务类型 */
     projectTaskTypeName?: string;
     /** 项目阶段ID */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 不通过比较类型 */
@@ -111,7 +111,7 @@ export interface IProjectTaskPagingQueryResponse {
 /** Id，名称VO */
 export interface IIdNameVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
 }
@@ -265,6 +265,8 @@ export enum EItemTaskPagingQueryResponse1_systemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -305,6 +307,14 @@ export enum EItemTaskPagingQueryResponse1_systemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

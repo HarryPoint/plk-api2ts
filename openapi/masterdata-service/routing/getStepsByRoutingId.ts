@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getStepsByRoutingIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessPathDetailsStepVO>(
         {
             url: "/masterdata-service/routing/getStepsByRoutingId",
@@ -22,16 +22,16 @@ export interface IJSONResultListProcessPathDetailsStepVO {
     /** 响应结果 */
     data?: IProcessPathDetailsStepsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺路径详情步骤VO */
 export interface IProcessPathDetailsStepsVO {
     /** 工艺路径步骤id */
-    id?: number;
+    id?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 所属工序id */
-    processId?: number;
+    processId?: string;
     /** 所属工序名称 */
     processName?: string;
     /** 所属工序编号 */
@@ -55,13 +55,13 @@ export interface IProcessPathDetailsStepsVO {
     /** 返工产出工费 */
     backProducePrice?: number;
     /** 所属进站工艺卡id */
-    processSheetBeforeId?: number;
+    processSheetBeforeId?: string;
     /** 所属进站工艺卡名称 */
     processSheetBeforeName?: string;
     /** 所属进站工艺卡编号 */
     processSheetBeforeCode?: string;
     /** 所属出站工艺卡id */
-    processSheetAfterId?: number;
+    processSheetAfterId?: string;
     /** 所属出站工艺卡名称 */
     processSheetAfterName?: string;
     /** 所属出站工艺卡编号 */
@@ -82,11 +82,11 @@ export interface IProcessPathDetailsStepsVO {
 /** 工艺路径详情步骤Bom明细返回VO */
 export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属主物料bom明细id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 所属bom物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 所属bom物料名称 */
     childMaterialName?: string;
     /** 所属bom物料编号 */
@@ -97,13 +97,13 @@ export interface IProcessPathDetailsStepBomDetailsReturnToVO {
 /** 质检方案明细返回VO */
 export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检方案名称 */
     name?: string;
     /** 质检方案编号 */
     code?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
@@ -115,7 +115,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 版次号 */
     issueCode?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */
@@ -127,11 +127,11 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 质检方式 */
     type?: ETheDetailsOfTheInspectionSchemeAreReturnedToVO_type;
     /** 质检比例 */
@@ -144,7 +144,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */
@@ -156,18 +156,18 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料规格 */
     spec?: string;
     /** 计量单位id */
-    unitId?: number;
+    unitId?: string;
     /** 库存可使用数 */
     storageUseQuantity?: number;
 }
 /** 质检方案质检项关联信息返回VO */
 export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 所属质检方案 */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 所属质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 所属质检项名称 */
     qualityInspectionItemName?: string;
     /** 所属质检项编号 */

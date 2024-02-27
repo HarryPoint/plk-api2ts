@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务排班相关/getSchedulLoopForPageUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessFactoryCalendarSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessFactoryCalendarSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessSchedulingRecordsAreReturnedToVO>(
         {
             url: "/flow-service/flowPathTaskCalendar/getSchedulLoopForPage",
@@ -38,65 +38,65 @@ export interface IJSONResultPagingInformationProcessSchedulingRecordsAreReturned
     /** 响应结果 */
     data?: IPagingInformationProcessSchedulingRecordsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«流程排班记录返回VO» */
 export interface IPagingInformationProcessSchedulingRecordsAreReturnedToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheProcessSchedulingRecordIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationProcessSchedulingRecordsAreReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationProcessSchedulingRecordsAreReturnedToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 流程排班记录返回VO */
 export interface ITheProcessSchedulingRecordIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 开始日期 */
-    beginDate?: string;
+    beginDate?;
     /** 循环天数 */
     loopDay?: number;
     /** 排班天数集 */
     schedulDays?: IProcessSchedulingBaseReturnsVO[];
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 /** 流程排班基数返回VO */
 export interface IProcessSchedulingBaseReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 流程排班循环配置 */
     schedulDayDetails?: IProcessSchedulingBaseDetailsAreReturnedToVO[];
 }
 /** 流程排班基数明细返回VO */
 export interface IProcessSchedulingBaseDetailsAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 班次名称 */
     classShiftName?: string;
     /** 班次开始时间 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/exportUsingPOST_9
 */
-export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/material/export",
@@ -24,13 +24,13 @@ export interface IMaterialMasterDataInventorySearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 编号 */
     materialCode?: string;
     /** 规格 */
     materialSpec?: string;
     /** 仓库id */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -46,9 +46,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSortVO_isAsc {

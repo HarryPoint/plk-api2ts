@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用权限相关/listCopyPermissionByFlowPathIdListUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListAddsPermissionEdit1>(
         {
             url: "/flow-service/flowPathPermission/listCopyPermissionByFlowPathIdList",
@@ -22,14 +22,14 @@ export interface IJSONResultListAddsPermissionEdit1 {
     /** 响应结果 */
     data?: IAddedPermissionEdit1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 新增权限编辑_1 */
 export interface IAddedPermissionEdit1 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */

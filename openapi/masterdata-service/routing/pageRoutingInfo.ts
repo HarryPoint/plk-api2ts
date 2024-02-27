@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺路径相关/pageRoutingInfoUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessPathInformationPagingQueryDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessPathInformationPagingQueryDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessPathInformationObject>(
         {
             url: "/masterdata-service/routing/pageRoutingInfo",
@@ -24,7 +24,7 @@ export interface IProcessPathInformationPagingQueryDTO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -42,35 +42,35 @@ export interface IJSONResultPagingInformationProcessPathInformationObject {
     /** 响应结果 */
     data?: IPagingInformationProcessPathInformationObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工艺路径信息对象» */
 export interface IPagingInformationProcessPathInformationObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcessPathInformationObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationProcessPathInformationObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationProcessPathInformationObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工艺路径信息对象 */
 export interface IProcessPathInformationObject {
     /** 工艺路径id */
-    id?: number;
+    id?: string;
     /** 工艺路径名称 */
     name?: string;
     /** 工艺路径编号 */
@@ -81,9 +81,9 @@ export interface IProcessPathInformationObject {
 /** 工艺步骤信息对象 */
 export interface IProcessStepInformationObject {
     /** 工序步骤id */
-    id?: number;
+    id?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

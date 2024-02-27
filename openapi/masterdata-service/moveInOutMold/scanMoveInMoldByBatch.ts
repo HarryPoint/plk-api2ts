@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料模具相关/scanMoveInMoldByBatchUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IFeedMoldQueryDTO }, extraO
 /** 进料模具查询DTO */
 export interface IFeedMoldQueryDTO {
     /** 生产任务ids */
-    produceTaskIds?: number[];
+    produceTaskIds?: string[];
     /** 名称或者编号 */
     nameOrCode?: string;
 }
@@ -29,16 +29,16 @@ export interface IJSONResultListFeedMoldResponseDTO {
     /** 响应结果 */
     data?: IFeedMoldRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进料模具响应DTO */
 export interface IFeedMoldRespondsToDTO {
     /** 模具id */
-    id?: number;
+    id?: string;
     /** 模具名称 */
     name?: string;
     /** 模具编号 */
     code?: string;
     /** 生产工艺模具id */
-    produceTechnologyMoldId?: number[];
+    produceTechnologyMoldId?: string[];
 }

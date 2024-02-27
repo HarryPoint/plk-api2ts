@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeGrandTotalUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProjectCostBudgetQueryObje
 /** 项目费用预算查询对象 */
 export interface IProjectCostBudgetQueryObject {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 执行时间 yyyy-MM-dd HH:mm:ss */
-    executeTime?: string;
+    executeTime?: number;
 }
 /** JSONResult«项目费用累计响应对象» */
 export interface IJSONResultProjectCostAccumulationResponseObject {
@@ -29,7 +29,7 @@ export interface IJSONResultProjectCostAccumulationResponseObject {
     /** 响应结果 */
     data?: IProjectCostCumulativeResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目费用累计响应对象 */
 export interface IProjectCostCumulativeResponseObject {

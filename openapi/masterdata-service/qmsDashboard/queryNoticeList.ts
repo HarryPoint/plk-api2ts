@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryNoticeListUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListNotificationField {
     /** 响应结果 */
     data?: INoticeBoard[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 通告栏 */
 export interface INoticeBoard {
     /** ID */
-    id?: number;
+    id?: string;
     /** 通知内容 */
     content?: string;
 }

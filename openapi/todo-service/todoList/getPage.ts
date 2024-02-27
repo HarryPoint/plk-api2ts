@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/getPageUsingPOST
 */
-export default function fetchMethod(options: { data: IToDoListSearchVOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IToDoListSearchVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationBacklogReturnsVO>(
         {
             url: "/todo-service/todoList/getPage",
@@ -32,11 +32,11 @@ export interface IToDoListSearchVO {
     /** 应用名称或单据编号 */
     nameOrCode?: string;
     /** 应用ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用ID列表 */
-    flowPathIdList?: number[];
+    flowPathIdList?: string[];
     /** 忽略应用ID列表 */
-    ignoreFlowPathIdList?: number[];
+    ignoreFlowPathIdList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -54,37 +54,37 @@ export interface IJSONResultPageInformationBacklogReturnsVO {
     /** 响应结果 */
     data?: IPageInformationBacklogReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«待办事项返回VO» */
 export interface IPageInformationBacklogReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBacklogReturnsToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationBacklogReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationBacklogReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 待办事项返回VO */
 export interface IBacklogReturnsToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属用户id */
-    userId?: number;
+    userId?: string;
     /** 单据名称 */
     flowPathName?: string;
     /** 节点名称 */
@@ -94,15 +94,15 @@ export interface IBacklogReturnsToVO {
     /** 类型 */
     type?: EBacklogReturnsToVO_type;
     /** 单据id */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 单据编号 */
     flowPathWorkOrderCode?: string;
     /** 任务开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 预计结束时间（截止时间） */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
     /** 状态 */
     status?: EBacklogReturnsToVO_status;
     /** 状态描述 */
@@ -110,11 +110,11 @@ export interface IBacklogReturnsToVO {
     /** 节点处理状态描述 */
     flowPathNodeHandleStatus?: string;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 自定义字段 */
@@ -150,9 +150,9 @@ export interface IBacklogReturnsToVO {
     /** 质检任务状态描述 */
     qualityTaskStatusDesc?: string;
     /** 所属流程节点id */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** produceTask */
     produceTask?: ITheProductionTaskIsReturnedToTheDTOForTheBacklog;
     /** 标题 */
@@ -172,11 +172,11 @@ export interface IWorkOrderDetailsReturnInformationVO {
 /** 流程节点执行人VO */
 export interface IProcessNodeExecutorVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 执行人id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EProcessNodeExecutorVO_executorType;
     /** 执行人系统控件类型 */
@@ -184,14 +184,14 @@ export interface IProcessNodeExecutorVO {
     /** 组织字段序列 - 即动态控件 */
     organizationFieldSerialNo?: string;
     /** flowPathId */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 节点ID */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
 }
 /** 生产任务针对待办返回DTO */
 export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
@@ -199,13 +199,13 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -213,9 +213,9 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 对应物料单位 */
     materialUnit?: string;
     /** 对应工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 对应工艺路径步骤id */
-    produceTechnologyRoutingStepId?: number;
+    produceTechnologyRoutingStepId?: string;
     /** 对应生产工艺路径名称 */
     routingName?: string;
     /** 对应生产工艺路径编号 */
@@ -223,29 +223,29 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 对应前生产工艺路径步骤id */
-    lastProduceTechnologyRoutingStepId?: number;
+    lastProduceTechnologyRoutingStepId?: string;
     /** 对应上工序步骤 */
     lastRoutingStep?: number;
     /** 对应上工序id */
-    lastProcessId?: number;
+    lastProcessId?: string;
     /** 对应上工序名称 */
     lastProcessName?: string;
     /** 对应上工序编号 */
     lastProcessCode?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 对应班次名称 */
     classShiftName?: string;
     /** 对应班次编号 */
     classShiftCode?: string;
     /** 对应班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 对应班组名称 */
     classGroupName?: string;
     /** 对应班组编号 */
@@ -261,13 +261,13 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 可用数量 */
     canUseQuantity?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 状态 */
     status?: ETheProductionTaskIsReturnedToTheDTOForTheBacklog_status;
     /** 状态描述 */
@@ -291,7 +291,7 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
     /** 可出料数量 */
     canMoveOutQuantity?: number;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 生产订单 */
     produceOrder?: Record<string, Record<string, any>>;
     /** 批次信息 */
@@ -304,7 +304,7 @@ export interface ITheProductionTaskIsReturnedToTheDTOForTheBacklog {
 /** 生产任务批次响应DTO(针对移动端) */
 export interface IProductionTaskBatchResponseDTOForMobileEnd {
     /** 批次id */
-    lotId?: number;
+    lotId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 批次总数量 */
@@ -313,7 +313,7 @@ export interface IProductionTaskBatchResponseDTOForMobileEnd {
 /** 生产工艺路径步骤设置返回VO */
 export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 进出站方式 */
     inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
@@ -341,7 +341,7 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
-    externalCodeLength?: number;
+    externalCodeLength?: string;
     /** 是否有设备 */
     enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */

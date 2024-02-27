@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检管理/getListForStaffUsingPOST_2
 */
-export default function fetchMethod(options: { data: IPublicBacklogDataQueryparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultListQualityStorageTaskVO>(
         {
             url: "/masterdata-service/qualityStorageTask/getListForStaff",
@@ -22,7 +22,7 @@ export interface IPublicBacklogDataQuery {
     /** 创建时间--结束时间 */
     createEndTime?: string;
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产任务状态集合 */
     produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
@@ -41,36 +41,36 @@ export interface IJSONResultListQualityStorageTaskVO {
     /** 响应结果 */
     data?: IQualityStorageTaskVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** QualityStorageTaskVO */
 export interface IQualityStorageTaskVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 任务号 */
     taskNo?: string;
     /** 质检任务类型 */
     type?: EQualityStorageTaskVO_type;
     /** 采购收货单id */
-    purchaseWorkOrderId?: number;
+    purchaseWorkOrderId?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 采购收货单物料明细id */
-    purchaseWorkOrderDetailId?: number;
+    purchaseWorkOrderDetailId?: string;
     /** 对应质检方案id */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 对应质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检仓位id */
-    qualityWarehouseId?: number;
+    qualityWarehouseId?: string;
     /** 检验位置id */
-    checkPositionId?: number;
+    checkPositionId?: string;
     /** 质检处理人 */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 总质检数 */
     totalInspectionQuantity?: number;
     /** 待检数 */
@@ -84,15 +84,15 @@ export interface IQualityStorageTaskVO {
     /** 让步接收数 */
     concessionQuantity?: number;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 备注 */
     remark?: string;
     /** 状态 */
     status?: EQualityStorageTaskVO_status;
     /** 取消人 */
-    cancelUserId?: number;
+    cancelUserId?: string;
     /** 取消时间 */
-    cancelTime?: string;
+    cancelTime?: number;
     /** 质检任务类型 */
     taskType?: EQualityStorageTaskVO_taskType;
 }

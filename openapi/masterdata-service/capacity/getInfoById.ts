@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/产能相关/getInfoByIdUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultProductivityResponseObject {
     /** 响应结果 */
     data?: IProductivityResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产能响应对象 */
 export interface IProductivityResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
@@ -50,7 +50,7 @@ export interface IProductivityResponseObject {
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示字段名称 */
     showFieldValue?: string;
 }

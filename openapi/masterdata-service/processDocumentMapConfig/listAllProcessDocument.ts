@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listAllProcessDocumentUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessDocumentVO>(
         {
             url: "/masterdata-service/processDocumentMapConfig/listAllProcessDocument",
@@ -22,7 +22,7 @@ export interface IJSONResultListProcessDocumentVO {
     /** 响应结果 */
     data?: IProcessDocumentationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺文档VO */
 export interface IProcessDocumentationVO {
@@ -41,13 +41,13 @@ export interface IProcessDocumentationVO {
     /** 排序 */
     sort?: number;
     /** 适用物料ids */
-    applyMaterialIdList?: number[];
+    applyMaterialIdList?: string[];
     /** 适用物料名称列表 */
     applyMaterialNameList?: string[];
     /** 适用车间ids */
-    applyAreaIdList?: number[];
+    applyAreaIdList?: string[];
     /** 适用工序ids */
-    applyProcessIdList?: number[];
+    applyProcessIdList?: string[];
     /** 文档内容 */
     content?: string;
 }

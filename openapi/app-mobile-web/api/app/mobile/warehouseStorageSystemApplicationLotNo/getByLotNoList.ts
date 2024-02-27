@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/仓位系统应用库存批次号相关/getWarehouseStorageSystemApplicationByLotNoListUsingPOST
@@ -27,20 +27,20 @@ export interface IJSONResultListTheWarehouseSystemAppliesTheInventoryBatchNumber
     /** 响应结果 */
     data?: ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingReturnObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓位系统应用库存批次号分页返回对象 */
 export interface ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingReturnObjects {
     /** 仓位系统应用关联数据id(eg：物料id) */
-    warehouseSystemApplicationId?: number;
+    warehouseSystemApplicationId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 库存总数 */

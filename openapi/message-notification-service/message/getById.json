@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«消息详情返回VO»",
-              "originalRef": "JSONResult«消息详情返回VO»"
+              "originalRef": "JSONResult«消息详情返回VO»",
+              "$ref": "#/definitions/JSONResult«消息详情返回VO»"
             }
           },
           "401": {
@@ -90,8 +90,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/消息详情返回VO",
-          "originalRef": "消息详情返回VO"
+          "originalRef": "消息详情返回VO",
+          "$ref": "#/definitions/消息详情返回VO"
         },
         "ts": {
           "type": "integer",

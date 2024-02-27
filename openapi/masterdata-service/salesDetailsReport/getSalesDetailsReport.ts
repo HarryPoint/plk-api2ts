@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getSalesDetailsReportUsingPOST
@@ -22,49 +22,49 @@ export interface IJSONResultPageInformationSalesListReturnedObject {
     /** 响应结果 */
     data?: IPageInformationSalesDetailsReturnObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«销售明细表返回对象» */
 export interface IPageInformationSalesDetailsReturnObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ISalesDetailReturnObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationSalesDetailsReturnObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationSalesDetailsReturnObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 销售明细表返回对象 */
 export interface ISalesDetailReturnObject {
     /** 单据编号 */
     code?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 单据类型（SALES_OUT_ORDER:销售出库单,SALES_RETURN_ORDER:销售退货单） */
     billType?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 物料名称 */
@@ -74,11 +74,11 @@ export interface ISalesDetailReturnObject {
     /** 单位 */
     materialUnit?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 数量 */
@@ -128,9 +128,9 @@ export interface ISalesDetailReturnObject {
     /** 发票类型 */
     invoiceType?: string;
     /** 发票类型 */
-    invoiceTypeId?: number;
+    invoiceTypeId?: string;
     /** 年份 */
-    yearTime?: string;
+    yearTime?: number;
     /** 中间商 */
     broker?: string;
     /** 分录备注 */

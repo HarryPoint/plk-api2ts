@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportUsingPOST
@@ -22,37 +22,37 @@ export interface IJSONResultObjectReturnedByThePagingInformationProcurementSumma
     /** 响应结果 */
     data?: IPageInformationPurchaseSummaryReportReturnsObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«采购汇总报表返回对象» */
 export interface IPageInformationPurchaseSummaryReportReturnsObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IThePurchaseSummaryReportReturnsObjects[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationPurchaseSummaryReportReturnsObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationPurchaseSummaryReportReturnsObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 采购汇总报表返回对象 */
 export interface IThePurchaseSummaryReportReturnsObjects {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 供应商id */
-    supplierId?: number;
+    supplierId?: string;
     /** 供应商Code */
     supplierCode?: string;
     /** 供应商名称 */

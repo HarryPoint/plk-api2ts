@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/listLotOrderFlowDetailUsingPOST
 */
-export default function fetchMethod(options: { data: IBatchOrderHistorySearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchOrderHistorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBatchOrderDetailedInformationRespondsToDTO>(
         {
             url: "/masterdata-service/produceOrder/listLotOrderFlowDetail",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBatchOrderHistorySearchVOp
 /** 批次订单流水搜索VO */
 export interface IBatchOrderHistorySearchVO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 批次订单id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 流水类型 */
     flowType?: EBatchOrderHistorySearchVO_flowType;
 }
@@ -31,16 +31,16 @@ export interface IJSONResultListBatchOrderDetailedInformationRespondsToDTO {
     /** 响应结果 */
     data?: IBatchOrderFlowDetailsRespondToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 批次订单流水明细信息响应DTO */
 export interface IBatchOrderFlowDetailsRespondToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 流水类型 */
     flowType?: EBatchOrderFlowDetailsRespondToDTO_flowType;
     /** 操作时间 */
-    opTime?: string;
+    opTime?: number;
     /** 操作员姓名 */
     opUserName?: string;
     /** 批次号 */

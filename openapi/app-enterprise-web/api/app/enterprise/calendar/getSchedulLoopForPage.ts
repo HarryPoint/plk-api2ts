@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工厂日历相关/getSchedulLoopForPageUsingPOST
@@ -38,61 +38,61 @@ export interface IJSONResultPagingInformationSchedulingRecordReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationSchedulingRecordReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«排班记录返回VO» */
 export interface IPagingInformationSchedulingRecordReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheSchedulingRecordIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationSchedulingRecordReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationSchedulingRecordReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 排班记录返回VO */
 export interface ITheSchedulingRecordIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 开始日期 */
-    beginDate?: string;
+    beginDate?;
     /** 循环天数 */
     loopDay?: number;
     /** 排班天数集 */
     scheduleDays?: ISchedulingBaseReturnsVO[];
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 /** 排班基数返回VO */
 export interface ISchedulingBaseReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 排班循环配置 */
     scheduleDayDetails?: IScheduleBaseDetailsAreReturnedToVO[];
 }
 /** 排班基数明细返回VO */
 export interface IScheduleBaseDetailsAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 班次名称 */
     classShiftName?: string;
     /** 班次开始时间 */
@@ -118,7 +118,7 @@ export interface ILocalTime {
 /** 排班基数明细班组返回VO */
 export interface ISchedulingBaseDetailGroupReturnsVO {
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
 }

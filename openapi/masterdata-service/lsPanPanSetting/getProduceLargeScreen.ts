@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/getProduceLargeScreenUsingPOST
@@ -22,7 +22,7 @@ export interface IJSONResultPanpanProducesLargeScreenResponseDtos {
     /** 响应结果 */
     data?: IPanpanProducesLargeScreenResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 盼盼生产大屏响应DTO */
 export interface IPanpanProducesLargeScreenResponseDTO {
@@ -89,7 +89,7 @@ export interface IPanpanProductionLargeScreenBackOrderResponseDTO {
     /** 延期原因 */
     overdueReason?: string;
     /** 延期工序id */
-    overdueProcessId?: number;
+    overdueProcessId?: string;
     /** 延期工序名称 */
     overdueProcessName?: string;
     /** 订单编码 */

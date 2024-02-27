@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-公海池相关/pagingSearchPublicCustomerUsingPOST
@@ -50,35 +50,35 @@ export interface IJSONResultPageInformationPublicCustomerOutputVO {
     /** 响应结果 */
     data?: IPageInformationPublicCustomerOutputVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«PublicCustomerOutputVO» */
 export interface IPageInformationPublicCustomerOutputVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IPublicCustomerOutputVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationPublicCustomerOutputVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationPublicCustomerOutputVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** PublicCustomerOutputVO */
 export interface IPublicCustomerOutputVO {
     /** 客户ID */
-    id?: number;
+    id?: string;
     /** 客户编码 */
     code?: string;
     /** 客户名称 */
@@ -96,11 +96,11 @@ export interface IPublicCustomerOutputVO {
     /** 客户来源 */
     customerSource?: string;
     /** 创建人ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPaging12_customerType {

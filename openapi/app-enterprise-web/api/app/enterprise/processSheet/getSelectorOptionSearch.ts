@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getSelectorOptionSearchUsingPOST_4
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProcessDropDownListToSearc
 /** 工艺卡下拉选择列表搜索DTO */
 export interface IProcessDropDownListToSearchForDtos {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工艺卡名称 */
     processSheetName?: string;
 }
@@ -31,12 +31,12 @@ export interface IJSONResultListProcessDropDownListToSearchForResponseDtos {
     /** 响应结果 */
     data?: IProcessDropDownSelectListSearchResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺卡下拉选择列表搜索响应DTO */
 export interface IProcessDropDownSelectListSearchResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

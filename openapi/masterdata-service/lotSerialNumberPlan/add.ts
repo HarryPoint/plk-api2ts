@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/批次方案相关/addUsingPOST_1
@@ -31,7 +31,7 @@ export interface ILotSerialNumberPlanRuleAddRequestDTO {
     /** 日期类型 */
     dateFormat?: ELotSerialNumberPlanRuleAddRequestDTO_dateFormat;
     /** 应用引擎ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用引擎编码 */
     flowPathCode?: string;
     /** 字段编码 */
@@ -53,7 +53,7 @@ export interface ILotSerialNumberPlanRuleAddRequestDTO {
     /** 步长值 - 用于流水 */
     stepValue?: number;
     /** 方案ID */
-    lotSerialNumberPlanId?: number;
+    lotSerialNumberPlanId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -64,9 +64,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ELotSerialNumberPlanAddRequestDTO_planType {

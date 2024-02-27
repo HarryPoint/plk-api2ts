@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产原材料成本同步测试相关/getReturnByCodeUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultProductionMaterialReturnOrderCostFetchBO {
     /** 响应结果 */
     data?: IProductionMaterialReturnOrderCostFetchBO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProductionMaterialReturnOrderCostFetchBO */
 export interface IProductionMaterialReturnOrderCostFetchBO {
     /** undefined */
     code?: string;
     /** undefined */
-    billDate?: string;
+    billDate?: number;
     /** undefined */
     detailList?: IProductionMaterialReturnOrderCostFetchDetailBO[];
     /** undefined */

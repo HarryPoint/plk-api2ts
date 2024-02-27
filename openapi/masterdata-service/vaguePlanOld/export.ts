@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/模糊排产相关/exportUsingPOST_33
 */
-export default function fetchMethod(options: { data: IProductionOrderSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/vaguePlanOld/export",
@@ -32,7 +32,7 @@ export interface IProductionOrderSearchVO {
     /** 订单状态 */
     orderStatus?: EProductionOrderSearchVO_orderStatus;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 订单排产状态 */
     planStatus?: EProductionOrderSearchVO_planStatus;
     /** 创建时间 - 开始, yyyy-MM-dd HH:mm:ss */
@@ -40,7 +40,7 @@ export interface IProductionOrderSearchVO {
     /** 计划结束时间, yyyy-MM-dd HH:mm:ss */
     workingEndTime?: string;
     /** 生产部门id */
-    placeOrderDepartmentId?: number;
+    placeOrderDepartmentId?: string;
     /** 创建时间 - 结束, yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
 }
@@ -58,9 +58,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionOrderSearchVO_orderType {

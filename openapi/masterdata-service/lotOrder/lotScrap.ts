@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/lotScrapUsingPOST
 */
-export default function fetchMethod(options: { data: IBatchScrapDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchScrapDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/lotOrder/lotScrap",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBatchScrapDTOparams: { ent
 /** 批次报废DTO */
 export interface IBatchScrapDTO {
     /** wipRpId */
-    wipRpId: number;
+    wipRpId: string;
     /** 生产异常类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 报废数量 */
     scrapCount: number;
     /** 备注 */
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

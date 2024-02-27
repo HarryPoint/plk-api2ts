@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺具体物料节点相关/addUsingPOST_9
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: ITheRequestObjectIsAddedToT
 /** 标准工艺具体物料节点新增请求对象 */
 export interface ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardProcess {
     /** 当前的标准工艺id, 创建标准工艺阶段 传递null, 编辑标准工艺阶段 传递编辑的标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 主物料id */
-    id: number;
+    id: string;
     /** BOM名称 */
     bomName: string;
     /** BOM编号 */
     bomCode?: string;
     /** 物料BOM详情id(针对所属上级bom的而言的详情id) */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 消耗数量(针对所属上级bom而言的消耗数量) */
     totalConsumeCount?: number;
     /** BOM明细 */
@@ -33,7 +33,7 @@ export interface ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardP
 /** 标准工艺具体物料节点新增bom详情请求对象 */
 export interface IAddARequestObjectForBomDetailsToTheMaterialNodeOfTheStandardProcess {
     /** 子物料id */
-    id: number;
+    id: string;
     /** 消耗数量 */
     totalConsumeCount: number;
 }
@@ -46,12 +46,12 @@ export interface IJSONResultMaterialBOMEditResponseObject {
     /** 响应结果 */
     data?: IMaterialBOMEditResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料BOM编辑响应对象 */
 export interface IMaterialBOMEditResponseObject {
     /** bom id */
-    id?: number;
+    id?: string;
     /** bom code */
     code?: string;
     /** 子物料列表 */
@@ -60,11 +60,11 @@ export interface IMaterialBOMEditResponseObject {
 /** 物料bom详情响应对象 */
 export interface IBomDetailsResponseObject {
     /** 物料BOM详情id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 所属物料bom id */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 子物料id */
-    id?: number;
+    id?: string;
     /** 子物料名称 */
     name?: string;
     /** 子物料编号 */

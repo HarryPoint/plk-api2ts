@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/客户跟进日历相关/exportUsingPOST_10
@@ -22,7 +22,7 @@ export interface ICustomerFollowUpCalendarInputVO {
     /** 日历类型 */
     calendarType?: ECustomerFollowUpCalendarInputVO_calendarType;
     /** 填报月份，格式 yyyy-MM-dd HH:mm:ss */
-    fillingMonth?: string;
+    fillingMonth?: number;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -31,9 +31,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ECustomerFollowUpCalendarInputVO_calendarType {

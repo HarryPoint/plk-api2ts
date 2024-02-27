@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getDetailInfoByIdUsingGET
 */
-export default function fetchMethod(options: { params: { id?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionOrderDetailsVO>(
         {
             url: "/masterdata-service/produceOrder/getDetailInfoById",
@@ -22,7 +22,7 @@ export interface IJSONResultProductionOrderDetailsVO {
     /** 响应结果 */
     data?: IProductionOrderDetailsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单详情VO */
 export interface IProductionOrderDetailsVO {
@@ -44,32 +44,32 @@ export interface IProductionOrderDetailsProductionVO {
     /** 排产类型 */
     planType?: EProductionOrderDetailsProductionVO_planType;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 计划生产数量 */
     totalCount?: number;
     /** 计划创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 计划人id */
-    planUserId?: number;
+    planUserId?: string;
     /** 计划人名称 */
     planUsername?: string;
     /** 任务下发时间 */
-    issueTime?: string;
+    issueTime?: number;
     /** 任务下发人id */
-    issueUserId?: number;
+    issueUserId?: string;
     /** 任务下发人名称 */
     issueUsername?: string;
     /** 状态 */
     orderStatus?: EProductionOrderDetailsProductionVO_orderStatus;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }
 /** 生产订单详情 - 物料信息VO */
 export interface IProductionOrderDetailsMaterialInformationVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -77,19 +77,19 @@ export interface IProductionOrderDetailsMaterialInformationVO {
     /** 物料规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位名称 */
     materialUnitName?: string;
     /** 物料单位编号 */
     materialUnitCode?: string;
     /** 生产工艺工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 工艺路径名称 */
     routingName?: string;
     /** 工艺路径编号 */
     routingCode?: string;
     /** 物料BOM bomid */
-    produceTechnologyMaterialBomId?: number;
+    produceTechnologyMaterialBomId?: string;
     /** 物料BOM 名称 */
     materialBomName?: string;
     /** 物料BOM 编号 */
@@ -103,27 +103,27 @@ export interface IProductionOrderDetailsMaterialInformationVO {
     /** 当前累积报废数量 */
     currentScrapCount?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 子物料信息 */
     childMaterialList?: IProductionOrderDetailsMaterialInformationVO[];
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 生产工艺名称 */
     produceTechnologyName?: string;
     /** 标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 标准工艺名称 */
     standardTechnologyName?: string;
     /** 序列号方案id */
-    serialNoSchemeId?: number;
+    serialNoSchemeId?: string;
     /** 批次方案id */
-    lotSchemeId?: number;
+    lotSchemeId?: string;
     /** 启用序列号 */
     enableSerialNo?: EProductionOrderDetailsMaterialInformationVO_enableSerialNo;
     /** 启用批次 */
@@ -134,17 +134,17 @@ export interface IProductionOrderDetailsMaterialInformationVO {
 /** 生产订单详情 - 补单VO */
 export interface IProductionOrderDetailsSupplementVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 报废补单订单编号 */
     code?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 物料BOM bomid */
-    produceTechnologyMaterialBomId?: number;
+    produceTechnologyMaterialBomId?: string;
     /** 物料BOM 名称 */
     materialBomName?: string;
     /** 物料BOM 编号 */
@@ -152,7 +152,7 @@ export interface IProductionOrderDetailsSupplementVO {
     /** 物料BOM 层级 */
     materialBomLevel?: number;
     /** 工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 工艺路径名称 */
     routingName?: string;
     /** 工艺路径编号 */
@@ -162,9 +162,9 @@ export interface IProductionOrderDetailsSupplementVO {
     /** 当前生产数量 */
     currentCount?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
 }
 
 export enum EProductionOrderDetailsProductionVO_planType {

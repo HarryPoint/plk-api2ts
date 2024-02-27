@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/editUsingPOST_3
 */
-export default function fetchMethod(options: { data: ITaskShiftEditDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITaskShiftEditDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathShift/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITaskShiftEditDTOparams: { 
 /** 任务班次编辑DTO */
 export interface ITaskShiftEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班次编号 */
     code?: string;
     /** 开始时间 HH:mm */
@@ -33,7 +33,7 @@ export interface ITaskShiftEditDTO {
 /** 执行人编辑DTO */
 export interface IExecutiveEditorDTO {
     /** id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: EExecutiveEditorDTO_executorType;
     /** 执行人系统控件类型 */
@@ -48,7 +48,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETaskShiftEditDTO_endTimeType {

@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/AppMessageConfigBatchQueryRequestDTO",
-              "originalRef": "AppMessageConfigBatchQueryRequestDTO"
+              "originalRef": "AppMessageConfigBatchQueryRequestDTO",
+              "$ref": "#/definitions/AppMessageConfigBatchQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«AppMessageConfigDTO»»",
-              "originalRef": "JSONResult«List«AppMessageConfigDTO»»"
+              "originalRef": "JSONResult«List«AppMessageConfigDTO»»",
+              "$ref": "#/definitions/JSONResult«List«AppMessageConfigDTO»»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/AppMessageConfigDTO",
-            "originalRef": "AppMessageConfigDTO"
+            "originalRef": "AppMessageConfigDTO",
+            "$ref": "#/definitions/AppMessageConfigDTO"
           }
         },
         "ts": {
@@ -146,16 +146,16 @@
           "type": "array",
           "description": "发送内容配置列表",
           "items": {
-            "$ref": "#/definitions/AppMessageSentContentTemplateDTO",
-            "originalRef": "AppMessageSentContentTemplateDTO"
+            "originalRef": "AppMessageSentContentTemplateDTO",
+            "$ref": "#/definitions/AppMessageSentContentTemplateDTO"
           }
         },
         "recipientList": {
           "type": "array",
           "description": "接受人列表",
           "items": {
-            "$ref": "#/definitions/AppMessageRecipientDTO",
-            "originalRef": "AppMessageRecipientDTO"
+            "originalRef": "AppMessageRecipientDTO",
+            "$ref": "#/definitions/AppMessageRecipientDTO"
           }
         },
         "applicationId": {
@@ -196,8 +196,8 @@
           "type": "array",
           "description": "字段元数据",
           "items": {
-            "$ref": "#/definitions/MessageContentFieldMetaDTO",
-            "originalRef": "MessageContentFieldMetaDTO"
+            "originalRef": "MessageContentFieldMetaDTO",
+            "$ref": "#/definitions/MessageContentFieldMetaDTO"
           }
         },
         "isUseConfig": {
@@ -320,24 +320,24 @@
           "type": "array",
           "description": "部门列表",
           "items": {
-            "$ref": "#/definitions/部门响应对象_1",
-            "originalRef": "部门响应对象_1"
+            "originalRef": "部门响应对象_1",
+            "$ref": "#/definitions/部门响应对象_1"
           }
         },
         "classGroupList": {
           "type": "array",
           "description": "班组列表",
           "items": {
-            "$ref": "#/definitions/部门响应对象",
-            "originalRef": "部门响应对象"
+            "originalRef": "部门响应对象",
+            "$ref": "#/definitions/部门响应对象"
           }
         },
         "userList": {
           "type": "array",
           "description": "用户列表",
           "items": {
-            "$ref": "#/definitions/人员响应对象",
-            "originalRef": "人员响应对象"
+            "originalRef": "人员响应对象",
+            "$ref": "#/definitions/人员响应对象"
           }
         }
       },
@@ -368,8 +368,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "$ref": "#/definitions/人员响应对象",
-            "originalRef": "人员响应对象"
+            "originalRef": "人员响应对象",
+            "$ref": "#/definitions/人员响应对象"
           }
         }
       },
@@ -483,8 +483,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "$ref": "#/definitions/人员响应对象",
-            "originalRef": "人员响应对象"
+            "originalRef": "人员响应对象",
+            "$ref": "#/definitions/人员响应对象"
           }
         }
       },

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/passTaskUsingPOST
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IProcessTaskSubmitDTO }, ex
 /** 流程任务提交DTO */
 export interface IProcessTaskSubmitDTO {
     /** 任务ID */
-    id?: number;
+    id?: string;
     /** 表单数据 */
     data?: Record<string, Record<string, any>>;
     /** 审批意见/执行情况 */
     notes?: string;
     /** 下个节点执行员工ID列表 */
-    nextNodeExecutorEmployeeIdList?: number[];
+    nextNodeExecutorEmployeeIdList?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

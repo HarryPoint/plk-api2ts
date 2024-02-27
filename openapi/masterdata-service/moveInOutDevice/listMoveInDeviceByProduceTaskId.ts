@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/listMoveInDeviceByProduceTaskIdUsingGET
@@ -22,16 +22,16 @@ export interface IJSONResultListTheFeedDeviceRespondsToDTO1 {
     /** 响应结果 */
     data?: ITheFeedDeviceRespondsToDTO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进料设备响应DTO_1 */
 export interface ITheFeedDeviceRespondsToDTO1 {
     /** 设备id */
-    id?: number;
+    id?: string;
     /** 设备名称 */
     name?: string;
     /** 设备编号 */
     code?: string;
     /** 生产工艺设备id */
-    produceTechnologyDeviceId?: number[];
+    produceTechnologyDeviceId?: string[];
 }

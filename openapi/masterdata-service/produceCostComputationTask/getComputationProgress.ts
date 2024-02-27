@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/getComputationProgressUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultProductionCostAccountingProgressResponseObjectDTO {
     /** 响应结果 */
     data?: IProductionCostAccountingProgressResponseObjectDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产成本核算进度响应对象DTO */
 export interface IProductionCostAccountingProgressResponseObjectDTO {

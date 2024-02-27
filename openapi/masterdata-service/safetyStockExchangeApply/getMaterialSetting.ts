@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getMaterialSettingUsingPOST
 */
-export default function fetchMethod(options: { data: ISafetyInventoryMaterialInventoryConfigurationInformationSearchVOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISafetyInventoryMaterialInventoryConfigurationInformationSearchVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultSafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/safetyStockExchangeApply/getMaterialSetting",
@@ -18,9 +18,9 @@ export interface ISafetyInventoryMaterialInventoryConfigurationInformationSearch
     /** 设置类型 */
     type: ESafetyInventoryMaterialInventoryConfigurationInformationSearchVO_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
 }
 /** JSONResult«安全库存物料库存配置信息返回VO» */
 export interface IJSONResultSafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO {
@@ -31,7 +31,7 @@ export interface IJSONResultSafetyInventoryMaterialInventoryConfigurationInforma
     /** 响应结果 */
     data?: ISafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 安全库存物料库存配置信息返回VO */
 export interface ISafetyInventoryMaterialInventoryConfigurationInformationIsReturnedToVO {

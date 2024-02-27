@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/getMoveToSelectTreeListUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailResponseDTO1>(
         {
             url: "/masterdata-service/fileCategory/getMoveToSelectTreeList",
@@ -22,18 +22,18 @@ export interface IJSONResultListFileClassificationDetailResponseDTO1 {
     /** 响应结果 */
     data?: IFileClassificationDetailsRespondToDTO6[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 文件分类明细响应DTO_6 */
 export interface IFileClassificationDetailsRespondToDTO6 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 分类名称 */
     name?: string;
     /** 上级ID */
-    parentId?: number;
+    parentId?: string;
     /** 创建人ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 下级树列表 */
     childList?: IFileClassificationDetailsRespondToDTO6[];
     /** 用户权限列表 */

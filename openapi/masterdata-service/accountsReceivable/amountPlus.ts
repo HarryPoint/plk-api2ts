@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/应收账款相关/amountPlusUsingPOST_1
 */
-export default function fetchMethod(options: { data: IAddAccountsReceivableDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAddAccountsReceivableDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/accountsReceivable/amountPlus",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IAddAccountsReceivableDTOpa
 /** 添加应收账款DTO */
 export interface IAddAccountsReceivableDTO {
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 已收金额 */
     receivedAmount?: number;
     /** 应收金额 */
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

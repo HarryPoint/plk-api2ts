@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getByIdUsingGET_2
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultInspectionTaskDetailsAreReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getById",
@@ -22,20 +22,20 @@ export interface IJSONResultInspectionTaskDetailsAreReturnedToVO {
     /** 响应结果 */
     data?: ICheckTaskDetailsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 质检任务明细返回VO */
 export interface ICheckTaskDetailsAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 任务号 */
     taskNo?: string;
     /** 质检任务类型 */
     type?: ECheckTaskDetailsAreReturnedToVO_type;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -47,25 +47,25 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 对应物料规格 */
     materialSpec?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
     qualityInspectionCategoryCode?: string;
     /** 质检方案id */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 质检方案名称 */
     qualityInspectionPlanName?: string;
     /** 质检仓位id */
-    qualityWarehouseId?: number;
+    qualityWarehouseId?: string;
     /** 质检仓位名称 */
     qualityWarehouseName?: string;
     /** 质检处理人 */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 质检处理人名称 */
     handleUserName?: string;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 总质检数 */
     totalInspectionQuantity?: number;
     /** 待检数 */
@@ -79,7 +79,7 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 让步接收数 */
     concessionQuantity?: number;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 备注 */
     remark?: string;
     /** 状态 */
@@ -87,11 +87,11 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 任务状态名称 */
     statusDesc?: string;
     /** 关闭人 */
-    cancelUserId?: number;
+    cancelUserId?: string;
     /** 关闭人名称 */
     cancelUserName?: string;
     /** 取消时间 */
-    cancelTime?: string;
+    cancelTime?: number;
     /** 质检方案质检项填写信息 */
     planItemInput?: IQualityInspectionTaskQualityInspectionSolutionQualityInspectionItemReturnToVO;
     /** 质检任务关闭信息 - 状态是已关闭（已撤销）时有值 */
@@ -103,15 +103,15 @@ export interface ICheckTaskDetailsAreReturnedToVO {
     /** 任务类型名称 */
     taskTypeDesc?: string;
     /** 检验位置id */
-    checkPositionId?: number;
+    checkPositionId?: string;
     /** 检验位置名称 */
     checkPositionName?: string;
     /** 发起部门id */
-    applyCombinationId?: number;
+    applyCombinationId?: string;
     /** 发起部门名称 */
     applyCombinationName?: string;
     /** 发起人id */
-    applyUserId?: number;
+    applyUserId?: string;
     /** 发起人名称 */
     applyUsername?: string;
 }
@@ -125,13 +125,13 @@ export interface IQualityInspectionTaskQualityInspectionSolutionQualityInspectio
 /** 质检任务质检方案返回VO */
 export interface IInspectionTaskInspectionSolutionReturnToVO {
     /** 质检方案id */
-    id?: number;
+    id?: string;
     /** 质检方案名称 */
     name?: string;
     /** 质检方案编号 */
     code?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
@@ -141,7 +141,7 @@ export interface IInspectionTaskInspectionSolutionReturnToVO {
     /** 备注 */
     remark?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */
@@ -152,11 +152,11 @@ export interface IInspectionTaskInspectionSolutionReturnToVO {
 /** 质检任务质检项返回VO */
 export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检方案质检项关联id */
-    qualityInspectionPlanItemRpId?: number;
+    qualityInspectionPlanItemRpId?: string;
     /** 质检方案id */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 质检项名称 */
     qualityInspectionItemName?: string;
     /** 质检项编号 */
@@ -164,7 +164,7 @@ export interface IInspectionTaskTheInspectionItemIsReturnedToVO {
     /** 质检项备注 */
     qualityInspectionItemRemark?: string;
     /** 质检项附件文件id */
-    qualityInspectionItemAttachedFileId?: number;
+    qualityInspectionItemAttachedFileId?: string;
     /** 质检项附件文件key */
     qualityInspectionItemAttachedFileKey?: string;
     /** 质检项附件文件完整路径 */
@@ -200,11 +200,11 @@ export interface ITheInspectionItemOptionReturnsVO {
 /** 质检任务关闭信息返回VO */
 export interface ITheInspectionTaskShutdownInformationIsReturnedToVO {
     /** 所属质检任务id */
-    qualityStorageTaskId?: number;
+    qualityStorageTaskId?: string;
     /** 关闭时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 关闭处理人 */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 关闭处理人姓名 */
     handleUsername?: string;
     /** 关闭处理人工号 */
@@ -215,7 +215,7 @@ export interface ITheInspectionTaskShutdownInformationIsReturnedToVO {
 /** 质检任务质检物料明细返回VO */
 export interface ICheckItemDetailsAreReturnedToVO {
     /** 质检任务质检物料明细id */
-    id?: number;
+    id?: string;
     /** 质检结果类型 */
     qualityInspectionResultType?: ECheckItemDetailsAreReturnedToVO_qualityInspectionResultType;
     /** 质检结果类型名称 */
@@ -226,7 +226,7 @@ export interface ICheckItemDetailsAreReturnedToVO {
 /** 质检任务质检物料质检项明细VO */
 export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 质检方案质检项关联id */
-    qualityInspectionPlanItemRpId?: number;
+    qualityInspectionPlanItemRpId?: string;
     /** 质检方式 */
     qualityMethod?: EQcTaskQCMaterialQCItemDetailsVO_qualityMethod;
     /** 数值质检标准 */
@@ -240,7 +240,7 @@ export interface IQcTaskQCMaterialQCItemDetailsVO {
     /** 数值单位 */
     numberUnit?: string;
     /** 质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 质检项名称 */
     qualityInspectionItemName?: string;
     /** 质检项编号 */

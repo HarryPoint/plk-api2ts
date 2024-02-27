@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/generateTicketUsingPOST
 */
-export default function fetchMethod(options: { params: { enterpriseCode?: string; enterpriseId?: number; searchJson?: string; type?: Etype; userId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseCode?: string; enterpriseId?: string; searchJson?: string; type?: Etype; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/masterdata-service/exportAuth/generateTicket",
@@ -22,7 +22,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

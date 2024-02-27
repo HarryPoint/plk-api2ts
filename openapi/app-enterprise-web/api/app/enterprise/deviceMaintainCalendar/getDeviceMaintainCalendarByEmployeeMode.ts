@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarByEmployeeModeUsingPOST
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IEquipmentMaintenanceCalend
 /** 设备保养日历请求DTO */
 export interface IEquipmentMaintenanceCalendarRequestDTO {
     /** 设备保养计划明细ids */
-    deviceMaintainDetailPlanIds?: number[];
+    deviceMaintainDetailPlanIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 设备ids */
-    deviceIds?: number[];
+    deviceIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
@@ -30,19 +30,19 @@ export interface IEquipmentMaintenanceCalendarRequestDTO {
     /** 导出字段集 */
     exportFields?: string[];
     /** 保养任务ids */
-    taskIds?: number[];
+    taskIds?: string[];
     /** 设备类型ids */
-    deviceTypeIds?: number[];
+    deviceTypeIds?: string[];
     /** 产线ids */
-    productionLineIds?: number[];
+    productionLineIds?: string[];
     /** 区域ids */
-    areaIds?: number[];
+    areaIds?: string[];
     /** 保养类型 */
     maintainTypes?: string[];
     /** 保养人员ids */
-    deviceEmployeeCapacityIds?: number[];
+    deviceEmployeeCapacityIds?: string[];
     /** 班组ids */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 查询状态 */
     queryStatusList?: EEquipmentMaintenanceCalendarRequestDTO_queryStatusList_items[];
     /** 保养计划编号 */
@@ -68,30 +68,30 @@ export interface IJSONResultPagingInformationDeviceMaintenanceCalendarPersonnelM
     /** 响应结果 */
     data?: IPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«设备保养日历-人员模式响应DTO» */
 export interface IPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IEquipmentMaintenanceCalendarPersonnelModeRespondsToDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationDeviceMaintenanceCalendarPersonnelModeRespondsToDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 设备保养日历-人员模式响应DTO */
 export interface IEquipmentMaintenanceCalendarPersonnelModeRespondsToDTO {
@@ -107,18 +107,18 @@ export interface IEquipmentMaintenanceCalendarPersonnelModeRespondsToDTO {
 /** 设备保养日历-人员模式详情响应DTO */
 export interface IEquipmentMaintenanceCalendarPersonnelModeDetailsRespondToDTO {
     /** 天 */
-    day?: string;
+    day?;
     /** 时间详情 */
     dayDetails?: IEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDTO[];
 }
 /** 设备保养日历-人员模式详情时间响应DTO */
 export interface IEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDTO {
     /** 保养任务id */
-    taskId?: number;
+    taskId?: string;
     /** 设备保养计划id */
-    deviceMaintainPlanId?: number;
+    deviceMaintainPlanId?: string;
     /** 设备保养计划明细id */
-    deviceMaintainDetailPlanId?: number;
+    deviceMaintainDetailPlanId?: string;
     /** 设备编号 */
     deviceCode?: string;
     /** 设备名称 */
@@ -126,13 +126,13 @@ export interface IEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDT
     /** 保养类型 */
     maintainType?: EEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDTO_maintainType;
     /** 计划开始时间 */
-    planTaskStartDate?: string;
+    planTaskStartDate?: number;
     /** 计划结束时间 */
-    planTaskEndDate?: string;
+    planTaskEndDate?: number;
     /** 任务开始时间 */
-    taskStartDate?: string;
+    taskStartDate?: number;
     /** 任务结束时间 */
-    taskEndDate?: string;
+    taskEndDate?: number;
     /** 任务状态 */
     taskStatus?: EEquipmentMaintenanceCalendarPersonnelModeDetailsTimeResponseDTO_taskStatus;
     /** 是否执行人 */

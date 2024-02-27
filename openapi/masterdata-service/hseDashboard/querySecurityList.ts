@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ISecurityQueryRequest }, ex
 /** 安全查询请求 */
 export interface ISecurityQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«安全查询响应»» */
 export interface IJSONResultListSecurityQueryResponse {
@@ -29,12 +29,12 @@ export interface IJSONResultListSecurityQueryResponse {
     /** 响应结果 */
     data?: ISecurityQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 安全查询响应 */
 export interface ISecurityQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 安全日期 */
     securityDate?: string;
     /** 轻伤及以上事故数 */

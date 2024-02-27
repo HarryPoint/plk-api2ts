@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/checkApplicationIsPublishSuccessUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IVerifyWhetherTheApplicatio
 /** 应用是否发布成功校验请求对象 */
 export interface IVerifyWhetherTheApplicationSuccessfullyAdvertisesTheRequestObject {
     /** 项目id */
-    projectId: number;
+    projectId: string;
     /** 应用流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用流程名称 */
     flowPathName?: string;
 }
@@ -31,7 +31,7 @@ export interface IJSONResultstring1 {
     /** 响应结果 */
     data?: EJSONResultstring1_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring1_data {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryStorageBasicAssociationReferenceDataListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IFormReferencingQueryReques
 /** FormReferencingQueryRequestDTO */
 export interface IFormReferencingQueryRequestDTO {
     /** undefined */
-    flowPathId: number;
+    flowPathId: string;
     /** undefined */
-    formRecordIdList?: number[];
+    formRecordIdList?: string[];
 }
 /** JSONResult«List«库存基础数据关联数据查询响应»» */
 export interface IJSONResultListInventoryBasicDataAssociationDataQueryResponse {
@@ -29,12 +29,12 @@ export interface IJSONResultListInventoryBasicDataAssociationDataQueryResponse {
     /** 响应结果 */
     data?: IInventoryBasicDataAssociatedDataQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 库存基础数据关联数据查询响应 */
 export interface IInventoryBasicDataAssociatedDataQueryResponse {
     /** 数据id */
-    id?: number;
+    id?: string;
     /** 数据编码 */
     code?: string;
     /** 数据名称 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/区域相关/getVOByIdAndCheckUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultAreaVO>(
         {
             url: "/masterdata-service/area/getVOByIdAndCheck",
@@ -22,18 +22,18 @@ export interface IJSONResultAreaVO {
     /** 响应结果 */
     data?: IRegionalVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 区域VO */
 export interface IRegionalVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 区域名称 */
     name?: string;
     /** 区域编号 */
     code?: string;
     /** 父级id */
-    parentId?: number;
+    parentId?: string;
 }

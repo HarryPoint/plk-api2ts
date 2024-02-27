@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺画布快照相关/getCanvasSnapshotByUserUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICraftCanvasSnapshotAcquisi
 /** 工艺画布快照获取请求DTO */
 export interface ICraftCanvasSnapshotAcquisitionRequestDTO {
     /** 工艺id - 新增场景传值-1 */
-    technologyId: number;
+    technologyId: string;
 }
 /** JSONResult«工艺画布快照获取响应DTO» */
 export interface IJSONResultProcessCanvasSnapshotGetsResponseDTO {
@@ -27,12 +27,12 @@ export interface IJSONResultProcessCanvasSnapshotGetsResponseDTO {
     /** 响应结果 */
     data?: IProcessCanvasSnapshotToGetResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺画布快照获取响应DTO */
 export interface IProcessCanvasSnapshotToGetResponseDTO {
     /** 工艺id */
-    technologyId?: number;
+    technologyId?: string;
     /** 快照保存json数据 */
     canvasSnapshot?: Record<string, Record<string, any>>;
 }

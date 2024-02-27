@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/权限相关/listTreeUsingPOST_1
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IPermissionQuery }, extraOp
 /** 权限查询 */
 export interface IPermissionQuery {
     /** 权限组id */
-    permissionGroupId?: number;
+    permissionGroupId?: string;
 }
 /** JSONResult«List«权限树响应 DTO»» */
 export interface ITheJSONResultListPermissionTreeRespondsToTheDTO {
@@ -27,12 +27,12 @@ export interface ITheJSONResultListPermissionTreeRespondsToTheDTO {
     /** 响应结果 */
     data?: IThePermissionTreeRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 权限树响应 DTO */
 export interface IThePermissionTreeRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -207,6 +207,8 @@ export enum EThePermissionTreeRespondsToTheDTO_applicationSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -247,6 +249,14 @@ export enum EThePermissionTreeRespondsToTheDTO_applicationSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

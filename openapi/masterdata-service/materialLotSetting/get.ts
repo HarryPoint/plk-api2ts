@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/getUsingGET_2
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; materialId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultMaterialBatchSettingsEditResponseObjects>(
         {
             url: "/masterdata-service/materialLotSetting/get",
@@ -22,20 +22,20 @@ export interface IJSONResultMaterialBatchSettingsEditResponseObjects {
     /** 响应结果 */
     data?: IMaterialBatchSettingsEditTheResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料批次设置编辑响应对象 */
 export interface IMaterialBatchSettingsEditTheResponseObject {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 启用序列号 */
     enableSerialNo?: EMaterialBatchSettingsEditTheResponseObject_enableSerialNo;
     /** 序列号方案id */
-    serialNoSchemeId?: number;
+    serialNoSchemeId?: string;
     /** 启用批次 */
     enableLot?: EMaterialBatchSettingsEditTheResponseObject_enableLot;
     /** 批次方案id */
-    lotSchemeId?: number;
+    lotSchemeId?: string;
     /** 启用质量追溯 */
     enableQualityTraceability?: EMaterialBatchSettingsEditTheResponseObject_enableQualityTraceability;
     /** 启用外部码 */
@@ -43,7 +43,7 @@ export interface IMaterialBatchSettingsEditTheResponseObject {
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
-    externalCodeLength?: number;
+    externalCodeLength?: string;
 }
 
 export enum EMaterialBatchSettingsEditTheResponseObject_enableSerialNo {

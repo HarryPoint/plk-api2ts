@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/closeUsingPOST_2
 */
-export default function fetchMethod(options: { data: ISalesOrdersCloseTheDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISalesOrdersCloseTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/salesOrder/close",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISalesOrdersCloseTheDTOpara
 /** 销售订单关闭 DTO */
 export interface ISalesOrdersCloseTheDTO {
     /** 销售订单id */
-    salesOrderId: number;
+    salesOrderId: string;
     /** 登录密码 */
     loginPassword?: string;
     /** 关闭原因 */
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

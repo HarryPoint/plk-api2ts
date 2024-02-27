@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/verifyUsingPOST
 */
-export default function fetchMethod(options: { data: ICheckTheDTOForInventoryTasksparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICheckTheDTOForInventoryTasks, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/storageTakeCheckTask/verify",
@@ -18,14 +18,14 @@ export interface ICheckTheDTOForInventoryTasks {
     /** 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT) */
     editType?: ECheckTheDTOForInventoryTasks_editType;
     /** 任务id */
-    id: number;
+    id: string;
     /** 盘点核对详情 */
     detailList?: IInventoryTaskCheckDetailsDTO[];
 }
 /** 盘点任务核对详情DTO */
 export interface IInventoryTaskCheckDetailsDTO {
     /** 详情id */
-    id?: number;
+    id?: string;
     /** 核对数量 */
     verifyQuantity?: number;
     /** 差异原因 */
@@ -49,7 +49,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ECheckTheDTOForInventoryTasks_editType {

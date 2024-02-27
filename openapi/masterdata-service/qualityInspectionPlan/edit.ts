@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检方案/editUsingPOST_18
 */
-export default function fetchMethod(options: { data: IEditTheQualityInspectionSchemeDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEditTheQualityInspectionSchemeDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityInspectionPlan/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEditTheQualityInspectionSc
 /** 编辑质检方案 DTO */
 export interface IEditTheQualityInspectionSchemeDTO {
     /** id，如果不传就是新增 */
-    id?: number;
+    id?: string;
     /** 质检方案名 */
     name: string;
     /** 质检方案编码 */
@@ -24,7 +24,7 @@ export interface IEditTheQualityInspectionSchemeDTO {
     /** 是否应用编码规则 */
     isCodeRule: EEditTheQualityInspectionSchemeDTO_isCodeRule;
     /** 所属质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检项清单 */
     itemList?: IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO[];
     /** 版次号 */
@@ -43,9 +43,9 @@ export interface IEditTheQualityInspectionSchemeDTO {
 /** 质检方案质检项关联信息编辑DTO */
 export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 所属质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 数值质检标准 */
     numberStandard?: EQualityInspectionSolutionQualityInspectionItemAssociationInformationEditTheDTO_numberStandard;
     /** 比较数值 */
@@ -66,7 +66,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEditTheQualityInspectionSchemeDTO_isCodeRule {

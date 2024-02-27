@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/produce-technology-material-bom-controller/getDetailByIdUsingGET_2
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProduceTechnologyMaterialBomInfoResponseDTO>(
         {
             url: "/masterdata-service/produceTechnologyMaterialBom/getDetailById",
@@ -22,40 +22,40 @@ export interface IJSONResultProduceTechnologyMaterialBomInfoResponseDTO {
     /** 响应结果 */
     data?: IProduceTechnologyMaterialBomInfoResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProduceTechnologyMaterialBomInfoResponseDTO */
 export interface IProduceTechnologyMaterialBomInfoResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 生产工艺ID */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 所属物料id */
-    materialId?: number;
+    materialId?: string;
     /** 所属物料名称 */
     materialName?: string;
     /** 物料BOMid */
-    materialBomId?: number;
+    materialBomId?: string;
     /** bom名称 */
     name?: string;
     /** bom编号 */
@@ -66,9 +66,9 @@ export interface IProduceTechnologyMaterialBomInfoResponseDTO {
 /** 生产工艺物料Bom明细节点响应对象 */
 export interface IProductionProcessMaterialBomDetailNodeResponseObject {
     /** 生产工艺物料bom明细id */
-    produceTechnologyMaterialBomDetailId?: number;
+    produceTechnologyMaterialBomDetailId?: string;
     /** 子物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 子物料种类 */
     childMaterialType?: string;
     /** 子物料名称 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderScheduleReportPageUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationReportProductionOrderReturnsVO>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderScheduleReportPage",
@@ -28,17 +28,17 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 物料id集合 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 计划开始日期查询开始时间 */
-    startTimeOfBeginTime?: string;
+    startTimeOfBeginTime?: number;
     /** 计划开始日期查询结束时间 */
-    endTimeOfBeginTime?: string;
+    endTimeOfBeginTime?: number;
     /** 排产方式集合 */
     planTypeList?: EProductionSchedulingOrderSearchVO_planTypeList_items[];
     /** 计划结束日期查询结束时间 */
-    endTimeOfEndTime?: string;
+    endTimeOfEndTime?: number;
     /** 计划结束日期查询开始时间 */
-    startTimeOfEndTime?: string;
+    startTimeOfEndTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -56,55 +56,55 @@ export interface IJSONResultPagingInformationReportProductionOrderReturnsVO {
     /** 响应结果 */
     data?: IPageInformationReportProductionOrderReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«报表生产订单返回VO» */
 export interface IPageInformationReportProductionOrderReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IReportProductionOrdersBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationReportProductionOrderReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationReportProductionOrderReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 报表生产订单返回VO */
 export interface IReportProductionOrdersBackToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 生产订单号 */
     code?: string;
     /** 父生产订单号 */
     parentProduceOrderCode?: string;
     /** 销售单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 销售详情id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 销售详情物料名称 */
     salesOrderMaterialName?: string;
     /** 订单类型描述 */
     orderTypeDesc?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 交付数量 */
     totalCount?: number;
     /** 优先级 */
@@ -118,13 +118,13 @@ export interface IReportProductionOrdersBackToVO {
     /** 订单排产方式描述 */
     planTypeDesc?: string;
     /** 订单计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 订单计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 对应标准工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 生产工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 对应工艺路径名称 */
     routingName?: string;
     /** 对应工艺路径编号 */

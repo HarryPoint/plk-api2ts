@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/checkProduceReportUsingPOST
 */
-export default function fetchMethod(options: { data: IOutputClassReportSearchVOparams: { enterpriseId?: number; isCreateLineChartReport?: boolean, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputClassReportSearchVO, params: { enterpriseId?: string; isCreateLineChartReport?: boolean } }, extraOptions?: any) {
     return http<IJSONResultProducesALineChartAndReturnsAVOobject>(
         {
             url: "/masterdata-service/rtProductionSnapshot/checkProduceReport",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOutputClassReportSearchVOp
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
@@ -37,7 +37,7 @@ export interface IJSONResultProducesALineChartAndReturnsAVOobject {
     /** 响应结果 */
     data?: IOutputLineChartReturnsVOobject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产出类折线图返回VO«object» */
 export interface IOutputLineChartReturnsVOobject {
@@ -52,16 +52,16 @@ export interface IOutputLineChartReturnsVOobject {
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
     isConsistent?: EOutputLineChartReturnsVOobject_isConsistent;
     /** 实际查询时间 - 开始 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际查询时间 - 结束 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 实际数据条数 */
     actualDataCount?: number;
 }
 /** 产出类折线图分组返回VO«object» */
 export interface IOutputLineChartsGroupedToReturnVOobject {
     /** 数据分组id */
-    groupId?: number;
+    groupId?: string;
     /** 数据分组名称 */
     groupName?: string;
     /** 数据分组编号 */
@@ -72,7 +72,7 @@ export interface IOutputLineChartsGroupedToReturnVOobject {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

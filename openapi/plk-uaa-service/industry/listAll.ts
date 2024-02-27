@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/行业相关/listAllUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListIndustryResponseObjectDTO {
     /** 响应结果 */
     data?: IIndustryResponseObjectDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 行业响应对象DTO */
 export interface IIndustryResponseObjectDTO {
     /** 行业id */
-    id?: number;
+    id?: string;
     /** 父级行业id */
-    parentId?: number;
+    parentId?: string;
     /** 行业名称 */
     name?: string;
     /** 排序 */

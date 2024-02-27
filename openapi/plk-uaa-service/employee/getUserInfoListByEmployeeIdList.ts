@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/getUserInfoListByEmployeeIdListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IUserInfoQueryRequestDTO },
 /** UserInfoQueryRequestDTO */
 export interface IUserInfoQueryRequestDTO {
     /** 员工ID列表不能为空 */
-    employeeIdList?: number[];
+    employeeIdList?: string[];
     /** 企业ID */
-    enterpriseId?: number;
+    enterpriseId?: string;
 }
 /** JSONResult«UserInfoQueryResponseDTO» */
 export interface IJSONResultUserInfoQueryResponseDTO {
@@ -29,7 +29,7 @@ export interface IJSONResultUserInfoQueryResponseDTO {
     /** 响应结果 */
     data?: IUserInfoQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** UserInfoQueryResponseDTO */
 export interface IUserInfoQueryResponseDTO {
@@ -39,7 +39,7 @@ export interface IUserInfoQueryResponseDTO {
 /** EnterpriseUserDTO */
 export interface IEnterpriseUserDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 手机号 */
     telephone?: string;
     /** 用户名 */
@@ -47,5 +47,5 @@ export interface IEnterpriseUserDTO {
     /** 头像 */
     avatar?: string;
     /** 员工ID */
-    employeeId?: number;
+    employeeId?: string;
 }

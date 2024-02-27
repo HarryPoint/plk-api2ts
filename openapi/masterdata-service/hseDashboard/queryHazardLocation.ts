@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardLocationUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IOccupationalHazardSiteInqu
 /** 职业危害场所查询请求 */
 export interface IOccupationalHazardSiteInquiryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«职业危害场所查询响应» */
 export interface IJSONResultResponseToOccupationalHazardSiteQuery {
@@ -29,7 +29,7 @@ export interface IJSONResultResponseToOccupationalHazardSiteQuery {
     /** 响应结果 */
     data?: IOccupationalHazardSiteInquiryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 职业危害场所查询响应 */
 export interface IOccupationalHazardSiteInquiryResponse {

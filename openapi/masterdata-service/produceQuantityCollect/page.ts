@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/pageUsingPOST_3
@@ -22,47 +22,47 @@ export interface IJSONResultCollectsPagingResponseObjectsForCompletedPagingInfor
     /** 响应结果 */
     data?: IPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«完工及产成品归集分页响应对象» */
 export interface IPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationCompletedAndFinishedProductsAreCollectedAsPagingResponseObjects_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 完工及产成品归集分页响应对象 */
 export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
     stockInStatus?: ETheFinishedAndFinishedProductsAreCollectedAsPagingResponseObjects_stockInStatus;
     /** 计划开工日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 计划完工日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -70,7 +70,7 @@ export interface ITheFinishedAndFinishedProductsAreCollectedAsPagingResponseObje
     /** 物料规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位名称 */
     materialUnitName?: string;
     /** 物料单位编号 */

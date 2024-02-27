@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/getWarehouseMaterialDimensionReportUsingPOST
@@ -22,35 +22,35 @@ export interface IJSONResultPageInformationQueriesDetailedResponseObjectsInTheMa
     /** 响应结果 */
     data?: IPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«物料库存维度查询明细响应对象» */
 export interface IPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IResponseObjectsForQueryingDetailsInTheInventoryDimension[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 物料库存维度查询明细响应对象 */
 export interface IResponseObjectsForQueryingDetailsInTheInventoryDimension {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 物料名称 */
@@ -62,13 +62,13 @@ export interface IResponseObjectsForQueryingDetailsInTheInventoryDimension {
     /** 批次号 */
     lotNo?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位编号 */
     warehouseCode?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库编号 */
     storehouseCode?: string;
     /** 仓库名称 */

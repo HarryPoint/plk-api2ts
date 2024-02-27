@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getPageUsingPOST_9
@@ -34,7 +34,7 @@ export interface IBatchOrderSearchVO {
     /** 创建结束时间 yyyy-MM-dd HH:mm:ss */
     createEndTime?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 来源类型 */
     sourceType?: EBatchOrderSearchVO_sourceType;
     /** 来源批次单号 */
@@ -58,35 +58,35 @@ export interface IJSONResultPagingInformationBatchOrderReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationBatchOrderReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«批次订单返回VO» */
 export interface IPagingInformationBatchOrderReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBatchOrderIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationBatchOrderReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationBatchOrderReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 批次订单返回VO */
 export interface IBatchOrderIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 批次名称 */
     lotName?: string;
     /** 批次号 */
@@ -100,7 +100,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 对应销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -120,7 +120,7 @@ export interface IBatchOrderIsReturnedToVO {
     /** 拆出数量 */
     changeTotalCount?: number;
     /** 生产工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 生产工艺路径名称 */
     produceTechnologyRoutingName?: string;
     /** 生产工艺路径编号 */
@@ -130,9 +130,9 @@ export interface IBatchOrderIsReturnedToVO {
     /** 当前流水类型描述 */
     lastFlowTypeDesc?: string;
     /** 当前对应工艺路径步骤id */
-    lastProduceRoutingStepId?: number;
+    lastProduceRoutingStepId?: string;
     /** 当前对应工序id */
-    lastProcessId?: number;
+    lastProcessId?: string;
     /** 当前对应工序名称 */
     lastProcessName?: string;
     /** 当前对应工序编号 */
@@ -148,11 +148,11 @@ export interface IBatchOrderIsReturnedToVO {
     /** 来源集 */
     sourceList?: IBatchOrderSourceReturnedToVO[];
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 批次订单二维码值 */
     lotOrderQrcode?: string;
 }

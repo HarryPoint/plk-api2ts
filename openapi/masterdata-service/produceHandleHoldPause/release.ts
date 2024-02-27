@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/releaseUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITheProductionProcessHoldsT
 /** 生产处理暂扣放行请求对象 */
 export interface ITheProductionProcessHoldsTheReleaseRequestObject {
     /** 生产处理id */
-    id?: number;
+    id?: string;
     /** 处理意见 */
     handleRemark?: string;
     /** 放行数量 */
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

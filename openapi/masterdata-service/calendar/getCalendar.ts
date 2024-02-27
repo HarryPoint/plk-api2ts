@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCalendarUsingPOST
 */
-export default function fetchMethod(options: { data: IFactoryCalendarSearchVO1params: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFactoryCalendarSearchVO1, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultFactoryCalendarReturnsVO>(
         {
             url: "/masterdata-service/calendar/getCalendar",
@@ -31,32 +31,32 @@ export interface IJSONResultFactoryCalendarReturnsVO {
     /** 响应结果 */
     data?: IFactoryCalendarReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工厂日历返回VO */
 export interface IFactoryCalendarReturnsVO {
     /** 排班的最后一天 */
-    endScheduleDay?: string;
+    endScheduleDay?;
     /** 工厂日历详情返回VO */
     calendarDetailList?: IFactoryCalendarDetailsBackToVO[];
 }
 /** 工厂日历详情返回VO */
 export interface IFactoryCalendarDetailsBackToVO {
     /** 工厂日历id */
-    id?: number;
+    id?: string;
     /** 日程安排日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 对应班组班次集 */
     groupShifts?: ICalendarShiftInformationReturnedToVO[];
 }
 /** 日历班次信息返回VO */
 export interface ICalendarShiftInformationReturnedToVO {
     /** 工厂日历与班组班次关联id */
-    id?: number;
+    id?: string;
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 班次名称 */
     classShiftName?: string;
     /** 班次开始时间 */
@@ -82,7 +82,7 @@ export interface ILocalTime {
 /** 日历班组信息返回VO */
 export interface ICalendarGroupInformationIsReturnedToVO {
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 班组对应的员工信息集 */
@@ -91,7 +91,7 @@ export interface ICalendarGroupInformationIsReturnedToVO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

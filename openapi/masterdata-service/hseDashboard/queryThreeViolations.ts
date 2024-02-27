@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryThreeViolationsUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: I3DInformationQueryRequest 
 /** 三维信息查询请求 */
 export interface I3DInformationQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«三维信息查询响应»» */
 export interface IJSONResultListResponseToQuerying3DInformation {
@@ -29,7 +29,7 @@ export interface IJSONResultListResponseToQuerying3DInformation {
     /** 响应结果 */
     data?: I3DInformationQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 三维信息查询响应 */
 export interface I3DInformationQueryResponse {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/服务相关/listUsingGET_3
@@ -22,12 +22,12 @@ export interface ITheJSONResultListServiceRespondsToTheDTO {
     /** 响应结果 */
     data?: IServiceRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 服务响应 DTO */
 export interface IServiceRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */

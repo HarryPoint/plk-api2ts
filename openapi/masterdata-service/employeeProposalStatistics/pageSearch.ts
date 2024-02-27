@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工建议统计报表相关/pageSearchUsingPOST
@@ -69,7 +69,7 @@ export interface IFormDataGroupingDTO {
     /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
     cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
     /** 多级基础数据上级ID */
-    treeDataParentId?: number;
+    treeDataParentId?: string;
 }
 /** JSONResult«分页信息«EmployeeProposalStatisticsResponseDTO»» */
 export interface IEmployeeProposalStatisticsResponseDTOJSONResultPagingInformation {
@@ -80,30 +80,30 @@ export interface IEmployeeProposalStatisticsResponseDTOJSONResultPagingInformati
     /** 响应结果 */
     data?: IThePagingInformationEmployeeProposalStatisticsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«EmployeeProposalStatisticsResponseDTO» */
 export interface IThePagingInformationEmployeeProposalStatisticsResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IEmployeeProposalStatisticsResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationEmployeeProposalStatisticsResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationEmployeeProposalStatisticsResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** EmployeeProposalStatisticsResponseDTO */
 export interface IEmployeeProposalStatisticsResponseDTO {
@@ -112,13 +112,13 @@ export interface IEmployeeProposalStatisticsResponseDTO {
     /** undefined */
     employeeName?: string;
     /** undefined */
-    employeeDepartmentId?: number;
+    employeeDepartmentId?: string;
     /** undefined */
     employeeDepartmentName?: string;
     /** undefined */
     employeeProposalCount?: string;
     /** undefined */
-    lastSubmitTime?: string;
+    lastSubmitTime?: number;
     /** undefined */
     idListStr?: string;
     /** undefined */

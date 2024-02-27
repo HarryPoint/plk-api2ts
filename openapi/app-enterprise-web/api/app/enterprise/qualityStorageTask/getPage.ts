@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检管理/getMaterialSelectorUsingPOST_4
@@ -22,9 +22,9 @@ export interface IInspectionTaskSearchesForVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 检验日期查询开始时间 */
-    completeStartTime?: string;
+    completeStartTime?: number;
     /** 质检分类 */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 采购收货单编号 */
     purchaseWorkOrderNo?: string;
     /** 任务类型 */
@@ -32,15 +32,15 @@ export interface IInspectionTaskSearchesForVO {
     /** 任务编号 */
     qualityStorageTaskNo?: string;
     /** 检验日期查询结束时间 */
-    completeEndTime?: string;
+    completeEndTime?: number;
     /** 检验员id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 检验位置id */
-    checkPositionId?: number;
+    checkPositionId?: string;
     /** 仓位id */
-    qualityWarehouseId?: number;
+    qualityWarehouseId?: string;
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -58,57 +58,57 @@ export interface IJSONResultThePageInformationInspectionTaskReturnsVO {
     /** 响应结果 */
     data?: IThePageInformationInspectionTaskReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质检任务返回VO» */
 export interface IThePageInformationInspectionTaskReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheInspectionTaskReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePageInformationInspectionTaskReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePageInformationInspectionTaskReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质检任务返回VO */
 export interface ITheInspectionTaskReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 发起部门id */
-    applyCombinationId?: number;
+    applyCombinationId?: string;
     /** 发起部门名称 */
     applyCombinationName?: string;
     /** 发起人id */
-    applyUserId?: number;
+    applyUserId?: string;
     /** 发起人名称 */
     applyUsername?: string;
     /** 质检任务编号 */
     code?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
     qualityInspectionCategoryCode?: string;
     /** 质检方案id */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 质检方案名称 */
     qualityInspectionPlanName?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -120,29 +120,29 @@ export interface ITheInspectionTaskReturnsVO {
     /** 对应物料规格 */
     materialSpec?: string;
     /** 质检仓位id */
-    qualityWarehouseId?: number;
+    qualityWarehouseId?: string;
     /** 质检仓位名称 */
     qualityWarehouseName?: string;
     /** 质检处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 质检处理人名字 */
     handleUserName?: string;
     /** 状态 */
     isValid?: ETheInspectionTaskReturnsVO_isValid;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务状态 */
     status?: ETheInspectionTaskReturnsVO_status;
     /** 任务状态名称 */
     statusDesc?: string;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 任务类型 */
     taskType?: ETheInspectionTaskReturnsVO_taskType;
     /** 任务类型描述 */
     taskTypeDesc?: string;
     /** 检验位置id */
-    checkPositionId?: number;
+    checkPositionId?: string;
     /** 检验位置名称 */
     checkPositionName?: string;
     /** 总质检数 */
@@ -152,9 +152,9 @@ export interface ITheInspectionTaskReturnsVO {
     /** 已检数 */
     inspectionQuantity?: number;
     /** 创建日期 */
-    createTime?: string;
+    createTime?: number;
     /** 关闭人 */
-    cancelUserId?: number;
+    cancelUserId?: string;
     /** 关闭人名称 */
     cancelUserName?: string;
 }

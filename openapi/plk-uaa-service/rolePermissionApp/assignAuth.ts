@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/assignAuthUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IRolePermissionApplicationA
 /** 角色权限应用授权请求DTO */
 export interface IRolePermissionApplicationAuthorizationRequestDTO {
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 应用code */
     appCode?: string;
     /** 角色权限信息集 */
@@ -25,7 +25,7 @@ export interface IRolePermissionApplicationAuthorizationRequestDTO {
 /** 角色权限应用授权明细请求DTO */
 export interface IRoleRightsApplyAuthorizationDetailsToRequestTheDTO {
     /** 角色id */
-    roleId?: number;
+    roleId?: string;
     /** 新增权限码集 */
     addPermissionCodes?: string[];
     /** 删除权限码集 */
@@ -56,7 +56,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEnterpriseDataPermissionListResponse1_dataAuthType {

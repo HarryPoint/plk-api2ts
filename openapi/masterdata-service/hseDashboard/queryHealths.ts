@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHealthsUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IHealthHQueryRequest }, ext
 /** 健康H查询请求 */
 export interface IHealthHQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«健康H查询响应»» */
 export interface IJSONResultListHealthHQueryResponse {
@@ -29,12 +29,12 @@ export interface IJSONResultListHealthHQueryResponse {
     /** 响应结果 */
     data?: IHealthHQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 健康H查询响应 */
 export interface IHealthHQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 健康日期 */
     healthDate?: string;
     /** 轻伤及以上事故数 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getDayPassListUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultListTodaysGoodProductStatisticsVO {
     /** 响应结果 */
     data?: ITodaysGoodProductStatisticsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 今日良品统计VO */
 export interface ITodaysGoodProductStatisticsVO {

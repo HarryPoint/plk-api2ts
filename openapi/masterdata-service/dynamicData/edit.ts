@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/editUsingPOST_5
 */
-export default function fetchMethod(options: { data: IMasterDataBaseEditDTOparams: { flowPathId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMasterDataBaseEditDTO, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultDynamicFormSaveResultBO>(
         {
             url: "/masterdata-service/dynamicData/edit",
@@ -18,7 +18,7 @@ export interface IMasterDataBaseEditDTO {
     /** 编辑数据 */
     data?: Record<string, Record<string, any>>;
     /** 流程任务id - 新增/重新编辑业务，要设置为null */
-    flowPathTaskId?: number;
+    flowPathTaskId?: string;
     /** 扩展参数 */
     extensionParam?: Record<string, Record<string, any>>;
 }
@@ -31,12 +31,12 @@ export interface IJSONResultDynamicFormSaveResultBO {
     /** 响应结果 */
     data?: IDynamicFormSaveResultBO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** DynamicFormSaveResultBO */
 export interface IDynamicFormSaveResultBO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
 }

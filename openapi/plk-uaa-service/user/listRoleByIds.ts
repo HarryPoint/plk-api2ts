@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/listRoleByIdsUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdSetInformation }, extraO
 /** id集 信息 */
 export interface IIdSetInformation {
     /** id集 */
-    ids: number[];
+    ids: string[];
 }
 /** JSONResult«List«角色及用户id信息响应»» */
 export interface IJSONResultListResponseToTheRoleAndUserIdInformation {
@@ -27,12 +27,12 @@ export interface IJSONResultListResponseToTheRoleAndUserIdInformation {
     /** 响应结果 */
     data?: IRoleAndUserIdInformationResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 角色及用户id信息响应 */
 export interface IRoleAndUserIdInformationResponse {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -44,7 +44,7 @@ export interface IRoleAndUserIdInformationResponse {
     /** 描述 */
     description?: string;
     /** 用户id */
-    userId?: number;
+    userId?: string;
     /** 应用级别 */
     applicationLevel?: ERoleAndUserIdInformationResponse_applicationLevel;
 }

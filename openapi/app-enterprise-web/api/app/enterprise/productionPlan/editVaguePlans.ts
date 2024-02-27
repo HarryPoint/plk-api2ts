@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/editVagueUsingPOST
@@ -16,18 +16,18 @@ export default function fetchMethod(options: { data: IProductionOrderStepSchedul
 /** 生产订单步骤排产编辑DTO_1 */
 export interface IProductionOrderStepSchedulingEditDTO1 {
     /** 排产计划id */
-    id?: number;
+    id?: string;
     /** 步骤排产集 */
     stepPlans?: IProductionOrderStepSchedulingEditDTO[];
 }
 /** 生产订单步骤排产编辑DTO */
 export interface IProductionOrderStepSchedulingEditDTO {
     /** 步骤排产id */
-    id?: number;
+    id?: string;
     /** 工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -46,5 +46,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

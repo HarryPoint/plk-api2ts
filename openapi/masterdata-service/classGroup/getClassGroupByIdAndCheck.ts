@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/班组相关/getClassGroupByIdAndCheckUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultVOGroup>(
         {
             url: "/masterdata-service/classGroup/getClassGroupByIdAndCheck",
@@ -22,16 +22,16 @@ export interface IJSONResultVOGroup {
     /** 响应结果 */
     data?: ITeamVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 班组VO */
 export interface ITeamVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 班组名称 */
     name?: string;
     /** 班组编号 */
     code?: string;
     /** 上级部门id */
-    departmentId?: number;
+    departmentId?: string;
 }

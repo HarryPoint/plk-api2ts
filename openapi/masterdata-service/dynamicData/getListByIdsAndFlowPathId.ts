@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getListByIdsAndFlowPathIdUsingPOST
 */
-export default function fetchMethod(options: { data: IListDataQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IListDataQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getListByIdsAndFlowPathId",
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IListDataQueryVOparams: { e
 /** ListDataQueryVO */
 export interface IListDataQueryVO {
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 是否是明细表 */
     isDetailTable?: EListDataQueryVO_isDetailTable;
     /** 主数据ids */
-    masterDataIds?: number[];
+    masterDataIds?: string[];
     /** 明细表格字段id集合 */
-    detailFlowPathFormFieldIds?: number[];
+    detailFlowPathFormFieldIds?: string[];
     /** 明细表格字段serialNo集合 */
     detailFlowPathFormFieldSerialNos?: string[];
 }
@@ -35,7 +35,7 @@ export interface IJSONResultListJSONObject {
     /** 响应结果 */
     data?: IJSONObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** JSONObject */
 export interface IJSONObject {

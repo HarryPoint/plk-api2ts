@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/backUsingPOST_1
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IProductionProcessingWithho
 /** 生产处理暂扣返工请求对象 */
 export interface IProductionProcessingWithholdReworkRequestObject {
     /** 生产处理id */
-    id?: number;
+    id?: string;
     /** 返工类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 返工数量 */
     abnormalQuantity: number;
     /** 返工生产后处理方式 */
     backProduceType: EProductionProcessingWithholdReworkRequestObject_backProduceType;
     /** 返工工艺路径步骤id */
-    backProduceTechnologyRoutingStepId: number;
+    backProduceTechnologyRoutingStepId: string;
     /** 处理意见 */
     handleRemark?: string;
 }
@@ -37,7 +37,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionProcessingWithholdReworkRequestObject_backProduceType {

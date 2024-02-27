@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/checkCollectOrderHasModifyUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultVerifiesTheResponseObject {
     /** 响应结果 */
     data?: ICheckResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 校验响应对象 */
 export interface ICheckResponseObject {

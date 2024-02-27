@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量月报报表相关/queryUsingPOST_1
@@ -223,7 +223,7 @@ export interface IQualityMonthlyReportRespondsToDTO {
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

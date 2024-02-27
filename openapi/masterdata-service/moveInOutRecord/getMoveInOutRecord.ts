@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveInOutRecordUsingPOST
 */
-export default function fetchMethod(options: { data: IEntryAndExitRecordsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEntryAndExitRecordsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListInboundAndOutboundRecordsReturnVO>(
         {
             url: "/masterdata-service/moveInOutRecord/getMoveInOutRecord",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEntryAndExitRecordsSearchV
 /** 进出站记录搜索VO */
 export interface IEntryAndExitRecordsSearchVO {
     /** 任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 进出站记录状态 */
     statusList?: EEntryAndExitRecordsSearchVO_statusList_items[];
 }
@@ -29,24 +29,24 @@ export interface IJSONResultListInboundAndOutboundRecordsReturnVO {
     /** 响应结果 */
     data?: IInboundAndOutboundLogsReturnToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进出站记录返回VO */
 export interface IInboundAndOutboundLogsReturnToVO {
     /** 记录id */
-    id?: number;
+    id?: string;
     /** 进出站类型 */
     type?: EInboundAndOutboundLogsReturnToVO_type;
     /** 状态 */
     status?: EInboundAndOutboundLogsReturnToVO_status;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应产出物料来料数 */
     materialIncomingQuantity?: number;
     /** 对应产出物料实际数 */
     materialActualQuantity?: number;
     /** 批次id */
-    lotId?: number;
+    lotId?: string;
     /** 批次名称 */
     lotName?: string;
     /** 批次号 */
@@ -54,48 +54,48 @@ export interface IInboundAndOutboundLogsReturnToVO {
     /** 备注 */
     remark?: string;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 关键参数录入信息 - 仅已进出站有工艺卡信息时有值 */
     inputList?: IProduceTechnologyKeyParameterDetailResponseDTO[];
     /** 对应生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 对应工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 对应工艺路径步骤id */
-    produceTechnologyRoutingStepId?: number;
+    produceTechnologyRoutingStepId?: string;
 }
 /** ProduceTechnologyKeyParameterDetailResponseDTO */
 export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 生产工艺关键参数id */
-    produceTechnologyKeyParameterId?: number;
+    produceTechnologyKeyParameterId?: string;
     /** 对应关键参数id */
-    keyParameterId?: number;
+    keyParameterId?: string;
     /** 字段名称 */
     name?: string;
     /** 字段编号 */

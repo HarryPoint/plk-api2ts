@@ -120,6 +120,8 @@
               "PROJECT_MODIFICATION",
               "PROJECT_PLAN_MODIFICATION",
               "PROJECT_MEMBER_MODIFICATION",
+              "PROJECT_FILE",
+              "PROJECT_FOLDER",
               "QMS_ANNUAL_QUALITY_TARGET",
               "QMS_QUALITY_WORK_PLAN",
               "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

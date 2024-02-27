@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/importStorageTakeCheckTaskDetailUsingPOST
 */
-export default function fetchMethod(options: { params: { submitCheckList?: string; taskId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { submitCheckList?: string; taskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnTheWarehouseInventoryListToTheDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/importStorageTakeCheckTaskDetail",
@@ -22,14 +22,14 @@ export interface IJSONResultListReturnTheWarehouseInventoryListToTheDTO {
     /** 响应结果 */
     data?: IWarehouseInventoryListReturnedToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓库盘点仓位清单返回DTO */
 export interface IWarehouseInventoryListReturnedToDTO {
     /** 盘点详情id */
-    id?: number;
+    id?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 仓位编号 */
@@ -43,7 +43,7 @@ export interface IWarehouseInventoryListReturnedToDTO {
     /** 仓库编号 */
     storehouseCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */

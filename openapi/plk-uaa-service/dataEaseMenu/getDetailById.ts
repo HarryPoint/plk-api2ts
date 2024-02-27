@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/getDetailByIdUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultDataEaseMenuDetailsResponseObject>(
         {
             url: "/plk-uaa-service/dataEaseMenu/getDetailById",
@@ -22,14 +22,14 @@ export interface IJSONResultDataEaseMenuDetailsResponseObject {
     /** 响应结果 */
     data?: IDataEaseMenuDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** DataEase菜单详情响应对象 */
 export interface IDataEaseMenuDetailsResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 企业名称 */
     enterpriseName?: string;
     /** 菜单名称 */
@@ -41,11 +41,11 @@ export interface IDataEaseMenuDetailsResponseObject {
     /** 是否在移动端发布 */
     isMobileTerminal?: EDataEaseMenuDetailsResponseObject_isMobileTerminal;
     /** PC端发布路由id */
-    pcTerminalPublishRouteId?: number;
+    pcTerminalPublishRouteId?: string;
     /** PC端展示方式 */
     pcTerminalDisplayMode?: EDataEaseMenuDetailsResponseObject_pcTerminalDisplayMode;
     /** 移动端发布路由id */
-    mobileTerminalPublishRouteId?: number;
+    mobileTerminalPublishRouteId?: string;
 }
 
 export enum EDataEaseMenuDetailsResponseObject_isPcTerminal {

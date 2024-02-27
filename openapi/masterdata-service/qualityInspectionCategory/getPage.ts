@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/质检分类/getPageUsingPOST_20
+* @link http://47.108.139.107:16700/doc.html#/default/质检分类/getPageUsingPOST_21
 */
-export default function fetchMethod(options: { data: IInspectionCategorySearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInspectionCategorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultThePageInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/qualityInspectionCategory/getPage",
@@ -44,35 +44,35 @@ export interface IJSONResultThePageInformationIsReturnedToVO {
     /** 响应结果 */
     data?: IPagingInformationInspectionClassificationReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质检分类返回VO» */
 export interface IPagingInformationInspectionClassificationReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheInspectionClassificationReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationInspectionClassificationReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationInspectionClassificationReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质检分类返回VO */
 export interface ITheInspectionClassificationReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检分类名称 */
     name?: string;
     /** 质检分类编号 */
@@ -80,11 +80,11 @@ export interface ITheInspectionClassificationReturnsVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPagingSortVO_isAsc {

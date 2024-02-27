@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/自定义筛选项相关/getByFilterApplicationCodeUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListReturnObjectDTOForAUserDefinedFilter {
     /** 响应结果 */
     data?: ICustomFiltersReturnObjectDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 自定义筛选项返回对象DTO */
 export interface ICustomFiltersReturnObjectDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 筛选应用code */
     filterApplicationCode?: string;
     /** 字段名称 */

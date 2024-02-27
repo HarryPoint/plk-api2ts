@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getPurchaseArrivedStatisticReportSumResultUsingPOST
 */
-export default function fetchMethod(options: { data: IPurchaseArrivalStatisticsReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPurchaseArrivalStatisticsReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPurchasedArrivalStatisticsReportReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getPurchaseArrivedStatisticReportSumResult",
@@ -24,21 +24,21 @@ export interface IPurchaseArrivalStatisticsReportSearchVO {
     /** 采购订单编号 */
     purchaseOrderNo?: string;
     /** 最新到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    lastEndDate?: string;
+    lastEndDate?: number;
     /** 供应商id */
-    supplierIds?: number[];
+    supplierIds?: string[];
     /** 要求到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    requiredBeginDate?: string;
+    requiredBeginDate?: number;
     /** 要求到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    requiredEndDate?: string;
+    requiredEndDate?: number;
     /** 最新到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    lastBeginDate?: string;
+    lastBeginDate?: number;
     /** 物料材质 */
     texture?: string;
     /** 单据类型 */
     orderType?: string;
     /** 物料id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 采购类型 */
@@ -62,7 +62,7 @@ export interface IJSONResultPurchasedArrivalStatisticsReportReturnedToVO {
     /** 响应结果 */
     data?: IPurchaseArrivalStatisticsReportReturnedToVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 采购到货统计报表返回VO_1 */
 export interface IPurchaseArrivalStatisticsReportReturnedToVO1 {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectRiskCountUsingPOST_1
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProjectOverviewQueryDto },
 /** 项目概况查询dto */
 export interface IProjectOverviewQueryDto {
     /** 项目id */
-    projectId: number;
+    projectId: string;
     /** 开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 查询条数 */
     limit?: number;
 }
@@ -33,7 +33,7 @@ export interface IJSONResultProjectRiskStatisticsResponseObject {
     /** 响应结果 */
     data?: IProjectRiskStatisticalResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目风险统计响应对象 */
 export interface IProjectRiskStatisticalResponseObject {

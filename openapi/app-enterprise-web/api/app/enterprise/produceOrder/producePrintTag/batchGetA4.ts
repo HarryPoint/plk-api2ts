@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/batchGetProducePrintTagA4UsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProducePrintTagVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/producePrintTag/batchGetA4",
@@ -22,12 +22,12 @@ export interface IJSONResultListProducePrintTagVO {
     /** 响应结果 */
     data?: IProducePrintTagVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProducePrintTagVO */
 export interface IProducePrintTagVO {
     /** 生产订单ID */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编码 */
     produceOrderCode?: string;
     /** 打印信息列表 */

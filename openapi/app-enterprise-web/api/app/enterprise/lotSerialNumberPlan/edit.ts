@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/批次方案相关/editUsingPOST_11
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ILotSerialNumberPlanEditReq
 /** LotSerialNumberPlanEditRequestDTO */
 export interface ILotSerialNumberPlanEditRequestDTO {
     /** 请选择方案ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 批次方案名称 */
@@ -29,13 +29,13 @@ export interface ILotSerialNumberPlanEditRequestDTO {
 /** LotSerialNumberPlanRuleEditRequestDTO */
 export interface ILotSerialNumberPlanRuleEditRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 规则类型 */
     type?: ELotSerialNumberPlanRuleEditRequestDTO_type;
     /** 日期类型 */
     dateFormat?: ELotSerialNumberPlanRuleEditRequestDTO_dateFormat;
     /** 应用引擎ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用引擎编码 */
     flowPathCode?: string;
     /** 字段编码 */
@@ -57,7 +57,7 @@ export interface ILotSerialNumberPlanRuleEditRequestDTO {
     /** 步长值 - 用于流水 */
     stepValue?: number;
     /** 方案ID */
-    lotSerialNumberPlanId?: number;
+    lotSerialNumberPlanId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -70,7 +70,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ELotSerialNumberPlanEditRequestDTO_planType {

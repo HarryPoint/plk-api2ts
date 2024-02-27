@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检管理/editUsingPOST_23
@@ -16,29 +16,29 @@ export default function fetchMethod(options: { data: IEditTheInspectionTaskDTO }
 /** 编辑质检任务 DTO */
 export interface IEditTheInspectionTaskDTO {
     /** id，如果不传就是新增 */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 质检物料id */
-    materialId?: number;
+    materialId?: string;
     /** 采购收货单物料明细id */
-    purchaseWorkOrderDetailId?: number;
+    purchaseWorkOrderDetailId?: string;
     /** 质检方案id */
-    qualityInspectionPlanId: number;
+    qualityInspectionPlanId: string;
     /** 质检分类id */
-    qualityInspectionCategoryId: number;
+    qualityInspectionCategoryId: string;
     /** 是否应用编码规则 */
     isCodeRule: EEditTheInspectionTaskDTO_isCodeRule;
     /** 物料位置id */
-    qualityWarehouseId?: number;
+    qualityWarehouseId?: string;
     /** 检验位置id */
-    checkPositionId?: number;
+    checkPositionId?: string;
     /** 处理人id */
-    handleUserId: number;
+    handleUserId: string;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 采购收货单id */
-    purchaseWorkOrderId?: number;
+    purchaseWorkOrderId?: string;
     /** 质检任务类型 */
     taskType: EEditTheInspectionTaskDTO_taskType;
 }
@@ -51,7 +51,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEditTheInspectionTaskDTO_isCodeRule {

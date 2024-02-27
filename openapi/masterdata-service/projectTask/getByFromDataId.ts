@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/getByFromDataIdUsingGET
 */
-export default function fetchMethod(options: { data: number }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string }, extraOptions?: any) {
     return http<IJSONResultProjectTaskResponseObject>(
         {
             url: "/masterdata-service/projectTask/getByFromDataId",
@@ -22,12 +22,12 @@ export interface IJSONResultProjectTaskResponseObject {
     /** 响应结果 */
     data?: IProjectTaskResponseObject6;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务响应对象_6 */
 export interface IProjectTaskResponseObject6 {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
@@ -41,27 +41,25 @@ export interface IProjectTaskResponseObject6 {
     /** 前置任务列表 */
     preTaskList?: IProjectTaskPreTaskResponseObject[];
     /** 任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务截止日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 优先级 */
     priorityName?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 项目计划编号 */
     projectPlanCode?: string;
-    /** 项目计划名称 */
-    projectPlanName?: string;
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 上级任务id */
-    parentId?: number;
+    parentId?: string;
     /** 上级任务名称 */
     parentName?: string;
     /** 备注 */
@@ -75,11 +73,11 @@ export interface IProjectTaskResponseObject6 {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** 下级任务列表 */
     children?: IProjectTaskResponseObject9[];
     /** 当前登录员工所属待办id */
-    currentEmployeeTodoId?: number;
+    currentEmployeeTodoId?: string;
     /** 当前登录员工所属待办状态 */
     currentEmployeeTodoStatus?: EProjectTaskResponseObject6_currentEmployeeTodoStatus;
     /** 状态 */
@@ -91,13 +89,13 @@ export interface IProjectTaskResponseObject6 {
     /** 创建部门名称 */
     createDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 修改员工名称 */
     updateUserName?: string;
     /** 修改部门名称 */
     updateDeptName?: string;
     /** 修改时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 超期天数(天) */
     overdueDay?: number;
     /** 任务进度 */
@@ -106,35 +104,29 @@ export interface IProjectTaskResponseObject6 {
     deliverableName?: string;
     /** 当前节点 */
     processStatusName?: string;
-    /** 任务权重 */
-    taskWeight?: number;
-    /** 项目计划模块是否展示 */
-    isProjectPlanShow?: EProjectTaskResponseObject6_isProjectPlanShow;
-    /** 项目任务模块是否展示 */
-    isProjectTaskShow?: EProjectTaskResponseObject6_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
     preTaskIds?: Record<string, any>[];
     /** undefined */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
     /** undefined */
     priority?: string;
     /** undefined */
-    createUserId?: number;
+    createUserId?: string;
     /** undefined */
-    createDeptId?: number;
+    createDeptId?: string;
     /** undefined */
-    updateUserId?: number;
+    updateUserId?: string;
     /** undefined */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** undefined */
     processStatus?: string;
 }
 /** 项目任务前置任务响应对象 */
 export interface IProjectTaskPreTaskResponseObject {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
@@ -143,7 +135,7 @@ export interface IProjectTaskPreTaskResponseObject {
 /** 项目任务响应对象_9 */
 export interface IProjectTaskResponseObject9 {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
@@ -157,27 +149,25 @@ export interface IProjectTaskResponseObject9 {
     /** 前置任务列表 */
     preTaskList?: IProjectTaskPreTaskResponseObject[];
     /** 任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务截止日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 优先级 */
     priorityName?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 项目计划编号 */
     projectPlanCode?: string;
-    /** 项目计划名称 */
-    projectPlanName?: string;
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 上级任务id */
-    parentId?: number;
+    parentId?: string;
     /** 上级任务名称 */
     parentName?: string;
     /** 备注 */
@@ -191,11 +181,11 @@ export interface IProjectTaskResponseObject9 {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** 下级任务列表 */
     children?: IProjectTaskResponseObject9[];
     /** 当前登录员工所属待办id */
-    currentEmployeeTodoId?: number;
+    currentEmployeeTodoId?: string;
     /** 当前登录员工所属待办状态 */
     currentEmployeeTodoStatus?: EProjectTaskResponseObject9_currentEmployeeTodoStatus;
     /** 状态 */
@@ -207,13 +197,13 @@ export interface IProjectTaskResponseObject9 {
     /** 创建部门名称 */
     createDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 修改员工名称 */
     updateUserName?: string;
     /** 修改部门名称 */
     updateDeptName?: string;
     /** 修改时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 超期天数(天) */
     overdueDay?: number;
     /** 任务进度 */
@@ -222,28 +212,22 @@ export interface IProjectTaskResponseObject9 {
     deliverableName?: string;
     /** 当前节点 */
     processStatusName?: string;
-    /** 任务权重 */
-    taskWeight?: number;
-    /** 项目计划模块是否展示 */
-    isProjectPlanShow?: EProjectTaskResponseObject9_isProjectPlanShow;
-    /** 项目任务模块是否展示 */
-    isProjectTaskShow?: EProjectTaskResponseObject9_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
     preTaskIds?: Record<string, any>[];
     /** undefined */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
     /** undefined */
     priority?: string;
     /** undefined */
-    createUserId?: number;
+    createUserId?: string;
     /** undefined */
-    createDeptId?: number;
+    createDeptId?: string;
     /** undefined */
-    updateUserId?: number;
+    updateUserId?: string;
     /** undefined */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** undefined */
     processStatus?: string;
 }
@@ -298,20 +282,6 @@ export enum EProjectTaskResponseObject6_status {
     INVALID = "INVALID"
 }
 
-export enum EProjectTaskResponseObject6_isProjectPlanShow {
-    /** 是 */
-    Y = "Y",
-    /** 否 */
-    N = "N"
-}
-
-export enum EProjectTaskResponseObject6_isProjectTaskShow {
-    /** 是 */
-    Y = "Y",
-    /** 否 */
-    N = "N"
-}
-
 export enum EProjectTaskResponseObject9_taskStatus {
     /** 草稿 */
     DRAFT = "DRAFT",
@@ -360,18 +330,4 @@ export enum EProjectTaskResponseObject9_status {
     STAGING = "STAGING",
     /** 作废/停用 */
     INVALID = "INVALID"
-}
-
-export enum EProjectTaskResponseObject9_isProjectPlanShow {
-    /** 是 */
-    Y = "Y",
-    /** 否 */
-    N = "N"
-}
-
-export enum EProjectTaskResponseObject9_isProjectTaskShow {
-    /** 是 */
-    Y = "Y",
-    /** 否 */
-    N = "N"
 }

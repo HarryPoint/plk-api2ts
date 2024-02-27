@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/modifyBatchManagementUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IExampleModifyTheEnterprise
 /** 修改企业批次管理信息请求对象 */
 export interface IExampleModifyTheEnterpriseBatchManagementInformationRequestObject {
     /** 企业id */
-    id?: number;
+    id?: string;
     /** 是否启用批次关联 */
     isEnableBatchManagement?: EExampleModifyTheEnterpriseBatchManagementInformationRequestObject_isEnableBatchManagement;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EExampleModifyTheEnterpriseBatchManagementInformationRequestObject_isEnableBatchManagement {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量审核统计表/exportIssueLevelUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBasicQualityAuditQueryRequ
 /** 基础质量审核查询请求 */
 export interface IBasicQualityAuditQueryRequest {
     /** 日期范围-起始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 日期范围-结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -27,7 +27,7 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

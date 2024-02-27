@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/getUserReportForPageUsingPOST
 */
-export default function fetchMethod(options: { data: IExampleQueryTheDataDTOReportedByAUserparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExampleQueryTheDataDTOReportedByAUser, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getUserReportForPage",
@@ -40,39 +40,39 @@ export interface IJSONResultPagingInformationDeviceDataCollectionManualReportedD
     /** 响应结果 */
     data?: IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«设备数采人工上报数据详单分页信息返回VO» */
 export interface IPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDeviceDataCollectionManualReportDataDetailsPageInformationReturnedToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 设备数采人工上报数据详单分页信息返回VO */
 export interface IDeviceDataAcquisitionManualReportDataCDRPageInformationIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据提交时间 */
-    collectTime?: string;
+    collectTime?: number;
     /** 设备id */
-    deviceId?: number;
+    deviceId?: string;
     /** 设备名称 */
     deviceName?: string;
     /** 设备编号 */

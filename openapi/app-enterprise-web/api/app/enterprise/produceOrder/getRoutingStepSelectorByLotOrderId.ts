@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getRoutingStepSelectorByLotOrderIdUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListProductionProcessPathStepProcessResponseDTO {
     /** 响应结果 */
     data?: IProductionProcessPathStepsProcessResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产工艺路径步骤工序响应 DTO */
 export interface IProductionProcessPathStepsProcessResponseDTO {
     /** 工艺路径步骤id */
-    id?: number;
+    id?: string;
     /** 对应步骤 */
     routingStep?: number;
     /** 工序 */
@@ -36,7 +36,7 @@ export interface IProductionProcessPathStepsProcessResponseDTO {
 /** 工序响应 DTO */
 export interface ITheProcessRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/深蓝大屏报表/getShenLanOneToSevenMachineReportUsingGET
 */
-export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReportparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTurretOrUnit1To7Report>(
         {
             url: "/masterdata-service/shenLan/report/oneToSevenMachine",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBl
 /** 深蓝报表查询条件 */
 export interface IQueryConditionsOfTheDarkBlueReport {
     /** 日期 */
-    date?: string;
+    date?;
     /** 当前页面 */
     pageNo?: number;
     /** 当前执行的程序名称 */
@@ -50,12 +50,12 @@ export interface IJSONResultListTurretOrUnit1To7Report {
     /** 响应结果 */
     data?: ITurretOrEngine1Through7Report[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 转塔或者1到7号机报表 */
 export interface ITurretOrEngine1Through7Report {
     /** 日期 */
-    date?: string;
+    date?;
     /** 设备名称 */
     deviceName?: string;
     /** 加工数量 */

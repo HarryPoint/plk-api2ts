@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/checkFiscalPeriodBatchUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IFiscalPeriodCheckRequestDT
 /** FiscalPeriodCheckRequestDTO */
 export interface IFiscalPeriodCheckRequestDTO {
     /** 单据ID */
-    id?: number;
+    id?: string;
     /** 单据编码 */
     code?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
 }
 /** JSONResult«List«FiscalPeriodCheckResponseDTO»» */
 export interface IJSONResultListFiscalPeriodCheckResponseDTO {
@@ -31,16 +31,16 @@ export interface IJSONResultListFiscalPeriodCheckResponseDTO {
     /** 响应结果 */
     data?: IFiscalPeriodCheckResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FiscalPeriodCheckResponseDTO */
 export interface IFiscalPeriodCheckResponseDTO {
     /** 单据ID */
-    id?: number;
+    id?: string;
     /** 单据编码 */
     code?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 结存状态 - 如果没有区间则返回空、如果区间存在则返回实际值 */
     balanceStatus?: EFiscalPeriodCheckResponseDTO_balanceStatus;
     /** 期间/所属期间- 如果没有区间则返回空、如果区间存在则返回实际值 */

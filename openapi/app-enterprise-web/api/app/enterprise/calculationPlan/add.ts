@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/addUsingPOST_1
@@ -30,7 +30,7 @@ export interface IComputingSolutionAddedARequestDTO {
     /** 计算模式 */
     calculationMode?: EComputingSolutionAddedARequestDTO_calculationMode;
     /** 固定时间 */
-    fixedTime?: string;
+    fixedTime?: number;
     /** 计算周期 */
     calculationPeriod?: EComputingSolutionAddedARequestDTO_calculationPeriod;
     /** 过滤条件列表 */
@@ -50,9 +50,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EComputingSolutionAddedARequestDTO_isDetailFlow {

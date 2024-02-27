@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/02-01-02-销售交期应答辅助相关/computeUsingPOST
 */
-export default function fetchMethod(options: { data: ISalesDeliveryResponseHelpsCalculateDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISalesDeliveryResponseHelpsCalculateDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesDeliveryResponseAssistedReturnToVO>(
         {
             url: "/masterdata-service/saleAssist/compute",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ISalesDeliveryResponseHelps
 /** 销售交期应答辅助计算DTO */
 export interface ISalesDeliveryResponseHelpsCalculateDTO {
     /** 物料id */
-    materialId: number;
+    materialId: string;
     /** 生产工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 数量, 只能输入正数，可以有小数点，小数点后2位 */
     count: number;
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
@@ -43,7 +43,7 @@ export interface IJSONResultSalesDeliveryResponseAssistedReturnToVO {
     /** 响应结果 */
     data?: ISalesDeliveryResponseIsAssistedBackToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售交期应答辅助返回VO */
 export interface ISalesDeliveryResponseIsAssistedBackToVO {
@@ -52,22 +52,22 @@ export interface ISalesDeliveryResponseIsAssistedBackToVO {
     /** 子物料信息集 */
     childMaterialInfos?: ISalesDeliveryResponseSupportMaterialReturnedToVO[];
     /** 预计整体交付时间 */
-    leadTime?: string;
+    leadTime?: number;
     /** 设计完成时间 */
-    designCompleteTime?: string;
+    designCompleteTime?: number;
     /** 采购完成时间 */
-    purchaseCompleteTime?: string;
+    purchaseCompleteTime?: number;
 }
 /** 销售交期应答辅助物料返回VO */
 export interface ISalesDeliveryResponseSupportMaterialReturnedToVO {
     /** id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 物料库存数 */
     materialStorageCount?: number;
     /** 需求数量 */

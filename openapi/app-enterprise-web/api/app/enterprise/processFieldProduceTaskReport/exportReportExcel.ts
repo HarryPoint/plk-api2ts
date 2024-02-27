@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务汇总表(基于工序字段)/exportReportExcelUsingPOST_1
@@ -22,15 +22,15 @@ export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
-    planStartDate?: string;
+    planStartDate?: number;
     /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
-    planEndDate?: string;
+    planEndDate?: number;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 物料ids */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 生产任务状态列表 */
     produceTaskStatusList?: ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items[];
 }
@@ -48,9 +48,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items {

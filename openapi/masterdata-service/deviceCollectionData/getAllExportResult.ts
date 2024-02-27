@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采相关/getAllExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceStatisticsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceStatisticsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListExportDeviceDataCollectionStatisticsReportVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getAllExportResult",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IDeviceStatisticsSearchVOpa
 /** 设备统计数据搜索VO */
 export interface IDeviceStatisticsSearchVO {
     /** 设备id集 */
-    deviceIds?: number[];
+    deviceIds?: string[];
     /** 查询参数id集 */
-    paramIds?: number[];
+    paramIds?: string[];
     /** 开始时间, yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间，yyyy-MM-dd HH:mm:ss */
@@ -37,7 +37,7 @@ export interface IJSONResultListExportDeviceDataCollectionStatisticsReportVO {
     /** 响应结果 */
     data?: IExportDeviceDataCollectionStatisticsReportVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备数采统计报表导出VO */
 export interface IExportDeviceDataCollectionStatisticsReportVO {

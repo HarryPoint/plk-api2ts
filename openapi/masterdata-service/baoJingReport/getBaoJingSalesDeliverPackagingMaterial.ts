@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverPackagingMaterialUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject>(
         {
             url: "/masterdata-service/baoJingReport/getBaoJingSalesDeliverPackagingMaterial",
@@ -22,7 +22,7 @@ export interface IJSONResultBaoJingSalesDeliveryReportPackageHeadResponseObject 
     /** 响应结果 */
     data?: IBaojingSalesDeliveryReportPackageHeadResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶销售发货报表包材表头响应对象 */
 export interface IBaojingSalesDeliveryReportPackageHeadResponseObject {
@@ -32,7 +32,7 @@ export interface IBaojingSalesDeliveryReportPackageHeadResponseObject {
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

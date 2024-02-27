@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(收款汇总)相关/getReportUsingPOST_1
@@ -20,19 +20,19 @@ export interface IBaojingCollectionSummaryAnalysisReportSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 业务员id集 */
-    businessUserIds?: number[];
+    businessUserIds?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    dateBegin?: string;
+    dateBegin?: number;
     /** 付款单位id集(客户id) */
-    payCustomerIds?: number[];
+    payCustomerIds?: string[];
     /** 收款组织 */
     collectionOrganization?: string;
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    dateEnd?: string;
+    dateEnd?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,51 +50,51 @@ export interface IJSONResultPageInformationBaojingCollectionSummaryAnalysisRepor
     /** 响应结果 */
     data?: IPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«宝晶收款汇总分析报表表格返回VO» */
 export interface IPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBaojingCollectionSummaryAnalysisReportFormReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationBaojingCollectionSummaryAnalysisReportFormReturnToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 宝晶收款汇总分析报表表格返回VO */
 export interface IBaojingCollectionSummaryAnalysisReportFormReturnedToVO {
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 付款单位id(客户id) */
     payCustomerIdsJson?: string;
     /** 付款单位id(客户id) */
-    payCustomerIds?: number[];
+    payCustomerIds?: string[];
     /** 付款单位名称(客户名称) */
     payCustomerName?: string;
     /** 收款组织id(部门id) */
     collectionOrganizationIdsJson?: string;
     /** 收款组织id(部门id) */
-    collectionOrganizationIds?: number[];
+    collectionOrganizationIds?: string[];
     /** 收款组织(部门名称) */
     collectionOrganization?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
     /** 是否含税 */

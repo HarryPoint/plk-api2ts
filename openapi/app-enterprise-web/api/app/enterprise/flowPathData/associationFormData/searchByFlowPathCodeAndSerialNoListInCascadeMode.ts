@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/searchByFlowPathCodeAndSerialNoListInCascadeModeUsingPOST
@@ -46,12 +46,12 @@ export interface IJSONResultListFormCascadeQueryResultVO {
     /** 响应结果 */
     data?: IFormCascadeQueryResultVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FormCascadeQueryResultVO */
 export interface IFormCascadeQueryResultVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示名称/显示分组名称/处理人名称 */
     name?: string;
     /** 编码 */

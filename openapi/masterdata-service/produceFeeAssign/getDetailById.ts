@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDetailByIdUsingGET_1
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionCostAllocationResponseObject>(
         {
             url: "/masterdata-service/produceFeeAssign/getDetailById",
@@ -22,16 +22,16 @@ export interface IJSONResultProductionCostAllocationResponseObject {
     /** 响应结果 */
     data?: IProductionCostAllocatesResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产成本分配响应对象 */
 export interface IProductionCostAllocatesResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 单据编号 */
     code?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 当前期间 */
     fiscalPeriod?: IDurationResponseObject;
     /** 分配信息 */
@@ -42,32 +42,32 @@ export interface IProductionCostAllocatesResponseObjects {
 /** 期间响应对象 */
 export interface IDurationResponseObject {
     /** 期间Id */
-    id?: number;
+    id?: string;
     /** 期间 */
     period?: string;
     /** 开始日期 */
-    startDate?: string;
+    startDate?: number;
     /** 结束日期 */
-    endDate?: string;
+    endDate?: number;
     /** 是否当前期间 */
     isCurrentFiscalPeriod?: EDurationResponseObject_isCurrentFiscalPeriod;
 }
 /** 生产成本分配明细响应对象 */
 export interface IProductionCostAllocationDetailResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 生产费用分配id */
-    produceFeeAssignId?: number;
+    produceFeeAssignId?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
     stockInStatus?: EProductionCostAllocationDetailResponseObject_stockInStatus;
     /** 计划开工日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -102,7 +102,7 @@ export interface IProductionCostAllocationDetailResponseObject {
 /** 生产成本分配动态数据 */
 export interface IProductionCostAllocationDynamicData {
     /** 费用类型id */
-    produceFeeTypeId?: number;
+    produceFeeTypeId?: string;
     /** 费用类型code */
     produceFeeTypeCode?: string;
     /** 费用 */
@@ -111,9 +111,9 @@ export interface IProductionCostAllocationDynamicData {
 /** 费用归集明细响应DTO */
 export interface IExpenseCollectionDetailsRespondToDTO {
     /** 费用归集明细id */
-    id?: number;
+    id?: string;
     /** 费用类型id */
-    produceFeeTypeId?: number;
+    produceFeeTypeId?: string;
     /** 费用编码 */
     produceFeeCode?: string;
     /** 费用名称 */
@@ -121,9 +121,9 @@ export interface IExpenseCollectionDetailsRespondToDTO {
     /** 费用金额 */
     fee?: number;
     /** 所属期间 */
-    periodDate?: string;
+    periodDate?: number;
     /** 指定生产订单 */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }
 
 export enum EDurationResponseObject_isCurrentFiscalPeriod {

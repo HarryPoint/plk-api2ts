@@ -14,7 +14,7 @@
           "质检分类"
         ],
         "summary": "分页查询质检分类",
-        "operationId": "getPageUsingPOST_20",
+        "operationId": "getPageUsingPOST_21",
         "consumes": [
           "application/json"
         ],

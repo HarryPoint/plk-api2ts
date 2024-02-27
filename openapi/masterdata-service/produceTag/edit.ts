@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/editUsingPOST_12
 */
-export default function fetchMethod(options: { data: IProductionLabelEditingDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionLabelEditingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTag/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionLabelEditingDTOp
 /** 生产标签编辑DTO */
 export interface IProductionLabelEditingDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属分类 */
     type: EProductionLabelEditingDTO_type;
     /** 标签名称 */
@@ -35,7 +35,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionLabelEditingDTO_type {

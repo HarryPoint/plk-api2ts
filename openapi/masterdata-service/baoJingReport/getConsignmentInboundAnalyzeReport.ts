@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentInboundAnalyzeReportUsingPOST
 */
-export default function fetchMethod(options: { data: IConsignmentInboundAnalysisReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IConsignmentInboundAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultConsignmentInboundAnalysisReportReturnsVO>(
         {
             url: "/masterdata-service/baoJingReport/getConsignmentInboundAnalyzeReport",
@@ -22,19 +22,19 @@ export interface IConsignmentInboundAnalysisReportSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 客户id */
-    customerId?: number[];
+    customerId?: string[];
     /** 日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 仓库id */
-    warehouseId?: number[];
+    warehouseId?: string[];
     /** 业务员id */
-    businessManId?: number[];
+    businessManId?: string[];
     /** 日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 产品id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 产品名称 */
     productName?: string;
     /** 单据编号 */
@@ -62,7 +62,7 @@ export interface IJSONResultConsignmentInboundAnalysisReportReturnsVO {
     /** 响应结果 */
     data?: IConsignmentInboundAnalysisReportIsReturnedToVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 寄售入库分析报表返回VO_1 */
 export interface IConsignmentInboundAnalysisReportIsReturnedToVO1 {
@@ -78,25 +78,25 @@ export interface IConsignmentInboundAnalysisReportIsReturnedToVO1 {
 /** 分页信息«寄售入库分析报表返回VO» */
 export interface IPageInformationConsignmentInboundAnalysisReportReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IConsignmentInboundAnalysisReportReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationConsignmentInboundAnalysisReportReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationConsignmentInboundAnalysisReportReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 寄售入库分析报表返回VO */
 export interface IConsignmentInboundAnalysisReportReturnedToVO {
@@ -109,7 +109,7 @@ export interface IConsignmentInboundAnalysisReportReturnedToVO {
     /** 业务员 */
     businessMan?: string;
     /** 入库日期 */
-    inboundDate?: string;
+    inboundDate?: number;
     /** 入库类型 */
     inboundType?: string;
     /** 入库单价 */

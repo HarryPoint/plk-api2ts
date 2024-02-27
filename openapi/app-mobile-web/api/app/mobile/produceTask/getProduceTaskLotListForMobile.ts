@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskLotListForMobileUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionTaskBatchInforma
 /** 生产任务批次信息查询DTO(针对移动端) */
 export interface IProductionTaskBatchInformationQueryDTOForMobileTerminals {
     /** 任务ids */
-    taskIds?: number[];
+    taskIds?: string[];
     /** 进出料类型 */
     produceTaskOptType?: EProductionTaskBatchInformationQueryDTOForMobileTerminals_produceTaskOptType;
 }
@@ -29,19 +29,19 @@ export interface IJSONResultListProductionTaskGroupingBatchOrderResponseDTOForMo
     /** 响应结果 */
     data?: IProductionTaskGroupingBatchOrderResponseDTOForMobile[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务分组批次订单响应DTO(针对移动端) */
 export interface IProductionTaskGroupingBatchOrderResponseDTOForMobile {
     /** 任务id */
-    taskId?: number;
+    taskId?: string;
     /** 批次 */
     lotOrders?: IProductionTaskGroupBatchDetailResponseDTOForMobileEnd[];
 }
 /** 生产任务分组批次明细响应DTO(针对移动端) */
 export interface IProductionTaskGroupBatchDetailResponseDTOForMobileEnd {
     /** 批次id */
-    lotId?: number;
+    lotId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 批次总数量 */

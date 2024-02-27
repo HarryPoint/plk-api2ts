@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/权限组相关/getByIdUsingPOST_1
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdInformation }, extraOpti
 /** Id 信息 */
 export interface IIdInformation {
     /** id */
-    id?: number;
+    id?: string;
 }
 /** JSONResult«权限组及权限响应 DTO» */
 export interface IJSONResultPermissionGroupAndPermissionResponseDTO {
@@ -27,16 +27,16 @@ export interface IJSONResultPermissionGroupAndPermissionResponseDTO {
     /** 响应结果 */
     data?: IPermissionGroupsAndPermissionResponseDtos;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 权限组及权限响应 DTO */
 export interface IPermissionGroupsAndPermissionResponseDtos {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
     name?: string;
     /** 权限码id集 */
-    permissionIds?: number[];
+    permissionIds?: string[];
 }

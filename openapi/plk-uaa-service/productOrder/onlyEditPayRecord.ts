@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/onlyEditPayRecordUsingPOST
@@ -16,20 +16,20 @@ export default function fetchMethod(options: { data: IProductOrdersOnlyModifyThe
 /** 产品订单只修改付款记录请求对象 */
 export interface IProductOrdersOnlyModifyThePaymentRecordRequestObject {
     /** 企业id */
-    id?: number;
+    id?: string;
     /** 付款记录列表 */
     payRecordList?: IProductOrderPaymentHistoryEditRequestObject[];
 }
 /** 产品订单付款记录编辑请求对象 */
 export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 付款记录id */
-    id?: number;
+    id?: string;
     /** 计划付款日期 */
-    planPayTime?: string;
+    planPayTime?: number;
     /** 应付金额(元) */
     payableQuantity?: number;
     /** 实际付款日期 */
-    realPayTime?: string;
+    realPayTime?: number;
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
@@ -44,7 +44,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductOrderPaymentHistoryEditRequestObject_status {

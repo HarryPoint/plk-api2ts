@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量审核统计表/queryIssueLevelUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IBasicQualityAuditQueryRequ
 /** 基础质量审核查询请求 */
 export interface IBasicQualityAuditQueryRequest {
     /** 日期范围-起始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 日期范围-结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«问题等级查询响应»» */
 export interface IJSONResultListProblemLevelQueryResponse {
@@ -29,7 +29,7 @@ export interface IJSONResultListProblemLevelQueryResponse {
     /** 响应结果 */
     data?: IQuestionLevelQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 问题等级查询响应 */
 export interface IQuestionLevelQueryResponse {

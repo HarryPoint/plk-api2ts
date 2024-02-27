@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/业务参数相关/getSettingUsingPOST
@@ -22,7 +22,7 @@ export interface IJSONResultSchedulingParameterVO {
     /** 响应结果 */
     data?: ISchedulingParametersVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 排产参数VO */
 export interface ISchedulingParametersVO {

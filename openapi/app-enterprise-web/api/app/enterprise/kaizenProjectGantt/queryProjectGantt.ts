@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/项目甘特图相关/queryProjectGanttUsingPOST
@@ -28,19 +28,19 @@ export interface IProjectGanttChartQueryObject {
     /** 任务状态 */
     projectTaskStatusList?: EProjectGanttChartQueryObject_projectTaskStatusList_items[];
     /** 项目负责人id集合 */
-    projectLeaderIdList?: number[];
+    projectLeaderIdList?: string[];
     /** 任务执行人id集合 */
-    projectTaskLeaderIdList?: number[];
+    projectTaskLeaderIdList?: string[];
     /** 项目查询开始日期 */
-    projectStartDate?: string;
+    projectStartDate?: number;
     /** 项目查询截止日期 */
-    projectEndDate?: string;
+    projectEndDate?: number;
     /** 项目任务查询开始日期 */
-    projectTaskStartDate?: string;
+    projectTaskStartDate?: number;
     /** 项目任务查询截止日期 */
-    projectTaskEndDate?: string;
+    projectTaskEndDate?: number;
     /** 项目id集合 */
-    projectIdList?: number[];
+    projectIdList?: string[];
 }
 /** JSONResult«List«项目甘特图响应对象»» */
 export interface IJSONResultListProjectGanttChartResponseObject {
@@ -51,12 +51,12 @@ export interface IJSONResultListProjectGanttChartResponseObject {
     /** 响应结果 */
     data?: IProjectGanttChartResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目甘特图响应对象 */
 export interface IProjectGanttChartResponseObject {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目状态 */
@@ -64,7 +64,7 @@ export interface IProjectGanttChartResponseObject {
     /** 项目状态描述 */
     projectStatusDesc?: string;
     /** 项目负责人id */
-    projectLeaderId?: number;
+    projectLeaderId?: string;
     /** 项目负责人名称 */
     projectLeaderName?: string;
     /** 项目类型 */
@@ -72,18 +72,18 @@ export interface IProjectGanttChartResponseObject {
     /** 项目类型描述 */
     projectTypeDesc?: string;
     /** 开始日期 */
-    projectStartDate?: string;
+    projectStartDate?: number;
     /** 截止日期 */
-    projectEndDate?: string;
+    projectEndDate?: number;
     /** 项目任务列表 */
     projectTaskGanttList?: IProjectTaskGanttChartResponseObject[];
 }
 /** 项目任务甘特图响应对象 */
 export interface IProjectTaskGanttChartResponseObject {
     /** 项目任务id */
-    projectTaskId?: number;
+    projectTaskId?: string;
     /** 上级任务id */
-    parentId?: number;
+    parentId?: string;
     /** 项目任务名称 */
     projectTaskName?: string;
     /** 项目任务优先级 */
@@ -95,13 +95,13 @@ export interface IProjectTaskGanttChartResponseObject {
     /** 项目任务状态描述 */
     projectTaskStatusDesc?: string;
     /** 项目任务执行人id */
-    projectTaskLeaderUserId?: number;
+    projectTaskLeaderUserId?: string;
     /** 项目任务执行人名称 */
     projectTaskLeaderUserName?: string;
     /** 项目任务开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 项目任务截止日期 */
-    endTime?: string;
+    endTime?: number;
 }
 
 export enum EProjectGanttChartQueryObject_priorityList_items {

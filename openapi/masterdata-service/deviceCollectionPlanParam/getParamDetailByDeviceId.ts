@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据方案参数关联相关/getParamDetailByDeviceIdUsingGET
 */
-export default function fetchMethod(options: { params: { deviceId?: number; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { deviceId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/deviceCollectionPlanParam/getParamDetailByDeviceId",
@@ -22,16 +22,16 @@ export interface IJSONResultListDeviceDataCollectionSchemeParameterAssociationIn
     /** 响应结果 */
     data?: IDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备数采方案参数关联信息返回VO */
 export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 设备数采方案id */
-    deviceCollectionPlanId?: number;
+    deviceCollectionPlanId?: string;
     /** 设备数采参数id */
-    deviceCollectionParamId?: number;
+    deviceCollectionParamId?: string;
     /** 设备数采参数名称 */
     deviceCollectionParamName?: string;
     /** 设备数采参数编号 */
@@ -62,7 +62,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsRe
 /** 设备数采方案参数预警返回VO */
 export interface IDeviceDataAcquisitionSchemeParameterWarningReturnVO {
     /** 预警id */
-    id?: number;
+    id?: string;
     /** 时间粒度 */
     timeType?: EDeviceDataAcquisitionSchemeParameterWarningReturnVO_timeType;
     /** 数值对比标准 */

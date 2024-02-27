@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/西偌帕斯大屏相关/saveSettingInfoUsingPOST_2
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ISilopusBigScreenSetUpTheDT
 /** 西偌帕斯大屏设置DTO */
 export interface ISilopusBigScreenSetUpTheDTO {
     /** 主要物料id集 */
-    majorDataIds: number[];
+    majorDataIds: string[];
     /** 主要工序id集 */
-    processIds: number[];
+    processIds: string[];
     /** 计划设置集 */
     planSettings: ISilopusLargeScreenProjectNumberSetDTO[];
     /** 工序目标值设置集 */
@@ -36,7 +36,7 @@ export interface ISilopusLargeScreenProjectNumberSetDTO {
 /** 西偌帕斯工序目标值大屏设置DTO */
 export interface ISilopusProcessTargetValueLargeScreenSetDTO {
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 产出目标数 */
     produceTargetQuantity: number;
 }
@@ -49,7 +49,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ESilopusBigScreenSetUpTheDTO_scrapStatisticsTime {

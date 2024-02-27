@@ -38,8 +38,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/消息信息",
-                "originalRef": "消息信息"
+                "originalRef": "消息信息",
+                "$ref": "#/definitions/消息信息"
               }
             }
           }
@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

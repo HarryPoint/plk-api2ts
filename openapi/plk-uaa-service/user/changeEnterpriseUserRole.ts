@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/changeEnterpriseUserRoleUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IRequestForAnEnterpriseUser
 /** 企业用户更换角色请求 */
 export interface IRequestForAnEnterpriseUserToChangeRoles {
     /** id */
-    id: number;
+    id: string;
     /** 更换角色id集 */
-    roleIds: number[];
+    roleIds: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

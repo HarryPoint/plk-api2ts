@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/lotHoldUsingGET
 */
-export default function fetchMethod(options: { params: { id?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheProductionTaskSelectionInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/produceOrder/getTaskSelector",
@@ -22,22 +22,22 @@ export interface IJSONResultListTheProductionTaskSelectionInformationIsReturnedT
     /** 响应结果 */
     data?: ITheProductionTaskSelectionInformationIsReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务选择信息返回VO */
 export interface ITheProductionTaskSelectionInformationIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 对应班次名称 */
     classShiftName?: string;
     /** 对应班次编号 */

@@ -1,7 +1,7 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16400/doc.html#/default/安全库存相关/getPageUsingPOST_27
+* @link http://47.108.139.107:16400/doc.html#/default/安全库存相关/getPageUsingPOST_28
 */
 export default function fetchMethod(options: { data: ISecurityInventorySearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationSecurityInventoryReturnsVO>(
@@ -30,7 +30,7 @@ export interface ISecurityInventorySearchVO {
     /** 设置类型 */
     type: ESecurityInventorySearchVO_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -48,35 +48,35 @@ export interface IJSONResultPagingInformationSecurityInventoryReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationSecurityInventoryReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«安全库存返回VO» */
 export interface IPagingInformationSecurityInventoryReturnedToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ISafetyStockReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationSecurityInventoryReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationSecurityInventoryReturnedToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 安全库存返回VO */
 export interface ISafetyStockReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */

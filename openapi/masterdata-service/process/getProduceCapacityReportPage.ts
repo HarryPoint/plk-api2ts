@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序相关/getProduceCapacityReportPageUsingPOST
 */
-export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtosparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationCapacityUtilizationReportVO>(
         {
             url: "/masterdata-service/process/getProduceCapacityReportPage",
@@ -20,7 +20,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** 分页大小 */
     pageSize?: number;
     /** 工序id列表 */
-    processIdList?: number[];
+    processIdList?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 日期 -- 开始时间 */
@@ -30,7 +30,7 @@ export interface ICapacityUtilizationReportQueryingDtos {
     /** 日期 -- 结束时间 */
     endTime: string;
     /** undefined */
-    produceTaskIds?: number[];
+    produceTaskIds?: string[];
     /** undefined */
     panPanProduceOrderCompleteType?: ECapacityUtilizationReportQueryingDtos_panPanProduceOrderCompleteType;
     /** 是否按天数过滤 */
@@ -52,35 +52,35 @@ export interface IJSONResultPagingInformationCapacityUtilizationReportVO {
     /** 响应结果 */
     data?: IPagingInformationCapacityUtilizationReportVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«产能利用率报表VO» */
 export interface IPagingInformationCapacityUtilizationReportVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ICapacityUtilizationReportVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationCapacityUtilizationReportVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationCapacityUtilizationReportVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 产能利用率报表VO */
 export interface ICapacityUtilizationReportVO {
     /** 工序Id */
-    processId?: number;
+    processId?: string;
     /** 工序编号 */
     processCode?: string;
     /** 工序名称 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产报废服务相关/addScrapUsingPOST
@@ -16,19 +16,19 @@ export default function fetchMethod(options: { data: IProductionScrapTreatment }
 /** 生产报废处理 */
 export interface IProductionScrapTreatment {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 生产异常类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 报废数量 */
     abnormalQuantity: number;
     /** 标签id集合 */
-    tagIds?: number[];
+    tagIds?: string[];
     /** 图片key集合 */
     imageKeys?: string[];
     /** 描述 */
     description?: string;
     /** 对应批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -39,5 +39,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

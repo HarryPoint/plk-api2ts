@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/getHandlingWorkOrderListByBusinessIdListUsingGET
 */
-export default function fetchMethod(options: { data: IHandlingWorkOrderQueryRequestparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IHandlingWorkOrderQueryRequest, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessWorkorderVO>(
         {
             url: "/masterdata-service/flowPathWorkOrder/getHandlingWorkOrderListByBusinessIdList",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IHandlingWorkOrderQueryRequ
 /** HandlingWorkOrderQueryRequest */
 export interface IHandlingWorkOrderQueryRequest {
     /** 应用ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 业务数据ID列表 */
-    businessIdList?: number[];
+    businessIdList?: string[];
 }
 /** JSONResult«List«流程工单VO»» */
 export interface IJSONResultListProcessWorkorderVO {
@@ -29,44 +29,44 @@ export interface IJSONResultListProcessWorkorderVO {
     /** 响应结果 */
     data?: IProcessWorkOrderVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程工单VO_1 */
 export interface IProcessWorkOrderVO1 {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** undefined */
     code?: string;
     /** undefined */
-    businessId?: number;
+    businessId?: string;
     /** undefined */
     businessCode?: string;
     /** undefined */
-    flowPathId?: number;
+    flowPathId?: string;
     /** undefined */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** undefined */
     flowPathVersionRank?: number;
     /** undefined */
-    currentFlowPathNodeId?: number;
+    currentFlowPathNodeId?: string;
     /** undefined */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** undefined */
     status?: EProcessWorkOrderVO1_status;
     /** undefined */
     processStatus?: string;
     /** undefined */
-    completeTime?: string;
+    completeTime?: number;
     /** undefined */
-    totalTime?: number;
+    totalTime?: string;
     /** undefined */
-    totalTimeoutTime?: number;
+    totalTimeoutTime?: string;
     /** undefined */
-    currentTotalTaskCount?: number;
+    currentTotalTaskCount?: string;
     /** undefined */
-    currentTotalTimeoutTaskCount?: number;
+    currentTotalTimeoutTaskCount?: string;
 }
 
 export enum EProcessWorkOrderVO1_status {

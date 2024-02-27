@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/editByBusinessCodeUsingPOST
 */
-export default function fetchMethod(options: { data: IFormFieldOption[]params: { businessCode?: EbusinessCode; enterpriseId?: number; flowPathId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFormFieldOption[], params: { businessCode?: EbusinessCode; enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathFormFieldRpSelectorDictionary/editByBusinessCode",
@@ -31,7 +31,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EbusinessCode {

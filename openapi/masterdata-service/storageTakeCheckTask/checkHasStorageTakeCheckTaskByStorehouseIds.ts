@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/checkHasStorageTakeCheckTaskByStorehouseIdsUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; storehouseIds?: number[] } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; storehouseIds?: string[] } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/storageTakeCheckTask/checkHasStorageTakeCheckTaskByStorehouseIds",
@@ -22,5 +22,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -1,7 +1,7 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16400/doc.html#/default/质检方案/getPageUsingPOST_25
+* @link http://47.108.139.107:16400/doc.html#/default/质检方案/getPageUsingPOST_26
 */
 export default function fetchMethod(options: { data: IInspectionSolutionSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationVOIsReturned>(
@@ -28,9 +28,9 @@ export interface IInspectionSolutionSearchVO {
     /** 状态(是否可用) */
     dataStatus?: number;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -48,41 +48,41 @@ export interface IJSONResultPagingInformationVOIsReturned {
     /** 响应结果 */
     data?: IPagingInformationTheInspectionSchemeReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质检方案返回VO» */
 export interface IPagingInformationTheInspectionSchemeReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheInspectionSolutionReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationTheInspectionSchemeReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationTheInspectionSchemeReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质检方案返回VO */
 export interface ITheInspectionSolutionReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检方案名称 */
     name?: string;
     /** 质检方案编号 */
     code?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
@@ -94,7 +94,7 @@ export interface ITheInspectionSolutionReturnsVO {
     /** 版次号 */
     issueCode?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */
@@ -104,11 +104,11 @@ export interface ITheInspectionSolutionReturnsVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 质检方式 */
     type?: ETheInspectionSolutionReturnsVO_type;
     /** 质检方式描述 */
@@ -117,7 +117,7 @@ export interface ITheInspectionSolutionReturnsVO {
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */
@@ -129,14 +129,14 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料规格 */
     spec?: string;
     /** 计量单位id */
-    unitId?: number;
+    unitId?: string;
     /** 库存可使用数 */
     storageUseQuantity?: number;
 }
 /** Id，名称VO */
 export interface IIdNameVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
 }

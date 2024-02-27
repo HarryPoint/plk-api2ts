@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/enableBatchUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IAppMessageConfigBatchEnabl
 /** AppMessageConfigBatchEnabledRequestDTO */
 export interface IAppMessageConfigBatchEnabledRequestDTO {
     /** 应用消息配置ID列表 */
-    idList?: number[];
+    idList?: string[];
     /** 应用ID */
-    applicationId?: number;
+    applicationId?: string;
 }
 /** JSONResult«string» */
 export interface IJSONResultstring {
@@ -29,7 +29,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/saveChangeUsingPOST
@@ -18,11 +18,11 @@ export interface IChangeGanttChartPlanDTO {
     /** 排期类型 */
     scheduleType?: EChangeGanttChartPlanDTO_scheduleType;
     /** 排期id */
-    scheduleId?: number;
+    scheduleId?: string;
     /** 最新时间 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 最新时间 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -33,7 +33,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EChangeGanttChartPlanDTO_scheduleType {

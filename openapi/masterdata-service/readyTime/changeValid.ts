@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/准备期相关/changeValidUsingPOST_10
 */
-export default function fetchMethod(options: { data: IEnableOrDisableVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEnableOrDisableVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/readyTime/changeValid",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEnableOrDisableVOparams: {
 /** 启用or停用VO */
 export interface IEnableOrDisableVO {
     /** id */
-    id: number;
+    id: string;
     /** 状态 */
     dataStatus: number;
 }
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

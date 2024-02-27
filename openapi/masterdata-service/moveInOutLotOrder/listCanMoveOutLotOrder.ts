@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料批次相关/listCanMoveOutLotOrderUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IDtoCanBeQueriedForIncoming
 /** 可进出料批次查询dto */
 export interface IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 批次号 */
     lotOrderCode?: string;
 }
@@ -29,12 +29,12 @@ export interface IJSONResultListDeliverableBatchResponseDto {
     /** 响应结果 */
     data?: IReleasableBatchResponseDto[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 可出料批次响应dto */
 export interface IReleasableBatchResponseDto {
     /** 批次id */
-    id?: number;
+    id?: string;
     /** 批次号 */
     lotOrderCode?: string;
     /** 可出料数量 */

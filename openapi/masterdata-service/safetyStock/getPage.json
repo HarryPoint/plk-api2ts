@@ -15,7 +15,7 @@
         ],
         "summary": "分页查询",
         "description": "<p style='color:red'>该页面各种细节注意项<br/>1、目前的业务： type写死传 ALL， businessId不传<br/></p>",
-        "operationId": "getPageUsingPOST_26",
+        "operationId": "getPageUsingPOST_27",
         "consumes": [
           "application/json"
         ],

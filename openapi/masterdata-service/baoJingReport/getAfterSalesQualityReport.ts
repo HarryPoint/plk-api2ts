@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getAfterSalesQualityReportUsingPOST
 */
-export default function fetchMethod(options: { data: IAfterSalesQualityAnalysisReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAfterSalesQualityAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultAfterSalesQualityAnalysisReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getAfterSalesQualityReport",
@@ -20,27 +20,27 @@ export interface IAfterSalesQualityAnalysisReportSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 灌装日期开始时间 yyyy-MM-dd HH:mm:ss */
-    fillingBeginDate?: string;
+    fillingBeginDate?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 灌装日期结束时间 yyyy-MM-dd HH:mm:ss */
-    fillingEndDate?: string;
+    fillingEndDate?: number;
     /** 客户id */
-    customerId?: number[];
+    customerId?: string[];
     /** 生产日期开始时间 yyyy-MM-dd HH:mm:ss */
-    productionBeginDate?: string;
+    productionBeginDate?: number;
     /** 业务员id */
-    businessIds?: number[];
+    businessIds?: string[];
     /** 生产日期结束时间 yyyy-MM-dd HH:mm:ss */
-    productionEndDate?: string;
+    productionEndDate?: number;
     /** 记录日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 记录日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 产品id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 灌装线 */
     fillingLine?: string;
     /** 责任单位 */
@@ -64,7 +64,7 @@ export interface IJSONResultAfterSalesQualityAnalysisReturnedToVO {
     /** 响应结果 */
     data?: IAfterSalesQualityAnalysisReturnsVO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 售后质量分析返回VO_1 */
 export interface IAfterSalesQualityAnalysisReturnsVO1 {
@@ -78,25 +78,25 @@ export interface IAfterSalesQualityAnalysisReturnsVO1 {
 /** 分页信息«售后质量分析返回VO» */
 export interface IPagingInformationAfterSalesQualityAnalysisReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IAfterSalesQualityAnalysisReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationAfterSalesQualityAnalysisReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationAfterSalesQualityAnalysisReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 售后质量分析返回VO */
 export interface IAfterSalesQualityAnalysisReturnedToVO {
@@ -109,11 +109,11 @@ export interface IAfterSalesQualityAnalysisReturnedToVO {
     /** 产品id集合 */
     productIds?: string;
     /** 灌装日期 */
-    fillingDate?: string;
+    fillingDate?: number;
     /** 灌装日期 */
     fillingDateStr?: string;
     /** 生产日期 */
-    productionDate?: string;
+    productionDate?: number;
     /** 灌装线 */
     fillingLine?: string;
     /** 责任单位 */
@@ -130,7 +130,7 @@ export interface IAfterSalesQualityAnalysisReturnedToVO {
 /** 附件 VO */
 export interface IAnnexVO {
     /** 文件id */
-    id?: number;
+    id?: string;
     /** 文件key */
     fileKey?: string;
     /** 文件完整路径 */
@@ -138,14 +138,14 @@ export interface IAnnexVO {
     /** 文件名 */
     fileName?: string;
     /** 文件大小 */
-    size?: number;
+    size?: string;
 }
 /** 售后质量分析图表数据返回VO */
 export interface IAfterSalesQualityAnalysisChartDataReturnedToVO {
     /** 轴标 */
     title?: string;
     /** 事故次数 */
-    numOfAccidents?: number;
+    numOfAccidents?: string;
 }
 
 export enum EPagingSortVO_isAsc {

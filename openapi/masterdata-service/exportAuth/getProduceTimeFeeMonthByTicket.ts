@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getProduceTimeFeeMonthByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationHourlyLaborFeeMonthlySummaryReportR
     /** 响应结果 */
     data?: IExportInformationHourlyLaborFeeMonthlySummaryReportReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«工时工费月度汇总报表返回VO» */
 export interface IExportInformationHourlyLaborFeeMonthlySummaryReportReturnToVO {
@@ -34,13 +34,13 @@ export interface IExportInformationHourlyLaborFeeMonthlySummaryReportReturnToVO 
 /** 工时工费月度汇总报表返回VO */
 export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
     /** 月份 */
-    month?: string;
+    month?: number;
     /** 员工id */
-    userId?: number;
+    userId?: string;
     /** 员工姓名 */
     username?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 合格产出工费 */

@@ -15,7 +15,7 @@
         ],
         "summary": "分页查询待办",
         "description": "<p style='color:red'>详情不同类型查询调的接口不一样(持续更新)：<br/>注：详情接口的对应的id传当前接口返回的 businessId（对应业务id） <br/>1、type == FLOW_TASK 查询详情调：'查询我的研发任务详情' <br/>2、type == FLOW_APPROVAL 查询详情调：'查询我的审批任务详情' <br/></p>",
-        "operationId": "getPageUsingPOST_35",
+        "operationId": "getPageUsingPOST_36",
         "consumes": [
           "application/json"
         ],

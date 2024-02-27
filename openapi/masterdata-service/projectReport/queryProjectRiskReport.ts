@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectRiskReportUsingPOST
@@ -22,41 +22,41 @@ export interface IJSONResultPagingInformationProjectRiskReportResponseObject {
     /** 响应结果 */
     data?: IPageInformationProjectRiskReportResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«项目风险报表响应对象» */
 export interface IPageInformationProjectRiskReportResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProjectRiskReportResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationProjectRiskReportResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationProjectRiskReportResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 项目风险报表响应对象 */
 export interface IProjectRiskReportResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
     code?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 处理人名称列表 */
     handleUserNameList?: string[];
     /** 项目名称 */
@@ -64,7 +64,7 @@ export interface IProjectRiskReportResponseObject {
     /** 项目编号 */
     projectCode?: string;
     /** 项目类型id */
-    projectTypeId?: number;
+    projectTypeId?: string;
     /** 项目类型名称 */
     projectTypeName?: string;
     /** 项目大类 */
@@ -82,9 +82,9 @@ export interface IProjectRiskReportResponseObject {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** undefined */
-    projectManagerId?: number;
+    projectManagerId?: string;
     /** 风险类型名称 */
     projectRiskTypeName?: string;
     /** 风险标识名称 */
@@ -94,15 +94,15 @@ export interface IProjectRiskReportResponseObject {
     /** 责任单位 */
     responsibleDeptName?: string;
     /** 要求完成时间 */
-    requireCompleteTime?: string;
+    requireCompleteTime?: number;
     /** 实际完成时间 */
-    actualCompleteTime?: string;
+    actualCompleteTime?: number;
     /** undefined */
-    projectRiskTypeId?: number;
+    projectRiskTypeId?: string;
     /** undefined */
-    projectRiskFlagId?: number;
+    projectRiskFlagId?: string;
     /** undefined */
-    responsibleDeptId?: number;
+    responsibleDeptId?: string;
     /** undefined */
     handleUserIds?: Record<string, any>[];
 }

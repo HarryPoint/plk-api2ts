@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMaterialActualQuantityPageUsingPOST
 */
-export default function fetchMethod(options: { data: IMaterialOutputSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialOutputSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialOutputVO>(
         {
             url: "/masterdata-service/moveInOutRecord/getMaterialActualQuantityPage",
@@ -20,13 +20,13 @@ export interface IMaterialOutputSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 工序步骤ids */
-    routingStepIds: number[];
+    routingStepIds: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 时间筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 时间筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -44,35 +44,35 @@ export interface IJSONResultPagingInformationMaterialOutputVO {
     /** 响应结果 */
     data?: IPagingInformationMaterialOutputVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«物料产出VO» */
 export interface IPagingInformationMaterialOutputVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMaterialOutputVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationMaterialOutputVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationMaterialOutputVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 物料产出VO */
 export interface IMaterialOutputVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料产出(出站总数量) */
     actualQuantity?: number;
 }

@@ -28,8 +28,8 @@
             "description": "fileProvisionCompleteRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/FileProvisionCompleteRequestDTO",
-              "originalRef": "FileProvisionCompleteRequestDTO"
+              "originalRef": "FileProvisionCompleteRequestDTO",
+              "$ref": "#/definitions/FileProvisionCompleteRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {

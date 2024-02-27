@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/existsDeviceMaintainTaskUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IDevicePersonnelCapabilityW
 /** 设备人员能力是否存在任务请求DTO */
 export interface IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO {
     /** 员工能力ids */
-    deviceEmployeeCapacityIds?: number[];
+    deviceEmployeeCapacityIds?: string[];
 }
 /** JSONResult«List«设备人员能力是否存在任务响应DTO»» */
 export interface IJSONResultListDevicePersonnelCapabilityWhetherATaskResponseDTOExists {
@@ -27,7 +27,7 @@ export interface IJSONResultListDevicePersonnelCapabilityWhetherATaskResponseDTO
     /** 响应结果 */
     data?: IDevicePersonnelCapabilityWhetherThereIsATaskResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备人员能力是否存在任务响应DTO */
 export interface IDevicePersonnelCapabilityWhetherThereIsATaskResponseDTO {

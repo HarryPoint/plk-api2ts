@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryDangerPointsUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IDangerPointQueryRequest },
 /** 危险点查询请求 */
 export interface IDangerPointQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«危险点查询响应»» */
 export interface IJSONResultListResponseToTheDangerPointQuery {
@@ -29,7 +29,7 @@ export interface IJSONResultListResponseToTheDangerPointQuery {
     /** 响应结果 */
     data?: IDangerPointQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 危险点查询响应 */
 export interface IDangerPointQueryResponse {

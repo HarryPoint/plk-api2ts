@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
@@ -27,12 +27,12 @@ export interface IJSONResultListResponseObjectForHandlingNonconformingItems {
     /** 响应结果 */
     data?: ITheNonconformingProductHandlingModeRespondsToTheObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 不合格品处理方式响应对象 */
 export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 处理方式 */

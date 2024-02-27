@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/scrapUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProductionProcessesWithhol
 /** 生产处理暂扣报废请求对象 */
 export interface IProductionProcessesWithholdScrapRequestObjects {
     /** 生产处理id */
-    id?: number;
+    id?: string;
     /** 返工类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 报废数量 */
     abnormalQuantity: number;
     /** 处理意见 */
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET_1
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultRoutingDeprecatedVO>(
         {
             url: "/masterdata-service/routing/getByIdAndCheck",
@@ -22,22 +22,22 @@ export interface IJSONResultRoutingDeprecatedVO {
     /** 响应结果 */
     data?: IRoutingDeprecatedVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** RoutingDeprecatedVO */
 export interface IRoutingDeprecatedVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 工艺路径编码 */
     code?: string;
     /** 工艺路径名称 */
     name?: string;
     /** 所属主物料id */
-    materialId?: number;
+    materialId?: string;
     /** 所属主物料bomid */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 是否默认 */
     isDefault?: ERoutingDeprecatedVO_isDefault;
 }

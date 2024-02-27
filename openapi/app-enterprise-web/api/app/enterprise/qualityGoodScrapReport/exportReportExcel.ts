@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检统计/exportReportExcelUsingPOST_3
@@ -22,11 +22,11 @@ export interface IScrapDataSheetSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 时间筛选 - 开始 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 时间筛选 - 结束 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料种类 */
     materialType?: string;
 }
@@ -44,9 +44,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSortVO_isAsc {

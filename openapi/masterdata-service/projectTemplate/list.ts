@@ -1,7 +1,7 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_5
+* @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_6
 */
 export default function fetchMethod(options: { params: { projectCategory?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTemplateRespondsToTheDTO>(
@@ -22,12 +22,12 @@ export interface IJSONResultListProjectTemplateRespondsToTheDTO {
     /** 响应结果 */
     data?: IProjectTemplatesRespondToDtos[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目模板响应DTO */
 export interface IProjectTemplatesRespondToDtos {
     /** 项目模板id */
-    id?: number;
+    id?: string;
     /** 项目名称 */
     name?: string;
     /** 项目大类 */
@@ -37,15 +37,15 @@ export interface IProjectTemplatesRespondToDtos {
     /** 项目名称 */
     projectName?: string;
     /** 项目类型id */
-    projectTypeId?: number;
+    projectTypeId?: string;
     /** 项目经理id */
-    projectManagerId?: number;
+    projectManagerId?: string;
     /** 主责部门 */
-    mainDutyDeptId?: number;
+    mainDutyDeptId?: string;
     /** 项目开始日期 */
-    projectBeginDate?: string;
+    projectBeginDate?: number;
     /** 项目结束日期 */
-    projectEndDate?: string;
+    projectEndDate?: number;
     /** 项目目的 */
     projectGoal?: string;
     /** 项目地址区域编码 */

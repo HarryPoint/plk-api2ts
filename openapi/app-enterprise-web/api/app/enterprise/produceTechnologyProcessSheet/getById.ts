@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产工艺工艺卡相关/getByIdUsingGET_16
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessCardInformationIsReturnedToTheDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTechnologyProcessSheet/getById",
@@ -22,44 +22,44 @@ export interface IJSONResultProcessCardInformationIsReturnedToTheDTO {
     /** 响应结果 */
     data?: IProductionProcessProcessCardInformationIsReturnedToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产工艺工艺卡信息返回DTO */
 export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 描述集合 */
     textList?: IProductionProcessProcessCardDetailsReturnedToDTO[];
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 工艺卡名称 */
     name?: string;
     /** 工艺卡编号 */
     code?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 文件集合 */
     fileList?: IProductionProcessProcessCardDetailsReturnedToDTO[];
     /** 工序对应字段信息 */
@@ -68,7 +68,7 @@ export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
 /** 生产工艺工艺卡明细返回DTO */
 export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细类型 */
     type?: EProductionProcessProcessCardDetailsReturnedToDTO_type;
     /** 明细名称/标题 */

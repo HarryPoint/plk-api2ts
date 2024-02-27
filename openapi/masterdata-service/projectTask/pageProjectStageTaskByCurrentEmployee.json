@@ -210,26 +210,19 @@
           "type": "string",
           "description": "项目名称"
         },
+        "projectPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目计划id"
+        },
+        "projectPlanCode": {
+          "type": "string",
+          "description": "项目计划编号"
+        },
         "projectStageId": {
           "type": "integer",
           "format": "int64",
           "description": "项目阶段id"
-        },
-        "projectPlanIds": {
-          "type": "array",
-          "description": "项目计划ids",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "projectPlanList": {
-          "type": "array",
-          "description": "项目计划ids",
-          "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
-          }
         },
         "projectStageName": {
           "type": "string",
@@ -259,25 +252,6 @@
         }
       },
       "title": "项目任务响应对象_5"
-    },
-    "Id Code Name 通用传输对象": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64",
-          "description": "id"
-        },
-        "code": {
-          "type": "string",
-          "description": "code"
-        },
-        "name": {
-          "type": "string",
-          "description": "name"
-        }
-      },
-      "title": "Id Code Name 通用传输对象"
     },
     "项目任务响应对象_9": {
       "type": "object",
@@ -359,10 +333,6 @@
         "projectPlanCode": {
           "type": "string",
           "description": "项目计划编号"
-        },
-        "projectPlanName": {
-          "type": "string",
-          "description": "项目计划名称"
         },
         "projectStageId": {
           "type": "integer",
@@ -493,26 +463,6 @@
         "processStatusName": {
           "type": "string",
           "description": "当前节点"
-        },
-        "taskWeight": {
-          "type": "number",
-          "description": "任务权重"
-        },
-        "isProjectPlanShow": {
-          "type": "string",
-          "description": "项目计划模块是否展示",
-          "enum": [
-            "  Y-是",
-            "  N-否"
-          ]
-        },
-        "isProjectTaskShow": {
-          "type": "string",
-          "description": "项目任务模块是否展示",
-          "enum": [
-            "  Y-是",
-            "  N-否"
-          ]
         },
         "leaderUserIds": {
           "type": "array",

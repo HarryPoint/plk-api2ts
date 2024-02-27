@@ -14,7 +14,7 @@
           "项目任务规则相关"
         ],
         "summary": "根据ID查询项目任务规则",
-        "operationId": "getByIdUsingGET_12",
+        "operationId": "getByIdUsingGET_14",
         "produces": [
           "*/*"
         ],

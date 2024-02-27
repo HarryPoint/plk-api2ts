@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/editUsingPOST_1
 */
-export default function fetchMethod(options: { data: IProcessEditDTO1params: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessEditDTO1, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessVersionRespondsToVO>(
         {
             url: "/flow-service/flowPath/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcessEditDTO1params: { e
 /** 流程编辑DTO_1 */
 export interface IProcessEditDTO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     lastName: string;
     /** 编号 */
@@ -64,7 +64,7 @@ export interface IProcessEditDTO1 {
     /** 详细页配置列表 */
     detailPageConfigList?: IFlowPathDetailPageConfigEditDTO[];
     /** 应用服务包ID */
-    appServicePackId?: number;
+    appServicePackId?: string;
     /** 应用级别 */
     applicationLevel?: EProcessEditDTO1_applicationLevel;
     /** undefined */
@@ -73,7 +73,7 @@ export interface IProcessEditDTO1 {
 /** 流程表单字段编辑DTO */
 export interface IProcessFormFieldEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 类型分组 */
     typeGroup?: EProcessFormFieldEditDTO_typeGroup;
     /** 类型 */
@@ -303,7 +303,7 @@ export interface IProcessFormAssociatedFormFillEditDTO {
 /** FlowPathFormFieldDataLinkageEditDTO */
 export interface IFlowPathFormFieldDataLinkageEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据来源应用编码（即联动表单） */
     sourceFormRpCode?: string;
     /** 数据来源应用表格编码（即联动表单） */
@@ -331,7 +331,7 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
 /** 流程节点编辑DTO_4 */
 export interface IProcessNodeEditDTO4 {
     /** id */
-    id?: number;
+    id?: string;
     /** 节点类型 */
     type: EProcessNodeEditDTO4_type;
     /** 名称 */
@@ -351,7 +351,7 @@ export interface IProcessNodeEditDTO4 {
     /** 回退类型 */
     backType?: EProcessNodeEditDTO4_backType;
     /** 回退流程节点id - 返回指定节点时有值 */
-    backFlowPathNodeId?: number;
+    backFlowPathNodeId?: string;
     /** 回退流程节点序列值 - 返回指定节点时有值 */
     backFlowPathNodeSerialNo?: string;
     /** 表单操作权限集 */
@@ -430,7 +430,7 @@ export interface IProcessNodeEditDTO4 {
 /** 流程节点执行人编辑DTO */
 export interface ITheProcessNodeExecutiveEditsTheDTO {
     /** id */
-    executorId?: number;
+    executorId?: string;
     /** 执行人类型 */
     executorType?: ETheProcessNodeExecutiveEditsTheDTO_executorType;
     /** 执行人系统类型 */
@@ -441,7 +441,7 @@ export interface ITheProcessNodeExecutiveEditsTheDTO {
 /** 流程节点表单操作权限编辑DTO */
 export interface IProcessNodeFormOperationPermissionEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 表单序号值(整数) - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 权限类型 */
@@ -452,20 +452,20 @@ export interface IProcessNodeFormOperationPermissionEditDTO {
 /** 流程节点条件分支组编辑DTO */
 export interface IProcessNodeConditionBranchGroupEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件集 */
     condis?: IEditDtosForProcessNodeConditions[];
 }
 /** 流程节点条件编辑DTO */
 export interface IEditDtosForProcessNodeConditions {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件类型 */
     type?: EEditDtosForProcessNodeConditions_type;
     /** 默认条件-条件类型为系统内置时有值 */
     defaultCondi?: EEditDtosForProcessNodeConditions_defaultCondi;
     /** 表单字段id-条件类型为表单字段时有值 */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单序号值 - 由前端生成，需要每个字段唯一，用于新增时，互相关联用 */
     flowPathFormFieldSerialNo: string;
     /** 判断方式 */
@@ -473,7 +473,7 @@ export interface IEditDtosForProcessNodeConditions {
     /** 判断目标来源 */
     compareTargetFromSource?: EEditDtosForProcessNodeConditions_compareTargetFromSource;
     /** 关联表单-比较目标字段ID */
-    targetFieldId?: number;
+    targetFieldId?: string;
     /** 关联表单-比较目标字段序列 */
     targetFieldSerialNo?: string;
     /** 关联表单-比较目标字段编码 */
@@ -490,7 +490,7 @@ export interface IEditDtosForProcessNodeConditions {
 /** 流程节点编辑DTO_1 */
 export interface IProcessNodeEditDTO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 超时的步骤类型 */
     stepType?: EProcessNodeEditDTO1_stepType;
     /** 超时类型 */
@@ -500,7 +500,7 @@ export interface IProcessNodeEditDTO1 {
     /** 超时值类型 - 超时类型为自定义时有值 */
     timeoutTimeType?: EProcessNodeEditDTO1_timeoutTimeType;
     /** 超时表单字段id */
-    timeoutFlowPathFormFieldId?: number;
+    timeoutFlowPathFormFieldId?: string;
     /** 超时表单字段序列值 */
     timeoutFlowPathFormFieldSerialNo?: string;
     /** 预警处理方式 */
@@ -527,15 +527,15 @@ export interface IProcessNodeEditDTO1 {
 /** 流程节点编辑DTO */
 export interface ITheProcessNodeEditsTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 消息触发时机 */
     triggerTiming?: ETheProcessNodeEditsTheDTO_triggerTiming;
     /** 消息配置ID列表 */
-    messageConfigIdList?: number[];
+    messageConfigIdList?: string[];
     /** 是否启用消息通知 */
     isEnabledMessageNotification?: ETheProcessNodeEditsTheDTO_isEnabledMessageNotification;
     /** 引用的ID。比如超时配置 */
-    refId?: number;
+    refId?: string;
 }
 /** 流程表单权限编辑DTO */
 export interface IProcessFormPermissionsEditDTO {
@@ -553,7 +553,7 @@ export interface IProcessFormPermissionsEditDTO {
 /** 流程角色权限DTO */
 export interface IProcessRolePermissionDTO {
     /** 角色id */
-    roleId?: number;
+    roleId?: string;
     /** 新增权限码集 */
     addPermissionCodes?: string[];
     /** 删除权限码集 */
@@ -753,7 +753,7 @@ export interface IApplyTheNewEventSubtableFilterToRequestADTO {
 /** 流程打印模板编辑DTO */
 export interface IProcessPrintTemplateEditDTO {
     /** 流程打印模板id */
-    id?: number;
+    id?: string;
     /** 模板名称 */
     name?: string;
     /** 模板结构代码 */
@@ -764,14 +764,14 @@ export interface IProcessPrintTemplateEditDTO {
 /** PublishEnterpriseRouterEditDTO */
 export interface IPublishEnterpriseRouterEditDTO {
     /** 上级路由ID */
-    parentRouteId?: number;
+    parentRouteId?: string;
     /** 所属排序位置-前端给的值不代表真实的顺序，仅仅代表该应用在第几号位置, 排在第一个，则排序位置为1，排在第二个则排序位置为2，依次类推 */
     sortOffset?: number;
 }
 /** 代办配置 */
 export interface IAgencyAllocation {
     /** 代办编辑服务 */
-    id?: number;
+    id?: string;
     /** 标题配置 */
     title?: string;
     /** 字段序列号列表 */
@@ -782,7 +782,7 @@ export interface IAgencyAllocation {
 /** FlowPathDetailPageConfigEditDTO */
 export interface IFlowPathDetailPageConfigEditDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 引用当前表单的应用引擎编码 */
     refFlowPathCode?: string;
     /** 页签名称/别名 */
@@ -793,20 +793,20 @@ export interface IFlowPathDetailPageConfigEditDTO {
 /** 条件组_1 */
 export interface IConditionGroup1 {
     /** 过滤组的ID */
-    id?: number;
+    id?: string;
     /** 分页配置ID */
-    flowPathDetailPageConfigId?: number;
+    flowPathDetailPageConfigId?: string;
     /** 过滤列表 */
     filterList?: ISetOfConditions[];
 }
 /** 条件组 */
 export interface ISetOfConditions {
     /** 过滤条件的ID */
-    id?: number;
+    id?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathDetailPageFilterGroupId?: number;
+    flowPathDetailPageFilterGroupId?: string;
     /** 所属流程表单字段id */
-    flowPathDetailPageConfigId?: number;
+    flowPathDetailPageConfigId?: string;
     /** 被判断的字段序列号 */
     columnSerialNo?: string;
     /** 判断方式 */
@@ -837,16 +837,16 @@ export interface IJSONResultProcessVersionRespondsToVO {
     /** 响应结果 */
     data?: ITheProcessVersionRespondsToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程版本响应VO */
 export interface ITheProcessVersionRespondsToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 版本排名 */
     versionRank?: number;
     /** 是否是系统流程 */
@@ -1030,6 +1030,8 @@ export enum EProcessEditDTO1_flowPathSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -1070,6 +1072,14 @@ export enum EProcessEditDTO1_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */
@@ -1511,15 +1521,15 @@ export enum EProcessFormFieldEditDTO_numberFormat {
 }
 
 export enum EProcessFormFieldEditDTO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"
@@ -1648,13 +1658,13 @@ export enum EProcessFormFieldEditDTO_isAutoGetLocation {
 }
 
 export enum EProcessFormFieldEditDTO_addressType {
-    /** 省 */
+    /** 省-市-区-详细地址 */
     REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区 */
     REGION = "REGION",
-    /** 省 */
+    /** 省-市-区-街道-详细地址 */
     STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区-街道 */
     STREET = "STREET"
 }
 

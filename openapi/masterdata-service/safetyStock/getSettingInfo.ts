@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存相关/getSettingInfoUsingPOST
 */
-export default function fetchMethod(options: { data: ISecurityStockSettingsSearchVOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISecurityStockSettingsSearchVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultSecurityStockSettingsReturnVO>(
         {
             url: "/masterdata-service/safetyStock/getSettingInfo",
@@ -18,7 +18,7 @@ export interface ISecurityStockSettingsSearchVO {
     /** 设置类型 */
     type: ESecurityStockSettingsSearchVO_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
 }
 /** JSONResult«安全库存设置返回VO» */
 export interface IJSONResultSecurityStockSettingsReturnVO {
@@ -29,7 +29,7 @@ export interface IJSONResultSecurityStockSettingsReturnVO {
     /** 响应结果 */
     data?: ISafetyStockSettingsReturnVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 安全库存设置返回VO */
 export interface ISafetyStockSettingsReturnVO {

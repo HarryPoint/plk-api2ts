@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/部门相关/getWorkOrderLogUsingPOST_11
@@ -18,17 +18,17 @@ export interface IJobLogSearchVO {
     /** 当前页面 */
     pageNo?: number;
     /** 业务流程ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工单id */
-    id?: number;
+    id?: string;
     /** 业务流程系统类型 */
     flowPathSystemType?: EJobLogSearchVO_flowPathSystemType;
     /** 业务数据ID列表 */
-    businessDataId?: number;
+    businessDataId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -46,39 +46,39 @@ export interface IJSONResultThePageInformationWorkOrderLogReturnsVO {
     /** 响应结果 */
     data?: IThePageInformationTicketLogReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工单日志返回VO» */
 export interface IThePageInformationTicketLogReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheTicketLogReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePageInformationTicketLogReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePageInformationTicketLogReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工单日志返回VO */
 export interface ITheTicketLogReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程工单id */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 所属流程节点id */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** 流程节点名称 */
     flowPathNodeName?: string;
     /** 是否首节点 */
@@ -86,20 +86,20 @@ export interface ITheTicketLogReturnsVO {
     /** 日志描述 */
     description?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 抄送人 */
     carbonCopyUsers?: ICcToVO[];
     /** 执行人 */
     handleUsers?: IToBeCopiedToVO1[];
     /** 流程任务id */
-    flowPathTaskId?: number;
+    flowPathTaskId?: string;
     /** 执行意见 */
     notes?: string;
 }
 /** 待办抄送人VO */
 export interface ICcToVO {
     /** 抄送人id */
-    userId?: number;
+    userId?: string;
     /** 抄送人姓名 */
     username?: string;
     /** 是否已读 */
@@ -108,19 +108,19 @@ export interface ICcToVO {
 /** 待办抄送人VO_1 */
 export interface IToBeCopiedToVO1 {
     /** 操作人 */
-    userId?: number;
+    userId?: string;
     /** 操作人姓名 */
     username?: string;
     /** 执行意见 */
     notes?: string;
     /** 创建时间(被转交方-转交时间) */
-    createTime?: string;
+    createTime?: number;
     /** 接受时间 */
-    acceptTime?: string;
+    acceptTime?: number;
     /** 开始时间 */
-    beginningTime?: string;
+    beginningTime?: number;
     /** 完成时间(当logStatus=TRANSFER时，为：转交方-转交时间) */
-    completeTime?: string;
+    completeTime?: number;
     /** 日志状态 */
     logStatus?: EToBeCopiedToVO1_logStatus;
     /** 日志状态描述 */
@@ -128,18 +128,18 @@ export interface IToBeCopiedToVO1 {
     /** 下个节点执行人列表 */
     nextNodeExecutorList?: INextNodeExecutor[];
     /** 转交给用户id */
-    transferToUserId?: number;
+    transferToUserId?: string;
     /** 转交给用户名称 */
     transferToUserName?: string;
     /** 转交来源用户id */
-    transferFromUserId?: number;
+    transferFromUserId?: string;
     /** 转交来源用户名称 */
     transferFromUserName?: string;
 }
 /** 下个节点执行人 */
 export interface INextNodeExecutor {
     /** 抄送人id */
-    userId?: number;
+    userId?: string;
     /** 抄送人姓名 */
     username?: string;
 }
@@ -333,6 +333,10 @@ export enum EJobLogSearchVO_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

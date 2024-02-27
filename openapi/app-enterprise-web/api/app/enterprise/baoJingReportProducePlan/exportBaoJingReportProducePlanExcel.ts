@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶生产计划报表/exportBaoJingReportProducePlanExcelUsingPOST
@@ -16,17 +16,17 @@ export default function fetchMethod(options: { data: IBaojingProductionTaskGantt
 /** 宝晶生产任务甘特图查询对象 */
 export interface IBaojingProductionTaskGanttChartQueryObject {
     /** 物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 部门id */
-    departmentIds?: number[];
+    departmentIds?: string[];
     /** 计划开始日期 */
-    planStartDate?: string;
+    planStartDate?: number;
     /** 计划结束日期 */
-    planEndDate?: string;
+    planEndDate?: number;
     /** 交货开始日期 */
-    startDeliveryDate?: string;
+    startDeliveryDate?: number;
     /** 交货结束日期 */
-    endDeliveryDate?: string;
+    endDeliveryDate?: number;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -35,7 +35,7 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

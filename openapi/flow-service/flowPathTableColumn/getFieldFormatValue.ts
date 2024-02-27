@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getFieldFormatValueUsingPOST
 */
-export default function fetchMethod(options: { data: IFormatTheValueOfTheFlowTableColumnToQueryTheDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFormatTheValueOfTheFlowTableColumnToQueryTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/flow-service/flowPathTableColumn/getFieldFormatValue",
@@ -33,5 +33,5 @@ export interface IJSONResultstring1 {
     /** 响应结果 */
     data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

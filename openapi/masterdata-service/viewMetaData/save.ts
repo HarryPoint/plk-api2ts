@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/视图元数据相关/saveUsingPOST_9
@@ -18,7 +18,7 @@ export interface IViewMetadataSaveRequestDTO {
     /** 应用编码 */
     appCode?: string;
     /** 实例ID */
-    instanceId?: number;
+    instanceId?: string;
     /** 元数据 */
     meta?: Record<string, Record<string, any>>;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

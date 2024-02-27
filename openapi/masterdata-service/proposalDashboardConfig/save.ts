@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板-配置页面相关/saveUsingPOST_6
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProposalDashboardConfigReq
 /** ProposalDashboardConfigRequestDTO */
 export interface IProposalDashboardConfigRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 建议部门ID列表 */
-    proposalDepartmentIdList?: number[];
+    proposalDepartmentIdList?: string[];
     /** 项目部门ID列表 */
-    projectDepartmentIdList?: number[];
+    projectDepartmentIdList?: string[];
     /** 未完成目标值 */
     unCompleteTargetValue?: number;
     /** 已完成目标值 */
@@ -33,7 +33,7 @@ export interface IProposalDashboardConfigRequestDTO {
 /** ProposalDashboardStatisticsConfigRequestDTO */
 export interface IProposalDashboardStatisticsConfigRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 统计类型 */
     type?: EProposalDashboardStatisticsConfigRequestDTO_type;
     /** 开始值 - 适用于数值区间、数值大于等于、数值大于 */
@@ -50,9 +50,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProposalDashboardStatisticsConfigRequestDTO_type {

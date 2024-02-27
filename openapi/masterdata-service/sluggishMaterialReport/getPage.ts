@@ -1,7 +1,7 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getPageUsingPOST_28
+* @link http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getPageUsingPOST_29
 */
 export default function fetchMethod(options: { data: GetPage }, extraOptions?: any) {
     return http<IJSONResultPageInformationDullMaterialsReportQueryDetailsResponseObject>(
@@ -22,30 +22,30 @@ export interface IJSONResultPageInformationDullMaterialsReportQueryDetailsRespon
     /** 响应结果 */
     data?: IPageInformationDullMaterialsReportQueryDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«呆滞物料报表查询明细响应对象» */
 export interface IPageInformationDullMaterialsReportQueryDetailsResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDullMaterialReportQueryDetailsResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDullMaterialsReportQueryDetailsResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDullMaterialsReportQueryDetailsResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 呆滞物料报表查询明细响应对象 */
 export interface IDullMaterialReportQueryDetailsResponseObject {
@@ -60,21 +60,21 @@ export interface IDullMaterialReportQueryDetailsResponseObject {
     /** 数量 */
     quantity?: number;
     /** 最后一次入库时间 */
-    lastInStorageTime?: string;
+    lastInStorageTime?: number;
     /** 最后一次入库 - 应用id */
-    lastInStorageFlowPathId?: number;
+    lastInStorageFlowPathId?: string;
     /** 最后一次入库 - 应用code */
     lastInStorageFlowPathCode?: string;
     /** 最后一次入库 - 单据id */
-    lastInStorageBillId?: number;
+    lastInStorageBillId?: string;
     /** 最后一次出库时间 */
-    lastOutStorageTime?: string;
+    lastOutStorageTime?: number;
     /** 最后一次出库 - 应用id */
-    lastOutStorageFlowPathId?: number;
+    lastOutStorageFlowPathId?: string;
     /** 最后一次出库 - 应用code */
     lastOutStorageFlowPathCode?: string;
     /** 最后一次出库 - 单据id */
-    lastOutStorageBillId?: number;
+    lastOutStorageBillId?: string;
 }
 
 export enum EPageInformationDullMaterialsReportQueryDetailsResponseObject_hasPreviousPage {

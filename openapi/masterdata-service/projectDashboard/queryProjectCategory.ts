@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
@@ -22,7 +22,7 @@ export interface ITheJSONResultListProjectClassDistributesResponseObjects {
     /** 响应结果 */
     data?: ITheProjectClassDistributesTheResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目大类分布响应对象 */
 export interface ITheProjectClassDistributesTheResponseObjects {

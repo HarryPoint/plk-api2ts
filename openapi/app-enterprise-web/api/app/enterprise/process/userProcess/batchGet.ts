@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序相关/batchGetUserProcessUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListUserProcessVo>(
         {
             url: "/app-enterprise-web/api/app/enterprise/process/userProcess/batchGet",
@@ -22,18 +22,18 @@ export interface IJSONResultListUserProcessVo {
     /** 响应结果 */
     data?: IUserProcessVo[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** UserProcessVo */
 export interface IUserProcessVo {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    processId?: number;
+    processId?: string;
     /** undefined */
     executorType?: EUserProcessVo_executorType;
     /** undefined */
-    refId?: number;
+    refId?: string;
     /** undefined */
     type?: EUserProcessVo_type;
     /** undefined */

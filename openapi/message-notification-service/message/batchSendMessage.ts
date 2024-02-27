@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息相关/batchSendMessageUsingPOST
 */
-export default function fetchMethod(options: { data: IMessageInformation[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageInformation[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/message-notification-service/message/batchSendMessage",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IMessageInformation[]params
 /** 消息信息 */
 export interface IMessageInformation {
     /** 消息id */
-    id?: number;
+    id?: string;
     /** 标题 */
     title?: string;
     /** 消息内容 */
@@ -24,11 +24,11 @@ export interface IMessageInformation {
     /** 消息类型 */
     type?: EMessageInformation_type;
     /** 消息发送人 */
-    sendUserId?: number;
+    sendUserId?: string;
     /** 移动端跳转路径 */
     mobilePath?: string;
     /** 消息接收人 */
-    receiveUserIds?: number[];
+    receiveUserIds?: string[];
     /** pc端跳转路径 */
     webPath?: string;
     /** 消息发送端 */
@@ -36,7 +36,7 @@ export interface IMessageInformation {
     /** 消息跳转类型 */
     pathType?: EMessageInformation_pathType;
     /** 消息业务id */
-    businessId?: number;
+    businessId?: string;
     /** 消息业务类型 */
     businessType?: EMessageInformation_businessType;
     /** 来源应用编码 */
@@ -51,7 +51,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EMessageInformation_type {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/bindUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ITheProjectPhaseBindsTheReq
 /** 项目阶段绑定请求对象 */
 export interface ITheProjectPhaseBindsTheRequestObject {
     /** 项目阶段id */
-    projectStageId: number;
+    projectStageId: string;
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

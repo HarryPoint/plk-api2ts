@@ -9,14 +9,29 @@
   "swagger": "2.0",
   "paths": {
     "/masterdata-service/qmsDashboard/queryAllAnnualProblemSituation": {
-      "get": {
+      "post": {
         "tags": [
           "QMS大屏相关"
         ],
         "summary": "查询年度质量查处问题情况-全部",
-        "operationId": "queryAllAnnualProblemSituationUsingGET",
+        "operationId": "queryAllAnnualProblemSituationUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "qms大屏时间区间请求",
+              "$ref": "#/definitions/qms大屏时间区间请求"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -25,6 +40,9 @@
               "originalRef": "JSONResult«年度问题查询情况»",
               "$ref": "#/definitions/JSONResult«年度问题查询情况»"
             }
+          },
+          "201": {
+            "description": "Created"
           },
           "401": {
             "description": "Unauthorized"
@@ -43,6 +61,29 @@
     }
   },
   "definitions": {
+    "qms大屏时间区间请求": {
+      "type": "object",
+      "properties": {
+        "dateRangeBegin": {
+          "type": "string",
+          "description": "查询日期的开始"
+        },
+        "dateRangeEnd": {
+          "type": "string",
+          "description": "查询日期的结束"
+        },
+        "dateRangeType": {
+          "type": "string",
+          "description": "查询日期区间类型",
+          "enum": [
+            "  YEAR-年",
+            "  QUARTER-季度",
+            "  MONTH-月"
+          ]
+        }
+      },
+      "title": "qms大屏时间区间请求"
+    },
     "JSONResult«年度问题查询情况»": {
       "type": "object",
       "properties": {

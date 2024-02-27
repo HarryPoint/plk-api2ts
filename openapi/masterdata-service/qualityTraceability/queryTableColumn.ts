@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量追溯/queryTableColumnUsingGET_1
@@ -22,7 +22,7 @@ export interface IJSONResultListQualityTraceabilityReportTableColumnBO {
     /** 响应结果 */
     data?: IQualityTraceabilityReportTableColumnBO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** QualityTraceabilityReportTableColumnBO */
 export interface IQualityTraceabilityReportTableColumnBO {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设置检验任务的检验方式相关/getUsingGET_5
@@ -22,7 +22,7 @@ export interface IJSONResultSetsTheCheckModeOfTheCheckTaskInResponseToTheDTO {
     /** 响应结果 */
     data?: ISetTheCheckModeResponseDTOForTheCheckTask;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设置检验任务检验方式响应DTO */
 export interface ISetTheCheckModeResponseDTOForTheCheckTask {

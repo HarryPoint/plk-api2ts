@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryByProduceCodeAndProcessIdUsingGET
 */
-export default function fetchMethod(options: { params: { processId?: number; produceOrderCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { processId?: string; produceOrderCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListProduceTaskVO>(
         {
             url: "/masterdata-service/produceTask/queryByProduceCodeAndProcessId",
@@ -22,20 +22,20 @@ export interface IJSONResultListProduceTaskVO {
     /** 响应结果 */
     data?: IProduceTaskVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProduceTaskVO */
 export interface IProduceTaskVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属排产计划id */
-    productionPlanId?: number;
+    productionPlanId?: string;
     /** 所属生产下发记录id */
-    produceOrderIssueId?: number;
+    produceOrderIssueId?: string;
     /** 来源生产任务id */
-    sourceProduceTaskId?: number;
+    sourceProduceTaskId?: string;
     /** 任务号 */
     taskNo?: string;
     /** 任务下发方式 */
@@ -45,39 +45,39 @@ export interface IProduceTaskVO {
     /** 返工任务类型 */
     backType?: EProduceTaskVO_backType;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 所属销售订单详情id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应工艺路径名称 */
     routingName?: string;
     /** 对应工艺路径编号 */
     routingCode?: string;
     /** 对应工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 对应工厂日历id */
-    factoryCalendarId?: number;
+    factoryCalendarId?: string;
     /** 对应班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 计划生产数量 */
     planProduceQuantity?: number;
     /** 当前完成数量 - 包含了产出 + 报废， */
@@ -87,13 +87,13 @@ export interface IProduceTaskVO {
     /** 当前报废数量 */
     currentScrapQuantity?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 备注 */
     remark?: string;
     /** 状态 */
@@ -101,11 +101,11 @@ export interface IProduceTaskVO {
     /** 任务优先级，数值越大优先级越高 */
     priorityLevel?: number;
     /** 对应生产处理id */
-    produceHandleId?: number;
+    produceHandleId?: string;
     /** 关闭人 */
-    closeUserId?: number;
+    closeUserId?: string;
     /** 关闭时间 */
-    closeTime?: string;
+    closeTime?: number;
     /** 关闭原因 */
     closeRemark?: string;
     /** 对应物料bom库存详情 */
@@ -124,11 +124,11 @@ export interface IProduceTaskVO {
 /** 工艺路径详情步骤Bom明细返回VO */
 export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属主物料bom明细id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 所属bom物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 所属bom物料名称 */
     childMaterialName?: string;
     /** 所属bom物料编号 */

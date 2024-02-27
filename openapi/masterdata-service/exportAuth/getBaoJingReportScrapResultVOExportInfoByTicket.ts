@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingReportScrapResultVOExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationAboutBaojingReportScrapReturnedToVO
     /** 响应结果 */
     data?: IExportInformationBaojingReportScrapRelatedReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«宝晶报表(报废)相关返回VO» */
 export interface IExportInformationBaojingReportScrapRelatedReturnToVO {
@@ -36,7 +36,7 @@ export interface IBaojingReportScrapRelatedReturnToVO {
     /** 报废类型 */
     scrapType?: string;
     /** 物料id */
-    majorDataId?: number;
+    majorDataId?: string;
     /** 物料编码 */
     majorDataCode?: string;
     /** 物料名称 */
@@ -46,7 +46,7 @@ export interface IBaojingReportScrapRelatedReturnToVO {
     /** 外部编码 */
     materialOutsideCode?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓库用途 */

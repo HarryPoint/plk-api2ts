@@ -47,8 +47,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«int»",
-              "originalRef": "JSONResult«int»"
+              "originalRef": "JSONResult«int»",
+              "$ref": "#/definitions/JSONResult«int»"
             }
           },
           "401": {

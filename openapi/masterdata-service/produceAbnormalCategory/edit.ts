@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/editUsingPOST_10
 */
-export default function fetchMethod(options: { data: IEditTheDTOForProductionExceptionTypesparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IEditTheDTOForProductionExceptionTypes, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceAbnormalCategory/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEditTheDTOForProductionExc
 /** 生产异常类型编辑DTO */
 export interface IEditTheDTOForProductionExceptionTypes {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属分类 */
     type: EEditTheDTOForProductionExceptionTypes_type;
     /** 类型名称 */
@@ -35,7 +35,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEditTheDTOForProductionExceptionTypes_type {

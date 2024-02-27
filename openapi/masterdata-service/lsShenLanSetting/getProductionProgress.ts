@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getProductionProgressUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultLargeScreenInspectionProductionInformationVOIsReturned>(
         {
             url: "/masterdata-service/lsShenLanSetting/getProductionProgress",
@@ -22,12 +22,12 @@ export interface IJSONResultLargeScreenInspectionProductionInformationVOIsReturn
     /** 响应结果 */
     data?: IInspectionProductionLargeScreenInspectionProductionInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 质检生产大屏质检生产信息返回VO */
 export interface IInspectionProductionLargeScreenInspectionProductionInformationIsReturnedToVO {
     /** 大屏左侧质检合格率工序id */
-    leftQualityPassRatioProcessId?: number;
+    leftQualityPassRatioProcessId?: string;
     /** 大屏左侧质检合格率工序名称 */
     leftQualityPassRatioProcessName?: string;
     /** 大屏左侧质检合格率工序编号 */
@@ -45,7 +45,7 @@ export interface IInspectionProductionLargeScreenInspectionProductionInformation
     /** 大屏左侧过去10年合格数量(合格数量+让步合格数量) */
     left10YPassQuantity?: number;
     /** 大屏右侧质检合格率工序id */
-    rightQualityPassRatioProcessId?: number;
+    rightQualityPassRatioProcessId?: string;
     /** 大屏右侧质检合格率工序名称 */
     rightQualityPassRatioProcessName?: string;
     /** 大屏右侧质检合格率工序编号 */
@@ -80,16 +80,16 @@ export interface IOutputLineChartReturnsVOOutputAmountReportReturnsVO {
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
     isConsistent?: EOutputLineChartReturnsVOOutputAmountReportReturnsVO_isConsistent;
     /** 实际查询时间 - 开始 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际查询时间 - 结束 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 实际数据条数 */
     actualDataCount?: number;
 }
 /** 产出类折线图分组返回VO«产出金额报表返回VO» */
 export interface IOutputLineChartGroupReturnsVOOutputAmountReportReturnsVO {
     /** 数据分组id */
-    groupId?: number;
+    groupId?: string;
     /** 数据分组名称 */
     groupName?: string;
     /** 数据分组编号 */
@@ -100,7 +100,7 @@ export interface IOutputLineChartGroupReturnsVOOutputAmountReportReturnsVO {
 /** 产出金额报表返回VO */
 export interface ITheOutputAmountReportIsReturnedToVO {
     /** 数据时间（时间戳），根据当前选中的时间粒度去转换时间 */
-    dataTime?: string;
+    dataTime?: number;
     /** 产出数量 */
     produceQuantity?: number;
     /** 返工产出 */
@@ -111,7 +111,7 @@ export interface ITheOutputAmountReportIsReturnedToVO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/listUsingGET_2
@@ -22,12 +22,12 @@ export interface IJSONResultListEmployeeBaseResponseDTO {
     /** 响应结果 */
     data?: IEmployeeBaseRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 员工基础响应 DTO */
 export interface IEmployeeBaseRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 员工工号 */
     code?: string;
     /** 员工姓名 */
@@ -35,11 +35,11 @@ export interface IEmployeeBaseRespondsToDTO {
     /** 手机号码 */
     mobilePhone?: string;
     /** 入职日期 */
-    entryTime?: string;
+    entryTime?: number;
     /** 离职日期 */
-    dimissionTime?: string;
+    dimissionTime?: number;
     /** 出生日期 */
-    birthday?: string;
+    birthday?: number;
     /** 性别 */
     gender?: EEmployeeBaseRespondsToDTO_gender;
     /** 学历 */
@@ -47,7 +47,7 @@ export interface IEmployeeBaseRespondsToDTO {
     /** 籍贯 */
     nativePlace?: string;
     /** 任职部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 邮箱 */
     email?: string;
 }

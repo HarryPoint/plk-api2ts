@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getPageUsingPOST_27
+* @link http://47.108.139.107:16700/doc.html#/default/安全库存变更申请相关/getPageUsingPOST_28
 */
-export default function fetchMethod(options: { data: ISecurityStockChangeRequestSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISecurityStockChangeRequestSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationSecurityInventoryChangeRequestReturnedToVO>(
         {
             url: "/masterdata-service/safetyStockExchangeApply/getPage",
@@ -24,7 +24,7 @@ export interface ISecurityStockChangeRequestSearchVO {
     /** 设置类型 */
     type: ESecurityStockChangeRequestSearchVO_type;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -42,39 +42,39 @@ export interface IJSONResultPagingInformationSecurityInventoryChangeRequestRetur
     /** 响应结果 */
     data?: IPagingInformationSecurityInventoryChangeRequestReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«安全库存变更申请返回VO» */
 export interface IPagingInformationSecurityInventoryChangeRequestReturnedToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ISecurityStockChangeRequestReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationSecurityInventoryChangeRequestReturnedToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationSecurityInventoryChangeRequestReturnedToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 安全库存变更申请返回VO */
 export interface ISecurityStockChangeRequestReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 申请单号 */
     applyNo?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -96,18 +96,18 @@ export interface ISecurityStockChangeRequestReturnedToVO {
     /** 状态描述 */
     statusDesc?: string;
     /** 审核时间 */
-    examineTime?: string;
+    examineTime?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/pageQueryUsingPOST
@@ -16,23 +16,23 @@ export default function fetchMethod(options: { data: IFinancialPeriodQueryReques
 /** 财务期间查询请求 */
 export interface IFinancialPeriodQueryRequest {
     /** 开始月份 */
-    startMonth?: string;
+    startMonth?: number;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 开始日期 - begin */
-    startDateBegin?: string;
+    startDateBegin?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 结束日期 - end */
-    endDateEnd?: string;
+    endDateEnd?: number;
     /** 期间 */
     periodList?: string[];
     /** 开始日期 - end */
-    startDateEnd?: string;
+    startDateEnd?: number;
     /** 结束日期 - begin */
-    endDateBegin?: string;
+    endDateBegin?: number;
     /** 天数 - Begin */
     daysBegin?: number;
     /** 天数 - End */
@@ -56,41 +56,41 @@ export interface IJSONResultPagingInformationFinancialPeriodQueryResponse {
     /** 响应结果 */
     data?: IPagingInformationFinancialPeriodQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«财务期间查询响应» */
 export interface IPagingInformationFinancialPeriodQueryResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IFinancialPeriodQueryResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationFinancialPeriodQueryResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationFinancialPeriodQueryResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 财务期间查询响应 */
 export interface IFinancialPeriodQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 期间 */
     period?: string;
     /** 开始日期 */
-    startDate?: string;
+    startDate?: number;
     /** 结束日期 */
-    endDate?: string;
+    endDate?: number;
     /** 天数 */
     days?: number;
     /** 结存状态 */

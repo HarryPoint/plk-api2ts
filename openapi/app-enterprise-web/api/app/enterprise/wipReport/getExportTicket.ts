@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/WIP报表相关/getExportTicketUsingPOST_16
@@ -18,13 +18,13 @@ export interface IWIPStatisticsReportSearchForVO {
     /** 当前页面 */
     pageNo?: number;
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -42,7 +42,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

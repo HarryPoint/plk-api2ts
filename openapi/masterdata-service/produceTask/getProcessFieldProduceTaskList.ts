@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProcessFieldProduceTaskListUsingPOST
 */
-export default function fetchMethod(options: { data: ITheTaskSummaryTableSearchesVOBasedOnProcessFieldsparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListTaskSummaryTableIsBasedOnProcessFieldDetailsVO>(
         {
             url: "/masterdata-service/produceTask/getProcessFieldProduceTaskList",
@@ -22,15 +22,15 @@ export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
-    planStartDate?: string;
+    planStartDate?: number;
     /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
-    planEndDate?: string;
+    planEndDate?: number;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 物料ids */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 生产任务状态列表 */
     produceTaskStatusList?: ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items[];
 }
@@ -50,14 +50,14 @@ export interface ITheJSONResultListTaskSummaryTableIsBasedOnProcessFieldDetailsV
     /** 响应结果 */
     data?: ITheTaskSummaryTableIsBasedOnProcessFieldDetailsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 任务汇总表(基于工序字段)明细信息VO */
 export interface ITheTaskSummaryTableIsBasedOnProcessFieldDetailsVO {
     /** 生产任务id */
     produceTaskId?: string;
     /** 计划生产日期 */
-    planTime?: string;
+    planTime?: number;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 物料名称 */

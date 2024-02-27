@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/手动甘特图相关/getSalesOrderUsingPOST_1
 */
-export default function fetchMethod(options: { data: IGanttChartSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IGanttChartSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationSalesOrderManualSchedulingGanttChartReturnsVO>(
         {
             url: "/masterdata-service/handPlanGantt/getSalesOrder",
@@ -28,11 +28,11 @@ export interface IGanttChartSearchVO {
     /** 生产订单编码 */
     produceOrderCode?: string;
     /** 工艺路径ID列表 */
-    processIdList?: number[];
+    processIdList?: string[];
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 生产物料ID列表 */
-    produceMaterialIdList?: number[];
+    produceMaterialIdList?: string[];
     /** 订单状态列表 */
     orderStatusList?: EGanttChartSearchVO_orderStatusList_items[];
 }
@@ -52,35 +52,35 @@ export interface IJSONResultPageInformationSalesOrderManualSchedulingGanttChartR
     /** 响应结果 */
     data?: IPaginationInformationSalesOrdersManualSchedulingGanttChartReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«销售订单手动排产甘特图返回VO» */
 export interface IPaginationInformationSalesOrdersManualSchedulingGanttChartReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ISalesOrderManualSchedulingGanttChartBackToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPaginationInformationSalesOrdersManualSchedulingGanttChartReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPaginationInformationSalesOrdersManualSchedulingGanttChartReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 销售订单手动排产甘特图返回VO */
 export interface ISalesOrderManualSchedulingGanttChartBackToVO {
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 销售订单明细 */
@@ -89,32 +89,32 @@ export interface ISalesOrderManualSchedulingGanttChartBackToVO {
 /** 手动排产销售订单明细甘特图返回VO */
 export interface IManualSchedulingSalesOrderDetailsGanttChartBackToVO {
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售明细id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 生产订单集 */
     produceOrders?: IProductionOrderManualSchedulingGanttChartBackToVO[];
 }
 /** 生产订单手动排产甘特图返回VO */
 export interface IProductionOrderManualSchedulingGanttChartBackToVO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售明细id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -124,13 +124,13 @@ export interface IProductionOrderManualSchedulingGanttChartBackToVO {
     /** 已生产数量 */
     currentCount?: number;
     /** 交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 生产订单状态 */
     orderStatus?: EProductionOrderManualSchedulingGanttChartBackToVO_orderStatus;
     /** 计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束日期 */
-    endTime?: string;
+    endTime?: number;
 }
 
 export enum EGanttChartSearchVO_orderStatusList_items {

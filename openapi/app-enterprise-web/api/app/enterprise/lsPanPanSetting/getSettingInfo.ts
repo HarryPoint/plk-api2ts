@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/盼盼大屏相关/getSettingInfoUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultPanpanProductionLargeScreenSettingsResponseDTO {
     /** 响应结果 */
     data?: IPanpanProductionLargeScreenSettingsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 盼盼生产大屏设置响应DTO */
 export interface IPanpanProductionLargeScreenSettingsResponseDTO {
@@ -48,7 +48,7 @@ export interface IPanpanProductionLargeScreenSettingsResponseDTO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

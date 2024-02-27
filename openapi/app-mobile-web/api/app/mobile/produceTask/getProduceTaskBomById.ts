@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskBomByIdUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListProductionTaskBOMMaterialInformationVO {
     /** 响应结果 */
     data?: IProductionTaskBOMMaterialInformationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务BOM物料信息VO */
 export interface IProductionTaskBOMMaterialInformationVO {
     /** 生产工艺路径步骤bom明细关联id */
-    id?: number;
+    id?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */

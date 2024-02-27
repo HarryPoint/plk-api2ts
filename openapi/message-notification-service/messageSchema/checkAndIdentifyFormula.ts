@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/checkAndIdentifyFormulaUsingPOST
@@ -29,7 +29,7 @@ export interface IJSONResultFormulaCheckResponseDTO {
     /** 响应结果 */
     data?: IFormulaCheckResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FormulaCheckResponseDTO */
 export interface IFormulaCheckResponseDTO {
@@ -53,6 +53,6 @@ export enum EFormulaCheckResponseDTO_messageExpressionType {
     NONE = "NONE",
     /** 日期函数表达式，即有NOW(), TODAY() */
     TIME_FUNCTION = "TIME_FUNCTION",
-    /** 聚合函数表达式，即有SUM/MAX/MIN/AVG/COUNT/+, */
+    /** 聚合函数表达式，即有SUM/MAX/MIN/AVG/COUNT/+,-,*,/ */
     MATH_FUNCTION = "MATH_FUNCTION"
 }

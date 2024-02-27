@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料库存维度报表相关/getWarehouseMaterialDimensionReportStatisticsUsingPOST
@@ -22,7 +22,7 @@ export interface IJSONResultQueriesResponseObjectsInTheInventoryDimension {
     /** 响应结果 */
     data?: IQueryResponseObjectsFromTheMaterialInventoryDimension;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料库存维度查询响应对象 */
 export interface IQueryResponseObjectsFromTheMaterialInventoryDimension {

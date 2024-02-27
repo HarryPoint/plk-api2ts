@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByScanCodeUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionTaskScanCodeQueryDtosForMobileTerminalsparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskScanCodeQueryDtosForMobileTerminals, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionTaskScanResponseDTOForMobileTerminals>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskByScanCode",
@@ -32,17 +32,17 @@ export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
     /** 生产任务可操作类型 */
     optTypes?: EProductionTaskScanCodeQueryDtosForMobileTerminals_optTypes_items[];
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 生产订单号/生产任务编号(扫码查询时默认为生产订单号) */
     codeSearch?: string;
     /** 物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 任务状态 */
     statusList?: EProductionTaskScanCodeQueryDtosForMobileTerminals_statusList_items[];
     /** 生产任务编号集合(扫码查询切换进出料查询时传参) */
     taskNos?: string[];
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 开始时间 yyyy-MM-dd HH:mm:dd */
     beginTime?: string;
     /** 计划生产数量最低数量 */
@@ -56,9 +56,9 @@ export interface IProductionTaskScanCodeQueryDtosForMobileTerminals {
     /** 查询类型 */
     queryType?: EProductionTaskScanCodeQueryDtosForMobileTerminals_queryType;
     /** undefined */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
     /** undefined */
-    userId?: number;
+    userId?: string;
     /** 任务出站关键参数是否需要填写 */
     moveOutKeyParameterFillNeeds?: EProductionTaskScanCodeQueryDtosForMobileTerminals_moveOutKeyParameterFillNeeds;
     /** 生产订单字段搜索 */
@@ -97,7 +97,7 @@ export interface IJSONResultProductionTaskScanResponseDTOForMobileTerminals {
     /** 响应结果 */
     data?: IProductionTaskCodeScanResponseDTOForMobileTerminals;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务扫码响应DTO(针对移动端) */
 export interface IProductionTaskCodeScanResponseDTOForMobileTerminals {
@@ -117,7 +117,7 @@ export interface IProductionTaskCodeScanResponseDTOForMobileTerminals {
 /** 生产任务响应DTO(针对移动端) */
 export interface IProductionTaskResponseDTOForMobile {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
@@ -125,13 +125,13 @@ export interface IProductionTaskResponseDTOForMobile {
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -139,9 +139,9 @@ export interface IProductionTaskResponseDTOForMobile {
     /** 对应物料单位 */
     materialUnit?: string;
     /** 对应工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 对应工艺路径步骤id */
-    produceTechnologyRoutingStepId?: number;
+    produceTechnologyRoutingStepId?: string;
     /** 对应生产工艺路径名称 */
     routingName?: string;
     /** 对应生产工艺路径编号 */
@@ -149,29 +149,29 @@ export interface IProductionTaskResponseDTOForMobile {
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 对应前生产工艺路径步骤id */
-    lastProduceTechnologyRoutingStepId?: number;
+    lastProduceTechnologyRoutingStepId?: string;
     /** 对应上工序步骤 */
     lastRoutingStep?: number;
     /** 对应上工序id */
-    lastProcessId?: number;
+    lastProcessId?: string;
     /** 对应上工序名称 */
     lastProcessName?: string;
     /** 对应上工序编号 */
     lastProcessCode?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 对应班次名称 */
     classShiftName?: string;
     /** 对应班次编号 */
     classShiftCode?: string;
     /** 对应班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 对应班组名称 */
     classGroupName?: string;
     /** 对应班组编号 */
@@ -187,13 +187,13 @@ export interface IProductionTaskResponseDTOForMobile {
     /** 可用数量 */
     canUseQuantity?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 状态 */
     status?: EProductionTaskResponseDTOForMobile_status;
     /** 状态描述 */
@@ -221,7 +221,7 @@ export interface IProductionTaskResponseDTOForMobile {
     /** 可质检数量 */
     canQualityQuantity?: number;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 生产订单 */
     produceOrder?: Record<string, Record<string, any>>;
     /** 批次信息 */
@@ -234,7 +234,7 @@ export interface IProductionTaskResponseDTOForMobile {
 /** 生产任务批次响应DTO(针对移动端) */
 export interface IProductionTaskBatchResponseDTOForMobileEnd {
     /** 批次id */
-    lotId?: number;
+    lotId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 批次总数量 */
@@ -243,7 +243,7 @@ export interface IProductionTaskBatchResponseDTOForMobileEnd {
 /** 生产工艺路径步骤设置返回VO */
 export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 进出站方式 */
     inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
@@ -271,7 +271,7 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
-    externalCodeLength?: number;
+    externalCodeLength?: string;
     /** 是否有设备 */
     enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */

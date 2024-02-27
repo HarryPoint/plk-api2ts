@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/RaceAttachmentProvisionTaskRequestDTO",
-              "originalRef": "RaceAttachmentProvisionTaskRequestDTO"
+              "originalRef": "RaceAttachmentProvisionTaskRequestDTO",
+              "$ref": "#/definitions/RaceAttachmentProvisionTaskRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«RaceAttachmentProvisionTaskResponseDTO»",
-              "originalRef": "JSONResult«RaceAttachmentProvisionTaskResponseDTO»"
+              "originalRef": "JSONResult«RaceAttachmentProvisionTaskResponseDTO»",
+              "$ref": "#/definitions/JSONResult«RaceAttachmentProvisionTaskResponseDTO»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/RaceAttachmentProvisionTaskResponseDTO",
-          "originalRef": "RaceAttachmentProvisionTaskResponseDTO"
+          "originalRef": "RaceAttachmentProvisionTaskResponseDTO",
+          "$ref": "#/definitions/RaceAttachmentProvisionTaskResponseDTO"
         },
         "ts": {
           "type": "integer",

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingSalesDeliverReportExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationBaojingSalesDeliveryReportFormRetur
     /** 响应结果 */
     data?: IExportInformationBaojingSalesDeliveryReportFormReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«宝晶销售发货报表表格返回VO» */
 export interface IExportInformationBaojingSalesDeliveryReportFormReturnToVO {
@@ -34,23 +34,23 @@ export interface IExportInformationBaojingSalesDeliveryReportFormReturnToVO {
 /** 宝晶销售发货报表表格返回VO */
 export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 发货日期 */
-    deliverDate?: string;
+    deliverDate?: number;
     /** 单据编号 */
     workOrderNo?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单编号 */
     salesOrderNo?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员名称 */
     businessUserName?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户名称 */
     customerName?: string;
     /** 产品id */
-    majorDataId?: number;
+    majorDataId?: string;
     /** 产品名称 */
     majorDataName?: string;
     /** 产品编号 */
@@ -70,7 +70,7 @@ export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 单据类型 */
     orderType?: string;
     /** 需求日期 */
-    demandDate?: string;
+    demandDate?: number;
     /** 需求数量 */
     demandQuantity?: number;
     /** 实际送达数量 */
@@ -80,14 +80,14 @@ export interface IBaojingSalesDeliveryReportFormReturnedToVO {
     /** 备注 */
     remark?: string;
     /** 数据id */
-    detailDataId?: number;
+    detailDataId?: string;
     /** 包材数据列表 */
     packagingMaterialValueList?: IIdValueVO[];
 }
 /** Id，值VO */
 export interface IIdValueVO {
     /** id */
-    id: number;
+    id: string;
     /** 值 */
     value: number;
 }

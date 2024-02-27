@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/moveUsingPOST
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IEnterpriseRoutingMobileReq
 /** 企业路由移动请求 DTO */
 export interface IEnterpriseRoutingMobileRequestDTO {
     /** 路由id */
-    id?: number;
+    id?: string;
     /** 移动到父级id */
-    parentId?: number;
+    parentId?: string;
     /** 客户端组编码 */
     clientGroupCode: string;
     /** 移动到父级id下的所有子集id顺序列表 */
-    childIds?: number[];
+    childIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

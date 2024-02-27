@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getBomDetailsByBomIdUsingGET
 */
-export default function fetchMethod(options: { params: { bomId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { bomId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBomDetailsSelectBasicInformationDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/routing/getBomDetailsByBomId",
@@ -22,14 +22,14 @@ export interface IJSONResultListBomDetailsSelectBasicInformationDTO {
     /** 响应结果 */
     data?: IBomDetailsSelectBasicInformationDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料主数据Bom详情选择基础信息DTO */
 export interface IBomDetailsSelectBasicInformationDTO {
     /** Bom详情id */
-    id?: number;
+    id?: string;
     /** 子物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 子物料名称 */
     childMaterialName?: string;
     /** 子物料编号 */

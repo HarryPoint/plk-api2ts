@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（原材料）日报表/getReportUsingPOST_3
@@ -30,17 +30,17 @@ export interface IBaojingReportInventoryRelatedSearchDTO {
     /** 导出字段集 */
     exportFields?: string[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 物料id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 业务员ids */
-    businessUserIds?: number[];
+    businessUserIds?: string[];
     /** 区域id */
-    areaIds?: number[];
+    areaIds?: string[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 物料类型 */
     materialTypes?: string[];
     /** 单据名称 */
@@ -64,35 +64,35 @@ export interface IJSONResultPageInformationBaojingReportRawMaterialsDailyReportR
     /** 响应结果 */
     data?: IPageInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«宝晶报表(原材料日报表)相关返回VO» */
 export interface IPageInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationBaojingReportRawMaterialsDailyReportRelatedReturnToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 宝晶报表(原材料日报表)相关返回VO */
 export interface IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO {
     /** 物料id */
-    majorDataId?: number;
+    majorDataId?: string;
     /** 物料编号 */
     majorDataCode?: string;
     /** 物料名称 */
@@ -102,7 +102,7 @@ export interface IBaojingReportRawMaterialsDailyReportRelatedToReturnToVO {
     /** 外部编码 */
     materialOutsideCode?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
     /** 期初数 */

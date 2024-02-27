@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/项目任务相关/pageQueryUsingPOST
@@ -22,25 +22,25 @@ export interface IPagingInformation {
     /** 任务名称 - 关键字查询 */
     name?: string;
     /** 开始时间 - 开始范围 */
-    beginTimeBegin?: string;
+    beginTimeBegin?: number;
     /** 关联项目 - 下拉多选 */
-    projectIdList?: number[];
+    projectIdList?: string[];
     /** 开始时间 - 结束范围 */
-    beginTimeEnd?: string;
+    beginTimeEnd?: number;
     /** 任务状态 - 下拉多选 */
     projectTaskStatusList?: EPagingInformation_projectTaskStatusList_items[];
     /** 执行人 - 下拉多选 */
-    leaderUserIdList?: number[];
+    leaderUserIdList?: string[];
     /** 优先级 - 下拉多选查询 */
     priorityList?: EPagingInformation_priorityList_items[];
     /** 创建时间 - 结束范围 */
-    createTimeEnd?: string;
+    createTimeEnd?: number;
     /** 备注 - 关键字查询 */
     remark?: string;
     /** 创建员工 - 下拉多选查询 */
-    createUserIdList?: number[];
+    createUserIdList?: string[];
     /** 创建时间 - 开始范围 */
-    createTimeBegin?: string;
+    createTimeBegin?: number;
     /** 创建时间 - Y - 正序， N - 倒序 */
     createTimeAsc?: EPagingInformation_createTimeAsc;
 }
@@ -53,35 +53,35 @@ export interface IKaizenProjectTaskResponseDTOJSONResultPagingInformation {
     /** 响应结果 */
     data?: IThePagingInformationKaizenProjectTaskResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«KaizenProjectTaskResponseDTO» */
 export interface IThePagingInformationKaizenProjectTaskResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IKaizenProjectTaskResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationKaizenProjectTaskResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationKaizenProjectTaskResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** KaizenProjectTaskResponseDTO */
 export interface IKaizenProjectTaskResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -93,11 +93,11 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 执行人 */
     leaderUserId?: IAssociateFormDataVO;
     /** 上级ID */
-    parentId?: number;
+    parentId?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 优先级 */
     priority?: EKaizenProjectTaskResponseDTO_priority;
     /** 备注 */
@@ -105,14 +105,14 @@ export interface IKaizenProjectTaskResponseDTO {
     /** 创建用户ID */
     createUserId?: IAssociateFormDataVO;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 下级任务列表 */
     childTaskList?: IKaizenProjectTaskResponseDTO[];
 }
 /** 关联表单数据VO */
 export interface IAssociateFormDataVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 关联表单显示值 */
     showFieldValue?: string;
     /** 数据状态 */
@@ -120,7 +120,7 @@ export interface IAssociateFormDataVO {
     /** 是否已删除显示字段 */
     isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
-    masterDataId?: number;
+    masterDataId?: string;
 }
 
 export enum EPagingInformation_projectTaskStatusList_items {

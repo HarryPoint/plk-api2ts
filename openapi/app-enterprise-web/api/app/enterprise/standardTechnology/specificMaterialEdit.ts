@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/specificMaterialEditUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IStandardProcessSpecificMat
 /** 标准工艺具体物料编辑请求对象 */
 export interface IStandardProcessSpecificMaterialEditRequestObject {
     /** 标准工艺id, 新增时传递为空 */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 标准工艺名称 */
     standardTechnologyName: string;
     /** 所属分类id */
-    standardTechnologyCategoryId?: number;
+    standardTechnologyCategoryId?: string;
     /** 缩略图 */
     thumbnail?: string;
     /** 是否是暂存 Y暂存 N发布 */
@@ -58,7 +58,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EStandardProcessSpecificMaterialEditRequestObject_isStaging {

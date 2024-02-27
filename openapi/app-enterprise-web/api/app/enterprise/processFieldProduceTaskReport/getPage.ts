@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/任务汇总表(基于工序字段)/getPageUsingPOST_12
@@ -22,15 +22,15 @@ export interface ITheTaskSummaryTableSearchesVOBasedOnProcessFields {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
-    planStartDate?: string;
+    planStartDate?: number;
     /** 开始日期(计划生产日期) yyyy-MM-dd HH:mm:ss */
-    planEndDate?: string;
+    planEndDate?: number;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 物料ids */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 生产任务状态列表 */
     produceTaskStatusList?: ETheTaskSummaryTableSearchesVOBasedOnProcessFields_produceTaskStatusList_items[];
 }
@@ -50,35 +50,35 @@ export interface ITheJSONResultPageInformationTaskSummaryTableSummarizesInformat
     /** 响应结果 */
     data?: IThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«任务汇总表(基于工序字段)归纳信息VO» */
 export interface IThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheTaskSummaryTableSummarizesInformationVOBasedOnProcessFields[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 任务汇总表(基于工序字段)归纳信息VO */
 export interface ITheTaskSummaryTableSummarizesInformationVOBasedOnProcessFields {
     /** 计划生产日期 */
-    planTime?: string;
+    planTime?: number;
     /** 生产订单编号列表 */
     produceOrderCodeList?: string[];
     /** 物料名称列表 */

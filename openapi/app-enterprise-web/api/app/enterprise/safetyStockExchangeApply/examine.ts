@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安全库存变更申请相关/examineUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ISecurityInventoryChangeReq
 /** 安全库存变更申请审核DTO */
 export interface ISecurityInventoryChangeRequestReviewDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 审核类型 */
     examineType?: ESecurityInventoryChangeRequestReviewDTO_examineType;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ESecurityInventoryChangeRequestReviewDTO_examineType {

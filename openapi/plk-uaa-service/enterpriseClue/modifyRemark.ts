@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/客户线索相关/modifyRemarkUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICustomerLeadsUpdateNoteReq
 /** 客户线索更新备注请求对象 */
 export interface ICustomerLeadsUpdateNoteRequestObject {
     /** 企业线索id */
-    enterpriseClueId?: number;
+    enterpriseClueId?: string;
     /** 备注 */
     remark?: string;
 }
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

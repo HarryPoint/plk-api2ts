@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/仓库任务相关/getStorageTakeCheckTaskForPageUsingPOST
@@ -40,49 +40,49 @@ export interface IJSONResultReturnsTheDTOFromTheExecutionSideOfTheWarehouseInven
     /** 响应结果 */
     data?: IPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«仓库盘点任务执行端返回DTO» */
 export interface IPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheExecutionEndOfTheWarehouseInventoryTaskReturnsTheDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 仓库盘点任务执行端返回DTO */
 export interface ITheExecutionEndOfTheWarehouseInventoryTaskReturnsTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 盘点仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 盘点仓库名称 */
     storehouseName?: string;
     /** 盘点仓库编号 */
     storehouseCode?: string;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 提交人ID */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 提交人 */
     handleUserName?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/getAllAppSelectorUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListAppliesTheServiceTreeDTO {
     /** 响应结果 */
     data?: IApplyTheServiceTreeDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 应用业务树DTO */
 export interface IApplyTheServiceTreeDTO {
     /** 路由id */
-    routerId?: number;
+    routerId?: string;
     /** 名称 */
     name?: string;
     /** 应用名称 */
@@ -35,7 +35,7 @@ export interface IApplyTheServiceTreeDTO {
     /** 编号 */
     code?: string;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程树类型 */
     treeType?: EApplyTheServiceTreeDTO_treeType;
     /** 字段集 */
@@ -45,7 +45,7 @@ export interface IApplyTheServiceTreeDTO {
     /** 流程code */
     flowPathCode?: string;
     /** 明细表字段id - treeType = FLOW_TABLE时有值 */
-    detailTableFieldId?: number;
+    detailTableFieldId?: string;
     /** 明细表字段编码 - treeType = FLOW_TABLE时有值 */
     detailTableFieldCode?: string;
     /** 明细表字段序列号 - treeType = FLOW_TABLE时有值 */
@@ -54,9 +54,9 @@ export interface IApplyTheServiceTreeDTO {
 /** 应用业务树字段信息返回DTO */
 export interface IApplicationServiceTreeFieldInformationReturnsTheDTO {
     /** 字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程编码 */
     flowPathCode?: string;
     /** 名称 */
@@ -175,15 +175,15 @@ export enum EApplicationServiceTreeFieldInformationReturnsTheDTO_isTableField {
 }
 
 export enum EApplicationServiceTreeFieldInformationReturnsTheDTO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"

@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/消息方案查询请求",
-              "originalRef": "消息方案查询请求"
+              "originalRef": "消息方案查询请求",
+              "$ref": "#/definitions/消息方案查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«分页查询响应»»",
-              "originalRef": "JSONResult«分页信息«分页查询响应»»"
+              "originalRef": "JSONResult«分页信息«分页查询响应»»",
+              "$ref": "#/definitions/JSONResult«分页信息«分页查询响应»»"
             }
           },
           "201": {
@@ -154,8 +154,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«分页查询响应»",
-          "originalRef": "分页信息«分页查询响应»"
+          "originalRef": "分页信息«分页查询响应»",
+          "$ref": "#/definitions/分页信息«分页查询响应»"
         },
         "ts": {
           "type": "integer",
@@ -193,8 +193,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/分页查询响应",
-            "originalRef": "分页查询响应"
+            "originalRef": "分页查询响应",
+            "$ref": "#/definitions/分页查询响应"
           }
         },
         "lastPage": {

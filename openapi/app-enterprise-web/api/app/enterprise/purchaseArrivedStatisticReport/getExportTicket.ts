@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/getConsignmentLossAnalyzeExportTicketUsingPOST
@@ -24,21 +24,21 @@ export interface IPurchaseArrivalStatisticsReportSearchVO {
     /** 采购订单编号 */
     purchaseOrderNo?: string;
     /** 最新到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    lastEndDate?: string;
+    lastEndDate?: number;
     /** 供应商id */
-    supplierIds?: number[];
+    supplierIds?: string[];
     /** 要求到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    requiredBeginDate?: string;
+    requiredBeginDate?: number;
     /** 要求到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    requiredEndDate?: string;
+    requiredEndDate?: number;
     /** 最新到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    lastBeginDate?: string;
+    lastBeginDate?: number;
     /** 物料材质 */
     texture?: string;
     /** 单据类型 */
     orderType?: string;
     /** 物料id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 采购类型 */
@@ -62,7 +62,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

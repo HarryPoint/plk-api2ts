@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/editForAppUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IApplyTheEnterpriseRouteEdi
 /** 应用企业路由编辑请求 DTO */
 export interface IApplyTheEnterpriseRouteEditRequestDTO {
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 应用名称 */
     appName?: string;
     /** 应用编码 */
@@ -28,7 +28,7 @@ export interface IApplyTheEnterpriseRouteEditRequestDTO {
     /** 发布到的企业路由id集 */
     enterpriseRouterPublishRequestList?: IEnterpriseRouterPublishRequestDTO[];
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务对象Code */
     serviceObjectCode?: string;
     /** 应用级别 */
@@ -37,7 +37,7 @@ export interface IApplyTheEnterpriseRouteEditRequestDTO {
 /** EnterpriseRouterPublishRequestDTO */
 export interface IEnterpriseRouterPublishRequestDTO {
     /** 上级路由ID */
-    parentRouteId?: number;
+    parentRouteId?: string;
     /** 所属排序位置偏移量 */
     sortOffset?: number;
 }
@@ -50,7 +50,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EApplyTheEnterpriseRouteEditRequestDTO_isSystem {
@@ -209,6 +209,8 @@ export enum EApplyTheEnterpriseRouteEditRequestDTO_appSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -249,6 +251,14 @@ export enum EApplyTheEnterpriseRouteEditRequestDTO_appSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

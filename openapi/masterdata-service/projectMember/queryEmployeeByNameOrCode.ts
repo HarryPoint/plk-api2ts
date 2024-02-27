@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目成员相关/queryEmployeeByNameOrCodeUsingPOST
@@ -16,11 +16,13 @@ export default function fetchMethod(options: { data: IItemNameNumberPublicQueryO
 /** 项目名称编号公共查询对象_1 */
 export interface IItemNameNumberPublicQueryObject1 {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 名称or编号 */
     nameOrCode?: string;
+    /** undefined */
+    projectPlanFlowIsComplete?: EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete;
 }
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
@@ -31,14 +33,19 @@ export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 响应结果 */
     data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */
     name?: string;
+}
+
+export enum EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete {
+    Y = "Y",
+    N = "N"
 }

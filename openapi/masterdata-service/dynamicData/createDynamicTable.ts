@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/createDynamicTableUsingPOST
 */
-export default function fetchMethod(options: { data: IFlowPathBaseParentFormFieldMapVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IFlowPathBaseParentFormFieldMapVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/dynamicData/createDynamicTable",
@@ -23,7 +23,7 @@ export interface IFlowPathBaseParentFormFieldMapVO {
 /** FlowPathBaseVO */
 export interface IFlowPathBaseVO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
     /** undefined */
@@ -34,11 +34,11 @@ export interface IFlowPathBaseVO {
 /** 流程表单VO_1 */
 export interface IProcessFormVO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 类型分组 */
@@ -142,7 +142,7 @@ export interface IProcessFormVO1 {
     /** 排序 */
     sort?: number;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** 父级流程表单编码 */
     parentFlowPathFormFieldCode?: string;
     /** 前端配置拓展字段 */
@@ -183,7 +183,7 @@ export interface IProcessFormVO1 {
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -205,7 +205,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -238,7 +238,7 @@ export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
 /** 流程表单字段下拉选项关联显示VO */
 export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 所属流程表单字段编号 */
     flowPathFormFieldCode?: string;
     /** 所属流程表单字段序列号 */
@@ -251,7 +251,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
 /** 流程表单关联表单筛选条件组VO */
 export interface IProcessFormsAssociateFormFilterGroupVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -259,9 +259,9 @@ export interface IProcessFormsAssociateFormFilterGroupVO {
     /** 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组 */
     isSystemDefault?: EProcessFormsAssociateFormFilterGroupVO_isSystemDefault;
     /** 数据联动ID */
-    dataLinkageId?: number;
+    dataLinkageId?: string;
     /** 表单字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
 }
 /** 流程表单关联表单筛选条件VO */
 export interface IProcessFormsAssociateFormFilterVO {
@@ -282,7 +282,7 @@ export interface IProcessFormsAssociateFormFilterVO {
     /** 自定义值回显 */
     compareCustomValueEcho?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathFormFieldFormRpFilterGroupId?: number;
+    flowPathFormFieldFormRpFilterGroupId?: string;
     /** 区间范围 -- 下限 */
     rangeLowerLimit?: string;
     /** 区间范围 -- 上限 */
@@ -297,9 +297,9 @@ export interface IProcessFormsAssociateFormFilterVO {
 /** 流程表单关联表单填充VO */
 export interface IProcessFormAssociatedFormFillVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 被采取的字段序号值 */
     columnSerialNo?: string;
     /** 被采取的字段序号值的下级字段序号值 */
@@ -318,7 +318,7 @@ export interface IProcessFormAssociatedFormFillVO {
 /** FlowPathFormFieldDataLinkageVO */
 export interface IFlowPathFormFieldDataLinkageVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据来源应用编码（即联动表单） */
     sourceFormRpCode?: string;
     /** 数据来源应用表格编码（即联动表单） */
@@ -352,7 +352,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EFlowPathBaseVO_type {
@@ -602,15 +602,15 @@ export enum EProcessFormVO1_numberFormat {
 }
 
 export enum EProcessFormVO1_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"
@@ -739,13 +739,13 @@ export enum EProcessFormVO1_isAutoGetLocation {
 }
 
 export enum EProcessFormVO1_addressType {
-    /** 省 */
+    /** 省-市-区-详细地址 */
     REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区 */
     REGION = "REGION",
-    /** 省 */
+    /** 省-市-区-街道-详细地址 */
     STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区-街道 */
     STREET = "STREET"
 }
 

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/getNotHandleCountUsingGET
 */
-export default function fetchMethod(options: { params: { appName?: string; enterpriseId?: number; userId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { appName?: string; enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultint>(
         {
             url: "/todo-service/todoList/getNotHandleCount",
@@ -22,5 +22,5 @@ export interface IJSONResultint {
     /** 响应结果 */
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

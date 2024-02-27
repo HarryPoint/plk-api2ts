@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/pageCurrentEnterpriseUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IQueryTheCurrentEnterpriseU
 /** 当前企业用户查询 */
 export interface IQueryTheCurrentEnterpriseUser {
     /** 创建人 */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 创建时间开始 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -32,7 +32,7 @@ export interface IQueryTheCurrentEnterpriseUser {
     /** 导出字段集 */
     exportFields?: string[];
     /** 创建时间结束 */
-    createEndTime?: string;
+    createEndTime?: number;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -50,55 +50,55 @@ export interface IJSONResultPagingInformationEnterpriseUserResponse {
     /** 响应结果 */
     data?: IPagingInformationEnterpriseUserResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«企业用户响应» */
 export interface IPagingInformationEnterpriseUserResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IEnterpriseUserResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationEnterpriseUserResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationEnterpriseUserResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 企业用户响应 */
 export interface IEnterpriseUserResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 用户id */
-    userId?: number;
+    userId?: string;
     /** 手机号码 */
     telephone?: string;
     /** 员工id */
-    employeeId?: number;
+    employeeId?: string;
     /** 员工 */
     employee?: IEmployeeInformationResponse;
     /** 角色集 */
@@ -111,19 +111,19 @@ export interface IEmployeeInformationResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -138,19 +138,19 @@ export interface IRoleMessageResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -164,14 +164,14 @@ export interface IRoleMessageResponse {
     /** 应用级别 */
     applicationLevel?: ERoleMessageResponse_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 /** 部门响应 DTO */
 export interface IDepartmentRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

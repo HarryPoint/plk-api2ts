@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产事件管理相关/exportUsingPOST_31
@@ -26,9 +26,9 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 异常分类 */
     type?: EProduceObjectsThatHandlePagingQueries_type;
     /** 提交人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 生产异常类型id */
-    produceAbnormalCategoryId?: number;
+    produceAbnormalCategoryId?: string;
     /** 状态 */
     status?: EProduceObjectsThatHandlePagingQueries_status;
     /** 操作开始时间 yyyy-MM-dd HH:mm:ss */
@@ -38,7 +38,7 @@ export interface IProduceObjectsThatHandlePagingQueries {
     /** 操作结束时间 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -54,9 +54,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProduceObjectsThatHandlePagingQueries_type {

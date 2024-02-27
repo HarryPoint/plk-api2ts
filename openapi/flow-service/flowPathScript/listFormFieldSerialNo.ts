@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/listFormFieldSerialNoUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultMapstringstring>(
         {
             url: "/flow-service/flowPathScript/listFormFieldSerialNo",
@@ -22,5 +22,5 @@ export interface IJSONResultMapstringstring {
     /** 响应结果 */
     data?: Record<string, string>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

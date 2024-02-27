@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/质检项/getPageUsingPOST_21
+* @link http://47.108.139.107:16700/doc.html#/default/质检项/getPageUsingPOST_22
 */
-export default function fetchMethod(options: { data: ICheckItemSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICheckItemSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationVOIsReturned>(
         {
             url: "/masterdata-service/qualityInspectionItem/getPage",
@@ -44,35 +44,35 @@ export interface IJSONResultPageInformationVOIsReturned {
     /** 响应结果 */
     data?: IPageInformationTheInspectionItemReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质检项返回VO» */
 export interface IPageInformationTheInspectionItemReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheInspectionItemIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTheInspectionItemReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTheInspectionItemReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质检项返回VO */
 export interface ITheInspectionItemIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检项名称 */
     name?: string;
     /** 质检项编号 */
@@ -88,7 +88,7 @@ export interface ITheInspectionItemIsReturnedToVO {
     /** 备注 */
     remark?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */
@@ -98,11 +98,11 @@ export interface ITheInspectionItemIsReturnedToVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPagingSortVO_isAsc {

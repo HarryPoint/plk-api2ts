@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料收发汇总报表相关/getMaterialStorageInOutReportForPageUsingPOST
@@ -22,35 +22,35 @@ export interface IJSONResultPageInformationPageResponseObjectForReceivingAndRece
     /** 响应结果 */
     data?: IPageInformationSummaryPageResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«物料收发汇总分页响应对象» */
 export interface IPageInformationSummaryPageResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMaterialsReceivingAndReceivingSummaryPageResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationSummaryPageResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationSummaryPageResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 物料收发汇总分页响应对象 */
 export interface IMaterialsReceivingAndReceivingSummaryPageResponseObject {
     /** 所属主数据id (eg:物料id) */
-    masterDataId?: number;
+    masterDataId?: string;
     /** 物料code */
     materialCode?: string;
     /** 物料名称 */
@@ -60,7 +60,7 @@ export interface IMaterialsReceivingAndReceivingSummaryPageResponseObject {
     /** 物料单位 */
     materialUnit?: string;
     /** 操作仓库id */
-    opStorehouseId?: number;
+    opStorehouseId?: string;
     /** 操作仓库编号 */
     opStorehouseCode?: string;
     /** 操作仓库名称 */

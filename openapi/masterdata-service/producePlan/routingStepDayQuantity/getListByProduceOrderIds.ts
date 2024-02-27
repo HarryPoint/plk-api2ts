@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产计划订单步骤日产量/getListByProduceOrderIdsUsingPOST_3
 */
-export default function fetchMethod(options: { data: IProductionPlanOrderStepDailyOutputVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionPlanOrderStepDailyOutputVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionPlanOrderStepDailyOutputVO>(
         {
             url: "/masterdata-service/producePlan/routingStepDayQuantity/getListByProduceOrderIds",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionPlanOrderStepDai
 /** 生产计划订单步骤日产量 VO */
 export interface IProductionPlanOrderStepDailyOutputVO {
     /** 生产订单ids */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
 }
 /** JSONResult«List«生产计划订单步骤日产量  VO»» */
 export interface IJSONResultListProductionPlanOrderStepDailyOutputVO {
@@ -27,22 +27,22 @@ export interface IJSONResultListProductionPlanOrderStepDailyOutputVO {
     /** 响应结果 */
     data?: IProductionPlanOrderStepDailyOutputVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产计划订单步骤日产量  VO */
 export interface IProductionPlanOrderStepDailyOutputVO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 工艺路径步骤id */
-    produceTechnologyRoutingStepId?: number;
+    produceTechnologyRoutingStepId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 排期日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 产量 */
     quantity?: number;
 }

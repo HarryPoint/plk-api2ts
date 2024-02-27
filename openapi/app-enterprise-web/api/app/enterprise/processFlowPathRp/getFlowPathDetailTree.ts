@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序字段对应表相关/getFlowPathDetailTreeUsingGET_1
@@ -22,7 +22,7 @@ export interface IJSONResultListProcessTreeVO1 {
     /** 响应结果 */
     data?: IProcessTreeVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程树VO_1 */
 export interface IProcessTreeVO1 {
@@ -31,7 +31,7 @@ export interface IProcessTreeVO1 {
     /** 编号 */
     code?: string;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程树类型 */
     treeType?: EProcessTreeVO1_treeType;
     /** 流程code */

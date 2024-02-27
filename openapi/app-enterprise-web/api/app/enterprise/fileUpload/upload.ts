@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/文件上传相关/uploadUsingPOST
@@ -22,12 +22,12 @@ export interface IJSONResultAnnexVO {
     /** 响应结果 */
     data?: IAnnexVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 附件 VO */
 export interface IAnnexVO {
     /** 文件id */
-    id?: number;
+    id?: string;
     /** 文件key */
     fileKey?: string;
     /** 文件完整路径 */
@@ -35,5 +35,5 @@ export interface IAnnexVO {
     /** 文件名 */
     fileName?: string;
     /** 文件大小 */
-    size?: number;
+    size?: string;
 }

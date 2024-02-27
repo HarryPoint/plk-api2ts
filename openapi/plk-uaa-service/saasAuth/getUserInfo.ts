@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserInfoUsingPOST
@@ -22,12 +22,12 @@ export interface IJSONResultSaasUserInformationResponse {
     /** 响应结果 */
     data?: ISaasUserInformationResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Saas 用户信息响应 */
 export interface ISaasUserInformationResponse {
     /** id */
-    id?: number;
+    id?: string;
     /** 手机号 */
     telephone?: string;
     /** 用户名 */
@@ -52,21 +52,21 @@ export interface ISaasEnterprisesRespondToDtos {
     /** 企业编号 */
     code?: string;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 企业到期时间 */
-    expireTime?: string;
+    expireTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 企业名 */
     name?: string;
     /** 是否启用批次关联 */
@@ -77,19 +77,19 @@ export interface IEmployeeInformationResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -102,7 +102,7 @@ export interface IEmployeeInformationResponse {
 /** 部门响应 DTO */
 export interface IDepartmentRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

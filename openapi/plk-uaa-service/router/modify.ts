@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/路由相关/modifyUsingPOST_10
@@ -20,7 +20,7 @@ export interface IModifyTheRouteDTO {
     /** 所属权限编码 */
     permissionCode: string;
     /** 父级路由id */
-    parentId?: number;
+    parentId?: string;
     /** 父级路由编码 */
     parentCode?: string;
     /** 路由name */
@@ -42,7 +42,7 @@ export interface IModifyTheRouteDTO {
     /** 应用级别 */
     applicationLevel?: EModifyTheRouteDTO_applicationLevel;
     /** id */
-    id?: number;
+    id?: string;
 }
 /** 路由配置请求 DTO */
 export interface IRouteConfigurationRequestsDTO {
@@ -65,7 +65,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EModifyTheRouteDTO_type {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/saveSettingUsingPOST_1
@@ -18,9 +18,9 @@ export interface IProjectLargeScreenSettingsSaveRequestDto1 {
     /** 统计范围 */
     scope: EProjectLargeScreenSettingsSaveRequestDto1_scope;
     /** 项目类型ids */
-    projectTypeIds?: number[];
+    projectTypeIds?: string[];
     /** 排除的项目ids */
-    excludeProjectIds?: number[];
+    excludeProjectIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -31,7 +31,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProjectLargeScreenSettingsSaveRequestDto1_scope {

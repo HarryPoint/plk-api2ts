@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getByIdAndCheckUsingGET_2
 */
-export default function fetchMethod(options: { params: { warehouseId?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { warehouseId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPositionVO>(
         {
             url: "/masterdata-service/warehouse/getByIdAndCheck",
@@ -22,18 +22,18 @@ export interface IJSONResultPositionVO {
     /** 响应结果 */
     data?: IPositionVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓位VO */
 export interface IPositionVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 父级id */
-    parentId?: number;
+    parentId?: string;
     /** 仓位名称 */
     name?: string;
     /** 仓位编号 */
@@ -45,9 +45,9 @@ export interface IPositionVO {
     /** WIP类型 - WIP时有值 */
     wipType?: EPositionVO_wipType;
     /** 所属工艺路径id - WIP时有值 */
-    routingId?: number;
+    routingId?: string;
     /** 所属区域id */
-    areaId?: number;
+    areaId?: string;
 }
 
 export enum EPositionVO_isDefault {

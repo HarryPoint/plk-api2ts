@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目相关/listUsingGET_4
@@ -22,12 +22,12 @@ export interface IJSONResultListProjectResponse {
     /** 响应结果 */
     data?: IProjectResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目响应 */
 export interface IProjectResponse {
     /** id */
-    id?: number;
+    id?: string;
     /** 项目编号 */
     code?: string;
     /** 项目名称 */
@@ -41,15 +41,15 @@ export interface IProjectResponse {
     /** 超期天数（天） */
     overdueDayCount?: number;
     /** 项目类型id */
-    projectTypeId?: number;
+    projectTypeId?: string;
     /** 项目经理id */
-    projectManagerId?: number;
+    projectManagerId?: string;
     /** 主责部门 */
-    mainDutyDeptId?: number;
+    mainDutyDeptId?: string;
     /** 项目开始日期 */
-    projectBeginDate?: string;
+    projectBeginDate?: number;
     /** 项目结束日期 */
-    projectEndDate?: string;
+    projectEndDate?: number;
     /** 项目目的 */
     projectGoal?: string;
     /** 项目文件key */
@@ -69,7 +69,7 @@ export enum EProjectResponse_projectStatus {
     APPROVAL_DENIED = "APPROVAL_DENIED",
     /** 进行中 */
     IN_PROGRESS = "IN_PROGRESS",
-    /** 已完成 */
+    /** 已关闭 */
     COMPLETE = "COMPLETE",
     /** 已终止 */
     END = "END"

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入模板相关/getByIdUsingGET_6
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultImportTemplate>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importTemplate/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultImportTemplate {
     /** 响应结果 */
     data?: IImportTemplate;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导入模板 */
 export interface IImportTemplate {
     /** ID */
-    id?: number;
+    id?: string;
     /** 模板编码 */
     code?: string;
     /** 模板名称 */
@@ -51,7 +51,7 @@ export interface IAssociationTableDefinition {
 /** ApplicationDTO */
 export interface IApplicationDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
 }

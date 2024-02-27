@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产标签相关/getPageUsingPOST_19
@@ -46,35 +46,35 @@ export interface IJSONResultPagingInformationExceptionLabelReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationExceptionLabelReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«异常标签返回VO» */
 export interface IPagingInformationExceptionLabelReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheExceptionTagReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationExceptionLabelReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationExceptionLabelReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 异常标签返回VO */
 export interface ITheExceptionTagReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属分类 */
     type?: ETheExceptionTagReturnsVO_type;
     /** 所属分类 */
@@ -86,11 +86,11 @@ export interface ITheExceptionTagReturnsVO {
     /** 是否启用 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EExceptionTagSearchVO_type {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialCuratorSelectorUsingGET
@@ -22,5 +22,5 @@ export interface IJSONResultListstring {
     /** 响应结果 */
     data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

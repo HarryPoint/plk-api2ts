@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateMemorabiliaUsingGET
@@ -22,20 +22,20 @@ export interface IJSONResultListProjectEventResponseObject1 {
     /** 响应结果 */
     data?: IItemEventResponseObject1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目大事记响应对象_1 */
 export interface IItemEventResponseObject1 {
     /** 项目大事记id */
-    id?: number;
+    id?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 大事记内容 */
     content?: string;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
 }

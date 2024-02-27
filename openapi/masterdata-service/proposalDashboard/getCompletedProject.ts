@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCompletedProjectUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultCompleteProjectResponseDTO {
     /** 响应结果 */
     data?: ICompleteProjectResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** CompleteProjectResponseDTO */
 export interface ICompleteProjectResponseDTO {
@@ -43,7 +43,7 @@ export interface IProjectIndicatorsRangeConfigResponseDTO {
 /** DepartmentProjectIndicatorsResponseDTO */
 export interface IDepartmentProjectIndicatorsResponseDTO {
     /** undefined */
-    departmentId?: number;
+    departmentId?: string;
     /** undefined */
     departmentName?: string;
     /** 指标Key => Project Quantity Map */

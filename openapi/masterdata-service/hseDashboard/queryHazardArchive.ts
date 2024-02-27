@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHazardArchiveUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IOccupationalHazardFileQuer
 /** 职业危害档案查询请求 */
 export interface IOccupationalHazardFileQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«职业危害档案查询响应» */
 export interface IJSONResultOccupationalHazardFileQueryResponse {
@@ -29,7 +29,7 @@ export interface IJSONResultOccupationalHazardFileQueryResponse {
     /** 响应结果 */
     data?: IOccupationalHazardFileQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 职业危害档案查询响应 */
 export interface IOccupationalHazardFileQueryResponse {

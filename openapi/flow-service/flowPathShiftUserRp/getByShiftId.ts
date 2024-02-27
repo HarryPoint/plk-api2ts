@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次关联相关/getByShiftIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; flowPathShiftId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathShiftId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFlowPathShiftUserRpVO>(
         {
             url: "/flow-service/flowPathShiftUserRp/getByShiftId",
@@ -22,18 +22,18 @@ export interface IJSONResultListFlowPathShiftUserRpVO {
     /** 响应结果 */
     data?: IFlowPathShiftUserRpVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathShiftUserRpVO */
 export interface IFlowPathShiftUserRpVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 对应班次id */
-    flowPathShiftId?: number;
+    flowPathShiftId?: string;
     /** 关联id */
-    executorId?: number;
+    executorId?: string;
     /** 关联类型 */
     executorType?: EFlowPathShiftUserRpVO_executorType;
     /** 关联系统控件类型 */

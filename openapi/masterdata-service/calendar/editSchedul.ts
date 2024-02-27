@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/editSchedulUsingPOST
 */
-export default function fetchMethod(options: { data: ICalendarSchedulingVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICalendarSchedulingVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/calendar/editSchedul",
@@ -30,9 +30,9 @@ export interface ICalendarSchedulingDaysVO {
 /** 日历排班天数明细VO */
 export interface ICalendarScheduleDaysDetailsVO {
     /** 班组id集合 */
-    classGroupIdList?: number[];
+    classGroupIdList?: string[];
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -43,5 +43,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

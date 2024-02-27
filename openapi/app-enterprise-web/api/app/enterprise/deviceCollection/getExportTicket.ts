@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据概览相关/getExportTicketUsingPOST_8
@@ -22,7 +22,7 @@ export interface IDeviceDataAcquisitionDataListSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 设备id */
-    deviceId: number;
+    deviceId: string;
     /** 是否有异常 */
     hasError?: EDeviceDataAcquisitionDataListSearchVO_hasError;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
@@ -46,7 +46,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

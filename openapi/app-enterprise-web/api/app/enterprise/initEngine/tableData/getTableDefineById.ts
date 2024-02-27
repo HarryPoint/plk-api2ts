@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDefineByIdUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultTableDefinition>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/getTableDefineById",
@@ -22,12 +22,12 @@ export interface IJSONResultTableDefinition {
     /** 响应结果 */
     data?: ITableDefinition;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 表格定义 */
 export interface ITableDefinition {
     /** ID */
-    id?: number;
+    id?: string;
     /** 表格编码 */
     code?: string;
     /** 表格名称 */
@@ -48,14 +48,14 @@ export interface ITableDefinition {
 /** ApplicationDTO */
 export interface IApplicationDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     code?: string;
 }
 /** 字段定义 */
 export interface IFieldDefinition {
     /** ID */
-    id?: number;
+    id?: string;
     /** 字段编码 */
     code?: string;
     /** 字段名称 */
@@ -87,7 +87,7 @@ export interface IFieldDefinition {
     /** 明细字段 */
     detailField?: boolean;
     /** 表定义ID */
-    tableDefineId?: number;
+    tableDefineId?: string;
     /** 选项值列表 */
     optionalValues?: IDictionaryDTO[];
     /** 上级字段编码 */
@@ -95,7 +95,7 @@ export interface IFieldDefinition {
     /** 上级字段名称 */
     parentFieldName?: string;
     /** 应用引擎原始字段ID */
-    originalFieldId?: number;
+    originalFieldId?: string;
     /** 显示内容字段编码 */
     showContentFieldCode?: string;
     /** 显示字段名称 */
@@ -310,6 +310,10 @@ export enum ETableDefinition_presetApplicationType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

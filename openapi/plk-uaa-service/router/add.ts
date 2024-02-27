@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/路由相关/editUsingPOST_1
@@ -20,7 +20,7 @@ export interface ITheDTOWasAddedToTheRouteProcedure {
     /** 所属权限编码 */
     permissionCode: string;
     /** 父级路由id */
-    parentId?: number;
+    parentId?: string;
     /** 父级路由编码 */
     parentCode?: string;
     /** 路由name */
@@ -63,7 +63,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETheDTOWasAddedToTheRouteProcedure_type {

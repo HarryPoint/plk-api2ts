@@ -28,8 +28,8 @@
             "description": "addRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/EmailContentTemplateAddRequestDTO",
-              "originalRef": "EmailContentTemplateAddRequestDTO"
+              "originalRef": "EmailContentTemplateAddRequestDTO",
+              "$ref": "#/definitions/EmailContentTemplateAddRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {

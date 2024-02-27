@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getHandledTaskListUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessTaskResultQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTaskResultQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTaskResultVO>(
         {
             url: "/masterdata-service/flowPathTask/getHandledTaskList",
@@ -18,7 +18,7 @@ export interface IProcessTaskResultQueryVO {
     /** 业务流程系统类型 */
     flowPathSystemType?: EProcessTaskResultQueryVO_flowPathSystemType;
     /** 业务数据ID列表 */
-    businessDataId?: number;
+    businessDataId?: string;
 }
 /** JSONResult«List«流程任务处理结果VO»» */
 export interface IJSONResultListProcessTaskResultVO {
@@ -29,7 +29,7 @@ export interface IJSONResultListProcessTaskResultVO {
     /** 响应结果 */
     data?: IProcessTaskProcessingResultVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程任务处理结果VO */
 export interface IProcessTaskProcessingResultVO {
@@ -40,11 +40,11 @@ export interface IProcessTaskProcessingResultVO {
     /** 所属流程节点名称 */
     flowPathNodeName?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理人名称 */
     handleUserName?: string;
     /** 处理时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 审批状态 */
     approvalStatus?: EProcessTaskProcessingResultVO_approvalStatus;
     /** 执行状态 */
@@ -202,6 +202,8 @@ export enum EProcessTaskResultQueryVO_flowPathSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -242,6 +244,14 @@ export enum EProcessTaskResultQueryVO_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

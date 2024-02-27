@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/treeUsingPOST
@@ -28,7 +28,7 @@ export interface IEnterpriseRoutingTreeQueryDTO1 {
     /** 应用级别 */
     applicationLevel?: EEnterpriseRoutingTreeQueryDTO1_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
 }
 /** JSONResult«List«企业路由树响应 DTO»» */
 export interface IJSONResultListEnterpriseRoutingTreeResponseDTO {
@@ -39,16 +39,16 @@ export interface IJSONResultListEnterpriseRoutingTreeResponseDTO {
     /** 响应结果 */
     data?: ITheEnterpriseRoutingTreeRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 企业路由树响应 DTO */
 export interface ITheEnterpriseRoutingTreeRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 路由id */
-    routerId?: number;
+    routerId?: string;
     /** 是否系统路由 */
     isSystem?: ETheEnterpriseRoutingTreeRespondsToTheDTO_isSystem;
     /** 客户端组编码 */
@@ -56,7 +56,7 @@ export interface ITheEnterpriseRoutingTreeRespondsToTheDTO {
     /** 所属权限编码 */
     permissionCode?: string;
     /** 父级路由id */
-    parentId?: number;
+    parentId?: string;
     /** 父级路由编码 */
     parentCode?: string;
     /** 路由name */
@@ -94,12 +94,12 @@ export interface ITheEnterpriseApplicationRouteConfigurationRespondsToTheDTO {
     /** 系统应用类型 */
     appSystemType?: ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSystemType;
     /** 应用id */
-    appId?: number;
+    appId?: string;
 }
 /** 企业应用路由配置响应 DTO_1 */
 export interface ITheEnterpriseApplicationRouteConfigurationRespondsToDTO1 {
     /** 外部报表id */
-    extReportId?: number;
+    extReportId?: string;
     /** 链接地址 */
     link?: string;
     /** 展示方式 */
@@ -312,6 +312,8 @@ export enum ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSyste
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -352,6 +354,14 @@ export enum ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSyste
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

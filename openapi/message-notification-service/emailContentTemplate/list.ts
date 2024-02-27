@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件内容模板/listUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListEmailContentTemplateDTO {
     /** 响应结果 */
     data?: IEmailContentTemplateDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EmailContentTemplateDTO */
 export interface IEmailContentTemplateDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件内容 */
     content?: string;
 }

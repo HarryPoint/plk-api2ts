@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/removeBatchUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IEmployeesDeleteRequestsInB
 /** 员工批量删除请求 */
 export interface IEmployeesDeleteRequestsInBatches {
     /** 员工id集 */
-    employeeIds?: number[];
+    employeeIds?: string[];
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/editBatchVerticalCellUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: ICellBatchEditRequest }, ex
 /** 单元格批量编辑请求 */
 export interface ICellBatchEditRequest {
     /** 表格数据ID */
-    rowDataIdList?: number[];
+    rowDataIdList?: string[];
     /** 字段定义编码 */
     fieldDefineCode?: string;
     /** 表数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 输入值 */
     value?: string;
     /** 关联表单选项列表 */
@@ -29,7 +29,7 @@ export interface ICellBatchEditRequest {
 /** AssociationFormSelectedItemInputputDTO */
 export interface IAssociationFormSelectedItemInputputDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     showFieldValue?: string;
 }
@@ -42,7 +42,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

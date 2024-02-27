@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/changeHeaderUsingPOST
 */
-export default function fetchMethod(options: { data: ITableHeaderChangesTheInputparams: { id?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITableHeaderChangesTheInput, params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/header/change",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITableHeaderChangesTheInput
 /** 表头变更输入 */
 export interface ITableHeaderChangesTheInput {
     /** undefined */
-    id?: number;
+    id?: string;
     /** 源字段编码 */
     originalFieldCode?: string;
     /** 目标字段编码 */
@@ -31,7 +31,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

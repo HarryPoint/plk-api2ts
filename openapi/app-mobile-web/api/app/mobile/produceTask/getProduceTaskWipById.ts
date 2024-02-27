@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskWipByIdUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInforma
     /** 响应结果 */
     data?: ITheProductionTaskWIPInformationRespondsToTheDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务WIP信息响应DTO */
 export interface ITheProductionTaskWIPInformationRespondsToTheDTO {
@@ -38,7 +38,7 @@ export interface ITheProductionTaskWIPInformationRespondsToTheDTO {
 /** 生产任务WIP批次信息VO */
 export interface IProductionTaskWIPBatchInformationVO {
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次名称 */
     lotOrderName?: string;
     /** 批次号 */

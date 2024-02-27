@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnvironmentalProtectionListUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IEnvironmentalProtectionSQu
 /** 环保S查询请求 */
 export interface IEnvironmentalProtectionSQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«环保S查询响应»» */
 export interface IJSONResultListGreenSQueryResponse {
@@ -29,12 +29,12 @@ export interface IJSONResultListGreenSQueryResponse {
     /** 响应结果 */
     data?: IEnvironmentalProtectionSQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 环保S查询响应 */
 export interface IEnvironmentalProtectionSQueryResponse {
     /** ID */
-    id?: number;
+    id?: string;
     /** 环保日期 */
     environmentalProtectionDate?: string;
     /** 发生事件数量 */

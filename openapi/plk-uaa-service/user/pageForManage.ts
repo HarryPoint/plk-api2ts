@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/pageForManageUsingPOST
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IUserManagementQuery }, ext
 /** 用户管理查询 */
 export interface IUserManagementQuery {
     /** 创建人 */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 创建时间开始 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 创建时间结束 */
-    createEndTime?: string;
+    createEndTime?: number;
     /** 排序字段集 */
     orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
@@ -32,7 +32,7 @@ export interface IUserManagementQuery {
     /** 导出字段集 */
     exportFields?: string[];
     /** 可访问企业id集 */
-    enterpriseIdList?: number[];
+    enterpriseIdList?: string[];
     /** 手机号 */
     telephone?: string;
     /** 状态 */
@@ -54,49 +54,49 @@ export interface IJSONResultPagingInformationUserManagementResponse {
     /** 响应结果 */
     data?: IPageInformationTheUserManagesTheResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«用户管理响应» */
 export interface IPageInformationTheUserManagesTheResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IUserManagementResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTheUserManagesTheResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTheUserManagesTheResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 用户管理响应 */
 export interface IUserManagementResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 手机号 */
     telephone?: string;
     /** 可访问企业集 */
@@ -106,14 +106,14 @@ export interface IUserManagementResponse {
     /** 创建方式 */
     createType?: EUserManagementResponse_createType;
     /** 最后登录时间 */
-    lastLoginTime?: string;
+    lastLoginTime?: number;
     /** 最后修改时间 */
-    lastUpdateTime?: string;
+    lastUpdateTime?: number;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

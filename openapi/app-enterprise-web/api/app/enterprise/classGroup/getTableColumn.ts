@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/班组相关/getTableColumnUsingGET_4
@@ -22,18 +22,18 @@ export interface IJSONResultListProcessTableColumnVO {
     /** 响应结果 */
     data?: ITheProcessTableListsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程表格列VO */
 export interface ITheProcessTableListsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程版本id - 只有根据版本ID查询才有。如果为空，则默认就是最新版本 */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 列类型 */
     type?: ETheProcessTableListsVO_type;
     /** 列code */
@@ -41,7 +41,7 @@ export interface ITheProcessTableListsVO {
     /** 列名称 */
     name?: string;
     /** 流程表单id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单类型分组 */
     formFieldTypeGroup?: ETheProcessTableListsVO_formFieldTypeGroup;
     /** 表单类型 */
@@ -71,7 +71,7 @@ export interface ITheProcessTableListsVO {
     /** 是否表格字段 */
     isTableField?: ETheProcessTableListsVO_isTableField;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** 父级流程表单code */
     parentFlowPathFormFieldCode?: string;
     /** 组织类型 */
@@ -136,7 +136,7 @@ export interface ITheProcessTableListsVO {
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -158,7 +158,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -266,15 +266,15 @@ export enum ETheProcessTableListsVO_canQuery {
 }
 
 export enum ETheProcessTableListsVO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"
@@ -301,13 +301,13 @@ export enum ETheProcessTableListsVO_organizationType {
 }
 
 export enum ETheProcessTableListsVO_addressType {
-    /** 省 */
+    /** 省-市-区-详细地址 */
     REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区 */
     REGION = "REGION",
-    /** 省 */
+    /** 省-市-区-街道-详细地址 */
     STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区-街道 */
     STREET = "STREET"
 }
 

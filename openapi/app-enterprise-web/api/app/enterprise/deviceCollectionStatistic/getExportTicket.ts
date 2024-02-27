@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getExportTicketUsingPOST_9
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IDeviceStatisticsSearchVO }
 /** 设备统计数据搜索VO */
 export interface IDeviceStatisticsSearchVO {
     /** 设备id集 */
-    deviceIds?: number[];
+    deviceIds?: string[];
     /** 查询参数id集 */
-    paramIds?: number[];
+    paramIds?: string[];
     /** 开始时间, yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间，yyyy-MM-dd HH:mm:ss */
@@ -37,7 +37,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

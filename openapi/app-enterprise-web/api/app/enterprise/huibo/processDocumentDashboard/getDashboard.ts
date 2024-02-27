@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/慧博工艺文档大屏相关/getDashboardUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProcessDocumentLargeScreen
 /** 工艺文档大屏查询DTO */
 export interface IProcessDocumentLargeScreenQueryDTO {
     /** 区域id */
-    areaId: number;
+    areaId: string;
     /** 工序id */
-    processId: number;
+    processId: string;
 }
 /** JSONResult«工艺文档大屏结果VO» */
 export interface IJSONResultProcessDocumentLargeScreenResultVO {
@@ -29,7 +29,7 @@ export interface IJSONResultProcessDocumentLargeScreenResultVO {
     /** 响应结果 */
     data?: IProcessDocumentLargeScreenResultsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺文档大屏结果VO */
 export interface IProcessDocumentLargeScreenResultsVO {

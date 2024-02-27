@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectActionItemUsingPOST
@@ -19,12 +19,12 @@ export interface IItemNameNumberPublicQueryObject {
     nameOrCode?: string;
     /** 条数 */
     limit?: number;
-    /** 项目计划ids */
-    projectPlanIds?: number[];
     /** undefined */
-    ids?: number[];
+    ids?: string[];
     /** undefined */
-    projectIds?: number[];
+    projectIds?: string[];
+    /** undefined */
+    projectPlanIds?: string[];
     /** undefined */
     statusList?: string[];
 }
@@ -37,24 +37,24 @@ export interface IJSONResultListProjectActionItemReportResponseObject {
     /** 响应结果 */
     data?: IProjectActionItemReportResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目行动项报表响应对象 */
 export interface IProjectActionItemReportResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
     code?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目编号 */
     projectCode?: string;
     /** 项目类型id */
-    projectTypeId?: number;
+    projectTypeId?: string;
     /** 项目类型名称 */
     projectTypeName?: string;
     /** 项目大类 */
@@ -72,9 +72,9 @@ export interface IProjectActionItemReportResponseObject {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** undefined */
-    projectManagerId?: number;
+    projectManagerId?: string;
     /** 行动项类型名称 */
     projectActionTypeName?: string;
     /** 密级名称 */
@@ -86,11 +86,11 @@ export interface IProjectActionItemReportResponseObject {
     /** 责任人名称列表 */
     responsibleUserList?: string[];
     /** 时间节点 */
-    timeNode?: string;
+    timeNode?: number;
     /** 实际完成时间 */
-    actualCompleteTime?: string;
+    actualCompleteTime?: number;
     /** undefined */
-    responsibleDeptId?: number;
+    responsibleDeptId?: string;
     /** undefined */
     responsibleUserIds?: Record<string, any>[];
     /** undefined */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/pageUsingPOST_4
@@ -44,35 +44,35 @@ export interface IJSONResultPagingInformationQualityPersonnelDropdownResponseDTO
     /** 响应结果 */
     data?: IPagingInformationQualityPersonnelDropDownResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质量人员下拉响应DTO» */
 export interface IPagingInformationQualityPersonnelDropDownResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IQualityPersonnelDropDownResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationQualityPersonnelDropDownResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationQualityPersonnelDropDownResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质量人员下拉响应DTO */
 export interface IQualityPersonnelDropDownResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 员工编号 */
     employeeCode?: string;
     /** 员工姓名 */

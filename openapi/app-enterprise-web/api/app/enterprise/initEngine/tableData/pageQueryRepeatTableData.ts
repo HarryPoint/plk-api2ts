@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/pageQueryRepeatTableDataUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IPaging15 }, extraOptions?:
 /** 分页_15 */
 export interface IPaging15 {
     /** 表数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -40,30 +40,30 @@ export interface IJSONResultPageInformationTableRowDTO {
     /** 响应结果 */
     data?: IPageInformationTableRowDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«TableRowDTO» */
 export interface IPageInformationTableRowDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITableRowDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTableRowDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTableRowDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** TableRowDTO */
 export interface ITableRowDTO {
@@ -72,14 +72,14 @@ export interface ITableRowDTO {
     /** 主表 - 单元格数据 */
     detailRowList?: ITableRowDTO[];
     /** 行ID列表 */
-    rowIdList?: number[];
+    rowIdList?: string[];
     /** 操作模式 */
     operatorMode?: ETableRowDTO_operatorMode;
 }
 /** TableCellDTO */
 export interface ITableCellDTO {
     /** 单元格ID */
-    id?: number;
+    id?: string;
     /** 列下标 */
     columnIndex?: number;
     /** 单元格编码 */

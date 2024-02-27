@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/批次方案相关/checkRemoveUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ILotSerialNumberPlanRemoveC
 /** LotSerialNumberPlanRemoveCheckRequestDTO */
 export interface ILotSerialNumberPlanRemoveCheckRequestDTO {
     /** 批次方案ID列表 */
-    idList?: number[];
+    idList?: string[];
 }
 /** JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO» */
 export interface IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO {
@@ -27,14 +27,14 @@ export interface IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO {
     /** 响应结果 */
     data?: ILotSerialNumberPlanRemoveCheckResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** LotSerialNumberPlanRemoveCheckResponseDTO */
 export interface ILotSerialNumberPlanRemoveCheckResponseDTO {
     /** 允许删除的ID列表 */
-    allowDeletionIdList?: number[];
+    allowDeletionIdList?: string[];
     /** 不允许删除的ID列表 */
-    notAllowDeletionIdList?: number[];
+    notAllowDeletionIdList?: string[];
     /** 已使用的ID列表 */
-    usedIdList?: number[];
+    usedIdList?: string[];
 }

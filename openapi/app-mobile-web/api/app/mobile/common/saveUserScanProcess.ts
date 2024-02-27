@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/saveUserScanProcessUsingGET
 */
-export default function fetchMethod(options: { params: { processId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { processId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/common/saveUserScanProcess",
@@ -22,5 +22,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

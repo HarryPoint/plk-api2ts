@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectQualityIssueUsingPOST
@@ -19,12 +19,12 @@ export interface IItemNameNumberPublicQueryObject {
     nameOrCode?: string;
     /** 条数 */
     limit?: number;
-    /** 项目计划ids */
-    projectPlanIds?: number[];
     /** undefined */
-    ids?: number[];
+    ids?: string[];
     /** undefined */
-    projectIds?: number[];
+    projectIds?: string[];
+    /** undefined */
+    projectPlanIds?: string[];
     /** undefined */
     statusList?: string[];
 }
@@ -37,24 +37,24 @@ export interface IJSONResultListProjectQualityProblemReportResponseObject {
     /** 响应结果 */
     data?: IProjectQualityProblemReportResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目质量问题报表响应对象 */
 export interface IProjectQualityProblemReportResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
     code?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目编号 */
     projectCode?: string;
     /** 项目类型id */
-    projectTypeId?: number;
+    projectTypeId?: string;
     /** 项目类型名称 */
     projectTypeName?: string;
     /** 项目大类 */
@@ -72,17 +72,17 @@ export interface IProjectQualityProblemReportResponseObject {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** undefined */
-    projectManagerId?: number;
+    projectManagerId?: string;
     /** 负责人名称列表 */
     responsibleNameList?: string[];
     /** 开始处理日期 */
-    beginHandleTime?: string;
+    beginHandleTime?: number;
     /** 结束处理日期 */
-    endHandleTime?: string;
+    endHandleTime?: number;
     /** 实际完成时间 */
-    actualCompleteTime?: string;
+    actualCompleteTime?: number;
     /** undefined */
     responsibleUserIds?: Record<string, any>[];
 }

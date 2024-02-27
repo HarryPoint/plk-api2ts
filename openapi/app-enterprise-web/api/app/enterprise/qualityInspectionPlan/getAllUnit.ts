@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检方案/getAllUnitUsingGET_2
@@ -22,12 +22,12 @@ export interface IJSONResultListIdNameVO {
     /** 响应结果 */
     data?: IIdNameVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id，名称VO */
 export interface IIdNameVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
 }

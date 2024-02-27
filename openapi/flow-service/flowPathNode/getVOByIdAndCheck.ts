@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdAndCheckUsingPOST
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessNodeVO>(
         {
             url: "/flow-service/flowPathNode/getVOByIdAndCheck",
@@ -22,18 +22,18 @@ export interface IJSONResultProcessNodeVO {
     /** 响应结果 */
     data?: IProcessNodeVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程节点VO */
 export interface IProcessNodeVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 节点业务类型 */
@@ -41,13 +41,13 @@ export interface IProcessNodeVO {
     /** 节点类型 */
     type?: EProcessNodeVO_type;
     /** 前节点id */
-    previousFlowPathNodeId?: number;
+    previousFlowPathNodeId?: string;
     /** 后节点id */
-    nextFlowPathNodeId?: number;
+    nextFlowPathNodeId?: string;
     /** 父节点id - 子节点有值 */
-    parentFlowPathNodeId?: number;
+    parentFlowPathNodeId?: string;
     /** 所属分支节点id - 子分支下的所有流程节点均属于当前子分支 */
-    branchesFlowPathNodeId?: number;
+    branchesFlowPathNodeId?: string;
     /** 名称 */
     name?: string;
     /** 名称 */
@@ -61,7 +61,7 @@ export interface IProcessNodeVO {
     /** 回退类型 */
     backType?: EProcessNodeVO_backType;
     /** 回退流程节点id - 返回指定节点时有值 */
-    backFlowPathNodeId?: number;
+    backFlowPathNodeId?: string;
     /** 是否是首节点 */
     isFirst?: EProcessNodeVO_isFirst;
     /** 节点级别 - 节点的深度 */

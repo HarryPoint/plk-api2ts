@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/getImportBehaviorStatusUsingGET
 */
-export default function fetchMethod(options: { params: { templateId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { templateId?: string } }, extraOptions?: any) {
     return http<IJSONResultDataInteractionOutputDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/getImportBehaviorStatus",
@@ -22,7 +22,7 @@ export interface IJSONResultDataInteractionOutputDTO {
     /** 响应结果 */
     data?: IDataInteractionOutputDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** DataInteractionOutputDTO */
 export interface IDataInteractionOutputDTO {

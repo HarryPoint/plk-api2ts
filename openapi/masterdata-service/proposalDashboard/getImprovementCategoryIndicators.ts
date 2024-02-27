@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getImprovementCategoryIndicatorsUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultImprovementCategoryIndicatorsResponseDTO {
     /** 响应结果 */
     data?: IImprovementCategoryIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ImprovementCategoryIndicatorsResponseDTO */
 export interface IImprovementCategoryIndicatorsResponseDTO {
@@ -32,7 +32,7 @@ export interface IImprovementCategoryIndicatorsResponseDTO {
 /** ImprovementCategoryIndicatorsItemResponseDTO */
 export interface IImprovementCategoryIndicatorsItemResponseDTO {
     /** 改善类别ID */
-    improvementCategoryId?: number;
+    improvementCategoryId?: string;
     /** 改善类别名称 */
     improvementCategoryName?: string;
     /** 改善类别数量 */

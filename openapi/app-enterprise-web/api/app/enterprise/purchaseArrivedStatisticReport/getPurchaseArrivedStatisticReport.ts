@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/getPurchaseArrivedStatisticReportUsingPOST
@@ -24,21 +24,21 @@ export interface IPurchaseArrivalStatisticsReportSearchVO {
     /** 采购订单编号 */
     purchaseOrderNo?: string;
     /** 最新到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    lastEndDate?: string;
+    lastEndDate?: number;
     /** 供应商id */
-    supplierIds?: number[];
+    supplierIds?: string[];
     /** 要求到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    requiredBeginDate?: string;
+    requiredBeginDate?: number;
     /** 要求到货日期结束时间 yyyy-MM-dd HH:mm:ss */
-    requiredEndDate?: string;
+    requiredEndDate?: number;
     /** 最新到货日期开始时间 yyyy-MM-dd HH:mm:ss */
-    lastBeginDate?: string;
+    lastBeginDate?: number;
     /** 物料材质 */
     texture?: string;
     /** 单据类型 */
     orderType?: string;
     /** 物料id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 采购类型 */
@@ -62,30 +62,30 @@ export interface IJSONResultPagingInformationTheStatisticsReportOfPurchasedGoods
     /** 响应结果 */
     data?: IPageInformationPurchaseArrivalStatisticsReportReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«采购到货统计报表返回VO» */
 export interface IPageInformationPurchaseArrivalStatisticsReportReturnToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IPurchaseArrivalStatisticsReportReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationPurchaseArrivalStatisticsReportReturnToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationPurchaseArrivalStatisticsReportReturnToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 采购到货统计报表返回VO */
 export interface IPurchaseArrivalStatisticsReportReturnedToVO {
@@ -102,11 +102,11 @@ export interface IPurchaseArrivalStatisticsReportReturnedToVO {
     /** 物料材质 */
     texture?: string;
     /** 要求到货日期 */
-    requiredArriveDate?: string;
+    requiredArriveDate?: number;
     /** 要求到货日期字符串 */
     requiredArriveDateStr?: string;
     /** 最新到货日期 */
-    lastArrivedDate?: string;
+    lastArrivedDate?: number;
     /** 最新到货日期字符串 */
     lastArrivedDateStr?: string;
     /** 订单数量 */

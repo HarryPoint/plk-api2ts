@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleListByBusinessTypeUsingGET
 */
-export default function fetchMethod(options: { params: { businessType?: EbusinessType; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { businessType?: EbusinessType; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldCodingRuleDetailsVO>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleListByBusinessType",
@@ -22,12 +22,12 @@ export interface IJSONResultListProcessFormFieldCodingRuleDetailsVO {
     /** 响应结果 */
     data?: IProcessFormFieldEncodingRuleDetailsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -49,7 +49,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }

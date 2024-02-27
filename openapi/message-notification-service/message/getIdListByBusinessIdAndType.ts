@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息相关/getIdListByBusinessIdAndTypeUsingPOST
 */
-export default function fetchMethod(options: { data: IMessageQueryDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMessageQueryDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/message-notification-service/message/getIdListByBusinessIdAndType",
@@ -18,7 +18,7 @@ export interface IMessageQueryDTO {
     /** 业务类型 */
     businessType?: EMessageQueryDTO_businessType;
     /** 业务id */
-    businessIds?: number[];
+    businessIds?: string[];
 }
 /** JSONResult«List«long»» */
 export interface IJSONResultListlong {
@@ -27,9 +27,9 @@ export interface IJSONResultListlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number[];
+    data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EMessageQueryDTO_businessType {

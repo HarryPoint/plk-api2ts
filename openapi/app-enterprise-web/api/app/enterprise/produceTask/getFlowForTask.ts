@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/getFlowForTaskUsingGET_1
 */
-export default function fetchMethod(options: { params: { produceOrderId?: number; produceTaskId?: number; type?: Etype } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceOrderId?: string; produceTaskId?: string; type?: Etype } }, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheDTOForProductionProcessingBasicInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTask/getFlowForTask",
@@ -22,14 +22,14 @@ export interface IJSONResultListRespondsToTheDTOForProductionProcessingBasicInfo
     /** 响应结果 */
     data?: IProductionProcessingBasicInformationRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产处理基础信息响应DTO */
 export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
@@ -39,7 +39,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产异常类型名称 */
     produceAbnormalName?: string;
     /** 生产异常类型编号 */
@@ -53,17 +53,17 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 备注 */
     remark?: string;
     /** 对应生产委外id */
-    produceEntrustId?: number;
+    produceEntrustId?: string;
     /** 状态 */
     status?: EProductionProcessingBasicInformationRespondsToDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 图片上传key集合 */
     imageKeys?: string;
     /** 图片Url集合 */
@@ -73,24 +73,24 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 异常描述 */
     desc?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理人 */
     handleUsername?: string;
     /** 处理时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序 */
     processName?: string;
     /** undefined */
-    materialId?: number;
+    materialId?: string;
 }
 /** 进出站关键参数明细响应DTO */
 export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */

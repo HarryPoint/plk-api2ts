@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/邮件内容模板/editUsingPOST_7
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEmailContentTemplateEditRe
 /** EmailContentTemplateEditRequestDTO */
 export interface IEmailContentTemplateEditRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件内容 */
     content?: string;
 }
@@ -29,7 +29,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

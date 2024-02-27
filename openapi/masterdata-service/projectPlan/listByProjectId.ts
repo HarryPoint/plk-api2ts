@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划相关/listByProjectIdUsingGET
@@ -22,12 +22,12 @@ export interface ITheJSONResultListProjectPlansTheResponseObject {
     /** 响应结果 */
     data?: IProjectPlanResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目计划响应对象 */
 export interface IProjectPlanResponseObject {
     /** 项目计划id */
-    id?: number;
+    id?: string;
     /** 计划编号 */
     code?: string;
     /** 计划名称 */
@@ -37,11 +37,11 @@ export interface IProjectPlanResponseObject {
     /** 流程状态 */
     status?: EProjectPlanResponseObject_status;
     /** 计划开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 计划结束日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
 }
 
 export enum EProjectPlanResponseObject_planStatus {

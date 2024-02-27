@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/单位相关/getByNamesUsingPOST
 */
-export default function fetchMethod(options: { data: string[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListUnitReturnsVO>(
         {
             url: "/masterdata-service/unit/getByNames",
@@ -22,12 +22,12 @@ export interface ITheJSONResultListUnitReturnsVO {
     /** 响应结果 */
     data?: IUnitReturnVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 单位返回VO */
 export interface IUnitReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 单位名称 */
     name?: string;
     /** 单位编码 */

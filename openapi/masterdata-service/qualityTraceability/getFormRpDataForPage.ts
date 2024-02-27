@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质量追溯/getFormRpDataForPageUsingPOST_1
@@ -30,7 +30,7 @@ export interface IProcessAssociationFormSearchVO {
     /** 通用：来自表单过滤条件，当 值 = Y 时，系统将忽略应用引擎配置的筛选条件。 */
     fromFormFilterCondition?: EProcessAssociationFormSearchVO_fromFormFilterCondition;
     /** 非通用：查询表单id， 即 用户正在操作的关联表单。其和查询表单编码、字段序列号处于互斥 */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 非通用：字段序列号， 即 当flowPathFormFieldId = null时，可以 flowPathCode、fieldSerialNo联合使用来查询关联表单数据 */
     fieldSerialNo?: string;
     /** 通用：提交项， 用户编辑的数据 */
@@ -56,7 +56,7 @@ export interface IJSONResultProcessAssociationFormQueryReturnsVO {
     /** 响应结果 */
     data?: ITheProcessAssociationFormQueryReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程关联表单查询返回VO */
 export interface ITheProcessAssociationFormQueryReturnsVO {
@@ -170,15 +170,15 @@ export enum ETheProcessAssociationFormHeaderQueryReturnsVO_formFieldType {
 }
 
 export enum ETheProcessAssociationFormHeaderQueryReturnsVO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/editUsingPOST_2
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEmailTaskEditRequestDTO },
 /** EmailTaskEditRequestDTO */
 export interface IEmailTaskEditRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件名称 */
     emailName?: string;
     /** 收件人 */
@@ -28,11 +28,11 @@ export interface IEmailTaskEditRequestDTO {
     /** 发送模式 */
     sendingMode?: EEmailTaskEditRequestDTO_sendingMode;
     /** 发送时间 */
-    sendingTime?: string;
+    sendingTime?: number;
     /** 下次发送时间 */
-    nextSendingTime?: string;
+    nextSendingTime?: number;
     /** 上次发送时间 */
-    lastSendingTime?: string;
+    lastSendingTime?: number;
     /** 邮件任务配置列表 */
     attachmentConfigList?: IEmailTaskAttachmentConfigEditRequestDTO[];
     /** 邮件状态 */
@@ -51,16 +51,16 @@ export interface IEmailTaskEditRequestDTO {
 /** EmailTaskAttachmentConfigEditRequestDTO */
 export interface IEmailTaskAttachmentConfigEditRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 其他对象引用ID */
-    refId?: number;
+    refId?: string;
     /** 文件类型 */
     fileType?: string;
 }
 /** SendingTimeConfigEditRequestDTO */
 export interface ISendingTimeConfigEditRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 时间模式 */
     timeMode?: ESendingTimeConfigEditRequestDTO_timeMode;
     /** 周号 */
@@ -85,7 +85,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEmailTaskEditRequestDTO_sendingMode {

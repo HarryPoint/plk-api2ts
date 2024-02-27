@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料批次相关/scanCanMoveInLotOrderUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IDtoCanBeCheckedByBatchScan
 /** 可进出料批次扫描查询dto */
 export interface IDtoCanBeCheckedByBatchScanning {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 编号 */
     code: string;
 }
@@ -29,12 +29,12 @@ export interface IJSONResultCanRespondToDtoWithIncomingBatch {
     /** 响应结果 */
     data?: ICanRespondToDtoWithIncomingBatch;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 可进料批次响应dto */
 export interface ICanRespondToDtoWithIncomingBatch {
     /** 批次id */
-    id?: number;
+    id?: string;
     /** 批次号 */
     lotOrderCode?: string;
     /** 需进料数量 */
@@ -42,5 +42,5 @@ export interface ICanRespondToDtoWithIncomingBatch {
     /** 可进料数量 */
     canOptQuantity?: number;
     /** 来料时间 */
-    wmRpCreateTime?: string;
+    wmRpCreateTime?: number;
 }

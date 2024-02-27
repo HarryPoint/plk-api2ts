@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
 */
-export default function fetchMethod(options: { params: { projectTaskId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskHistoryQueryResponse>(
         {
             url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",
@@ -22,50 +22,50 @@ export interface IJSONResultListProjectTaskHistoryQueryResponse {
     /** 响应结果 */
     data?: IProjectTaskHistoryQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务历史查询响应 */
 export interface IProjectTaskHistoryQueryResponse {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 项目任务名称 */
     projectTaskName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 应用版本ID */
-    appVersionId?: number;
+    appVersionId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** ID */
-    id?: number;
+    id?: string;
     /** 版本号 */
     versionNo?: string;
     /** 项目任务ID */
-    projectTaskId?: number;
+    projectTaskId?: string;
     /** 应用ID */
-    appId?: number;
+    appId?: string;
     /** 禁用来源任务名称 */
     disableFromTaskName?: string;
     /** 应用系统类型 */
     appSystemType?: EProjectTaskHistoryQueryResponse_appSystemType;
     /** 变更应用id */
-    modificationAppId?: number;
+    modificationAppId?: string;
     /** 变更单id */
-    modificationId?: number;
+    modificationId?: string;
     /** 变更单编号 */
     modificationCode?: string;
 }
@@ -219,6 +219,8 @@ export enum EProjectTaskHistoryQueryResponse_appSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -259,6 +261,14 @@ export enum EProjectTaskHistoryQueryResponse_appSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/addSyncUsingPOST
@@ -16,25 +16,25 @@ export default function fetchMethod(options: { data: IAlllistaddsyncrequestdto }
 /** ToDoListAddSyncRequestDTO */
 export interface IAlllistaddsyncrequestdto {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属用户id */
-    userId?: number;
+    userId?: string;
     /** 待办编号 */
     code?: string;
     /** 流程处理类型 */
     type?: EAlllistaddsyncrequestdto_type;
     /** 任务开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 预计结束时间 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 对应业务id */
-    businessId?: number;
+    businessId?: string;
     /** 状态 */
     status?: EAlllistaddsyncrequestdto_status;
     /** 完成时间 */
-    completeTime?: string;
+    completeTime?: number;
     /** 发起人id */
-    workOrderCreateUserId?: number;
+    workOrderCreateUserId?: string;
     /** 是否超时处理 */
     isTimeout?: EAlllistaddsyncrequestdto_isTimeout;
     /** 节点处理状态描述 */
@@ -42,17 +42,17 @@ export interface IAlllistaddsyncrequestdto {
     /** 工单处理状态描述 */
     flowPathWorkOrderHandleStatus?: string;
     /** 所属工单ID */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 所属工单编号 */
     flowPathWorkOrderCode?: string;
     /** 所属工单业务ID(具体数据id) */
-    flowPathWorkOrderBusinessId?: number;
+    flowPathWorkOrderBusinessId?: string;
     /** 所属流程节点id */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** 工单状态 */
     flowPathWorkOrderStatus?: EAlllistaddsyncrequestdto_flowPathWorkOrderStatus;
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程名称 */
     flowPathName?: string;
     /** 节点名称 */
@@ -93,7 +93,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EAlllistaddsyncrequestdto_type {

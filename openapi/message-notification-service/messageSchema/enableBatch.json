@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/MessageSchemaBatchEnableRequestDTO",
-              "originalRef": "MessageSchemaBatchEnableRequestDTO"
+              "originalRef": "MessageSchemaBatchEnableRequestDTO",
+              "$ref": "#/definitions/MessageSchemaBatchEnableRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用事件相关/queryTriggerTimingsUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEventTriggerTiming }, extr
 /** 事件触发时机 */
 export interface IEventTriggerTiming {
     /** 根据应用版本ID列表 */
-    flowPathVersionIdList?: number[];
+    flowPathVersionIdList?: string[];
     /** 触发事件的时机 */
     triggerEventTiming?: EEventTriggerTiming_triggerEventTiming;
 }
@@ -29,18 +29,18 @@ export interface IJSONResultListFlowPathEventTriggerTimingQueryResponseDTO {
     /** 响应结果 */
     data?: IFlowPathEventTriggerTimingQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathEventTriggerTimingQueryResponseDTO */
 export interface IFlowPathEventTriggerTimingQueryResponseDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    flowPathId?: number;
+    flowPathId?: string;
     /** undefined */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** undefined */
-    flowPathEventId?: number;
+    flowPathEventId?: string;
     /** undefined */
     eventTriggerTiming?: EFlowPathEventTriggerTimingQueryResponseDTO_eventTriggerTiming;
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectStageDistributeUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IProjectOverviewQueryDto },
 /** 项目概况查询dto */
 export interface IProjectOverviewQueryDto {
     /** 项目id */
-    projectId: number;
+    projectId: string;
     /** 开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 查询条数 */
     limit?: number;
 }
@@ -33,14 +33,14 @@ export interface IJSONResultListProjectPhaseDistributesResponseObjects {
     /** 响应结果 */
     data?: ITheProjectPhaseDistributesTheResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目阶段分布响应对象 */
 export interface ITheProjectPhaseDistributesTheResponseObjects {
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段排序 */
     sort?: number;
     /** 项目任务列表 */
@@ -49,7 +49,7 @@ export interface ITheProjectPhaseDistributesTheResponseObjects {
 /** 项目阶段任务分布响应对象 */
 export interface IProjectPhaseTasksDistributeResponseObjects {
     /** 项目任务类型id */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
     /** 项目任务类型编号 */
     projectTaskTypeCode?: string;
     /** 项目任务类型名称 */
@@ -57,15 +57,15 @@ export interface IProjectPhaseTasksDistributeResponseObjects {
     /** 项目任务名称 */
     projectTaskName?: string;
     /** 项目任务id */
-    projectTaskId?: number;
+    projectTaskId?: string;
     /** 项目任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 项目任务状态 */
     taskStatus?: EProjectPhaseTasksDistributeResponseObjects_taskStatus;
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
 }
 
 export enum EProjectPhaseTasksDistributeResponseObjects_taskStatus {

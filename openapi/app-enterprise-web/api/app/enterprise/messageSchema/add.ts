@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/消息方案相关/addUsingPOST_5
@@ -54,7 +54,7 @@ export interface IMessageSendingContentTemplateAddDTO {
     /** 是否使用消息模板 */
     isUseSmsTemplate?: EMessageSendingContentTemplateAddDTO_isUseSmsTemplate;
     /** 消息模板ID */
-    smsTemplateId?: number;
+    smsTemplateId?: string;
     /** 消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题 */
     messageContent?: string;
     /** undefined */
@@ -120,9 +120,9 @@ export interface IMessageTriggerNodeAddDTO {
     /** 逻辑运算符类型 */
     logicalType?: EMessageTriggerNodeAddDTO_logicalType;
     /** 当前触发节点条件ID */
-    currentTriggerConditionId?: number;
+    currentTriggerConditionId?: string;
     /** 上级触发节点ID */
-    parentTriggerNodeId?: number;
+    parentTriggerNodeId?: string;
     /** 当前节点表达式 */
     currentConditionExpression?: IMessageTriggerConditionAddDTO;
     /** 下级节点表达式列表 */
@@ -183,7 +183,7 @@ export interface IFormConfigAddDTO {
     /** 详细流程字段编码 */
     detailTableFieldCode?: string;
     /** 详细流程字段ID */
-    detailTableFieldId?: number;
+    detailTableFieldId?: string;
     /** 详细流程字段序列号 */
     detailTableFieldSerialNo?: string;
     /** 是否详细流程表 */
@@ -200,9 +200,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EMessageSchemaAddDTO_selectedTimeType {
@@ -321,7 +321,7 @@ export enum EMessageTriggerConditionAddDTO_expressionType {
     NONE = "NONE",
     /** 日期函数表达式，即有NOW(), TODAY() */
     TIME_FUNCTION = "TIME_FUNCTION",
-    /** 聚合函数表达式，即有SUM/MAX/MIN/AVG/COUNT/+, */
+    /** 聚合函数表达式，即有SUM/MAX/MIN/AVG/COUNT/+,-,*,/ */
     MATH_FUNCTION = "MATH_FUNCTION"
 }
 

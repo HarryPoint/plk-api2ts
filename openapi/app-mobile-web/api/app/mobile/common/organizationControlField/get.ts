@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/getOrganizationControlFieldsUsingGET
@@ -22,14 +22,14 @@ export interface IJSONResultListOrganizationControlFieldVO {
     /** 响应结果 */
     data?: IOrganizationControlFieldVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** OrganizationControlFieldVO */
 export interface IOrganizationControlFieldVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程id */
-    appId?: number;
+    appId?: string;
     /** 编码 */
     code?: string;
     /** 序列 */
@@ -45,7 +45,7 @@ export interface IOrganizationControlFieldVO {
     /** 是否是表格内字段 */
     isTableField?: EOrganizationControlFieldVO_isTableField;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** 父级流程表单编码 */
     parentFlowPathFormFieldCode?: string;
     /** 父级流程表单名称 */

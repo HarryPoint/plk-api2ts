@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检项/getByIdUsingGET_17
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultCheckItemDetailsVOIsReturned>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultCheckItemDetailsVOIsReturned {
     /** 响应结果 */
     data?: ICheckItemDetailsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 质检项详细返回VO */
 export interface ICheckItemDetailsAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检项名称 */
     name?: string;
     /** 质检项编号 */
@@ -43,7 +43,7 @@ export interface ICheckItemDetailsAreReturnedToVO {
     /** 备注 */
     remark?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */

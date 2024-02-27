@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/产出报表(产出数据相关)相关/getReportUsingPOST_9
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOutputClassReportSearchVO 
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
@@ -37,12 +37,12 @@ export interface IJSONResultListReturnsTheOutputDataStatisticsToVO {
     /** 响应结果 */
     data?: IOutputDataStatisticsAreReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产出数据统计返回VO */
 export interface IOutputDataStatisticsAreReturnedToVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -55,7 +55,7 @@ export interface IOutputDataStatisticsAreReturnedToVO {
 /** 工序产出统计报表返回VO */
 export interface ITheProcessOutputStatisticsReportIsReturnedToVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

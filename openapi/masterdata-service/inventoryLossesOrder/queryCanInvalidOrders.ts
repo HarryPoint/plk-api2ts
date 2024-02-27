@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/盘亏单相关/queryCanInvalidOrdersUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdCollectionInformation },
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«List«long»» */
 export interface IJSONResultListlong {
@@ -25,7 +25,7 @@ export interface IJSONResultListlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number[];
+    data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

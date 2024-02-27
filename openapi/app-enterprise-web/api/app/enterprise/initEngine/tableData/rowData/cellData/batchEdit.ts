@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/batchEditCellValueUsingPOST
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: ICellData[] }, extraOptions
 /** 单元格数据 */
 export interface ICellData {
     /** ID */
-    id?: number;
+    id?: string;
     /** 单元格下标 */
     cellIndex?: number;
     /** 值 */
     value?: string;
     /** 表格数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 表格数据ID */
-    rowDataId?: number;
+    rowDataId?: string;
     /** 关联字段信息 */
     fieldDefine?: IAssociatedFieldDefinition1;
     /** 关联表单选项列表 */
@@ -33,7 +33,7 @@ export interface ICellData {
 /** 关联字段定义_1 */
 export interface IAssociatedFieldDefinition1 {
     /** undefined */
-    id: number;
+    id: string;
     /** undefined */
     code?: string;
     /** undefined */
@@ -46,7 +46,7 @@ export interface IAssociatedFieldDefinition1 {
 /** AssociationFormSelectedItemInputputDTO */
 export interface IAssociationFormSelectedItemInputputDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
     showFieldValue?: string;
 }
@@ -59,7 +59,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EAssociatedFieldDefinition1_fieldType {

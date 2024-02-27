@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialPlaceUsingPOST
 */
-export default function fetchMethod(options: { data: IBaojingMaterialMasterDataInventoryDistributionSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnTheInventoryDistributionToVO>(
         {
             url: "/masterdata-service/baoJingWarehouseMaterial/getMaterialPlace",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IBaojingMaterialMasterDataI
 /** 宝晶物料主数据库存分布搜索VO */
 export interface IBaojingMaterialMasterDataInventoryDistributionSearchVO {
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 物料名称 */
@@ -28,11 +28,11 @@ export interface IBaojingMaterialMasterDataInventoryDistributionSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 仓库id */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
     /** 仓位id集合 */
-    warehouseIdList?: number[];
+    warehouseIdList?: string[];
     /** 规格 */
     materialSpec?: string;
     /** 仓库用途 */
@@ -56,12 +56,12 @@ export interface IJSONResultListReturnTheInventoryDistributionToVO {
     /** 响应结果 */
     data?: IBaojingMaterialInventoryDistributionReturnedToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶物料库存分布返回VO */
 export interface IBaojingMaterialInventoryDistributionReturnedToVO {
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
     /** 区域编号 */
@@ -73,7 +73,7 @@ export interface IBaojingMaterialInventoryDistributionReturnedToVO {
     /** 物料保管员 */
     materialCurator?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓库编号 */
@@ -81,7 +81,7 @@ export interface IBaojingMaterialInventoryDistributionReturnedToVO {
     /** 仓库用途 */
     storehousePurpose?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 仓位编号 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getCompleteQuantityByRoutingStepIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; produceOrderId?: number; routingStepId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; produceOrderId?: string; routingStepId?: string } }, extraOptions?: any) {
     return http<IJSONResultbigdecimal>(
         {
             url: "/masterdata-service/produceTask/getCompleteQuantityByRoutingStepId",
@@ -22,5 +22,5 @@ export interface IJSONResultbigdecimal {
     /** 响应结果 */
     data?: number;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

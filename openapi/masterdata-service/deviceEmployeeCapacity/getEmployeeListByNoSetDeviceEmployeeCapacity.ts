@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/getEmployeeListByNoSetDeviceEmployeeCapacityUsingPOST
@@ -27,22 +27,22 @@ export interface IJSONResultListDevicePersonnelCapabilityNoPersonnelResponseDTOI
     /** 响应结果 */
     data?: IEquipmentPersonnelCapabilityNoPersonnelIsSetToRespondToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备人员能力未设置人员响应DTO */
 export interface IEquipmentPersonnelCapabilityNoPersonnelIsSetToRespondToTheDTO {
     /** 员工id */
-    employeeId?: number;
+    employeeId?: string;
     /** 员工code */
     employeeCode?: string;
     /** 员工姓名 */
     employeeName?: string;
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
 }

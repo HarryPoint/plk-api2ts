@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getBySalesOrderDetailIdsUsingPOST
 */
-export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionOrder>(
         {
             url: "/masterdata-service/produceOrder/getBySalesOrderDetailIds",
@@ -22,28 +22,28 @@ export interface IJSONResultListProductionOrder {
     /** 响应结果 */
     data?: IProductionOrder[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单 */
 export interface IProductionOrder {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 生产订单号 */
     code?: string;
     /** 所属销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 所属销售订单详情id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 主生产订单号 */
     parentProduceOrderCode?: string;
     /** 订单类型 */
     orderType?: EProductionOrder_orderType;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -51,13 +51,13 @@ export interface IProductionOrder {
     /** 对应物料规格 */
     materialSpec?: string;
     /** 对应物料单位 */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料种类 */
     materialType?: string;
     /** 对应工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应物料主数据bomid */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 总生产数量 */
     totalCount?: number;
     /** 当前生产数量 */
@@ -71,17 +71,17 @@ export interface IProductionOrder {
     /** 当前累积转移数量 - 针对批次转移到其他生产订单 */
     currentChangeCount?: number;
     /** 计划开工日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 实际开工日期 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 计划完工日期 */
-    endTime?: string;
+    endTime?: number;
     /** 实际完工日期 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 生产完成时间 */
-    produceCompleteTime?: string;
+    produceCompleteTime?: number;
     /** 交期日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 排产类型 */
     planType?: EProductionOrder_planType;
     /** 订单状态 */
@@ -89,9 +89,9 @@ export interface IProductionOrder {
     /** 订单排产状态 */
     planStatus?: EProductionOrder_planStatus;
     /** 关闭人 */
-    closeUserId?: number;
+    closeUserId?: string;
     /** 关闭时间 */
-    closeTime?: string;
+    closeTime?: number;
     /** 关闭原因 */
     closeRemark?: string;
     /** 订单优先级，数值越大优先级越高 */
@@ -99,7 +99,7 @@ export interface IProductionOrder {
     /** 备注 */
     remark?: string;
     /** 下单业务部门id */
-    placeOrderDepartmentId?: number;
+    placeOrderDepartmentId?: string;
     /** 下单业务部门编号 */
     placeOrderDepartmentCode?: string;
     /** 下单业务部门名称 */

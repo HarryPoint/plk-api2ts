@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getChildMaterialProduceInfoUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ISubMaterialProductionInfor
 /** 子物料生产信息查询请求DTO */
 export interface ISubMaterialProductionInformationQueryRequestDTO {
     /** 标准工艺ID */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 生产订单ID */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }
 /** JSONResult«子生产订单信息查询响应» */
 export interface IJSONResultChildProductionOrderInformationQueryResponse {
@@ -29,7 +29,7 @@ export interface IJSONResultChildProductionOrderInformationQueryResponse {
     /** 响应结果 */
     data?: ISubProductionOrderInformationQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 子生产订单信息查询响应 */
 export interface ISubProductionOrderInformationQueryResponse {
@@ -41,11 +41,11 @@ export interface ISubProductionOrderInformationQueryResponse {
 /** 子物料生产信息VO */
 export interface ISubMaterialProductionInformationVO {
     /** 子物料生产信息指向的标准工艺节点ID（用于后续标准用户输入的生产信息应该给到那个子订单） */
-    standardTechnologyNodeId?: number;
+    standardTechnologyNodeId?: string;
     /** 物料bom明细id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -63,13 +63,13 @@ export interface ISubMaterialProductionInformationVO {
     /** 层级 */
     level?: number;
     /** 父级物料id */
-    parentMaterialId?: number;
+    parentMaterialId?: string;
     /** 父级物料名称 */
     parentMaterialName?: string;
     /** 父级物料编号 */
     parentMaterialCode?: string;
     /** 父级物料bomId */
-    parentMaterialBomId?: number;
+    parentMaterialBomId?: string;
     /** 父级物料bom名称 */
     parentMaterialBomName?: string;
     /** 父级物料bom编号 */
@@ -79,17 +79,17 @@ export interface ISubMaterialProductionInformationVO {
     /** 工艺路径名称 */
     routingName?: string;
     /** 工艺路径ID */
-    routingId?: number;
+    routingId?: string;
     /** 标准工艺路径具体物料节点ID */
-    standardTechnologySpecificRoutingNodeId?: number;
+    standardTechnologySpecificRoutingNodeId?: string;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 序列号方案id */
-    serialNoSchemeId?: number;
+    serialNoSchemeId?: string;
     /** 批次方案id */
-    lotSchemeId?: number;
+    lotSchemeId?: string;
     /** 启用序列号 */
     enableSerialNo?: ESubMaterialProductionInformationVO_enableSerialNo;
     /** 启用批次 */
@@ -100,7 +100,7 @@ export interface ISubMaterialProductionInformationVO {
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */
@@ -112,7 +112,7 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料规格 */
     spec?: string;
     /** 计量单位id */
-    unitId?: number;
+    unitId?: string;
     /** 库存可使用数 */
     storageUseQuantity?: number;
 }

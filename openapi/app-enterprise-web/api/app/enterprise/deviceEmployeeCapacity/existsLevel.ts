@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/existsLevelUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsARespons
     /** 响应结果 */
     data?: IEquipmentPersonnelCapabilityLevelWhetherThereIsAResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备人员能力等级是否存在响应DTO */
 export interface IEquipmentPersonnelCapabilityLevelWhetherThereIsAResponseDTO {

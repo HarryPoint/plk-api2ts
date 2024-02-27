@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchGetLotSerialNoForStockUsingPOST
@@ -16,21 +16,21 @@ export default function fetchMethod(options: { data: IBatchSerialNumberRequestDT
 /** 批次/序列号申请DTO */
 export interface IBatchSerialNumberRequestDTO {
     /** 批次/序列号方案id */
-    lotSerialNumPlanId?: number;
+    lotSerialNumPlanId?: string;
     /** 需申请数量 */
     needQuantity?: number;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单明细id */
-    salesOrderDetailId?: number;
+    salesOrderDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 索引开始位置 */
     latestOffset?: number;
     /** 连续申请方案id */
-    continuousLotSerialNumPlanId?: number;
+    continuousLotSerialNumPlanId?: string;
     /** 连续申请数量 */
     continuousApplyQuantity?: number;
 }
@@ -43,7 +43,7 @@ export interface IJSONResultBatchNumberUsesDTO {
     /** 响应结果 */
     data?: ITheBatchNumberUsesDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 批次号使用DTO */
 export interface ITheBatchNumberUsesDTO {

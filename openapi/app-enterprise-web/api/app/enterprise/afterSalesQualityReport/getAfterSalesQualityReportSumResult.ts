@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶售后质量分析报表相关/getAfterSalesQualityReportSumResultUsingPOST
@@ -20,27 +20,27 @@ export interface IAfterSalesQualityAnalysisReportSearchVO {
     /** 分页大小 */
     pageSize?: number;
     /** 灌装日期开始时间 yyyy-MM-dd HH:mm:ss */
-    fillingBeginDate?: string;
+    fillingBeginDate?: number;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 灌装日期结束时间 yyyy-MM-dd HH:mm:ss */
-    fillingEndDate?: string;
+    fillingEndDate?: number;
     /** 客户id */
-    customerId?: number[];
+    customerId?: string[];
     /** 生产日期开始时间 yyyy-MM-dd HH:mm:ss */
-    productionBeginDate?: string;
+    productionBeginDate?: number;
     /** 业务员id */
-    businessIds?: number[];
+    businessIds?: string[];
     /** 生产日期结束时间 yyyy-MM-dd HH:mm:ss */
-    productionEndDate?: string;
+    productionEndDate?: number;
     /** 记录日期结束时间 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 记录日期开始时间 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 产品id */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 灌装线 */
     fillingLine?: string;
     /** 责任单位 */
@@ -64,7 +64,7 @@ export interface IJSONResultAfterSalesQualityAnalysisReturnsVO1 {
     /** 响应结果 */
     data?: IAfterSalesQualityAnalysisReturnsVO2;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 售后质量分析返回VO_2 */
 export interface IAfterSalesQualityAnalysisReturnsVO2 {

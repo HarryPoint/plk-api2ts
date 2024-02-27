@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryPollutantEmissionsUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IPollutantQueryRequest }, e
 /** 污染物查询请求 */
 export interface IPollutantQueryRequest {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«污染物查询响应»» */
 export interface IJSONResultListPollutantQueryResponse {
@@ -29,7 +29,7 @@ export interface IJSONResultListPollutantQueryResponse {
     /** 响应结果 */
     data?: IPollutantQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 污染物查询响应 */
 export interface IPollutantQueryResponse {

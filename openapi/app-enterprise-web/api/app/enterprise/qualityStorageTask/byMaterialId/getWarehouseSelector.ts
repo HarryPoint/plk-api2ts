@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/质检管理/getWarehouseSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { materialId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheMaterialMasterDataStoreToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/byMaterialId/getWarehouseSelector",
@@ -22,18 +22,18 @@ export interface IJSONResultListReturnsTheMaterialMasterDataStoreToVO {
     /** 响应结果 */
     data?: IMaterialMasterDataWarehouseReturnsToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料主数据仓位返回VO */
 export interface IMaterialMasterDataWarehouseReturnsToVO {
     /** 仓位id */
-    id?: number;
+    id?: string;
     /** 仓位编码 */
     code?: string;
     /** 仓位名称 */
     name?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 物料名称 */

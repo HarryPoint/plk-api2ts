@@ -14,7 +14,7 @@
           "质检项"
         ],
         "summary": "分页查询质检项",
-        "operationId": "getPageUsingPOST_24",
+        "operationId": "getPageUsingPOST_25",
         "consumes": [
           "application/json"
         ],

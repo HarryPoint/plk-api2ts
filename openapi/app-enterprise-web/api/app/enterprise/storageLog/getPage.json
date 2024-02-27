@@ -15,7 +15,7 @@
         ],
         "summary": "分页查询库存流水信息",
         "description": "<p style='color:red'>该页面各种细节注意项：<br/>1、详情按钮的跳转通过 flowType 进行判断: <br/>1、flowType = TAKE_CHECK 用 businessId 跳盘点详情，flowType = WORK_ORDER 根据下面规则跳： <br/>2、如果 flowPathType == 'DEV_PROJECT' 带上 workOrderDataId 跳转到研发项目的详情页面里面<br/>3、如果 flowPathType == 'DEVICE' 带上 workOrderDataId 跳转到设备单据的详情页面里面<br/>4、如果 flowPathType == 'DEVICE_MAINTAIN_PLAN' 带上 workOrderDataId 跳转到设备维护计划单据的详情页面里面<br/>5、如果 flowPathType == 'STORAGE' 带上 workOrderDataId 跳转到仓库单据的详情页面里面<br/>6、如果 flowPathType == 'PURCHASE' 带上 workOrderDataId 跳转到采购单据的详情页面里面<br/>7、如果 flowPathType == 'SALES' 带上 workOrderDataId 跳转到销售单据的详情页面里面<br/></p>",
-        "operationId": "getPageUsingPOST_33",
+        "operationId": "getPageUsingPOST_34",
         "consumes": [
           "application/json"
         ],

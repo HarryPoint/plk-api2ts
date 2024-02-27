@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number; produceOrderId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; produceOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionProcessTreeResponseObject>(
         {
             url: "/masterdata-service/produceTechnology/getTreeDetailById",
@@ -22,16 +22,16 @@ export interface IJSONResultProductionProcessTreeResponseObject {
     /** 响应结果 */
     data?: IProductionProcessTreeResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产工艺树状响应对象 */
 export interface IProductionProcessTreeResponseObject {
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 生产工艺名称 */
     produceTechnologyName?: string;
     /** 物料id(该工艺对应的物料id) */
-    materialId?: number;
+    materialId?: string;
     /** 生产工艺节点响应对象 */
     nodeResponse?: IProductionProcessNodeResponseObject;
     /** 整个结构是否有工艺路径 */
@@ -40,7 +40,7 @@ export interface IProductionProcessTreeResponseObject {
 /** 生产工艺节点响应对象 */
 export interface IProductionProcessNodeResponseObject {
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 节点类型 */
     type?: EProductionProcessNodeResponseObject_type;
     /** 节点数据 -- 不同的节点类型的数据格式不一样 */

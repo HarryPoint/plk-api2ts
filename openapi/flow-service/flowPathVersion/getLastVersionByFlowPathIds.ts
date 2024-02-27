@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程版本相关/getLastVersionByFlowPathIdsUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProcessVersionRespondsToVO>(
         {
             url: "/flow-service/flowPathVersion/getLastVersionByFlowPathIds",
@@ -22,16 +22,16 @@ export interface IJSONResultListProcessVersionRespondsToVO {
     /** 响应结果 */
     data?: ITheProcessVersionRespondsToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程版本响应VO */
 export interface ITheProcessVersionRespondsToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 版本排名 */
     versionRank?: number;
     /** 是否是系统流程 */

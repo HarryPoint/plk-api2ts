@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getAllProduceEntrustExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IOutputClassReportSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputClassReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListOutsourcedReportExportVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getAllProduceEntrustExportResult",
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IOutputClassReportSearchVOp
 /** 产出类报表搜索VO */
 export interface IOutputClassReportSearchVO {
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 日期筛选 - 开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 日期筛选 - 结束 yyyy-MM-dd HH:mm:ss */
@@ -37,7 +37,7 @@ export interface IJSONResultListOutsourcedReportExportVO {
     /** 响应结果 */
     data?: IOutsourcingReportExportVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 委外报表导出VO */
 export interface IOutsourcingReportExportVO {

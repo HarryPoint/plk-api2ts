@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/getInfoByIdUsingGET_3
@@ -22,12 +22,12 @@ export interface IJSONResultStandardProcessConditionGroupRespondsToDTO {
     /** 响应结果 */
     data?: IStandardProcessConditionsGroupRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 标准工艺条件组响应DTO */
 export interface IStandardProcessConditionsGroupRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 标准工艺条件 */
@@ -36,7 +36,7 @@ export interface IStandardProcessConditionsGroupRespondsToDTO {
 /** 标准工艺条件响应DTO */
 export interface IStandardProcessConditionsRespondToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 来源应用编号 */
     fromFlowPathCode?: string;
     /** 来源字段编号 */

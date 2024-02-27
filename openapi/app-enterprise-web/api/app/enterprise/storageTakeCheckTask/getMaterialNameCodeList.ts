@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getMaterialNameCodeListUsingPOST
@@ -29,12 +29,12 @@ export interface IJSONResultListReturnInformationAboutTheMaterial {
     /** 响应结果 */
     data?: IMaterialReturnInformation[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料返回信息 */
 export interface IMaterialReturnInformation {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */

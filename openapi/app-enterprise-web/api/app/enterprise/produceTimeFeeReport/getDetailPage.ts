@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工时工费相关/getDetailPageUsingPOST_1
@@ -22,19 +22,19 @@ export interface IHourlyLaborRateReportSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 员工id集 */
-    userIds?: number[];
+    userIds?: string[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 生产任务编码 */
@@ -56,57 +56,57 @@ export interface IJSONResultPagingInformationTheLaborCostReportReturnsVO {
     /** 响应结果 */
     data?: IPageInformationTheTimeSpentReportReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工时工费报表返回VO» */
 export interface IPageInformationTheTimeSpentReportReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheManHourReportReturnsToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTheTimeSpentReportReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTheTimeSpentReportReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工时工费报表返回VO */
 export interface ITheManHourReportReturnsToVO {
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 员工id */
-    userId?: number;
+    userId?: string;
     /** 员工姓名 */
     username?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
     materialCode?: string;
     /** 订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 订单数量(工单数量) */
     produceOrderTotalCount?: number;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -120,11 +120,11 @@ export interface ITheManHourReportReturnsToVO {
     /** 返工产出工费 */
     backFee?: number;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 生产任务编码 */
     produceTaskNo?: string;
 }

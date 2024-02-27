@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/addTaskUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionCostingTaskAddsR
 /** 生产成本核算任务添加请求对象 */
 export interface IProductionCostingTaskAddsRequestObject {
     /** 财务期间id */
-    fiscalPeriodId: number;
+    fiscalPeriodId: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -25,7 +25,7 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

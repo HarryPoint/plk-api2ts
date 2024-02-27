@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/trialDelayAddUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITrialProductOrderExtension
 /** 试用产品订单延期新增请求对象 */
 export interface ITrialProductOrderExtensionNewRequestObject {
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 延长时长(天) */
     delayDurationQuantity?: number;
     /** 购买账号数 */
@@ -26,7 +26,7 @@ export interface ITrialProductOrderExtensionNewRequestObject {
     /** 延期原因 */
     delayReason?: string;
     /** 预计到期日期 */
-    planExpireTime?: string;
+    planExpireTime?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -37,5 +37,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

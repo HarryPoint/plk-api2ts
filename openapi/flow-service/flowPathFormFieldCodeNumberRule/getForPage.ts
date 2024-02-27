@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getForPageUsingPOST
 */
-export default function fetchMethod(options: { data: ICodeRulePagingQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICodeRulePagingQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getForPage",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICodeRulePagingQueryVOparam
 /** 编码规则分页查询VO */
 export interface ICodeRulePagingQueryVO {
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 当前页面 */
     pageNo?: number;
     /** 字段名称 */
@@ -44,55 +44,55 @@ export interface IJSONResultPagingInformationEncodingRulePagingReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationEncodingRulePagingReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«编码规则分页返回VO» */
 export interface IPagingInformationEncodingRulePagingReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheEncodingRulePagingReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationEncodingRulePagingReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationEncodingRulePagingReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 编码规则分页返回VO */
 export interface ITheEncodingRulePagingReturnsVO {
     /** 数据状态 0停用，1启用，-1已删除 */
     dataStatus?: number;
     /** 创建员工id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建员工名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新员工id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新员工名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 规则类型 */
     type?: ETheEncodingRulePagingReturnsVO_type;
     /** 业务类型 */
     businessType?: ETheEncodingRulePagingReturnsVO_businessType;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程名称 */
     flowPathName?: string;
     /** 所属流程表单code */
@@ -109,7 +109,7 @@ export interface ITheEncodingRulePagingReturnsVO {
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -131,7 +131,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }

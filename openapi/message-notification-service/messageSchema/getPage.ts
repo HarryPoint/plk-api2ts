@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/getPageUsingPOST_1
@@ -26,11 +26,11 @@ export interface IMessageSchemeQueryRequest {
     /** 消息标题 */
     messageSchemaTitle?: string;
     /** 创建员工 */
-    createUserIdList?: number[];
+    createUserIdList?: string[];
     /** 创建时间开始时间 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 创建时间结束时间 */
-    createEndTime?: string;
+    createEndTime?: number;
     /** 方案状态 */
     dataStatusList?: number[];
     /** 标题和编码模糊匹配 */
@@ -47,57 +47,57 @@ export interface IJSONResultPageInformationPageQueryResponse {
     /** 响应结果 */
     data?: IPageInformationPageQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«分页查询响应» */
 export interface IPageInformationPageQueryResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IPagingQueryResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationPageQueryResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationPageQueryResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 分页查询响应 */
 export interface IPagingQueryResponse {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 发送状态 */
     sendingContentStatus?: EPagingQueryResponse_sendingContentStatus;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 消息方案id */
-    id?: number;
+    id?: string;
     /** 方案编号 */
     code?: string;
     /** 消息标题 */
@@ -115,7 +115,7 @@ export interface IPagingQueryResponse {
     /** 业务 */
     applicationName?: string;
     /** 表单配置ID */
-    formConfigId?: number;
+    formConfigId?: string;
 }
 
 export enum EMessageSchemeQueryRequest_sendingModeList_items {

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderIdsByScheduleReportSearchUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderIdsByScheduleReportSearch",
@@ -28,17 +28,17 @@ export interface IProductionSchedulingOrderSearchVO {
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 物料id集合 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 计划开始日期查询开始时间 */
-    startTimeOfBeginTime?: string;
+    startTimeOfBeginTime?: number;
     /** 计划开始日期查询结束时间 */
-    endTimeOfBeginTime?: string;
+    endTimeOfBeginTime?: number;
     /** 排产方式集合 */
     planTypeList?: EProductionSchedulingOrderSearchVO_planTypeList_items[];
     /** 计划结束日期查询结束时间 */
-    endTimeOfEndTime?: string;
+    endTimeOfEndTime?: number;
     /** 计划结束日期查询开始时间 */
-    startTimeOfEndTime?: string;
+    startTimeOfEndTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -54,9 +54,9 @@ export interface IJSONResultListlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number[];
+    data?: string[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionSchedulingOrderSearchVO_planTypeList_items {

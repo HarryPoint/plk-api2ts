@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶生产计划报表/getBaoJingReportProducePlanReportUsingPOST
@@ -16,17 +16,17 @@ export default function fetchMethod(options: { data: IBaojingProductionTaskGantt
 /** 宝晶生产任务甘特图查询对象 */
 export interface IBaojingProductionTaskGanttChartQueryObject {
     /** 物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 部门id */
-    departmentIds?: number[];
+    departmentIds?: string[];
     /** 计划开始日期 */
-    planStartDate?: string;
+    planStartDate?: number;
     /** 计划结束日期 */
-    planEndDate?: string;
+    planEndDate?: number;
     /** 交货开始日期 */
-    startDeliveryDate?: string;
+    startDeliveryDate?: number;
     /** 交货结束日期 */
-    endDeliveryDate?: string;
+    endDeliveryDate?: number;
 }
 /** JSONResult«List«宝晶生产计划甘特图响应对象»» */
 export interface IJSONResultListTreasureProductionPlanGanttChartResponseObject {
@@ -37,12 +37,12 @@ export interface IJSONResultListTreasureProductionPlanGanttChartResponseObject {
     /** 响应结果 */
     data?: IBaojingProductionPlanGanttChartResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶生产计划甘特图响应对象 */
 export interface IBaojingProductionPlanGanttChartResponseObject {
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 计划数 */
@@ -61,13 +61,13 @@ export interface IBaojingProductionPlanResponseObject {
     /** key */
     key?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料规格 */
     materialSpec?: string;
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 计划数 */
@@ -79,11 +79,11 @@ export interface IBaojingProductionPlanResponseObject {
     /** 完工率 */
     completionRate?: number;
     /** 计划开始日期 */
-    planStartDate?: string;
+    planStartDate?: number;
     /** 计划结束日期 */
-    planEndDate?: string;
+    planEndDate?: number;
     /** 交货日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 计划生产明细 */
     details?: IBaojingProductionPlanDetailsResponseObject[];
 }
@@ -98,5 +98,5 @@ export interface IBaojingProductionPlanDetailsResponseObject {
     /** 完工率 */
     completionRate?: number;
     /** 日期 */
-    date?: string;
+    date?;
 }

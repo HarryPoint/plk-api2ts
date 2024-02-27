@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表相关/getAllSalesOrderReportExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IOrderProgressStatisticsQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOrderProgressStatisticsQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListExportOrderProgressStatisticsVO>(
         {
             url: "/masterdata-service/report/getAllSalesOrderReportExportResult",
@@ -22,15 +22,15 @@ export interface IOrderProgressStatisticsQueryVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 交付日期 - 开始 yyyy-MM-dd HH:mm:ss */
-    deliveryDateBegin?: string;
+    deliveryDateBegin?: number;
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 客户id集 */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 交付日期 - 结束 yyyy-MM-dd HH:mm:ss */
-    deliveryDateEnd?: string;
+    deliveryDateEnd?: number;
     /** 物料编码 */
     materialCode?: string;
     /** 销售订单状态 */
@@ -52,7 +52,7 @@ export interface IJSONResultListExportOrderProgressStatisticsVO {
     /** 响应结果 */
     data?: IOrderProgressStatisticsAreDerivedVO2[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 订单进度统计导出VO_2 */
 export interface IOrderProgressStatisticsAreDerivedVO2 {
@@ -69,12 +69,12 @@ export interface IOrderProgressStatisticsAreDerivedVO2 {
     /** 销售订单中生产订单数量 */
     produceOrderCount?: number;
     /** 销售订单创建时间 */
-    salesOrderCreateTime?: string;
+    salesOrderCreateTime?: number;
 }
 /** 订单进度统计导出VO_1 */
 export interface IOrderProgressStatisticsAreExportedVO1 {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */
@@ -84,23 +84,23 @@ export interface IOrderProgressStatisticsAreExportedVO1 {
     /** 交付数量 */
     totalQuantity?: number;
     /** 交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 交付日期字符串 */
     deliveryDateStr?: string;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
-    minPlanBeginTime?: string;
+    minPlanBeginTime?: number;
     /** 计划开始时间字符串 */
     minPlanBeginTimeStr?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
-    maxPlanEndTime?: string;
+    maxPlanEndTime?: number;
     /** 计划结束时间字符串 */
     maxPlanEndTimeStr?: string;
     /** 实际生产开始时间 */
-    minActualBeginTime?: string;
+    minActualBeginTime?: number;
     /** 实际生产开始时间字符串 */
     minActualBeginTimeStr?: string;
     /** 实际生产完成时间 */
-    maxActualEndTime?: string;
+    maxActualEndTime?: number;
     /** 实际生产完成时间字符串 */
     maxActualEndTimeStr?: string;
     /** 交付剩余天数 */
@@ -125,7 +125,7 @@ export interface IOrderProgressStatisticsAreExportedToVO {
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 生产物料id */
-    produceMaterialId?: number;
+    produceMaterialId?: string;
     /** 生产物料编码 */
     produceMaterialCode?: string;
     /** 生产物料名称 */
@@ -143,9 +143,9 @@ export interface IOrderProgressStatisticsAreExportedToVO {
     /** 排产状态描述 */
     produceOrderPlanStatusStr?: string;
     /** 计划生产开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 计划生产结束时间 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 计划生产开始时间字符串 */
     planBeginTimeStr?: string;
     /** 计划生产结束时间字符串 */
@@ -153,9 +153,9 @@ export interface IOrderProgressStatisticsAreExportedToVO {
     /** 计划生产数量 */
     planQuantity?: number;
     /** 实际生产开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际生产结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 实际生产开始时间字符串 */
     actualBeginTimeStr?: string;
     /** 实际生产结束时间字符串 */

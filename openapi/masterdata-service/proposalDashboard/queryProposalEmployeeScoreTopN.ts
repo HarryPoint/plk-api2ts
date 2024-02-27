@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/queryProposalEmployeeScoreTopNUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultEmployeeScoreIndicatorsResponseDTO {
     /** 响应结果 */
     data?: IEmployeeScoreIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EmployeeScoreIndicatorsResponseDTO */
 export interface IEmployeeScoreIndicatorsResponseDTO {
@@ -32,7 +32,7 @@ export interface IEmployeeScoreIndicatorsResponseDTO {
 /** EmployeeScoreIndicatorsItemResponseDTO */
 export interface IEmployeeScoreIndicatorsItemResponseDTO {
     /** 员工ID */
-    employeeId?: number;
+    employeeId?: string;
     /** 员工姓名 */
     employeeName?: string;
     /** 用户头像的文件Key */

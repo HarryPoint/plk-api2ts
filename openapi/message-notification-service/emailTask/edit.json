@@ -28,8 +28,8 @@
             "description": "emailTaskEditRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/EmailTaskEditRequestDTO",
-              "originalRef": "EmailTaskEditRequestDTO"
+              "originalRef": "EmailTaskEditRequestDTO",
+              "$ref": "#/definitions/EmailTaskEditRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {
@@ -113,8 +113,8 @@
           "type": "array",
           "description": "邮件任务配置列表",
           "items": {
-            "$ref": "#/definitions/EmailTaskAttachmentConfigEditRequestDTO",
-            "originalRef": "EmailTaskAttachmentConfigEditRequestDTO"
+            "originalRef": "EmailTaskAttachmentConfigEditRequestDTO",
+            "$ref": "#/definitions/EmailTaskAttachmentConfigEditRequestDTO"
           }
         },
         "status": {
@@ -128,8 +128,8 @@
         },
         "sendingTimeConfig": {
           "description": "发送时间配置",
-          "$ref": "#/definitions/SendingTimeConfigEditRequestDTO",
-          "originalRef": "SendingTimeConfigEditRequestDTO"
+          "originalRef": "SendingTimeConfigEditRequestDTO",
+          "$ref": "#/definitions/SendingTimeConfigEditRequestDTO"
         },
         "createUserName": {
           "type": "string",

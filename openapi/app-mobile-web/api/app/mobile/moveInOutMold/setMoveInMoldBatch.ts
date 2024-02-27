@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/进出料模具相关/setMoveInMoldBatchUsingPOST
@@ -16,20 +16,20 @@ export default function fetchMethod(options: { data: IProductionTaskBatchSetFeed
 /** 生产任务批量设置进料模具请求DTO */
 export interface IProductionTaskBatchSetFeedMoldRequestDTO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 生产任务详情 */
     produceTaskDetails?: IProductionTaskBatchSetFeedMoldTaskDetailsRequestDTO[];
     /** 模具ids */
-    moldIds: number[];
+    moldIds: string[];
 }
 /** 生产任务批量设置进料模具任务详情请求DTO */
 export interface IProductionTaskBatchSetFeedMoldTaskDetailsRequestDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 批次ids */
-    lotIds: number[];
+    lotIds: string[];
     /** undefined */
-    produceTechnologyMoldIds?: number[];
+    produceTechnologyMoldIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -40,5 +40,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

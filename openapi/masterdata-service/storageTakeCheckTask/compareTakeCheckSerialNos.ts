@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/compareTakeCheckSerialNosUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IInventorySerialNumberCompa
 /** 盘点序列号比较请求DTO */
 export interface IInventorySerialNumberComparisonRequestDTO {
     /** 仓位id */
-    warehouseId: number;
+    warehouseId: string;
     /** 物料id */
-    materialId: number;
+    materialId: string;
     /** 批次号 */
     lotNo?: string;
     /** 序列号集合 */
@@ -40,14 +40,14 @@ export interface IJSONResultInventorySerialNumberComparisonResultDTO {
     /** 响应结果 */
     data?: IInventorySerialNumberComparisonResultsDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 盘点序列号比较结果DTO */
 export interface IInventorySerialNumberComparisonResultsDTO {
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 序列号集 */

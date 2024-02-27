@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/deviceRpUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformationparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/deviceCollectionPlan/deviceRp",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IDeviceDataAcquisitionSolut
 /** 设备数采方案应用设备关联信息编辑DTO */
 export interface IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation {
     /** 方案id */
-    id?: number;
+    id?: string;
     /** 设备id集 */
-    deviceIds?: number[];
+    deviceIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

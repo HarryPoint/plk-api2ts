@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/getImportProjectTaskResultUsingGET
@@ -22,16 +22,16 @@ export interface IJSONResultProjectTaskImportRecordQueryResponse {
     /** 响应结果 */
     data?: IProjectTaskImportRecordQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务导入记录查询响应 */
 export interface IProjectTaskImportRecordQueryResponse {
     /** 导入文件id */
     importFileId?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 导入状态 */
     importStatus?: EProjectTaskImportRecordQueryResponse_importStatus;
     /** 总数 */

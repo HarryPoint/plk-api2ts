@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessCardSelectionListSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessCardSelectionListSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/processSheet/getSelector",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProcessCardSelectionListSe
 /** 工艺卡选择列表搜索VO */
 export interface IProcessCardSelectionListSearchVO {
     /** 物料id */
-    materialId: number;
+    materialId: string;
     /** 工序id */
-    processId: number;
+    processId: string;
 }
 /** JSONResult«List«Id，名称，编号VO»» */
 export interface IJSONResultListIdNameNumberVO {
@@ -29,12 +29,12 @@ export interface IJSONResultListIdNameNumberVO {
     /** 响应结果 */
     data?: IIdNameNumberVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

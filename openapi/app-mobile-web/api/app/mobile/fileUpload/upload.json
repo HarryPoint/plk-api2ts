@@ -34,8 +34,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«文件VO»",
-              "$ref": "#/definitions/JSONResult«文件VO»"
+              "originalRef": "JSONResult«附件 VO»",
+              "$ref": "#/definitions/JSONResult«附件 VO»"
             }
           },
           "201": {
@@ -57,7 +57,7 @@
     }
   },
   "definitions": {
-    "JSONResult«文件VO»": {
+    "JSONResult«附件 VO»": {
       "type": "object",
       "properties": {
         "code": {
@@ -73,8 +73,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "文件VO",
-          "$ref": "#/definitions/文件VO"
+          "originalRef": "附件 VO",
+          "$ref": "#/definitions/附件 VO"
         },
         "ts": {
           "type": "integer",
@@ -83,11 +83,16 @@
           "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
         }
       },
-      "title": "JSONResult«文件VO»"
+      "title": "JSONResult«附件 VO»"
     },
-    "文件VO": {
+    "附件 VO": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件id"
+        },
         "fileKey": {
           "type": "string",
           "description": "文件key"
@@ -100,12 +105,13 @@
           "type": "string",
           "description": "文件名"
         },
-        "fileSuffix": {
-          "type": "string",
-          "description": "文件后缀"
+        "size": {
+          "type": "integer",
+          "format": "int64",
+          "description": "文件大小"
         }
       },
-      "title": "文件VO"
+      "title": "附件 VO"
     }
   }
 }

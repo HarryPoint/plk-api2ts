@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionModelUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IQualifiedSupplierInspectio
 /** QualifiedSupplierInspectionModelQueryRequestDTO */
 export interface IQualifiedSupplierInspectionModelQueryRequestDTO {
     /** 查询日期的开始 */
-    dateRangeBegin?: string;
+    dateRangeBegin?: number;
     /** 查询日期的结束 */
-    dateRangeEnd?: string;
+    dateRangeEnd?: number;
 }
 /** JSONResult«List«供应商交检合格率-型号查询响应»» */
 export interface IJSONResultListResponseToTheSuppliersQualifiedDeliveryRate {
@@ -29,7 +29,7 @@ export interface IJSONResultListResponseToTheSuppliersQualifiedDeliveryRate {
     /** 响应结果 */
     data?: ISupplierDeliveryQualifiedRateModelQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 供应商交检合格率-型号查询响应 */
 export interface ISupplierDeliveryQualifiedRateModelQueryResponse {

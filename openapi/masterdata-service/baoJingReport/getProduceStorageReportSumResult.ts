@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getProduceStorageReportSumResultUsingPOST
 */
-export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getProduceStorageReportSumResult",
@@ -30,17 +30,17 @@ export interface IBaojingReportInventoryRelatedSearchDTO {
     /** 导出字段集 */
     exportFields?: string[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 物料id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 业务员ids */
-    businessUserIds?: number[];
+    businessUserIds?: string[];
     /** 区域id */
-    areaIds?: number[];
+    areaIds?: string[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 物料类型 */
     materialTypes?: string[];
     /** 单据名称 */
@@ -64,7 +64,7 @@ export interface IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIs
     /** 响应结果 */
     data?: IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 宝晶报表(成品日报表)合计返回VO */
 export interface IBaojingReportTotalDailyReportOfFinishedProductsReturnedToVO {

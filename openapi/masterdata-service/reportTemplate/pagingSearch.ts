@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/报表模板/pagingSearchUsingPOST
@@ -24,21 +24,21 @@ export interface IPaging14 {
     /** 分页大小 */
     pageSize?: number;
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 模板状态 - 精确匹配, -1 删除， 1 有效， 2.暂存，0 停用 */
     status?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 创建时间-范围开始时间 */
-    createTimeBegin?: string;
+    createTimeBegin?: number;
     /** 更新时间 - 范围结束时间 */
-    updateTimeEnd?: string;
+    updateTimeEnd?: number;
     /** 创建时间-范围结束时间 */
-    createTimeEnd?: string;
+    createTimeEnd?: number;
     /** 更新时间 - 范围开始时间 */
-    updateTimeBegin?: string;
+    updateTimeBegin?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -56,55 +56,55 @@ export interface IReportTemplateQueryResponseDTOJSONResultPagingInformation {
     /** 响应结果 */
     data?: IThePagingInformationReportTemplateQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«ReportTemplateQueryResponseDTO» */
 export interface IThePagingInformationReportTemplateQueryResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IReportTemplateQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationReportTemplateQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationReportTemplateQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** ReportTemplateQueryResponseDTO */
 export interface IReportTemplateQueryResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** ID */
-    id?: number;
+    id?: string;
     /** 模板名称 - 模糊查询 */
     templateName?: string;
     /** 报表类型 - 报表 */
@@ -175,9 +175,9 @@ export enum EReportTemplateQueryResponseDTO_report {
     PRODUCE_PROCESS_REPORT = "PRODUCE_PROCESS_REPORT",
     /** 按物料统计报表 */
     PRODUCE_MATERIAL_REPORT = "PRODUCE_MATERIAL_REPORT",
-    /** 工费统计表 */
+    /** 工费统计表-明细表报表 */
     PRODUCE_TIME_FEE_DETAIL_REPORT = "PRODUCE_TIME_FEE_DETAIL_REPORT",
-    /** 工费统计表 */
+    /** 工费统计表-月度统计表报表 */
     PRODUCE_TIME_FEE_MONTH_REPORT = "PRODUCE_TIME_FEE_MONTH_REPORT",
     /** 委外统计报表 */
     PRODUCE_ENTRUST_MAJOR_DATA_REPORT = "PRODUCE_ENTRUST_MAJOR_DATA_REPORT",

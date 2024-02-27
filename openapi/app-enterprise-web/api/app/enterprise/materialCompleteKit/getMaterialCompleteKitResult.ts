@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/物料齐套相关/getMaterialCompleteKitResultUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IMaterialSetQueryRequestObj
 /** 物料齐套查询请求对象 */
 export interface IMaterialSetQueryRequestObject {
     /** 物料id */
-    materialId: number;
+    materialId: string;
     /** 标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 需求数量 */
     needCount?: number;
 }
@@ -31,14 +31,14 @@ export interface IJSONResultQueryResponseObject {
     /** 响应结果 */
     data?: IMaterialAssemblyQueryResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料齐套查询响应对象 */
 export interface IMaterialAssemblyQueryResponseObject {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** bomId */
-    bomId?: number;
+    bomId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 库存数量 */

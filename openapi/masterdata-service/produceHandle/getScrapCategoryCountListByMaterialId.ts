@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getScrapCategoryCountListByMaterialIdUsingGET
 */
-export default function fetchMethod(options: { params: { beginTime?: string; materialId?: string; endTime?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: string; materialId?: string; endTime?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdIndicatesTheValueVO>(
         {
             url: "/masterdata-service/produceHandle/getScrapCategoryCountListByMaterialId",
@@ -22,12 +22,12 @@ export interface IJSONResultListIdIndicatesTheValueVO {
     /** 响应结果 */
     data?: IIdValueVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id，值VO */
 export interface IIdValueVO {
     /** id */
-    id: number;
+    id: string;
     /** 值 */
     value: number;
 }

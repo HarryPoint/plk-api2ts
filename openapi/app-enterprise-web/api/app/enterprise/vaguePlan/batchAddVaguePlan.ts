@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/模糊排产相关/batchAddVaguePlanUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionOrderBatchFuzzyS
 /** 生产订单批量模糊排产DTO */
 export interface IProductionOrderBatchFuzzySchedulingDTO {
     /** 生产订单id集合 */
-    ids: number[];
+    ids: string[];
     /** 计划开始时间, yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
     beginTime: string;
     /** 计划结束时间, yyyy-MM-dd HH:mm:ss 选择到分，秒数补位00 */
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

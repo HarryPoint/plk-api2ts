@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCurrentYearCumulativeProposalIndicatorsUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultCumulativeProposalIndicatorsResponseDTO {
     /** 响应结果 */
     data?: ICumulativeProposalIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** CumulativeProposalIndicatorsResponseDTO */
 export interface ICumulativeProposalIndicatorsResponseDTO {
@@ -37,9 +37,9 @@ export interface ICumulativeProposalIndicatorsResponseDTO {
     /** 本月/今年参与率 */
     proposalRate?: number;
     /** 全公司员工总数（已启用） */
-    employeeTotalQuantity?: number;
+    employeeTotalQuantity?: string;
     /** 平均提案数 */
     avgProposalQuantity?: number;
     /** 项目完成数量 */
-    projectCompleteQuantity?: number;
+    projectCompleteQuantity?: string;
 }

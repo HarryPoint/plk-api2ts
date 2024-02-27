@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/getWaitForExecutionUsingPOST
@@ -27,12 +27,12 @@ export interface IJSONResultEmailTaskWaitForExecutionQueryResponseDTO {
     /** 响应结果 */
     data?: IEmailTaskWaitForExecutionQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EmailTaskWaitForExecutionQueryResponseDTO */
 export interface IEmailTaskWaitForExecutionQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件名称 */
     emailName?: string;
     /** 收件人 */
@@ -42,11 +42,11 @@ export interface IEmailTaskWaitForExecutionQueryResponseDTO {
     /** 邮件正文 */
     content?: string;
     /** 发送时间 */
-    sendingTime?: string;
+    sendingTime?: number;
     /** 下次发送时间 */
-    nextSendingTime?: string;
+    nextSendingTime?: number;
     /** 上次发送时间 */
-    lastSendingTime?: string;
+    lastSendingTime?: number;
     /** 引用ID列表- 这里指的是报表模板的ID列表 */
-    refIdList?: number[];
+    refIdList?: string[];
 }

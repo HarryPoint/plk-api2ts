@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getTreeByWarehouseUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdCollectionInformation },
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«List«仓位树详情返回VO»» */
 export interface IJSONResultListPositionTreeDetailsAreReturnedToVO {
@@ -27,24 +27,24 @@ export interface IJSONResultListPositionTreeDetailsAreReturnedToVO {
     /** 响应结果 */
     data?: IPositionTreeDetailsBackToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓位树详情返回VO */
 export interface IPositionTreeDetailsBackToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 仓位名称 */
     name?: string;
     /** 仓位编号 */
     code?: string;
     /** 仓库id */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓库编号 */
     storehouseCode?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
     /** 区域编号 */
@@ -54,11 +54,11 @@ export interface IPositionTreeDetailsBackToVO {
     /** 状态(是否可用) */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 子仓位 */
     children?: IPositionTreeDetailsBackToVO[];
 }

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/searchByAttachmentConfigUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEmailTaskAttachmentConfigQ
 /** EmailTaskAttachmentConfigQueryRequestDTO */
 export interface IEmailTaskAttachmentConfigQueryRequestDTO {
     /** 应用ID列表-精确匹配 */
-    refIdList?: number[];
+    refIdList?: string[];
 }
 /** JSONResult«List«EmailTaskQueryResponseDTO»» */
 export interface IJSONResultListEmailTaskQueryResponseDTO {
@@ -27,32 +27,32 @@ export interface IJSONResultListEmailTaskQueryResponseDTO {
     /** 响应结果 */
     data?: IEmailTaskQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EmailTaskQueryResponseDTO */
 export interface IEmailTaskQueryResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** undefined */
-    id?: number;
+    id?: string;
     /** 邮件名称 */
     emailName?: string;
     /** 收件人 */

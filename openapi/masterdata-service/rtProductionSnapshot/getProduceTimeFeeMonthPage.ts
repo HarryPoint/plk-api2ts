@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProduceTimeFeeMonthPageUsingPOST
 */
-export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationMonthlySummaryReportOfLaborTimeIsReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProduceTimeFeeMonthPage",
@@ -22,13 +22,13 @@ export interface IMonthlyReportOfHourlyLaborFeeSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 员工id集 */
-    userIds?: number[];
+    userIds?: string[];
     /** 班组id集 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 查询开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 查询结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -46,41 +46,41 @@ export interface IJSONResultPageInformationMonthlySummaryReportOfLaborTimeIsRetu
     /** 响应结果 */
     data?: IPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工时工费月度汇总报表返回VO» */
 export interface IPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMonthlySummaryReportOfManHourPaymentIsReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationMonthlySummaryReportOfManHourFeeReturnsToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工时工费月度汇总报表返回VO */
 export interface IMonthlySummaryReportOfManHourPaymentIsReturnedToVO {
     /** 月份 */
-    month?: string;
+    month?: number;
     /** 员工id */
-    userId?: number;
+    userId?: string;
     /** 员工姓名 */
     username?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 合格产出工费 */

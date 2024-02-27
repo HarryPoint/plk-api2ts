@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺路径相关/getFlowPathStructureDataUsingPOST_29
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProcessStructureSearchVO }
 /** 流程结构搜索VO */
 export interface IProcessStructureSearchVO {
     /** 流程任务id */
-    flowPathTaskId?: number;
+    flowPathTaskId?: string;
     /** 数据id */
-    id?: number;
+    id?: string;
 }
 /** JSONResult«工艺路径动态数据VO» */
 export interface IJSONResultProcessPathDynamicDataVO {
@@ -29,14 +29,14 @@ export interface IJSONResultProcessPathDynamicDataVO {
     /** 响应结果 */
     data?: IProcessPathDynamicDataVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺路径动态数据VO */
 export interface IProcessPathDynamicDataVO {
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 流程版本 */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程code */
     flowPathCode?: string;
     /** 是否自定义提交按钮文案 */
@@ -44,7 +44,7 @@ export interface IProcessPathDynamicDataVO {
     /** 自定义提交按钮文案 */
     customSubmitContent?: string;
     /** 流程工单id */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 表单结构 */
     structures?: IFormStructureVO[];
     /** 数据 */
@@ -55,9 +55,9 @@ export interface IProcessPathDynamicDataVO {
 /** 表单结构VO */
 export interface IFormStructureVO {
     /** 节点表单关联id */
-    flowPathNodeFormFieldPermissionsRpId?: number;
+    flowPathNodeFormFieldPermissionsRpId?: string;
     /** 所属表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单字段信息 */
     formField?: IProcessFormVO;
     /** 权限类型 */
@@ -68,11 +68,11 @@ export interface IFormStructureVO {
 /** 流程表单VO */
 export interface IProcessFormVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 类型分组 */
@@ -176,7 +176,7 @@ export interface IProcessFormVO {
     /** 排序 */
     sort?: number;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** 父级流程表单编码 */
     parentFlowPathFormFieldCode?: string;
     /** 前端配置拓展字段 */
@@ -226,7 +226,7 @@ export interface ITheProcessFormFormulaFieldReturnsVO {
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -248,7 +248,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -281,7 +281,7 @@ export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
 /** 流程表单字段下拉选项关联显示VO */
 export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 所属流程表单字段编号 */
     flowPathFormFieldCode?: string;
     /** 所属流程表单字段序列号 */
@@ -294,7 +294,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
 /** 流程表单关联表单筛选条件组VO */
 export interface IProcessFormsAssociateFormFilterGroupVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -302,9 +302,9 @@ export interface IProcessFormsAssociateFormFilterGroupVO {
     /** 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组 */
     isSystemDefault?: EProcessFormsAssociateFormFilterGroupVO_isSystemDefault;
     /** 数据联动ID */
-    dataLinkageId?: number;
+    dataLinkageId?: string;
     /** 表单字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
 }
 /** 流程表单关联表单筛选条件VO */
 export interface IProcessFormsAssociateFormFilterVO {
@@ -325,7 +325,7 @@ export interface IProcessFormsAssociateFormFilterVO {
     /** 自定义值回显 */
     compareCustomValueEcho?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathFormFieldFormRpFilterGroupId?: number;
+    flowPathFormFieldFormRpFilterGroupId?: string;
     /** 区间范围 -- 下限 */
     rangeLowerLimit?: string;
     /** 区间范围 -- 上限 */
@@ -340,9 +340,9 @@ export interface IProcessFormsAssociateFormFilterVO {
 /** 流程表单关联表单填充VO */
 export interface IProcessFormAssociatedFormFillVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 被采取的字段序号值 */
     columnSerialNo?: string;
     /** 被采取的字段序号值的下级字段序号值 */
@@ -361,7 +361,7 @@ export interface IProcessFormAssociatedFormFillVO {
 /** FlowPathFormFieldDataLinkageVO */
 export interface IFlowPathFormFieldDataLinkageVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据来源应用编码（即联动表单） */
     sourceFormRpCode?: string;
     /** 数据来源应用表格编码（即联动表单） */
@@ -389,11 +389,11 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
 /** 工艺路径详情步骤VO */
 export interface IProcessPathDetailsStepsVO {
     /** 工艺路径步骤id */
-    id?: number;
+    id?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 所属工序id */
-    processId?: number;
+    processId?: string;
     /** 所属工序名称 */
     processName?: string;
     /** 所属工序编号 */
@@ -417,13 +417,13 @@ export interface IProcessPathDetailsStepsVO {
     /** 返工产出工费 */
     backProducePrice?: number;
     /** 所属进站工艺卡id */
-    processSheetBeforeId?: number;
+    processSheetBeforeId?: string;
     /** 所属进站工艺卡名称 */
     processSheetBeforeName?: string;
     /** 所属进站工艺卡编号 */
     processSheetBeforeCode?: string;
     /** 所属出站工艺卡id */
-    processSheetAfterId?: number;
+    processSheetAfterId?: string;
     /** 所属出站工艺卡名称 */
     processSheetAfterName?: string;
     /** 所属出站工艺卡编号 */
@@ -444,11 +444,11 @@ export interface IProcessPathDetailsStepsVO {
 /** 工艺路径详情步骤Bom明细返回VO */
 export interface IProcessPathDetailsStepBomDetailsReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属主物料bom明细id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 所属bom物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 所属bom物料名称 */
     childMaterialName?: string;
     /** 所属bom物料编号 */
@@ -459,13 +459,13 @@ export interface IProcessPathDetailsStepBomDetailsReturnToVO {
 /** 质检方案明细返回VO */
 export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 质检方案名称 */
     name?: string;
     /** 质检方案编号 */
     code?: string;
     /** 质检分类id */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 质检分类名称 */
     qualityInspectionCategoryName?: string;
     /** 质检分类编号 */
@@ -477,7 +477,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 版次号 */
     issueCode?: string;
     /** 附件文件id */
-    attachedFileId?: number;
+    attachedFileId?: string;
     /** 附件文件key */
     attachedFileKey?: string;
     /** 附件文件完整路径 */
@@ -489,11 +489,11 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 质检方式 */
     type?: ETheDetailsOfTheInspectionSchemeAreReturnedToVO_type;
     /** 质检比例 */
@@ -506,7 +506,7 @@ export interface ITheDetailsOfTheInspectionSchemeAreReturnedToVO {
 /** 物料主数据基础信息返回VO */
 export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */
@@ -518,18 +518,18 @@ export interface IMaterialMasterDataBasicInformationIsReturnedToVO {
     /** 物料规格 */
     spec?: string;
     /** 计量单位id */
-    unitId?: number;
+    unitId?: string;
     /** 库存可使用数 */
     storageUseQuantity?: number;
 }
 /** 质检方案质检项关联信息返回VO */
 export interface IQualityInspectionSolutionQualityInspectionItemAssociationInformationIsReturnedToVO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 所属质检方案 */
-    qualityInspectionPlanId?: number;
+    qualityInspectionPlanId?: string;
     /** 所属质检项id */
-    qualityInspectionItemId?: number;
+    qualityInspectionItemId?: string;
     /** 所属质检项名称 */
     qualityInspectionItemName?: string;
     /** 所属质检项编号 */
@@ -821,15 +821,15 @@ export enum EProcessFormVO_numberFormat {
 }
 
 export enum EProcessFormVO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"
@@ -958,13 +958,13 @@ export enum EProcessFormVO_isAutoGetLocation {
 }
 
 export enum EProcessFormVO_addressType {
-    /** 省 */
+    /** 省-市-区-详细地址 */
     REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区 */
     REGION = "REGION",
-    /** 省 */
+    /** 省-市-区-街道-详细地址 */
     STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区-街道 */
     STREET = "STREET"
 }
 

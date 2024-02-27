@@ -14,7 +14,7 @@
           "质检管理"
         ],
         "summary": "分页查询质检任务列表",
-        "operationId": "getPageUsingPOST_23",
+        "operationId": "getPageUsingPOST_24",
         "consumes": [
           "application/json"
         ],

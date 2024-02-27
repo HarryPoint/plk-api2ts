@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectMapUsingPOST
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IProjectKanbanQueryDto }, e
 /** 项目看板查询dto */
 export interface IProjectKanbanQueryDto {
     /** 开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 项目大类 */
     projectCategory?: string;
     /** undefined */
-    projectTypeIds?: number[];
+    projectTypeIds?: string[];
     /** undefined */
-    excludeProjectIds?: number[];
+    excludeProjectIds?: string[];
 }
 /** JSONResult«List«项目地图响应对象»» */
 export interface IJSONResultListProjectMapResponseObject {
@@ -35,7 +35,7 @@ export interface IJSONResultListProjectMapResponseObject {
     /** 响应结果 */
     data?: IProjectMapResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目地图响应对象 */
 export interface IProjectMapResponseObject {
@@ -51,7 +51,7 @@ export interface IProjectMapResponseObject {
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

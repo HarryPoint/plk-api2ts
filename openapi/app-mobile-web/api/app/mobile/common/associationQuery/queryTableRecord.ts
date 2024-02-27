@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/queryAssociationFormTableRecordUsingPOST
@@ -24,7 +24,7 @@ export interface IPaging1 {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 表单字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -42,7 +42,7 @@ export interface IJSONResultAssociationFormTypeFieldTableRecordOutputVO {
     /** 响应结果 */
     data?: IAssociationFormTypeFieldTableRecordOutputVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** AssociationFormTypeFieldTableRecordOutputVO */
 export interface IAssociationFormTypeFieldTableRecordOutputVO {
@@ -54,9 +54,9 @@ export interface IAssociationFormTypeFieldTableRecordOutputVO {
 /** 表单结构VO */
 export interface IFormStructureVO {
     /** 节点表单关联id */
-    flowPathNodeFormFieldPermissionsRpId?: number;
+    flowPathNodeFormFieldPermissionsRpId?: string;
     /** 所属表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 表单字段信息 */
     formField?: IProcessFormVO;
     /** 权限类型 */
@@ -67,11 +67,11 @@ export interface IFormStructureVO {
 /** 流程表单VO */
 export interface IProcessFormVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 类型分组 */
@@ -175,7 +175,7 @@ export interface IProcessFormVO {
     /** 排序 */
     sort?: number;
     /** 父级流程表单id */
-    parentFlowPathFormFieldId?: number;
+    parentFlowPathFormFieldId?: string;
     /** 父级流程表单编码 */
     parentFlowPathFormFieldCode?: string;
     /** 前端配置拓展字段 */
@@ -225,7 +225,7 @@ export interface ITheProcessFormFormulaFieldReturnsVO {
 /** 流程表单字段编码规则明细VO */
 export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设置类型 */
     type?: EProcessFormFieldEncodingRuleDetailsVO_type;
     /** 日期格式 - 用于日期 */
@@ -247,7 +247,7 @@ export interface IProcessFormFieldEncodingRuleDetailsVO {
     /** 所属流程表单字段序列值 -- 针对引用字段类型 */
     flowPathFormFiledCode?: string;
     /** 规则ID */
-    flowPathFormFieldCodeNumberRuleId?: number;
+    flowPathFormFieldCodeNumberRuleId?: string;
     /** 排序 */
     sort?: number;
 }
@@ -280,7 +280,7 @@ export interface IProcessFormFieldAssociationDictionaryOptionSetVO {
 /** 流程表单字段下拉选项关联显示VO */
 export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 所属流程表单字段编号 */
     flowPathFormFieldCode?: string;
     /** 所属流程表单字段序列号 */
@@ -293,7 +293,7 @@ export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
 /** 流程表单关联表单筛选条件组VO */
 export interface IProcessFormsAssociateFormFilterGroupVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -301,9 +301,9 @@ export interface IProcessFormsAssociateFormFilterGroupVO {
     /** 是否系统默认条件组，条件集 => Y 表示系统默认条件组（每个字段有且最多只有1个系统默认条件组），N - 用户自定义条件组 */
     isSystemDefault?: EProcessFormsAssociateFormFilterGroupVO_isSystemDefault;
     /** 数据联动ID */
-    dataLinkageId?: number;
+    dataLinkageId?: string;
     /** 表单字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
 }
 /** 流程表单关联表单筛选条件VO */
 export interface IProcessFormsAssociateFormFilterVO {
@@ -324,7 +324,7 @@ export interface IProcessFormsAssociateFormFilterVO {
     /** 自定义值回显 */
     compareCustomValueEcho?: string;
     /** 所属流程表单关联表单筛选条件组id */
-    flowPathFormFieldFormRpFilterGroupId?: number;
+    flowPathFormFieldFormRpFilterGroupId?: string;
     /** 区间范围 -- 下限 */
     rangeLowerLimit?: string;
     /** 区间范围 -- 上限 */
@@ -339,9 +339,9 @@ export interface IProcessFormsAssociateFormFilterVO {
 /** 流程表单关联表单填充VO */
 export interface IProcessFormAssociatedFormFillVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 被采取的字段序号值 */
     columnSerialNo?: string;
     /** 被采取的字段序号值的下级字段序号值 */
@@ -360,7 +360,7 @@ export interface IProcessFormAssociatedFormFillVO {
 /** FlowPathFormFieldDataLinkageVO */
 export interface IFlowPathFormFieldDataLinkageVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 数据来源应用编码（即联动表单） */
     sourceFormRpCode?: string;
     /** 数据来源应用表格编码（即联动表单） */
@@ -388,25 +388,25 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
 /** 分页信息«JSONObject» */
 export interface IPagingInformationJSONObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IJSONObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationJSONObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationJSONObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** JSONObject */
 export interface IJSONObject {
@@ -666,15 +666,15 @@ export enum EProcessFormVO_numberFormat {
 }
 
 export enum EProcessFormVO_dateType {
-    /** 年 */
+    /** 年-月-日 */
     DAY = "DAY",
-    /** 年 */
+    /** 年-月-日 时:分 */
     MIN = "MIN",
-    /** 年 */
+    /** 年-月-日 时:分:秒 */
     SECOND = "SECOND",
     /** 时:分 */
     HOUR_MIN = "HOUR_MIN",
-    /** 年 */
+    /** 年-月 */
     MONTH = "MONTH",
     /** 年 */
     YEAR = "YEAR"
@@ -803,13 +803,13 @@ export enum EProcessFormVO_isAutoGetLocation {
 }
 
 export enum EProcessFormVO_addressType {
-    /** 省 */
+    /** 省-市-区-详细地址 */
     REGION_AND_DETAIL_ADDRESS = "REGION_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区 */
     REGION = "REGION",
-    /** 省 */
+    /** 省-市-区-街道-详细地址 */
     STREET_AND_DETAIL_ADDRESS = "STREET_AND_DETAIL_ADDRESS",
-    /** 省 */
+    /** 省-市-区-街道 */
     STREET = "STREET"
 }
 

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getPackageMaterialArriveProgressListUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultListPackageMaterialArrivalProgressVO {
     /** 响应结果 */
     data?: IPackagingMaterialsArrivedVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 包装材料到达进度VO */
 export interface IPackagingMaterialsArrivedVO {
@@ -36,7 +36,7 @@ export interface IPackagingMaterialsArrivedVO {
 /** 包装材料到达进度详情VO */
 export interface IPackagingMaterialsArrivalScheduleDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     materialName?: string;
     /** 到达状态 */

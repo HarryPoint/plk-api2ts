@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目角色配置相关/getForPageUsingPOST_16
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProjectRoleConfigureTheQue
 /** 项目角色配置查询对象 */
 export interface IProjectRoleConfigureTheQueryObject {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目角色id */
-    projectRoleIds?: number[];
+    projectRoleIds?: string[];
     /** 查询配置code集 */
     codes?: string[];
 }
@@ -31,7 +31,7 @@ export interface IJSONResultListProjectRoleConfigurationReturnObject {
     /** 响应结果 */
     data?: ITheProjectRoleConfigurationReturnsTheObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目角色配置返回对象 */
 export interface ITheProjectRoleConfigurationReturnsTheObject {

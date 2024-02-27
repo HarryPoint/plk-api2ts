@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板-配置页面相关/getUsingGET_4
@@ -22,18 +22,18 @@ export interface IJSONResultProposalDashboardConfigResponseDTO {
     /** 响应结果 */
     data?: IProposalDashboardConfigResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProposalDashboardConfigResponseDTO */
 export interface IProposalDashboardConfigResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 建议部门ID列表 */
-    proposalDepartmentIdList?: number[];
+    proposalDepartmentIdList?: string[];
     /** 建议部门 ID => Name */
     proposalDepartmentList?: IBasicData[];
     /** 项目部门ID列表 */
-    projectDepartmentIdList?: number[];
+    projectDepartmentIdList?: string[];
     /** 项目部门 ID => Name */
     projectDepartmentList?: IBasicData[];
     /** 未完成目标值 */
@@ -48,7 +48,7 @@ export interface IProposalDashboardConfigResponseDTO {
 /** 基础数据 */
 export interface IBasicData {
     /** ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -57,7 +57,7 @@ export interface IBasicData {
 /** ProposalDashboardStatisticsConfigResponseDTO */
 export interface IProposalDashboardStatisticsConfigResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 统计类型 */
     type?: EProposalDashboardStatisticsConfigResponseDTO_type;
     /** 开始值 - 适用于数值区间、数值大于等于、数值大于 */

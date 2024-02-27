@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/getProcessSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; type?: Etype } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; type?: Etype } }, extraOptions?: any) {
     return http<ITheJSONResultListOperationSelectsToReturnVO1>(
         {
             url: "/masterdata-service/userProcess/getProcessSelector",
@@ -22,12 +22,12 @@ export interface ITheJSONResultListOperationSelectsToReturnVO1 {
     /** 响应结果 */
     data?: IProcedureSelectionReturnsVO1[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工序选择返回VO_1 */
 export interface IProcedureSelectionReturnsVO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序名称 */
     name?: string;
     /** 工序编号 */

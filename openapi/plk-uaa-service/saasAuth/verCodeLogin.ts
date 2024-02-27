@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/verCodeLoginUsingPOST
@@ -31,7 +31,7 @@ export interface IJSONResultLoginResponseDTO {
     /** 响应结果 */
     data?: ILoginRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 登录响应 DTO */
 export interface ILoginRespondsToDTO {

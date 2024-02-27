@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单下发扩展信息/getListByProduceOrderIdsUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionOrderDeliveryExtendedInformationQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderDeliveryExtendedInformationQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListExtendedInformationVOForProductionOrderDelivery>(
         {
             url: "/masterdata-service/produceOrderIssueExt/getListByProduceOrderIds",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProductionOrderDeliveryExt
 /** 生产订单下发扩展信息查询VO */
 export interface IProductionOrderDeliveryExtendedInformationQueryVO {
     /** 生产订单ids */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
 }
 /** JSONResult«List«生产订单下发扩展信息VO»» */
 export interface IJSONResultListExtendedInformationVOForProductionOrderDelivery {
@@ -27,22 +27,22 @@ export interface IJSONResultListExtendedInformationVOForProductionOrderDelivery 
     /** 响应结果 */
     data?: IProductionOrderDeliveryExtendedMessageVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单下发扩展信息VO */
 export interface IProductionOrderDeliveryExtendedMessageVO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 下发人id */
-    issueUserId?: number;
+    issueUserId?: string;
     /** 下发人 */
     issueUser?: string;
     /** 下发时间 */
-    issueTime?: string;
+    issueTime?: number;
     /** 下发人id */
-    planUserId?: number;
+    planUserId?: string;
     /** 计划人 */
     planUser?: string;
     /** 计划时间 */
-    planTime?: string;
+    planTime?: number;
 }

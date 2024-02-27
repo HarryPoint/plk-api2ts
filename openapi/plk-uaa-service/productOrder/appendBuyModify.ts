@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/appendBuyModifyUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IAdditionalProductOrderModi
 /** 加购产品订单修改请求对象 */
 export interface IAdditionalProductOrderModificationRequestObject {
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 加购类型非法传递, 默认传 MES  */
     appendType?: EAdditionalProductOrderModificationRequestObject_appendType;
     /** 加购产品类型非法传递, 默认传 MES  */
@@ -30,26 +30,26 @@ export interface IAdditionalProductOrderModificationRequestObject {
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 合同签约时间 */
-    contractTime?: string;
+    contractTime?: number;
     /** 预计交付日期 */
-    planDeliveryTime?: string;
+    planDeliveryTime?: number;
     /** 预计到期日期 */
-    planExpireTime?: string;
+    planExpireTime?: number;
     /** 付款记录列表 */
     payRecordList?: IProductOrderPaymentHistoryEditRequestObject[];
     /** 企业id */
-    id?: number;
+    id?: string;
 }
 /** 产品订单付款记录编辑请求对象 */
 export interface IProductOrderPaymentHistoryEditRequestObject {
     /** 付款记录id */
-    id?: number;
+    id?: string;
     /** 计划付款日期 */
-    planPayTime?: string;
+    planPayTime?: number;
     /** 应付金额(元) */
     payableQuantity?: number;
     /** 实际付款日期 */
-    realPayTime?: string;
+    realPayTime?: number;
     /** 实付金额(元) */
     actualPayQuantity?: number;
     /** 状态 */
@@ -64,7 +64,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EAdditionalProductOrderModificationRequestObject_appendType {

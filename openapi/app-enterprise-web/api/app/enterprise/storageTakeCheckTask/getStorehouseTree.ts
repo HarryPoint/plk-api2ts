@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getStorehouseTreeUsingGET_2
@@ -22,12 +22,12 @@ export interface ITheJSONResultListRepositoryAreaTreeReturnsVO1 {
     /** 响应结果 */
     data?: ITheWarehouseAreaTreeReturnsVO2[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 仓库区域树返回VO_2 */
 export interface ITheWarehouseAreaTreeReturnsVO2 {
     /** 区域id */
-    id?: number;
+    id?: string;
     /** 区域名称 */
     name?: string;
     /** 区域编号 */
@@ -40,7 +40,7 @@ export interface ITheWarehouseAreaTreeReturnsVO2 {
 /** 仓库树返回VO_2 */
 export interface ITheWarehouseTreeReturnsVO2 {
     /** id */
-    id?: number;
+    id?: string;
     /** 仓库名称 */
     name?: string;
     /** 仓库编号 */
@@ -55,7 +55,7 @@ export interface ITheWarehouseTreeReturnsVO2 {
 /** 仓位树返回VO_7 */
 export interface IPositionTreeReturnsVO7 {
     /** id */
-    id?: number;
+    id?: string;
     /** 仓位名称 */
     name?: string;
     /** 仓位编号 */
@@ -63,11 +63,11 @@ export interface IPositionTreeReturnsVO7 {
     /** 状态(是否可用) */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 区域名称 */
     areaName?: string;
     /** 仓库名称 */

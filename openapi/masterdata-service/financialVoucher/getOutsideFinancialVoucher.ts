@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
 */
-export default function fetchMethod(options: { params: { applicationId?: number; id?: number; voucherNo?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { applicationId?: string; id?: string; voucherNo?: string } }, extraOptions?: any) {
     return http<IJSONResultExternalFinancialCertificateResponseObject>(
         {
             url: "/masterdata-service/financialVoucher/getOutsideFinancialVoucher",
@@ -22,7 +22,7 @@ export interface IJSONResultExternalFinancialCertificateResponseObject {
     /** 响应结果 */
     data?: IExternalFinancialCertificateResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 外部财务凭证响应对象 */
 export interface IExternalFinancialCertificateResponseObject {
@@ -31,7 +31,7 @@ export interface IExternalFinancialCertificateResponseObject {
     /** 凭证字号 */
     voucherType?: string;
     /** 日期 */
-    date?: string;
+    date?: number;
     /** 凭证期间 */
     voucherPeriod?: string;
     /** 借方合计 */

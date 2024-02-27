@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectTaskReportUsingPOST
@@ -22,47 +22,47 @@ export interface IJSONResultPagingInformationProjectTaskReportResponseObject {
     /** 响应结果 */
     data?: IPageInformationItemTaskReportResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«项目任务报表响应对象» */
 export interface IPageInformationItemTaskReportResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProjectTaskReportResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationItemTaskReportResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationItemTaskReportResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 项目任务报表响应对象 */
 export interface IProjectTaskReportResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
     code?: string;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目编号 */
     projectCode?: string;
     /** 项目类型id */
-    projectTypeId?: number;
+    projectTypeId?: string;
     /** 项目类型名称 */
     projectTypeName?: string;
     /** 优先级 */
@@ -82,9 +82,9 @@ export interface IProjectTaskReportResponseObject {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** undefined */
-    projectManagerId?: number;
+    projectManagerId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 任务类型 */
@@ -94,29 +94,23 @@ export interface IProjectTaskReportResponseObject {
     /** 任务负责人名称 */
     leaderUserNameList?: string[];
     /** 任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务截止日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 前置任务名称列表 */
     preTaskNameList?: string[];
     /** 上级任务名称 */
     parentName?: string;
     /** 任务完成时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 任务进度 */
     taskProgress?: number;
-    /** 项目计划id */
-    projectPlanId?: number;
-    /** 项目计划编号 */
-    projectPlanCode?: string;
-    /** 项目计划名称 */
-    projectPlanName?: string;
     /** undefined */
-    parentId?: number;
+    parentId?: string;
     /** undefined */
-    projectStageId?: number;
+    projectStageId?: string;
     /** undefined */
-    projectTaskTypeId?: number;
+    projectTaskTypeId?: string;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */

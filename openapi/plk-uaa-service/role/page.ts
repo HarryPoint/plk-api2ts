@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/pageUsingPOST_7
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IRoleQuery }, extraOptions?
 /** 角色查询 */
 export interface IRoleQuery {
     /** 创建人 */
-    createUserIds?: number[];
+    createUserIds?: string[];
     /** 当前页面 */
     pageNo?: number;
     /** 创建时间开始 */
-    createBeginTime?: string;
+    createBeginTime?: number;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -28,7 +28,7 @@ export interface IRoleQuery {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 导出字段集 */
     exportFields?: string[];
     /** 角色编码 */
@@ -38,9 +38,9 @@ export interface IRoleQuery {
     /** 应用级别 */
     applicationLevel?: ERoleQuery_applicationLevel;
     /** 创建时间结束 */
-    createEndTime?: string;
+    createEndTime?: number;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -58,49 +58,49 @@ export interface IJSONResultPagingInformationEnterpriseRoleResponse {
     /** 响应结果 */
     data?: IPagingInformationEnterpriseRoleResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«企业角色响应» */
 export interface IPagingInformationEnterpriseRoleResponse {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IEnterpriseRoleResponse[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationEnterpriseRoleResponse_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationEnterpriseRoleResponse_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 企业角色响应 */
 export interface IEnterpriseRoleResponse {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人名称 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新人id */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新人名称 */
     updateUsername?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -116,9 +116,9 @@ export interface IEnterpriseRoleResponse {
     /** 应用级别 */
     applicationLevel?: EEnterpriseRoleResponse_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 服务业务ID */
-    serviceBusinessId?: number;
+    serviceBusinessId?: string;
 }
 
 export enum ERoleQuery_applicationLevel {

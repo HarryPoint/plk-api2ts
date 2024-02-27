@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料全局批次设置相关/editUsingPOST_7
 */
-export default function fetchMethod(options: { data: IMaterialsBureauBatchSetEditObjectparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialsBureauBatchSetEditObject, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/materialGlobalLotSetting/edit",
@@ -35,7 +35,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EMaterialsBureauBatchSetEditObject_enableSerialNo {

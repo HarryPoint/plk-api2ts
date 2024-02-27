@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/exportUsingPOST_32
 */
-export default function fetchMethod(options: { data: IWarehouseInventoryTasksPageQueryObjectsparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IWarehouseInventoryTasksPageQueryObjects, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/storageTakeCheckTask/export",
@@ -24,13 +24,13 @@ export interface IWarehouseInventoryTasksPageQueryObjects {
     /** 任务编号 */
     taskNo?: string;
     /** 盘点仓库id */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
     /** 物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 完成开始时间 yyyy-MM-dd HH:mm:ss */
     completeBeginTime?: string;
     /** 处理人id */
-    handleUserIds?: number[];
+    handleUserIds?: string[];
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
     planBeginTime?: string;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
@@ -54,9 +54,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EWarehouseInventoryTasksPageQueryObjects_status {

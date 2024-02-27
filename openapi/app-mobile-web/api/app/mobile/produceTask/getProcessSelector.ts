@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProcessSelectorUsingGET_2
@@ -22,12 +22,12 @@ export interface ITheJSONResultListAreaOperationSelectsToReturnVO {
     /** 响应结果 */
     data?: ITheRegionalOperationSelectionReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 区域工序选择返回VO */
 export interface ITheRegionalOperationSelectionReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 区域名称 */
     name?: string;
     /** 区域编号 */
@@ -38,7 +38,7 @@ export interface ITheRegionalOperationSelectionReturnsVO {
 /** 工序返回VO - 包含任务信息 */
 export interface IProcedureReturnsVOContainingTaskInformation {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序名称 */
     name?: string;
     /** 工序编号 */

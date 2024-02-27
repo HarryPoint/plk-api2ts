@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/queryEmployeeListOfNextNodeUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IPageBreaks4 }, extraOption
 /** 分页_4 */
 export interface IPageBreaks4 {
     /** 当前的工单ID */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -28,7 +28,7 @@ export interface IPageBreaks4 {
     /** 导出字段集 */
     exportFields?: string[];
     /** 下个节点ID列表 */
-    nextNodeIdList?: number[];
+    nextNodeIdList?: string[];
     /** 名称或编码 */
     nameOrCode?: string;
     /** 动态表单记录 */
@@ -50,36 +50,36 @@ export interface IJSONResultListEmployeeResponseObject {
     /** 响应结果 */
     data?: IEmployeeResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 员工响应对象 */
 export interface IEmployeeResponseObject {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 出生日期 */
-    birthday?: string;
+    birthday?: number;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 员工工号 */
     code?: string;
     /** 员工姓名 */
@@ -87,11 +87,11 @@ export interface IEmployeeResponseObject {
     /** 手机号码 */
     mobilePhone?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 入职日期 */
-    entryTime?: string;
+    entryTime?: number;
     /** 离职日期 */
-    dimissionTime?: string;
+    dimissionTime?: number;
     /** 性别 */
     gender?: EEmployeeResponseObject_gender;
     /** 学历 */
@@ -99,13 +99,13 @@ export interface IEmployeeResponseObject {
     /** 籍贯 */
     nativePlace?: string;
     /** 任职部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 任职部门名称 */
     departmentName?: string;
     /** 任职职位id */
-    positionId?: number;
+    positionId?: string;
     /** 直属上级id */
-    higherUserId?: number;
+    higherUserId?: string;
     /** 邮箱 */
     email?: string;
 }

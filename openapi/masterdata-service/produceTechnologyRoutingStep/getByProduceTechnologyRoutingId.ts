@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-step-controller/getByProduceTechnologyRoutingIdUsingGET
 */
-export default function fetchMethod(options: { params: { produceTechnologyRoutingId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceTechnologyRoutingId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProduceTechnologyRoutingStepResponseDTO>(
         {
             url: "/masterdata-service/produceTechnologyRoutingStep/getByProduceTechnologyRoutingId",
@@ -22,56 +22,56 @@ export interface IJSONResultListProduceTechnologyRoutingStepResponseDTO {
     /** 响应结果 */
     data?: IProduceTechnologyRoutingStepResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProduceTechnologyRoutingStepResponseDTO */
 export interface IProduceTechnologyRoutingStepResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 生产工艺工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 工艺路径步骤 */
     routingStep?: number;
     /** 所属工序id */
-    processId?: number;
+    processId?: string;
     /** 所属工序名称 */
     processName?: string;
     /** 所属生产工艺产能id */
-    produceTechnologyCapacityId?: number;
+    produceTechnologyCapacityId?: string;
     /** 所属生产工艺工费id */
-    produceTechnologyLaborCostId?: number;
+    produceTechnologyLaborCostId?: string;
     /** 所属生产工艺工艺卡id */
-    produceTechnologyProcessSheetId?: number;
+    produceTechnologyProcessSheetId?: string;
     /** BOM物料消耗确认类型 */
     bomConsumeSureType?: EProduceTechnologyRoutingStepResponseDTO_bomConsumeSureType;
     /** 进站关键参数id */
-    moveInKeyParameterId?: number;
+    moveInKeyParameterId?: string;
     /** 出站关键参数id */
-    moveOutKeyParameterId?: number;
+    moveOutKeyParameterId?: string;
     /** 进出站类型 */
     inOutType?: EProduceTechnologyRoutingStepResponseDTO_inOutType;
     /** 是否允许直接出站 */
@@ -84,9 +84,9 @@ export interface IProduceTechnologyRoutingStepResponseDTO {
 /** ProduceTechnologyRoutingStepBomDetailResponseDTO */
 export interface IProduceTechnologyRoutingStepBomDetailResponseDTO {
     /** 所属主物料bom明细id */
-    produceTechnologyMaterialBomDetailId?: number;
+    produceTechnologyMaterialBomDetailId?: string;
     /** 所属bom物料id */
-    childMaterialId?: number;
+    childMaterialId?: string;
     /** 所属bom物料名称 */
     childMaterialName?: string;
     /** 所属bom物料编号 */

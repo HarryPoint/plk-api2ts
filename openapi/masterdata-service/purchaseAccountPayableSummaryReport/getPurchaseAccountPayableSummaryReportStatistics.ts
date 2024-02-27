@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/应付账款汇总报表相关/getPurchaseAccountPayableSummaryReportStatisticsUsingPOST
@@ -22,7 +22,7 @@ export interface IJSONResultAccountsPayableSummaryReturnObject {
     /** 响应结果 */
     data?: IAccountsPayableSummaryReturnObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 应付账款汇总表返回对象 */
 export interface IAccountsPayableSummaryReturnObject {

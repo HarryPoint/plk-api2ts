@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathDataAuthDetailListUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessRoleDataPermissionDetailsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessRoleDataPermissionDetailsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessRoleDataPermissionDetailsVO>(
         {
             url: "/flow-service/flowPath/dataAuth/detail/list",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IProcessRoleDataPermissionD
 /** 流程角色数据权限详情搜索VO */
 export interface IProcessRoleDataPermissionDetailsSearchVO {
     /** 角色id集 */
-    roleIds?: number[];
+    roleIds?: string[];
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
 }
 /** JSONResult«List«流程角色数据权限详情VO»» */
 export interface IJSONResultListProcessRoleDataPermissionDetailsVO {
@@ -29,7 +29,7 @@ export interface IJSONResultListProcessRoleDataPermissionDetailsVO {
     /** 响应结果 */
     data?: IProcessRoleDataPermissionDetailsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程角色数据权限详情VO */
 export interface IProcessRoleDataPermissionDetailsVO {

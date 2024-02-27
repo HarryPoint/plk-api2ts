@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/模糊排产/vaguePlanUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionOrderFuzzySchedulingDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderFuzzySchedulingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/vaguePlan/vaguePlan",
@@ -23,22 +23,22 @@ export interface IProductionOrderFuzzySchedulingDTO {
 /** 生产订单模糊排产订单DTO */
 export interface IProductionOrderFuzzySchedulingProductionOrderDTO {
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 计划开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
     /** 步骤明细 */
     steps?: IProductionOrderFuzzySchedulingProductionOrderStepDTO[];
 }
 /** 生产订单模糊排产订单步骤DTO */
 export interface IProductionOrderFuzzySchedulingProductionOrderStepDTO {
     /** 步骤id */
-    id?: number;
+    id?: string;
     /** 计划开始日期 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束日期 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -49,5 +49,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

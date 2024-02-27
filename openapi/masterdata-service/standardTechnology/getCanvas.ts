@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getCanvasUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IStandardProcessCanvasQuery
 /** 标准工艺画布查询对象 */
 export interface IStandardProcessCanvasQueryObject {
     /** 标准工艺id */
-    standardTechnologyId: number;
+    standardTechnologyId: string;
 }
 /** JSONResult«标准工艺画布响应对象» */
 export interface IJSONResultStandardProcessCanvasResponseObject {
@@ -27,12 +27,12 @@ export interface IJSONResultStandardProcessCanvasResponseObject {
     /** 响应结果 */
     data?: IStandardProcessCanvasResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 标准工艺画布响应对象 */
 export interface IStandardProcessCanvasResponseObject {
     /** 标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 标准工艺名称 */
     standardTechnologyName?: string;
     /** 标准工艺类型 */
@@ -40,13 +40,13 @@ export interface IStandardProcessCanvasResponseObject {
     /** 标准工艺状态 */
     standardTechnologyStatus?: EStandardProcessCanvasResponseObject_standardTechnologyStatus;
     /** 所属分类id */
-    standardTechnologyCategoryId?: number;
+    standardTechnologyCategoryId?: string;
     /** 所属分类名称 */
     standardTechnologyCategoryName?: string;
     /** 物料id(该工艺对应的物料id -- 针对具体物料类型有值) */
-    materialId?: number;
+    materialId?: string;
     /** 条件组id(该标准工艺对应的条件组id -- 针对某一类别的有值) */
-    standardTechnologyConditionGroupId?: number;
+    standardTechnologyConditionGroupId?: string;
     /** 条件来源应用编号(该标准工艺里面的条件字段 只有一个来源) */
     conditionFromFlowPathCode?: string;
     /** 条件来源应用名称(该标准工艺里面的条件字段 只有一个来源) */
@@ -59,15 +59,15 @@ export interface IStandardProcessCanvasResponseObject {
 /** 标准工艺节点响应对象 */
 export interface IStandardProcessNodeResponseObject {
     /** 标准工艺id */
-    standardTechnologyId?: number;
+    standardTechnologyId?: string;
     /** 节点id */
-    nodeId?: number;
+    nodeId?: string;
     /** 前一节点id */
-    prevNodeId?: number;
+    prevNodeId?: string;
     /** 后一节点id */
-    nextNodeId?: number;
+    nextNodeId?: string;
     /** 所属分支节点id */
-    branchNodeId?: number;
+    branchNodeId?: string;
     /** 节点序列号 */
     serialNo?: string;
     /** 节点名称 */

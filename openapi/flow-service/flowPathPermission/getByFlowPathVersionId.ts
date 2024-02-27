@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用权限相关/getByFlowPathVersionIdUsingGET_1
 */
-export default function fetchMethod(options: { params: { flowPathVersionId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathVersionId?: string } }, extraOptions?: any) {
     return http<IJSONResultQueryPermissionQueryResponse>(
         {
             url: "/flow-service/flowPathPermission/getByFlowPathVersionId",
@@ -22,7 +22,7 @@ export interface IJSONResultQueryPermissionQueryResponse {
     /** 响应结果 */
     data?: IQueryPermissionQueryResponse;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 查询权限查询Response */
 export interface IQueryPermissionQueryResponse {
@@ -38,7 +38,7 @@ export interface IQueryPermissionQueryResponse {
 /** 新增权限编辑_2 */
 export interface IAddedPermissionEdit2 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程状态 */
     flowStatus?: EAddedPermissionEdit2_flowStatus;
     /** 是否可编辑 */
@@ -49,9 +49,9 @@ export interface IAddedPermissionEdit2 {
 /** 新增权限编辑 */
 export interface INewPermissionEdit {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
@@ -62,9 +62,9 @@ export interface INewPermissionEdit {
 /** 查询权限编辑 */
 export interface IQueryPermissionEditing {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */
@@ -75,9 +75,9 @@ export interface IQueryPermissionEditing {
 /** 新增权限编辑_1 */
 export interface IAddedPermissionEdit1 {
     /** ID */
-    id?: number;
+    id?: string;
     /** 流程字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 流程字段编码 */
     flowPathFormFieldCode?: string;
     /** 流程字段序列号 */

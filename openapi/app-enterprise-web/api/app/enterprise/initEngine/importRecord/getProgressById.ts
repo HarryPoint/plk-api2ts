@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getProgressByIdUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultImportProgressQueryResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getProgressById",
@@ -22,26 +22,26 @@ export interface IJSONResultImportProgressQueryResponseDTO {
     /** 响应结果 */
     data?: IImportProgressQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ImportProgressQueryResponseDTO */
 export interface IImportProgressQueryResponseDTO {
     /** 导入记录ID */
-    importRecordId?: number;
+    importRecordId?: string;
     /** 文件名 */
     fileName?: string;
     /** 排在你前面的任务数 */
-    numberOfTasksBefore?: number;
+    numberOfTasksBefore?: string;
     /** 导入状态 */
     status?: EImportProgressQueryResponseDTO_status;
     /** 总数量 */
-    totalNumber?: number;
+    totalNumber?: string;
     /** 已处理的数量 */
-    numberOfProcessed?: number;
+    numberOfProcessed?: string;
     /** 剩余时间 */
-    surplusTime?: number;
+    surplusTime?: string;
     /** 可以导入数量 */
-    numberOfImport?: number;
+    numberOfImport?: string;
 }
 
 export enum EImportProgressQueryResponseDTO_status {

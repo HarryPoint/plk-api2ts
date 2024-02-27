@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/关键参数相关/getPageUsingPOST_7
@@ -24,11 +24,11 @@ export interface IKeyParameterPageQueryObject {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 所属工序id */
-    processId?: number;
+    processId?: string;
     /** 名称 -- 模糊查询 */
     name?: string;
     /** 所属物料id */
-    materialId?: number;
+    materialId?: string;
     /** 状态(是否可用) */
     dataStatus?: number;
 }
@@ -48,55 +48,55 @@ export interface IJSONResultPagingInformationKeyParameterPagingResponseObject {
     /** 响应结果 */
     data?: IPageInformationKeyParameterPageResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«关键参数分页响应对象» */
 export interface IPageInformationKeyParameterPageResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IKeyParameterPagingResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationKeyParameterPageResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationKeyParameterPageResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 关键参数分页响应对象 */
 export interface IKeyParameterPagingResponseObject {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 关键参数编号 */
     code?: string;
     /** 关键参数名称 */
@@ -111,7 +111,7 @@ export interface IKeyParameterPagingResponseObject {
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示字段名称 */
     showFieldValue?: string;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getChangeRecordListUsingGET
 */
-export default function fetchMethod(options: { params: { planId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { planId?: string } }, extraOptions?: any) {
     return http<IJSONResultListMaintenancePlanChangeRecordRespondsToDTO>(
         {
             url: "/masterdata-service/deviceMaintainPlan/getChangeRecordList",
@@ -22,16 +22,16 @@ export interface IJSONResultListMaintenancePlanChangeRecordRespondsToDTO {
     /** 响应结果 */
     data?: IMaintenancePlanChangeRecordRespondsToDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 保养计划变更记录响应DTO */
 export interface IMaintenancePlanChangeRecordRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 备注 */
     remark?: string;
     /** 操作人 */
     createUser?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }

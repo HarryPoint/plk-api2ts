@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getQualityDetailUsingGET
 */
-export default function fetchMethod(options: { params: { lotOrderId?: number; taskId?: number; wipRpId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { lotOrderId?: string; taskId?: string; wipRpId?: string } }, extraOptions?: any) {
     return http<IJSONResultInboundAndOutboundInformationVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getQualityDetail",
@@ -22,24 +22,24 @@ export interface IJSONResultInboundAndOutboundInformationVO {
     /** 响应结果 */
     data?: IEntryAndExitInformationVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进出站信息VO */
 export interface IEntryAndExitInformationVO {
     /** 进出站记录id */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 任务号 */
     produceTaskNo?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次订单号 */
     lotOrderNo?: string;
     /** wip状态记录id */
-    wipRpId?: number;
+    wipRpId?: string;
     /** 工序信息 */
     processInfo?: IUpperAndLowerProcessInformationVO;
     /** 成品物料信息 */
@@ -58,13 +58,13 @@ export interface IUpperAndLowerProcessInformationVO {
     /** 对应上工序步骤 */
     lastRoutingStep?: number;
     /** 对应上工序id */
-    lastProcessId?: number;
+    lastProcessId?: string;
     /** 对应上工序名称 */
     lastProcessName?: string;
     /** 对应上工序编号 */
     lastProcessCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
@@ -72,7 +72,7 @@ export interface IUpperAndLowerProcessInformationVO {
     /** 对应下工序步骤 */
     nextRoutingStep?: number;
     /** 对应下工序id */
-    nextProcessId?: number;
+    nextProcessId?: string;
     /** 对应下工序名称 */
     nextProcessName?: string;
     /** 对应下工序编号 */
@@ -81,7 +81,7 @@ export interface IUpperAndLowerProcessInformationVO {
 /** 成品物料信息VO */
 export interface IFinishedMaterialInformationVO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料号 */
@@ -100,9 +100,9 @@ export interface IFinishedMaterialInformationVO {
 /** 进出站Bom物料确认信息VO */
 export interface IBomBOMMaterialConfirmationVO {
     /** 生产工艺路径步骤bom明细关联id */
-    id?: number;
+    id?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -123,70 +123,70 @@ export interface IBomBOMMaterialConfirmationVO {
 /** ProduceTechnologyKeyParameterResponseDTO */
 export interface IProduceTechnologyKeyParameterResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** BOM名称 */
     name?: string;
     /** BOM编码 */
     code?: string;
     /** 关键参数id */
-    keyParameterId?: number;
+    keyParameterId?: string;
     /** 关键参数明细 */
     keyParameterDetailList?: IProduceTechnologyKeyParameterDetailResponseDTO[];
 }
 /** ProduceTechnologyKeyParameterDetailResponseDTO */
 export interface IProduceTechnologyKeyParameterDetailResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 生产工艺关键参数id */
-    produceTechnologyKeyParameterId?: number;
+    produceTechnologyKeyParameterId?: string;
     /** 对应关键参数id */
-    keyParameterId?: number;
+    keyParameterId?: string;
     /** 字段名称 */
     name?: string;
     /** 字段编号 */
@@ -225,7 +225,7 @@ export interface IProduceTechnologyKeyParameterDetailResponseDTO {
 /** 生产工艺路径步骤设置返回VO */
 export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 进出站方式 */
     inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
@@ -253,7 +253,7 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
-    externalCodeLength?: number;
+    externalCodeLength?: string;
     /** 是否有设备 */
     enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */

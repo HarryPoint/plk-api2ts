@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getConsignmentInboundAnalyzeReportExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationConsignmentInboundAnalysisReportRet
     /** 响应结果 */
     data?: IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«寄售入库分析报表返回VO» */
 export interface IExportInformationConsignmentWarehousingAnalysisReportReturnedToVO {
@@ -42,7 +42,7 @@ export interface IConsignmentInboundAnalysisReportReturnedToVO {
     /** 业务员 */
     businessMan?: string;
     /** 入库日期 */
-    inboundDate?: string;
+    inboundDate?: number;
     /** 入库类型 */
     inboundType?: string;
     /** 入库单价 */

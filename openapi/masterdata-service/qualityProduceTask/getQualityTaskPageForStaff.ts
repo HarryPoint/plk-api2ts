@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/getQualityTaskPageForStaffUsingPOST
 */
-export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVOOnTheEmployeeEndparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee>(
         {
             url: "/masterdata-service/qualityProduceTask/getQualityTaskPageForStaff",
@@ -24,15 +24,15 @@ export interface ITheInspectionTaskSearchesForVOOnTheEmployeeEnd {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 送检人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
     /** 送检物料id */
-    materialId?: number;
+    materialId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,47 +50,47 @@ export interface IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmp
     /** 响应结果 */
     data?: IPagingInformationTheInspectionTaskReturnsVOForTheEmployee;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«质检任务针对员工返回VO» */
 export interface IPagingInformationTheInspectionTaskReturnsVOForTheEmployee {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITheInspectionTaskIsReturnedToVOForTheEmployee[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationTheInspectionTaskReturnsVOForTheEmployee_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationTheInspectionTaskReturnsVOForTheEmployee_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 质检任务针对员工返回VO */
 export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 所属生产任务号 */
     produceTaskNo?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -100,9 +100,9 @@ export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     /** 对应物料单位 */
     materialUnit?: string;
     /** 对应工艺路径步骤id */
-    routingStepId?: number;
+    routingStepId?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
@@ -118,13 +118,13 @@ export interface ITheInspectionTaskIsReturnedToVOForTheEmployee {
     /** 状态描述 */
     statusDesc?: string;
     /** 送检人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 送检人姓名 */
     createUsername?: string;
     /** 送检人工号 */
     createUserCode?: string;
     /** 送检时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum ETheInspectionTaskSearchesForVOOnTheEmployeeEnd_statusList_items {

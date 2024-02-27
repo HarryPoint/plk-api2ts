@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/startTaskUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEmailTaskStartTaskRequestD
 /** EmailTaskStartTaskRequestDTO */
 export interface IEmailTaskStartTaskRequestDTO {
     /** undefined */
-    emailTaskId: number;
+    emailTaskId: string;
 }
 /** JSONResult«EmailTaskStartTaskResponseDTO» */
 export interface IJSONResultEmailTaskStartTaskResponseDTO {
@@ -27,14 +27,14 @@ export interface IJSONResultEmailTaskStartTaskResponseDTO {
     /** 响应结果 */
     data?: IEmailTaskStartTaskResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EmailTaskStartTaskResponseDTO */
 export interface IEmailTaskStartTaskResponseDTO {
     /** 是否启动成功 */
     startSuccess?: boolean;
     /** 邮件任务ID */
-    emailTaskId?: number;
+    emailTaskId?: string;
     /** 邮件记录ID */
-    mailRecordId?: number;
+    mailRecordId?: string;
 }

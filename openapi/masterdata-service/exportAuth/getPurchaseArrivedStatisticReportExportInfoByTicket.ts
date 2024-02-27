@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getPurchaseArrivedStatisticReportExportInfoByTicketUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultExportInformationPurchaseArrivalStatisticsReportRetu
     /** 响应结果 */
     data?: IExportInformationPurchaseArrivalStatisticsReportReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出信息«采购到货统计报表返回VO» */
 export interface IExportInformationPurchaseArrivalStatisticsReportReturnToVO {
@@ -46,11 +46,11 @@ export interface IPurchaseArrivalStatisticsReportReturnedToVO {
     /** 物料材质 */
     texture?: string;
     /** 要求到货日期 */
-    requiredArriveDate?: string;
+    requiredArriveDate?: number;
     /** 要求到货日期字符串 */
     requiredArriveDateStr?: string;
     /** 最新到货日期 */
-    lastArrivedDate?: string;
+    lastArrivedDate?: number;
     /** 最新到货日期字符串 */
     lastArrivedDateStr?: string;
     /** 订单数量 */

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listByToCodeUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; toCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; toCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessDocumentMapConfigurationVO>(
         {
             url: "/masterdata-service/processDocumentMapConfig/listByToCode",
@@ -22,7 +22,7 @@ export interface IJSONResultListProcessDocumentMapConfigurationVO {
     /** 响应结果 */
     data?: IProcessDocumentMappingConfigurationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺文档映射配置VO */
 export interface IProcessDocumentMappingConfigurationVO {

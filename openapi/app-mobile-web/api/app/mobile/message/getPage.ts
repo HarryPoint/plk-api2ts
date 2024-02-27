@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/消息通知相关/getPageUsingPOST_1
@@ -29,10 +29,14 @@ export interface IMessageSearchVO {
     beginTime?: string;
     /** 时间结束 yyyy-MM-dd HH:mm:ss */
     endTime?: string;
+    /** 忽略应用编码列表 */
+    ignoreAppCodeList?: string[];
     /** 是否已读 */
     isRead?: EMessageSearchVO_isRead;
     /** 最新发布终端值合计 */
     sendTarget?: number;
+    /** 应用编码列表 */
+    appCodeList?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,35 +54,35 @@ export interface IJSONResultPagingInformationMessageReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationMessageReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«消息返回VO» */
 export interface IPagingInformationMessageReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMessageReturnVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationMessageReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationMessageReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 消息返回VO */
 export interface IMessageReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 消息类型 */
     type?: EMessageReturnVO_type;
     /** 消息类型描述 */
@@ -94,7 +98,7 @@ export interface IMessageReturnVO {
     /** 移动端跳转路径 */
     mobilePath?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 消息跳转类型 */
     pathType?: EMessageReturnVO_pathType;
     /** 消息跳转类型描述 */

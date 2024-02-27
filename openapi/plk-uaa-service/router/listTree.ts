@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/路由相关/listTreeUsingPOST_2
@@ -27,18 +27,18 @@ export interface IJSONResultListRouteResponseDTO {
     /** 响应结果 */
     data?: ITheRouteRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 路由响应 DTO */
 export interface ITheRouteRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 客户端组编码 */
     clientGroupCode?: string;
     /** 所属权限编码 */
     permissionCode?: string;
     /** 父级路由id */
-    parentId?: number;
+    parentId?: string;
     /** 父级路由编码 */
     parentCode?: string;
     /** 路由name */

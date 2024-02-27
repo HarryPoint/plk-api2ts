@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/getByIdNotCheckUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathShiftVO>(
         {
             url: "/flow-service/flowPathShift/getByIdNotCheck",
@@ -22,20 +22,20 @@ export interface IJSONResultFlowPathShiftVO {
     /** 响应结果 */
     data?: IFlowPathShiftVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathShiftVO */
 export interface IFlowPathShiftVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 方案编号 */
     code?: string;
     /** 开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 结束时间类型 */
     endTimeType?: EFlowPathShiftVO_endTimeType;
     /** 方案名称 */

@@ -28,8 +28,8 @@
             "description": "emailTaskQueryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/分页",
-              "originalRef": "分页"
+              "originalRef": "分页",
+              "$ref": "#/definitions/分页"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«EmailTaskQueryResponseDTO»»",
-              "originalRef": "JSONResult«分页信息«EmailTaskQueryResponseDTO»»"
+              "originalRef": "JSONResult«分页信息«EmailTaskQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«EmailTaskQueryResponseDTO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "addressee": {
@@ -150,8 +150,8 @@
         },
         "attachmentConfigQueryRequest": {
           "description": "附件查询请求",
-          "$ref": "#/definitions/EmailTaskAttachmentConfigQueryRequestDTO",
-          "originalRef": "EmailTaskAttachmentConfigQueryRequestDTO"
+          "originalRef": "EmailTaskAttachmentConfigQueryRequestDTO",
+          "$ref": "#/definitions/EmailTaskAttachmentConfigQueryRequestDTO"
         }
       },
       "title": "分页"
@@ -202,8 +202,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«EmailTaskQueryResponseDTO»",
-          "originalRef": "分页信息«EmailTaskQueryResponseDTO»"
+          "originalRef": "分页信息«EmailTaskQueryResponseDTO»",
+          "$ref": "#/definitions/分页信息«EmailTaskQueryResponseDTO»"
         },
         "ts": {
           "type": "integer",
@@ -241,8 +241,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/EmailTaskQueryResponseDTO",
-            "originalRef": "EmailTaskQueryResponseDTO"
+            "originalRef": "EmailTaskQueryResponseDTO",
+            "$ref": "#/definitions/EmailTaskQueryResponseDTO"
           }
         },
         "lastPage": {

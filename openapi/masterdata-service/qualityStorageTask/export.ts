@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检管理/exportUsingPOST_27
 */
-export default function fetchMethod(options: { data: IInspectionTaskSearchesForVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInspectionTaskSearchesForVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qualityStorageTask/export",
@@ -22,9 +22,9 @@ export interface IInspectionTaskSearchesForVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 检验日期查询开始时间 */
-    completeStartTime?: string;
+    completeStartTime?: number;
     /** 质检分类 */
-    qualityInspectionCategoryId?: number;
+    qualityInspectionCategoryId?: string;
     /** 采购收货单编号 */
     purchaseWorkOrderNo?: string;
     /** 任务类型 */
@@ -32,15 +32,15 @@ export interface IInspectionTaskSearchesForVO {
     /** 任务编号 */
     qualityStorageTaskNo?: string;
     /** 检验日期查询结束时间 */
-    completeEndTime?: string;
+    completeEndTime?: number;
     /** 检验员id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 检验位置id */
-    checkPositionId?: number;
+    checkPositionId?: string;
     /** 仓位id */
-    qualityWarehouseId?: number;
+    qualityWarehouseId?: string;
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -56,9 +56,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EInspectionTaskSearchesForVO_taskType {

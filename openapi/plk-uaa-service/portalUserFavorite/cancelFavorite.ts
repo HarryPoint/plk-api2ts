@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/cancelFavoriteUsingPOST_1
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEnterpriseRouteCollectionC
 /** 企业路由收藏取消请求 DTO_1 */
 export interface IEnterpriseRouteCollectionCancelRequestDTO1 {
     /** 路由id */
-    routerId?: number;
+    routerId?: string;
     /** 客户端组编码 */
     clientGroupCode: string;
 }
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

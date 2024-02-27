@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/handleUsingPOST
@@ -18,16 +18,16 @@ export interface IInventoryTaskInventoryProcessingDTO {
     /** 编辑模式 -- (暂存就传递STAGING, 提交就传递 DEFAULT) */
     editType?: EInventoryTaskInventoryProcessingDTO_editType;
     /** 任务id */
-    id: number;
+    id: string;
     /** 盘点明细 */
     detailList?: IInventoryTaskInventoryProcessingDetailsDTO[];
 }
 /** 盘点任务盘点处理详情DTO */
 export interface IInventoryTaskInventoryProcessingDetailsDTO {
     /** 盘点仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 批次号 */
     lotNo?: string;
     /** 序列号集 */
@@ -53,7 +53,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EInventoryTaskInventoryProcessingDTO_editType {

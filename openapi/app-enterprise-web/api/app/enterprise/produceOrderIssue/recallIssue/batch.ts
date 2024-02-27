@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/batchRecallIssueUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdCollectionInformation },
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«生产订单下发结果DTO» */
 export interface IJSONResultProductionOrderDeliveryResultDTO {
@@ -27,7 +27,7 @@ export interface IJSONResultProductionOrderDeliveryResultDTO {
     /** 响应结果 */
     data?: IProductionOrderDeliveryResultsDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单下发结果DTO */
 export interface IProductionOrderDeliveryResultsDTO {

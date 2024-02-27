@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
 */
-export default function fetchMethod(options: { data: IAutomaticProductionOrderSchedulingDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAutomaticProductionOrderSchedulingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSchedulingResultVO>(
         {
             url: "/masterdata-service/autoPlan/autoPlanCompute",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IAutomaticProductionOrderSc
 /** 生产订单自动排产DTO */
 export interface IAutomaticProductionOrderSchedulingDTO {
     /** 待排产订单id集 */
-    waitProduceOrderIds?: number[];
+    waitProduceOrderIds?: string[];
     /** 是否正向排产 */
     isAsc?: EAutomaticProductionOrderSchedulingDTO_isAsc;
     /** 是否倒序排产 */
@@ -24,9 +24,9 @@ export interface IAutomaticProductionOrderSchedulingDTO {
     /** 是否考虑自动提前 */
     isAutoMoveUp?: EAutomaticProductionOrderSchedulingDTO_isAutoMoveUp;
     /** 排产开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime?: string;
+    beginTime?: number;
     /** 排产结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime?: string;
+    endTime?: number;
 }
 /** JSONResult«排产计算结果VO» */
 export interface IJSONResultSchedulingResultVO {
@@ -37,7 +37,7 @@ export interface IJSONResultSchedulingResultVO {
     /** 响应结果 */
     data?: ICalculationResultOfSchedulingVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 排产计算结果VO */
 export interface ICalculationResultOfSchedulingVO {
@@ -76,7 +76,7 @@ export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
 /** 未排产生产订单返回VO */
 export interface IUnscheduledProductionOrdersAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 是否加急 */
     isEmergentOrder?: EUnscheduledProductionOrdersAreReturnedToVO_isEmergentOrder;
     /** 生产订单编号 */
@@ -86,7 +86,7 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO {
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 生产物料id */
-    materialId?: number;
+    materialId?: string;
     /** 生产物料名称 */
     materialName?: string;
     /** 生产物料编号 */
@@ -94,23 +94,23 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO {
     /** 物料规格 */
     materialSpec?: string;
     /** 物料单位id */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 物料单位 */
     materialUnit?: string;
     /** 计划交付日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 订单计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 订单计划结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 订单当前计划开始日期 */
-    currentBeginTime?: string;
+    currentBeginTime?: number;
     /** 订单当前计划结束日期 */
-    currentEndTime?: string;
+    currentEndTime?: number;
     /** 订单优先级 */
     priorityLevel?: number;
     /** 工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 工艺路径名称 */
     routingName?: string;
     /** 工艺路径编号 */
@@ -127,9 +127,9 @@ export interface IUnscheduledProductionOrdersAreReturnedToVO {
 /** 未排产订单步骤返回VO */
 export interface IUnscheduledProductionOrderStepReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -145,13 +145,13 @@ export interface IUnscheduledProductionOrderStepReturnToVO {
     /** 产能-生产数量 */
     capacityProduceQuantity?: number;
     /** 工序计划开始日期 */
-    beginTime?: string;
+    beginTime?: number;
     /** 工序计划结束日期 */
-    endTime?: string;
+    endTime?: number;
     /** 工序当前计划开始日期 */
-    currentBeginTime?: string;
+    currentBeginTime?: number;
     /** 工序当前计划结束日期 */
-    currentEndTime?: string;
+    currentEndTime?: number;
 }
 
 export enum EAutomaticProductionOrderSchedulingDTO_isAsc {

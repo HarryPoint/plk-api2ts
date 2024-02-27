@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/changeManageUsingPOST
@@ -18,7 +18,7 @@ export interface ITransferSuperAdministratorDTO {
     /** 验证码 */
     verCode?: string;
     /** 转让用户id */
-    changeUserId: number;
+    changeUserId: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

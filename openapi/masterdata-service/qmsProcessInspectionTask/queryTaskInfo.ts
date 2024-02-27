@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/工序检验任务相关/queryTaskInfoUsingGET_1
@@ -22,12 +22,12 @@ export interface IJSONResultProcessCheckTaskResponseObject {
     /** 响应结果 */
     data?: IProcessCheckCheckTaskResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工序检检验任务响应对象 */
 export interface IProcessCheckCheckTaskResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务编号 */
     code?: string;
     /** 业务类型 */
@@ -37,29 +37,29 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 是否临检 */
     isTemporarily?: EProcessCheckCheckTaskResponseObject_isTemporarily;
     /** 报检单物料明细id */
-    qmsInspectionApplyFormMaterialDetailId?: number;
+    qmsInspectionApplyFormMaterialDetailId?: string;
     /** 报检日期 */
-    applyDate?: string;
+    applyDate?: number;
     /** 报检员 */
-    applyEmployeeId?: number;
+    applyEmployeeId?: string;
     /** 报检部门 */
-    applyDepartmentId?: number;
+    applyDepartmentId?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 产线id */
-    productionLineId?: number;
+    productionLineId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 物料名称 */
-    materialId?: number;
+    materialId?: string;
     /** 物料检验类别 */
-    qmsInspectionCategoryId?: number;
+    qmsInspectionCategoryId?: string;
     /** 对应物料code */
     materialCode?: string;
     /** 对应物料规格 */
     materialSpec?: string;
     /** 对应物料单位 */
-    materialUnitId?: number;
+    materialUnitId?: string;
     /** 批次 */
     lot?: string;
     /** 报检数量 */
@@ -67,9 +67,9 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 三检制选择 */
     threeInspectionSystems?: Record<string, any>[];
     /** 自检员 */
-    selfInspectionEmployeeIds?: number[];
+    selfInspectionEmployeeIds?: string[];
     /** 互检员 */
-    mutualInspectionEmployeeIds?: number[];
+    mutualInspectionEmployeeIds?: string[];
     /** 检验方式 */
     inspectionMethod?: EProcessCheckCheckTaskResponseObject_inspectionMethod;
     /** 检验数量 */
@@ -95,7 +95,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 申请验收地点 */
     applyInspectAddress?: string;
     /** 申请验收日期 */
-    applyInspectDate?: string;
+    applyInspectDate?: number;
     /** 报检附件 */
     inspectionApplyFiles?: string;
     /** 版次 */
@@ -107,7 +107,7 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 检验结果描述 */
     inspectionResultDesc?: string;
     /** 检验方案id */
-    qmsInspectionSchemeId?: number;
+    qmsInspectionSchemeId?: string;
     /** 检验员 */
     inspectionEmployeeIds?: Record<string, any>[];
     /** 检验员 */
@@ -115,11 +115,11 @@ export interface IProcessCheckCheckTaskResponseObject {
     /** 分配状态 */
     isAssignment?: EProcessCheckCheckTaskResponseObject_isAssignment;
     /** 检验截止日期 */
-    inspectionEndDate?: string;
+    inspectionEndDate?: number;
     /** 检验完成日期 */
-    inspectionCompletedDate?: string;
+    inspectionCompletedDate?: number;
     /** 开始时间 */
-    taskStartDate?: string;
+    taskStartDate?: number;
     /** 任务执行状态 */
     taskStatus?: EProcessCheckCheckTaskResponseObject_taskStatus;
     /** 是否超期 */
@@ -136,7 +136,7 @@ export interface IProcessCheckCheckTaskResponseObject {
 /** 关联表单数据VO */
 export interface IAssociateFormDataVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 关联表单显示值 */
     showFieldValue?: string;
     /** 数据状态 */
@@ -144,12 +144,12 @@ export interface IAssociateFormDataVO {
     /** 是否已删除显示字段 */
     isRemovedShowField?: EAssociateFormDataVO_isRemovedShowField;
     /** 主数据ID */
-    masterDataId?: number;
+    masterDataId?: string;
 }
 /** 工序检检验任务互检记录响应对象 */
 export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
@@ -157,7 +157,7 @@ export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
-    qmsInspectionItemsId?: number;
+    qmsInspectionItemsId?: string;
     /** 标准值 */
     inspectionStandardValue?: string;
     /** 实测值 */
@@ -168,7 +168,7 @@ export interface IProcessCheckCheckTaskMutualCheckRecordResponseObject {
 /** 首检自检记录响应对象 */
 export interface IFirstCheckSelfCheckRecordResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
@@ -176,7 +176,7 @@ export interface IFirstCheckSelfCheckRecordResponseObject {
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
-    qmsInspectionItemsId?: number;
+    qmsInspectionItemsId?: string;
     /** 标准值 */
     inspectionStandardValue?: string;
     /** 实测值 */
@@ -187,7 +187,7 @@ export interface IFirstCheckSelfCheckRecordResponseObject {
 /** 工序检检验专检记录响应对象 */
 export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 零件号 */
     partNumber?: string;
     /** 零件检验结果 */
@@ -195,7 +195,7 @@ export interface IProcessInspectionInspectionSpecialInspectionRecordResponseObje
     /** 不合格情况描述 */
     descriptionOfNonconformities?: string;
     /** 检验项id */
-    qmsInspectionItemsId?: number;
+    qmsInspectionItemsId?: string;
     /** 标准值 */
     inspectionStandardValue?: string;
     /** 实测值 */

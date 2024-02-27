@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/质检方案/materialRpUsingPOST
 */
-export default function fetchMethod(options: { data: IQualityControlSolutionMaterialApplicationAssociationInformationEditDTOparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityInspectionPlan/materialRp",
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IQualityControlSolutionMate
 /** 质检方案物料应用关联信息编辑DTO */
 export interface IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO {
     /** 质检方案id */
-    id?: number;
+    id?: string;
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -29,5 +29,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

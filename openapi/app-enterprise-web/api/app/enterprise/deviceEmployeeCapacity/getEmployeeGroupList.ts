@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/getEmployeeGroupListUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IDevicePersonnelAbilityQuer
 /** 设备人员能力分组查询DTO */
 export interface IDevicePersonnelAbilityQueryDtosInGroups {
     /** 人员id */
-    employeeIds?: number[];
+    employeeIds?: string[];
     /** 班组id */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
     /** 部门id */
-    departmentIds?: number[];
+    departmentIds?: string[];
     /** 维修能力 */
     maintainLevels?: string[];
     /** 保养能力 */
@@ -35,20 +35,20 @@ export interface IJSONResultListDevicePersonnelAbilityToGroupResponseDtos {
     /** 响应结果 */
     data?: IEquipmentPersonnelAbilityToRespondToDTOInGroups[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备人员能力分组响应DTO */
 export interface IEquipmentPersonnelAbilityToRespondToDTOInGroups {
     /** 人员能力id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 人员id */
-    employeeId?: number;
+    employeeId?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 人员名称 */
     employeeName?: string;
     /** 班组 */
@@ -61,9 +61,9 @@ export interface IEquipmentPersonnelAbilityToRespondToDTOInGroups {
 /** 设备人员能力分组项响应DTO */
 export interface IEquipmentPersonnelCapabilityGroupItemRespondsToDTO {
     /** 人员能力明细id */
-    detailId?: number;
+    detailId?: string;
     /** 设备类型id */
-    deviceTypeId?: number;
+    deviceTypeId?: string;
     /** 设备类型 */
     deviceTypeName?: string;
     /** 维修能力 */

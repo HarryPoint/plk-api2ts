@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单明细相关/getByIdsUsingPOST_7
 */
-export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListSalesOrderDetailsReturnToVO>(
         {
             url: "/masterdata-service/salesOrderDetail/getByIds",
@@ -22,20 +22,20 @@ export interface IJSONResultListSalesOrderDetailsReturnToVO {
     /** 响应结果 */
     data?: ISalesOrderDetailsBackToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售订单详情返回VO */
 export interface ISalesOrderDetailsBackToVO {
     /** 详情id */
-    id?: number;
+    id?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单名称 */
     salesOrderName?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 总销售数量 */
@@ -49,13 +49,13 @@ export interface ISalesOrderDetailsBackToVO {
     /** 对应物料库存 */
     materialStorageCount?: number;
     /** 对应物料bomId */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 对应物料bom名称 */
     materialBomName?: string;
     /** 对应物料bom编号 */
     materialBomCode?: string;
     /** 对应生产工艺路径id */
-    routingId?: number;
+    routingId?: string;
     /** 对应工艺路径名称 */
     routingName?: string;
     /** 对应工艺路径编号 */
@@ -67,7 +67,7 @@ export interface ISalesOrderDetailsBackToVO {
     /** 未转换数量 */
     notConvertCount?: number;
     /** 交货日期 */
-    deliveryDate?: string;
+    deliveryDate?: number;
     /** 层级 */
     level?: number;
     /** 优先级 */
@@ -82,9 +82,9 @@ export interface ISalesOrderDetailsBackToVO {
 /** 子物料生产信息VO_1 */
 export interface ISubMaterialProductionInformationVO1 {
     /** 物料bom明细id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -102,13 +102,13 @@ export interface ISubMaterialProductionInformationVO1 {
     /** 层级 */
     level?: number;
     /** 父级物料id */
-    parentMaterialId?: number;
+    parentMaterialId?: string;
     /** 父级物料名称 */
     parentMaterialName?: string;
     /** 父级物料编号 */
     parentMaterialCode?: string;
     /** 父级物料bomId */
-    parentMaterialBomId?: number;
+    parentMaterialBomId?: string;
     /** 父级物料bom名称 */
     parentMaterialBomName?: string;
     /** 父级物料bom编号 */
@@ -121,7 +121,7 @@ export interface ISubMaterialProductionInformationVO1 {
 /** 工艺路径选择VO */
 export interface IProcessPathSelectionVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工艺路径名称 */
     name?: string;
     /** 工艺路径编号 */
@@ -129,20 +129,20 @@ export interface IProcessPathSelectionVO {
     /** 是否物料默认 */
     isDefault?: EProcessPathSelectionVO_isDefault;
     /** 物料bomId */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 物料bom名称 */
     materialBomName?: string;
     /** 物料bom编号 */
     materialBomCode?: string;
     /** 物料ID */
-    materialId?: number;
+    materialId?: string;
 }
 /** 生产所需其他物料信息VO */
 export interface IOtherMaterialInformationRequiredForProductionVO {
     /** 物料bom明细id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -160,13 +160,13 @@ export interface IOtherMaterialInformationRequiredForProductionVO {
     /** 层级 */
     level?: number;
     /** 父级物料id */
-    parentMaterialId?: number;
+    parentMaterialId?: string;
     /** 父级物料名称 */
     parentMaterialName?: string;
     /** 父级物料编号 */
     parentMaterialCode?: string;
     /** 父级物料bomId */
-    parentMaterialBomId?: number;
+    parentMaterialBomId?: string;
     /** 父级物料bom名称 */
     parentMaterialBomName?: string;
     /** 父级物料bom编号 */

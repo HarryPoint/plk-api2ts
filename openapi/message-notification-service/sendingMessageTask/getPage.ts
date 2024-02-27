@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/getPageUsingPOST_2
@@ -22,13 +22,13 @@ export interface IMessageQueuePagingQueryRequest {
     /** 当前页面 */
     pageNo?: number;
     /** 所属方案 */
-    messageSchemaIdList?: number[];
+    messageSchemaIdList?: string[];
     /** 分页大小 */
     pageSize?: number;
     /** 触发时间开始时间 */
-    createTimeBegin?: string;
+    createTimeBegin?: number;
     /** 触发时间结束时间 */
-    createTimeEnd?: string;
+    createTimeEnd?: number;
 }
 /** JSONResult«分页信息«消息队列分页响应对象»» */
 export interface IJSONResultPagingMessageQueuePagingResponseObject {
@@ -39,41 +39,41 @@ export interface IJSONResultPagingMessageQueuePagingResponseObject {
     /** 响应结果 */
     data?: IPageInformationMessageQueuePageResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«消息队列分页响应对象» */
 export interface IPageInformationMessageQueuePageResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMessageQueuePagingResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationMessageQueuePageResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationMessageQueuePageResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 消息队列分页响应对象 */
 export interface IMessageQueuePagingResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 下次发送时间 */
-    nextSendingTime?: string;
+    nextSendingTime?: number;
     /** 消息触发时间/创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 消息方案ID */
-    messageSchemaId?: number;
+    messageSchemaId?: string;
     /** 消息方案编号 */
     messageSchemaCode?: string;
     /** 消息标题 */

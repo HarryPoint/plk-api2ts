@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceBatchUsingPOST
@@ -16,20 +16,20 @@ export default function fetchMethod(options: { data: IProductionTaskBatchSetTheF
 /** 生产任务批量设置进料设备请求DTO */
 export interface IProductionTaskBatchSetTheFeedDeviceRequestDTO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 生产任务详情 */
     produceTaskDetails?: IProductionTaskBatchSetFeedDeviceTaskDetailsRequestDTO[];
     /** 设备ids */
-    deviceIds: number[];
+    deviceIds: string[];
 }
 /** 生产任务批量设置进料设备任务详情请求DTO */
 export interface IProductionTaskBatchSetFeedDeviceTaskDetailsRequestDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 批次ids */
-    lotIds: number[];
+    lotIds: string[];
     /** undefined */
-    produceTechnologyDeviceIds?: number[];
+    produceTechnologyDeviceIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -40,5 +40,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -14,7 +14,7 @@
           "标准工艺相关"
         ],
         "summary": "获取标准工艺分页",
-        "operationId": "getPageUsingPOST_29",
+        "operationId": "getPageUsingPOST_30",
         "consumes": [
           "application/json"
         ],

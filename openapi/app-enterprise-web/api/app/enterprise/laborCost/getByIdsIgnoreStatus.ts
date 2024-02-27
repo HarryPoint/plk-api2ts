@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工费相关/getByIdsIgnoreStatusUsingPOST_2
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IIdCollectionInformation },
 /** id集合信息 */
 export interface IIdCollectionInformation {
     /** id集合 */
-    ids?: number[];
+    ids?: string[];
 }
 /** JSONResult«List«工费下拉选择列表搜索响应DTO»» */
 export interface IJSONResultListWorkCostDropDownSelectAListToSearchForResponseDtos {
@@ -27,12 +27,12 @@ export interface IJSONResultListWorkCostDropDownSelectAListToSearchForResponseDt
     /** 响应结果 */
     data?: IPayDropDownSelectListToSearchResponseDtos[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工费下拉选择列表搜索响应DTO */
 export interface IPayDropDownSelectListToSearchResponseDtos {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

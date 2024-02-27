@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryAssociationFormDataInCascadeModeUsingPOST
@@ -18,7 +18,7 @@ export interface IFormCascadeQueryConditionVO {
     /** 搜索名称 */
     globalSearch?: string;
     /** 当前表单字段ID */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 当前表单选择的数据 */
     submitFieldsJsonObject?: Record<string, Record<string, any>>;
     /** 来自表单过滤条件 */
@@ -37,12 +37,12 @@ export interface IJSONResultListFormCascadeQueryResultVO {
     /** 响应结果 */
     data?: IFormCascadeQueryResultVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FormCascadeQueryResultVO */
 export interface IFormCascadeQueryResultVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示名称/显示分组名称/处理人名称 */
     name?: string;
     /** 编码 */

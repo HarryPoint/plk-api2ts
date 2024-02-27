@@ -396,6 +396,8 @@
             "  PROJECT_MODIFICATION-项目信息变更单",
             "  PROJECT_PLAN_MODIFICATION-项目计划变更单",
             "  PROJECT_MEMBER_MODIFICATION-项目成员变更单",
+            "  PROJECT_FILE-项目文件",
+            "  PROJECT_FOLDER-项目文件夹",
             "  QMS_ANNUAL_QUALITY_TARGET-年度质量目标",
             "  QMS_QUALITY_WORK_PLAN-质量工作计划",
             "  QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT-未完成情况分析报告",
@@ -469,7 +471,9 @@
             "  QMS_SEAL_APPLY_FOR_REPLACEMENT-印章更换申请",
             "  QMS_PATROL_INSPECTION_PLAN-巡检计划",
             "  QMS_PATROL_INSPECTION_TASK-巡检任务",
-            "  QMS_PATROL_INSPECTION_REPORT-巡检报告"
+            "  QMS_PATROL_INSPECTION_REPORT-巡检报告",
+            "  FILE_CATEGORY-文件分类",
+            "  FILE_OBJECT-文件对象"
           ]
         },
         "flowPathId": {

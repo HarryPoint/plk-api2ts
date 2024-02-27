@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getUserProduceStatisticUsingPOST
 */
-export default function fetchMethod(options: { data: IUserProductionStatisticsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUserProductionStatisticsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListUserProductionStatisticsReturnVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getUserProduceStatistic",
@@ -20,9 +20,9 @@ export interface IUserProductionStatisticsSearchVO {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产任务类型 */
     produceTaskTypeList?: EUserProductionStatisticsSearchVO_produceTaskTypeList_items[];
     /** 生产订单编码 */
@@ -37,16 +37,16 @@ export interface IJSONResultListUserProductionStatisticsReturnVO {
     /** 响应结果 */
     data?: IUserProductionStatisticsReturnVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 用户生产统计返回VO */
 export interface IUserProductionStatisticsReturnVO {
     /** 所属员工id */
-    userId?: number;
+    userId?: string;
     /** 生产订单编码 */
     produceOrderCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -54,7 +54,7 @@ export interface IUserProductionStatisticsReturnVO {
     /** 物料单位 */
     materialUnit?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */
@@ -78,7 +78,7 @@ export interface IUserProductionStatisticsReturnVO {
     /** 返工产出参考工时 */
     backTaskTime?: number;
     /** 记录时间 */
-    createTime?: string;
+    createTime?: number;
     /** 快照类型 */
     type?: EUserProductionStatisticsReturnVO_type;
 }

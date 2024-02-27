@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQuantityForStaffUsingPOST
 */
-export default function fetchMethod(options: { data: IPublicBacklogDataQueryparams: { enterpriseId?: number; userId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceTask/getQuantityForStaff",
@@ -22,7 +22,7 @@ export interface IPublicBacklogDataQuery {
     /** 创建时间--结束时间 */
     createEndTime?: string;
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 生产任务状态集合 */
     produceTaskStatusList?: EPublicBacklogDataQuery_produceTaskStatusList_items[];
     /** 是否超时(生产任务) */
@@ -39,9 +39,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPublicBacklogDataQuery_produceTaskStatusList_items {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/部门相关/addBatchUsingPOST
@@ -16,13 +16,13 @@ export default function fetchMethod(options: { data: IDepartmentEditRequest[] },
 /** 部门编辑请求 */
 export interface IDepartmentEditRequest {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
     name?: string;
     /** 父级id */
-    parentId?: number;
+    parentId?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -33,5 +33,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

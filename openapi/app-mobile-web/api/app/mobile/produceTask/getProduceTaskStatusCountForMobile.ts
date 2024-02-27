@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskStatusCountForMobileUsingPOST
@@ -30,15 +30,15 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 生产任务可操作类型 */
     optTypes?: EProductionTaskQueryDTOForMobileEnd_optTypes_items[];
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 生产订单号/生产任务编号(扫码查询时默认为生产订单号) */
     codeSearch?: string;
     /** 物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 任务状态 */
     statusList?: EProductionTaskQueryDTOForMobileEnd_statusList_items[];
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 开始时间 yyyy-MM-dd HH:mm:dd */
     beginTime?: string;
     /** 结束时间 yyyy-MM-dd HH:mm:dd */
@@ -50,7 +50,7 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 计划生产数量最低数量 */
     planProduceMinQuantity?: number;
     /** undefined */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
     /** 计划生产数量最高数量 */
     planProduceMaxQuantity?: number;
     /** 任务出站关键参数是否需要填写 */
@@ -60,7 +60,7 @@ export interface IProductionTaskQueryDTOForMobileEnd {
     /** 查询类型 */
     queryType?: EProductionTaskQueryDTOForMobileEnd_queryType;
     /** undefined */
-    userId?: number;
+    userId?: string;
 }
 /** 分页排序 */
 export interface IPagingSort {
@@ -95,16 +95,16 @@ export interface IJSONResultNumberOfProductionTaskStatesReturnedForTheMobileEnd 
     /** 响应结果 */
     data?: INumberOfProductionTaskStatesReturnedForTheMobileEnd;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务状态数量返回(针对移动端) */
 export interface INumberOfProductionTaskStatesReturnedForTheMobileEnd {
     /** 待处理数量 */
-    waitQuantity?: number;
+    waitQuantity?: string;
     /** 生产中数量 */
-    produceQuantity?: number;
+    produceQuantity?: string;
     /** 已关闭数量 */
-    closeQuantity?: number;
+    closeQuantity?: string;
 }
 
 export enum EProductionTaskQueryDTOForMobileEnd_types_items {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/getAggregateResultUsingPOST
@@ -20,9 +20,9 @@ export interface IPanpanReportsStatisticsToQueryObjects {
     /** 查询结束时间 yyyy-MM-dd HH:mm:ss */
     endTime: string;
     /** 物料id集合 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
 }
 /** JSONResult«盼盼上报统计汇总响应对象» */
 export interface IJSONResultReportStatisticsSummaryResponseObject {
@@ -33,7 +33,7 @@ export interface IJSONResultReportStatisticsSummaryResponseObject {
     /** 响应结果 */
     data?: IPanpanReportsStatisticalSummaryResponseObjects;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 盼盼上报统计汇总响应对象 */
 export interface IPanpanReportsStatisticalSummaryResponseObjects {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskCanOperatorForMobileUsingPOST
@@ -30,19 +30,19 @@ export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobil
     /** 生产任务可操作类型 */
     optTypes?: EProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals_optTypes_items[];
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 任务ids */
-    taskIds?: number[];
+    taskIds?: string[];
     /** 生产订单号/生产任务编号(扫码查询时默认为生产订单号) */
     codeSearch?: string;
     /** 物料id */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 任务状态 */
     statusList?: EProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals_statusList_items[];
     /** 生产任务编号集合(扫码查询切换进出料查询时传参) */
     taskNos?: string[];
     /** 工序id集合 */
-    processIds?: number[];
+    processIds?: string[];
     /** 开始时间 yyyy-MM-dd HH:mm:dd */
     beginTime?: string;
     /** 计划生产数量最低数量 */
@@ -56,9 +56,9 @@ export interface IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobil
     /** 查询类型 */
     queryType?: EProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals_queryType;
     /** undefined */
-    produceOrderIds?: number[];
+    produceOrderIds?: string[];
     /** undefined */
-    userId?: number;
+    userId?: string;
     /** 任务出站关键参数是否需要填写 */
     moveOutKeyParameterFillNeeds?: EProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals_moveOutKeyParameterFillNeeds;
     /** 生产订单字段搜索 */
@@ -97,7 +97,7 @@ export interface IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTO
     /** 响应结果 */
     data?: IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务列表可批量操作按钮返回DTO(针对移动端) */
 export interface IProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceMaterialIssuanceSummaryUsingPOST
@@ -22,7 +22,7 @@ export interface IPaging7 {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 生产订单ID */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -40,37 +40,37 @@ export interface IProduceMaterialIssuanceSummaryQueryResponseDTOJSONResultPaging
     /** 响应结果 */
     data?: IThePagingInformationProduceMaterialIssuanceSummaryQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«ProduceMaterialIssuanceSummaryQueryResponseDTO» */
 export interface IThePagingInformationProduceMaterialIssuanceSummaryQueryResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProduceMaterialIssuanceSummaryQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationProduceMaterialIssuanceSummaryQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationProduceMaterialIssuanceSummaryQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** ProduceMaterialIssuanceSummaryQueryResponseDTO */
 export interface IProduceMaterialIssuanceSummaryQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 物料ID */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */

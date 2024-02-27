@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/运营账号相关/modifyUsingPOST_7
@@ -24,12 +24,12 @@ export interface IOperationUserModifiesRequest {
     /** 角色集 */
     manageRoleList?: IIdInformation1[];
     /** id */
-    id?: number;
+    id?: string;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */
@@ -38,7 +38,7 @@ export interface IIdCodeNameGenericTransportObject {
 /** Id 信息_1 */
 export interface IIdInformation1 {
     /** id */
-    id: number;
+    id: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -49,5 +49,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

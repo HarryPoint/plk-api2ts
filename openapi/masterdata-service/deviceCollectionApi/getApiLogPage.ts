@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
 */
-export default function fetchMethod(options: { data: IOpenApiRequestsSearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOpenApiRequestsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>(
         {
             url: "/masterdata-service/deviceCollectionApi/getApiLogPage",
@@ -38,37 +38,37 @@ export interface IJSONResultPagingInformationOpenApiRequestLogReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationOpenApiRequestLogReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«开放api请求日志返回VO» */
 export interface IPagingInformationOpenApiRequestLogReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IOpenApiRequestLogReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationOpenApiRequestLogReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationOpenApiRequestLogReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 开放api请求日志返回VO */
 export interface IOpenApiRequestLogReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 请求员工id */
-    reqUserId?: number;
+    reqUserId?: string;
     /** 请求员工姓名 */
     reqUsername?: string;
     /** 请求ip */
@@ -86,7 +86,7 @@ export interface IOpenApiRequestLogReturnsVO {
     /** 异常信息 */
     errorInfo?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPagingSortVO_isAsc {

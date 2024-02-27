@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产入库单相关/pageQuerySelectionItemUsingPOST_1
@@ -26,7 +26,7 @@ export interface IPaging13 {
     /** 生产订单编号匹配 */
     produceOrderCodeMatch?: string;
     /** 生产物料ID */
-    produceMaterialIdList?: number[];
+    produceMaterialIdList?: string[];
     /** 是否入库前先领料 */
     isBeforeStorageIssuanceMaterial?: EPaging13_isBeforeStorageIssuanceMaterial;
 }
@@ -46,30 +46,30 @@ export interface IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInfo
     /** 响应结果 */
     data?: IThePagingInformationProduceOrderSelectionItemQueryResponseDTO1;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«ProduceOrderSelectionItemQueryResponseDTO»_1 */
 export interface IThePagingInformationProduceOrderSelectionItemQueryResponseDTO1 {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProduceOrderSelectionItemQueryResponseDTO1[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationProduceOrderSelectionItemQueryResponseDTO1_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationProduceOrderSelectionItemQueryResponseDTO1_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** ProduceOrderSelectionItemQueryResponseDTO_1 */
 export interface IProduceOrderSelectionItemQueryResponseDTO1 {
@@ -78,11 +78,11 @@ export interface IProduceOrderSelectionItemQueryResponseDTO1 {
     /** 生产订单编码 */
     produceOrderCode?: string;
     /** 销售订单ID */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 物料ID */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */
@@ -92,7 +92,7 @@ export interface IProduceOrderSelectionItemQueryResponseDTO1 {
     /** 物料规格 */
     materialSpec?: string;
     /** 单位ID */
-    unitId?: number;
+    unitId?: string;
     /** 单位名称 */
     unitName?: string;
     /** 生产批次号 */
@@ -106,9 +106,9 @@ export interface IProduceOrderSelectionItemQueryResponseDTO1 {
     /** 已退库数量 */
     stockReturnedQuantity?: number;
     /** 仓库ID */
-    storehouseId?: number;
+    storehouseId?: string;
     /** 仓位ID */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓库名称 */
     storehouseName?: string;
     /** 仓位名称 */

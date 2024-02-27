@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产处理返工相关/addUsingPOST
@@ -16,19 +16,19 @@ export default function fetchMethod(options: { data: IProductionProcessesReworkA
 /** 生产处理返工添加请求对象 */
 export interface IProductionProcessesReworkAddingRequestObjects {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 返工类型id */
-    produceAbnormalCategoryId: number;
+    produceAbnormalCategoryId: string;
     /** 对应批次id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 返工工艺路径步骤id */
-    backProduceTechnologyRoutingStepId: number;
+    backProduceTechnologyRoutingStepId: string;
     /** 返工数量 */
     abnormalQuantity?: number;
     /** 返工生产后处理方式 */
     backProduceType: EProductionProcessesReworkAddingRequestObjects_backProduceType;
     /** 标签id集合 */
-    tagIds?: number[];
+    tagIds?: string[];
     /** 图片key集合 */
     imageKeys?: string[];
     /** 描述 */
@@ -43,7 +43,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionProcessesReworkAddingRequestObjects_backProduceType {

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getStatisticDataUsingPOST_1
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IDeviceStatisticsSearchVO }
 /** 设备统计数据搜索VO */
 export interface IDeviceStatisticsSearchVO {
     /** 设备id集 */
-    deviceIds?: number[];
+    deviceIds?: string[];
     /** 查询参数id集 */
-    paramIds?: number[];
+    paramIds?: string[];
     /** 开始时间, yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 结束时间，yyyy-MM-dd HH:mm:ss */
@@ -37,16 +37,16 @@ export interface IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStat
     /** 响应结果 */
     data?: IVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备数采参数统计查询返回VO */
 export interface IVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery {
     /** 是否和预期查询相符 Y-相符，不显示异常信息；N-不相符，显示异常信息 */
     isConsistent?: EVOIsReturnedFromTheDeviceDataAcquisitionParameterStatisticsQuery_isConsistent;
     /** 实际查询时间 - 开始 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际查询时间 - 结束 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 实际数据条数 */
     actualDataCount?: number;
     /** 参数信息集 */
@@ -83,7 +83,7 @@ export interface ITheDeviceDataCollectionStatisticsDetailsAreReturnedToVO {
     /** 数据值 */
     dataValue?: number;
     /** 数据采集时间 */
-    collectTime?: string;
+    collectTime?: number;
 }
 
 export enum EDeviceStatisticsSearchVO_timeType {

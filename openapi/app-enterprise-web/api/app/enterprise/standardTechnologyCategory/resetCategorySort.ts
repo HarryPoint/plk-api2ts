@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺分类相关/resetCategorySortUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IStandardProcessClassificat
 /** 标准工艺分类排序请求DTO */
 export interface IStandardProcessClassificationSortRequestDTO {
     /** 父级分类id, 当移动到第一级时,传递空; */
-    parentCategoryId?: number;
+    parentCategoryId?: string;
     /** 分类id */
-    id: number;
+    id: string;
     /** 移动后所处父级分类下的第几个位置 */
     sort: number;
 }
@@ -31,5 +31,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

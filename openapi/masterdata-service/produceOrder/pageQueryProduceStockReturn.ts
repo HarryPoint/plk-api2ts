@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/pageQueryProduceStockReturnUsingPOST
@@ -22,7 +22,7 @@ export interface IPaging11 {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 生产订单ID */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -40,57 +40,57 @@ export interface IProductionStockReturnQueryResponseDTOJSONResultPagingInformati
     /** 响应结果 */
     data?: IThePagingInformationProductionStockReturnQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«ProductionStockReturnQueryResponseDTO» */
 export interface IThePagingInformationProductionStockReturnQueryResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProductionStockReturnQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationProductionStockReturnQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationProductionStockReturnQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** ProductionStockReturnQueryResponseDTO */
 export interface IProductionStockReturnQueryResponseDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 主数据ID/生产退库单ID */
-    masterDataId?: number;
+    masterDataId?: string;
     /** 生产退库单编码 */
     produceStockReturnOrderCode?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 退库收货人 */
-    stockReturnEmployeeId?: number;
+    stockReturnEmployeeId?: string;
     /** 退库收货人名称 */
     stockReturnEmployeeName?: string;
     /** 退库收货部门ID */
-    stockReturnDepartmentId?: number;
+    stockReturnDepartmentId?: string;
     /** 退库收货部门名称 */
     stockReturnDepartmentName?: string;
     /** 生产入库单ID */
-    productionStockInOrderId?: number;
+    productionStockInOrderId?: string;
     /** 生产入库单明细ID */
-    productionStockInOrderDetailId?: number;
+    productionStockInOrderDetailId?: string;
     /** 生产入库单编码 */
     productionStockInOrderCode?: string;
     /** 物料ID */
-    materialId?: number;
+    materialId?: string;
     /** 物料编码 */
     materialCode?: string;
     /** 物料名称 */

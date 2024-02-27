@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/进出料设备相关/scanMoveInDeviceUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IFeedDeviceScanRequestDTO }
 /** 进料设备扫描请求DTO */
 export interface IFeedDeviceScanRequestDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 生产任务ids */
-    produceTaskIds?: number[];
+    produceTaskIds?: string[];
     /** 编号 */
     code: string;
 }
@@ -31,16 +31,16 @@ export interface IJSONResultFeedDeviceRespondsToDTO {
     /** 响应结果 */
     data?: IFeedEquipmentRespondsToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进料设备响应DTO */
 export interface IFeedEquipmentRespondsToDTO {
     /** 设备id */
-    id?: number;
+    id?: string;
     /** 设备名称 */
     name?: string;
     /** 设备编号 */
     code?: string;
     /** 生产工艺设备id */
-    produceTechnologyDeviceId?: number[];
+    produceTechnologyDeviceId?: string[];
 }

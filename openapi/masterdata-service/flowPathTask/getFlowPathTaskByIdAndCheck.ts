@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getFlowPathTaskByIdAndCheckUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessTaskReturnsVO>(
         {
             url: "/masterdata-service/flowPathTask/getFlowPathTaskByIdAndCheck",
@@ -22,46 +22,46 @@ export interface IJSONResultProcessTaskReturnsVO {
     /** 响应结果 */
     data?: ITheProcessTaskReturnsToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程任务返回VO */
 export interface ITheProcessTaskReturnsToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 任务类型 */
     type?: ETheProcessTaskReturnsToVO_type;
     /** 任务号 */
     taskNo?: string;
     /** 所属流程工单id */
-    flowPathWorkOrderId?: number;
+    flowPathWorkOrderId?: string;
     /** 所属流程工单编号 */
     flowPathWorkOrderCode?: string;
     /** 流程工单发起人id */
-    workOrderCreateUserId?: number;
+    workOrderCreateUserId?: string;
     /** 工单发起部门id */
-    workOrderCreateCombinationId?: number;
+    workOrderCreateCombinationId?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 流程节点id */
-    flowPathNodeId?: number;
+    flowPathNodeId?: string;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 执行人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理时间 - 状态为已处理、已关闭时有值 */
-    handleTime?: string;
+    handleTime?: number;
     /** 总耗时秒 */
-    totalTime?: number;
+    totalTime?: string;
     /** 超时开始时间 */
-    timeoutBeginTime?: string;
+    timeoutBeginTime?: number;
     /** 总超时秒 */
-    totalTimeoutTime?: number;
+    totalTimeoutTime?: string;
     /** 状态 */
     status?: ETheProcessTaskReturnsToVO_status;
     /** 审批状态 */
@@ -73,7 +73,7 @@ export interface ITheProcessTaskReturnsToVO {
     /** 审批意见/执行情况 */
     notes?: string;
     /** 任务接受时间 */
-    acceptTime?: string;
+    acceptTime?: number;
 }
 
 export enum ETheProcessTaskReturnsToVO_type {

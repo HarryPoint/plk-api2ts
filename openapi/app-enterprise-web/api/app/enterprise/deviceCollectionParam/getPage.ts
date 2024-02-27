@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据参数相关/getPageUsingPOST_4
@@ -44,35 +44,35 @@ export interface IJSONResultPagingInformationDeviceDataParameterOverviewReturnsV
     /** 响应结果 */
     data?: IPageInformationDeviceDataParameterOverviewReturnVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«设备数据参数概览返回VO» */
 export interface IPageInformationDeviceDataParameterOverviewReturnVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDeviceDataParameterOverviewReturnsVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationDeviceDataParameterOverviewReturnVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationDeviceDataParameterOverviewReturnVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 设备数据参数概览返回VO */
 export interface IDeviceDataParameterOverviewReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设备参数名称 */
     name?: string;
     /** 数据类型(number数字 text文本) */
@@ -88,11 +88,11 @@ export interface IDeviceDataParameterOverviewReturnsVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPagingSortVO_isAsc {

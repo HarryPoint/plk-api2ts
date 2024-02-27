@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/getOperateUserForPageUsingPOST
@@ -18,7 +18,7 @@ export interface IProcessOperatorSearchesVO {
     /** 当前页面 */
     pageNo?: number;
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 分页大小 */
     pageSize?: number;
     /** 排序字段集 */
@@ -26,11 +26,11 @@ export interface IProcessOperatorSearchesVO {
     /** 员工类型 */
     userType: EProcessOperatorSearchesVO_userType;
     /** 员工id集合 */
-    userIds?: number[];
+    userIds?: string[];
     /** 部门id集合 */
-    departmentIds?: number[];
+    departmentIds?: string[];
     /** 班组id集合 */
-    classGroupIds?: number[];
+    classGroupIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -48,47 +48,47 @@ export interface IJSONResultPagingInformationProcessOperatorVO {
     /** 响应结果 */
     data?: IPagingInformationProcessOperatorVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«工序操作人员VO» */
 export interface IPagingInformationProcessOperatorVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProcessOperatorVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationProcessOperatorVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationProcessOperatorVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 工序操作人员VO */
 export interface IProcessOperatorVO {
     /** 员工id */
-    userId?: number;
+    userId?: string;
     /** 员工编号 */
     userCode?: string;
     /** 员工名称 */
     userName?: string;
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门编号 */
     departmentCode?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 班组编号 */

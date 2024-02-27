@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/甘特图相关/editUsingPOST
@@ -16,11 +16,11 @@ export default function fetchMethod(options: { data: IEditProducePlanAutoSchedul
 /** EditProducePlanAutoScheduleInputVO */
 export interface IEditProducePlanAutoScheduleInputVO {
     /** 排期ID */
-    id?: number;
+    id?: string;
     /** 占用开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 占用结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 占用原因 */
     reason?: string;
     /** 循环次数 */
@@ -35,5 +35,5 @@ export interface IJSONResultboolean {
     /** 响应结果 */
     data?: boolean;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

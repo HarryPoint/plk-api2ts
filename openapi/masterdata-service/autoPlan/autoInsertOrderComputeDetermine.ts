@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoInsertOrderComputeDetermineUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/autoPlan/autoInsertOrderComputeDetermine",
@@ -29,30 +29,30 @@ export interface IProductionOrderAutomaticInsertionCalculationResultsToDetermine
 /** 生产订单自动排产计划时间DTO */
 export interface IAutomaticProductionOrderSchedulingTimeDTO {
     /** 订单id */
-    id: number;
+    id: string;
     /** 订单号 */
     code: string;
     /** 计划开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime: number;
     /** 计划结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime: number;
     /** 步骤计划集 */
     steps?: IProductionOrderAutomaticSchedulingStepTimeDTO[];
 }
 /** 生产订单自动排产计划步骤时间DTO */
 export interface IProductionOrderAutomaticSchedulingStepTimeDTO {
     /** 步骤id */
-    id: number;
+    id: string;
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 工序名称 */
     processName: string;
     /** 工序编号 */
     processCode: string;
     /** 工序计划开始时间 yyyy-MM-dd HH:mm:ss */
-    beginTime: string;
+    beginTime: number;
     /** 工序计划结束时间 yyyy-MM-dd HH:mm:ss */
-    endTime: string;
+    endTime: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -63,7 +63,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionOrderAutomaticInsertionCalculationResultsToDetermineTheDTO_autoPlanType {

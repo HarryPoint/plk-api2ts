@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/getRolePermissionsByServiceObjectUsingPOST
@@ -18,9 +18,9 @@ export interface IRoleRightsAuthorizationQueryRequestDTO {
     /** 应用级别 */
     applicationLevel?: ERoleRightsAuthorizationQueryRequestDTO_applicationLevel;
     /** 服务对象ID */
-    serviceObjectId?: number;
+    serviceObjectId?: string;
     /** 角色ids */
-    roleIds?: number[];
+    roleIds?: string[];
 }
 /** JSONResult«List«应用角色权限响应DTO»» */
 export interface IJSONResultListAppliesTheRolePermissionResponseDTO {
@@ -31,12 +31,12 @@ export interface IJSONResultListAppliesTheRolePermissionResponseDTO {
     /** 响应结果 */
     data?: IApplicationRolePermissionRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 应用角色权限响应DTO */
 export interface IApplicationRolePermissionRespondsToTheDTO {
     /** 角色id */
-    roleId?: number;
+    roleId?: string;
     /** 角色名称 */
     roleName?: string;
     /** 权限码集 */
@@ -49,7 +49,7 @@ export interface IEnterpriseRolePermissionResponse {
     /** 数据权限类型 */
     dataAuthType?: EEnterpriseRolePermissionResponse_dataAuthType;
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 企业路由code */
     enterpriseRouterCode?: string;
     /** 数据权限对应的字段列表(只针对表单字段类型) */

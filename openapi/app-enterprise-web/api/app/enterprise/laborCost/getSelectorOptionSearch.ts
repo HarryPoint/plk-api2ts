@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工费相关/getSelectorOptionSearchUsingPOST_2
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: ITheLaborCostDropDownListIs
 /** 工费下拉选择列表搜索DTO */
 export interface ITheLaborCostDropDownListIsUsedToSearchForDtos {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工费名称 */
     laborCostName?: string;
 }
@@ -31,12 +31,12 @@ export interface IJSONResultListWorkCostDropDownSelectAListToSearchForResponseDt
     /** 响应结果 */
     data?: IPayDropDownSelectListToSearchResponseDtos[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工费下拉选择列表搜索响应DTO */
 export interface IPayDropDownSelectListToSearchResponseDtos {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

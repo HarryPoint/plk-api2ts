@@ -14,7 +14,7 @@
           "呆滞物料分析报表相关"
         ],
         "summary": "分页查询呆滞物料分析报表数据",
-        "operationId": "getPageUsingPOST_28",
+        "operationId": "getPageUsingPOST_29",
         "consumes": [
           "application/json"
         ],

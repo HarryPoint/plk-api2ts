@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/客户跟进日历相关/listUsingPOST
@@ -22,7 +22,7 @@ export interface ICustomerFollowUpCalendarInputVO {
     /** 日历类型 */
     calendarType?: ECustomerFollowUpCalendarInputVO_calendarType;
     /** 填报月份，格式 yyyy-MM-dd HH:mm:ss */
-    fillingMonth?: string;
+    fillingMonth?: number;
 }
 /** JSONResult«List«CustomerFollowUpCalendarOutputVO»» */
 export interface IJSONResultListCustomerFollowUpCalendarOutputVO {
@@ -33,24 +33,24 @@ export interface IJSONResultListCustomerFollowUpCalendarOutputVO {
     /** 响应结果 */
     data?: ICustomerFollowUpCalendarOutputVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** CustomerFollowUpCalendarOutputVO */
 export interface ICustomerFollowUpCalendarOutputVO {
     /** 业务数据ID */
-    refId?: number;
+    refId?: string;
     /** 日历类型 */
     calendarType?: ECustomerFollowUpCalendarOutputVO_calendarType;
     /** 发生时间 */
-    dateOfOccurrence?: string;
+    dateOfOccurrence?: number;
     /** 客户信息 */
     customer?: Record<string, Record<string, any>>;
     /** 跟进人 */
     createUserId?: Record<string, Record<string, any>>;
     /** 创建人 */
-    createTime?: string;
+    createTime?: number;
     /** 流程ID */
-    flowPathId?: number;
+    flowPathId?: string;
 }
 
 export enum ECustomerFollowUpCalendarInputVO_calendarType {

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/库存查询相关/getMaterialStatisticsUsingPOST_1
 */
-export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultMaterialInventoryStatisticsVO>(
         {
             url: "/masterdata-service/warehouseMaterial/getMaterialStatistics",
@@ -24,13 +24,13 @@ export interface IMaterialMasterDataInventorySearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id集 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 编号 */
     materialCode?: string;
     /** 规格 */
     materialSpec?: string;
     /** 仓库id */
-    storehouseIds?: number[];
+    storehouseIds?: string[];
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -48,7 +48,7 @@ export interface IJSONResultMaterialInventoryStatisticsVO {
     /** 响应结果 */
     data?: IMaterialInventoryStatisticsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料库存统计VO */
 export interface IMaterialInventoryStatisticsVO {
@@ -64,30 +64,30 @@ export interface IMaterialInventoryStatisticsVO {
 /** 分页信息«物料主数据库存返回VO» */
 export interface IPagingInformationMaterialMasterDataInventoryReturnsVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IMaterialMasterDataInventoryReturnedToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationMaterialMasterDataInventoryReturnsVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationMaterialMasterDataInventoryReturnsVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 物料主数据库存返回VO */
 export interface IMaterialMasterDataInventoryReturnedToVO {
     /** 物料id */
-    id?: number;
+    id?: string;
     /** 物料名称 */
     name?: string;
     /** 物料编号 */

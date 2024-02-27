@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/深蓝大屏相关/getSettingInfoUsingGET_1
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultDeepBlueProductionScreenSettingReturnsVO>(
         {
             url: "/masterdata-service/lsShenLanSetting/getSettingInfo",
@@ -22,16 +22,16 @@ export interface IJSONResultDeepBlueProductionScreenSettingReturnsVO {
     /** 响应结果 */
     data?: IDeepBlueProductionLargeScreenSettingsReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 深蓝生产大屏设置返回VO */
 export interface IDeepBlueProductionLargeScreenSettingsReturnToVO {
     /** 大屏左侧质检合格率工序id */
-    leftQualityPassRatioProcessId?: number;
+    leftQualityPassRatioProcessId?: string;
     /** 大屏左侧质检数据 */
     leftQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetBackToVO;
     /** 大屏右侧质检合格率工序id */
-    rightQualityPassRatioProcessId?: number;
+    rightQualityPassRatioProcessId?: string;
     /** 大屏右侧质检数据 */
     rightQualityPassRatios?: IDeepBlueProductionLargeScreenPassRateDataSetBackToVO;
     /** 大屏中部数据类型 */
@@ -59,7 +59,7 @@ export interface IDeepBlueProductionLargeScreenPassRateDataSetBackToVO {
 /** 深蓝生产大屏产出设置返回VO */
 export interface IDeepBlueProductionLargeScreenOutputSettingsReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */
@@ -74,7 +74,7 @@ export interface IDeepBlueProductionLargeScreenOutputSettingsReturnToVO {
 /** 深蓝生产大屏产出设置明细返回VO */
 export interface IDeepBlueProductionLargeScreenOutputSettingDetailsBackToVO {
     /** 日期 */
-    scheduleDate?: string;
+    scheduleDate?: number;
     /** 手动修改值 */
     handQuantity?: number;
     /** 手动修改金额 */

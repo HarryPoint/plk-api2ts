@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/trialAddUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ITrialProductOrderNewReques
 /** 试用产品订单新增请求对象 */
 export interface ITrialProductOrderNewRequestObject {
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 试用产品类型, 默认传 MES  */
     productType?: ETrialProductOrderNewRequestObject_productType;
     /** 产品模块 */
@@ -26,7 +26,7 @@ export interface ITrialProductOrderNewRequestObject {
     /** 购买账号数 */
     buyAccountQuantity?: number;
     /** 预计到期日期 */
-    planExpireTime?: string;
+    planExpireTime?: number;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -37,7 +37,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETrialProductOrderNewRequestObject_productType {

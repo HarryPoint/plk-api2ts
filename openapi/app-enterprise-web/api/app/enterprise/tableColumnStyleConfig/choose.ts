@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/列表列样式配置/chooseUsingGET
 */
-export default function fetchMethod(options: { params: { tableColumnStyleConfigId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { tableColumnStyleConfigId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/choose",
@@ -22,5 +22,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

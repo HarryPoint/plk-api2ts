@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getMonthProposalIndicatorsUsingGET
@@ -22,7 +22,7 @@ export interface IJSONResultMonthProposalIndicatorsResponseDTO {
     /** 响应结果 */
     data?: IMonthProposalIndicatorsResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** MonthProposalIndicatorsResponseDTO */
 export interface IMonthProposalIndicatorsResponseDTO {

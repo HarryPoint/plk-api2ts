@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/transferFilesUsingPOST
@@ -16,16 +16,16 @@ export default function fetchMethod(options: { data: ITransferFileRequestDTO }, 
 /** TransferFileRequestDTO */
 export interface ITransferFileRequestDTO {
     /** 邮件记录ID */
-    sendingEmailRecordId?: number;
+    sendingEmailRecordId?: string;
     /** undefined */
-    sendingEmailAttachmentId?: number;
+    sendingEmailAttachmentId?: string;
     /** 文件ID列表 */
     attachmentList?: IAttachmentRequestDTO[];
 }
 /** AttachmentRequestDTO */
 export interface IAttachmentRequestDTO {
     /** undefined */
-    fileKey: number;
+    fileKey: string;
     /** undefined */
     name: string;
 }
@@ -38,7 +38,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring_data {

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/应用事件相关/listByIdListUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListFlowPathEventQueryResponseDTO>(
         {
             url: "/flow-service/flowPathEvent/listByIdList",
@@ -22,22 +22,22 @@ export interface IJSONResultListFlowPathEventQueryResponseDTO {
     /** 响应结果 */
     data?: IFlowPathEventQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** FlowPathEventQueryResponseDTO */
 export interface IFlowPathEventQueryResponseDTO {
     /** undefined */
-    id?: number;
+    id?: string;
     /** undefined */
-    flowPathNodeIdList?: number[];
+    flowPathNodeIdList?: string[];
     /** undefined */
     title?: string;
     /** undefined */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** undefined */
-    flowPathId?: number;
+    flowPathId?: string;
     /** undefined */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** undefined */
     operateFormType?: EFlowPathEventQueryResponseDTO_operateFormType;
     /** undefined */
@@ -74,7 +74,7 @@ export interface IFlowPathEventQueryResponseDTO {
 /** 流程事件操作筛选条件组查询DTO */
 export interface IProcessEventOperationFilterGroupQueriesDtos {
     /** id */
-    id?: number;
+    id?: string;
     /** 条件组名称 */
     name?: string;
     /** 条件集 */
@@ -87,7 +87,7 @@ export interface IProcessEventOperationFilterGroupQueriesDtos {
 /** 流程事件操作筛选条件DTO */
 export interface IProcessEventOperationFilterDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 操作触发类型 */
     triggerType?: EProcessEventOperationFilterDTO_triggerType;
     /** 被判断的字段序号值 */
@@ -123,7 +123,7 @@ export interface IInsertTheBasis2OfTheServiceEventDetailDataGroup {
 /** 流程事件映射条件组-查询响应 */
 export interface IProcessEventMappingConditionGroupQueryResponse {
     /** id */
-    id?: number;
+    id?: string;
     /** 操作触发类型 */
     triggerType?: EProcessEventMappingConditionGroupQueryResponse_triggerType;
     /** 操作赋值字段序号值 */
@@ -148,11 +148,11 @@ export interface IProcessEventMappingConditionGroupQueryResponse {
 /** 应用新增事件子表设置响应DTO_1 */
 export interface IApplyTheNewEventSubtableToSetResponseDTO1 {
     /** id */
-    id?: number;
+    id?: string;
     /** 操作触发类型 */
     triggerType?: EApplyTheNewEventSubtableToSetResponseDTO1_triggerType;
     /** 字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 字段序列号 */
     flowPathFormFieldSerialNo?: string;
     /** 字段编号 */

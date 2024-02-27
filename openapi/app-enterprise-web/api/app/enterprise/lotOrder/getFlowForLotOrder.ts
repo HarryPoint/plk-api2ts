@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getFlowForLotUsingGET
 */
-export default function fetchMethod(options: { params: { flowType?: EflowType; lotOrderId?: number; produceOrderId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowType?: EflowType; lotOrderId?: string; produceOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/getFlowForLotOrder",
@@ -22,18 +22,18 @@ export interface IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToThe
     /** 响应结果 */
     data?: IBatchOrderFlowBasicInformationResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 批次订单流水基本信息响应DTO */
 export interface IBatchOrderFlowBasicInformationResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 流水类型 */
     flowType?: EBatchOrderFlowBasicInformationResponseDTO_flowType;
     /** 当前流水类型描述 */
     flowTypeDesc?: string;
     /** 操作时间 */
-    createTime?: string;
+    createTime?: number;
     /** 描述 */
     remark?: string;
 }

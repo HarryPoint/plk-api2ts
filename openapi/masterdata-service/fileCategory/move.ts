@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/文件分类相关/moveUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IFileCategoryMoveRequestDTO
 /** FileCategoryMoveRequestDTO */
 export interface IFileCategoryMoveRequestDTO {
     /** 当前文件分类ID */
-    id?: number;
+    id?: string;
     /** 移动目标文件分类ID */
-    targetFileCategoryId?: number;
+    targetFileCategoryId?: string;
 }
 /** JSONResult«string»_1 */
 export interface IJSONResultstring1 {
@@ -29,7 +29,7 @@ export interface IJSONResultstring1 {
     /** 响应结果 */
     data?: EJSONResultstring1_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EJSONResultstring1_data {

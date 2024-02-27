@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/getByIdUsingGET_13
@@ -22,12 +22,12 @@ export interface IJSONResultProductionTaskDetailsReturnToVO {
     /** 响应结果 */
     data?: IProductionTaskDetailsReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务详情返回VO */
 export interface IProductionTaskDetailsReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 任务下发方式 */
@@ -39,13 +39,13 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 任务类型描述 */
     typeDesc?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -59,19 +59,19 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 对应工艺路径步骤 */
     routingStep?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 对应班次名称 */
     classShiftName?: string;
     /** 对应班次编号 */
     classShiftCode?: string;
     /** 补单来源生产任务id */
-    supplementSourceProduceTaskId?: number;
+    supplementSourceProduceTaskId?: string;
     /** 计划生产数量 - 任务进度分母 */
     planProduceQuantity?: number;
     /** 当前完成数量 - 任务进度分子(合格数量) */
@@ -89,13 +89,13 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 可质检数量 */
     canQualityQuantity?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 备注 */
     remark?: string;
     /** 状态 */
@@ -105,19 +105,19 @@ export interface IProductionTaskDetailsReturnToVO {
     /** 任务优先级 */
     priorityLevel?: number;
     /** 关闭人 */
-    closeUserId?: number;
+    closeUserId?: string;
     /** 关闭人姓名 */
     closeUsername?: string;
     /** 关闭时间 */
-    closeTime?: string;
+    closeTime?: number;
     /** 关闭原因 */
     closeRemark?: string;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 可操作项列表 */
     canOpItemList?: EProductionTaskDetailsReturnToVO_canOpItemList_items[];
     /** 可操作项列表拼接 */
@@ -128,9 +128,9 @@ export interface IProductionTaskDetailsReturnToVO {
 /** 生产处理基础信息响应DTO */
 export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
@@ -140,7 +140,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产异常类型名称 */
     produceAbnormalName?: string;
     /** 生产异常类型编号 */
@@ -154,17 +154,17 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 备注 */
     remark?: string;
     /** 对应生产委外id */
-    produceEntrustId?: number;
+    produceEntrustId?: string;
     /** 状态 */
     status?: EProductionProcessingBasicInformationRespondsToDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 图片上传key集合 */
     imageKeys?: string;
     /** 图片Url集合 */
@@ -174,24 +174,24 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 异常描述 */
     desc?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理人 */
     handleUsername?: string;
     /** 处理时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序 */
     processName?: string;
     /** undefined */
-    materialId?: number;
+    materialId?: string;
 }
 /** 进出站关键参数明细响应DTO */
 export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */

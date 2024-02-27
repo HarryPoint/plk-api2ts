@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务甘特图相关/queryGanttChartUsingPOST
@@ -22,26 +22,26 @@ export interface IJSONResultListProjectTaskGanttChartPhaseResponseObject {
     /** 响应结果 */
     data?: IProjectTaskGanttChartPhaseResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务甘特图阶段响应对象 */
 export interface IProjectTaskGanttChartPhaseResponseObject {
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目名称 */
     projectName?: string;
     /** 项目计划id */
-    projectPlanId?: number;
+    projectPlanId?: string;
     /** 项目计划编号 */
     projectPlanCode?: string;
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 项目阶段来源应用编号 */
     projectStageFromAppCode?: string;
     /** 项目阶段来源应用id */
-    projectStageFromAppId?: number;
+    projectStageFromAppId?: string;
     /** 项目阶段排序 */
     projectStageSort?: number;
     /** 下级任务列表 */
@@ -50,15 +50,15 @@ export interface IProjectTaskGanttChartPhaseResponseObject {
 /** 项目任务甘特图任务响应对象 */
 export interface IProjectTaskGanttChartTaskResponseObject {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
     code?: string;
     /** 任务开始日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 任务截止日期 */
-    planEndTime?: string;
+    planEndTime?: number;
     /** 任务进度 */
     taskProgress?: number;
     /** 总周期 */
@@ -84,35 +84,31 @@ export interface IProjectTaskGanttChartTaskResponseObject {
     /** 前置任务列表 */
     preTaskList?: IProjectTaskPreTaskResponseObject[];
     /** 上级任务id */
-    parentId?: number;
+    parentId?: string;
     /** 上级任务名称 */
     parentName?: string;
     /** 优先级 */
     priorityName?: string;
     /** 项目阶段id */
-    projectStageId?: number;
+    projectStageId?: string;
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 任务下发时间 */
-    issueTime?: string;
+    issueTime?: number;
     /** 任务接收时间 */
-    receiveTime?: string;
+    receiveTime?: number;
     /** 任务实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 任务实际结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 任务取消时间 */
-    cancelTime?: string;
+    cancelTime?: number;
     /** 任务未通过时间 */
-    noPassTime?: string;
+    noPassTime?: number;
     /** 项目id */
-    projectId?: number;
+    projectId?: string;
     /** 项目计划id */
-    projectPlanId?: number;
-    /** 项目计划编号 */
-    projectPlanCode?: string;
-    /** 项目计划名称 */
-    projectPlanName?: string;
+    projectPlanId?: string;
     /** 层级 */
     level?: number;
     /** 排序 */
@@ -122,18 +118,18 @@ export interface IProjectTaskGanttChartTaskResponseObject {
     /** 来源应用编号 */
     fromAppCode?: string;
     /** 来源应用id */
-    fromAppId?: number;
+    fromAppId?: string;
     /** 备注 */
     remark?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** 下级任务列表 */
     children?: IProjectTaskGanttChartTaskResponseObject[];
 }
 /** 项目任务前置任务响应对象 */
 export interface IProjectTaskPreTaskResponseObject {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */
@@ -315,6 +311,8 @@ export enum EProjectTaskGanttChartTaskResponseObject_appSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
+    /** 项目设备信息 */
+    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -355,6 +353,14 @@ export enum EProjectTaskGanttChartTaskResponseObject_appSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
+    /** 项目资源 */
+    PROJECT_RESOURCES = "PROJECT_RESOURCES",
+    /** 项目文件 */
+    PROJECT_FILE = "PROJECT_FILE",
+    /** 项目文件夹 */
+    PROJECT_FOLDER = "PROJECT_FOLDER",
+    /** 项目关闭 */
+    PROJECT_CLOSE = "PROJECT_CLOSE",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

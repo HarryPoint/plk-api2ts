@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQualityLotUsingGET
 */
-export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListWipBatchInformationVO>(
         {
             url: "/masterdata-service/produceTask/getQualityLot",
@@ -22,12 +22,12 @@ export interface IJSONResultListWipBatchInformationVO {
     /** 响应结果 */
     data?: IWipBatchInformationVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Wip批次信息VO */
 export interface IWipBatchInformationVO {
     /** 批次id */
-    id?: number;
+    id?: string;
     /** 批次名称 */
     lotName?: string;
     /** 批次号 */
@@ -35,7 +35,7 @@ export interface IWipBatchInformationVO {
     /** 批次原始数量 */
     totalCount?: number;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
-    wmRpCreateTime?: string;
+    wmRpCreateTime?: number;
     /** 可委外数量 */
     canEntrustQuantity?: number;
     /** 可操作数量 */
@@ -46,7 +46,7 @@ export interface IWipBatchInformationVO {
 /** Wip数量状态信息VO */
 export interface IWipQuantityStatusVO {
     /** wip状态记录id */
-    wipRpId?: number;
+    wipRpId?: string;
     /** 数量 */
     quantity?: number;
     /** wip数量状态 */
@@ -56,7 +56,7 @@ export interface IWipQuantityStatusVO {
     /** 是否可用 */
     canUse?: EWipQuantityStatusVO_canUse;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
-    wmRpCreateTime?: string;
+    wmRpCreateTime?: number;
     /** 可委外数量 */
     canEntrustQuantity?: number;
     /** 可操作数量 */

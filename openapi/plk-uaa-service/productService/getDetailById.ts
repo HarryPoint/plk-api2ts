@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/产品服务相关/getDetailByIdUsingGET_3
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductServiceDetailsResponseObject>(
         {
             url: "/plk-uaa-service/productService/getDetailById",
@@ -22,14 +22,14 @@ export interface IJSONResultProductServiceDetailsResponseObject {
     /** 响应结果 */
     data?: IProductServiceDetailsResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 产品服务详情响应对象 */
 export interface IProductServiceDetailsResponseObject {
     /** 产品服务id */
-    id?: number;
+    id?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 企业名称 */
     enterpriseName?: string;
     /** 企业编号 */
@@ -43,7 +43,7 @@ export interface IProductServiceDetailsResponseObject {
     /** 产品类型 */
     productType?: EProductServiceDetailsResponseObject_productType;
     /** 到期时间 */
-    expireTime?: string;
+    expireTime?: number;
     /** 账号数 */
     availableAccountQuantity?: number;
     /** 产品模块数组 */
@@ -56,11 +56,11 @@ export interface IProductServiceDetailsResponseObject {
 /** 产品订单响应对象 */
 export interface IProductOrderResponseObject {
     /** 订单id */
-    id?: number;
+    id?: string;
     /** 订单编号 */
     code?: string;
     /** 企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 类型 */
     type?: EProductOrderResponseObject_type;
     /** 状态 */
@@ -70,11 +70,11 @@ export interface IProductOrderResponseObject {
     /** 订单金额(元) */
     orderMoneyQuantity?: number;
     /** 下单用户id */
-    placeOrderUserId?: number;
+    placeOrderUserId?: string;
     /** 下单用户名称 */
     placeOrderUserName?: string;
     /** 下单时间 */
-    placeOrderTime?: string;
+    placeOrderTime?: number;
 }
 /** 产品服务日志响应对象 */
 export interface IProductServiceLogResponseObject {
@@ -83,7 +83,7 @@ export interface IProductServiceLogResponseObject {
     /** 产品服务类型 */
     productServiceType?: EProductServiceLogResponseObject_productServiceType;
     /** 产品服务到期时间 */
-    productServiceExpireTime?: string;
+    productServiceExpireTime?: number;
     /** 产品服务可用账号数 */
     productServiceAvailableAccountQuantity?: number;
     /** 产品类型 */
@@ -97,7 +97,7 @@ export interface IProductServiceLogResponseObject {
     /** 产品订单延期类型 */
     productOrderDelayType?: EProductServiceLogResponseObject_productOrderDelayType;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EProductServiceDetailsResponseObject_type {

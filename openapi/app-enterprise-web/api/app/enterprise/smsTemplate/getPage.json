@@ -14,7 +14,7 @@
           "短信内容相关"
         ],
         "summary": "短信内容分页查询",
-        "operationId": "getPageUsingPOST_31",
+        "operationId": "getPageUsingPOST_32",
         "consumes": [
           "application/json"
         ],

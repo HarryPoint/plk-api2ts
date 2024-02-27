@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/editUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IComputeSchemeEditRequestDT
 /** 计算方案编辑请求DTO */
 export interface IComputeSchemeEditRequestDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 应用编码 */
@@ -32,7 +32,7 @@ export interface IComputeSchemeEditRequestDTO {
     /** 计算模式 */
     calculationMode?: EComputeSchemeEditRequestDTO_calculationMode;
     /** 固定时间 */
-    fixedTime?: string;
+    fixedTime?: number;
     /** 计算周期 */
     calculationPeriod?: EComputeSchemeEditRequestDTO_calculationPeriod;
     /** 过滤条件列表 */
@@ -54,7 +54,7 @@ export interface IJSONResultstring {
     /** 响应结果 */
     data?: EJSONResultstring_data;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EComputeSchemeEditRequestDTO_isDetailFlow {

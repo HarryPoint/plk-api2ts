@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getReportHistoryUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionProcessingQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionProcessingQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationProductionProcessingBasicInformationResponseDTO>(
         {
             url: "/masterdata-service/produceHandle/getReportHistory",
@@ -24,7 +24,7 @@ export interface IProductionProcessingQueryVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 任务id */
-    taskId?: number;
+    taskId?: string;
     /** 上报类型/上报标签 检索关键字 */
     searchKeyWord?: string;
     /** 开始时间 yyyy-MM-dd HH:mm:ss */
@@ -48,37 +48,37 @@ export interface IJSONResultPageInformationProductionProcessingBasicInformationR
     /** 响应结果 */
     data?: IPageInformationProductionProcessesBasicInformationInResponseToDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«生产处理基础信息响应DTO» */
 export interface IPageInformationProductionProcessesBasicInformationInResponseToDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProductionProcessingBasicInformationRespondsToDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationProductionProcessesBasicInformationInResponseToDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationProductionProcessesBasicInformationInResponseToDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 生产处理基础信息响应DTO */
 export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 任务号 */
     produceTaskNo?: string;
     /** 业务类型 */
@@ -88,7 +88,7 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 异常分类描述 */
     typeDesc?: string;
     /** 所属进出站记录id */
-    moveInOutRecordId?: number;
+    moveInOutRecordId?: string;
     /** 生产异常类型名称 */
     produceAbnormalName?: string;
     /** 生产异常类型编号 */
@@ -102,17 +102,17 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 备注 */
     remark?: string;
     /** 对应生产委外id */
-    produceEntrustId?: number;
+    produceEntrustId?: string;
     /** 状态 */
     status?: EProductionProcessingBasicInformationRespondsToDTO_status;
     /** 状态描述 */
     statusDesc?: string;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 图片上传key集合 */
     imageKeys?: string;
     /** 图片Url集合 */
@@ -122,24 +122,24 @@ export interface IProductionProcessingBasicInformationRespondsToDTO {
     /** 异常描述 */
     desc?: string;
     /** 处理人id */
-    handleUserId?: number;
+    handleUserId?: string;
     /** 处理人 */
     handleUsername?: string;
     /** 处理时间 */
-    handleTime?: string;
+    handleTime?: number;
     /** 销售订单编码 */
     salesOrderCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序 */
     processName?: string;
     /** undefined */
-    materialId?: number;
+    materialId?: string;
 }
 /** 进出站关键参数明细响应DTO */
 export interface IKeyParametersInAndOutOfTheStationDetailResponseDTO {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细名称/标题 */
     name: string;
     /** 录入类型 */

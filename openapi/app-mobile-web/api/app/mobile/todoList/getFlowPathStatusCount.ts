@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/getFlowPathStatusCountUsingGET
 */
-export default function fetchMethod(options: { params: { flowPathId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultNumberOfToDoQueryStatesReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/todoList/getFlowPathStatusCount",
@@ -22,7 +22,7 @@ export interface IJSONResultNumberOfToDoQueryStatesReturnedToVO {
     /** 响应结果 */
     data?: INumberOfBacklogQueryStatesReturnsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 待办事项查询状态数量返回VO */
 export interface INumberOfBacklogQueryStatesReturnsVO {

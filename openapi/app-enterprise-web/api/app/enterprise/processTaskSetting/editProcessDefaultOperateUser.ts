@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/editProcessDefaultOperateUserUsingPOST
@@ -18,9 +18,9 @@ export interface IProcedureTaskSettingDefaultOperatorEditsDTO {
     /** 员工类型 */
     userType: EProcedureTaskSettingDefaultOperatorEditsDTO_userType;
     /** 工序id */
-    processId: number;
+    processId: string;
     /** 默认操作员ids */
-    defaultUserIds?: number[];
+    defaultUserIds?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -31,7 +31,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProcedureTaskSettingDefaultOperatorEditsDTO_userType {

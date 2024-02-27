@@ -14,7 +14,7 @@
           "准备期相关"
         ],
         "summary": "分页查询准备期",
-        "operationId": "getPageUsingPOST_24",
+        "operationId": "getPageUsingPOST_25",
         "consumes": [
           "application/json"
         ],

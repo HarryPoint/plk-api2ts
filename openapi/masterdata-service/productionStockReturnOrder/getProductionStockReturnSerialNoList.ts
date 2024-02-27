@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产退库单相关/getProductionStockReturnSerialNoListUsingPOST
 */
-export default function fetchMethod(options: { params: { productionStockInOrderDetailId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { productionStockInOrderDetailId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionStockReturnSerialNoQueryResponseDTO>(
         {
             url: "/masterdata-service/productionStockReturnOrder/getProductionStockReturnSerialNoList",
@@ -22,7 +22,7 @@ export interface IJSONResultListProductionStockReturnSerialNoQueryResponseDTO {
     /** 响应结果 */
     data?: IProductionStockReturnSerialNoQueryResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** ProductionStockReturnSerialNoQueryResponseDTO */
 export interface IProductionStockReturnSerialNoQueryResponseDTO {

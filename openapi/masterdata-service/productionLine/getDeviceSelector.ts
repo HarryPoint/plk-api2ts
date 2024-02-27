@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/产线相关/getDeviceSelectorUsingPOST
@@ -18,7 +18,7 @@ export interface IAssociatedQueryDtosOfDevicesInTheProductionLine {
     /** 名称or编号 */
     nameOrCode?: string;
     /** 用户已选数据 */
-    selectedDeviceIdList?: number[];
+    selectedDeviceIdList?: string[];
 }
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
@@ -29,12 +29,12 @@ export interface IJSONResultListIdCodeNameACommonTransferObject {
     /** 响应结果 */
     data?: IIdCodeNameGenericTransportObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id Code Name 通用传输对象 */
 export interface IIdCodeNameGenericTransportObject {
     /** id */
-    id?: number;
+    id?: string;
     /** code */
     code?: string;
     /** name */

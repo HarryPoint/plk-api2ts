@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/批次方案相关/getSelectorOptionSearchUsingPOST_3
@@ -22,7 +22,7 @@ export interface IPaging5 {
     /** 分页大小 */
     pageSize?: number;
     /** 创建用户ID列表 */
-    createUserIdList?: number[];
+    createUserIdList?: string[];
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 方案名称匹配 */
@@ -30,9 +30,9 @@ export interface IPaging5 {
     /** 类型列表 */
     planTypeList?: EPaging5_planTypeList_items[];
     /** 创建时间范围的开始 */
-    createTimeBegin?: string;
+    createTimeBegin?: number;
     /** 创建时间范围的结束 */
-    createTimeEnd?: string;
+    createTimeEnd?: number;
 }
 /** 分页排序VO */
 export interface IPagingSortVO {
@@ -50,55 +50,55 @@ export interface ILotSerialNumberPlanPageQueryResponseDTOJSONResultPagingInforma
     /** 响应结果 */
     data?: IThePagingInformationLotSerialNumberPlanPageQueryResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«LotSerialNumberPlanPageQueryResponseDTO» */
 export interface IThePagingInformationLotSerialNumberPlanPageQueryResponseDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ILotSerialNumberPlanPageQueryResponseDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EThePagingInformationLotSerialNumberPlanPageQueryResponseDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EThePagingInformationLotSerialNumberPlanPageQueryResponseDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** LotSerialNumberPlanPageQueryResponseDTO */
 export interface ILotSerialNumberPlanPageQueryResponseDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** undefined */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 方案名称 */

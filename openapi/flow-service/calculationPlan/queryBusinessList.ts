@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/queryBusinessListUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListServiceQueryResponse {
     /** 响应结果 */
     data?: IBusinessQueryResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 业务查询响应 */
 export interface IBusinessQueryResponse {
     /** 应用ID */
-    appId?: number;
+    appId?: string;
     /** 应用编码 */
     appCode?: string;
     /** 业务名称 */

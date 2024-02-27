@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/pageQueryExcelDataUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IPaging14 }, extraOptions?:
 /** 分页_14 */
 export interface IPaging14 {
     /** 表数据ID */
-    tableDataId?: number;
+    tableDataId?: string;
     /** 当前页面 */
     pageNo?: number;
     /** 分页大小 */
@@ -40,35 +40,35 @@ export interface IJSONResultPageInformationExcelRowDTO {
     /** 响应结果 */
     data?: IPageInformationExcelRowDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«ExcelRowDTO» */
 export interface IPageInformationExcelRowDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IExcelRowDTO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationExcelRowDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationExcelRowDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** ExcelRowDTO */
 export interface IExcelRowDTO {
     /** 行数据ID */
-    id?: number;
+    id?: string;
     /** 行下标 */
     rowIndex?: number;
     /** 单元格列表 */
@@ -77,7 +77,7 @@ export interface IExcelRowDTO {
 /** ExcelCellDTO */
 export interface IExcelCellDTO {
     /** 单元格ID */
-    id?: number;
+    id?: string;
     /** 列下标 */
     columnIndex?: number;
     /** 单元格编码 */

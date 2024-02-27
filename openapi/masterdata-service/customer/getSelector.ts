@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/getSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListClientSelectsToReturnVO>(
         {
             url: "/masterdata-service/customer/getSelector",
@@ -22,12 +22,12 @@ export interface IJSONResultListClientSelectsToReturnVO {
     /** 响应结果 */
     data?: ITheCustomerChoosesToReturnToVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 客户选择返回VO */
 export interface ITheCustomerChoosesToReturnToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编号 */

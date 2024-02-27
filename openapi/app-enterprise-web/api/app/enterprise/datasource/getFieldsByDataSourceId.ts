@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getFieldsByDataSourceIdUsingGET
@@ -22,20 +22,20 @@ export interface IJSONResultListDataSourceFieldResponseObject {
     /** 响应结果 */
     data?: IDataSourceFieldResponseObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 数据源字段响应对象 */
 export interface IDataSourceFieldResponseObject {
     /** id/流程表单字段id */
-    id?: number;
+    id?: string;
     /** 父级id */
-    parentId?: number;
+    parentId?: string;
     /** 父级serialNo */
     parentSerialNo?: string;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 数据源id */
-    dataSourceId?: number;
+    dataSourceId?: string;
     /** 字段编码 */
     fieldCode?: string;
     /** serialNo */

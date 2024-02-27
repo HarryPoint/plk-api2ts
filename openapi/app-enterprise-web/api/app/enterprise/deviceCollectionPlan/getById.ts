@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/getByIdUsingGET_3
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultTheDeviceDataCollectionSchemeDetailsAreReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultTheDeviceDataCollectionSchemeDetailsAreReturnedToVO 
     /** 响应结果 */
     data?: IDeviceDataCollectionSchemeDetailsAreReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备数采方案明细返回VO */
 export interface IDeviceDataCollectionSchemeDetailsAreReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 方案名称 */
     name?: string;
     /** 方案编号 */
@@ -43,16 +43,16 @@ export interface IDeviceDataCollectionSchemeDetailsAreReturnedToVO {
     /** 状态 */
     dataStatus?: number;
     /** 创建人id */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -61,11 +61,11 @@ export interface IIdNameNumberVO {
 /** 设备数采方案参数关联信息返回VO */
 export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsReturnedToVO {
     /** 关联id */
-    id?: number;
+    id?: string;
     /** 设备数采方案id */
-    deviceCollectionPlanId?: number;
+    deviceCollectionPlanId?: string;
     /** 设备数采参数id */
-    deviceCollectionParamId?: number;
+    deviceCollectionParamId?: string;
     /** 设备数采参数名称 */
     deviceCollectionParamName?: string;
     /** 设备数采参数编号 */
@@ -96,7 +96,7 @@ export interface IDeviceDataAcquisitionSchemeParameterAssociationInformationIsRe
 /** 设备数采方案参数预警返回VO */
 export interface IDeviceDataAcquisitionSchemeParameterWarningReturnVO {
     /** 预警id */
-    id?: number;
+    id?: string;
     /** 时间粒度 */
     timeType?: EDeviceDataAcquisitionSchemeParameterWarningReturnVO_timeType;
     /** 数值对比标准 */

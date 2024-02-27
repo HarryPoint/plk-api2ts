@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务分配相关/getOperateUserListByProcessIdUsingGET
 */
-export default function fetchMethod(options: { params: { processId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { processId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTaskAssign/getOperateUserListByProcessId",
@@ -22,12 +22,12 @@ export interface IJSONResultListIdNameNumberVO {
     /** 响应结果 */
     data?: IIdNameNumberVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */

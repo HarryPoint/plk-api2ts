@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/getPageUsingPOST_12
@@ -24,11 +24,11 @@ export interface IProductionCostingPagingRequestObject {
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
     /** 计划开始时间查询结束时间 */
-    endPlanBeginTime?: string;
+    endPlanBeginTime?: number;
     /** 导出字段集 */
     exportFields?: string[];
     /** 期间id集合 */
-    fiscalPeriodIdList?: number[];
+    fiscalPeriodIdList?: string[];
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 销售订单编号 */
@@ -36,9 +36,9 @@ export interface IProductionCostingPagingRequestObject {
     /** 物料规格 */
     materialSpec?: string;
     /** 计划开始时间查询开始时间 */
-    beginPlanBeginTime?: string;
+    beginPlanBeginTime?: number;
     /** 物料id集合 */
-    materialIdList?: number[];
+    materialIdList?: string[];
     /** 期初在产品 - 数量 - 开始数量 */
     beginBeginPeriodInProduceQuantity?: number;
     /** 期初在产品 - 数量 - 结束数量 */
@@ -100,35 +100,35 @@ export interface IJSONResultPageInformationPageResponseObjectForProductionCostin
     /** 响应结果 */
     data?: IPageInformationProductionCostAccountingPageResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«生产成本核算分页响应对象» */
 export interface IPageInformationProductionCostAccountingPageResponseObject {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IProductionCostingPagingResponseObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationProductionCostAccountingPageResponseObject_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationProductionCostAccountingPageResponseObject_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 生产成本核算分页响应对象 */
 export interface IProductionCostingPagingResponseObject {
     /** 所属期间id */
-    fiscalPeriodId?: number;
+    fiscalPeriodId?: string;
     /** 所属期间 */
     fiscalPeriodDate?: string;
     /** 生产订单编号 */
@@ -136,9 +136,9 @@ export interface IProductionCostingPagingResponseObject {
     /** 销售订单编号 */
     salesOrderCode?: string;
     /** 计划开始时间 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */

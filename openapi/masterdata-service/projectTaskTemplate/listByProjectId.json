@@ -14,7 +14,7 @@
           "项目任务模板相关"
         ],
         "summary": "通过项目id获取模板列表",
-        "operationId": "listByProjectIdUsingGET_1",
+        "operationId": "listByProjectIdUsingGET",
         "produces": [
           "*/*"
         ],

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectMemberUsingPOST
@@ -19,12 +19,12 @@ export interface IItemNameNumberPublicQueryObject {
     nameOrCode?: string;
     /** 条数 */
     limit?: number;
-    /** 项目计划ids */
-    projectPlanIds?: number[];
     /** undefined */
-    ids?: number[];
+    ids?: string[];
     /** undefined */
-    projectIds?: number[];
+    projectIds?: string[];
+    /** undefined */
+    projectPlanIds?: string[];
     /** undefined */
     statusList?: string[];
 }
@@ -37,20 +37,20 @@ export interface ITheJSONResultListProjectMemberCountsTheResponseObject {
     /** 响应结果 */
     data?: IProjectMembersCountResponseObjects[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目成员统计响应对象 */
 export interface IProjectMembersCountResponseObjects {
     /** 项目成员id */
-    id?: number;
+    id?: string;
     /** 项目成员名称 */
     name?: string;
     /** 项目成员工号 */
     code?: string;
     /** 员工id */
-    employeeId?: number;
+    employeeId?: string;
     /** 所属部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 所属部门名称 */
     departmentName?: string;
 }

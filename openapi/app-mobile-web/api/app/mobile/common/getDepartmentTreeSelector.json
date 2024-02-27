@@ -18,6 +18,15 @@
         "produces": [
           "*/*"
         ],
+        "parameters": [
+          {
+            "name": "nameOrCode",
+            "in": "query",
+            "description": "nameOrCode",
+            "required": false,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",

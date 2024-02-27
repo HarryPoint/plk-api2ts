@@ -37,8 +37,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/消息搜索VO",
-              "originalRef": "消息搜索VO"
+              "originalRef": "消息搜索VO",
+              "$ref": "#/definitions/消息搜索VO"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«消息返回VO»»",
-              "originalRef": "JSONResult«分页信息«消息返回VO»»"
+              "originalRef": "JSONResult«分页信息«消息返回VO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«消息返回VO»»"
             }
           },
           "201": {
@@ -94,8 +94,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "searchData": {
@@ -181,8 +181,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«消息返回VO»",
-          "originalRef": "分页信息«消息返回VO»"
+          "originalRef": "分页信息«消息返回VO»",
+          "$ref": "#/definitions/分页信息«消息返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -220,8 +220,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/消息返回VO",
-            "originalRef": "消息返回VO"
+            "originalRef": "消息返回VO",
+            "$ref": "#/definitions/消息返回VO"
           }
         },
         "lastPage": {

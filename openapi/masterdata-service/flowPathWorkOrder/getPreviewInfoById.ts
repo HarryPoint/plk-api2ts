@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/getPreviewInfoByIdUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessOrderPreviewInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/flowPathWorkOrder/getPreviewInfoById",
@@ -22,24 +22,24 @@ export interface IJSONResultProcessOrderPreviewInformationIsReturnedToVO {
     /** 响应结果 */
     data?: IProcessTicketPreviewInformationIsReturnedToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程工单预览信息返回VO */
 export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 工单号 */
     workOrderCode?: string;
     /** 提交用户id */
-    createUserId?: number;
+    createUserId?: string;
     /** 提交人姓名 */
     createUsername?: string;
     /** 提交人部门id */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 提交人部门名称 */
     createDeptName?: string;
     /** 提交时间 */
-    createTime?: string;
+    createTime?: number;
     /** 状态 */
     status?: EProcessTicketPreviewInformationIsReturnedToVO_status;
     /** 状态描述 */
@@ -49,15 +49,15 @@ export interface IProcessTicketPreviewInformationIsReturnedToVO {
     /** 关闭类型描述 */
     closeTypeDesc?: string;
     /** 所属流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 所属流程版本id */
-    flowPathVersionId?: number;
+    flowPathVersionId?: string;
     /** 流程版本号 */
     flowPathVersionRank?: number;
     /** 当前节点id */
-    currentFlowPathNodeId?: number;
+    currentFlowPathNodeId?: string;
     /** 业务数据id */
-    businessId?: number;
+    businessId?: string;
     /** 业务数据code */
     businessCode?: string;
 }

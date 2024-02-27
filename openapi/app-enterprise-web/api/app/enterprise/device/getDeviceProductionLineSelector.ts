@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
@@ -18,13 +18,13 @@ export interface IDeviceProductionLineSelectsRequestDTO {
     /** 搜索参数 */
     searchValue?: string;
     /** 设备ids */
-    deviceIds?: number[];
+    deviceIds?: string[];
     /** 设备类型ids */
-    deviceTypeIds?: number[];
+    deviceTypeIds?: string[];
     /** 产线ids */
-    productionLineIds?: number[];
+    productionLineIds?: string[];
     /** 区域ids */
-    areaIds?: number[];
+    areaIds?: string[];
     /** 设备状态 */
     dataStatusList?: number[];
 }
@@ -37,12 +37,12 @@ export interface IJSONResultListSelectResponseDtosForTheDeviceProductionLine {
     /** 响应结果 */
     data?: ITheEquipmentProductionLineSelectsResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 设备产线选择响应DTO */
 export interface ITheEquipmentProductionLineSelectsResponseDTO {
     /** 设备id */
-    id?: number;
+    id?: string;
     /** 设备code */
     code?: string;
     /** 设备名称 */
@@ -50,15 +50,15 @@ export interface ITheEquipmentProductionLineSelectsResponseDTO {
     /** 设备状态 */
     dataStatus?: number;
     /** 设备类型id */
-    deviceTypeId?: number;
+    deviceTypeId?: string;
     /** 设备类型名称 */
     deviceTypeName?: string;
     /** 产线id */
-    productionLineId?: number;
+    productionLineId?: string;
     /** 产线名称 */
     productionLineName?: string;
     /** 区域id */
-    areaId?: number;
+    areaId?: string;
     /** 区域名称 */
     areaName?: string;
 }

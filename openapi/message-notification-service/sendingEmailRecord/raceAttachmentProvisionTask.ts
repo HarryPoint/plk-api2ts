@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/raceAttachmentProvisionTaskUsingPOST
@@ -27,18 +27,18 @@ export interface IJSONResultRaceAttachmentProvisionTaskResponseDTO {
     /** 响应结果 */
     data?: IRaceAttachmentProvisionTaskResponseDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** RaceAttachmentProvisionTaskResponseDTO */
 export interface IRaceAttachmentProvisionTaskResponseDTO {
     /** undefined */
-    emailTaskId?: number;
+    emailTaskId?: string;
     /** undefined */
-    sendingEmailRecordId?: number;
+    sendingEmailRecordId?: string;
     /** undefined */
-    sendingEmailAttachmentId?: number;
+    sendingEmailAttachmentId?: string;
     /** undefined */
-    refId?: number;
+    refId?: string;
     /** undefined */
     fileType?: string;
 }

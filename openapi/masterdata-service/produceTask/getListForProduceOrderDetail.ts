@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getListForProduceOrderDetailUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number; produceOrderId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; produceOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionOrderDetailsProductionTaskVO>(
         {
             url: "/masterdata-service/produceTask/getListForProduceOrderDetail",
@@ -22,26 +22,26 @@ export interface IJSONResultListProductionOrderDetailsProductionTaskVO {
     /** 响应结果 */
     data?: IProductionOrderDetailsProductionTaskVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产订单详情 - 生产任务VO */
 export interface IProductionOrderDetailsProductionTaskVO {
     /** 生产任务id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 任务下发时间 */
-    issueTime?: string;
+    issueTime?: number;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
     processCode?: string;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 计划生产数量 - 任务进度分母 */
     planProduceQuantity?: number;
     /** 当前完成数量 - 任务进度分子(合格数量) */

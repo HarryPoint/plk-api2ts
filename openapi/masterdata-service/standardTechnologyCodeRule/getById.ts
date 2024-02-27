@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/getByIdUsingGET_16
+* @link http://47.108.139.107:16700/doc.html#/default/标准工艺编码规则相关/getByIdUsingGET_18
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultStandardProcessCodingRulesRespondToDtos>(
         {
             url: "/masterdata-service/standardTechnologyCodeRule/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultStandardProcessCodingRulesRespondToDtos {
     /** 响应结果 */
     data?: IStandardProcessCodingRulesRespondToDtos;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 标准工艺编码规则响应 DTO */
 export interface IStandardProcessCodingRulesRespondToDtos {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 规则明细 */
@@ -36,7 +36,7 @@ export interface IStandardProcessCodingRulesRespondToDtos {
 /** 标准工艺编码规则明细响应 DTO */
 export interface IStandardProcessCodingRulesDetailResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 类型 */
     type?: EStandardProcessCodingRulesDetailResponseDTO_type;
     /** 应用表格列code - 类型是应用时有值 */

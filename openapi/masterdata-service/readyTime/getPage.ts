@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/准备期相关/getPageUsingPOST_24
+* @link http://47.108.139.107:16700/doc.html#/default/准备期相关/getPageUsingPOST_25
 */
-export default function fetchMethod(options: { data: IPreparationPeriodQueryVOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPreparationPeriodQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationPreparationPeriodReturnsVO>(
         {
             url: "/masterdata-service/readyTime/getPage",
@@ -24,7 +24,7 @@ export interface IPreparationPeriodQueryVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 名称 */
     name?: string;
     /** 规则类型 */
@@ -46,37 +46,37 @@ export interface IJSONResultPageInformationPreparationPeriodReturnsVO {
     /** 响应结果 */
     data?: IPagingInformationPreparationPeriodReturnVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«准备期返回VO» */
 export interface IPagingInformationPreparationPeriodReturnVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IPreparationPeriodReturnVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPagingInformationPreparationPeriodReturnVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPagingInformationPreparationPeriodReturnVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 准备期返回VO */
 export interface IPreparationPeriodReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属工序id */
-    processId?: number;
+    processId?: string;
     /** 所属工序名称 */
     processName?: string;
     /** 所属工序编号 */
@@ -94,11 +94,11 @@ export interface IPreparationPeriodReturnVO {
     /** 数据状态 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum EPreparationPeriodQueryVO_ruleType {

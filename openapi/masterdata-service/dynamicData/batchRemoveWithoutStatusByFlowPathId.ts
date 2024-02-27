@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/batchRemoveWithoutStatusByFlowPathIdUsingPOST
 */
-export default function fetchMethod(options: { data: IDynamicDataStatelessDeleteRequestObjectparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDynamicDataStatelessDeleteRequestObject, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/dynamicData/batchRemoveWithoutStatusByFlowPathId",
@@ -21,9 +21,9 @@ export interface IDynamicDataStatelessDeleteRequestObject {
 /** 动态数据无状态删除明细请求对象 */
 export interface IDynamicDataStatelessDeletionOfDetailedRequestObjects {
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 动态数据id集合 */
-    formRecordIdList?: number[];
+    formRecordIdList?: string[];
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -34,5 +34,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

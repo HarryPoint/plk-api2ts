@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产计划相关/getProducePlanHandsUsingPOST
 */
-export default function fetchMethod(options: { data: number[]params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionPlanManuallySchedulesVOProduction>(
         {
             url: "/masterdata-service/producePlan/getProducePlanHands",
@@ -22,12 +22,12 @@ export interface IJSONResultListProductionPlanManuallySchedulesVOProduction {
     /** 响应结果 */
     data?: IProductionScheduleManualProductionVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产计划手动排产VO */
 export interface IProductionScheduleManualProductionVO {
     /** 生产订单id */
-    id?: number;
+    id?: string;
     /** 按日排产明细 */
     dayQuantities?: IProductionOrderManualSchedulingVODailyScheduling[];
     /** 按班次排产明细 */
@@ -38,28 +38,28 @@ export interface IProductionScheduleManualProductionVO {
 /** 生产订单手动排产按日排产VO */
 export interface IProductionOrderManualSchedulingVODailyScheduling {
     /** 日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 产量 */
     quantity?: number;
 }
 /** 生产订单手动排产按班次排产VO */
 export interface IManualProductionSchedulingOfProductionOrdersVOByShift {
     /** 日期 */
-    scheduleDate?: string;
+    scheduleDate?;
     /** 班次产量集 */
     classShifts?: IProductionPerShiftVO[];
 }
 /** 班次产量VO */
 export interface IProductionPerShiftVO {
     /** 班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 产量 */
     quantity?: number;
 }
 /** 生产订单手动排产明细步骤产量VO */
 export interface IProductionOrderManualSchedulingDetailStepOutputVO {
     /** 步骤id */
-    id?: number;
+    id?: string;
     /** 按日排产明细 */
     dayQuantities?: IProductionOrderManualSchedulingVODailyScheduling[];
     /** 按班次排产明细 */

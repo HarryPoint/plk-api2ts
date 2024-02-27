@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/客户端相关/listUsingGET
@@ -22,12 +22,12 @@ export interface IJSONResultListTheClientRespondsToTheDTO {
     /** 响应结果 */
     data?: ITheClientRespondsToTheDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 客户端响应 DTO */
 export interface ITheClientRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */
@@ -40,7 +40,7 @@ export interface ITheClientRespondsToTheDTO {
 /** 客户端组响应 DTO */
 export interface ITheClientGroupRespondsToTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 名称 */

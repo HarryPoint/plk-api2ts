@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/queryRoleDataAuthUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IRoleQuery1 }, extraOptions
 /** 角色查询_1 */
 export interface IRoleQuery1 {
     /** 角色id集 */
-    roleIds?: number[];
+    roleIds?: string[];
     /** 应用id */
-    appId?: number;
+    appId?: string;
 }
 /** JSONResult«List«企业角色权限响应»» */
 export interface IJSONResultListEnterpriseRolePermissionResponse {
@@ -29,14 +29,14 @@ export interface IJSONResultListEnterpriseRolePermissionResponse {
     /** 响应结果 */
     data?: IEnterpriseRolePermissionResponse[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 企业角色权限响应 */
 export interface IEnterpriseRolePermissionResponse {
     /** 数据权限类型 */
     dataAuthType?: EEnterpriseRolePermissionResponse_dataAuthType;
     /** 应用id */
-    appId?: number;
+    appId?: string;
     /** 企业路由code */
     enterpriseRouterCode?: string;
     /** 数据权限对应的字段列表(只针对表单字段类型) */

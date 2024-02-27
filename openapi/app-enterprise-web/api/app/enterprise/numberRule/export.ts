@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/编码规则相关/exportUsingPOST_26
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: ICodeRulePagingQueryVO }, e
 /** 编码规则分页查询VO */
 export interface ICodeRulePagingQueryVO {
     /** 流程id */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 当前页面 */
     pageNo?: number;
     /** 字段名称 */
@@ -42,9 +42,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSortVO_isAsc {

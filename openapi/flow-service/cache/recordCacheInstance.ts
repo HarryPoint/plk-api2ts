@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/缓存相关/recordCacheInstanceUsingPOST
@@ -29,29 +29,29 @@ export interface ICacheInstanceDetailRequestDTO {
     /** undefined */
     cacheKey?: string;
     /** undefined */
-    estimatedSize?: number;
+    estimatedSize?: string;
     /** undefined */
-    hitCount?: number;
+    hitCount?: string;
     /** undefined */
-    missCount?: number;
+    missCount?: string;
     /** undefined */
-    loadCount?: number;
+    loadCount?: string;
     /** undefined */
-    loadSuccessCount?: number;
+    loadSuccessCount?: string;
     /** undefined */
-    loadFailureCount?: number;
+    loadFailureCount?: string;
     /** undefined */
-    evictionCount?: number;
+    evictionCount?: string;
     /** undefined */
-    expireAfterWrite?: number;
+    expireAfterWrite?: string;
     /** undefined */
-    expireAfterAccess?: number;
+    expireAfterAccess?: string;
     /** undefined */
-    expireAfter?: number;
+    expireAfter?: string;
     /** undefined */
-    maximumSize?: number;
+    maximumSize?: string;
     /** undefined */
-    maximumWeight?: number;
+    maximumWeight?: string;
 }
 /** JSONResult«object» */
 export interface IJSONResultobject {
@@ -62,5 +62,5 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getWaitIssueDeviceMaintainPlanDetailUsingGET
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IMaintenancePlanDetailsToBeDeliveredResponseDTO[]>(
         {
             url: "/masterdata-service/deviceMaintainPlan/getWaitIssueDeviceMaintainPlanDetail",
@@ -16,23 +16,23 @@ export default function fetchMethod(options: { params: { enterpriseId?: number }
 /** 保养计划明细待下发响应DTO */
 export interface IMaintenancePlanDetailsToBeDeliveredResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 设备保养计划id */
-    deviceMaintainPlanId?: number;
+    deviceMaintainPlanId?: string;
     /** 设备id */
-    deviceId?: number;
+    deviceId?: string;
     /** 设备编号 */
     deviceCode?: string;
     /** 设备类型id */
-    deviceTypeId?: number;
+    deviceTypeId?: string;
     /** 所属区域id */
-    areaId?: number;
+    areaId?: string;
     /** 保养类型 */
     maintainType?: EMaintenancePlanDetailsToBeDeliveredResponseDTO_maintainType;
     /** 保养方案id */
-    maintainSchemeId?: number;
+    maintainSchemeId?: string;
     /** 保养开始时间 */
-    maintainStartTime?: string;
+    maintainStartTime?: number;
     /** 计划明细状态 */
     planDetailStatus?: EMaintenancePlanDetailsToBeDeliveredResponseDTO_planDetailStatus;
 }

@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/西偌帕斯大屏相关/getSettingInfoUsingGET_2
 */
-export default function fetchMethod(options: { params: { enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSilopusLargeScreenSettingsReturnVO>(
         {
             url: "/masterdata-service/lsXiRuoPaSiSetting/getSettingInfo",
@@ -22,14 +22,14 @@ export interface IJSONResultSilopusLargeScreenSettingsReturnVO {
     /** 响应结果 */
     data?: ISilopusLargeScreenSettingsReturnToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 西偌帕斯大屏设置返回VO */
 export interface ISilopusLargeScreenSettingsReturnToVO {
     /** 主要物料信息集 */
     majorDatas?: IIdNameNumberVO[];
     /** 主要工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 7天计划产出设置 */
     planSettings?: ISilopusBigScreenPlanSetToReturnToVO[];
     /** 工序目标值设置集 */
@@ -40,7 +40,7 @@ export interface ISilopusLargeScreenSettingsReturnToVO {
 /** Id，名称，编号VO */
 export interface IIdNameNumberVO {
     /** id */
-    id: number;
+    id: string;
     /** 名称 */
     name: string;
     /** 编号 */
@@ -49,7 +49,7 @@ export interface IIdNameNumberVO {
 /** 西偌帕斯大屏计划设置返回VO */
 export interface ISilopusBigScreenPlanSetToReturnToVO {
     /** 日程安排日期 */
-    scheduleDate?: string;
+    scheduleDate?: number;
     /** 手动排产数量 */
     handPlanQuantity?: number;
     /** 计划数 */
@@ -58,7 +58,7 @@ export interface ISilopusBigScreenPlanSetToReturnToVO {
 /** 西偌帕斯大屏工序目标设置返回VO */
 export interface ISilopusLargeScreenOperationTargetSettingReturnsVO {
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

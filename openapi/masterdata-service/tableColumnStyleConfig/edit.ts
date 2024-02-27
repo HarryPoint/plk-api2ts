@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editUsingPOST_24
 */
-export default function fetchMethod(options: { data: IListColumnStyleConfigurationEditDTOparams: { enterpriseId?: number, extraOptions?: any) {
+export default function fetchMethod(options: { data: IListColumnStyleConfigurationEditDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListColumnStyleConfigurationEditDTO>(
         {
             url: "/masterdata-service/tableColumnStyleConfig/edit",
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IListColumnStyleConfigurati
 /** 列表列样式配置编辑DTO */
 export interface IListColumnStyleConfigurationEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 名称 */
     name?: string;
     /** 编码 */
@@ -35,7 +35,7 @@ export interface IJSONResultListColumnStyleConfigurationEditDTO {
     /** 响应结果 */
     data?: IListColumnStyleConfigurationEditDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EListColumnStyleConfigurationEditDTO_type {

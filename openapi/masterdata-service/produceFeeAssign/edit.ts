@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/editUsingPOST_11
@@ -16,15 +16,15 @@ export default function fetchMethod(options: { data: IProductionExpensesAllocati
 /** 生产费用分配编辑DTO */
 export interface IProductionExpensesAllocationEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 单据编号 */
     code?: string;
     /** 单据日期 */
-    billDate?: string;
+    billDate?: number;
     /** 当前期间id */
-    currentFiscalPeriodId?: number;
+    currentFiscalPeriodId?: string;
     /** 数量归集id */
-    produceQuantityCollectIds?: number[];
+    produceQuantityCollectIds?: string[];
     /** 分配信息 */
     produceFeeAssignDetailList?: IProductionExpenseAllocationDetailsEditDTO[];
     /** 费用信息 */
@@ -35,19 +35,19 @@ export interface IProductionExpensesAllocationEditDTO {
 /** 生产费用分配明细编辑DTO */
 export interface IProductionExpenseAllocationDetailsEditDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 生产费用分配id */
-    produceFeeAssignId?: number;
+    produceFeeAssignId?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单编号 */
     produceOrderCode?: string;
     /** 入库状态 */
     stockInStatus?: EProductionExpenseAllocationDetailsEditDTO_stockInStatus;
     /** 计划开工日期 */
-    planBeginTime?: string;
+    planBeginTime?: number;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 计划生产数量 */
@@ -76,7 +76,7 @@ export interface IProductionExpenseAllocationDetailsEditDTO {
 /** 生产成本分配动态数据 */
 export interface IProductionCostAllocationDynamicData {
     /** 费用类型id */
-    produceFeeTypeId?: number;
+    produceFeeTypeId?: string;
     /** 费用类型code */
     produceFeeTypeCode?: string;
     /** 费用 */
@@ -85,9 +85,9 @@ export interface IProductionCostAllocationDynamicData {
 /** 费用归集明细响应DTO_1 */
 export interface ICostCollectionDetailResponseDTO1 {
     /** 费用归集明细id */
-    id?: number;
+    id?: string;
     /** 费用类型id */
-    produceFeeTypeId?: number;
+    produceFeeTypeId?: string;
     /** 费用编码 */
     produceFeeCode?: string;
     /** 费用名称 */
@@ -95,9 +95,9 @@ export interface ICostCollectionDetailResponseDTO1 {
     /** 费用金额 */
     fee?: number;
     /** 所属期间 */
-    periodDate?: string;
+    periodDate?: number;
     /** 指定生产订单 */
-    produceOrderId?: number;
+    produceOrderId?: string;
 }
 /** JSONResult«long» */
 export interface IJSONResultlong {
@@ -106,9 +106,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EProductionExpensesAllocationEditDTO_isDeleted {

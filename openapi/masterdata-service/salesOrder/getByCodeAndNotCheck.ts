@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
 */
-export default function fetchMethod(options: { params: { code?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesOrderVO>(
         {
             url: "/masterdata-service/salesOrder/getByCodeAndNotCheck",
@@ -22,16 +22,16 @@ export interface IJSONResultSalesOrderVO {
     /** 响应结果 */
     data?: ISalesOrderVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 销售订单VO */
 export interface ISalesOrderVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 所属企业id */
-    enterpriseId?: number;
+    enterpriseId?: string;
     /** 销售订单名称 */
     name?: string;
     /** 销售订单号 */
@@ -39,17 +39,17 @@ export interface ISalesOrderVO {
     /** 订单类型 */
     orderType?: ESalesOrderVO_orderType;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 合同号 */
     contractNo?: string;
     /** 备注 */
     remark?: string;
     /** 下单日期(销售日期) */
-    placeOrderTime?: string;
+    placeOrderTime?: number;
     /** 下单业务部门id */
-    placeOrderDepartmentId?: number;
+    placeOrderDepartmentId?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 收货地址 */
     receivingAddress?: string;
     /** 客户联系人名称 */
@@ -65,9 +65,9 @@ export interface ISalesOrderVO {
     /** 销售订单生产状态 */
     produceStatus?: ESalesOrderVO_produceStatus;
     /** 关闭人 */
-    closeUserId?: number;
+    closeUserId?: string;
     /** 关闭时间 */
-    closeTime?: string;
+    closeTime?: number;
     /** 关闭原因 */
     closeRemark?: string;
     /** 发货数量 */

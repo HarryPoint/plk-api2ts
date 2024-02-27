@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/getProduceTagUsingGET
 */
-export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTagReturnsVO>(
         {
             url: "/masterdata-service/produceTag/getProduceTag",
@@ -22,12 +22,12 @@ export interface ITheJSONResultListExceptionTagReturnsVO {
     /** 响应结果 */
     data?: ITheExceptionTagReturnsVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 异常标签返回VO */
 export interface ITheExceptionTagReturnsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 所属分类 */
     type?: ETheExceptionTagReturnsVO_type;
     /** 所属分类 */
@@ -39,11 +39,11 @@ export interface ITheExceptionTagReturnsVO {
     /** 是否启用 */
     dataStatus?: number;
     /** 创建人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建人姓名 */
     createUsername?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
 }
 
 export enum Etype {

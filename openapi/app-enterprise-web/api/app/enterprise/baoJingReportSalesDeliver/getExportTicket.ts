@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(销售发货分析)相关/getExportTicketUsingPOST_6
@@ -22,13 +22,13 @@ export interface IBaojingSalesDeliveryReportSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 客户id集 */
-    customerIds?: number[];
+    customerIds?: string[];
     /** 产品名称 */
     majorDataName?: string;
     /** 产品id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 外部编码产品id集 */
-    outerCodeMajorDataIds?: number[];
+    outerCodeMajorDataIds?: string[];
     /** 运单号 */
     trackNo?: string;
     /** 销售订单编号 */
@@ -36,17 +36,17 @@ export interface IBaojingSalesDeliveryReportSearchVO {
     /** 单据号 */
     workOrderNo?: string;
     /** 发货日期-开始 yyyy-MM-dd HH:mm:ss */
-    deliverDateBegin?: string;
+    deliverDateBegin?: number;
     /** 单据类型 */
     orderType?: string;
     /** 发货日期-结束 yyyy-MM-dd HH:mm:ss */
-    deliverDateEnd?: string;
+    deliverDateEnd?: number;
     /** 需求日期-开始 yyyy-MM-dd HH:mm:ss */
-    demandDateBegin?: string;
+    demandDateBegin?: number;
     /** 需求日期-结束 yyyy-MM-dd HH:mm:ss */
-    demandDateEnd?: string;
+    demandDateEnd?: number;
     /** 业务员ID列表 */
-    businessUserIdList?: number[];
+    businessUserIdList?: string[];
     /** 物料类型 */
     materialTypes?: string[];
 }
@@ -66,7 +66,7 @@ export interface IJSONResultExportedTicketInformation {
     /** 响应结果 */
     data?: IExportingTicketInformation;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 导出ticket信息 */
 export interface IExportingTicketInformation {

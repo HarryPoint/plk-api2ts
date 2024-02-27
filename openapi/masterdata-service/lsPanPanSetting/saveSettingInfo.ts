@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/saveSettingInfoUsingPOST
@@ -18,7 +18,7 @@ export interface IPanpanLargeScreenSetDTO {
     /** 延期订单判断值（小时） */
     overdueTime?: number;
     /** 大屏展示工序id集 */
-    processIds?: number[];
+    processIds?: string[];
     /** 延期订单判断类型 */
     produceOrderOverdueType?: EPanpanLargeScreenSetDTO_produceOrderOverdueType;
     /** 开始时间月份类型 */
@@ -43,7 +43,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPanpanLargeScreenSetDTO_produceOrderOverdueType {

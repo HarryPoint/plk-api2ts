@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getMoveOutLotUsingGET
 */
-export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials>(
         {
             url: "/masterdata-service/produceTask/getMoveOutLot",
@@ -22,12 +22,12 @@ export interface IJSONResultListwipRespondsToDtoForIncomingAndOutgoingMaterials 
     /** 响应结果 */
     data?: IWipCanRespondToDto[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** wip可进出料响应dto */
 export interface IWipCanRespondToDto {
     /** 批次id -- 有批次时有值 */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次名称  -- 有批次时有值 */
     lotName?: string;
     /** 批次号  -- 有批次时有值 */
@@ -35,7 +35,7 @@ export interface IWipCanRespondToDto {
     /** 原始数量 -- 有批次时为批次原始数量，无批次时为任务计划量 */
     totalQuantity?: number;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
-    wmRpCreateTime?: string;
+    wmRpCreateTime?: number;
     /** 可委外数量 */
     canEntrustQuantity?: number;
     /** 可操作数量 */
@@ -46,7 +46,7 @@ export interface IWipCanRespondToDto {
 /** Wip数量状态信息响应对象 */
 export interface IWipQuantityStatusInformationResponseObject {
     /** wip状态记录id */
-    wipRpId?: number;
+    wipRpId?: string;
     /** 数量 */
     quantity?: number;
     /** wip数量状态 */
@@ -56,7 +56,7 @@ export interface IWipQuantityStatusInformationResponseObject {
     /** 是否可用 */
     canUse?: EWipQuantityStatusInformationResponseObject_canUse;
     /** wip库存创建时间 - 进料批次的的首次来料时间 */
-    wmRpCreateTime?: string;
+    wmRpCreateTime?: number;
     /** 可委外数量 */
     canEntrustQuantity?: number;
     /** 可操作数量 */

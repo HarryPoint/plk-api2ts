@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreProjectTaskChainUsingGET
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskLinkNode>(
         {
             url: "/masterdata-service/projectTask/queryPreProjectTaskChain",
@@ -22,12 +22,12 @@ export interface IJSONResultListProjectTaskLinkNode {
     /** 响应结果 */
     data?: IProjectTaskLinkNode[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 项目任务链路节点 */
 export interface IProjectTaskLinkNode {
     /** 任务id */
-    id?: number;
+    id?: string;
     /** 任务名称 */
     name?: string;
     /** 任务编号 */

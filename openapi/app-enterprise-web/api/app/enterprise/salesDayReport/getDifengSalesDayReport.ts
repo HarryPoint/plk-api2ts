@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/销售日报表相关/getDifengSalesDayReportUsingPOST
@@ -22,49 +22,49 @@ export interface IJSONResultPageInformationObjectReturnedByTheSalesDailyReport {
     /** 响应结果 */
     data?: IPageInformationObjectsReturnedByTheSalesDailyReport;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«销售日报表返回对象» */
 export interface IPageInformationObjectsReturnedByTheSalesDailyReport {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IDailySalesReportReturnsObject[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationObjectsReturnedByTheSalesDailyReport_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationObjectsReturnedByTheSalesDailyReport_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 销售日报表返回对象 */
 export interface IDailySalesReportReturnsObject {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 客户id */
-    customerId?: number;
+    customerId?: string;
     /** 客户Code */
     customerCode?: string;
     /** 客户名称 */
     customerName?: string;
     /** 部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门Code */
     departmentCode?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 业务员id */
-    businessUserId?: number;
+    businessUserId?: string;
     /** 业务员Code */
     businessUserCode?: string;
     /** 业务员名称 */

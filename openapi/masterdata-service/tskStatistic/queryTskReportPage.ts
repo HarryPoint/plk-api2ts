@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTskReportPageUsingPOST
@@ -50,30 +50,30 @@ export interface IJSONResultPageInformationTSKReportQueryDTO {
     /** 响应结果 */
     data?: IPageInformationTSKReportQueryingDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«TSK报表查询DTO» */
 export interface IPageInformationTSKReportQueryingDTO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: ITSKReportQueryingDtos[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationTSKReportQueryingDTO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationTSKReportQueryingDTO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** TSK报表查询DTO */
 export interface ITSKReportQueryingDtos {

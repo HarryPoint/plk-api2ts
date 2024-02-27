@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/批次方案相关/getByIdUsingGET_7
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultLotSerialNumberPlanDTO>(
         {
             url: "/masterdata-service/lotSerialNumberPlan/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultLotSerialNumberPlanDTO {
     /** 响应结果 */
     data?: ILotSerialNumberPlanDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** LotSerialNumberPlanDTO */
 export interface ILotSerialNumberPlanDTO {
     /** 请选择方案ID */
-    id?: number;
+    id?: string;
     /** 编码 */
     code?: string;
     /** 批次方案名称 */
@@ -40,13 +40,13 @@ export interface ILotSerialNumberPlanDTO {
 /** LotSerialNumberPlanRuleDTO */
 export interface ILotSerialNumberPlanRuleDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 规则类型 */
     type?: ELotSerialNumberPlanRuleDTO_type;
     /** 日期类型 */
     dateFormat?: ELotSerialNumberPlanRuleDTO_dateFormat;
     /** 应用引擎ID */
-    flowPathId?: number;
+    flowPathId?: string;
     /** 应用引擎编码 */
     flowPathCode?: string;
     /** 字段编码 */
@@ -68,7 +68,7 @@ export interface ILotSerialNumberPlanRuleDTO {
     /** 步长值 - 用于流水 */
     stepValue?: number;
     /** 方案ID */
-    lotSerialNumberPlanId?: number;
+    lotSerialNumberPlanId?: string;
     /** 排序 */
     sort?: number;
     /** 规则描述 */

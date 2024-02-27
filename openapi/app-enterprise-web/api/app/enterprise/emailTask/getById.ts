@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/邮件任务/getByIdUsingPOST
 */
-export default function fetchMethod(options: { params: { id?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultEmailTaskDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/emailTask/getById",
@@ -22,12 +22,12 @@ export interface IJSONResultEmailTaskDTO {
     /** 响应结果 */
     data?: IEmailTaskDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** EmailTaskDTO */
 export interface IEmailTaskDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 邮件名称 */
     emailName?: string;
     /** 收件人 */
@@ -39,11 +39,11 @@ export interface IEmailTaskDTO {
     /** 发送模式 */
     sendingMode?: EEmailTaskDTO_sendingMode;
     /** 发送时间 */
-    sendingTime?: string;
+    sendingTime?: number;
     /** 下次发送时间 */
-    nextSendingTime?: string;
+    nextSendingTime?: number;
     /** 上次发送时间 */
-    lastSendingTime?: string;
+    lastSendingTime?: number;
     /** 附件配置列表 */
     attachmentConfigList?: IEmailTaskAttachmentConfigDTO[];
     /** 邮件状态 */
@@ -59,23 +59,23 @@ export interface IEmailTaskDTO {
     /** 更新部门名 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
 }
 /** EmailTaskAttachmentConfigDTO */
 export interface IEmailTaskAttachmentConfigDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 其他对象引用ID */
-    refId?: number;
+    refId?: string;
     /** 文件类型 */
     fileType?: string;
 }
 /** SendingTimeConfigDTO */
 export interface ISendingTimeConfigDTO {
     /** ID */
-    id?: number;
+    id?: string;
     /** 时间模式 */
     timeMode?: ESendingTimeConfigDTO_timeMode;
     /** 周号 */

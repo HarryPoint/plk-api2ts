@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/进出料扫码相关/moveInScanUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IFeedScanRequestDTO }, extr
 /** 进料扫描请求DTO */
 export interface IFeedScanRequestDTO {
     /** 生产任务id */
-    produceTaskId: number;
+    produceTaskId: string;
     /** 最近物料id */
-    lastMaterialId?: number;
+    lastMaterialId?: string;
     /** 编号 */
     code: string;
 }
@@ -31,7 +31,7 @@ export interface IJSONResultIncomingScanResponseObjectDTO {
     /** 响应结果 */
     data?: IFeedScanResponseObjectDTO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 进料扫描响应对象DTO */
 export interface IFeedScanResponseObjectDTO {
@@ -47,29 +47,29 @@ export interface IFeedScanResponseObjectDTO {
 /** 进料设备响应DTO_1 */
 export interface ITheFeedDeviceRespondsToDTO1 {
     /** 设备id */
-    id?: number;
+    id?: string;
     /** 设备名称 */
     name?: string;
     /** 设备编号 */
     code?: string;
     /** 生产工艺设备id */
-    produceTechnologyDeviceId?: number[];
+    produceTechnologyDeviceId?: string[];
 }
 /** 进料模具响应DTO_1 */
 export interface ITheFeedMoldRespondsToDTO1 {
     /** 模具id */
-    id?: number;
+    id?: string;
     /** 模具名称 */
     name?: string;
     /** 模具编号 */
     code?: string;
     /** 生产工艺模具id */
-    produceTechnologyMoldId?: number[];
+    produceTechnologyMoldId?: string[];
 }
 /** 进料bom消耗物料扫描响应DTO */
 export interface IIncomingBomConsumedMaterialScanRespondsToDTO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */
@@ -78,7 +78,7 @@ export interface IIncomingBomConsumedMaterialScanRespondsToDTO {
 /** 进料bom消耗物料外部码扫描响应DTO */
 export interface IIncomingBomConsumptionMaterialExternalCodeScanResponseDTO {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */

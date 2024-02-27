@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/自动排产甘特图相关/addOccupyUsingPOST
@@ -18,11 +18,11 @@ export interface ITheOccupiedDTOWasAdded {
     /** 占用类型 */
     occupyType?: ETheOccupiedDTOWasAdded_occupyType;
     /** 占用工序id */
-    processId?: number;
+    processId?: string;
     /** 占用开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 占用结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 占用原因 */
     reason?: string;
     /** 循环次数 */
@@ -37,7 +37,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum ETheOccupiedDTOWasAdded_occupyType {

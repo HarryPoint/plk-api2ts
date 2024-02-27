@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/关键参数相关/saveUsingPOST_2
@@ -16,22 +16,22 @@ export default function fetchMethod(options: { data: IKeyParametersSaveTheDTO },
 /** 关键参数保存DTO */
 export interface IKeyParametersSaveTheDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
     name: string;
     /** 关联物料 */
-    materialIds?: number[];
+    materialIds?: string[];
     /** 关联工序 */
-    processIds: number[];
+    processIds: string[];
     /** 关键参数集合 */
     parameterDetailList: ISaveTheDTOForKeyParameterDetails[];
 }
 /** 关键参数明细保存DTO */
 export interface ISaveTheDTOForKeyParameterDetails {
     /** 字段id */
-    id?: number;
+    id?: string;
     /** 字段名称 */
     name?: string;
     /** 帮助提示 */
@@ -62,12 +62,12 @@ export interface IJSONResultKeyParameterInformationResponseObject {
     /** 响应结果 */
     data?: IKeyParameterInformationResponseObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 关键参数信息响应对象 */
 export interface IKeyParameterInformationResponseObject {
     /** id */
-    id?: number;
+    id?: string;
     /** 编号 */
     code?: string;
     /** 名称 */
@@ -82,14 +82,14 @@ export interface IKeyParameterInformationResponseObject {
 /** 关联下拉响应对象 */
 export interface IAssociatedDropDownResponseObjects {
     /** id */
-    id?: number;
+    id?: string;
     /** 显示字段名称 */
     showFieldValue?: string;
 }
 /** 关键参数信息详情响应对象 */
 export interface IKeyParameterDetailsResponseObject {
     /** 字段id */
-    id?: number;
+    id?: string;
     /** 字段名称 */
     name?: string;
     /** 帮助提示 */

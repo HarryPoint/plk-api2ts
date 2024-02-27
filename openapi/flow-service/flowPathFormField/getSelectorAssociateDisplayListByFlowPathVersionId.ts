@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getSelectorAssociateDisplayListByFlowPathVersionIdUsingPOST
 */
-export default function fetchMethod(options: { params: { flowPathVersionId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathVersionId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldDropDownOptionAssociatedToDisplayVO>(
         {
             url: "/flow-service/flowPathFormField/getSelectorAssociateDisplayListByFlowPathVersionId",
@@ -22,12 +22,12 @@ export interface IJSONResultListProcessFormFieldDropDownOptionAssociatedToDispla
     /** 响应结果 */
     data?: ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 流程表单字段下拉选项关联显示VO */
 export interface ITheProcessFormFieldDropDownOptionIsAssociatedToDisplayVO {
     /** 所属流程表单字段id */
-    flowPathFormFieldId?: number;
+    flowPathFormFieldId?: string;
     /** 所属流程表单字段编号 */
     flowPathFormFieldCode?: string;
     /** 所属流程表单字段序列号 */

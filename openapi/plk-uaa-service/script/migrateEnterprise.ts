@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:18100/doc.html#/default/ 企业迁移脚本相关/migrateEnterpriseUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IEnterpriseMigrateRequestDT
 /** EnterpriseMigrateRequestDTO */
 export interface IEnterpriseMigrateRequestDTO {
     /** undefined */
-    id: number;
+    id: string;
     /** undefined */
     code: string;
     /** undefined */
@@ -26,7 +26,7 @@ export interface IEnterpriseMigrateRequestDTO {
     /** undefined */
     usedAccountQuantity?: number;
     /** undefined */
-    expireTime: string;
+    expireTime: number;
     /** undefined */
     isEnableBatchManagement?: EEnterpriseMigrateRequestDTO_isEnableBatchManagement;
     /** undefined */
@@ -43,7 +43,7 @@ export interface IJSONResultobject {
     /** 响应结果 */
     data?: Record<string, any>;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EEnterpriseMigrateRequestDTO_isEnableBatchManagement {

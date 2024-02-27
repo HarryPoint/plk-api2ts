@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialDefaultByMaterialIdUsingGET
 */
-export default function fetchMethod(options: { params: { materialId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultBomResponseObject>(
         {
             url: "/masterdata-service/materialBom/getMaterialDefaultByMaterialId",
@@ -22,20 +22,20 @@ export interface IJSONResultBomResponseObject {
     /** 响应结果 */
     data?: IBomRespondsToTheObject;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 物料bom响应对象 */
 export interface IBomRespondsToTheObject {
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** bomId */
-    bomId?: number;
+    bomId?: string;
     /** bom名称 */
     bomName?: string;
     /** bom编号 */
     bomCode?: string;
     /** 主物料Id */
-    id?: number;
+    id?: string;
     /** 主物料名称 */
     name?: string;
     /** 主物料编号 */
@@ -54,11 +54,11 @@ export interface IBomRespondsToTheObject {
 /** 物料bom详情响应对象 */
 export interface IBomDetailsResponseObject {
     /** 物料BOM详情id */
-    materialBomDetailId?: number;
+    materialBomDetailId?: string;
     /** 所属物料bom id */
-    materialBomId?: number;
+    materialBomId?: string;
     /** 子物料id */
-    id?: number;
+    id?: string;
     /** 子物料名称 */
     name?: string;
     /** 子物料编号 */

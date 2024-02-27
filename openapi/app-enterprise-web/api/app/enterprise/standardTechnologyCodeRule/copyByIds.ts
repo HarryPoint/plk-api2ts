@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/copyByIdsUsingPOST
 */
-export default function fetchMethod(options: { data: number[] }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListStandardProcessCodingRulesCopyResponseDtos>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCodeRule/copyByIds",
@@ -22,14 +22,14 @@ export interface IJSONResultListStandardProcessCodingRulesCopyResponseDtos {
     /** 响应结果 */
     data?: IStandardProcessCodingRulesCopyResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 标准工艺编码规则复制响应 DTO */
 export interface IStandardProcessCodingRulesCopyResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 原始id */
-    originalId?: number;
+    originalId?: string;
     /** 名称 */
     name?: string;
     /** 规则明细 */
@@ -38,9 +38,9 @@ export interface IStandardProcessCodingRulesCopyResponseDTO {
 /** 标准工艺编码规则明细拷贝响应 DTO */
 export interface IStandardProcessCodingRulesDetailCopyResponseDTO {
     /** id */
-    id?: number;
+    id?: string;
     /** 原始id */
-    originalId?: number;
+    originalId?: string;
     /** 类型 */
     type?: EStandardProcessCodingRulesDetailCopyResponseDTO_type;
     /** 应用表格列code - 类型是应用时有值 */

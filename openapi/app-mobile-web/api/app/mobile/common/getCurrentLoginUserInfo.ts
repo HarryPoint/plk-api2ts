@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:17400/doc.html#/default/公共相关/getCurrentLoginUserInfoUsingGET
@@ -22,38 +22,38 @@ export interface IJSONResultUserDetailsVO {
     /** 响应结果 */
     data?: IUserDetailsVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 用户详细VO */
 export interface IUserDetailsVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 员工工号 */
     code?: string;
     /** 员工姓名 */
     name?: string;
     /** 所属部门id */
-    departmentId?: number;
+    departmentId?: string;
     /** 部门名称 */
     departmentName?: string;
     /** 部门编码 */
     departmentCode?: string;
     /** 所属账号id */
-    userId?: number;
+    userId?: string;
     /** 手机号码 */
     mobilePhone?: string;
     /** 班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 班组名称 */
     classGroupName?: string;
     /** 班组编码 */
     classGroupCode?: string;
     /** 入职日期 */
-    entryTime?: string;
+    entryTime?: number;
     /** 离职日期 */
-    dimissionTime?: string;
+    dimissionTime?: number;
     /** 出生日期 */
-    birthday?: string;
+    birthday?: number;
     /** 性别 */
     gender?: EUserDetailsVO_gender;
     /** 学历 */
@@ -61,13 +61,13 @@ export interface IUserDetailsVO {
     /** 籍贯 */
     nativePlace?: string;
     /** 任职职位id */
-    positionId?: number;
+    positionId?: string;
     /** 职位名称 */
     positionName?: string;
     /** 职位编码 */
     positionCode?: string;
     /** 任职开始日期 */
-    positionDate?: string;
+    positionDate?: number;
 }
 
 export enum EUserDetailsVO_gender {

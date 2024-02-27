@@ -1,9 +1,9 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskDetailByNoUsingGET_1
 */
-export default function fetchMethod(options: { params: { taskNo?: string; enterpriseId?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskNo?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultTheProductionTaskReturnsVOForEmployeeDetails>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskDetailByNo",
@@ -22,26 +22,26 @@ export interface IJSONResultTheProductionTaskReturnsVOForEmployeeDetails {
     /** 响应结果 */
     data?: IProductionTasksAreReturnedToVOForEmployeeDetails;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 生产任务针对员工详情返回VO */
 export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** id */
-    id?: number;
+    id?: string;
     /** 任务号 */
     taskNo?: string;
     /** 任务类型 */
     type?: EProductionTasksAreReturnedToVOForEmployeeDetails_type;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 销售订单id */
-    salesOrderId?: number;
+    salesOrderId?: string;
     /** 销售订单号 */
     salesOrderCode?: string;
     /** 对应物料id */
-    materialId?: number;
+    materialId?: string;
     /** 对应物料名称 */
     materialName?: string;
     /** 对应物料编号 */
@@ -51,13 +51,13 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 对应上工序步骤 */
     lastRoutingStep?: number;
     /** 对应上工序id */
-    lastProcessId?: number;
+    lastProcessId?: string;
     /** 对应上工序名称 */
     lastProcessName?: string;
     /** 对应上工序编号 */
     lastProcessCode?: string;
     /** 对应工序id */
-    processId?: number;
+    processId?: string;
     /** 对应工序名称 */
     processName?: string;
     /** 对应工序编号 */
@@ -65,19 +65,19 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 对应下工序步骤 */
     nextRoutingStep?: number;
     /** 对应下工序id */
-    nextProcessId?: number;
+    nextProcessId?: string;
     /** 对应下工序名称 */
     nextProcessName?: string;
     /** 对应下工序编号 */
     nextProcessCode?: string;
     /** 对应班次id */
-    classShiftId?: number;
+    classShiftId?: string;
     /** 对应班次名称 */
     classShiftName?: string;
     /** 对应班次编号 */
     classShiftCode?: string;
     /** 对应班组id */
-    classGroupId?: number;
+    classGroupId?: string;
     /** 对应班组名称 */
     classGroupName?: string;
     /** 对应班组编号 */
@@ -107,13 +107,13 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 可异常数量 */
     canExceptionQuantity?: number;
     /** 计划开始时间 */
-    beginTime?: string;
+    beginTime?: number;
     /** 计划结束时间 */
-    endTime?: string;
+    endTime?: number;
     /** 实际开始时间 */
-    actualBeginTime?: string;
+    actualBeginTime?: number;
     /** 实际结束时间 */
-    actualEndTime?: string;
+    actualEndTime?: number;
     /** 状态 */
     status?: EProductionTasksAreReturnedToVOForEmployeeDetails_status;
     /** 状态描述 */
@@ -129,9 +129,9 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
     /** 当前步骤配置信息 - 用于前端判断各种情况逻辑 */
     stepSetInfo?: IProductionProcessPathStepSettingsReturnVO;
     /** 任务下发时间 */
-    createTime?: string;
+    createTime?: number;
     /** 对应工艺路径id */
-    produceTechnologyRoutingId?: number;
+    produceTechnologyRoutingId?: string;
     /** 对应工艺路径 */
     routing?: string;
     /** 对应工艺卡信息 */
@@ -142,7 +142,7 @@ export interface IProductionTasksAreReturnedToVOForEmployeeDetails {
 /** 生产工艺路径步骤设置返回VO */
 export interface IProductionProcessPathStepSettingsReturnVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 进出站方式 */
     inOutType?: EProductionProcessPathStepSettingsReturnVO_inOutType;
     /** 是否允许直接出站 */
@@ -170,7 +170,7 @@ export interface IProductionProcessPathStepSettingsReturnVO {
     /** 外部码字段名称 */
     externalCodeFieldName?: string;
     /** 外部码长度 */
-    externalCodeLength?: number;
+    externalCodeLength?: string;
     /** 是否有设备 */
     enableDevice?: EProductionProcessPathStepSettingsReturnVO_enableDevice;
     /** 是否有模具 */
@@ -189,39 +189,39 @@ export interface IProductionProcessPathStepSettingsReturnVO {
 /** 生产工艺工艺卡信息返回DTO */
 export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
     /** 创建用户ID */
-    createUserId?: number;
+    createUserId?: string;
     /** 创建用户名 */
     createUserName?: string;
     /** 生产工艺id */
-    produceTechnologyId?: number;
+    produceTechnologyId?: string;
     /** 创建部门ID */
-    createDeptId?: number;
+    createDeptId?: string;
     /** 创建部门名称 */
     createDeptName?: string;
     /** 更新部门ID */
-    updateDeptId?: number;
+    updateDeptId?: string;
     /** 更新部门名称 */
     updateDeptName?: string;
     /** 创建时间 */
-    createTime?: string;
+    createTime?: number;
     /** 描述集合 */
     textList?: IProductionProcessProcessCardDetailsReturnedToDTO[];
     /** 更新用户ID */
-    updateUserId?: number;
+    updateUserId?: string;
     /** 更新用户名称 */
     updateUserName?: string;
     /** 更新时间 */
-    updateTime?: string;
+    updateTime?: number;
     /** id */
-    id?: number;
+    id?: string;
     /** 工艺卡名称 */
     name?: string;
     /** 工艺卡编号 */
     code?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 文件集合 */
     fileList?: IProductionProcessProcessCardDetailsReturnedToDTO[];
     /** 工序对应字段信息 */
@@ -230,7 +230,7 @@ export interface IProductionProcessProcessCardInformationIsReturnedToDTO {
 /** 生产工艺工艺卡明细返回DTO */
 export interface IProductionProcessProcessCardDetailsReturnedToDTO {
     /** 明细id */
-    id?: number;
+    id?: string;
     /** 明细类型 */
     type?: EProductionProcessProcessCardDetailsReturnedToDTO_type;
     /** 明细名称/标题 */

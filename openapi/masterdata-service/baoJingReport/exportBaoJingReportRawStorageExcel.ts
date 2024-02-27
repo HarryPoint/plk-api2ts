@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportRawStorageExcelUsingPOST
@@ -30,17 +30,17 @@ export interface IBaojingReportInventoryRelatedSearchDTO {
     /** 导出字段集 */
     exportFields?: string[];
     /** 日期-结束 yyyy-MM-dd HH:mm:ss */
-    endDate?: string;
+    endDate?: number;
     /** 物料id集 */
-    majorDataIds?: number[];
+    majorDataIds?: string[];
     /** 物料名称 */
     majorDataName?: string;
     /** 业务员ids */
-    businessUserIds?: number[];
+    businessUserIds?: string[];
     /** 区域id */
-    areaIds?: number[];
+    areaIds?: string[];
     /** 日期-开始 yyyy-MM-dd HH:mm:ss */
-    beginDate?: string;
+    beginDate?: number;
     /** 物料类型 */
     materialTypes?: string[];
     /** 单据名称 */
@@ -62,9 +62,9 @@ export interface IJSONResultlong {
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: number;
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 
 export enum EPagingSort_isAsc {

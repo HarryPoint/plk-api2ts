@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/工艺路径相关/listRoutingInfoUsingPOST
@@ -16,7 +16,7 @@ export default function fetchMethod(options: { data: IProcessPathInformationQuer
 /** 工艺路径信息查询对象 */
 export interface IProcessPathInformationQueryObject {
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 工艺路径名称 */
     routingName?: string;
 }
@@ -29,12 +29,12 @@ export interface IJSONResultListProcessPathInformationObject {
     /** 响应结果 */
     data?: IProcessPathInformationObject[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 工艺路径信息对象 */
 export interface IProcessPathInformationObject {
     /** 工艺路径id */
-    id?: number;
+    id?: string;
     /** 工艺路径名称 */
     name?: string;
     /** 工艺路径编号 */
@@ -45,9 +45,9 @@ export interface IProcessPathInformationObject {
 /** 工艺步骤信息对象 */
 export interface IProcessStepInformationObject {
     /** 工序步骤id */
-    id?: number;
+    id?: string;
     /** 工序id */
-    processId?: number;
+    processId?: string;
     /** 工序名称 */
     processName?: string;
     /** 工序编号 */

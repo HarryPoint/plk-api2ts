@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/委外加工管理/getPageUsingPOST_16
@@ -26,7 +26,7 @@ export interface IOutsourcingSearchVO {
     /** 排序字段集 */
     orders?: IPagingSortVO[];
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 发起时间开始 yyyy-MM-dd HH:mm:ss */
     beginTime?: string;
     /** 发起时间结束 yyyy-MM-dd HH:mm:ss */
@@ -48,51 +48,51 @@ export interface IJSONResultPageInformationOutsourcingReturnsVO {
     /** 响应结果 */
     data?: IPageInformationIsOutsourcedBackToVO;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 分页信息«委外加工返回VO» */
 export interface IPageInformationIsOutsourcedBackToVO {
     /** 当前页码 */
-    pageNo?: number;
+    pageNo?: string;
     /** 分页大小 */
-    pageSize?: number;
+    pageSize?: string;
     /** 总页数 */
-    totalPage?: number;
+    totalPage?: string;
     /** 总的记录数 */
-    totalCount?: number;
+    totalCount?: string;
     /** 分页列表 */
     list?: IOutsourcingReturnsToVO[];
     /** 最后页页码 */
-    lastPage?: number;
+    lastPage?: string;
     /** 是否有上一页 */
     hasPreviousPage?: EPageInformationIsOutsourcedBackToVO_hasPreviousPage;
     /** 是否有下一页 */
     hasNextPage?: EPageInformationIsOutsourcedBackToVO_hasNextPage;
     /** 上一页页码 */
-    previousPage?: number;
+    previousPage?: string;
     /** 下一页页码 */
-    nextPage?: number;
+    nextPage?: string;
 }
 /** 委外加工返回VO */
 export interface IOutsourcingReturnsToVO {
     /** id */
-    id?: number;
+    id?: string;
     /** 委外单号 */
     entrustNo?: string;
     /** 生产订单id */
-    produceOrderId?: number;
+    produceOrderId?: string;
     /** 生产订单号 */
     produceOrderCode?: string;
     /** 生产任务id */
-    produceTaskId?: number;
+    produceTaskId?: string;
     /** 生产任务编号 */
     produceTaskNo?: string;
     /** 批次订单id */
-    lotOrderId?: number;
+    lotOrderId?: string;
     /** 批次订单号 */
     lotOrderNo?: string;
     /** 物料主数据id */
-    materialId?: number;
+    materialId?: string;
     /** 物料主数据名称 */
     materialName?: string;
     /** 物料主数据编号 */
@@ -102,23 +102,23 @@ export interface IOutsourcingReturnsToVO {
     /** 对应物料单位 */
     materialUnit?: string;
     /** 供应商id */
-    supplierId?: number;
+    supplierId?: string;
     /** 供应商名称 */
     supplierName?: string;
     /** 供应商编号 */
     supplierCode?: string;
     /** 发起工序id */
-    entrustProcessId?: number;
+    entrustProcessId?: string;
     /** 发起工序名称 */
     entrustProcessName?: string;
     /** 发起工序编号 */
     entrustProcessCode?: string;
     /** 委外发起人 */
-    createUserId?: number;
+    createUserId?: string;
     /** 委外发起人姓名 */
     createUsername?: string;
     /** 委外发起时间 */
-    createTime?: string;
+    createTime?: number;
     /** 委外总量(委外发出) */
     totalQuantity?: number;
     /** 实际返回数量(委外返回) */
@@ -130,9 +130,9 @@ export interface IOutsourcingReturnsToVO {
     /** 剩余数量 */
     surplusQuantity?: number;
     /** 返回生产工艺路径步骤id */
-    backRoutingStepId?: number;
+    backRoutingStepId?: string;
     /** 接收工序id */
-    backProcessId?: number;
+    backProcessId?: string;
     /** 接收工序名称 */
     backProcessName?: string;
     /** 接收工序编号 */
@@ -140,7 +140,7 @@ export interface IOutsourcingReturnsToVO {
     /** 投料记录数 */
     backDetailsCount?: number;
     /** 首次投料时间 */
-    firstBackTime?: string;
+    firstBackTime?: number;
 }
 
 export enum EPagingSortVO_isAsc {

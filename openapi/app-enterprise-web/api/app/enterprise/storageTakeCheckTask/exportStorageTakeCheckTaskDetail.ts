@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/exportStorageTakeCheckTaskDetailUsingPOST
@@ -16,9 +16,9 @@ export default function fetchMethod(options: { data: IExportTheWarehouseInventor
 /** 仓库盘点仓位清单导出DTO */
 export interface IExportTheWarehouseInventoryListToDTO {
     /** 盘点详情id */
-    id?: number;
+    id?: string;
     /** 仓位id */
-    warehouseId?: number;
+    warehouseId?: string;
     /** 仓位名称 */
     warehouseName?: string;
     /** 仓位编号 */
@@ -32,7 +32,7 @@ export interface IExportTheWarehouseInventoryListToDTO {
     /** 仓库编号 */
     storehouseCode?: string;
     /** 物料id */
-    materialId?: number;
+    materialId?: string;
     /** 物料名称 */
     materialName?: string;
     /** 物料编号 */

@@ -1,4 +1,4 @@
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
 * @link http://47.108.139.107:16700/doc.html#/default/销售明细报表相关/getDifengSalesMaterialCategoryListUsingPOST
@@ -27,7 +27,7 @@ export interface IJSONResultListNameEncodesTheResponseDTO {
     /** 响应结果 */
     data?: INameEncodingResponseDTO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts?: number;
+    ts?: string;
 }
 /** 名称编码响应 DTO */
 export interface INameEncodingResponseDTO {
