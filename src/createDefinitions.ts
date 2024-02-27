@@ -24,8 +24,10 @@ type IDefinitionsMapItem = {
 };
 
 const formatEnumValue = (str: string) => {
-  const newStrArr = str.trim().split("-");
-  return newStrArr;
+  const base = str.trim();
+  const [name] = base.split("-", 1);
+  const desc = base.replace(new RegExp(`^${name}-`, ""), "");
+  return [name, desc];
 };
 
 export const createDefinitions = async (
