@@ -11,7 +11,7 @@ export const customContent = async (
     for (let method in fetchDefines) {
       const methodDefine = fetchDefines[method];
       definitionsFile.addStatements((writer) => {
-        writer.writeLine(`import { http } from '@/api/http';`);
+        writer.writeLine(`import { http } from "@/api/http";`);
         writer.writeLine(" ");
         writer.writeLine("/**");
         const docUrl = `http://${
