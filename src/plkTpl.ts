@@ -106,7 +106,7 @@ export const customContent = async (
         );
         writer.writeLine(`  {`);
         writer.writeLine(`  url: "${url}",`);
-        writer.writeLine(`  method: "${method}",`);
+        writer.writeLine(`  method: "${method.toUpperCase()}",`);
         writer.writeLine(`  ...options,`);
         writer.writeLine(`},`);
         writer.writeLine(`extraOptions,`);

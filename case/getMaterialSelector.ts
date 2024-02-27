@@ -8,7 +8,7 @@ export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListSaasEnterpriseResponseDTO>(
         {
             url: "/plk-uaa-service/saasAuth/getUserEnterprise",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
