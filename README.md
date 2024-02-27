@@ -4,13 +4,13 @@ plk-api2ts 是一个高效的工程化工具，它可以将 Swagger（v2版本�
 
 通过使用 plk-api2ts，你可以大大提高开发效率，减少错误，并确保前后端接口的类型一致性。这个工具特别适合在大型项目中使用，其中可能包含大量的接口和类型定义。
 
-## 主要特性
+### 主要特性
 
 1. 自动化：只需一次设置，就可以自动将后端的 Swagger 文档转换为 TypeScript 文件。
 2. 准确性：通过直接从 Swagger 文档生成类型定义，可以确保前后端接口的类型一致性。
 3. 高效率：消除了手动编写和更新类型定义的需求，从而大大提高了开发效率。
 
-## 如何开始
+### 如何开始
 
 1. 安装
 
@@ -65,7 +65,7 @@ npm run api2ts
 npm run api:update
 ```
 
-## 配置项
+### 配置项
 
 | 选项名称          |                   描述                   |                                               类型                                                |                                默认值 |
 | :---------------- | :--------------------------------------: | :-----------------------------------------------------------------------------------------------: | ------------------------------------: |
@@ -76,7 +76,7 @@ npm run api:update
 | customContent     |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                          详见下方说明 |
 | prefix            |               类型定义前缀               |                                              string                                               |                                   'I' |
 
-## customContent 默认函数如下
+### customContent 默认函数如下
 ```javascript
 import { SourceFile } from "ts-morph";
 
@@ -200,12 +200,12 @@ export const customContent = async (
 import { http } from "@/api/http";
 
 /**
-* @link http://yourserviceapi/doc.html#/default/安利康大屏相关/getCategorySelectorUsingGET
+* @link http://yourserviceapi/doc.html#/default/xxx/getCategorySelectorUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListNameNumberVO>(
         {
-            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getCategorySelector",
+            url: "/your/api/path",
             method: "get",
             ...options,
         },
@@ -233,7 +233,7 @@ export interface INameNumberVO {
 
 ```
 
-## CASE
+### CASE
 
 1. 自定义添加文件生成内容
 ```javascript
@@ -254,7 +254,7 @@ module.exports = () => {
 修改 translateCache.json 中字典内容，重新执行代码生成逻辑 `npm run api2ts`
 
 
-## 功能清单
+### 功能清单
 
 | 功能内容                   | 是否支持 |
 | :------------------------- | -------: |
@@ -266,10 +266,10 @@ module.exports = () => {
 | 根据服务名称创建文件夹归类 |       是 |
 | 自定义生成文件内容         |       是 |
 
-## :copyright: License
+### :copyright: License
 
 [MIT](http://opensource.org/licenses/MIT)
 
-## 写在最后
+### 写在最后
 
 本包比较新，如果使用上有问题，欢迎大家提 issue, 但希望您能提供你的配置，或者给出类型转换有异常的swagger json 数据，描述清楚如何复现问题。我将不定期清理issue。最后希望大家都能愉快coding, 不用再写api相关的ts代码☺
