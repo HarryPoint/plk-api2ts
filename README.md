@@ -1,14 +1,14 @@
 ## plk-api2ts
 
-plk-api2ts 是一个高效的工程化工具，它可以将 Swagger 文档转换为 TypeScript 文件。这个工具的主要目标是自动化后端接口的类型定义，将其转换为前端代码，从而消除了手动编写类型定义的需求。
+plk-api2ts 是一个高效的工程化工具，它可以将 Swagger（v2版本） 文档转换为 TypeScript 文件。这个工具的主要目标是自动化后端接口的类型定义，将其转换为前端代码，从而消除了手动编写类型定义的需求。
 
 通过使用 plk-api2ts，你可以大大提高开发效率，减少错误，并确保前后端接口的类型一致性。这个工具特别适合在大型项目中使用，其中可能包含大量的接口和类型定义。
 
 ## 主要特性
 
-自动化：只需一次设置，就可以自动将后端的 Swagger 文档转换为 TypeScript 文件。
-准确性：通过直接从 Swagger 文档生成类型定义，可以确保前后端接口的类型一致性。
-高效率：消除了手动编写和更新类型定义的需求，从而大大提高了开发效率。
+1. 自动化：只需一次设置，就可以自动将后端的 Swagger 文档转换为 TypeScript 文件。
+2. 准确性：通过直接从 Swagger 文档生成类型定义，可以确保前后端接口的类型一致性。
+3. 高效率：消除了手动编写和更新类型定义的需求，从而大大提高了开发效率。
 
 ## 如何开始
 
@@ -47,13 +47,19 @@ module.exports = () => {
 
 4. 运行命令， 自动生成接口类型定义
 
-# 仅更新定义文件
+> 仅更新定义文件
 
 ```shell
 npm run api2json
 ```
 
-# 更新 json 数据，同时生成新定义
+> 仅根据数据文件生成新的定义文件
+
+```shell
+npm run api2ts
+```
+
+> 更新 json 数据，同时生成新定义
 
 ```shell
 npm run api:update
@@ -84,7 +90,7 @@ export const customContent = async (
     for (let method in fetchDefines) {
       const methodDefine = fetchDefines[method];
       definitionsFile.addStatements((writer) => {
-        writer.writeLine(`import { http } from '@/api/http';`);
+        writer.writeLine(`import { http } from "@/api/http";`);
         writer.writeLine(" ");
         writer.writeLine("/**");
         const docUrl = `http://${
@@ -146,12 +152,24 @@ export const customContent = async (
         };
       }
       const defineArr = [bodyDefine, queryDefine].filter(Boolean);
-      defineArr.forEach((defineItem) => {
-        const name = defineItem.in === "body" ? "data" : "params";
-        functionDeclaration.addParameter({
-          name,
-          type: transFormType(defineItem.schema),
-        });
+      functionDeclaration.addParameter({
+        name: "options",
+        initializer: (writer) => {
+          if (defineArr.length === 0) {
+            writer.write("{}");
+          }
+        },
+        type: (writer) => {
+          writer.write("{");
+          defineArr.forEach((defineItem, index) => {
+            const name = defineItem.in === "body" ? "data" : "params";
+            if (index) {
+              writer.write(",");
+            }
+            writer.write(`${name}: ${transFormType(defineItem.schema)}`);
+          });
+          writer.write("}");
+        },
       });
       functionDeclaration.addParameter({
         name: "extraOptions",
@@ -167,14 +185,7 @@ export const customContent = async (
         writer.writeLine(`  {`);
         writer.writeLine(`  url: "${url}",`);
         writer.writeLine(`  method: "${method}",`);
-        defineArr?.forEach((paramsDefine: any) => {
-          if (paramsDefine.in === "body") {
-            writer.writeLine(`  data,`);
-          }
-          if (paramsDefine.in === "query") {
-            writer.writeLine(`  params,`);
-          }
-        });
+        writer.writeLine(`  ...options,`);
         writer.writeLine(`},`);
         writer.writeLine(`extraOptions,`);
         writer.writeLine(`);`);
@@ -186,57 +197,38 @@ export const customContent = async (
 ```
 结果示例
 ```javascript
-import { http } from '@/api/http';
+import { http } from "@/api/http";
 
 /**
-* @link http://xxxx/doc.html#/default/库存查询相关/exportUsingPOST_58
+* @link http://yourserviceapi/doc.html#/default/安利康大屏相关/getCategorySelectorUsingGET
 */
-export default function fetchMethod(data: IMaterialMasterDataInventorySearchVO, extraOptions?: any) {
-    return http<IJSONResultlong>(
+export default function fetchMethod(options: {} = {}, extraOptions?: any) {
+    return http<IJSONResultListNameNumberVO>(
         {
-            url: "/app-enterprise-web/api/app/enterprise/warehouseMaterial/export",
-            method: "post",
-            data,
+            url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getCategorySelector",
+            method: "get",
+            ...options,
         },
         extraOptions,
     );
 }
-/** 物料主数据库存搜索VO */
-export interface IMaterialMasterDataInventorySearchVO {
-    /** 当前页面 */
-    pageNo: number;
-    /** 物料名称 */
-    materialName: string;
-    /** 分页大小 */
-    pageSize: number;
-    /** 排序字段集 */
-    orders: IPagingSortVO[];
-    /** 物料id集 */
-    materialIds: number[];
-    /** 编号 */
-    materialCode: string;
-    /** 规格 */
-    materialSpec: string;
-    /** 仓库id */
-    storehouseIds: number[];
-}
-/** 分页排序VO */
-export interface IPagingSortVO {
-    /** undefined */
-    column: string;
-    /** undefined */
-    isAsc: string;
-}
-/** JSONResult«long» */
-export interface IJSONResultlong {
+/** JSONResult«List«名称，编号VO»» */
+export interface IJSONResultListNameNumberVO {
     /** 返回码 */
-    code: number;
+    code?: number;
     /** 返回消息说明 */
-    msg: string;
+    msg?: string;
     /** 响应结果 */
-    data: number;
+    data?: INameNumberVO[];
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
-    ts: number;
+    ts?: string;
+}
+/** 名称，编号VO */
+export interface INameNumberVO {
+    /** 名称 */
+    name: string;
+    /** 编号 */
+    code: string;
 }
 
 ```

@@ -25,6 +25,7 @@ const readFiles = async (dir: string, project: Project) => {
         translate: config.translate,
         prefix: config.prefix,
         enumPrefix: config.enumPrefix,
+        transformOriginType: config.transformOriginType,
         customContent: config.customContent,
       });
     } else if (stat.isDirectory()) {

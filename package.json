@@ -1,6 +1,6 @@
 {
   "name": "plk-api2ts",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,20 @@
     "update:link": "tsc && npm link",
     "build": "tsc -d"
   },
-  "keywords": [],
-  "author": "",
+  "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
+  "bugs": {
+    "url": "https://github.com/HarryPoint/plk-api2ts/issues"
+  },
+  "homepage": "https://github.com/HarryPoint/plk-api2ts#readme",
+  "keywords": [
+    "Swagger",
+    "typescript",
+    "api2ts",
+    "Swagger2",
+    "code generation",
+    "code refactor"
+  ],
+  "author": "harry",
   "license": "ISC",
   "bin": {
     "api2json": "./bin/api2json",

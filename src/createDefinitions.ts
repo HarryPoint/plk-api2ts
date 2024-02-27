@@ -2,16 +2,21 @@ import { OptionalKind, PropertySignatureStructure, SourceFile } from "ts-morph";
 import { IConfig } from "./config";
 import { translate as translateFn } from "./translate";
 
-const typeMap = {
-  string: "string",
-  "string(date-time)": "number",
-  integer: "number",
-  "integer(int64)": "string",
-  "integer(int32)": "number",
-  number: "number",
-  boolean: "boolean",
-  array: "[]",
-  object: "{}",
+const defaultTransformOriginType = (define: any): string => {
+  const typeName = `${define.type}${define.format ? `(${define.format})` : ""}`;
+
+  const defaultTypeMap = {
+    string: "string",
+    "string(date-time)": "number",
+    integer: "number",
+    "integer(int64)": "string",
+    "integer(int32)": "number",
+    number: "number",
+    boolean: "boolean",
+    array: "[]",
+    object: "{}",
+  };
+  return defaultTypeMap[typeName as keyof typeof defaultTypeMap] as string;
 };
 
 // 去除所有的特殊字符
@@ -37,6 +42,7 @@ export const createDefinitions = async (
     translate?: boolean;
     prefix?: string;
     enumPrefix?: string;
+    transformOriginType?: (define: any) => string;
     customContent?: IConfig["customContent"];
   }
 ) => {
@@ -44,6 +50,7 @@ export const createDefinitions = async (
     translate = true,
     prefix = "I",
     enumPrefix = "E",
+    transformOriginType = defaultTransformOriginType,
     customContent,
   } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
@@ -56,10 +63,7 @@ export const createDefinitions = async (
       }
       return definitionsMap[define.originalRef].name;
     }
-    const typeName = `${define.type}${
-      define.format ? `(${define.format})` : ""
-    }`;
-    const typeOrigin = typeMap[typeName as keyof typeof typeMap];
+    const typeOrigin = transformOriginType(define);
     if (typeOrigin === "[]") {
       return `${transFormType(define.items, [...pathKeys, "items"])}[]`;
     }

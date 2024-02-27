@@ -15,6 +15,7 @@ export type IConfig = {
   serviceMap: Record<string, string>;
   serviceNameToPath: boolean;
   output: string;
+  transformOriginType?: (define: any) => string;
   customContent: (
     data: any,
     definitionsFile: SourceFile,
