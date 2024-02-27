@@ -82,8 +82,11 @@ export const customContent = async (
         },
         type: (writer) => {
           writer.write("{");
-          defineArr.forEach((defineItem) => {
+          defineArr.forEach((defineItem, index) => {
             const name = defineItem.in === "body" ? "data" : "params";
+            if (index) {
+              writer.write(",");
+            }
             writer.write(`${name}: ${transFormType(defineItem.schema)}`);
           });
           writer.write("}");
