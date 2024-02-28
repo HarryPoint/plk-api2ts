@@ -21,6 +21,7 @@ export type IConfig = {
     definitionsFile: SourceFile,
     transFormType: (arg: any) => string
   ) => Promise<void>;
+  pathFilter?: (ar: string) => boolean;
 };
 
 const output = path.join(process.cwd(), "./autoApi");
@@ -38,6 +39,7 @@ const defaultConfig: IConfig = {
   serviceNameToPath: false,
   output,
   customContent,
+  pathFilter: (ar: string) => !!ar,
 };
 
 const argv = require("yargs").argv;

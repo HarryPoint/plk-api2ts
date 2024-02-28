@@ -1,15 +1,18 @@
 import fs from "fs";
 import path from "path";
 import { Project } from "ts-morph";
-import config from "./config";
+import config, { IConfig } from "./config";
 import { createDefinitions } from "./createDefinitions";
 
-const readFiles = async (dir: string, project: Project) => {
+const readFiles = async (config: IConfig, dir: string, project: Project) => {
   const files = fs.readdirSync(dir);
   for (let file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     const info = path.parse(filePath);
+    if (config.pathFilter && !config.pathFilter(filePath)) {
+      continue;
+    }
     if (
       stat.isFile() &&
       info.ext === ".json" &&
@@ -29,26 +32,29 @@ const readFiles = async (dir: string, project: Project) => {
         customContent: config.customContent,
       });
     } else if (stat.isDirectory()) {
-      await readFiles(filePath, project);
+      await readFiles(config, filePath, project);
     }
   }
 };
 
-const main = async (dir: string) => {
+const main = async (config: IConfig) => {
   const project = new Project({
     // Optionally specify compiler options, tsconfig.json, in-memory file system, and more here.
     // If you initialize with a tsconfig.json, then it will automatically populate the project
     // with the associated source files.
     // Read more: https://ts-morph.com/setup/
   });
-  project.addSourceFilesAtPaths(`${dir}/**/*.ts`);
-  await readFiles(dir, project);
+  project.addSourceFilesAtPaths(`${config.output}/**/*.ts`);
+  await readFiles(config, config.output, project);
   await project.save();
 };
 
 const argv = require("yargs").argv;
-let target = config.output;
 if (argv.target) {
-  target = path.join(process.cwd(), argv.target);
+  config.output = path.join(process.cwd(), argv.target);
 }
-main(target);
+if (argv.filterPath) {
+  const filterPath = argv.filterPath;
+  config.pathFilter = (pt: string) => pt.includes(filterPath);
+}
+main(config);

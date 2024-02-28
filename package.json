@@ -12,7 +12,9 @@
     "src:init": "npm run src:fetch && npm run src:create",
     "case": "ts-node ./src/createTs.ts --target=./case",
     "update:link": "tsc && npm link",
-    "build": "tsc -d"
+    "build": "tsc -d",
+    "createDataFilter": "ts-node ./src/createData.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "createTsFilter": "ts-node ./src/createTs.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
   "bugs": {

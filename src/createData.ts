@@ -5,9 +5,9 @@ import path from "path";
 import config, { IConfig } from "./config";
 
 const fetchData = async (
+  config: IConfig,
   apiUri: string,
-  prefix: string = "./",
-  config: IConfig
+  prefix: string = "./"
 ) => {
   if (!apiUri) {
     throw new Error("apiUri not found");
@@ -55,28 +55,35 @@ const fetchData = async (
       },
     ] as [string, any];
   });
-  openJsonArr.forEach(([pathStr, jsonData]) => {
+  for (let [pathStr, jsonData] of openJsonArr) {
     const pathArr = pathStr.split("/");
     const outputFolder = path.join(
       config.output,
       prefix,
       pathArr.slice(0, pathArr.length - 1).join("/")
     );
-    console.log("outputFolder: ", outputFolder);
     const filePath = path.join(config.output, prefix, `${pathStr}.json`);
+    if (config.pathFilter && !config.pathFilter(filePath)) {
+      continue;
+    }
     // 创建输出目录
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });
     }
     fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2), "utf-8");
-  });
+  }
 };
 
 const main = async (config: IConfig) => {
   for (const key in config.serviceMap) {
     const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
-    await fetchData(apiUri, config.serviceNameToPath ? key : "./", config);
+    await fetchData(config, apiUri, config.serviceNameToPath ? key : "./");
   }
 };
 
+const argv = require("yargs").argv;
+if (argv.filterPath) {
+  const filterPath = argv.filterPath;
+  config.pathFilter = (pt: string) => pt.includes(filterPath);
+}
 main(config);
