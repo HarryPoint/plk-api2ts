@@ -4,6 +4,7 @@ import { main as createTs } from "./createTs";
 const argv = require("yargs").argv;
 
 export const main = async (config: IConfig = baseConfig) => {
+  console.log("argv.type: ", argv.type);
   if (!argv.type || argv.type === "createData") {
     await createData(config);
   }
@@ -11,3 +12,5 @@ export const main = async (config: IConfig = baseConfig) => {
     await createTs(config);
   }
 };
+
+main(baseConfig);
