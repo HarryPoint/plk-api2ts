@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/批次跟踪报表相关/exportMaterialLotNoTrackReportUsingPOST
 */
-export default function fetchMethod(options: { data: ExportMaterialLotNoTrackReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseStorageLotNoTrackReport/exportMaterialLotNoTrackReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

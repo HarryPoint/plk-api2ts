@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/setProductionPersonUsingPOST
 */
 export default function fetchMethod(options: { data: ISetExecutorDTO[] }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/userProcess/{id}/productionPerson/set",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

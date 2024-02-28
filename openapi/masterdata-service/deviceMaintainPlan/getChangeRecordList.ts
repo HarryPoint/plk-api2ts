@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养计划相关/getChangeRecordListUsingGET
 */
 export default function fetchMethod(options: { params: { planId?: string } }, extraOptions?: any) {
     return http<IJSONResultListMaintenancePlanChangeRecordRespondsToDTO>(
         {
             url: "/masterdata-service/deviceMaintainPlan/getChangeRecordList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

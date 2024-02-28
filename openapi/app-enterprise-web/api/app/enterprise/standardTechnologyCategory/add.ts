@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺分类相关/addUsingPOST_8
 */
 export default function fetchMethod(options: { data: INewRequestDTOForStandardProcessClassification }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnologyCategory/add",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

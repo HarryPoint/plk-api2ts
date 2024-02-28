@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/copyCanvasUsingPOST
 */
 export default function fetchMethod(options: { data: IStandardProcessCanvasCopyRequestObject }, extraOptions?: any) {
     return http<IJSONResultStandardProcessCanvasResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/standardTechnology/copyCanvas",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

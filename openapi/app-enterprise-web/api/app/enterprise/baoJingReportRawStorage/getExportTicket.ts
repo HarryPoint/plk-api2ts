@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（原材料）日报表/getExportTicketUsingPOST_5
 */
 export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchVO }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportRawStorage/getExportTicket",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

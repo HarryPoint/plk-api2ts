@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16400/doc.html#/default/项目相关/getPageUsingPOST_22
+* @author lin.he
+* @link http://47.108.139.107:16400/doc.html#/default/项目管理相关/getPageUsingPOST_22
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/project/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

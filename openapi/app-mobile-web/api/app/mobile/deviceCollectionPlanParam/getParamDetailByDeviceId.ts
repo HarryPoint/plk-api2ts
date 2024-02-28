@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/设备数采数据方案参数关联相关/getParamDetailByDeviceIdUsingGET
 */
 export default function fetchMethod(options: { params: { deviceId?: string } }, extraOptions?: any) {
     return http<IJSONResultListDeviceDataCollectionSchemeParameterAssociationInformationIsReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/deviceCollectionPlanParam/getParamDetailByDeviceId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

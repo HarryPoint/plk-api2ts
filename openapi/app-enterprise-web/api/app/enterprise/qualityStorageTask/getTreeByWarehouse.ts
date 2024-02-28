@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/质检管理/getTreeByWarehouseUsingGET
 */
 export default function fetchMethod(options: { params: { storehouseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListThePositionTreeReturnsVO1>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getTreeByWarehouse",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

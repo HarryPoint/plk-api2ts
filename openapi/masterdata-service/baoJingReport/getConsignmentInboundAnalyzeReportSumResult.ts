@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentInboundAnalyzeReportSumResultUsingPOST
 */
 export default function fetchMethod(options: { data: IConsignmentInboundAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultConsignmentInboundAnalysisReportTotalReturnVO>(
         {
             url: "/masterdata-service/baoJingReport/getConsignmentInboundAnalyzeReportSumResult",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

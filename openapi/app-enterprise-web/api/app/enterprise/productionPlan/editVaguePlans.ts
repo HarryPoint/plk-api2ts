@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/任务下发相关/editVagueUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionOrderStepSchedulingEditDTO1 }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/productionPlan/editVaguePlans",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

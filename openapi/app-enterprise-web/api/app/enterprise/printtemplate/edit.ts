@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/打印模板相关/editUsingPOST_15
 */
 export default function fetchMethod(options: { data: IPrintTheTemplateRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/printtemplate/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

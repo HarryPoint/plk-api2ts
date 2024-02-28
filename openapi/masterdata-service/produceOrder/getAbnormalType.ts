@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getAbnormalTypeUsingGET_2
 */
 export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(
         {
             url: "/masterdata-service/produceOrder/getAbnormalType",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

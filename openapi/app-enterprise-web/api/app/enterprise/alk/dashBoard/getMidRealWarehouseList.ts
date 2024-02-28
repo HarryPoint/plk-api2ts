@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getMidRealWarehouseListUsingGET
 */
 export default function fetchMethod(options: { params: { categoryCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListIntermediateLibraryRealTimeInventoryVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/getMidRealWarehouseList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryThreeViolationsUsingPOST
 */
 export default function fetchMethod(options: { data: I3DInformationQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListResponseToQuerying3DInformation>(
         {
             url: "/masterdata-service/hseDashboard/queryThreeViolations",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

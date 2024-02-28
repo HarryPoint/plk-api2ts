@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/邮件任务/pageSearchUsingPOST
 */
 export default function fetchMethod(options: { data: IPage2 }, extraOptions?: any) {
     return http<IEmailTaskQueryResponseDTOJSONResultPagingInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/emailTask/pageSearch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

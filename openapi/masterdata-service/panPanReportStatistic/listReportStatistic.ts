@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/盼盼上报统计/listReportStatisticUsingPOST
 */
 export default function fetchMethod(options: { data: IPanpanReportsStatisticsToQueryObjects }, extraOptions?: any) {
     return http<IJSONResultListIndicatesTheResponseObjectForPanpanToReportStatistics>(
         {
             url: "/masterdata-service/panPanReportStatistic/listReportStatistic",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

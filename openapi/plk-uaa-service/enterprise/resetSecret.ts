@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/resetSecretUsingPOST
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/enterprise/resetSecret",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

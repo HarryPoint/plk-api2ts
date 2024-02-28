@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TanPeng
 * @link http://47.108.139.107:16400/doc.html#/default/项目相关/queryListByProjectUsingGET
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectTaskResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProject/queryListByProject",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

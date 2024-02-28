@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/cleanInvalidConfigUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/message-notification-service/appMessageConfig/cleanInvalidConfig",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

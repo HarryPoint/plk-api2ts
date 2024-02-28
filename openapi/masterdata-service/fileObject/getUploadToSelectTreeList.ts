@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/文件对象相关/getUploadToSelectTreeListUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailResponseDTO4>(
         {
             url: "/masterdata-service/fileObject/getUploadToSelectTreeList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

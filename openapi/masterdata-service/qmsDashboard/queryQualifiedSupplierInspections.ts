@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryQualifiedSupplierInspectionsUsingPOST
 */
 export default function fetchMethod(options: { data: IQmsLargeScreenTimeIntervalRequest }, extraOptions?: any) {
     return http<IJSONResultListResponseToTheSupplierDeliveryQualificationRateQuery>(
         {
             url: "/masterdata-service/qmsDashboard/queryQualifiedSupplierInspections",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

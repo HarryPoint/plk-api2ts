@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/getUsingGET_2
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultMaterialBatchSettingsEditResponseObjects>(
         {
             url: "/masterdata-service/materialLotSetting/get",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

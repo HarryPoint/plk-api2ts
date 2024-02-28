@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/extractFailureDataUsingPOST
 */
 export default function fetchMethod(options: { data: IExtractFailureDataRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/extractFailureData",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

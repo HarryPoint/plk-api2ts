@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/班次相关/getAllClassShiftUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListShiftsBackToVO>(
         {
             url: "/masterdata-service/classShift/getAllClassShift",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

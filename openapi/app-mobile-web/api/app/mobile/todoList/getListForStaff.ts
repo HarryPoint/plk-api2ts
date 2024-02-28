@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/getListForStaffUsingPOST
 */
 export default function fetchMethod(options: { data: IToDoListSearchVO }, extraOptions?: any) {
     return http<IJSONResultListMobileReturnToTheDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/todoList/getListForStaff",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

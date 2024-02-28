@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/质量审核统计表/exportClauseNumberUsingPOST
 */
 export default function fetchMethod(options: { data: IBasicQualityAuditQueryRequest }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qualityAuditStatisticsReport/exportClauseNumber",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/enableBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IAppMessageConfigBatchEnabledRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/appMessageConfig/enableBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

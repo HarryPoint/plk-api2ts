@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16500/doc.html#/default/缓存相关/markCmdExecuteSuccessUsingPOST
 */
 export default function fetchMethod(options: { data: IMarkCmdExecuteSuccessRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/cache/markCmdExecuteSuccess",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

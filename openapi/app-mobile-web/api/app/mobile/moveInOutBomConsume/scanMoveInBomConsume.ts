@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:17400/doc.html#/default/进出料bom消耗相关/scanMoveInBomConsumeUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedBomConsumptionScanRequestDTO }, extraOptions?: any) {
     return http<IJSONResultIncomingBomConsumptionScanResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutBomConsume/scanMoveInBomConsume",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

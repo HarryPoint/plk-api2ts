@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getByCodeAndCheckUsingPOST_1
 */
 export default function fetchMethod(options: { params: { code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPositionVO>(
         {
             url: "/masterdata-service/warehouse/getByCodeAndCheck",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

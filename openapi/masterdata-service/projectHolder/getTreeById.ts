@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目文件夹相关/getTreeByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string; projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultFileClassificationDetailResponseDTO2>(
         {
             url: "/masterdata-service/projectHolder/getTreeById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

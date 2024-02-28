@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/listByInspectionItemsIdUsingGET
 */
 export default function fetchMethod(options: { params: { inspectionItemsId?: string } }, extraOptions?: any) {
     return http<IJSONResultListQualityPersonnelDropDownResponseDtos>(
         {
             url: "/masterdata-service/qmsQualityPersonnel/listByInspectionItemsId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

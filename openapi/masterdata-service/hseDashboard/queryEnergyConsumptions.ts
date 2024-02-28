@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryEnergyConsumptionsUsingPOST
 */
 export default function fetchMethod(options: { data: IEnergyConsumptionQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListEnergyConsumptionQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/queryEnergyConsumptions",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

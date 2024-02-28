@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/project-script-controller/addProcessStatusUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/projectScript/addProcessStatus",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

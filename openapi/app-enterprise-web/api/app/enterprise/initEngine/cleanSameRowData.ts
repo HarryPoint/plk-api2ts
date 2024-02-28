@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/cleanSameRowDataUsingPOST
 */
 export default function fetchMethod(options: { data: ICleanSameRowDataInputDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/cleanSameRowData",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

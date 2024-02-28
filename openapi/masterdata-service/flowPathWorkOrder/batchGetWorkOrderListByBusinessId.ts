@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/batchGetWorkOrderListByBusinessIdUsingGET
 */
 export default function fetchMethod(options: { params: { businessId?: string; enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessWorkOrderVO1>(
         {
             url: "/masterdata-service/flowPathWorkOrder/batchGetWorkOrderListByBusinessId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

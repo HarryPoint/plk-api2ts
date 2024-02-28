@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:16700/doc.html#/default/项目相关/queryBaseProjectUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectPhaseTaskQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectBaseQueryResponseObject>(
         {
             url: "/masterdata-service/project/queryBaseProject",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -27,18 +28,20 @@ export interface IProjectPhaseTaskQueryObject {
     projectPlanId?: string;
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
-    /** 任务名称 */
-    name?: string;
     /** 导出字段集 */
     exportFields?: string[];
-    /** 是否超期（Y是 N:否） */
-    isOverdueList?: string[];
+    /** 任务名称 */
+    name?: string;
     /** 项目id */
     projectId?: string;
-    /** 项目阶段ids列表 */
-    projectStageIds?: string[];
+    /** 是否超期（Y是 N:否） */
+    isOverdueList?: string[];
     /** 项目经理id集 */
     projectManagerIds?: string[];
+    /** 项目计划id集 */
+    projectPlanIds?: string[];
+    /** 项目阶段ids列表 */
+    projectStageIds?: string[];
     /** 任务编号 */
     code?: string;
     /** 任务负责人列表 */
@@ -99,24 +102,26 @@ export interface IProjectPhaseTaskQueryObject {
     endUpdateTime?: number;
     /** 处理进度名称列表 */
     processStatusNames?: string[];
+    /** 是否查询没有关联项目计划的任务 */
+    isQueryEmptyPlanTask?: EProjectPhaseTaskQueryObject_isQueryEmptyPlanTask;
     /** 修改部门ids */
     updateDeptIds?: string[];
+    /** 任务权重 -- 开始 */
+    beginTaskWeight?: number;
     /** 是否仅查询当前登录用户 */
     isQueryCurrentMember?: EProjectPhaseTaskQueryObject_isQueryCurrentMember;
-    /** undefined */
-    fromAppIds?: string[];
     /** 是否展示子任务 */
     isShowChildTask?: EProjectPhaseTaskQueryObject_isShowChildTask;
     /** undefined */
-    projectPlanFlowIsComplete?: EProjectPhaseTaskQueryObject_projectPlanFlowIsComplete;
+    fromAppIds?: string[];
     /** 项目类型id集 */
     projectTypeIds?: string[];
-    /** undefined */
-    notEmptyCondition?: boolean;
+    /** 任务权重 -- 结束 */
+    endTaskWeight?: number;
     /** 项目大类集 */
     projectCategories?: string[];
     /** undefined */
-    filterDraftStatus?: EProjectPhaseTaskQueryObject_filterDraftStatus;
+    notEmptyCondition?: boolean;
     /** 项目管理员id集 */
     projectAdminUserIds?: string[];
     /** undefined */
@@ -156,6 +161,13 @@ export interface IProjectBaseQueryResponseObject {
     projectManagerName?: string;
 }
 
+export enum EProjectPhaseTaskQueryObject_isQueryEmptyPlanTask {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
 export enum EProjectPhaseTaskQueryObject_isQueryCurrentMember {
     /** 是 */
     Y = "Y",
@@ -167,16 +179,6 @@ export enum EProjectPhaseTaskQueryObject_isShowChildTask {
     /** 是 */
     Y = "Y",
     /** 否 */
-    N = "N"
-}
-
-export enum EProjectPhaseTaskQueryObject_projectPlanFlowIsComplete {
-    Y = "Y",
-    N = "N"
-}
-
-export enum EProjectPhaseTaskQueryObject_filterDraftStatus {
-    Y = "Y",
     N = "N"
 }
 

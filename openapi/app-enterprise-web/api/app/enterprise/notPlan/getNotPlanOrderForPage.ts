@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/未排产订单相关/getForPageUsingPOST_13
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationDynamicExpansionDataVOUnscheduledProductionOrderReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/notPlan/getNotPlanOrderForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

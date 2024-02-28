@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/raceAttachmentProvisionTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IRaceAttachmentProvisionTaskRequestDTO }, extraOptions?: any) {
     return http<IJSONResultRaceAttachmentProvisionTaskResponseDTO>(
         {
             url: "/message-notification-service/sendingEmailRecord/raceAttachmentProvisionTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

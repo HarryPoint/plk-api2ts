@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/班次相关/changeValidUsingPOST
 */
 export default function fetchMethod(options: { data: IEnableOrDisableVO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/classShift/changeValid",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

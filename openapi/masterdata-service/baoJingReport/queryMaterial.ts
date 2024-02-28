@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/queryMaterialUsingPOST
 */
 export default function fetchMethod(options: { data: IBaojingReportMaterialQueryDTO }, extraOptions?: any) {
     return http<IJSONResultPageInformationBaojingReportMaterialResponseDTO>(
         {
             url: "/masterdata-service/baoJingReport/queryMaterial",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/生产成本核算表相关/exportUsingPOST_14
 */
 export default function fetchMethod(options: { data: IProductionCostingPagingRequestObject }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceCostComputationReport/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

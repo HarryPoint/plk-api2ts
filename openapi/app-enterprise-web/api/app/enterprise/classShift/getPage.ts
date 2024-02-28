@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/班次相关/getPageUsingPOST_2
 */
 export default function fetchMethod(options: { data: IShiftSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationShiftReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/classShift/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

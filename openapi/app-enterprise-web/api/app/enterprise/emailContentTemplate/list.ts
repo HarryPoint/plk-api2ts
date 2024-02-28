@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/邮件内容模板/listUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListEmailContentTemplateDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/emailContentTemplate/list",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/任务班次相关/editUsingPOST_10
 */
 export default function fetchMethod(options: { data: ITaskShiftEditDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathShift/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

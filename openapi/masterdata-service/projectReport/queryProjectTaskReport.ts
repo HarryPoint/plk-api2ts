@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectTaskReportUsingPOST
 */
-export default function fetchMethod(options: { data: QueryProjectTaskReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProjectTaskReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectTaskReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -105,6 +106,12 @@ export interface IProjectTaskReportResponseObject {
     actualEndTime?: number;
     /** 任务进度 */
     taskProgress?: number;
+    /** 项目计划id */
+    projectPlanId?: string;
+    /** 项目计划编号 */
+    projectPlanCode?: string;
+    /** 项目计划名称 */
+    projectPlanName?: string;
     /** undefined */
     parentId?: string;
     /** undefined */

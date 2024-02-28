@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/editUsingPOST_3
 */
 export default function fetchMethod(options: { data: IMessageSchemaEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/message-notification-service/messageSchema/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

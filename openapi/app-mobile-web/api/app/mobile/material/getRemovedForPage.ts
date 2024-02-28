@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/物料相关/getRemovedForPageUsingPOST_10
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-mobile-web/api/app/mobile/material/getRemovedForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

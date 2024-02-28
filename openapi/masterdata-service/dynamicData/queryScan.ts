@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/queryScanUsingPOST
 */
 export default function fetchMethod(options: { data: IAssociationFormScanQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListAssociationFormScanQueryResponseDTO>(
         {
             url: "/masterdata-service/dynamicData/queryScan",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

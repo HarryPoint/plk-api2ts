@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎-企业字段分割规则/queryAllEnterpriseFieldSplitRuleUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListEnterpriseFieldSplitRule>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/enterpriseFieldSplitRule",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

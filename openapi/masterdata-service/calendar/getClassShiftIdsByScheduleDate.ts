@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getClassShiftIdsByScheduleDateUsingPOST
 */
 export default function fetchMethod(options: { data: ISchedulingDateDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSetlong>(
         {
             url: "/masterdata-service/calendar/getClassShiftIdsByScheduleDate",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

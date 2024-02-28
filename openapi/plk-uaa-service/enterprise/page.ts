@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/pageUsingPOST_2
 */
 export default function fetchMethod(options: { data: IEnterprisePagingQueryObject }, extraOptions?: any) {
     return http<IJSONResultPagingInformationEnterprisePagingResponse>(
         {
             url: "/plk-uaa-service/enterprise/page",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

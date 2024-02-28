@@ -14,7 +14,7 @@
           "项目阶段相关"
         ],
         "summary": "通过项目id获取项目阶段应用信息",
-        "operationId": "getAppInfoUsingGET_1",
+        "operationId": "getAppInfoUsingGET_2",
         "produces": [
           "*/*"
         ],

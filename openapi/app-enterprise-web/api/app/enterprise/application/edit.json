@@ -184,6 +184,7 @@
             "  PROJECT_TYPE-项目类型",
             "  PROJECT_RISK_TYPE-项目风险类型",
             "  PROJECT_RISK_FLAG-项目风险标识",
+            "  PROJECT_DEVICE_INFO-项目设备信息",
             "  PROJECT_PLAN-项目计划",
             "  PROJECT_STAGE-项目阶段",
             "  PROJECT_TASK-项目任务",
@@ -204,8 +205,11 @@
             "  PROJECT_MODIFICATION-项目信息变更单",
             "  PROJECT_PLAN_MODIFICATION-项目计划变更单",
             "  PROJECT_MEMBER_MODIFICATION-项目成员变更单",
+            "  PROJECT_RESOURCES-项目资源",
             "  PROJECT_FILE-项目文件",
             "  PROJECT_FOLDER-项目文件夹",
+            "  PROJECT_CLOSE-项目关闭",
+            "  PROJECT_TRANSFER-项目迁移",
             "  QMS_ANNUAL_QUALITY_TARGET-年度质量目标",
             "  QMS_QUALITY_WORK_PLAN-质量工作计划",
             "  QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT-未完成情况分析报告",
@@ -761,7 +765,8 @@
             "  QMS_PROJECT_TASK_REVIEW_RESULT-评审结果",
             "  QMS_PROJECT_TASK_DECISION_RESULT-决策结果",
             "  QMS_INSPECTION_BUSINESS_TYPE-检验任务业务类型",
-            "  DEVICE_EMPLOYEE_MAINTAIN_LEVEL-维修能力"
+            "  DEVICE_EMPLOYEE_MAINTAIN_LEVEL-维修能力",
+            "  PROJECT_DEVICE_INFO_STATUS-项目设备信息状态"
           ]
         },
         "selectorAssociateDisplayList": {

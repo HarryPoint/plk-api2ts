@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getFactoryCalendarScheduleClassUsingPOST
 */
 export default function fetchMethod(options: { data: IDateRangeQueryDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFactoryCalendarScheduleShiftRelationshipVO>(
         {
             url: "/masterdata-service/calendar/getFactoryCalendarScheduleClass",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -67,7 +67,8 @@
               "QMS_PROJECT_TASK_REVIEW_RESULT",
               "QMS_PROJECT_TASK_DECISION_RESULT",
               "QMS_INSPECTION_BUSINESS_TYPE",
-              "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+              "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+              "PROJECT_DEVICE_INFO_STATUS"
             ]
           },
           {

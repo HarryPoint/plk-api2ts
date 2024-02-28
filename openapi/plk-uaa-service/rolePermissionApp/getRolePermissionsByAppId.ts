@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/getRolePermissionsByAppIdUsingPOST
 */
 export default function fetchMethod(options: { params: { appId?: string } }, extraOptions?: any) {
     return http<IJSONResultListAppliesTheRolePermissionResponseDTO>(
         {
             url: "/plk-uaa-service/rolePermissionApp/getRolePermissionsByAppId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

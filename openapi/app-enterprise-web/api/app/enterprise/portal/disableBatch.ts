@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16400/doc.html#/default/门户相关/disableBatchUsingPOST_3
 */
 export default function fetchMethod(options: { data: IThePortalDisablesTheRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/portal/disableBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

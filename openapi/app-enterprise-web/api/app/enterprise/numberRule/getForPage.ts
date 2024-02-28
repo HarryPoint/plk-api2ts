@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/编码规则相关/getForPageUsingPOST_14
 */
 export default function fetchMethod(options: { data: ICodeRulePagingQueryVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationEncodingRulePagingReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/numberRule/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

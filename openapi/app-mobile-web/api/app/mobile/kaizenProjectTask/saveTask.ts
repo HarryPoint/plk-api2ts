@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17400/doc.html#/default/项目任务相关/saveTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IMasterDataBaseEditDTO2 }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/saveTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

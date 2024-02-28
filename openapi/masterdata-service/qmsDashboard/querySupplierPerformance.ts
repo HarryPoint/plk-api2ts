@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySupplierPerformanceUsingPOST
 */
 export default function fetchMethod(options: { data: IQmsLargeScreenTimeIntervalRequest }, extraOptions?: any) {
     return http<IJSONResultListQualityPerformanceEvaluationTableReturnsDTO1>(
         {
             url: "/masterdata-service/qmsDashboard/querySupplierPerformance",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

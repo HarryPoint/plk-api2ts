@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/searchRelationFormDataUsingPOST
 */
 export default function fetchMethod(options: { data: ITheFieldRefersToTheQueryCondition }, extraOptions?: any) {
     return http<ITheJSONResultFieldReferencesTheSearchResults>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/fieldReference/search",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

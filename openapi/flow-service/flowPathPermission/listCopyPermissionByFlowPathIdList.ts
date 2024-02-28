@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin he
 * @link http://47.108.139.107:16500/doc.html#/default/应用权限相关/listCopyPermissionByFlowPathIdListUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListAddsPermissionEdit1>(
         {
             url: "/flow-service/flowPathPermission/listCopyPermissionByFlowPathIdList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

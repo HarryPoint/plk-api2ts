@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/进出料设备相关/scanMoveInDeviceByBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedEquipmentQueryDTO }, extraOptions?: any) {
     return http<IJSONResultListFeedDeviceRespondsToDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutDevice/scanMoveInDeviceByBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

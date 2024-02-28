@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检管理/exportUsingPOST_27
 */
 export default function fetchMethod(options: { data: IInspectionTaskSearchesForVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qualityStorageTask/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

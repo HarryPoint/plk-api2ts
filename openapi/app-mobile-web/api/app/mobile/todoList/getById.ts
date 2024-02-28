@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/getByIdUsingGET_3
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultToDoListDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/todoList/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

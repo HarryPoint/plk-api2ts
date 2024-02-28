@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/batchMoveOutUsingPOST
 */
 export default function fetchMethod(options: { data: ITaskBatchOperationDTO4 }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/batchMoveOut",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

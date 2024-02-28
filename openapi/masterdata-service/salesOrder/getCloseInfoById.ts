@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getCloseInfoByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesOrderClosureInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/salesOrder/getCloseInfoById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

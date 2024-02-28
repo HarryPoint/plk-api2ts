@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检分类/changeValidUsingPOST_7
 */
 export default function fetchMethod(options: { data: IEnableOrDisableVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityInspectionCategory/changeValid",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

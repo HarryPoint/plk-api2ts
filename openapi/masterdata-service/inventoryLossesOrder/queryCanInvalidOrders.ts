@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/盘亏单相关/queryCanInvalidOrdersUsingPOST
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/masterdata-service/inventoryLossesOrder/queryCanInvalidOrders",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

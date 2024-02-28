@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/acceptTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IFlowPathTaskProcessRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/flowPathTask/acceptTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/采购汇总报表相关/getPurchaseSummaryReportUsingPOST
 */
-export default function fetchMethod(options: { data: GetPurchaseSummaryReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultObjectReturnedByThePagingInformationProcurementSummaryReport>(
         {
             url: "/app-mobile-web/api/app/mobile/purchaseSummaryReport/getPurchaseSummaryReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

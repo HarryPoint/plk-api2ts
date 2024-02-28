@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getPageUsingPOST_30
 */
 export default function fetchMethod(options: { data: IStandardProcessPagingQueryObject }, extraOptions?: any) {
     return http<IJSONResultPagingInformationStandardProcessPagingResponseObject>(
         {
             url: "/masterdata-service/standardTechnology/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

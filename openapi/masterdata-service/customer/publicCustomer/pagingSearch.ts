@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/pagingSearchPublicCustomerUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging }, extraOptions?: any) {
     return http<IJSONResultPageInformationPublicCustomerOutputVO>(
         {
             url: "/masterdata-service/customer/publicCustomer/pagingSearch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

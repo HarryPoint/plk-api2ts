@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/getModificationDetailUsingGET_2
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectPlanChangeResponseObject>(
         {
             url: "/masterdata-service/projectPlanModification/getModificationDetail",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
@@ -30,6 +31,8 @@ export interface ITheProjectPlanChangesTheResponseObject {
     projectStageList?: IChangeOrderResponseParametersInProjectPhase[];
     /** 项目任务响应列表 */
     projectTaskList?: IProjectTaskChangeOrderResponseParameters[];
+    /** 项目计划变更信息响应列表 */
+    projectPlanList?: IItemChangeOrderFieldResponseParameter[];
 }
 /** 项目阶段变更单响应参数 */
 export interface IChangeOrderResponseParametersInProjectPhase {

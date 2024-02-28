@@ -28,8 +28,8 @@
             "description": "nameOrCodeQuery",
             "required": true,
             "schema": {
-              "originalRef": "项目名称编号公共查询对象_1",
-              "$ref": "#/definitions/项目名称编号公共查询对象_1"
+              "originalRef": "项目任务名称编号查询对象",
+              "$ref": "#/definitions/项目任务名称编号查询对象"
             }
           }
         ],
@@ -61,7 +61,7 @@
     }
   },
   "definitions": {
-    "项目名称编号公共查询对象_1": {
+    "项目任务名称编号查询对象": {
       "type": "object",
       "properties": {
         "projectId": {
@@ -74,19 +74,28 @@
           "format": "int64",
           "description": "项目计划id"
         },
+        "isProjectPlanShow": {
+          "type": "string",
+          "description": "是否查询只在项目计划模块展示的任务",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isProjectTaskShow": {
+          "type": "string",
+          "description": "是否查询只在项目任务模块展示的任务",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
         "nameOrCode": {
           "type": "string",
           "description": "名称or编号"
-        },
-        "projectPlanFlowIsComplete": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
-          ]
         }
       },
-      "title": "项目名称编号公共查询对象_1"
+      "title": "项目任务名称编号查询对象"
     },
     "JSONResult«List«Id Code Name 通用传输对象»»": {
       "type": "object",

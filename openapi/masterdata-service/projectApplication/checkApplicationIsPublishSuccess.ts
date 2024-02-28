@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/checkApplicationIsPublishSuccessUsingPOST
 */
 export default function fetchMethod(options: { data: IVerifyWhetherTheApplicationSuccessfullyAdvertisesTheRequestObject }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/projectApplication/checkApplicationIsPublishSuccess",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

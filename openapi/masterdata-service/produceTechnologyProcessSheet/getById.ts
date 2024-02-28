@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/生产工艺工艺卡相关/getByIdUsingGET_11
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessCardInformationIsReturnedToTheDTO>(
         {
             url: "/masterdata-service/produceTechnologyProcessSheet/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

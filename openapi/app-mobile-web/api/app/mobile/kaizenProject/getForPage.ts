@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/项目相关/getPageByFlowPathIdUsingPOST_9
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-mobile-web/api/app/mobile/kaizenProject/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getStructureByFlowPathIdUsingPOST
 */
 export default function fetchMethod(options: { data: IFlowPathStructureQueryRequest, params: { enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/flow-service/flowPath/getStructureByFlowPathId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -738,7 +739,9 @@ export enum EProcessFormVO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+    /** 项目设备信息状态 */
+    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
 }
 
 export enum EProcessFormVO_isCanModifySelectorOption {

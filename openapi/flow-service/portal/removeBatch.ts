@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16500/doc.html#/default/门户相关/removeBatchUsingPOST_1
 */
 export default function fetchMethod(options: { data: IPortalDeleteRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/flow-service/portal/removeBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

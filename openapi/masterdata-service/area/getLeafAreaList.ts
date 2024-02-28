@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/区域相关/getLeafAreaListUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/area/getLeafAreaList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

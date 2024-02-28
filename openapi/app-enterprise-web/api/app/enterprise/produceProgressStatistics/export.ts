@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产进度统计报表 - 相关/exportUsingPOST_34
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO2 }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceProgressStatistics/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/saveUsingPOST_5
 */
 export default function fetchMethod(options: { data: IProjectTemplateEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/projectTemplate/save",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

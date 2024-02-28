@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getFlowPathByCodeAndCheckUsingGET
 */
 export default function fetchMethod(options: { params: { code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessRespondsToVO>(
         {
             url: "/flow-service/flowPath/getFlowPathByCodeAndCheck",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
@@ -281,6 +282,8 @@ export enum ETheFlowRespondsToVO1_flowPathSystemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

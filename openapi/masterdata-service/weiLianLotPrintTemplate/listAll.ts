@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAllUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListVirtualizedBatchPrintTemplateResponseObject1>(
         {
             url: "/masterdata-service/weiLianLotPrintTemplate/listAll",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

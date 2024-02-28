@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/邮件任务/disableBatchUsingPOST_1
 */
 export default function fetchMethod(options: { data: IEmailTaskDisableRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/emailTask/disableBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

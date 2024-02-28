@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/initStaticApplicationUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/enterprise/importInfo/init/initStaticApplication",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

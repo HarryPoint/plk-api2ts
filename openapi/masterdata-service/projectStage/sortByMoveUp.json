@@ -84,6 +84,22 @@
           "description": "移动到的排序,最小为1",
           "minimum": 1,
           "exclusiveMinimum": false
+        },
+        "isProjectPlanShow": {
+          "type": "string",
+          "description": "是否是在项目计划模块展示的阶段",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isProjectTaskShow": {
+          "type": "string",
+          "description": "是否是在项目任务模块展示的阶段",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
         }
       },
       "title": "项目阶段排序请求对象"

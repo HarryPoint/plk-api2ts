@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16400/doc.html#/default/生产工艺工艺路径相关/getDetailByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProduceTechnologyMaterialBomInfoResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTechnologyMaterialBom/getDetailById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

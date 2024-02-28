@@ -229,6 +229,7 @@
             "  PROJECT_FILE-项目文件",
             "  PROJECT_FOLDER-项目文件夹",
             "  PROJECT_CLOSE-项目关闭",
+            "  PROJECT_TRANSFER-项目迁移",
             "  QMS_ANNUAL_QUALITY_TARGET-年度质量目标",
             "  QMS_QUALITY_WORK_PLAN-质量工作计划",
             "  QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT-未完成情况分析报告",

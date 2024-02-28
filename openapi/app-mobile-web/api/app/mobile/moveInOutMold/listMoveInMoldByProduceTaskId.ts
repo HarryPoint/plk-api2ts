@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/进出料模具相关/listMoveInMoldByProduceTaskIdUsingGET
 */
 export default function fetchMethod(options: { params: { produceTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFeedMoldResponseDTO1>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutMold/listMoveInMoldByProduceTaskId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

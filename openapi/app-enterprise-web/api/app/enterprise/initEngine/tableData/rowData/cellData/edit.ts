@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/editCellValueUsingPOST
 */
 export default function fetchMethod(options: { data: ICellData }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/rowData/cellData/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

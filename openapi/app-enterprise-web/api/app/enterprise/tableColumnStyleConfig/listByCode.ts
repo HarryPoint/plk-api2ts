@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/列表列样式配置/listByCodeUsingGET
 */
 export default function fetchMethod(options: { params: { code?: string } }, extraOptions?: any) {
     return http<IJSONResultListListColumnStyleConfigurationVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/tableColumnStyleConfig/listByCode",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/入库类型相关/getRemovedForPageUsingPOST_7
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/outStorageType/getRemovedForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

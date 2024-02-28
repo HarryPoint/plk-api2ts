@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程自定义字段相关/getByFlowPathVersionIdUsingPOST
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathVersionId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListProcessCustomNotificationFieldRespondsToVO>(
         {
             url: "/flow-service/flowPathCustomerNotice/getByFlowPathVersionId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

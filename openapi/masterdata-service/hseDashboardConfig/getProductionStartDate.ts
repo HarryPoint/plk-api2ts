@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/getProductionStartDateUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultResponseToTheProductionStartDateQuery>(
         {
             url: "/masterdata-service/hseDashboardConfig/getProductionStartDate",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

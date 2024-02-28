@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理暂扣相关/addUsingPOST_4
 */
 export default function fetchMethod(options: { data: ITheProductionProcessingWithholdAddsTheRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleHoldPause/add",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

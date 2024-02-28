@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/序列号跟踪报表相关/getMaterialSerialNoTrackReportForPageUsingPOST
 */
-export default function fetchMethod(options: { data: GetMaterialSerialNoTrackReportForPage }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialSerialNumberTracesPagingResponseObjects>(
         {
             url: "/masterdata-service/warehouseStorageSerialNoTrackReport/getMaterialSerialNoTrackReportForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

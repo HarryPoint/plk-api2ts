@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/准备期相关/changeValidUsingPOST_10
 */
 export default function fetchMethod(options: { data: IEnableOrDisableVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/readyTime/changeValid",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

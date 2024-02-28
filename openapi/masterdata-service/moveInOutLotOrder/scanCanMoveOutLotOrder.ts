@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/进出料批次相关/scanCanMoveOutLotOrderUsingPOST
 */
 export default function fetchMethod(options: { data: IDtoCanBeCheckedByBatchScanning }, extraOptions?: any) {
     return http<IJSONResultReleasableBatchResponseDto>(
         {
             url: "/masterdata-service/moveInOutLotOrder/scanCanMoveOutLotOrder",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

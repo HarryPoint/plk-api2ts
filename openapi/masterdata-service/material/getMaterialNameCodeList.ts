@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialNameCodeListUsingPOST
 */
 export default function fetchMethod(options: { data: IMaterialNameNumberQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnInformationAboutTheMaterial>(
         {
             url: "/masterdata-service/material/getMaterialNameCodeList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

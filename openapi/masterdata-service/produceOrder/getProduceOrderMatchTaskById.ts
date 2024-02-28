@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderMatchTaskDetailByIdUsingGET
 */
 export default function fetchMethod(options: { params: { taskId?: string } }, extraOptions?: any) {
     return http<IJSONResultQueryRequestForProductionOrderMatchingTasks>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderMatchTaskById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

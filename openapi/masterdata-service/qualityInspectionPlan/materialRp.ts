@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检方案/materialRpUsingPOST
 */
 export default function fetchMethod(options: { data: IQualityControlSolutionMaterialApplicationAssociationInformationEditDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityInspectionPlan/materialRp",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

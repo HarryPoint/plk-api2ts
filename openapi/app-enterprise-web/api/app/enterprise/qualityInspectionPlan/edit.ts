@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/质检方案/editUsingPOST_22
 */
 export default function fetchMethod(options: { data: IEditTheQualityInspectionSchemeDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/客户端组相关/addUsingPOST_1
 */
 export default function fetchMethod(options: { data: ITheDTOIsAddedToTheClientGroup }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/clientGroup/add",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

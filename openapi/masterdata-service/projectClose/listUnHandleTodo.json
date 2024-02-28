@@ -9,15 +9,12 @@
   "swagger": "2.0",
   "paths": {
     "/masterdata-service/projectClose/listUnHandleTodo": {
-      "post": {
+      "get": {
         "tags": [
           "项目关闭相关"
         ],
         "summary": "查询未处理待办",
-        "operationId": "listUnHandleTodoUsingPOST",
-        "consumes": [
-          "application/json"
-        ],
+        "operationId": "listUnHandleTodoUsingGET",
         "produces": [
           "*/*"
         ],
@@ -39,9 +36,6 @@
               "$ref": "#/definitions/JSONResult«List«项目应用未处理待办返回对象»»"
             }
           },
-          "201": {
-            "description": "Created"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -54,7 +48,7 @@
         },
         "deprecated": false,
         "x-author": "XieJian",
-        "x-order": "10"
+        "x-order": "20"
       }
     }
   },

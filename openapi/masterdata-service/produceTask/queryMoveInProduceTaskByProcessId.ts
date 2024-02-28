@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/queryMoveInProduceTaskByProcessIdUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTaskQueryDTOForMobileEnd, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationProductionTaskResponseDTOForMobile>(
         {
             url: "/masterdata-service/produceTask/queryMoveInProduceTaskByProcessId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

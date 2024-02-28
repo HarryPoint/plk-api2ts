@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/上报反馈服务相关/sureUsingPOST
 */
 export default function fetchMethod(options: { data: IReportTheDTOToHandleTheChangeStatus }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandleReport/sure",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

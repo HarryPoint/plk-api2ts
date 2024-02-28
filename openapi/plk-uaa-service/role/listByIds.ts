@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/listByIdsUsingGET
 */
 export default function fetchMethod(options: { data: IIdSetInformation }, extraOptions?: any) {
     return http<IJSONResultListResponseForRoleInformation>(
         {
             url: "/plk-uaa-service/role/listByIds",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

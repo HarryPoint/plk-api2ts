@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶寄售入库报表相关/getMaterialOuterCodeSelectorUsingPOST_1
 */
 export default function fetchMethod(options: { data: IMaterialMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataExternalCodeSelectReturnDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/consignmentInboundAnalyzeReport/getMaterialOuterCodeSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

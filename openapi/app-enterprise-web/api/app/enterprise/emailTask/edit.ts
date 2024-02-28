@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/邮件任务/editUsingPOST_8
 */
 export default function fetchMethod(options: { data: IEmailTaskEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/emailTask/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

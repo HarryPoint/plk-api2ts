@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/工费相关/batchImportUsingPOST_2
 */
 export default function fetchMethod(options: { data: ILaborCostsSaveDTO[] }, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/masterdata-service/laborCost/batchImport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

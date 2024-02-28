@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/设备数采相关/getUserReportForPageUsingPOST
 */
 export default function fetchMethod(options: { data: IExampleQueryTheDataDTOReportedByAUser }, extraOptions?: any) {
     return http<IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO>(
         {
             url: "/app-mobile-web/api/app/mobile/deviceCollectionData/getUserReportForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

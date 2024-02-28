@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/getConsignmentLossAnalyzeExportTicketUsingPOST
 */
 export default function fetchMethod(options: { data: IPurchaseArrivalStatisticsReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/purchaseArrivedStatisticReport/getExportTicket",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

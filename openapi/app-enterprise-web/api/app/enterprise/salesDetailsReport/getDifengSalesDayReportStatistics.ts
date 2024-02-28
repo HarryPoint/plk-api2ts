@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/销售明细报表相关/getDifengSalesDayReportStatisticsUsingPOST_1
 */
-export default function fetchMethod(options: { data: GetDifengSalesDayReportStatistics }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultSalesStatisticsReturnObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesDetailsReport/getDifengSalesDayReportStatistics",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

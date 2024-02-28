@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getPageUsingPOST_18
 */
 export default function fetchMethod(options: { data: IProductionTaskSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/produceTask/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

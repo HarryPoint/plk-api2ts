@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeGrandTotalUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectCostBudgetQueryObject }, extraOptions?: any) {
     return http<IJSONResultProjectCostAccumulationResponseObject>(
         {
             url: "/masterdata-service/projectFee/getProjectFeeGrandTotal",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

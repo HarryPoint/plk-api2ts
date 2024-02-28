@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/仓库相关/getStorehouseAreaListSelectorUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListRepositoryAreaTreeReturnsVO>(
         {
             url: "/masterdata-service/storehouse/getStorehouseAreaListSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

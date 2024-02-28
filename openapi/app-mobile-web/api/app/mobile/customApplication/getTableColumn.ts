@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/自定义应用相关/getTableColumnUsingGET_6
 */
 export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-mobile-web/api/app/mobile/customApplication/getTableColumn",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

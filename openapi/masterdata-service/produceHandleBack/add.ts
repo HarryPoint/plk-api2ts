@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/生产处理返工相关/addUsingPOST_3
 */
 export default function fetchMethod(options: { data: IProductionProcessesReworkAddingRequestObjects }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandleBack/add",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

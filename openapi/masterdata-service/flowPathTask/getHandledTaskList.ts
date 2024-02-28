@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/流程任务相关/getHandledTaskListUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessTaskResultQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTaskResultVO>(
         {
             url: "/masterdata-service/flowPathTask/getHandledTaskList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -252,6 +253,8 @@ export enum EProcessTaskResultQueryVO_flowPathSystemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

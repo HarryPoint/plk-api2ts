@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/仓位系统应用库存批次号相关/getWarehouseStorageSystemApplicationLotNoUsingPOST
 */
 export default function fetchMethod(options: { data: ITheWarehouseSystemAppliesTheInventoryBatchNumberToPagingQueryObjects }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheWarehouseSystemAppliesTheInventoryBatchNumberPagingReturnObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseStorageSystemApplicationLotNo/getLotNoList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

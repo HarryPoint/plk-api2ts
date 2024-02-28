@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/getDataByCodeOrNameListUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessFormCodeOrNameSearchesForVO }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathData/getDataByCodeOrNameList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

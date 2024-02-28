@@ -59,7 +59,8 @@ export const createDefinitions = async (
   const transFormType = (define: any, pathKeys: string[] = []): string => {
     if (define.originalRef) {
       if (!definitionsMap[define.originalRef]) {
-        return define.originalRef;
+        // 可能存在无定义的类型
+        return "any";
       }
       return definitionsMap[define.originalRef].name;
     }

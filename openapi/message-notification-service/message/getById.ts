@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/消息相关/getByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string; clientCode?: string; enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultMessageDetailsAreReturnedToVO>(
         {
             url: "/message-notification-service/message/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

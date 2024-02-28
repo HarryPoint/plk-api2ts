@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getStaffSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: ISearchVOWithTheHomeOwnerDataSelectionList }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/getStaffSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

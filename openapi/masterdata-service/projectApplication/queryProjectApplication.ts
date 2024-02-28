@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/queryProjectApplicationUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectApplicationRequestObject }, extraOptions?: any) {
     return http<ITheJSONResultProjectApplicationReturnsTheObject>(
         {
             url: "/masterdata-service/projectApplication/queryProjectApplication",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -252,6 +253,8 @@ export enum EProjectApplicationRequestObject_flowPathSystemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */
@@ -605,6 +608,8 @@ export enum ETheProjectApplicationReturnsTheObject_flowPathSystemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

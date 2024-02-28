@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMoveInOutRecordDetailUsingGET
 */
 export default function fetchMethod(options: { params: { recordId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultInboundAndOutboundInformationVO>(
         {
             url: "/masterdata-service/moveInOutRecord/getMoveInOutRecordDetail",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

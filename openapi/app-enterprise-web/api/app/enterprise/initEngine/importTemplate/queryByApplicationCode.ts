@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入模板相关/queryByApplicationCodeUsingGET
 */
 export default function fetchMethod(options: { params: { applicationCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListImportTemplate>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importTemplate/queryByApplicationCode",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

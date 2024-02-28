@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产报表/getPageByProduceOrderUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationSchedulingProductionOrderReportVOProductionOrderDimension>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderScheduleReport/getPageByProduceOrder",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

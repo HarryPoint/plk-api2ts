@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采接口管理相关/getApiLogPageUsingPOST
 */
 export default function fetchMethod(options: { data: IOpenApiRequestsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationOpenApiRequestLogReturnsVO>(
         {
             url: "/masterdata-service/deviceCollectionApi/getApiLogPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

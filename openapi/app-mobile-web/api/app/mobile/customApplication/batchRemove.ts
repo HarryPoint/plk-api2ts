@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/自定义应用相关/batchRemoveByFlowPathIdUsingPOST
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/customApplication/batchRemove",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

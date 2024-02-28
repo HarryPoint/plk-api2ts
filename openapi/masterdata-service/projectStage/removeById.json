@@ -9,22 +9,28 @@
   "swagger": "2.0",
   "paths": {
     "/masterdata-service/projectStage/removeById": {
-      "get": {
+      "post": {
         "tags": [
           "项目阶段相关"
         ],
         "summary": "删除项目阶段",
-        "operationId": "removeByIdUsingGET_1",
+        "operationId": "removeByIdUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
         "produces": [
           "*/*"
         ],
         "parameters": [
           {
-            "name": "id",
-            "in": "query",
-            "description": "项目阶段id",
+            "in": "body",
+            "name": "removeRequest",
+            "description": "removeRequest",
             "required": true,
-            "type": "string"
+            "schema": {
+              "originalRef": "项目阶段删除请求对象",
+              "$ref": "#/definitions/项目阶段删除请求对象"
+            }
           }
         ],
         "responses": {
@@ -34,6 +40,9 @@
               "originalRef": "JSONResult«object»",
               "$ref": "#/definitions/JSONResult«object»"
             }
+          },
+          "201": {
+            "description": "Created"
           },
           "401": {
             "description": "Unauthorized"
@@ -52,6 +61,25 @@
     }
   },
   "definitions": {
+    "项目阶段删除请求对象": {
+      "type": "object",
+      "required": [
+        "projectStageId"
+      ],
+      "properties": {
+        "projectStageId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目阶段id"
+        },
+        "projectPlanId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目计划id"
+        }
+      },
+      "title": "项目阶段删除请求对象"
+    },
     "JSONResult«object»": {
       "type": "object",
       "properties": {

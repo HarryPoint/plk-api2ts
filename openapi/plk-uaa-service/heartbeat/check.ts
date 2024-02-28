@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/心跳相关/checkUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/heartbeat/check",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

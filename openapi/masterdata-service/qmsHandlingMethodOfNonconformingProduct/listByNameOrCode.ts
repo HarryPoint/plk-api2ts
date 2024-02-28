@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByNameOrCodeUsingPOST
 */
 export default function fetchMethod(options: { data: INameNumberDTO }, extraOptions?: any) {
     return http<IJSONResultListResponseObjectForHandlingNonconformingItems>(
         {
             url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByNameOrCode",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

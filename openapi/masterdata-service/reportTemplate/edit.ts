@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/报表模板/editUsingPOST_21
 */
 export default function fetchMethod(options: { data: IReportTemplateEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/reportTemplate/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

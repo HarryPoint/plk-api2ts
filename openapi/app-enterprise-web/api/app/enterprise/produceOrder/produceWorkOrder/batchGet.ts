@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/batchGetProduceWorkOrderUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProduceWorkOrderVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/produceWorkOrder/batchGet",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

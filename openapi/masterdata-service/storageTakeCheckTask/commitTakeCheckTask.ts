@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/commitTakeCheckTaskUsingPOST
 */
 export default function fetchMethod(options: { data: ISubmitTheInventoryTaskToTheDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/storageTakeCheckTask/commitTakeCheckTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

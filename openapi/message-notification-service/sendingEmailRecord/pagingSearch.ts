@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/pagingSearchUsingPOST
 */
 export default function fetchMethod(options: { data: ISendAnEmailRecordQueryRequest }, extraOptions?: any) {
     return http<ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation>(
         {
             url: "/message-notification-service/sendingEmailRecord/pagingSearch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/queryCanAppendBuyEnterpriseListUsingPOST
 */
 export default function fetchMethod(options: { data: IProductOrderEnterpriseQueryRequestObject }, extraOptions?: any) {
     return http<IJSONResultListEnterpriseNameNumberResponseObject>(
         {
             url: "/plk-uaa-service/enterprise/queryCanAppendBuyEnterpriseList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

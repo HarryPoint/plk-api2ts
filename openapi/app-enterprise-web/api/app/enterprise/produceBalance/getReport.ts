@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产结存报表相关/getReportUsingPOST_6
 */
 export default function fetchMethod(options: { data: IProductionBalanceStatisticsReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultProductionBalanceMaterialStatisticsReportReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceBalance/getReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

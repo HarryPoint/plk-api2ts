@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/物料库存维度报表相关/getWarehouseMaterialDimensionReportUsingPOST
 */
-export default function fetchMethod(options: { data: GetWarehouseMaterialDimensionReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPageInformationQueriesDetailedResponseObjectsInTheMaterialInventoryDimension>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialDimensionReport/getWarehouseMaterialDimensionReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

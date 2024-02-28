@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
 */
 export default function fetchMethod(options: { data: IAutomaticProductionOrderSchedulingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSchedulingResultVO>(
         {
             url: "/masterdata-service/autoPlan/autoPlanCompute",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -71,7 +72,7 @@ export interface ITheResultsOfSchedulingCalculationWereAnalyzedVO {
     /** 还需增加工时(小时) */
     needPlusTime?: number;
     /** 可增加工时日期集 */
-    canPlusDays?: LocalDateTime[];
+    canPlusDays?: any[];
 }
 /** 未排产生产订单返回VO */
 export interface IUnscheduledProductionOrdersAreReturnedToVO {

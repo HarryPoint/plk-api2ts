@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/cancelTaskUsingPOST_1
 */
 export default function fetchMethod(options: { data: IVerifyTaskCancellationRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qmsFirstInspectionTask/cancelTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

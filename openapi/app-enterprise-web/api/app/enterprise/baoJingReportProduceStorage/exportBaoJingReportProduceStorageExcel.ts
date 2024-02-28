@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/库存统计（成品）日报表/exportBaoJingReportProduceStorageExcelUsingPOST
 */
 export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportProduceStorage/exportBaoJingReportProduceStorageExcel",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

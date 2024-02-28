@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/供应商绩效评价报表相关/querySupplierPerformanceReportUsingPOST
 */
-export default function fetchMethod(options: { data: QuerySupplierPerformanceReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultThePageInformationQualityPerformanceEvaluationReportReturnsTheDTO>(
         {
             url: "/masterdata-service/supplierPerformanceReport/querySupplierPerformanceReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/进出料模具相关/scanMoveInMoldByBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedMoldQueryDTO }, extraOptions?: any) {
     return http<IJSONResultListFeedMoldResponseDTO>(
         {
             url: "/masterdata-service/moveInOutMold/scanMoveInMoldByBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

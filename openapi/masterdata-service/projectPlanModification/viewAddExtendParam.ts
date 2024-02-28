@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/viewAddExtendParamUsingPOST_2
 */
 export default function fetchMethod(options: { data: IProjectPlanChangeOrderExtensionParameterRequest }, extraOptions?: any) {
     return http<any>(
         {
             url: "/masterdata-service/projectPlanModification/viewAddExtendParam",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -15,21 +16,12 @@ export default function fetchMethod(options: { data: IProjectPlanChangeOrderExte
 }
 /** 项目计划变更单扩展参数请求 */
 export interface IProjectPlanChangeOrderExtensionParameterRequest {
+    /** 项目计划变更信息列表 */
+    projectPlanList?: IItemChangeSingleFieldExtensionParameterRequest[];
     /** 项目阶段列表 */
     projectStageList?: IItemChangeFormExtensionParameterEditRequest[];
     /** 项目任务列表 */
     projectTaskList?: IItemChangeFormExtensionParameterEditRequest[];
-}
-/** 项目变更表单扩展参数编辑请求 */
-export interface IItemChangeFormExtensionParameterEditRequest {
-    /** 应用id */
-    appId?: string;
-    /** 表单操作类型 */
-    operateType?: EItemChangeFormExtensionParameterEditRequest_operateType;
-    /** 数据id */
-    dataId?: string;
-    /** 字段数据列表 */
-    fieldDataList?: IItemChangeSingleFieldExtensionParameterRequest[];
 }
 /** 项目变更单字段扩展参数请求 */
 export interface IItemChangeSingleFieldExtensionParameterRequest {
@@ -53,16 +45,16 @@ export interface IItemChangeListFieldExtensionParameterRequest1 {
     /** 列数据 */
     columnData?: IItemChangeSingleFieldExtensionParameterRequest[];
 }
-
-export enum EItemChangeFormExtensionParameterEditRequest_operateType {
-    /** 新增 */
-    ADD = "ADD",
-    /** 修改 */
-    MODIFY = "MODIFY",
-    /** 删除 */
-    DELETE = "DELETE",
-    /** 修改项目经理 */
-    MODIFY_PROJECT_MANGER = "MODIFY_PROJECT_MANGER"
+/** 项目变更表单扩展参数编辑请求 */
+export interface IItemChangeFormExtensionParameterEditRequest {
+    /** 应用id */
+    appId?: string;
+    /** 表单操作类型 */
+    operateType?: EItemChangeFormExtensionParameterEditRequest_operateType;
+    /** 数据id */
+    dataId?: string;
+    /** 字段数据列表 */
+    fieldDataList?: IItemChangeSingleFieldExtensionParameterRequest[];
 }
 
 export enum EItemChangeSingleFieldExtensionParameterRequest_operateType {
@@ -85,4 +77,15 @@ export enum EItemChangeListFieldExtensionParameterRequest1_operateType {
     DELETE = "DELETE",
     /** 记录值 */
     RECORD = "RECORD"
+}
+
+export enum EItemChangeFormExtensionParameterEditRequest_operateType {
+    /** 新增 */
+    ADD = "ADD",
+    /** 修改 */
+    MODIFY = "MODIFY",
+    /** 删除 */
+    DELETE = "DELETE",
+    /** 修改项目经理 */
+    MODIFY_PROJECT_MANGER = "MODIFY_PROJECT_MANGER"
 }

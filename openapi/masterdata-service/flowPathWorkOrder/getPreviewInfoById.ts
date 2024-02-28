@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/getPreviewInfoByIdUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessOrderPreviewInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/flowPathWorkOrder/getPreviewInfoById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/库存流水相关/getPageUsingPOST_34
 */
 export default function fetchMethod(options: { data: IInventoryFlowSearchVO, params: { masterDataFlowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationInventoryReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageLog/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

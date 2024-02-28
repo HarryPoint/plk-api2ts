@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/changeValidUsingPOST_3
 */
 export default function fetchMethod(options: { data: IEnableOrDisableVO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/changeValid",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

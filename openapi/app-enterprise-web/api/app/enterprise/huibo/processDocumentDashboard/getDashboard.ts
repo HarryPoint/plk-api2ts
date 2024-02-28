@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/慧博工艺文档大屏相关/getDashboardUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessDocumentLargeScreenQueryDTO }, extraOptions?: any) {
     return http<IJSONResultProcessDocumentLargeScreenResultVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/huibo/processDocumentDashboard/getDashboard",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

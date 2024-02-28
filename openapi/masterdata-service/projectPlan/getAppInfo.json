@@ -14,7 +14,7 @@
           "项目计划相关"
         ],
         "summary": "通过项目id获取项目计划应用信息",
-        "operationId": "getAppInfoUsingGET",
+        "operationId": "getAppInfoUsingGET_1",
         "produces": [
           "*/*"
         ],

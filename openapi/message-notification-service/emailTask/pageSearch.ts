@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/pageSearchUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging }, extraOptions?: any) {
     return http<IEmailTaskQueryResponseDTOJSONResultPagingInformation>(
         {
             url: "/message-notification-service/emailTask/pageSearch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/物料相关/editHasResponseProcessStatusDataUsingPOST
 */
 export default function fetchMethod(options: { data: IMaterialEditorRequestDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultMaterialEditResponseInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/material/editHasResponseProcessStatusData",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/设备数采数据方案相关/getPageUsingPOST_4
 */
 export default function fetchMethod(options: { data: IDeviceDataSchemeSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationDeviceDataCollectionSchemeReturnsVO>(
         {
             url: "/masterdata-service/deviceCollectionPlan/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/getBySystemTypeUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultProcessRespondsToVO>(
         {
             url: "/flow-service/flowPath/getBySystemType",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
@@ -164,6 +165,7 @@ export enum EsystemType {
     PROJECT_FILE = "PROJECT_FILE",
     PROJECT_FOLDER = "PROJECT_FOLDER",
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",
@@ -459,6 +461,8 @@ export enum ETheFlowRespondsToVO1_flowPathSystemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

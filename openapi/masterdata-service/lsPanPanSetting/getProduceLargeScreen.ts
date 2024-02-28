@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TanPeng
 * @link http://47.108.139.107:16700/doc.html#/default/盼盼大屏相关/getProduceLargeScreenUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultPanpanProducesLargeScreenResponseDtos>(
         {
             url: "/masterdata-service/lsPanPanSetting/getProduceLargeScreen",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

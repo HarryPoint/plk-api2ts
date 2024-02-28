@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getQualityDetailUsingGET
 */
 export default function fetchMethod(options: { params: { lotOrderId?: string; taskId?: string; wipRpId?: string } }, extraOptions?: any) {
     return http<IJSONResultInboundAndOutboundInformationVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getQualityDetail",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

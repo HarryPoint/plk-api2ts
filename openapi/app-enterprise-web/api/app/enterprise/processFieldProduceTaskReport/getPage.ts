@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/任务汇总表(基于工序字段)/getPageUsingPOST_12
 */
 export default function fetchMethod(options: { data: ITheTaskSummaryTableSearchesVOBasedOnProcessFields }, extraOptions?: any) {
     return http<ITheJSONResultPageInformationTaskSummaryTableSummarizesInformationVOBasedOnProcessFields>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processFieldProduceTaskReport/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

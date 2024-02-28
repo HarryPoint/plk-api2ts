@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/checkFiscalPeriodBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IFiscalPeriodCheckRequestDTO[] }, extraOptions?: any) {
     return http<IJSONResultListFiscalPeriodCheckResponseDTO>(
         {
             url: "/masterdata-service/dynamicData/checkFiscalPeriodBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

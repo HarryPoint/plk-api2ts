@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程相关/stagingUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessEditDTO2, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessVersionRespondsToVO>(
         {
             url: "/flow-service/flowPath/staging",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -1080,6 +1081,8 @@ export enum EProcessEditDTO2_flowPathSystemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */
@@ -1620,7 +1623,9 @@ export enum EProcessFormFieldEditDTO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+    /** 项目设备信息状态 */
+    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
 }
 
 export enum EProcessFormFieldEditDTO_isCanModifySelectorOption {

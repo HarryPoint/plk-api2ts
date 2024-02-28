@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/editMaintainLevelUsingPOST
 */
 export default function fetchMethod(options: { data: ISelectorJsonInfo[], params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceEmployeeCapacity/editMaintainLevel",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

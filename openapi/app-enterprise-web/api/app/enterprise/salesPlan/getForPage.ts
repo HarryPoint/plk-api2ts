@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/CRM-销售计划相关/getPageByFlowPathIdUsingPOST_13
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesPlan/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

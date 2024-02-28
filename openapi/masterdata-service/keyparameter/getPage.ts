@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/关键参数相关/getPageUsingPOST_5
 */
 export default function fetchMethod(options: { data: IKeyParameterPageQueryObject }, extraOptions?: any) {
     return http<IJSONResultPagingInformationKeyParameterPagingResponseObject>(
         {
             url: "/masterdata-service/keyparameter/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

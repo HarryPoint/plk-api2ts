@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/项目简报相关/checkWeeklyReportUsingGET
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/projectBriefReport/checkWeeklyReport",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17400/doc.html#/default/项目任务相关/getProjectByProjectIdUsingPOST
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultKaizenProjectResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/getProjectByProjectId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

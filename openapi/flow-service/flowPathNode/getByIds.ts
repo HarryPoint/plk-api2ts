@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TanPeng
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdsUsingPOST_1
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProcessNodeVO>(
         {
             url: "/flow-service/flowPathNode/getByIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/自定义筛选项相关/getByFilterApplicationCodeUsingGET
 */
 export default function fetchMethod(options: { params: { filterApplicationCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnObjectDTOForAUserDefinedFilter>(
         {
             url: "/app-mobile-web/api/app/mobile/customFilter/getByFilterApplicationCode",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

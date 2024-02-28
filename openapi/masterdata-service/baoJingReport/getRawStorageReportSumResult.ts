@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getRawStorageReportSumResultUsingPOST
 */
 export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaoJingReportRawMaterialsDailyReportRelatedReturnVO>(
         {
             url: "/masterdata-service/baoJingReport/getRawStorageReportSumResult",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

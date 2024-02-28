@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/exportSluggishMaterialReportUsingPOST
 */
-export default function fetchMethod(options: { data: ExportSluggishMaterialReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/sluggishMaterialReport/exportSluggishMaterialReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

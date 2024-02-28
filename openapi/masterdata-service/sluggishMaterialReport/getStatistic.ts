@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/呆滞物料分析报表相关/getStatisticUsingPOST
 */
-export default function fetchMethod(options: { data: GetStatistic }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultTotalResponseObjectForQueryingTheInactiveMaterialsReport>(
         {
             url: "/masterdata-service/sluggishMaterialReport/getStatistic",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

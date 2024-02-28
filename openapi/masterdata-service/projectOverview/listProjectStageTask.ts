@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目概况相关/listProjectStageTaskUsingPOST
 */
-export default function fetchMethod(options: { data: ListProjectStageTask }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskResponseObject1>(
         {
             url: "/masterdata-service/projectOverview/listProjectStageTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -30,12 +31,12 @@ export interface IProjectTaskResponseObject10 {
     projectId?: string;
     /** 项目名称 */
     projectName?: string;
-    /** 项目计划id */
-    projectPlanId?: string;
-    /** 项目计划编号 */
-    projectPlanCode?: string;
     /** 项目阶段id */
     projectStageId?: string;
+    /** 项目计划ids */
+    projectPlanIds?: string[];
+    /** 项目计划ids */
+    projectPlanList?: IIdCodeNameGenericTransportObject[];
     /** 项目阶段名称 */
     projectStageName?: string;
     /** 项目阶段来源应用编号 */
@@ -46,6 +47,15 @@ export interface IProjectTaskResponseObject10 {
     projectStageSort?: number;
     /** 下级任务列表 */
     children?: IProjectTaskResponseObject9[];
+}
+/** Id Code Name 通用传输对象 */
+export interface IIdCodeNameGenericTransportObject {
+    /** id */
+    id?: string;
+    /** code */
+    code?: string;
+    /** name */
+    name?: string;
 }
 /** 项目任务响应对象_9 */
 export interface IProjectTaskResponseObject9 {
@@ -77,6 +87,8 @@ export interface IProjectTaskResponseObject9 {
     projectPlanId?: string;
     /** 项目计划编号 */
     projectPlanCode?: string;
+    /** 项目计划名称 */
+    projectPlanName?: string;
     /** 项目阶段id */
     projectStageId?: string;
     /** 项目阶段名称 */
@@ -127,6 +139,12 @@ export interface IProjectTaskResponseObject9 {
     deliverableName?: string;
     /** 当前节点 */
     processStatusName?: string;
+    /** 任务权重 */
+    taskWeight?: number;
+    /** 项目计划模块是否展示 */
+    isProjectPlanShow?: EProjectTaskResponseObject9_isProjectPlanShow;
+    /** 项目任务模块是否展示 */
+    isProjectTaskShow?: EProjectTaskResponseObject9_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
@@ -204,4 +222,18 @@ export enum EProjectTaskResponseObject9_status {
     STAGING = "STAGING",
     /** 作废/停用 */
     INVALID = "INVALID"
+}
+
+export enum EProjectTaskResponseObject9_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject9_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

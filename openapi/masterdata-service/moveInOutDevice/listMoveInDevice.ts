@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/listMoveInDeviceUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedEquipmentQueryDTO }, extraOptions?: any) {
     return http<IJSONResultListFeedDeviceRespondsToDTO>(
         {
             url: "/masterdata-service/moveInOutDevice/listMoveInDevice",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

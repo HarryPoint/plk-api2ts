@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/上报反馈服务相关/addReportUsingPOST
 */
 export default function fetchMethod(options: { data: IReportTheFeedbackProcessingDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/produceHandleReport/addReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

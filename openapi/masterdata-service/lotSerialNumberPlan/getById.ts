@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/批次方案相关/getByIdUsingGET_7
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultLotSerialNumberPlanDTO>(
         {
             url: "/masterdata-service/lotSerialNumberPlan/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

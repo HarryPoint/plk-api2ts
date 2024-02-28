@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/工厂日历相关/getSchedulLoopForPageUsingPOST
 */
 export default function fetchMethod(options: { data: IFactoryCalendarSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationSchedulingRecordReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/calendar/getSchedulLoopForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

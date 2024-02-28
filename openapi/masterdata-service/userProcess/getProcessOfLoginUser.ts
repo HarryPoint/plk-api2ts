@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/getProcessOfLoginUserUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/userProcess/getProcessOfLoginUser",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

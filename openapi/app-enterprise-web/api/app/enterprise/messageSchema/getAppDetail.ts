@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16400/doc.html#/default/消息方案相关/getAppDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IApplyTheServiceTreeToQueryTheDTO }, extraOptions?: any) {
     return http<IJSONResultApplicationServiceTreeDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/messageSchema/getAppDetail",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getWeekSchedulePlanListUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListWeeklyProductionVolumeVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/alk/dashBoard/weekSchedulePlan/getList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

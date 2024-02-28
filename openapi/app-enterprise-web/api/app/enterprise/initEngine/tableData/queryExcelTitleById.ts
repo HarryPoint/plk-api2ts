@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/queryExcelTitleByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultExcelTitleQueryResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/queryExcelTitleById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

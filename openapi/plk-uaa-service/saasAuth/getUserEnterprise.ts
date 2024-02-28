@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/getUserEnterpriseUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListSaasEnterpriseResponseDTO>(
         {
             url: "/plk-uaa-service/saasAuth/getUserEnterprise",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/newBuyModifyUsingPOST
 */
 export default function fetchMethod(options: { data: INewProductOrderModificationRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/productOrder/newBuyModify",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

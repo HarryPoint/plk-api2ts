@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/客户相关/getCustomerSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: ICustomerSelectionListSearch }, extraOptions?: any) {
     return http<IJSONResultPagingInformationIdCodeNameCommonTransmissionObject>(
         {
             url: "/masterdata-service/customer/getCustomerSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

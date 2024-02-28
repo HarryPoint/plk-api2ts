@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/getNumberRuleListByBusinessTypeUsingGET
 */
 export default function fetchMethod(options: { params: { businessType?: EbusinessType; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldCodingRuleDetailsVO>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/getNumberRuleListByBusinessType",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

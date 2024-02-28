@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/queryCanCloseBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IProduceOrderBatchCloseRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/masterdata-service/produceOrder/queryCanCloseBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

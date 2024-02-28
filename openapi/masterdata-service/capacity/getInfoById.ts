@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/产能相关/getInfoByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductivityResponseObject>(
         {
             url: "/masterdata-service/capacity/getInfoById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

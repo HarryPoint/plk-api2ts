@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/checkHasStorageTakeCheckTaskByStorehouseIdsUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; storehouseIds?: string[] } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/storageTakeCheckTask/checkHasStorageTakeCheckTaskByStorehouseIds",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

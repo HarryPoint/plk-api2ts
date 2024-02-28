@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/application-script-controller/changeSerialNoUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/message-notification-service/applicationScript/changeSerialNo",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

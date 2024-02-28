@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByIdAndCheckUsingPOST
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessNodeVO>(
         {
             url: "/flow-service/flowPathNode/getVOByIdAndCheck",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

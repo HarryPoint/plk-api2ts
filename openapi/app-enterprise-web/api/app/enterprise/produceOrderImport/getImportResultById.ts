@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单导入相关/getImportResultByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProduceOrderImportSynchronizationOutputDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderImport/getImportResultById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

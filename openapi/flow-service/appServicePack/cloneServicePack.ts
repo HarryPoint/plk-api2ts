@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16500/doc.html#/default/应用服务包相关/cloneServicePackUsingPOST
 */
 export default function fetchMethod(options: { data: IServiceObjectRegistrationRequest }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/appServicePack/cloneServicePack",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

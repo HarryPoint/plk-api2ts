@@ -3068,5 +3068,13 @@
   "ProjectFolderMoveRequestDTO": "ProjectFolderMoveRequestDTO",
   "ProjectFolderPermissionSaveRequestDTO": "ProjectFolderPermissionSaveRequestDTO",
   "ProjectFolderPermissionEditRequestDTO": "ProjectFolderPermissionEditRequestDTO",
-  "ProjectFolderOrganizationEditRequestDTO": "ProjectFolderOrganizationEditRequestDTO"
+  "ProjectFolderOrganizationEditRequestDTO": "ProjectFolderOrganizationEditRequestDTO",
+  "项目动态表单记录查询_1": "ProjectDynamicFormRecordQuery1",
+  "JSONResultListProjectAttachmentResponseDTO": "JSONResultListProjectAttachmentResponseDTO",
+  "ProjectAttachmentResponseDTO": "ProjectAttachmentResponseDTO",
+  "JSONResult项目关闭应用响应对象": "TheJSONResultProjectClosesTheApplicationResponseObject",
+  "项目关闭应用响应对象": "TheProjectClosesApplyingTheResponseObject",
+  "JSONResult分页信息项目资源统计报表响应对象": "JSONResultPageInformationItemResourceStatisticsReportResponseObject",
+  "分页信息项目资源统计报表响应对象": "PageInformationItemResourceStatisticsReportResponseObject",
+  "项目资源统计报表响应对象": "TheProjectResourceStatisticsReportRespondsToTheObject"
 }

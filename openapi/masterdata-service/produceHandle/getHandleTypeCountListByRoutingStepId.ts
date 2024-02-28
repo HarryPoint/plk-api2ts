@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getHandleTypeCountListByRoutingStepIdUsingGET
 */
 export default function fetchMethod(options: { params: { beginTime?: string; routingStepIds?: string; endTime?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionProcessingStatisticsVO>(
         {
             url: "/masterdata-service/produceHandle/getHandleTypeCountListByRoutingStepId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

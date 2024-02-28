@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectTaskCompleteQuarterDistributeUsingGET
 */
 export default function fetchMethod(options: { params: { projectCategory?: string } }, extraOptions?: any) {
     return http<IJSONResultListQuarterlyDistributedResponseObjectForProjectTasks>(
         {
             url: "/masterdata-service/projectDashboard/queryProjectTaskCompleteQuarterDistribute",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

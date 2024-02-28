@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/质检管理/getMaterialSelectorUsingPOST_4
 */
 export default function fetchMethod(options: { data: IInspectionTaskSearchesForVO }, extraOptions?: any) {
     return http<IJSONResultThePageInformationInspectionTaskReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityStorageTask/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

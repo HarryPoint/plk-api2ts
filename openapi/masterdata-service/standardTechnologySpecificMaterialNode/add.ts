@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺具体物料节点相关/addUsingPOST_9
 */
 export default function fetchMethod(options: { data: ITheRequestObjectIsAddedToTheSpecificMaterialNodeOfTheStandardProcess }, extraOptions?: any) {
     return http<IJSONResultMaterialBOMEditResponseObject>(
         {
             url: "/masterdata-service/standardTechnologySpecificMaterialNode/add",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySafetyProductionDaysUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/hseDashboard/querySafetyProducetionDays",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/getDynamicExecutorSelectorUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessNodeDynamicExecutorReturnsVO>(
         {
             url: "/flow-service/flowPathShift/getDynamicExecutorSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

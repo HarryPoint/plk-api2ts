@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/listUsingGET_6
 */
 export default function fetchMethod(options: { params: { projectCategory?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTemplateRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTemplate/list",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

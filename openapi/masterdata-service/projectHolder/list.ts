@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目文件夹相关/listUsingGET_5
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectFolderListQueryResponseDTO>(
         {
             url: "/masterdata-service/projectHolder/list",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

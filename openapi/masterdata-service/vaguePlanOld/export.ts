@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/模糊排产相关/exportUsingPOST_33
 */
 export default function fetchMethod(options: { data: IProductionOrderSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/vaguePlanOld/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

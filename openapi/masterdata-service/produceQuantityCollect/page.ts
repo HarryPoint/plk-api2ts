@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/完工及产成品归集相关/pageUsingPOST_3
 */
-export default function fetchMethod(options: { data: Page }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultCollectsPagingResponseObjectsForCompletedPagingInformationAndFinishedProducts>(
         {
             url: "/masterdata-service/produceQuantityCollect/page",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

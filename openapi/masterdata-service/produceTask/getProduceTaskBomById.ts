@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskBomByIdUsingGET
 */
 export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionTaskBOMMaterialInformationVO>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskBomById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

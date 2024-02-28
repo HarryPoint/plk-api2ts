@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getProduceTaskByScanCodeUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTaskScanCodeQueryDtosForMobileTerminals, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionTaskScanResponseDTOForMobileTerminals>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskByScanCode",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

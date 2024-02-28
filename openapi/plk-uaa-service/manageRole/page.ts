@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/运营角色相关/pageUsingPOST_3
 */
 export default function fetchMethod(options: { data: IOperationRoleQuery }, extraOptions?: any) {
     return http<IJSONResultPagingInformationOperationRoleResponse>(
         {
             url: "/plk-uaa-service/manageRole/page",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

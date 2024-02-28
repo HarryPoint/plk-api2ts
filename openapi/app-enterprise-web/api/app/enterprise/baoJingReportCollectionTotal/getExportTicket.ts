@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶报表(收款汇总)相关/getExportTicketUsingPOST_3
 */
 export default function fetchMethod(options: { data: IBaojingCollectionSummaryAnalysisReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportCollectionTotal/getExportTicket",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

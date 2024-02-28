@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/checkAndIdentifyFormulaUsingPOST
 */
 export default function fetchMethod(options: { data: ICalcPlanFormulaCheckRequestDTO }, extraOptions?: any) {
     return http<IJSONResultCalcPlanFormulaCheckResponseDTO>(
         {
             url: "/flow-service/calculationPlan/checkAndIdentifyFormula",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

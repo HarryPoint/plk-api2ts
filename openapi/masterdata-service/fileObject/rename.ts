@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/文件对象相关/renameUsingPOST
 */
 export default function fetchMethod(options: { data: IFileObjectRenameRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/fileObject/rename",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

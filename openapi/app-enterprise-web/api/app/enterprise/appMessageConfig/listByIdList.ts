@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/应用消息配置相关/listByIdListUsingPOST
 */
 export default function fetchMethod(options: { data: IAppMessageConfigBatchQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListAppMessageConfigDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/appMessageConfig/listByIdList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/物料Bom相关/getMaterialBomListUsingPOST
 */
 export default function fetchMethod(options: { data: IMaterialBomQueriesTheRequestedObject }, extraOptions?: any) {
     return http<IJSONResultListMaterialBomResponseObject>(
         {
             url: "/masterdata-service/materialBom/getMaterialBomList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

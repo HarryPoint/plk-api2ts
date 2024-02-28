@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/工费相关/getPageUsingPOST_6
 */
 export default function fetchMethod(options: { data: ILaborPageQueryObjectDtos }, extraOptions?: any) {
     return http<IJSONResultPagingInformationPagingResponseObject>(
         {
             url: "/masterdata-service/laborCost/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

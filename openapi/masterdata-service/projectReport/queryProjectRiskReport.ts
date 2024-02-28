@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectRiskReportUsingPOST
 */
-export default function fetchMethod(options: { data: QueryProjectRiskReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProjectRiskReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectRiskReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

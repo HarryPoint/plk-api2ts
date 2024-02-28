@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/editUsingPOST_13
 */
 export default function fetchMethod(options: { data: IProductionTaskCustomCardStyleEditListObjectDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTaskCustomCardStyle/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

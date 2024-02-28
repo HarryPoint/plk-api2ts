@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/listProjectQualityTargetUsingPOST
 */
 export default function fetchMethod(options: { data: IItemNameNumberPublicQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectQualityTargetReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/listProjectQualityTarget",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -19,12 +20,12 @@ export interface IItemNameNumberPublicQueryObject {
     nameOrCode?: string;
     /** 条数 */
     limit?: number;
-    /** undefined */
+    /** 项目成员id集合 */
     ids?: string[];
+    /** 项目计划ids */
+    projectPlanIds?: string[];
     /** undefined */
     projectIds?: string[];
-    /** undefined */
-    projectPlanIds?: string[];
     /** undefined */
     statusList?: string[];
 }

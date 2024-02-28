@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getAllByFlowPathIdUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/flow-service/flowPathTableColumn/getAllByFlowPathId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

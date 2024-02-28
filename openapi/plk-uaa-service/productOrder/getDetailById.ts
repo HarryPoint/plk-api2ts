@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/getDetailByIdUsingGET_2
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductOrderDetailsResponseObject>(
         {
             url: "/plk-uaa-service/productOrder/getDetailById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

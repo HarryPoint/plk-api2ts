@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/消息通知相关/getPageUsingPOST_1
 */
 export default function fetchMethod(options: { data: IMessageSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMessageReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/message/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

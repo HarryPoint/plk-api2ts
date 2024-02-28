@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/物料收发汇总报表相关/getMaterialStorageInOutReportForPageUsingPOST
 */
-export default function fetchMethod(options: { data: GetMaterialStorageInOutReportForPage }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPageInformationPageResponseObjectForReceivingAndReceivingMaterials>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseMaterialStorageInOutReport/getMaterialStorageInOutReportForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

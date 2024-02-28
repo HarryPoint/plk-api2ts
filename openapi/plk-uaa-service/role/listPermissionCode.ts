@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/listPermissionCodeUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultSetstring>(
         {
             url: "/plk-uaa-service/role/listPermissionCode",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

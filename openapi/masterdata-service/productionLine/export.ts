@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/产线相关/exportUsingPOST_23
 */
 export default function fetchMethod(options: { data: IProcessDataSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/productionLine/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

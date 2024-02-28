@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/sortByMoveUpUsingPOST_1
 */
 export default function fetchMethod(options: { data: IProjectTaskSortRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/projectTask/sortByMoveUp",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

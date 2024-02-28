@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检统计/exportReportExcelUsingPOST_2
 */
 export default function fetchMethod(options: { data: IScrapDataSheetSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/qualityGoodScrapReport/exportReportExcel",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

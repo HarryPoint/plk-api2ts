@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/getFlowForLotUsingGET
 */
 export default function fetchMethod(options: { params: { flowType?: EflowType; lotOrderId?: string; produceOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBasicInformationAboutBatchOrderFlowRespondsToTheDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/getFlowForLotOrder",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

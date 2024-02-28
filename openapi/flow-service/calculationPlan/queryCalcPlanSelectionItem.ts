@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/queryCalcPlanSelectionItemUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListCalcPlanSelectionItemQueryResponseDTO>(
         {
             url: "/flow-service/calculationPlan/queryCalcPlanSelectionItem",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

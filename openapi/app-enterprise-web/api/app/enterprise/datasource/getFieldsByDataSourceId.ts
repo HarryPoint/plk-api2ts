@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/打印数据源相关/getFieldsByDataSourceIdUsingGET
 */
 export default function fetchMethod(options: { params: { dataSourceId?: string; printTemplateType?: EprintTemplateType } }, extraOptions?: any) {
     return http<IJSONResultListDataSourceFieldResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/datasource/getFieldsByDataSourceId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TanPeng
 * @link http://47.108.139.107:16700/doc.html#/default/批次|序列号相关/batchGetLotSerialNoForProduceUsingPOST
 */
 export default function fetchMethod(options: { data: IBatchSerialNumberRequestDTO }, extraOptions?: any) {
     return http<IJSONResultBatchNumberUsesDTO>(
         {
             url: "/masterdata-service/lotSerialNo/batchGetLotSerialNo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

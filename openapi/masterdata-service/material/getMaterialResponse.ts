@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/物料相关/getMaterialResponseUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultMaterialReturnInformation>(
         {
             url: "/masterdata-service/material/getMaterialResponse",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

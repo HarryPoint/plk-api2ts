@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/生产统计相关/getProduceStatisticUsingPOST
 */
 export default function fetchMethod(options: { data: IUserProductionStatisticsSearchVO }, extraOptions?: any) {
     return http<IJSONResultListUserProductionStatisticsReturnVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceReport/getProduceStatistic",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectLeaderInstructReportUsingPOST
 */
-export default function fetchMethod(options: { data: QueryProjectLeaderInstructReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProjectLeaderDirectiveReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectLeaderInstructReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

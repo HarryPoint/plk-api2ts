@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/进出料设备相关/setMoveInDeviceUsingPOST
 */
 export default function fetchMethod(options: { data: ITheProductionTaskSetsTheFeedDeviceToRequestTheDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutDevice/setMoveInDevice",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getSelectorAssociateDisplayListByFlowPathVersionIdUsingPOST
 */
 export default function fetchMethod(options: { params: { flowPathVersionId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldDropDownOptionAssociatedToDisplayVO>(
         {
             url: "/flow-service/flowPathFormField/getSelectorAssociateDisplayListByFlowPathVersionId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

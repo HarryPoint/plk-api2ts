@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectStageDistributeUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectOverviewQueryDto }, extraOptions?: any) {
     return http<IJSONResultListProjectPhaseDistributesResponseObjects>(
         {
             url: "/masterdata-service/projectOverview/queryProjectStageDistribute",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

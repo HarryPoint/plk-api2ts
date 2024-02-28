@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/setMoveInDeviceBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTaskBatchSetTheFeedDeviceRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/moveInOutDevice/setMoveInDeviceBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

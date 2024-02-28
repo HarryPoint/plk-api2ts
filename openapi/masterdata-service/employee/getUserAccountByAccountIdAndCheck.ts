@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/getUserAccountByAccountIdAndCheckUsingGET
 */
 export default function fetchMethod(options: { params: { accountId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultEmployeeAccountVO>(
         {
             url: "/masterdata-service/employee/getUserAccountByAccountIdAndCheck",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

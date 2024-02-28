@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/列表列样式配置/queryByCodesUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/masterdata-service/tableColumnStyleConfig/queryByCodes",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

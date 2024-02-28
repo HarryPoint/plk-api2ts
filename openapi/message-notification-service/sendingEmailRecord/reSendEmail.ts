@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/reSendEmailUsingPOST
 */
 export default function fetchMethod(options: { data: IReEmailSendingEmailRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/sendingEmailRecord/reSendEmail",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

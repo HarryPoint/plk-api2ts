@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16400/doc.html#/default/中航机器人生产订单相关/getMaterialRecipientListByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListResponseDtoForObtainingMaterialsForAProductionOrder>(
         {
             url: "/app-enterprise-web/api/app/enterprise/zhongHangProduceOrder/getMaterialRecipientListById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

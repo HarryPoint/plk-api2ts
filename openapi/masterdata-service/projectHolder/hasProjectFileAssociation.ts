@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目文件夹相关/hasProjectFileAssociationUsingPOST
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/projectHolder/hasProjectFileAssociation",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

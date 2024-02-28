@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/项目设备信息相关/listCanSelectProjectDeviceInfoUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProjectDeviceInformationResponse>(
         {
             url: "/masterdata-service/projectDeviceInfo/listCanSelectProjectDeviceInfo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

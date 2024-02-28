@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/updateSyncUsingPOST
 */
 export default function fetchMethod(options: { data: IToDoListUpdateSyncRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/updateSync",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

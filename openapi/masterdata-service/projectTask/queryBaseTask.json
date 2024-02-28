@@ -89,10 +89,6 @@
             "type": "string"
           }
         },
-        "code": {
-          "type": "string",
-          "description": "任务编号"
-        },
         "exportFields": {
           "type": "array",
           "description": "导出字段集",
@@ -118,16 +114,21 @@
           "format": "int64",
           "description": "项目计划id"
         },
+        "projectPlanIds": {
+          "type": "array",
+          "description": "项目计划id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
         "name": {
           "type": "string",
           "description": "任务名称"
         },
-        "leaderUserIds": {
-          "type": "array",
-          "description": "任务负责人列表",
-          "items": {
-            "type": "string"
-          }
+        "code": {
+          "type": "string",
+          "description": "任务编号"
         },
         "nameOrCode": {
           "type": "string",
@@ -163,17 +164,19 @@
             "format": "int64"
           }
         },
+        "leaderUserIds": {
+          "type": "array",
+          "description": "任务负责人列表",
+          "items": {
+            "type": "string"
+          }
+        },
         "taskStatusList": {
           "type": "array",
           "description": "任务状态（DRAFT:草稿,UN_ISSUE:未下发,UN_RECEIVE:未接受,UN_START:未开始,HANDLING:进行中,COMPLETE:已完成,NOT_PASS:未通过,CANCEL:已取消）",
           "items": {
             "type": "string"
           }
-        },
-        "endPlanBeginTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "任务开始日期 --结束日期"
         },
         "taskStatusGroupList": {
           "type": "array",
@@ -189,11 +192,6 @@
         "endOverdueDay": {
           "type": "number",
           "description": "超期天数结束"
-        },
-        "endPlanEndTime": {
-          "type": "string",
-          "format": "date-time",
-          "description": "任务截止日期 --结束日期"
         },
         "taskIds": {
           "type": "array",
@@ -220,18 +218,20 @@
           "format": "date-time",
           "description": "任务开始日期 --开始日期"
         },
-        "parentIds": {
-          "type": "array",
-          "description": "上级任务列表",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
+        "endPlanBeginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务开始日期 --结束日期"
         },
         "beginPlanEndTime": {
           "type": "string",
           "format": "date-time",
           "description": "任务截止日期 --开始日期"
+        },
+        "endPlanEndTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "任务截止日期 --结束日期"
         },
         "beginTaskTime": {
           "type": "string",
@@ -243,6 +243,14 @@
           "description": "优先级列表",
           "items": {
             "type": "string"
+          }
+        },
+        "parentIds": {
+          "type": "array",
+          "description": "上级任务列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
           }
         },
         "remark": {
@@ -339,22 +347,24 @@
             "type": "string"
           }
         },
-        "projectPlanFlowIsComplete": {
+        "isQueryEmptyPlanTask": {
           "type": "string",
+          "description": "是否查询没有关联项目计划的任务",
           "enum": [
-            "Y",
-            "N"
+            "  Y-是",
+            "  N-否"
           ]
+        },
+        "beginTaskWeight": {
+          "type": "number",
+          "description": "任务权重 -- 开始"
+        },
+        "endTaskWeight": {
+          "type": "number",
+          "description": "任务权重 -- 结束"
         },
         "notEmptyCondition": {
           "type": "boolean"
-        },
-        "filterDraftStatus": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
-          ]
         },
         "processStatusCodes": {
           "type": "array",

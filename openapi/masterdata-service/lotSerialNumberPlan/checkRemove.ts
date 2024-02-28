@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/批次方案相关/checkRemoveUsingPOST
 */
 export default function fetchMethod(options: { data: ILotSerialNumberPlanRemoveCheckRequestDTO }, extraOptions?: any) {
     return http<IJSONResultLotSerialNumberPlanRemoveCheckResponseDTO>(
         {
             url: "/masterdata-service/lotSerialNumberPlan/checkRemove",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

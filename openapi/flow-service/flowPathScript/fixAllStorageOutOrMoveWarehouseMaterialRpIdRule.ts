@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/应用引擎脚本相关/fixAllStorageOutOrMoveWarehouseMaterialRpIdRuleUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathScript/fixAllStorageOutOrMoveWarehouseMaterialRpIdRule",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

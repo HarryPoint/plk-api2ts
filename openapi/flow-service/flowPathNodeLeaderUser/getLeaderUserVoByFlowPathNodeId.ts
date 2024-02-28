@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程节点负责人相关/getLeaderUserVoByFlowPathNodeIdUsingPOST
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathNodeId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessNodeExecutorVO>(
         {
             url: "/flow-service/flowPathNodeLeaderUser/getLeaderUserVoByFlowPathNodeId",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

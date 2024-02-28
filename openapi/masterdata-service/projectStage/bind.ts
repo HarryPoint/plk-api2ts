@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/bindUsingPOST
 */
 export default function fetchMethod(options: { data: ITheProjectPhaseBindsTheRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/projectStage/bind",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

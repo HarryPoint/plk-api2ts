@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16400/doc.html#/default/计算方案相关/editUsingPOST_2
 */
 export default function fetchMethod(options: { data: IComputeSchemeEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/calculationPlan/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

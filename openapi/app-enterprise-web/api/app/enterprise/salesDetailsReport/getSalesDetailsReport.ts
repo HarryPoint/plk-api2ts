@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/销售明细报表相关/getSalesDetailsReportUsingPOST
 */
-export default function fetchMethod(options: { data: GetSalesDetailsReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPageInformationSalesListReturnedObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesDetailsReport/getSalesDetailsReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

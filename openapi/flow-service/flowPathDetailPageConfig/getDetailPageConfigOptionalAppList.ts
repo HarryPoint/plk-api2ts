@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getDetailPageConfigOptionalAppListUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigOptionalAppResponseDTO>(
         {
             url: "/flow-service/flowPathDetailPageConfig/getDetailPageConfigOptionalAppList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

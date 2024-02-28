@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/removeByFlowPathWorkOrderIdsUsingPOST
 */
 export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/removeByFlowPathWorkOrderIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

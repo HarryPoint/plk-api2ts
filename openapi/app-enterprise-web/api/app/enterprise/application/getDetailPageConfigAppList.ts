@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/应用相关/getDetailPageConfigAppListUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigAppResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/application/getDetailPageConfigAppList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

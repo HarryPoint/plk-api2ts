@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入记录相关/getByTableDataIdUsingGET
 */
 export default function fetchMethod(options: { params: { tableDataId?: string } }, extraOptions?: any) {
     return http<IJSONResultImportRecordDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/importRecord/getByTableDataId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

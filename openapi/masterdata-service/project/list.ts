@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/项目相关/listUsingGET_4
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProjectResponse>(
         {
             url: "/masterdata-service/project/list",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

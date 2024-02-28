@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectActionItemCompleteCountUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectKanbanQueryDto }, extraOptions?: any) {
     return http<IJSONResultProjectActionItemStatisticsResponseObject>(
         {
             url: "/masterdata-service/projectDashboard/queryProjectActionItemCompleteCount",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

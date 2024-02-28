@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listEmployeeToDayLastMoveInBomConsumeByProduceTaskIdUsingGET
 */
 export default function fetchMethod(options: { params: { produceTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheDTOForTheLastInputBom>(
         {
             url: "/masterdata-service/moveInOutBomConsume/listEmployeeToDayLastMoveInBomConsumeByProduceTaskId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

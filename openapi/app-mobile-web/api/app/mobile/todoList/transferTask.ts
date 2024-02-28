@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TanPeng
 * @link http://47.108.139.107:17400/doc.html#/default/待办相关/transferTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessTasksAreTransferredToTheDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/todoList/transferTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

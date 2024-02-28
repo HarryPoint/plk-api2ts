@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/销售日报表相关/getDifengSalesDayReportUsingPOST
 */
-export default function fetchMethod(options: { data: GetDifengSalesDayReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPageInformationObjectReturnedByTheSalesDailyReport>(
         {
             url: "/app-mobile-web/api/app/mobile/salesDayReport/getDifengSalesDayReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

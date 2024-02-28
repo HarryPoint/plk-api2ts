@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryYearlyGoalsUsingPOST
 */
 export default function fetchMethod(options: { data: IAnnualTargetQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListAnnualTargetQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/queryYearlyGoals",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

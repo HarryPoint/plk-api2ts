@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目计划相关/listByProjectIdUsingGET
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListProjectPlansTheResponseObject>(
         {
             url: "/masterdata-service/projectPlan/listByProjectId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

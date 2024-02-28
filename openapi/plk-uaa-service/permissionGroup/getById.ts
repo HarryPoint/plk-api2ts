@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/权限组相关/getByIdUsingPOST_1
 */
 export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultPermissionGroupAndPermissionResponseDTO>(
         {
             url: "/plk-uaa-service/permissionGroup/getById",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

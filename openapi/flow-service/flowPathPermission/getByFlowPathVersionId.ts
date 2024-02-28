@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin he
 * @link http://47.108.139.107:16500/doc.html#/default/应用权限相关/getByFlowPathVersionIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { flowPathVersionId?: string } }, extraOptions?: any) {
     return http<IJSONResultQueryPermissionQueryResponse>(
         {
             url: "/flow-service/flowPathPermission/getByFlowPathVersionId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

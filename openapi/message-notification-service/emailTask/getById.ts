@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/getByIdUsingPOST
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultEmailTaskDTO>(
         {
             url: "/message-notification-service/emailTask/getById",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/委外加工管理/getProduceRoutingStepSelectorUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessPathStepsSelectVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceEntrust/getProduceRoutingStepSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

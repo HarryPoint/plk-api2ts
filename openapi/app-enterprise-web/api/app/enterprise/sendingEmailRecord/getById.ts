@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/发送邮件记录/getByIdUsingGET_20
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultSendingEmailRecordDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/sendingEmailRecord/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

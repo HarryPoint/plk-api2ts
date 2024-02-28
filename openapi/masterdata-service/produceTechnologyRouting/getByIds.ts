@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/produce-technology-routing-controller/getByIdsUsingPOST_4
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProduceTechnologyRoutingResponseDTO>(
         {
             url: "/masterdata-service/produceTechnologyRouting/getByIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

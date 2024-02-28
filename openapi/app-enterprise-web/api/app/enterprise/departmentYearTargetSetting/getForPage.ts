@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/部门年目标设置相关/getPageByFlowPathIdUsingPOST_5
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/departmentYearTargetSetting/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

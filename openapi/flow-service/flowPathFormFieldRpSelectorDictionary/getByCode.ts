@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/getByCodeUsingGET
 */
 export default function fetchMethod(options: { params: { businessCode?: EbusinessCode; code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessFormFieldAssociationDictionaryOptionSetVO>(
         {
             url: "/flow-service/flowPathFormFieldRpSelectorDictionary/getByCode",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
@@ -81,7 +82,8 @@ export enum EbusinessCode {
     QMS_PROJECT_TASK_REVIEW_RESULT = "QMS_PROJECT_TASK_REVIEW_RESULT",
     QMS_PROJECT_TASK_DECISION_RESULT = "QMS_PROJECT_TASK_DECISION_RESULT",
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
 }
 
 export enum EProcessFormFieldAssociationDictionaryOptionSetVO_isPreset {

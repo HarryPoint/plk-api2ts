@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/exportUsingPOST_3
 */
 export default function fetchMethod(options: { data: IBaojingMaterialMasterDataInventorySearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingWarehouseMaterial/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

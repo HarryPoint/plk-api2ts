@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/项目角色相关/getForPageUsingPOST_17
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO, params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/projectRole/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

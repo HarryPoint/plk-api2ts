@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/getDetailByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionCostAllocationResponseObject>(
         {
             url: "/masterdata-service/produceFeeAssign/getDetailById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

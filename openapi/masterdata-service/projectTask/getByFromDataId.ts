@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/getByFromDataIdUsingGET
 */
 export default function fetchMethod(options: { data: string }, extraOptions?: any) {
     return http<IJSONResultProjectTaskResponseObject>(
         {
             url: "/masterdata-service/projectTask/getByFromDataId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
@@ -54,6 +55,8 @@ export interface IProjectTaskResponseObject6 {
     projectPlanId?: string;
     /** 项目计划编号 */
     projectPlanCode?: string;
+    /** 项目计划名称 */
+    projectPlanName?: string;
     /** 项目阶段id */
     projectStageId?: string;
     /** 项目阶段名称 */
@@ -104,6 +107,12 @@ export interface IProjectTaskResponseObject6 {
     deliverableName?: string;
     /** 当前节点 */
     processStatusName?: string;
+    /** 任务权重 */
+    taskWeight?: number;
+    /** 项目计划模块是否展示 */
+    isProjectPlanShow?: EProjectTaskResponseObject6_isProjectPlanShow;
+    /** 项目任务模块是否展示 */
+    isProjectTaskShow?: EProjectTaskResponseObject6_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
@@ -162,6 +171,8 @@ export interface IProjectTaskResponseObject9 {
     projectPlanId?: string;
     /** 项目计划编号 */
     projectPlanCode?: string;
+    /** 项目计划名称 */
+    projectPlanName?: string;
     /** 项目阶段id */
     projectStageId?: string;
     /** 项目阶段名称 */
@@ -212,6 +223,12 @@ export interface IProjectTaskResponseObject9 {
     deliverableName?: string;
     /** 当前节点 */
     processStatusName?: string;
+    /** 任务权重 */
+    taskWeight?: number;
+    /** 项目计划模块是否展示 */
+    isProjectPlanShow?: EProjectTaskResponseObject9_isProjectPlanShow;
+    /** 项目任务模块是否展示 */
+    isProjectTaskShow?: EProjectTaskResponseObject9_isProjectTaskShow;
     /** undefined */
     leaderUserIds?: Record<string, any>[];
     /** undefined */
@@ -282,6 +299,20 @@ export enum EProjectTaskResponseObject6_status {
     INVALID = "INVALID"
 }
 
+export enum EProjectTaskResponseObject6_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject6_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
 export enum EProjectTaskResponseObject9_taskStatus {
     /** 草稿 */
     DRAFT = "DRAFT",
@@ -330,4 +361,18 @@ export enum EProjectTaskResponseObject9_status {
     STAGING = "STAGING",
     /** 作废/停用 */
     INVALID = "INVALID"
+}
+
+export enum EProjectTaskResponseObject9_isProjectPlanShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EProjectTaskResponseObject9_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }

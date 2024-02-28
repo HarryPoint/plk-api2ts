@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/工序相关/batchGetUserProcessUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListUserProcessVo>(
         {
             url: "/app-mobile-web/api/app/mobile/process/userProcess/batchGet",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16500/doc.html#/default/计算方案相关/getByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultSpecifiesTheResponseDTOForTheCalculationScheme>(
         {
             url: "/flow-service/calculationPlan/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

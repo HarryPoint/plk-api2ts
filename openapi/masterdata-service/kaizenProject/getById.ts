@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/kaizen项目相关/getByIdUsingPOST
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultKaizenProjectResponseDTO>(
         {
             url: "/masterdata-service/kaizenProject/getById",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

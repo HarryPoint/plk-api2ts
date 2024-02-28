@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/getMasterMaterialByDetailIdUsingGET
 */
 export default function fetchMethod(options: { params: { detailId?: string } }, extraOptions?: any) {
     return http<IJSONResultMainMaterialInformationOfTheProductionOrder>(
         {
             url: "/masterdata-service/salesOrder/transferToProduceOrder/getMasterMaterialByDetailId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

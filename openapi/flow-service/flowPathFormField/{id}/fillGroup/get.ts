@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getFilterGroupsUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListProcessFormAssociatesTheFormFilterGroupVO>(
         {
             url: "/flow-service/flowPathFormField/{id}/fillGroup/get",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

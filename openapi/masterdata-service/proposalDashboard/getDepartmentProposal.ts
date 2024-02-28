@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getDepartmentProposalUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultDepartmentProposalDashboardResponseDTO>(
         {
             url: "/masterdata-service/proposalDashboard/getDepartmentProposal",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

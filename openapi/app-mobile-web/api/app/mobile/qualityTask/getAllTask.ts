@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/getAllTaskUsingGET
 */
 export default function fetchMethod(options: { params: { status?: Estatus } }, extraOptions?: any) {
     return http<ITheJSONResultListSalesModuleReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/qualityTask/getAllTask",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/listEmployIdsByUserIdsUsingPOST
 */
 export default function fetchMethod(options: { data: IIdSetInformation }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/plk-uaa-service/employee/listEmployIdsByUserIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

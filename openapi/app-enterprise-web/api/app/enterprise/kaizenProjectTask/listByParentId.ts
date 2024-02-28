@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/listByParentIdUsingGET
 */
 export default function fetchMethod(options: { params: { parentId?: string } }, extraOptions?: any) {
     return http<IJSONResultListKaizenProjectTaskResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProjectTask/listByParentId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

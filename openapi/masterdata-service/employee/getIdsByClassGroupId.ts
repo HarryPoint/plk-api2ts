@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByClassGroupIdUsingGET
 */
 export default function fetchMethod(options: { params: { classGroupId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/masterdata-service/employee/getIdsByClassGroupId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

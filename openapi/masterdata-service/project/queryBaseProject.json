@@ -102,16 +102,21 @@
             "type": "string"
           }
         },
-        "name": {
-          "type": "string",
-          "description": "任务名称"
-        },
         "exportFields": {
           "type": "array",
           "description": "导出字段集",
           "items": {
             "type": "string"
           }
+        },
+        "name": {
+          "type": "string",
+          "description": "任务名称"
+        },
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
         },
         "isOverdueList": {
           "type": "array",
@@ -120,10 +125,20 @@
             "type": "string"
           }
         },
-        "projectId": {
-          "type": "integer",
-          "format": "int64",
-          "description": "项目id"
+        "projectManagerIds": {
+          "type": "array",
+          "description": "项目经理id集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "projectPlanIds": {
+          "type": "array",
+          "description": "项目计划id集",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
         },
         "projectStageIds": {
           "type": "array",
@@ -131,13 +146,6 @@
           "items": {
             "type": "integer",
             "format": "int64"
-          }
-        },
-        "projectManagerIds": {
-          "type": "array",
-          "description": "项目经理id集",
-          "items": {
-            "type": "string"
           }
         },
         "code": {
@@ -322,6 +330,14 @@
             "type": "string"
           }
         },
+        "isQueryEmptyPlanTask": {
+          "type": "string",
+          "description": "是否查询没有关联项目计划的任务",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
         "updateDeptIds": {
           "type": "array",
           "description": "修改部门ids",
@@ -330,9 +346,21 @@
             "format": "int64"
           }
         },
+        "beginTaskWeight": {
+          "type": "number",
+          "description": "任务权重 -- 开始"
+        },
         "isQueryCurrentMember": {
           "type": "string",
           "description": "是否仅查询当前登录用户",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isShowChildTask": {
+          "type": "string",
+          "description": "是否展示子任务",
           "enum": [
             "  Y-是",
             "  N-否"
@@ -345,21 +373,6 @@
             "format": "int64"
           }
         },
-        "isShowChildTask": {
-          "type": "string",
-          "description": "是否展示子任务",
-          "enum": [
-            "  Y-是",
-            "  N-否"
-          ]
-        },
-        "projectPlanFlowIsComplete": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
-          ]
-        },
         "projectTypeIds": {
           "type": "array",
           "description": "项目类型id集",
@@ -368,8 +381,9 @@
             "format": "int64"
           }
         },
-        "notEmptyCondition": {
-          "type": "boolean"
+        "endTaskWeight": {
+          "type": "number",
+          "description": "任务权重 -- 结束"
         },
         "projectCategories": {
           "type": "array",
@@ -378,12 +392,8 @@
             "type": "string"
           }
         },
-        "filterDraftStatus": {
-          "type": "string",
-          "enum": [
-            "Y",
-            "N"
-          ]
+        "notEmptyCondition": {
+          "type": "boolean"
         },
         "projectAdminUserIds": {
           "type": "array",

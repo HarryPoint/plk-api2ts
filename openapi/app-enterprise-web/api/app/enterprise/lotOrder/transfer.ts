@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产批次订单相关/transferUsingPOST
 */
 export default function fetchMethod(options: { data: IBatchTransferToOtherProductionOrderDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotOrder/transfer",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

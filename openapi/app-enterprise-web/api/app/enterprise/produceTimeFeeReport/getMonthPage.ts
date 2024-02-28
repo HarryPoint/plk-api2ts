@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/工时工费相关/getMonthPageUsingPOST
 */
 export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationMonthlySummaryReportOfLaborTimeIsReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceTimeFeeReport/getMonthPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

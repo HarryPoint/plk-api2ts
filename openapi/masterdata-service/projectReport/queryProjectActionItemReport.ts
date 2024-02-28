@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目报表相关/queryProjectActionItemReportUsingPOST
 */
-export default function fetchMethod(options: { data: QueryProjectActionItemReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPageInformationItemActionItemReportResponseObject>(
         {
             url: "/masterdata-service/projectReport/queryProjectActionItemReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

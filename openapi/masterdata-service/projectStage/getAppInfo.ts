@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/getAppInfoUsingGET_1
+* @author MaoHaiPing
+* @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/getAppInfoUsingGET_2
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectPhaseAppliesTheResponseObject>(
         {
             url: "/masterdata-service/projectStage/getAppInfo",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

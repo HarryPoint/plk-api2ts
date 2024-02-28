@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/产能相关/batchImportUsingPOST
 */
 export default function fetchMethod(options: { data: ICapacityPreservationDTO[] }, extraOptions?: any) {
     return http<IJSONResultListstring>(
         {
             url: "/masterdata-service/capacity/batchImport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

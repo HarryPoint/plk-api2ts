@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/queryCurrentPeriodQuantityCollectUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListCollectsPageResponseObjectsForFinishedAndFinishedProducts>(
         {
             url: "/masterdata-service/produceFeeAssign/queryCurrentPeriodQuantityCollect",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

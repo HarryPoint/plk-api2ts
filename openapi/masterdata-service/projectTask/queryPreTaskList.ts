@@ -1,28 +1,31 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreTaskListUsingPOST
 */
-export default function fetchMethod(options: { data: IItemNameNumberPublicQueryObject1 }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IItemTaskNameNumberQueryObject }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/projectTask/queryPreTaskList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
     );
 }
-/** 项目名称编号公共查询对象_1 */
-export interface IItemNameNumberPublicQueryObject1 {
+/** 项目任务名称编号查询对象 */
+export interface IItemTaskNameNumberQueryObject {
     /** 项目id */
     projectId?: string;
     /** 项目计划id */
     projectPlanId?: string;
+    /** 是否查询只在项目计划模块展示的任务 */
+    isProjectPlanShow?: EItemTaskNameNumberQueryObject_isProjectPlanShow;
+    /** 是否查询只在项目任务模块展示的任务 */
+    isProjectTaskShow?: EItemTaskNameNumberQueryObject_isProjectTaskShow;
     /** 名称or编号 */
     nameOrCode?: string;
-    /** undefined */
-    projectPlanFlowIsComplete?: EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete;
 }
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
@@ -45,7 +48,16 @@ export interface IIdCodeNameGenericTransportObject {
     name?: string;
 }
 
-export enum EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete {
+export enum EItemTaskNameNumberQueryObject_isProjectPlanShow {
+    /** 是 */
     Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EItemTaskNameNumberQueryObject_isProjectTaskShow {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
     N = "N"
 }

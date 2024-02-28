@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/生产报废服务相关/refuseUsingPOST_1
 */
 export default function fetchMethod(options: { data: IProductionProcessingScrapChangeStatusDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandleScrap/refuse",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

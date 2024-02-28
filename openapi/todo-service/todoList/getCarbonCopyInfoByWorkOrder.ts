@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/getCarbonCopyInfoByWorkOrderUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathWorkOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultListToDoListVO>(
         {
             url: "/todo-service/todoList/getCarbonCopyInfoByWorkOrder",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

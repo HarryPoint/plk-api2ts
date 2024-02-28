@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/区域相关/getAreaSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IRegionalMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/area/getAreaSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

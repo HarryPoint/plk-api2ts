@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目成员变更相关/viewAddExtendParamUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectMemberChangeOrderExtensionParameterRequest }, extraOptions?: any) {
     return http<any>(
         {
             url: "/masterdata-service/projectMemberModification/viewAddExtendParam",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

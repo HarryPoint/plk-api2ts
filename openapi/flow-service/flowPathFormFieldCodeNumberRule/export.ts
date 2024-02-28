@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段编码相关/exportUsingPOST
 */
 export default function fetchMethod(options: { data: ICodeRulePagingQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/flow-service/flowPathFormFieldCodeNumberRule/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

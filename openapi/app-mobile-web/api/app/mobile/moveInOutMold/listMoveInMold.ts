@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:17400/doc.html#/default/进出料模具相关/listMoveInMoldUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedMoldQueryDTO }, extraOptions?: any) {
     return http<IJSONResultListFeedMoldResponseDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/moveInOutMold/listMoveInMold",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16600/doc.html#/default/待办相关/updateTodoWorkOrderStatusUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathWorkOrderId?: string; userId?: string; workOrderStatus?: EworkOrderStatus } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/todo-service/todoList/updateTodoWorkOrderStatus",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

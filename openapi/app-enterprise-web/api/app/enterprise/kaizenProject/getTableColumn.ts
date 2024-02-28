@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/项目相关/getTableColumnUsingGET_17
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProject/getTableColumn",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

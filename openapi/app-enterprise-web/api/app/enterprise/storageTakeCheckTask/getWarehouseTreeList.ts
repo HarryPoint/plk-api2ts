@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/仓库盘点任务相关/getWarehouseTreeListUsingPOST_1
 */
 export default function fetchMethod(options: { data: IDatabaseBitTreeQueryVO }, extraOptions?: any) {
     return http<IJSONResultListThePositionTreeReturnsVO3>(
         {
             url: "/app-enterprise-web/api/app/enterprise/storageTakeCheckTask/getWarehouseTreeList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

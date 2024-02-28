@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/recallIssueAllUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultProductionOrderDeliveryResultDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/recallIssue/all",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

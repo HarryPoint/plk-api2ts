@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tanpeng
 * @link http://47.108.139.107:16400/doc.html#/default/项目相关/cancelUsingPOST
 */
 export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/kaizenProject/cancel",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

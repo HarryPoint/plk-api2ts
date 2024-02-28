@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/巡检检验任务相关/assignmentTaskUsingPOST_2
 */
 export default function fetchMethod(options: { data: IVerifyTaskAssignmentRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qmsPatrolInspectionTask/assignmentTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

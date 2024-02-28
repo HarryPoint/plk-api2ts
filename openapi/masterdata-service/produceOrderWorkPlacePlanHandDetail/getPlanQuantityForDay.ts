@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单工位计划手动排产详情相关/getPlanQuantityForDayUsingGET
 */
 export default function fetchMethod(options: { params: { beginTime?: number; endTime?: number; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListPlansToReturnVO>(
         {
             url: "/masterdata-service/produceOrderWorkPlacePlanHandDetail/getPlanQuantityForDay",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

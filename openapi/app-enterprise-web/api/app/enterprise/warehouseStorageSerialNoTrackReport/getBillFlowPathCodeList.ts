@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/序列号跟踪报表相关/getBillFlowPathCodeListUsingGET_2
 */
 export default function fetchMethod(options: { params: { masterDataFlowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/warehouseStorageSerialNoTrackReport/getBillFlowPathCodeList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

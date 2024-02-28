@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/批次方案相关/removeBatchByIdListUsingPOST
 */
 export default function fetchMethod(options: { data: ILotSerialNumberPlanBatchRemoveRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/lotSerialNumberPlan/removeBatchByIdList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

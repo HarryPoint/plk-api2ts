@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/exportByFlowPathSystemTypeUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessDataSearchVO2, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/dynamicData/byFlowPathSystemType/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -191,6 +192,7 @@ export enum EsystemType {
     PROJECT_FILE = "PROJECT_FILE",
     PROJECT_FOLDER = "PROJECT_FOLDER",
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

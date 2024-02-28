@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/表单数据分组规则相关/editGroupingUsingPOST
 */
 export default function fetchMethod(options: { data: IFormDataGroupingSettingsAreRelated, params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/formDataGroupingRule/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

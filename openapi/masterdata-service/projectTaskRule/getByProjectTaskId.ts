@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务规则相关/getByProjectTaskIdUsingGET
 */
 export default function fetchMethod(options: { params: { projectTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectTaskRuleDetailResponseDTO>(
         {
             url: "/masterdata-service/projectTaskRule/getByProjectTaskId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

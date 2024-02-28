@@ -75,19 +75,21 @@
         },
         "ids": {
           "type": "array",
-          "items": {
-            "type": "integer",
-            "format": "int64"
-          }
-        },
-        "projectIds": {
-          "type": "array",
+          "description": "项目成员id集合",
           "items": {
             "type": "integer",
             "format": "int64"
           }
         },
         "projectPlanIds": {
+          "type": "array",
+          "description": "项目计划ids",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "projectIds": {
           "type": "array",
           "items": {
             "type": "integer",

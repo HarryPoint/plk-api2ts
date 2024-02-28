@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/treeByEnterpriseUsingPOST
 */
 export default function fetchMethod(options: { data: IQueryDTO2InTheEnterpriseRoutingTree }, extraOptions?: any) {
     return http<IJSONResultListEnterpriseRoutingTreeResponseDTO>(
         {
             url: "/plk-uaa-service/enterpriseRouter/treeByEnterprise",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -364,6 +365,8 @@ export enum ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSyste
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

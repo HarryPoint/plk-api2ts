@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/listEmployeeUserRpInfoUsingPOST
 */
 export default function fetchMethod(options: { data: IBatchQueryEmployeeUserAssociationInformation }, extraOptions?: any) {
     return http<IJSONResultListEmployeeUserAssociationInformationResponse>(
         {
             url: "/plk-uaa-service/employee/listEmployeeUserRpInfo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检项/getSelectorUsingGET_6
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBasicInformationAboutInspectionItemsVOIsReturned>(
         {
             url: "/masterdata-service/qualityInspectionItem/getSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

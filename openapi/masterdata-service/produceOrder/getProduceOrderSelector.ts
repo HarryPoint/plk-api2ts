@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/getProduceOrderSelectorUsingGET_1
 */
 export default function fetchMethod(options: { params: { lotOrderId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheProductionOrderIsReturnedToVO>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

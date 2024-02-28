@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/进出料设备相关/pageMoveInDeviceUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedEquipmentPagingQuery }, extraOptions?: any) {
     return http<IJSONResultThePagingInformationFeedDeviceRespondsToTheDTO>(
         {
             url: "/masterdata-service/moveInOutDevice/pageMoveInDevice",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

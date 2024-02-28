@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/物料批次设置相关/listByMaterialIdsUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListMaterialBatchSettingsEditResponseObjects>(
         {
             url: "/masterdata-service/materialLotSetting/listByMaterialIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

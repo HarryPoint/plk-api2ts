@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16500/doc.html#/default/详细页面配置-相关/getByIdUsingGET_3
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathDetailPageConfigVO>(
         {
             url: "/flow-service/flowPathDetailPageConfig/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

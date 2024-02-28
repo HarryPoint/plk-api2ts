@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺相关/modifyCategoryUsingPOST
 */
 export default function fetchMethod(options: { data: IStandardProcessModificationClassificationRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/standardTechnology/modifyCategory",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

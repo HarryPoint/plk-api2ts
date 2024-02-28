@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/员工工序相关/setQualityInspectorUsingPOST
 */
 export default function fetchMethod(options: { data: ISetExecutorDTO[] }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/userProcess/{id}/qualityInspector/set",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

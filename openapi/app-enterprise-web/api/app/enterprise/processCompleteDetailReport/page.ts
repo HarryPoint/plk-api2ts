@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16400/doc.html#/default/工序完成明细表/pageUsingPOST_1
 */
 export default function fetchMethod(options: { data: IProcedureCompletionListQuery }, extraOptions?: any) {
     return http<IJSONResultPagingInformationOperationCompletionDetailTableResponseDto>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processCompleteDetailReport/page",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -56,7 +57,7 @@ export interface IProcedureCompletionListQuery {
     /** 是否根据排班日期查询 */
     isQueryByCalendar?: boolean;
     /** 排班日期集合 */
-    calendarDayList?: LocalDate[];
+    calendarDayList?: any[];
 }
 /** 分页排序 */
 export interface IPagingSort {

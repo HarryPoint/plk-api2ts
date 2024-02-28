@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/员工相关/getForPageUsingPOST_8
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationDynamicExpansionDataVOIndicatesWhetherTheEmployeeIsAllowedToLogInToTheDTO>(
         {
             url: "/app-mobile-web/api/app/mobile/employee/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

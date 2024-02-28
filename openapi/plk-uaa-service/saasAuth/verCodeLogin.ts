@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/Saas授权相关/verCodeLoginUsingPOST
 */
 export default function fetchMethod(options: { data: IVerificationCodeLoginRequestDTO }, extraOptions?: any) {
     return http<IJSONResultLoginResponseDTO>(
         {
             url: "/plk-uaa-service/saasAuth/verCodeLogin",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

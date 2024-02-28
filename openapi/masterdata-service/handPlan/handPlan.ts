@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/手动排产/handPlanUsingPOST
 */
 export default function fetchMethod(options: { data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/handPlan/handPlan",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

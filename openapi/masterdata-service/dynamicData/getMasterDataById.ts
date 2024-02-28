@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getMasterDataByIdUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseCode?: string; flowPathCode?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getMasterDataById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

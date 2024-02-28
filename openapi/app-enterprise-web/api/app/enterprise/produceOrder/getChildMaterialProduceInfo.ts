@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getChildMaterialProduceInfoUsingPOST
 */
 export default function fetchMethod(options: { data: ISubMaterialProductionInformationQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultChildProductionOrderInformationQueryResponse>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/getChildMaterialProduceInfo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

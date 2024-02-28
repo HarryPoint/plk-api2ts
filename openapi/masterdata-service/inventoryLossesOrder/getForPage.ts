@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/盘亏单相关/getForPageUsingPOST_5
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/inventoryLossesOrder/getForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

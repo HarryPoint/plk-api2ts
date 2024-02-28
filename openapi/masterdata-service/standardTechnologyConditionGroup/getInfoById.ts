@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/getInfoByIdUsingGET_3
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultStandardProcessConditionGroupRespondsToDTO>(
         {
             url: "/masterdata-service/standardTechnologyConditionGroup/getInfoById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

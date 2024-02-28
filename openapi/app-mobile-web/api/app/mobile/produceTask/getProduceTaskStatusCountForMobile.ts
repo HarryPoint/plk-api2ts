@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskStatusCountForMobileUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTaskQueryDTOForMobileEnd }, extraOptions?: any) {
     return http<IJSONResultNumberOfProductionTaskStatesReturnedForTheMobileEnd>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskStatusCountForMobile",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

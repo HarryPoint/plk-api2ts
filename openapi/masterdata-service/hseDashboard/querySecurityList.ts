@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/querySecurityListUsingPOST
 */
 export default function fetchMethod(options: { data: ISecurityQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListSecurityQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/querySecurityList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

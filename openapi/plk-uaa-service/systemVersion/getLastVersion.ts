@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/系统版本相关/getLastVersionUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultSystemVersionResponseDTO>(
         {
             url: "/plk-uaa-service/systemVersion/getLastVersion",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

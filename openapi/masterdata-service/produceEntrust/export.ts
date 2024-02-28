@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/委外加工管理/exportUsingPOST_15
 */
 export default function fetchMethod(options: { data: IOutsourcingSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceEntrust/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

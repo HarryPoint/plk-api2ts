@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/crm-商机销售统计相关/exportSalesStatisticsUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/businessChance/exportSalesStatistics",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

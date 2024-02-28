@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/质检统计/getPageUsingPOST_23
 */
 export default function fetchMethod(options: { data: IScrapDataSheetSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationGoodScrapDataTableResultVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityGoodScrapReport/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

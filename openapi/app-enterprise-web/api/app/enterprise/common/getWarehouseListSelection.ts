@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/公共相关/getWarehouseListSelectionUsingPOST
 */
 export default function fetchMethod(options: { data: IPositionTreeReturnsVO }, extraOptions?: any) {
     return http<IJSONResultDTOForPagingInformationLocationQuery>(
         {
             url: "/app-enterprise-web/api/app/enterprise/common/getWarehouseListSelection",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

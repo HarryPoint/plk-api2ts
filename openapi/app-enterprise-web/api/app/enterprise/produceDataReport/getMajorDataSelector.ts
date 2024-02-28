@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/产出报表(产出数据相关)相关/getMajorDataSelectorUsingPOST_15
 */
 export default function fetchMethod(options: { data: IMaterialMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceDataReport/getMajorDataSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

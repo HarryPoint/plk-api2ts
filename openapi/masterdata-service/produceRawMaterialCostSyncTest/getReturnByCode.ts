@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/生产原材料成本同步测试相关/getReturnByCodeUsingGET
 */
 export default function fetchMethod(options: { params: { code?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionMaterialReturnOrderCostFetchBO>(
         {
             url: "/masterdata-service/produceRawMaterialCostSyncTest/getReturnByCode",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

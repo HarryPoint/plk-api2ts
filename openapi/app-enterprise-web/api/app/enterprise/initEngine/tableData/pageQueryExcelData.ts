@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/pageQueryExcelDataUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging14 }, extraOptions?: any) {
     return http<IJSONResultPageInformationExcelRowDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/tableData/pageQueryExcelData",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

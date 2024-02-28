@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/销售订单相关/queryDownstreamOrderUsingPOST_1
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultListAssociatesTheDocumentResponse>(
         {
             url: "/masterdata-service/salesOrder/queryDownstreamOrder",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -246,6 +247,8 @@ export enum EAssociatedDocumentResponse_associatedOrderType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

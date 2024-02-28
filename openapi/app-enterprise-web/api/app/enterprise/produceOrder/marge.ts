@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/margeUsingPOST_1
 */
 export default function fetchMethod(options: { data: IBatchOrderConsolidationDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/marge",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

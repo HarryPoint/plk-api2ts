@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/querySpecialAuditImprovementRectificationUsingPOST
 */
 export default function fetchMethod(options: { data: IImprovementRecificationQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultImprovesTheRectificationRate>(
         {
             url: "/masterdata-service/qmsDashboard/querySpecialAuditImprovementRectification",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

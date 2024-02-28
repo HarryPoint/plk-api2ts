@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/文件对象相关/pageUsingPOST_1
 */
 export default function fetchMethod(options: { data: IFileObjectPagingQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationFileObjectPagingQueryResponseDTO>(
         {
             url: "/masterdata-service/fileObject/page",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

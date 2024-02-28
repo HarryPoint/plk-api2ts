@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产计划订单步骤日产量/getListByProduceOrderIdsUsingPOST_3
 */
 export default function fetchMethod(options: { data: IProductionPlanOrderStepDailyOutputVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionPlanOrderStepDailyOutputVO>(
         {
             url: "/masterdata-service/producePlan/routingStepDayQuantity/getListByProduceOrderIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

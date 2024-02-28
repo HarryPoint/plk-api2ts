@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/应付账款相关/amountPlusUsingPOST
 */
 export default function fetchMethod(options: { data: IAddAccountsPayableDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/accountsPayable/amountPlus",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

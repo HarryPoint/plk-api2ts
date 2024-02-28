@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/初始化引擎/getEffectiveBehaviorStatusUsingGET
 */
 export default function fetchMethod(options: { params: { templateId?: string } }, extraOptions?: any) {
     return http<IJSONResultDataInteractionOutputDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/initEngine/getEffectiveBehaviorStatus",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

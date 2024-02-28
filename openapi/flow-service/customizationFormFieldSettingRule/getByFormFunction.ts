@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/定制表单字段设置规则 - 相关/getByFormFunctionUsingGET
 */
 export default function fetchMethod(options: { params: { formFunctionType?: EformFunctionType } }, extraOptions?: any) {
     return http<IJSONResultListCustomizedFormFieldSettingRuleVO>(
         {
             url: "/flow-service/customizationFormFieldSettingRule/getByFormFunction",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
@@ -268,6 +269,8 @@ export enum ECustomizedFormFieldSettingRuleVO_systemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

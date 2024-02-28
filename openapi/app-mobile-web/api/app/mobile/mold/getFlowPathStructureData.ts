@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/模具相关/getFlowPathStructureDataUsingPOST_22
 */
 export default function fetchMethod(options: { data: IProcessStructureSearchVO }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/app-mobile-web/api/app/mobile/mold/getFlowPathStructureData",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

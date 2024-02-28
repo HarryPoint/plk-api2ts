@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/其它出库单相关/getTableColumnUsingGET_6
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
         {
             url: "/masterdata-service/otherOutStorageOrder/getTableColumn",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

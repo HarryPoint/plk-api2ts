@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/listIdsByPermissionCodesUsingPOST
 */
 export default function fetchMethod(options: { data: IQueryByPermissionCodeSetUserIdQueryObjects }, extraOptions?: any) {
     return http<IJSONResultListlong>(
         {
             url: "/plk-uaa-service/user/listIdsByPermissionCodes",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

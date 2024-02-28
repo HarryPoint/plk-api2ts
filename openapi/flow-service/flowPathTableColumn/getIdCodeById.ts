@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getIdCodeByIdUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(
         {
             url: "/flow-service/flowPathTableColumn/getIdCodeById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

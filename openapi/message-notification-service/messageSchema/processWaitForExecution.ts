@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/processWaitForExecutionUsingPOST_1
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/messageSchema/processWaitForExecution",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

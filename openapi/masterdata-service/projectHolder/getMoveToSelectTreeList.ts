@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目文件夹相关/getMoveToSelectTreeListUsingGET_3
 */
 export default function fetchMethod(options: { params: { id?: string; projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailsResponseDTO8>(
         {
             url: "/masterdata-service/projectHolder/getMoveToSelectTreeList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

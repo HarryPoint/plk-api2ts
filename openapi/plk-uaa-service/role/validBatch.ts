@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/validBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IIdSetInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/role/validBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

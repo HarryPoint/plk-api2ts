@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/销售订单相关/closeUsingPOST_1
 */
 export default function fetchMethod(options: { data: ISalesOrdersCloseTheDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/salesOrder/close",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

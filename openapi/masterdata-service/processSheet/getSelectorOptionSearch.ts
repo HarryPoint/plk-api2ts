@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/工艺卡相关/getSelectorOptionSearchUsingPOST_3
 */
 export default function fetchMethod(options: { data: IProcessDropDownListToSearchForDtos }, extraOptions?: any) {
     return http<IJSONResultListProcessDropDownListToSearchForResponseDtos>(
         {
             url: "/masterdata-service/processSheet/getSelectorOptionSearch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

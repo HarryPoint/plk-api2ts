@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:17600/doc.html#/default/发送消息任务模板/editInterceptionUpperLimitUsingPOST
 */
 export default function fetchMethod(options: { data: IEditInterceptionUpperLimitRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/sendingMessageTask/editInterceptionUpperLimit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

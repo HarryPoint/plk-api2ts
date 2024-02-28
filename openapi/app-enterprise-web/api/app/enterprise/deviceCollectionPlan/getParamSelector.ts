@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/设备数采数据方案相关/getParamSelectorUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListDeviceDataCollectionSelectVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/deviceCollectionPlan/getParamSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/消息相关/sendMessageUsingPOST
 */
 export default function fetchMethod(options: { data: IMessageInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/message/sendMessage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

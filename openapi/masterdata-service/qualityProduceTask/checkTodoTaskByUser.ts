@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/checkTodoTaskByUserUsingGET_1
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultboolean>(
         {
             url: "/masterdata-service/qualityProduceTask/checkTodoTaskByUser",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/客户线索相关/bindEnterpriseUsingPOST
 */
 export default function fetchMethod(options: { data: ICustomerLeadsUpdateTheEnterpriseRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/enterpriseClue/bindEnterprise",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

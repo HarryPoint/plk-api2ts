@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getRoutingStepSelectorByLotOrderIdUsingGET
 */
 export default function fetchMethod(options: { params: { lotOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionProcessPathStepProcessResponseDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/getRoutingStepSelectorByLotOrderId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

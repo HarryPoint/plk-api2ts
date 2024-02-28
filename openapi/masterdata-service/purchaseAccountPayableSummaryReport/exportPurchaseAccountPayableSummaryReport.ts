@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/应付账款汇总报表相关/exportPurchaseAccountPayableSummaryReportUsingPOST
 */
-export default function fetchMethod(options: { data: ExportPurchaseAccountPayableSummaryReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/purchaseAccountPayableSummaryReport/exportPurchaseAccountPayableSummaryReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

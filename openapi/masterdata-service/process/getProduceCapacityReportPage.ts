@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/工序相关/getProduceCapacityReportPageUsingPOST
 */
 export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationCapacityUtilizationReportVO>(
         {
             url: "/masterdata-service/process/getProduceCapacityReportPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

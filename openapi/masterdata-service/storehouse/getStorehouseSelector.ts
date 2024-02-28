@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/仓库相关/getStorehouseSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IWarehouseMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/storehouse/getStorehouseSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

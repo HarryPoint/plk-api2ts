@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/质检项/getPageUsingPOST_25
 */
 export default function fetchMethod(options: { data: ICheckItemSearchVO }, extraOptions?: any) {
     return http<IJSONResultPageInformationVOIsReturned>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityInspectionItem/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

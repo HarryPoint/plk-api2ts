@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/首检检验任务相关/queryTaskInfoUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFirstCheckChecksTheTaskResponseObject>(
         {
             url: "/masterdata-service/qmsFirstInspectionTask/queryTaskInfo",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

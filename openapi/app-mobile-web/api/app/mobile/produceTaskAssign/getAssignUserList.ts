@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务分配相关/getAssignUserListUsingGET
 */
 export default function fetchMethod(options: { params: { nameOrCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTaskAssign/getAssignUserList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

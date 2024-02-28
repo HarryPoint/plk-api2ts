@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/导出相关/getPurchaseArrivedStatisticReportExportInfoByTicketUsingGET
 */
 export default function fetchMethod(options: { params: { ticket?: string } }, extraOptions?: any) {
     return http<IJSONResultExportInformationPurchaseArrivalStatisticsReportReturnedToVO>(
         {
             url: "/masterdata-service/exportAuth/getPurchaseArrivedStatisticReportExportInfoByTicket",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

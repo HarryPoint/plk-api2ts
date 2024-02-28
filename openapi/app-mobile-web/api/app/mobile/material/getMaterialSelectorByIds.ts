@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:17400/doc.html#/default/物料相关/getMaterialSelectorByIdsUsingPOST
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultListReturnVOToTheMaterialMasterDataSelection>(
         {
             url: "/app-mobile-web/api/app/mobile/material/getMaterialSelectorByIds",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

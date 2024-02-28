@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:17400/doc.html#/default/物料bom相关/getMaterialDefaultByMaterialIdUsingGET
 */
 export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultBomResponseObject>(
         {
             url: "/app-mobile-web/api/app/mobile/materialBom/getMaterialDefaultByMaterialId",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

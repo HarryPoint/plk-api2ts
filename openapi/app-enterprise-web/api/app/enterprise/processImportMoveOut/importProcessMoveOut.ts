@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16400/doc.html#/default/出料数据导入相关/importProcessMoveOutUsingPOST
 */
 export default function fetchMethod(options: { data: IImportProcessMoveOutInputDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/app-enterprise-web/api/app/enterprise/processImportMoveOut/importProcessMoveOut",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

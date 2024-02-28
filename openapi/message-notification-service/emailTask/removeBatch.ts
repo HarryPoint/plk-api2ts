@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/邮件任务/removeBatchUsingPOST_1
 */
 export default function fetchMethod(options: { data: IEmailTaskRemoveRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/message-notification-service/emailTask/removeBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/工费相关/getInfoByIdUsingGET_2
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultLaborResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/laborCost/getInfoById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

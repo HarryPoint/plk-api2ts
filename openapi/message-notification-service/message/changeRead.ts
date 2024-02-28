@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17600/doc.html#/default/消息相关/changeReadUsingPOST
 */
 export default function fetchMethod(options: { data: IMessageChangeReadDTO, params: { clientCode?: string; enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/message-notification-service/message/changeRead",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

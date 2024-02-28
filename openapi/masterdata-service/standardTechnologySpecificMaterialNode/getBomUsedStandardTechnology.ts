@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/标准工艺具体物料节点相关/getBomUsedStandardTechnologyUsingPOST
 */
 export default function fetchMethod(options: { data: IStandardProcessQueryObjectUsedByBom }, extraOptions?: any) {
     return http<IJSONResultListbomStandardProcessResponse>(
         {
             url: "/masterdata-service/standardTechnologySpecificMaterialNode/getBomUsedStandardTechnology",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

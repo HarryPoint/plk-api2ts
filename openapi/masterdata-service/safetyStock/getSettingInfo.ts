@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/安全库存相关/getSettingInfoUsingPOST
 */
 export default function fetchMethod(options: { data: ISecurityStockSettingsSearchVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultSecurityStockSettingsReturnVO>(
         {
             url: "/masterdata-service/safetyStock/getSettingInfo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

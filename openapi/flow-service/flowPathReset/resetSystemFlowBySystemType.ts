@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16500/doc.html#/default/流程重置相关/resetSystemFlowBySystemTypeUsingPOST
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/flow-service/flowPathReset/resetSystemFlowBySystemType",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -125,6 +126,7 @@ export enum EsystemType {
     PROJECT_FILE = "PROJECT_FILE",
     PROJECT_FOLDER = "PROJECT_FOLDER",
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

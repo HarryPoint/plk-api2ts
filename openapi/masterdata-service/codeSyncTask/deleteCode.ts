@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/编码同步任务相关/deleteCodeUsingPOST
 */
 export default function fetchMethod(options: { params: { code?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/codeSyncTask/deleteCode",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

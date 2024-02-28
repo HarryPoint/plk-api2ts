@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/checkProduceFeeAssignHasModifyUsingGET
 */
 export default function fetchMethod(options: { params: { fiscalPeriodId?: string } }, extraOptions?: any) {
     return http<IJSONResultVerifiesTheResponseObject>(
         {
             url: "/masterdata-service/produceFeeAssign/checkProduceFeeAssignHasModify",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

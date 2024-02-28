@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/员工相关/allowLoginBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IEmployeesAllowLoginRequestsInBulk }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/employee/allowLoginBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

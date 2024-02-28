@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/仓位相关/storageFlowPathInOutUsingPOST
 */
 export default function fetchMethod(options: { data: IWarehouseProcessInboundAndOutboundDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/warehouse/storageFlowPathInOut",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

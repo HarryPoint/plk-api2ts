@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16500/doc.html#/default/流程表单字段相关/getDataLinkageByIdUsingPOST
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathFormFieldDataLinkageVO>(
         {
             url: "/flow-service/flowPathFormField/getDataLinkageById",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

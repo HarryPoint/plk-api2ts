@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/listLotOrderFlowDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IBatchOrderHistorySearchVO }, extraOptions?: any) {
     return http<IJSONResultListBatchOrderDetailedInformationRespondsToDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrder/listLotOrderFlowDetail",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

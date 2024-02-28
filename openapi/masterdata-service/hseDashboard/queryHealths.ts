@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/HSE大屏相关/queryHealthsUsingPOST
 */
 export default function fetchMethod(options: { data: IHealthHQueryRequest }, extraOptions?: any) {
     return http<IJSONResultListHealthHQueryResponse>(
         {
             url: "/masterdata-service/hseDashboard/queryHealths",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

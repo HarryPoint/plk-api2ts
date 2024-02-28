@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:17400/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
 */
 export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultSpecificMaterialDataStructureResponseObject>(
         {
             url: "/app-mobile-web/api/app/mobile/standardTechnology/getMaterialRelateStructure",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

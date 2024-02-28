@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/calcFormFillValueUsingPOST
 */
 export default function fetchMethod(options: { data: IFormFillRequest }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathData/formFillValue/calc",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

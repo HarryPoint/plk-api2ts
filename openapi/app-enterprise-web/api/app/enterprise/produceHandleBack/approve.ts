@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16400/doc.html#/default/生产处理返工相关/approveUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionProcessesTheReworkApprovalRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceHandleBack/approve",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

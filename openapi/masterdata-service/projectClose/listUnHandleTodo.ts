@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
-* @link http://47.108.139.107:16700/doc.html#/default/项目关闭相关/listUnHandleTodoUsingPOST
+* @author XieJian
+* @link http://47.108.139.107:16700/doc.html#/default/项目关闭相关/listUnHandleTodoUsingGET
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListProjectAppliesTheUnprocessedBacklogReturnObject>(
         {
             url: "/masterdata-service/projectClose/listUnHandleTodo",
-            method: "post",
+            method: "GET",
             ...options,
         },
         extraOptions,

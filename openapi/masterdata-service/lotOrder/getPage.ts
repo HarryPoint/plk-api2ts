@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getPageUsingPOST_7
 */
 export default function fetchMethod(options: { data: IBatchOrderSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationBatchOrderReturnsVO>(
         {
             url: "/masterdata-service/lotOrder/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

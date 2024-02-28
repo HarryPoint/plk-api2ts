@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getMoveInDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IQueryDTOForIncomingAndOutgoingMaterialInformation }, extraOptions?: any) {
     return http<IJSONResultIncomingAndOutgoingMaterialInformationResponseObject>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getMoveInDetail",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/项目成员相关/queryEmployeeByNameOrCodeUsingPOST
 */
 export default function fetchMethod(options: { data: IItemNameNumberPublicQueryObject1 }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/projectMember/queryEmployeeByNameOrCode",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -21,8 +22,6 @@ export interface IItemNameNumberPublicQueryObject1 {
     projectPlanId?: string;
     /** 名称or编号 */
     nameOrCode?: string;
-    /** undefined */
-    projectPlanFlowIsComplete?: EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete;
 }
 /** JSONResult«List«Id Code Name 通用传输对象»» */
 export interface IJSONResultListIdCodeNameACommonTransferObject {
@@ -43,9 +42,4 @@ export interface IIdCodeNameGenericTransportObject {
     code?: string;
     /** name */
     name?: string;
-}
-
-export enum EItemNameNumberPublicQueryObject1_projectPlanFlowIsComplete {
-    Y = "Y",
-    N = "N"
 }

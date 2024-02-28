@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryBaseTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectPhaseTaskQueryObject1 }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskBaseQueryResponseObject>(
         {
             url: "/masterdata-service/projectTask/queryBaseTask",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -23,8 +24,6 @@ export interface IProjectPhaseTaskQueryObject1 {
     orders?: IPagingSort[];
     /** 汇总聚合维度字段集 */
     groupBys?: string[];
-    /** 任务编号 */
-    code?: string;
     /** 导出字段集 */
     exportFields?: string[];
     /** 项目id */
@@ -33,10 +32,12 @@ export interface IProjectPhaseTaskQueryObject1 {
     projectIds?: string[];
     /** 项目计划id */
     projectPlanId?: string;
+    /** 项目计划id集 */
+    projectPlanIds?: string[];
     /** 任务名称 */
     name?: string;
-    /** 任务负责人列表 */
-    leaderUserIds?: string[];
+    /** 任务编号 */
+    code?: string;
     /** 名称or编号 */
     nameOrCode?: string;
     /** 是否超期（Y是 N:否） */
@@ -47,18 +48,16 @@ export interface IProjectPhaseTaskQueryObject1 {
     projectStageIds?: string[];
     /** 项目任务类型ids列表 */
     projectTaskTypeIds?: string[];
+    /** 任务负责人列表 */
+    leaderUserIds?: string[];
     /** 任务状态（DRAFT:草稿,UN_ISSUE:未下发,UN_RECEIVE:未接受,UN_START:未开始,HANDLING:进行中,COMPLETE:已完成,NOT_PASS:未通过,CANCEL:已取消） */
     taskStatusList?: string[];
-    /** 任务开始日期 --结束日期 */
-    endPlanBeginTime?: number;
     /** 任务状态（DRAFT:草稿,UN_ISSUE:未下发,UN_RECEIVE:未接受,UN_START:未开始,HANDLING:进行中,COMPLETE:已完成,NOT_PASS:未通过,CANCEL:已取消） */
     taskStatusGroupList?: string[];
     /** 超期天数开始 */
     beginOverdueDay?: number;
     /** 超期天数结束 */
     endOverdueDay?: number;
-    /** 任务截止日期 --结束日期 */
-    endPlanEndTime?: number;
     /** 任务id集 */
     taskIds?: string[];
     /** 任务查询日期 --开始日期 */
@@ -67,14 +66,18 @@ export interface IProjectPhaseTaskQueryObject1 {
     preTaskIds?: string[];
     /** 任务开始日期 --开始日期 */
     beginPlanBeginTime?: number;
-    /** 上级任务列表 */
-    parentIds?: string[];
+    /** 任务开始日期 --结束日期 */
+    endPlanBeginTime?: number;
     /** 任务截止日期 --开始日期 */
     beginPlanEndTime?: number;
+    /** 任务截止日期 --结束日期 */
+    endPlanEndTime?: number;
     /** 任务查询日期 --开始日期 */
     beginTaskTime?: number;
     /** 优先级列表 */
     priorityList?: string[];
+    /** 上级任务列表 */
+    parentIds?: string[];
     /** 备注 */
     remark?: string;
     /** 状态 HANDLING进行中，COMPLETE已完成，NOT_PASS未通过, STAGING暂存, INVALID作废/停用 */
@@ -103,12 +106,14 @@ export interface IProjectPhaseTaskQueryObject1 {
     isShowChildTask?: EProjectPhaseTaskQueryObject1_isShowChildTask;
     /** 处理进度名称列表 */
     processStatusNames?: string[];
-    /** undefined */
-    projectPlanFlowIsComplete?: EProjectPhaseTaskQueryObject1_projectPlanFlowIsComplete;
+    /** 是否查询没有关联项目计划的任务 */
+    isQueryEmptyPlanTask?: EProjectPhaseTaskQueryObject1_isQueryEmptyPlanTask;
+    /** 任务权重 -- 开始 */
+    beginTaskWeight?: number;
+    /** 任务权重 -- 结束 */
+    endTaskWeight?: number;
     /** undefined */
     notEmptyCondition?: boolean;
-    /** undefined */
-    filterDraftStatus?: EProjectPhaseTaskQueryObject1_filterDraftStatus;
     /** undefined */
     processStatusCodes?: string[];
     /** undefined */
@@ -162,13 +167,10 @@ export enum EProjectPhaseTaskQueryObject1_isShowChildTask {
     N = "N"
 }
 
-export enum EProjectPhaseTaskQueryObject1_projectPlanFlowIsComplete {
+export enum EProjectPhaseTaskQueryObject1_isQueryEmptyPlanTask {
+    /** 是 */
     Y = "Y",
-    N = "N"
-}
-
-export enum EProjectPhaseTaskQueryObject1_filterDraftStatus {
-    Y = "Y",
+    /** 否 */
     N = "N"
 }
 

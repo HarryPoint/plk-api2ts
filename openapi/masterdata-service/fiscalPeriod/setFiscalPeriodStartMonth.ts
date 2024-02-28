@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/setFiscalPeriodStartMonthUsingPOST
 */
 export default function fetchMethod(options: { data: ISetTheStartMonthRequestDuringThePeriod }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/fiscalPeriod/setFiscalPeriodStartMonth",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

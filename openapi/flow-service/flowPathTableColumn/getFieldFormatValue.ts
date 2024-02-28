@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getFieldFormatValueUsingPOST
 */
 export default function fetchMethod(options: { data: IFormatTheValueOfTheFlowTableColumnToQueryTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/flow-service/flowPathTableColumn/getFieldFormatValue",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/queryFavoritesUsingPOST_1
 */
 export default function fetchMethod(options: { data: IPortalEnterpriseRoutingCollectionQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListPortalUsersCollectEnterpriseRoutingDtos>(
         {
             url: "/plk-uaa-service/portalUserFavorite/queryFavorites",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -349,6 +350,8 @@ export enum ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSyste
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

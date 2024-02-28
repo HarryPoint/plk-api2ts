@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TanPeng
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchUseLotNoUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultTheBatchNumberIsDTO1>(
         {
             url: "/masterdata-service/lotOrder/batchUseLotNo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

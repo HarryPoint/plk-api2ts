@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/标签设置/editUsingPOST_12
 */
 export default function fetchMethod(options: { data: IProductionLabelEditingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTag/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

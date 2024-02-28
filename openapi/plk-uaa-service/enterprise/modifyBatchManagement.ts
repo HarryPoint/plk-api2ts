@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/modifyBatchManagementUsingPOST
 */
 export default function fetchMethod(options: { data: IExampleModifyTheEnterpriseBatchManagementInformationRequestObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/plk-uaa-service/enterprise/modifyBatchManagement",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

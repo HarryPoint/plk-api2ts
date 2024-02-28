@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/exportUsingPOST_22
 */
 export default function fetchMethod(options: { data: IExportTheDTOOfAProductionTask, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultlong>(
         {
             url: "/masterdata-service/produceTask/export",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageQueryOfReviewTaskTypeUsingPOST
 */
 export default function fetchMethod(options: { data: IItemTaskPagingQueryResponse1 }, extraOptions?: any) {
     return http<IJSONResultPageInformationItemTaskPageQueryResponse>(
         {
             url: "/masterdata-service/projectTask/pageQueryOfReviewTaskType",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,
@@ -315,6 +316,8 @@ export enum EItemTaskPagingQueryResponse1_systemType {
     PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 项目关闭 */
     PROJECT_CLOSE = "PROJECT_CLOSE",
+    /** 项目迁移 */
+    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

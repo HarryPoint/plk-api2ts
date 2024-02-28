@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/项目应用相关/setNavigationSortUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectApplicationNavigationSortRequestObjects }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/projectApplication/setNavigationSort",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

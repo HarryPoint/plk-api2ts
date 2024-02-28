@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/员工相关/batchAllowLoginUsingPOST
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-mobile-web/api/app/mobile/employee/batchAllowLogin",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

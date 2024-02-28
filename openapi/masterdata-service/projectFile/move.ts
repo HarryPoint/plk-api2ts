@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目文件相关/moveUsingPOST_2
 */
 export default function fetchMethod(options: { data: IProjectFileMoveRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/projectFile/move",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

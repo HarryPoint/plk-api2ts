@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/物料全局批次设置相关/editUsingPOST_12
 */
 export default function fetchMethod(options: { data: IMaterialsBureauBatchSetEditObject }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/materialGlobalLotSetting/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

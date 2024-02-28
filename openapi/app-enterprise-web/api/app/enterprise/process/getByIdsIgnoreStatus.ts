@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/工序相关/getByIdsIgnoreStatusUsingPOST_3
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<ITheJSONResultListOperationSelectsToReturnVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/process/getByIdsIgnoreStatus",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

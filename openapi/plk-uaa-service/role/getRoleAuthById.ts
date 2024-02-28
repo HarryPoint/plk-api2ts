@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author TangYongDi
 * @link http://47.108.139.107:18100/doc.html#/default/角色相关/getRoleAuthByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultResponseToRolePermissionsAndEmployeeInformation>(
         {
             url: "/plk-uaa-service/role/getRoleAuthById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/质检方案/getByIdUsingGET_18
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultCheckSolutionDetailsAreReturnedToVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/qualityInspectionPlan/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

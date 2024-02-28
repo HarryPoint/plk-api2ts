@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/销售日报表相关/getSalesDayReportStatisticsUsingPOST
 */
-export default function fetchMethod(options: { data: GetSalesDayReportStatistics }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheReturnedObjectOfDailySalesReportStatistics>(
         {
             url: "/masterdata-service/salesDayReport/getSalesDayReportStatistics",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

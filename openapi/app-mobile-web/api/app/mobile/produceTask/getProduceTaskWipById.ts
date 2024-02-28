@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskWipByIdUsingGET
 */
 export default function fetchMethod(options: { params: { taskId?: string } }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheResponseDTOToTheProductionTaskWIPInformation>(
         {
             url: "/app-mobile-web/api/app/mobile/produceTask/getProduceTaskWipById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

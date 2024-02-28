@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:16700/doc.html#/default/产线相关/getSelectorUsingPOST_1
 */
 export default function fetchMethod(options: { data: INameNumberVO }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(
         {
             url: "/masterdata-service/productionLine/getSelector",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

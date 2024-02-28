@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/销售订单相关/getMaterialRoutingSelectorUsingGET
 */
 export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessPathSelectVO>(
         {
             url: "/app-mobile-web/api/app/mobile/salesOrder/getMaterialRoutingSelector",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

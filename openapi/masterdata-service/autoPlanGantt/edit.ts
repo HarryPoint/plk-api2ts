@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/甘特图相关/editUsingPOST
 */
 export default function fetchMethod(options: { data: IEditProducePlanAutoScheduleInputVO }, extraOptions?: any) {
     return http<IJSONResultboolean>(
         {
             url: "/masterdata-service/autoPlanGantt/edit",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

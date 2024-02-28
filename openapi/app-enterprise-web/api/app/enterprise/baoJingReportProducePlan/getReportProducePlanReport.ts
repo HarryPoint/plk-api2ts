@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/宝晶生产计划报表/getBaoJingReportProducePlanReportUsingPOST
 */
 export default function fetchMethod(options: { data: IBaojingProductionTaskGanttChartQueryObject }, extraOptions?: any) {
     return http<IJSONResultListTreasureProductionPlanGanttChartResponseObject>(
         {
             url: "/app-enterprise-web/api/app/enterprise/baoJingReportProducePlan/getReportProducePlanReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

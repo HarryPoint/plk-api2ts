@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/balanceAntiUsingPOST
 */
 export default function fetchMethod(options: { data: ICounterbalanceRequestForFinancialPeriod }, extraOptions?: any) {
     return http<IJSONResultboolean>(
         {
             url: "/masterdata-service/fiscalPeriod/balanceAnti",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

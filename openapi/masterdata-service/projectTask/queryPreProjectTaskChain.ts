@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author helin
 * @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryPreProjectTaskChainUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskLinkNode>(
         {
             url: "/masterdata-service/projectTask/queryPreProjectTaskChain",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

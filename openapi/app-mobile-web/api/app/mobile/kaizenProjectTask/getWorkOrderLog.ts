@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:17400/doc.html#/default/项目任务相关/getWorkOrderLogUsingPOST_17
 */
 export default function fetchMethod(options: { data: IJobLogSearchVO }, extraOptions?: any) {
     return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
         {
             url: "/app-mobile-web/api/app/mobile/kaizenProjectTask/getWorkOrderLog",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

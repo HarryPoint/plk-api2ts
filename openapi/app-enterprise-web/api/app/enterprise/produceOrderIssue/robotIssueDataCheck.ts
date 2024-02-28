@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16400/doc.html#/default/订单排产任务下发相关/robotIssueDataCheckUsingPOST
 */
 export default function fetchMethod(options: { data: IAutomaticProductionSchedulingSendsTaskDataVerificationRequestDTO }, extraOptions?: any) {
     return http<IJSONResultAutomaticProductionOrderSchedulingTaskDataVerificationReturnDTO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/produceOrderIssue/robotIssueDataCheck",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

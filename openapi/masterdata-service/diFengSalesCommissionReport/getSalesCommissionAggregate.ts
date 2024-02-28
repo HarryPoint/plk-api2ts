@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Mao Hai Ping
 * @link http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionAggregateUsingPOST
 */
-export default function fetchMethod(options: { data: GetSalesCommissionAggregate }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultCommissionAndCommissionStatisticsTableTeifungCustomizedTotalResponseObject>(
         {
             url: "/masterdata-service/diFengSalesCommissionReport/getSalesCommissionAggregate",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

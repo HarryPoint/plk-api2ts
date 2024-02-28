@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/物料齐套相关/getMaterialCompleteKitResultUsingPOST
 */
 export default function fetchMethod(options: { data: IMaterialSetQueryRequestObject }, extraOptions?: any) {
     return http<IJSONResultQueryResponseObject>(
         {
             url: "/masterdata-service/materialCompleteKit/getMaterialCompleteKitResult",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

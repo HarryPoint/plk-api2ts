@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/reportUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTreatment, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceHandle/report",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

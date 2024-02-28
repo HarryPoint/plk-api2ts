@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检管理/qualityStorageTaskCompleteUsingPOST
 */
 export default function fetchMethod(options: { data: ITheDTOCompletesTheInspectionTask, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/qualityStorageTask/qualityStorageTaskComplete",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

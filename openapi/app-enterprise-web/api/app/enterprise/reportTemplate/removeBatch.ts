@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/报表模板/removeBatchUsingPOST_5
 */
 export default function fetchMethod(options: { data: IReportTemplateRemoveRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(
         {
             url: "/app-enterprise-web/api/app/enterprise/reportTemplate/removeBatch",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

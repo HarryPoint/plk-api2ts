@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author tp
 * @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/getFormRpDataForPageUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessAssociationFormSearchVO }, extraOptions?: any) {
     return http<IJSONResultProcessAssociationFormQueryReturnsVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/flowPathData/getFormRpDataForPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

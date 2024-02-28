@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/moveOutUsingPOST
 */
 export default function fetchMethod(options: { data: IInboundAndOutboundInformationDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/produceTask/moveOut",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

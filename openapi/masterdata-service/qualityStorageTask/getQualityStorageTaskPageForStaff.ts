@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/质检管理/getQualityStorageTaskPageForStaffUsingPOST
 */
 export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVO1OnTheEmployee, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultThePageInformationInspectionTaskReturnsVO>(
         {
             url: "/masterdata-service/qualityStorageTask/getQualityStorageTaskPageForStaff",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

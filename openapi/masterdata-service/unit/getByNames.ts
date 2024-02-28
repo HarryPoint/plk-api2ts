@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/单位相关/getByNamesUsingPOST
 */
 export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListUnitReturnsVO>(
         {
             url: "/masterdata-service/unit/getByNames",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

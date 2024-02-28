@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/listMoveInBomConsumeSerialNoUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedBomConsumptionSerialNumberQueryDTO }, extraOptions?: any) {
     return http<IJSONResultListIncomingBomConsumptionSerialNumberRespondsToDTO>(
         {
             url: "/masterdata-service/moveInOutBomConsume/listMoveInBomConsumeSerialNo",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

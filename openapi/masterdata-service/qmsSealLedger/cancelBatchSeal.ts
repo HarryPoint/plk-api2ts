@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author lin.he
 * @link http://47.108.139.107:16700/doc.html#/default/印章台账相关/cancelBatchSealUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultstring1>(
         {
             url: "/masterdata-service/qmsSealLedger/cancelBatchSeal",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/不合格统计报表相关/getHandlingOfNonConformingStatisticsReportUsingPOST
 */
-export default function fetchMethod(options: { data: GetHandlingOfNonConformingStatisticsReport }, extraOptions?: any) {
+export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultTheDTOIsReturnedAfterThePageInformationFails>(
         {
             url: "/masterdata-service/handlingOfNonConformingReport/getHandlingOfNonConformingStatisticsReport",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

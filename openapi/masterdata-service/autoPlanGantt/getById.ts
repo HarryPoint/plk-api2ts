@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/甘特图相关/getByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProducePlanAutoScheduleOutputVO>(
         {
             url: "/masterdata-service/autoPlanGantt/getById",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

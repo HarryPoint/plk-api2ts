@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author Tan Peng
 * @link http://47.108.139.107:17600/doc.html#/default/消息方案/getPageUsingPOST_1
 */
 export default function fetchMethod(options: { data: IMessageSchemeQueryRequest }, extraOptions?: any) {
     return http<IJSONResultPageInformationPageQueryResponse>(
         {
             url: "/message-notification-service/messageSchema/getPage",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

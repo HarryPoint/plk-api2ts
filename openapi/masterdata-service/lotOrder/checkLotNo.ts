@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author MaoHaiPing
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/checkLotNoUsingGET
 */
 export default function fetchMethod(options: { params: { lotNo?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
         {
             url: "/masterdata-service/lotOrder/checkLotNo",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,

@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/getLotOrderWipListUsingPOST
 */
 export default function fetchMethod(options: { data: IBatchOrderWipSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBatchWipInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/lotOrder/getLotOrderWipList",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

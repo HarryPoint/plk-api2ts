@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author XieJian
 * @link http://47.108.139.107:16700/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IEquipmentMaintenanceCalendarDetailsRequestDTO }, extraOptions?: any) {
     return http<IJSONResultDeviceMaintenanceCalendarRespondsToDTO>(
         {
             url: "/masterdata-service/deviceMaintainCalendar/getDeviceMaintainCalendarDetail",
-            method: "post",
+            method: "POST",
             ...options,
         },
         extraOptions,

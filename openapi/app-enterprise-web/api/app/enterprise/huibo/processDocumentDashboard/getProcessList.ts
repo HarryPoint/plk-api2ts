@@ -1,13 +1,14 @@
 import { http } from "@/api/http";
 
 /**
+* @author 
 * @link http://47.108.139.107:16400/doc.html#/default/慧博工艺文档大屏相关/getProcessListUsingGET
 */
 export default function fetchMethod(options: { params: { areaId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/app-enterprise-web/api/app/enterprise/huibo/processDocumentDashboard/getProcessList",
-            method: "get",
+            method: "GET",
             ...options,
         },
         extraOptions,
