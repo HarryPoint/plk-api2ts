@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16700/doc.html#/default/合理化建议综合看板相关/getCurrentMonthCumulativeProposalIndicatorsUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/合理化建议综合看板相关/getCurrentMonthCumulativeProposalIndicatorsUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultCumulativeProposalIndicatorsResponseDTO>(

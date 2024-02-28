@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16700/doc.html#/default/生产入库单相关/pageQuerySelectionItemUsingPOST_1
+* @link http://47.108.135.148:16700/doc.html#/default/生产入库单相关/pageQuerySelectionItemUsingPOST_1
 */
 export default function fetchMethod(options: { data: IPaging13 }, extraOptions?: any) {
     return http<IProduceOrderSelectionItemQueryResponseDTO1JSONResultPagingInformation>(

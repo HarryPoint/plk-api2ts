@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.139.107:16400/doc.html#/default/流程选项集字典相关/getListByBusinessCodeUsingGET
+* @link http://47.108.135.148:16400/doc.html#/default/流程选项集字典相关/getListByBusinessCodeUsingGET
 */
 export default function fetchMethod(options: { params: { businessCode?: EbusinessCode } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormFieldAssociationDictionaryOptionSetVO>(
@@ -82,8 +82,7 @@ export enum EbusinessCode {
     QMS_PROJECT_TASK_REVIEW_RESULT = "QMS_PROJECT_TASK_REVIEW_RESULT",
     QMS_PROJECT_TASK_DECISION_RESULT = "QMS_PROJECT_TASK_DECISION_RESULT",
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
-    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
 }
 
 export enum EProcessFormFieldAssociationDictionaryOptionSetVO_isPreset {

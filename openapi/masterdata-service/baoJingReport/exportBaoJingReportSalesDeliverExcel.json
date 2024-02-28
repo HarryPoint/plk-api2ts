@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "宝晶销售发货报表搜索VO",
-              "$ref": "#/definitions/宝晶销售发货报表搜索VO"
+              "$ref": "#/definitions/宝晶销售发货报表搜索VO",
+              "originalRef": "宝晶销售发货报表搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "customerIds": {

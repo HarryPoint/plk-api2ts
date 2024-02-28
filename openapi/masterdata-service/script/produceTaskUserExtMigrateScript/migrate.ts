@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/生产任务用户扩展数据迁移相关/migrateUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/生产任务用户扩展数据迁移相关/migrateUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

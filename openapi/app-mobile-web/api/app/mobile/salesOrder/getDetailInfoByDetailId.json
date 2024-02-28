@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«销售订单详情返回VO»",
-              "$ref": "#/definitions/JSONResult«销售订单详情返回VO»"
+              "$ref": "#/definitions/JSONResult«销售订单详情返回VO»",
+              "originalRef": "JSONResult«销售订单详情返回VO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "销售订单详情返回VO",
-          "$ref": "#/definitions/销售订单详情返回VO"
+          "$ref": "#/definitions/销售订单详情返回VO",
+          "originalRef": "销售订单详情返回VO"
         },
         "ts": {
           "type": "integer",
@@ -191,16 +191,16 @@
           "type": "array",
           "description": "子物料生产信息",
           "items": {
-            "originalRef": "子物料生产信息VO",
-            "$ref": "#/definitions/子物料生产信息VO"
+            "$ref": "#/definitions/子物料生产信息VO",
+            "originalRef": "子物料生产信息VO"
           }
         },
         "produceOtherMaterials": {
           "type": "array",
           "description": "生产所需其他物料",
           "items": {
-            "originalRef": "生产所需其他物料信息VO",
-            "$ref": "#/definitions/生产所需其他物料信息VO"
+            "$ref": "#/definitions/生产所需其他物料信息VO",
+            "originalRef": "生产所需其他物料信息VO"
           }
         }
       },
@@ -287,8 +287,8 @@
           "type": "array",
           "description": "子物料工艺路径选择集合, 默认选中 isDefault = Y的",
           "items": {
-            "originalRef": "工艺路径选择VO",
-            "$ref": "#/definitions/工艺路径选择VO"
+            "$ref": "#/definitions/工艺路径选择VO",
+            "originalRef": "工艺路径选择VO"
           }
         }
       },
@@ -346,8 +346,8 @@
           "type": "array",
           "description": "替换物料集",
           "items": {
-            "originalRef": "子物料生产信息VO",
-            "$ref": "#/definitions/子物料生产信息VO"
+            "$ref": "#/definitions/子物料生产信息VO",
+            "originalRef": "子物料生产信息VO"
           }
         },
         "materialBomDetailId": {
@@ -428,14 +428,14 @@
           "type": "array",
           "description": "子物料工艺路径选择集合, 默认选中 isDefault = Y的",
           "items": {
-            "originalRef": "工艺路径选择VO",
-            "$ref": "#/definitions/工艺路径选择VO"
+            "$ref": "#/definitions/工艺路径选择VO",
+            "originalRef": "工艺路径选择VO"
           }
         },
         "sourceMajorData": {
           "description": "原物料信息 - 用于重置物料",
-          "originalRef": "生产所需其他物料信息VO",
-          "$ref": "#/definitions/生产所需其他物料信息VO"
+          "$ref": "#/definitions/生产所需其他物料信息VO",
+          "originalRef": "生产所需其他物料信息VO"
         }
       },
       "title": "生产所需其他物料信息VO"

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "PageProjectStageTaskByCurrentEmployee",
-              "$ref": "#/definitions/PageProjectStageTaskByCurrentEmployee"
+              "$ref": "#/definitions/PageProjectStageTaskByCurrentEmployee",
+              "originalRef": "PageProjectStageTaskByCurrentEmployee"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«项目 项目-阶段-任务响应对象»»",
-              "$ref": "#/definitions/JSONResult«分页信息«项目 项目-阶段-任务响应对象»»"
+              "$ref": "#/definitions/JSONResult«分页信息«项目 项目-阶段-任务响应对象»»",
+              "originalRef": "JSONResult«分页信息«项目 项目-阶段-任务响应对象»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«项目 项目-阶段-任务响应对象»",
-          "$ref": "#/definitions/分页信息«项目 项目-阶段-任务响应对象»"
+          "$ref": "#/definitions/分页信息«项目 项目-阶段-任务响应对象»",
+          "originalRef": "分页信息«项目 项目-阶段-任务响应对象»"
         },
         "ts": {
           "type": "integer",
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "项目 项目-阶段-任务响应对象",
-            "$ref": "#/definitions/项目 项目-阶段-任务响应对象"
+            "$ref": "#/definitions/项目 项目-阶段-任务响应对象",
+            "originalRef": "项目 项目-阶段-任务响应对象"
           }
         },
         "lastPage": {
@@ -191,8 +191,8 @@
           "type": "array",
           "description": "阶段任务集",
           "items": {
-            "originalRef": "项目任务响应对象_5",
-            "$ref": "#/definitions/项目任务响应对象_5"
+            "$ref": "#/definitions/项目任务响应对象_5",
+            "originalRef": "项目任务响应对象_5"
           }
         }
       },
@@ -227,8 +227,8 @@
           "type": "array",
           "description": "项目计划ids",
           "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
+            "$ref": "#/definitions/Id Code Name 通用传输对象",
+            "originalRef": "Id Code Name 通用传输对象"
           }
         },
         "projectStageName": {
@@ -253,8 +253,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "originalRef": "项目任务响应对象_9",
-            "$ref": "#/definitions/项目任务响应对象_9"
+            "$ref": "#/definitions/项目任务响应对象_9",
+            "originalRef": "项目任务响应对象_9"
           }
         }
       },
@@ -324,8 +324,8 @@
           "type": "array",
           "description": "前置任务列表",
           "items": {
-            "originalRef": "项目任务前置任务响应对象",
-            "$ref": "#/definitions/项目任务前置任务响应对象"
+            "$ref": "#/definitions/项目任务前置任务响应对象",
+            "originalRef": "项目任务前置任务响应对象"
           }
         },
         "planBeginTime": {
@@ -417,8 +417,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "originalRef": "项目任务响应对象_9",
-            "$ref": "#/definitions/项目任务响应对象_9"
+            "$ref": "#/definitions/项目任务响应对象_9",
+            "originalRef": "项目任务响应对象_9"
           }
         },
         "currentEmployeeTodoId": {

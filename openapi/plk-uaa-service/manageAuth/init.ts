@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:18100/doc.html#/default/运营管理端授权相关/initUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/运营管理端授权相关/initUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:18100/doc.html#/default/角色相关/listAllUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/角色相关/listAllUsingPOST
 */
 export default function fetchMethod(options: { data: IRoleQuery }, extraOptions?: any) {
     return http<IJSONResultListResponseForRoleInformation>(

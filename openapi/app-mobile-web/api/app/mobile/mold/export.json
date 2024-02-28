@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "exportRequest",
             "required": true,
             "schema": {
-              "originalRef": "流程数据搜索VO",
-              "$ref": "#/definitions/流程数据搜索VO"
+              "$ref": "#/definitions/流程数据搜索VO",
+              "originalRef": "流程数据搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -83,8 +83,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         },
         "pageSize": {
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "tableColumnCode": {
@@ -106,8 +106,8 @@
         },
         "currentFormDataGrouping": {
           "description": "当前的表单分组",
-          "originalRef": "表单数据分组DTO",
-          "$ref": "#/definitions/表单数据分组DTO"
+          "$ref": "#/definitions/表单数据分组DTO",
+          "originalRef": "表单数据分组DTO"
         },
         "opUserId": {
           "type": "integer",
@@ -221,8 +221,8 @@
           "type": "array",
           "description": "下级分组",
           "items": {
-            "originalRef": "表单数据分组DTO",
-            "$ref": "#/definitions/表单数据分组DTO"
+            "$ref": "#/definitions/表单数据分组DTO",
+            "originalRef": "表单数据分组DTO"
           }
         },
         "cascadeFormData": {

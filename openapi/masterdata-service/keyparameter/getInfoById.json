@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«关键参数信息响应对象»",
-              "$ref": "#/definitions/JSONResult«关键参数信息响应对象»"
+              "$ref": "#/definitions/JSONResult«关键参数信息响应对象»",
+              "originalRef": "JSONResult«关键参数信息响应对象»"
             }
           },
           "401": {
@@ -67,8 +67,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "关键参数信息响应对象",
-          "$ref": "#/definitions/关键参数信息响应对象"
+          "$ref": "#/definitions/关键参数信息响应对象",
+          "originalRef": "关键参数信息响应对象"
         },
         "ts": {
           "type": "integer",
@@ -99,24 +99,24 @@
           "type": "array",
           "description": "关联工序",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "materialRp": {
           "type": "array",
           "description": "关联物料",
           "items": {
-            "originalRef": "关联下拉响应对象",
-            "$ref": "#/definitions/关联下拉响应对象"
+            "$ref": "#/definitions/关联下拉响应对象",
+            "originalRef": "关联下拉响应对象"
           }
         },
         "parameterDetailList": {
           "type": "array",
           "description": "关键参数集合",
           "items": {
-            "originalRef": "关键参数信息详情响应对象",
-            "$ref": "#/definitions/关键参数信息详情响应对象"
+            "$ref": "#/definitions/关键参数信息详情响应对象",
+            "originalRef": "关键参数信息详情响应对象"
           }
         }
       },

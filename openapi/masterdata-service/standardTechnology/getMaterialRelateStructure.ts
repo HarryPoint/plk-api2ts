@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16700/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/标准工艺相关/getMaterialRelateStructureUsingGET
 */
 export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultSpecificMaterialDataStructureResponseObject>(

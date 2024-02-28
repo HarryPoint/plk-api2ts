@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -37,8 +37,8 @@
             "description": "lotTransferDTO",
             "required": true,
             "schema": {
-              "originalRef": "批次转移到其他生产订单DTO",
-              "$ref": "#/definitions/批次转移到其他生产订单DTO"
+              "$ref": "#/definitions/批次转移到其他生产订单DTO",
+              "originalRef": "批次转移到其他生产订单DTO"
             }
           }
         ],
@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

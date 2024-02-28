@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "dataEdit",
             "required": true,
             "schema": {
-              "originalRef": "主数据基础编辑 DTO",
-              "$ref": "#/definitions/主数据基础编辑 DTO"
+              "$ref": "#/definitions/主数据基础编辑 DTO",
+              "originalRef": "主数据基础编辑 DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

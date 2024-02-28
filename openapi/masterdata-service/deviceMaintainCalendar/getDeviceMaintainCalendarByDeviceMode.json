@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "设备保养日历请求DTO",
-              "$ref": "#/definitions/设备保养日历请求DTO"
+              "$ref": "#/definitions/设备保养日历请求DTO",
+              "originalRef": "设备保养日历请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«设备保养日历-设备模式响应DTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«设备保养日历-设备模式响应DTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«设备保养日历-设备模式响应DTO»»",
+              "originalRef": "JSONResult«分页信息«设备保养日历-设备模式响应DTO»»"
             }
           },
           "201": {
@@ -94,8 +94,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -231,8 +231,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«设备保养日历-设备模式响应DTO»",
-          "$ref": "#/definitions/分页信息«设备保养日历-设备模式响应DTO»"
+          "$ref": "#/definitions/分页信息«设备保养日历-设备模式响应DTO»",
+          "originalRef": "分页信息«设备保养日历-设备模式响应DTO»"
         },
         "ts": {
           "type": "integer",
@@ -270,8 +270,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "设备保养日历-设备模式响应DTO",
-            "$ref": "#/definitions/设备保养日历-设备模式响应DTO"
+            "$ref": "#/definitions/设备保养日历-设备模式响应DTO",
+            "originalRef": "设备保养日历-设备模式响应DTO"
           }
         },
         "lastPage": {
@@ -335,8 +335,8 @@
           "type": "array",
           "description": "明细详情",
           "items": {
-            "originalRef": "设备保养日历-设备模式详情响应DTO",
-            "$ref": "#/definitions/设备保养日历-设备模式详情响应DTO"
+            "$ref": "#/definitions/设备保养日历-设备模式详情响应DTO",
+            "originalRef": "设备保养日历-设备模式详情响应DTO"
           }
         }
       },
@@ -359,8 +359,8 @@
           "type": "array",
           "description": "时间详情",
           "items": {
-            "originalRef": "设备保养日历-设备模式详情时间响应DTO",
-            "$ref": "#/definitions/设备保养日历-设备模式详情时间响应DTO"
+            "$ref": "#/definitions/设备保养日历-设备模式详情时间响应DTO",
+            "originalRef": "设备保养日历-设备模式详情时间响应DTO"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«ProduceWorkOrderVO»»",
-              "$ref": "#/definitions/JSONResult«List«ProduceWorkOrderVO»»"
+              "$ref": "#/definitions/JSONResult«List«ProduceWorkOrderVO»»",
+              "originalRef": "JSONResult«List«ProduceWorkOrderVO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "ProduceWorkOrderVO",
-            "$ref": "#/definitions/ProduceWorkOrderVO"
+            "$ref": "#/definitions/ProduceWorkOrderVO",
+            "originalRef": "ProduceWorkOrderVO"
           }
         },
         "ts": {
@@ -161,16 +161,16 @@
           "type": "array",
           "description": "工序信息",
           "items": {
-            "originalRef": "ProduceWorkOrderProcessVO",
-            "$ref": "#/definitions/ProduceWorkOrderProcessVO"
+            "$ref": "#/definitions/ProduceWorkOrderProcessVO",
+            "originalRef": "ProduceWorkOrderProcessVO"
           }
         },
         "produceCustomInfo": {
           "type": "array",
           "description": "生产相关信息",
           "items": {
-            "originalRef": "ProduceWorkOrderCustomFieldDataVO",
-            "$ref": "#/definitions/ProduceWorkOrderCustomFieldDataVO"
+            "$ref": "#/definitions/ProduceWorkOrderCustomFieldDataVO",
+            "originalRef": "ProduceWorkOrderCustomFieldDataVO"
           }
         }
       },

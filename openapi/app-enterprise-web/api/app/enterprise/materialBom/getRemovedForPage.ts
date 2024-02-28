@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/物料bom相关/getRemovedForPageUsingPOST_11
+* @link http://47.108.135.148:16400/doc.html#/default/物料bom相关/getRemovedForPageUsingPOST_11
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(

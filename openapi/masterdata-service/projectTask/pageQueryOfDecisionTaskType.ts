@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/pageQueryOfDecisionTaskTypeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/项目任务相关/pageQueryOfDecisionTaskTypeUsingPOST
 */
 export default function fetchMethod(options: { data: IItemTaskPagingQueryResponse1 }, extraOptions?: any) {
     return http<IJSONResultPageInformationItemTaskPageQueryResponse>(
@@ -266,8 +266,6 @@ export enum EItemTaskPagingQueryResponse1_systemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
-    /** 项目设备信息 */
-    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -308,16 +306,6 @@ export enum EItemTaskPagingQueryResponse1_systemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
-    /** 项目资源 */
-    PROJECT_RESOURCES = "PROJECT_RESOURCES",
-    /** 项目文件 */
-    PROJECT_FILE = "PROJECT_FILE",
-    /** 项目文件夹 */
-    PROJECT_FOLDER = "PROJECT_FOLDER",
-    /** 项目关闭 */
-    PROJECT_CLOSE = "PROJECT_CLOSE",
-    /** 项目迁移 */
-    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

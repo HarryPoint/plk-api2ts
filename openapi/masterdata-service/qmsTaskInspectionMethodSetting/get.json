@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设置检验任务检验方式响应DTO»",
-              "$ref": "#/definitions/JSONResult«设置检验任务检验方式响应DTO»"
+              "$ref": "#/definitions/JSONResult«设置检验任务检验方式响应DTO»",
+              "originalRef": "JSONResult«设置检验任务检验方式响应DTO»"
             }
           },
           "401": {
@@ -59,8 +59,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设置检验任务检验方式响应DTO",
-          "$ref": "#/definitions/设置检验任务检验方式响应DTO"
+          "$ref": "#/definitions/设置检验任务检验方式响应DTO",
+          "originalRef": "设置检验任务检验方式响应DTO"
         },
         "ts": {
           "type": "integer",

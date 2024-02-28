@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«异常标签返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«异常标签返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«异常标签返回VO»»",
+              "originalRef": "JSONResult«List«异常标签返回VO»»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "异常标签返回VO",
-            "$ref": "#/definitions/异常标签返回VO"
+            "$ref": "#/definitions/异常标签返回VO",
+            "originalRef": "异常标签返回VO"
           }
         },
         "ts": {

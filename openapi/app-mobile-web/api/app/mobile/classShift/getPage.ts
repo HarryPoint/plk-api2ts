@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/班次相关/getPageUsingPOST
+* @link http://47.108.135.148:17400/doc.html#/default/班次相关/getPageUsingPOST
 */
 export default function fetchMethod(options: { data: IShiftSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationShiftReturnsVO>(

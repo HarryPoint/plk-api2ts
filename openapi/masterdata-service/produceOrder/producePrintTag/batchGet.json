@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«ProducePrintTagVO»»",
-              "$ref": "#/definitions/JSONResult«List«ProducePrintTagVO»»"
+              "$ref": "#/definitions/JSONResult«List«ProducePrintTagVO»»",
+              "originalRef": "JSONResult«List«ProducePrintTagVO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "ProducePrintTagVO",
-            "$ref": "#/definitions/ProducePrintTagVO"
+            "$ref": "#/definitions/ProducePrintTagVO",
+            "originalRef": "ProducePrintTagVO"
           }
         },
         "ts": {
@@ -110,8 +110,8 @@
           "type": "array",
           "description": "打印信息列表",
           "items": {
-            "originalRef": "ProducePrintTagFieldDataVO",
-            "$ref": "#/definitions/ProducePrintTagFieldDataVO"
+            "$ref": "#/definitions/ProducePrintTagFieldDataVO",
+            "originalRef": "ProducePrintTagFieldDataVO"
           }
         }
       },

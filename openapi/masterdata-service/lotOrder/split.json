@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "lotOrderSplit",
             "required": true,
             "schema": {
-              "originalRef": "批次订单拆分DTO",
-              "$ref": "#/definitions/批次订单拆分DTO"
+              "$ref": "#/definitions/批次订单拆分DTO",
+              "originalRef": "批次订单拆分DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -84,8 +84,8 @@
           "type": "array",
           "description": "拆分批次信息",
           "items": {
-            "originalRef": "批次订单DTO",
-            "$ref": "#/definitions/批次订单DTO"
+            "$ref": "#/definitions/批次订单DTO",
+            "originalRef": "批次订单DTO"
           }
         },
         "remark": {

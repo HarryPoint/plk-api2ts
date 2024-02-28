@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "AssociationFormScanQueryRequestDTO",
-              "$ref": "#/definitions/AssociationFormScanQueryRequestDTO"
+              "$ref": "#/definitions/AssociationFormScanQueryRequestDTO",
+              "originalRef": "AssociationFormScanQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«AssociationFormScanQueryResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«List«AssociationFormScanQueryResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«List«AssociationFormScanQueryResponseDTO»»",
+              "originalRef": "JSONResult«List«AssociationFormScanQueryResponseDTO»»"
             }
           },
           "201": {
@@ -109,8 +109,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "AssociationFormScanQueryResponseDTO",
-            "$ref": "#/definitions/AssociationFormScanQueryResponseDTO"
+            "$ref": "#/definitions/AssociationFormScanQueryResponseDTO",
+            "originalRef": "AssociationFormScanQueryResponseDTO"
           }
         },
         "ts": {

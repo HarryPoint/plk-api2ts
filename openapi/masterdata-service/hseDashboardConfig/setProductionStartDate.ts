@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.139.107:16700/doc.html#/default/Hse大屏配置相关/setProductionStartDateUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/Hse大屏配置相关/setProductionStartDateUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionStartDateSetRequest }, extraOptions?: any) {
     return http<IJSONResultstring1>(

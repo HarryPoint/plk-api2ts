@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "add",
             "required": true,
             "schema": {
-              "originalRef": "路由新增 DTO",
-              "$ref": "#/definitions/路由新增 DTO"
+              "$ref": "#/definitions/路由新增 DTO",
+              "originalRef": "路由新增 DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -133,8 +133,8 @@
         },
         "config": {
           "description": "配置",
-          "originalRef": "路由配置请求 DTO",
-          "$ref": "#/definitions/路由配置请求 DTO"
+          "$ref": "#/definitions/路由配置请求 DTO",
+          "originalRef": "路由配置请求 DTO"
         },
         "applicationLevel": {
           "type": "string",
@@ -160,8 +160,8 @@
         },
         "appConfig": {
           "description": "应用配置",
-          "originalRef": "应用路由配置请求 DTO",
-          "$ref": "#/definitions/应用路由配置请求 DTO"
+          "$ref": "#/definitions/应用路由配置请求 DTO",
+          "originalRef": "应用路由配置请求 DTO"
         }
       },
       "title": "路由配置请求 DTO"

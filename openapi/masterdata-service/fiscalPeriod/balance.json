@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "财务期间结存请求",
-              "$ref": "#/definitions/财务期间结存请求"
+              "$ref": "#/definitions/财务期间结存请求",
+              "originalRef": "财务期间结存请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«boolean»",
-              "$ref": "#/definitions/JSONResult«boolean»"
+              "$ref": "#/definitions/JSONResult«boolean»",
+              "originalRef": "JSONResult«boolean»"
             }
           },
           "201": {

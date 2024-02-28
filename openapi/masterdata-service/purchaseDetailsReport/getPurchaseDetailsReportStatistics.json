@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "GetPurchaseDetailsReportStatistics",
-              "$ref": "#/definitions/GetPurchaseDetailsReportStatistics"
+              "$ref": "#/definitions/GetPurchaseDetailsReportStatistics",
+              "originalRef": "GetPurchaseDetailsReportStatistics"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«采购明细表统计返回对象»",
-              "$ref": "#/definitions/JSONResult«采购明细表统计返回对象»"
+              "$ref": "#/definitions/JSONResult«采购明细表统计返回对象»",
+              "originalRef": "JSONResult«采购明细表统计返回对象»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "采购明细表统计返回对象",
-          "$ref": "#/definitions/采购明细表统计返回对象"
+          "$ref": "#/definitions/采购明细表统计返回对象",
+          "originalRef": "采购明细表统计返回对象"
         },
         "ts": {
           "type": "integer",

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/getIdCodeBySerialNoUsingGET
+* @link http://47.108.135.148:16500/doc.html#/default/流程表格相关/getIdCodeBySerialNoUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathId?: string; serialNo?: string } }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(

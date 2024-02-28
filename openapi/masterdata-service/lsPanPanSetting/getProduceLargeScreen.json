@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -25,8 +25,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«盼盼生产大屏响应DTO»",
-              "$ref": "#/definitions/JSONResult«盼盼生产大屏响应DTO»"
+              "$ref": "#/definitions/JSONResult«盼盼生产大屏响应DTO»",
+              "originalRef": "JSONResult«盼盼生产大屏响应DTO»"
             }
           },
           "201": {
@@ -65,8 +65,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "盼盼生产大屏响应DTO",
-          "$ref": "#/definitions/盼盼生产大屏响应DTO"
+          "$ref": "#/definitions/盼盼生产大屏响应DTO",
+          "originalRef": "盼盼生产大屏响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -82,36 +82,36 @@
       "properties": {
         "todayProduce": {
           "description": "当日生产概览",
-          "originalRef": "盼盼生产大屏当日生产响应DTO_1",
-          "$ref": "#/definitions/盼盼生产大屏当日生产响应DTO_1"
+          "$ref": "#/definitions/盼盼生产大屏当日生产响应DTO_1",
+          "originalRef": "盼盼生产大屏当日生产响应DTO_1"
         },
         "thisMonthProduce": {
           "description": "当月生产数据",
-          "originalRef": "盼盼生产大屏当日生产响应DTO",
-          "$ref": "#/definitions/盼盼生产大屏当日生产响应DTO"
+          "$ref": "#/definitions/盼盼生产大屏当日生产响应DTO",
+          "originalRef": "盼盼生产大屏当日生产响应DTO"
         },
         "overdueOrders": {
           "type": "array",
           "description": "延期订单跟踪",
           "items": {
-            "originalRef": "盼盼生产大屏延期订单响应DTO",
-            "$ref": "#/definitions/盼盼生产大屏延期订单响应DTO"
+            "$ref": "#/definitions/盼盼生产大屏延期订单响应DTO",
+            "originalRef": "盼盼生产大屏延期订单响应DTO"
           }
         },
         "emergencyOrders": {
           "type": "array",
           "description": "加急订单跟踪",
           "items": {
-            "originalRef": "盼盼生产大屏加急订单响应DTO",
-            "$ref": "#/definitions/盼盼生产大屏加急订单响应DTO"
+            "$ref": "#/definitions/盼盼生产大屏加急订单响应DTO",
+            "originalRef": "盼盼生产大屏加急订单响应DTO"
           }
         },
         "capacities": {
           "type": "array",
           "description": "7天各工序产能分析",
           "items": {
-            "originalRef": "盼盼生产大屏7天工序产能响应DTO",
-            "$ref": "#/definitions/盼盼生产大屏7天工序产能响应DTO"
+            "$ref": "#/definitions/盼盼生产大屏7天工序产能响应DTO",
+            "originalRef": "盼盼生产大屏7天工序产能响应DTO"
           }
         }
       },
@@ -140,8 +140,8 @@
           "type": "array",
           "description": "当日各工序完工率",
           "items": {
-            "originalRef": "盼盼生产大屏当日工序生产响应DTO",
-            "$ref": "#/definitions/盼盼生产大屏当日工序生产响应DTO"
+            "$ref": "#/definitions/盼盼生产大屏当日工序生产响应DTO",
+            "originalRef": "盼盼生产大屏当日工序生产响应DTO"
           }
         }
       },

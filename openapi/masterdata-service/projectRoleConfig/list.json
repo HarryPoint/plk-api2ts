@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "项目角色配置相关"
         ],
         "summary": "批量查询项目角色配置",
-        "operationId": "getForPageUsingPOST_16",
+        "operationId": "getForPageUsingPOST_17",
         "consumes": [
           "application/json"
         ],
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "项目角色配置查询对象",
-              "$ref": "#/definitions/项目角色配置查询对象"
+              "$ref": "#/definitions/项目角色配置查询对象",
+              "originalRef": "项目角色配置查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目角色配置返回对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目角色配置返回对象»»"
+              "$ref": "#/definitions/JSONResult«List«项目角色配置返回对象»»",
+              "originalRef": "JSONResult«List«项目角色配置返回对象»»"
             }
           },
           "201": {
@@ -105,8 +105,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目角色配置返回对象",
-            "$ref": "#/definitions/项目角色配置返回对象"
+            "$ref": "#/definitions/项目角色配置返回对象",
+            "originalRef": "项目角色配置返回对象"
           }
         },
         "ts": {

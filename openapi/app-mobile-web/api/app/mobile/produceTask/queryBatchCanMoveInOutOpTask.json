@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "batchOpTask",
             "required": true,
             "schema": {
-              "originalRef": "任务批量操作DTO_1",
-              "$ref": "#/definitions/任务批量操作DTO_1"
+              "$ref": "#/definitions/任务批量操作DTO_1",
+              "originalRef": "任务批量操作DTO_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«批量操作任务返回信息DTO»",
-              "$ref": "#/definitions/JSONResult«批量操作任务返回信息DTO»"
+              "$ref": "#/definitions/JSONResult«批量操作任务返回信息DTO»",
+              "originalRef": "JSONResult«批量操作任务返回信息DTO»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "生产任务查询列表",
           "items": {
-            "originalRef": "任务批量操作DTO",
-            "$ref": "#/definitions/任务批量操作DTO"
+            "$ref": "#/definitions/任务批量操作DTO",
+            "originalRef": "任务批量操作DTO"
           }
         },
         "queryType": {
@@ -132,8 +132,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "批量操作任务返回信息DTO",
-          "$ref": "#/definitions/批量操作任务返回信息DTO"
+          "$ref": "#/definitions/批量操作任务返回信息DTO",
+          "originalRef": "批量操作任务返回信息DTO"
         },
         "ts": {
           "type": "integer",
@@ -193,8 +193,8 @@
           "type": "array",
           "description": "物料数据",
           "items": {
-            "originalRef": "批量操作任务物料响应DTO",
-            "$ref": "#/definitions/批量操作任务物料响应DTO"
+            "$ref": "#/definitions/批量操作任务物料响应DTO",
+            "originalRef": "批量操作任务物料响应DTO"
           }
         }
       },
@@ -228,8 +228,8 @@
           "type": "array",
           "description": "生产任务列表",
           "items": {
-            "originalRef": "BatchOpTaskMoveInOutResponseDTO",
-            "$ref": "#/definitions/BatchOpTaskMoveInOutResponseDTO"
+            "$ref": "#/definitions/BatchOpTaskMoveInOutResponseDTO",
+            "originalRef": "BatchOpTaskMoveInOutResponseDTO"
           }
         }
       },
@@ -271,8 +271,8 @@
           "type": "array",
           "description": "批次订单列表",
           "items": {
-            "originalRef": "批量操作任务批次订单响应DTO",
-            "$ref": "#/definitions/批量操作任务批次订单响应DTO"
+            "$ref": "#/definitions/批量操作任务批次订单响应DTO",
+            "originalRef": "批量操作任务批次订单响应DTO"
           }
         }
       },

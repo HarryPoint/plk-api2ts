@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getFieldDataPageSelectorUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getFieldDataPageSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessAssociationFormSearchVO }, extraOptions?: any) {
     return http<IJSONResultProcessAssociationFormQueryReturnsVO>(

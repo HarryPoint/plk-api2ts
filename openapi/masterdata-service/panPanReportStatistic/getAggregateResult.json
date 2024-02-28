@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "reportStatisticQuery",
             "required": true,
             "schema": {
-              "originalRef": "盼盼上报统计查询对象",
-              "$ref": "#/definitions/盼盼上报统计查询对象"
+              "$ref": "#/definitions/盼盼上报统计查询对象",
+              "originalRef": "盼盼上报统计查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«盼盼上报统计汇总响应对象»",
-              "$ref": "#/definitions/JSONResult«盼盼上报统计汇总响应对象»"
+              "$ref": "#/definitions/JSONResult«盼盼上报统计汇总响应对象»",
+              "originalRef": "JSONResult«盼盼上报统计汇总响应对象»"
             }
           },
           "201": {
@@ -111,8 +111,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "盼盼上报统计汇总响应对象",
-          "$ref": "#/definitions/盼盼上报统计汇总响应对象"
+          "$ref": "#/definitions/盼盼上报统计汇总响应对象",
+          "originalRef": "盼盼上报统计汇总响应对象"
         },
         "ts": {
           "type": "integer",

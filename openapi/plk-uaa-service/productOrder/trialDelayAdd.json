@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "trialDelayAddRequest",
             "required": true,
             "schema": {
-              "originalRef": "试用产品订单延期新增请求对象",
-              "$ref": "#/definitions/试用产品订单延期新增请求对象"
+              "$ref": "#/definitions/试用产品订单延期新增请求对象",
+              "originalRef": "试用产品订单延期新增请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/航发相关/getUserByNumberUsingGET
 */
 export default function fetchMethod(options: { params: { number?: string } }, extraOptions?: any) {
     return http<IJSONResultThirdApiResponseDTO>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/宝晶采购到货统计报表相关/getMajorDataSelectorUsingPOST_3
+* @link http://47.108.135.148:16400/doc.html#/default/宝晶采购到货统计报表相关/getMajorDataSelectorUsingPOST_3
 */
 export default function fetchMethod(options: { data: IMaterialMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(

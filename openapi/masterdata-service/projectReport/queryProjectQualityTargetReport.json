@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "QueryProjectQualityTargetReport",
-              "$ref": "#/definitions/QueryProjectQualityTargetReport"
+              "$ref": "#/definitions/QueryProjectQualityTargetReport",
+              "originalRef": "QueryProjectQualityTargetReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«项目质量目标报表响应对象»»",
-              "$ref": "#/definitions/JSONResult«分页信息«项目质量目标报表响应对象»»"
+              "$ref": "#/definitions/JSONResult«分页信息«项目质量目标报表响应对象»»",
+              "originalRef": "JSONResult«分页信息«项目质量目标报表响应对象»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«项目质量目标报表响应对象»",
-          "$ref": "#/definitions/分页信息«项目质量目标报表响应对象»"
+          "$ref": "#/definitions/分页信息«项目质量目标报表响应对象»",
+          "originalRef": "分页信息«项目质量目标报表响应对象»"
         },
         "ts": {
           "type": "integer",
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "项目质量目标报表响应对象",
-            "$ref": "#/definitions/项目质量目标报表响应对象"
+            "$ref": "#/definitions/项目质量目标报表响应对象",
+            "originalRef": "项目质量目标报表响应对象"
           }
         },
         "lastPage": {

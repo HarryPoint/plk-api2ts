@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:18100/doc.html#/default/行业相关/listAllUsingGET
+* @link http://47.108.135.148:18100/doc.html#/default/行业相关/listAllUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListIndustryResponseObjectDTO>(

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16400",
+  "host": "47.108.135.148:16400",
   "info": {
     "description": "服务名: app-enterprise-web",
     "version": "1.0",
@@ -583,8 +583,7 @@
             "  QMS_PROJECT_TASK_REVIEW_RESULT-评审结果",
             "  QMS_PROJECT_TASK_DECISION_RESULT-决策结果",
             "  QMS_INSPECTION_BUSINESS_TYPE-检验任务业务类型",
-            "  DEVICE_EMPLOYEE_MAINTAIN_LEVEL-维修能力",
-            "  PROJECT_DEVICE_INFO_STATUS-项目设备信息状态"
+            "  DEVICE_EMPLOYEE_MAINTAIN_LEVEL-维修能力"
           ]
         },
         "isCanModifySelectorOption": {

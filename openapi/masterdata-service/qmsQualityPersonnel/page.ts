@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.139.107:16700/doc.html#/default/质量人员服务相关/pageUsingPOST_4
+* @link http://47.108.135.148:16700/doc.html#/default/质量人员服务相关/pageUsingPOST_4
 */
 export default function fetchMethod(options: { data: IQualityPersonnelDropDownPageQueryObjects }, extraOptions?: any) {
     return http<IJSONResultPagingInformationQualityPersonnelDropdownResponseDTO>(

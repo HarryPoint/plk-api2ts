@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:18100/doc.html#/default/运营账号相关/addUsingPOST_8
+* @link http://47.108.135.148:18100/doc.html#/default/运营账号相关/addUsingPOST_8
 */
 export default function fetchMethod(options: { data: IOperationUserAddedARequest }, extraOptions?: any) {
     return http<IJSONResultobject>(

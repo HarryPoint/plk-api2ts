@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -15,7 +15,7 @@
         ],
         "summary": "分页查询库存流水信息",
         "description": "<p style='color:red'>该页面各种细节注意项：<br/>1、详情按钮的跳转通过 flowType 进行判断: <br/>1、flowType = TAKE_CHECK 用 businessId 跳盘点详情，flowType = WORK_ORDER 根据下面规则跳： <br/>2、如果 flowPathType == 'DEV_PROJECT' 带上 workOrderDataId 跳转到研发项目的详情页面里面<br/>3、如果 flowPathType == 'DEVICE' 带上 workOrderDataId 跳转到设备单据的详情页面里面<br/>4、如果 flowPathType == 'DEVICE_MAINTAIN_PLAN' 带上 workOrderDataId 跳转到设备维护计划单据的详情页面里面<br/>5、如果 flowPathType == 'STORAGE' 带上 workOrderDataId 跳转到仓库单据的详情页面里面<br/>6、如果 flowPathType == 'PURCHASE' 带上 workOrderDataId 跳转到采购单据的详情页面里面<br/>7、如果 flowPathType == 'SALES' 带上 workOrderDataId 跳转到销售单据的详情页面里面<br/></p>",
-        "operationId": "getPageUsingPOST_31",
+        "operationId": "getPageUsingPOST_30",
         "consumes": [
           "application/json"
         ],
@@ -44,8 +44,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "库存流水搜索VO",
-              "$ref": "#/definitions/库存流水搜索VO"
+              "$ref": "#/definitions/库存流水搜索VO",
+              "originalRef": "库存流水搜索VO"
             }
           }
         ],
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«库存流水返回VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«库存流水返回VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«库存流水返回VO»»",
+              "originalRef": "JSONResult«分页信息«库存流水返回VO»»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "masterDataIdList": {
@@ -287,8 +287,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«库存流水返回VO»",
-          "$ref": "#/definitions/分页信息«库存流水返回VO»"
+          "$ref": "#/definitions/分页信息«库存流水返回VO»",
+          "originalRef": "分页信息«库存流水返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -326,8 +326,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "库存流水返回VO",
-            "$ref": "#/definitions/库存流水返回VO"
+            "$ref": "#/definitions/库存流水返回VO",
+            "originalRef": "库存流水返回VO"
           }
         },
         "lastPage": {
@@ -441,8 +441,8 @@
           "type": "array",
           "description": "操作仓位层级，从高至低排列",
           "items": {
-            "originalRef": "Id，名称，编号VO",
-            "$ref": "#/definitions/Id，名称，编号VO"
+            "$ref": "#/definitions/Id，名称，编号VO",
+            "originalRef": "Id，名称，编号VO"
           }
         },
         "workOrderId": {

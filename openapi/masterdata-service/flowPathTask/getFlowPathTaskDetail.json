@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«流程任务明细返回VO»",
-              "$ref": "#/definitions/JSONResult«流程任务明细返回VO»"
+              "$ref": "#/definitions/JSONResult«流程任务明细返回VO»",
+              "originalRef": "JSONResult«流程任务明细返回VO»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "流程任务明细返回VO",
-          "$ref": "#/definitions/流程任务明细返回VO"
+          "$ref": "#/definitions/流程任务明细返回VO",
+          "originalRef": "流程任务明细返回VO"
         },
         "ts": {
           "type": "integer",
@@ -251,8 +251,8 @@
           "type": "array",
           "description": "自定义字段",
           "items": {
-            "originalRef": "工单明细数据返回信息VO",
-            "$ref": "#/definitions/工单明细数据返回信息VO"
+            "$ref": "#/definitions/工单明细数据返回信息VO",
+            "originalRef": "工单明细数据返回信息VO"
           }
         },
         "createDeptName": {
@@ -261,8 +261,8 @@
         },
         "workOrder": {
           "description": "工单信息",
-          "originalRef": "流程工单预览信息返回VO",
-          "$ref": "#/definitions/流程工单预览信息返回VO"
+          "$ref": "#/definitions/流程工单预览信息返回VO",
+          "originalRef": "流程工单预览信息返回VO"
         },
         "isCustomSubmitContent": {
           "type": "string",
@@ -293,8 +293,8 @@
           "type": "array",
           "description": "审批回退节点选择集",
           "items": {
-            "originalRef": "Id，名称，编号VO",
-            "$ref": "#/definitions/Id，名称，编号VO"
+            "$ref": "#/definitions/Id，名称，编号VO",
+            "originalRef": "Id，名称，编号VO"
           }
         },
         "isCustomAcceptContent": {

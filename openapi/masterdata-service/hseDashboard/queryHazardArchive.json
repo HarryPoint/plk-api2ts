@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "职业危害档案查询请求",
-              "$ref": "#/definitions/职业危害档案查询请求"
+              "$ref": "#/definitions/职业危害档案查询请求",
+              "originalRef": "职业危害档案查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«职业危害档案查询响应»",
-              "$ref": "#/definitions/JSONResult«职业危害档案查询响应»"
+              "$ref": "#/definitions/JSONResult«职业危害档案查询响应»",
+              "originalRef": "JSONResult«职业危害档案查询响应»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "职业危害档案查询响应",
-          "$ref": "#/definitions/职业危害档案查询响应"
+          "$ref": "#/definitions/职业危害档案查询响应",
+          "originalRef": "职业危害档案查询响应"
         },
         "ts": {
           "type": "integer",

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«物料批次设置编辑响应对象»",
-              "$ref": "#/definitions/JSONResult«物料批次设置编辑响应对象»"
+              "$ref": "#/definitions/JSONResult«物料批次设置编辑响应对象»",
+              "originalRef": "JSONResult«物料批次设置编辑响应对象»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "物料批次设置编辑响应对象",
-          "$ref": "#/definitions/物料批次设置编辑响应对象"
+          "$ref": "#/definitions/物料批次设置编辑响应对象",
+          "originalRef": "物料批次设置编辑响应对象"
         },
         "ts": {
           "type": "integer",

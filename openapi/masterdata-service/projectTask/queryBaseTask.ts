@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:16700/doc.html#/default/项目任务相关/queryBaseTaskUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/项目任务相关/queryBaseTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectPhaseTaskQueryObject1 }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskBaseQueryResponseObject>(

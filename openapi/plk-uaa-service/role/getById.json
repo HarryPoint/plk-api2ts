@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«角色信息响应»",
-              "$ref": "#/definitions/JSONResult«角色信息响应»"
+              "$ref": "#/definitions/JSONResult«角色信息响应»",
+              "originalRef": "JSONResult«角色信息响应»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "角色信息响应",
-          "$ref": "#/definitions/角色信息响应"
+          "$ref": "#/definitions/角色信息响应",
+          "originalRef": "角色信息响应"
         },
         "ts": {
           "type": "integer",

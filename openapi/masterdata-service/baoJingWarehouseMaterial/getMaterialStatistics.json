@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "宝晶物料主数据库存搜索VO",
-              "$ref": "#/definitions/宝晶物料主数据库存搜索VO"
+              "$ref": "#/definitions/宝晶物料主数据库存搜索VO",
+              "originalRef": "宝晶物料主数据库存搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«宝晶物料库存统计VO»",
-              "$ref": "#/definitions/JSONResult«宝晶物料库存统计VO»"
+              "$ref": "#/definitions/JSONResult«宝晶物料库存统计VO»",
+              "originalRef": "JSONResult«宝晶物料库存统计VO»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "materialSpec": {
@@ -222,8 +222,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "宝晶物料库存统计VO",
-          "$ref": "#/definitions/宝晶物料库存统计VO"
+          "$ref": "#/definitions/宝晶物料库存统计VO",
+          "originalRef": "宝晶物料库存统计VO"
         },
         "ts": {
           "type": "integer",
@@ -251,8 +251,8 @@
         },
         "materialStorages": {
           "description": "物料库存分页",
-          "originalRef": "分页信息«宝晶物料主数据库存返回VO»",
-          "$ref": "#/definitions/分页信息«宝晶物料主数据库存返回VO»"
+          "$ref": "#/definitions/分页信息«宝晶物料主数据库存返回VO»",
+          "originalRef": "分页信息«宝晶物料主数据库存返回VO»"
         }
       },
       "title": "宝晶物料库存统计VO"
@@ -284,8 +284,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "宝晶物料主数据库存返回VO",
-            "$ref": "#/definitions/宝晶物料主数据库存返回VO"
+            "$ref": "#/definitions/宝晶物料主数据库存返回VO",
+            "originalRef": "宝晶物料主数据库存返回VO"
           }
         },
         "lastPage": {

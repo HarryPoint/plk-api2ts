@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/仓位相关/getTreeByWarehouseUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/仓位相关/getTreeByWarehouseUsingGET
 */
 export default function fetchMethod(options: { params: { storehouseId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListPositionTreeReturnsVO>(

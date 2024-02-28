@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "idsDTO",
             "required": true,
             "schema": {
-              "originalRef": "id集合信息",
-              "$ref": "#/definitions/id集合信息"
+              "$ref": "#/definitions/id集合信息",
+              "originalRef": "id集合信息"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产订单下发结果DTO»",
-              "$ref": "#/definitions/JSONResult«生产订单下发结果DTO»"
+              "$ref": "#/definitions/JSONResult«生产订单下发结果DTO»",
+              "originalRef": "JSONResult«生产订单下发结果DTO»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产订单下发结果DTO",
-          "$ref": "#/definitions/生产订单下发结果DTO"
+          "$ref": "#/definitions/生产订单下发结果DTO",
+          "originalRef": "生产订单下发结果DTO"
         },
         "ts": {
           "type": "integer",

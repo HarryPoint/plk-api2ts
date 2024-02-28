@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getApplicationStructureUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getApplicationStructureUsingPOST
 */
 export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO1>(
@@ -732,9 +732,7 @@ export enum EProcessFormVO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
-    /** 项目设备信息状态 */
-    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
 }
 
 export enum EProcessFormVO_isCanModifySelectorOption {

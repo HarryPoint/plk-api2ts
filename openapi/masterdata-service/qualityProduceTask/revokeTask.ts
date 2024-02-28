@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/生产质检管理/revokeTaskUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/生产质检管理/revokeTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTreatment, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

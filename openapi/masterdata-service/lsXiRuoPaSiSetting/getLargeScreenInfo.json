@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -33,8 +33,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«西偌帕斯大屏返回VO»",
-              "$ref": "#/definitions/JSONResult«西偌帕斯大屏返回VO»"
+              "$ref": "#/definitions/JSONResult«西偌帕斯大屏返回VO»",
+              "originalRef": "JSONResult«西偌帕斯大屏返回VO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "西偌帕斯大屏返回VO",
-          "$ref": "#/definitions/西偌帕斯大屏返回VO"
+          "$ref": "#/definitions/西偌帕斯大屏返回VO",
+          "originalRef": "西偌帕斯大屏返回VO"
         },
         "ts": {
           "type": "integer",
@@ -88,58 +88,58 @@
           "type": "array",
           "description": "7天 计划VS实际产出",
           "items": {
-            "originalRef": "西偌帕斯大屏7天计划VS实际产出VO",
-            "$ref": "#/definitions/西偌帕斯大屏7天计划VS实际产出VO"
+            "$ref": "#/definitions/西偌帕斯大屏7天计划VS实际产出VO",
+            "originalRef": "西偌帕斯大屏7天计划VS实际产出VO"
           }
         },
         "monthIndexWork": {
           "description": "本月关键指标",
-          "originalRef": "西偌帕斯大屏关键指标VO",
-          "$ref": "#/definitions/西偌帕斯大屏关键指标VO"
+          "$ref": "#/definitions/西偌帕斯大屏关键指标VO",
+          "originalRef": "西偌帕斯大屏关键指标VO"
         },
         "dayIndexWork": {
           "description": "24小时关键指标",
-          "originalRef": "西偌帕斯大屏关键指标VO",
-          "$ref": "#/definitions/西偌帕斯大屏关键指标VO"
+          "$ref": "#/definitions/西偌帕斯大屏关键指标VO",
+          "originalRef": "西偌帕斯大屏关键指标VO"
         },
         "fpyRates": {
           "type": "array",
           "description": "14天 直通率",
           "items": {
-            "originalRef": "西偌帕斯大屏14天 直通率VO",
-            "$ref": "#/definitions/西偌帕斯大屏14天 直通率VO"
+            "$ref": "#/definitions/西偌帕斯大屏14天 直通率VO",
+            "originalRef": "西偌帕斯大屏14天 直通率VO"
           }
         },
         "scrapTypes": {
           "type": "array",
           "description": "不良明细前五",
           "items": {
-            "originalRef": "西偌帕斯大屏不良明细前五产出VO",
-            "$ref": "#/definitions/西偌帕斯大屏不良明细前五产出VO"
+            "$ref": "#/definitions/西偌帕斯大屏不良明细前五产出VO",
+            "originalRef": "西偌帕斯大屏不良明细前五产出VO"
           }
         },
         "processProduces": {
           "type": "array",
           "description": "主要工序24小时产出",
           "items": {
-            "originalRef": "西偌帕斯大屏主要工序24小时产出VO",
-            "$ref": "#/definitions/西偌帕斯大屏主要工序24小时产出VO"
+            "$ref": "#/definitions/西偌帕斯大屏主要工序24小时产出VO",
+            "originalRef": "西偌帕斯大屏主要工序24小时产出VO"
           }
         },
         "majorDataFpyRate": {
           "type": "array",
           "description": "主要产品14天 直通率",
           "items": {
-            "originalRef": "产出类折线图分组返回VO«直通报表返回VO»",
-            "$ref": "#/definitions/产出类折线图分组返回VO«直通报表返回VO»"
+            "$ref": "#/definitions/产出类折线图分组返回VO«直通报表返回VO»",
+            "originalRef": "产出类折线图分组返回VO«直通报表返回VO»"
           }
         },
         "processGoodProductRate": {
           "type": "array",
           "description": "主要工序7天良品率",
           "items": {
-            "originalRef": "产出类折线图分组返回VO«良品与报废报表返回VO»",
-            "$ref": "#/definitions/产出类折线图分组返回VO«良品与报废报表返回VO»"
+            "$ref": "#/definitions/产出类折线图分组返回VO«良品与报废报表返回VO»",
+            "originalRef": "产出类折线图分组返回VO«良品与报废报表返回VO»"
           }
         }
       },
@@ -264,8 +264,8 @@
           "type": "array",
           "description": "详细点数据",
           "items": {
-            "originalRef": "直通报表返回VO",
-            "$ref": "#/definitions/直通报表返回VO"
+            "$ref": "#/definitions/直通报表返回VO",
+            "originalRef": "直通报表返回VO"
           }
         }
       },
@@ -318,8 +318,8 @@
           "type": "array",
           "description": "详细点数据",
           "items": {
-            "originalRef": "良品与报废报表返回VO",
-            "$ref": "#/definitions/良品与报废报表返回VO"
+            "$ref": "#/definitions/良品与报废报表返回VO",
+            "originalRef": "良品与报废报表返回VO"
           }
         }
       },

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16700/doc.html#/default/tsk数采数据相关/queryTskReportPageUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/tsk数采数据相关/queryTskReportPageUsingPOST
 */
 export default function fetchMethod(options: { data: ITSKReportQueryDTO1 }, extraOptions?: any) {
     return http<IJSONResultPageInformationTSKReportQueryDTO>(

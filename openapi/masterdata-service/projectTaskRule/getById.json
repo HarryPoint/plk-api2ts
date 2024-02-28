@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "项目任务规则相关"
         ],
         "summary": "根据ID查询项目任务规则",
-        "operationId": "getByIdUsingGET_14",
+        "operationId": "getByIdUsingGET_12",
         "produces": [
           "*/*"
         ],
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«项目任务规则明细响应DTO»",
-              "$ref": "#/definitions/JSONResult«项目任务规则明细响应DTO»"
+              "$ref": "#/definitions/JSONResult«项目任务规则明细响应DTO»",
+              "originalRef": "JSONResult«项目任务规则明细响应DTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "项目任务规则明细响应DTO",
-          "$ref": "#/definitions/项目任务规则明细响应DTO"
+          "$ref": "#/definitions/项目任务规则明细响应DTO",
+          "originalRef": "项目任务规则明细响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -163,8 +163,8 @@
           "type": "array",
           "description": "修改任务列表",
           "items": {
-            "originalRef": "Id，名称VO",
-            "$ref": "#/definitions/Id，名称VO"
+            "$ref": "#/definitions/Id，名称VO",
+            "originalRef": "Id，名称VO"
           }
         },
         "finalReviewOrReviewResult": {

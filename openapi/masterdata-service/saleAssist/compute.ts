@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/02-01-02-销售交期应答辅助相关/computeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/02-01-02-销售交期应答辅助相关/computeUsingPOST
 */
 export default function fetchMethod(options: { data: ISalesDeliveryResponseHelpsCalculateDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesDeliveryResponseAssistedReturnToVO>(

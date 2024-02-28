@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16400/doc.html#/default/短信内容相关/getPageUsingPOST_32
+* @link http://47.108.135.148:16400/doc.html#/default/短信内容相关/getPageUsingPOST_31
 */
 export default function fetchMethod(options: { data: IQueryDtosUsingSMSTemplates }, extraOptions?: any) {
     return http<IJSONResultSpecifiesTheResponseDTOToQueryPagingInformationShortMessageTemplate>(

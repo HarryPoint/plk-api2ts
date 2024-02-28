@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -100,7 +100,6 @@
               "PROJECT_TYPE",
               "PROJECT_RISK_TYPE",
               "PROJECT_RISK_FLAG",
-              "PROJECT_DEVICE_INFO",
               "PROJECT_PLAN",
               "PROJECT_STAGE",
               "PROJECT_TASK",
@@ -121,11 +120,6 @@
               "PROJECT_MODIFICATION",
               "PROJECT_PLAN_MODIFICATION",
               "PROJECT_MEMBER_MODIFICATION",
-              "PROJECT_RESOURCES",
-              "PROJECT_FILE",
-              "PROJECT_FOLDER",
-              "PROJECT_CLOSE",
-              "PROJECT_TRANSFER",
               "QMS_ANNUAL_QUALITY_TARGET",
               "QMS_QUALITY_WORK_PLAN",
               "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",
@@ -224,8 +218,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«Id，名称，编号VO»»",
-              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»"
+              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»",
+              "originalRef": "JSONResult«List«Id，名称，编号VO»»"
             }
           },
           "401": {
@@ -262,8 +256,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "Id，名称，编号VO",
-            "$ref": "#/definitions/Id，名称，编号VO"
+            "$ref": "#/definitions/Id，名称，编号VO",
+            "originalRef": "Id，名称，编号VO"
           }
         },
         "ts": {

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "scanLotNoRequest",
             "required": true,
             "schema": {
-              "originalRef": "物料出库扫码批次号查询对象",
-              "$ref": "#/definitions/物料出库扫码批次号查询对象"
+              "$ref": "#/definitions/物料出库扫码批次号查询对象",
+              "originalRef": "物料出库扫码批次号查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«物料出库扫码批次号分组返回对象»»",
-              "$ref": "#/definitions/JSONResult«List«物料出库扫码批次号分组返回对象»»"
+              "$ref": "#/definitions/JSONResult«List«物料出库扫码批次号分组返回对象»»",
+              "originalRef": "JSONResult«List«物料出库扫码批次号分组返回对象»»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "物料出库扫码批次号分组返回对象",
-            "$ref": "#/definitions/物料出库扫码批次号分组返回对象"
+            "$ref": "#/definitions/物料出库扫码批次号分组返回对象",
+            "originalRef": "物料出库扫码批次号分组返回对象"
           }
         },
         "ts": {
@@ -126,8 +126,8 @@
           "type": "array",
           "description": "明细数据",
           "items": {
-            "originalRef": "物料出库扫码批次号返回对象",
-            "$ref": "#/definitions/物料出库扫码批次号返回对象"
+            "$ref": "#/definitions/物料出库扫码批次号返回对象",
+            "originalRef": "物料出库扫码批次号返回对象"
           }
         }
       },

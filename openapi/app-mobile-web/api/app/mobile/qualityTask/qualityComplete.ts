@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/质检任务相关/qualityCompleteUsingPOST
+* @link http://47.108.135.148:17400/doc.html#/default/质检任务相关/qualityCompleteUsingPOST
 */
 export default function fetchMethod(options: { data: ITheDTOCompletesTheInspectionTask }, extraOptions?: any) {
     return http<IJSONResultobject>(

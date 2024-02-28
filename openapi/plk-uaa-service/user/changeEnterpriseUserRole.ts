@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:18100/doc.html#/default/用户账号相关/changeEnterpriseUserRoleUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/用户账号相关/changeEnterpriseUserRoleUsingPOST
 */
 export default function fetchMethod(options: { data: IRequestForAnEnterpriseUserToChangeRoles }, extraOptions?: any) {
     return http<IJSONResultobject>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/CRM-报价单相关/getPageByFlowPathIdUsingPOST_13
+* @link http://47.108.135.148:17400/doc.html#/default/CRM-报价单相关/getPageByFlowPathIdUsingPOST_13
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(

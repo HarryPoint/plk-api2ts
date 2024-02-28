@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "项目看板查询dto",
-              "$ref": "#/definitions/项目看板查询dto"
+              "$ref": "#/definitions/项目看板查询dto",
+              "originalRef": "项目看板查询dto"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目地图响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目地图响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«项目地图响应对象»»",
+              "originalRef": "JSONResult«List«项目地图响应对象»»"
             }
           },
           "201": {
@@ -113,8 +113,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目地图响应对象",
-            "$ref": "#/definitions/项目地图响应对象"
+            "$ref": "#/definitions/项目地图响应对象",
+            "originalRef": "项目地图响应对象"
           }
         },
         "ts": {
@@ -146,8 +146,8 @@
           "type": "array",
           "description": "项目列表",
           "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
+            "$ref": "#/definitions/Id Code Name 通用传输对象",
+            "originalRef": "Id Code Name 通用传输对象"
           }
         }
       },

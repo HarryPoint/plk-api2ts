@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16700/doc.html#/default/视图元数据相关/queryUsingPOST_3
+* @link http://47.108.135.148:16700/doc.html#/default/视图元数据相关/queryUsingPOST_3
 */
 export default function fetchMethod(options: { data: IViewMetadataQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultViewMetadataQueryResponseDTO>(

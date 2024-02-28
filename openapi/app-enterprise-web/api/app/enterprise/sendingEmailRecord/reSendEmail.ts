@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/发送邮件记录/reSendEmailUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/发送邮件记录/reSendEmailUsingPOST
 */
 export default function fetchMethod(options: { data: IReEmailSendingEmailRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(

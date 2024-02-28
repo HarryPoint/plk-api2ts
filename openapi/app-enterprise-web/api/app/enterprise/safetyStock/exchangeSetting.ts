@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
 */
 export default function fetchMethod(options: { data: IUnifiedSecurityInventoryConfiguration }, extraOptions?: any) {
     return http<IJSONResultobject>(

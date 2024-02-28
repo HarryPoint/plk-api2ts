@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -42,8 +42,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«项目任务响应对象»",
-              "$ref": "#/definitions/JSONResult«项目任务响应对象»"
+              "$ref": "#/definitions/JSONResult«项目任务响应对象»",
+              "originalRef": "JSONResult«项目任务响应对象»"
             }
           },
           "401": {
@@ -79,8 +79,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "项目任务响应对象_6",
-          "$ref": "#/definitions/项目任务响应对象_6"
+          "$ref": "#/definitions/项目任务响应对象_6",
+          "originalRef": "项目任务响应对象_6"
         },
         "ts": {
           "type": "integer",
@@ -136,8 +136,8 @@
           "type": "array",
           "description": "前置任务列表",
           "items": {
-            "originalRef": "项目任务前置任务响应对象",
-            "$ref": "#/definitions/项目任务前置任务响应对象"
+            "$ref": "#/definitions/项目任务前置任务响应对象",
+            "originalRef": "项目任务前置任务响应对象"
           }
         },
         "planBeginTime": {
@@ -229,8 +229,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "originalRef": "项目任务响应对象_9",
-            "$ref": "#/definitions/项目任务响应对象_9"
+            "$ref": "#/definitions/项目任务响应对象_9",
+            "originalRef": "项目任务响应对象_9"
           }
         },
         "currentEmployeeTodoId": {
@@ -431,8 +431,8 @@
           "type": "array",
           "description": "前置任务列表",
           "items": {
-            "originalRef": "项目任务前置任务响应对象",
-            "$ref": "#/definitions/项目任务前置任务响应对象"
+            "$ref": "#/definitions/项目任务前置任务响应对象",
+            "originalRef": "项目任务前置任务响应对象"
           }
         },
         "planBeginTime": {
@@ -524,8 +524,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "originalRef": "项目任务响应对象_9",
-            "$ref": "#/definitions/项目任务响应对象_9"
+            "$ref": "#/definitions/项目任务响应对象_9",
+            "originalRef": "项目任务响应对象_9"
           }
         },
         "currentEmployeeTodoId": {

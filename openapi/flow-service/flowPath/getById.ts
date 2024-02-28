@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16500/doc.html#/default/流程相关/getByIdUsingGET_2
+* @link http://47.108.135.148:16500/doc.html#/default/流程相关/getByIdUsingGET_2
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessDetailsReturnVOForEditing>(
@@ -1177,8 +1177,6 @@ export enum EProcessDetailsAreReturnedToVOForEditing_flowPathSystemType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
-    /** 项目设备信息 */
-    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -1219,16 +1217,6 @@ export enum EProcessDetailsAreReturnedToVOForEditing_flowPathSystemType {
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
-    /** 项目资源 */
-    PROJECT_RESOURCES = "PROJECT_RESOURCES",
-    /** 项目文件 */
-    PROJECT_FILE = "PROJECT_FILE",
-    /** 项目文件夹 */
-    PROJECT_FOLDER = "PROJECT_FOLDER",
-    /** 项目关闭 */
-    PROJECT_CLOSE = "PROJECT_CLOSE",
-    /** 项目迁移 */
-    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */
@@ -1757,9 +1745,7 @@ export enum EProcessFormVO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
-    /** 项目设备信息状态 */
-    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
 }
 
 export enum EProcessFormVO_isCanModifySelectorOption {

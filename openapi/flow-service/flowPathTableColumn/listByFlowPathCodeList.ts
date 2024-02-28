@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/listByFlowPathCodeListUsingPOST_1
+* @link http://47.108.135.148:16500/doc.html#/default/流程表格相关/listByFlowPathCodeListUsingPOST_1
 */
 export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(

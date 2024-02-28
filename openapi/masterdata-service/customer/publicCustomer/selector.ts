@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/客户相关/searchPublicCustomerSelectorDataListUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/客户相关/searchPublicCustomerSelectorDataListUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging1 }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(

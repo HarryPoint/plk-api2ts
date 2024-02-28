@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«KaizenProjectResponseDTO»",
-              "$ref": "#/definitions/JSONResult«KaizenProjectResponseDTO»"
+              "$ref": "#/definitions/JSONResult«KaizenProjectResponseDTO»",
+              "originalRef": "JSONResult«KaizenProjectResponseDTO»"
             }
           },
           "201": {
@@ -74,8 +74,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "KaizenProjectResponseDTO",
-          "$ref": "#/definitions/KaizenProjectResponseDTO"
+          "$ref": "#/definitions/KaizenProjectResponseDTO",
+          "originalRef": "KaizenProjectResponseDTO"
         },
         "ts": {
           "type": "integer",

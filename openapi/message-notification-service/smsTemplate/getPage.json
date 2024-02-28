@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17600",
+  "host": "47.108.135.148:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "originalRef": "短信模板查询DTO",
-              "$ref": "#/definitions/短信模板查询DTO"
+              "$ref": "#/definitions/短信模板查询DTO",
+              "originalRef": "短信模板查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«短信模板查询响应DTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«短信模板查询响应DTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«短信模板查询响应DTO»»",
+              "originalRef": "JSONResult«分页信息«短信模板查询响应DTO»»"
             }
           },
           "201": {
@@ -128,8 +128,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«短信模板查询响应DTO»",
-          "$ref": "#/definitions/分页信息«短信模板查询响应DTO»"
+          "$ref": "#/definitions/分页信息«短信模板查询响应DTO»",
+          "originalRef": "分页信息«短信模板查询响应DTO»"
         },
         "ts": {
           "type": "integer",
@@ -167,8 +167,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "短信模板查询响应DTO",
-            "$ref": "#/definitions/短信模板查询响应DTO"
+            "$ref": "#/definitions/短信模板查询响应DTO",
+            "originalRef": "短信模板查询响应DTO"
           }
         },
         "lastPage": {

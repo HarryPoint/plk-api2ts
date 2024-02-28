@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«设备数采数据人工上报详单返回VO»",
-              "$ref": "#/definitions/JSONResult«设备数采数据人工上报详单返回VO»"
+              "$ref": "#/definitions/JSONResult«设备数采数据人工上报详单返回VO»",
+              "originalRef": "JSONResult«设备数采数据人工上报详单返回VO»"
             }
           },
           "401": {
@@ -84,8 +84,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "设备数采数据人工上报详单返回VO",
-          "$ref": "#/definitions/设备数采数据人工上报详单返回VO"
+          "$ref": "#/definitions/设备数采数据人工上报详单返回VO",
+          "originalRef": "设备数采数据人工上报详单返回VO"
         },
         "ts": {
           "type": "integer",
@@ -165,8 +165,8 @@
           "type": "array",
           "description": "详情",
           "items": {
-            "originalRef": "设备数采数据明细返回VO",
-            "$ref": "#/definitions/设备数采数据明细返回VO"
+            "$ref": "#/definitions/设备数采数据明细返回VO",
+            "originalRef": "设备数采数据明细返回VO"
           }
         }
       },

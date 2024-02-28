@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:16700/doc.html#/default/项目大屏设置相关/saveSettingUsingPOST_1
+* @link http://47.108.135.148:16700/doc.html#/default/项目大屏设置相关/saveSettingUsingPOST_1
 */
 export default function fetchMethod(options: { data: IProjectLargeScreenSettingsSaveRequestDto1 }, extraOptions?: any) {
     return http<IJSONResultobject>(

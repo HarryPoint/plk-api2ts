@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.139.107:16700/doc.html#/default/待处理进出料异步处理相关/triggerMoveInOutAsyncHandleTaskUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/待处理进出料异步处理相关/triggerMoveInOutAsyncHandleTaskUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

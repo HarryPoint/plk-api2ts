@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "editCheck",
             "required": true,
             "schema": {
-              "originalRef": "年度质量目标编辑校验DTO",
-              "$ref": "#/definitions/年度质量目标编辑校验DTO"
+              "$ref": "#/definitions/年度质量目标编辑校验DTO",
+              "originalRef": "年度质量目标编辑校验DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«年度质量目标编辑校验返回DTO»",
-              "$ref": "#/definitions/JSONResult«年度质量目标编辑校验返回DTO»"
+              "$ref": "#/definitions/JSONResult«年度质量目标编辑校验返回DTO»",
+              "originalRef": "JSONResult«年度质量目标编辑校验返回DTO»"
             }
           },
           "201": {
@@ -82,8 +82,8 @@
           "type": "array",
           "description": "明细数据",
           "items": {
-            "originalRef": "年度质量目标明细编辑DTO",
-            "$ref": "#/definitions/年度质量目标明细编辑DTO"
+            "$ref": "#/definitions/年度质量目标明细编辑DTO",
+            "originalRef": "年度质量目标明细编辑DTO"
           }
         }
       },
@@ -160,8 +160,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "年度质量目标编辑校验返回DTO",
-          "$ref": "#/definitions/年度质量目标编辑校验返回DTO"
+          "$ref": "#/definitions/年度质量目标编辑校验返回DTO",
+          "originalRef": "年度质量目标编辑校验返回DTO"
         },
         "ts": {
           "type": "integer",

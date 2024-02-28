@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "子物料生产信息查询请求DTO",
-              "$ref": "#/definitions/子物料生产信息查询请求DTO"
+              "$ref": "#/definitions/子物料生产信息查询请求DTO",
+              "originalRef": "子物料生产信息查询请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«子生产订单信息查询响应»",
-              "$ref": "#/definitions/JSONResult«子生产订单信息查询响应»"
+              "$ref": "#/definitions/JSONResult«子生产订单信息查询响应»",
+              "originalRef": "JSONResult«子生产订单信息查询响应»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "子生产订单信息查询响应",
-          "$ref": "#/definitions/子生产订单信息查询响应"
+          "$ref": "#/definitions/子生产订单信息查询响应",
+          "originalRef": "子生产订单信息查询响应"
         },
         "ts": {
           "type": "integer",
@@ -112,16 +112,16 @@
           "type": "array",
           "description": "子物料生产信息集",
           "items": {
-            "originalRef": "子物料生产信息VO",
-            "$ref": "#/definitions/子物料生产信息VO"
+            "$ref": "#/definitions/子物料生产信息VO",
+            "originalRef": "子物料生产信息VO"
           }
         },
         "produceOtherMaterials": {
           "type": "array",
           "description": "生产所需要的其他物料信息",
           "items": {
-            "originalRef": "物料主数据基础信息返回VO",
-            "$ref": "#/definitions/物料主数据基础信息返回VO"
+            "$ref": "#/definitions/物料主数据基础信息返回VO",
+            "originalRef": "物料主数据基础信息返回VO"
           }
         }
       },

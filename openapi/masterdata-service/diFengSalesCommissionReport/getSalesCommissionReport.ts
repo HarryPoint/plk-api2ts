@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.139.107:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionReportUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/佣金与提成统计表（帝丰定制）/getSalesCommissionReportUsingPOST
 */
 export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultPagingInformationCommissionAndCommissionStatisticsTableTyfungCustomizedResponseObject>(

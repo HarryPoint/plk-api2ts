@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "queryVO",
             "required": true,
             "schema": {
-              "originalRef": "主表id查询VO",
-              "$ref": "#/definitions/主表id查询VO"
+              "$ref": "#/definitions/主表id查询VO",
+              "originalRef": "主表id查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«long»»",
-              "$ref": "#/definitions/JSONResult«List«long»»"
+              "$ref": "#/definitions/JSONResult«List«long»»",
+              "originalRef": "JSONResult«List«long»»"
             }
           },
           "201": {

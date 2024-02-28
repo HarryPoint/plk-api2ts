@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17600/doc.html#/default/消息相关/getPageUsingPOST
+* @link http://47.108.135.148:17600/doc.html#/default/消息相关/getPageUsingPOST
 */
 export default function fetchMethod(options: { data: IMessageSearchVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMessageReturnsVO>(

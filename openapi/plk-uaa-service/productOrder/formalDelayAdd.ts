@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:18100/doc.html#/default/产品订单相关/formalDelayAddUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/产品订单相关/formalDelayAddUsingPOST
 */
 export default function fetchMethod(options: { data: INewRequestObjectForOfficialProductOrderExtension }, extraOptions?: any) {
     return http<IJSONResultobject>(

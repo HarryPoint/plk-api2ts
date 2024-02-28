@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/工艺路径相关/getProcessSheetSelectorUsingPOST
+* @link http://47.108.135.148:17400/doc.html#/default/工艺路径相关/getProcessSheetSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessCardSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(

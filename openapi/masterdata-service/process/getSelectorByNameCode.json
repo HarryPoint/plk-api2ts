@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«工序选择返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«工序选择返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«工序选择返回VO»»",
+              "originalRef": "JSONResult«List«工序选择返回VO»»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "工序选择返回VO",
-            "$ref": "#/definitions/工序选择返回VO"
+            "$ref": "#/definitions/工序选择返回VO",
+            "originalRef": "工序选择返回VO"
           }
         },
         "ts": {
@@ -113,8 +113,8 @@
         },
         "area": {
           "description": "区域",
-          "originalRef": "区域VO_1",
-          "$ref": "#/definitions/区域VO_1"
+          "$ref": "#/definitions/区域VO_1",
+          "originalRef": "区域VO_1"
         }
       },
       "title": "工序选择返回VO"

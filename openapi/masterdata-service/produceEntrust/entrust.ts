@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/委外加工管理/entrustUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/委外加工管理/entrustUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionOutsourcingSubmitDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

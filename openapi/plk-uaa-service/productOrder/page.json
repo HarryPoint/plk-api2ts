@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "pageQuery",
             "required": true,
             "schema": {
-              "originalRef": "产品订单分页查询对象",
-              "$ref": "#/definitions/产品订单分页查询对象"
+              "$ref": "#/definitions/产品订单分页查询对象",
+              "originalRef": "产品订单分页查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«产品订单分页响应»»",
-              "$ref": "#/definitions/JSONResult«分页信息«产品订单分页响应»»"
+              "$ref": "#/definitions/JSONResult«分页信息«产品订单分页响应»»",
+              "originalRef": "JSONResult«分页信息«产品订单分页响应»»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -189,8 +189,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«产品订单分页响应»",
-          "$ref": "#/definitions/分页信息«产品订单分页响应»"
+          "$ref": "#/definitions/分页信息«产品订单分页响应»",
+          "originalRef": "分页信息«产品订单分页响应»"
         },
         "ts": {
           "type": "integer",
@@ -228,8 +228,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "产品订单分页响应",
-            "$ref": "#/definitions/产品订单分页响应"
+            "$ref": "#/definitions/产品订单分页响应",
+            "originalRef": "产品订单分页响应"
           }
         },
         "lastPage": {

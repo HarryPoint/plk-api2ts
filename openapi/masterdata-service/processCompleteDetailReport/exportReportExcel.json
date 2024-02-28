@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "reportQuery",
             "required": true,
             "schema": {
-              "originalRef": "工序完成明细表查询",
-              "$ref": "#/definitions/工序完成明细表查询"
+              "$ref": "#/definitions/工序完成明细表查询",
+              "originalRef": "工序完成明细表查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "configNo": {
@@ -192,8 +192,8 @@
           "type": "array",
           "description": "排班日期集合",
           "items": {
-            "originalRef": "LocalDate",
-            "$ref": "#/definitions/LocalDate"
+            "$ref": "#/definitions/LocalDate",
+            "originalRef": "LocalDate"
           }
         }
       },

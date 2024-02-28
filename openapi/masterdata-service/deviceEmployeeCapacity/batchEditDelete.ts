@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.139.107:16700/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/设备人员能力相关/batchEditDeleteUsingPOST
 */
 export default function fetchMethod(options: { data: IEquipmentPersonnelAbilityToBatchEditDtos }, extraOptions?: any) {
     return http<IJSONResultobject>(

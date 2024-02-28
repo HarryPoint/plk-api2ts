@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17600",
+  "host": "47.108.135.148:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "AppMessageConfigBatchCheckRequestDTO",
-              "$ref": "#/definitions/AppMessageConfigBatchCheckRequestDTO"
+              "$ref": "#/definitions/AppMessageConfigBatchCheckRequestDTO",
+              "originalRef": "AppMessageConfigBatchCheckRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»",
-              "$ref": "#/definitions/JSONResult«string»"
+              "$ref": "#/definitions/JSONResult«string»",
+              "originalRef": "JSONResult«string»"
             }
           },
           "201": {
@@ -74,15 +74,15 @@
         },
         "flowPath": {
           "description": "应用引擎",
-          "originalRef": "流程响应VO",
-          "$ref": "#/definitions/流程响应VO"
+          "$ref": "#/definitions/流程响应VO",
+          "originalRef": "流程响应VO"
         },
         "fieldList": {
           "type": "array",
           "description": "字段列表",
           "items": {
-            "originalRef": "流程表单VO",
-            "$ref": "#/definitions/流程表单VO"
+            "$ref": "#/definitions/流程表单VO",
+            "originalRef": "流程表单VO"
           }
         }
       },
@@ -239,8 +239,6 @@
             "  PROJECT_MODIFICATION-项目信息变更单",
             "  PROJECT_PLAN_MODIFICATION-项目计划变更单",
             "  PROJECT_MEMBER_MODIFICATION-项目成员变更单",
-            "  PROJECT_FILE-项目文件",
-            "  PROJECT_FOLDER-项目文件夹",
             "  QMS_ANNUAL_QUALITY_TARGET-年度质量目标",
             "  QMS_QUALITY_WORK_PLAN-质量工作计划",
             "  QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT-未完成情况分析报告",
@@ -616,8 +614,8 @@
           "type": "array",
           "description": "编码规则",
           "items": {
-            "originalRef": "流程表单字段编码规则明细VO",
-            "$ref": "#/definitions/流程表单字段编码规则明细VO"
+            "$ref": "#/definitions/流程表单字段编码规则明细VO",
+            "originalRef": "流程表单字段编码规则明细VO"
           }
         },
         "isMust": {
@@ -687,24 +685,24 @@
           "type": "array",
           "description": "选项集",
           "items": {
-            "originalRef": "FormFieldOption",
-            "$ref": "#/definitions/FormFieldOption"
+            "$ref": "#/definitions/FormFieldOption",
+            "originalRef": "FormFieldOption"
           }
         },
         "selectorDictionaryList": {
           "type": "array",
           "description": "选项集字典",
           "items": {
-            "originalRef": "流程表单字段关联字典选项集VO",
-            "$ref": "#/definitions/流程表单字段关联字典选项集VO"
+            "$ref": "#/definitions/流程表单字段关联字典选项集VO",
+            "originalRef": "流程表单字段关联字典选项集VO"
           }
         },
         "selectorAssociateDisplayList": {
           "type": "array",
           "description": "下拉选项关联显示列表",
           "items": {
-            "originalRef": "流程表单字段下拉选项关联显示VO",
-            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO"
+            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO",
+            "originalRef": "流程表单字段下拉选项关联显示VO"
           }
         },
         "selectorOptionSource": {
@@ -788,24 +786,24 @@
           "type": "array",
           "description": "关联表单筛选条件组集",
           "items": {
-            "originalRef": "流程表单关联表单筛选条件组VO",
-            "$ref": "#/definitions/流程表单关联表单筛选条件组VO"
+            "$ref": "#/definitions/流程表单关联表单筛选条件组VO",
+            "originalRef": "流程表单关联表单筛选条件组VO"
           }
         },
         "formRpFills": {
           "type": "array",
           "description": "关联表单填充规则集",
           "items": {
-            "originalRef": "流程表单关联表单填充VO",
-            "$ref": "#/definitions/流程表单关联表单填充VO"
+            "$ref": "#/definitions/流程表单关联表单填充VO",
+            "originalRef": "流程表单关联表单填充VO"
           }
         },
         "tableCustomFormFields": {
           "type": "array",
           "description": "表格自定义字段集",
           "items": {
-            "originalRef": "流程表单VO",
-            "$ref": "#/definitions/流程表单VO"
+            "$ref": "#/definitions/流程表单VO",
+            "originalRef": "流程表单VO"
           }
         },
         "style": {
@@ -925,15 +923,15 @@
         },
         "dataLinkage": {
           "description": "数据联动",
-          "originalRef": "FlowPathFormFieldDataLinkageVO",
-          "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
+          "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO",
+          "originalRef": "FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {
           "type": "array",
           "description": "字段值限制规则",
           "items": {
-            "originalRef": "FlowPathFormFieldValueLimitRuleEditDTO",
-            "$ref": "#/definitions/FlowPathFormFieldValueLimitRuleEditDTO"
+            "$ref": "#/definitions/FlowPathFormFieldValueLimitRuleEditDTO",
+            "originalRef": "FlowPathFormFieldValueLimitRuleEditDTO"
           }
         },
         "isHyperlinkEnabled": {
@@ -1154,8 +1152,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "originalRef": "流程表单关联表单筛选条件VO",
-            "$ref": "#/definitions/流程表单关联表单筛选条件VO"
+            "$ref": "#/definitions/流程表单关联表单筛选条件VO",
+            "originalRef": "流程表单关联表单筛选条件VO"
           }
         },
         "isSystemDefault": {
@@ -1379,8 +1377,8 @@
           "type": "array",
           "description": "筛选条件组集",
           "items": {
-            "originalRef": "流程表单关联表单筛选条件组VO",
-            "$ref": "#/definitions/流程表单关联表单筛选条件组VO"
+            "$ref": "#/definitions/流程表单关联表单筛选条件组VO",
+            "originalRef": "流程表单关联表单筛选条件组VO"
           }
         }
       },

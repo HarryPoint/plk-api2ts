@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/设备数采数据参数相关/changeValidUsingPOST_2
+* @link http://47.108.135.148:16400/doc.html#/default/设备数采数据参数相关/changeValidUsingPOST_2
 */
 export default function fetchMethod(options: { data: IEnableOrDisableVO }, extraOptions?: any) {
     return http<IJSONResultobject>(

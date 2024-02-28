@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17600",
+  "host": "47.108.135.148:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "AppMessageConfigDTO",
-              "$ref": "#/definitions/AppMessageConfigDTO"
+              "$ref": "#/definitions/AppMessageConfigDTO",
+              "originalRef": "AppMessageConfigDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«string»",
-              "$ref": "#/definitions/JSONResult«string»"
+              "$ref": "#/definitions/JSONResult«string»",
+              "originalRef": "JSONResult«string»"
             }
           },
           "201": {
@@ -101,16 +101,16 @@
           "type": "array",
           "description": "发送内容配置列表",
           "items": {
-            "originalRef": "AppMessageSentContentTemplateDTO",
-            "$ref": "#/definitions/AppMessageSentContentTemplateDTO"
+            "$ref": "#/definitions/AppMessageSentContentTemplateDTO",
+            "originalRef": "AppMessageSentContentTemplateDTO"
           }
         },
         "recipientList": {
           "type": "array",
           "description": "接受人列表",
           "items": {
-            "originalRef": "AppMessageRecipientDTO",
-            "$ref": "#/definitions/AppMessageRecipientDTO"
+            "$ref": "#/definitions/AppMessageRecipientDTO",
+            "originalRef": "AppMessageRecipientDTO"
           }
         },
         "applicationId": {
@@ -151,8 +151,8 @@
           "type": "array",
           "description": "字段元数据",
           "items": {
-            "originalRef": "MessageContentFieldMetaDTO",
-            "$ref": "#/definitions/MessageContentFieldMetaDTO"
+            "$ref": "#/definitions/MessageContentFieldMetaDTO",
+            "originalRef": "MessageContentFieldMetaDTO"
           }
         },
         "isUseConfig": {
@@ -275,24 +275,24 @@
           "type": "array",
           "description": "部门列表",
           "items": {
-            "originalRef": "部门响应对象_1",
-            "$ref": "#/definitions/部门响应对象_1"
+            "$ref": "#/definitions/部门响应对象_1",
+            "originalRef": "部门响应对象_1"
           }
         },
         "classGroupList": {
           "type": "array",
           "description": "班组列表",
           "items": {
-            "originalRef": "部门响应对象",
-            "$ref": "#/definitions/部门响应对象"
+            "$ref": "#/definitions/部门响应对象",
+            "originalRef": "部门响应对象"
           }
         },
         "userList": {
           "type": "array",
           "description": "用户列表",
           "items": {
-            "originalRef": "人员响应对象",
-            "$ref": "#/definitions/人员响应对象"
+            "$ref": "#/definitions/人员响应对象",
+            "originalRef": "人员响应对象"
           }
         }
       },
@@ -323,8 +323,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "originalRef": "人员响应对象",
-            "$ref": "#/definitions/人员响应对象"
+            "$ref": "#/definitions/人员响应对象",
+            "originalRef": "人员响应对象"
           }
         }
       },
@@ -438,8 +438,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "originalRef": "人员响应对象",
-            "$ref": "#/definitions/人员响应对象"
+            "$ref": "#/definitions/人员响应对象",
+            "originalRef": "人员响应对象"
           }
         }
       },

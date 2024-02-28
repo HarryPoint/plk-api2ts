@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/生产订单相关/batchGetProducePrintTagUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/生产订单相关/batchGetProducePrintTagUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProducePrintTagVO>(

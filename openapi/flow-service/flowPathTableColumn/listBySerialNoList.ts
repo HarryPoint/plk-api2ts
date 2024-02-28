@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/listBySerialNoListUsingPOST
+* @link http://47.108.135.148:16500/doc.html#/default/流程表格相关/listBySerialNoListUsingPOST
 */
 export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(

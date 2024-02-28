@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "condition",
             "required": true,
             "schema": {
-              "originalRef": "FormCascadeQueryConditionVO",
-              "$ref": "#/definitions/FormCascadeQueryConditionVO"
+              "$ref": "#/definitions/FormCascadeQueryConditionVO",
+              "originalRef": "FormCascadeQueryConditionVO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«FormCascadeQueryResultVO»»",
-              "$ref": "#/definitions/JSONResult«List«FormCascadeQueryResultVO»»"
+              "$ref": "#/definitions/JSONResult«List«FormCascadeQueryResultVO»»",
+              "originalRef": "JSONResult«List«FormCascadeQueryResultVO»»"
             }
           },
           "201": {
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "FormCascadeQueryResultVO",
-            "$ref": "#/definitions/FormCascadeQueryResultVO"
+            "$ref": "#/definitions/FormCascadeQueryResultVO",
+            "originalRef": "FormCascadeQueryResultVO"
           }
         },
         "ts": {
@@ -149,8 +149,8 @@
           "type": "array",
           "description": "子集",
           "items": {
-            "originalRef": "FormCascadeQueryResultVO",
-            "$ref": "#/definitions/FormCascadeQueryResultVO"
+            "$ref": "#/definitions/FormCascadeQueryResultVO",
+            "originalRef": "FormCascadeQueryResultVO"
           }
         }
       },

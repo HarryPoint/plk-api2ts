@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "originalRef": "用户员工查询",
-              "$ref": "#/definitions/用户员工查询"
+              "$ref": "#/definitions/用户员工查询",
+              "originalRef": "用户员工查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«用户员工信息响应»»",
-              "$ref": "#/definitions/JSONResult«List«用户员工信息响应»»"
+              "$ref": "#/definitions/JSONResult«List«用户员工信息响应»»",
+              "originalRef": "JSONResult«List«用户员工信息响应»»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "用户员工信息响应",
-            "$ref": "#/definitions/用户员工信息响应"
+            "$ref": "#/definitions/用户员工信息响应",
+            "originalRef": "用户员工信息响应"
           }
         },
         "ts": {

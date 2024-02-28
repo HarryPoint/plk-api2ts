@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "commitDTO",
             "required": true,
             "schema": {
-              "originalRef": "盘点任务提交DTO",
-              "$ref": "#/definitions/盘点任务提交DTO"
+              "$ref": "#/definitions/盘点任务提交DTO",
+              "originalRef": "盘点任务提交DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -72,8 +72,8 @@
           "type": "array",
           "description": "提交清单",
           "items": {
-            "originalRef": "盘点任务提交清单DTO",
-            "$ref": "#/definitions/盘点任务提交清单DTO"
+            "$ref": "#/definitions/盘点任务提交清单DTO",
+            "originalRef": "盘点任务提交清单DTO"
           }
         }
       },
@@ -91,8 +91,8 @@
           "type": "array",
           "description": "物料集",
           "items": {
-            "originalRef": "盘点任务提交清单物料DTO",
-            "$ref": "#/definitions/盘点任务提交清单物料DTO"
+            "$ref": "#/definitions/盘点任务提交清单物料DTO",
+            "originalRef": "盘点任务提交清单物料DTO"
           }
         }
       },

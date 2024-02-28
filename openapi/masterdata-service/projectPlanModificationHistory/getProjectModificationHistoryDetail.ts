@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TanPeng
-* @link http://47.108.139.107:16700/doc.html#/default/项目计划变更版本记录相关/getProjectModificationHistoryDetailUsingGET_2
+* @link http://47.108.135.148:16700/doc.html#/default/项目计划变更版本记录相关/getProjectModificationHistoryDetailUsingGET_2
 */
 export default function fetchMethod(options: { params: { projectPlanModificationId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectPlanChangeInformationVersionRecord>(

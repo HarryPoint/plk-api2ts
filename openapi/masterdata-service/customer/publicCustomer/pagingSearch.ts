@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/客户相关/pagingSearchPublicCustomerUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/客户相关/pagingSearchPublicCustomerUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging }, extraOptions?: any) {
     return http<IJSONResultPageInformationPublicCustomerOutputVO>(

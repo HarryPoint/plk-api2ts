@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:18100/doc.html#/default/员工相关/getUserInfoListByEmployeeIdListUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/员工相关/getUserInfoListByEmployeeIdListUsingPOST
 */
 export default function fetchMethod(options: { data: IUserInfoQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultUserInfoQueryResponseDTO>(

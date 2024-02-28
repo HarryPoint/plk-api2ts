@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16400/doc.html#/default/消息方案相关/editUsingPOST_13
+* @link http://47.108.135.148:16400/doc.html#/default/消息方案相关/editUsingPOST_13
 */
 export default function fetchMethod(options: { data: IMessageSchemaEditRequestDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(

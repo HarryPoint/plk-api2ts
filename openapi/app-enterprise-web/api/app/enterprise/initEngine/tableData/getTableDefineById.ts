@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDefineByIdUsingGET
+* @link http://47.108.135.148:16400/doc.html#/default/初始化引擎 - 表数据相关/getTableDefineByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultTableDefinition>(
@@ -271,18 +271,12 @@ export enum ETableDefinition_presetApplicationType {
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
-    /** 项目设备信息 */
-    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
     PROJECT_STAGE = "PROJECT_STAGE",
     /** 项目任务 */
     PROJECT_TASK = "PROJECT_TASK",
-    /** 评审任务 */
-    PROJECT_TASK_REVIEW = "PROJECT_TASK_REVIEW",
-    /** 决策任务 */
-    PROJECT_TASK_DECISION = "PROJECT_TASK_DECISION",
     /** 项目任务类型 */
     PROJECT_TASK_TYPE = "PROJECT_TASK_TYPE",
     /** 项目成员 */
@@ -307,18 +301,16 @@ export enum ETableDefinition_presetApplicationType {
     PROJECT_MEMORABILIA = "PROJECT_MEMORABILIA",
     /** 项目简报 */
     PROJECT_BRIEF_REPORT = "PROJECT_BRIEF_REPORT",
+    /** 评审任务 */
+    PROJECT_TASK_REVIEW = "PROJECT_TASK_REVIEW",
+    /** 决策任务 */
+    PROJECT_TASK_DECISION = "PROJECT_TASK_DECISION",
     /** 项目信息变更单 */
     PROJECT_MODIFICATION = "PROJECT_MODIFICATION",
     /** 项目计划变更单 */
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
-    /** 项目资源 */
-    PROJECT_RESOURCES = "PROJECT_RESOURCES",
-    /** 项目文件 */
-    PROJECT_FILE = "PROJECT_FILE",
-    /** 项目文件夹 */
-    PROJECT_FOLDER = "PROJECT_FOLDER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

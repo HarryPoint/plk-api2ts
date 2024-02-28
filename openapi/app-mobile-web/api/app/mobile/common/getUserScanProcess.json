@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«UserScanProcessVO»",
-              "$ref": "#/definitions/JSONResult«UserScanProcessVO»"
+              "$ref": "#/definitions/JSONResult«UserScanProcessVO»",
+              "originalRef": "JSONResult«UserScanProcessVO»"
             }
           },
           "401": {
@@ -58,8 +58,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "UserScanProcessVO",
-          "$ref": "#/definitions/UserScanProcessVO"
+          "$ref": "#/definitions/UserScanProcessVO",
+          "originalRef": "UserScanProcessVO"
         },
         "ts": {
           "type": "integer",

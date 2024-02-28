@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/工艺画布编辑锁定相关/lockTechnologyCanvasEditUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/工艺画布编辑锁定相关/lockTechnologyCanvasEditUsingPOST
 */
 export default function fetchMethod(options: { data: ICraftCanvasEditLockRequestDTO }, extraOptions?: any) {
     return http<IJSONResultProcessCanvasEditsLockResponseDTO>(

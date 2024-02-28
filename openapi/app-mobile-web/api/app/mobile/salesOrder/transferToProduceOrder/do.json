@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "transferToRequest",
             "required": true,
             "schema": {
-              "originalRef": "批量转到生产订单",
-              "$ref": "#/definitions/批量转到生产订单"
+              "$ref": "#/definitions/批量转到生产订单",
+              "originalRef": "批量转到生产订单"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«销售订单转生产订单返回DTO»",
-              "$ref": "#/definitions/JSONResult«销售订单转生产订单返回DTO»"
+              "$ref": "#/definitions/JSONResult«销售订单转生产订单返回DTO»",
+              "originalRef": "JSONResult«销售订单转生产订单返回DTO»"
             }
           },
           "201": {
@@ -75,8 +75,8 @@
           "type": "array",
           "description": "转生产订单数据列表",
           "items": {
-            "originalRef": "销售订单转生产订单子物料生产信息DTO",
-            "$ref": "#/definitions/销售订单转生产订单子物料生产信息DTO"
+            "$ref": "#/definitions/销售订单转生产订单子物料生产信息DTO",
+            "originalRef": "销售订单转生产订单子物料生产信息DTO"
           }
         }
       },
@@ -135,16 +135,16 @@
           "type": "array",
           "description": "对应批次订单集合",
           "items": {
-            "originalRef": "批次编辑DTO",
-            "$ref": "#/definitions/批次编辑DTO"
+            "$ref": "#/definitions/批次编辑DTO",
+            "originalRef": "批次编辑DTO"
           }
         },
         "childMaterialProduces": {
           "type": "array",
           "description": "子物料生产信息",
           "items": {
-            "originalRef": "子生产订单配置请求",
-            "$ref": "#/definitions/子生产订单配置请求"
+            "$ref": "#/definitions/子生产订单配置请求",
+            "originalRef": "子生产订单配置请求"
           }
         },
         "notNeedProduceMaterialStandardTechnologyNodeIdList": {
@@ -256,8 +256,8 @@
           "type": "array",
           "description": "批次信息列表",
           "items": {
-            "originalRef": "批次编辑DTO",
-            "$ref": "#/definitions/批次编辑DTO"
+            "$ref": "#/definitions/批次编辑DTO",
+            "originalRef": "批次编辑DTO"
           }
         }
       },
@@ -279,8 +279,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "销售订单转生产订单返回DTO",
-          "$ref": "#/definitions/销售订单转生产订单返回DTO"
+          "$ref": "#/definitions/销售订单转生产订单返回DTO",
+          "originalRef": "销售订单转生产订单返回DTO"
         },
         "ts": {
           "type": "integer",

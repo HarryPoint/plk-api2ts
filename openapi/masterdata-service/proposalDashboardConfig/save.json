@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "config",
             "required": true,
             "schema": {
-              "originalRef": "ProposalDashboardConfigRequestDTO",
-              "$ref": "#/definitions/ProposalDashboardConfigRequestDTO"
+              "$ref": "#/definitions/ProposalDashboardConfigRequestDTO",
+              "originalRef": "ProposalDashboardConfigRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -106,16 +106,16 @@
           "type": "array",
           "description": "未完成项目数量的统计区间配置",
           "items": {
-            "originalRef": "ProposalDashboardStatisticsConfigRequestDTO",
-            "$ref": "#/definitions/ProposalDashboardStatisticsConfigRequestDTO"
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigRequestDTO",
+            "originalRef": "ProposalDashboardStatisticsConfigRequestDTO"
           }
         },
         "completedProjectDashboardStatisticsConfigList": {
           "type": "array",
           "description": "已完成项目数量的统计区间配置",
           "items": {
-            "originalRef": "ProposalDashboardStatisticsConfigRequestDTO",
-            "$ref": "#/definitions/ProposalDashboardStatisticsConfigRequestDTO"
+            "$ref": "#/definitions/ProposalDashboardStatisticsConfigRequestDTO",
+            "originalRef": "ProposalDashboardStatisticsConfigRequestDTO"
           }
         }
       },

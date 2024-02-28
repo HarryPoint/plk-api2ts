@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/getQualityDetailUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/getQualityDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IEnterAndExitTheStationForDetailedVOSearch, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultInboundAndOutboundInformationVO>(

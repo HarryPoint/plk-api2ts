@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "vaguePlan",
             "required": true,
             "schema": {
-              "originalRef": "生产订单模糊排产DTO",
-              "$ref": "#/definitions/生产订单模糊排产DTO"
+              "$ref": "#/definitions/生产订单模糊排产DTO",
+              "originalRef": "生产订单模糊排产DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "排产订单集",
           "items": {
-            "originalRef": "生产订单模糊排产订单DTO",
-            "$ref": "#/definitions/生产订单模糊排产订单DTO"
+            "$ref": "#/definitions/生产订单模糊排产订单DTO",
+            "originalRef": "生产订单模糊排产订单DTO"
           }
         }
       },
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "步骤明细",
           "items": {
-            "originalRef": "生产订单模糊排产订单步骤DTO",
-            "$ref": "#/definitions/生产订单模糊排产订单步骤DTO"
+            "$ref": "#/definitions/生产订单模糊排产订单步骤DTO",
+            "originalRef": "生产订单模糊排产订单步骤DTO"
           }
         }
       },

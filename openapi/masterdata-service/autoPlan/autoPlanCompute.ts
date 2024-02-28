@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/自动排产订单相关/autoPlanComputeUsingPOST
 */
 export default function fetchMethod(options: { data: IAutomaticProductionOrderSchedulingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSchedulingResultVO>(

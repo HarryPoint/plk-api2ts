@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "GetQualityAnalysisAmountReport",
-              "$ref": "#/definitions/GetQualityAnalysisAmountReport"
+              "$ref": "#/definitions/GetQualityAnalysisAmountReport",
+              "originalRef": "GetQualityAnalysisAmountReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«质量统计分析报表合计返回DTO»",
-              "$ref": "#/definitions/JSONResult«质量统计分析报表合计返回DTO»"
+              "$ref": "#/definitions/JSONResult«质量统计分析报表合计返回DTO»",
+              "originalRef": "JSONResult«质量统计分析报表合计返回DTO»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "质量统计分析报表合计返回DTO",
-          "$ref": "#/definitions/质量统计分析报表合计返回DTO"
+          "$ref": "#/definitions/质量统计分析报表合计返回DTO",
+          "originalRef": "质量统计分析报表合计返回DTO"
         },
         "ts": {
           "type": "integer",

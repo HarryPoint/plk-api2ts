@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16700/doc.html#/default/提案部门完成情况表-相关/getDeadlineMonthUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/提案部门完成情况表-相关/getDeadlineMonthUsingGET
 */
 export default function fetchMethod(options: { params: { year?: number } }, extraOptions?: any) {
     return http<IJSONResultint>(

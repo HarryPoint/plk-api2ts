@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/compareTakeCheckSerialNosUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/仓库盘点任务相关/compareTakeCheckSerialNosUsingPOST
 */
 export default function fetchMethod(options: { data: IInventorySerialNumberComparisonRequestDTO }, extraOptions?: any) {
     return http<IJSONResultInventorySerialNumberComparisonResultDTO>(

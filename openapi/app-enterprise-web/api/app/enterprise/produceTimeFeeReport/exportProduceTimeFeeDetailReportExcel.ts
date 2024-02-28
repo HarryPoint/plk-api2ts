@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16400/doc.html#/default/工时工费相关/exportProduceTimeFeeDetailReportExcelUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/工时工费相关/exportProduceTimeFeeDetailReportExcelUsingPOST
 */
 export default function fetchMethod(options: { data: IHourlyLaborRateReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(

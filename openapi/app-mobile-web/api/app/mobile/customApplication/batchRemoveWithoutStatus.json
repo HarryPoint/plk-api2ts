@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "dynamicWithoutStatusRemoveRequest",
             "required": true,
             "schema": {
-              "originalRef": "动态数据无状态删除请求对象",
-              "$ref": "#/definitions/动态数据无状态删除请求对象"
+              "$ref": "#/definitions/动态数据无状态删除请求对象",
+              "originalRef": "动态数据无状态删除请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -68,8 +68,8 @@
           "type": "array",
           "description": "删除明细",
           "items": {
-            "originalRef": "动态数据无状态删除明细请求对象",
-            "$ref": "#/definitions/动态数据无状态删除明细请求对象"
+            "$ref": "#/definitions/动态数据无状态删除明细请求对象",
+            "originalRef": "动态数据无状态删除明细请求对象"
           }
         }
       },

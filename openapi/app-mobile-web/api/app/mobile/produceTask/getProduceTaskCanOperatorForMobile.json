@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "生产任务列表可批量操作项查询DTO(针对移动端)",
-              "$ref": "#/definitions/生产任务列表可批量操作项查询DTO(针对移动端)"
+              "$ref": "#/definitions/生产任务列表可批量操作项查询DTO(针对移动端)",
+              "originalRef": "生产任务列表可批量操作项查询DTO(针对移动端)"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产任务列表可批量操作按钮返回DTO(针对移动端)»",
-              "$ref": "#/definitions/JSONResult«生产任务列表可批量操作按钮返回DTO(针对移动端)»"
+              "$ref": "#/definitions/JSONResult«生产任务列表可批量操作按钮返回DTO(针对移动端)»",
+              "originalRef": "JSONResult«生产任务列表可批量操作按钮返回DTO(针对移动端)»"
             }
           },
           "201": {
@@ -80,8 +80,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "groupBys": {
@@ -233,8 +233,8 @@
           "type": "array",
           "description": "生产订单字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         }
       },
@@ -326,8 +326,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产任务列表可批量操作按钮返回DTO(针对移动端)",
-          "$ref": "#/definitions/生产任务列表可批量操作按钮返回DTO(针对移动端)"
+          "$ref": "#/definitions/生产任务列表可批量操作按钮返回DTO(针对移动端)",
+          "originalRef": "生产任务列表可批量操作按钮返回DTO(针对移动端)"
         },
         "ts": {
           "type": "integer",

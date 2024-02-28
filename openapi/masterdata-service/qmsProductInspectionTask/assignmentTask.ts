@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.139.107:16700/doc.html#/default/成品检验任务相关/assignmentTaskUsingPOST_4
+* @link http://47.108.135.148:16700/doc.html#/default/成品检验任务相关/assignmentTaskUsingPOST_4
 */
 export default function fetchMethod(options: { data: IVerifyTaskAssignmentRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

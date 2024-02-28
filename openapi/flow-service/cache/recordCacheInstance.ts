@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16500/doc.html#/default/缓存相关/recordCacheInstanceUsingPOST
+* @link http://47.108.135.148:16500/doc.html#/default/缓存相关/recordCacheInstanceUsingPOST
 */
 export default function fetchMethod(options: { data: ICacheInstanceRecordRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

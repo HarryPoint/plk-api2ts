@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/uaa迁移脚本相关/transferUsingPOST_2
+* @link http://47.108.135.148:16700/doc.html#/default/uaa迁移脚本相关/transferUsingPOST_2
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

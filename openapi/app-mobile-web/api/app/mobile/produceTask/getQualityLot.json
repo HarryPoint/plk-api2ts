@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«Wip批次信息VO»»",
-              "$ref": "#/definitions/JSONResult«List«Wip批次信息VO»»"
+              "$ref": "#/definitions/JSONResult«List«Wip批次信息VO»»",
+              "originalRef": "JSONResult«List«Wip批次信息VO»»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "Wip批次信息VO",
-            "$ref": "#/definitions/Wip批次信息VO"
+            "$ref": "#/definitions/Wip批次信息VO",
+            "originalRef": "Wip批次信息VO"
           }
         },
         "ts": {
@@ -119,8 +119,8 @@
           "type": "array",
           "description": "wip状态信息集",
           "items": {
-            "originalRef": "Wip数量状态信息VO",
-            "$ref": "#/definitions/Wip数量状态信息VO"
+            "$ref": "#/definitions/Wip数量状态信息VO",
+            "originalRef": "Wip数量状态信息VO"
           }
         }
       },

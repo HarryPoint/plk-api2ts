@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/产出报表(按工序统计)相关/getProcessSelectorUsingGET_8
+* @link http://47.108.135.148:16400/doc.html#/default/产出报表(按工序统计)相关/getProcessSelectorUsingGET_8
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(

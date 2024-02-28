@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -33,8 +33,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«质检任务明细返回VO»",
-              "$ref": "#/definitions/JSONResult«质检任务明细返回VO»"
+              "$ref": "#/definitions/JSONResult«质检任务明细返回VO»",
+              "originalRef": "JSONResult«质检任务明细返回VO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "质检任务明细返回VO",
-          "$ref": "#/definitions/质检任务明细返回VO"
+          "$ref": "#/definitions/质检任务明细返回VO",
+          "originalRef": "质检任务明细返回VO"
         },
         "ts": {
           "type": "integer",
@@ -240,20 +240,20 @@
         },
         "planItemInput": {
           "description": "质检方案质检项填写信息",
-          "originalRef": "质检任务质检方案质检项填写返回VO",
-          "$ref": "#/definitions/质检任务质检方案质检项填写返回VO"
+          "$ref": "#/definitions/质检任务质检方案质检项填写返回VO",
+          "originalRef": "质检任务质检方案质检项填写返回VO"
         },
         "closeInfo": {
           "description": "质检任务关闭信息 - 状态是已关闭（已撤销）时有值",
-          "originalRef": "质检任务关闭信息返回VO",
-          "$ref": "#/definitions/质检任务关闭信息返回VO"
+          "$ref": "#/definitions/质检任务关闭信息返回VO",
+          "originalRef": "质检任务关闭信息返回VO"
         },
         "planItemResults": {
           "type": "array",
           "description": "质检结果明细 - 状态是已完成时有值",
           "items": {
-            "originalRef": "质检任务质检物料明细返回VO",
-            "$ref": "#/definitions/质检任务质检物料明细返回VO"
+            "$ref": "#/definitions/质检任务质检物料明细返回VO",
+            "originalRef": "质检任务质检物料明细返回VO"
           }
         },
         "taskType": {
@@ -305,16 +305,16 @@
           "type": "array",
           "description": "质检方案集",
           "items": {
-            "originalRef": "质检任务质检方案返回VO",
-            "$ref": "#/definitions/质检任务质检方案返回VO"
+            "$ref": "#/definitions/质检任务质检方案返回VO",
+            "originalRef": "质检任务质检方案返回VO"
           }
         },
         "items": {
           "type": "array",
           "description": "质检项集",
           "items": {
-            "originalRef": "质检任务质检项返回VO",
-            "$ref": "#/definitions/质检任务质检项返回VO"
+            "$ref": "#/definitions/质检任务质检项返回VO",
+            "originalRef": "质检任务质检项返回VO"
           }
         }
       },
@@ -444,8 +444,8 @@
           "type": "array",
           "description": "选择项",
           "items": {
-            "originalRef": "质检项选择项返回VO",
-            "$ref": "#/definitions/质检项选择项返回VO"
+            "$ref": "#/definitions/质检项选择项返回VO",
+            "originalRef": "质检项选择项返回VO"
           }
         },
         "numberStandard": {
@@ -554,8 +554,8 @@
           "type": "array",
           "description": "质检项集",
           "items": {
-            "originalRef": "质检任务质检物料质检项明细VO",
-            "$ref": "#/definitions/质检任务质检物料质检项明细VO"
+            "$ref": "#/definitions/质检任务质检物料质检项明细VO",
+            "originalRef": "质检任务质检物料质检项明细VO"
           }
         }
       },

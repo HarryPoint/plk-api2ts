@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "DataLinkageCalcRequestDTO",
-              "$ref": "#/definitions/DataLinkageCalcRequestDTO"
+              "$ref": "#/definitions/DataLinkageCalcRequestDTO",
+              "originalRef": "DataLinkageCalcRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«DataLinkageCalcResponseDTO»",
-              "$ref": "#/definitions/JSONResult«DataLinkageCalcResponseDTO»"
+              "$ref": "#/definitions/JSONResult«DataLinkageCalcResponseDTO»",
+              "originalRef": "JSONResult«DataLinkageCalcResponseDTO»"
             }
           },
           "201": {
@@ -95,8 +95,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "DataLinkageCalcResponseDTO",
-          "$ref": "#/definitions/DataLinkageCalcResponseDTO"
+          "$ref": "#/definitions/DataLinkageCalcResponseDTO",
+          "originalRef": "DataLinkageCalcResponseDTO"
         },
         "ts": {
           "type": "integer",

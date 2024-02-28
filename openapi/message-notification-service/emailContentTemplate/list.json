@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17600",
+  "host": "47.108.135.148:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«EmailContentTemplateDTO»»",
-              "$ref": "#/definitions/JSONResult«List«EmailContentTemplateDTO»»"
+              "$ref": "#/definitions/JSONResult«List«EmailContentTemplateDTO»»",
+              "originalRef": "JSONResult«List«EmailContentTemplateDTO»»"
             }
           },
           "401": {
@@ -60,8 +60,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "EmailContentTemplateDTO",
-            "$ref": "#/definitions/EmailContentTemplateDTO"
+            "$ref": "#/definitions/EmailContentTemplateDTO",
+            "originalRef": "EmailContentTemplateDTO"
           }
         },
         "ts": {

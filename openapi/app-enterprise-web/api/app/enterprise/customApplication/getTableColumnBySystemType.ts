@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/自定义应用相关/getTableColumnBySystemTypeUsingGET
+* @link http://47.108.135.148:16400/doc.html#/default/自定义应用相关/getTableColumnBySystemTypeUsingGET
 */
 export default function fetchMethod(options: { params: { flowPathSystemType?: EflowPathSystemType } }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(
@@ -248,7 +248,6 @@ export enum EflowPathSystemType {
     PROJECT_TYPE = "PROJECT_TYPE",
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
-    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     PROJECT_PLAN = "PROJECT_PLAN",
     PROJECT_STAGE = "PROJECT_STAGE",
     PROJECT_TASK = "PROJECT_TASK",
@@ -269,11 +268,6 @@ export enum EflowPathSystemType {
     PROJECT_MODIFICATION = "PROJECT_MODIFICATION",
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
-    PROJECT_RESOURCES = "PROJECT_RESOURCES",
-    PROJECT_FILE = "PROJECT_FILE",
-    PROJECT_FOLDER = "PROJECT_FOLDER",
-    PROJECT_CLOSE = "PROJECT_CLOSE",
-    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",

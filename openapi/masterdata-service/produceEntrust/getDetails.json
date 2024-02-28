@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«委外加工明细返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«委外加工明细返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«委外加工明细返回VO»»",
+              "originalRef": "JSONResult«List«委外加工明细返回VO»»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "委外加工明细返回VO",
-            "$ref": "#/definitions/委外加工明细返回VO"
+            "$ref": "#/definitions/委外加工明细返回VO",
+            "originalRef": "委外加工明细返回VO"
           }
         },
         "ts": {

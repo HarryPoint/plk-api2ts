@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "storehouseIdsDTO",
             "required": true,
             "schema": {
-              "originalRef": "id集合信息",
-              "$ref": "#/definitions/id集合信息"
+              "$ref": "#/definitions/id集合信息",
+              "originalRef": "id集合信息"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«仓位树详情返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«仓位树详情返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«仓位树详情返回VO»»",
+              "originalRef": "JSONResult«List«仓位树详情返回VO»»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "仓位树详情返回VO",
-            "$ref": "#/definitions/仓位树详情返回VO"
+            "$ref": "#/definitions/仓位树详情返回VO",
+            "originalRef": "仓位树详情返回VO"
           }
         },
         "ts": {
@@ -182,8 +182,8 @@
           "type": "array",
           "description": "子仓位",
           "items": {
-            "originalRef": "仓位树详情返回VO",
-            "$ref": "#/definitions/仓位树详情返回VO"
+            "$ref": "#/definitions/仓位树详情返回VO",
+            "originalRef": "仓位树详情返回VO"
           }
         }
       },

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getAbnormalTypeUsingGET
+* @link http://47.108.135.148:17400/doc.html#/default/生产任务相关/getAbnormalTypeUsingGET
 */
 export default function fetchMethod(options: { params: { type?: Etype } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(

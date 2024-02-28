@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:16500/doc.html#/default/应用服务包相关/getApplicationDetailTreeUsingGET
+* @link http://47.108.135.148:16500/doc.html#/default/应用服务包相关/getApplicationDetailTreeUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessTreeVO>(

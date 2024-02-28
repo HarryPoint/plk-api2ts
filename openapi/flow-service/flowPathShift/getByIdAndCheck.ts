@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16500/doc.html#/default/任务班次相关/getByIdAndCheckUsingGET
+* @link http://47.108.135.148:16500/doc.html#/default/任务班次相关/getByIdAndCheckUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultFlowPathShiftVO>(

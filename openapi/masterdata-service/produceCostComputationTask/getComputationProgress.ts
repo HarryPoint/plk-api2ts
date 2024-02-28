@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/getComputationProgressUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/生产成本核算任务相关/getComputationProgressUsingGET
 */
 export default function fetchMethod(options: { params: { computationTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionCostAccountingProgressResponseObjectDTO>(

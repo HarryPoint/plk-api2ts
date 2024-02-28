@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«RegionVo»»",
-              "$ref": "#/definitions/JSONResult«List«RegionVo»»"
+              "$ref": "#/definitions/JSONResult«List«RegionVo»»",
+              "originalRef": "JSONResult«List«RegionVo»»"
             }
           },
           "401": {
@@ -60,8 +60,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "RegionVo",
-            "$ref": "#/definitions/RegionVo"
+            "$ref": "#/definitions/RegionVo",
+            "originalRef": "RegionVo"
           }
         },
         "ts": {
@@ -116,8 +116,8 @@
           "type": "array",
           "description": "下级行政区域",
           "items": {
-            "originalRef": "RegionVo",
-            "$ref": "#/definitions/RegionVo"
+            "$ref": "#/definitions/RegionVo",
+            "originalRef": "RegionVo"
           }
         }
       },

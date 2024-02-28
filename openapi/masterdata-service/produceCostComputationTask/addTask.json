@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -29,8 +29,8 @@
             "description": "addRequest",
             "required": true,
             "schema": {
-              "originalRef": "生产成本核算任务添加请求对象",
-              "$ref": "#/definitions/生产成本核算任务添加请求对象"
+              "$ref": "#/definitions/生产成本核算任务添加请求对象",
+              "originalRef": "生产成本核算任务添加请求对象"
             }
           }
         ],
@@ -38,8 +38,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {

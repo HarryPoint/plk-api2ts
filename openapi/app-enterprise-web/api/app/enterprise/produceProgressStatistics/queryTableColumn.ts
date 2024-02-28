@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/生产进度统计报表 - 相关/queryTableColumnUsingGET
+* @link http://47.108.135.148:16400/doc.html#/default/生产进度统计报表 - 相关/queryTableColumnUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(

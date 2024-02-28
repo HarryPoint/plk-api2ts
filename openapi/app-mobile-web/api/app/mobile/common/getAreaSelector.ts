@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.139.107:17400/doc.html#/default/公共相关/getAreaSelectorUsingPOST
+* @link http://47.108.135.148:17400/doc.html#/default/公共相关/getAreaSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IRegionalMasterDataSelectionListSearchVO }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(

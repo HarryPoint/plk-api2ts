@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "标准工艺编码规则相关"
         ],
         "summary": "根据id查询编码规则信息",
-        "operationId": "getByIdUsingGET_18",
+        "operationId": "getByIdUsingGET_16",
         "produces": [
           "*/*"
         ],
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«标准工艺编码规则响应 DTO»",
-              "$ref": "#/definitions/JSONResult«标准工艺编码规则响应 DTO»"
+              "$ref": "#/definitions/JSONResult«标准工艺编码规则响应 DTO»",
+              "originalRef": "JSONResult«标准工艺编码规则响应 DTO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "标准工艺编码规则响应 DTO",
-          "$ref": "#/definitions/标准工艺编码规则响应 DTO"
+          "$ref": "#/definitions/标准工艺编码规则响应 DTO",
+          "originalRef": "标准工艺编码规则响应 DTO"
         },
         "ts": {
           "type": "integer",
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "规则明细",
           "items": {
-            "originalRef": "标准工艺编码规则明细响应 DTO",
-            "$ref": "#/definitions/标准工艺编码规则明细响应 DTO"
+            "$ref": "#/definitions/标准工艺编码规则明细响应 DTO",
+            "originalRef": "标准工艺编码规则明细响应 DTO"
           }
         }
       },

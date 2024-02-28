@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:16700/doc.html#/default/项目概况相关/queryProjectTaskTypeDistributeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/项目概况相关/queryProjectTaskTypeDistributeUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectOverviewQueryDto }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskTypeDistributedResponseObject>(

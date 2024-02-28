@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "工厂日历搜索VO_1",
-              "$ref": "#/definitions/工厂日历搜索VO_1"
+              "$ref": "#/definitions/工厂日历搜索VO_1",
+              "originalRef": "工厂日历搜索VO_1"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«工厂日历返回VO»",
-              "$ref": "#/definitions/JSONResult«工厂日历返回VO»"
+              "$ref": "#/definitions/JSONResult«工厂日历返回VO»",
+              "originalRef": "JSONResult«工厂日历返回VO»"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "工厂日历返回VO",
-          "$ref": "#/definitions/工厂日历返回VO"
+          "$ref": "#/definitions/工厂日历返回VO",
+          "originalRef": "工厂日历返回VO"
         },
         "ts": {
           "type": "integer",
@@ -126,8 +126,8 @@
           "type": "array",
           "description": "工厂日历详情返回VO",
           "items": {
-            "originalRef": "工厂日历详情返回VO",
-            "$ref": "#/definitions/工厂日历详情返回VO"
+            "$ref": "#/definitions/工厂日历详情返回VO",
+            "originalRef": "工厂日历详情返回VO"
           }
         }
       },
@@ -155,8 +155,8 @@
           "type": "array",
           "description": "对应班组班次集",
           "items": {
-            "originalRef": "日历班次信息返回VO",
-            "$ref": "#/definitions/日历班次信息返回VO"
+            "$ref": "#/definitions/日历班次信息返回VO",
+            "originalRef": "日历班次信息返回VO"
           }
         }
       },
@@ -181,8 +181,8 @@
         },
         "classShiftBeginTime": {
           "description": "班次开始时间",
-          "originalRef": "LocalTime",
-          "$ref": "#/definitions/LocalTime"
+          "$ref": "#/definitions/LocalTime",
+          "originalRef": "LocalTime"
         },
         "endTimeType": {
           "type": "string",
@@ -194,15 +194,15 @@
         },
         "classShiftEndTime": {
           "description": "班次结束时间",
-          "originalRef": "LocalTime",
-          "$ref": "#/definitions/LocalTime"
+          "$ref": "#/definitions/LocalTime",
+          "originalRef": "LocalTime"
         },
         "classGroupList": {
           "type": "array",
           "description": "班组列表信息",
           "items": {
-            "originalRef": "日历班组信息返回VO",
-            "$ref": "#/definitions/日历班组信息返回VO"
+            "$ref": "#/definitions/日历班组信息返回VO",
+            "originalRef": "日历班组信息返回VO"
           }
         }
       },
@@ -246,8 +246,8 @@
           "type": "array",
           "description": "班组对应的员工信息集",
           "items": {
-            "originalRef": "Id，名称，编号VO",
-            "$ref": "#/definitions/Id，名称，编号VO"
+            "$ref": "#/definitions/Id，名称，编号VO",
+            "originalRef": "Id，名称，编号VO"
           }
         }
       },

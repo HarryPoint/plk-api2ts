@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "dateRangeRequest",
             "required": true,
             "schema": {
-              "originalRef": "qms大屏时间区间请求",
-              "$ref": "#/definitions/qms大屏时间区间请求"
+              "$ref": "#/definitions/qms大屏时间区间请求",
+              "originalRef": "qms大屏时间区间请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«质量绩效评价表返回DTO»»_1",
-              "$ref": "#/definitions/JSONResult«List«质量绩效评价表返回DTO»»_1"
+              "$ref": "#/definitions/JSONResult«List«质量绩效评价表返回DTO»»_1",
+              "originalRef": "JSONResult«List«质量绩效评价表返回DTO»»_1"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "质量绩效评价表返回DTO_1",
-            "$ref": "#/definitions/质量绩效评价表返回DTO_1"
+            "$ref": "#/definitions/质量绩效评价表返回DTO_1",
+            "originalRef": "质量绩效评价表返回DTO_1"
           }
         },
         "ts": {

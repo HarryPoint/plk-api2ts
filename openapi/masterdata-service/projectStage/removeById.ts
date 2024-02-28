@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/removeByIdUsingPOST_1
+* @link http://47.108.135.148:16700/doc.html#/default/项目阶段相关/removeByIdUsingPOST_1
 */
 export default function fetchMethod(options: { data: IDeleteTheRequestObjectDuringTheProjectPhase }, extraOptions?: any) {
     return http<IJSONResultobject>(

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "分页_12",
-              "$ref": "#/definitions/分页_12"
+              "$ref": "#/definitions/分页_12",
+              "originalRef": "分页_12"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»",
+              "originalRef": "JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "produceOrderCodeMatch": {
@@ -137,8 +137,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«ProduceOrderSelectionItemQueryResponseDTO»",
-          "$ref": "#/definitions/分页信息«ProduceOrderSelectionItemQueryResponseDTO»"
+          "$ref": "#/definitions/分页信息«ProduceOrderSelectionItemQueryResponseDTO»",
+          "originalRef": "分页信息«ProduceOrderSelectionItemQueryResponseDTO»"
         },
         "ts": {
           "type": "integer",
@@ -176,8 +176,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "ProduceOrderSelectionItemQueryResponseDTO",
-            "$ref": "#/definitions/ProduceOrderSelectionItemQueryResponseDTO"
+            "$ref": "#/definitions/ProduceOrderSelectionItemQueryResponseDTO",
+            "originalRef": "ProduceOrderSelectionItemQueryResponseDTO"
           }
         },
         "lastPage": {

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "produceFeeAssignEditRequest",
             "required": true,
             "schema": {
-              "originalRef": "生产费用分配编辑DTO",
-              "$ref": "#/definitions/生产费用分配编辑DTO"
+              "$ref": "#/definitions/生产费用分配编辑DTO",
+              "originalRef": "生产费用分配编辑DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -95,16 +95,16 @@
           "type": "array",
           "description": "分配信息",
           "items": {
-            "originalRef": "生产费用分配明细编辑DTO",
-            "$ref": "#/definitions/生产费用分配明细编辑DTO"
+            "$ref": "#/definitions/生产费用分配明细编辑DTO",
+            "originalRef": "生产费用分配明细编辑DTO"
           }
         },
         "produceFeeCollectDetailList": {
           "type": "array",
           "description": "费用信息",
           "items": {
-            "originalRef": "费用归集明细响应DTO_1",
-            "$ref": "#/definitions/费用归集明细响应DTO_1"
+            "$ref": "#/definitions/费用归集明细响应DTO_1",
+            "originalRef": "费用归集明细响应DTO_1"
           }
         },
         "isDeleted": {
@@ -198,8 +198,8 @@
           "type": "array",
           "description": "动态费用分配信息",
           "items": {
-            "originalRef": "生产成本分配动态数据",
-            "$ref": "#/definitions/生产成本分配动态数据"
+            "$ref": "#/definitions/生产成本分配动态数据",
+            "originalRef": "生产成本分配动态数据"
           }
         },
         "totalFee": {

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.139.107:16500/doc.html#/default/门户相关/enableBatchUsingPOST_1
+* @link http://47.108.135.148:16500/doc.html#/default/门户相关/enableBatchUsingPOST_1
 */
 export default function fetchMethod(options: { data: IPortalEnabledRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(

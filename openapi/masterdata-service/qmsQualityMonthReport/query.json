@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "reportQuery",
             "required": true,
             "schema": {
-              "originalRef": "Query",
-              "$ref": "#/definitions/Query"
+              "$ref": "#/definitions/Query",
+              "originalRef": "Query"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "质量月报响应DTO",
-              "$ref": "#/definitions/质量月报响应DTO"
+              "$ref": "#/definitions/质量月报响应DTO",
+              "originalRef": "质量月报响应DTO"
             }
           },
           "201": {
@@ -465,8 +465,8 @@
           "type": "array",
           "description": "未填报部门",
           "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
+            "$ref": "#/definitions/Id Code Name 通用传输对象",
+            "originalRef": "Id Code Name 通用传输对象"
           }
         },
         "reportStatus": {

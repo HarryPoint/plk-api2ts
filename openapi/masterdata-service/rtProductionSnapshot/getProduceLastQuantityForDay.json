@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«最后工序合格产出返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«最后工序合格产出返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«最后工序合格产出返回VO»»",
+              "originalRef": "JSONResult«List«最后工序合格产出返回VO»»"
             }
           },
           "401": {
@@ -86,8 +86,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "最后工序合格产出返回VO",
-            "$ref": "#/definitions/最后工序合格产出返回VO"
+            "$ref": "#/definitions/最后工序合格产出返回VO",
+            "originalRef": "最后工序合格产出返回VO"
           }
         },
         "ts": {

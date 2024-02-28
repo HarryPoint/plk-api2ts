@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:18100/doc.html#/default/服务相关/modifyUsingPOST_11
+* @link http://47.108.135.148:18100/doc.html#/default/服务相关/modifyUsingPOST_11
 */
 export default function fetchMethod(options: { data: IServiceModifyTheDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

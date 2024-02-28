@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/定时任务相关/checkJobCanExchangeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/定时任务相关/checkJobCanExchangeUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

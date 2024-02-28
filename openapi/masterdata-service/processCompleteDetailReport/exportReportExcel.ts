@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:16700/doc.html#/default/工序完成明细表/exportReportExcelUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/工序完成明细表/exportReportExcelUsingPOST
 */
 export default function fetchMethod(options: { data: IProcedureCompletionListQuery }, extraOptions?: any) {
     return http<IJSONResultlong>(

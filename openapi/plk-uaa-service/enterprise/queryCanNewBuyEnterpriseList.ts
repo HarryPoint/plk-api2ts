@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.139.107:18100/doc.html#/default/企业客户相关/queryCanNewBuyEnterpriseListUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/企业客户相关/queryCanNewBuyEnterpriseListUsingPOST
 */
 export default function fetchMethod(options: { data: IProductOrderEnterpriseQueryRequestObject }, extraOptions?: any) {
     return http<IJSONResultListEnterpriseNameNumberResponseObject>(

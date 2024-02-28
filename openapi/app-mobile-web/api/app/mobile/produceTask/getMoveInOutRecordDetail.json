@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«进出站信息VO»",
-              "$ref": "#/definitions/JSONResult«进出站信息VO»"
+              "$ref": "#/definitions/JSONResult«进出站信息VO»",
+              "originalRef": "JSONResult«进出站信息VO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "进出站信息VO",
-          "$ref": "#/definitions/进出站信息VO"
+          "$ref": "#/definitions/进出站信息VO",
+          "originalRef": "进出站信息VO"
         },
         "ts": {
           "type": "integer",
@@ -117,31 +117,31 @@
         },
         "processInfo": {
           "description": "工序信息",
-          "originalRef": "上下工序信息VO",
-          "$ref": "#/definitions/上下工序信息VO"
+          "$ref": "#/definitions/上下工序信息VO",
+          "originalRef": "上下工序信息VO"
         },
         "finishedMaterial": {
           "description": "成品物料信息",
-          "originalRef": "成品物料信息VO",
-          "$ref": "#/definitions/成品物料信息VO"
+          "$ref": "#/definitions/成品物料信息VO",
+          "originalRef": "成品物料信息VO"
         },
         "bomMaterials": {
           "type": "array",
           "description": "BOM物料信息列表",
           "items": {
-            "originalRef": "进出站Bom物料确认信息VO",
-            "$ref": "#/definitions/进出站Bom物料确认信息VO"
+            "$ref": "#/definitions/进出站Bom物料确认信息VO",
+            "originalRef": "进出站Bom物料确认信息VO"
           }
         },
         "keyParametersInfo": {
           "description": "关键参数信息",
-          "originalRef": "ProduceTechnologyKeyParameterResponseDTO",
-          "$ref": "#/definitions/ProduceTechnologyKeyParameterResponseDTO"
+          "$ref": "#/definitions/ProduceTechnologyKeyParameterResponseDTO",
+          "originalRef": "ProduceTechnologyKeyParameterResponseDTO"
         },
         "stepSetInfo": {
           "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
-          "originalRef": "生产工艺路径步骤设置返回VO",
-          "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
+          "$ref": "#/definitions/生产工艺路径步骤设置返回VO",
+          "originalRef": "生产工艺路径步骤设置返回VO"
         }
       },
       "title": "进出站信息VO"
@@ -386,8 +386,8 @@
           "type": "array",
           "description": "关键参数明细",
           "items": {
-            "originalRef": "ProduceTechnologyKeyParameterDetailResponseDTO",
-            "$ref": "#/definitions/ProduceTechnologyKeyParameterDetailResponseDTO"
+            "$ref": "#/definitions/ProduceTechnologyKeyParameterDetailResponseDTO",
+            "originalRef": "ProduceTechnologyKeyParameterDetailResponseDTO"
           }
         }
       },

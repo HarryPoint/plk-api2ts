@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:18100",
+  "host": "47.108.135.148:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "authQuery",
             "required": true,
             "schema": {
-              "originalRef": "角色权限授权查询请求DTO",
-              "$ref": "#/definitions/角色权限授权查询请求DTO"
+              "$ref": "#/definitions/角色权限授权查询请求DTO",
+              "originalRef": "角色权限授权查询请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«应用角色权限响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«应用角色权限响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«应用角色权限响应DTO»»",
+              "originalRef": "JSONResult«List«应用角色权限响应DTO»»"
             }
           },
           "201": {
@@ -106,8 +106,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "应用角色权限响应DTO",
-            "$ref": "#/definitions/应用角色权限响应DTO"
+            "$ref": "#/definitions/应用角色权限响应DTO",
+            "originalRef": "应用角色权限响应DTO"
           }
         },
         "ts": {
@@ -142,8 +142,8 @@
           "type": "array",
           "description": "数据权限集",
           "items": {
-            "originalRef": "企业角色权限响应",
-            "$ref": "#/definitions/企业角色权限响应"
+            "$ref": "#/definitions/企业角色权限响应",
+            "originalRef": "企业角色权限响应"
           }
         }
       },
@@ -175,8 +175,8 @@
           "type": "array",
           "description": "数据权限对应的字段列表(只针对表单字段类型)",
           "items": {
-            "originalRef": "角色数据权限字段响应DTO",
-            "$ref": "#/definitions/角色数据权限字段响应DTO"
+            "$ref": "#/definitions/角色数据权限字段响应DTO",
+            "originalRef": "角色数据权限字段响应DTO"
           }
         }
       },

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "ids",
             "required": true,
             "schema": {
-              "originalRef": "id集合信息",
-              "$ref": "#/definitions/id集合信息"
+              "$ref": "#/definitions/id集合信息",
+              "originalRef": "id集合信息"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«工艺卡下拉选择列表搜索响应DTO»»",
-              "$ref": "#/definitions/JSONResult«List«工艺卡下拉选择列表搜索响应DTO»»"
+              "$ref": "#/definitions/JSONResult«List«工艺卡下拉选择列表搜索响应DTO»»",
+              "originalRef": "JSONResult«List«工艺卡下拉选择列表搜索响应DTO»»"
             }
           },
           "201": {
@@ -92,8 +92,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "工艺卡下拉选择列表搜索响应DTO",
-            "$ref": "#/definitions/工艺卡下拉选择列表搜索响应DTO"
+            "$ref": "#/definitions/工艺卡下拉选择列表搜索响应DTO",
+            "originalRef": "工艺卡下拉选择列表搜索响应DTO"
           }
         },
         "ts": {

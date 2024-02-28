@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/模糊排产相关/exportUsingPOST_56
+* @link http://47.108.135.148:16400/doc.html#/default/模糊排产相关/exportUsingPOST_56
 */
 export default function fetchMethod(options: { data: IProductionOrderSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(

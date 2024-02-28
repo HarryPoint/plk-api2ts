@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "handleDTO",
             "required": true,
             "schema": {
-              "originalRef": "盘点任务盘点处理DTO",
-              "$ref": "#/definitions/盘点任务盘点处理DTO"
+              "$ref": "#/definitions/盘点任务盘点处理DTO",
+              "originalRef": "盘点任务盘点处理DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "盘点明细",
           "items": {
-            "originalRef": "盘点任务盘点处理详情DTO",
-            "$ref": "#/definitions/盘点任务盘点处理详情DTO"
+            "$ref": "#/definitions/盘点任务盘点处理详情DTO",
+            "originalRef": "盘点任务盘点处理详情DTO"
           }
         }
       },
@@ -121,8 +121,8 @@
           "type": "array",
           "description": "序列号集",
           "items": {
-            "originalRef": "盘点任务盘点明细序列号DTO_1",
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1"
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1",
+            "originalRef": "盘点任务盘点明细序列号DTO_1"
           }
         },
         "quantity": {

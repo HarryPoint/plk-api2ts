@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/仓库盘点任务相关/getStorageTakeCheckTaskForPageUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/仓库盘点任务相关/getStorageTakeCheckTaskForPageUsingPOST
 */
 export default function fetchMethod(options: { data: ISearchVOOnTheExecutionSideOfTheWarehouseInventoryTask, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultReturnsTheDTOFromTheExecutionSideOfTheWarehouseInventoryTask>(

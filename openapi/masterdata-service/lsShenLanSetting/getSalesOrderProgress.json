@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -33,8 +33,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«质检生产大屏订单完成进度返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«质检生产大屏订单完成进度返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«质检生产大屏订单完成进度返回VO»»",
+              "originalRef": "JSONResult«List«质检生产大屏订单完成进度返回VO»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "质检生产大屏订单完成进度返回VO",
-            "$ref": "#/definitions/质检生产大屏订单完成进度返回VO"
+            "$ref": "#/definitions/质检生产大屏订单完成进度返回VO",
+            "originalRef": "质检生产大屏订单完成进度返回VO"
           }
         },
         "ts": {

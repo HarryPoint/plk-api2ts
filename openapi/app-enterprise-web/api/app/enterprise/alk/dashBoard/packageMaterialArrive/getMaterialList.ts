@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/安利康大屏相关/getPackageMaterialArriveMaterialListUsingGET
+* @link http://47.108.135.148:16400/doc.html#/default/安利康大屏相关/getPackageMaterialArriveMaterialListUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(

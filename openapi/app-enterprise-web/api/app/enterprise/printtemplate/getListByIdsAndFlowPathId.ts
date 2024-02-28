@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/打印模板相关/getListByIdsAndFlowPathIdUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/打印模板相关/getListByIdsAndFlowPathIdUsingPOST
 */
 export default function fetchMethod(options: { data: IPrintTemplateDataQueryObjects }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(

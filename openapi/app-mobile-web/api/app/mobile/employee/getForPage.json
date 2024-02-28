@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "流程数据基础搜索VO",
-              "$ref": "#/definitions/流程数据基础搜索VO"
+              "$ref": "#/definitions/流程数据基础搜索VO",
+              "originalRef": "流程数据基础搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«动态拓展数据VO«员工是否允许登录DTO»»»",
-              "$ref": "#/definitions/JSONResult«分页信息«动态拓展数据VO«员工是否允许登录DTO»»»"
+              "$ref": "#/definitions/JSONResult«分页信息«动态拓展数据VO«员工是否允许登录DTO»»»",
+              "originalRef": "JSONResult«分页信息«动态拓展数据VO«员工是否允许登录DTO»»»"
             }
           },
           "201": {
@@ -76,8 +76,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "originalRef": "流程数据明细搜索VO",
-            "$ref": "#/definitions/流程数据明细搜索VO"
+            "$ref": "#/definitions/流程数据明细搜索VO",
+            "originalRef": "流程数据明细搜索VO"
           }
         },
         "pageSize": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "tableColumnCode": {
@@ -99,8 +99,8 @@
         },
         "currentFormDataGrouping": {
           "description": "当前的表单分组",
-          "originalRef": "表单数据分组DTO",
-          "$ref": "#/definitions/表单数据分组DTO"
+          "$ref": "#/definitions/表单数据分组DTO",
+          "originalRef": "表单数据分组DTO"
         }
       },
       "title": "流程数据基础搜索VO"
@@ -196,8 +196,8 @@
           "type": "array",
           "description": "下级分组",
           "items": {
-            "originalRef": "表单数据分组DTO",
-            "$ref": "#/definitions/表单数据分组DTO"
+            "$ref": "#/definitions/表单数据分组DTO",
+            "originalRef": "表单数据分组DTO"
           }
         },
         "cascadeFormData": {
@@ -232,8 +232,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«动态拓展数据VO«员工是否允许登录DTO»»",
-          "$ref": "#/definitions/分页信息«动态拓展数据VO«员工是否允许登录DTO»»"
+          "$ref": "#/definitions/分页信息«动态拓展数据VO«员工是否允许登录DTO»»",
+          "originalRef": "分页信息«动态拓展数据VO«员工是否允许登录DTO»»"
         },
         "ts": {
           "type": "integer",
@@ -271,8 +271,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "动态拓展数据VO«员工是否允许登录DTO»",
-            "$ref": "#/definitions/动态拓展数据VO«员工是否允许登录DTO»"
+            "$ref": "#/definitions/动态拓展数据VO«员工是否允许登录DTO»",
+            "originalRef": "动态拓展数据VO«员工是否允许登录DTO»"
           }
         },
         "lastPage": {
@@ -314,8 +314,8 @@
       "properties": {
         "ext": {
           "description": "拓展数据",
-          "originalRef": "员工是否允许登录DTO",
-          "$ref": "#/definitions/员工是否允许登录DTO"
+          "$ref": "#/definitions/员工是否允许登录DTO",
+          "originalRef": "员工是否允许登录DTO"
         },
         "data": {
           "type": "object",
@@ -342,8 +342,8 @@
           "type": "array",
           "description": "角色集",
           "items": {
-            "originalRef": "角色信息响应",
-            "$ref": "#/definitions/角色信息响应"
+            "$ref": "#/definitions/角色信息响应",
+            "originalRef": "角色信息响应"
           }
         },
         "userTelephone": {

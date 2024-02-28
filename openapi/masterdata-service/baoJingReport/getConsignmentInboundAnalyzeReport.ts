@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/getConsignmentInboundAnalyzeReportUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/宝晶报表相关/getConsignmentInboundAnalyzeReportUsingPOST
 */
 export default function fetchMethod(options: { data: IConsignmentInboundAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultConsignmentInboundAnalysisReportReturnsVO>(

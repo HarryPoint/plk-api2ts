@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16700/doc.html#/default/项目模板相关/deleteUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/项目模板相关/deleteUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultstring1>(

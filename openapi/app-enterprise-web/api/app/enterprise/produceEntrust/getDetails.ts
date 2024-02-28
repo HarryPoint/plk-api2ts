@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/委外加工管理/getDetailsUsingGET
+* @link http://47.108.135.148:16400/doc.html#/default/委外加工管理/getDetailsUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListOutsourcedProcessingDetailsAreReturnedToVO>(

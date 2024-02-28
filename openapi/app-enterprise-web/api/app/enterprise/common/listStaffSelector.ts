@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16400/doc.html#/default/公共相关/listStaffSelectorUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/公共相关/listStaffSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: INameNumberDTO }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(

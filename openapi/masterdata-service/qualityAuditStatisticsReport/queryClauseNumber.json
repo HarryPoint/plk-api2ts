@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "基础质量审核查询请求",
-              "$ref": "#/definitions/基础质量审核查询请求"
+              "$ref": "#/definitions/基础质量审核查询请求",
+              "originalRef": "基础质量审核查询请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«不符合项统计-条款号»",
-              "$ref": "#/definitions/JSONResult«不符合项统计-条款号»"
+              "$ref": "#/definitions/JSONResult«不符合项统计-条款号»",
+              "originalRef": "JSONResult«不符合项统计-条款号»"
             }
           },
           "201": {
@@ -93,8 +93,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "不符合项统计-条款号",
-          "$ref": "#/definitions/不符合项统计-条款号"
+          "$ref": "#/definitions/不符合项统计-条款号",
+          "originalRef": "不符合项统计-条款号"
         },
         "ts": {
           "type": "integer",
@@ -112,16 +112,16 @@
           "type": "array",
           "description": "各部门不符合项分布情况的标题",
           "items": {
-            "originalRef": "审核类型标题",
-            "$ref": "#/definitions/审核类型标题"
+            "$ref": "#/definitions/审核类型标题",
+            "originalRef": "审核类型标题"
           }
         },
         "itemList": {
           "type": "array",
           "description": "条款项列表",
           "items": {
-            "originalRef": "QualityAuditClauseNumberQueryItemResponseDTO",
-            "$ref": "#/definitions/QualityAuditClauseNumberQueryItemResponseDTO"
+            "$ref": "#/definitions/QualityAuditClauseNumberQueryItemResponseDTO",
+            "originalRef": "QualityAuditClauseNumberQueryItemResponseDTO"
           }
         }
       },

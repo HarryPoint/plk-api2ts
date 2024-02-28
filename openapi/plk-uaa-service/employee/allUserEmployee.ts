@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:18100/doc.html#/default/员工相关/allUserEmployeeUsingPOST
+* @link http://47.108.135.148:18100/doc.html#/default/员工相关/allUserEmployeeUsingPOST
 */
 export default function fetchMethod(options: { data: IUserEmployeeQuery }, extraOptions?: any) {
     return http<IJSONResultListUserEmployeeInformationResponse>(

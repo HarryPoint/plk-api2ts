@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -60,8 +60,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产处理统计VO»",
-              "$ref": "#/definitions/JSONResult«生产处理统计VO»"
+              "$ref": "#/definitions/JSONResult«生产处理统计VO»",
+              "originalRef": "JSONResult«生产处理统计VO»"
             }
           },
           "401": {
@@ -96,8 +96,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产处理统计VO",
-          "$ref": "#/definitions/生产处理统计VO"
+          "$ref": "#/definitions/生产处理统计VO",
+          "originalRef": "生产处理统计VO"
         },
         "ts": {
           "type": "integer",

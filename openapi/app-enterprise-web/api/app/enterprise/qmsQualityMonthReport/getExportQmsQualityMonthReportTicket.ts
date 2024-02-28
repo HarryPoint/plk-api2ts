@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16400/doc.html#/default/质量月报报表相关/getExportQmsQualityMonthReportTicketUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/质量月报报表相关/getExportQmsQualityMonthReportTicketUsingPOST
 */
 export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(

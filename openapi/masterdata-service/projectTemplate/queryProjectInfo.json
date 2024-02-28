@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«项目模板项目信息响应DTO»",
-              "$ref": "#/definitions/JSONResult«项目模板项目信息响应DTO»"
+              "$ref": "#/definitions/JSONResult«项目模板项目信息响应DTO»",
+              "originalRef": "JSONResult«项目模板项目信息响应DTO»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "项目模板项目信息响应DTO",
-          "$ref": "#/definitions/项目模板项目信息响应DTO"
+          "$ref": "#/definitions/项目模板项目信息响应DTO",
+          "originalRef": "项目模板项目信息响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "项目取值字段",
           "items": {
-            "originalRef": "Id Code Name 通用传输对象",
-            "$ref": "#/definitions/Id Code Name 通用传输对象"
+            "$ref": "#/definitions/Id Code Name 通用传输对象",
+            "originalRef": "Id Code Name 通用传输对象"
           }
         }
       },

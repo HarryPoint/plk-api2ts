@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/getStructureDataBySystemTypeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getStructureDataBySystemTypeUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessStructureSearchVO, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
@@ -461,7 +461,6 @@ export enum EsystemType {
     PROJECT_TYPE = "PROJECT_TYPE",
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
-    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     PROJECT_PLAN = "PROJECT_PLAN",
     PROJECT_STAGE = "PROJECT_STAGE",
     PROJECT_TASK = "PROJECT_TASK",
@@ -482,11 +481,6 @@ export enum EsystemType {
     PROJECT_MODIFICATION = "PROJECT_MODIFICATION",
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
-    PROJECT_RESOURCES = "PROJECT_RESOURCES",
-    PROJECT_FILE = "PROJECT_FILE",
-    PROJECT_FOLDER = "PROJECT_FOLDER",
-    PROJECT_CLOSE = "PROJECT_CLOSE",
-    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     QMS_QUALITY_WORK_PLAN = "QMS_QUALITY_WORK_PLAN",
     QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT = "QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT",
@@ -920,9 +914,7 @@ export enum EProcessFormVO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
-    /** 项目设备信息状态 */
-    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
 }
 
 export enum EProcessFormVO_isCanModifySelectorOption {

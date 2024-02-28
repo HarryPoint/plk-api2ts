@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16400",
+  "host": "47.108.135.148:16400",
   "info": {
     "description": "服务名: app-enterprise-web",
     "version": "1.0",
@@ -15,7 +15,7 @@
         ],
         "summary": "分页查询",
         "description": "<p style='color:red'>该页面各种细节注意项：<br/>1、如果 status = WAIT 时，操作显示'详情'、'关闭任务'、'盘点' <br/>1、如果 status = HANDLING 时，操作显示'详情'、'盘点' <br/>1、如果 status = WAIT_VERIFY 时，操作显示'详情'、'核对' <br/>2、如果 status = WAIT_EXAMINE 时，操作显示'详情'、'审核'<br/>3、如果 status = COMPLETE 时，操作显示'详情'<br/>4、如果 status = CANCEL 时，操作显示'详情'<br/>5、如果 status = CLOSE 时，没有操作'<br/></p>",
-        "operationId": "getPageUsingPOST_35",
+        "operationId": "getPageUsingPOST_34",
         "consumes": [
           "application/json"
         ],

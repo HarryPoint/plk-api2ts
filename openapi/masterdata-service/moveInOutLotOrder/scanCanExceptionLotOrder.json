@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "canMoveOutLotOrderScanRequest",
             "required": true,
             "schema": {
-              "originalRef": "可进出料批次扫描查询dto",
-              "$ref": "#/definitions/可进出料批次扫描查询dto"
+              "$ref": "#/definitions/可进出料批次扫描查询dto",
+              "originalRef": "可进出料批次扫描查询dto"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«可异常处理批次响应dto»",
-              "$ref": "#/definitions/JSONResult«可异常处理批次响应dto»"
+              "$ref": "#/definitions/JSONResult«可异常处理批次响应dto»",
+              "originalRef": "JSONResult«可异常处理批次响应dto»"
             }
           },
           "201": {
@@ -96,8 +96,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "可异常处理批次响应dto",
-          "$ref": "#/definitions/可异常处理批次响应dto"
+          "$ref": "#/definitions/可异常处理批次响应dto",
+          "originalRef": "可异常处理批次响应dto"
         },
         "ts": {
           "type": "integer",

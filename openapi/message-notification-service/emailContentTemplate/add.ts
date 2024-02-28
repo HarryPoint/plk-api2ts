@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17600/doc.html#/default/邮件内容模板/addUsingPOST_1
+* @link http://47.108.135.148:17600/doc.html#/default/邮件内容模板/addUsingPOST_1
 */
 export default function fetchMethod(options: { data: IEmailContentTemplateAddRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(

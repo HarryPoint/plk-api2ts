@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«质量追溯未打开生产订单响应对象»»",
-              "$ref": "#/definitions/JSONResult«List«质量追溯未打开生产订单响应对象»»"
+              "$ref": "#/definitions/JSONResult«List«质量追溯未打开生产订单响应对象»»",
+              "originalRef": "JSONResult«List«质量追溯未打开生产订单响应对象»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "质量追溯未打开生产订单响应对象",
-            "$ref": "#/definitions/质量追溯未打开生产订单响应对象"
+            "$ref": "#/definitions/质量追溯未打开生产订单响应对象",
+            "originalRef": "质量追溯未打开生产订单响应对象"
           }
         },
         "ts": {

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/生产任务自动出料相关/scheduleHandleUploadDataUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/生产任务自动出料相关/scheduleHandleUploadDataUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

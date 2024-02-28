@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/生产任务自定义卡片样式相关/getUsingGET_3
+* @link http://47.108.135.148:16700/doc.html#/default/生产任务自定义卡片样式相关/getUsingGET_3
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProductionTaskCustomCardStyleResponseObjectDTO>(

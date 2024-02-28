@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/员工相关/getIdCodeByIdUsingGET_1
+* @link http://47.108.135.148:16700/doc.html#/default/员工相关/getIdCodeByIdUsingGET_1
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultIdNameNumberVO>(

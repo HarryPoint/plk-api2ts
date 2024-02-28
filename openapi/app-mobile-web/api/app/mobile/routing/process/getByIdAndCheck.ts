@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET
+* @link http://47.108.135.148:17400/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET
 */
 export default function fetchMethod(options: { params: { processId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessDeprecatedVO>(

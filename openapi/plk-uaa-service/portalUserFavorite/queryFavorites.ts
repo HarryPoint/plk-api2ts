@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.139.107:18100/doc.html#/default/门户用户收藏功能相关/queryFavoritesUsingPOST_1
+* @link http://47.108.135.148:18100/doc.html#/default/门户用户收藏功能相关/queryFavoritesUsingPOST_1
 */
 export default function fetchMethod(options: { data: IPortalEnterpriseRoutingCollectionQueryRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListPortalUsersCollectEnterpriseRoutingDtos>(
@@ -300,8 +300,6 @@ export enum ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSyste
     PROJECT_RISK_TYPE = "PROJECT_RISK_TYPE",
     /** 项目风险标识 */
     PROJECT_RISK_FLAG = "PROJECT_RISK_FLAG",
-    /** 项目设备信息 */
-    PROJECT_DEVICE_INFO = "PROJECT_DEVICE_INFO",
     /** 项目计划 */
     PROJECT_PLAN = "PROJECT_PLAN",
     /** 项目阶段 */
@@ -342,16 +340,6 @@ export enum ETheEnterpriseApplicationRouteConfigurationRespondsToTheDTO_appSyste
     PROJECT_PLAN_MODIFICATION = "PROJECT_PLAN_MODIFICATION",
     /** 项目成员变更单 */
     PROJECT_MEMBER_MODIFICATION = "PROJECT_MEMBER_MODIFICATION",
-    /** 项目资源 */
-    PROJECT_RESOURCES = "PROJECT_RESOURCES",
-    /** 项目文件 */
-    PROJECT_FILE = "PROJECT_FILE",
-    /** 项目文件夹 */
-    PROJECT_FOLDER = "PROJECT_FOLDER",
-    /** 项目关闭 */
-    PROJECT_CLOSE = "PROJECT_CLOSE",
-    /** 项目迁移 */
-    PROJECT_TRANSFER = "PROJECT_TRANSFER",
     /** 年度质量目标 */
     QMS_ANNUAL_QUALITY_TARGET = "QMS_ANNUAL_QUALITY_TARGET",
     /** 质量工作计划 */

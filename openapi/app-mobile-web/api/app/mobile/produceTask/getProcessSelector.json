@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«区域工序选择返回VO»»",
-              "$ref": "#/definitions/JSONResult«List«区域工序选择返回VO»»"
+              "$ref": "#/definitions/JSONResult«List«区域工序选择返回VO»»",
+              "originalRef": "JSONResult«List«区域工序选择返回VO»»"
             }
           },
           "401": {
@@ -60,8 +60,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "区域工序选择返回VO",
-            "$ref": "#/definitions/区域工序选择返回VO"
+            "$ref": "#/definitions/区域工序选择返回VO",
+            "originalRef": "区域工序选择返回VO"
           }
         },
         "ts": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "工序集合",
           "items": {
-            "originalRef": "工序返回VO - 包含任务信息",
-            "$ref": "#/definitions/工序返回VO - 包含任务信息"
+            "$ref": "#/definitions/工序返回VO - 包含任务信息",
+            "originalRef": "工序返回VO - 包含任务信息"
           }
         }
       },

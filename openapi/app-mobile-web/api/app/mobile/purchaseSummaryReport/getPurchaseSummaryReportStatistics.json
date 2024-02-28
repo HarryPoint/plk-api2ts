@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "originalRef": "GetPurchaseSummaryReportStatistics",
-              "$ref": "#/definitions/GetPurchaseSummaryReportStatistics"
+              "$ref": "#/definitions/GetPurchaseSummaryReportStatistics",
+              "originalRef": "GetPurchaseSummaryReportStatistics"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«采购汇总报表合计返回对象»",
-              "$ref": "#/definitions/JSONResult«采购汇总报表合计返回对象»"
+              "$ref": "#/definitions/JSONResult«采购汇总报表合计返回对象»",
+              "originalRef": "JSONResult«采购汇总报表合计返回对象»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "采购汇总报表合计返回对象",
-          "$ref": "#/definitions/采购汇总报表合计返回对象"
+          "$ref": "#/definitions/采购汇总报表合计返回对象",
+          "originalRef": "采购汇总报表合计返回对象"
         },
         "ts": {
           "type": "integer",

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«保养计划响应DTO»",
-              "$ref": "#/definitions/JSONResult«保养计划响应DTO»"
+              "$ref": "#/definitions/JSONResult«保养计划响应DTO»",
+              "originalRef": "JSONResult«保养计划响应DTO»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "保养计划响应DTO",
-          "$ref": "#/definitions/保养计划响应DTO"
+          "$ref": "#/definitions/保养计划响应DTO",
+          "originalRef": "保养计划响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -130,8 +130,8 @@
           "type": "array",
           "description": "计划明细",
           "items": {
-            "originalRef": "保养计划明细响应DTO",
-            "$ref": "#/definitions/保养计划明细响应DTO"
+            "$ref": "#/definitions/保养计划明细响应DTO",
+            "originalRef": "保养计划明细响应DTO"
           }
         }
       },
@@ -189,8 +189,8 @@
           "type": "array",
           "description": "保养明细",
           "items": {
-            "originalRef": "保养计划明细项响应DTO",
-            "$ref": "#/definitions/保养计划明细项响应DTO"
+            "$ref": "#/definitions/保养计划明细项响应DTO",
+            "originalRef": "保养计划明细项响应DTO"
           }
         }
       },
@@ -222,8 +222,8 @@
           "type": "array",
           "description": "保养时间",
           "items": {
-            "originalRef": "保养计划明细项时间响应DTO",
-            "$ref": "#/definitions/保养计划明细项时间响应DTO"
+            "$ref": "#/definitions/保养计划明细项时间响应DTO",
+            "originalRef": "保养计划明细项时间响应DTO"
           }
         }
       },

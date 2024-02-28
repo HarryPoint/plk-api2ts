@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.139.107:16400/doc.html#/default/设备人员能力相关/existsDeviceMaintainTaskUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/设备人员能力相关/existsDeviceMaintainTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IDevicePersonnelCapabilityWhetherThereIsATaskRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListDevicePersonnelCapabilityWhetherATaskResponseDTOExists>(

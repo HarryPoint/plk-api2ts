@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«通告栏»»",
-              "$ref": "#/definitions/JSONResult«List«通告栏»»"
+              "$ref": "#/definitions/JSONResult«List«通告栏»»",
+              "originalRef": "JSONResult«List«通告栏»»"
             }
           },
           "401": {
@@ -61,8 +61,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "通告栏",
-            "$ref": "#/definitions/通告栏"
+            "$ref": "#/definitions/通告栏",
+            "originalRef": "通告栏"
           }
         },
         "ts": {

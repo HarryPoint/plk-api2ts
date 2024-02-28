@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/工序任务设置相关/editProcessDefaultOperateUserUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/工序任务设置相关/editProcessDefaultOperateUserUsingPOST
 */
 export default function fetchMethod(options: { data: IProcedureTaskSettingDefaultOperatorEditsDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

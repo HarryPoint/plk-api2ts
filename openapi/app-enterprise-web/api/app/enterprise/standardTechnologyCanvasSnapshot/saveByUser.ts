@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/工艺画布快照相关/saveCanvasSnapshotByUserUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/工艺画布快照相关/saveCanvasSnapshotByUserUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessCanvasSnapshotAcquisitionRequestDTO1 }, extraOptions?: any) {
     return http<IJSONResultobject>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/业务参数相关/saveSettingUsingPOST
+* @link http://47.108.135.148:16400/doc.html#/default/业务参数相关/saveSettingUsingPOST
 */
 export default function fetchMethod(options: { data: ISchedulingParametersDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "reportQuery",
             "required": true,
             "schema": {
-              "originalRef": "工序完成明细表查询",
-              "$ref": "#/definitions/工序完成明细表查询"
+              "$ref": "#/definitions/工序完成明细表查询",
+              "originalRef": "工序完成明细表查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«工序完成明细表响应dto»»",
-              "$ref": "#/definitions/JSONResult«分页信息«工序完成明细表响应dto»»"
+              "$ref": "#/definitions/JSONResult«分页信息«工序完成明细表响应dto»»",
+              "originalRef": "JSONResult«分页信息«工序完成明细表响应dto»»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序",
-            "$ref": "#/definitions/分页排序"
+            "$ref": "#/definitions/分页排序",
+            "originalRef": "分页排序"
           }
         },
         "configNo": {
@@ -192,8 +192,8 @@
           "type": "array",
           "description": "排班日期集合",
           "items": {
-            "originalRef": "LocalDate",
-            "$ref": "#/definitions/LocalDate"
+            "$ref": "#/definitions/LocalDate",
+            "originalRef": "LocalDate"
           }
         }
       },
@@ -233,8 +233,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«工序完成明细表响应dto»",
-          "$ref": "#/definitions/分页信息«工序完成明细表响应dto»"
+          "$ref": "#/definitions/分页信息«工序完成明细表响应dto»",
+          "originalRef": "分页信息«工序完成明细表响应dto»"
         },
         "ts": {
           "type": "integer",
@@ -272,8 +272,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "工序完成明细表响应dto",
-            "$ref": "#/definitions/工序完成明细表响应dto"
+            "$ref": "#/definitions/工序完成明细表响应dto",
+            "originalRef": "工序完成明细表响应dto"
           }
         },
         "lastPage": {
@@ -343,8 +343,8 @@
           "type": "array",
           "description": "生产订单列表",
           "items": {
-            "originalRef": "工序完成明细表生产订单响应dto",
-            "$ref": "#/definitions/工序完成明细表生产订单响应dto"
+            "$ref": "#/definitions/工序完成明细表生产订单响应dto",
+            "originalRef": "工序完成明细表生产订单响应dto"
           }
         }
       },

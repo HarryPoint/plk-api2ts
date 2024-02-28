@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.139.107:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/宝晶即时库存查询相关/getMaterialSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IBaojingReportMaterialSelectionQuery }, extraOptions?: any) {
     return http<IJSONResultPagingInformationBaoJingReportMaterialSelectionResponse>(

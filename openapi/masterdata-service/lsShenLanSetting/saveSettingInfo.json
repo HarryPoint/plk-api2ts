@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "editDTO",
             "required": true,
             "schema": {
-              "originalRef": "深蓝大屏设置DTO",
-              "$ref": "#/definitions/深蓝大屏设置DTO"
+              "$ref": "#/definitions/深蓝大屏设置DTO",
+              "originalRef": "深蓝大屏设置DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«object»",
-              "$ref": "#/definitions/JSONResult«object»"
+              "$ref": "#/definitions/JSONResult«object»",
+              "originalRef": "JSONResult«object»"
             }
           },
           "201": {
@@ -86,8 +86,8 @@
         },
         "leftQualityPassRatios": {
           "description": "大屏左侧质检数据",
-          "originalRef": "深蓝生产大屏合格率数据设置编辑DTO",
-          "$ref": "#/definitions/深蓝生产大屏合格率数据设置编辑DTO"
+          "$ref": "#/definitions/深蓝生产大屏合格率数据设置编辑DTO",
+          "originalRef": "深蓝生产大屏合格率数据设置编辑DTO"
         },
         "rightQualityPassRatioProcessId": {
           "type": "integer",
@@ -96,8 +96,8 @@
         },
         "rightQualityPassRatios": {
           "description": "大屏右侧质检数据",
-          "originalRef": "深蓝生产大屏合格率数据设置编辑DTO",
-          "$ref": "#/definitions/深蓝生产大屏合格率数据设置编辑DTO"
+          "$ref": "#/definitions/深蓝生产大屏合格率数据设置编辑DTO",
+          "originalRef": "深蓝生产大屏合格率数据设置编辑DTO"
         },
         "centerProductionType": {
           "type": "string",
@@ -111,8 +111,8 @@
           "type": "array",
           "description": "大屏中部业务对象集",
           "items": {
-            "originalRef": "深蓝生产大屏产出设置编辑DTO",
-            "$ref": "#/definitions/深蓝生产大屏产出设置编辑DTO"
+            "$ref": "#/definitions/深蓝生产大屏产出设置编辑DTO",
+            "originalRef": "深蓝生产大屏产出设置编辑DTO"
           }
         },
         "everydayResetTime": {
@@ -168,16 +168,16 @@
           "type": "array",
           "description": "过去12个月明细",
           "items": {
-            "originalRef": "深蓝生产大屏产出设置明细编辑DTO",
-            "$ref": "#/definitions/深蓝生产大屏产出设置明细编辑DTO"
+            "$ref": "#/definitions/深蓝生产大屏产出设置明细编辑DTO",
+            "originalRef": "深蓝生产大屏产出设置明细编辑DTO"
           }
         },
         "year10Details": {
           "type": "array",
           "description": "过去10年明细",
           "items": {
-            "originalRef": "深蓝生产大屏产出设置明细编辑DTO",
-            "$ref": "#/definitions/深蓝生产大屏产出设置明细编辑DTO"
+            "$ref": "#/definitions/深蓝生产大屏产出设置明细编辑DTO",
+            "originalRef": "深蓝生产大屏产出设置明细编辑DTO"
           }
         }
       },

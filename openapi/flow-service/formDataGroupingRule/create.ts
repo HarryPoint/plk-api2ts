@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16500/doc.html#/default/表单数据分组规则相关/createUsingPOST
+* @link http://47.108.135.148:16500/doc.html#/default/表单数据分组规则相关/createUsingPOST
 */
 export default function fetchMethod(options: { data: IFormDataGroupingSettingsAreRelated }, extraOptions?: any) {
     return http<IJSONResultstring>(

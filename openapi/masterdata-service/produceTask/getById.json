@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«生产任务详情返回VO»",
-              "$ref": "#/definitions/JSONResult«生产任务详情返回VO»"
+              "$ref": "#/definitions/JSONResult«生产任务详情返回VO»",
+              "originalRef": "JSONResult«生产任务详情返回VO»"
             }
           },
           "401": {
@@ -75,8 +75,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "生产任务详情返回VO",
-          "$ref": "#/definitions/生产任务详情返回VO"
+          "$ref": "#/definitions/生产任务详情返回VO",
+          "originalRef": "生产任务详情返回VO"
         },
         "ts": {
           "type": "integer",
@@ -325,8 +325,8 @@
           "type": "array",
           "description": "生产任务记录",
           "items": {
-            "originalRef": "生产处理基础信息响应DTO",
-            "$ref": "#/definitions/生产处理基础信息响应DTO"
+            "$ref": "#/definitions/生产处理基础信息响应DTO",
+            "originalRef": "生产处理基础信息响应DTO"
           }
         }
       },
@@ -465,8 +465,8 @@
           "type": "array",
           "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
           "items": {
-            "originalRef": "进出站关键参数明细响应DTO",
-            "$ref": "#/definitions/进出站关键参数明细响应DTO"
+            "$ref": "#/definitions/进出站关键参数明细响应DTO",
+            "originalRef": "进出站关键参数明细响应DTO"
           }
         },
         "desc": {

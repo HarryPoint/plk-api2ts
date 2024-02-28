@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/产能相关/getByIdsIgnoreStatusUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/产能相关/getByIdsIgnoreStatusUsingPOST
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultListCapacityDropDownSelectAListToSearchForResponseObjects>(

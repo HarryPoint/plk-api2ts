@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16400/doc.html#/default/委外报表相关/getReportUsingPOST_7
+* @link http://47.108.135.148:16400/doc.html#/default/委外报表相关/getReportUsingPOST_7
 */
 export default function fetchMethod(options: { data: IOutputClassReportSearchVO }, extraOptions?: any) {
     return http<IJSONResultOutputLineChartReturnsVOOutsourcedOutputReportReturnsVO>(

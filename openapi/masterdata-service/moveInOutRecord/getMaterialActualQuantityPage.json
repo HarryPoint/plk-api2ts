@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "物料产出搜索VO",
-              "$ref": "#/definitions/物料产出搜索VO"
+              "$ref": "#/definitions/物料产出搜索VO",
+              "originalRef": "物料产出搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«物料产出VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«物料产出VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«物料产出VO»»",
+              "originalRef": "JSONResult«分页信息«物料产出VO»»"
             }
           },
           "201": {
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "beginTime": {
@@ -145,8 +145,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«物料产出VO»",
-          "$ref": "#/definitions/分页信息«物料产出VO»"
+          "$ref": "#/definitions/分页信息«物料产出VO»",
+          "originalRef": "分页信息«物料产出VO»"
         },
         "ts": {
           "type": "integer",
@@ -184,8 +184,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "物料产出VO",
-            "$ref": "#/definitions/物料产出VO"
+            "$ref": "#/definitions/物料产出VO",
+            "originalRef": "物料产出VO"
           }
         },
         "lastPage": {

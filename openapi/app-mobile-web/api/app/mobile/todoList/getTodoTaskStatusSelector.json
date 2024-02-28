@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17400",
+  "host": "47.108.135.148:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -42,8 +42,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«string»»",
-              "$ref": "#/definitions/JSONResult«List«string»»"
+              "$ref": "#/definitions/JSONResult«List«string»»",
+              "originalRef": "JSONResult«List«string»»"
             }
           },
           "401": {

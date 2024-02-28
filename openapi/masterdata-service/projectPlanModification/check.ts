@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TanPeng
-* @link http://47.108.139.107:16700/doc.html#/default/项目计划变更相关/checkUsingGET_2
+* @link http://47.108.135.148:16700/doc.html#/default/项目计划变更相关/checkUsingGET_2
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultIndicatesTheResultOfVerifyingProjectChangeInformation>(

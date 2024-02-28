@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/客户跟进日历相关/exportUsingPOST_8
+* @link http://47.108.135.148:17400/doc.html#/default/客户跟进日历相关/exportUsingPOST_8
 */
 export default function fetchMethod(options: { data: ICustomerFollowUpCalendarInputVO }, extraOptions?: any) {
     return http<IJSONResultlong>(

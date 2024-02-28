@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.139.107:16700/doc.html#/default/项目角色配置相关/getForPageUsingPOST_16
+* @link http://47.108.135.148:16700/doc.html#/default/项目角色配置相关/getForPageUsingPOST_17
 */
 export default function fetchMethod(options: { data: IProjectRoleConfigureTheQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectRoleConfigurationReturnObject>(

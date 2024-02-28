@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:17400/doc.html#/default/CRM-商机销售统计报表相关/querySalesStatisticsUsingPOST
+* @link http://47.108.135.148:17400/doc.html#/default/CRM-商机销售统计报表相关/querySalesStatisticsUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListSalesStatisticsItemOutputVO>(

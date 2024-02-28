@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/质检统计/getPageUsingPOST_20
+* @link http://47.108.135.148:16700/doc.html#/default/质检统计/getPageUsingPOST_19
 */
 export default function fetchMethod(options: { data: IScrapDataSheetSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationGoodScrapDataTableResultVO>(

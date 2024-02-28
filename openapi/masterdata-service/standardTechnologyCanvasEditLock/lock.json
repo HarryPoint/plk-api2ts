@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "editLockRequest",
             "required": true,
             "schema": {
-              "originalRef": "工艺画布编辑锁定请求DTO",
-              "$ref": "#/definitions/工艺画布编辑锁定请求DTO"
+              "$ref": "#/definitions/工艺画布编辑锁定请求DTO",
+              "originalRef": "工艺画布编辑锁定请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«工艺画布编辑锁定响应DTO»",
-              "$ref": "#/definitions/JSONResult«工艺画布编辑锁定响应DTO»"
+              "$ref": "#/definitions/JSONResult«工艺画布编辑锁定响应DTO»",
+              "originalRef": "JSONResult«工艺画布编辑锁定响应DTO»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "工艺画布编辑锁定响应DTO",
-          "$ref": "#/definitions/工艺画布编辑锁定响应DTO"
+          "$ref": "#/definitions/工艺画布编辑锁定响应DTO",
+          "originalRef": "工艺画布编辑锁定响应DTO"
         },
         "ts": {
           "type": "integer",

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -36,8 +36,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "originalRef": "生产订单搜索VO",
-              "$ref": "#/definitions/生产订单搜索VO"
+              "$ref": "#/definitions/生产订单搜索VO",
+              "originalRef": "生产订单搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«生产订单返回VO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«生产订单返回VO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«生产订单返回VO»»",
+              "originalRef": "JSONResult«分页信息«生产订单返回VO»»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         },
         "produceOrderCode": {
@@ -194,8 +194,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«生产订单返回VO»",
-          "$ref": "#/definitions/分页信息«生产订单返回VO»"
+          "$ref": "#/definitions/分页信息«生产订单返回VO»",
+          "originalRef": "分页信息«生产订单返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -233,8 +233,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "生产订单返回VO_2",
-            "$ref": "#/definitions/生产订单返回VO_2"
+            "$ref": "#/definitions/生产订单返回VO_2",
+            "originalRef": "生产订单返回VO_2"
           }
         },
         "lastPage": {

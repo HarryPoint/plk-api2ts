@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.139.107:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByPrintTemplateIdUsingGET
+* @link http://47.108.135.148:16700/doc.html#/default/维联打印模板相关/listAlreadyBindMaterialByPrintTemplateIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListBindAMaterialResponseObjectToTheVirtualizedBatchPrintTemplate>(

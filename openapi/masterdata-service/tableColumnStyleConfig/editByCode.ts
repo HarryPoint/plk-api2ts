@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/列表列样式配置/editByCodeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/列表列样式配置/editByCodeUsingPOST
 */
 export default function fetchMethod(options: { data: IListColumnStyleSystemConfigurationEditDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

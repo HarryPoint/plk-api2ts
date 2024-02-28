@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.139.107:16700/doc.html#/default/流程工单相关/closeUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/流程工单相关/closeUsingPOST
 */
 export default function fetchMethod(options: { data: IWorkOrderCloseRequestDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

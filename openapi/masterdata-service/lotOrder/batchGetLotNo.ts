@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TanPeng
-* @link http://47.108.139.107:16700/doc.html#/default/生产批次订单相关/batchGetLotNoUsingPOST
+* @link http://47.108.135.148:16700/doc.html#/default/生产批次订单相关/batchGetLotNoUsingPOST
 */
 export default function fetchMethod(options: { data: IBatchSerialNumberRequestDTO }, extraOptions?: any) {
     return http<IJSONResultBatchNumberUsesDTO>(

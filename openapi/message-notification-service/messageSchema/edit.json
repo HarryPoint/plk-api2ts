@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:17600",
+  "host": "47.108.135.148:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "originalRef": "MessageSchemaEditRequestDTO",
-              "$ref": "#/definitions/MessageSchemaEditRequestDTO"
+              "$ref": "#/definitions/MessageSchemaEditRequestDTO",
+              "originalRef": "MessageSchemaEditRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«long»",
-              "$ref": "#/definitions/JSONResult«long»"
+              "$ref": "#/definitions/JSONResult«long»",
+              "originalRef": "JSONResult«long»"
             }
           },
           "201": {
@@ -66,13 +66,13 @@
       "properties": {
         "messageSchema": {
           "description": "消息方案",
-          "originalRef": "MessageSchemaDTO",
-          "$ref": "#/definitions/MessageSchemaDTO"
+          "$ref": "#/definitions/MessageSchemaDTO",
+          "originalRef": "MessageSchemaDTO"
         },
         "formConfig": {
           "description": "业务配置",
-          "originalRef": "FormConfigDTO",
-          "$ref": "#/definitions/FormConfigDTO"
+          "$ref": "#/definitions/FormConfigDTO",
+          "originalRef": "FormConfigDTO"
         }
       },
       "title": "MessageSchemaEditRequestDTO"
@@ -139,32 +139,32 @@
           "type": "array",
           "description": "消息发送内容模板列表",
           "items": {
-            "originalRef": "MessageSendingContentTemplateDTO",
-            "$ref": "#/definitions/MessageSendingContentTemplateDTO"
+            "$ref": "#/definitions/MessageSendingContentTemplateDTO",
+            "originalRef": "MessageSendingContentTemplateDTO"
           }
         },
         "recipientList": {
           "type": "array",
           "description": "消息接受人列表",
           "items": {
-            "originalRef": "MessageRecipientDTO",
-            "$ref": "#/definitions/MessageRecipientDTO"
+            "$ref": "#/definitions/MessageRecipientDTO",
+            "originalRef": "MessageRecipientDTO"
           }
         },
         "filterConditionList": {
           "type": "array",
           "description": "过滤条件列表",
           "items": {
-            "originalRef": "OriginalDataFilterConditionDTO",
-            "$ref": "#/definitions/OriginalDataFilterConditionDTO"
+            "$ref": "#/definitions/OriginalDataFilterConditionDTO",
+            "originalRef": "OriginalDataFilterConditionDTO"
           }
         },
         "messageTriggerNodeList": {
           "type": "array",
           "description": "消息触发节点列表",
           "items": {
-            "originalRef": "MessageTriggerNodeDTO",
-            "$ref": "#/definitions/MessageTriggerNodeDTO"
+            "$ref": "#/definitions/MessageTriggerNodeDTO",
+            "originalRef": "MessageTriggerNodeDTO"
           }
         },
         "messageType": {
@@ -177,8 +177,8 @@
         },
         "timeConfig": {
           "description": "时间配置",
-          "originalRef": "MessageSchemaTimeConfigDTO",
-          "$ref": "#/definitions/MessageSchemaTimeConfigDTO"
+          "$ref": "#/definitions/MessageSchemaTimeConfigDTO",
+          "originalRef": "MessageSchemaTimeConfigDTO"
         }
       },
       "title": "MessageSchemaDTO"
@@ -233,8 +233,8 @@
           "type": "array",
           "description": "字段元数据",
           "items": {
-            "originalRef": "MessageContentFieldMetaDTO",
-            "$ref": "#/definitions/MessageContentFieldMetaDTO"
+            "$ref": "#/definitions/MessageContentFieldMetaDTO",
+            "originalRef": "MessageContentFieldMetaDTO"
           }
         },
         "isUseConfig": {
@@ -363,32 +363,32 @@
           "type": "array",
           "description": "部门列表",
           "items": {
-            "originalRef": "部门响应对象_1",
-            "$ref": "#/definitions/部门响应对象_1"
+            "$ref": "#/definitions/部门响应对象_1",
+            "originalRef": "部门响应对象_1"
           }
         },
         "classGroupList": {
           "type": "array",
           "description": "班组列表",
           "items": {
-            "originalRef": "部门响应对象",
-            "$ref": "#/definitions/部门响应对象"
+            "$ref": "#/definitions/部门响应对象",
+            "originalRef": "部门响应对象"
           }
         },
         "userList": {
           "type": "array",
           "description": "用户列表",
           "items": {
-            "originalRef": "人员响应对象",
-            "$ref": "#/definitions/人员响应对象"
+            "$ref": "#/definitions/人员响应对象",
+            "originalRef": "人员响应对象"
           }
         },
         "organizationFieldList": {
           "type": "array",
           "description": "组织字段列表",
           "items": {
-            "originalRef": "FieldSerialNoToNameMappingDTO",
-            "$ref": "#/definitions/FieldSerialNoToNameMappingDTO"
+            "$ref": "#/definitions/FieldSerialNoToNameMappingDTO",
+            "originalRef": "FieldSerialNoToNameMappingDTO"
           }
         }
       },
@@ -419,8 +419,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "originalRef": "人员响应对象",
-            "$ref": "#/definitions/人员响应对象"
+            "$ref": "#/definitions/人员响应对象",
+            "originalRef": "人员响应对象"
           }
         }
       },
@@ -534,8 +534,8 @@
           "type": "array",
           "description": "人员",
           "items": {
-            "originalRef": "人员响应对象",
-            "$ref": "#/definitions/人员响应对象"
+            "$ref": "#/definitions/人员响应对象",
+            "originalRef": "人员响应对象"
           }
         }
       },
@@ -636,15 +636,15 @@
         },
         "currentConditionExpression": {
           "description": "当前节点表达式",
-          "originalRef": "MessageTriggerConditionDTO",
-          "$ref": "#/definitions/MessageTriggerConditionDTO"
+          "$ref": "#/definitions/MessageTriggerConditionDTO",
+          "originalRef": "MessageTriggerConditionDTO"
         },
         "children": {
           "type": "array",
           "description": "下级节点表达式列表",
           "items": {
-            "originalRef": "MessageTriggerNodeDTO",
-            "$ref": "#/definitions/MessageTriggerNodeDTO"
+            "$ref": "#/definitions/MessageTriggerNodeDTO",
+            "originalRef": "MessageTriggerNodeDTO"
           }
         },
         "order": {

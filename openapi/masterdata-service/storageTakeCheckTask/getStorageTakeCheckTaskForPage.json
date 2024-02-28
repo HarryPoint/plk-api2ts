@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.139.107:16700",
+  "host": "47.108.135.148:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -37,8 +37,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "originalRef": "仓库盘点任务执行端搜索VO",
-              "$ref": "#/definitions/仓库盘点任务执行端搜索VO"
+              "$ref": "#/definitions/仓库盘点任务执行端搜索VO",
+              "originalRef": "仓库盘点任务执行端搜索VO"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«分页信息«仓库盘点任务执行端返回DTO»»",
-              "$ref": "#/definitions/JSONResult«分页信息«仓库盘点任务执行端返回DTO»»"
+              "$ref": "#/definitions/JSONResult«分页信息«仓库盘点任务执行端返回DTO»»",
+              "originalRef": "JSONResult«分页信息«仓库盘点任务执行端返回DTO»»"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "originalRef": "分页排序VO",
-            "$ref": "#/definitions/分页排序VO"
+            "$ref": "#/definitions/分页排序VO",
+            "originalRef": "分页排序VO"
           }
         }
       },
@@ -141,8 +141,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "分页信息«仓库盘点任务执行端返回DTO»",
-          "$ref": "#/definitions/分页信息«仓库盘点任务执行端返回DTO»"
+          "$ref": "#/definitions/分页信息«仓库盘点任务执行端返回DTO»",
+          "originalRef": "分页信息«仓库盘点任务执行端返回DTO»"
         },
         "ts": {
           "type": "integer",
@@ -180,8 +180,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "originalRef": "仓库盘点任务执行端返回DTO",
-            "$ref": "#/definitions/仓库盘点任务执行端返回DTO"
+            "$ref": "#/definitions/仓库盘点任务执行端返回DTO",
+            "originalRef": "仓库盘点任务执行端返回DTO"
           }
         },
         "lastPage": {
