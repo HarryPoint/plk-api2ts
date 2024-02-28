@@ -8,18 +8,30 @@
   },
   "swagger": "2.0",
   "paths": {
-    "/masterdata-service/projectDeviceInfo/listCanSelectProjectDeviceInfo": {
+    "/masterdata-service/projectResourcesStatisticReport/listProjectDeviceInfo": {
       "post": {
         "tags": [
-          "项目设备信息相关"
+          "项目资源统计相关"
         ],
-        "summary": "查询可选项目设备信息",
-        "operationId": "listCanSelectProjectDeviceInfoUsingPOST",
+        "summary": "获取设备列表",
+        "operationId": "listProjectDeviceInfoUsingPOST",
         "consumes": [
           "application/json"
         ],
         "produces": [
           "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "nameOrCode",
+            "description": "nameOrCode",
+            "required": true,
+            "schema": {
+              "originalRef": "名称、编号DTO",
+              "$ref": "#/definitions/名称、编号DTO"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -44,11 +56,21 @@
         },
         "deprecated": false,
         "x-author": "Tan Peng",
-        "x-order": "10"
+        "x-order": "20"
       }
     }
   },
   "definitions": {
+    "名称、编号DTO": {
+      "type": "object",
+      "properties": {
+        "nameOrCode": {
+          "type": "string",
+          "description": "名称or编号"
+        }
+      },
+      "title": "名称、编号DTO"
+    },
     "JSONResult«List«项目设备信息响应对象»»": {
       "type": "object",
       "properties": {
