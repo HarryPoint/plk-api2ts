@@ -7,14 +7,14 @@
     "fetch": "node ./lib/createData.js",
     "create": "node ./lib/createTs.js",
     "init": "npm run fetch && npm run create",
-    "src:fetch": "ts-node ./src/createData.ts",
-    "src:create": "ts-node ./src/createTs.ts",
+    "src:fetch": "ts-node ./src/main.ts --type=createData",
+    "src:create": "ts-node ./src/main.ts --type=createTs",
     "src:init": "ts-node ./src/main.ts --platform=dev",
-    "case": "ts-node ./src/createTs.ts --target=./case",
+    "case": "ts-node ./src/main.ts --type=createTs --target=./case",
     "update:link": "tsc && npm link",
     "build": "tsc -d",
-    "createDataFilter": "ts-node ./src/createData.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export",
-    "createTsFilter": "ts-node ./src/createTs.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export"
+    "createDataFilter": "ts-node ./src/main.ts --type=createData --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "createTsFilter": "ts-node ./src/main.ts --type=createTs --filterPath=/app-mobile-web/api/app/mobile/andon/export"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
   "bugs": {
