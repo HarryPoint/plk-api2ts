@@ -66,6 +66,7 @@ const fetchData = async (
     if (config.pathFilter && !config.pathFilter(filePath)) {
       continue;
     }
+    console.log("filePath: ", filePath);
     // 创建输出目录
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });
