@@ -3076,5 +3076,7 @@
   "项目关闭应用响应对象": "TheProjectClosesApplyingTheResponseObject",
   "JSONResult分页信息项目资源统计报表响应对象": "JSONResultPageInformationItemResourceStatisticsReportResponseObject",
   "分页信息项目资源统计报表响应对象": "PageInformationItemResourceStatisticsReportResponseObject",
-  "项目资源统计报表响应对象": "TheProjectResourceStatisticsReportRespondsToTheObject"
+  "项目资源统计报表响应对象": "TheProjectResourceStatisticsReportRespondsToTheObject",
+  "JSONResultList项目设备信息响应对象": "JSONResultListProjectDeviceInformationResponseObject",
+  "项目设备信息响应对象": "ItemDeviceInformationResponseObject"
 }
