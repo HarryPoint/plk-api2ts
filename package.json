@@ -9,7 +9,7 @@
     "init": "npm run fetch && npm run create",
     "src:fetch": "ts-node ./src/createData.ts",
     "src:create": "ts-node ./src/createTs.ts",
-    "src:init": "npm run src:fetch && npm run src:create",
+    "src:init": "ts-node ./src/main.ts --platform=dev",
     "case": "ts-node ./src/createTs.ts --target=./case",
     "update:link": "tsc && npm link",
     "build": "tsc -d",

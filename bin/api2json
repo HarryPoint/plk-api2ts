@@ -1,2 +1,3 @@
 #!/usr/bin/env node
-require("../lib/createData.js");
+const { main: createData } = require("../lib/createData.js");
+createData();

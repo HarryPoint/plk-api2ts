@@ -1,4 +1,5 @@
 const path = require("path");
+const argv = require("yargs").argv;
 
 const platformMap = {
   dev: "47.108.139.107",
@@ -26,8 +27,9 @@ const apiMap = Object.keys(platformMap)
   .reduce((prev, next) => ({ ...prev, ...next }), {});
 
 module.exports = () => {
+  console.log("argv.platform: ", argv.platform);
   return {
     output: path.resolve(__dirname, "./openapi"),
-    serviceMap: apiMap.dev,
+    serviceMap: argv.platform === "dev" ? apiMap.dev : apiMap.uat,
   };
 };

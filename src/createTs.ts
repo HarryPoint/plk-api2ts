@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { Project } from "ts-morph";
-import config, { IConfig } from "./config";
+import baseConfig, { IConfig } from "./config";
 import { createDefinitions } from "./createDefinitions";
 
 const readFiles = async (config: IConfig, dir: string, project: Project) => {
@@ -35,7 +35,15 @@ const readFiles = async (config: IConfig, dir: string, project: Project) => {
   }
 };
 
-const main = async (config: IConfig) => {
+export const main = async (config: IConfig = baseConfig) => {
+  const argv = require("yargs").argv;
+  if (argv.target) {
+    config.output = path.join(process.cwd(), argv.target);
+  }
+  if (argv.filterPath) {
+    const filterPath = argv.filterPath;
+    config.pathFilter = (pt: string) => pt.includes(filterPath);
+  }
   const project = new Project({
     // Optionally specify compiler options, tsconfig.json, in-memory file system, and more here.
     // If you initialize with a tsconfig.json, then it will automatically populate the project
@@ -46,13 +54,3 @@ const main = async (config: IConfig) => {
   await readFiles(config, config.output, project);
   await project.save();
 };
-
-const argv = require("yargs").argv;
-if (argv.target) {
-  config.output = path.join(process.cwd(), argv.target);
-}
-if (argv.filterPath) {
-  const filterPath = argv.filterPath;
-  config.pathFilter = (pt: string) => pt.includes(filterPath);
-}
-main(config);

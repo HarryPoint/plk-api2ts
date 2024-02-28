@@ -2,7 +2,7 @@ import axios from "axios";
 import fs from "fs";
 import _ from "lodash";
 import path from "path";
-import config, { IConfig } from "./config";
+import baseConfig, { IConfig } from "./config";
 
 const fetchData = async (
   config: IConfig,
@@ -74,16 +74,14 @@ const fetchData = async (
   }
 };
 
-const main = async (config: IConfig) => {
+export const main = async (config: IConfig = baseConfig) => {
+  const argv = require("yargs").argv;
+  if (argv.filterPath) {
+    const filterPath = argv.filterPath;
+    config.pathFilter = (pt: string) => pt.includes(filterPath);
+  }
   for (const key in config.serviceMap) {
     const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
     await fetchData(config, apiUri, config.serviceNameToPath ? key : "./");
   }
 };
-
-const argv = require("yargs").argv;
-if (argv.filterPath) {
-  const filterPath = argv.filterPath;
-  config.pathFilter = (pt: string) => pt.includes(filterPath);
-}
-main(config);
