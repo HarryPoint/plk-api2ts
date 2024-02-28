@@ -1,0 +1,186 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/flowPathWorkOrder/getPreviewInfoById": {
+      "get": {
+        "tags": [
+          "流程工单相关"
+        ],
+        "summary": "根据id查询流程工单预览信息",
+        "operationId": "getPreviewInfoByIdUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«流程工单预览信息返回VO»",
+              "$ref": "#/definitions/JSONResult«流程工单预览信息返回VO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«流程工单预览信息返回VO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "流程工单预览信息返回VO",
+          "$ref": "#/definitions/流程工单预览信息返回VO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«流程工单预览信息返回VO»"
+    },
+    "流程工单预览信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "workOrderCode": {
+          "type": "string",
+          "description": "工单号"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "提交用户id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "提交人姓名"
+        },
+        "createDeptId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "提交人部门id"
+        },
+        "createDeptName": {
+          "type": "string",
+          "description": "提交人部门名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "提交时间"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  HANDLING-进行中",
+            "  COMPLETE-已完成",
+            "  NOT_PASS-未通过",
+            "  STAGING-暂存",
+            "  INVALID-作废/停用"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "closeType": {
+          "type": "string",
+          "description": "关闭类型",
+          "enum": [
+            "  COMPLETE-已完成",
+            "  REFUSE-已拒绝"
+          ]
+        },
+        "closeTypeDesc": {
+          "type": "string",
+          "description": "关闭类型描述"
+        },
+        "flowPathId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程id"
+        },
+        "flowPathVersionId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属流程版本id"
+        },
+        "flowPathVersionRank": {
+          "type": "integer",
+          "format": "int32",
+          "description": "流程版本号"
+        },
+        "currentFlowPathNodeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前节点id"
+        },
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "业务数据id"
+        },
+        "businessCode": {
+          "type": "string",
+          "description": "业务数据code"
+        }
+      },
+      "title": "流程工单预览信息返回VO"
+    }
+  }
+}

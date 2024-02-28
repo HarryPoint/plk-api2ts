@@ -1,0 +1,120 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/proposalDepartmentStatistics/export": {
+      "post": {
+        "tags": [
+          "提案部门完成情况表-相关"
+        ],
+        "summary": "导出提案情况完成表",
+        "operationId": "exportUsingPOST_24",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "ProposalDepartmentStatisticsQueryRequestDTO",
+              "$ref": "#/definitions/ProposalDepartmentStatisticsQueryRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "20"
+      }
+    }
+  },
+  "definitions": {
+    "ProposalDepartmentStatisticsQueryRequestDTO": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "format": "int32",
+          "description": "年份"
+        },
+        "departmentIdList": {
+          "type": "array",
+          "description": "部门ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "departmentOwnerIdList": {
+          "type": "array",
+          "description": "部门责任人列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "title": "ProposalDepartmentStatisticsQueryRequestDTO"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/autoPlanGantt/getSalesOrder": {
+      "post": {
+        "tags": [
+          "甘特图相关"
+        ],
+        "summary": "分页查询销售订单",
+        "operationId": "getSalesOrderUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "甘特图搜索VO",
+              "$ref": "#/definitions/甘特图搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«销售订单甘特图返回VO»",
+              "$ref": "#/definitions/JSONResult«销售订单甘特图返回VO»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "甘特图搜索VO": {
+      "type": "object",
+      "required": [
+        "beginDate",
+        "endDate"
+      ],
+      "properties": {
+        "beginDate": {
+          "type": "string",
+          "description": "开始日期 yyyy-MM-dd"
+        },
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "结束日期 yyyy-MM-dd"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单编码"
+        },
+        "processIdList": {
+          "type": "array",
+          "description": "工艺路径ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编码"
+        },
+        "produceMaterialIdList": {
+          "type": "array",
+          "description": "生产物料ID列表",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "orderStatusList": {
+          "type": "array",
+          "description": "订单状态列表",
+          "items": {
+            "type": "string",
+            "enum": [
+              "CREATED",
+              "PLAN",
+              "ISSUE",
+              "PRODUCE",
+              "CANCEL",
+              "CLOSE",
+              "PART_COMPLETE",
+              "COMPLETE"
+            ]
+          }
+        }
+      },
+      "title": "甘特图搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«销售订单甘特图返回VO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "销售订单甘特图返回VO",
+          "$ref": "#/definitions/销售订单甘特图返回VO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«销售订单甘特图返回VO»"
+    },
+    "销售订单甘特图返回VO": {
+      "type": "object",
+      "properties": {
+        "timeOccupies": {
+          "type": "array",
+          "description": "全局时间占用集",
+          "items": {
+            "originalRef": "占用返回VO",
+            "$ref": "#/definitions/占用返回VO"
+          }
+        },
+        "salesOrders": {
+          "description": "销售订单分页信息",
+          "originalRef": "分页信息«销售订单排期返回VO»",
+          "$ref": "#/definitions/分页信息«销售订单排期返回VO»"
+        }
+      },
+      "title": "销售订单甘特图返回VO"
+    },
+    "占用返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "排期id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "占用工序"
+        },
+        "processName": {
+          "type": "string",
+          "description": "占用工序名称"
+        },
+        "processCode": {
+          "type": "string",
+          "description": "占用工序编号"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "占用时间 开始"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "占用时间 结束"
+        },
+        "reason": {
+          "type": "string",
+          "description": "占用原因"
+        },
+        "scheduleType": {
+          "type": "string",
+          "description": "排期类型",
+          "enum": [
+            "  OCCUPY_PROCESS-工序占用",
+            "  OCCUPY_TIME-时间占用",
+            "  PROCESS-工序",
+            "  ORDER-生产订单"
+          ]
+        }
+      },
+      "title": "占用返回VO"
+    },
+    "分页信息«销售订单排期返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "销售订单排期返回VO",
+            "$ref": "#/definitions/销售订单排期返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«销售订单排期返回VO»"
+    },
+    "销售订单排期返回VO": {
+      "type": "object",
+      "properties": {
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单id"
+        },
+        "salesOrderName": {
+          "type": "string",
+          "description": "销售订单名称"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编号"
+        },
+        "details": {
+          "type": "array",
+          "description": "销售订单明细集",
+          "items": {
+            "originalRef": "销售订单明细排期返回VO",
+            "$ref": "#/definitions/销售订单明细排期返回VO"
+          }
+        }
+      },
+      "title": "销售订单排期返回VO"
+    },
+    "销售订单明细排期返回VO": {
+      "type": "object",
+      "properties": {
+        "salesOrderDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单明细id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "deliveryDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交货日期"
+        },
+        "salesOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "销售订单ID"
+        },
+        "produceOrderTimes": {
+          "type": "array",
+          "description": "生产订单集",
+          "items": {
+            "originalRef": "生产订单时间返回VO",
+            "$ref": "#/definitions/生产订单时间返回VO"
+          }
+        }
+      },
+      "title": "销售订单明细排期返回VO"
+    },
+    "生产订单时间返回VO": {
+      "type": "object",
+      "properties": {
+        "scheduleId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "排期id"
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "orderStatus": {
+          "type": "string",
+          "description": "生产订单状态",
+          "enum": [
+            "  CREATED-已创建",
+            "  PLAN-已排产",
+            "  ISSUE-已下发",
+            "  PRODUCE-生产中",
+            "  CANCEL-已取消",
+            "  CLOSE-已关闭",
+            "  PART_COMPLETE-部分完成",
+            "  COMPLETE-已完成"
+          ]
+        },
+        "totalCount": {
+          "type": "number",
+          "description": "交付数量"
+        },
+        "currentCount": {
+          "type": "number",
+          "description": "已生产数量"
+        },
+        "deliveryDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "交付日期"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划开始时间"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "计划结束时间"
+        },
+        "refId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "应用ID - 工序甘特图 代表 工序ID， 销售订单，则代表销售订单明细ID"
+        },
+        "isLock": {
+          "type": "string",
+          "description": "是否锁定",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "scheduleType": {
+          "type": "string",
+          "description": "排期类型",
+          "enum": [
+            "  OCCUPY_PROCESS-工序占用",
+            "  OCCUPY_TIME-时间占用",
+            "  PROCESS-工序",
+            "  ORDER-生产订单"
+          ]
+        },
+        "produceTaskStatus": {
+          "type": "string",
+          "description": "生产任务状态",
+          "enum": [
+            "  WAIT-待处理",
+            "  PRODUCE-生产中",
+            "  PAUSE-暂停中",
+            "  STOP-停止",
+            "  CLOSE-已关闭",
+            "  CANCEL-已取消"
+          ]
+        }
+      },
+      "title": "生产订单时间返回VO"
+    }
+  }
+}

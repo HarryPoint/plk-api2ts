@@ -1,0 +1,86 @@
+import { http } from "@/api/http";
+
+/**
+* @author XieJian
+* @link http://47.108.139.107:16400/doc.html#/default/流程数据相关/getDataByCodeOrNameListUsingPOST
+*/
+export default function fetchMethod(options: { data: IProcessFormCodeOrNameSearchesForVO }, extraOptions?: any) {
+    return http<IJSONResultListJSONObject>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/flowPathData/getDataByCodeOrNameList",
+            method: "POST",
+            ...options,
+        },
+        extraOptions,
+    );
+}
+/** 流程表单Code或Name搜索VO */
+export interface IProcessFormCodeOrNameSearchesForVO {
+    /** 应用code */
+    flowPathCode?: string;
+    /** 当前页面 */
+    pageNo?: number;
+    /** 分页大小 */
+    pageSize?: number;
+    /** 字段搜索 */
+    dataSearchList?: IProcessDataDetailsSearchVO[];
+    /** 排序字段集 */
+    orders?: IPagingSortVO[];
+    /** 搜索值 */
+    searchValue?: string;
+}
+/** 流程数据明细搜索VO */
+export interface IProcessDataDetailsSearchVO {
+    /** 列code */
+    code: string;
+    /** 搜索类型 */
+    searchType: EProcessDataDetailsSearchVO_searchType;
+    /** 搜索文本 - 针对文本搜索 */
+    text?: string;
+    /** 搜索起始值 - 针对范围搜索 */
+    limitBegin?: Record<string, any>;
+    /** 搜索结束值 - 针对范围搜索 */
+    limitEnd?: Record<string, any>;
+    /** 搜索选项值 - 针对选择搜索 */
+    selectors?: Record<string, any>[];
+    /** 表格编码 */
+    tableCode?: string;
+}
+/** 分页排序VO */
+export interface IPagingSortVO {
+    /** undefined */
+    column?: string;
+    /** undefined */
+    isAsc?: EPagingSortVO_isAsc;
+}
+/** JSONResult«List«JSONObject»» */
+export interface IJSONResultListJSONObject {
+    /** 返回码 */
+    code?: number;
+    /** 返回消息说明 */
+    msg?: string;
+    /** 响应结果 */
+    data?: IJSONObject[];
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
+    ts?: string;
+}
+/** JSONObject */
+export interface IJSONObject {
+}
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}

@@ -1,0 +1,128 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:18100",
+  "info": {
+    "description": "服务名: plk-uaa-service",
+    "version": "1.0",
+    "title": "普朗克用户帐号和身份认证服务(plk-uaa-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/plk-uaa-service/productOrder/trialDelayAdd": {
+      "post": {
+        "tags": [
+          "产品订单相关"
+        ],
+        "summary": "试用产品订单延期新增",
+        "operationId": "trialDelayAddUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "trialDelayAddRequest",
+            "description": "trialDelayAddRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "试用产品订单延期新增请求对象",
+              "$ref": "#/definitions/试用产品订单延期新增请求对象"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "70"
+      }
+    }
+  },
+  "definitions": {
+    "试用产品订单延期新增请求对象": {
+      "type": "object",
+      "properties": {
+        "enterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "企业id"
+        },
+        "delayDurationQuantity": {
+          "type": "number",
+          "description": "延长时长(天)"
+        },
+        "buyAccountQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "购买账号数"
+        },
+        "productModuleArray": {
+          "type": "array",
+          "description": "产品模块",
+          "items": {
+            "type": "string"
+          }
+        },
+        "delayReason": {
+          "type": "string",
+          "description": "延期原因"
+        },
+        "planExpireTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "预计到期日期"
+        }
+      },
+      "title": "试用产品订单延期新增请求对象"
+    },
+    "JSONResult«object»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "object",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«object»"
+    }
+  }
+}

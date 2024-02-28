@@ -1,0 +1,149 @@
+import { http } from "@/api/http";
+
+/**
+* @author 
+* @link http://47.108.139.107:16400/doc.html#/default/发送邮件记录/pagingSearchUsingPOST_1
+*/
+export default function fetchMethod(options: { data: ISendAnEmailRecordQueryRequest }, extraOptions?: any) {
+    return http<ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation>(
+        {
+            url: "/app-enterprise-web/api/app/enterprise/sendingEmailRecord/pagingSearch",
+            method: "POST",
+            ...options,
+        },
+        extraOptions,
+    );
+}
+/** 发送邮件记录查询请求 */
+export interface ISendAnEmailRecordQueryRequest {
+    /** 当前页面 */
+    pageNo?: number;
+    /** 分页大小 */
+    pageSize?: number;
+    /** 排序字段集 */
+    orders?: IPagingSortVO[];
+    /** 邮件名称-模糊搜索 */
+    emailName?: string;
+    /** 发送时间-起始 */
+    sendingTimeBegin?: number;
+    /** 发送时间-截止 */
+    sendingTimeEnd?: number;
+    /** 邮件标题-模糊搜索 */
+    title?: string;
+    /** 收件人地址-模糊搜索 */
+    addressee?: string;
+    /** 邮件正文-模糊搜索 */
+    content?: string;
+    /** 发送状态-精确匹配 */
+    status?: ESendAnEmailRecordQueryRequest_status;
+}
+/** 分页排序VO */
+export interface IPagingSortVO {
+    /** undefined */
+    column?: string;
+    /** undefined */
+    isAsc?: EPagingSortVO_isAsc;
+}
+/** JSONResult«分页信息«SendingEmailRecordQueryResponseDTO»» */
+export interface ISendingEmailRecordQueryResponseDTOJSONResultPagingInformation {
+    /** 返回码 */
+    code?: number;
+    /** 返回消息说明 */
+    msg?: string;
+    /** 响应结果 */
+    data?: IThePagingInformationSendingEmailRecordQueryResponseDTO;
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
+    ts?: string;
+}
+/** 分页信息«SendingEmailRecordQueryResponseDTO» */
+export interface IThePagingInformationSendingEmailRecordQueryResponseDTO {
+    /** 当前页码 */
+    pageNo?: string;
+    /** 分页大小 */
+    pageSize?: string;
+    /** 总页数 */
+    totalPage?: string;
+    /** 总的记录数 */
+    totalCount?: string;
+    /** 分页列表 */
+    list?: ISendingEmailRecordQueryResponseDTO[];
+    /** 最后页页码 */
+    lastPage?: string;
+    /** 是否有上一页 */
+    hasPreviousPage?: EThePagingInformationSendingEmailRecordQueryResponseDTO_hasPreviousPage;
+    /** 是否有下一页 */
+    hasNextPage?: EThePagingInformationSendingEmailRecordQueryResponseDTO_hasNextPage;
+    /** 上一页页码 */
+    previousPage?: string;
+    /** 下一页页码 */
+    nextPage?: string;
+}
+/** SendingEmailRecordQueryResponseDTO */
+export interface ISendingEmailRecordQueryResponseDTO {
+    /** ID */
+    id?: string;
+    /** 邮件名称 */
+    emailName?: string;
+    /** 邮件任务ID */
+    emailTaskId?: string;
+    /** 邮件任务-标题 */
+    title?: string;
+    /** 内容 */
+    content?: string;
+    /** 发送邮件状态 */
+    status?: ESendingEmailRecordQueryResponseDTO_status;
+    /** 发送时间 */
+    sendingTime?: number;
+    /** 发送来源 */
+    sendingFrom?: string;
+    /** 收件人地址 */
+    addressee?: string;
+    /**  是否已准备好数据，只有准备好的邮件才能重新发送 */
+    isReady?: ESendingEmailRecordQueryResponseDTO_isReady;
+    /** 失败的原因 */
+    failureReason?: string;
+}
+
+export enum ESendAnEmailRecordQueryRequest_status {
+    /** 待发送 */
+    NONE = "NONE",
+    /** 发送成功 */
+    SENT_SUCCESS = "SENT_SUCCESS",
+    /** 发送失败 */
+    SENT_FAILURE = "SENT_FAILURE"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EThePagingInformationSendingEmailRecordQueryResponseDTO_hasPreviousPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum EThePagingInformationSendingEmailRecordQueryResponseDTO_hasNextPage {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}
+
+export enum ESendingEmailRecordQueryResponseDTO_status {
+    /** 待发送 */
+    NONE = "NONE",
+    /** 发送成功 */
+    SENT_SUCCESS = "SENT_SUCCESS",
+    /** 发送失败 */
+    SENT_FAILURE = "SENT_FAILURE"
+}
+
+export enum ESendingEmailRecordQueryResponseDTO_isReady {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
+}

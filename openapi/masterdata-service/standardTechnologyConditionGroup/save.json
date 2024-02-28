@@ -1,0 +1,179 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/standardTechnologyConditionGroup/save": {
+      "post": {
+        "tags": [
+          "标准工艺条件组相关"
+        ],
+        "summary": "标准工艺条件组新增、编辑",
+        "operationId": "saveUsingPOST_8",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "conditionGroupSaveRequest",
+            "description": "conditionGroupSaveRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "标准工艺条件组保存DTO",
+              "$ref": "#/definitions/标准工艺条件组保存DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«标准工艺条件组保存响应DTO»",
+              "$ref": "#/definitions/JSONResult«标准工艺条件组保存响应DTO»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "XieJian",
+        "x-order": "20"
+      }
+    }
+  },
+  "definitions": {
+    "标准工艺条件组保存DTO": {
+      "type": "object",
+      "required": [
+        "conditionList",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "条件组名称"
+        },
+        "conditionList": {
+          "type": "array",
+          "description": "标准工艺条件",
+          "items": {
+            "originalRef": "标准工艺条件保存DTO",
+            "$ref": "#/definitions/标准工艺条件保存DTO"
+          }
+        }
+      },
+      "title": "标准工艺条件组保存DTO"
+    },
+    "标准工艺条件保存DTO": {
+      "type": "object",
+      "required": [
+        "compareType",
+        "compareValue",
+        "fromFieldCode",
+        "fromFieldSerialNo",
+        "fromFlowPathCode",
+        "joinType"
+      ],
+      "properties": {
+        "fromFlowPathCode": {
+          "type": "string",
+          "description": "来源应用编号"
+        },
+        "fromFieldCode": {
+          "type": "string",
+          "description": "来源字段编号"
+        },
+        "fromFieldSerialNo": {
+          "type": "string",
+          "description": "来源字段序列号"
+        },
+        "compareType": {
+          "type": "string",
+          "description": "判断方式",
+          "enum": [
+            "  EQ-等于",
+            "  NE-不等于",
+            "  CONTAIN-包含",
+            "  NOT_CONTAIN-不包含"
+          ]
+        },
+        "compareValue": {
+          "type": "string",
+          "description": "判断的值"
+        },
+        "joinType": {
+          "type": "string",
+          "description": "连接类型",
+          "enum": [
+            "  AND-且",
+            "  OR-或"
+          ]
+        }
+      },
+      "title": "标准工艺条件保存DTO"
+    },
+    "JSONResult«标准工艺条件组保存响应DTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "标准工艺条件组保存响应DTO",
+          "$ref": "#/definitions/标准工艺条件组保存响应DTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«标准工艺条件组保存响应DTO»"
+    },
+    "标准工艺条件组保存响应DTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "条件组id"
+        }
+      },
+      "title": "标准工艺条件组保存响应DTO"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/purchaseArrivedStatisticReport/getExportTicket": {
+      "post": {
+        "tags": [
+          "宝晶采购到货统计报表相关"
+        ],
+        "summary": "获取导出ticket",
+        "operationId": "getConsignmentLossAnalyzeExportTicketUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "searchVO",
+            "description": "searchVO",
+            "required": true,
+            "schema": {
+              "originalRef": "采购到货统计报表搜索VO",
+              "$ref": "#/definitions/采购到货统计报表搜索VO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«导出ticket信息»",
+              "$ref": "#/definitions/JSONResult«导出ticket信息»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "采购到货统计报表搜索VO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "purchaseOrderNo": {
+          "type": "string",
+          "description": "采购订单编号"
+        },
+        "lastEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最新到货日期结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "supplierIds": {
+          "type": "array",
+          "description": "供应商id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "requiredBeginDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "要求到货日期开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "requiredEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "要求到货日期结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "lastBeginDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最新到货日期开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "texture": {
+          "type": "string",
+          "description": "物料材质"
+        },
+        "orderType": {
+          "type": "string",
+          "description": "单据类型"
+        },
+        "majorDataIds": {
+          "type": "array",
+          "description": "物料id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "majorDataName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "purchaseType": {
+          "type": "string",
+          "description": "采购类型"
+        },
+        "materialTypes": {
+          "type": "array",
+          "description": "物料类型",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "采购到货统计报表搜索VO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«导出ticket信息»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "导出ticket信息",
+          "$ref": "#/definitions/导出ticket信息"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«导出ticket信息»"
+    },
+    "导出ticket信息": {
+      "type": "object",
+      "properties": {
+        "ticket": {
+          "type": "string",
+          "description": "导出凭证ticket"
+        }
+      },
+      "title": "导出ticket信息"
+    }
+  }
+}

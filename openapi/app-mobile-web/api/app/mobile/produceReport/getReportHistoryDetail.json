@@ -1,0 +1,473 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:17400",
+  "info": {
+    "description": "服务名: app-mobile-web",
+    "version": "1.0",
+    "title": "普朗克移动端(app-mobile-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-mobile-web/api/app/mobile/produceReport/getReportHistoryDetail": {
+      "get": {
+        "tags": [
+          "生产统计相关"
+        ],
+        "summary": "上报反馈详情查询",
+        "operationId": "getReportHistoryDetailUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«生产处理基础信息详情返回VO»",
+              "$ref": "#/definitions/JSONResult«生产处理基础信息详情返回VO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "40"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«生产处理基础信息详情返回VO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "生产处理基础信息详情返回VO",
+          "$ref": "#/definitions/生产处理基础信息详情返回VO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«生产处理基础信息详情返回VO»"
+    },
+    "生产处理基础信息详情返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "produceTaskId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属生产任务id"
+        },
+        "produceTaskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "businessType": {
+          "type": "string",
+          "description": "业务类型",
+          "enum": [
+            "  IN_OUT-进出站",
+            "  QUALITY-质检",
+            "  ABNORMAL-异常",
+            "  SYSTEM-系统"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "description": "异常分类",
+          "enum": [
+            "  SCRAP-报废",
+            "  HOLD-扣留",
+            "  HOLD_PAUSE-暂扣",
+            "  REPORT-上报反馈",
+            "  BACK-返工",
+            "  MOVE_IN-进料",
+            "  MOVE_OUT-出料",
+            "  QUALITY_APPLY-申请质检",
+            "  TASK_ISSUE-任务下发",
+            "  PRODUCE_ENTRUST-委外加工",
+            "  TASK_ASSIGN-任务分配"
+          ]
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "异常分类描述"
+        },
+        "moveInOutRecordId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "所属进出站记录id"
+        },
+        "produceAbnormalName": {
+          "type": "string",
+          "description": "生产异常类型名称"
+        },
+        "produceAbnormalCode": {
+          "type": "string",
+          "description": "生产异常类型编号"
+        },
+        "abnormalQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        },
+        "lotName": {
+          "type": "string",
+          "description": "批次名称"
+        },
+        "lotNo": {
+          "type": "string",
+          "description": "批次号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "备注"
+        },
+        "produceEntrustId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应生产委外id"
+        },
+        "status": {
+          "type": "string",
+          "description": "状态",
+          "enum": [
+            "  CREATED-待处理",
+            "  SURE-已确认",
+            "  IGNORE-已忽略",
+            "  RELEASE-放行",
+            "  BACK-返工",
+            "  HANDING-处理中",
+            "  ALL_HANDLE-处理完成",
+            "  APPROVAL-批准",
+            "  REFUSE-拒绝",
+            "  REVOKE-撤销",
+            "  COMPLETE-完成",
+            "  CANCEL-取消"
+          ]
+        },
+        "statusDesc": {
+          "type": "string",
+          "description": "状态描述"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUserName": {
+          "type": "string",
+          "description": "创建用户名"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "imageKeys": {
+          "type": "string",
+          "description": "图片上传key集合"
+        },
+        "imageUrls": {
+          "type": "array",
+          "description": "图片Url集合",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inputList": {
+          "type": "array",
+          "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
+          "items": {
+            "originalRef": "工艺卡明细返回VO(含填写的信息)",
+            "$ref": "#/definitions/工艺卡明细返回VO(含填写的信息)"
+          }
+        },
+        "desc": {
+          "type": "string",
+          "description": "异常描述"
+        },
+        "handleUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "处理人id"
+        },
+        "handleUsername": {
+          "type": "string",
+          "description": "处理人"
+        },
+        "handleTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "处理时间"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单编码"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工序id"
+        },
+        "processName": {
+          "type": "string",
+          "description": "对应工序"
+        },
+        "routingId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应工艺路径id"
+        },
+        "routingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "所属生产任务工艺路径步骤"
+        },
+        "tags": {
+          "type": "array",
+          "description": "标签集合",
+          "items": {
+            "type": "string"
+          }
+        },
+        "produceOrderId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应生产订单id"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "对应生产订单号"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料id"
+        },
+        "materialName": {
+          "type": "string",
+          "description": "物料名称"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "物料编号"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "物料规格"
+        },
+        "handleQuantity": {
+          "type": "number",
+          "description": "已处理数量"
+        },
+        "waitQuantity": {
+          "type": "number",
+          "description": "待处理数量"
+        },
+        "backQuantity": {
+          "type": "number",
+          "description": "返工数量"
+        },
+        "scrapQuantity": {
+          "type": "number",
+          "description": "报废数量"
+        },
+        "releaseQuantity": {
+          "type": "number",
+          "description": "放行数量"
+        },
+        "backRoutingStepId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "返工工艺路径步骤id"
+        },
+        "backRoutingStep": {
+          "type": "integer",
+          "format": "int32",
+          "description": "返工工艺路径步骤"
+        },
+        "backProcessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "返工工序id"
+        },
+        "backProcessName": {
+          "type": "string",
+          "description": "返工工序名称"
+        },
+        "backProcessCode": {
+          "type": "string",
+          "description": "返工工序编号"
+        },
+        "backProduceType": {
+          "type": "string",
+          "description": "返工生产类型",
+          "enum": [
+            "  RETURN-返回原工序",
+            "  ORDER-顺序生产"
+          ]
+        },
+        "backProduceTypeDesc": {
+          "type": "string",
+          "description": "返工生产类型描述"
+        },
+        "handleRemark": {
+          "type": "string",
+          "description": "处理意见"
+        }
+      },
+      "title": "生产处理基础信息详情返回VO"
+    },
+    "工艺卡明细返回VO(含填写的信息)": {
+      "type": "object",
+      "required": [
+        "code",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "明细id"
+        },
+        "type": {
+          "type": "string",
+          "description": "明细类型",
+          "enum": [
+            "  FILE-文件",
+            "  TEXT-描述",
+            "  INPUT-录入"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "description": "明细名称/标题"
+        },
+        "code": {
+          "type": "string",
+          "description": "明细编号"
+        },
+        "remark": {
+          "type": "string",
+          "description": "描述内容/备注"
+        },
+        "fileName": {
+          "type": "string",
+          "description": "文件名称"
+        },
+        "fileKey": {
+          "type": "string",
+          "description": "文件key"
+        },
+        "fileUrl": {
+          "type": "string",
+          "description": "文件完整url"
+        },
+        "inputType": {
+          "type": "string",
+          "description": "录入类型",
+          "enum": [
+            "  TEXT-文本",
+            "  SELECTOR-单选框",
+            "  CHECKBOX-多选框",
+            "  NUMBER-数值",
+            "  IMAGE-上传图片"
+          ]
+        },
+        "textType": {
+          "type": "string",
+          "description": "文本类型",
+          "enum": [
+            "  INPUT-输入",
+            "  COMPARE-比较"
+          ]
+        },
+        "textCompareValueList": {
+          "type": "array",
+          "description": "文本比较值集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lowerLimit": {
+          "type": "number",
+          "description": "下限"
+        },
+        "upperLimit": {
+          "type": "number",
+          "description": "上限"
+        },
+        "numberUnit": {
+          "type": "string",
+          "description": "数值单位"
+        },
+        "imageTotalCount": {
+          "type": "integer",
+          "format": "int32",
+          "description": "图片最大上传量"
+        },
+        "selectorList": {
+          "type": "array",
+          "description": "选项集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "inputValue": {
+          "type": "string",
+          "description": "录入值 - 明细录入类型不是图片时，有值"
+        },
+        "imageKeys": {
+          "type": "array",
+          "description": "图片上传key集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imageUrls": {
+          "type": "array",
+          "description": "图片Url集合 - 明细录入类型是图片时，有值",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "title": "工艺卡明细返回VO(含填写的信息)"
+    }
+  }
+}

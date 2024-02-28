@@ -1,0 +1,277 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:17600",
+  "info": {
+    "description": "服务名: message-notification-service",
+    "version": "1.0",
+    "title": "普朗克消息通知服务(message-notification-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/message-notification-service/appMessageConfig/add": {
+      "post": {
+        "tags": [
+          "应用消息配置相关"
+        ],
+        "summary": "添加应用消息配置 - 应用引擎只要有改动消息配置，那么对于用户来说都是新增。因此只添加新增接口- 只提供新增接口，不提供”编辑“接口防止FlowPath多版本共用一套消息编辑设置。进而导致消息错误",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "request",
+            "description": "request",
+            "required": true,
+            "schema": {
+              "originalRef": "AppMessageConfigAddRequestDTO",
+              "$ref": "#/definitions/AppMessageConfigAddRequestDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "lin.he",
+        "x-order": "10"
+      }
+    }
+  },
+  "definitions": {
+    "AppMessageConfigAddRequestDTO": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "标题"
+        },
+        "applicationCode": {
+          "type": "string",
+          "description": "应用编码"
+        },
+        "detailTableFieldSerialNo": {
+          "type": "string",
+          "description": "详细表格字段序列号"
+        },
+        "detailTableFieldCode": {
+          "type": "string",
+          "description": "详细表格字段编码"
+        },
+        "isDetailFlowTable": {
+          "type": "string",
+          "description": "是否明细表, Y - 主表， N - 明细表",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "tableCode": {
+          "type": "string",
+          "description": "表格编码"
+        },
+        "sentContentConfigList": {
+          "type": "array",
+          "description": "发送内容配置列表",
+          "items": {
+            "originalRef": "AppMessageSentContentTemplateAddRequestDTO",
+            "$ref": "#/definitions/AppMessageSentContentTemplateAddRequestDTO"
+          }
+        },
+        "recipientList": {
+          "type": "array",
+          "description": "接受人列表",
+          "items": {
+            "originalRef": "AppMessageRecipientAddRequestDTO",
+            "$ref": "#/definitions/AppMessageRecipientAddRequestDTO"
+          }
+        }
+      },
+      "title": "AppMessageConfigAddRequestDTO"
+    },
+    "AppMessageSentContentTemplateAddRequestDTO": {
+      "type": "object",
+      "properties": {
+        "sendingMode": {
+          "type": "string",
+          "description": "消息发送模式",
+          "enum": [
+            "  SYSTEM-系统消息",
+            "  SMS-短信",
+            "  EMAIL-邮件"
+          ]
+        },
+        "messageContent": {
+          "type": "string",
+          "description": "消息内容  模板内容。  销售订单为:${SSALESORDERCODENS},这个订单有问题"
+        },
+        "fieldSerialNoList": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "fieldMetaList": {
+          "type": "array",
+          "description": "字段元数据",
+          "items": {
+            "originalRef": "MessageContentFieldMetaAddDTO",
+            "$ref": "#/definitions/MessageContentFieldMetaAddDTO"
+          }
+        },
+        "isUseConfig": {
+          "type": "string",
+          "description": "是否使用配置",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "htmlContent": {
+          "type": "string",
+          "description": "html 内容"
+        },
+        "emailSubject": {
+          "type": "string",
+          "description": "邮件主题"
+        }
+      },
+      "title": "AppMessageSentContentTemplateAddRequestDTO"
+    },
+    "MessageContentFieldMetaAddDTO": {
+      "type": "object",
+      "properties": {
+        "applicationCode": {
+          "type": "string",
+          "description": "应用编码"
+        },
+        "currentFormFieldSerialNo": {
+          "type": "string",
+          "description": "当前表单字段序列号"
+        },
+        "associationApplicationCode": {
+          "type": "string",
+          "description": "关联应用编码"
+        },
+        "associationFormFieldSerialNo": {
+          "type": "string",
+          "description": "关联表单序列号"
+        },
+        "showFieldName": {
+          "type": "string",
+          "description": "显示字段名"
+        }
+      },
+      "title": "MessageContentFieldMetaAddDTO"
+    },
+    "AppMessageRecipientAddRequestDTO": {
+      "type": "object",
+      "properties": {
+        "recipientType": {
+          "type": "string",
+          "description": "接收人类型",
+          "enum": [
+            "  USER-人员",
+            "  CLASS_GROUP-班组",
+            "  DEPARTMENT-部门",
+            "  EMAIL-邮件",
+            "  BUSINESS-业务"
+          ]
+        },
+        "departmentIdList": {
+          "type": "array",
+          "description": "部门ID列表",
+          "items": {
+            "type": "object"
+          }
+        },
+        "classGroupIdList": {
+          "type": "array",
+          "description": "班组ID列表",
+          "items": {
+            "type": "object"
+          }
+        },
+        "organizationFieldSerialList": {
+          "type": "array",
+          "description": "组织字段序列号列表",
+          "items": {
+            "type": "object"
+          }
+        },
+        "userIdList": {
+          "type": "array",
+          "description": "用户ID列表",
+          "items": {
+            "type": "object"
+          }
+        },
+        "emailAddressList": {
+          "type": "array",
+          "description": "邮箱列表",
+          "items": {
+            "type": "object"
+          }
+        },
+        "nodeRecipientTypeList": {
+          "type": "array",
+          "description": "节点接受人类型",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "title": "AppMessageRecipientAddRequestDTO"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

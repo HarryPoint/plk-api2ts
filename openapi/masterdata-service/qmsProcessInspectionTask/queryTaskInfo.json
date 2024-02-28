@@ -1,0 +1,580 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/qmsProcessInspectionTask/queryTaskInfo": {
+      "get": {
+        "tags": [
+          "工序检验任务相关"
+        ],
+        "summary": "查询任务信息",
+        "operationId": "queryTaskInfoUsingGET_1",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "工序检任务id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«工序检检验任务响应对象»",
+              "$ref": "#/definitions/JSONResult«工序检检验任务响应对象»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "Tan Peng",
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«工序检检验任务响应对象»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "工序检检验任务响应对象",
+          "$ref": "#/definitions/工序检检验任务响应对象"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«工序检检验任务响应对象»"
+    },
+    "工序检检验任务响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "任务编号"
+        },
+        "businessType": {
+          "type": "string",
+          "description": "业务类型",
+          "enum": [
+            "  CUSTOMER_COMPLAIN-客户投诉",
+            "  INCOMING_INSPECTION-来料检",
+            "  FIRST_INSPECTION-首检",
+            "  PATROL_INSPECTION-巡检",
+            "  PROCESS_INSPECTION-工序检",
+            "  PRODUCT_INSPECTION-成品检",
+            "  SHIPMENT_INSPECTION-出货检",
+            "  EXPERIMENT-试验",
+            "  OTHER-其它"
+          ]
+        },
+        "isEmergent": {
+          "type": "string",
+          "description": "是否紧急",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "isTemporarily": {
+          "type": "string",
+          "description": "是否临检",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "qmsInspectionApplyFormMaterialDetailId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "报检单物料明细id"
+        },
+        "applyDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "报检日期"
+        },
+        "applyEmployeeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "报检员"
+        },
+        "applyDepartmentId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "报检部门"
+        },
+        "areaId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "区域id"
+        },
+        "productionLineId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "产线id"
+        },
+        "processId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "工序id"
+        },
+        "materialId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料名称"
+        },
+        "qmsInspectionCategoryId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "物料检验类别"
+        },
+        "materialCode": {
+          "type": "string",
+          "description": "对应物料code"
+        },
+        "materialSpec": {
+          "type": "string",
+          "description": "对应物料规格"
+        },
+        "materialUnitId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "对应物料单位"
+        },
+        "lot": {
+          "type": "string",
+          "description": "批次"
+        },
+        "inspectionApplyQuantity": {
+          "type": "number",
+          "description": "报检数量"
+        },
+        "threeInspectionSystems": {
+          "type": "array",
+          "description": "三检制选择",
+          "items": {
+            "type": "object"
+          }
+        },
+        "selfInspectionEmployeeIds": {
+          "type": "array",
+          "description": "自检员",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "mutualInspectionEmployeeIds": {
+          "type": "array",
+          "description": "互检员",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "inspectionMethod": {
+          "type": "string",
+          "description": "检验方式",
+          "enum": [
+            "  SPOT_CHECK-抽检",
+            "  ALL_CHECK-全检"
+          ]
+        },
+        "inspectionQuantity": {
+          "type": "number",
+          "description": "检验数量"
+        },
+        "selfQualifiedQuantity": {
+          "type": "number",
+          "description": "自检合格数"
+        },
+        "selfUnQualifiedQuantity": {
+          "type": "number",
+          "description": "自检不合格数"
+        },
+        "selfInspectionResult": {
+          "type": "string",
+          "description": "自检检验结果",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "mutualQualifiedQuantity": {
+          "type": "number",
+          "description": "互检合格数"
+        },
+        "mutualUnQualifiedQuantity": {
+          "type": "number",
+          "description": "互检不合格数"
+        },
+        "mutualInspectionResult": {
+          "type": "string",
+          "description": "互检检验结果",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "specialQualifiedQuantity": {
+          "type": "number",
+          "description": "专检合格数"
+        },
+        "specialUnQualifiedQuantity": {
+          "type": "number",
+          "description": "专检不合格数"
+        },
+        "specialInspectionResult": {
+          "type": "string",
+          "description": "专检检验结果",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "applyInspectAddress": {
+          "type": "string",
+          "description": "申请验收地点"
+        },
+        "applyInspectDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "申请验收日期"
+        },
+        "inspectionApplyFiles": {
+          "type": "string",
+          "description": "报检附件"
+        },
+        "edition": {
+          "type": "string",
+          "description": "版次"
+        },
+        "inspectionSchemeFiles": {
+          "type": "string",
+          "description": "方案附件"
+        },
+        "inspectionRecordFiles": {
+          "type": "string",
+          "description": "检验记录附件"
+        },
+        "inspectionResultDesc": {
+          "type": "string",
+          "description": "检验结果描述"
+        },
+        "qmsInspectionSchemeId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验方案id"
+        },
+        "inspectionEmployeeIds": {
+          "type": "array",
+          "description": "检验员",
+          "items": {
+            "type": "object"
+          }
+        },
+        "inspectionEmployees": {
+          "type": "array",
+          "description": "检验员",
+          "items": {
+            "originalRef": "关联表单数据VO",
+            "$ref": "#/definitions/关联表单数据VO"
+          }
+        },
+        "isAssignment": {
+          "type": "string",
+          "description": "分配状态",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "inspectionEndDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "检验截止日期"
+        },
+        "inspectionCompletedDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "检验完成日期"
+        },
+        "taskStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "开始时间"
+        },
+        "taskStatus": {
+          "type": "string",
+          "description": "任务执行状态",
+          "enum": [
+            "  WAIT-待执行",
+            "  HANDLING-进行中",
+            "  CANCEL-已取消",
+            "  COMPLETE-已完成"
+          ]
+        },
+        "isOverdue": {
+          "type": "string",
+          "description": "是否超期",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "overdueDay": {
+          "type": "number",
+          "description": "超期天数"
+        },
+        "mutualRecords": {
+          "type": "array",
+          "description": "互检记录",
+          "items": {
+            "originalRef": "工序检检验任务互检记录响应对象",
+            "$ref": "#/definitions/工序检检验任务互检记录响应对象"
+          }
+        },
+        "selfRecords": {
+          "type": "array",
+          "description": "专检记录",
+          "items": {
+            "originalRef": "首检自检记录响应对象",
+            "$ref": "#/definitions/首检自检记录响应对象"
+          }
+        },
+        "specialRecords": {
+          "type": "array",
+          "description": "自检记录",
+          "items": {
+            "originalRef": "工序检检验专检记录响应对象",
+            "$ref": "#/definitions/工序检检验专检记录响应对象"
+          }
+        }
+      },
+      "title": "工序检检验任务响应对象"
+    },
+    "关联表单数据VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "showFieldValue": {
+          "type": "string",
+          "description": "关联表单显示值"
+        },
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数据状态"
+        },
+        "isRemovedShowField": {
+          "type": "string",
+          "description": "是否已删除显示字段",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "masterDataId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "主数据ID"
+        }
+      },
+      "title": "关联表单数据VO"
+    },
+    "工序检检验任务互检记录响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "partNumber": {
+          "type": "string",
+          "description": "零件号"
+        },
+        "inspectionResultsOfIndividualParts": {
+          "type": "string",
+          "description": "零件检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        },
+        "descriptionOfNonconformities": {
+          "type": "string",
+          "description": "不合格情况描述"
+        },
+        "qmsInspectionItemsId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验项id"
+        },
+        "inspectionStandardValue": {
+          "type": "string",
+          "description": "标准值"
+        },
+        "inspectionActualValue": {
+          "type": "string",
+          "description": "实测值"
+        },
+        "inspectionResult": {
+          "type": "string",
+          "description": "检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        }
+      },
+      "title": "工序检检验任务互检记录响应对象"
+    },
+    "首检自检记录响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "partNumber": {
+          "type": "string",
+          "description": "零件号"
+        },
+        "inspectionResultsOfIndividualParts": {
+          "type": "string",
+          "description": "零件检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        },
+        "descriptionOfNonconformities": {
+          "type": "string",
+          "description": "不合格情况描述"
+        },
+        "qmsInspectionItemsId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验项id"
+        },
+        "inspectionStandardValue": {
+          "type": "string",
+          "description": "标准值"
+        },
+        "inspectionActualValue": {
+          "type": "string",
+          "description": "实测值"
+        },
+        "inspectionResult": {
+          "type": "string",
+          "description": "检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        }
+      },
+      "title": "首检自检记录响应对象"
+    },
+    "工序检检验专检记录响应对象": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "partNumber": {
+          "type": "string",
+          "description": "零件号"
+        },
+        "inspectionResultsOfIndividualParts": {
+          "type": "string",
+          "description": "零件检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        },
+        "descriptionOfNonconformities": {
+          "type": "string",
+          "description": "不合格情况描述"
+        },
+        "qmsInspectionItemsId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "检验项id"
+        },
+        "inspectionStandardValue": {
+          "type": "string",
+          "description": "标准值"
+        },
+        "inspectionActualValue": {
+          "type": "string",
+          "description": "实测值"
+        },
+        "inspectionResult": {
+          "type": "string",
+          "description": "检验结果",
+          "enum": [
+            "  QUALIFIED-合格",
+            "  UN_QUALIFIED-不合格",
+            "  UNSUITED-不适用"
+          ]
+        }
+      },
+      "title": "工序检检验专检记录响应对象"
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/produceTask/export": {
+      "post": {
+        "tags": [
+          "生产任务相关"
+        ],
+        "summary": "导出生产任务",
+        "description": "<p style='color:red'>注意：操作中的 按钮有状态判断显示<br/>1、恢复：status = PAUSE <br/>2、暂停：status = WAIT 或 PRODUCE <br/>3、停止：status = WAIT 或 PAUSE 或 PRODUCE <br/></p>",
+        "operationId": "exportUsingPOST_36",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "search",
+            "description": "search",
+            "required": true,
+            "schema": {
+              "originalRef": "生产任务导出DTO",
+              "$ref": "#/definitions/生产任务导出DTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "生产任务导出DTO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "processIds": {
+          "type": "array",
+          "description": "对应工序id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "taskNo": {
+          "type": "string",
+          "description": "任务号"
+        },
+        "produceOrderCode": {
+          "type": "string",
+          "description": "生产订单号"
+        },
+        "salesOrderCode": {
+          "type": "string",
+          "description": "销售订单号"
+        },
+        "materialIds": {
+          "type": "array",
+          "description": "对应物料id",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "typeDesc": {
+          "type": "string",
+          "description": "任务类型描述"
+        },
+        "issueType": {
+          "type": "string",
+          "description": "任务下发方式",
+          "enum": [
+            "  PLAN-排产下发",
+            "  DIRECT-直接下发"
+          ]
+        },
+        "issueTypeDesc": {
+          "type": "string",
+          "description": "任务下发方式描述"
+        },
+        "type": {
+          "type": "string",
+          "description": "任务类型",
+          "enum": [
+            "  PRODUCE-生产任务",
+            "  BACK-返工任务"
+          ]
+        },
+        "startEndTime": {
+          "type": "string",
+          "description": "计划开始-结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "statusList": {
+          "type": "array",
+          "description": "任务状态",
+          "items": {
+            "type": "string",
+            "enum": [
+              "WAIT",
+              "PRODUCE",
+              "PAUSE",
+              "STOP",
+              "CLOSE",
+              "CANCEL"
+            ]
+          }
+        },
+        "priorityLevel": {
+          "type": "integer",
+          "format": "int32",
+          "description": "任务优先级"
+        },
+        "createBeginTime": {
+          "type": "string",
+          "description": "创建开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "startBeginTime": {
+          "type": "string",
+          "description": "计划开始-开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "endBeginTime": {
+          "type": "string",
+          "description": "计划结束-开始时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "endEndTime": {
+          "type": "string",
+          "description": "计划结束-结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "createEndTime": {
+          "type": "string",
+          "description": "创建结束时间 yyyy-MM-dd HH:mm:ss"
+        },
+        "exportFieldCodes": {
+          "type": "array",
+          "description": "导出字段code",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canOpItem": {
+          "type": "string",
+          "description": "可操作项",
+          "enum": [
+            "  CAN_MOVE_IN-进料",
+            "  CAN_QUALITY-质检",
+            "  CAN_MOVE_OUT-出料"
+          ]
+        },
+        "produceOrderSearchList": {
+          "type": "array",
+          "description": "生产订单字段搜索",
+          "items": {
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
+          }
+        }
+      },
+      "title": "生产任务导出DTO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "流程数据明细搜索VO": {
+      "type": "object",
+      "required": [
+        "code",
+        "searchType"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "列code"
+        },
+        "searchType": {
+          "type": "string",
+          "description": "搜索类型",
+          "enum": [
+            "NONE",
+            "EQ",
+            "LIKE",
+            "RANGE",
+            "SELECTOR",
+            "IS_NULL",
+            "NOT_NULL",
+            "NE",
+            "REGEXP"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "description": "搜索文本 - 针对文本搜索"
+        },
+        "limitBegin": {
+          "type": "object",
+          "description": "搜索起始值 - 针对范围搜索"
+        },
+        "limitEnd": {
+          "type": "object",
+          "description": "搜索结束值 - 针对范围搜索"
+        },
+        "selectors": {
+          "type": "array",
+          "description": "搜索选项值 - 针对选择搜索",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tableCode": {
+          "type": "string",
+          "description": "表格编码"
+        }
+      },
+      "title": "流程数据明细搜索VO"
+    },
+    "JSONResult«long»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "type": "integer",
+          "format": "int64",
+          "description": "响应结果"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«long»"
+    }
+  }
+}

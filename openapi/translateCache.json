@@ -3078,5 +3078,7 @@
   "分页信息项目资源统计报表响应对象": "PageInformationItemResourceStatisticsReportResponseObject",
   "项目资源统计报表响应对象": "TheProjectResourceStatisticsReportRespondsToTheObject",
   "JSONResultList项目设备信息响应对象": "JSONResultListProjectDeviceInformationResponseObject",
-  "项目设备信息响应对象": "ItemDeviceInformationResponseObject"
+  "项目设备信息响应对象": "ItemDeviceInformationResponseObject",
+  "项目阶段编号查询对象_1": "ProjectPhaseNumberQueryObject1",
+  "JSONResultIdCodeName通用传输对象": "JSONResultIdCodeNameCommonTransferObject"
 }

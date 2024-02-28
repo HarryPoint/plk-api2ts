@@ -1,0 +1,167 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/projectOverview/queryLeaderInstructCompleteCount": {
+      "post": {
+        "tags": [
+          "项目概况相关"
+        ],
+        "summary": "获取领导批示",
+        "operationId": "queryLeaderInstructCompleteCountUsingPOST_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "query",
+            "description": "query",
+            "required": true,
+            "schema": {
+              "originalRef": "项目概况查询dto",
+              "$ref": "#/definitions/项目概况查询dto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«领导批示统计响应对象»",
+              "$ref": "#/definitions/JSONResult«领导批示统计响应对象»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "MaoHaiPing",
+        "x-order": "60"
+      }
+    }
+  },
+  "definitions": {
+    "项目概况查询dto": {
+      "type": "object",
+      "required": [
+        "projectId"
+      ],
+      "properties": {
+        "projectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "项目id"
+        },
+        "beginTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "开始日期"
+        },
+        "endTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "结束日期"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int32",
+          "description": "查询条数"
+        }
+      },
+      "title": "项目概况查询dto"
+    },
+    "JSONResult«领导批示统计响应对象»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "领导批示统计响应对象",
+          "$ref": "#/definitions/领导批示统计响应对象"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«领导批示统计响应对象»"
+    },
+    "领导批示统计响应对象": {
+      "type": "object",
+      "properties": {
+        "totalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "总数量"
+        },
+        "unCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "未完成数量"
+        },
+        "completeQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "已完成数量"
+        },
+        "normalQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "正常进行数量"
+        },
+        "onTimeCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "按期完成数量"
+        },
+        "overdueCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超期完成数量"
+        },
+        "overdueUnCompleteQuantity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "超期未完成数量"
+        },
+        "completeRate": {
+          "type": "number",
+          "description": "完成率"
+        }
+      },
+      "title": "领导批示统计响应对象"
+    }
+  }
+}

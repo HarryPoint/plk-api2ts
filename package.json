@@ -14,7 +14,8 @@
     "update:link": "tsc && npm link",
     "build": "tsc -d",
     "createDataFilter": "ts-node ./src/main.ts --type=createData --filterPath=/app-mobile-web/api/app/mobile/andon/export",
-    "createTsFilter": "ts-node ./src/main.ts --type=createTs --filterPath=/app-mobile-web/api/app/mobile/andon/export"
+    "createTsFilter": "ts-node ./src/main.ts --type=createTs --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "createFilter": "ts-node ./src/main.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
   "bugs": {

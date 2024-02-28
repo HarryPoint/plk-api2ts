@@ -1,0 +1,109 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16400",
+  "info": {
+    "description": "服务名: app-enterprise-web",
+    "version": "1.0",
+    "title": "普朗克企业后台(app-enterprise-web) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/app-enterprise-web/api/app/enterprise/initEngine/getImportBehaviorStatus": {
+      "get": {
+        "tags": [
+          "初始化引擎"
+        ],
+        "summary": "获取导入行为的状态",
+        "operationId": "getImportBehaviorStatusUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "templateId",
+            "in": "query",
+            "description": "templateId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«DataInteractionOutputDTO»",
+              "$ref": "#/definitions/JSONResult«DataInteractionOutputDTO»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«DataInteractionOutputDTO»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "DataInteractionOutputDTO",
+          "$ref": "#/definitions/DataInteractionOutputDTO"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«DataInteractionOutputDTO»"
+    },
+    "DataInteractionOutputDTO": {
+      "type": "object",
+      "properties": {
+        "templateCode": {
+          "type": "string",
+          "description": "模板编码"
+        },
+        "interactionStatus": {
+          "type": "string",
+          "description": "生效状态",
+          "enum": [
+            "  IMPORT_TABLE-已导入表格",
+            "  NOT_IMPORTED_TABLE-未导入表格",
+            "  IMPORT_FAILURE-表格导入失败",
+            "  IMPORTING-表格导入中",
+            "  CHECKING-校验中",
+            "  VERIFIED-校验完毕",
+            "  VERIFIED_FAIL-校验失败",
+            "  DATA_IN_EFFECT-数据生效中",
+            "  DATA_IS_EFFECTIVE-数据生效完成"
+          ]
+        }
+      },
+      "title": "DataInteractionOutputDTO"
+    }
+  }
+}

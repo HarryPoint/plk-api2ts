@@ -1,0 +1,280 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:16700",
+  "info": {
+    "description": "服务名: masterdata-service",
+    "version": "1.0",
+    "title": "普朗克主数据服务(masterdata-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/masterdata-service/deviceCollectionData/getUserReportForPage": {
+      "post": {
+        "tags": [
+          "设备数采相关"
+        ],
+        "summary": "分页查询用户上报数据",
+        "operationId": "getUserReportForPageUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "query",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "queryRequest",
+            "description": "queryRequest",
+            "required": true,
+            "schema": {
+              "originalRef": "查询用户上报数据DTO",
+              "$ref": "#/definitions/查询用户上报数据DTO"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "userId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»»"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-order": "40"
+      }
+    }
+  },
+  "definitions": {
+    "查询用户上报数据DTO": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int32",
+          "description": "当前页面"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "分页大小"
+        },
+        "orders": {
+          "type": "array",
+          "description": "排序字段集",
+          "items": {
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
+          }
+        },
+        "searchKey": {
+          "type": "string",
+          "description": "搜索关键字"
+        }
+      },
+      "title": "查询用户上报数据DTO"
+    },
+    "分页排序VO": {
+      "type": "object",
+      "properties": {
+        "column": {
+          "type": "string"
+        },
+        "isAsc": {
+          "type": "string",
+          "enum": [
+            "Y",
+            "N"
+          ]
+        }
+      },
+      "title": "分页排序VO"
+    },
+    "JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "分页信息«设备数采人工上报数据详单分页信息返回VO»",
+          "$ref": "#/definitions/分页信息«设备数采人工上报数据详单分页信息返回VO»"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«分页信息«设备数采人工上报数据详单分页信息返回VO»»"
+    },
+    "分页信息«设备数采人工上报数据详单分页信息返回VO»": {
+      "type": "object",
+      "properties": {
+        "pageNo": {
+          "type": "integer",
+          "format": "int64",
+          "description": "当前页码"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64",
+          "description": "分页大小"
+        },
+        "totalPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总页数"
+        },
+        "totalCount": {
+          "type": "integer",
+          "format": "int64",
+          "description": "总的记录数"
+        },
+        "list": {
+          "type": "array",
+          "description": "分页列表",
+          "items": {
+            "originalRef": "设备数采人工上报数据详单分页信息返回VO",
+            "$ref": "#/definitions/设备数采人工上报数据详单分页信息返回VO"
+          }
+        },
+        "lastPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "最后页页码"
+        },
+        "hasPreviousPage": {
+          "type": "string",
+          "description": "是否有上一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "hasNextPage": {
+          "type": "string",
+          "description": "是否有下一页",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        },
+        "previousPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "上一页页码"
+        },
+        "nextPage": {
+          "type": "integer",
+          "format": "int64",
+          "description": "下一页页码"
+        }
+      },
+      "title": "分页信息«设备数采人工上报数据详单分页信息返回VO»"
+    },
+    "设备数采人工上报数据详单分页信息返回VO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "collectTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "数据提交时间"
+        },
+        "deviceId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "设备id"
+        },
+        "deviceName": {
+          "type": "string",
+          "description": "设备名称"
+        },
+        "deviceCode": {
+          "type": "string",
+          "description": "设备编号"
+        },
+        "deviceType": {
+          "type": "string",
+          "description": "设备型号类型"
+        },
+        "onlineStatus": {
+          "type": "string",
+          "description": "在线状态",
+          "enum": [
+            "  ONLINE-在线",
+            "  OFFLINE-离线"
+          ]
+        },
+        "deviceStatus": {
+          "type": "string",
+          "description": "设备状态",
+          "enum": [
+            "  DS1-正常运行",
+            "  DS2-降速运行",
+            "  DS3-故障停机",
+            "  DS4-保养",
+            "  DS5-空闲待用",
+            "  DS6-换型",
+            "  DS7-关机",
+            "  DS8-空运"
+          ]
+        },
+        "hasError": {
+          "type": "string",
+          "description": "是否有异常",
+          "enum": [
+            "  Y-是",
+            "  N-否"
+          ]
+        }
+      },
+      "title": "设备数采人工上报数据详单分页信息返回VO"
+    }
+  }
+}

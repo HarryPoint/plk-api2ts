@@ -1,0 +1,314 @@
+{
+  "basePath": "/",
+  "host": "47.108.139.107:18100",
+  "info": {
+    "description": "服务名: plk-uaa-service",
+    "version": "1.0",
+    "title": "普朗克用户帐号和身份认证服务(plk-uaa-service) API接口"
+  },
+  "swagger": "2.0",
+  "paths": {
+    "/plk-uaa-service/role/getRoleAuthById": {
+      "get": {
+        "tags": [
+          "角色相关"
+        ],
+        "summary": "根据id查询角色权限信息",
+        "operationId": "getRoleAuthByIdUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "originalRef": "JSONResult«角色权限及员工信息响应»",
+              "$ref": "#/definitions/JSONResult«角色权限及员工信息响应»"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false,
+        "x-author": "TangYongDi",
+        "x-order": "30"
+      }
+    }
+  },
+  "definitions": {
+    "JSONResult«角色权限及员工信息响应»": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32",
+          "example": 0,
+          "description": "返回码"
+        },
+        "msg": {
+          "type": "string",
+          "example": "服务器异常",
+          "description": "返回消息说明"
+        },
+        "data": {
+          "description": "响应结果",
+          "originalRef": "角色权限及员工信息响应",
+          "$ref": "#/definitions/角色权限及员工信息响应"
+        },
+        "ts": {
+          "type": "integer",
+          "format": "int64",
+          "example": 1356019200000,
+          "description": "服务器结果返回时的 Unix timestamp,单位毫秒"
+        }
+      },
+      "title": "JSONResult«角色权限及员工信息响应»"
+    },
+    "角色权限及员工信息响应": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "name": {
+          "type": "string",
+          "description": "角色名"
+        },
+        "code": {
+          "type": "string",
+          "description": "角色编码"
+        },
+        "description": {
+          "type": "string",
+          "description": "角色描述"
+        },
+        "permissionCodes": {
+          "type": "array",
+          "description": "勾选的权限码集",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataAuths": {
+          "type": "array",
+          "description": "路由对应的数据权限集",
+          "items": {
+            "originalRef": "企业数据权限响应",
+            "$ref": "#/definitions/企业数据权限响应"
+          }
+        },
+        "applicationLevel": {
+          "type": "string",
+          "description": "应用级别",
+          "enum": [
+            "  PROJECT_MANAGER-项目管理",
+            "  ENTERPRISE-企业"
+          ]
+        },
+        "serviceObjectId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "服务对象ID"
+        },
+        "serviceBusinessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "服务业务ID"
+        },
+        "users": {
+          "type": "array",
+          "description": "用户集",
+          "items": {
+            "originalRef": "企业用户员工信息响应",
+            "$ref": "#/definitions/企业用户员工信息响应"
+          }
+        }
+      },
+      "title": "角色权限及员工信息响应"
+    },
+    "企业数据权限响应": {
+      "type": "object",
+      "properties": {
+        "routerCode": {
+          "type": "string",
+          "description": "路由code"
+        },
+        "dataAuthList": {
+          "type": "array",
+          "description": "数据权限集",
+          "items": {
+            "originalRef": "企业数据权限列表响应",
+            "$ref": "#/definitions/企业数据权限列表响应"
+          }
+        }
+      },
+      "title": "企业数据权限响应"
+    },
+    "企业数据权限列表响应": {
+      "type": "object",
+      "properties": {
+        "dataAuthType": {
+          "type": "string",
+          "description": "数据权限类型",
+          "enum": [
+            "  FLOW_FIELD-表单字段",
+            "  SELF-本人",
+            "  DEPT-所属部门",
+            "  ALL-全部"
+          ]
+        },
+        "roleDataAuthFieldList": {
+          "type": "array",
+          "description": "数据权限对应的字段列表(只针对表单字段类型)",
+          "items": {
+            "originalRef": "角色数据权限字段响应DTO",
+            "$ref": "#/definitions/角色数据权限字段响应DTO"
+          }
+        }
+      },
+      "title": "企业数据权限列表响应"
+    },
+    "角色数据权限字段响应DTO": {
+      "type": "object",
+      "properties": {
+        "appFieldSerialNo": {
+          "type": "string",
+          "description": "流程表单字段序列号"
+        },
+        "appFieldName": {
+          "type": "string",
+          "description": "流程表单字段名"
+        }
+      },
+      "title": "角色数据权限字段响应DTO"
+    },
+    "企业用户员工信息响应": {
+      "type": "object",
+      "properties": {
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数据状态"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新人id"
+        },
+        "updateUsername": {
+          "type": "string",
+          "description": "更新人名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "userId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "用户id"
+        },
+        "employee": {
+          "description": "员工",
+          "originalRef": "员工信息响应",
+          "$ref": "#/definitions/员工信息响应"
+        }
+      },
+      "title": "企业用户员工信息响应"
+    },
+    "员工信息响应": {
+      "type": "object",
+      "properties": {
+        "dataStatus": {
+          "type": "integer",
+          "format": "int32",
+          "description": "数据状态"
+        },
+        "createUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "创建人id"
+        },
+        "createUsername": {
+          "type": "string",
+          "description": "创建人名称"
+        },
+        "createTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "创建时间"
+        },
+        "updateUserId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "更新人id"
+        },
+        "updateUsername": {
+          "type": "string",
+          "description": "更新人名称"
+        },
+        "updateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "更新时间"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64",
+          "description": "id"
+        },
+        "code": {
+          "type": "string",
+          "description": "编码"
+        },
+        "name": {
+          "type": "string",
+          "description": "名称"
+        },
+        "telephone": {
+          "type": "string",
+          "description": "手机号"
+        },
+        "email": {
+          "type": "string",
+          "description": "邮件"
+        }
+      },
+      "title": "员工信息响应"
+    }
+  }
+}
