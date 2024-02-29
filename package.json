@@ -1,6 +1,6 @@
 {
   "name": "plk-api2ts",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,8 @@
   "license": "ISC",
   "bin": {
     "api2json": "./bin/api2json",
-    "api2ts": "./bin/api2ts"
+    "api2ts": "./bin/api2ts",
+    "apiUpdate": "./bin/apiUpdate"
   },
   "files": [
     "bin",
