@@ -9,11 +9,10 @@ const platformMap = {
 const serviceMap = {
   "masterdata-service": 16700,
   "plk-uaa-service": 18100,
-  "flow-service": 16500,
-  "todo-service": 16600,
-  "app-enterprise-web": 16400,
-  "app-mobile-web": 17400,
-  "message-notification-service": 17600,
+  // "flow-service": 16500,
+  // "todo-service": 16600,
+  // "app-enterprise-web": 16400,
+  // "message-notification-service": 17600,
 };
 
 const apiMap = Object.keys(platformMap)
