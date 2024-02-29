@@ -104,7 +104,7 @@ export const createDefinitions = async (
   // console.log("data.definitions: ", data.definitions);
   for (let name in data.definitions) {
     const define = data.definitions[name];
-    if (define.type === "object") {
+    if (define && define.type === "object") {
       definitionsMap[name] = {
         name: formatName(name),
         translateName: formatName(name),

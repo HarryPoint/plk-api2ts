@@ -4,18 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "fetch": "node ./lib/createData.js",
-    "create": "node ./lib/createTs.js",
-    "init": "npm run fetch && npm run create",
-    "src:fetch": "ts-node ./src/main.ts --type=createData",
-    "src:create": "ts-node ./src/main.ts --type=createTs",
-    "src:init": "ts-node ./src/main.ts --platform=dev",
-    "case": "ts-node ./src/main.ts --type=createTs --target=./case",
-    "update:link": "tsc && npm link",
-    "build": "tsc -d",
-    "createDataFilter": "ts-node ./src/main.ts --type=createData --filterPath=/app-mobile-web/api/app/mobile/andon/export",
-    "createTsFilter": "ts-node ./src/main.ts --type=createTs --filterPath=/app-mobile-web/api/app/mobile/andon/export",
-    "createFilter": "ts-node ./src/main.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export"
+    "lib": "node ./lib/main.js",
+    "lib:ts": "node ./lib/main.js --type=createTsFile",
+    "lib:json": "node ./lib/main.js --type=createJsonFile",
+    "src:platform": "ts-node ./src/main.ts --platform=dev",
+    "src:ts": "ts-node ./src/main.ts --type=createTsFile",
+    "src:json": "ts-node ./src/main.ts --type=createJsonFile",
+    "src:transform": "ts-node ./src/main.ts --type=transform --target=./case",
+    "src:ts:filter": "ts-node ./src/main.ts --type=createTsFile --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "src:json:filter": "ts-node ./src/main.ts --type=createJsonFile --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "src:filter": "ts-node ./src/main.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "build": "tsc -d"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
   "bugs": {
@@ -33,7 +32,6 @@
   "author": "harry",
   "license": "ISC",
   "bin": {
-    "api2json": "./bin/api2json",
     "api2ts": "./bin/api2ts",
     "apiUpdate": "./bin/apiUpdate"
   },

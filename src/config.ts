@@ -15,6 +15,8 @@ export type IConfig = {
   serviceMap: Record<string, string>;
   serviceNameToPath: boolean;
   output: string;
+  createTsFile: boolean;
+  createJsonFile: boolean;
   transformOriginType?: (define: any) => string;
   customContent: (
     data: any,
@@ -37,6 +39,8 @@ const defaultConfig: IConfig = {
   enumPrefix: "E",
   serviceMap: {},
   serviceNameToPath: false,
+  createTsFile: true,
+  createJsonFile: false,
   output,
   customContent,
   pathFilter: (ar: string) => !!ar,

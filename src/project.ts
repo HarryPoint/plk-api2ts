@@ -29,4 +29,21 @@ export const createTsFile = async (
     transformOriginType: config.transformOriginType,
     customContent: config.customContent,
   });
+  definitionsFile.saveSync();
+};
+
+export const createJsonFile = async (
+  config: IConfig = baseConfig,
+  project: Project,
+  filePath: string,
+  data: any
+) => {
+  const definitionsFile = project.createSourceFile(
+    filePath,
+    JSON.stringify(data, null, 2),
+    {
+      overwrite: true,
+    }
+  );
+  definitionsFile.saveSync();
 };

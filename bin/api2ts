@@ -1,3 +1,2 @@
 #!/usr/bin/env node
-const { main: createTs } = require("../lib/createTs.js");
-createTs();
+require("../lib/main.js");
