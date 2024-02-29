@@ -50,21 +50,6 @@ const defaultConfig: IConfig = {
   pathFilter: (ar: string) => !!ar,
 };
 
-// 配置重置
-if (argv.target) {
-  defaultConfig.output = path.join(process.cwd(), argv.target);
-}
-if (argv.filterPath) {
-  const filterPath = argv.filterPath;
-  defaultConfig.pathFilter = (pt: string) => pt.includes(filterPath);
-}
-if (argv.json === "true") {
-  defaultConfig.createJsonFile = true;
-}
-if (argv.type === "transform") {
-  defaultConfig.transform = true;
-}
-
 const configPath = path.join(process.cwd(), argv.config || "api2ts.config.js");
 
 if (!fs.existsSync(configPath)) {
@@ -78,6 +63,23 @@ if (typeof configFn === "function") {
   configData = configFn(defaultConfig, argv) as Partial<IConfig>;
 } else {
   configData = configFn as Partial<IConfig>;
+}
+
+// 配置重置
+if (argv.target) {
+  configData.output = path.join(process.cwd(), argv.target);
+}
+if (argv.filterPath) {
+  const filterPath = argv.filterPath;
+  configData.pathFilter = (pt: string) => {
+    return pt === filterPath;
+  };
+}
+if (argv.json === "true") {
+  configData.createJsonFile = true;
+}
+if (argv.type === "transform") {
+  configData.transform = true;
 }
 
 if (!configData.output) {

@@ -76,10 +76,12 @@ const fetchData = async (
     ] as [string, any];
   });
   for (let [pathStr, jsonData] of openJsonArr) {
-    const filePath = path.join(config.output, prefix, pathStr);
+    const basePath = path.join(config.output, prefix);
+    const filePath = path.join(basePath, pathStr);
+    const apiPath = filePath.replace(basePath, "/");
     const jsonFilePath = `${filePath}.json`;
     const tsFilePath = `${filePath}.ts`;
-    if (config.pathFilter && !config.pathFilter(filePath)) {
+    if (config.pathFilter && !config.pathFilter(apiPath)) {
       continue;
     }
     if (config.createTsFile) {

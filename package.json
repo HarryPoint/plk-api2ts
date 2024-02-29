@@ -10,8 +10,8 @@
     "src": "ts-node ./src/main.ts",
     "src:json": "ts-node ./src/main.ts --json=true",
     "src:transform": "ts-node ./src/main.ts --type=transform --target=./case",
-    "src:filter": "ts-node ./src/main.ts --filterPath=/app-mobile-web/api/app/mobile/andon/export",
-    "src:json:filter": "ts-node ./src/main.ts --json=true --filterPath=/app-mobile-web/api/app/mobile/andon/export",
+    "src:filter": "ts-node ./src/main.ts --filterPath=/masterdata-service/autoPlan/autoInsertOrderCompute",
+    "src:json:filter": "ts-node ./src/main.ts --json=true --filterPath=/masterdata-service/autoPlan/autoInsertOrderCompute",
     "build": "tsc -d"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
