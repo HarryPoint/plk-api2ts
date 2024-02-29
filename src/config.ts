@@ -69,14 +69,17 @@ if (typeof configFn === "function") {
 if (argv.target) {
   configData.output = path.join(process.cwd(), argv.target);
 }
-if (argv.filterPath) {
-  const filterPath = argv.filterPath;
+if (argv.filter) {
+  const filter = argv.filter;
   configData.pathFilter = (pt: string) => {
-    return pt === filterPath;
+    return pt === filter;
   };
 }
 if (argv.json === "true") {
   configData.createJsonFile = true;
+}
+if (argv.ts === "false") {
+  configData.createTsFile = false;
 }
 if (argv.type === "transform") {
   configData.transform = true;

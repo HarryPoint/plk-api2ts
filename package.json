@@ -1,17 +1,20 @@
 {
   "name": "plk-api2ts",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "",
   "main": "index.js",
   "scripts": {
     "lib": "node ./lib/main.js",
+    "lib:platform": "node ./lib/main.js --platform=dev",
     "lib:json": "node ./lib/main.js --json=true",
-    "src:platform": "ts-node ./src/main.ts --platform=dev",
+    "lib:transform": "node ./lib/main.js --type=transform --target=./case",
+    "lib:filter": "node ./lib/main.js --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
     "src": "ts-node ./src/main.ts",
+    "src:platform": "ts-node ./src/main.ts --platform=dev",
     "src:json": "ts-node ./src/main.ts --json=true",
-    "src:transform": "ts-node ./src/main.ts --type=transform --target=./case",
-    "src:filter": "ts-node ./src/main.ts --filterPath=/masterdata-service/autoPlan/autoInsertOrderCompute",
-    "src:json:filter": "ts-node ./src/main.ts --json=true --filterPath=/masterdata-service/autoPlan/autoInsertOrderCompute",
+    "src:transform": "ts-node ./src/main.ts --type=transform --target=./case --filter=/getMaterialSelector",
+    "src:filter": "ts-node ./src/main.ts --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
+    "src:json:filter": "ts-node ./src/main.ts --json=true --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
     "build": "tsc -d"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",
@@ -30,8 +33,7 @@
   "author": "harry",
   "license": "ISC",
   "bin": {
-    "api2ts": "./bin/api2ts",
-    "apiUpdate": "./bin/apiUpdate"
+    "api2ts": "./bin/api2ts"
   },
   "files": [
     "bin",
