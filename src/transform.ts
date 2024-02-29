@@ -21,10 +21,15 @@ export const transform = async (
       info.base !== config.translateCacheFileName &&
       ((config.pathFilter && config.pathFilter(basePath)) || !config.pathFilter)
     ) {
-      const data = fs.readFileSync(filePath);
-      const swaggerData = JSON.parse(data.toString());
-      const tsPath = path.join(info.dir, `${info.name}.ts`);
-      await createTsFile(config, project, tsPath, swaggerData);
+      // 非转换模式下，删除json文件
+      if (!config.transform && config.clearJsonFile) {
+        fs.unlinkSync(filePath);
+      } else {
+        const data = fs.readFileSync(filePath);
+        const swaggerData = JSON.parse(data.toString());
+        const tsPath = path.join(info.dir, `${info.name}.ts`);
+        await createTsFile(config, project, tsPath, swaggerData);
+      }
     } else if (stat.isDirectory()) {
       await transform(config, project, filePath);
     }

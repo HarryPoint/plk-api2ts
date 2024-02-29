@@ -12,6 +12,7 @@
     "src": "ts-node ./src/main.ts",
     "src:platform": "ts-node ./src/main.ts --platform=dev",
     "src:json": "ts-node ./src/main.ts --json=true",
+    "src:clear": "ts-node ./src/main.ts --type=clear",
     "src:transform": "ts-node ./src/main.ts --type=transform --target=./case --filter=/getMaterialSelector",
     "src:filter": "ts-node ./src/main.ts --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
     "src:json:filter": "ts-node ./src/main.ts --json=true --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",

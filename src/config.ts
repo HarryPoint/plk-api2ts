@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { SourceFile } from "ts-morph";
-import { customContent } from "./plkTpl";
+import { customContent, transformOriginType } from "./plkTpl";
 
 const argv = require("yargs").argv;
 
@@ -20,7 +20,8 @@ export type IConfig = {
   output: string;
   createTsFile: boolean;
   createJsonFile: boolean;
-  transformOriginType?: (define: any) => string;
+  clearJsonFile: boolean;
+  transformOriginType: (define: any) => string;
   customContent: (
     data: any,
     definitionsFile: SourceFile,
@@ -45,7 +46,9 @@ const defaultConfig: IConfig = {
   serviceNameToPath: false,
   createTsFile: true,
   createJsonFile: false,
+  clearJsonFile: false,
   output,
+  transformOriginType,
   customContent,
   pathFilter: (ar: string) => !!ar,
 };
@@ -83,6 +86,9 @@ if (argv.ts === "false") {
 }
 if (argv.type === "transform") {
   configData.transform = true;
+}
+if (argv.type === "clear") {
+  configData.clearJsonFile = true;
 }
 
 if (!configData.output) {

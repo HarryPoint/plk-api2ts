@@ -115,3 +115,21 @@ export const customContent = async (
     }
   }
 };
+
+// plk 特有转换逻辑
+export const transformOriginType = (define: any): string => {
+  const typeName = `${define.type}${define.format ? `(${define.format})` : ""}`;
+
+  const defaultTypeMap = {
+    string: "string",
+    "string(date-time)": "number",
+    integer: "number",
+    "integer(int64)": "string",
+    "integer(int32)": "number",
+    number: "number",
+    boolean: "boolean",
+    array: "[]",
+    object: "{}",
+  };
+  return defaultTypeMap[typeName as keyof typeof defaultTypeMap] as string;
+};

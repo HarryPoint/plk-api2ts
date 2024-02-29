@@ -95,7 +95,7 @@ const fetchData = async (
 
 export const main = async (config: IConfig = baseConfig) => {
   const project = await createProject(config);
-  if (config.transform) {
+  if (config.transform || config.clearJsonFile) {
     return transform(config, project, config.output);
   }
   for (const key in config.serviceMap) {
