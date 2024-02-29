@@ -90,8 +90,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "工艺画布编辑锁定响应DTO",
+          "description": "响应结果",
           "$ref": "#/definitions/工艺画布编辑锁定响应DTO"
         },
         "ts": {

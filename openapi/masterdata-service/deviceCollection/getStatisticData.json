@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/设备统计数据搜索VO",
-              "originalRef": "设备统计数据搜索VO"
+              "originalRef": "设备统计数据搜索VO",
+              "$ref": "#/definitions/设备统计数据搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«设备数采参数统计查询返回VO»",
-              "originalRef": "JSONResult«设备数采参数统计查询返回VO»"
+              "originalRef": "JSONResult«设备数采参数统计查询返回VO»",
+              "$ref": "#/definitions/JSONResult«设备数采参数统计查询返回VO»"
             }
           },
           "201": {
@@ -132,9 +132,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "设备数采参数统计查询返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/设备数采参数统计查询返回VO",
-          "originalRef": "设备数采参数统计查询返回VO"
+          "$ref": "#/definitions/设备数采参数统计查询返回VO"
         },
         "ts": {
           "type": "integer",
@@ -175,8 +175,8 @@
           "type": "array",
           "description": "参数信息集",
           "items": {
-            "$ref": "#/definitions/设备数采参数统计返回VO",
-            "originalRef": "设备数采参数统计返回VO"
+            "originalRef": "设备数采参数统计返回VO",
+            "$ref": "#/definitions/设备数采参数统计返回VO"
           }
         }
       },
@@ -205,8 +205,8 @@
           "type": "array",
           "description": "设备信息集",
           "items": {
-            "$ref": "#/definitions/设备数采统计返回VO",
-            "originalRef": "设备数采统计返回VO"
+            "originalRef": "设备数采统计返回VO",
+            "$ref": "#/definitions/设备数采统计返回VO"
           }
         }
       },
@@ -227,8 +227,8 @@
           "type": "array",
           "description": "详细数据",
           "items": {
-            "$ref": "#/definitions/设备数采统计明细返回VO",
-            "originalRef": "设备数采统计明细返回VO"
+            "originalRef": "设备数采统计明细返回VO",
+            "$ref": "#/definitions/设备数采统计明细返回VO"
           }
         },
         "lowerLimit": {

@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目阶段任务查询对象",
-              "originalRef": "项目阶段任务查询对象"
+              "originalRef": "项目阶段任务查询对象",
+              "$ref": "#/definitions/项目阶段任务查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«项目基础查询响应对象»»",
-              "originalRef": "JSONResult«List«项目基础查询响应对象»»"
+              "originalRef": "JSONResult«List«项目基础查询响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«项目基础查询响应对象»»"
             }
           },
           "201": {
@@ -86,8 +86,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "projectPlanId": {
@@ -459,8 +459,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/项目基础查询响应对象",
-            "originalRef": "项目基础查询响应对象"
+            "originalRef": "项目基础查询响应对象",
+            "$ref": "#/definitions/项目基础查询响应对象"
           }
         },
         "ts": {

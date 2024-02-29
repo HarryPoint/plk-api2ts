@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«MonthProposalIndicatorsResponseDTO»",
-              "originalRef": "JSONResult«MonthProposalIndicatorsResponseDTO»"
+              "originalRef": "JSONResult«MonthProposalIndicatorsResponseDTO»",
+              "$ref": "#/definitions/JSONResult«MonthProposalIndicatorsResponseDTO»"
             }
           },
           "401": {
@@ -58,9 +58,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "MonthProposalIndicatorsResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/MonthProposalIndicatorsResponseDTO",
-          "originalRef": "MonthProposalIndicatorsResponseDTO"
+          "$ref": "#/definitions/MonthProposalIndicatorsResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "改善提案有效数量和员工参与率月目标",
           "items": {
-            "$ref": "#/definitions/MonthProposalIndicatorsItemResponseDTO",
-            "originalRef": "MonthProposalIndicatorsItemResponseDTO"
+            "originalRef": "MonthProposalIndicatorsItemResponseDTO",
+            "$ref": "#/definitions/MonthProposalIndicatorsItemResponseDTO"
           }
         }
       },

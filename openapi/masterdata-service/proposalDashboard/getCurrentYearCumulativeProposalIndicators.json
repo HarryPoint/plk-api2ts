@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«CumulativeProposalIndicatorsResponseDTO»",
-              "originalRef": "JSONResult«CumulativeProposalIndicatorsResponseDTO»"
+              "originalRef": "JSONResult«CumulativeProposalIndicatorsResponseDTO»",
+              "$ref": "#/definitions/JSONResult«CumulativeProposalIndicatorsResponseDTO»"
             }
           },
           "401": {
@@ -58,9 +58,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "CumulativeProposalIndicatorsResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/CumulativeProposalIndicatorsResponseDTO",
-          "originalRef": "CumulativeProposalIndicatorsResponseDTO"
+          "$ref": "#/definitions/CumulativeProposalIndicatorsResponseDTO"
         },
         "ts": {
           "type": "integer",

@@ -29,8 +29,8 @@
             "description": "add",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/安全库存变更申请配置",
-              "originalRef": "安全库存变更申请配置"
+              "originalRef": "安全库存变更申请配置",
+              "$ref": "#/definitions/安全库存变更申请配置"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

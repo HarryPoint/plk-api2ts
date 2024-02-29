@@ -72,18 +72,18 @@
       "type": "object",
       "properties": {
         "tableDefine": {
-          "description": "表定义",
           "originalRef": "关联表定义",
+          "description": "表定义",
           "$ref": "#/definitions/关联表定义"
         },
         "fieldDefine": {
-          "description": "字段定义",
           "originalRef": "关联字段定义",
+          "description": "字段定义",
           "$ref": "#/definitions/关联字段定义"
         },
         "template": {
-          "description": "模板",
           "originalRef": "关联模板",
+          "description": "模板",
           "$ref": "#/definitions/关联模板"
         },
         "splitChar": {

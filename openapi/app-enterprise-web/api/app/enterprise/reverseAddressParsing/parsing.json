@@ -87,8 +87,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "AddressOutputDTO",
+          "description": "响应结果",
           "$ref": "#/definitions/AddressOutputDTO"
         },
         "ts": {
@@ -112,18 +112,18 @@
           "description": "以行政区划 + 道路 + 门牌号等信息组成的标准格式化地址"
         },
         "addressComponent": {
-          "description": "地址部件，address不满足需求时可自行拼接",
           "originalRef": "AddressComponentOutputDTO",
+          "description": "地址部件，address不满足需求时可自行拼接",
           "$ref": "#/definitions/AddressComponentOutputDTO"
         },
         "formattedAddresses": {
-          "description": "以结合知名地点形成的描述性地址，更具备人性化特点",
           "originalRef": "FormattedAddressesOutputDTO",
+          "description": "以结合知名地点形成的描述性地址，更具备人性化特点",
           "$ref": "#/definitions/FormattedAddressesOutputDTO"
         },
         "adInfo": {
-          "description": "行政区划信息",
           "originalRef": "AddressRegionInfo",
+          "description": "行政区划信息",
           "$ref": "#/definitions/AddressRegionInfo"
         }
       },

@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ReportTemplateDTO»",
-              "originalRef": "JSONResult«ReportTemplateDTO»"
+              "originalRef": "JSONResult«ReportTemplateDTO»",
+              "$ref": "#/definitions/JSONResult«ReportTemplateDTO»"
             }
           },
           "201": {
@@ -73,9 +73,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "ReportTemplateDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/ReportTemplateDTO",
-          "originalRef": "ReportTemplateDTO"
+          "$ref": "#/definitions/ReportTemplateDTO"
         },
         "ts": {
           "type": "integer",
@@ -192,14 +192,14 @@
           "type": "array",
           "description": "显示模板条件添加请求列表",
           "items": {
-            "$ref": "#/definitions/ReportTemplateConditionDTO",
-            "originalRef": "ReportTemplateConditionDTO"
+            "originalRef": "ReportTemplateConditionDTO",
+            "$ref": "#/definitions/ReportTemplateConditionDTO"
           }
         },
         "timeRange": {
+          "originalRef": "ReportStatisticsTimeRangeDTO",
           "description": "报表统计时间范围添加请求",
-          "$ref": "#/definitions/ReportStatisticsTimeRangeDTO",
-          "originalRef": "ReportStatisticsTimeRangeDTO"
+          "$ref": "#/definitions/ReportStatisticsTimeRangeDTO"
         },
         "reportStatisticsTimeRangeDesc": {
           "type": "string",

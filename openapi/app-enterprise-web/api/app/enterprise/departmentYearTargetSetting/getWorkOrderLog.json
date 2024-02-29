@@ -312,8 +312,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«工单日志返回VO»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«工单日志返回VO»"
         },
         "ts": {

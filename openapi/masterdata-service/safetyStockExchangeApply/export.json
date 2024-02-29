@@ -37,8 +37,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/安全库存变更申请搜索VO",
-              "originalRef": "安全库存变更申请搜索VO"
+              "originalRef": "安全库存变更申请搜索VO",
+              "$ref": "#/definitions/安全库存变更申请搜索VO"
             }
           }
         ],
@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "type": {

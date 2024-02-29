@@ -99,8 +99,8 @@
           "description": "明细表表code，传值后，将会查询明细表数据"
         },
         "currentFormDataGrouping": {
-          "description": "当前的表单分组",
           "originalRef": "表单数据分组DTO",
+          "description": "当前的表单分组",
           "$ref": "#/definitions/表单数据分组DTO"
         }
       },
@@ -232,8 +232,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«JSONObject»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«JSONObject»"
         },
         "ts": {

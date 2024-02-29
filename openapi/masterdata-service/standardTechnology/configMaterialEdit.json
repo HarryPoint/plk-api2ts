@@ -28,8 +28,8 @@
             "description": "configMaterialEditRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/标准工艺某一类别物料编辑请求对象",
-              "originalRef": "标准工艺某一类别物料编辑请求对象"
+              "originalRef": "标准工艺某一类别物料编辑请求对象",
+              "$ref": "#/definitions/标准工艺某一类别物料编辑请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -98,9 +98,9 @@
           ]
         },
         "nodeEditRequest": {
+          "originalRef": "标准工艺节点响应对象_1",
           "description": "标准工艺节点编辑请求对象 发布时传递",
-          "$ref": "#/definitions/标准工艺节点响应对象_1",
-          "originalRef": "标准工艺节点响应对象_1"
+          "$ref": "#/definitions/标准工艺节点响应对象_1"
         },
         "canvasSnapshot": {
           "type": "object",
@@ -166,16 +166,16 @@
           }
         },
         "nextNode": {
+          "originalRef": "标准工艺节点响应对象_2",
           "description": "下一节点",
-          "$ref": "#/definitions/标准工艺节点响应对象_2",
-          "originalRef": "标准工艺节点响应对象_2"
+          "$ref": "#/definitions/标准工艺节点响应对象_2"
         },
         "branches": {
           "type": "array",
           "description": "分支节点列表",
           "items": {
-            "$ref": "#/definitions/标准工艺节点响应对象_2",
-            "originalRef": "标准工艺节点响应对象_2"
+            "originalRef": "标准工艺节点响应对象_2",
+            "$ref": "#/definitions/标准工艺节点响应对象_2"
           }
         }
       },
@@ -226,16 +226,16 @@
           }
         },
         "nextNode": {
+          "originalRef": "标准工艺节点响应对象_2",
           "description": "下一节点",
-          "$ref": "#/definitions/标准工艺节点响应对象_2",
-          "originalRef": "标准工艺节点响应对象_2"
+          "$ref": "#/definitions/标准工艺节点响应对象_2"
         },
         "branches": {
           "type": "array",
           "description": "分支节点列表",
           "items": {
-            "$ref": "#/definitions/标准工艺节点响应对象_2",
-            "originalRef": "标准工艺节点响应对象_2"
+            "originalRef": "标准工艺节点响应对象_2",
+            "$ref": "#/definitions/标准工艺节点响应对象_2"
           }
         }
       },

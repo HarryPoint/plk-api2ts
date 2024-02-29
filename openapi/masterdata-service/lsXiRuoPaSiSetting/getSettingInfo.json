@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«西偌帕斯大屏设置返回VO»",
-              "originalRef": "JSONResult«西偌帕斯大屏设置返回VO»"
+              "originalRef": "JSONResult«西偌帕斯大屏设置返回VO»",
+              "$ref": "#/definitions/JSONResult«西偌帕斯大屏设置返回VO»"
             }
           },
           "401": {
@@ -67,9 +67,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "西偌帕斯大屏设置返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/西偌帕斯大屏设置返回VO",
-          "originalRef": "西偌帕斯大屏设置返回VO"
+          "$ref": "#/definitions/西偌帕斯大屏设置返回VO"
         },
         "ts": {
           "type": "integer",
@@ -87,8 +87,8 @@
           "type": "array",
           "description": "主要物料信息集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "processIds": {
@@ -103,16 +103,16 @@
           "type": "array",
           "description": "7天计划产出设置",
           "items": {
-            "$ref": "#/definitions/西偌帕斯大屏计划设置返回VO",
-            "originalRef": "西偌帕斯大屏计划设置返回VO"
+            "originalRef": "西偌帕斯大屏计划设置返回VO",
+            "$ref": "#/definitions/西偌帕斯大屏计划设置返回VO"
           }
         },
         "processTargetSettings": {
           "type": "array",
           "description": "工序目标值设置集",
           "items": {
-            "$ref": "#/definitions/西偌帕斯大屏工序目标设置返回VO",
-            "originalRef": "西偌帕斯大屏工序目标设置返回VO"
+            "originalRef": "西偌帕斯大屏工序目标设置返回VO",
+            "$ref": "#/definitions/西偌帕斯大屏工序目标设置返回VO"
           }
         },
         "scrapStatisticsTime": {

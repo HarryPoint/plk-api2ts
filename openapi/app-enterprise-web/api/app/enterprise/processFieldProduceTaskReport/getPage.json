@@ -160,8 +160,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«任务汇总表(基于工序字段)归纳信息VO»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«任务汇总表(基于工序字段)归纳信息VO»"
         },
         "ts": {

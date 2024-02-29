@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产处理查询VO",
-              "originalRef": "生产处理查询VO"
+              "originalRef": "生产处理查询VO",
+              "$ref": "#/definitions/生产处理查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«生产处理基础信息响应DTO»»",
-              "originalRef": "JSONResult«分页信息«生产处理基础信息响应DTO»»"
+              "originalRef": "JSONResult«分页信息«生产处理基础信息响应DTO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«生产处理基础信息响应DTO»»"
             }
           },
           "201": {
@@ -105,8 +105,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "taskId": {
@@ -160,9 +160,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "分页信息«生产处理基础信息响应DTO»",
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«生产处理基础信息响应DTO»",
-          "originalRef": "分页信息«生产处理基础信息响应DTO»"
+          "$ref": "#/definitions/分页信息«生产处理基础信息响应DTO»"
         },
         "ts": {
           "type": "integer",
@@ -200,8 +200,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/生产处理基础信息响应DTO",
-            "originalRef": "生产处理基础信息响应DTO"
+            "originalRef": "生产处理基础信息响应DTO",
+            "$ref": "#/definitions/生产处理基础信息响应DTO"
           }
         },
         "lastPage": {
@@ -371,8 +371,8 @@
           "type": "array",
           "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
           "items": {
-            "$ref": "#/definitions/进出站关键参数明细响应DTO",
-            "originalRef": "进出站关键参数明细响应DTO"
+            "originalRef": "进出站关键参数明细响应DTO",
+            "$ref": "#/definitions/进出站关键参数明细响应DTO"
           }
         },
         "desc": {

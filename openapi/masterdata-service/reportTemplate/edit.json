@@ -28,8 +28,8 @@
             "description": "editRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ReportTemplateEditRequestDTO",
-              "originalRef": "ReportTemplateEditRequestDTO"
+              "originalRef": "ReportTemplateEditRequestDTO",
+              "$ref": "#/definitions/ReportTemplateEditRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»_1",
-              "originalRef": "JSONResult«string»_1"
+              "originalRef": "JSONResult«string»_1",
+              "$ref": "#/definitions/JSONResult«string»_1"
             }
           },
           "201": {
@@ -120,14 +120,14 @@
           "type": "array",
           "description": "显示模板条件添加请求列表",
           "items": {
-            "$ref": "#/definitions/ReportTemplateConditionEditRequestDTO",
-            "originalRef": "ReportTemplateConditionEditRequestDTO"
+            "originalRef": "ReportTemplateConditionEditRequestDTO",
+            "$ref": "#/definitions/ReportTemplateConditionEditRequestDTO"
           }
         },
         "timeRange": {
+          "originalRef": "ReportStatisticsTimeRangeEditRequestDTO",
           "description": "报表统计时间范围添加请求",
-          "$ref": "#/definitions/ReportStatisticsTimeRangeEditRequestDTO",
-          "originalRef": "ReportStatisticsTimeRangeEditRequestDTO"
+          "$ref": "#/definitions/ReportStatisticsTimeRangeEditRequestDTO"
         }
       },
       "title": "ReportTemplateEditRequestDTO"

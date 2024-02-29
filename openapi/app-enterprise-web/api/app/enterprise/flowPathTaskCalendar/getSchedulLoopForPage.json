@@ -115,8 +115,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«流程排班记录返回VO»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«流程排班记录返回VO»"
         },
         "ts": {
@@ -282,8 +282,8 @@
           "description": "班次名称"
         },
         "classShiftBeginTime": {
-          "description": "班次开始时间",
           "originalRef": "LocalTime",
+          "description": "班次开始时间",
           "$ref": "#/definitions/LocalTime"
         },
         "endTimeType": {
@@ -295,8 +295,8 @@
           ]
         },
         "classShiftEndTime": {
-          "description": "班次结束时间",
           "originalRef": "LocalTime",
+          "description": "班次结束时间",
           "$ref": "#/definitions/LocalTime"
         }
       },

@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/售后质量分析报表搜索VO",
-              "originalRef": "售后质量分析报表搜索VO"
+              "originalRef": "售后质量分析报表搜索VO",
+              "$ref": "#/definitions/售后质量分析报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«售后质量分析返回VO»_1",
-              "originalRef": "JSONResult«售后质量分析返回VO»_1"
+              "originalRef": "JSONResult«售后质量分析返回VO»_1",
+              "$ref": "#/definitions/JSONResult«售后质量分析返回VO»_1"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "fillingEndDate": {
@@ -200,9 +200,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "售后质量分析返回VO_2",
           "description": "响应结果",
-          "$ref": "#/definitions/售后质量分析返回VO_2",
-          "originalRef": "售后质量分析返回VO_2"
+          "$ref": "#/definitions/售后质量分析返回VO_2"
         },
         "ts": {
           "type": "integer",

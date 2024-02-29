@@ -28,8 +28,8 @@
             "description": "moveInBomConsumeLotOrderQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进料bom消耗批次订单查询DTO",
-              "originalRef": "进料bom消耗批次订单查询DTO"
+              "originalRef": "进料bom消耗批次订单查询DTO",
+              "$ref": "#/definitions/进料bom消耗批次订单查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«进料bom消耗批次响应DTO»»",
-              "originalRef": "JSONResult«List«进料bom消耗批次响应DTO»»"
+              "originalRef": "JSONResult«List«进料bom消耗批次响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«进料bom消耗批次响应DTO»»"
             }
           },
           "201": {
@@ -97,8 +97,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/进料bom消耗批次响应DTO_1",
-            "originalRef": "进料bom消耗批次响应DTO_1"
+            "originalRef": "进料bom消耗批次响应DTO_1",
+            "$ref": "#/definitions/进料bom消耗批次响应DTO_1"
           }
         },
         "ts": {

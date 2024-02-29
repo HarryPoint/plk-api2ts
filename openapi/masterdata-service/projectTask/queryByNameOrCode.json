@@ -28,8 +28,8 @@
             "description": "nameOrCodeQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目任务名称编号查询对象",
-              "originalRef": "项目任务名称编号查询对象"
+              "originalRef": "项目任务名称编号查询对象",
+              "$ref": "#/definitions/项目任务名称编号查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«Id Code Name 通用传输对象»»",
-              "originalRef": "JSONResult«List«Id Code Name 通用传输对象»»"
+              "originalRef": "JSONResult«List«Id Code Name 通用传输对象»»",
+              "$ref": "#/definitions/JSONResult«List«Id Code Name 通用传输对象»»"
             }
           },
           "201": {
@@ -115,8 +115,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/Id Code Name 通用传输对象",
-            "originalRef": "Id Code Name 通用传输对象"
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
           }
         },
         "ts": {

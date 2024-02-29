@@ -100,8 +100,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "应用业务树DTO",
+          "description": "响应结果",
           "$ref": "#/definitions/应用业务树DTO"
         },
         "ts": {

@@ -102,8 +102,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "生产结存物料统计报表返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/生产结存物料统计报表返回VO"
         },
         "ts": {

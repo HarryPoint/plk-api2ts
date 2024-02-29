@@ -69,8 +69,8 @@
           "description": "大屏左侧质检合格率工序id"
         },
         "leftQualityPassRatios": {
-          "description": "大屏左侧质检数据",
           "originalRef": "深蓝生产大屏合格率数据设置编辑DTO",
+          "description": "大屏左侧质检数据",
           "$ref": "#/definitions/深蓝生产大屏合格率数据设置编辑DTO"
         },
         "rightQualityPassRatioProcessId": {
@@ -79,8 +79,8 @@
           "description": "大屏右侧质检合格率工序id"
         },
         "rightQualityPassRatios": {
-          "description": "大屏右侧质检数据",
           "originalRef": "深蓝生产大屏合格率数据设置编辑DTO",
+          "description": "大屏右侧质检数据",
           "$ref": "#/definitions/深蓝生产大屏合格率数据设置编辑DTO"
         },
         "centerProductionType": {

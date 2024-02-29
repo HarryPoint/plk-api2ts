@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«项目任务规则明细响应DTO»",
-              "originalRef": "JSONResult«项目任务规则明细响应DTO»"
+              "originalRef": "JSONResult«项目任务规则明细响应DTO»",
+              "$ref": "#/definitions/JSONResult«项目任务规则明细响应DTO»"
             }
           },
           "401": {
@@ -68,9 +68,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "项目任务规则明细响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/项目任务规则明细响应DTO",
-          "originalRef": "项目任务规则明细响应DTO"
+          "$ref": "#/definitions/项目任务规则明细响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -163,8 +163,8 @@
           "type": "array",
           "description": "修改任务列表",
           "items": {
-            "$ref": "#/definitions/Id，名称VO",
-            "originalRef": "Id，名称VO"
+            "originalRef": "Id，名称VO",
+            "$ref": "#/definitions/Id，名称VO"
           }
         },
         "finalReviewOrReviewResult": {

@@ -12,7 +12,23 @@ const fetchData = async (
   if (!apiUri) {
     throw new Error("apiUri not found");
   }
-  const { data } = await axios.get(`${apiUri}/v2/api-docs`);
+  const { data: originData } = await axios.get(`${apiUri}/v2/api-docs`);
+  const sortData = (data: any): any => {
+    if (Array.isArray(data)) {
+      return data.map(sortData);
+    }
+    if (_.isObject(data)) {
+      let keys = Object.keys(data);
+      keys = keys.includes("originalRef") ? keys.sort().reverse() : keys;
+      return keys.reduce((pre, next) => {
+        pre[next] = sortData((data as any)[next]);
+        return pre;
+      }, {} as Record<string, any>);
+    }
+    return data;
+  };
+  const data = sortData(originData);
+
   const baseData = _.pick(data, ["basePath", "host", "info", "swagger"]);
   const findOriginalRef = (pathItem: any): string[] => {
     let result: string[] = [];

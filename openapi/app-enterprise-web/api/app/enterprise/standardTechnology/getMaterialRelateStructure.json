@@ -68,8 +68,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "具体物料数据结构响应对象_1",
+          "description": "响应结果",
           "$ref": "#/definitions/具体物料数据结构响应对象_1"
         },
         "ts": {
@@ -106,13 +106,13 @@
           "description": "主物料单位"
         },
         "materialBomStructure": {
-          "description": "物料BOM",
           "originalRef": "具体物料数据结构响应对象",
+          "description": "物料BOM",
           "$ref": "#/definitions/具体物料数据结构响应对象"
         },
         "materialRoutingStructure": {
-          "description": "工艺路径",
           "originalRef": "具体物料数关联工艺路径数据结构响应对象",
+          "description": "工艺路径",
           "$ref": "#/definitions/具体物料数关联工艺路径数据结构响应对象"
         }
       },
@@ -183,8 +183,8 @@
           "description": "消耗数量"
         },
         "childMaterialStructure": {
-          "description": "子物料信息",
           "originalRef": "具体物料数据结构响应对象_1",
+          "description": "子物料信息",
           "$ref": "#/definitions/具体物料数据结构响应对象_1"
         }
       },
@@ -239,23 +239,23 @@
           "description": "工序编码"
         },
         "processSheet": {
-          "description": "工艺卡",
           "originalRef": "标准工艺具体工艺卡详情对象_1",
+          "description": "工艺卡",
           "$ref": "#/definitions/标准工艺具体工艺卡详情对象_1"
         },
         "keyParameter": {
-          "description": "关键参数",
           "originalRef": "关键参数信息响应对象",
+          "description": "关键参数",
           "$ref": "#/definitions/关键参数信息响应对象"
         },
         "capacity": {
-          "description": "产能",
           "originalRef": "产能响应对象",
+          "description": "产能",
           "$ref": "#/definitions/产能响应对象"
         },
         "laborCost": {
-          "description": "工费",
           "originalRef": "工费响应对象",
+          "description": "工费",
           "$ref": "#/definitions/工费响应对象"
         },
         "bomConsumeSureType": {

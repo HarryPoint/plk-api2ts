@@ -28,8 +28,8 @@
             "description": "editDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/列表列样式配置编辑DTO",
-              "originalRef": "列表列样式配置编辑DTO"
+              "originalRef": "列表列样式配置编辑DTO",
+              "$ref": "#/definitions/列表列样式配置编辑DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«列表列样式配置编辑DTO»",
-              "originalRef": "JSONResult«列表列样式配置编辑DTO»"
+              "originalRef": "JSONResult«列表列样式配置编辑DTO»",
+              "$ref": "#/definitions/JSONResult«列表列样式配置编辑DTO»"
             }
           },
           "201": {
@@ -117,9 +117,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "列表列样式配置编辑DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/列表列样式配置编辑DTO",
-          "originalRef": "列表列样式配置编辑DTO"
+          "$ref": "#/definitions/列表列样式配置编辑DTO"
         },
         "ts": {
           "type": "integer",

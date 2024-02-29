@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/生产子物料查询请求",
-                "originalRef": "生产子物料查询请求"
+                "originalRef": "生产子物料查询请求",
+                "$ref": "#/definitions/生产子物料查询请求"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产子物料信息»»",
-              "originalRef": "JSONResult«List«生产子物料信息»»"
+              "originalRef": "JSONResult«List«生产子物料信息»»",
+              "$ref": "#/definitions/JSONResult«List«生产子物料信息»»"
             }
           },
           "201": {
@@ -102,8 +102,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产子物料信息",
-            "originalRef": "生产子物料信息"
+            "originalRef": "生产子物料信息",
+            "$ref": "#/definitions/生产子物料信息"
           }
         },
         "ts": {
@@ -184,8 +184,8 @@
           "type": "array",
           "description": "子物料生产信息集",
           "items": {
-            "$ref": "#/definitions/子物料生产信息VO",
-            "originalRef": "子物料生产信息VO"
+            "originalRef": "子物料生产信息VO",
+            "$ref": "#/definitions/子物料生产信息VO"
           }
         },
         "serialNoSchemeId": {

@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«生产工艺树状响应对象»",
-              "originalRef": "JSONResult«生产工艺树状响应对象»"
+              "originalRef": "JSONResult«生产工艺树状响应对象»",
+              "$ref": "#/definitions/JSONResult«生产工艺树状响应对象»"
             }
           },
           "401": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "生产工艺树状响应对象",
           "description": "响应结果",
-          "$ref": "#/definitions/生产工艺树状响应对象",
-          "originalRef": "生产工艺树状响应对象"
+          "$ref": "#/definitions/生产工艺树状响应对象"
         },
         "ts": {
           "type": "integer",
@@ -107,9 +107,9 @@
           "description": "物料id(该工艺对应的物料id)"
         },
         "nodeResponse": {
+          "originalRef": "生产工艺节点响应对象",
           "description": "生产工艺节点响应对象",
-          "$ref": "#/definitions/生产工艺节点响应对象",
-          "originalRef": "生产工艺节点响应对象"
+          "$ref": "#/definitions/生产工艺节点响应对象"
         },
         "hasRouting": {
           "type": "boolean",
@@ -143,16 +143,16 @@
           }
         },
         "nextNode": {
+          "originalRef": "生产工艺节点响应对象",
           "description": "下一节点",
-          "$ref": "#/definitions/生产工艺节点响应对象",
-          "originalRef": "生产工艺节点响应对象"
+          "$ref": "#/definitions/生产工艺节点响应对象"
         },
         "branches": {
           "type": "array",
           "description": "分支节点列表",
           "items": {
-            "$ref": "#/definitions/生产工艺节点响应对象",
-            "originalRef": "生产工艺节点响应对象"
+            "originalRef": "生产工艺节点响应对象",
+            "$ref": "#/definitions/生产工艺节点响应对象"
           }
         },
         "serialNo": {

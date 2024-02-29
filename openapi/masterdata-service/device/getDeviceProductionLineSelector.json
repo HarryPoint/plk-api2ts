@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/设备产线选择请求DTO",
-              "originalRef": "设备产线选择请求DTO"
+              "originalRef": "设备产线选择请求DTO",
+              "$ref": "#/definitions/设备产线选择请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«设备产线选择响应DTO»»",
-              "originalRef": "JSONResult«List«设备产线选择响应DTO»»"
+              "originalRef": "JSONResult«List«设备产线选择响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«设备产线选择响应DTO»»"
             }
           },
           "201": {
@@ -128,8 +128,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/设备产线选择响应DTO",
-            "originalRef": "设备产线选择响应DTO"
+            "originalRef": "设备产线选择响应DTO",
+            "$ref": "#/definitions/设备产线选择响应DTO"
           }
         },
         "ts": {

@@ -28,8 +28,8 @@
             "description": "lotNoBatchApply",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/批次/序列号申请DTO",
-              "originalRef": "批次/序列号申请DTO"
+              "originalRef": "批次/序列号申请DTO",
+              "$ref": "#/definitions/批次/序列号申请DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«批次号使用DTO»",
-              "originalRef": "JSONResult«批次号使用DTO»"
+              "originalRef": "JSONResult«批次号使用DTO»",
+              "$ref": "#/definitions/JSONResult«批次号使用DTO»"
             }
           },
           "201": {
@@ -127,9 +127,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "批次号使用DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/批次号使用DTO",
-          "originalRef": "批次号使用DTO"
+          "$ref": "#/definitions/批次号使用DTO"
         },
         "ts": {
           "type": "integer",
@@ -147,8 +147,8 @@
           "type": "array",
           "description": "异常批次号",
           "items": {
-            "$ref": "#/definitions/批次号使用异常DTO",
-            "originalRef": "批次号使用异常DTO"
+            "originalRef": "批次号使用异常DTO",
+            "$ref": "#/definitions/批次号使用异常DTO"
           }
         },
         "lotSerialNoList": {

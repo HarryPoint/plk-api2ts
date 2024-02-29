@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»",
-              "originalRef": "JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»"
+              "originalRef": "JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«WarehouseMaterialRpQueryResponseDTO»»"
             }
           },
           "201": {
@@ -82,8 +82,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/WarehouseMaterialRpQueryResponseDTO",
-            "originalRef": "WarehouseMaterialRpQueryResponseDTO"
+            "originalRef": "WarehouseMaterialRpQueryResponseDTO",
+            "$ref": "#/definitions/WarehouseMaterialRpQueryResponseDTO"
           }
         },
         "ts": {

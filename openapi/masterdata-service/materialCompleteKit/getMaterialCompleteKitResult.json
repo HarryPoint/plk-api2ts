@@ -28,8 +28,8 @@
             "description": "completeKitQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/物料齐套查询请求对象",
-              "originalRef": "物料齐套查询请求对象"
+              "originalRef": "物料齐套查询请求对象",
+              "$ref": "#/definitions/物料齐套查询请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«物料齐套查询响应对象»",
-              "originalRef": "JSONResult«物料齐套查询响应对象»"
+              "originalRef": "JSONResult«物料齐套查询响应对象»",
+              "$ref": "#/definitions/JSONResult«物料齐套查询响应对象»"
             }
           },
           "201": {
@@ -98,9 +98,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "物料齐套查询响应对象",
           "description": "响应结果",
-          "$ref": "#/definitions/物料齐套查询响应对象",
-          "originalRef": "物料齐套查询响应对象"
+          "$ref": "#/definitions/物料齐套查询响应对象"
         },
         "ts": {
           "type": "integer",
@@ -144,8 +144,8 @@
           "type": "array",
           "description": "明细",
           "items": {
-            "$ref": "#/definitions/物料齐套查询响应对象",
-            "originalRef": "物料齐套查询响应对象"
+            "originalRef": "物料齐套查询响应对象",
+            "$ref": "#/definitions/物料齐套查询响应对象"
           }
         }
       },

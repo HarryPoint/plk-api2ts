@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«long»»",
-              "originalRef": "JSONResult«List«long»»"
+              "originalRef": "JSONResult«List«long»»",
+              "$ref": "#/definitions/JSONResult«List«long»»"
             }
           },
           "401": {

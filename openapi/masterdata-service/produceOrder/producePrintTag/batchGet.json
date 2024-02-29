@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProducePrintTagVO»»",
-              "originalRef": "JSONResult«List«ProducePrintTagVO»»"
+              "originalRef": "JSONResult«List«ProducePrintTagVO»»",
+              "$ref": "#/definitions/JSONResult«List«ProducePrintTagVO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProducePrintTagVO",
-            "originalRef": "ProducePrintTagVO"
+            "originalRef": "ProducePrintTagVO",
+            "$ref": "#/definitions/ProducePrintTagVO"
           }
         },
         "ts": {
@@ -110,8 +110,8 @@
           "type": "array",
           "description": "打印信息列表",
           "items": {
-            "$ref": "#/definitions/ProducePrintTagFieldDataVO",
-            "originalRef": "ProducePrintTagFieldDataVO"
+            "originalRef": "ProducePrintTagFieldDataVO",
+            "$ref": "#/definitions/ProducePrintTagFieldDataVO"
           }
         }
       },

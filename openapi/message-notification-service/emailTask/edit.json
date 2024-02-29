@@ -127,8 +127,8 @@
           ]
         },
         "sendingTimeConfig": {
-          "description": "发送时间配置",
           "originalRef": "SendingTimeConfigEditRequestDTO",
+          "description": "发送时间配置",
           "$ref": "#/definitions/SendingTimeConfigEditRequestDTO"
         },
         "createUserName": {

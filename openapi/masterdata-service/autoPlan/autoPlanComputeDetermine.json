@@ -28,8 +28,8 @@
             "description": "computeDetermine",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产订单自动排产计算结果确定DTO",
-              "originalRef": "生产订单自动排产计算结果确定DTO"
+              "originalRef": "生产订单自动排产计算结果确定DTO",
+              "$ref": "#/definitions/生产订单自动排产计算结果确定DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -105,8 +105,8 @@
           "type": "array",
           "description": "生产订单计划时间集",
           "items": {
-            "$ref": "#/definitions/生产订单自动排产计划时间DTO",
-            "originalRef": "生产订单自动排产计划时间DTO"
+            "originalRef": "生产订单自动排产计划时间DTO",
+            "$ref": "#/definitions/生产订单自动排产计划时间DTO"
           }
         }
       },
@@ -144,8 +144,8 @@
           "type": "array",
           "description": "步骤计划集",
           "items": {
-            "$ref": "#/definitions/生产订单自动排产计划步骤时间DTO",
-            "originalRef": "生产订单自动排产计划步骤时间DTO"
+            "originalRef": "生产订单自动排产计划步骤时间DTO",
+            "$ref": "#/definitions/生产订单自动排产计划步骤时间DTO"
           }
         }
       },

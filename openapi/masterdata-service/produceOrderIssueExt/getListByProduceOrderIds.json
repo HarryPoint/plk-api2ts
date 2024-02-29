@@ -36,8 +36,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产订单下发扩展信息查询VO",
-              "originalRef": "生产订单下发扩展信息查询VO"
+              "originalRef": "生产订单下发扩展信息查询VO",
+              "$ref": "#/definitions/生产订单下发扩展信息查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产订单下发扩展信息VO»»",
-              "originalRef": "JSONResult«List«生产订单下发扩展信息VO»»"
+              "originalRef": "JSONResult«List«生产订单下发扩展信息VO»»",
+              "$ref": "#/definitions/JSONResult«List«生产订单下发扩展信息VO»»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产订单下发扩展信息VO",
-            "originalRef": "生产订单下发扩展信息VO"
+            "originalRef": "生产订单下发扩展信息VO",
+            "$ref": "#/definitions/生产订单下发扩展信息VO"
           }
         },
         "ts": {

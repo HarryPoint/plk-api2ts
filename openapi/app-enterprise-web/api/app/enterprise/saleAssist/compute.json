@@ -129,8 +129,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "销售交期应答辅助返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/销售交期应答辅助返回VO"
         },
         "ts": {
@@ -146,8 +146,8 @@
       "type": "object",
       "properties": {
         "materialInfo": {
-          "description": "主物料信息",
           "originalRef": "销售交期应答辅助物料返回VO",
+          "description": "主物料信息",
           "$ref": "#/definitions/销售交期应答辅助物料返回VO"
         },
         "childMaterialInfos": {

@@ -37,8 +37,8 @@
             "description": "lotOrderSplit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/批次订单拆分DTO",
-              "originalRef": "批次订单拆分DTO"
+              "originalRef": "批次订单拆分DTO",
+              "$ref": "#/definitions/批次订单拆分DTO"
             }
           }
         ],
@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "拆分批次信息",
           "items": {
-            "$ref": "#/definitions/批次订单DTO",
-            "originalRef": "批次订单DTO"
+            "originalRef": "批次订单DTO",
+            "$ref": "#/definitions/批次订单DTO"
           }
         },
         "remark": {

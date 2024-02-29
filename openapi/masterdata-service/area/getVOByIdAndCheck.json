@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«区域VO»",
-              "originalRef": "JSONResult«区域VO»"
+              "originalRef": "JSONResult«区域VO»",
+              "$ref": "#/definitions/JSONResult«区域VO»"
             }
           },
           "401": {
@@ -75,9 +75,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "区域VO",
           "description": "响应结果",
-          "$ref": "#/definitions/区域VO",
-          "originalRef": "区域VO"
+          "$ref": "#/definitions/区域VO"
         },
         "ts": {
           "type": "integer",

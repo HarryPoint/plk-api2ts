@@ -75,8 +75,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "流程明细针对编辑返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/流程明细针对编辑返回VO"
         },
         "ts": {
@@ -382,13 +382,13 @@
           }
         },
         "flowPathNode": {
-          "description": "节点信息",
           "originalRef": "流程节点针对编辑返回VO",
+          "description": "节点信息",
           "$ref": "#/definitions/流程节点针对编辑返回VO"
         },
         "permission": {
-          "description": "权限设置",
           "originalRef": "流程权限VO",
+          "description": "权限设置",
           "$ref": "#/definitions/流程权限VO"
         },
         "flowPathEvents": {
@@ -459,8 +459,8 @@
           "description": "应用访问链接"
         },
         "todoConfig": {
-          "description": "代办设置",
           "originalRef": "流程自定义通知字段响应VO",
+          "description": "代办设置",
           "$ref": "#/definitions/流程自定义通知字段响应VO"
         },
         "detailPageConfigList": {
@@ -1036,8 +1036,8 @@
           ]
         },
         "dataLinkage": {
-          "description": "数据联动",
           "originalRef": "FlowPathFormFieldDataLinkageVO",
+          "description": "数据联动",
           "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {
@@ -1731,8 +1731,8 @@
           "description": "自定义提交按钮文案"
         },
         "nextNode": {
-          "description": "下节点信息",
           "originalRef": "流程节点针对编辑返回VO",
+          "description": "下节点信息",
           "$ref": "#/definitions/流程节点针对编辑返回VO"
         },
         "branches": {
@@ -2774,13 +2774,13 @@
           ]
         },
         "validSetting": {
-          "description": "触发条件生效设置",
           "originalRef": "流程事件设置编辑VO",
+          "description": "触发条件生效设置",
           "$ref": "#/definitions/流程事件设置编辑VO"
         },
         "invalidSetting": {
-          "description": "触发条件失效设置",
           "originalRef": "流程事件设置编辑VO",
+          "description": "触发条件失效设置",
           "$ref": "#/definitions/流程事件设置编辑VO"
         },
         "isTriggerFlow": {
@@ -2876,8 +2876,8 @@
           }
         },
         "detailGroup": {
-          "description": "明细分组",
           "originalRef": "插入业务事件-明细数据分组的依据_1",
+          "description": "明细分组",
           "$ref": "#/definitions/插入业务事件-明细数据分组的依据_1"
         },
         "isDirectDeleteTargetForm": {

@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«项目模板项目信息响应DTO»",
-              "originalRef": "JSONResult«项目模板项目信息响应DTO»"
+              "originalRef": "JSONResult«项目模板项目信息响应DTO»",
+              "$ref": "#/definitions/JSONResult«项目模板项目信息响应DTO»"
             }
           },
           "401": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "项目模板项目信息响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/项目模板项目信息响应DTO",
-          "originalRef": "项目模板项目信息响应DTO"
+          "$ref": "#/definitions/项目模板项目信息响应DTO"
         },
         "ts": {
           "type": "integer",
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "项目取值字段",
           "items": {
-            "$ref": "#/definitions/Id Code Name 通用传输对象",
-            "originalRef": "Id Code Name 通用传输对象"
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
           }
         }
       },

@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«EmployeeScoreIndicatorsResponseDTO»",
-              "originalRef": "JSONResult«EmployeeScoreIndicatorsResponseDTO»"
+              "originalRef": "JSONResult«EmployeeScoreIndicatorsResponseDTO»",
+              "$ref": "#/definitions/JSONResult«EmployeeScoreIndicatorsResponseDTO»"
             }
           },
           "401": {
@@ -58,9 +58,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "EmployeeScoreIndicatorsResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/EmployeeScoreIndicatorsResponseDTO",
-          "originalRef": "EmployeeScoreIndicatorsResponseDTO"
+          "$ref": "#/definitions/EmployeeScoreIndicatorsResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "指标列表",
           "items": {
-            "$ref": "#/definitions/EmployeeScoreIndicatorsItemResponseDTO",
-            "originalRef": "EmployeeScoreIndicatorsItemResponseDTO"
+            "originalRef": "EmployeeScoreIndicatorsItemResponseDTO",
+            "$ref": "#/definitions/EmployeeScoreIndicatorsItemResponseDTO"
           }
         }
       },

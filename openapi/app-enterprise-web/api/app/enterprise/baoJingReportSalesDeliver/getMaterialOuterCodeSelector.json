@@ -133,8 +133,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«物料主数据外部编码选择返回DTO»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«物料主数据外部编码选择返回DTO»"
         },
         "ts": {

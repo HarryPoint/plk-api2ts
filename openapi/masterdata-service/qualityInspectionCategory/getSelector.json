@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»",
-              "originalRef": "JSONResult«List«Id，名称，编号VO»»"
+              "originalRef": "JSONResult«List«Id，名称，编号VO»»",
+              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "ts": {

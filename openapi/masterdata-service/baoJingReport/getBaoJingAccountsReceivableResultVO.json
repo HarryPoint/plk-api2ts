@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/宝晶应收账款分析报表搜索VO",
-              "originalRef": "宝晶应收账款分析报表搜索VO"
+              "originalRef": "宝晶应收账款分析报表搜索VO",
+              "$ref": "#/definitions/宝晶应收账款分析报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«宝晶应收账款分析报表返回VO»",
-              "originalRef": "JSONResult«宝晶应收账款分析报表返回VO»"
+              "originalRef": "JSONResult«宝晶应收账款分析报表返回VO»",
+              "$ref": "#/definitions/JSONResult«宝晶应收账款分析报表返回VO»"
             }
           },
           "201": {
@@ -98,8 +98,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "customerIds": {
@@ -149,9 +149,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "宝晶应收账款分析报表返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/宝晶应收账款分析报表返回VO",
-          "originalRef": "宝晶应收账款分析报表返回VO"
+          "$ref": "#/definitions/宝晶应收账款分析报表返回VO"
         },
         "ts": {
           "type": "integer",
@@ -169,24 +169,24 @@
           "type": "array",
           "description": "数据表",
           "items": {
-            "$ref": "#/definitions/宝晶应收账款分析报表表格返回VO",
-            "originalRef": "宝晶应收账款分析报表表格返回VO"
+            "originalRef": "宝晶应收账款分析报表表格返回VO",
+            "$ref": "#/definitions/宝晶应收账款分析报表表格返回VO"
           }
         },
         "businessUser": {
           "type": "array",
           "description": "业务员维度",
           "items": {
-            "$ref": "#/definitions/宝晶应收账款分析报表图表返回VO",
-            "originalRef": "宝晶应收账款分析报表图表返回VO"
+            "originalRef": "宝晶应收账款分析报表图表返回VO",
+            "$ref": "#/definitions/宝晶应收账款分析报表图表返回VO"
           }
         },
         "trendChart": {
           "type": "array",
           "description": "趋势图维度",
           "items": {
-            "$ref": "#/definitions/宝晶应收账款分析报表图表含时间返回VO",
-            "originalRef": "宝晶应收账款分析报表图表含时间返回VO"
+            "originalRef": "宝晶应收账款分析报表图表含时间返回VO",
+            "$ref": "#/definitions/宝晶应收账款分析报表图表含时间返回VO"
           }
         }
       },

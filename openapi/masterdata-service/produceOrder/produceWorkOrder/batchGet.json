@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProduceWorkOrderVO»»",
-              "originalRef": "JSONResult«List«ProduceWorkOrderVO»»"
+              "originalRef": "JSONResult«List«ProduceWorkOrderVO»»",
+              "$ref": "#/definitions/JSONResult«List«ProduceWorkOrderVO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProduceWorkOrderVO",
-            "originalRef": "ProduceWorkOrderVO"
+            "originalRef": "ProduceWorkOrderVO",
+            "$ref": "#/definitions/ProduceWorkOrderVO"
           }
         },
         "ts": {
@@ -161,16 +161,16 @@
           "type": "array",
           "description": "工序信息",
           "items": {
-            "$ref": "#/definitions/ProduceWorkOrderProcessVO",
-            "originalRef": "ProduceWorkOrderProcessVO"
+            "originalRef": "ProduceWorkOrderProcessVO",
+            "$ref": "#/definitions/ProduceWorkOrderProcessVO"
           }
         },
         "produceCustomInfo": {
           "type": "array",
           "description": "生产相关信息",
           "items": {
-            "$ref": "#/definitions/ProduceWorkOrderCustomFieldDataVO",
-            "originalRef": "ProduceWorkOrderCustomFieldDataVO"
+            "originalRef": "ProduceWorkOrderCustomFieldDataVO",
+            "$ref": "#/definitions/ProduceWorkOrderCustomFieldDataVO"
           }
         }
       },

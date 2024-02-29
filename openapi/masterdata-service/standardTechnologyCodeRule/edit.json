@@ -28,8 +28,8 @@
             "description": "codeRuleEdit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/标准工艺编码规则请求 DTO",
-              "originalRef": "标准工艺编码规则请求 DTO"
+              "originalRef": "标准工艺编码规则请求 DTO",
+              "$ref": "#/definitions/标准工艺编码规则请求 DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«id信息»",
-              "originalRef": "JSONResult«id信息»"
+              "originalRef": "JSONResult«id信息»",
+              "$ref": "#/definitions/JSONResult«id信息»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "规则明细",
           "items": {
-            "$ref": "#/definitions/标准工艺编码规则明细请求 DTO",
-            "originalRef": "标准工艺编码规则明细请求 DTO"
+            "originalRef": "标准工艺编码规则明细请求 DTO",
+            "$ref": "#/definitions/标准工艺编码规则明细请求 DTO"
           }
         }
       },
@@ -163,9 +163,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "id信息",
           "description": "响应结果",
-          "$ref": "#/definitions/id信息",
-          "originalRef": "id信息"
+          "$ref": "#/definitions/id信息"
         },
         "ts": {
           "type": "integer",

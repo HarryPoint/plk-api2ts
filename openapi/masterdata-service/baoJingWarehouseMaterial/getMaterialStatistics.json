@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/宝晶物料主数据库存搜索VO",
-              "originalRef": "宝晶物料主数据库存搜索VO"
+              "originalRef": "宝晶物料主数据库存搜索VO",
+              "$ref": "#/definitions/宝晶物料主数据库存搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«宝晶物料库存统计VO»",
-              "originalRef": "JSONResult«宝晶物料库存统计VO»"
+              "originalRef": "JSONResult«宝晶物料库存统计VO»",
+              "$ref": "#/definitions/JSONResult«宝晶物料库存统计VO»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "materialSpec": {
@@ -221,9 +221,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "宝晶物料库存统计VO",
           "description": "响应结果",
-          "$ref": "#/definitions/宝晶物料库存统计VO",
-          "originalRef": "宝晶物料库存统计VO"
+          "$ref": "#/definitions/宝晶物料库存统计VO"
         },
         "ts": {
           "type": "integer",
@@ -250,9 +250,9 @@
           "description": "库存可使用数"
         },
         "materialStorages": {
+          "originalRef": "分页信息«宝晶物料主数据库存返回VO»",
           "description": "物料库存分页",
-          "$ref": "#/definitions/分页信息«宝晶物料主数据库存返回VO»",
-          "originalRef": "分页信息«宝晶物料主数据库存返回VO»"
+          "$ref": "#/definitions/分页信息«宝晶物料主数据库存返回VO»"
         }
       },
       "title": "宝晶物料库存统计VO"
@@ -284,8 +284,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/宝晶物料主数据库存返回VO",
-            "originalRef": "宝晶物料主数据库存返回VO"
+            "originalRef": "宝晶物料主数据库存返回VO",
+            "$ref": "#/definitions/宝晶物料主数据库存返回VO"
           }
         },
         "lastPage": {

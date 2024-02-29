@@ -37,8 +37,8 @@
             "description": "produceOrderCloseDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产订单关闭 DTO",
-              "originalRef": "生产订单关闭 DTO"
+              "originalRef": "生产订单关闭 DTO",
+              "$ref": "#/definitions/生产订单关闭 DTO"
             }
           }
         ],
@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

@@ -28,8 +28,8 @@
             "description": "removeRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/标准工艺修改分类请求对象_1",
-              "originalRef": "标准工艺修改分类请求对象_1"
+              "originalRef": "标准工艺修改分类请求对象_1",
+              "$ref": "#/definitions/标准工艺修改分类请求对象_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

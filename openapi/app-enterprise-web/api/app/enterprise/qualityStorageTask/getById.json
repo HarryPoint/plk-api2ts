@@ -68,8 +68,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "质检任务明细返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/质检任务明细返回VO"
         },
         "ts": {
@@ -239,13 +239,13 @@
           "description": "取消时间"
         },
         "planItemInput": {
-          "description": "质检方案质检项填写信息",
           "originalRef": "质检任务质检方案质检项填写返回VO",
+          "description": "质检方案质检项填写信息",
           "$ref": "#/definitions/质检任务质检方案质检项填写返回VO"
         },
         "closeInfo": {
-          "description": "质检任务关闭信息 - 状态是已关闭（已撤销）时有值",
           "originalRef": "质检任务关闭信息返回VO",
+          "description": "质检任务关闭信息 - 状态是已关闭（已撤销）时有值",
           "$ref": "#/definitions/质检任务关闭信息返回VO"
         },
         "planItemResults": {

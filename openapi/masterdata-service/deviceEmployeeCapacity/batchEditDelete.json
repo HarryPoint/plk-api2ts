@@ -28,8 +28,8 @@
             "description": "batchEditRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/设备人员能力批量编辑DTO",
-              "originalRef": "设备人员能力批量编辑DTO"
+              "originalRef": "设备人员能力批量编辑DTO",
+              "$ref": "#/definitions/设备人员能力批量编辑DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -68,8 +68,8 @@
           "type": "array",
           "description": "编辑项列表",
           "items": {
-            "$ref": "#/definitions/设备人员能力编辑DTO",
-            "originalRef": "设备人员能力编辑DTO"
+            "originalRef": "设备人员能力编辑DTO",
+            "$ref": "#/definitions/设备人员能力编辑DTO"
           }
         },
         "deleteIds": {
@@ -114,8 +114,8 @@
           "type": "array",
           "description": "编辑能力明细",
           "items": {
-            "$ref": "#/definitions/设备人员能力明细编辑DTO",
-            "originalRef": "设备人员能力明细编辑DTO"
+            "originalRef": "设备人员能力明细编辑DTO",
+            "$ref": "#/definitions/设备人员能力明细编辑DTO"
           }
         }
       },

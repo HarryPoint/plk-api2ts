@@ -36,8 +36,8 @@
             "description": "ids",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/id集合信息",
-              "originalRef": "id集合信息"
+              "originalRef": "id集合信息",
+              "$ref": "#/definitions/id集合信息"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«工序选择返回VO»»",
-              "originalRef": "JSONResult«List«工序选择返回VO»»"
+              "originalRef": "JSONResult«List«工序选择返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«工序选择返回VO»»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/工序选择返回VO",
-            "originalRef": "工序选择返回VO"
+            "originalRef": "工序选择返回VO",
+            "$ref": "#/definitions/工序选择返回VO"
           }
         },
         "ts": {
@@ -135,9 +135,9 @@
           "description": "区域id"
         },
         "area": {
+          "originalRef": "区域VO_1",
           "description": "区域",
-          "$ref": "#/definitions/区域VO_1",
-          "originalRef": "区域VO_1"
+          "$ref": "#/definitions/区域VO_1"
         }
       },
       "title": "工序选择返回VO"

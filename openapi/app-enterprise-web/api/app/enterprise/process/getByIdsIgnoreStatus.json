@@ -128,8 +128,8 @@
           "description": "区域id"
         },
         "area": {
-          "description": "区域",
           "originalRef": "区域VO",
+          "description": "区域",
           "$ref": "#/definitions/区域VO"
         }
       },

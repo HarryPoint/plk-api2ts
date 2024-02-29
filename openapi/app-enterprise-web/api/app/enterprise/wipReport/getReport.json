@@ -131,8 +131,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«WIP统计报表返回VO»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«WIP统计报表返回VO»"
         },
         "ts": {
@@ -226,8 +226,8 @@
           "description": "物料编号"
         },
         "allProcessWarehouse": {
-          "description": "所有工序库存信息",
           "originalRef": "WIP库存统计报表返回VO",
+          "description": "所有工序库存信息",
           "$ref": "#/definitions/WIP库存统计报表返回VO"
         },
         "processList": {
@@ -300,8 +300,8 @@
           "description": "工序编号"
         },
         "warehouse": {
-          "description": "工序库存集",
           "originalRef": "WIP库存统计报表返回VO",
+          "description": "工序库存集",
           "$ref": "#/definitions/WIP库存统计报表返回VO"
         }
       },

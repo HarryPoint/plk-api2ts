@@ -28,8 +28,8 @@
             "description": "moveInBomConsumeScanRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进料bom消耗扫描请求DTO",
-              "originalRef": "进料bom消耗扫描请求DTO"
+              "originalRef": "进料bom消耗扫描请求DTO",
+              "$ref": "#/definitions/进料bom消耗扫描请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«进料bom消耗物料扫描响应DTO»",
-              "originalRef": "JSONResult«进料bom消耗物料扫描响应DTO»"
+              "originalRef": "JSONResult«进料bom消耗物料扫描响应DTO»",
+              "$ref": "#/definitions/JSONResult«进料bom消耗物料扫描响应DTO»"
             }
           },
           "201": {
@@ -95,9 +95,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "进料bom消耗物料扫描响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/进料bom消耗物料扫描响应DTO",
-          "originalRef": "进料bom消耗物料扫描响应DTO"
+          "$ref": "#/definitions/进料bom消耗物料扫描响应DTO"
         },
         "ts": {
           "type": "integer",

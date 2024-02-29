@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«名称，编号VO»»",
-              "originalRef": "JSONResult«List«名称，编号VO»»"
+              "originalRef": "JSONResult«List«名称，编号VO»»",
+              "$ref": "#/definitions/JSONResult«List«名称，编号VO»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/名称，编号VO",
-            "originalRef": "名称，编号VO"
+            "originalRef": "名称，编号VO",
+            "$ref": "#/definitions/名称，编号VO"
           }
         },
         "ts": {

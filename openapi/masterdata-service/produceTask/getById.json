@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«生产任务详情返回VO»",
-              "originalRef": "JSONResult«生产任务详情返回VO»"
+              "originalRef": "JSONResult«生产任务详情返回VO»",
+              "$ref": "#/definitions/JSONResult«生产任务详情返回VO»"
             }
           },
           "401": {
@@ -74,9 +74,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "生产任务详情返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/生产任务详情返回VO",
-          "originalRef": "生产任务详情返回VO"
+          "$ref": "#/definitions/生产任务详情返回VO"
         },
         "ts": {
           "type": "integer",
@@ -325,8 +325,8 @@
           "type": "array",
           "description": "生产任务记录",
           "items": {
-            "$ref": "#/definitions/生产处理基础信息响应DTO",
-            "originalRef": "生产处理基础信息响应DTO"
+            "originalRef": "生产处理基础信息响应DTO",
+            "$ref": "#/definitions/生产处理基础信息响应DTO"
           }
         }
       },
@@ -465,8 +465,8 @@
           "type": "array",
           "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
           "items": {
-            "$ref": "#/definitions/进出站关键参数明细响应DTO",
-            "originalRef": "进出站关键参数明细响应DTO"
+            "originalRef": "进出站关键参数明细响应DTO",
+            "$ref": "#/definitions/进出站关键参数明细响应DTO"
           }
         },
         "desc": {

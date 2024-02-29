@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/GetInspectionTaskStatisticsAmountReport",
-              "originalRef": "GetInspectionTaskStatisticsAmountReport"
+              "originalRef": "GetInspectionTaskStatisticsAmountReport",
+              "$ref": "#/definitions/GetInspectionTaskStatisticsAmountReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«任务量统计报表合计返回DTO»",
-              "originalRef": "JSONResult«任务量统计报表合计返回DTO»"
+              "originalRef": "JSONResult«任务量统计报表合计返回DTO»",
+              "$ref": "#/definitions/JSONResult«任务量统计报表合计返回DTO»"
             }
           },
           "201": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "任务量统计报表合计返回DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/任务量统计报表合计返回DTO",
-          "originalRef": "任务量统计报表合计返回DTO"
+          "$ref": "#/definitions/任务量统计报表合计返回DTO"
         },
         "ts": {
           "type": "integer",

@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/GetDifengSalesDayReportStatistics",
-              "originalRef": "GetDifengSalesDayReportStatistics"
+              "originalRef": "GetDifengSalesDayReportStatistics",
+              "$ref": "#/definitions/GetDifengSalesDayReportStatistics"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«销售日报表统计返回对象»",
-              "originalRef": "JSONResult«销售日报表统计返回对象»"
+              "originalRef": "JSONResult«销售日报表统计返回对象»",
+              "$ref": "#/definitions/JSONResult«销售日报表统计返回对象»"
             }
           },
           "201": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "销售日报表统计返回对象",
           "description": "响应结果",
-          "$ref": "#/definitions/销售日报表统计返回对象",
-          "originalRef": "销售日报表统计返回对象"
+          "$ref": "#/definitions/销售日报表统计返回对象"
         },
         "ts": {
           "type": "integer",

@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«设备选择返回VO - 针对数采方案»»",
-              "originalRef": "JSONResult«List«设备选择返回VO - 针对数采方案»»"
+              "originalRef": "JSONResult«List«设备选择返回VO - 针对数采方案»»",
+              "$ref": "#/definitions/JSONResult«List«设备选择返回VO - 针对数采方案»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/设备选择返回VO - 针对数采方案",
-            "originalRef": "设备选择返回VO - 针对数采方案"
+            "originalRef": "设备选择返回VO - 针对数采方案",
+            "$ref": "#/definitions/设备选择返回VO - 针对数采方案"
           }
         },
         "ts": {

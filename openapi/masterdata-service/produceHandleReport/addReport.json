@@ -36,8 +36,8 @@
             "description": "handleDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/上报反馈处理DTO",
-              "originalRef": "上报反馈处理DTO"
+              "originalRef": "上报反馈处理DTO",
+              "$ref": "#/definitions/上报反馈处理DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

@@ -28,8 +28,8 @@
             "description": "canMoveOutLotOrderScanRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/可进出料批次扫描查询dto",
-              "originalRef": "可进出料批次扫描查询dto"
+              "originalRef": "可进出料批次扫描查询dto",
+              "$ref": "#/definitions/可进出料批次扫描查询dto"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«可异常处理批次响应dto»",
-              "originalRef": "JSONResult«可异常处理批次响应dto»"
+              "originalRef": "JSONResult«可异常处理批次响应dto»",
+              "$ref": "#/definitions/JSONResult«可异常处理批次响应dto»"
             }
           },
           "201": {
@@ -95,9 +95,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "可异常处理批次响应dto",
           "description": "响应结果",
-          "$ref": "#/definitions/可异常处理批次响应dto",
-          "originalRef": "可异常处理批次响应dto"
+          "$ref": "#/definitions/可异常处理批次响应dto"
         },
         "ts": {
           "type": "integer",

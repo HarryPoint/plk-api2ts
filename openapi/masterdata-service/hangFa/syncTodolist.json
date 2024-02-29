@@ -28,8 +28,8 @@
             "description": "todolistCreate",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/金蝶待办创建请求",
-              "originalRef": "金蝶待办创建请求"
+              "originalRef": "金蝶待办创建请求",
+              "$ref": "#/definitions/金蝶待办创建请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

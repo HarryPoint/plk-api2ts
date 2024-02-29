@@ -95,8 +95,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "设备数采实时数据返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/设备数采实时数据返回VO"
         },
         "ts": {
@@ -112,8 +112,8 @@
       "type": "object",
       "properties": {
         "deviceInfo": {
-          "description": "设备信息",
           "originalRef": "设备数采状态信息VO",
+          "description": "设备信息",
           "$ref": "#/definitions/设备数采状态信息VO"
         },
         "params": {

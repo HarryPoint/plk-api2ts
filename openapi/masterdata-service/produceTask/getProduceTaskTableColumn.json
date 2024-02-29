@@ -33,8 +33,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产任务导出表格列DTO»»",
-              "originalRef": "JSONResult«List«生产任务导出表格列DTO»»"
+              "originalRef": "JSONResult«List«生产任务导出表格列DTO»»",
+              "$ref": "#/definitions/JSONResult«List«生产任务导出表格列DTO»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产任务导出表格列DTO",
-            "originalRef": "生产任务导出表格列DTO"
+            "originalRef": "生产任务导出表格列DTO",
+            "$ref": "#/definitions/生产任务导出表格列DTO"
           }
         },
         "ts": {
@@ -177,24 +177,24 @@
           "type": "array",
           "description": "表格内字段集",
           "items": {
-            "$ref": "#/definitions/流程表格列VO",
-            "originalRef": "流程表格列VO"
+            "originalRef": "流程表格列VO",
+            "$ref": "#/definitions/流程表格列VO"
           }
         },
         "numberRuleDetails": {
           "type": "array",
           "description": "编码字段编码规则集",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细VO",
-            "originalRef": "流程表单字段编码规则明细VO"
+            "originalRef": "流程表单字段编码规则明细VO",
+            "$ref": "#/definitions/流程表单字段编码规则明细VO"
           }
         },
         "selectorList": {
           "type": "array",
           "description": "选项集",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "serialNo": {
@@ -592,24 +592,24 @@
           "type": "array",
           "description": "表格内字段集",
           "items": {
-            "$ref": "#/definitions/流程表格列VO",
-            "originalRef": "流程表格列VO"
+            "originalRef": "流程表格列VO",
+            "$ref": "#/definitions/流程表格列VO"
           }
         },
         "numberRuleDetails": {
           "type": "array",
           "description": "编码字段编码规则集",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细VO",
-            "originalRef": "流程表单字段编码规则明细VO"
+            "originalRef": "流程表单字段编码规则明细VO",
+            "$ref": "#/definitions/流程表单字段编码规则明细VO"
           }
         },
         "selectorList": {
           "type": "array",
           "description": "选项集",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "serialNo": {

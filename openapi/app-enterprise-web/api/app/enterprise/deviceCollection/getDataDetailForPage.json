@@ -139,8 +139,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "设备数采数据详单返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/设备数采数据详单返回VO"
         },
         "ts": {
@@ -156,13 +156,13 @@
       "type": "object",
       "properties": {
         "dataPages": {
-          "description": "分页信息",
           "originalRef": "分页信息«设备数采数据详单分页信息返回VO»",
+          "description": "分页信息",
           "$ref": "#/definitions/分页信息«设备数采数据详单分页信息返回VO»"
         },
         "deviceInfo": {
-          "description": "设备信息",
           "originalRef": "设备数采状态信息VO",
+          "description": "设备信息",
           "$ref": "#/definitions/设备数采状态信息VO"
         }
       },

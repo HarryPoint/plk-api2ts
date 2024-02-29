@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«生产任务针对员工详情返回VO»",
-              "originalRef": "JSONResult«生产任务针对员工详情返回VO»"
+              "originalRef": "JSONResult«生产任务针对员工详情返回VO»",
+              "$ref": "#/definitions/JSONResult«生产任务针对员工详情返回VO»"
             }
           },
           "401": {
@@ -74,9 +74,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "生产任务针对员工详情返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/生产任务针对员工详情返回VO",
-          "originalRef": "生产任务针对员工详情返回VO"
+          "$ref": "#/definitions/生产任务针对员工详情返回VO"
         },
         "ts": {
           "type": "integer",
@@ -326,9 +326,9 @@
           "description": "可出料批次数"
         },
         "stepSetInfo": {
+          "originalRef": "生产工艺路径步骤设置返回VO",
           "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
-          "$ref": "#/definitions/生产工艺路径步骤设置返回VO",
-          "originalRef": "生产工艺路径步骤设置返回VO"
+          "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
         },
         "createTime": {
           "type": "string",
@@ -345,9 +345,9 @@
           "description": "对应工艺路径"
         },
         "produceTechnologyProcessSheetInfo": {
+          "originalRef": "生产工艺工艺卡信息返回DTO",
           "description": "对应工艺卡信息",
-          "$ref": "#/definitions/生产工艺工艺卡信息返回DTO",
-          "originalRef": "生产工艺工艺卡信息返回DTO"
+          "$ref": "#/definitions/生产工艺工艺卡信息返回DTO"
         },
         "enableQualityTraceability": {
           "type": "string",
@@ -576,8 +576,8 @@
           "type": "array",
           "description": "描述集合",
           "items": {
-            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO",
-            "originalRef": "生产工艺工艺卡明细返回DTO"
+            "originalRef": "生产工艺工艺卡明细返回DTO",
+            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO"
           }
         },
         "updateUserId": {
@@ -621,16 +621,16 @@
           "type": "array",
           "description": "文件集合",
           "items": {
-            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO",
-            "originalRef": "生产工艺工艺卡明细返回DTO"
+            "originalRef": "生产工艺工艺卡明细返回DTO",
+            "$ref": "#/definitions/生产工艺工艺卡明细返回DTO"
           }
         },
         "processFlowPathRpDatas": {
           "type": "array",
           "description": "工序对应字段信息",
           "items": {
-            "$ref": "#/definitions/工序对应字段详情VO",
-            "originalRef": "工序对应字段详情VO"
+            "originalRef": "工序对应字段详情VO",
+            "$ref": "#/definitions/工序对应字段详情VO"
           }
         }
       },

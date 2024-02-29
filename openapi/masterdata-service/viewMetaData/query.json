@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ViewMetadataQueryRequestDTO",
-              "originalRef": "ViewMetadataQueryRequestDTO"
+              "originalRef": "ViewMetadataQueryRequestDTO",
+              "$ref": "#/definitions/ViewMetadataQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ViewMetadataQueryResponseDTO»",
-              "originalRef": "JSONResult«ViewMetadataQueryResponseDTO»"
+              "originalRef": "JSONResult«ViewMetadataQueryResponseDTO»",
+              "$ref": "#/definitions/JSONResult«ViewMetadataQueryResponseDTO»"
             }
           },
           "201": {
@@ -91,9 +91,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "ViewMetadataQueryResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/ViewMetadataQueryResponseDTO",
-          "originalRef": "ViewMetadataQueryResponseDTO"
+          "$ref": "#/definitions/ViewMetadataQueryResponseDTO"
         },
         "ts": {
           "type": "integer",

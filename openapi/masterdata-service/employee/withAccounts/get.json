@@ -28,8 +28,8 @@
             "description": "userSelectorSearchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/用户主数据选择列表搜索VO",
-              "originalRef": "用户主数据选择列表搜索VO"
+              "originalRef": "用户主数据选择列表搜索VO",
+              "$ref": "#/definitions/用户主数据选择列表搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»",
-              "originalRef": "JSONResult«List«Id，名称，编号VO»»"
+              "originalRef": "JSONResult«List«Id，名称，编号VO»»",
+              "$ref": "#/definitions/JSONResult«List«Id，名称，编号VO»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "nameOrCode": {
@@ -130,8 +130,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "ts": {

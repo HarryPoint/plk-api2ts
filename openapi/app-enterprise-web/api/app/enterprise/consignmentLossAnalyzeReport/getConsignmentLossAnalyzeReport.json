@@ -180,8 +180,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "寄售损耗分析报表返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/寄售损耗分析报表返回VO"
         },
         "ts": {
@@ -197,8 +197,8 @@
       "type": "object",
       "properties": {
         "tablePage": {
-          "description": "数据表",
           "originalRef": "分页信息«寄售损耗分析报表分页返回VO»",
+          "description": "数据表",
           "$ref": "#/definitions/分页信息«寄售损耗分析报表分页返回VO»"
         },
         "productDimension": {

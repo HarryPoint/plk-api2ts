@@ -327,8 +327,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "生产任务扫码响应DTO(针对移动端)",
+          "description": "响应结果",
           "$ref": "#/definitions/生产任务扫码响应DTO(针对移动端)"
         },
         "ts": {
@@ -678,8 +678,8 @@
           "description": "批次数量"
         },
         "stepSetInfo": {
-          "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
           "originalRef": "生产工艺路径步骤设置返回VO",
+          "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
           "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
         }
       },

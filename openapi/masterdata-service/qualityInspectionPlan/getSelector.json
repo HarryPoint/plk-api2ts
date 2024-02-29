@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«质检方案选择VO»»",
-              "originalRef": "JSONResult«List«质检方案选择VO»»"
+              "originalRef": "JSONResult«List«质检方案选择VO»»",
+              "$ref": "#/definitions/JSONResult«List«质检方案选择VO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/质检方案选择VO",
-            "originalRef": "质检方案选择VO"
+            "originalRef": "质检方案选择VO",
+            "$ref": "#/definitions/质检方案选择VO"
           }
         },
         "ts": {

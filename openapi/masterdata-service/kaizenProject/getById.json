@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«KaizenProjectResponseDTO»",
-              "originalRef": "JSONResult«KaizenProjectResponseDTO»"
+              "originalRef": "JSONResult«KaizenProjectResponseDTO»",
+              "$ref": "#/definitions/JSONResult«KaizenProjectResponseDTO»"
             }
           },
           "201": {
@@ -73,9 +73,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "KaizenProjectResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/KaizenProjectResponseDTO",
-          "originalRef": "KaizenProjectResponseDTO"
+          "$ref": "#/definitions/KaizenProjectResponseDTO"
         },
         "ts": {
           "type": "integer",

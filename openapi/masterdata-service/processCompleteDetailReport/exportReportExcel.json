@@ -28,8 +28,8 @@
             "description": "reportQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/工序完成明细表查询",
-              "originalRef": "工序完成明细表查询"
+              "originalRef": "工序完成明细表查询",
+              "$ref": "#/definitions/工序完成明细表查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -90,8 +90,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "configNo": {
@@ -192,8 +192,8 @@
           "type": "array",
           "description": "排班日期集合",
           "items": {
-            "$ref": "#/definitions/LocalDate",
-            "originalRef": "LocalDate"
+            "originalRef": "LocalDate",
+            "$ref": "#/definitions/LocalDate"
           }
         }
       },

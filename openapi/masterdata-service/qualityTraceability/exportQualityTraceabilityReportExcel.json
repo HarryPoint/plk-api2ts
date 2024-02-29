@@ -28,8 +28,8 @@
             "description": "qualityTraceabilityReportRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/质量追溯报表查询DTO",
-              "originalRef": "质量追溯报表查询DTO"
+              "originalRef": "质量追溯报表查询DTO",
+              "$ref": "#/definitions/质量追溯报表查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -68,8 +68,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "$ref": "#/definitions/流程数据明细搜索VO",
-            "originalRef": "流程数据明细搜索VO"
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
           }
         },
         "pageNo": {
@@ -93,8 +93,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         }
       },

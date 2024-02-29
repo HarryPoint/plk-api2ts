@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LotSerialNumberPlanRemoveCheckRequestDTO",
-              "originalRef": "LotSerialNumberPlanRemoveCheckRequestDTO"
+              "originalRef": "LotSerialNumberPlanRemoveCheckRequestDTO",
+              "$ref": "#/definitions/LotSerialNumberPlanRemoveCheckRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO»",
-              "originalRef": "JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO»"
+              "originalRef": "JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO»",
+              "$ref": "#/definitions/JSONResult«LotSerialNumberPlanRemoveCheckResponseDTO»"
             }
           },
           "201": {
@@ -90,9 +90,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "LotSerialNumberPlanRemoveCheckResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/LotSerialNumberPlanRemoveCheckResponseDTO",
-          "originalRef": "LotSerialNumberPlanRemoveCheckResponseDTO"
+          "$ref": "#/definitions/LotSerialNumberPlanRemoveCheckResponseDTO"
         },
         "ts": {
           "type": "integer",

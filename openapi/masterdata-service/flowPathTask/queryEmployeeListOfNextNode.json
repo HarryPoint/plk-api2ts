@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/分页_4",
-              "originalRef": "分页_4"
+              "originalRef": "分页_4",
+              "$ref": "#/definitions/分页_4"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«员工响应对象»»",
-              "originalRef": "JSONResult«List«员工响应对象»»"
+              "originalRef": "JSONResult«List«员工响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«员工响应对象»»"
             }
           },
           "201": {
@@ -83,8 +83,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "groupBys": {
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/员工响应对象",
-            "originalRef": "员工响应对象"
+            "originalRef": "员工响应对象",
+            "$ref": "#/definitions/员工响应对象"
           }
         },
         "ts": {

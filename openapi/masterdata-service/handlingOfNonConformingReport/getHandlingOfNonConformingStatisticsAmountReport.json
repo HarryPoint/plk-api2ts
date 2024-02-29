@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/GetHandlingOfNonConformingStatisticsAmountReport",
-              "originalRef": "GetHandlingOfNonConformingStatisticsAmountReport"
+              "originalRef": "GetHandlingOfNonConformingStatisticsAmountReport",
+              "$ref": "#/definitions/GetHandlingOfNonConformingStatisticsAmountReport"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«不合格报表合计返回DTO»",
-              "originalRef": "JSONResult«不合格报表合计返回DTO»"
+              "originalRef": "JSONResult«不合格报表合计返回DTO»",
+              "$ref": "#/definitions/JSONResult«不合格报表合计返回DTO»"
             }
           },
           "201": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "不合格报表合计返回DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/不合格报表合计返回DTO",
-          "originalRef": "不合格报表合计返回DTO"
+          "$ref": "#/definitions/不合格报表合计返回DTO"
         },
         "ts": {
           "type": "integer",

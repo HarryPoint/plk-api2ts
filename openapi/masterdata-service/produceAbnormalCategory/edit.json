@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产异常类型编辑DTO",
-              "originalRef": "生产异常类型编辑DTO"
+              "originalRef": "生产异常类型编辑DTO",
+              "$ref": "#/definitions/生产异常类型编辑DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

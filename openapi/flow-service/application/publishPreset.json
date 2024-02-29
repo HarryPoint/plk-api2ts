@@ -65,8 +65,8 @@
       "type": "object",
       "properties": {
         "flowPath": {
-          "description": "应用编辑信息",
           "originalRef": "流程编辑DTO",
+          "description": "应用编辑信息",
           "$ref": "#/definitions/流程编辑DTO"
         },
         "originalApplicationCode": {
@@ -335,13 +335,13 @@
           }
         },
         "flowPathNode": {
-          "description": "节点",
           "originalRef": "流程节点编辑DTO_4",
+          "description": "节点",
           "$ref": "#/definitions/流程节点编辑DTO_4"
         },
         "permission": {
-          "description": "权限",
           "originalRef": "流程表单权限编辑DTO",
+          "description": "权限",
           "$ref": "#/definitions/流程表单权限编辑DTO"
         },
         "flowPathEvents": {
@@ -417,8 +417,8 @@
           "description": "应用访问链接"
         },
         "todoConfig": {
-          "description": "代办设置",
           "originalRef": "代办配置",
+          "description": "代办设置",
           "$ref": "#/definitions/代办配置"
         },
         "detailPageConfigList": {
@@ -962,8 +962,8 @@
           ]
         },
         "dataLinkage": {
-          "description": "数据联动",
           "originalRef": "FlowPathFormFieldDataLinkageEditDTO",
+          "description": "数据联动",
           "$ref": "#/definitions/FlowPathFormFieldDataLinkageEditDTO"
         },
         "valueLimitRules": {
@@ -1529,8 +1529,8 @@
           }
         },
         "nextNode": {
-          "description": "下节点信息",
           "originalRef": "流程节点编辑DTO_4",
+          "description": "下节点信息",
           "$ref": "#/definitions/流程节点编辑DTO_4"
         },
         "branches": {
@@ -2405,13 +2405,13 @@
           ]
         },
         "validSetting": {
-          "description": "触发条件生效设置",
           "originalRef": "流程事件设置编辑DTO",
+          "description": "触发条件生效设置",
           "$ref": "#/definitions/流程事件设置编辑DTO"
         },
         "invalidSetting": {
-          "description": "触发条件失效设置",
           "originalRef": "流程事件设置编辑DTO",
+          "description": "触发条件失效设置",
           "$ref": "#/definitions/流程事件设置编辑DTO"
         },
         "isTriggerFlow": {
@@ -2467,8 +2467,8 @@
           "description": "在指定的表格编码的维度上新增数据 -- 针对新增事件。如果为空，则维度以主表的维度来新增数据，不为空，则以指定明细表的维度来新增数据）"
         },
         "detailGroup": {
-          "description": "新增业务事件-明细分组",
           "originalRef": "插入业务事件-明细数据分组的依据",
+          "description": "新增业务事件-明细分组",
           "$ref": "#/definitions/插入业务事件-明细数据分组的依据"
         },
         "operateSettings": {

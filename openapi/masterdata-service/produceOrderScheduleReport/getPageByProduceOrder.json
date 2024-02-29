@@ -28,8 +28,8 @@
             "description": "searchCondition",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产排产订单搜索VO",
-              "originalRef": "生产排产订单搜索VO"
+              "originalRef": "生产排产订单搜索VO",
+              "$ref": "#/definitions/生产排产订单搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«排产订单报表VO(生产订单维度)»»",
-              "originalRef": "JSONResult«分页信息«排产订单报表VO(生产订单维度)»»"
+              "originalRef": "JSONResult«分页信息«排产订单报表VO(生产订单维度)»»",
+              "$ref": "#/definitions/JSONResult«分页信息«排产订单报表VO(生产订单维度)»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "produceOrderCode": {
@@ -168,9 +168,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "分页信息«排产订单报表VO(生产订单维度)»",
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«排产订单报表VO(生产订单维度)»",
-          "originalRef": "分页信息«排产订单报表VO(生产订单维度)»"
+          "$ref": "#/definitions/分页信息«排产订单报表VO(生产订单维度)»"
         },
         "ts": {
           "type": "integer",
@@ -208,8 +208,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/排产订单报表VO(生产订单维度)",
-            "originalRef": "排产订单报表VO(生产订单维度)"
+            "originalRef": "排产订单报表VO(生产订单维度)",
+            "$ref": "#/definitions/排产订单报表VO(生产订单维度)"
           }
         },
         "lastPage": {
@@ -312,24 +312,24 @@
           "type": "array",
           "description": "计划产量列表",
           "items": {
-            "$ref": "#/definitions/Id，code, name, 值VO",
-            "originalRef": "Id，code, name, 值VO"
+            "originalRef": "Id，code, name, 值VO",
+            "$ref": "#/definitions/Id，code, name, 值VO"
           }
         },
         "routingStepCompleteProgressList": {
           "type": "array",
           "description": "工序完成进度列表",
           "items": {
-            "$ref": "#/definitions/Id，code, name, 值VO",
-            "originalRef": "Id，code, name, 值VO"
+            "originalRef": "Id，code, name, 值VO",
+            "$ref": "#/definitions/Id，code, name, 值VO"
           }
         },
         "routingStepPlanList": {
           "type": "array",
           "description": "工序步骤计划列表",
           "items": {
-            "$ref": "#/definitions/排产订单报表工序步骤计划VO",
-            "originalRef": "排产订单报表工序步骤计划VO"
+            "originalRef": "排产订单报表工序步骤计划VO",
+            "$ref": "#/definitions/排产订单报表工序步骤计划VO"
           }
         }
       },
@@ -419,8 +419,8 @@
           "type": "array",
           "description": "计划产量列表",
           "items": {
-            "$ref": "#/definitions/Id，code, name, 值VO",
-            "originalRef": "Id，code, name, 值VO"
+            "originalRef": "Id，code, name, 值VO",
+            "$ref": "#/definitions/Id，code, name, 值VO"
           }
         }
       },

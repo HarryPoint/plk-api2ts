@@ -73,8 +73,8 @@
           }
         },
         "flowPath": {
-          "description": "应用引擎",
           "originalRef": "流程响应VO",
+          "description": "应用引擎",
           "$ref": "#/definitions/流程响应VO"
         },
         "fieldList": {
@@ -924,8 +924,8 @@
           ]
         },
         "dataLinkage": {
-          "description": "数据联动",
           "originalRef": "FlowPathFormFieldDataLinkageVO",
+          "description": "数据联动",
           "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {

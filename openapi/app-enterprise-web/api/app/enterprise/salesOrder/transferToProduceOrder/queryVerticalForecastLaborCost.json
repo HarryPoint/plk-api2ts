@@ -155,13 +155,13 @@
           "description": "销售订单编码"
         },
         "masterMaterial": {
-          "description": "主物料",
           "originalRef": "ForecastMaterialInfo",
+          "description": "主物料",
           "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "childMaterial": {
-          "description": "子物料",
           "originalRef": "ForecastMaterialInfo",
+          "description": "子物料",
           "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "processId": {

@@ -86,8 +86,8 @@
           ]
         },
         "clientGroup": {
-          "description": "客户端组",
           "originalRef": "客户端组修改 DTO",
+          "description": "客户端组",
           "$ref": "#/definitions/客户端组修改 DTO"
         },
         "id": {

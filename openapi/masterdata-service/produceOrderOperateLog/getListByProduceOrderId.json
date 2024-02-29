@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产订单详情 - 操作日志VO»»",
-              "originalRef": "JSONResult«List«生产订单详情 - 操作日志VO»»"
+              "originalRef": "JSONResult«List«生产订单详情 - 操作日志VO»»",
+              "$ref": "#/definitions/JSONResult«List«生产订单详情 - 操作日志VO»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产订单详情 - 操作日志VO",
-            "originalRef": "生产订单详情 - 操作日志VO"
+            "originalRef": "生产订单详情 - 操作日志VO",
+            "$ref": "#/definitions/生产订单详情 - 操作日志VO"
           }
         },
         "ts": {

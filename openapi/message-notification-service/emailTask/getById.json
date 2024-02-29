@@ -73,8 +73,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "EmailTaskDTO",
+          "description": "响应结果",
           "$ref": "#/definitions/EmailTaskDTO"
         },
         "ts": {
@@ -151,8 +151,8 @@
           ]
         },
         "sendingTimeConfig": {
-          "description": "发送时间配置",
           "originalRef": "SendingTimeConfigDTO",
+          "description": "发送时间配置",
           "$ref": "#/definitions/SendingTimeConfigDTO"
         },
         "createUserName": {

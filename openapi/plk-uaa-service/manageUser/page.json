@@ -178,8 +178,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«运营用户信息响应»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«运营用户信息响应»"
         },
         "ts": {
@@ -306,8 +306,8 @@
           "description": "邮件"
         },
         "manageEmployee": {
-          "description": "运营员工信息",
           "originalRef": "运营员工信息响应",
+          "description": "运营员工信息",
           "$ref": "#/definitions/运营员工信息响应"
         },
         "manageRoleList": {

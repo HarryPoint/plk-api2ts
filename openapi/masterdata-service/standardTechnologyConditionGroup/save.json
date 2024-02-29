@@ -28,8 +28,8 @@
             "description": "conditionGroupSaveRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/标准工艺条件组保存DTO",
-              "originalRef": "标准工艺条件组保存DTO"
+              "originalRef": "标准工艺条件组保存DTO",
+              "$ref": "#/definitions/标准工艺条件组保存DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«标准工艺条件组保存响应DTO»",
-              "originalRef": "JSONResult«标准工艺条件组保存响应DTO»"
+              "originalRef": "JSONResult«标准工艺条件组保存响应DTO»",
+              "$ref": "#/definitions/JSONResult«标准工艺条件组保存响应DTO»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "标准工艺条件",
           "items": {
-            "$ref": "#/definitions/标准工艺条件保存DTO",
-            "originalRef": "标准工艺条件保存DTO"
+            "originalRef": "标准工艺条件保存DTO",
+            "$ref": "#/definitions/标准工艺条件保存DTO"
           }
         }
       },
@@ -151,9 +151,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "标准工艺条件组保存响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/标准工艺条件组保存响应DTO",
-          "originalRef": "标准工艺条件组保存响应DTO"
+          "$ref": "#/definitions/标准工艺条件组保存响应DTO"
         },
         "ts": {
           "type": "integer",

@@ -116,8 +116,8 @@
           "description": "id"
         },
         "enterpriseRouter": {
-          "description": "企业路由",
           "originalRef": "企业路由响应 DTO",
+          "description": "企业路由",
           "$ref": "#/definitions/企业路由响应 DTO"
         },
         "sort": {
@@ -220,8 +220,8 @@
           ]
         },
         "config": {
-          "description": "配置",
           "originalRef": "企业路由配置响应 DTO",
+          "description": "配置",
           "$ref": "#/definitions/企业路由配置响应 DTO"
         }
       },
@@ -239,13 +239,13 @@
           ]
         },
         "appConfig": {
-          "description": "应用配置",
           "originalRef": "企业应用路由配置响应 DTO",
+          "description": "应用配置",
           "$ref": "#/definitions/企业应用路由配置响应 DTO"
         },
         "rpExtConfig": {
-          "description": "外部报表配置",
           "originalRef": "企业应用路由配置响应 DTO_1",
+          "description": "外部报表配置",
           "$ref": "#/definitions/企业应用路由配置响应 DTO_1"
         },
         "appOrganizationFiledList": {

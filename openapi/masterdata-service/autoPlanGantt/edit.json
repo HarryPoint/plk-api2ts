@@ -28,8 +28,8 @@
             "description": "scheduleInput",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/EditProducePlanAutoScheduleInputVO",
-              "originalRef": "EditProducePlanAutoScheduleInputVO"
+              "originalRef": "EditProducePlanAutoScheduleInputVO",
+              "$ref": "#/definitions/EditProducePlanAutoScheduleInputVO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«boolean»",
-              "originalRef": "JSONResult«boolean»"
+              "originalRef": "JSONResult«boolean»",
+              "$ref": "#/definitions/JSONResult«boolean»"
             }
           },
           "201": {

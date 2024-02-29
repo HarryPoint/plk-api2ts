@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/预测工费_1",
-                "originalRef": "预测工费_1"
+                "originalRef": "预测工费_1",
+                "$ref": "#/definitions/预测工费_1"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«预测工费»»",
-              "originalRef": "JSONResult«List«预测工费»»"
+              "originalRef": "JSONResult«List«预测工费»»",
+              "$ref": "#/definitions/JSONResult«List«预测工费»»"
             }
           },
           "201": {
@@ -130,8 +130,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/预测工费_2",
-            "originalRef": "预测工费_2"
+            "originalRef": "预测工费_2",
+            "$ref": "#/definitions/预测工费_2"
           }
         },
         "ts": {
@@ -156,14 +156,14 @@
           "description": "销售订单编码"
         },
         "masterMaterial": {
+          "originalRef": "ForecastMaterialInfo",
           "description": "主物料",
-          "$ref": "#/definitions/ForecastMaterialInfo",
-          "originalRef": "ForecastMaterialInfo"
+          "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "childMaterial": {
+          "originalRef": "ForecastMaterialInfo",
           "description": "子物料",
-          "$ref": "#/definitions/ForecastMaterialInfo",
-          "originalRef": "ForecastMaterialInfo"
+          "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "processId": {
           "type": "integer",

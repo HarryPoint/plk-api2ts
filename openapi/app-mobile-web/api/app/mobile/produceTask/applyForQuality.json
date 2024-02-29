@@ -85,8 +85,8 @@
           "description": "wip状态记录id"
         },
         "finishedMaterial": {
-          "description": "成品物料信息",
           "originalRef": "成品物料填写DTO",
+          "description": "成品物料信息",
           "$ref": "#/definitions/成品物料填写DTO"
         }
       },

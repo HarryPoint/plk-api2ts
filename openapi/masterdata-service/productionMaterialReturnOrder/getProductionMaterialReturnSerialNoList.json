@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProductionMaterialReturnSerialNoQueryResponseDTO»»",
-              "originalRef": "JSONResult«List«ProductionMaterialReturnSerialNoQueryResponseDTO»»"
+              "originalRef": "JSONResult«List«ProductionMaterialReturnSerialNoQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«ProductionMaterialReturnSerialNoQueryResponseDTO»»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProductionMaterialReturnSerialNoQueryResponseDTO",
-            "originalRef": "ProductionMaterialReturnSerialNoQueryResponseDTO"
+            "originalRef": "ProductionMaterialReturnSerialNoQueryResponseDTO",
+            "$ref": "#/definitions/ProductionMaterialReturnSerialNoQueryResponseDTO"
           }
         },
         "ts": {

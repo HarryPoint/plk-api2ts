@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/工费保存DTO",
-                "originalRef": "工费保存DTO"
+                "originalRef": "工费保存DTO",
+                "$ref": "#/definitions/工费保存DTO"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«string»»",
-              "originalRef": "JSONResult«List«string»»"
+              "originalRef": "JSONResult«List«string»»",
+              "$ref": "#/definitions/JSONResult«List«string»»"
             }
           },
           "201": {

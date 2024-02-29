@@ -28,8 +28,8 @@
             "description": "messageSend",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/金蝶消息发送请求",
-              "originalRef": "金蝶消息发送请求"
+              "originalRef": "金蝶消息发送请求",
+              "$ref": "#/definitions/金蝶消息发送请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

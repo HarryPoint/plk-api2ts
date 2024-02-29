@@ -29,8 +29,8 @@
             "description": "addRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产成本核算任务添加请求对象",
-              "originalRef": "生产成本核算任务添加请求对象"
+              "originalRef": "生产成本核算任务添加请求对象",
+              "$ref": "#/definitions/生产成本核算任务添加请求对象"
             }
           }
         ],
@@ -38,8 +38,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {

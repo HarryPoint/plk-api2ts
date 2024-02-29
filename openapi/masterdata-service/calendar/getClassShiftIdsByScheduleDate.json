@@ -36,8 +36,8 @@
             "description": "scheduleDate",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/排班日期DTO",
-              "originalRef": "排班日期DTO"
+              "originalRef": "排班日期DTO",
+              "$ref": "#/definitions/排班日期DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«Set«long»»",
-              "originalRef": "JSONResult«Set«long»»"
+              "originalRef": "JSONResult«Set«long»»",
+              "$ref": "#/definitions/JSONResult«Set«long»»"
             }
           },
           "201": {

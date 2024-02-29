@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产计划手动排产VO»»",
-              "originalRef": "JSONResult«List«生产计划手动排产VO»»"
+              "originalRef": "JSONResult«List«生产计划手动排产VO»»",
+              "$ref": "#/definitions/JSONResult«List«生产计划手动排产VO»»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产计划手动排产VO",
-            "originalRef": "生产计划手动排产VO"
+            "originalRef": "生产计划手动排产VO",
+            "$ref": "#/definitions/生产计划手动排产VO"
           }
         },
         "ts": {
@@ -114,24 +114,24 @@
           "type": "array",
           "description": "按日排产明细",
           "items": {
-            "$ref": "#/definitions/生产订单手动排产按日排产VO",
-            "originalRef": "生产订单手动排产按日排产VO"
+            "originalRef": "生产订单手动排产按日排产VO",
+            "$ref": "#/definitions/生产订单手动排产按日排产VO"
           }
         },
         "classShiftQuantities": {
           "type": "array",
           "description": "按班次排产明细",
           "items": {
-            "$ref": "#/definitions/生产订单手动排产按班次排产VO",
-            "originalRef": "生产订单手动排产按班次排产VO"
+            "originalRef": "生产订单手动排产按班次排产VO",
+            "$ref": "#/definitions/生产订单手动排产按班次排产VO"
           }
         },
         "steps": {
           "type": "array",
           "description": "步骤产量集",
           "items": {
-            "$ref": "#/definitions/生产订单手动排产明细步骤产量VO",
-            "originalRef": "生产订单手动排产明细步骤产量VO"
+            "originalRef": "生产订单手动排产明细步骤产量VO",
+            "$ref": "#/definitions/生产订单手动排产明细步骤产量VO"
           }
         }
       },
@@ -164,8 +164,8 @@
           "type": "array",
           "description": "班次产量集",
           "items": {
-            "$ref": "#/definitions/班次产量VO",
-            "originalRef": "班次产量VO"
+            "originalRef": "班次产量VO",
+            "$ref": "#/definitions/班次产量VO"
           }
         }
       },
@@ -198,16 +198,16 @@
           "type": "array",
           "description": "按日排产明细",
           "items": {
-            "$ref": "#/definitions/生产订单手动排产按日排产VO",
-            "originalRef": "生产订单手动排产按日排产VO"
+            "originalRef": "生产订单手动排产按日排产VO",
+            "$ref": "#/definitions/生产订单手动排产按日排产VO"
           }
         },
         "classShiftQuantities": {
           "type": "array",
           "description": "按班次排产明细",
           "items": {
-            "$ref": "#/definitions/生产订单手动排产按班次排产VO",
-            "originalRef": "生产订单手动排产按班次排产VO"
+            "originalRef": "生产订单手动排产按班次排产VO",
+            "$ref": "#/definitions/生产订单手动排产按班次排产VO"
           }
         }
       },

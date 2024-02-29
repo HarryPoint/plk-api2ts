@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«批次订单返回VO»»",
-              "originalRef": "JSONResult«List«批次订单返回VO»»"
+              "originalRef": "JSONResult«List«批次订单返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«批次订单返回VO»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/批次订单返回VO",
-            "originalRef": "批次订单返回VO"
+            "originalRef": "批次订单返回VO",
+            "$ref": "#/definitions/批次订单返回VO"
           }
         },
         "ts": {
@@ -249,8 +249,8 @@
           "type": "array",
           "description": "来源集",
           "items": {
-            "$ref": "#/definitions/批次订单来源返回VO",
-            "originalRef": "批次订单来源返回VO"
+            "originalRef": "批次订单来源返回VO",
+            "$ref": "#/definitions/批次订单来源返回VO"
           }
         },
         "createUserId": {

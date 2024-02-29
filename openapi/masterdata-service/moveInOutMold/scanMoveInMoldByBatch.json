@@ -28,8 +28,8 @@
             "description": "moveInMoldQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进料模具查询DTO",
-              "originalRef": "进料模具查询DTO"
+              "originalRef": "进料模具查询DTO",
+              "$ref": "#/definitions/进料模具查询DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«进料模具响应DTO»»",
-              "originalRef": "JSONResult«List«进料模具响应DTO»»"
+              "originalRef": "JSONResult«List«进料模具响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«进料模具响应DTO»»"
             }
           },
           "201": {
@@ -97,8 +97,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/进料模具响应DTO",
-            "originalRef": "进料模具响应DTO"
+            "originalRef": "进料模具响应DTO",
+            "$ref": "#/definitions/进料模具响应DTO"
           }
         },
         "ts": {

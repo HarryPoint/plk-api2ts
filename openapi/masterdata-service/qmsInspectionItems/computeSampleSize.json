@@ -28,8 +28,8 @@
             "description": "computeRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/检验项计算DTO",
-              "originalRef": "检验项计算DTO"
+              "originalRef": "检验项计算DTO",
+              "$ref": "#/definitions/检验项计算DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«检验项计算响应DTO»",
-              "originalRef": "JSONResult«检验项计算响应DTO»"
+              "originalRef": "JSONResult«检验项计算响应DTO»",
+              "$ref": "#/definitions/JSONResult«检验项计算响应DTO»"
             }
           },
           "201": {
@@ -99,9 +99,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "检验项计算响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/检验项计算响应DTO",
-          "originalRef": "检验项计算响应DTO"
+          "$ref": "#/definitions/检验项计算响应DTO"
         },
         "ts": {
           "type": "integer",

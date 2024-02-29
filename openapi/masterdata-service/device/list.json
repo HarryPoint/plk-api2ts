@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«设备DTO»»",
-              "originalRef": "JSONResult«List«设备DTO»»"
+              "originalRef": "JSONResult«List«设备DTO»»",
+              "$ref": "#/definitions/JSONResult«List«设备DTO»»"
             }
           },
           "401": {
@@ -61,8 +61,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/设备DTO",
-            "originalRef": "设备DTO"
+            "originalRef": "设备DTO",
+            "$ref": "#/definitions/设备DTO"
           }
         },
         "ts": {

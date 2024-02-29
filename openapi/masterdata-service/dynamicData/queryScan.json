@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/AssociationFormScanQueryRequestDTO",
-              "originalRef": "AssociationFormScanQueryRequestDTO"
+              "originalRef": "AssociationFormScanQueryRequestDTO",
+              "$ref": "#/definitions/AssociationFormScanQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«AssociationFormScanQueryResponseDTO»»",
-              "originalRef": "JSONResult«List«AssociationFormScanQueryResponseDTO»»"
+              "originalRef": "JSONResult«List«AssociationFormScanQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«AssociationFormScanQueryResponseDTO»»"
             }
           },
           "201": {
@@ -109,8 +109,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/AssociationFormScanQueryResponseDTO",
-            "originalRef": "AssociationFormScanQueryResponseDTO"
+            "originalRef": "AssociationFormScanQueryResponseDTO",
+            "$ref": "#/definitions/AssociationFormScanQueryResponseDTO"
           }
         },
         "ts": {

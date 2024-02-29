@@ -67,8 +67,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "表格定义",
+          "description": "响应结果",
           "$ref": "#/definitions/表格定义"
         },
         "ts": {
@@ -97,8 +97,8 @@
           "description": "表格名称"
         },
         "application": {
-          "description": "应用",
           "originalRef": "ApplicationDTO",
+          "description": "应用",
           "$ref": "#/definitions/ApplicationDTO"
         },
         "mainBusinessFieldCode": {
@@ -354,13 +354,13 @@
           "description": "组名"
         },
         "currentApplication": {
-          "description": "当前应用",
           "originalRef": "ApplicationDTO",
+          "description": "当前应用",
           "$ref": "#/definitions/ApplicationDTO"
         },
         "associationApplication": {
-          "description": "关联应用",
           "originalRef": "ApplicationDTO",
+          "description": "关联应用",
           "$ref": "#/definitions/ApplicationDTO"
         },
         "required": {

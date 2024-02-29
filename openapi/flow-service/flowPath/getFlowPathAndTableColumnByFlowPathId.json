@@ -75,8 +75,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "流程及表格列VO",
+          "description": "响应结果",
           "$ref": "#/definitions/流程及表格列VO"
         },
         "ts": {

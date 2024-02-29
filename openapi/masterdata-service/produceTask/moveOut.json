@@ -36,8 +36,8 @@
             "description": "moveOutRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进出站信息DTO",
-              "originalRef": "进出站信息DTO"
+              "originalRef": "进出站信息DTO",
+              "$ref": "#/definitions/进出站信息DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -89,22 +89,22 @@
           "type": "array",
           "description": "成品物料填写信息列表",
           "items": {
-            "$ref": "#/definitions/成品物料填写请求DTO",
-            "originalRef": "成品物料填写请求DTO"
+            "originalRef": "成品物料填写请求DTO",
+            "$ref": "#/definitions/成品物料填写请求DTO"
           }
         },
         "bomMaterials": {
           "type": "array",
           "description": "BOM消耗列表",
           "items": {
-            "$ref": "#/definitions/BOM消耗请求DTO",
-            "originalRef": "BOM消耗请求DTO"
+            "originalRef": "BOM消耗请求DTO",
+            "$ref": "#/definitions/BOM消耗请求DTO"
           }
         },
         "keyParametersInfo": {
+          "originalRef": "进出站工艺卡填写",
           "description": "关键参数信息填写",
-          "$ref": "#/definitions/进出站工艺卡填写",
-          "originalRef": "进出站工艺卡填写"
+          "$ref": "#/definitions/进出站工艺卡填写"
         },
         "handleOtherAsync": {
           "type": "string",
@@ -166,8 +166,8 @@
           "type": "array",
           "description": "进料批次列表",
           "items": {
-            "$ref": "#/definitions/bom消耗批次订单请求对象",
-            "originalRef": "bom消耗批次订单请求对象"
+            "originalRef": "bom消耗批次订单请求对象",
+            "$ref": "#/definitions/bom消耗批次订单请求对象"
           }
         },
         "externalCodeList": {
@@ -222,8 +222,8 @@
           "type": "array",
           "description": "录入集合 - 带录入信息",
           "items": {
-            "$ref": "#/definitions/关键参数明细填写信息",
-            "originalRef": "关键参数明细填写信息"
+            "originalRef": "关键参数明细填写信息",
+            "$ref": "#/definitions/关键参数明细填写信息"
           }
         }
       },

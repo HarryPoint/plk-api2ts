@@ -93,8 +93,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "StandardTechnologyMatchResponseDTO",
+          "description": "响应结果",
           "$ref": "#/definitions/StandardTechnologyMatchResponseDTO"
         },
         "ts": {
@@ -132,13 +132,13 @@
       "type": "object",
       "properties": {
         "produceOrder": {
-          "description": "生产订单ID",
           "originalRef": "单据",
+          "description": "生产订单ID",
           "$ref": "#/definitions/单据"
         },
         "material": {
-          "description": "物料",
           "originalRef": "基础数据",
+          "description": "物料",
           "$ref": "#/definitions/基础数据"
         },
         "standardTechnologyList": {

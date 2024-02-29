@@ -166,8 +166,8 @@
           ]
         },
         "config": {
-          "description": "路由配置",
           "originalRef": "路由配置响应 DTO",
+          "description": "路由配置",
           "$ref": "#/definitions/路由配置响应 DTO"
         },
         "applicationLevel": {
@@ -201,8 +201,8 @@
           ]
         },
         "appConfig": {
-          "description": "应用配置",
           "originalRef": "应用路由配置响应 DTO",
+          "description": "应用配置",
           "$ref": "#/definitions/应用路由配置响应 DTO"
         }
       },

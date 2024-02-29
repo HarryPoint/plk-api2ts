@@ -28,8 +28,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/宝晶报表(库存)相关搜索DTO",
-              "originalRef": "宝晶报表(库存)相关搜索DTO"
+              "originalRef": "宝晶报表(库存)相关搜索DTO",
+              "$ref": "#/definitions/宝晶报表(库存)相关搜索DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -82,8 +82,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "groupBys": {

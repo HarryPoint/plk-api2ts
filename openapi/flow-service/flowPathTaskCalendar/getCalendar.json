@@ -167,8 +167,8 @@
           "description": "班次名称"
         },
         "flowPathShiftBeginTime": {
-          "description": "班次开始时间",
           "originalRef": "LocalTime",
+          "description": "班次开始时间",
           "$ref": "#/definitions/LocalTime"
         },
         "endTimeType": {
@@ -180,8 +180,8 @@
           ]
         },
         "flowPathShiftEndTime": {
-          "description": "班次结束时间",
           "originalRef": "LocalTime",
+          "description": "班次结束时间",
           "$ref": "#/definitions/LocalTime"
         },
         "planName": {

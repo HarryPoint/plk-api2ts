@@ -28,8 +28,8 @@
             "description": "matchRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/StandardTechnologyMatchRequestDTO",
-              "originalRef": "StandardTechnologyMatchRequestDTO"
+              "originalRef": "StandardTechnologyMatchRequestDTO",
+              "$ref": "#/definitions/StandardTechnologyMatchRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«StandardTechnologyMatchResponseDTO»",
-              "originalRef": "JSONResult«StandardTechnologyMatchResponseDTO»"
+              "originalRef": "JSONResult«StandardTechnologyMatchResponseDTO»",
+              "$ref": "#/definitions/JSONResult«StandardTechnologyMatchResponseDTO»"
             }
           },
           "201": {
@@ -93,9 +93,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "StandardTechnologyMatchResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/StandardTechnologyMatchResponseDTO",
-          "originalRef": "StandardTechnologyMatchResponseDTO"
+          "$ref": "#/definitions/StandardTechnologyMatchResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -113,16 +113,16 @@
           "type": "array",
           "description": "匹配成功项",
           "items": {
-            "$ref": "#/definitions/StandardTechnologyMatchItemResponseDTO",
-            "originalRef": "StandardTechnologyMatchItemResponseDTO"
+            "originalRef": "StandardTechnologyMatchItemResponseDTO",
+            "$ref": "#/definitions/StandardTechnologyMatchItemResponseDTO"
           }
         },
         "matchFailItemList": {
           "type": "array",
           "description": "匹配失败的标准工艺列表",
           "items": {
-            "$ref": "#/definitions/StandardTechnologyMatchItemResponseDTO",
-            "originalRef": "StandardTechnologyMatchItemResponseDTO"
+            "originalRef": "StandardTechnologyMatchItemResponseDTO",
+            "$ref": "#/definitions/StandardTechnologyMatchItemResponseDTO"
           }
         }
       },
@@ -132,21 +132,21 @@
       "type": "object",
       "properties": {
         "produceOrder": {
+          "originalRef": "单据",
           "description": "生产订单ID",
-          "$ref": "#/definitions/单据",
-          "originalRef": "单据"
+          "$ref": "#/definitions/单据"
         },
         "material": {
+          "originalRef": "基础数据",
           "description": "物料",
-          "$ref": "#/definitions/基础数据",
-          "originalRef": "基础数据"
+          "$ref": "#/definitions/基础数据"
         },
         "standardTechnologyList": {
           "type": "array",
           "description": "匹配的生产工艺列表",
           "items": {
-            "$ref": "#/definitions/StandardTechnologyDTO",
-            "originalRef": "StandardTechnologyDTO"
+            "originalRef": "StandardTechnologyDTO",
+            "$ref": "#/definitions/StandardTechnologyDTO"
           }
         },
         "currentMaterialRecentlyMatchedStandardTechnologyId": {
@@ -158,8 +158,8 @@
           "type": "array",
           "description": "订单批次信息",
           "items": {
-            "$ref": "#/definitions/批次信息VO",
-            "originalRef": "批次信息VO"
+            "originalRef": "批次信息VO",
+            "$ref": "#/definitions/批次信息VO"
           }
         }
       },

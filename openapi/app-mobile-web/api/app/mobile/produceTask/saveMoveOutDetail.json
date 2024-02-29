@@ -89,8 +89,8 @@
           "description": "wip状态记录id"
         },
         "finishedMaterial": {
-          "description": "成品物料信息",
           "originalRef": "成品物料填写DTO",
+          "description": "成品物料信息",
           "$ref": "#/definitions/成品物料填写DTO"
         },
         "bomMaterials": {
@@ -102,8 +102,8 @@
           }
         },
         "keyParametersInfo": {
-          "description": "关键参数信息填写",
           "originalRef": "进出站工艺卡填写",
+          "description": "关键参数信息填写",
           "$ref": "#/definitions/进出站工艺卡填写"
         }
       },

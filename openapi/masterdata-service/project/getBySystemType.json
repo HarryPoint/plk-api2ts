@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目动态表单记录查询_1",
-              "originalRef": "项目动态表单记录查询_1"
+              "originalRef": "项目动态表单记录查询_1",
+              "$ref": "#/definitions/项目动态表单记录查询_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«表单结构VO»",
-              "originalRef": "JSONResult«表单结构VO»"
+              "originalRef": "JSONResult«表单结构VO»",
+              "$ref": "#/definitions/JSONResult«表单结构VO»"
             }
           },
           "201": {
@@ -274,9 +274,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "表单结构VO_1",
           "description": "响应结果",
-          "$ref": "#/definitions/表单结构VO_1",
-          "originalRef": "表单结构VO_1"
+          "$ref": "#/definitions/表单结构VO_1"
         },
         "ts": {
           "type": "integer",
@@ -325,8 +325,8 @@
           "type": "array",
           "description": "表单结构",
           "items": {
-            "$ref": "#/definitions/表单结构VO",
-            "originalRef": "表单结构VO"
+            "originalRef": "表单结构VO",
+            "$ref": "#/definitions/表单结构VO"
           }
         },
         "data": {
@@ -353,9 +353,9 @@
           "description": "所属表单字段id"
         },
         "formField": {
+          "originalRef": "流程表单VO",
           "description": "表单字段信息",
-          "$ref": "#/definitions/流程表单VO",
-          "originalRef": "流程表单VO"
+          "$ref": "#/definitions/流程表单VO"
         },
         "permissionsType": {
           "type": "string",
@@ -370,8 +370,8 @@
           "type": "array",
           "description": "表格内字段结构集",
           "items": {
-            "$ref": "#/definitions/表单结构VO",
-            "originalRef": "表单结构VO"
+            "originalRef": "表单结构VO",
+            "$ref": "#/definitions/表单结构VO"
           }
         }
       },
@@ -609,16 +609,16 @@
           "type": "array",
           "description": "计算公式用到的表单序号值集",
           "items": {
-            "$ref": "#/definitions/流程表单公式字段返回VO",
-            "originalRef": "流程表单公式字段返回VO"
+            "originalRef": "流程表单公式字段返回VO",
+            "$ref": "#/definitions/流程表单公式字段返回VO"
           }
         },
         "codeNumberRules": {
           "type": "array",
           "description": "编码规则",
           "items": {
-            "$ref": "#/definitions/流程表单字段编码规则明细VO",
-            "originalRef": "流程表单字段编码规则明细VO"
+            "originalRef": "流程表单字段编码规则明细VO",
+            "$ref": "#/definitions/流程表单字段编码规则明细VO"
           }
         },
         "isMust": {
@@ -688,24 +688,24 @@
           "type": "array",
           "description": "选项集",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "selectorDictionaryList": {
           "type": "array",
           "description": "选项集字典",
           "items": {
-            "$ref": "#/definitions/流程表单字段关联字典选项集VO",
-            "originalRef": "流程表单字段关联字典选项集VO"
+            "originalRef": "流程表单字段关联字典选项集VO",
+            "$ref": "#/definitions/流程表单字段关联字典选项集VO"
           }
         },
         "selectorAssociateDisplayList": {
           "type": "array",
           "description": "下拉选项关联显示列表",
           "items": {
-            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO",
-            "originalRef": "流程表单字段下拉选项关联显示VO"
+            "originalRef": "流程表单字段下拉选项关联显示VO",
+            "$ref": "#/definitions/流程表单字段下拉选项关联显示VO"
           }
         },
         "selectorOptionSource": {
@@ -790,24 +790,24 @@
           "type": "array",
           "description": "关联表单筛选条件组集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单筛选条件组VO",
-            "originalRef": "流程表单关联表单筛选条件组VO"
+            "originalRef": "流程表单关联表单筛选条件组VO",
+            "$ref": "#/definitions/流程表单关联表单筛选条件组VO"
           }
         },
         "formRpFills": {
           "type": "array",
           "description": "关联表单填充规则集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单填充VO",
-            "originalRef": "流程表单关联表单填充VO"
+            "originalRef": "流程表单关联表单填充VO",
+            "$ref": "#/definitions/流程表单关联表单填充VO"
           }
         },
         "tableCustomFormFields": {
           "type": "array",
           "description": "表格自定义字段集",
           "items": {
-            "$ref": "#/definitions/流程表单VO",
-            "originalRef": "流程表单VO"
+            "originalRef": "流程表单VO",
+            "$ref": "#/definitions/流程表单VO"
           }
         },
         "style": {
@@ -926,16 +926,16 @@
           ]
         },
         "dataLinkage": {
+          "originalRef": "FlowPathFormFieldDataLinkageVO",
           "description": "数据联动",
-          "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO",
-          "originalRef": "FlowPathFormFieldDataLinkageVO"
+          "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {
           "type": "array",
           "description": "字段值限制规则",
           "items": {
-            "$ref": "#/definitions/FlowPathFormFieldValueLimitRuleEditDTO",
-            "originalRef": "FlowPathFormFieldValueLimitRuleEditDTO"
+            "originalRef": "FlowPathFormFieldValueLimitRuleEditDTO",
+            "$ref": "#/definitions/FlowPathFormFieldValueLimitRuleEditDTO"
           }
         },
         "isHyperlinkEnabled": {
@@ -1190,8 +1190,8 @@
           "type": "array",
           "description": "条件集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单筛选条件VO",
-            "originalRef": "流程表单关联表单筛选条件VO"
+            "originalRef": "流程表单关联表单筛选条件VO",
+            "$ref": "#/definitions/流程表单关联表单筛选条件VO"
           }
         },
         "isSystemDefault": {
@@ -1415,8 +1415,8 @@
           "type": "array",
           "description": "筛选条件组集",
           "items": {
-            "$ref": "#/definitions/流程表单关联表单筛选条件组VO",
-            "originalRef": "流程表单关联表单筛选条件组VO"
+            "originalRef": "流程表单关联表单筛选条件组VO",
+            "$ref": "#/definitions/流程表单关联表单筛选条件组VO"
           }
         }
       },

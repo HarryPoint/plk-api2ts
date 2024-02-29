@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程任务处理结果查询VO",
-              "originalRef": "流程任务处理结果查询VO"
+              "originalRef": "流程任务处理结果查询VO",
+              "$ref": "#/definitions/流程任务处理结果查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«流程任务处理结果VO»»",
-              "originalRef": "JSONResult«List«流程任务处理结果VO»»"
+              "originalRef": "JSONResult«List«流程任务处理结果VO»»",
+              "$ref": "#/definitions/JSONResult«List«流程任务处理结果VO»»"
             }
           },
           "201": {
@@ -280,8 +280,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/流程任务处理结果VO",
-            "originalRef": "流程任务处理结果VO"
+            "originalRef": "流程任务处理结果VO",
+            "$ref": "#/definitions/流程任务处理结果VO"
           }
         },
         "ts": {

@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«质检项详细返回VO»",
-              "originalRef": "JSONResult«质检项详细返回VO»"
+              "originalRef": "JSONResult«质检项详细返回VO»",
+              "$ref": "#/definitions/JSONResult«质检项详细返回VO»"
             }
           },
           "401": {
@@ -75,9 +75,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "质检项详细返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/质检项详细返回VO",
-          "originalRef": "质检项详细返回VO"
+          "$ref": "#/definitions/质检项详细返回VO"
         },
         "ts": {
           "type": "integer",
@@ -153,8 +153,8 @@
           "type": "array",
           "description": "选项内容集合",
           "items": {
-            "$ref": "#/definitions/质检项选择项返回VO",
-            "originalRef": "质检项选择项返回VO"
+            "originalRef": "质检项选择项返回VO",
+            "$ref": "#/definitions/质检项选择项返回VO"
           }
         }
       },

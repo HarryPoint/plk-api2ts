@@ -93,8 +93,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "工厂日历返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/工厂日历返回VO"
         },
         "ts": {
@@ -172,8 +172,8 @@
           "description": "班次名称"
         },
         "classShiftBeginTime": {
-          "description": "班次开始时间",
           "originalRef": "LocalTime",
+          "description": "班次开始时间",
           "$ref": "#/definitions/LocalTime"
         },
         "endTimeType": {
@@ -185,8 +185,8 @@
           ]
         },
         "classShiftEndTime": {
-          "description": "班次结束时间",
           "originalRef": "LocalTime",
+          "description": "班次结束时间",
           "$ref": "#/definitions/LocalTime"
         },
         "classGroupList": {

@@ -36,8 +36,8 @@
             "description": "rpEdit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/设备数采方案应用设备关联信息编辑DTO",
-              "originalRef": "设备数采方案应用设备关联信息编辑DTO"
+              "originalRef": "设备数采方案应用设备关联信息编辑DTO",
+              "$ref": "#/definitions/设备数采方案应用设备关联信息编辑DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

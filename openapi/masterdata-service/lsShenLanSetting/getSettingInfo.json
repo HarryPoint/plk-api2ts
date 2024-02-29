@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«深蓝生产大屏设置返回VO»",
-              "originalRef": "JSONResult«深蓝生产大屏设置返回VO»"
+              "originalRef": "JSONResult«深蓝生产大屏设置返回VO»",
+              "$ref": "#/definitions/JSONResult«深蓝生产大屏设置返回VO»"
             }
           },
           "401": {
@@ -67,9 +67,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "深蓝生产大屏设置返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/深蓝生产大屏设置返回VO",
-          "originalRef": "深蓝生产大屏设置返回VO"
+          "$ref": "#/definitions/深蓝生产大屏设置返回VO"
         },
         "ts": {
           "type": "integer",
@@ -89,9 +89,9 @@
           "description": "大屏左侧质检合格率工序id"
         },
         "leftQualityPassRatios": {
+          "originalRef": "深蓝生产大屏合格率数据设置返回VO",
           "description": "大屏左侧质检数据",
-          "$ref": "#/definitions/深蓝生产大屏合格率数据设置返回VO",
-          "originalRef": "深蓝生产大屏合格率数据设置返回VO"
+          "$ref": "#/definitions/深蓝生产大屏合格率数据设置返回VO"
         },
         "rightQualityPassRatioProcessId": {
           "type": "integer",
@@ -99,9 +99,9 @@
           "description": "大屏右侧质检合格率工序id"
         },
         "rightQualityPassRatios": {
+          "originalRef": "深蓝生产大屏合格率数据设置返回VO",
           "description": "大屏右侧质检数据",
-          "$ref": "#/definitions/深蓝生产大屏合格率数据设置返回VO",
-          "originalRef": "深蓝生产大屏合格率数据设置返回VO"
+          "$ref": "#/definitions/深蓝生产大屏合格率数据设置返回VO"
         },
         "centerProductionType": {
           "type": "string",
@@ -115,14 +115,14 @@
           "type": "array",
           "description": "大屏中部业务对象集",
           "items": {
-            "$ref": "#/definitions/深蓝生产大屏产出设置返回VO",
-            "originalRef": "深蓝生产大屏产出设置返回VO"
+            "originalRef": "深蓝生产大屏产出设置返回VO",
+            "$ref": "#/definitions/深蓝生产大屏产出设置返回VO"
           }
         },
         "everydayResetTime": {
+          "originalRef": "LocalTime",
           "description": "每日清零时间",
-          "$ref": "#/definitions/LocalTime",
-          "originalRef": "LocalTime"
+          "$ref": "#/definitions/LocalTime"
         }
       },
       "title": "深蓝生产大屏设置返回VO"
@@ -181,16 +181,16 @@
           "type": "array",
           "description": "过去12个月明细",
           "items": {
-            "$ref": "#/definitions/深蓝生产大屏产出设置明细返回VO",
-            "originalRef": "深蓝生产大屏产出设置明细返回VO"
+            "originalRef": "深蓝生产大屏产出设置明细返回VO",
+            "$ref": "#/definitions/深蓝生产大屏产出设置明细返回VO"
           }
         },
         "year10Details": {
           "type": "array",
           "description": "过去10年明细",
           "items": {
-            "$ref": "#/definitions/深蓝生产大屏产出设置明细返回VO",
-            "originalRef": "深蓝生产大屏产出设置明细返回VO"
+            "originalRef": "深蓝生产大屏产出设置明细返回VO",
+            "$ref": "#/definitions/深蓝生产大屏产出设置明细返回VO"
           }
         }
       },

@@ -57,8 +57,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "深蓝生产大屏设置返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/深蓝生产大屏设置返回VO"
         },
         "ts": {
@@ -79,8 +79,8 @@
           "description": "大屏左侧质检合格率工序id"
         },
         "leftQualityPassRatios": {
-          "description": "大屏左侧质检数据",
           "originalRef": "深蓝生产大屏合格率数据设置返回VO",
+          "description": "大屏左侧质检数据",
           "$ref": "#/definitions/深蓝生产大屏合格率数据设置返回VO"
         },
         "rightQualityPassRatioProcessId": {
@@ -89,8 +89,8 @@
           "description": "大屏右侧质检合格率工序id"
         },
         "rightQualityPassRatios": {
-          "description": "大屏右侧质检数据",
           "originalRef": "深蓝生产大屏合格率数据设置返回VO",
+          "description": "大屏右侧质检数据",
           "$ref": "#/definitions/深蓝生产大屏合格率数据设置返回VO"
         },
         "centerProductionType": {
@@ -110,8 +110,8 @@
           }
         },
         "everydayResetTime": {
-          "description": "每日清零时间",
           "originalRef": "LocalTime",
+          "description": "每日清零时间",
           "$ref": "#/definitions/LocalTime"
         }
       },

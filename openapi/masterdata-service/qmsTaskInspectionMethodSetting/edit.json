@@ -28,8 +28,8 @@
             "description": "editRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/设置检验任务检验方式请求DTO",
-              "originalRef": "设置检验任务检验方式请求DTO"
+              "originalRef": "设置检验任务检验方式请求DTO",
+              "$ref": "#/definitions/设置检验任务检验方式请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

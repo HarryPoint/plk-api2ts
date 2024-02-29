@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«项目文件响应DTO»",
-              "originalRef": "JSONResult«项目文件响应DTO»"
+              "originalRef": "JSONResult«项目文件响应DTO»",
+              "$ref": "#/definitions/JSONResult«项目文件响应DTO»"
             }
           },
           "401": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "项目文件响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/项目文件响应DTO",
-          "originalRef": "项目文件响应DTO"
+          "$ref": "#/definitions/项目文件响应DTO"
         },
         "ts": {
           "type": "integer",

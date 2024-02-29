@@ -47,8 +47,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«异常类型返回VO»»",
-              "originalRef": "JSONResult«List«异常类型返回VO»»"
+              "originalRef": "JSONResult«List«异常类型返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«异常类型返回VO»»"
             }
           },
           "401": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/异常类型返回VO",
-            "originalRef": "异常类型返回VO"
+            "originalRef": "异常类型返回VO",
+            "$ref": "#/definitions/异常类型返回VO"
           }
         },
         "ts": {

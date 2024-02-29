@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产处理查询VO - 针对生产订单",
-              "originalRef": "生产处理查询VO - 针对生产订单"
+              "originalRef": "生产处理查询VO - 针对生产订单",
+              "$ref": "#/definitions/生产处理查询VO - 针对生产订单"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产处理基础信息响应DTO»»",
-              "originalRef": "JSONResult«List«生产处理基础信息响应DTO»»"
+              "originalRef": "JSONResult«List«生产处理基础信息响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«生产处理基础信息响应DTO»»"
             }
           },
           "201": {
@@ -119,8 +119,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产处理基础信息响应DTO",
-            "originalRef": "生产处理基础信息响应DTO"
+            "originalRef": "生产处理基础信息响应DTO",
+            "$ref": "#/definitions/生产处理基础信息响应DTO"
           }
         },
         "ts": {
@@ -265,8 +265,8 @@
           "type": "array",
           "description": "工艺卡录入信息 - 仅已进出站有工艺卡信息时有值",
           "items": {
-            "$ref": "#/definitions/进出站关键参数明细响应DTO",
-            "originalRef": "进出站关键参数明细响应DTO"
+            "originalRef": "进出站关键参数明细响应DTO",
+            "$ref": "#/definitions/进出站关键参数明细响应DTO"
           }
         },
         "desc": {

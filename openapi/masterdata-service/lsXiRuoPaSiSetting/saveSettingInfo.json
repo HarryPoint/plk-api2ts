@@ -28,8 +28,8 @@
             "description": "editDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/西偌帕斯大屏设置DTO",
-              "originalRef": "西偌帕斯大屏设置DTO"
+              "originalRef": "西偌帕斯大屏设置DTO",
+              "$ref": "#/definitions/西偌帕斯大屏设置DTO"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -106,16 +106,16 @@
           "type": "array",
           "description": "计划设置集",
           "items": {
-            "$ref": "#/definitions/西偌帕斯大屏计划数设置DTO",
-            "originalRef": "西偌帕斯大屏计划数设置DTO"
+            "originalRef": "西偌帕斯大屏计划数设置DTO",
+            "$ref": "#/definitions/西偌帕斯大屏计划数设置DTO"
           }
         },
         "processTargetSettings": {
           "type": "array",
           "description": "工序目标值设置集",
           "items": {
-            "$ref": "#/definitions/西偌帕斯工序目标值大屏设置DTO",
-            "originalRef": "西偌帕斯工序目标值大屏设置DTO"
+            "originalRef": "西偌帕斯工序目标值大屏设置DTO",
+            "$ref": "#/definitions/西偌帕斯工序目标值大屏设置DTO"
           }
         },
         "scrapStatisticsTime": {

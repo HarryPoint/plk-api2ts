@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«表单数据分组DTO»»",
-              "originalRef": "JSONResult«List«表单数据分组DTO»»"
+              "originalRef": "JSONResult«List«表单数据分组DTO»»",
+              "$ref": "#/definitions/JSONResult«List«表单数据分组DTO»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/表单数据分组DTO",
-            "originalRef": "表单数据分组DTO"
+            "originalRef": "表单数据分组DTO",
+            "$ref": "#/definitions/表单数据分组DTO"
           }
         },
         "ts": {
@@ -106,8 +106,8 @@
           "type": "array",
           "description": "下级分组",
           "items": {
-            "$ref": "#/definitions/表单数据分组DTO",
-            "originalRef": "表单数据分组DTO"
+            "originalRef": "表单数据分组DTO",
+            "$ref": "#/definitions/表单数据分组DTO"
           }
         },
         "cascadeFormData": {

@@ -28,8 +28,8 @@
             "description": "saveRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目大屏设置保存请求dto_1",
-              "originalRef": "项目大屏设置保存请求dto_1"
+              "originalRef": "项目大屏设置保存请求dto_1",
+              "$ref": "#/definitions/项目大屏设置保存请求dto_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

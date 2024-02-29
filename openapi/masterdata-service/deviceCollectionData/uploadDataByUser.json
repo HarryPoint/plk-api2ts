@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/设备数采数据上传",
-                "originalRef": "设备数采数据上传"
+                "originalRef": "设备数采数据上传",
+                "$ref": "#/definitions/设备数采数据上传"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

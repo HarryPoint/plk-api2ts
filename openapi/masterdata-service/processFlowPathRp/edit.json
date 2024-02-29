@@ -28,8 +28,8 @@
             "description": "editDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/工序字段对应表编辑DTO",
-              "originalRef": "工序字段对应表编辑DTO"
+              "originalRef": "工序字段对应表编辑DTO",
+              "$ref": "#/definitions/工序字段对应表编辑DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

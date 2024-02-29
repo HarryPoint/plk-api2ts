@@ -28,8 +28,8 @@
             "description": "moveInMoldScanRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进料扫描请求DTO",
-              "originalRef": "进料扫描请求DTO"
+              "originalRef": "进料扫描请求DTO",
+              "$ref": "#/definitions/进料扫描请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«进料扫描响应对象DTO»",
-              "originalRef": "JSONResult«进料扫描响应对象DTO»"
+              "originalRef": "JSONResult«进料扫描响应对象DTO»",
+              "$ref": "#/definitions/JSONResult«进料扫描响应对象DTO»"
             }
           },
           "201": {
@@ -100,9 +100,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "进料扫描响应对象DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/进料扫描响应对象DTO",
-          "originalRef": "进料扫描响应对象DTO"
+          "$ref": "#/definitions/进料扫描响应对象DTO"
         },
         "ts": {
           "type": "integer",
@@ -117,24 +117,24 @@
       "type": "object",
       "properties": {
         "moveInDevice": {
+          "originalRef": "进料设备响应DTO_1",
           "description": "进料设备",
-          "$ref": "#/definitions/进料设备响应DTO_1",
-          "originalRef": "进料设备响应DTO_1"
+          "$ref": "#/definitions/进料设备响应DTO_1"
         },
         "moveInMold": {
+          "originalRef": "进料模具响应DTO_1",
           "description": "进料模具",
-          "$ref": "#/definitions/进料模具响应DTO_1",
-          "originalRef": "进料模具响应DTO_1"
+          "$ref": "#/definitions/进料模具响应DTO_1"
         },
         "moveInMaterial": {
+          "originalRef": "进料bom消耗物料扫描响应DTO",
           "description": "所需物料",
-          "$ref": "#/definitions/进料bom消耗物料扫描响应DTO",
-          "originalRef": "进料bom消耗物料扫描响应DTO"
+          "$ref": "#/definitions/进料bom消耗物料扫描响应DTO"
         },
         "externalCodeResult": {
+          "originalRef": "进料bom消耗物料外部码扫描响应DTO",
           "description": "外部码",
-          "$ref": "#/definitions/进料bom消耗物料外部码扫描响应DTO",
-          "originalRef": "进料bom消耗物料外部码扫描响应DTO"
+          "$ref": "#/definitions/进料bom消耗物料外部码扫描响应DTO"
         }
       },
       "title": "进料扫描响应对象DTO"

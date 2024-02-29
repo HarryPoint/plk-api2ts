@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»",
-              "originalRef": "JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»"
+              "originalRef": "JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»",
+              "$ref": "#/definitions/JSONResult«导出信息«宝晶收款汇总分析报表表格返回VO»»"
             }
           },
           "401": {
@@ -66,9 +66,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "导出信息«宝晶收款汇总分析报表表格返回VO»",
           "description": "响应结果",
-          "$ref": "#/definitions/导出信息«宝晶收款汇总分析报表表格返回VO»",
-          "originalRef": "导出信息«宝晶收款汇总分析报表表格返回VO»"
+          "$ref": "#/definitions/导出信息«宝晶收款汇总分析报表表格返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "数据",
           "items": {
-            "$ref": "#/definitions/宝晶收款汇总分析报表表格返回VO",
-            "originalRef": "宝晶收款汇总分析报表表格返回VO"
+            "originalRef": "宝晶收款汇总分析报表表格返回VO",
+            "$ref": "#/definitions/宝晶收款汇总分析报表表格返回VO"
           }
         }
       },

@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/分页_12",
-              "originalRef": "分页_12"
+              "originalRef": "分页_12",
+              "$ref": "#/definitions/分页_12"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»",
-              "originalRef": "JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»"
+              "originalRef": "JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«ProduceOrderSelectionItemQueryResponseDTO»»"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "produceOrderCodeMatch": {
@@ -136,9 +136,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "分页信息«ProduceOrderSelectionItemQueryResponseDTO»",
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«ProduceOrderSelectionItemQueryResponseDTO»",
-          "originalRef": "分页信息«ProduceOrderSelectionItemQueryResponseDTO»"
+          "$ref": "#/definitions/分页信息«ProduceOrderSelectionItemQueryResponseDTO»"
         },
         "ts": {
           "type": "integer",
@@ -176,8 +176,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/ProduceOrderSelectionItemQueryResponseDTO",
-            "originalRef": "ProduceOrderSelectionItemQueryResponseDTO"
+            "originalRef": "ProduceOrderSelectionItemQueryResponseDTO",
+            "$ref": "#/definitions/ProduceOrderSelectionItemQueryResponseDTO"
           }
         },
         "lastPage": {

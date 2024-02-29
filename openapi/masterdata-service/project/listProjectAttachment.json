@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProjectAttachmentResponseDTO»»",
-              "originalRef": "JSONResult«List«ProjectAttachmentResponseDTO»»"
+              "originalRef": "JSONResult«List«ProjectAttachmentResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«ProjectAttachmentResponseDTO»»"
             }
           },
           "401": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProjectAttachmentResponseDTO",
-            "originalRef": "ProjectAttachmentResponseDTO"
+            "originalRef": "ProjectAttachmentResponseDTO",
+            "$ref": "#/definitions/ProjectAttachmentResponseDTO"
           }
         },
         "ts": {

@@ -83,8 +83,8 @@
           }
         },
         "lotSetting": {
-          "description": "物料批次设置",
           "originalRef": "物料批次设置编辑对象",
+          "description": "物料批次设置",
           "$ref": "#/definitions/物料批次设置编辑对象"
         }
       },

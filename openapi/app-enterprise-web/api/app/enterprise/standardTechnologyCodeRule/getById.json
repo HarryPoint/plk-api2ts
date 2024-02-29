@@ -87,8 +87,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "标准工艺编码规则响应 DTO",
+          "description": "响应结果",
           "$ref": "#/definitions/标准工艺编码规则响应 DTO"
         },
         "ts": {

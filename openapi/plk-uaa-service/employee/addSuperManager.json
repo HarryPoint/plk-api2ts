@@ -65,8 +65,8 @@
       "type": "object",
       "properties": {
         "employee": {
-          "description": "员工",
           "originalRef": "员工编辑请求",
+          "description": "员工",
           "$ref": "#/definitions/员工编辑请求"
         },
         "password": {

@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/宝晶报表(库存)相关搜索DTO",
-              "originalRef": "宝晶报表(库存)相关搜索DTO"
+              "originalRef": "宝晶报表(库存)相关搜索DTO",
+              "$ref": "#/definitions/宝晶报表(库存)相关搜索DTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«宝晶报表(成品日报表)合计返回VO»",
-              "originalRef": "JSONResult«宝晶报表(成品日报表)合计返回VO»"
+              "originalRef": "JSONResult«宝晶报表(成品日报表)合计返回VO»",
+              "$ref": "#/definitions/JSONResult«宝晶报表(成品日报表)合计返回VO»"
             }
           },
           "201": {
@@ -89,8 +89,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "groupBys": {
@@ -206,9 +206,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "宝晶报表(成品日报表)合计返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/宝晶报表(成品日报表)合计返回VO",
-          "originalRef": "宝晶报表(成品日报表)合计返回VO"
+          "$ref": "#/definitions/宝晶报表(成品日报表)合计返回VO"
         },
         "ts": {
           "type": "integer",

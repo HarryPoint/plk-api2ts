@@ -88,8 +88,8 @@
           "description": "表格数据ID"
         },
         "fieldDefine": {
-          "description": "关联字段信息",
           "originalRef": "关联字段定义_1",
+          "description": "关联字段信息",
           "$ref": "#/definitions/关联字段定义_1"
         },
         "selectedItemList": {

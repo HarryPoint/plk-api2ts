@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«员工账户VO»",
-              "originalRef": "JSONResult«员工账户VO»"
+              "originalRef": "JSONResult«员工账户VO»",
+              "$ref": "#/definitions/JSONResult«员工账户VO»"
             }
           },
           "401": {
@@ -75,9 +75,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "员工账户VO",
           "description": "响应结果",
-          "$ref": "#/definitions/员工账户VO",
-          "originalRef": "员工账户VO"
+          "$ref": "#/definitions/员工账户VO"
         },
         "ts": {
           "type": "integer",

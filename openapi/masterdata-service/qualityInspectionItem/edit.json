@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/编辑质检分类 DTO_1",
-              "originalRef": "编辑质检分类 DTO_1"
+              "originalRef": "编辑质检分类 DTO_1",
+              "$ref": "#/definitions/编辑质检分类 DTO_1"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -125,8 +125,8 @@
           "type": "array",
           "description": "选项内容集合",
           "items": {
-            "$ref": "#/definitions/质检项选择项编辑DTO",
-            "originalRef": "质检项选择项编辑DTO"
+            "originalRef": "质检项选择项编辑DTO",
+            "$ref": "#/definitions/质检项选择项编辑DTO"
           }
         },
         "remark": {

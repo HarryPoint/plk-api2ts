@@ -284,8 +284,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "表单结构VO_1",
+          "description": "响应结果",
           "$ref": "#/definitions/表单结构VO_1"
         },
         "ts": {
@@ -356,8 +356,8 @@
           "description": "所属表单字段id"
         },
         "formField": {
-          "description": "表单字段信息",
           "originalRef": "流程表单VO",
+          "description": "表单字段信息",
           "$ref": "#/definitions/流程表单VO"
         },
         "permissionsType": {
@@ -929,8 +929,8 @@
           ]
         },
         "dataLinkage": {
-          "description": "数据联动",
           "originalRef": "FlowPathFormFieldDataLinkageVO",
+          "description": "数据联动",
           "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {

@@ -65,8 +65,8 @@
       "type": "object",
       "properties": {
         "manageEmployee": {
-          "description": "运营员工",
           "originalRef": "Id Code Name 通用传输对象",
+          "description": "运营员工",
           "$ref": "#/definitions/Id Code Name 通用传输对象"
         },
         "telephone": {

@@ -618,8 +618,8 @@
           "description": "批次数量"
         },
         "stepSetInfo": {
-          "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
           "originalRef": "生产工艺路径步骤设置返回VO",
+          "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
           "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
         }
       },

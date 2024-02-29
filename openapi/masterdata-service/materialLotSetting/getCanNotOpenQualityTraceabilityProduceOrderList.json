@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«质量追溯未打开生产订单响应对象»»",
-              "originalRef": "JSONResult«List«质量追溯未打开生产订单响应对象»»"
+              "originalRef": "JSONResult«List«质量追溯未打开生产订单响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«质量追溯未打开生产订单响应对象»»"
             }
           },
           "401": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/质量追溯未打开生产订单响应对象",
-            "originalRef": "质量追溯未打开生产订单响应对象"
+            "originalRef": "质量追溯未打开生产订单响应对象",
+            "$ref": "#/definitions/质量追溯未打开生产订单响应对象"
           }
         },
         "ts": {

@@ -28,8 +28,8 @@
             "description": "idDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Id 信息",
-              "originalRef": "Id 信息"
+              "originalRef": "Id 信息",
+              "$ref": "#/definitions/Id 信息"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

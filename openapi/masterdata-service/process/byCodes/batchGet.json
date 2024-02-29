@@ -47,8 +47,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProcessDeprecatedVO»»",
-              "originalRef": "JSONResult«List«ProcessDeprecatedVO»»"
+              "originalRef": "JSONResult«List«ProcessDeprecatedVO»»",
+              "$ref": "#/definitions/JSONResult«List«ProcessDeprecatedVO»»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProcessDeprecatedVO",
-            "originalRef": "ProcessDeprecatedVO"
+            "originalRef": "ProcessDeprecatedVO",
+            "$ref": "#/definitions/ProcessDeprecatedVO"
           }
         },
         "ts": {

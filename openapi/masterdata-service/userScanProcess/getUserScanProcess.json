@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«UserScanProcessVO»",
-              "originalRef": "JSONResult«UserScanProcessVO»"
+              "originalRef": "JSONResult«UserScanProcessVO»",
+              "$ref": "#/definitions/JSONResult«UserScanProcessVO»"
             }
           },
           "401": {
@@ -75,9 +75,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "UserScanProcessVO",
           "description": "响应结果",
-          "$ref": "#/definitions/UserScanProcessVO",
-          "originalRef": "UserScanProcessVO"
+          "$ref": "#/definitions/UserScanProcessVO"
         },
         "ts": {
           "type": "integer",

@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«导出信息«WIP统计报表返回VO»»",
-              "originalRef": "JSONResult«导出信息«WIP统计报表返回VO»»"
+              "originalRef": "JSONResult«导出信息«WIP统计报表返回VO»»",
+              "$ref": "#/definitions/JSONResult«导出信息«WIP统计报表返回VO»»"
             }
           },
           "401": {
@@ -66,9 +66,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "导出信息«WIP统计报表返回VO»",
           "description": "响应结果",
-          "$ref": "#/definitions/导出信息«WIP统计报表返回VO»",
-          "originalRef": "导出信息«WIP统计报表返回VO»"
+          "$ref": "#/definitions/导出信息«WIP统计报表返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -159,8 +159,8 @@
           "type": "array",
           "description": "数据",
           "items": {
-            "$ref": "#/definitions/WIP统计报表返回VO",
-            "originalRef": "WIP统计报表返回VO"
+            "originalRef": "WIP统计报表返回VO",
+            "$ref": "#/definitions/WIP统计报表返回VO"
           }
         }
       },
@@ -183,16 +183,16 @@
           "description": "物料编号"
         },
         "allProcessWarehouse": {
+          "originalRef": "WIP库存统计报表返回VO",
           "description": "所有工序库存信息",
-          "$ref": "#/definitions/WIP库存统计报表返回VO",
-          "originalRef": "WIP库存统计报表返回VO"
+          "$ref": "#/definitions/WIP库存统计报表返回VO"
         },
         "processList": {
           "type": "array",
           "description": "工序信息集",
           "items": {
-            "$ref": "#/definitions/WIP工序统计报表返回VO",
-            "originalRef": "WIP工序统计报表返回VO"
+            "originalRef": "WIP工序统计报表返回VO",
+            "$ref": "#/definitions/WIP工序统计报表返回VO"
           }
         }
       },
@@ -257,9 +257,9 @@
           "description": "工序编号"
         },
         "warehouse": {
+          "originalRef": "WIP库存统计报表返回VO",
           "description": "工序库存集",
-          "$ref": "#/definitions/WIP库存统计报表返回VO",
-          "originalRef": "WIP库存统计报表返回VO"
+          "$ref": "#/definitions/WIP库存统计报表返回VO"
         }
       },
       "title": "WIP工序统计报表返回VO"

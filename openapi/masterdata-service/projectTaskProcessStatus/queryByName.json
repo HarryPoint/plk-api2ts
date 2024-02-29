@@ -28,8 +28,8 @@
             "description": "nameQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目名称编号公共查询对象_1",
-              "originalRef": "项目名称编号公共查询对象_1"
+              "originalRef": "项目名称编号公共查询对象_1",
+              "$ref": "#/definitions/项目名称编号公共查询对象_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«string»»",
-              "originalRef": "JSONResult«List«string»»"
+              "originalRef": "JSONResult«List«string»»",
+              "$ref": "#/definitions/JSONResult«List«string»»"
             }
           },
           "201": {

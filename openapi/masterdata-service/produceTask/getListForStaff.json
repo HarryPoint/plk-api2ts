@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/公共待办数据查询",
-              "originalRef": "公共待办数据查询"
+              "originalRef": "公共待办数据查询",
+              "$ref": "#/definitions/公共待办数据查询"
             }
           },
           {
@@ -53,8 +53,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产任务响应DTO(针对移动端)»»",
-              "originalRef": "JSONResult«List«生产任务响应DTO(针对移动端)»»"
+              "originalRef": "JSONResult«List«生产任务响应DTO(针对移动端)»»",
+              "$ref": "#/definitions/JSONResult«List«生产任务响应DTO(针对移动端)»»"
             }
           },
           "201": {
@@ -168,8 +168,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产任务响应DTO(针对移动端)",
-            "originalRef": "生产任务响应DTO(针对移动端)"
+            "originalRef": "生产任务响应DTO(针对移动端)",
+            "$ref": "#/definitions/生产任务响应DTO(针对移动端)"
           }
         },
         "ts": {
@@ -457,8 +457,8 @@
           "type": "array",
           "description": "批次信息",
           "items": {
-            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)",
-            "originalRef": "生产任务批次响应DTO(针对移动端)"
+            "originalRef": "生产任务批次响应DTO(针对移动端)",
+            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)"
           }
         },
         "lotOrderNumber": {
@@ -466,9 +466,9 @@
           "description": "批次数量"
         },
         "stepSetInfo": {
+          "originalRef": "生产工艺路径步骤设置返回VO",
           "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
-          "$ref": "#/definitions/生产工艺路径步骤设置返回VO",
-          "originalRef": "生产工艺路径步骤设置返回VO"
+          "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
         }
       },
       "title": "生产任务响应DTO(针对移动端)"

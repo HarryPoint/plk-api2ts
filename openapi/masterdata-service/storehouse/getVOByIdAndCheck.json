@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«仓库VO»",
-              "originalRef": "JSONResult«仓库VO»"
+              "originalRef": "JSONResult«仓库VO»",
+              "$ref": "#/definitions/JSONResult«仓库VO»"
             }
           },
           "401": {
@@ -75,9 +75,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "仓库VO",
           "description": "响应结果",
-          "$ref": "#/definitions/仓库VO",
-          "originalRef": "仓库VO"
+          "$ref": "#/definitions/仓库VO"
         },
         "ts": {
           "type": "integer",

@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»",
-              "originalRef": "JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»"
+              "originalRef": "JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»",
+              "$ref": "#/definitions/JSONResult«ProduceTechnologyMaterialBomInfoResponseDTO»"
             }
           },
           "401": {
@@ -68,9 +68,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "ProduceTechnologyMaterialBomInfoResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/ProduceTechnologyMaterialBomInfoResponseDTO",
-          "originalRef": "ProduceTechnologyMaterialBomInfoResponseDTO"
+          "$ref": "#/definitions/ProduceTechnologyMaterialBomInfoResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -166,8 +166,8 @@
           "type": "array",
           "description": "生产工艺物料BOM明细",
           "items": {
-            "$ref": "#/definitions/生产工艺物料Bom明细节点响应对象",
-            "originalRef": "生产工艺物料Bom明细节点响应对象"
+            "originalRef": "生产工艺物料Bom明细节点响应对象",
+            "$ref": "#/definitions/生产工艺物料Bom明细节点响应对象"
           }
         }
       },

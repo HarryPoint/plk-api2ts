@@ -36,8 +36,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/DynamicFormDisabledRequestDTO",
-              "originalRef": "DynamicFormDisabledRequestDTO"
+              "originalRef": "DynamicFormDisabledRequestDTO",
+              "$ref": "#/definitions/DynamicFormDisabledRequestDTO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

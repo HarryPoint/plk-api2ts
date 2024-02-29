@@ -28,8 +28,8 @@
             "description": "changeValid",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/启用or停用VO",
-              "originalRef": "启用or停用VO"
+              "originalRef": "启用or停用VO",
+              "$ref": "#/definitions/启用or停用VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

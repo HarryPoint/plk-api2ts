@@ -28,8 +28,8 @@
             "description": "jsonObject",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/GetSalesCommissionAggregate",
-              "originalRef": "GetSalesCommissionAggregate"
+              "originalRef": "GetSalesCommissionAggregate",
+              "$ref": "#/definitions/GetSalesCommissionAggregate"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»",
-              "originalRef": "JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»"
+              "originalRef": "JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»",
+              "$ref": "#/definitions/JSONResult«佣金与提成统计表（帝丰定制）合计响应对象»"
             }
           },
           "201": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "佣金与提成统计表（帝丰定制）合计响应对象",
           "description": "响应结果",
-          "$ref": "#/definitions/佣金与提成统计表（帝丰定制）合计响应对象",
-          "originalRef": "佣金与提成统计表（帝丰定制）合计响应对象"
+          "$ref": "#/definitions/佣金与提成统计表（帝丰定制）合计响应对象"
         },
         "ts": {
           "type": "integer",

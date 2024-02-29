@@ -67,8 +67,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "KaizenProjectTaskResponseDTO",
+          "description": "响应结果",
           "$ref": "#/definitions/KaizenProjectTaskResponseDTO"
         },
         "ts": {
@@ -107,13 +107,13 @@
           ]
         },
         "projectId": {
-          "description": "关联项目",
           "originalRef": "关联表单数据VO",
+          "description": "关联项目",
           "$ref": "#/definitions/关联表单数据VO"
         },
         "leaderUserId": {
-          "description": "执行人",
           "originalRef": "关联表单数据VO",
+          "description": "执行人",
           "$ref": "#/definitions/关联表单数据VO"
         },
         "parentId": {
@@ -146,8 +146,8 @@
           "description": "备注"
         },
         "createUserId": {
-          "description": "创建用户ID",
           "originalRef": "关联表单数据VO",
+          "description": "创建用户ID",
           "$ref": "#/definitions/关联表单数据VO"
         },
         "createTime": {

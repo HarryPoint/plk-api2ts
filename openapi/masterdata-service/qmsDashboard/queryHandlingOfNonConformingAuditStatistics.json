@@ -38,8 +38,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«大屏不合格品统计按审理情况响应DTO»",
-              "originalRef": "JSONResult«大屏不合格品统计按审理情况响应DTO»"
+              "originalRef": "JSONResult«大屏不合格品统计按审理情况响应DTO»",
+              "$ref": "#/definitions/JSONResult«大屏不合格品统计按审理情况响应DTO»"
             }
           },
           "401": {
@@ -74,9 +74,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "大屏不合格品统计按审理情况响应DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/大屏不合格品统计按审理情况响应DTO",
-          "originalRef": "大屏不合格品统计按审理情况响应DTO"
+          "$ref": "#/definitions/大屏不合格品统计按审理情况响应DTO"
         },
         "ts": {
           "type": "integer",

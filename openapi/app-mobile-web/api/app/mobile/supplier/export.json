@@ -104,8 +104,8 @@
           "description": "明细表表code，传值后，将会查询明细表数据"
         },
         "currentFormDataGrouping": {
-          "description": "当前的表单分组",
           "originalRef": "表单数据分组DTO",
+          "description": "当前的表单分组",
           "$ref": "#/definitions/表单数据分组DTO"
         },
         "opUserId": {

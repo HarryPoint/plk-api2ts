@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyMaterialBomDTO»»",
-              "originalRef": "JSONResult«List«ProduceTechnologyMaterialBomDTO»»"
+              "originalRef": "JSONResult«List«ProduceTechnologyMaterialBomDTO»»",
+              "$ref": "#/definitions/JSONResult«List«ProduceTechnologyMaterialBomDTO»»"
             }
           },
           "201": {
@@ -82,8 +82,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/ProduceTechnologyMaterialBomDTO",
-            "originalRef": "ProduceTechnologyMaterialBomDTO"
+            "originalRef": "ProduceTechnologyMaterialBomDTO",
+            "$ref": "#/definitions/ProduceTechnologyMaterialBomDTO"
           }
         },
         "ts": {

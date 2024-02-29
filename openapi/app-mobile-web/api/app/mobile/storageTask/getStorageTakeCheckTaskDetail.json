@@ -67,8 +67,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "仓库盘点任务明细执行端返回DTO",
+          "description": "响应结果",
           "$ref": "#/definitions/仓库盘点任务明细执行端返回DTO"
         },
         "ts": {

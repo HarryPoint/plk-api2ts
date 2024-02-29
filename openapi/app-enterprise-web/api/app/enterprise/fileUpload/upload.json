@@ -72,8 +72,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "附件 VO",
+          "description": "响应结果",
           "$ref": "#/definitions/附件 VO"
         },
         "ts": {

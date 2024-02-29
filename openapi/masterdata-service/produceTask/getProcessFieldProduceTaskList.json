@@ -36,8 +36,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/任务汇总表(基于工序字段)搜索VO",
-              "originalRef": "任务汇总表(基于工序字段)搜索VO"
+              "originalRef": "任务汇总表(基于工序字段)搜索VO",
+              "$ref": "#/definitions/任务汇总表(基于工序字段)搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«任务汇总表(基于工序字段)明细信息VO»»",
-              "originalRef": "JSONResult«List«任务汇总表(基于工序字段)明细信息VO»»"
+              "originalRef": "JSONResult«List«任务汇总表(基于工序字段)明细信息VO»»",
+              "$ref": "#/definitions/JSONResult«List«任务汇总表(基于工序字段)明细信息VO»»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "processId": {
@@ -171,8 +171,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/任务汇总表(基于工序字段)明细信息VO",
-            "originalRef": "任务汇总表(基于工序字段)明细信息VO"
+            "originalRef": "任务汇总表(基于工序字段)明细信息VO",
+            "$ref": "#/definitions/任务汇总表(基于工序字段)明细信息VO"
           }
         },
         "ts": {
@@ -212,8 +212,8 @@
           "type": "array",
           "description": "动态字段值列表",
           "items": {
-            "$ref": "#/definitions/工序字段值VO",
-            "originalRef": "工序字段值VO"
+            "originalRef": "工序字段值VO",
+            "$ref": "#/definitions/工序字段值VO"
           }
         },
         "produceTaskStatus": {

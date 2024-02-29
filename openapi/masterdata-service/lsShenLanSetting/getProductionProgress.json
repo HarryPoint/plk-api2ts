@@ -33,8 +33,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«质检生产大屏质检生产信息返回VO»",
-              "originalRef": "JSONResult«质检生产大屏质检生产信息返回VO»"
+              "originalRef": "JSONResult«质检生产大屏质检生产信息返回VO»",
+              "$ref": "#/definitions/JSONResult«质检生产大屏质检生产信息返回VO»"
             }
           },
           "401": {
@@ -68,9 +68,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "质检生产大屏质检生产信息返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/质检生产大屏质检生产信息返回VO",
-          "originalRef": "质检生产大屏质检生产信息返回VO"
+          "$ref": "#/definitions/质检生产大屏质检生产信息返回VO"
         },
         "ts": {
           "type": "integer",
@@ -159,14 +159,14 @@
           "description": "大屏右侧过去10年合格数量(合格数量+让步合格数量)"
         },
         "center12MProduction": {
+          "originalRef": "产出类折线图返回VO«产出金额报表返回VO»",
           "description": "大屏中部过去12个月产出",
-          "$ref": "#/definitions/产出类折线图返回VO«产出金额报表返回VO»",
-          "originalRef": "产出类折线图返回VO«产出金额报表返回VO»"
+          "$ref": "#/definitions/产出类折线图返回VO«产出金额报表返回VO»"
         },
         "center10YProduction": {
+          "originalRef": "产出类折线图返回VO«产出金额报表返回VO»",
           "description": "大屏中部过去10年产出",
-          "$ref": "#/definitions/产出类折线图返回VO«产出金额报表返回VO»",
-          "originalRef": "产出类折线图返回VO«产出金额报表返回VO»"
+          "$ref": "#/definitions/产出类折线图返回VO«产出金额报表返回VO»"
         }
       },
       "title": "质检生产大屏质检生产信息返回VO"
@@ -178,32 +178,32 @@
           "type": "array",
           "description": "分组数据",
           "items": {
-            "$ref": "#/definitions/产出类折线图分组返回VO«产出金额报表返回VO»",
-            "originalRef": "产出类折线图分组返回VO«产出金额报表返回VO»"
+            "originalRef": "产出类折线图分组返回VO«产出金额报表返回VO»",
+            "$ref": "#/definitions/产出类折线图分组返回VO«产出金额报表返回VO»"
           }
         },
         "classGroupList": {
           "type": "array",
           "description": "查询班组集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "processList": {
           "type": "array",
           "description": "查询工序集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "majorDataList": {
           "type": "array",
           "description": "查询物料集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "isConsistent": {
@@ -252,8 +252,8 @@
           "type": "array",
           "description": "详细点数据",
           "items": {
-            "$ref": "#/definitions/产出金额报表返回VO",
-            "originalRef": "产出金额报表返回VO"
+            "originalRef": "产出金额报表返回VO",
+            "$ref": "#/definitions/产出金额报表返回VO"
           }
         }
       },

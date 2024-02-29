@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/FlowPathTaskProcessRequestDTO",
-              "originalRef": "FlowPathTaskProcessRequestDTO"
+              "originalRef": "FlowPathTaskProcessRequestDTO",
+              "$ref": "#/definitions/FlowPathTaskProcessRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

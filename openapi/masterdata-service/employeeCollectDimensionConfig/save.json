@@ -28,8 +28,8 @@
             "description": "collectDimensionConfigRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/用户聚合维度配置请求",
-              "originalRef": "用户聚合维度配置请求"
+              "originalRef": "用户聚合维度配置请求",
+              "$ref": "#/definitions/用户聚合维度配置请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

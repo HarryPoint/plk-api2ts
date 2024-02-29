@@ -96,8 +96,8 @@
           ]
         },
         "nodeEditRequest": {
-          "description": "标准工艺节点编辑请求对象 发布时传递",
           "originalRef": "标准工艺节点响应对象_2",
+          "description": "标准工艺节点编辑请求对象 发布时传递",
           "$ref": "#/definitions/标准工艺节点响应对象_2"
         },
         "canvasSnapshot": {
@@ -155,8 +155,8 @@
           }
         },
         "nextNode": {
-          "description": "下一节点",
           "originalRef": "标准工艺节点响应对象_2",
+          "description": "下一节点",
           "$ref": "#/definitions/标准工艺节点响应对象_2"
         },
         "branches": {

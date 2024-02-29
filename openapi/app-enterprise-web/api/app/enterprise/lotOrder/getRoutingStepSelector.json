@@ -96,8 +96,8 @@
           "description": "对应步骤"
         },
         "process": {
-          "description": "工序",
           "originalRef": "工序响应 DTO",
+          "description": "工序",
           "$ref": "#/definitions/工序响应 DTO"
         }
       },

@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«生产订单物料领用响应dto»»",
-              "originalRef": "JSONResult«List«生产订单物料领用响应dto»»"
+              "originalRef": "JSONResult«List«生产订单物料领用响应dto»»",
+              "$ref": "#/definitions/JSONResult«List«生产订单物料领用响应dto»»"
             }
           },
           "401": {
@@ -79,8 +79,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/生产订单物料领用响应dto",
-            "originalRef": "生产订单物料领用响应dto"
+            "originalRef": "生产订单物料领用响应dto",
+            "$ref": "#/definitions/生产订单物料领用响应dto"
           }
         },
         "ts": {
@@ -180,8 +180,8 @@
           "type": "array",
           "description": "关联领用单列表",
           "items": {
-            "$ref": "#/definitions/生产订单物料领用明细响应dto",
-            "originalRef": "生产订单物料领用明细响应dto"
+            "originalRef": "生产订单物料领用明细响应dto",
+            "$ref": "#/definitions/生产订单物料领用明细响应dto"
           }
         }
       },

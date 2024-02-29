@@ -68,8 +68,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "流程节点DTO",
+          "description": "响应结果",
           "$ref": "#/definitions/流程节点DTO"
         },
         "ts": {
@@ -428,8 +428,8 @@
           ]
         },
         "nextNode": {
-          "description": "下节点信息",
           "originalRef": "流程节点DTO",
+          "description": "下节点信息",
           "$ref": "#/definitions/流程节点DTO"
         },
         "branches": {

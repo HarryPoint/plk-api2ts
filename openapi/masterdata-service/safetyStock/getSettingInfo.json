@@ -37,8 +37,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/安全库存设置搜索VO",
-              "originalRef": "安全库存设置搜索VO"
+              "originalRef": "安全库存设置搜索VO",
+              "$ref": "#/definitions/安全库存设置搜索VO"
             }
           },
           {
@@ -54,8 +54,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«安全库存设置返回VO»",
-              "originalRef": "JSONResult«安全库存设置返回VO»"
+              "originalRef": "JSONResult«安全库存设置返回VO»",
+              "$ref": "#/definitions/JSONResult«安全库存设置返回VO»"
             }
           },
           "201": {
@@ -116,9 +116,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "安全库存设置返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/安全库存设置返回VO",
-          "originalRef": "安全库存设置返回VO"
+          "$ref": "#/definitions/安全库存设置返回VO"
         },
         "ts": {
           "type": "integer",

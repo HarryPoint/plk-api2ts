@@ -28,8 +28,8 @@
             "description": "compareRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/盘点序列号比较请求DTO",
-              "originalRef": "盘点序列号比较请求DTO"
+              "originalRef": "盘点序列号比较请求DTO",
+              "$ref": "#/definitions/盘点序列号比较请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«盘点序列号比较结果DTO»",
-              "originalRef": "JSONResult«盘点序列号比较结果DTO»"
+              "originalRef": "JSONResult«盘点序列号比较结果DTO»",
+              "$ref": "#/definitions/JSONResult«盘点序列号比较结果DTO»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "序列号集合",
           "items": {
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1",
-            "originalRef": "盘点任务盘点明细序列号DTO_1"
+            "originalRef": "盘点任务盘点明细序列号DTO_1",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO_1"
           }
         }
       },
@@ -121,9 +121,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "盘点序列号比较结果DTO",
           "description": "响应结果",
-          "$ref": "#/definitions/盘点序列号比较结果DTO",
-          "originalRef": "盘点序列号比较结果DTO"
+          "$ref": "#/definitions/盘点序列号比较结果DTO"
         },
         "ts": {
           "type": "integer",
@@ -155,32 +155,32 @@
           "type": "array",
           "description": "序列号集",
           "items": {
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
-            "originalRef": "盘点任务盘点明细序列号DTO"
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
           }
         },
         "profitSerialNos": {
           "type": "array",
           "description": "盘盈序列号集",
           "items": {
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
-            "originalRef": "盘点任务盘点明细序列号DTO"
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
           }
         },
         "lossSerialNos": {
           "type": "array",
           "description": "盘亏序列号集",
           "items": {
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
-            "originalRef": "盘点任务盘点明细序列号DTO"
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
           }
         },
         "pickSerialNos": {
           "type": "array",
           "description": "序列号集合",
           "items": {
-            "$ref": "#/definitions/盘点任务盘点明细序列号DTO",
-            "originalRef": "盘点任务盘点明细序列号DTO"
+            "originalRef": "盘点任务盘点明细序列号DTO",
+            "$ref": "#/definitions/盘点任务盘点明细序列号DTO"
           }
         }
       },

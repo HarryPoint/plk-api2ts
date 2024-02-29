@@ -28,8 +28,8 @@
             "description": "exportCondition",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/流程数据基础搜索VO_2",
-              "originalRef": "流程数据基础搜索VO_2"
+              "originalRef": "流程数据基础搜索VO_2",
+              "$ref": "#/definitions/流程数据基础搜索VO_2"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -83,8 +83,8 @@
           "type": "array",
           "description": "字段搜索",
           "items": {
-            "$ref": "#/definitions/流程数据明细搜索VO",
-            "originalRef": "流程数据明细搜索VO"
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
           }
         },
         "pageSize": {
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "tableColumnCode": {
@@ -105,9 +105,9 @@
           "description": "明细表表code，传值后，将会查询明细表数据"
         },
         "currentFormDataGrouping": {
+          "originalRef": "表单数据分组DTO",
           "description": "当前的表单分组",
-          "$ref": "#/definitions/表单数据分组DTO",
-          "originalRef": "表单数据分组DTO"
+          "$ref": "#/definitions/表单数据分组DTO"
         }
       },
       "title": "流程数据基础搜索VO_2"
@@ -203,8 +203,8 @@
           "type": "array",
           "description": "下级分组",
           "items": {
-            "$ref": "#/definitions/表单数据分组DTO",
-            "originalRef": "表单数据分组DTO"
+            "originalRef": "表单数据分组DTO",
+            "$ref": "#/definitions/表单数据分组DTO"
           }
         },
         "cascadeFormData": {

@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«销售订单VO»",
-              "originalRef": "JSONResult«销售订单VO»"
+              "originalRef": "JSONResult«销售订单VO»",
+              "$ref": "#/definitions/JSONResult«销售订单VO»"
             }
           },
           "401": {
@@ -74,9 +74,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "销售订单VO",
           "description": "响应结果",
-          "$ref": "#/definitions/销售订单VO",
-          "originalRef": "销售订单VO"
+          "$ref": "#/definitions/销售订单VO"
         },
         "ts": {
           "type": "integer",

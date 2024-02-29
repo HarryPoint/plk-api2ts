@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/检验任务检验记录查询请求DTO",
-              "originalRef": "检验任务检验记录查询请求DTO"
+              "originalRef": "检验任务检验记录查询请求DTO",
+              "$ref": "#/definitions/检验任务检验记录查询请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«检验任务检验记录查询响应DTO»»",
-              "originalRef": "JSONResult«List«检验任务检验记录查询响应DTO»»"
+              "originalRef": "JSONResult«List«检验任务检验记录查询响应DTO»»",
+              "$ref": "#/definitions/JSONResult«List«检验任务检验记录查询响应DTO»»"
             }
           },
           "201": {
@@ -118,8 +118,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/检验任务检验记录查询响应DTO",
-            "originalRef": "检验任务检验记录查询响应DTO"
+            "originalRef": "检验任务检验记录查询响应DTO",
+            "$ref": "#/definitions/检验任务检验记录查询响应DTO"
           }
         },
         "ts": {

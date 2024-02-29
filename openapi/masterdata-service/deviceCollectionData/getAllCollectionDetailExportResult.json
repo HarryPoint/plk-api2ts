@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/设备数采数据详单搜索VO",
-              "originalRef": "设备数采数据详单搜索VO"
+              "originalRef": "设备数采数据详单搜索VO",
+              "$ref": "#/definitions/设备数采数据详单搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«设备数采明细报表导出VO»»",
-              "originalRef": "JSONResult«List«设备数采明细报表导出VO»»"
+              "originalRef": "JSONResult«List«设备数采明细报表导出VO»»",
+              "$ref": "#/definitions/JSONResult«List«设备数采明细报表导出VO»»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "deviceId": {
@@ -150,8 +150,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/设备数采明细报表导出VO",
-            "originalRef": "设备数采明细报表导出VO"
+            "originalRef": "设备数采明细报表导出VO",
+            "$ref": "#/definitions/设备数采明细报表导出VO"
           }
         },
         "ts": {

@@ -37,8 +37,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产任务导出DTO",
-              "originalRef": "生产任务导出DTO"
+              "originalRef": "生产任务导出DTO",
+              "$ref": "#/definitions/生产任务导出DTO"
             }
           }
         ],
@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -86,8 +86,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "processIds": {
@@ -206,8 +206,8 @@
           "type": "array",
           "description": "生产订单字段搜索",
           "items": {
-            "$ref": "#/definitions/流程数据明细搜索VO",
-            "originalRef": "流程数据明细搜索VO"
+            "originalRef": "流程数据明细搜索VO",
+            "$ref": "#/definitions/流程数据明细搜索VO"
           }
         }
       },

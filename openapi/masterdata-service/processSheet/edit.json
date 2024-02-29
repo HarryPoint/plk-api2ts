@@ -28,8 +28,8 @@
             "description": "edit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/工艺卡信息编辑DTO",
-              "originalRef": "工艺卡信息编辑DTO"
+              "originalRef": "工艺卡信息编辑DTO",
+              "$ref": "#/definitions/工艺卡信息编辑DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«工艺卡信息返回VO»",
-              "originalRef": "JSONResult«工艺卡信息返回VO»"
+              "originalRef": "JSONResult«工艺卡信息返回VO»",
+              "$ref": "#/definitions/JSONResult«工艺卡信息返回VO»"
             }
           },
           "201": {
@@ -108,16 +108,16 @@
           "type": "array",
           "description": "文件集合",
           "items": {
-            "$ref": "#/definitions/工艺卡明细文件编辑DTO",
-            "originalRef": "工艺卡明细文件编辑DTO"
+            "originalRef": "工艺卡明细文件编辑DTO",
+            "$ref": "#/definitions/工艺卡明细文件编辑DTO"
           }
         },
         "textList": {
           "type": "array",
           "description": "描述集合",
           "items": {
-            "$ref": "#/definitions/工艺卡明细描述编辑DTO",
-            "originalRef": "工艺卡明细描述编辑DTO"
+            "originalRef": "工艺卡明细描述编辑DTO",
+            "$ref": "#/definitions/工艺卡明细描述编辑DTO"
           }
         }
       },
@@ -179,9 +179,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "工艺卡信息返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/工艺卡信息返回VO",
-          "originalRef": "工艺卡信息返回VO"
+          "$ref": "#/definitions/工艺卡信息返回VO"
         },
         "ts": {
           "type": "integer",
@@ -228,24 +228,24 @@
           "type": "array",
           "description": "文件集合",
           "items": {
-            "$ref": "#/definitions/工艺卡明细返回VO",
-            "originalRef": "工艺卡明细返回VO"
+            "originalRef": "工艺卡明细返回VO",
+            "$ref": "#/definitions/工艺卡明细返回VO"
           }
         },
         "textList": {
           "type": "array",
           "description": "描述集合",
           "items": {
-            "$ref": "#/definitions/工艺卡明细返回VO",
-            "originalRef": "工艺卡明细返回VO"
+            "originalRef": "工艺卡明细返回VO",
+            "$ref": "#/definitions/工艺卡明细返回VO"
           }
         },
         "inputList": {
           "type": "array",
           "description": "录入集合",
           "items": {
-            "$ref": "#/definitions/工艺卡明细返回VO",
-            "originalRef": "工艺卡明细返回VO"
+            "originalRef": "工艺卡明细返回VO",
+            "$ref": "#/definitions/工艺卡明细返回VO"
           }
         }
       },

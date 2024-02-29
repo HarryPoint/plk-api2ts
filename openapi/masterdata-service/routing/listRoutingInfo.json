@@ -36,8 +36,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/工艺路径信息查询对象",
-              "originalRef": "工艺路径信息查询对象"
+              "originalRef": "工艺路径信息查询对象",
+              "$ref": "#/definitions/工艺路径信息查询对象"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«工艺路径信息对象»»",
-              "originalRef": "JSONResult«List«工艺路径信息对象»»"
+              "originalRef": "JSONResult«List«工艺路径信息对象»»",
+              "$ref": "#/definitions/JSONResult«List«工艺路径信息对象»»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/工艺路径信息对象",
-            "originalRef": "工艺路径信息对象"
+            "originalRef": "工艺路径信息对象",
+            "$ref": "#/definitions/工艺路径信息对象"
           }
         },
         "ts": {
@@ -134,8 +134,8 @@
           "type": "array",
           "description": "工艺步骤列表",
           "items": {
-            "$ref": "#/definitions/工艺步骤信息对象",
-            "originalRef": "工艺步骤信息对象"
+            "originalRef": "工艺步骤信息对象",
+            "$ref": "#/definitions/工艺步骤信息对象"
           }
         }
       },

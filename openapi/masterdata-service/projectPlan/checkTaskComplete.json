@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«Id Code Name 通用传输对象»»",
-              "originalRef": "JSONResult«List«Id Code Name 通用传输对象»»"
+              "originalRef": "JSONResult«List«Id Code Name 通用传输对象»»",
+              "$ref": "#/definitions/JSONResult«List«Id Code Name 通用传输对象»»"
             }
           },
           "401": {
@@ -70,8 +70,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/Id Code Name 通用传输对象",
-            "originalRef": "Id Code Name 通用传输对象"
+            "originalRef": "Id Code Name 通用传输对象",
+            "$ref": "#/definitions/Id Code Name 通用传输对象"
           }
         },
         "ts": {

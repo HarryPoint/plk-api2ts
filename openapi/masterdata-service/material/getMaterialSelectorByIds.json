@@ -37,8 +37,8 @@
             "description": "ids",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/id集合信息",
-              "originalRef": "id集合信息"
+              "originalRef": "id集合信息",
+              "$ref": "#/definitions/id集合信息"
             }
           }
         ],
@@ -46,8 +46,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«物料主数据选择返回VO»»",
-              "originalRef": "JSONResult«List«物料主数据选择返回VO»»"
+              "originalRef": "JSONResult«List«物料主数据选择返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«物料主数据选择返回VO»»"
             }
           },
           "201": {
@@ -101,8 +101,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/物料主数据选择返回VO",
-            "originalRef": "物料主数据选择返回VO"
+            "originalRef": "物料主数据选择返回VO",
+            "$ref": "#/definitions/物料主数据选择返回VO"
           }
         },
         "ts": {

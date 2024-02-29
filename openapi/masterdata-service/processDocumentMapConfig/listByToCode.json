@@ -39,8 +39,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«工艺文档映射配置VO»»",
-              "originalRef": "JSONResult«List«工艺文档映射配置VO»»"
+              "originalRef": "JSONResult«List«工艺文档映射配置VO»»",
+              "$ref": "#/definitions/JSONResult«List«工艺文档映射配置VO»»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/工艺文档映射配置VO",
-            "originalRef": "工艺文档映射配置VO"
+            "originalRef": "工艺文档映射配置VO",
+            "$ref": "#/definitions/工艺文档映射配置VO"
           }
         },
         "ts": {

@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«项目计划变更响应对象»",
-              "originalRef": "JSONResult«项目计划变更响应对象»"
+              "originalRef": "JSONResult«项目计划变更响应对象»",
+              "$ref": "#/definitions/JSONResult«项目计划变更响应对象»"
             }
           },
           "401": {
@@ -67,9 +67,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "项目计划变更响应对象",
           "description": "响应结果",
-          "$ref": "#/definitions/项目计划变更响应对象",
-          "originalRef": "项目计划变更响应对象"
+          "$ref": "#/definitions/项目计划变更响应对象"
         },
         "ts": {
           "type": "integer",
@@ -87,24 +87,24 @@
           "type": "array",
           "description": "项目阶段响应列表",
           "items": {
-            "$ref": "#/definitions/项目阶段变更单响应参数",
-            "originalRef": "项目阶段变更单响应参数"
+            "originalRef": "项目阶段变更单响应参数",
+            "$ref": "#/definitions/项目阶段变更单响应参数"
           }
         },
         "projectTaskList": {
           "type": "array",
           "description": "项目任务响应列表",
           "items": {
-            "$ref": "#/definitions/项目任务变更单响应参数",
-            "originalRef": "项目任务变更单响应参数"
+            "originalRef": "项目任务变更单响应参数",
+            "$ref": "#/definitions/项目任务变更单响应参数"
           }
         },
         "projectPlanList": {
           "type": "array",
           "description": "项目计划变更信息响应列表",
           "items": {
-            "$ref": "#/definitions/项目变更单字段响应参数",
-            "originalRef": "项目变更单字段响应参数"
+            "originalRef": "项目变更单字段响应参数",
+            "$ref": "#/definitions/项目变更单字段响应参数"
           }
         }
       },
@@ -140,8 +140,8 @@
           "type": "array",
           "description": "字段数据列表",
           "items": {
-            "$ref": "#/definitions/项目变更单字段响应参数",
-            "originalRef": "项目变更单字段响应参数"
+            "originalRef": "项目变更单字段响应参数",
+            "$ref": "#/definitions/项目变更单字段响应参数"
           }
         }
       },
@@ -176,8 +176,8 @@
           "type": "array",
           "description": "子表数据列表",
           "items": {
-            "$ref": "#/definitions/项目变更单子表字段扩展参数请求",
-            "originalRef": "项目变更单子表字段扩展参数请求"
+            "originalRef": "项目变更单子表字段扩展参数请求",
+            "$ref": "#/definitions/项目变更单子表字段扩展参数请求"
           }
         }
       },
@@ -204,8 +204,8 @@
           "type": "array",
           "description": "列数据",
           "items": {
-            "$ref": "#/definitions/项目变更单字段响应参数",
-            "originalRef": "项目变更单字段响应参数"
+            "originalRef": "项目变更单字段响应参数",
+            "$ref": "#/definitions/项目变更单字段响应参数"
           }
         }
       },
@@ -254,8 +254,8 @@
           "type": "array",
           "description": "字段数据列表",
           "items": {
-            "$ref": "#/definitions/项目变更单字段响应参数",
-            "originalRef": "项目变更单字段响应参数"
+            "originalRef": "项目变更单字段响应参数",
+            "$ref": "#/definitions/项目变更单字段响应参数"
           }
         }
       },

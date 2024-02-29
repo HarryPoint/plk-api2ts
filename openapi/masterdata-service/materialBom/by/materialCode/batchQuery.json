@@ -47,8 +47,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«MaterialBomBaseVo»»",
-              "originalRef": "JSONResult«List«MaterialBomBaseVo»»"
+              "originalRef": "JSONResult«List«MaterialBomBaseVo»»",
+              "$ref": "#/definitions/JSONResult«List«MaterialBomBaseVo»»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/MaterialBomBaseVo",
-            "originalRef": "MaterialBomBaseVo"
+            "originalRef": "MaterialBomBaseVo",
+            "$ref": "#/definitions/MaterialBomBaseVo"
           }
         },
         "ts": {

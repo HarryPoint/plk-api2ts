@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«KaizenProjectResponseDTO»»",
-              "originalRef": "JSONResult«List«KaizenProjectResponseDTO»»"
+              "originalRef": "JSONResult«List«KaizenProjectResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«List«KaizenProjectResponseDTO»»"
             }
           },
           "201": {
@@ -76,8 +76,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/KaizenProjectResponseDTO",
-            "originalRef": "KaizenProjectResponseDTO"
+            "originalRef": "KaizenProjectResponseDTO",
+            "$ref": "#/definitions/KaizenProjectResponseDTO"
           }
         },
         "ts": {

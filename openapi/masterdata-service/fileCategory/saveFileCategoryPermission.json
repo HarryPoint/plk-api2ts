@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/FileCategoryPermissionSaveRequestDTO",
-              "originalRef": "FileCategoryPermissionSaveRequestDTO"
+              "originalRef": "FileCategoryPermissionSaveRequestDTO",
+              "$ref": "#/definitions/FileCategoryPermissionSaveRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»_1",
-              "originalRef": "JSONResult«string»_1"
+              "originalRef": "JSONResult«string»_1",
+              "$ref": "#/definitions/JSONResult«string»_1"
             }
           },
           "201": {
@@ -73,8 +73,8 @@
           "type": "array",
           "description": "权限列表",
           "items": {
-            "$ref": "#/definitions/FileCategoryPermissionEditRequestDTO",
-            "originalRef": "FileCategoryPermissionEditRequestDTO"
+            "originalRef": "FileCategoryPermissionEditRequestDTO",
+            "$ref": "#/definitions/FileCategoryPermissionEditRequestDTO"
           }
         }
       },
@@ -105,8 +105,8 @@
           "type": "array",
           "description": "组织列表",
           "items": {
-            "$ref": "#/definitions/FileCategoryOrganizationEditRequestDTO",
-            "originalRef": "FileCategoryOrganizationEditRequestDTO"
+            "originalRef": "FileCategoryOrganizationEditRequestDTO",
+            "$ref": "#/definitions/FileCategoryOrganizationEditRequestDTO"
           }
         }
       },

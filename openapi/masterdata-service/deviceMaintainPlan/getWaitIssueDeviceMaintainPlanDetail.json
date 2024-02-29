@@ -34,8 +34,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/保养计划明细待下发响应DTO",
-                "originalRef": "保养计划明细待下发响应DTO"
+                "originalRef": "保养计划明细待下发响应DTO",
+                "$ref": "#/definitions/保养计划明细待下发响应DTO"
               }
             }
           },

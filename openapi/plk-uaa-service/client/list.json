@@ -99,8 +99,8 @@
           ]
         },
         "clientGroup": {
-          "description": "客户端组",
           "originalRef": "客户端组响应 DTO",
+          "description": "客户端组",
           "$ref": "#/definitions/客户端组响应 DTO"
         }
       },

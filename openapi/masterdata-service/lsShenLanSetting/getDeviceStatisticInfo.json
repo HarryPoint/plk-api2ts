@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«深蓝设备统计响应VO»",
-              "originalRef": "JSONResult«深蓝设备统计响应VO»"
+              "originalRef": "JSONResult«深蓝设备统计响应VO»",
+              "$ref": "#/definitions/JSONResult«深蓝设备统计响应VO»"
             }
           },
           "401": {
@@ -67,9 +67,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "深蓝设备统计响应VO",
           "description": "响应结果",
-          "$ref": "#/definitions/深蓝设备统计响应VO",
-          "originalRef": "深蓝设备统计响应VO"
+          "$ref": "#/definitions/深蓝设备统计响应VO"
         },
         "ts": {
           "type": "integer",
@@ -87,32 +87,32 @@
           "type": "object",
           "description": "左、中、右-设备运行信息",
           "additionalProperties": {
-            "$ref": "#/definitions/深蓝设备运行信息响应VO",
-            "originalRef": "深蓝设备运行信息响应VO"
+            "originalRef": "深蓝设备运行信息响应VO",
+            "$ref": "#/definitions/深蓝设备运行信息响应VO"
           }
         },
         "alarmInfos": {
           "type": "array",
           "description": "报警信息-右上",
           "items": {
-            "$ref": "#/definitions/深蓝报警统计信息VO",
-            "originalRef": "深蓝报警统计信息VO"
+            "originalRef": "深蓝报警统计信息VO",
+            "$ref": "#/definitions/深蓝报警统计信息VO"
           }
         },
         "produceInfos": {
           "type": "array",
           "description": "今日生产情况-右下",
           "items": {
-            "$ref": "#/definitions/深蓝设备综合效率响应VO_1",
-            "originalRef": "深蓝设备综合效率响应VO_1"
+            "originalRef": "深蓝设备综合效率响应VO_1",
+            "$ref": "#/definitions/深蓝设备综合效率响应VO_1"
           }
         },
         "onlineInfos": {
           "type": "array",
           "description": "在线结点数/节点率-右下",
           "items": {
-            "$ref": "#/definitions/深蓝设备在线情况响应VO",
-            "originalRef": "深蓝设备在线情况响应VO"
+            "originalRef": "深蓝设备在线情况响应VO",
+            "$ref": "#/definitions/深蓝设备在线情况响应VO"
           }
         }
       },
@@ -125,34 +125,34 @@
           "type": "array",
           "description": "设备运行进度信息",
           "items": {
-            "$ref": "#/definitions/深蓝设备运行进度信息响应VO",
-            "originalRef": "深蓝设备运行进度信息响应VO"
+            "originalRef": "深蓝设备运行进度信息响应VO",
+            "$ref": "#/definitions/深蓝设备运行进度信息响应VO"
           }
         },
         "todayRun": {
+          "originalRef": "深蓝设备运行统计响应VO",
           "description": "设备今日运行统计",
-          "$ref": "#/definitions/深蓝设备运行统计响应VO",
-          "originalRef": "深蓝设备运行统计响应VO"
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
         },
         "yesterdayRun": {
+          "originalRef": "深蓝设备运行统计响应VO",
           "description": "设备昨日运行统计",
-          "$ref": "#/definitions/深蓝设备运行统计响应VO",
-          "originalRef": "深蓝设备运行统计响应VO"
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
         },
         "weekRun": {
+          "originalRef": "深蓝设备运行统计响应VO",
           "description": "设备本周运行统计",
-          "$ref": "#/definitions/深蓝设备运行统计响应VO",
-          "originalRef": "深蓝设备运行统计响应VO"
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
         },
         "preWeekRun": {
+          "originalRef": "深蓝设备运行统计响应VO",
           "description": "设备上周运行统计",
-          "$ref": "#/definitions/深蓝设备运行统计响应VO",
-          "originalRef": "深蓝设备运行统计响应VO"
+          "$ref": "#/definitions/深蓝设备运行统计响应VO"
         },
         "deviceEfficiencies": {
+          "originalRef": "深蓝设备综合效率响应VO",
           "description": "设备综合效率",
-          "$ref": "#/definitions/深蓝设备综合效率响应VO",
-          "originalRef": "深蓝设备综合效率响应VO"
+          "$ref": "#/definitions/深蓝设备综合效率响应VO"
         }
       },
       "title": "深蓝设备运行信息响应VO"

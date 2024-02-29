@@ -98,8 +98,8 @@
           "description": "明细表表code，传值后，将会查询明细表数据"
         },
         "currentFormDataGrouping": {
-          "description": "当前的表单分组",
           "originalRef": "表单数据分组DTO",
+          "description": "当前的表单分组",
           "$ref": "#/definitions/表单数据分组DTO"
         }
       },
@@ -231,8 +231,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«动态拓展数据VO«已排产生产订单返回VO»»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«动态拓展数据VO«已排产生产订单返回VO»»"
         },
         "ts": {
@@ -313,8 +313,8 @@
       "type": "object",
       "properties": {
         "ext": {
-          "description": "拓展数据",
           "originalRef": "已排产生产订单返回VO",
+          "description": "拓展数据",
           "$ref": "#/definitions/已排产生产订单返回VO"
         },
         "data": {
@@ -405,8 +405,8 @@
           "description": "工序编号"
         },
         "capacity": {
-          "description": "产能",
           "originalRef": "ProduceTechnologyCapacityResponseDTO",
+          "description": "产能",
           "$ref": "#/definitions/ProduceTechnologyCapacityResponseDTO"
         },
         "beginTime": {

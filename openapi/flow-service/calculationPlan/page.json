@@ -144,8 +144,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "分页信息«计算方案分页查询响应DTO»",
+          "description": "响应结果",
           "$ref": "#/definitions/分页信息«计算方案分页查询响应DTO»"
         },
         "ts": {

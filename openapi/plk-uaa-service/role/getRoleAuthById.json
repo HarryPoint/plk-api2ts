@@ -68,8 +68,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "角色权限及员工信息响应",
+          "description": "响应结果",
           "$ref": "#/definitions/角色权限及员工信息响应"
         },
         "ts": {
@@ -243,8 +243,8 @@
           "description": "用户id"
         },
         "employee": {
-          "description": "员工",
           "originalRef": "员工信息响应",
+          "description": "员工",
           "$ref": "#/definitions/员工信息响应"
         }
       },

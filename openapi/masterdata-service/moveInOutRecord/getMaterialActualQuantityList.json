@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/物料产出搜索VO",
-              "originalRef": "物料产出搜索VO"
+              "originalRef": "物料产出搜索VO",
+              "$ref": "#/definitions/物料产出搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«物料产出VO»»",
-              "originalRef": "JSONResult«List«物料产出VO»»"
+              "originalRef": "JSONResult«List«物料产出VO»»",
+              "$ref": "#/definitions/JSONResult«List«物料产出VO»»"
             }
           },
           "201": {
@@ -96,8 +96,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "beginTime": {
@@ -147,8 +147,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/物料产出VO",
-            "originalRef": "物料产出VO"
+            "originalRef": "物料产出VO",
+            "$ref": "#/definitions/物料产出VO"
           }
         },
         "ts": {

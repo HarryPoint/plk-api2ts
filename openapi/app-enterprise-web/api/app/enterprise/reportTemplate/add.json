@@ -120,8 +120,8 @@
           }
         },
         "timeRange": {
-          "description": "报表统计时间范围添加请求",
           "originalRef": "ReportStatisticsTimeRangeAddRequestDTO",
+          "description": "报表统计时间范围添加请求",
           "$ref": "#/definitions/ReportStatisticsTimeRangeAddRequestDTO"
         }
       },

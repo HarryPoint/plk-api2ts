@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«SalesStatisticsItemOutputVO»»",
-              "originalRef": "JSONResult«List«SalesStatisticsItemOutputVO»»"
+              "originalRef": "JSONResult«List«SalesStatisticsItemOutputVO»»",
+              "$ref": "#/definitions/JSONResult«List«SalesStatisticsItemOutputVO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/SalesStatisticsItemOutputVO",
-            "originalRef": "SalesStatisticsItemOutputVO"
+            "originalRef": "SalesStatisticsItemOutputVO",
+            "$ref": "#/definitions/SalesStatisticsItemOutputVO"
           }
         },
         "ts": {

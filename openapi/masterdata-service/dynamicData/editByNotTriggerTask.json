@@ -28,8 +28,8 @@
             "description": "dataEdit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/主数据基础编辑 DTO",
-              "originalRef": "主数据基础编辑 DTO"
+              "originalRef": "主数据基础编辑 DTO",
+              "$ref": "#/definitions/主数据基础编辑 DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {

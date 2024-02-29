@@ -31,8 +31,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»_2",
-              "originalRef": "JSONResult«string»_2"
+              "originalRef": "JSONResult«string»_2",
+              "$ref": "#/definitions/JSONResult«string»_2"
             }
           },
           "401": {

@@ -57,8 +57,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "深蓝车间看板响应VO",
+          "description": "响应结果",
           "$ref": "#/definitions/深蓝车间看板响应VO"
         },
         "ts": {
@@ -74,8 +74,8 @@
       "type": "object",
       "properties": {
         "productionOverview": {
-          "description": "生产概览-左上",
           "originalRef": "车间生产概览统计响应VO",
+          "description": "生产概览-左上",
           "$ref": "#/definitions/车间生产概览统计响应VO"
         },
         "completeRates": {

@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/产出类报表搜索VO",
-              "originalRef": "产出类报表搜索VO"
+              "originalRef": "产出类报表搜索VO",
+              "$ref": "#/definitions/产出类报表搜索VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«产出类折线图返回VO«委外产出报表返回VO»»",
-              "originalRef": "JSONResult«产出类折线图返回VO«委外产出报表返回VO»»"
+              "originalRef": "JSONResult«产出类折线图返回VO«委外产出报表返回VO»»",
+              "$ref": "#/definitions/JSONResult«产出类折线图返回VO«委外产出报表返回VO»»"
             }
           },
           "201": {
@@ -131,9 +131,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "产出类折线图返回VO«委外产出报表返回VO»",
           "description": "响应结果",
-          "$ref": "#/definitions/产出类折线图返回VO«委外产出报表返回VO»",
-          "originalRef": "产出类折线图返回VO«委外产出报表返回VO»"
+          "$ref": "#/definitions/产出类折线图返回VO«委外产出报表返回VO»"
         },
         "ts": {
           "type": "integer",
@@ -151,32 +151,32 @@
           "type": "array",
           "description": "分组数据",
           "items": {
-            "$ref": "#/definitions/产出类折线图分组返回VO«委外产出报表返回VO»",
-            "originalRef": "产出类折线图分组返回VO«委外产出报表返回VO»"
+            "originalRef": "产出类折线图分组返回VO«委外产出报表返回VO»",
+            "$ref": "#/definitions/产出类折线图分组返回VO«委外产出报表返回VO»"
           }
         },
         "classGroupList": {
           "type": "array",
           "description": "查询班组集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "processList": {
           "type": "array",
           "description": "查询工序集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "majorDataList": {
           "type": "array",
           "description": "查询物料集",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "isConsistent": {
@@ -225,8 +225,8 @@
           "type": "array",
           "description": "详细点数据",
           "items": {
-            "$ref": "#/definitions/委外产出报表返回VO",
-            "originalRef": "委外产出报表返回VO"
+            "originalRef": "委外产出报表返回VO",
+            "$ref": "#/definitions/委外产出报表返回VO"
           }
         }
       },

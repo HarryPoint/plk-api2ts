@@ -41,8 +41,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«RoutingDeprecatedVO»",
-              "originalRef": "JSONResult«RoutingDeprecatedVO»"
+              "originalRef": "JSONResult«RoutingDeprecatedVO»",
+              "$ref": "#/definitions/JSONResult«RoutingDeprecatedVO»"
             }
           },
           "401": {
@@ -76,9 +76,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "RoutingDeprecatedVO",
           "description": "响应结果",
-          "$ref": "#/definitions/RoutingDeprecatedVO",
-          "originalRef": "RoutingDeprecatedVO"
+          "$ref": "#/definitions/RoutingDeprecatedVO"
         },
         "ts": {
           "type": "integer",

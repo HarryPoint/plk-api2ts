@@ -36,8 +36,8 @@
             "description": "handleDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产报废处理",
-              "originalRef": "生产报废处理"
+              "originalRef": "生产报废处理",
+              "$ref": "#/definitions/生产报废处理"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«排产参数VO»",
-              "originalRef": "JSONResult«排产参数VO»"
+              "originalRef": "JSONResult«排产参数VO»",
+              "$ref": "#/definitions/JSONResult«排产参数VO»"
             }
           },
           "201": {
@@ -73,9 +73,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "排产参数VO",
           "description": "响应结果",
-          "$ref": "#/definitions/排产参数VO",
-          "originalRef": "排产参数VO"
+          "$ref": "#/definitions/排产参数VO"
         },
         "ts": {
           "type": "integer",

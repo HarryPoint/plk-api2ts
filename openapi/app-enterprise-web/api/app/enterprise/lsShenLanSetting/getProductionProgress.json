@@ -58,8 +58,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "质检生产大屏质检生产信息返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/质检生产大屏质检生产信息返回VO"
         },
         "ts": {
@@ -149,13 +149,13 @@
           "description": "大屏右侧过去10年合格数量(合格数量+让步合格数量)"
         },
         "center12MProduction": {
-          "description": "大屏中部过去12个月产出",
           "originalRef": "产出类折线图返回VO«产出金额报表返回VO»",
+          "description": "大屏中部过去12个月产出",
           "$ref": "#/definitions/产出类折线图返回VO«产出金额报表返回VO»"
         },
         "center10YProduction": {
-          "description": "大屏中部过去10年产出",
           "originalRef": "产出类折线图返回VO«产出金额报表返回VO»",
+          "description": "大屏中部过去10年产出",
           "$ref": "#/definitions/产出类折线图返回VO«产出金额报表返回VO»"
         }
       },

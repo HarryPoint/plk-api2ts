@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«设备数采数据人工上报详单返回VO»",
-              "originalRef": "JSONResult«设备数采数据人工上报详单返回VO»"
+              "originalRef": "JSONResult«设备数采数据人工上报详单返回VO»",
+              "$ref": "#/definitions/JSONResult«设备数采数据人工上报详单返回VO»"
             }
           },
           "401": {
@@ -83,9 +83,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "设备数采数据人工上报详单返回VO",
           "description": "响应结果",
-          "$ref": "#/definitions/设备数采数据人工上报详单返回VO",
-          "originalRef": "设备数采数据人工上报详单返回VO"
+          "$ref": "#/definitions/设备数采数据人工上报详单返回VO"
         },
         "ts": {
           "type": "integer",
@@ -165,8 +165,8 @@
           "type": "array",
           "description": "详情",
           "items": {
-            "$ref": "#/definitions/设备数采数据明细返回VO",
-            "originalRef": "设备数采数据明细返回VO"
+            "originalRef": "设备数采数据明细返回VO",
+            "$ref": "#/definitions/设备数采数据明细返回VO"
           }
         }
       },

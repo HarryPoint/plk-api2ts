@@ -28,8 +28,8 @@
             "description": "bomQueryRequestDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/物料bom查询请求对象",
-              "originalRef": "物料bom查询请求对象"
+              "originalRef": "物料bom查询请求对象",
+              "$ref": "#/definitions/物料bom查询请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«物料bom响应对象»»",
-              "originalRef": "JSONResult«List«物料bom响应对象»»"
+              "originalRef": "JSONResult«List«物料bom响应对象»»",
+              "$ref": "#/definitions/JSONResult«List«物料bom响应对象»»"
             }
           },
           "201": {
@@ -92,8 +92,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/物料bom响应对象",
-            "originalRef": "物料bom响应对象"
+            "originalRef": "物料bom响应对象",
+            "$ref": "#/definitions/物料bom响应对象"
           }
         },
         "ts": {
@@ -163,8 +163,8 @@
           "type": "array",
           "description": "子物料列表",
           "items": {
-            "$ref": "#/definitions/物料bom详情响应对象",
-            "originalRef": "物料bom详情响应对象"
+            "originalRef": "物料bom详情响应对象",
+            "$ref": "#/definitions/物料bom详情响应对象"
           }
         }
       },

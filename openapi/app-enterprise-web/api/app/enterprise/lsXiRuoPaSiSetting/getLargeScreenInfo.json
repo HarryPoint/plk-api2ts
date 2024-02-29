@@ -58,8 +58,8 @@
           "description": "返回消息说明"
         },
         "data": {
-          "description": "响应结果",
           "originalRef": "西偌帕斯大屏返回VO",
+          "description": "响应结果",
           "$ref": "#/definitions/西偌帕斯大屏返回VO"
         },
         "ts": {
@@ -83,13 +83,13 @@
           }
         },
         "monthIndexWork": {
-          "description": "本月关键指标",
           "originalRef": "西偌帕斯大屏关键指标VO",
+          "description": "本月关键指标",
           "$ref": "#/definitions/西偌帕斯大屏关键指标VO"
         },
         "dayIndexWork": {
-          "description": "24小时关键指标",
           "originalRef": "西偌帕斯大屏关键指标VO",
+          "description": "24小时关键指标",
           "$ref": "#/definitions/西偌帕斯大屏关键指标VO"
         },
         "fpyRates": {

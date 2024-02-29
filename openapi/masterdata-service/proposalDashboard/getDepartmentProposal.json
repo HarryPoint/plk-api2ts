@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«DepartmentProposalDashboardResponseDTO»",
-              "originalRef": "JSONResult«DepartmentProposalDashboardResponseDTO»"
+              "originalRef": "JSONResult«DepartmentProposalDashboardResponseDTO»",
+              "$ref": "#/definitions/JSONResult«DepartmentProposalDashboardResponseDTO»"
             }
           },
           "401": {
@@ -58,9 +58,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "DepartmentProposalDashboardResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/DepartmentProposalDashboardResponseDTO",
-          "originalRef": "DepartmentProposalDashboardResponseDTO"
+          "$ref": "#/definitions/DepartmentProposalDashboardResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -88,8 +88,8 @@
           "type": "array",
           "description": "部门提案指标",
           "items": {
-            "$ref": "#/definitions/DepartmentProposalIndicatorsResponseDTO",
-            "originalRef": "DepartmentProposalIndicatorsResponseDTO"
+            "originalRef": "DepartmentProposalIndicatorsResponseDTO",
+            "$ref": "#/definitions/DepartmentProposalIndicatorsResponseDTO"
           }
         }
       },

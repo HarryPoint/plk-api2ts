@@ -59,8 +59,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«仓位物料库存关联VO»",
-              "originalRef": "JSONResult«仓位物料库存关联VO»"
+              "originalRef": "JSONResult«仓位物料库存关联VO»",
+              "$ref": "#/definitions/JSONResult«仓位物料库存关联VO»"
             }
           },
           "201": {
@@ -97,9 +97,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "仓位物料库存关联VO",
           "description": "响应结果",
-          "$ref": "#/definitions/仓位物料库存关联VO",
-          "originalRef": "仓位物料库存关联VO"
+          "$ref": "#/definitions/仓位物料库存关联VO"
         },
         "ts": {
           "type": "integer",

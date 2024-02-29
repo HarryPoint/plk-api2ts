@@ -94,8 +94,8 @@
           "description": "文件key"
         },
         "tableDefine": {
-          "description": "表定义",
           "originalRef": "关联表定义",
+          "description": "表定义",
           "$ref": "#/definitions/关联表定义"
         },
         "presetTemplate": {
@@ -103,8 +103,8 @@
           "description": "是否预设模板模板"
         },
         "application": {
-          "description": "应用",
           "originalRef": "ApplicationDTO",
+          "description": "应用",
           "$ref": "#/definitions/ApplicationDTO"
         },
         "desc": {

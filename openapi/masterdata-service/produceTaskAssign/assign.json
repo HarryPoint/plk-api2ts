@@ -28,8 +28,8 @@
             "description": "assignDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产任务分配VO",
-              "originalRef": "生产任务分配VO"
+              "originalRef": "生产任务分配VO",
+              "$ref": "#/definitions/生产任务分配VO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

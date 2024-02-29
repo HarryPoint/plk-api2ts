@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/生产订单变更优先级DTO",
-                "originalRef": "生产订单变更优先级DTO"
+                "originalRef": "生产订单变更优先级DTO",
+                "$ref": "#/definitions/生产订单变更优先级DTO"
               }
             }
           },
@@ -48,8 +48,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

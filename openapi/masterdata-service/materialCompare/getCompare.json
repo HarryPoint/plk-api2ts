@@ -28,8 +28,8 @@
             "description": "bomIdsVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/物料主数据bom id集合VO",
-              "originalRef": "物料主数据bom id集合VO"
+              "originalRef": "物料主数据bom id集合VO",
+              "$ref": "#/definitions/物料主数据bom id集合VO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«物料主数据比对返回VO»»",
-              "originalRef": "JSONResult«List«物料主数据比对返回VO»»"
+              "originalRef": "JSONResult«List«物料主数据比对返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«物料主数据比对返回VO»»"
             }
           },
           "201": {
@@ -100,8 +100,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/物料主数据比对返回VO",
-            "originalRef": "物料主数据比对返回VO"
+            "originalRef": "物料主数据比对返回VO",
+            "$ref": "#/definitions/物料主数据比对返回VO"
           }
         },
         "ts": {
@@ -141,8 +141,8 @@
           "type": "array",
           "description": "比对内容集",
           "items": {
-            "$ref": "#/definitions/物料主数据比对详情返回VO",
-            "originalRef": "物料主数据比对详情返回VO"
+            "originalRef": "物料主数据比对详情返回VO",
+            "$ref": "#/definitions/物料主数据比对详情返回VO"
           }
         }
       },
@@ -168,8 +168,8 @@
           "type": "array",
           "description": "对应工艺路径集",
           "items": {
-            "$ref": "#/definitions/生产工艺路径基础信息VO",
-            "originalRef": "生产工艺路径基础信息VO"
+            "originalRef": "生产工艺路径基础信息VO",
+            "$ref": "#/definitions/生产工艺路径基础信息VO"
           }
         }
       },

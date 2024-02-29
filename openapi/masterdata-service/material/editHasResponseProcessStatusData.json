@@ -28,8 +28,8 @@
             "description": "dataEdit",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/物料编辑请求DTO",
-              "originalRef": "物料编辑请求DTO"
+              "originalRef": "物料编辑请求DTO",
+              "$ref": "#/definitions/物料编辑请求DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«物料编辑响应信息»",
-              "originalRef": "JSONResult«物料编辑响应信息»"
+              "originalRef": "JSONResult«物料编辑响应信息»",
+              "$ref": "#/definitions/JSONResult«物料编辑响应信息»"
             }
           },
           "201": {
@@ -91,9 +91,9 @@
           }
         },
         "lotSetting": {
+          "originalRef": "物料批次设置编辑对象",
           "description": "物料批次设置",
-          "$ref": "#/definitions/物料批次设置编辑对象",
-          "originalRef": "物料批次设置编辑对象"
+          "$ref": "#/definitions/物料批次设置编辑对象"
         }
       },
       "title": "物料编辑请求DTO"
@@ -175,9 +175,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "物料编辑响应信息",
           "description": "响应结果",
-          "$ref": "#/definitions/物料编辑响应信息",
-          "originalRef": "物料编辑响应信息"
+          "$ref": "#/definitions/物料编辑响应信息"
         },
         "ts": {
           "type": "integer",

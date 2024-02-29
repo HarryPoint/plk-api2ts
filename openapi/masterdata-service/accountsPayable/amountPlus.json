@@ -28,8 +28,8 @@
             "description": "amountPlus",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/添加应付账款DTO",
-              "originalRef": "添加应付账款DTO"
+              "originalRef": "添加应付账款DTO",
+              "$ref": "#/definitions/添加应付账款DTO"
             }
           },
           {
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {

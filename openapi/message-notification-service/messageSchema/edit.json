@@ -65,13 +65,13 @@
       "type": "object",
       "properties": {
         "messageSchema": {
-          "description": "消息方案",
           "originalRef": "MessageSchemaDTO",
+          "description": "消息方案",
           "$ref": "#/definitions/MessageSchemaDTO"
         },
         "formConfig": {
-          "description": "业务配置",
           "originalRef": "FormConfigDTO",
+          "description": "业务配置",
           "$ref": "#/definitions/FormConfigDTO"
         }
       },
@@ -176,8 +176,8 @@
           ]
         },
         "timeConfig": {
-          "description": "时间配置",
           "originalRef": "MessageSchemaTimeConfigDTO",
+          "description": "时间配置",
           "$ref": "#/definitions/MessageSchemaTimeConfigDTO"
         }
       },
@@ -635,8 +635,8 @@
           "description": "上级触发节点ID"
         },
         "currentConditionExpression": {
-          "description": "当前节点表达式",
           "originalRef": "MessageTriggerConditionDTO",
+          "description": "当前节点表达式",
           "$ref": "#/definitions/MessageTriggerConditionDTO"
         },
         "children": {

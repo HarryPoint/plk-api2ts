@@ -35,8 +35,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«ProposalResponseDTO»",
-              "originalRef": "JSONResult«ProposalResponseDTO»"
+              "originalRef": "JSONResult«ProposalResponseDTO»",
+              "$ref": "#/definitions/JSONResult«ProposalResponseDTO»"
             }
           },
           "201": {
@@ -73,9 +73,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "ProposalResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/ProposalResponseDTO",
-          "originalRef": "ProposalResponseDTO"
+          "$ref": "#/definitions/ProposalResponseDTO"
         },
         "ts": {
           "type": "integer",

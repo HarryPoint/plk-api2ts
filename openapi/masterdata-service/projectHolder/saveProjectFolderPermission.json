@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ProjectFolderPermissionSaveRequestDTO",
-              "originalRef": "ProjectFolderPermissionSaveRequestDTO"
+              "originalRef": "ProjectFolderPermissionSaveRequestDTO",
+              "$ref": "#/definitions/ProjectFolderPermissionSaveRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»_1",
-              "originalRef": "JSONResult«string»_1"
+              "originalRef": "JSONResult«string»_1",
+              "$ref": "#/definitions/JSONResult«string»_1"
             }
           },
           "201": {
@@ -78,8 +78,8 @@
           "type": "array",
           "description": "权限列表",
           "items": {
-            "$ref": "#/definitions/ProjectFolderPermissionEditRequestDTO",
-            "originalRef": "ProjectFolderPermissionEditRequestDTO"
+            "originalRef": "ProjectFolderPermissionEditRequestDTO",
+            "$ref": "#/definitions/ProjectFolderPermissionEditRequestDTO"
           }
         }
       },
@@ -110,8 +110,8 @@
           "type": "array",
           "description": "组织列表",
           "items": {
-            "$ref": "#/definitions/ProjectFolderOrganizationEditRequestDTO",
-            "originalRef": "ProjectFolderOrganizationEditRequestDTO"
+            "originalRef": "ProjectFolderOrganizationEditRequestDTO",
+            "$ref": "#/definitions/ProjectFolderOrganizationEditRequestDTO"
           }
         }
       },

@@ -36,8 +36,8 @@
             "description": "searchVO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/订单进度统计查询VO",
-              "originalRef": "订单进度统计查询VO"
+              "originalRef": "订单进度统计查询VO",
+              "$ref": "#/definitions/订单进度统计查询VO"
             }
           }
         ],
@@ -45,8 +45,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«销售订单VO»»",
-              "originalRef": "JSONResult«List«销售订单VO»»"
+              "originalRef": "JSONResult«List«销售订单VO»»",
+              "$ref": "#/definitions/JSONResult«List«销售订单VO»»"
             }
           },
           "201": {
@@ -85,8 +85,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "deliveryDateBegin": {
@@ -171,8 +171,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/销售订单VO",
-            "originalRef": "销售订单VO"
+            "originalRef": "销售订单VO",
+            "$ref": "#/definitions/销售订单VO"
           }
         },
         "ts": {

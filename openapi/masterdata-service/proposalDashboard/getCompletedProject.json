@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«CompleteProjectResponseDTO»",
-              "originalRef": "JSONResult«CompleteProjectResponseDTO»"
+              "originalRef": "JSONResult«CompleteProjectResponseDTO»",
+              "$ref": "#/definitions/JSONResult«CompleteProjectResponseDTO»"
             }
           },
           "401": {
@@ -58,9 +58,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "CompleteProjectResponseDTO",
           "description": "响应结果",
-          "$ref": "#/definitions/CompleteProjectResponseDTO",
-          "originalRef": "CompleteProjectResponseDTO"
+          "$ref": "#/definitions/CompleteProjectResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -83,16 +83,16 @@
           "type": "array",
           "description": "项目指标区间配置",
           "items": {
-            "$ref": "#/definitions/ProjectIndicatorsRangeConfigResponseDTO",
-            "originalRef": "ProjectIndicatorsRangeConfigResponseDTO"
+            "originalRef": "ProjectIndicatorsRangeConfigResponseDTO",
+            "$ref": "#/definitions/ProjectIndicatorsRangeConfigResponseDTO"
           }
         },
         "departmentProjectIndicatorsList": {
           "type": "array",
           "description": "部门的各个项目指标",
           "items": {
-            "$ref": "#/definitions/DepartmentProjectIndicatorsResponseDTO",
-            "originalRef": "DepartmentProjectIndicatorsResponseDTO"
+            "originalRef": "DepartmentProjectIndicatorsResponseDTO",
+            "$ref": "#/definitions/DepartmentProjectIndicatorsResponseDTO"
           }
         }
       },

@@ -924,8 +924,8 @@
           ]
         },
         "dataLinkage": {
-          "description": "数据联动",
           "originalRef": "FlowPathFormFieldDataLinkageVO",
+          "description": "数据联动",
           "$ref": "#/definitions/FlowPathFormFieldDataLinkageVO"
         },
         "valueLimitRules": {

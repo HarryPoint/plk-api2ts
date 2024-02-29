@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ProposalDepartmentStatisticsQueryRequestDTO",
-              "originalRef": "ProposalDepartmentStatisticsQueryRequestDTO"
+              "originalRef": "ProposalDepartmentStatisticsQueryRequestDTO",
+              "$ref": "#/definitions/ProposalDepartmentStatisticsQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {

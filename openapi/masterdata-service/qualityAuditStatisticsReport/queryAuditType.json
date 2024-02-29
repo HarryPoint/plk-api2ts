@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/基础质量审核查询请求_1",
-              "originalRef": "基础质量审核查询请求_1"
+              "originalRef": "基础质量审核查询请求_1",
+              "$ref": "#/definitions/基础质量审核查询请求_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«质量审核类型查询响应»",
-              "originalRef": "JSONResult«质量审核类型查询响应»"
+              "originalRef": "JSONResult«质量审核类型查询响应»",
+              "$ref": "#/definitions/JSONResult«质量审核类型查询响应»"
             }
           },
           "201": {
@@ -92,9 +92,9 @@
           "description": "返回消息说明"
         },
         "data": {
+          "originalRef": "质量审核类型查询响应",
           "description": "响应结果",
-          "$ref": "#/definitions/质量审核类型查询响应",
-          "originalRef": "质量审核类型查询响应"
+          "$ref": "#/definitions/质量审核类型查询响应"
         },
         "ts": {
           "type": "integer",
@@ -112,24 +112,24 @@
           "type": "array",
           "description": "标题列表-仅包含XX不符合项数量,XX 不符合占比",
           "items": {
-            "$ref": "#/definitions/审核类型标题",
-            "originalRef": "审核类型标题"
+            "originalRef": "审核类型标题",
+            "$ref": "#/definitions/审核类型标题"
           }
         },
         "internalAudit": {
+          "originalRef": "质量审核类型的值响应",
           "description": "内审清单",
-          "$ref": "#/definitions/质量审核类型的值响应",
-          "originalRef": "质量审核类型的值响应"
+          "$ref": "#/definitions/质量审核类型的值响应"
         },
         "externalAudit": {
+          "originalRef": "质量审核类型的值响应",
           "description": "外审清单",
-          "$ref": "#/definitions/质量审核类型的值响应",
-          "originalRef": "质量审核类型的值响应"
+          "$ref": "#/definitions/质量审核类型的值响应"
         },
         "specialAudit": {
+          "originalRef": "质量审核类型的值响应",
           "description": "专审清单",
-          "$ref": "#/definitions/质量审核类型的值响应",
-          "originalRef": "质量审核类型的值响应"
+          "$ref": "#/definitions/质量审核类型的值响应"
         }
       },
       "title": "质量审核类型查询响应"
