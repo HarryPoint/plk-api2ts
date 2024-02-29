@@ -38,9 +38,7 @@ module.exports = () => {
 ```json
 {
   "scripts": {
-    "api2json": "api2json",
     "api2ts": "api2ts",
-    "api:update": "npm run api2json && npm run api2ts"
   }
 }
 ```
@@ -50,20 +48,9 @@ module.exports = () => {
 > 仅更新定义文件
 
 ```shell
-npm run api2json
-```
-
-> 仅根据数据文件生成新的定义文件
-
-```shell
 npm run api2ts
 ```
 
-> 更新 json 数据，同时生成新定义
-
-```shell
-npm run api:update
-```
 
 ### 配置项
 

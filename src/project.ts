@@ -24,7 +24,7 @@ export const createTsFile = async (
   });
   await createDefinitions(definitionsFile, data, {
     translate: config.translate,
-    prefix: config.prefix,
+    interfacePrefix: config.interfacePrefix,
     enumPrefix: config.enumPrefix,
     transformOriginType: config.transformOriginType,
     customContent: config.customContent,

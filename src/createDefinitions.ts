@@ -23,7 +23,7 @@ export const createDefinitions = async (
   data: any,
   option: {
     translate?: boolean;
-    prefix?: string;
+    interfacePrefix?: string;
     enumPrefix?: string;
     transformOriginType: (define: any) => string;
     customContent?: IConfig["customContent"];
@@ -31,7 +31,7 @@ export const createDefinitions = async (
 ) => {
   const {
     translate = true,
-    prefix = "I",
+    interfacePrefix = "I",
     enumPrefix = "E",
     transformOriginType,
     customContent,
@@ -105,7 +105,7 @@ export const createDefinitions = async (
   // 所有的定义名称修正
   translateItemArr.forEach((item, index) => {
     const translateName = formatName(result[index]);
-    item.name = `${prefix}${translateName}`;
+    item.name = `${interfacePrefix}${translateName}`;
     item.translateName = translateName;
     // console.log("item.name: ", item.name);
   });

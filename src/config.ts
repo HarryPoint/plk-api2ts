@@ -6,7 +6,7 @@ import { customContent, transformOriginType } from "./plkTpl";
 const argv = require("yargs").argv;
 
 export type IConfig = {
-  prefix: string;
+  interfacePrefix: string;
   enumPrefix: string;
   translate: boolean;
   translateCacheFileName: string;
@@ -40,7 +40,7 @@ const defaultConfig: IConfig = {
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
   transform: false,
-  prefix: "I",
+  interfacePrefix: "I",
   enumPrefix: "E",
   serviceMap: {},
   serviceNameToPath: false,
