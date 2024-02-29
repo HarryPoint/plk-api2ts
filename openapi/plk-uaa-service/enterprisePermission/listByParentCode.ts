@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:18100/doc.html#/default/企业权限相关/listByParentCodeUsingGET
+* @link http://47.108.139.107:18100/doc.html#/default/企业权限相关/listByParentCodeUsingGET
 */
 export default function fetchMethod(options: { params: { parentCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListEnterprisePermissionResponseDTO>(

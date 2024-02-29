@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "modifyRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/加购产品订单修改请求对象",
-              "originalRef": "加购产品订单修改请求对象"
+              "originalRef": "加购产品订单修改请求对象",
+              "$ref": "#/definitions/加购产品订单修改请求对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -126,8 +126,8 @@
           "type": "array",
           "description": "付款记录列表",
           "items": {
-            "$ref": "#/definitions/产品订单付款记录编辑请求对象",
-            "originalRef": "产品订单付款记录编辑请求对象"
+            "originalRef": "产品订单付款记录编辑请求对象",
+            "$ref": "#/definitions/产品订单付款记录编辑请求对象"
           }
         },
         "id": {

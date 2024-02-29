@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/准备期相关/editUsingPOST_24
+* @link http://47.108.139.107:16400/doc.html#/default/准备期相关/editUsingPOST_24
 */
 export default function fetchMethod(options: { data: IPreparatoryPeriodEditorDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

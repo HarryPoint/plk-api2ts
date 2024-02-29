@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/设备数采数据参数相关/editUsingPOST_3
+* @link http://47.108.139.107:16700/doc.html#/default/设备数采数据参数相关/editUsingPOST_3
 */
 export default function fetchMethod(options: { data: IDeviceDataAcquisitionCommunicationParametersEditDTO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

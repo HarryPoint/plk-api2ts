@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16500/doc.html#/default/流程节点相关/getByFlowPathVersionIdUsingGET
+* @link http://47.108.139.107:16500/doc.html#/default/流程节点相关/getByFlowPathVersionIdUsingGET
 */
 export default function fetchMethod(options: { params: { flowPathVersionId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessNodeDTO>(

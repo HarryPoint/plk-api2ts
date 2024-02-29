@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "质检分类"
         ],
         "summary": "分页查询质检分类",
-        "operationId": "getPageUsingPOST_20",
+        "operationId": "getPageUsingPOST_21",
         "consumes": [
           "application/json"
         ],

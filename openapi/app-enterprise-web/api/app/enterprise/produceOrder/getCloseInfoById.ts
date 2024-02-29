@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/生产订单相关/getCloseInfoByIdUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/生产订单相关/getCloseInfoByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionOrderClosureInformationIsReturnedToVO>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/部门年目标设置相关/batchRemoveByFlowPathIdUsingPOST_1
+* @link http://47.108.139.107:17400/doc.html#/default/部门年目标设置相关/batchRemoveByFlowPathIdUsingPOST_1
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(

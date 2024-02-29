@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "projectStageQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/项目阶段编号查询对象_1",
-              "originalRef": "项目阶段编号查询对象_1"
+              "$ref": "#/definitions/项目阶段编号查询对象",
+              "originalRef": "项目阶段编号查询对象"
             }
           }
         ],
@@ -61,7 +61,7 @@
     }
   },
   "definitions": {
-    "项目阶段编号查询对象_1": {
+    "项目阶段编号查询对象": {
       "type": "object",
       "properties": {
         "projectId": {
@@ -90,7 +90,7 @@
           ]
         }
       },
-      "title": "项目阶段编号查询对象_1"
+      "title": "项目阶段编号查询对象"
     },
     "JSONResult«List«项目阶段响应对象»»": {
       "type": "object",

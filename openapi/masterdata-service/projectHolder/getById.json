@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«ProjectFolderResponseDTO»",
-              "$ref": "#/definitions/JSONResult«ProjectFolderResponseDTO»"
+              "$ref": "#/definitions/JSONResult«ProjectFolderResponseDTO»",
+              "originalRef": "JSONResult«ProjectFolderResponseDTO»"
             }
           },
           "401": {
@@ -77,8 +77,8 @@
         },
         "data": {
           "description": "响应结果",
-          "originalRef": "ProjectFolderResponseDTO",
-          "$ref": "#/definitions/ProjectFolderResponseDTO"
+          "$ref": "#/definitions/ProjectFolderResponseDTO",
+          "originalRef": "ProjectFolderResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -115,8 +115,8 @@
           "type": "array",
           "description": "权限列表",
           "items": {
-            "originalRef": "ProjectFolderPermissionResponseDTO",
-            "$ref": "#/definitions/ProjectFolderPermissionResponseDTO"
+            "$ref": "#/definitions/ProjectFolderPermissionResponseDTO",
+            "originalRef": "ProjectFolderPermissionResponseDTO"
           }
         }
       },
@@ -147,8 +147,8 @@
           "type": "array",
           "description": "组织列表",
           "items": {
-            "originalRef": "ProjectFolderOrganizationResponseDTO",
-            "$ref": "#/definitions/ProjectFolderOrganizationResponseDTO"
+            "$ref": "#/definitions/ProjectFolderOrganizationResponseDTO",
+            "originalRef": "ProjectFolderOrganizationResponseDTO"
           }
         }
       },

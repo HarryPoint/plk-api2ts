@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/费用类型相关/exportUsingPOST_18
+* @link http://47.108.139.107:16700/doc.html#/default/费用类型相关/exportUsingPOST_18
 */
 export default function fetchMethod(options: { data: IProcessDataSearchVO }, extraOptions?: any) {
     return http<IJSONResultlong>(

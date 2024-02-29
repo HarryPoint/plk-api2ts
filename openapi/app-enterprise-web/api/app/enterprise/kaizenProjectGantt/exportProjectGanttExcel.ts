@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TanPeng
-* @link http://47.108.135.148:16400/doc.html#/default/项目甘特图相关/exportProjectGanttExcelUsingPOST
+* @link http://47.108.139.107:16400/doc.html#/default/项目甘特图相关/exportProjectGanttExcelUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectGanttChartQueryObject }, extraOptions?: any) {
     return http<IJSONResultlong>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:16400/doc.html#/default/标准工艺编码规则相关/copyByIdsUsingPOST
+* @link http://47.108.139.107:16400/doc.html#/default/标准工艺编码规则相关/copyByIdsUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListStandardProcessCodingRulesCopyResponseDtos>(

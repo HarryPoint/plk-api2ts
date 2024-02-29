@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:18100/doc.html#/default/试用模块相关/listAllUsingGET_1
+* @link http://47.108.139.107:18100/doc.html#/default/试用模块相关/listAllUsingGET_1
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListTheTrialModuleRespondsToTheDTO>(

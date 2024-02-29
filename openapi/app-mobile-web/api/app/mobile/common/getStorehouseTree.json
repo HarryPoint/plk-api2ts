@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«仓库区域树返回VO»»",
-              "originalRef": "JSONResult«List«仓库区域树返回VO»»"
+              "originalRef": "JSONResult«List«仓库区域树返回VO»»",
+              "$ref": "#/definitions/JSONResult«List«仓库区域树返回VO»»"
             }
           },
           "401": {
@@ -60,8 +60,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/仓库区域树返回VO",
-            "originalRef": "仓库区域树返回VO"
+            "originalRef": "仓库区域树返回VO",
+            "$ref": "#/definitions/仓库区域树返回VO"
           }
         },
         "ts": {
@@ -93,16 +93,16 @@
           "type": "array",
           "description": "下级区域集",
           "items": {
-            "$ref": "#/definitions/仓库区域树返回VO",
-            "originalRef": "仓库区域树返回VO"
+            "originalRef": "仓库区域树返回VO",
+            "$ref": "#/definitions/仓库区域树返回VO"
           }
         },
         "storehouseChildren": {
           "type": "array",
           "description": "仓库集",
           "items": {
-            "$ref": "#/definitions/仓库树返回VO",
-            "originalRef": "仓库树返回VO"
+            "originalRef": "仓库树返回VO",
+            "$ref": "#/definitions/仓库树返回VO"
           }
         }
       },
@@ -141,8 +141,8 @@
           "type": "array",
           "description": "仓位集",
           "items": {
-            "$ref": "#/definitions/仓位树返回VO",
-            "originalRef": "仓位树返回VO"
+            "originalRef": "仓位树返回VO",
+            "$ref": "#/definitions/仓位树返回VO"
           }
         }
       },
@@ -195,8 +195,8 @@
           "type": "array",
           "description": "子仓位",
           "items": {
-            "$ref": "#/definitions/仓位树返回VO",
-            "originalRef": "仓位树返回VO"
+            "originalRef": "仓位树返回VO",
+            "$ref": "#/definitions/仓位树返回VO"
           }
         }
       },

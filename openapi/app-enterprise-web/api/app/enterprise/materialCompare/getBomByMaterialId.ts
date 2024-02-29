@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/09-02-04-物料主数据比对相关/getBomByMaterialIdUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/09-02-04-物料主数据比对相关/getBomByMaterialIdUsingGET
 */
 export default function fetchMethod(options: { params: { materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultListMaterialBomBaseVo>(

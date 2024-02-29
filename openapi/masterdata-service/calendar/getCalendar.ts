@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/工厂日历相关/getCalendarUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/工厂日历相关/getCalendarUsingPOST
 */
 export default function fetchMethod(options: { data: IFactoryCalendarSearchVO1, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultFactoryCalendarReturnsVO>(

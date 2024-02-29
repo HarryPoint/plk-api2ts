@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/费用类型相关/getTableColumnUsingGET_9
+* @link http://47.108.139.107:16700/doc.html#/default/费用类型相关/getTableColumnUsingGET_9
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(

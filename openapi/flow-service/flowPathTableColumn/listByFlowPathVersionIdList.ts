@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16500/doc.html#/default/流程表格相关/listByFlowPathVersionIdListUsingPOST
+* @link http://47.108.139.107:16500/doc.html#/default/流程表格相关/listByFlowPathVersionIdListUsingPOST
 */
 export default function fetchMethod(options: { data: string[] }, extraOptions?: any) {
     return http<IJSONResultListProcessTableColumnVO>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/生产异常类型相关/getAbnormalTypeUsingGET_1
+* @link http://47.108.139.107:16700/doc.html#/default/生产异常类型相关/getAbnormalTypeUsingGET_1
 */
 export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(

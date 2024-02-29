@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:17400/doc.html#/default/生产报废服务相关/addScrapUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/生产报废服务相关/addScrapUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionScrapTreatment }, extraOptions?: any) {
     return http<IJSONResultobject>(

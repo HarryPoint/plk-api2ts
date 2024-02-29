@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/角色查询",
-              "originalRef": "角色查询"
+              "originalRef": "角色查询",
+              "$ref": "#/definitions/角色查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«企业角色响应»»",
-              "originalRef": "JSONResult«分页信息«企业角色响应»»"
+              "originalRef": "JSONResult«分页信息«企业角色响应»»",
+              "$ref": "#/definitions/JSONResult«分页信息«企业角色响应»»"
             }
           },
           "201": {
@@ -91,8 +91,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "groupBys": {
@@ -177,8 +177,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«企业角色响应»",
-          "originalRef": "分页信息«企业角色响应»"
+          "originalRef": "分页信息«企业角色响应»",
+          "$ref": "#/definitions/分页信息«企业角色响应»"
         },
         "ts": {
           "type": "integer",
@@ -216,8 +216,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/企业角色响应",
-            "originalRef": "企业角色响应"
+            "originalRef": "企业角色响应",
+            "$ref": "#/definitions/企业角色响应"
           }
         },
         "lastPage": {

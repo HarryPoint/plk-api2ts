@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17600",
+  "host": "47.108.139.107:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "emailTaskAddRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/EmailTaskAddRequestDTO",
-              "originalRef": "EmailTaskAddRequestDTO"
+              "originalRef": "EmailTaskAddRequestDTO",
+              "$ref": "#/definitions/EmailTaskAddRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«string»",
-              "originalRef": "JSONResult«string»"
+              "originalRef": "JSONResult«string»",
+              "$ref": "#/definitions/JSONResult«string»"
             }
           },
           "201": {
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "附件配置列表",
           "items": {
-            "$ref": "#/definitions/EmailTaskAttachmentConfigAddRequestDTO",
-            "originalRef": "EmailTaskAttachmentConfigAddRequestDTO"
+            "originalRef": "EmailTaskAttachmentConfigAddRequestDTO",
+            "$ref": "#/definitions/EmailTaskAttachmentConfigAddRequestDTO"
           }
         },
         "status": {
@@ -123,8 +123,8 @@
         },
         "sendingTimeConfig": {
           "description": "发送时间配置",
-          "$ref": "#/definitions/SendingTimeConfigAddRequestDTO",
-          "originalRef": "SendingTimeConfigAddRequestDTO"
+          "originalRef": "SendingTimeConfigAddRequestDTO",
+          "$ref": "#/definitions/SendingTimeConfigAddRequestDTO"
         },
         "createUserName": {
           "type": "string",

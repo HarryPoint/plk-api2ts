@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/saveMoveInDetailUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/生产任务相关/saveMoveInDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IInboundAndOutboundInformationDTO1, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

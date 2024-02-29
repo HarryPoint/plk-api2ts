@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/工艺卡相关/getMaterialSelectorUsingPOST_2
+* @link http://47.108.139.107:16400/doc.html#/default/工艺卡相关/getMaterialSelectorUsingPOST_2
 */
 export default function fetchMethod(options: { params: { materialTypeList?: EmaterialTypeList_items[]; nameOrCode?: string; pageNo?: number; pageSize?: number; orders?: { column?: string; isAsc?: Eorders_items_isAsc }[] } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialMasterDataSelectionReturnsVO>(

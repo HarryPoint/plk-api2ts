@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:17400/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/物料库存扫码相关服务/outStorageScanLotNoUsingPOST
 */
 export default function fetchMethod(options: { data: ITheBatchNumberOfTheScanCodeForMaterialsLeavingTheWarehouseIsToBeQueried }, extraOptions?: any) {
     return http<IJSONResultListObjectReturnedToTheBatchNumberGroupForRetrievingMaterials>(

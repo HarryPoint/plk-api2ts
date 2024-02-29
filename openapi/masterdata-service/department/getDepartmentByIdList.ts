@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16700/doc.html#/default/部门相关/getDepartmentByIdListUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/部门相关/getDepartmentByIdListUsingPOST
 */
 export default function fetchMethod(options: { data: IIdCollectionInformation, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListDepartmentVO>(

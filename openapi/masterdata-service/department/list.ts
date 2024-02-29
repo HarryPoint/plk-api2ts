@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:16700/doc.html#/default/部门相关/listUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/部门相关/listUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListDepartmentDTO>(

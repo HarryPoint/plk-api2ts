@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.135.148:16700/doc.html#/default/项目阶段相关/sortByMoveUpUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/项目阶段相关/sortByMoveUpUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectPhaseSortRequestObjects }, extraOptions?: any) {
     return http<IJSONResultobject>(

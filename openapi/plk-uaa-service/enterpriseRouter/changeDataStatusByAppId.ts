@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:18100/doc.html#/default/企业路由相关/changeDataStatusByAppIdUsingPOST
+* @link http://47.108.139.107:18100/doc.html#/default/企业路由相关/changeDataStatusByAppIdUsingPOST
 */
 export default function fetchMethod(options: { data: ITheEnterpriseRouteRequestsTheDTOToChangeTheDataStatusBasedOnTheApplicationId }, extraOptions?: any) {
     return http<IJSONResultobject>(

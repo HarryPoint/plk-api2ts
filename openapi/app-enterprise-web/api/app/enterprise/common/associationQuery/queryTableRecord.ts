@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/公共相关/queryAssociationFormTableRecordUsingPOST
+* @link http://47.108.139.107:16400/doc.html#/default/公共相关/queryAssociationFormTableRecordUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging1 }, extraOptions?: any) {
     return http<IJSONResultAssociationFormTypeFieldTableRecordOutputVO>(
@@ -766,7 +766,9 @@ export enum EProcessFormVO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+    /** 项目设备信息状态 */
+    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
 }
 
 export enum EProcessFormVO_isCanModifySelectorOption {

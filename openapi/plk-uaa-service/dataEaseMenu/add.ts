@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:18100/doc.html#/default/DataEase菜单相关/addUsingPOST_2
+* @link http://47.108.139.107:18100/doc.html#/default/DataEase菜单相关/addUsingPOST_2
 */
 export default function fetchMethod(options: { data: ITheDataEaseMenuAddsTheRequestObject }, extraOptions?: any) {
     return http<IJSONResultlong>(

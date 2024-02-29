@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/初始化引擎 - 导入模板相关/queryByApplicationIdUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/初始化引擎 - 导入模板相关/queryByApplicationIdUsingGET
 */
 export default function fetchMethod(options: { params: { applicationId?: string } }, extraOptions?: any) {
     return http<IJSONResultListImportTemplate>(

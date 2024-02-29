@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -34,8 +34,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«附件 VO»",
-              "originalRef": "JSONResult«附件 VO»"
+              "originalRef": "JSONResult«附件 VO»",
+              "$ref": "#/definitions/JSONResult«附件 VO»"
             }
           },
           "201": {
@@ -73,8 +73,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/附件 VO",
-          "originalRef": "附件 VO"
+          "originalRef": "附件 VO",
+          "$ref": "#/definitions/附件 VO"
         },
         "ts": {
           "type": "integer",

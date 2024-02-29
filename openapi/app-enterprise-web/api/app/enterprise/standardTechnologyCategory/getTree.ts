@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16400/doc.html#/default/标准工艺分类相关/getTreeUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/标准工艺分类相关/getTreeUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListStandardProcessClassificationTreeRespondsToDtos>(

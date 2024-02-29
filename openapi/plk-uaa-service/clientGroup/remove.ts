@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:18100/doc.html#/default/客户端组相关/removeUsingPOST_1
+* @link http://47.108.139.107:18100/doc.html#/default/客户端组相关/removeUsingPOST_1
 */
 export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(

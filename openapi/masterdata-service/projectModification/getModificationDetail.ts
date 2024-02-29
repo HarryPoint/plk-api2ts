@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16700/doc.html#/default/项目变更相关/getModificationDetailUsingGET_1
+* @link http://47.108.139.107:16700/doc.html#/default/项目变更相关/getModificationDetailUsingGET_1
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectChangeOrderFieldResponseParameters>(

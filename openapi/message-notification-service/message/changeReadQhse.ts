@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17600/doc.html#/default/消息相关/changeReadQhseUsingPOST
+* @link http://47.108.139.107:17600/doc.html#/default/消息相关/changeReadQhseUsingPOST
 */
 export default function fetchMethod(options: { data: IMessageChangeReadDTO }, extraOptions?: any) {
     return http<IJSONResultobject>(

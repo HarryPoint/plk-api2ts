@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "moveInMoldBatchRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/生产任务批量设置进料模具请求DTO",
-              "originalRef": "生产任务批量设置进料模具请求DTO"
+              "originalRef": "生产任务批量设置进料模具请求DTO",
+              "$ref": "#/definitions/生产任务批量设置进料模具请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -76,8 +76,8 @@
           "type": "array",
           "description": "生产任务详情",
           "items": {
-            "$ref": "#/definitions/生产任务批量设置进料模具任务详情请求DTO",
-            "originalRef": "生产任务批量设置进料模具任务详情请求DTO"
+            "originalRef": "生产任务批量设置进料模具任务详情请求DTO",
+            "$ref": "#/definitions/生产任务批量设置进料模具任务详情请求DTO"
           }
         },
         "moldIds": {

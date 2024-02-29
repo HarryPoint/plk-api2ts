@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17600",
+  "host": "47.108.139.107:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/AppMessageConfigAddRequestDTO",
-              "originalRef": "AppMessageConfigAddRequestDTO"
+              "originalRef": "AppMessageConfigAddRequestDTO",
+              "$ref": "#/definitions/AppMessageConfigAddRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«long»",
-              "originalRef": "JSONResult«long»"
+              "originalRef": "JSONResult«long»",
+              "$ref": "#/definitions/JSONResult«long»"
             }
           },
           "201": {
@@ -96,16 +96,16 @@
           "type": "array",
           "description": "发送内容配置列表",
           "items": {
-            "$ref": "#/definitions/AppMessageSentContentTemplateAddRequestDTO",
-            "originalRef": "AppMessageSentContentTemplateAddRequestDTO"
+            "originalRef": "AppMessageSentContentTemplateAddRequestDTO",
+            "$ref": "#/definitions/AppMessageSentContentTemplateAddRequestDTO"
           }
         },
         "recipientList": {
           "type": "array",
           "description": "接受人列表",
           "items": {
-            "$ref": "#/definitions/AppMessageRecipientAddRequestDTO",
-            "originalRef": "AppMessageRecipientAddRequestDTO"
+            "originalRef": "AppMessageRecipientAddRequestDTO",
+            "$ref": "#/definitions/AppMessageRecipientAddRequestDTO"
           }
         }
       },
@@ -137,8 +137,8 @@
           "type": "array",
           "description": "字段元数据",
           "items": {
-            "$ref": "#/definitions/MessageContentFieldMetaAddDTO",
-            "originalRef": "MessageContentFieldMetaAddDTO"
+            "originalRef": "MessageContentFieldMetaAddDTO",
+            "$ref": "#/definitions/MessageContentFieldMetaAddDTO"
           }
         },
         "isUseConfig": {

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16700/doc.html#/default/进出料bom消耗相关/scanMoveInBomConsumeByLotNoUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/进出料bom消耗相关/scanMoveInBomConsumeByLotNoUsingPOST
 */
 export default function fetchMethod(options: { data: IFeedBomConsumptionScanRequestDTO }, extraOptions?: any) {
     return http<IJSONResultIncomingBomConsumptionScanResponseDTO>(

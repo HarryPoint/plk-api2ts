@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/UserInfoQueryRequestDTO",
-              "originalRef": "UserInfoQueryRequestDTO"
+              "originalRef": "UserInfoQueryRequestDTO",
+              "$ref": "#/definitions/UserInfoQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«UserInfoQueryResponseDTO»",
-              "originalRef": "JSONResult«UserInfoQueryResponseDTO»"
+              "originalRef": "JSONResult«UserInfoQueryResponseDTO»",
+              "$ref": "#/definitions/JSONResult«UserInfoQueryResponseDTO»"
             }
           },
           "201": {
@@ -96,8 +96,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/UserInfoQueryResponseDTO",
-          "originalRef": "UserInfoQueryResponseDTO"
+          "originalRef": "UserInfoQueryResponseDTO",
+          "$ref": "#/definitions/UserInfoQueryResponseDTO"
         },
         "ts": {
           "type": "integer",
@@ -115,8 +115,8 @@
           "type": "array",
           "description": "用户列表",
           "items": {
-            "$ref": "#/definitions/EnterpriseUserDTO",
-            "originalRef": "EnterpriseUserDTO"
+            "originalRef": "EnterpriseUserDTO",
+            "$ref": "#/definitions/EnterpriseUserDTO"
           }
         }
       },

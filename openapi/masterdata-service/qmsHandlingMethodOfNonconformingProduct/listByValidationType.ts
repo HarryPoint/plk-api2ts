@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
 */
 export default function fetchMethod(options: { params: { useValidationTypes?: EuseValidationTypes } }, extraOptions?: any) {
     return http<IJSONResultListResponseObjectForHandlingNonconformingItems>(

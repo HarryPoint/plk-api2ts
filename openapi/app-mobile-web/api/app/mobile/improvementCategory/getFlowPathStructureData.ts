@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/改善类别相关/getFlowPathStructureDataUsingPOST_17
+* @link http://47.108.139.107:17400/doc.html#/default/改善类别相关/getFlowPathStructureDataUsingPOST_17
 */
 export default function fetchMethod(options: { data: IProcessStructureSearchVO }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(

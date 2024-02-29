@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:17600/doc.html#/default/消息相关/getIdListByBusinessIdAndTypeUsingPOST
+* @link http://47.108.139.107:17600/doc.html#/default/消息相关/getIdListByBusinessIdAndTypeUsingPOST
 */
 export default function fetchMethod(options: { data: IMessageQueryDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListlong>(

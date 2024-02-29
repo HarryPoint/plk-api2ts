@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "工序完成明细表"
         ],
         "summary": "查询工序完成明细表分页数据",
-        "operationId": "pageUsingPOST_2",
+        "operationId": "pageUsingPOST_1",
         "consumes": [
           "application/json"
         ],

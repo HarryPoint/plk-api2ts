@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/工艺文档映射配置/listByToCodeUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/工艺文档映射配置/listByToCodeUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; toCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessDocumentMapConfigurationVO>(

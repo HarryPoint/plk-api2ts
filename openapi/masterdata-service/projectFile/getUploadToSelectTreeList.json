@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«文件分类明细响应DTO»»_6",
-              "$ref": "#/definitions/JSONResult«List«文件分类明细响应DTO»»_6"
+              "$ref": "#/definitions/JSONResult«List«文件分类明细响应DTO»»_6",
+              "originalRef": "JSONResult«List«文件分类明细响应DTO»»_6"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "文件分类明细响应DTO_12",
-            "$ref": "#/definitions/文件分类明细响应DTO_12"
+            "$ref": "#/definitions/文件分类明细响应DTO_12",
+            "originalRef": "文件分类明细响应DTO_12"
           }
         },
         "ts": {
@@ -115,8 +115,8 @@
           "type": "array",
           "description": "下级树列表",
           "items": {
-            "originalRef": "文件分类明细响应DTO_12",
-            "$ref": "#/definitions/文件分类明细响应DTO_12"
+            "$ref": "#/definitions/文件分类明细响应DTO_12",
+            "originalRef": "文件分类明细响应DTO_12"
           }
         },
         "userPermissionList": {

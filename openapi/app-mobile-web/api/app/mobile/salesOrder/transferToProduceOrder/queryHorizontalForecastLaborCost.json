@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/预测工费_1",
-                "originalRef": "预测工费_1"
+                "originalRef": "预测工费_1",
+                "$ref": "#/definitions/预测工费_1"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«预测工费»",
-              "originalRef": "JSONResult«预测工费»"
+              "originalRef": "JSONResult«预测工费»",
+              "$ref": "#/definitions/JSONResult«预测工费»"
             }
           },
           "201": {
@@ -127,8 +127,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/预测工费",
-          "originalRef": "预测工费"
+          "originalRef": "预测工费",
+          "$ref": "#/definitions/预测工费"
         },
         "ts": {
           "type": "integer",
@@ -146,24 +146,24 @@
           "type": "array",
           "description": "工序列表",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "orderItemList": {
           "type": "array",
           "description": "订单项列表",
           "items": {
-            "$ref": "#/definitions/预测工费水平订单项",
-            "originalRef": "预测工费水平订单项"
+            "originalRef": "预测工费水平订单项",
+            "$ref": "#/definitions/预测工费水平订单项"
           }
         },
         "summaryLaborCostList": {
           "type": "array",
           "description": "汇总工费列表",
           "items": {
-            "$ref": "#/definitions/ProcessLaborCostVO",
-            "originalRef": "ProcessLaborCostVO"
+            "originalRef": "ProcessLaborCostVO",
+            "$ref": "#/definitions/ProcessLaborCostVO"
           }
         }
       },
@@ -207,13 +207,13 @@
         },
         "masterMaterial": {
           "description": "主物料",
-          "$ref": "#/definitions/ForecastMaterialInfo",
-          "originalRef": "ForecastMaterialInfo"
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "childMaterial": {
           "description": "子物料",
-          "$ref": "#/definitions/ForecastMaterialInfo",
-          "originalRef": "ForecastMaterialInfo"
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "deliveryQuantity": {
           "type": "number",
@@ -232,8 +232,8 @@
           "type": "array",
           "description": "预测工费列表",
           "items": {
-            "$ref": "#/definitions/ProcessLaborCostVO",
-            "originalRef": "ProcessLaborCostVO"
+            "originalRef": "ProcessLaborCostVO",
+            "$ref": "#/definitions/ProcessLaborCostVO"
           }
         }
       },

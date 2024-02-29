@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListInCascadeModeUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/searchByFlowPathCodeAndSerialNoListInCascadeModeUsingPOST
 */
 export default function fetchMethod(options: { data: IPaging3 }, extraOptions?: any) {
     return http<IJSONResultListFormCascadeQueryResultVO>(

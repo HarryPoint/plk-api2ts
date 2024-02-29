@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16700/doc.html#/default/项目成员相关/listProjectMemberUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/项目成员相关/listProjectMemberUsingPOST
 */
 export default function fetchMethod(options: { data: IItemNameNumberPublicQueryObject }, extraOptions?: any) {
     return http<ITheJSONResultListProjectMemberCountsTheResponseObject>(
@@ -20,10 +20,10 @@ export interface IItemNameNumberPublicQueryObject {
     nameOrCode?: string;
     /** 条数 */
     limit?: number;
-    /** 项目计划ids */
-    projectPlanIds?: string[];
     /** 项目成员id集合 */
     ids?: string[];
+    /** 项目计划ids */
+    projectPlanIds?: string[];
     /** undefined */
     projectIds?: string[];
     /** undefined */

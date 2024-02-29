@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:17400/doc.html#/default/自定义应用相关/pageSearchDetailPageFormDataUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/自定义应用相关/pageSearchDetailPageFormDataUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessDataBasicSearchVO1 }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(

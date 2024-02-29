@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/设备参数报表相关/getExportTicketUsingPOST_9
+* @link http://47.108.139.107:16400/doc.html#/default/设备参数报表相关/getExportTicketUsingPOST_9
 */
 export default function fetchMethod(options: { data: IDeviceStatisticsSearchVO }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(

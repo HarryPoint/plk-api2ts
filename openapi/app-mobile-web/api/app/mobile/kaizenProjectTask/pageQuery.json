@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/分页信息",
-              "originalRef": "分页信息"
+              "originalRef": "分页信息",
+              "$ref": "#/definitions/分页信息"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«KaizenProjectTaskResponseDTO»»",
-              "originalRef": "JSONResult«分页信息«KaizenProjectTaskResponseDTO»»"
+              "originalRef": "JSONResult«分页信息«KaizenProjectTaskResponseDTO»»",
+              "$ref": "#/definitions/JSONResult«分页信息«KaizenProjectTaskResponseDTO»»"
             }
           },
           "201": {
@@ -179,8 +179,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«KaizenProjectTaskResponseDTO»",
-          "originalRef": "分页信息«KaizenProjectTaskResponseDTO»"
+          "originalRef": "分页信息«KaizenProjectTaskResponseDTO»",
+          "$ref": "#/definitions/分页信息«KaizenProjectTaskResponseDTO»"
         },
         "ts": {
           "type": "integer",
@@ -218,8 +218,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/KaizenProjectTaskResponseDTO",
-            "originalRef": "KaizenProjectTaskResponseDTO"
+            "originalRef": "KaizenProjectTaskResponseDTO",
+            "$ref": "#/definitions/KaizenProjectTaskResponseDTO"
           }
         },
         "lastPage": {
@@ -284,13 +284,13 @@
         },
         "projectId": {
           "description": "关联项目",
-          "$ref": "#/definitions/关联表单数据VO",
-          "originalRef": "关联表单数据VO"
+          "originalRef": "关联表单数据VO",
+          "$ref": "#/definitions/关联表单数据VO"
         },
         "leaderUserId": {
           "description": "执行人",
-          "$ref": "#/definitions/关联表单数据VO",
-          "originalRef": "关联表单数据VO"
+          "originalRef": "关联表单数据VO",
+          "$ref": "#/definitions/关联表单数据VO"
         },
         "parentId": {
           "type": "integer",
@@ -323,8 +323,8 @@
         },
         "createUserId": {
           "description": "创建用户ID",
-          "$ref": "#/definitions/关联表单数据VO",
-          "originalRef": "关联表单数据VO"
+          "originalRef": "关联表单数据VO",
+          "$ref": "#/definitions/关联表单数据VO"
         },
         "createTime": {
           "type": "string",
@@ -335,8 +335,8 @@
           "type": "array",
           "description": "下级任务列表",
           "items": {
-            "$ref": "#/definitions/KaizenProjectTaskResponseDTO",
-            "originalRef": "KaizenProjectTaskResponseDTO"
+            "originalRef": "KaizenProjectTaskResponseDTO",
+            "$ref": "#/definitions/KaizenProjectTaskResponseDTO"
           }
         }
       },

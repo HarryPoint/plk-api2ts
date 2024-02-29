@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:17400/doc.html#/default/生产处理返工相关/addUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/生产处理返工相关/addUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionProcessesReworkAddingRequestObjects }, extraOptions?: any) {
     return http<IJSONResultobject>(

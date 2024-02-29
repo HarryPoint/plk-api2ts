@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16700/doc.html#/default/项目大屏相关/queryProjectFeeCountUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectFeeCountUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectKanbanQueryDto }, extraOptions?: any) {
     return http<IJSONResultListProjectCostStatisticsResponseObject>(

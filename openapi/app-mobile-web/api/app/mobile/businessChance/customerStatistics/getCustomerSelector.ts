@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/CRM-客户统计报表相关/getCustomerSelectorUsingGET
+* @link http://47.108.139.107:17400/doc.html#/default/CRM-客户统计报表相关/getCustomerSelectorUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListClientSelectsToReturnVO>(

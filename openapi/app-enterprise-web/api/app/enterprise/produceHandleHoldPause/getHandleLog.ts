@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16400/doc.html#/default/生产处理暂扣相关/getHandleLogUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/生产处理暂扣相关/getHandleLogUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProducesTheResponseObjectForTheSuspenseProcessingRecord>(

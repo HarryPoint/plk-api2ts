@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "search",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/待办事项搜索VO",
-              "originalRef": "待办事项搜索VO"
+              "originalRef": "待办事项搜索VO",
+              "$ref": "#/definitions/待办事项搜索VO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«待办事项移动端返回DTO»»",
-              "originalRef": "JSONResult«List«待办事项移动端返回DTO»»"
+              "originalRef": "JSONResult«List«待办事项移动端返回DTO»»",
+              "$ref": "#/definitions/JSONResult«List«待办事项移动端返回DTO»»"
             }
           },
           "201": {
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序VO",
-            "originalRef": "分页排序VO"
+            "originalRef": "分页排序VO",
+            "$ref": "#/definitions/分页排序VO"
           }
         },
         "queryStatus": {
@@ -173,8 +173,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/待办事项移动端返回DTO",
-            "originalRef": "待办事项移动端返回DTO"
+            "originalRef": "待办事项移动端返回DTO",
+            "$ref": "#/definitions/待办事项移动端返回DTO"
           }
         },
         "ts": {
@@ -276,16 +276,16 @@
           "type": "array",
           "description": "自定义字段",
           "items": {
-            "$ref": "#/definitions/工单明细数据返回信息VO",
-            "originalRef": "工单明细数据返回信息VO"
+            "originalRef": "工单明细数据返回信息VO",
+            "$ref": "#/definitions/工单明细数据返回信息VO"
           }
         },
         "currentHandleUsers": {
           "type": "array",
           "description": "当前处理人集合",
           "items": {
-            "$ref": "#/definitions/流程节点执行人VO",
-            "originalRef": "流程节点执行人VO"
+            "originalRef": "流程节点执行人VO",
+            "$ref": "#/definitions/流程节点执行人VO"
           }
         },
         "isTimeout": {
@@ -389,8 +389,8 @@
         },
         "produceTask": {
           "description": "produceTask",
-          "$ref": "#/definitions/生产任务针对待办返回DTO",
-          "originalRef": "生产任务针对待办返回DTO"
+          "originalRef": "生产任务针对待办返回DTO",
+          "$ref": "#/definitions/生产任务针对待办返回DTO"
         },
         "title": {
           "type": "string",
@@ -400,16 +400,16 @@
           "type": "array",
           "description": "表头",
           "items": {
-            "$ref": "#/definitions/TableHeaderDTO",
-            "originalRef": "TableHeaderDTO"
+            "originalRef": "TableHeaderDTO",
+            "$ref": "#/definitions/TableHeaderDTO"
           }
         },
         "tableDataList": {
           "type": "array",
           "description": "表数据",
           "items": {
-            "$ref": "#/definitions/TableDataDTO",
-            "originalRef": "TableDataDTO"
+            "originalRef": "TableDataDTO",
+            "$ref": "#/definitions/TableDataDTO"
           }
         }
       },
@@ -746,8 +746,8 @@
           "type": "array",
           "description": "批次信息",
           "items": {
-            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)",
-            "originalRef": "生产任务批次响应DTO(针对移动端)"
+            "originalRef": "生产任务批次响应DTO(针对移动端)",
+            "$ref": "#/definitions/生产任务批次响应DTO(针对移动端)"
           }
         },
         "lotOrderNumber": {
@@ -756,8 +756,8 @@
         },
         "stepSetInfo": {
           "description": "当前步骤配置信息 - 用于前端判断各种情况逻辑",
-          "$ref": "#/definitions/生产工艺路径步骤设置返回VO",
-          "originalRef": "生产工艺路径步骤设置返回VO"
+          "originalRef": "生产工艺路径步骤设置返回VO",
+          "$ref": "#/definitions/生产工艺路径步骤设置返回VO"
         }
       },
       "title": "生产任务针对待办返回DTO"

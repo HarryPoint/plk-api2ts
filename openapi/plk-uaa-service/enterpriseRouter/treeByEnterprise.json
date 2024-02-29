@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "enterpriseQuery",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/企业路由树查询 DTO_2",
-              "originalRef": "企业路由树查询 DTO_2"
+              "originalRef": "企业路由树查询 DTO_2",
+              "$ref": "#/definitions/企业路由树查询 DTO_2"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«企业路由树响应 DTO»»",
-              "originalRef": "JSONResult«List«企业路由树响应 DTO»»"
+              "originalRef": "JSONResult«List«企业路由树响应 DTO»»",
+              "$ref": "#/definitions/JSONResult«List«企业路由树响应 DTO»»"
             }
           },
           "201": {
@@ -131,8 +131,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/企业路由树响应 DTO",
-            "originalRef": "企业路由树响应 DTO"
+            "originalRef": "企业路由树响应 DTO",
+            "$ref": "#/definitions/企业路由树响应 DTO"
           }
         },
         "ts": {
@@ -227,15 +227,15 @@
         },
         "config": {
           "description": "配置",
-          "$ref": "#/definitions/企业路由配置响应 DTO",
-          "originalRef": "企业路由配置响应 DTO"
+          "originalRef": "企业路由配置响应 DTO",
+          "$ref": "#/definitions/企业路由配置响应 DTO"
         },
         "children": {
           "type": "array",
           "description": "子集",
           "items": {
-            "$ref": "#/definitions/企业路由树响应 DTO",
-            "originalRef": "企业路由树响应 DTO"
+            "originalRef": "企业路由树响应 DTO",
+            "$ref": "#/definitions/企业路由树响应 DTO"
           }
         }
       },
@@ -254,20 +254,20 @@
         },
         "appConfig": {
           "description": "应用配置",
-          "$ref": "#/definitions/企业应用路由配置响应 DTO",
-          "originalRef": "企业应用路由配置响应 DTO"
+          "originalRef": "企业应用路由配置响应 DTO",
+          "$ref": "#/definitions/企业应用路由配置响应 DTO"
         },
         "rpExtConfig": {
           "description": "外部报表配置",
-          "$ref": "#/definitions/企业应用路由配置响应 DTO_1",
-          "originalRef": "企业应用路由配置响应 DTO_1"
+          "originalRef": "企业应用路由配置响应 DTO_1",
+          "$ref": "#/definitions/企业应用路由配置响应 DTO_1"
         },
         "appOrganizationFiledList": {
           "type": "array",
           "description": "应用对应的组织字段列表",
           "items": {
-            "$ref": "#/definitions/企业路由应用字段响应 DTO",
-            "originalRef": "企业路由应用字段响应 DTO"
+            "originalRef": "企业路由应用字段响应 DTO",
+            "$ref": "#/definitions/企业路由应用字段响应 DTO"
           }
         }
       },
@@ -354,6 +354,7 @@
             "  PROJECT_TYPE-项目类型",
             "  PROJECT_RISK_TYPE-项目风险类型",
             "  PROJECT_RISK_FLAG-项目风险标识",
+            "  PROJECT_DEVICE_INFO-项目设备信息",
             "  PROJECT_PLAN-项目计划",
             "  PROJECT_STAGE-项目阶段",
             "  PROJECT_TASK-项目任务",
@@ -374,6 +375,11 @@
             "  PROJECT_MODIFICATION-项目信息变更单",
             "  PROJECT_PLAN_MODIFICATION-项目计划变更单",
             "  PROJECT_MEMBER_MODIFICATION-项目成员变更单",
+            "  PROJECT_RESOURCES-项目资源",
+            "  PROJECT_FILE-项目文件",
+            "  PROJECT_FOLDER-项目文件夹",
+            "  PROJECT_CLOSE-项目关闭",
+            "  PROJECT_TRANSFER-项目迁移",
             "  QMS_ANNUAL_QUALITY_TARGET-年度质量目标",
             "  QMS_QUALITY_WORK_PLAN-质量工作计划",
             "  QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT-未完成情况分析报告",

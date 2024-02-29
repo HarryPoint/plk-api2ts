@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16400/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/生产工艺相关/getTreeDetailByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string; produceOrderId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionProcessTreeResponseObject>(

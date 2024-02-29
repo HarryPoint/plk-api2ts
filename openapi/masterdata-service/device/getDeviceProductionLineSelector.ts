@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/设备相关/getDeviceProductionLineSelectorUsingPOST
 */
 export default function fetchMethod(options: { data: IDeviceProductionLineSelectsRequestDTO }, extraOptions?: any) {
     return http<IJSONResultListSelectResponseDtosForTheDeviceProductionLine>(

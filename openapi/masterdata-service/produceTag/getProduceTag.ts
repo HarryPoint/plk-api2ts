@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/标签设置/getProduceTagUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/标签设置/getProduceTagUsingGET
 */
 export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTagReturnsVO>(

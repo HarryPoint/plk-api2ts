@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "报表相关"
         ],
         "summary": "分页查询订单报表",
-        "operationId": "getPageUsingPOST_25",
+        "operationId": "getPageUsingPOST_26",
         "consumes": [
           "application/json"
         ],

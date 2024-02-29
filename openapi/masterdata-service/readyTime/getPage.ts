@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/准备期相关/getPageUsingPOST_24
+* @link http://47.108.139.107:16700/doc.html#/default/准备期相关/getPageUsingPOST_25
 */
 export default function fetchMethod(options: { data: IPreparationPeriodQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPageInformationPreparationPeriodReturnsVO>(

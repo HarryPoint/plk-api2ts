@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/进出料记录管理/getMaterialActualQuantityPageUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/进出料记录管理/getMaterialActualQuantityPageUsingPOST
 */
 export default function fetchMethod(options: { data: IMaterialOutputSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationMaterialOutputVO>(

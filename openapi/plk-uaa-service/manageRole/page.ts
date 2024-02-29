@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:18100/doc.html#/default/运营角色相关/pageUsingPOST_3
+* @link http://47.108.139.107:18100/doc.html#/default/运营角色相关/pageUsingPOST_3
 */
 export default function fetchMethod(options: { data: IOperationRoleQuery }, extraOptions?: any) {
     return http<IJSONResultPagingInformationOperationRoleResponse>(

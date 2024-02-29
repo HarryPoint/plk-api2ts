@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/项目大屏相关/queryProjectCategoryUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<ITheJSONResultListProjectClassDistributesResponseObjects>(

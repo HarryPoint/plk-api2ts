@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16700/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarDetailUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/设备保养日历相关/getDeviceMaintainCalendarDetailUsingPOST
 */
 export default function fetchMethod(options: { data: IEquipmentMaintenanceCalendarDetailsRequestDTO }, extraOptions?: any) {
     return http<IJSONResultDeviceMaintenanceCalendarRespondsToDTO>(

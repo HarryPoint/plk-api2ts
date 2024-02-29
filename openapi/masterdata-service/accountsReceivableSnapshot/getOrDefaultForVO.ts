@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/应收账款快照相关/getOrDefaultForVOUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/应收账款快照相关/getOrDefaultForVOUsingGET
 */
 export default function fetchMethod(options: { params: { businessUserId?: string; customerId?: string; day?: number; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultAccountsReceivableSnapshotVO>(

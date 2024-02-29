@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16700/doc.html#/default/生产退料单相关/getProductionMaterialReturnSerialNoListUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/生产退料单相关/getProductionMaterialReturnSerialNoListUsingPOST
 */
 export default function fetchMethod(options: { params: { productionMaterialIssuanceOrderDetailId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionMaterialReturnSerialNoQueryResponseDTO>(

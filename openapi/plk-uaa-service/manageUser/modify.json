@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "modify",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/运营用户修改请求",
-              "originalRef": "运营用户修改请求"
+              "originalRef": "运营用户修改请求",
+              "$ref": "#/definitions/运营用户修改请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -66,8 +66,8 @@
       "properties": {
         "manageEmployee": {
           "description": "运营员工",
-          "$ref": "#/definitions/Id Code Name 通用传输对象",
-          "originalRef": "Id Code Name 通用传输对象"
+          "originalRef": "Id Code Name 通用传输对象",
+          "$ref": "#/definitions/Id Code Name 通用传输对象"
         },
         "telephone": {
           "type": "string",
@@ -81,8 +81,8 @@
           "type": "array",
           "description": "角色集",
           "items": {
-            "$ref": "#/definitions/Id 信息_1",
-            "originalRef": "Id 信息_1"
+            "originalRef": "Id 信息_1",
+            "$ref": "#/definitions/Id 信息_1"
           }
         },
         "id": {

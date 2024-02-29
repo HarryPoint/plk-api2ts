@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«流程响应VO»",
-              "originalRef": "JSONResult«流程响应VO»"
+              "originalRef": "JSONResult«流程响应VO»",
+              "$ref": "#/definitions/JSONResult«流程响应VO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/流程响应VO",
-          "originalRef": "流程响应VO"
+          "originalRef": "流程响应VO",
+          "$ref": "#/definitions/流程响应VO"
         },
         "ts": {
           "type": "integer",
@@ -231,6 +231,8 @@
             "  PROJECT_MODIFICATION-项目信息变更单",
             "  PROJECT_PLAN_MODIFICATION-项目计划变更单",
             "  PROJECT_MEMBER_MODIFICATION-项目成员变更单",
+            "  PROJECT_FILE-项目文件",
+            "  PROJECT_FOLDER-项目文件夹",
             "  QMS_ANNUAL_QUALITY_TARGET-年度质量目标",
             "  QMS_QUALITY_WORK_PLAN-质量工作计划",
             "  QMS_INCOMPLETE_SITUATION_ANALYSIS_REPORT-未完成情况分析报告",

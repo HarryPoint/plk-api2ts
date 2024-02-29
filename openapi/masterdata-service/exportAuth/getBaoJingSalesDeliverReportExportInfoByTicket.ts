@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/导出相关/getBaoJingSalesDeliverReportExportInfoByTicketUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/导出相关/getBaoJingSalesDeliverReportExportInfoByTicketUsingGET
 */
 export default function fetchMethod(options: { params: { ticket?: string } }, extraOptions?: any) {
     return http<IJSONResultExportInformationBaojingSalesDeliveryReportFormReturnedToVO>(

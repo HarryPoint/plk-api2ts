@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:16700/doc.html#/default/项目相关/queryBaseProjectUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/项目相关/queryBaseProjectUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectPhaseTaskQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProjectBaseQueryResponseObject>(
@@ -191,7 +191,7 @@ export enum EProjectPhaseTaskQueryObject_projectStatus {
     APPROVAL_DENIED = "APPROVAL_DENIED",
     /** 进行中 */
     IN_PROGRESS = "IN_PROGRESS",
-    /** 已完成 */
+    /** 已关闭 */
     COMPLETE = "COMPLETE",
     /** 已终止 */
     END = "END"

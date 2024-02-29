@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/模糊排产/vaguePlanUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/模糊排产/vaguePlanUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionOrderFuzzySchedulingDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

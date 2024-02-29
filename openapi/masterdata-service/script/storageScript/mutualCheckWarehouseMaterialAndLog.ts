@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/库存脚本相关接口/mutualCheckWarehouseMaterialAndLogUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/库存脚本相关接口/mutualCheckWarehouseMaterialAndLogUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultstring>(

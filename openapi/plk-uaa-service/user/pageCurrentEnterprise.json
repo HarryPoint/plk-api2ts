@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "query",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/当前企业用户查询",
-              "originalRef": "当前企业用户查询"
+              "originalRef": "当前企业用户查询",
+              "$ref": "#/definitions/当前企业用户查询"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«分页信息«企业用户响应»»",
-              "originalRef": "JSONResult«分页信息«企业用户响应»»"
+              "originalRef": "JSONResult«分页信息«企业用户响应»»",
+              "$ref": "#/definitions/JSONResult«分页信息«企业用户响应»»"
             }
           },
           "201": {
@@ -91,8 +91,8 @@
           "type": "array",
           "description": "排序字段集",
           "items": {
-            "$ref": "#/definitions/分页排序",
-            "originalRef": "分页排序"
+            "originalRef": "分页排序",
+            "$ref": "#/definitions/分页排序"
           }
         },
         "groupBys": {
@@ -155,8 +155,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/分页信息«企业用户响应»",
-          "originalRef": "分页信息«企业用户响应»"
+          "originalRef": "分页信息«企业用户响应»",
+          "$ref": "#/definitions/分页信息«企业用户响应»"
         },
         "ts": {
           "type": "integer",
@@ -194,8 +194,8 @@
           "type": "array",
           "description": "分页列表",
           "items": {
-            "$ref": "#/definitions/企业用户响应",
-            "originalRef": "企业用户响应"
+            "originalRef": "企业用户响应",
+            "$ref": "#/definitions/企业用户响应"
           }
         },
         "lastPage": {
@@ -289,21 +289,21 @@
         },
         "employee": {
           "description": "员工",
-          "$ref": "#/definitions/员工信息响应",
-          "originalRef": "员工信息响应"
+          "originalRef": "员工信息响应",
+          "$ref": "#/definitions/员工信息响应"
         },
         "roleList": {
           "type": "array",
           "description": "角色集",
           "items": {
-            "$ref": "#/definitions/角色信息响应",
-            "originalRef": "角色信息响应"
+            "originalRef": "角色信息响应",
+            "$ref": "#/definitions/角色信息响应"
           }
         },
         "department": {
           "description": "部门",
-          "$ref": "#/definitions/部门响应 DTO",
-          "originalRef": "部门响应 DTO"
+          "originalRef": "部门响应 DTO",
+          "$ref": "#/definitions/部门响应 DTO"
         }
       },
       "title": "企业用户响应"

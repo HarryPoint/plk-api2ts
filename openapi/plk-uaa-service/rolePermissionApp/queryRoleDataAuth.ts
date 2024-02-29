@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:18100/doc.html#/default/应用相关的角色权限/queryRoleDataAuthUsingPOST
+* @link http://47.108.139.107:18100/doc.html#/default/应用相关的角色权限/queryRoleDataAuthUsingPOST
 */
 export default function fetchMethod(options: { data: IRoleQuery1 }, extraOptions?: any) {
     return http<IJSONResultListEnterpriseRolePermissionResponse>(

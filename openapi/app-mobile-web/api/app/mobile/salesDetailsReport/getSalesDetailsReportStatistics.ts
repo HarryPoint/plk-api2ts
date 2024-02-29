@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:17400/doc.html#/default/销售明细报表相关/getSalesDetailsReportStatisticsUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/销售明细报表相关/getSalesDetailsReportStatisticsUsingPOST
 */
 export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultSalesStatisticsReturnObject>(

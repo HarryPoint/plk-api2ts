@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16400/doc.html#/default/项目任务相关/getProjectByProjectIdUsingPOST
+* @link http://47.108.139.107:16400/doc.html#/default/项目任务相关/getProjectByProjectIdUsingPOST
 */
 export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultKaizenProjectResponseDTO>(

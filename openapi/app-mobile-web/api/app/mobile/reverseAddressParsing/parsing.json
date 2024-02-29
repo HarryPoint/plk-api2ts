@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "location",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/LocationInfo",
-              "originalRef": "LocationInfo"
+              "originalRef": "LocationInfo",
+              "$ref": "#/definitions/LocationInfo"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«AddressOutputDTO»",
-              "originalRef": "JSONResult«AddressOutputDTO»"
+              "originalRef": "JSONResult«AddressOutputDTO»",
+              "$ref": "#/definitions/JSONResult«AddressOutputDTO»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/AddressOutputDTO",
-          "originalRef": "AddressOutputDTO"
+          "originalRef": "AddressOutputDTO",
+          "$ref": "#/definitions/AddressOutputDTO"
         },
         "ts": {
           "type": "integer",
@@ -104,8 +104,8 @@
       "type": "object",
       "properties": {
         "location": {
-          "$ref": "#/definitions/LocationInfo",
-          "originalRef": "LocationInfo"
+          "originalRef": "LocationInfo",
+          "$ref": "#/definitions/LocationInfo"
         },
         "address": {
           "type": "string",
@@ -113,18 +113,18 @@
         },
         "addressComponent": {
           "description": "地址部件，address不满足需求时可自行拼接",
-          "$ref": "#/definitions/AddressComponentOutputDTO",
-          "originalRef": "AddressComponentOutputDTO"
+          "originalRef": "AddressComponentOutputDTO",
+          "$ref": "#/definitions/AddressComponentOutputDTO"
         },
         "formattedAddresses": {
           "description": "以结合知名地点形成的描述性地址，更具备人性化特点",
-          "$ref": "#/definitions/FormattedAddressesOutputDTO",
-          "originalRef": "FormattedAddressesOutputDTO"
+          "originalRef": "FormattedAddressesOutputDTO",
+          "$ref": "#/definitions/FormattedAddressesOutputDTO"
         },
         "adInfo": {
           "description": "行政区划信息",
-          "$ref": "#/definitions/AddressRegionInfo",
-          "originalRef": "AddressRegionInfo"
+          "originalRef": "AddressRegionInfo",
+          "$ref": "#/definitions/AddressRegionInfo"
         }
       },
       "title": "AddressOutputDTO"

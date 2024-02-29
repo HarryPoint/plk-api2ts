@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«项目应用未处理待办返回对象»»",
-              "$ref": "#/definitions/JSONResult«List«项目应用未处理待办返回对象»»"
+              "$ref": "#/definitions/JSONResult«List«项目应用未处理待办返回对象»»",
+              "originalRef": "JSONResult«List«项目应用未处理待办返回对象»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "项目应用未处理待办返回对象",
-            "$ref": "#/definitions/项目应用未处理待办返回对象"
+            "$ref": "#/definitions/项目应用未处理待办返回对象",
+            "originalRef": "项目应用未处理待办返回对象"
           }
         },
         "ts": {
@@ -169,16 +169,16 @@
           "type": "array",
           "description": "标题表头",
           "items": {
-            "originalRef": "项目应用未处理待办表头返回对象",
-            "$ref": "#/definitions/项目应用未处理待办表头返回对象"
+            "$ref": "#/definitions/项目应用未处理待办表头返回对象",
+            "originalRef": "项目应用未处理待办表头返回对象"
           }
         },
         "tableDataList": {
           "type": "array",
           "description": "表数据",
           "items": {
-            "originalRef": "项目应用未处理待办数据返回对象",
-            "$ref": "#/definitions/项目应用未处理待办数据返回对象"
+            "$ref": "#/definitions/项目应用未处理待办数据返回对象",
+            "originalRef": "项目应用未处理待办数据返回对象"
           }
         },
         "isCanHandle": {

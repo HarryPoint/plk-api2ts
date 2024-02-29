@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16400/doc.html#/default/出料数据导入相关/getImportResultByIdUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/出料数据导入相关/getImportResultByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessMoveOutImportSynchronizationOutputDTO>(

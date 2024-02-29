@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/生产任务相关/exportUsingPOST_36
+* @link http://47.108.139.107:16400/doc.html#/default/生产任务相关/exportUsingPOST_36
 */
 export default function fetchMethod(options: { data: IExportTheDTOOfAProductionTask }, extraOptions?: any) {
     return http<IJSONResultlong>(

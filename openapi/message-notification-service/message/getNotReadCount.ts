@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17600/doc.html#/default/消息相关/getNotReadCountUsingGET
+* @link http://47.108.139.107:17600/doc.html#/default/消息相关/getNotReadCountUsingGET
 */
 export default function fetchMethod(options: { params: { clientCode?: string; enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultint>(

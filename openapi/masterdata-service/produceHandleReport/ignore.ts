@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/上报反馈服务相关/ignoreUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/上报反馈服务相关/ignoreUsingPOST
 */
 export default function fetchMethod(options: { data: IReportTheDTOToHandleTheChangeStatus, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

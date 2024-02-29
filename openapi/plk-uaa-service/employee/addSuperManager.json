@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "add",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/超管员工新增请求",
-              "originalRef": "超管员工新增请求"
+              "originalRef": "超管员工新增请求",
+              "$ref": "#/definitions/超管员工新增请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -66,8 +66,8 @@
       "properties": {
         "employee": {
           "description": "员工",
-          "$ref": "#/definitions/员工编辑请求",
-          "originalRef": "员工编辑请求"
+          "originalRef": "员工编辑请求",
+          "$ref": "#/definitions/员工编辑请求"
         },
         "password": {
           "type": "string",

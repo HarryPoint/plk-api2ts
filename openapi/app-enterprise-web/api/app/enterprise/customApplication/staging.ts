@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/自定义应用相关/stagingUsingPOST_1
+* @link http://47.108.139.107:16400/doc.html#/default/自定义应用相关/stagingUsingPOST_1
 */
 export default function fetchMethod(options: { data: IMasterDataBaseEditDTO, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

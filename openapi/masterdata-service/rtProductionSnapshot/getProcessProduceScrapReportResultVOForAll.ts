@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getProcessProduceScrapReportResultVOForAllUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getProcessProduceScrapReportResultVOForAllUsingPOST
 */
 export default function fetchMethod(options: { data: string[], params: { beginTime?: number; endTime?: number; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessOutputScrapStatisticsAreReturnedToVO>(

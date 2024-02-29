@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:16700/doc.html#/default/项目费用相关/getProjectFeeBudgetUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/项目费用相关/getProjectFeeBudgetUsingPOST
 */
 export default function fetchMethod(options: { data: IProjectCostBudgetQueryObject }, extraOptions?: any) {
     return http<IJSONResultProjectCostBudgetResponseObject>(

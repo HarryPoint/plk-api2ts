@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "input",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/CustomerClaimInputVO",
-              "originalRef": "CustomerClaimInputVO"
+              "originalRef": "CustomerClaimInputVO",
+              "$ref": "#/definitions/CustomerClaimInputVO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«boolean»",
-              "originalRef": "JSONResult«boolean»"
+              "originalRef": "JSONResult«boolean»",
+              "$ref": "#/definitions/JSONResult«boolean»"
             }
           },
           "201": {

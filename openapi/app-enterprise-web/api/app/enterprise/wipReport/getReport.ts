@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/WIP报表相关/getWipReportPageUsingPOST
+* @link http://47.108.139.107:16400/doc.html#/default/WIP报表相关/getWipReportPageUsingPOST
 */
 export default function fetchMethod(options: { data: IWIPStatisticsReportSearchForVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheWIPStatisticsReportReturnsVO>(

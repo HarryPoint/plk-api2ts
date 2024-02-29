@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/报表模板/selectorUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/报表模板/selectorUsingPOST
 */
 export default function fetchMethod(options: { data: IReportTemplateSelectorQueryConditionDTO }, extraOptions?: any) {
     return http<IJSONResultListReportTemplateQueryResponseDTO>(

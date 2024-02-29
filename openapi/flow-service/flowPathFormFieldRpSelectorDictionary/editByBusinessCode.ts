@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16500/doc.html#/default/流程表单字段表关联字典相关/editByBusinessCodeUsingPOST
+* @link http://47.108.139.107:16500/doc.html#/default/流程表单字段表关联字典相关/editByBusinessCodeUsingPOST
 */
 export default function fetchMethod(options: { data: IFormFieldOption[], params: { businessCode?: EbusinessCode; enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(
@@ -74,5 +74,6 @@ export enum EbusinessCode {
     QMS_PROJECT_TASK_REVIEW_RESULT = "QMS_PROJECT_TASK_REVIEW_RESULT",
     QMS_PROJECT_TASK_DECISION_RESULT = "QMS_PROJECT_TASK_DECISION_RESULT",
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
 }

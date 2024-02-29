@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16400/doc.html#/default/物料全局批次设置相关/getUsingGET_1
+* @link http://47.108.139.107:16400/doc.html#/default/物料全局批次设置相关/getUsingGET_1
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultMaterialGlobalBatchSettingsEditResponseObject>(

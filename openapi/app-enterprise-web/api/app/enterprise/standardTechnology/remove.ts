@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16400/doc.html#/default/标准工艺相关/removeUsingPOST_1
+* @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/removeUsingPOST_1
 */
 export default function fetchMethod(options: { data: IStandardProcessModificationClassificationRequestObject1 }, extraOptions?: any) {
     return http<IJSONResultobject>(

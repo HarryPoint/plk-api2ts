@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17600/doc.html#/default/邮件任务/startTaskUsingPOST
+* @link http://47.108.139.107:17600/doc.html#/default/邮件任务/startTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IEmailTaskStartTaskRequestDTO }, extraOptions?: any) {
     return http<IJSONResultEmailTaskStartTaskResponseDTO>(

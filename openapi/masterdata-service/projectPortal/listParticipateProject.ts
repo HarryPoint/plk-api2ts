@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16700/doc.html#/default/项目门户相关/listParticipateProjectUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/项目门户相关/listParticipateProjectUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListProjectPortalResponseObject>(
@@ -54,7 +54,7 @@ export enum EProjectPortalResponseObject_projectStatus {
     APPROVAL_DENIED = "APPROVAL_DENIED",
     /** 进行中 */
     IN_PROGRESS = "IN_PROGRESS",
-    /** 已完成 */
+    /** 已关闭 */
     COMPLETE = "COMPLETE",
     /** 已终止 */
     END = "END"

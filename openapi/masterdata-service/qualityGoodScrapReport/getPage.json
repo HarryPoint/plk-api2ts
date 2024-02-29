@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "质检统计"
         ],
         "summary": "查询良品报废分页数据",
-        "operationId": "getPageUsingPOST_19",
+        "operationId": "getPageUsingPOST_20",
         "consumes": [
           "application/json"
         ],

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17600",
+  "host": "47.108.139.107:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -22,8 +22,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«应用业务树DTO»»",
-              "originalRef": "JSONResult«List«应用业务树DTO»»"
+              "originalRef": "JSONResult«List«应用业务树DTO»»",
+              "$ref": "#/definitions/JSONResult«List«应用业务树DTO»»"
             }
           },
           "401": {
@@ -61,8 +61,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/应用业务树DTO",
-            "originalRef": "应用业务树DTO"
+            "originalRef": "应用业务树DTO",
+            "$ref": "#/definitions/应用业务树DTO"
           }
         },
         "ts": {
@@ -112,16 +112,16 @@
           "type": "array",
           "description": "字段集",
           "items": {
-            "$ref": "#/definitions/应用业务树字段信息返回DTO",
-            "originalRef": "应用业务树字段信息返回DTO"
+            "originalRef": "应用业务树字段信息返回DTO",
+            "$ref": "#/definitions/应用业务树字段信息返回DTO"
           }
         },
         "children": {
           "type": "array",
           "description": "子集",
           "items": {
-            "$ref": "#/definitions/应用业务树DTO",
-            "originalRef": "应用业务树DTO"
+            "originalRef": "应用业务树DTO",
+            "$ref": "#/definitions/应用业务树DTO"
           }
         },
         "flowPathCode": {
@@ -223,8 +223,8 @@
           "type": "array",
           "description": "选项集 传值传code，显示name",
           "items": {
-            "$ref": "#/definitions/FormFieldOption",
-            "originalRef": "FormFieldOption"
+            "originalRef": "FormFieldOption",
+            "$ref": "#/definitions/FormFieldOption"
           }
         },
         "dateType": {
@@ -275,8 +275,8 @@
           "type": "array",
           "description": "关联表单字段集",
           "items": {
-            "$ref": "#/definitions/应用业务树字段信息返回DTO",
-            "originalRef": "应用业务树字段信息返回DTO"
+            "originalRef": "应用业务树字段信息返回DTO",
+            "$ref": "#/definitions/应用业务树字段信息返回DTO"
           }
         }
       },

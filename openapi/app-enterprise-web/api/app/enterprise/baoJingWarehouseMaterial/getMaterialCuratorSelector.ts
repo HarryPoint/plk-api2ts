@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialCuratorSelectorUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/宝晶即时库存查询相关/getMaterialCuratorSelectorUsingGET
 */
 export default function fetchMethod(options: { params: { nameOrCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListstring>(

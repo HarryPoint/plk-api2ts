@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/物料主数据比对相关/getMaterialCompareUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/物料主数据比对相关/getMaterialCompareUsingPOST
 */
 export default function fetchMethod(options: { data: IMaterialMasterDataBomidCollectionVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnVOForMaterialMasterDataComparison>(

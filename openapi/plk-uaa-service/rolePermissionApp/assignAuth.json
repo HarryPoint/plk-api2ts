@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "appAuthRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/角色权限应用授权请求DTO",
-              "originalRef": "角色权限应用授权请求DTO"
+              "originalRef": "角色权限应用授权请求DTO",
+              "$ref": "#/definitions/角色权限应用授权请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -77,8 +77,8 @@
           "type": "array",
           "description": "角色权限信息集",
           "items": {
-            "$ref": "#/definitions/角色权限应用授权明细请求DTO",
-            "originalRef": "角色权限应用授权明细请求DTO"
+            "originalRef": "角色权限应用授权明细请求DTO",
+            "$ref": "#/definitions/角色权限应用授权明细请求DTO"
           }
         }
       },
@@ -110,8 +110,8 @@
           "type": "array",
           "description": "数据权限集",
           "items": {
-            "$ref": "#/definitions/企业数据权限列表响应_1",
-            "originalRef": "企业数据权限列表响应_1"
+            "originalRef": "企业数据权限列表响应_1",
+            "$ref": "#/definitions/企业数据权限列表响应_1"
           }
         }
       },
@@ -134,8 +134,8 @@
           "type": "array",
           "description": "数据权限对应的字段列表(只针对表单字段类型)",
           "items": {
-            "$ref": "#/definitions/角色数据权限字段编辑DTO",
-            "originalRef": "角色数据权限字段编辑DTO"
+            "originalRef": "角色数据权限字段编辑DTO",
+            "$ref": "#/definitions/角色数据权限字段编辑DTO"
           }
         }
       },

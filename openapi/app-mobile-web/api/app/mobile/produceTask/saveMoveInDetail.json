@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "moveInOutDTO",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进出站信息DTO_1",
-              "originalRef": "进出站信息DTO_1"
+              "originalRef": "进出站信息DTO_1",
+              "$ref": "#/definitions/进出站信息DTO_1"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«object»",
-              "originalRef": "JSONResult«object»"
+              "originalRef": "JSONResult«object»",
+              "$ref": "#/definitions/JSONResult«object»"
             }
           },
           "201": {
@@ -90,21 +90,21 @@
         },
         "finishedMaterial": {
           "description": "成品物料信息",
-          "$ref": "#/definitions/成品物料填写DTO",
-          "originalRef": "成品物料填写DTO"
+          "originalRef": "成品物料填写DTO",
+          "$ref": "#/definitions/成品物料填写DTO"
         },
         "bomMaterials": {
           "type": "array",
           "description": "BOM物料信息列表",
           "items": {
-            "$ref": "#/definitions/BOM物料填写DTO",
-            "originalRef": "BOM物料填写DTO"
+            "originalRef": "BOM物料填写DTO",
+            "$ref": "#/definitions/BOM物料填写DTO"
           }
         },
         "keyParametersInfo": {
           "description": "关键参数信息填写",
-          "$ref": "#/definitions/进出站工艺卡填写",
-          "originalRef": "进出站工艺卡填写"
+          "originalRef": "进出站工艺卡填写",
+          "$ref": "#/definitions/进出站工艺卡填写"
         }
       },
       "title": "进出站信息DTO_1"
@@ -155,8 +155,8 @@
           "type": "array",
           "description": "录入集合 - 带录入信息",
           "items": {
-            "$ref": "#/definitions/关键参数明细填写信息",
-            "originalRef": "关键参数明细填写信息"
+            "originalRef": "关键参数明细填写信息",
+            "$ref": "#/definitions/关键参数明细填写信息"
           }
         }
       },

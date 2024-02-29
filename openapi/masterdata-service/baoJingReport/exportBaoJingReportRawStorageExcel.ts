@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportRawStorageExcelUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/exportBaoJingReportRawStorageExcelUsingPOST
 */
 export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO }, extraOptions?: any) {
     return http<IJSONResultlong>(

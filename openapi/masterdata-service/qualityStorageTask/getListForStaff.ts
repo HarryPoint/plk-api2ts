@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/质检管理/getListForStaffUsingPOST_2
+* @link http://47.108.139.107:16700/doc.html#/default/质检管理/getListForStaffUsingPOST_2
 */
 export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultListQualityStorageTaskVO>(

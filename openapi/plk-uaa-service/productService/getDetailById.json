@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:18100",
+  "host": "47.108.139.107:18100",
   "info": {
     "description": "服务名: plk-uaa-service",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«产品服务详情响应对象»",
-              "originalRef": "JSONResult«产品服务详情响应对象»"
+              "originalRef": "JSONResult«产品服务详情响应对象»",
+              "$ref": "#/definitions/JSONResult«产品服务详情响应对象»"
             }
           },
           "401": {
@@ -69,8 +69,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/产品服务详情响应对象",
-          "originalRef": "产品服务详情响应对象"
+          "originalRef": "产品服务详情响应对象",
+          "$ref": "#/definitions/产品服务详情响应对象"
         },
         "ts": {
           "type": "integer",
@@ -151,16 +151,16 @@
           "type": "array",
           "description": "产品订单列表",
           "items": {
-            "$ref": "#/definitions/产品订单响应对象",
-            "originalRef": "产品订单响应对象"
+            "originalRef": "产品订单响应对象",
+            "$ref": "#/definitions/产品订单响应对象"
           }
         },
         "productServiceLogList": {
           "type": "array",
           "description": "产品服务日志列表",
           "items": {
-            "$ref": "#/definitions/产品服务日志响应对象",
-            "originalRef": "产品服务日志响应对象"
+            "originalRef": "产品服务日志响应对象",
+            "$ref": "#/definitions/产品服务日志响应对象"
           }
         }
       },

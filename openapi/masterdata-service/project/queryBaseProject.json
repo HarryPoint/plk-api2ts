@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -416,7 +416,7 @@
             "  IN_APPROVE-审批中",
             "  APPROVAL_DENIED-审批拒绝",
             "  IN_PROGRESS-进行中",
-            "  COMPLETE-已完成",
+            "  COMPLETE-已关闭",
             "  END-已终止"
           ]
         }

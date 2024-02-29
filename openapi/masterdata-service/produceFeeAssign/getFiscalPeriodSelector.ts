@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16700/doc.html#/default/费用分配相关/getFiscalPeriodSelectorUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/费用分配相关/getFiscalPeriodSelectorUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListRespondsToTheObjectDuring>(

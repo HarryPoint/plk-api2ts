@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/生产任务相关/batchMoveInUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/batchMoveInUsingPOST
 */
 export default function fetchMethod(options: { data: ITaskBatchOperationDTO4 }, extraOptions?: any) {
     return http<IJSONResultobject>(

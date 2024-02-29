@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -14,7 +14,7 @@
           "项目角色配置相关"
         ],
         "summary": "批量查询项目角色配置",
-        "operationId": "getForPageUsingPOST_17",
+        "operationId": "getForPageUsingPOST_16",
         "consumes": [
           "application/json"
         ],

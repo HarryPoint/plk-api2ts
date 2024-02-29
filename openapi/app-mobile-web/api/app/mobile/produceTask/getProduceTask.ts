@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/生产任务相关/getProduceTaskUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/生产任务相关/getProduceTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionTaskQueryDTOForMobileEnd }, extraOptions?: any) {
     return http<IJSONResultPageInformationProductionTaskResponseDTOForMobile>(

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/报表模板/getByIdUsingPOST_2
+* @link http://47.108.139.107:16400/doc.html#/default/报表模板/getByIdUsingPOST_2
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultReportTemplateDTO>(

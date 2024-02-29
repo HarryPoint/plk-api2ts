@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.135.148:16700/doc.html#/default/QMS大屏相关/queryInfieldAnnualProblemSituationUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/queryInfieldAnnualProblemSituationUsingPOST
 */
 export default function fetchMethod(options: { data: IQmsLargeScreenTimeIntervalRequest }, extraOptions?: any) {
     return http<IJSONResultAnnualProblemQuery>(

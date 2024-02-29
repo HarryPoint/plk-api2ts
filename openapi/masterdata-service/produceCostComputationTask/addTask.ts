@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.135.148:16700/doc.html#/default/生产成本核算任务相关/addTaskUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/生产成本核算任务相关/addTaskUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionCostingTaskAddsRequestObject }, extraOptions?: any) {
     return http<IJSONResultlong>(

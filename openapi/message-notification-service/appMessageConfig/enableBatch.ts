@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:17600/doc.html#/default/应用消息配置相关/enableBatchUsingPOST
+* @link http://47.108.139.107:17600/doc.html#/default/应用消息配置相关/enableBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IAppMessageConfigBatchEnabledRequestDTO }, extraOptions?: any) {
     return http<IJSONResultstring>(

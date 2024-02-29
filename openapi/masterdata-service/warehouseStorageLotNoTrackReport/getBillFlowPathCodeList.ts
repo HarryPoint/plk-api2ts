@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16700/doc.html#/default/批次跟踪报表相关/getBillFlowPathCodeListUsingGET_1
+* @link http://47.108.139.107:16700/doc.html#/default/批次跟踪报表相关/getBillFlowPathCodeListUsingGET_1
 */
 export default function fetchMethod(options: { params: { masterDataFlowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdCodeNameACommonTransferObject>(

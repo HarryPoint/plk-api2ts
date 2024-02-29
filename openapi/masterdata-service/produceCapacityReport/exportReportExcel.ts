@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/产能利用率统计表/exportReportExcelUsingPOST_1
+* @link http://47.108.139.107:16700/doc.html#/default/产能利用率统计表/exportReportExcelUsingPOST_1
 */
 export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtos }, extraOptions?: any) {
     return http<IJSONResultlong>(

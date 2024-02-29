@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/工艺路径相关/listRoutingInfoUsingPOST
+* @link http://47.108.139.107:16400/doc.html#/default/工艺路径相关/listRoutingInfoUsingPOST
 */
 export default function fetchMethod(options: { data: IProcessPathInformationQueryObject }, extraOptions?: any) {
     return http<IJSONResultListProcessPathInformationObject>(

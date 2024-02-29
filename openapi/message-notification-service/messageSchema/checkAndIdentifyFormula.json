@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17600",
+  "host": "47.108.139.107:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/FormulaCheckRequestDTO",
-              "originalRef": "FormulaCheckRequestDTO"
+              "originalRef": "FormulaCheckRequestDTO",
+              "$ref": "#/definitions/FormulaCheckRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«FormulaCheckResponseDTO»",
-              "originalRef": "JSONResult«FormulaCheckResponseDTO»"
+              "originalRef": "JSONResult«FormulaCheckResponseDTO»",
+              "$ref": "#/definitions/JSONResult«FormulaCheckResponseDTO»"
             }
           },
           "201": {
@@ -91,8 +91,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/FormulaCheckResponseDTO",
-          "originalRef": "FormulaCheckResponseDTO"
+          "originalRef": "FormulaCheckResponseDTO",
+          "$ref": "#/definitions/FormulaCheckResponseDTO"
         },
         "ts": {
           "type": "integer",

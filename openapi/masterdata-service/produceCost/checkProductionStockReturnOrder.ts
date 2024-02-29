@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.135.148:16700/doc.html#/default/生产成本相关/checkProductionStockReturnOrderUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/生产成本相关/checkProductionStockReturnOrderUsingGET
 */
 export default function fetchMethod(options: { params: { fiscalPeriodId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionCostAccountingDocumentStatusVerificationResponseDTO>(

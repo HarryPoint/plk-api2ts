@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "moveInBomConsumeScanRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/进料bom消耗扫描请求DTO",
-              "originalRef": "进料bom消耗扫描请求DTO"
+              "originalRef": "进料bom消耗扫描请求DTO",
+              "$ref": "#/definitions/进料bom消耗扫描请求DTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«进料bom消耗扫描响应DTO»",
-              "originalRef": "JSONResult«进料bom消耗扫描响应DTO»"
+              "originalRef": "JSONResult«进料bom消耗扫描响应DTO»",
+              "$ref": "#/definitions/JSONResult«进料bom消耗扫描响应DTO»"
             }
           },
           "201": {
@@ -96,8 +96,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/进料bom消耗扫描响应DTO",
-          "originalRef": "进料bom消耗扫描响应DTO"
+          "originalRef": "进料bom消耗扫描响应DTO",
+          "$ref": "#/definitions/进料bom消耗扫描响应DTO"
         },
         "ts": {
           "type": "integer",

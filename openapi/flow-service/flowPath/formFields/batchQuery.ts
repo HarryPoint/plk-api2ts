@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16500/doc.html#/default/流程相关/batchQueryFieldListUsingPOST
+* @link http://47.108.139.107:16500/doc.html#/default/流程相关/batchQueryFieldListUsingPOST
 */
 export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessFormVO>(
@@ -686,7 +686,9 @@ export enum EProcessFormVO_selectorOptionSourceBusinessCode {
     /** 检验任务业务类型 */
     QMS_INSPECTION_BUSINESS_TYPE = "QMS_INSPECTION_BUSINESS_TYPE",
     /** 维修能力 */
-    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL"
+    DEVICE_EMPLOYEE_MAINTAIN_LEVEL = "DEVICE_EMPLOYEE_MAINTAIN_LEVEL",
+    /** 项目设备信息状态 */
+    PROJECT_DEVICE_INFO_STATUS = "PROJECT_DEVICE_INFO_STATUS"
 }
 
 export enum EProcessFormVO_isCanModifySelectorOption {

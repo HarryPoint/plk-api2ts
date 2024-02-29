@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryCountListUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryCountListUsingPOST
 */
 export default function fetchMethod(options: { data: IProductionExceptionTypeStatisticsVO1, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProductionExceptionTypeStatisticsVO>(

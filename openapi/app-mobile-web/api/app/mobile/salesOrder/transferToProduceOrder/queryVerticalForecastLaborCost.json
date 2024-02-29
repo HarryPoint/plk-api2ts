@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -30,8 +30,8 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/预测工费_1",
-                "originalRef": "预测工费_1"
+                "originalRef": "预测工费_1",
+                "$ref": "#/definitions/预测工费_1"
               }
             }
           }
@@ -40,8 +40,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«预测工费»»",
-              "originalRef": "JSONResult«List«预测工费»»"
+              "originalRef": "JSONResult«List«预测工费»»",
+              "$ref": "#/definitions/JSONResult«List«预测工费»»"
             }
           },
           "201": {
@@ -129,8 +129,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/预测工费_2",
-            "originalRef": "预测工费_2"
+            "originalRef": "预测工费_2",
+            "$ref": "#/definitions/预测工费_2"
           }
         },
         "ts": {
@@ -156,13 +156,13 @@
         },
         "masterMaterial": {
           "description": "主物料",
-          "$ref": "#/definitions/ForecastMaterialInfo",
-          "originalRef": "ForecastMaterialInfo"
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "childMaterial": {
           "description": "子物料",
-          "$ref": "#/definitions/ForecastMaterialInfo",
-          "originalRef": "ForecastMaterialInfo"
+          "originalRef": "ForecastMaterialInfo",
+          "$ref": "#/definitions/ForecastMaterialInfo"
         },
         "processId": {
           "type": "integer",

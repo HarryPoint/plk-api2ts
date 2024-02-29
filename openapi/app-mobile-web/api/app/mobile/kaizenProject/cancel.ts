@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tanpeng
-* @link http://47.108.135.148:17400/doc.html#/default/项目相关/cancelUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/项目相关/cancelUsingPOST
 */
 export default function fetchMethod(options: { data: IIdInformation }, extraOptions?: any) {
     return http<IJSONResultobject>(

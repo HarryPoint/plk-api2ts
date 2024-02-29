@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:17600/doc.html#/default/短信模板/processUpdateSmsTemplateForAuditStateUsingPOST
+* @link http://47.108.139.107:17600/doc.html#/default/短信模板/processUpdateSmsTemplateForAuditStateUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultstring>(

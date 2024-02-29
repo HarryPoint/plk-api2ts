@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:16700",
+  "host": "47.108.139.107:16700",
   "info": {
     "description": "服务名: masterdata-service",
     "version": "1.0",
@@ -15,7 +15,7 @@
         ],
         "summary": "根据id查询详情",
         "description": "<p style='color:red'>注意：<br/><br/>一、数据处理判断：<br/>status == 'COMPLETE' 数据渲染逻辑处理取 planItemResults</p>",
-        "operationId": "getByIdUsingGET_15",
+        "operationId": "getByIdUsingGET_17",
         "produces": [
           "*/*"
         ],

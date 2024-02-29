@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/仓位系统应用库存批次号查询对象",
-              "originalRef": "仓位系统应用库存批次号查询对象"
+              "originalRef": "仓位系统应用库存批次号查询对象",
+              "$ref": "#/definitions/仓位系统应用库存批次号查询对象"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«仓位系统应用库存批次号分页返回对象»»",
-              "originalRef": "JSONResult«List«仓位系统应用库存批次号分页返回对象»»"
+              "originalRef": "JSONResult«List«仓位系统应用库存批次号分页返回对象»»",
+              "$ref": "#/definitions/JSONResult«List«仓位系统应用库存批次号分页返回对象»»"
             }
           },
           "201": {
@@ -92,8 +92,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/仓位系统应用库存批次号分页返回对象",
-            "originalRef": "仓位系统应用库存批次号分页返回对象"
+            "originalRef": "仓位系统应用库存批次号分页返回对象",
+            "$ref": "#/definitions/仓位系统应用库存批次号分页返回对象"
           }
         },
         "ts": {

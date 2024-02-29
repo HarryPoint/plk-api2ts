@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/开放接口相关/addUsingPOST_2
+* @link http://47.108.139.107:16700/doc.html#/default/开放接口相关/addUsingPOST_2
 */
 export default function fetchMethod(options: { params: { clientIp?: string; enterpriseId?: string; isSuccess?: EisSuccess; reqBody?: string; reqType?: EreqType; uri?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultobject>(

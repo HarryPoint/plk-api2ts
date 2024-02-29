@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/员工相关/getIdsByRoleIdUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/员工相关/getIdsByRoleIdUsingGET
 */
 export default function fetchMethod(options: { params: { enterpriseId?: string; roleId?: string } }, extraOptions?: any) {
     return http<IJSONResultListlong>(

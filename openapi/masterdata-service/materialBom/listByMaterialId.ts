@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16700/doc.html#/default/物料Bom相关/listByMaterialIdAndMaterialBomIdUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/物料Bom相关/listByMaterialIdAndMaterialBomIdUsingGET
 */
 export default function fetchMethod(options: { params: { materialBomId?: string; materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultListMaterialBomResponseObject>(

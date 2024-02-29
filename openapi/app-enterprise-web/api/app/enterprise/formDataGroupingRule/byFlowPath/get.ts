@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/表单数据分组规则相关/getByFlowPathIdUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/表单数据分组规则相关/getByFlowPathIdUsingGET
 */
 export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultFormDataGroupingSettingsAreRelated>(

@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "originalRef": "JSONResult«List«ProjectFolderListQueryResponseDTO»»",
-              "$ref": "#/definitions/JSONResult«List«ProjectFolderListQueryResponseDTO»»"
+              "$ref": "#/definitions/JSONResult«List«ProjectFolderListQueryResponseDTO»»",
+              "originalRef": "JSONResult«List«ProjectFolderListQueryResponseDTO»»"
             }
           },
           "401": {
@@ -71,8 +71,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "originalRef": "ProjectFolderListQueryResponseDTO",
-            "$ref": "#/definitions/ProjectFolderListQueryResponseDTO"
+            "$ref": "#/definitions/ProjectFolderListQueryResponseDTO",
+            "originalRef": "ProjectFolderListQueryResponseDTO"
           }
         },
         "ts": {

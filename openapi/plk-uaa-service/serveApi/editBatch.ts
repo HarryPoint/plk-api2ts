@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author TangYongDi
-* @link http://47.108.135.148:18100/doc.html#/default/服务Api相关/editBatchUsingPOST
+* @link http://47.108.139.107:18100/doc.html#/default/服务Api相关/editBatchUsingPOST
 */
 export default function fetchMethod(options: { data: IServeauthrequestdto }, extraOptions?: any) {
     return http<IJSONResultobject>(

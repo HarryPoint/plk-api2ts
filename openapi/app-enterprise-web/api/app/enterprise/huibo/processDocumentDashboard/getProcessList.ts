@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/慧博工艺文档大屏相关/getProcessListUsingGET
+* @link http://47.108.139.107:16400/doc.html#/default/慧博工艺文档大屏相关/getProcessListUsingGET
 */
 export default function fetchMethod(options: { params: { areaId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(

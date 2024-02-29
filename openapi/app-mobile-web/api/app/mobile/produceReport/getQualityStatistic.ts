@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/生产统计相关/getQualityStatisticUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/生产统计相关/getQualityStatisticUsingPOST
 */
 export default function fetchMethod(options: { data: IUserProductionStatisticsSearchVO }, extraOptions?: any) {
     return http<IJSONResultListReturnsVOToTheUserInspectionStatistics>(

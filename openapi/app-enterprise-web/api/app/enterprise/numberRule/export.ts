@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16400/doc.html#/default/编码规则相关/exportUsingPOST_26
+* @link http://47.108.139.107:16400/doc.html#/default/编码规则相关/exportUsingPOST_26
 */
 export default function fetchMethod(options: { data: ICodeRulePagingQueryVO }, extraOptions?: any) {
     return http<IJSONResultlong>(

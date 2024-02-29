@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "request",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/表单填充请求",
-              "originalRef": "表单填充请求"
+              "originalRef": "表单填充请求",
+              "$ref": "#/definitions/表单填充请求"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«JSONObject»»",
-              "originalRef": "JSONResult«List«JSONObject»»"
+              "originalRef": "JSONResult«List«JSONObject»»",
+              "$ref": "#/definitions/JSONResult«List«JSONObject»»"
             }
           },
           "201": {
@@ -72,8 +72,8 @@
           "type": "array",
           "description": "填充数据项",
           "items": {
-            "$ref": "#/definitions/表单填充项下标",
-            "originalRef": "表单填充项下标"
+            "originalRef": "表单填充项下标",
+            "$ref": "#/definitions/表单填充项下标"
           }
         },
         "formRecord": {
@@ -122,8 +122,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/JSONObject",
-            "originalRef": "JSONObject"
+            "originalRef": "JSONObject",
+            "$ref": "#/definitions/JSONObject"
           }
         },
         "ts": {

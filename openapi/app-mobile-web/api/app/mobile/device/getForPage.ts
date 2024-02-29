@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:17400/doc.html#/default/设备相关/getForPageUsingPOST_6
+* @link http://47.108.139.107:17400/doc.html#/default/设备相关/getForPageUsingPOST_6
 */
 export default function fetchMethod(options: { data: IProcessDataBaseSearchVO }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(

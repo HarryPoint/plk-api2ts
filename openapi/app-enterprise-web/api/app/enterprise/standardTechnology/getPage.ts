@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:16400/doc.html#/default/标准工艺相关/getPageUsingPOST_32
+* @link http://47.108.139.107:16400/doc.html#/default/标准工艺相关/getPageUsingPOST_33
 */
 export default function fetchMethod(options: { data: IStandardProcessPagingQueryObject }, extraOptions?: any) {
     return http<IJSONResultPagingInformationStandardProcessPagingResponseObject>(

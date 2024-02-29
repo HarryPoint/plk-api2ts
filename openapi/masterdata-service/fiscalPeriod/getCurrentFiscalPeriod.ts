@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Mao Hai Ping
-* @link http://47.108.135.148:16700/doc.html#/default/财务期间相关/getCurrentFiscalPeriodUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/财务期间相关/getCurrentFiscalPeriodUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IResponseObjectDuringJSONResult>(

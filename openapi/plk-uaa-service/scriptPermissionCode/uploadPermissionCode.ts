@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:18100/doc.html#/default/权限码脚本相关/uploadPermissionCodeUsingPOST
+* @link http://47.108.139.107:18100/doc.html#/default/权限码脚本相关/uploadPermissionCodeUsingPOST
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

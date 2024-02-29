@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/生产订单全自动机器人相关/scheduleAutoVaguePlanAndIssueProduceOrderUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/生产订单全自动机器人相关/scheduleAutoVaguePlanAndIssueProduceOrderUsingGET
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultobject>(

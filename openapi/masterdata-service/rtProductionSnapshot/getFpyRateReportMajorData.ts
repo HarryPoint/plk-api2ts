@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getFpyRateReportMajorDataUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/生产快照相关/getFpyRateReportMajorDataUsingPOST
 */
 export default function fetchMethod(options: { data: IOutputClassReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultOutputLineChartReturnsVOPassthroughReportReturnsVO>(

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "condition",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/CustomerFollowUpCalendarInputVO",
-              "originalRef": "CustomerFollowUpCalendarInputVO"
+              "originalRef": "CustomerFollowUpCalendarInputVO",
+              "$ref": "#/definitions/CustomerFollowUpCalendarInputVO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«List«CustomerFollowUpCalendarOutputVO»»",
-              "originalRef": "JSONResult«List«CustomerFollowUpCalendarOutputVO»»"
+              "originalRef": "JSONResult«List«CustomerFollowUpCalendarOutputVO»»",
+              "$ref": "#/definitions/JSONResult«List«CustomerFollowUpCalendarOutputVO»»"
             }
           },
           "201": {
@@ -108,8 +108,8 @@
           "type": "array",
           "description": "响应结果",
           "items": {
-            "$ref": "#/definitions/CustomerFollowUpCalendarOutputVO",
-            "originalRef": "CustomerFollowUpCalendarOutputVO"
+            "originalRef": "CustomerFollowUpCalendarOutputVO",
+            "$ref": "#/definitions/CustomerFollowUpCalendarOutputVO"
           }
         },
         "ts": {

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16700/doc.html#/default/年度质量目标管理统计报表相关/queryAnnualQualityTargetManageStatisticsReportUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/年度质量目标管理统计报表相关/queryAnnualQualityTargetManageStatisticsReportUsingPOST
 */
 export default function fetchMethod(options: { data: any }, extraOptions?: any) {
     return http<IJSONResultListReturnTheAnnualQualityObjectiveManagementStatisticsToTheDTO>(

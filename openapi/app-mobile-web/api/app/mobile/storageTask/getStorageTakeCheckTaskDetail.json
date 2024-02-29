@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17400",
+  "host": "47.108.139.107:17400",
   "info": {
     "description": "服务名: app-mobile-web",
     "version": "1.0",
@@ -32,8 +32,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«仓库盘点任务明细执行端返回DTO»",
-              "originalRef": "JSONResult«仓库盘点任务明细执行端返回DTO»"
+              "originalRef": "JSONResult«仓库盘点任务明细执行端返回DTO»",
+              "$ref": "#/definitions/JSONResult«仓库盘点任务明细执行端返回DTO»"
             }
           },
           "401": {
@@ -68,8 +68,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/仓库盘点任务明细执行端返回DTO",
-          "originalRef": "仓库盘点任务明细执行端返回DTO"
+          "originalRef": "仓库盘点任务明细执行端返回DTO",
+          "$ref": "#/definitions/仓库盘点任务明细执行端返回DTO"
         },
         "ts": {
           "type": "integer",
@@ -145,8 +145,8 @@
           "type": "array",
           "description": "默认盘点清单",
           "items": {
-            "$ref": "#/definitions/仓库盘点任务清单执行端返回VO",
-            "originalRef": "仓库盘点任务清单执行端返回VO"
+            "originalRef": "仓库盘点任务清单执行端返回VO",
+            "$ref": "#/definitions/仓库盘点任务清单执行端返回VO"
           }
         }
       },
@@ -172,16 +172,16 @@
           "type": "array",
           "description": "仓位层级，从高至低排列",
           "items": {
-            "$ref": "#/definitions/Id，名称，编号VO",
-            "originalRef": "Id，名称，编号VO"
+            "originalRef": "Id，名称，编号VO",
+            "$ref": "#/definitions/Id，名称，编号VO"
           }
         },
         "materialList": {
           "type": "array",
           "description": "物料集",
           "items": {
-            "$ref": "#/definitions/仓库盘点任务清单物料执行端返回DTO",
-            "originalRef": "仓库盘点任务清单物料执行端返回DTO"
+            "originalRef": "仓库盘点任务清单物料执行端返回DTO",
+            "$ref": "#/definitions/仓库盘点任务清单物料执行端返回DTO"
           }
         }
       },

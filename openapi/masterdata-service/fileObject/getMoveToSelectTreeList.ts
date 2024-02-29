@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.135.148:16700/doc.html#/default/文件对象相关/getMoveToSelectTreeListUsingGET_1
+* @link http://47.108.139.107:16700/doc.html#/default/文件对象相关/getMoveToSelectTreeListUsingGET_1
 */
 export default function fetchMethod(options: {} = {}, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailResponseDTO3>(

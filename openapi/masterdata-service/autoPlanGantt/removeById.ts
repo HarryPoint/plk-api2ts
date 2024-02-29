@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author 
-* @link http://47.108.135.148:16700/doc.html#/default/甘特图相关/removeByIdUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/甘特图相关/removeByIdUsingGET
 */
 export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultboolean>(

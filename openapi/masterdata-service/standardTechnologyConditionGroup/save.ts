@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author XieJian
-* @link http://47.108.135.148:16700/doc.html#/default/标准工艺条件组相关/saveUsingPOST_8
+* @link http://47.108.139.107:16700/doc.html#/default/标准工艺条件组相关/saveUsingPOST_8
 */
 export default function fetchMethod(options: { data: IDtosAreStoredInStandardProcessConditionsGroup }, extraOptions?: any) {
     return http<IJSONResultStandardProcessConditionGroupSavesResponseDtos>(

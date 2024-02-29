@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author MaoHaiPing
-* @link http://47.108.135.148:17400/doc.html#/default/进出料批次相关/listCanMoveOutLotOrderUsingPOST
+* @link http://47.108.139.107:17400/doc.html#/default/进出料批次相关/listCanMoveOutLotOrderUsingPOST
 */
 export default function fetchMethod(options: { data: IDtoCanBeQueriedForIncomingAndOutgoingMaterialBatches }, extraOptions?: any) {
     return http<IJSONResultListDeliverableBatchResponseDto>(

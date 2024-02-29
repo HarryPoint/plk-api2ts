@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author lin.he
-* @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/calcDataLinkageUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/动态数据相关/calcDataLinkageUsingPOST
 */
 export default function fetchMethod(options: { data: IDataLinkageCalcRequestDTO }, extraOptions?: any) {
     return http<IJSONResultDataLinkageCalcResponseDTO>(

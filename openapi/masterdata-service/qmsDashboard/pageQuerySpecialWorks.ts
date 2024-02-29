@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author helin
-* @link http://47.108.135.148:16700/doc.html#/default/QMS大屏相关/pageQuerySpecialWorksUsingPOST
+* @link http://47.108.139.107:16700/doc.html#/default/QMS大屏相关/pageQuerySpecialWorksUsingPOST
 */
 export default function fetchMethod(options: { data: ISpecialWorkQueryRequest1 }, extraOptions?: any) {
     return http<IJSONResultSpecialTaskQueryRequestForPagingInformation>(

@@ -1,6 +1,6 @@
 {
   "basePath": "/",
-  "host": "47.108.135.148:17600",
+  "host": "47.108.139.107:17600",
   "info": {
     "description": "服务名: message-notification-service",
     "version": "1.0",
@@ -28,8 +28,8 @@
             "description": "queryRequest",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/EmailTaskWaitForExecutionQueryRequestDTO",
-              "originalRef": "EmailTaskWaitForExecutionQueryRequestDTO"
+              "originalRef": "EmailTaskWaitForExecutionQueryRequestDTO",
+              "$ref": "#/definitions/EmailTaskWaitForExecutionQueryRequestDTO"
             }
           }
         ],
@@ -37,8 +37,8 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/JSONResult«EmailTaskWaitForExecutionQueryResponseDTO»",
-              "originalRef": "JSONResult«EmailTaskWaitForExecutionQueryResponseDTO»"
+              "originalRef": "JSONResult«EmailTaskWaitForExecutionQueryResponseDTO»",
+              "$ref": "#/definitions/JSONResult«EmailTaskWaitForExecutionQueryResponseDTO»"
             }
           },
           "201": {
@@ -88,8 +88,8 @@
         },
         "data": {
           "description": "响应结果",
-          "$ref": "#/definitions/EmailTaskWaitForExecutionQueryResponseDTO",
-          "originalRef": "EmailTaskWaitForExecutionQueryResponseDTO"
+          "originalRef": "EmailTaskWaitForExecutionQueryResponseDTO",
+          "$ref": "#/definitions/EmailTaskWaitForExecutionQueryResponseDTO"
         },
         "ts": {
           "type": "integer",

@@ -2,7 +2,7 @@ import { http } from "@/api/http";
 
 /**
 * @author Tan Peng
-* @link http://47.108.135.148:16700/doc.html#/default/宝晶报表相关/listBillNameUsingGET
+* @link http://47.108.139.107:16700/doc.html#/default/宝晶报表相关/listBillNameUsingGET
 */
 export default function fetchMethod(options: { params: { billName?: string } }, extraOptions?: any) {
     return http<IJSONResultListstring>(
