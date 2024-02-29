@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { Project } from "ts-morph";
 import baseConfig, { IConfig } from "./config";
-import { createDefinitions } from "./createDefinitions";
+import { main as createProject, createTsFile } from "./project";
 
 const readFiles = async (config: IConfig, dir: string, project: Project) => {
   const files = fs.readdirSync(dir);
@@ -25,16 +25,7 @@ const readFiles = async (config: IConfig, dir: string, project: Project) => {
       // });
       const swaggerData = JSON.parse(data.toString());
       const tsPath = path.join(info.dir, `${info.name}.ts`);
-      const definitionsFile = project.createSourceFile(tsPath, "", {
-        overwrite: true,
-      });
-      await createDefinitions(definitionsFile, swaggerData, {
-        translate: config.translate,
-        prefix: config.prefix,
-        enumPrefix: config.enumPrefix,
-        transformOriginType: config.transformOriginType,
-        customContent: config.customContent,
-      });
+      await createTsFile(config, project, tsPath, swaggerData);
     } else if (stat.isDirectory()) {
       await readFiles(config, filePath, project);
     }
@@ -50,13 +41,7 @@ export const main = async (config: IConfig = baseConfig) => {
     const filterPath = argv.filterPath;
     config.pathFilter = (pt: string) => pt.includes(filterPath);
   }
-  const project = new Project({
-    // Optionally specify compiler options, tsconfig.json, in-memory file system, and more here.
-    // If you initialize with a tsconfig.json, then it will automatically populate the project
-    // with the associated source files.
-    // Read more: https://ts-morph.com/setup/
-  });
-  project.addSourceFilesAtPaths(`${config.output}/**/*.ts`);
+  const project = await createProject(config);
   await readFiles(config, config.output, project);
   await project.save();
 };

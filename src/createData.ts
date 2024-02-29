@@ -1,11 +1,13 @@
 import axios from "axios";
-import fs from "fs";
 import _ from "lodash";
 import path from "path";
+import { Project } from "ts-morph";
 import baseConfig, { IConfig } from "./config";
+import { main as createProject, createTsFile } from "./project";
 
 const fetchData = async (
   config: IConfig,
+  project: Project,
   apiUri: string,
   prefix: string = "./"
 ) => {
@@ -83,11 +85,12 @@ const fetchData = async (
       continue;
     }
     console.log("filePath: ", filePath);
-    // 创建输出目录
-    if (!fs.existsSync(outputFolder)) {
-      fs.mkdirSync(outputFolder, { recursive: true });
-    }
-    fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2), "utf-8");
+    await createTsFile(config, project, filePath, jsonData);
+    // // 创建输出目录
+    // if (!fs.existsSync(outputFolder)) {
+    //   fs.mkdirSync(outputFolder, { recursive: true });
+    // }
+    // fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2), "utf-8");
   }
 };
 
@@ -97,8 +100,15 @@ export const main = async (config: IConfig = baseConfig) => {
     const filterPath = argv.filterPath;
     config.pathFilter = (pt: string) => pt.includes(filterPath);
   }
+  const project = await createProject(config);
   for (const key in config.serviceMap) {
     const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
-    await fetchData(config, apiUri, config.serviceNameToPath ? key : "./");
+    await fetchData(
+      config,
+      project,
+      apiUri,
+      config.serviceNameToPath ? key : "./"
+    );
   }
+  await project.save();
 };
