@@ -70,7 +70,7 @@ npm run api2ts
 | pathFilter          |      过滤目标项（用于更新单个接口）      |                                     (path: string) => boolean                                     |                               () => true |
 
 
-### customContent 默认函数如下
+### 默认 `customContent`
 ```javascript
 import { SourceFile } from "ts-morph";
 
@@ -310,6 +310,27 @@ export enum EFormDataGroupingDTO_cascadeFormData {
     N = "N"
 }
 
+```
+
+### 默认 `transformOriginType`
+
+```javascript
+export const transformOriginType = (define: any): string => {
+  const typeName = `${define.type}${define.format ? `(${define.format})` : ""}`;
+
+  const defaultTypeMap = {
+    string: "string",
+    "string(date-time)": "number",
+    integer: "number",
+    "integer(int64)": "string",
+    "integer(int32)": "number",
+    number: "number",
+    boolean: "boolean",
+    array: "[]",
+    object: "{}",
+  };
+  return defaultTypeMap[typeName as keyof typeof defaultTypeMap] as string;
+};
 ```
 
 ### CASE
