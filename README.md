@@ -54,14 +54,21 @@ npm run api2ts
 
 ### 配置项
 
-| 选项名称          |                   描述                   |                                               类型                                                |                                默认值 |
-| :---------------- | :--------------------------------------: | :-----------------------------------------------------------------------------------------------: | ------------------------------------: |
-| output            |          文件生成目录(完整路径)          |                                              string                                               | path.join(process.cwd(), "./autoApi") |
-| serviceMap        |              需要转换的服务              |                                      Record<string, string>                                       |                                  null |
-| serviceNameToPath |       是否根据服务名称添加子级目录       |                                              boolean                                              |                                 false |
-| translate         | 是否启用翻译（自动翻译中文为对应的英文） |                                              boolean                                              |                                  true |
-| customContent     |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                          详见下方说明 |
-| prefix            |               类型定义前缀               |                                              string                                               |                                   'I' |
+| 选项名称            |                   描述                   |                                               类型                                                |                                   默认值 |
+| :------------------ | :--------------------------------------: | :-----------------------------------------------------------------------------------------------: | ---------------------------------------: |
+| output              |          文件生成目录(完整路径)          |                                              string                                               |    path.join(process.cwd(), "./autoApi") |
+| serviceMap          |              需要转换的服务              |                                      Record<string, string>                                       |                                     null |
+| serviceNameToPath   |       是否根据服务名称添加子级目录       |                                              boolean                                              |                                    false |
+| translate           | 是否启用翻译（自动翻译中文为对应的英文） |                                              boolean                                              |                                     true |
+| customContent       |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                             详见下方说明 |
+| interfacePrefix     |           interface自定义前缀            |                                              string                                               |                                      'I' |
+| enumPrefix          |            enum自定义定义前缀            |                                              string                                               |                                      'E' |
+| createTsFile        |              是否生成ts文件              |                                              boolean                                              |    true (可以通过命令行 --ts=false 修改) |
+| createJsonFile      |             是否生成json文件             |                                              boolean                                              |  false (可以通过命令行 --json=true 修改) |
+| clearJsonFile       |             是否清理json文件             |                                              boolean                                              | false (可以通过命令行 --type=clear 修改) |
+| transformOriginType |       自定义swagger内type类型转换        |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  |                           详情见下方说明 |
+| pathFilter          |      过滤目标项（用于更新单个接口）      |                                     (path: string) => boolean                                     |                               () => true |
+
 
 ### customContent 默认函数如下
 ```javascript
@@ -85,6 +92,7 @@ export const customContent = async (
         }/doc.html#/default/${methodDefine.tags?.join("/")}/${
           methodDefine.operationId
         }`;
+        writer.writeLine(`* @author ${methodDefine?.["x-author"] || ""}`);
         writer.writeLine(`* @link ${docUrl}`);
         writer.writeLine("*/");
         console.log("docUrl: ", docUrl);
@@ -171,7 +179,7 @@ export const customContent = async (
         );
         writer.writeLine(`  {`);
         writer.writeLine(`  url: "${url}",`);
-        writer.writeLine(`  method: "${method}",`);
+        writer.writeLine(`  method: "${method.toUpperCase()}",`);
         writer.writeLine(`  ...options,`);
         writer.writeLine(`},`);
         writer.writeLine(`extraOptions,`);
@@ -187,35 +195,119 @@ export const customContent = async (
 import { http } from "@/api/http";
 
 /**
-* @link http://yourserviceapi/doc.html#/default/xxx/getCategorySelectorUsingGET
+* @author 张三
+* @link http://yourdocpath/doc.html#/default/exportUsingPOST
 */
-export default function fetchMethod(options: {} = {}, extraOptions?: any) {
-    return http<IJSONResultListNameNumberVO>(
+export default function fetchMethod(options: { data: IProcessDataSearchVO }, extraOptions?: any) {
+    return http<IJSONResultlong>(
         {
-            url: "/your/api/path",
-            method: "get",
+            url: "/masterdata-service/allocationOrder/export",
+            method: "POST",
             ...options,
         },
         extraOptions,
     );
 }
-/** JSONResult«List«名称，编号VO»» */
-export interface IJSONResultListNameNumberVO {
+/** 流程数据搜索VO */
+export interface IProcessDataSearchVO {
+    /** undefined */
+    showFieldSerialNoList?: string[];
+    /** 全局搜索 */
+    allSearch?: string;
+    /** 当前页面 */
+    pageNo?: number;
+    /** 字段搜索 */
+    dataSearchList?: IProcessDataDetailsSearchVO[];
+    /** 分页大小 */
+    pageSize?: number;
+    /** 排序字段集 */
+    orders?: IPagingSortVO[];
+    /** 明细表表code，传值后，将会查询明细表数据 */
+    tableColumnCode?: string;
+    /** 当前的表单分组 */
+    currentFormDataGrouping?: IFormDataGroupingDTO;
+    /** 操作员工id */
+    opUserId?: string;
+    /** 操作角色id集 */
+    opRoleIds?: string[];
+    /** 操作部门id */
+    opDeptId?: string;
+}
+/** 流程数据明细搜索VO */
+export interface IProcessDataDetailsSearchVO {
+    /** 列code */
+    code: string;
+    /** 搜索类型 */
+    searchType: EProcessDataDetailsSearchVO_searchType;
+    /** 搜索文本 - 针对文本搜索 */
+    text?: string;
+    /** 搜索起始值 - 针对范围搜索 */
+    limitBegin?: Record<string, any>;
+    /** 搜索结束值 - 针对范围搜索 */
+    limitEnd?: Record<string, any>;
+    /** 搜索选项值 - 针对选择搜索 */
+    selectors?: Record<string, any>[];
+    /** 表格编码 */
+    tableCode?: string;
+}
+/** 分页排序VO */
+export interface IPagingSortVO {
+    /** undefined */
+    column?: string;
+    /** undefined */
+    isAsc?: EPagingSortVO_isAsc;
+}
+/** 表单数据分组DTO */
+export interface IFormDataGroupingDTO {
+    /** 分组字段序列 */
+    groupingFieldSerialNo?: string;
+    /** 分组字段编码 */
+    groupFieldCode?: string;
+    /** 分组的值， 如果是关联表单，则是ID */
+    groupingValue?: string;
+    /** 分组名称 */
+    groupingName?: string;
+    /** 下级分组 */
+    children?: IFormDataGroupingDTO[];
+    /** 级联表单数据，  级联表单的上下级关系  - Y, 多字段分组关系 - N */
+    cascadeFormData?: EFormDataGroupingDTO_cascadeFormData;
+    /** 多级基础数据上级ID */
+    treeDataParentId?: string;
+}
+/** JSONResult«long» */
+export interface IJSONResultlong {
     /** 返回码 */
     code?: number;
     /** 返回消息说明 */
     msg?: string;
     /** 响应结果 */
-    data?: INameNumberVO[];
+    data?: string;
     /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
     ts?: string;
 }
-/** 名称，编号VO */
-export interface INameNumberVO {
-    /** 名称 */
-    name: string;
-    /** 编号 */
-    code: string;
+
+export enum EProcessDataDetailsSearchVO_searchType {
+    NONE = "NONE",
+    EQ = "EQ",
+    LIKE = "LIKE",
+    RANGE = "RANGE",
+    SELECTOR = "SELECTOR",
+    IS_NULL = "IS_NULL",
+    NOT_NULL = "NOT_NULL",
+    NE = "NE",
+    REGEXP = "REGEXP"
+}
+
+export enum EPagingSortVO_isAsc {
+    Y = "Y",
+    N = "N"
+}
+
+export enum EFormDataGroupingDTO_cascadeFormData {
+    /** 是 */
+    Y = "Y",
+    /** 否 */
+    N = "N"
 }
 
 ```
@@ -240,18 +332,40 @@ module.exports = () => {
 2. 自动生成的翻译名称不符合要求
 修改 translateCache.json 中字典内容，重新执行代码生成逻辑 `npm run api2ts`
 
+3. 自定义更新某一个接口
+```bash
+npx api2ts --filter=你的接口请求路径
+```
+
+4. 需要生成接口的swagger文件
+```bash
+npx api2ts --json=true
+```
+
+5. 需要清除生成的swagger文件
+```bash
+npx api2ts --type=clear
+```
+
+6. 当前已有swagger文件，想要转换为ts定义
+
+```bash
+npx api2ts --type=transform
+```
+
 
 ### 功能清单
 
 | 功能内容                   | 是否支持 |
 | :------------------------- | -------: |
-| 接口数据同步               |       是 |
-| 接口数据类型定义自动生成   |       是 |
+| 获取接口swagger数据        |       是 |
+| 生成接口数据类型定义       |       是 |
 | 接口定义名称翻译           |       是 |
 | 接口定义翻译结果调整       |       是 |
 | 自定义api服务              |       是 |
 | 根据服务名称创建文件夹归类 |       是 |
 | 自定义生成文件内容         |       是 |
+| 单个接口数据更新           |       是 |
 
 ### :copyright: License
 
