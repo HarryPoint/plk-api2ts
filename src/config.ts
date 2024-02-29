@@ -54,7 +54,7 @@ let configFn = require(configPath);
 let configData: Partial<IConfig> = {};
 
 if (typeof configFn === "function") {
-  configData = configFn(defaultConfig) as Partial<IConfig>;
+  configData = configFn(defaultConfig, argv) as Partial<IConfig>;
 } else {
   configData = configFn as Partial<IConfig>;
 }
