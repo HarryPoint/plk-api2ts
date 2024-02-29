@@ -17,6 +17,12 @@ const readFiles = async (config: IConfig, dir: string, project: Project) => {
       ((config.pathFilter && config.pathFilter(filePath)) || !config.pathFilter)
     ) {
       const data = fs.readFileSync(filePath);
+      fs.unlink(filePath, (err) => {
+        if (err) {
+          console.error("Error deleting file:", err);
+          return;
+        }
+      });
       const swaggerData = JSON.parse(data.toString());
       const tsPath = path.join(info.dir, `${info.name}.ts`);
       const definitionsFile = project.createSourceFile(tsPath, "", {
