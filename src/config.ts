@@ -3,6 +3,8 @@ import path from "path";
 import { SourceFile } from "ts-morph";
 import { customContent } from "./plkTpl";
 
+const argv = require("yargs").argv;
+
 export type IConfig = {
   prefix: string;
   enumPrefix: string;
@@ -12,6 +14,7 @@ export type IConfig = {
   translateAppKey: string;
   translateAppSecret: string;
   translateChunkSize: number;
+  transform: boolean;
   serviceMap: Record<string, string>;
   serviceNameToPath: boolean;
   output: string;
@@ -35,6 +38,7 @@ const defaultConfig: IConfig = {
   translateAppKey: "4a8802ec639e5e84",
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
+  transform: false,
   prefix: "I",
   enumPrefix: "E",
   serviceMap: {},
@@ -46,7 +50,20 @@ const defaultConfig: IConfig = {
   pathFilter: (ar: string) => !!ar,
 };
 
-const argv = require("yargs").argv;
+// 配置重置
+if (argv.target) {
+  defaultConfig.output = path.join(process.cwd(), argv.target);
+}
+if (argv.filterPath) {
+  const filterPath = argv.filterPath;
+  defaultConfig.pathFilter = (pt: string) => pt.includes(filterPath);
+}
+if (argv.json === "true") {
+  defaultConfig.createJsonFile = true;
+}
+if (argv.type === "transform") {
+  defaultConfig.transform = true;
+}
 
 const configPath = path.join(process.cwd(), argv.config || "api2ts.config.js");
 

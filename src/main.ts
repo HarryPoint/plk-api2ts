@@ -92,24 +92,9 @@ const fetchData = async (
 };
 
 export const main = async (config: IConfig = baseConfig) => {
-  console.log("main: ", config.createJsonFile);
-  const argv = require("yargs").argv;
-  if (argv.target) {
-    config.output = path.join(process.cwd(), argv.target);
-  }
   const project = await createProject(config);
-  if (argv.filterPath) {
-    const filterPath = argv.filterPath;
-    config.pathFilter = (pt: string) => pt.includes(filterPath);
-  }
-  if (argv.type === "transform") {
-    await transform(config, project, config.output);
-  }
-  if (argv.type === "createJsonFile") {
-    config.createJsonFile = true;
-  }
-  if (argv.type === "createTsFile") {
-    config.createTsFile = true;
+  if (config.transform) {
+    return transform(config, project, config.output);
   }
   for (const key in config.serviceMap) {
     const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
@@ -121,3 +106,5 @@ export const main = async (config: IConfig = baseConfig) => {
     );
   }
 };
+
+main();
