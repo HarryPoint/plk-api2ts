@@ -1,4 +1,13 @@
 {
   "JSONResultListSaas企业响应DTO": "JSONResultListSaasEnterpriseResponseDTO",
-  "Saas企业响应DTO_1": "SaasEnterprisesRespondToDTO1"
+  "Saas企业响应DTO_1": "SaasEnterprisesRespondToDTO1",
+  "添加应付账款DTO": "AddAccountsPayableDTO",
+  "JSONResultObject": "JSONResultObject",
+  "添加应收账款DTO": "AddAccountsReceivableDTO",
+  "JSONResultAccountsReceivableVO": "JSONResultAccountsReceivableVO",
+  "AccountsReceivableVO": "AccountsReceivableVO",
+  "JSONResultAccountsReceivableSnapshotVO": "JSONResultAccountsReceivableSnapshotVO",
+  "AccountsReceivableSnapshotVO": "AccountsReceivableSnapshotVO",
+  "JSONResultList今日良品统计VO": "JSONResultListToday'sGoodProductStatisticsVO",
+  "今日良品统计VO": "Today'sGoodProductStatisticsVO"
 }
