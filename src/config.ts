@@ -30,10 +30,10 @@ export type IConfig = {
   pathFilter?: (ar: string) => boolean;
 };
 
-const output = path.join(process.cwd(), "./autoApi");
+const output = path.join(process.cwd(), "./api2ts");
 
 const defaultConfig: IConfig = {
-  translate: true,
+  translate: false,
   translateCacheFileName: "translateCache.json",
   translateApiUri: "https://openapi.youdao.com/v2/api",
   translateAppKey: "4a8802ec639e5e84",
@@ -55,11 +55,12 @@ const defaultConfig: IConfig = {
 
 const configPath = path.join(process.cwd(), argv.config || "api2ts.config.js");
 
-if (!fs.existsSync(configPath)) {
-  throw new Error("config file not found");
+let configFn = (config: IConfig, argv: any) => config;
+
+if (fs.existsSync(configPath)) {
+  configFn = require(configPath);
 }
 
-let configFn = require(configPath);
 let configData: Partial<IConfig> = {};
 
 if (typeof configFn === "function") {
@@ -78,11 +79,14 @@ if (argv.filter) {
     return pt === filter;
   };
 }
-if (argv.json === "true") {
-  configData.createJsonFile = true;
+if (argv.translate) {
+  configData.translate = argv.translate === "true" ? true : false;
 }
-if (argv.ts === "false") {
-  configData.createTsFile = false;
+if (argv.json) {
+  configData.createJsonFile = argv.json === "true" ? true : false;
+}
+if (argv.ts) {
+  configData.createTsFile = argv.ts === "false" ? false : true;
 }
 if (argv.type === "transform") {
   configData.transform = true;
