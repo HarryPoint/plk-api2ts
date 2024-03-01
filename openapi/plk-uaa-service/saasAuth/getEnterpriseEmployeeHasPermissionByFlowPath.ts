@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author XieJian
 * @link http://47.108.135.148:18100/doc.html#/default/Saas授权相关/getEnterpriseEmployeeHasPermissionByFlowPathUsingGET
 */
-export default function fetchMethod(options: { params: { FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultString>(
         {
             url: "/plk-uaa-service/saasAuth/getEnterpriseEmployeeHasPermissionByFlowPath",

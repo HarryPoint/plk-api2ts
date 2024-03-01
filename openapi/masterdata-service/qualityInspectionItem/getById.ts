@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/质检项/getByIdUsingGET_15
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultCheckItemDetailsVOIsReturned>(
         {
             url: "/masterdata-service/qualityInspectionItem/getById",

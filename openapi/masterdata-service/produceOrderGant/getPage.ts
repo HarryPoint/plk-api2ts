@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产订单甘特图相关/getPageUsingPOST_16
 */
-export default function fetchMethod(options: { data: IProductionOrdersGanttChartSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrdersGanttChartSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionOrderGanttReturnedToVO>(
         {
             url: "/masterdata-service/produceOrderGant/getPage",

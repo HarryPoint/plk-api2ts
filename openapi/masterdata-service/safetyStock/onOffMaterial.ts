@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/安全库存相关/onOffMaterialUsingPOST
 */
-export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchWarning, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISafetyStockMaterialSwitchWarning, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/safetyStock/onOffMaterial",

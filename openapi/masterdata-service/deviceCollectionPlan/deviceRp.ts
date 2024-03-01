@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/设备数采数据方案相关/deviceRpUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionSolutionEditDTOByApplyingDeviceAssociationInformation, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/deviceCollectionPlan/deviceRp",

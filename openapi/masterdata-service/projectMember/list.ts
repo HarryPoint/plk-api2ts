@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/项目成员相关/listUsingGET_6
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListProjectMemberCountsTheResponseObject>(
         {
             url: "/masterdata-service/projectMember/list",

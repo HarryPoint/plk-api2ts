@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/深蓝大屏报表/getShenLanZheWanJiReportUsingGET
 */
-export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReport, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IQueryConditionsOfTheDarkBlueReport, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListDarkBluePressReport>(
         {
             url: "/masterdata-service/shenLan/report/zheWanJi",

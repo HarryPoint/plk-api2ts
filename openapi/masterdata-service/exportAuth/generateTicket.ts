@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/导出相关/generateTicketUsingPOST
 */
-export default function fetchMethod(options: { params: { EnterpriseCode?: string; EnterpriseId?: string; SearchJson?: string; Type?: EType; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseCode?: string; enterpriseId?: string; searchJson?: string; type?: Etype; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultExportedTicketInformation>(
         {
             url: "/masterdata-service/exportAuth/generateTicket",
@@ -31,7 +31,7 @@ export interface IExportingTicketInformation {
     ticket?: string;
 }
 
-export enum EType {
+export enum Etype {
     USER = "USER",
     MAJOR_DATA = "MAJOR_DATA",
     BOM = "BOM",

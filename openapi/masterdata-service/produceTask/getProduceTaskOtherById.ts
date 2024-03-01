@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/getProduceTaskOtherByIdUsingGET
 */
-export default function fetchMethod(options: { params: { TaskId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultOtherInformationAboutTheProductionTaskVO>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskOtherById",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author MaoHaiPing
 * @link http://47.108.135.148:18100/doc.html#/default/产品服务相关/getEnterpriseFormalProductServiceUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductServiceResponseObject>(
         {
             url: "/plk-uaa-service/productService/getEnterpriseFormalProductService",

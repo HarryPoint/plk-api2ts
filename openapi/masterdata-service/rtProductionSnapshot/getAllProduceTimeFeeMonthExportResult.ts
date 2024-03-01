@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getAllProduceTimeFeeMonthExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMonthlyReportOfHourlyLaborFeeSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheMonthlySummaryReportOfManHourFeeIsReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getAllProduceTimeFeeMonthExportResult",

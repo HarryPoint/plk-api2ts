@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author helin
 * @link http://47.108.135.148:16700/doc.html#/default/项目文件相关/getMoveToSelectTreeListUsingGET_2
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFileClassificationDetailsResponseDTO5>(
         {
             url: "/masterdata-service/projectFile/getMoveToSelectTreeList",

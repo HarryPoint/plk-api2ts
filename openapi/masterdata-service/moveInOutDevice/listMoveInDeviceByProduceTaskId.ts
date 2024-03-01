@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author MaoHaiPing
 * @link http://47.108.135.148:16700/doc.html#/default/进出料设备相关/listMoveInDeviceByProduceTaskIdUsingGET
 */
-export default function fetchMethod(options: { params: { ProduceTaskId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListTheFeedDeviceRespondsToDTO1>(
         {
             url: "/masterdata-service/moveInOutDevice/listMoveInDeviceByProduceTaskId",

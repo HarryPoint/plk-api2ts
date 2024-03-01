@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/项目相关/getPageUsingPOST_19
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/project/getPage",

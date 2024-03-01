@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author helin
 * @link http://47.108.135.148:16700/doc.html#/default/文件对象相关/getByIdUsingGET_4
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultFileObjectDetailResponseDTO>(
         {
             url: "/masterdata-service/fileObject/getById",

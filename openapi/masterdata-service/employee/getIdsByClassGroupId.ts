@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工相关/getIdsByClassGroupIdUsingGET
 */
-export default function fetchMethod(options: { params: { ClassGroupId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { classGroupId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListLong>(
         {
             url: "/masterdata-service/employee/getIdsByClassGroupId",

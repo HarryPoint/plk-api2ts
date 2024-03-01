@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/流程任务相关/getFlowPathTaskByIdAndCheckUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessTaskReturnsVO>(
         {
             url: "/masterdata-service/flowPathTask/getFlowPathTaskByIdAndCheck",

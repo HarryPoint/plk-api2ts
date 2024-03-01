@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/上报反馈服务相关/sureUsingPOST
 */
-export default function fetchMethod(options: { data: IReportTheDTOToHandleTheChangeStatus, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IReportTheDTOToHandleTheChangeStatus, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/produceHandleReport/sure",

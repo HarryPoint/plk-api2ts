@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工艺卡相关/getDetailByIdUsingGET
 */
-export default function fetchMethod(options: { params: { Id?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessCardInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/processSheet/getDetailById",

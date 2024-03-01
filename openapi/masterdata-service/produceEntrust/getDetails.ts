@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/委外加工管理/getDetailsUsingGET
 */
-export default function fetchMethod(options: { params: { Id?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListOutsourcedProcessingDetailsAreReturnedToVO>(
         {
             url: "/masterdata-service/produceEntrust/getDetails",

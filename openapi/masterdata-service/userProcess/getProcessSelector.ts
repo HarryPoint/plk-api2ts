@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工工序相关/getProcessSelectorUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; Type?: EType } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; type?: Etype } }, extraOptions?: any) {
     return http<ITheJSONResultListOperationSelectsToReturnVO1>(
         {
             url: "/masterdata-service/userProcess/getProcessSelector",
@@ -39,7 +39,7 @@ export interface IProcedureSelectionReturnsVO1 {
     name?: string;
 }
 
-export enum EType {
+export enum Etype {
     PRODUCE = "PRODUCE",
     QUALITY = "QUALITY"
 }

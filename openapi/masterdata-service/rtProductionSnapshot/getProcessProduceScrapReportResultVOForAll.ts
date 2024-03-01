@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getProcessProduceScrapReportResultVOForAllUsingPOST
 */
-export default function fetchMethod(options: { data: string[], params: { BeginTime?: number; EndTime?: number; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { beginTime?: number; endTime?: number; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessOutputScrapStatisticsAreReturnedToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProcessProduceScrapReportResultVOForAll",

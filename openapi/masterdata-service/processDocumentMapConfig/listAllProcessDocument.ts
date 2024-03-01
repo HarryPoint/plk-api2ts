@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工艺文档映射配置/listAllProcessDocumentUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessDocumentVO>(
         {
             url: "/masterdata-service/processDocumentMapConfig/listAllProcessDocument",

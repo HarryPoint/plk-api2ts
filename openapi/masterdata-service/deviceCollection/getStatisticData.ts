@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/设备数采数据概览相关/getStatisticDataUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceStatisticsSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceStatisticsSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultVOIsReturnedFromTheDeviceDataCollectionParameterStatisticsQuery>(
         {
             url: "/masterdata-service/deviceCollection/getStatisticData",

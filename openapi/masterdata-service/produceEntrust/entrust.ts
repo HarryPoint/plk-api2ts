@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/委外加工管理/entrustUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionOutsourcingSubmitDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOutsourcingSubmitDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/produceEntrust/entrust",

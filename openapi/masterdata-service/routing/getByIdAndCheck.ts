@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工艺路径相关/getByIdAndCheckUsingGET_1
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultRoutingDeprecatedVO>(
         {
             url: "/masterdata-service/routing/getByIdAndCheck",

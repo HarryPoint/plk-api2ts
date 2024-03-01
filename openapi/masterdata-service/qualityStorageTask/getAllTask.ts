@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/质检管理/getAllTaskUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; Status?: EStatus } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; status?: Estatus } }, extraOptions?: any) {
     return http<ITheJSONResultListSalesModuleReturnsVO>(
         {
             url: "/masterdata-service/qualityStorageTask/getAllTask",
@@ -86,7 +86,7 @@ export interface ITheInspectionModuleTaskReturnsVO {
     waitInspectionQuantity?: number;
 }
 
-export enum EStatus {
+export enum Estatus {
     WAIT = "WAIT",
     COMPLETE = "COMPLETE",
     CANCEL = "CANCEL",

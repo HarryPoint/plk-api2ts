@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/深蓝大屏相关/getSettingInfoUsingGET_1
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultDeepBlueProductionScreenSettingReturnsVO>(
         {
             url: "/masterdata-service/lsShenLanSetting/getSettingInfo",

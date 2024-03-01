@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/进出料记录管理/getMoveOutQuantityByMaterialIdUsingGET
 */
-export default function fetchMethod(options: { params: { BeginTime?: string; MaterialId?: string; EndTime?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: string; materialId?: string; endTime?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBigdecimal>(
         {
             url: "/masterdata-service/moveInOutRecord/getMoveOutQuantityByMaterialId",

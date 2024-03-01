@@ -4,7 +4,7 @@ import { IConfig } from "./config";
 import { translate as translateFn } from "./translate";
 
 // 去除所有的特殊字符
-const formatName = (name: string) =>
+const formatInterfaceName = (name: string) =>
   name
     .split(/[、,，'/《》«»()（）-\s]/)
     .map(_.upperFirst)
@@ -89,8 +89,8 @@ export const createDefinitions = async (
     const define = data.definitions[name];
     if (define && define.type === "object") {
       definitionsMap[name] = {
-        name: formatName(name),
-        translateName: formatName(name),
+        name: formatInterfaceName(name),
+        translateName: formatInterfaceName(name),
         originName: name,
         ins: null,
         define,
@@ -104,7 +104,7 @@ export const createDefinitions = async (
   const result = translate ? await translateFn(names) : names;
   // 所有的定义名称修正
   translateItemArr.forEach((item, index) => {
-    const translateName = formatName(result[index]);
+    const translateName = formatInterfaceName(result[index]);
     item.name = `${interfacePrefix}${translateName}`;
     item.translateName = translateName;
     // console.log("item.name: ", item.name);

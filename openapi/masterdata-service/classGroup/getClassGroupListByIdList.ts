@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/班组相关/getClassGroupListByIdListUsingPOST
 */
-export default function fetchMethod(options: { data: string[], params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/classGroup/getClassGroupListByIdList",

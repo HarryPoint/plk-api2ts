@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工相关/getUserAccountByAccountIdAndCheckForDynamicDataUsingGET
 */
-export default function fetchMethod(options: { params: { AccountId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { accountId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultEmployeeAccountVO>(
         {
             url: "/masterdata-service/employee/getUserAccountByAccountIdAndCheckForDynamicData",

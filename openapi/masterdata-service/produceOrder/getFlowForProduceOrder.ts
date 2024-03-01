@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产订单相关/getFlowForProduceOrderUsingGET
 */
-export default function fetchMethod(options: { params: { ProduceOrderId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceOrderId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnTheProductionOrderToVO1>(
         {
             url: "/masterdata-service/produceOrder/getFlowForProduceOrder",

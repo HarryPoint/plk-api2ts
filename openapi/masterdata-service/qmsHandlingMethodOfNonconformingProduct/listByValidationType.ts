@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Tan Peng
 * @link http://47.108.135.148:16700/doc.html#/default/不合格品处理方式相关/listByValidationTypeUsingGET
 */
-export default function fetchMethod(options: { params: { UseValidationTypes?: EUseValidationTypes } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { useValidationTypes?: EuseValidationTypes } }, extraOptions?: any) {
     return http<IJSONResultListResponseObjectForHandlingNonconformingItems>(
         {
             url: "/masterdata-service/qmsHandlingMethodOfNonconformingProduct/listByValidationType",
@@ -39,7 +39,7 @@ export interface ITheNonconformingProductHandlingModeRespondsToTheObject {
     useValidationTypesDesc?: string;
 }
 
-export enum EUseValidationTypes {
+export enum EuseValidationTypes {
     CUSTOMER_COMPLAIN = "CUSTOMER_COMPLAIN",
     INCOMING_INSPECTION = "INCOMING_INSPECTION",
     FIRST_INSPECTION = "FIRST_INSPECTION",

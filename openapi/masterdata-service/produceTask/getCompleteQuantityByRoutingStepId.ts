@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/getCompleteQuantityByRoutingStepIdUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; ProduceOrderId?: string; RoutingStepId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; produceOrderId?: string; routingStepId?: string } }, extraOptions?: any) {
     return http<IJSONResultBigdecimal>(
         {
             url: "/masterdata-service/produceTask/getCompleteQuantityByRoutingStepId",

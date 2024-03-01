@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/物料批次设置相关/getCanNotOpenQualityTraceabilityProduceOrderListUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; MaterialId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultListQualityTraceabilityDoesNotOpenAProductionOrderResponseObject>(
         {
             url: "/masterdata-service/materialLotSetting/getCanNotOpenQualityTraceabilityProduceOrderList",

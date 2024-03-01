@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Tan Peng
 * @link http://47.108.135.148:16700/doc.html#/default/QMS大屏相关/queryHandlingOfNonConformingAuditStatisticsUsingGET
 */
-export default function fetchMethod(options: { params: { DateBegin?: string; DateEnd?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { dateBegin?: string; dateEnd?: string } }, extraOptions?: any) {
     return http<IJSONResultLargeScreenNonconformingProductStatisticsRespondToDTOAccordingToTheTrialSituation>(
         {
             url: "/masterdata-service/qmsDashboard/queryHandlingOfNonConformingAuditStatistics",

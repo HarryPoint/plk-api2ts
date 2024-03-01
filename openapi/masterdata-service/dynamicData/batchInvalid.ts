@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/batchInvalidUsingPOST
 */
-export default function fetchMethod(options: { data: IDynamicFormDisabledRequestDTO, params: { FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDynamicFormDisabledRequestDTO, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/dynamicData/batchInvalid",

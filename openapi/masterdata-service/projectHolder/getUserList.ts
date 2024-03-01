@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author helin
 * @link http://47.108.135.148:16700/doc.html#/default/项目文件夹相关/getUserListUsingGET_1
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectFolderListQueryResponseDTO>(
         {
             url: "/masterdata-service/projectHolder/getUserList",

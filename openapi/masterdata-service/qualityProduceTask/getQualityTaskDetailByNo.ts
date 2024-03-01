@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产质检管理/getQualityTaskDetailByNoUsingGET
 */
-export default function fetchMethod(options: { params: { TaskNo?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { taskNo?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultInspectionTaskDetailsAreReturnedToVOForEmployees>(
         {
             url: "/masterdata-service/qualityProduceTask/getQualityTaskDetailByNo",

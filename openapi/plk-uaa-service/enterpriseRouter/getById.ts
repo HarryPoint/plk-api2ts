@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author TangYongDi
 * @link http://47.108.135.148:18100/doc.html#/default/企业路由相关/getByIdUsingGET
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultEnterpriseRouteResponseDTO>(
         {
             url: "/plk-uaa-service/enterpriseRouter/getById",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/库存查询相关/exportUsingPOST_34
 */
-export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataInventorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultLong>(
         {
             url: "/masterdata-service/warehouseMaterial/export",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/销售订单相关/getByCodeAndNotCheckUsingGET
 */
-export default function fetchMethod(options: { params: { Code?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesOrderVO>(
         {
             url: "/masterdata-service/salesOrder/getByCodeAndNotCheck",

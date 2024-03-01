@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getScrapProduceAbnormalCategoryReportResultVOForAllTopNUsingGET
 */
-export default function fetchMethod(options: { params: { BeginTime?: number; EndTime?: number; EnterpriseId?: string; Top?: number } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: number; endTime?: number; enterpriseId?: string; top?: number } }, extraOptions?: any) {
     return http<IJSONResultListScrapTypeStatisticsReturnVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getScrapProduceAbnormalCategoryReportResultVOForAllTopN",

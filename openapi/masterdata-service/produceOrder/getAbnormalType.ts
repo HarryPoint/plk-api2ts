@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产订单相关/getAbnormalTypeUsingGET_2
 */
-export default function fetchMethod(options: { params: { Type?: EType; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTypeReturnsVO>(
         {
             url: "/masterdata-service/produceOrder/getAbnormalType",
@@ -47,7 +47,7 @@ export interface IExceptionTypeReturnsVO {
     typeDesc?: string;
 }
 
-export enum EType {
+export enum Etype {
     SCRAP = "SCRAP",
     HOLD = "HOLD",
     HOLD_PAUSE = "HOLD_PAUSE",

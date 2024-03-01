@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author MaoHaiPing
 * @link http://47.108.135.148:16700/doc.html#/default/项目任务模板相关/listByProjectIdUsingGET_1
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskTemplateRespondsToTheDTO>(
         {
             url: "/masterdata-service/projectTaskTemplate/listByProjectId",

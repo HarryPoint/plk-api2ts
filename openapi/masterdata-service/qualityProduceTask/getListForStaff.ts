@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产质检管理/getListForStaffUsingPOST_1
 */
-export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultListQualityProduceTaskVO>(
         {
             url: "/masterdata-service/qualityProduceTask/getListForStaff",

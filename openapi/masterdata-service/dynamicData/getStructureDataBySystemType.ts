@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getStructureDataBySystemTypeUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessStructureSearchVO, params: { EnterpriseId?: string; SystemType?: ESystemType } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVO, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/masterdata-service/dynamicData/getStructureDataBySystemType",
@@ -386,7 +386,7 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     meta?: Record<string, Record<string, any>>;
 }
 
-export enum ESystemType {
+export enum EsystemType {
     STOREHOUSE = "STOREHOUSE",
     WAREHOUSE = "WAREHOUSE",
     PRODUCE_ORDER = "PRODUCE_ORDER",

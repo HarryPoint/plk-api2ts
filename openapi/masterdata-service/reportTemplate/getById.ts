@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/报表模板/getByIdUsingPOST_3
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultReportTemplateDTO>(
         {
             url: "/masterdata-service/reportTemplate/getById",

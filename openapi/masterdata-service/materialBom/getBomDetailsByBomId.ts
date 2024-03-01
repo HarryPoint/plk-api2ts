@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/物料Bom相关/getBomDetailsByBomIdUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; id?: string } }, extraOptions?: any) {
     return http<IJSONResultListBomDetailsSelectBasicInformationDTO>(
         {
             url: "/masterdata-service/materialBom/getBomDetailsByBomId",

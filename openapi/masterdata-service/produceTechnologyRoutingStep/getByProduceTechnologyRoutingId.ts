@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/produce-technology-routing-step-controller/getByProduceTechnologyRoutingIdUsingGET
 */
-export default function fetchMethod(options: { params: { ProduceTechnologyRoutingId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { produceTechnologyRoutingId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProduceTechnologyRoutingStepResponseDTO>(
         {
             url: "/masterdata-service/produceTechnologyRoutingStep/getByProduceTechnologyRoutingId",

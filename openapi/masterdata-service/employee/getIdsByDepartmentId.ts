@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工相关/getIdsByDepartmentIdUsingGET
 */
-export default function fetchMethod(options: { params: { DepartmentId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { departmentId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListLong>(
         {
             url: "/masterdata-service/employee/getIdsByDepartmentId",

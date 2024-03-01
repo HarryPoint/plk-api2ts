@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/手动排产/handPlanUsingPOST
 */
-export default function fetchMethod(options: { data: IManualDTOSchedulingOfProductionOrders, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IManualDTOSchedulingOfProductionOrders, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/handPlan/handPlan",

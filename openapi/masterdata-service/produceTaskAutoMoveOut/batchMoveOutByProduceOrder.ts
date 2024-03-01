@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产任务自动出料相关/batchMoveOutByProduceOrderUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionTaskAutomaticDischargeUploadDataDTO[], params: { ClientIp?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskAutomaticDischargeUploadDataDTO[], params: { clientIp?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/produceTaskAutoMoveOut/batchMoveOutByProduceOrder",

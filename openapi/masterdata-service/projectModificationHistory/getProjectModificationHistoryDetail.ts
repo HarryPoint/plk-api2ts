@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author TanPeng
 * @link http://47.108.135.148:16700/doc.html#/default/项目变更版本记录相关/getProjectModificationHistoryDetailUsingGET_1
 */
-export default function fetchMethod(options: { params: { ProjectModificationId?: string; SystemType?: ESystemType } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectModificationId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO>(
         {
             url: "/masterdata-service/projectModificationHistory/getProjectModificationHistoryDetail",
@@ -379,7 +379,7 @@ export interface IFlowPathFormFieldValueLimitRuleEditDTO {
     meta?: Record<string, Record<string, any>>;
 }
 
-export enum ESystemType {
+export enum EsystemType {
     STOREHOUSE = "STOREHOUSE",
     WAREHOUSE = "WAREHOUSE",
     PRODUCE_ORDER = "PRODUCE_ORDER",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author helin
 * @link http://47.108.135.148:16700/doc.html#/default/文件分类相关/hasFileObjectAssociationUsingPOST
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultString1>(
         {
             url: "/masterdata-service/fileCategory/hasFileObjectAssociation",

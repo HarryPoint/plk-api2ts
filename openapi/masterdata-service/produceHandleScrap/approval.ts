@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产报废服务相关/approvalUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionProcessingScrapChangeStatusDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionProcessingScrapChangeStatusDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/produceHandleScrap/approval",

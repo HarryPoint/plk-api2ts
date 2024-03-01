@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Tan Peng
 * @link http://47.108.135.148:16700/doc.html#/default/tsk数采数据相关/batchUploadUsingPOST
 */
-export default function fetchMethod(options: { data: ITSKTestData[], params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITSKTestData[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/tskStatistic/batchUpload",

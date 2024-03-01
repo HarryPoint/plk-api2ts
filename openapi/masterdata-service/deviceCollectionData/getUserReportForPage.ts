@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/设备数采相关/getUserReportForPageUsingPOST
 */
-export default function fetchMethod(options: { data: IExampleQueryTheDataDTOReportedByAUser, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IExampleQueryTheDataDTOReportedByAUser, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationDeviceDataCollectionManualReportedDataCDRPagingInformationReturnedToVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getUserReportForPage",

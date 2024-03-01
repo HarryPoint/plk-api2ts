@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author XieJian
 * @link http://47.108.135.148:16700/doc.html#/default/项目任务泳道图相关/querySwimLaneChartUsingGET
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectTaskLaneMapResponseObject>(
         {
             url: "/masterdata-service/projectTaskSwimLaneChart/querySwimLaneChart",

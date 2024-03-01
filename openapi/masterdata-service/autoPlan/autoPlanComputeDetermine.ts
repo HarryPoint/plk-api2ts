@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/自动排产订单相关/autoPlanComputeDetermineUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionOrderAutomaticSchedulingCalculationResultsToDetermineTheDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/autoPlan/autoPlanComputeDetermine",

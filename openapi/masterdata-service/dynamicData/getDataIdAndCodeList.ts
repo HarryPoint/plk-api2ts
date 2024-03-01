@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getDataIdAndCodeListUsingPOST
 */
-export default function fetchMethod(options: { data: string[], params: { EnterpriseCode?: string; EnterpriseId?: string; FlowPathCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseCode?: string; enterpriseId?: string; flowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getDataIdAndCodeList",

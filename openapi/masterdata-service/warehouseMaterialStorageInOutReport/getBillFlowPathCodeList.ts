@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author XieJian
 * @link http://47.108.135.148:16700/doc.html#/default/物料收发汇总报表相关/getBillFlowPathCodeListUsingGET
 */
-export default function fetchMethod(options: { params: { MasterDataFlowPathCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { masterDataFlowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultResponseObjectOfTheBillListForReceivingAndSendingMaterials>(
         {
             url: "/masterdata-service/warehouseMaterialStorageInOutReport/getBillFlowPathCodeList",

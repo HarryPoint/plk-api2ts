@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author MaoHaiPing
 * @link http://47.108.135.148:16700/doc.html#/default/项目任务模板用户相关/getProjectTaskTemplateIdUsingGET
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultLong>(
         {
             url: "/masterdata-service/projectTaskTemplateUser/getProjectTaskTemplateId",

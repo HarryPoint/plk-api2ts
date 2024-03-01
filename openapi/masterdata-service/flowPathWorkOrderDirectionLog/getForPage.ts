@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/流程工单流转日志相关/getForPageUsingPOST_3
 */
-export default function fetchMethod(options: { data: IJobLogSearchVO, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IJobLogSearchVO, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultThePageInformationWorkOrderLogReturnsVO>(
         {
             url: "/masterdata-service/flowPathWorkOrderDirectionLog/getForPage",

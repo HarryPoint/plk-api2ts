@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/导出相关/getConsignmentLossAnalyzeReportExportInfoByTicketUsingGET
 */
-export default function fetchMethod(options: { params: { Ticket?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { ticket?: string } }, extraOptions?: any) {
     return http<IJSONResultExportInformationConsignmentLossAnalysisReportPaginatedReturnVO>(
         {
             url: "/masterdata-service/exportAuth/getConsignmentLossAnalyzeReportExportInfoByTicket",

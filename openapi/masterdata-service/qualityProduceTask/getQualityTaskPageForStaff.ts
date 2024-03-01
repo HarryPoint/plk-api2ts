@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产质检管理/getQualityTaskPageForStaffUsingPOST
 */
-export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ITheInspectionTaskSearchesForVOOnTheEmployeeEnd, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationTheInspectionTaskReturnsVOForTheEmployee>(
         {
             url: "/masterdata-service/qualityProduceTask/getQualityTaskPageForStaff",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工序任务设置相关/getOperateUserForPageUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessOperatorSearchesVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessOperatorSearchesVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationProcessOperatorVO>(
         {
             url: "/masterdata-service/processTaskSetting/getOperateUserForPage",

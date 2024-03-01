@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Tan peng
 * @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/queryByProduceCodeAndProcessIdUsingGET
 */
-export default function fetchMethod(options: { params: { ProcessId?: string; ProduceOrderCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { processId?: string; produceOrderCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListProduceTaskVO>(
         {
             url: "/masterdata-service/produceTask/queryByProduceCodeAndProcessId",

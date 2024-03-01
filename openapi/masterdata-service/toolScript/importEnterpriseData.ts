@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/工具脚本相关/importEnterpriseDataUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; FileKey?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; fileKey?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/toolScript/importEnterpriseData",

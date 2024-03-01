@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/标准工艺编码规则相关/getByIdUsingGET_18
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultStandardProcessCodingRulesRespondToDtos>(
         {
             url: "/masterdata-service/standardTechnologyCodeRule/getById",

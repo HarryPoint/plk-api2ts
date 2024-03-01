@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/质检分类/getPageUsingPOST_21
 */
-export default function fetchMethod(options: { data: IInspectionCategorySearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IInspectionCategorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultThePageInformationIsReturnedToVO>(
         {
             url: "/masterdata-service/qualityInspectionCategory/getPage",

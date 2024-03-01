@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/宝晶报表相关/getBaoJingSalesDeliverResultVOUsingPOST
 */
-export default function fetchMethod(options: { data: IBaojingSalesDeliveryReportSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingSalesDeliveryReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaojingSalesDeliveryReportReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getBaoJingSalesDeliverResultVO",

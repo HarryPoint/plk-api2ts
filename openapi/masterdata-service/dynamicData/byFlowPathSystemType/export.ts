@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/exportByFlowPathSystemTypeUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVO2, params: { EnterpriseId?: string; SystemType?: ESystemType } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO2, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultLong>(
         {
             url: "/masterdata-service/dynamicData/byFlowPathSystemType/export",
@@ -92,7 +92,7 @@ export interface IJSONResultLong {
     ts?: string;
 }
 
-export enum ESystemType {
+export enum EsystemType {
     STOREHOUSE = "STOREHOUSE",
     WAREHOUSE = "WAREHOUSE",
     PRODUCE_ORDER = "PRODUCE_ORDER",

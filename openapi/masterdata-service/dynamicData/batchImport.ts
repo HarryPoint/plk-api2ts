@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/batchImportUsingPOST_1
 */
-export default function fetchMethod(options: { data: IMasterDataBaseEditDTO[], params: { EnterpriseId?: string; FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMasterDataBaseEditDTO[], params: { enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListString>(
         {
             url: "/masterdata-service/dynamicData/batchImport",

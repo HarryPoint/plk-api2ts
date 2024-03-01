@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getFormRpDataForPageUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessAssociationFormSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessAssociationFormSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProcessAssociationFormQueryReturnsVO>(
         {
             url: "/masterdata-service/dynamicData/getFormRpDataForPage",

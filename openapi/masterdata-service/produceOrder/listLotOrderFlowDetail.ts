@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author MaoHaiPing
 * @link http://47.108.135.148:16700/doc.html#/default/生产订单相关/listLotOrderFlowDetailUsingPOST
 */
-export default function fetchMethod(options: { data: IBatchOrderHistorySearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBatchOrderHistorySearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListBatchOrderDetailedInformationRespondsToDTO>(
         {
             url: "/masterdata-service/produceOrder/listLotOrderFlowDetail",

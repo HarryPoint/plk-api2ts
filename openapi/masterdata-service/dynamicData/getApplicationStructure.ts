@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getApplicationStructureUsingPOST
 */
-export default function fetchMethod(options: { params: { FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultFormStructureVO1>(
         {
             url: "/masterdata-service/dynamicData/getApplicationStructure",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author helin
 * @link http://47.108.135.148:16700/doc.html#/default/项目任务历史相关/listByProjectTaskIdUsingGET
 */
-export default function fetchMethod(options: { params: { ProjectTaskId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectTaskId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskHistoryQueryResponse>(
         {
             url: "/masterdata-service/projectTaskHistory/listByProjectTaskId",

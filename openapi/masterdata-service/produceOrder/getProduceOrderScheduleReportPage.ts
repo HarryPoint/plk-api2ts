@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产订单相关/getProduceOrderScheduleReportPageUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionSchedulingOrderSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationReportProductionOrderReturnsVO>(
         {
             url: "/masterdata-service/produceOrder/getProduceOrderScheduleReportPage",

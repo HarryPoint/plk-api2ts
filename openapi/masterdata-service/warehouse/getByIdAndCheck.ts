@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/仓位相关/getByIdAndCheckUsingGET_2
 */
-export default function fetchMethod(options: { params: { WarehouseId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { warehouseId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultPositionVO>(
         {
             url: "/masterdata-service/warehouse/getByIdAndCheck",

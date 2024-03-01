@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工艺文档映射配置/listByToCodeUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; ToCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; toCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListProcessDocumentMapConfigurationVO>(
         {
             url: "/masterdata-service/processDocumentMapConfig/listByToCode",

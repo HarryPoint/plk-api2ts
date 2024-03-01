@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/安全库存相关/exchangeSettingUsingPOST
 */
-export default function fetchMethod(options: { data: IUnifiedSecurityInventoryConfiguration, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IUnifiedSecurityInventoryConfiguration, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/safetyStock/exchangeSetting",

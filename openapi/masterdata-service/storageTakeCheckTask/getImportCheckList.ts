@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/仓库盘点任务相关/getImportCheckListUsingPOST
 */
-export default function fetchMethod(options: { data: IImportDetailsListDTOForInventory, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IImportDetailsListDTOForInventory, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnTheWarehouseInventoryListToTheDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getImportCheckList",

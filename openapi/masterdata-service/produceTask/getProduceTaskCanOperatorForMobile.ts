@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/getProduceTaskCanOperatorForMobileUsingPOST
 */
-export default function fetchMethod(options: { data: IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProductionTaskListYouCanQueryDtosForBatchOperationItemsOnMobileTerminals, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionTaskListCanBeBatchOperationButtonReturnDTOForMobileEnd>(
         {
             url: "/masterdata-service/produceTask/getProduceTaskCanOperatorForMobile",

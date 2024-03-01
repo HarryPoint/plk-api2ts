@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/仓库盘点任务相关/getListForStaffUsingPOST_3
 */
-export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IPublicBacklogDataQuery, params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultListStorageTakeCheckTaskResponseDTO>(
         {
             url: "/masterdata-service/storageTakeCheckTask/getListForStaff",

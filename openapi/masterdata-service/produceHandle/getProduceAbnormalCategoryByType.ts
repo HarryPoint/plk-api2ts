@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产事件管理/getProduceAbnormalCategoryByTypeUsingGET
 */
-export default function fetchMethod(options: { params: { Type?: EType; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/produceHandle/getProduceAbnormalCategoryByType",
@@ -35,7 +35,7 @@ export interface IIdNameNumberVO {
     name: string;
 }
 
-export enum EType {
+export enum Etype {
     SCRAP = "SCRAP",
     HOLD = "HOLD",
     HOLD_PAUSE = "HOLD_PAUSE",

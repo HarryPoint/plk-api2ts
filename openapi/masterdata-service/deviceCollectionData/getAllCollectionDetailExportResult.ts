@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/设备数采相关/getAllCollectionDetailExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataListSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataListSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListExportDetailedDeviceDataCollectionReportVO>(
         {
             url: "/masterdata-service/deviceCollectionData/getAllCollectionDetailExportResult",

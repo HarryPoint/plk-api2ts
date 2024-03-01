@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/project-script-controller/removeProjectUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/projectScript/removeProject",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/宝晶报表相关/getProduceStorageReportSumResultUsingPOST
 */
-export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IBaojingReportInventoryRelatedSearchDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultBaoJingReportTheTotalDailyReportOfFinishedProductsIsReturnedToVO>(
         {
             url: "/masterdata-service/baoJingReport/getProduceStorageReportSumResult",

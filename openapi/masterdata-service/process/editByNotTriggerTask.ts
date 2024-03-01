@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工序相关/editByNotTriggerTaskUsingPOST_2
 */
-export default function fetchMethod(options: { data: IMasterDataBaseEditDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMasterDataBaseEditDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultString>(
         {
             url: "/masterdata-service/process/editByNotTriggerTask",

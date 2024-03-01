@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产任务相关/getUserWaitHandleCountUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; IsTimeout?: EIsTimeout; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; isTimeout?: EisTimeout; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultLong>(
         {
             url: "/masterdata-service/produceTask/getUserWaitHandleCount",
@@ -26,7 +26,7 @@ export interface IJSONResultLong {
     ts?: string;
 }
 
-export enum EIsTimeout {
+export enum EisTimeout {
     Y = "Y",
     N = "N"
 }

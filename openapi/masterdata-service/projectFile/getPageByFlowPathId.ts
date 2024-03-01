@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author helin
 * @link http://47.108.135.148:16700/doc.html#/default/项目文件相关/getPageByFlowPathIdUsingPOST_2
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/projectFile/getPageByFlowPathId",

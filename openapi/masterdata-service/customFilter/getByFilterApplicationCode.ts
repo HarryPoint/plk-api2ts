@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/自定义筛选项相关/getByFilterApplicationCodeUsingGET
 */
-export default function fetchMethod(options: { params: { FilterApplicationCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { filterApplicationCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnObjectDTOForAUserDefinedFilter>(
         {
             url: "/masterdata-service/customFilter/getByFilterApplicationCode",

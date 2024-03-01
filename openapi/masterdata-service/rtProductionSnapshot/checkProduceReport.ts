@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/checkProduceReportUsingPOST
 */
-export default function fetchMethod(options: { data: IOutputClassReportSearchVO, params: { EnterpriseId?: string; IsCreateLineChartReport?: boolean } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputClassReportSearchVO, params: { enterpriseId?: string; isCreateLineChartReport?: boolean } }, extraOptions?: any) {
     return http<IJSONResultProducesALineChartAndReturnsAVOObject>(
         {
             url: "/masterdata-service/rtProductionSnapshot/checkProduceReport",

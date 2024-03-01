@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/盘点单数据迁移服务/allUsingGET_1
 */
-export default function fetchMethod(options: { params: { EnterpriseIds?: string[] } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseIds?: string[] } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/script/storageTakeCheckTaskMigrateScript/all",

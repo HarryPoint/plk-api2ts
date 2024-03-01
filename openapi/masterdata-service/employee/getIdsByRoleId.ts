@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工相关/getIdsByRoleIdUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; RoleId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; roleId?: string } }, extraOptions?: any) {
     return http<IJSONResultListLong>(
         {
             url: "/masterdata-service/employee/getIdsByRoleId",

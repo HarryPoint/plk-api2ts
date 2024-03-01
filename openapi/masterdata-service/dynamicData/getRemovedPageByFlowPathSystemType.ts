@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getRemovedPageByFlowPathSystemTypeUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { EnterpriseId?: string; SystemType?: ESystemType } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { enterpriseId?: string; systemType?: EsystemType } }, extraOptions?: any) {
     return http<IJSONResultPagingInformationJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getRemovedPageByFlowPathSystemType",
@@ -116,7 +116,7 @@ export interface IPagingInformationJSONObject {
 export interface IJSONObject {
 }
 
-export enum ESystemType {
+export enum EsystemType {
     STOREHOUSE = "STOREHOUSE",
     WAREHOUSE = "WAREHOUSE",
     PRODUCE_ORDER = "PRODUCE_ORDER",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author lin.he
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getByIdUsingGET_2
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; FlowPathId?: string; FormRecordId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; flowPathId?: string; formRecordId?: string } }, extraOptions?: any) {
     return http<IJSONResultJSONObject>(
         {
             url: "/masterdata-service/dynamicData/getById",

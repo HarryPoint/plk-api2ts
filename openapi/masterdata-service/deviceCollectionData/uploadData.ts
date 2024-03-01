@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/设备数采相关/uploadDataUsingPOST
 */
-export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataUpload[], params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IDeviceDataAcquisitionDataUpload[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/deviceCollectionData/uploadData",

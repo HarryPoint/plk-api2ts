@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author TanPeng
 * @link http://47.108.135.148:16700/doc.html#/default/流程任务相关/queryTransferUserInfoUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessTasksAreTransferredToPersonnelToInquireDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessTasksAreTransferredToPersonnelToInquireDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/masterdata-service/flowPathTask/queryTransferUserInfo",

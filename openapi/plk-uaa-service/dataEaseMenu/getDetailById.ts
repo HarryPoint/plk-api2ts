@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author XieJian
 * @link http://47.108.135.148:18100/doc.html#/default/DataEase菜单相关/getDetailByIdUsingGET
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultDataEaseMenuDetailsResponseObject>(
         {
             url: "/plk-uaa-service/dataEaseMenu/getDetailById",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/销售订单相关/getByIdsUsingPOST_6
 */
-export default function fetchMethod(options: { data: string[], params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: string[], params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListSalesOrderVO>(
         {
             url: "/masterdata-service/salesOrder/getByIds",

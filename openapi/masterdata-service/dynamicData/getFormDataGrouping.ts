@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/getFromDataGroupingUsingGET
 */
-export default function fetchMethod(options: { params: { FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultListFormDataGroupingDTO>(
         {
             url: "/masterdata-service/dynamicData/getFormDataGrouping",

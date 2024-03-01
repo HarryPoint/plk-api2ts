@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getUnionSqlUsingPOST
 */
-export default function fetchMethod(options: { params: { BeginTime?: number; EndTime?: number; QueryQuantityCount?: number; TimeType?: ETimeType } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { beginTime?: number; endTime?: number; queryQuantityCount?: number; timeType?: EtimeType } }, extraOptions?: any) {
     return http<IJSONResultString>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getUnionSql",
@@ -26,7 +26,7 @@ export interface IJSONResultString {
     ts?: string;
 }
 
-export enum ETimeType {
+export enum EtimeType {
     HOUR = "HOUR",
     DAY = "DAY",
     MONTH = "MONTH",

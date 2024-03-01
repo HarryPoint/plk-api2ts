@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/开放接口相关/addUsingPOST_2
 */
-export default function fetchMethod(options: { params: { ClientIp?: string; EnterpriseId?: string; IsSuccess?: EIsSuccess; ReqBody?: string; ReqType?: EReqType; Uri?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { clientIp?: string; enterpriseId?: string; isSuccess?: EisSuccess; reqBody?: string; reqType?: EreqType; uri?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/openapiLog/add",
@@ -26,12 +26,12 @@ export interface IJSONResultObject {
     ts?: string;
 }
 
-export enum EIsSuccess {
+export enum EisSuccess {
     Y = "Y",
     N = "N"
 }
 
-export enum EReqType {
+export enum EreqType {
     API = "API",
     HANDLE = "HANDLE"
 }

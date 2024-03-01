@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author XieJian
 * @link http://47.108.135.148:16700/doc.html#/default/标准工艺相关/getByMaterialIdUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; MaterialId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; materialId?: string } }, extraOptions?: any) {
     return http<IJSONResultListStandardProcessDropDownResponseObject>(
         {
             url: "/masterdata-service/standardTechnology/getByMaterialId",

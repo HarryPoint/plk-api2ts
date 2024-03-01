@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author TanPeng
 * @link http://47.108.135.148:16700/doc.html#/default/项目成员变更相关/listModificationHistoryUsingGET
 */
-export default function fetchMethod(options: { params: { ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectMemberChangeInformation>(
         {
             url: "/masterdata-service/projectMemberModification/listModificationHistory",

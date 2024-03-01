@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Mao Hai Ping
 * @link http://47.108.135.148:16700/doc.html#/default/完工及产成品归集相关/checkCollectOrderHasModifyUsingGET
 */
-export default function fetchMethod(options: { params: { FiscalPeriodId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { fiscalPeriodId?: string } }, extraOptions?: any) {
     return http<IJSONResultVerifiesTheResponseObject>(
         {
             url: "/masterdata-service/produceQuantityCollect/checkCollectOrderHasModify",

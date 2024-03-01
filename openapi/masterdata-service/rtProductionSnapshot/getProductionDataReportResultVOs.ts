@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/生产快照相关/getProductionDataReportResultVOsUsingPOST
 */
-export default function fetchMethod(options: { data: IOutputDataReportSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOutputDataReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheOutputDataStatisticsToVO>(
         {
             url: "/masterdata-service/rtProductionSnapshot/getProductionDataReportResultVOs",

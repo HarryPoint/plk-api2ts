@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/设备相关/getDeviceSelectorForPlanUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListDeviceSelectsToReturnVOForTheDataCollectionScheme>(
         {
             url: "/masterdata-service/device/getDeviceSelectorForPlan",

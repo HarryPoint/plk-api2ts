@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/应收账款相关/amountPlusUsingPOST_1
 */
-export default function fetchMethod(options: { data: IAddAccountsReceivableDTO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAddAccountsReceivableDTO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/accountsReceivable/amountPlus",

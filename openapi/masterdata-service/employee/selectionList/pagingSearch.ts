@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工相关/pagingSearchSelectionUserListUsingPOST
 */
-export default function fetchMethod(options: { data: ISearchVOWithTheHomeOwnerDataSelectionList, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ISearchVOWithTheHomeOwnerDataSelectionList, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListEmployeeResponseObject>(
         {
             url: "/masterdata-service/employee/selectionList/pagingSearch",

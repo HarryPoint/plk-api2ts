@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author TangYongDi
 * @link http://47.108.135.148:16700/doc.html#/default/财务凭证相关/getOutsideFinancialVoucherUsingGET
 */
-export default function fetchMethod(options: { params: { ApplicationId?: string; Id?: string; VoucherNo?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { applicationId?: string; id?: string; voucherNo?: string } }, extraOptions?: any) {
     return http<IJSONResultExternalFinancialCertificateResponseObject>(
         {
             url: "/masterdata-service/financialVoucher/getOutsideFinancialVoucher",

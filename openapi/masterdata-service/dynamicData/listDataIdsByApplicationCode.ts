@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/动态数据相关/listDataIdsByApplicationCodeUsingPOST
 */
-export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { EnterpriseId?: string; FlowPathCode?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessDataSearchVO1, params: { enterpriseId?: string; flowPathCode?: string } }, extraOptions?: any) {
     return http<IJSONResultListLong>(
         {
             url: "/masterdata-service/dynamicData/listDataIdsByApplicationCode",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Tan Peng
 * @link http://47.108.135.148:16700/doc.html#/default/项目相关/completeUsingGET
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultString1>(
         {
             url: "/masterdata-service/project/complete",

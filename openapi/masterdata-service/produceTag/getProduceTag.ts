@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/标签设置/getProduceTagUsingGET
 */
-export default function fetchMethod(options: { params: { Type?: EType; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { type?: Etype; enterpriseId?: string } }, extraOptions?: any) {
     return http<ITheJSONResultListExceptionTagReturnsVO>(
         {
             url: "/masterdata-service/produceTag/getProduceTag",
@@ -47,7 +47,7 @@ export interface ITheExceptionTagReturnsVO {
     typeDesc?: string;
 }
 
-export enum EType {
+export enum Etype {
     SCRAP = "SCRAP",
     HOLD = "HOLD",
     HOLD_PAUSE = "HOLD_PAUSE",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/project-script-controller/removeTodoUsingGET
 */
-export default function fetchMethod(options: { params: { ApiSystem?: EApiSystem; DataId?: string; EnterpriseId?: string; FlowPathId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { apiSystem?: EapiSystem; dataId?: string; enterpriseId?: string; flowPathId?: string } }, extraOptions?: any) {
     return http<IJSONResultObject>(
         {
             url: "/masterdata-service/projectScript/removeTodo",
@@ -26,7 +26,7 @@ export interface IJSONResultObject {
     ts?: string;
 }
 
-export enum EApiSystem {
+export enum EapiSystem {
     KING_DEE_YXC = "KING_DEE_YXC",
     KING_DEE_YCQ = "KING_DEE_YCQ",
     KING_DEE_YZJ_PROJECT = "KING_DEE_YZJ_PROJECT",

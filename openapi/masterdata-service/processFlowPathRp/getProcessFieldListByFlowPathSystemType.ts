@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工序字段对应表相关/getProcessFieldListByFlowPathSystemTypeUsingGET
 */
-export default function fetchMethod(options: { params: { FlowPathSystemTypeList?: EFlowPathSystemTypeList; ProcessId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { flowPathSystemTypeList?: EflowPathSystemTypeList; processId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListIdNameNumberVO>(
         {
             url: "/masterdata-service/processFlowPathRp/getProcessFieldListByFlowPathSystemType",
@@ -35,7 +35,7 @@ export interface IIdNameNumberVO {
     name: string;
 }
 
-export enum EFlowPathSystemTypeList {
+export enum EflowPathSystemTypeList {
     STOREHOUSE = "STOREHOUSE",
     WAREHOUSE = "WAREHOUSE",
     PRODUCE_ORDER = "PRODUCE_ORDER",

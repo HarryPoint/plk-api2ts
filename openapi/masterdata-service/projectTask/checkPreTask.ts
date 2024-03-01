@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author MaoHaiPing
 * @link http://47.108.135.148:16700/doc.html#/default/项目任务相关/checkPreTaskUsingGET
 */
-export default function fetchMethod(options: { params: { Id?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { id?: string } }, extraOptions?: any) {
     return http<IJSONResultListProjectTaskPreTaskVerifyTheResponseObject>(
         {
             url: "/masterdata-service/projectTask/checkPreTask",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/库存查询相关/getMaterialPlaceUsingPOST_1
 */
-export default function fetchMethod(options: { data: IMaterialMasterDataInventoryDistributionSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialMasterDataInventoryDistributionSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListReturnsTheInventoryDistributionToVO>(
         {
             url: "/masterdata-service/warehouseMaterial/getMaterialPlace",

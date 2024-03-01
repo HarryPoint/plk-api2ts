@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/报表相关/getAllSalesOrderReportExportResultUsingPOST
 */
-export default function fetchMethod(options: { data: IOrderProgressStatisticsQueryVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IOrderProgressStatisticsQueryVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListExportOrderProgressStatisticsVO>(
         {
             url: "/masterdata-service/report/getAllSalesOrderReportExportResult",

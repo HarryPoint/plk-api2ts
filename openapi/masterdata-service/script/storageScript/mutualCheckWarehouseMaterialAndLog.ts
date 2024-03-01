@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/库存脚本相关接口/mutualCheckWarehouseMaterialAndLogUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultString>(
         {
             url: "/masterdata-service/script/storageScript/mutualCheckWarehouseMaterialAndLog",

@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/进出料记录管理/getMaterialActualQuantityListUsingPOST
 */
-export default function fetchMethod(options: { data: IMaterialOutputSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IMaterialOutputSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListMaterialOutputVO>(
         {
             url: "/masterdata-service/moveInOutRecord/getMaterialActualQuantityList",

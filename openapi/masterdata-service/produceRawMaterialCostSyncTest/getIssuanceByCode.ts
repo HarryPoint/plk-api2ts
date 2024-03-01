@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author Mao Hai Ping
 * @link http://47.108.135.148:16700/doc.html#/default/生产原材料成本同步测试相关/getIssuanceByCodeUsingGET
 */
-export default function fetchMethod(options: { params: { Code?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string } }, extraOptions?: any) {
     return http<IJSONResultProductionMaterialIssuanceOrderCostFetchBO>(
         {
             url: "/masterdata-service/produceRawMaterialCostSyncTest/getIssuanceByCode",

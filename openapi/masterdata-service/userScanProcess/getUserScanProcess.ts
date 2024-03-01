@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/员工扫码报工工序相关/getUserScanProcessUsingGET
 */
-export default function fetchMethod(options: { params: { EnterpriseId?: string; UserId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { enterpriseId?: string; userId?: string } }, extraOptions?: any) {
     return http<IJSONResultUserScanProcessVO>(
         {
             url: "/masterdata-service/userScanProcess/getUserScanProcess",

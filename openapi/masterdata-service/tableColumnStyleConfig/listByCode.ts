@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/列表列样式配置/listByCodeUsingGET
 */
-export default function fetchMethod(options: { params: { Code?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { code?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListListColumnStyleConfigurationVO>(
         {
             url: "/masterdata-service/tableColumnStyleConfig/listByCode",

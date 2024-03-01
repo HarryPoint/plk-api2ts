@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/销售订单相关/getDetailInfoByDetailIdUsingGET
 */
-export default function fetchMethod(options: { params: { DetailId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { detailId?: string; enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultSalesOrderDetailsBackToVO>(
         {
             url: "/masterdata-service/salesOrder/getDetailInfoByDetailId",

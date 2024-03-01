@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author TangYongDi
 * @link http://47.108.135.148:16700/doc.html#/default/项目角色相关/getByIdUsingPOST_1
 */
-export default function fetchMethod(options: { data: IProcessStructureSearchVO, params: { FlowPathId?: string; ProjectId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IProcessStructureSearchVO, params: { flowPathId?: string; projectId?: string } }, extraOptions?: any) {
     return http<IJSONResultProjectRoleEditsResponseDTO>(
         {
             url: "/masterdata-service/projectRole/getById",

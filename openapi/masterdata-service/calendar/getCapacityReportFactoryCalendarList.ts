@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/工厂日历相关/getCapacityReportFactoryCalendarListUsingPOST
 */
-export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtos, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: ICapacityUtilizationReportQueryingDtos, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultListCapacityUtilizationReportFactoryCalendarVO>(
         {
             url: "/masterdata-service/calendar/getCapacityReportFactoryCalendarList",

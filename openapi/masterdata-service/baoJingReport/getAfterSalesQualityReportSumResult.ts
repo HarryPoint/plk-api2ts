@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author 
 * @link http://47.108.135.148:16700/doc.html#/default/宝晶报表相关/getAfterSalesQualityReportSumResultUsingPOST
 */
-export default function fetchMethod(options: { data: IAfterSalesQualityAnalysisReportSearchVO, params: { EnterpriseId?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { data: IAfterSalesQualityAnalysisReportSearchVO, params: { enterpriseId?: string } }, extraOptions?: any) {
     return http<IJSONResultAfterSalesQualityAnalysisReturnsVO1>(
         {
             url: "/masterdata-service/baoJingReport/getAfterSalesQualityReportSumResult",

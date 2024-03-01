@@ -4,7 +4,7 @@ import { http } from "@/api/http";
 * @author XieJian
 * @link http://47.108.135.148:16700/doc.html#/default/设备人员能力相关/existsLevelUsingGET
 */
-export default function fetchMethod(options: { params: { MaintainLevel?: string } }, extraOptions?: any) {
+export default function fetchMethod(options: { params: { maintainLevel?: string } }, extraOptions?: any) {
     return http<IJSONResultDevicePersonnelCapabilityLevelWhetherThereIsAResponseDTO>(
         {
             url: "/masterdata-service/deviceEmployeeCapacity/existsLevel",
