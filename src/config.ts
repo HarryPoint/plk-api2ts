@@ -21,7 +21,8 @@ export type IConfig = {
   createTsFile: boolean;
   createJsonFile: boolean;
   clearJsonFile: boolean;
-  newLineKind?: "CRLF" | "LF";
+  newLineKind: "CRLF" | "LF";
+  sort: boolean;
   transformOriginType: (define: any) => string;
   customContent: (
     data: any,
@@ -49,6 +50,7 @@ const defaultConfig: IConfig = {
   createJsonFile: false,
   clearJsonFile: false,
   newLineKind: "LF",
+  sort: false,
   output,
   transformOriginType,
   customContent,
@@ -95,6 +97,9 @@ if (argv.ts) {
 }
 if (argv.nlk) {
   configData.newLineKind = argv.nlk as "CRLF" | "LF";
+}
+if (argv.sort) {
+  configData.sort = argv.sort === "true" ? true : false;
 }
 if (argv.type === "transform") {
   configData.transform = true;

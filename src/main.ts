@@ -22,8 +22,7 @@ const fetchData = async (
       return data.map(sortData);
     }
     if (_.isObject(data)) {
-      let keys = Object.keys(data);
-      keys = keys.includes("originalRef") ? keys.sort().reverse() : keys;
+      let keys = Object.keys(data).sort();
       return keys.reduce((pre, next) => {
         pre[next] = sortData((data as any)[next]);
         return pre;
@@ -31,7 +30,7 @@ const fetchData = async (
     }
     return data;
   };
-  const data = sortData(originData);
+  const data = config.sort ? sortData(originData) : originData;
 
   const baseData = _.pick(data, ["basePath", "host", "info", "swagger"]);
   const findOriginalRef = (pathItem: any): string[] => {
