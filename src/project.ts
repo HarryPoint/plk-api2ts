@@ -1,4 +1,4 @@
-import { Project } from "ts-morph";
+import { NewLineKind, Project } from "ts-morph";
 import baseConfig, { IConfig } from "./config";
 import { createDefinitions } from "./createDefinitions";
 
@@ -8,6 +8,9 @@ export const main = async (config: IConfig = baseConfig) => {
     // If you initialize with a tsconfig.json, then it will automatically populate the project
     // with the associated source files.
     // Read more: https://ts-morph.com/setup/
+    manipulationSettings: {
+      newLineKind: NewLineKind.CarriageReturnLineFeed,
+    },
   });
   project.addSourceFilesAtPaths(`${config.output}/**/*.ts`);
   return project;
