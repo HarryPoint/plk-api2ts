@@ -76,6 +76,9 @@ if (argv.target) {
 if (argv.filter) {
   const filter = argv.filter;
   configData.pathFilter = (pt: string) => {
+    if (path.sep === path.win32.sep) {
+      pt = pt.replace(/\\/g, "/");
+    }
     return pt === filter;
   };
 }

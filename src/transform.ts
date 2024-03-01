@@ -14,7 +14,10 @@ export const transform = async (
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     const info = path.parse(filePath);
-    const basePath = `${info.dir}/${info.name}`.replace(config.output, "");
+    const basePath = `${info.dir}${path.sep}${info.name}`.replace(
+      config.output,
+      ""
+    );
     if (
       stat.isFile() &&
       info.ext === ".json" &&
