@@ -60,13 +60,9 @@ export const createDefinitions = async (
         const requiredKeys = define.required || [];
         return `{ ${Object.keys(define.properties || {})
           .map((key) => {
-            const formatKey = formatName(key);
-            return `${formatKey}${
+            return `${key}${
               requiredKeys.includes(key) ? "" : "?"
-            }: ${transFormType(define.properties[key], [
-              ...pathKeys,
-              formatKey,
-            ])}`;
+            }: ${transFormType(define.properties[key], [...pathKeys, key])}`;
           })
           .join("; ")} }`;
       }

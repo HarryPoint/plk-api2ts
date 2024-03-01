@@ -1,0 +1,34 @@
+import { http } from "@/api/http";
+
+/**
+* @author 
+* @link http://47.108.135.148:16700/doc.html#/default/生产订单相关/getProduceOrderSelectorUsingGET_1
+*/
+export default function fetchMethod(options: { params: { LotOrderId?: string; EnterpriseId?: string } }, extraOptions?: any) {
+    return http<IJSONResultListTheProductionOrderIsReturnedToVO>(
+        {
+            url: "/masterdata-service/produceOrder/getProduceOrderSelector",
+            method: "GET",
+            ...options,
+        },
+        extraOptions,
+    );
+}
+/** JSONResult«List«生产订单返回VO»» */
+export interface IJSONResultListTheProductionOrderIsReturnedToVO {
+    /** 返回码 */
+    code?: number;
+    /** 响应结果 */
+    data?: IProductionOrderReturnedToVO[];
+    /** 返回消息说明 */
+    msg?: string;
+    /** 服务器结果返回时的 Unix timestamp,单位毫秒 */
+    ts?: string;
+}
+/** 生产订单返回VO */
+export interface IProductionOrderReturnedToVO {
+    /** id */
+    id?: string;
+    /** 生产订单号 */
+    produceOrderCode?: string;
+}
