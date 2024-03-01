@@ -93,6 +93,9 @@ if (argv.json) {
 if (argv.ts) {
   configData.createTsFile = argv.ts === "false" ? false : true;
 }
+if (argv.nlk) {
+  configData.newLineKind = argv.nlk as "CRLF" | "LF";
+}
 if (argv.type === "transform") {
   configData.transform = true;
 }
