@@ -9,6 +9,7 @@ plk-api2ts 是一个高效的工程化工具，它可以将 Swagger（v2版本�
 1. 自动化：只需一次设置，就可以自动将后端的 Swagger 文档转换为 TypeScript 文件。
 2. 准确性：通过直接从 Swagger 文档生成类型定义，可以确保前后端接口的类型一致性。
 3. 高效率：消除了手动编写和更新类型定义的需求，从而大大提高了开发效率。
+4. 便捷性：可以作为命令行工具直接转换swagger数据为 TypeScript 文件，同时支持转换后清除swagger JSON 数据文件。
 
 ### 如何开始
 
@@ -18,7 +19,7 @@ plk-api2ts 是一个高效的工程化工具，它可以将 Swagger（v2版本�
 npm install plk-api2ts -D
 ```
 
-2. 添加配置文件 `api2ts.config.js`
+2. 添加配置文件 `api2ts.config.js`（如果仅做命令行工具转换swagger为TypeScript可以省略）
 
 ```javascript
 const path = require("path");
@@ -54,20 +55,20 @@ npm run api2ts
 
 ### 配置项
 
-| 选项名称            |                   描述                   |                                               类型                                                |                                   默认值 |
-| :------------------ | :--------------------------------------: | :-----------------------------------------------------------------------------------------------: | ---------------------------------------: |
-| output              |          文件生成目录(完整路径)          |                                              string                                               |    path.join(process.cwd(), "./autoApi") |
-| serviceMap          |              需要转换的服务              |                                      Record<string, string>                                       |                                     null |
-| serviceNameToPath   |       是否根据服务名称添加子级目录       |                                              boolean                                              |                                    false |
-| translate           | 是否启用翻译（自动翻译中文为对应的英文） |                                              boolean                                              |                                     true |
-| customContent       |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                             详见下方说明 |
-| interfacePrefix     |           interface自定义前缀            |                                              string                                               |                                      'I' |
-| enumPrefix          |            enum自定义定义前缀            |                                              string                                               |                                      'E' |
-| createTsFile        |              是否生成ts文件              |                                              boolean                                              |    true (可以通过命令行 --ts=false 修改) |
-| createJsonFile      |             是否生成json文件             |                                              boolean                                              |  false (可以通过命令行 --json=true 修改) |
-| clearJsonFile       |             是否清理json文件             |                                              boolean                                              | false (可以通过命令行 --type=clear 修改) |
-| transformOriginType |       自定义swagger内type类型转换        |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  |                           详情见下方说明 |
-| pathFilter          |      过滤目标项（用于更新单个接口）      |                                     (path: string) => boolean                                     |                               () => true |
+| 选项名称            |                   描述                   |                                               类型                                                |                               默认值 |
+| :------------------ | :--------------------------------------: | :-----------------------------------------------------------------------------------------------: | -----------------------------------: |
+| output              |          文件生成目录(完整路径)          |                                              string                                               | path.join(process.cwd(), "./api2ts") |
+| serviceMap          |              需要转换的服务              |                                      Record<string, string>                                       |                                 null |
+| serviceNameToPath   |       是否根据服务名称添加子级目录       |                                              boolean                                              |                                false |
+| translate           | 是否启用翻译（自动翻译中文为对应的英文） |                                              boolean                                              |      false（ --translate=true 修改） |
+| customContent       |            自定义文件添加内容            | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                         详见下方说明 |
+| interfacePrefix     |           interface自定义前缀            |                                              string                                               |                                  'I' |
+| enumPrefix          |            enum自定义定义前缀            |                                              string                                               |                                  'E' |
+| createTsFile        |              是否生成ts文件              |                                              boolean                                              |              true ( --ts=false 修改) |
+| createJsonFile      |             是否生成json文件             |                                              boolean                                              |            false ( --json=true 修改) |
+| clearJsonFile       |             是否清理json文件             |                                              boolean                                              |           false ( --type=clear 修改) |
+| transformOriginType |       自定义swagger内type类型转换        |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  |                       详情见下方说明 |
+| pathFilter          |      过滤目标项（用于更新单个接口）      |                                     (path: string) => boolean                                     |                           () => true |
 
 
 ### 默认 `customContent`
@@ -373,20 +374,35 @@ npx api2ts --type=clear
 ```bash
 npx api2ts --type=transform
 ```
+7. 指定转换文件夹下的swagger 文件为 TypeScript
+```bash
+npx api2ts --type=transform --target=./your_path
+```
 
+7. 指定转换文件夹下的swagger 文件为 TypeScript 并且将 interface 名称翻译为英文
+```bash
+npx api2ts --type=transform --target=./your_path --translate=true
+```
+
+8. 清除转换文件夹下的swagger 文件
+```bash
+npx api2ts --type=clear --target=./your_path
+```
 
 ### 功能清单
 
-| 功能内容                   | 是否支持 |
-| :------------------------- | -------: |
-| 获取接口swagger数据        |       是 |
-| 生成接口数据类型定义       |       是 |
-| 接口定义名称翻译           |       是 |
-| 接口定义翻译结果调整       |       是 |
-| 自定义api服务              |       是 |
-| 根据服务名称创建文件夹归类 |       是 |
-| 自定义生成文件内容         |       是 |
-| 单个接口数据更新           |       是 |
+| 功能内容                                         | 是否支持 |
+| :----------------------------------------------- | -------: |
+| 获取接口swagger数据                              |       是 |
+| 生成接口数据类型定义                             |       是 |
+| 接口定义名称翻译                                 |       是 |
+| 接口定义翻译结果调整                             |       是 |
+| 自定义api服务                                    |       是 |
+| 根据服务名称创建文件夹归类                       |       是 |
+| 自定义生成文件内容                               |       是 |
+| 单个接口数据更新                                 |       是 |
+| 对指定文件夹下的swagger数据文件转换为 TypeScript |       是 |
+| 清理swagger json 数据文件                        |       是 |
 
 ### :copyright: License
 
