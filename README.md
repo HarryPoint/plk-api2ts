@@ -67,6 +67,7 @@ npm run api2ts
 | createTsFile        |              是否生成ts文件              |                                              boolean                                              |              true ( --ts=false 修改) |
 | createJsonFile      |             是否生成json文件             |                                              boolean                                              |            false ( --json=true 修改) |
 | clearJsonFile       |             是否清理json文件             |                                              boolean                                              |           false ( --type=clear 修改) |
+| newLineKind         |                 行尾序列                 |                                           'CRLF'\|'LF'                                            |                                 'LF' |
 | transformOriginType |       自定义swagger内type类型转换        |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  |                       详情见下方说明 |
 | pathFilter          |      过滤目标项（用于更新单个接口）      |                                     (path: string) => boolean                                     |                           () => true |
 

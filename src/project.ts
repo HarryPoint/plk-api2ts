@@ -9,7 +9,10 @@ export const main = async (config: IConfig = baseConfig) => {
     // with the associated source files.
     // Read more: https://ts-morph.com/setup/
     manipulationSettings: {
-      newLineKind: NewLineKind.CarriageReturnLineFeed,
+      newLineKind:
+        config.newLineKind === "LF"
+          ? NewLineKind.LineFeed
+          : NewLineKind.CarriageReturnLineFeed,
     },
   });
   project.addSourceFilesAtPaths(`${config.output}/**/*.ts`);

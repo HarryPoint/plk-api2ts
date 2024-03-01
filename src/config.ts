@@ -21,6 +21,7 @@ export type IConfig = {
   createTsFile: boolean;
   createJsonFile: boolean;
   clearJsonFile: boolean;
+  newLineKind?: "CRLF" | "LF";
   transformOriginType: (define: any) => string;
   customContent: (
     data: any,
@@ -47,6 +48,7 @@ const defaultConfig: IConfig = {
   createTsFile: true,
   createJsonFile: false,
   clearJsonFile: false,
+  newLineKind: "LF",
   output,
   transformOriginType,
   customContent,
