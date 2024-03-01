@@ -1,10 +1,14 @@
+import _ from "lodash";
 import { OptionalKind, PropertySignatureStructure, SourceFile } from "ts-morph";
 import { IConfig } from "./config";
 import { translate as translateFn } from "./translate";
 
 // 去除所有的特殊字符
 const formatName = (name: string) =>
-  name.replace(/[、,，'/《》«»()（）-\s]/gi, "");
+  name
+    .split(/[、,，'/《》«»()（）-\s]/)
+    .map(_.upperFirst)
+    .join("");
 
 type IDefinitionsMapItem = {
   name: string;

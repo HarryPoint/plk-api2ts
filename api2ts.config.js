@@ -30,5 +30,6 @@ module.exports = () => {
   return {
     output: path.resolve(__dirname, "./openapi"),
     serviceMap: argv.platform === "dev" ? apiMap.dev : apiMap.uat,
+    translate: true,
   };
 };
