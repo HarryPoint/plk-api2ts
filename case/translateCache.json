@@ -9,5 +9,13 @@
   "JSONResultAccountsReceivableSnapshotVO": "JSONResultAccountsReceivableSnapshotVO",
   "AccountsReceivableSnapshotVO": "AccountsReceivableSnapshotVO",
   "JSONResultList今日良品统计VO": "JSONResultListToday'sGoodProductStatisticsVO",
-  "今日良品统计VO": "Today'sGoodProductStatisticsVO"
+  "今日良品统计VO": "Today'sGoodProductStatisticsVO",
+  "工厂日历搜索VO_1": "FactoryCalendarSearchVO1",
+  "JSONResult工厂日历返回VO": "JSONResultFactoryCalendarReturnsVO",
+  "工厂日历返回VO": "FactoryCalendarReturnsVO",
+  "工厂日历详情返回VO": "FactoryCalendarDetailsBackToVO",
+  "日历班次信息返回VO": "CalendarShiftInformationReturnedToVO",
+  "LocalTime": "LocalTime",
+  "日历班组信息返回VO": "CalendarGroupInformationIsReturnedToVO",
+  "Id名称编号VO": "IdNameNumberVO"
 }

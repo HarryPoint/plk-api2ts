@@ -123,6 +123,7 @@ export const transformOriginType = (define: any): string => {
   const defaultTypeMap = {
     string: "string",
     "string(date-time)": "number",
+    "string(date)": "number",
     integer: "number",
     "integer(int64)": "string",
     "integer(int32)": "number",
