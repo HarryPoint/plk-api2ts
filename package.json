@@ -14,7 +14,7 @@
     "src:json": "ts-node ./src/main.ts --json=true",
     "src:clear": "ts-node ./src/main.ts --type=clear",
     "src:transform": "ts-node ./src/main.ts --type=transform --target=./case --translate=true",
-    "src:filter": "ts-node ./src/main.ts --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
+    "src:filter": "ts-node ./src/main.ts --filter=/plk-uaa-service/productOrder/newBuyAdd",
     "src:json:filter": "ts-node ./src/main.ts --json=true --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
     "build": "tsc -d"
   },

@@ -3114,5 +3114,6 @@
   "Bom占用的标准工艺查询对象": "StandardProcessQueryObjectUsedByBom",
   "JSONResultListBom占用的标准工艺响应": "JSONResultListBomStandardProcessResponse",
   "Bom占用的标准工艺响应": "StandardProcessResponseToBomOccupancy",
-  "Id集信息": "IdSetInformation"
+  "Id集信息": "IdSetInformation",
+  "JSONResult项目计划响应对象": "JSONResultProjectPlanResponseObject"
 }
