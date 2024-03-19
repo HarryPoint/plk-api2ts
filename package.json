@@ -15,7 +15,7 @@
     "src:clear": "ts-node ./src/main.ts --type=clear",
     "src:transform": "ts-node ./src/main.ts --type=transform --target=./case --translate=true",
     "src:filter": "ts-node ./src/main.ts --filter=/plk-uaa-service/productOrder/newBuyAdd",
-    "src:json:filter": "ts-node ./src/main.ts --json=true --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
+    "src:json:filter": "ts-node ./src/main.ts --json=true --filter=/masterdata-service/saleAssist/compute",
     "build": "tsc -d"
   },
   "repository": "git+https://github.com/HarryPoint/plk-api2ts.git",

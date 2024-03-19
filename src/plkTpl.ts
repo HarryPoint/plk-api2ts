@@ -20,6 +20,7 @@ export const customContent = async (
           methodDefine.operationId
         }`;
         writer.writeLine(`* @author ${methodDefine?.["x-author"] || ""}`);
+        writer.writeLine(`* @desc ${methodDefine?.["summary"] || ""}`);
         writer.writeLine(`* @link ${docUrl}`);
         writer.writeLine("*/");
         console.log("docUrl: ", docUrl);
