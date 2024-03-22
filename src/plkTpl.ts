@@ -130,7 +130,6 @@ export const customContent = async (
   }
   typeInfoArr.forEach((typeInfo) => {
     let str = contentTemplate;
-    console.log("contentTemplate: ", contentTemplate);
     Object.keys(typeInfo).forEach((key) => {
       const target = `<% ${key} %>`;
       str = str.replace(target, typeInfo[key as keyof ITypeInfo]);

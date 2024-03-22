@@ -61,6 +61,7 @@ npm run api2ts
 | serviceMap          |                                   需要转换的服务                                   |                                      Record<string, string>                                       |                                 null |
 | serviceNameToPath   |                            是否根据服务名称添加子级目录                            |                                              boolean                                              |                                false |
 | translate           |                      是否启用翻译（自动翻译中文为对应的英文）                      |                                              boolean                                              |      false（ --translate=true 修改） |
+| contentTemplate     |                                   自定义内容模板                                   |                                            见下方说明                                             |                         详见下方说明 |
 | customContent       |                                 自定义文件添加内容                                 | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                         详见下方说明 |
 | interfacePrefix     |                                interface自定义前缀                                 |                                              string                                               |                                  'I' |
 | enumPrefix          |                                 enum自定义定义前缀                                 |                                              string                                               |                                  'E' |
@@ -72,39 +73,58 @@ npm run api2ts
 | transformOriginType |                            自定义swagger内type类型转换                             |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  |                       详情见下方说明 |
 | pathFilter          |                           过滤目标项（用于更新单个接口）                           |                                     (path: string) => boolean                                     |                           () => true |
 
+### 默认 `contentTemplate`
+> 最终会被 ·customContent·消费
+```javascript
+export const contentTemplate = `import { http } from "@/api/http";
+/**
+* @author <% author %> 
+* @desc <% desc %>
+* @link <% docUrl %>
+*/
+export default function fetchMethod(options: <% argumentsDefine %> , extraOptions?: any) {
+    return http<<% responseDefine %>>(
+        {
+            url: "<% path %>",
+            method: "<% method %>",
+            ...options,
+        },
+        extraOptions,
+    );
+}
+`;
+```
+通过自定义模板可以满足 ·90%·以上的自定义场景
 
 ### 默认 `customContent`
+> 除非你有 100% 自定义内容的需求，否则更加推荐使用 contentTemplate 配置你的自定义内容
 ```javascript
 import { SourceFile } from "ts-morph";
 
 export const customContent = async (
   data: any,
   definitionsFile: SourceFile,
+  contentTemplate: string,
   transFormType: (arg: any) => string
 ) => {
+  const typeInfoArr: ITypeInfo[] = [];
   for (let url in data.paths) {
     const fetchDefines = data.paths[url];
-    for (let method in fetchDefines) {
-      const methodDefine = fetchDefines[method];
-      definitionsFile.addStatements((writer) => {
-        writer.writeLine(`import { http } from "@/api/http";`);
-        writer.writeLine(" ");
-        writer.writeLine("/**");
-        const docUrl = `http://${
-          data.host
-        }/doc.html#/default/${methodDefine.tags?.join("/")}/${
-          methodDefine.operationId
-        }`;
-        writer.writeLine(`* @author ${methodDefine?.["x-author"] || ""}`);
-        writer.writeLine(`* @link ${docUrl}`);
-        writer.writeLine("*/");
-        console.log("docUrl: ", docUrl);
-      });
-      const functionDeclaration = definitionsFile.addFunction({
-        name: "fetchMethod",
-        isDefaultExport: true,
-      });
-      const responseDefine = methodDefine.responses?.[200]?.schema;
+    for (let methodStr in fetchDefines) {
+      const methodDefine = fetchDefines[methodStr];
+      const docUrl = `http://${
+        data.host
+      }/doc.html#/default/${methodDefine.tags?.join("/")}/${
+        methodDefine.operationId
+      }`;
+      const author = methodDefine?.["x-author"] || "";
+      const desc = methodDefine?.["summary"] || "";
+      const path = url;
+      const method = methodStr.toUpperCase();
+      const responseDefineSchema = methodDefine.responses?.[200]?.schema;
+      const responseDefine = responseDefineSchema
+        ? `${transFormType(responseDefineSchema)}`
+        : "any";
       let bodyDefine: any;
       let queryDefine: any;
       let arrayQueryDefineMap: Record<string, any> = {};
@@ -150,46 +170,39 @@ export const customContent = async (
         };
       }
       const defineArr = [bodyDefine, queryDefine].filter(Boolean);
-      functionDeclaration.addParameter({
-        name: "options",
-        initializer: (writer) => {
-          if (defineArr.length === 0) {
-            writer.write("{}");
+      const argumentsDefine = (() => {
+        let str = "{";
+        defineArr.forEach((defineItem, index) => {
+          const name = defineItem.in === "body" ? "data" : "params";
+          if (index) {
+            str += ",";
           }
-        },
-        type: (writer) => {
-          writer.write("{");
-          defineArr.forEach((defineItem, index) => {
-            const name = defineItem.in === "body" ? "data" : "params";
-            if (index) {
-              writer.write(",");
-            }
-            writer.write(`${name}: ${transFormType(defineItem.schema)}`);
-          });
-          writer.write("}");
-        },
-      });
-      functionDeclaration.addParameter({
-        name: "extraOptions",
-        type: "any",
-        hasQuestionToken: true,
-      });
-      functionDeclaration.setBodyText((writer) => {
-        writer.writeLine(
-          `return http<${
-            responseDefine ? `${transFormType(responseDefine)}` : "any"
-          }>(`
-        );
-        writer.writeLine(`  {`);
-        writer.writeLine(`  url: "${url}",`);
-        writer.writeLine(`  method: "${method.toUpperCase()}",`);
-        writer.writeLine(`  ...options,`);
-        writer.writeLine(`},`);
-        writer.writeLine(`extraOptions,`);
-        writer.writeLine(`);`);
+          str += `${name}: ${transFormType(defineItem.schema)}`;
+        });
+        str += "}";
+        return str;
+      })();
+
+      typeInfoArr.push({
+        docUrl,
+        author,
+        desc,
+        argumentsDefine,
+        responseDefine,
+        path,
+        method,
       });
     }
   }
+  typeInfoArr.forEach((typeInfo) => {
+    let str = contentTemplate;
+    console.log("contentTemplate: ", contentTemplate);
+    Object.keys(typeInfo).forEach((key) => {
+      const target = `<% ${key} %>`;
+      str = str.replace(target, typeInfo[key as keyof ITypeInfo]);
+    });
+    definitionsFile.addStatements(str);
+  });
 };
 
 ```
@@ -323,7 +336,8 @@ export const transformOriginType = (define: any): string => {
 
   const defaultTypeMap = {
     string: "string",
-    "string(date-time)": "number",
+    "string(date-time)": "string",
+    "string(date)": "string",
     integer: "number",
     "integer(int64)": "string",
     "integer(int32)": "number",
@@ -348,6 +362,9 @@ module.exports = () => {
     serviceMap: {
       yourServiceName: "your api path",
     },
+    // 满足 90% 以上的自定义内容的需求
+    contentTemplate: '你的自定义内容',
+    // 仅当你需要完全自定义你的文件内容时使用
     customContent: () => '// 自定义内容'
   };
 };
@@ -401,6 +418,7 @@ npx api2ts --type=clear --target=./your_path
 | 接口定义翻译结果调整                             |       是 |
 | 自定义api服务                                    |       是 |
 | 根据服务名称创建文件夹归类                       |       是 |
+| 自定义文件内容模板                               |       是 |
 | 自定义生成文件内容                               |       是 |
 | 单个接口数据更新                                 |       是 |
 | 对指定文件夹下的swagger数据文件转换为 TypeScript |       是 |
