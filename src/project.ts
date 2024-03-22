@@ -34,6 +34,7 @@ export const createTsFile = async (
     enumPrefix: config.enumPrefix,
     transformOriginType: config.transformOriginType,
     customContent: config.customContent,
+    contentTemplate: config.contentTemplate,
   });
   definitionsFile.saveSync();
 };

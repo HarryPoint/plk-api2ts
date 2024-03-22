@@ -1,8 +1,6 @@
 import { SourceFile } from "ts-morph";
 
-const template = `
-import { http } from "@/api/http";
-
+export const contentTemplate = `import { http } from "@/api/http";
 /**
 * @author <% author %> 
 * @desc <% desc %>
@@ -11,14 +9,13 @@ import { http } from "@/api/http";
 export default function fetchMethod(options: <% argumentsDefine %> , extraOptions?: any) {
     return http<<% responseDefine %>>(
         {
-            url: "<% path %> ",
-            method: "<% method %> ",
+            url: "<% path %>",
+            method: "<% method %>",
             ...options,
         },
         extraOptions,
     );
 }
-
 `;
 interface ITypeInfo {
   // 接口地址
@@ -41,6 +38,7 @@ interface ITypeInfo {
 export const customContent = async (
   data: any,
   definitionsFile: SourceFile,
+  contentTemplate: string,
   transFormType: (arg: any) => string
 ) => {
   const typeInfoArr: ITypeInfo[] = [];
@@ -115,6 +113,7 @@ export const customContent = async (
           }
           str += `${name}: ${transFormType(defineItem.schema)}`;
         });
+        str += "}";
         return str;
       })();
 
@@ -130,9 +129,11 @@ export const customContent = async (
     }
   }
   typeInfoArr.forEach((typeInfo) => {
-    let str = template;
+    let str = contentTemplate;
+    console.log("contentTemplate: ", contentTemplate);
     Object.keys(typeInfo).forEach((key) => {
-      str.replace(`<% ${key} %>`, typeInfo[key as keyof ITypeInfo]);
+      const target = `<% ${key} %>`;
+      str = str.replace(target, typeInfo[key as keyof ITypeInfo]);
     });
     definitionsFile.addStatements(str);
   });

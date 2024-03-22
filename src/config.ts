@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { SourceFile } from "ts-morph";
-import { customContent, transformOriginType } from "./plkTpl";
+import { contentTemplate, customContent, transformOriginType } from "./plkTpl";
 
 const argv = require("yargs").argv;
 
@@ -27,8 +27,10 @@ export type IConfig = {
   customContent: (
     data: any,
     definitionsFile: SourceFile,
+    contentTemplate: string,
     transFormType: (arg: any) => string
   ) => Promise<void>;
+  contentTemplate: string;
   pathFilter?: (ar: string) => boolean;
 };
 
@@ -54,6 +56,7 @@ const defaultConfig: IConfig = {
   output,
   transformOriginType,
   customContent,
+  contentTemplate,
   pathFilter: (ar: string) => !!ar,
 };
 

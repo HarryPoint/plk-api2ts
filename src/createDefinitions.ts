@@ -31,6 +31,7 @@ export const createDefinitions = async (
     enumPrefix?: string;
     transformOriginType: (define: any) => string;
     customContent?: IConfig["customContent"];
+    contentTemplate?: IConfig["contentTemplate"];
   }
 ) => {
   const {
@@ -39,6 +40,7 @@ export const createDefinitions = async (
     enumPrefix = "E",
     transformOriginType,
     customContent,
+    contentTemplate,
   } = option || {};
   const definitionsMap: Record<string, IDefinitionsMapItem> = {};
   const enumMap: Record<string, any[]> = {};
@@ -110,8 +112,8 @@ export const createDefinitions = async (
     // console.log("item.name: ", item.name);
   });
 
-  if (customContent) {
-    await customContent(data, definitionsFile, transFormType);
+  if (customContent && contentTemplate) {
+    await customContent(data, definitionsFile, contentTemplate, transFormType);
   }
   // 生成所有的定义
   for (let name in definitionsMap) {

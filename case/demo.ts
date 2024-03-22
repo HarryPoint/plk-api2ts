@@ -1,7 +1,7 @@
 import { http } from "@/api/http";
-
 /**
-* @author 
+* @author  
+* @desc 查询日历信息(日历模式)
 * @link http://47.108.139.107:16400/doc.html#/default/工厂日历相关/getCalendarUsingPOST
 */
 export default function fetchMethod(options: { data: IFactoryCalendarSearchVO1 }, extraOptions?: any) {
@@ -37,7 +37,7 @@ export interface IJSONResultFactoryCalendarReturnsVO {
 /** 工厂日历返回VO */
 export interface IFactoryCalendarReturnsVO {
     /** 排班的最后一天 */
-    endScheduleDay?: number;
+    endScheduleDay?: string;
     /** 工厂日历详情返回VO */
     calendarDetailList?: IFactoryCalendarDetailsBackToVO[];
 }
@@ -46,9 +46,9 @@ export interface IFactoryCalendarDetailsBackToVO {
     /** 工厂日历id */
     id?: string;
     /** 日程安排日期 */
-    scheduleDate?: number;
+    scheduleDate?: string;
     /** 创建时间 */
-    createTime?: number;
+    createTime?: string;
     /** 对应班组班次集 */
     groupShifts?: ICalendarShiftInformationReturnedToVO[];
 }
