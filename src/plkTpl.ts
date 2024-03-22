@@ -1,35 +1,66 @@
 import { SourceFile } from "ts-morph";
 
+const template = `
+import { http } from "@/api/http";
+
+/**
+* @author <% author %> 
+* @desc <% desc %>
+* @link <% docUrl %>
+*/
+export default function fetchMethod(options: <% argumentsDefine %> , extraOptions?: any) {
+    return http<<% responseDefine %>>(
+        {
+            url: "<% path %> ",
+            method: "<% method %> ",
+            ...options,
+        },
+        extraOptions,
+    );
+}
+
+`;
+interface ITypeInfo {
+  // 接口地址
+  docUrl: string;
+  // 接口作者
+  author: string;
+  // 接口说明
+  desc: string;
+  // 参数定义
+  argumentsDefine: string;
+  // 返回值定义
+  responseDefine: string;
+  // 请求地址
+  path: string;
+  // 请求方式定义
+  method: string;
+}
+
 // plk 特有文件头内容
 export const customContent = async (
   data: any,
   definitionsFile: SourceFile,
   transFormType: (arg: any) => string
 ) => {
+  const typeInfoArr: ITypeInfo[] = [];
   for (let url in data.paths) {
     const fetchDefines = data.paths[url];
-    for (let method in fetchDefines) {
-      const methodDefine = fetchDefines[method];
-      definitionsFile.addStatements((writer) => {
-        writer.writeLine(`import { http } from "@/api/http";`);
-        writer.writeLine(" ");
-        writer.writeLine("/**");
-        const docUrl = `http://${
-          data.host
-        }/doc.html#/default/${methodDefine.tags?.join("/")}/${
-          methodDefine.operationId
-        }`;
-        writer.writeLine(`* @author ${methodDefine?.["x-author"] || ""}`);
-        writer.writeLine(`* @desc ${methodDefine?.["summary"] || ""}`);
-        writer.writeLine(`* @link ${docUrl}`);
-        writer.writeLine("*/");
-        console.log("docUrl: ", docUrl);
-      });
-      const functionDeclaration = definitionsFile.addFunction({
-        name: "fetchMethod",
-        isDefaultExport: true,
-      });
-      const responseDefine = methodDefine.responses?.[200]?.schema;
+    for (let methodStr in fetchDefines) {
+      const methodDefine = fetchDefines[methodStr];
+      const docUrl = `http://${
+        data.host
+      }/doc.html#/default/${methodDefine.tags?.join("/")}/${
+        methodDefine.operationId
+      }`;
+      const author = methodDefine?.["x-author"] || "";
+      const desc = methodDefine?.["summary"] || "";
+      const path = url;
+      const method = methodStr.toUpperCase();
+      const responseDefineSchema = methodDefine.responses?.[200]?.schema;
+      const responseDefine = responseDefineSchema
+        ? `${transFormType(responseDefineSchema)}`
+        : "any";
       let bodyDefine: any;
       let queryDefine: any;
       let arrayQueryDefineMap: Record<string, any> = {};
@@ -75,46 +106,36 @@ export const customContent = async (
         };
       }
       const defineArr = [bodyDefine, queryDefine].filter(Boolean);
-      functionDeclaration.addParameter({
-        name: "options",
-        initializer: (writer) => {
-          if (defineArr.length === 0) {
-            writer.write("{}");
+      const argumentsDefine = (() => {
+        let str = "{";
+        defineArr.forEach((defineItem, index) => {
+          const name = defineItem.in === "body" ? "data" : "params";
+          if (index) {
+            str += ",";
           }
-        },
-        type: (writer) => {
-          writer.write("{");
-          defineArr.forEach((defineItem, index) => {
-            const name = defineItem.in === "body" ? "data" : "params";
-            if (index) {
-              writer.write(",");
-            }
-            writer.write(`${name}: ${transFormType(defineItem.schema)}`);
-          });
-          writer.write("}");
-        },
-      });
-      functionDeclaration.addParameter({
-        name: "extraOptions",
-        type: "any",
-        hasQuestionToken: true,
-      });
-      functionDeclaration.setBodyText((writer) => {
-        writer.writeLine(
-          `return http<${
-            responseDefine ? `${transFormType(responseDefine)}` : "any"
-          }>(`
-        );
-        writer.writeLine(`  {`);
-        writer.writeLine(`  url: "${url}",`);
-        writer.writeLine(`  method: "${method.toUpperCase()}",`);
-        writer.writeLine(`  ...options,`);
-        writer.writeLine(`},`);
-        writer.writeLine(`extraOptions,`);
-        writer.writeLine(`);`);
+          str += `${name}: ${transFormType(defineItem.schema)}`;
+        });
+        return str;
+      })();
+
+      typeInfoArr.push({
+        docUrl,
+        author,
+        desc,
+        argumentsDefine,
+        responseDefine,
+        path,
+        method,
       });
     }
   }
+  typeInfoArr.forEach((typeInfo) => {
+    let str = template;
+    Object.keys(typeInfo).forEach((key) => {
+      str.replace(`<% ${key} %>`, typeInfo[key as keyof ITypeInfo]);
+    });
+    definitionsFile.addStatements(str);
+  });
 };
 
 // plk 特有转换逻辑
