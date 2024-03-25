@@ -1,6 +1,7 @@
 import { SourceFile } from "ts-morph";
 
 export const contentTemplate = `import { http } from "@/api/http";
+
 /**
 * @author <% author %> 
 * @desc <% desc %>
