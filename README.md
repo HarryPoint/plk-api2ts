@@ -60,26 +60,26 @@ npx api2ts --help
 ```
 
 
-### 配置项
+### Configuration
 
-| options             |                                                                    desc                                                                    |                                               type                                                |                                   default |
-| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: | ----------------------------------------: |
-| output              |                                                   File Generation Directory (Full Path)                                                    |                                              string                                               |      path.join(process.cwd(), "./api2ts") |
-| serviceMap          |                                                          Services to be Converted                                                          |                                      Record<string, string>                                       |                                      null |
-| serviceNameToPath   |                                            Whether to Add Subdirectories Based on Service Name                                             |                                              boolean                                              |                                     false |
-| apiPath             |                                   Path of the Type Data Request (Fill in according to actual situation)                                    |                                              string                                               | "/v2/api-docs" (--api-path=xxx to Modify) |
-| translate           |                         Whether to Enable Translation (Automatically Translate Chinese into Corresponding English)                         |                                              boolean                                              |           false（ --translate=true 修改） |
-| contentTemplate     |                                                          Custom Content Template                                                           |                                    See the explanation below.                                     |                See the explanation below. |
-| customContent       |                                                      Customize File Addition Content                                                       | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |                See the explanation below. |
-| interfacePrefix     |                                                        Custom Prefix for interface                                                         |                                              string                                               |                                       'I' |
-| enumPrefix          |                                                           Custom Prefix for enum                                                           |                                              string                                               |                                       'E' |
-| createTsFile        |                                                             Generate ts Files                                                              |                                              boolean                                              |                   true ( --ts=false 修改) |
-| createJsonFile      |                                                            Generate json Files                                                             |                                              boolean                                              |                 false ( --json=true 修改) |
-| clearJsonFile       |                                                            Clean Up json Files                                                             |                                              boolean                                              |                false ( --type=clear 修改) |
-| newLineKind         |                                                            End of Line Sequence                                                            |                                           'CRLF'\|'LF'                                            |                    'LF'( --nlk=CRLF 修改) |
-| sort                | When generating interfaces, sort member names (the order of data content keys is unstable, enabling this can prevent invalid file changes) |                                              boolean                                              |                  false (--sort=true 修改) |
-| transformOriginType |                                           Customize the Conversion of Type Types within Swagger                                            |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  |    See the details below for explanation. |
-| pathFilter          |                                         Filter Target Items (Used for Updating a Single Interface)                                         |                                     (path: string) => boolean                                     |                                () => true |
+| options             |                                                                    desc                                                                    |                                               type                                                |                                default |
+| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: | -------------------------------------: |
+| output              |                                                   File Generation Directory (Full Path)                                                    |                                              string                                               |   path.join(process.cwd(), "./api2ts") |
+| serviceMap          |                                                          Services to be Converted                                                          |                                      Record<string, string>                                       |                                   null |
+| serviceNameToPath   |                                            Whether to Add Subdirectories Based on Service Name                                             |                                              boolean                                              |                                  false |
+| apiPath             |                                   Path of the Type Data Request (Fill in according to actual situation)                                    |                                              string                                               |        "/v2/api-docs" (--api-path=xxx) |
+| translate           |                         Whether to Enable Translation (Automatically Translate Chinese into Corresponding English)                         |                                              boolean                                              |            false（ --translate=true ） |
+| contentTemplate     |                                                          Custom Content Template                                                           |                                    See the explanation below.                                     |             See the explanation below. |
+| customContent       |                                                      Customize File Addition Content                                                       | ( data: any,  definitionsFile: SourceFile, transFormType: (arg: any) => string ) => Promise<void> |             See the explanation below. |
+| interfacePrefix     |                                                        Custom Prefix for interface                                                         |                                              string                                               |                                    'I' |
+| enumPrefix          |                                                           Custom Prefix for enum                                                           |                                              string                                               |                                    'E' |
+| createTsFile        |                                                             Generate ts Files                                                              |                                              boolean                                              |                    true ( --ts=false ) |
+| createJsonFile      |                                                            Generate json Files                                                             |                                              boolean                                              |                  false ( --json=true ) |
+| clearJsonFile       |                                                            Clean Up json Files                                                             |                                              boolean                                              |                 false ( --type=clear ) |
+| newLineKind         |                                                            End of Line Sequence                                                            |                                           'CRLF'\|'LF'                                            |                     'LF'( --nlk=CRLF ) |
+| sort                | When generating interfaces, sort member names (the order of data content keys is unstable, enabling this can prevent invalid file changes) |                                              boolean                                              |                   false (--sort=true ) |
+| transformOriginType |                                           Customize the Conversion of Type Types within Swagger                                            |                  (define: swagger) => "string"\| "number"\|"boolean"\|"[]"\|"{}"                  | See the details below for explanation. |
+| pathFilter          |                                         Filter Target Items (Used for Updating a Single Interface)                                         |                                     (path: string) => boolean                                     |                             () => true |
 
 ###  `contentTemplate` default value
 > Will eventually be consumed by  ·customContent·
@@ -370,10 +370,10 @@ module.exports = () => {
     serviceMap: {
       yourServiceName: "your api path",
     },
-    // 满足 90% 以上的自定义内容的需求
-    contentTemplate: '你的自定义内容',
-    // 仅当你需要完全自定义你的文件内容时使用
-    customContent: () => '// 自定义内容'
+    // Satisfies over 90% of custom content requirements
+    contentTemplate: 'Your Custom Content',
+    // Only use when you need to fully customize your file content
+    customContent: () => '// Custom Content'
   };
 };
 ```
