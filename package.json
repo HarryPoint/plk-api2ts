@@ -36,7 +36,7 @@
   "author": "harry",
   "license": "MIT",
   "bin": {
-    "api2ts": "./bin/api2ts"
+    "api2ts": "./bin/api2ts.js"
   },
   "files": [
     "bin",
