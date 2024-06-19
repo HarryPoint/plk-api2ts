@@ -52,6 +52,11 @@ module.exports = () => {
 npm run api2ts
 ```
 
+5. 帮助信息查看
+```shell
+npx api2ts --help
+```
+
 
 ### 配置项
 
