@@ -1,8 +1,8 @@
 import { NewLineKind, Project } from "ts-morph";
-import baseConfig, { IConfig } from "./config";
+import { IConfig } from "./config";
 import { createDefinitions } from "./createDefinitions";
 
-export const main = async (config: IConfig = baseConfig) => {
+export const main = async (config: IConfig) => {
   const project = new Project({
     // Optionally specify compiler options, tsconfig.json, in-memory file system, and more here.
     // If you initialize with a tsconfig.json, then it will automatically populate the project
@@ -20,7 +20,7 @@ export const main = async (config: IConfig = baseConfig) => {
 };
 
 export const createTsFile = async (
-  config: IConfig = baseConfig,
+  config: IConfig,
   project: Project,
   filePath: string,
   data: any
@@ -40,7 +40,7 @@ export const createTsFile = async (
 };
 
 export const createJsonFile = async (
-  config: IConfig = baseConfig,
+  config: IConfig,
   project: Project,
   filePath: string,
   data: any

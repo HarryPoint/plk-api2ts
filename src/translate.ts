@@ -4,12 +4,25 @@ import fs from "fs";
 import _ from "lodash";
 import path from "path";
 import qs from "qs";
-import config from "./config";
+import { getRunTimeConfig } from "./config";
 
-const apiUri = config.translateApiUri;
-const appKey = config.translateAppKey;
-const appSecret = config.translateAppSecret;
-const chunkSize = config.translateChunkSize;
+const getConfig = () => {
+  const config = getRunTimeConfig();
+  const apiUri = config.translateApiUri;
+  const appKey = config.translateAppKey;
+  const appSecret = config.translateAppSecret;
+  const chunkSize = config.translateChunkSize;
+  const output = config.output;
+  const translateCacheFileName = config.translateCacheFileName;
+  return {
+    apiUri,
+    appKey,
+    appSecret,
+    chunkSize,
+    output,
+    translateCacheFileName,
+  };
+};
 
 type IParams = {
   appKey: string;
@@ -37,6 +50,7 @@ const createSign = ({ appKey, input, salt, curTime, appSecret }: IParams) => {
 };
 
 const fetchApi = async (input: string[]) => {
+  const { apiUri, appKey, appSecret } = getConfig();
   const curTime = `${Math.round(new Date().getTime() / 1000)}`;
   const salt = `${new Date().getTime()}`;
   return await axios({
@@ -65,12 +79,10 @@ const fetchApi = async (input: string[]) => {
 };
 
 export const translate = async (input: string | string[]) => {
+  const { chunkSize, output, translateCacheFileName } = getConfig();
   const inputArr = Array.isArray(input) ? input : [input];
   const chunkArr = _.chunk(inputArr, chunkSize);
-  const translateCachePath = path.join(
-    config.output,
-    config.translateCacheFileName
-  );
+  const translateCachePath = path.join(output, translateCacheFileName);
   let translateCacheData: Record<string, string> = {};
   try {
     const stat = fs.statSync(translateCachePath);

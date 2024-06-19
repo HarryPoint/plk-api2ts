@@ -1,9 +1,8 @@
-import fs from "fs";
 import path from "path";
 import { SourceFile } from "ts-morph";
 import { contentTemplate, customContent, transformOriginType } from "./plkTpl";
 
-const argv = require("yargs").argv;
+// const argv = require("yargs").argv;
 
 export type IConfig = {
   interfacePrefix: string;
@@ -60,68 +59,12 @@ export const defaultConfig: IConfig = {
   pathFilter: (ar: string) => !!ar,
 };
 
-const configPath = path.join(process.cwd(), argv.config || "api2ts.config.js");
+let runTimeConfig = defaultConfig;
 
-let configFn = (config: IConfig, argv: any) => config;
-
-if (fs.existsSync(configPath)) {
-  configFn = require(configPath);
-}
-
-let configData: Partial<IConfig> = {};
-
-if (typeof configFn === "function") {
-  configData = configFn(defaultConfig, argv) as Partial<IConfig>;
-} else {
-  configData = configFn as Partial<IConfig>;
-}
-
-// 配置重置
-if (argv.target) {
-  configData.output = path.join(process.cwd(), argv.target);
-}
-if (argv.filter) {
-  const filter = argv.filter;
-  configData.pathFilter = (pt: string) => {
-    if (path.sep === path.win32.sep) {
-      pt = pt.replace(/\\/g, "/");
-    }
-    return pt === filter;
-  };
-}
-if (argv.translate) {
-  configData.translate = argv.translate === "true" ? true : false;
-}
-if (argv.json) {
-  configData.createJsonFile = argv.json === "true" ? true : false;
-}
-if (argv.ts) {
-  configData.createTsFile = argv.ts === "false" ? false : true;
-}
-if (argv.nlk) {
-  configData.newLineKind = argv.nlk as "CRLF" | "LF";
-}
-if (argv.sort) {
-  configData.sort = argv.sort === "true" ? true : false;
-}
-if (argv.type === "transform") {
-  configData.transform = true;
-}
-if (argv.type === "clear") {
-  configData.clearJsonFile = true;
-}
-
-if (!configData.output) {
-  throw new Error("config file must have output field");
-}
-
-if (!configData.serviceMap) {
-  throw new Error("config file must have serviceMap field");
-}
-
-const resultConfig: IConfig = {
-  ...defaultConfig,
-  ...configData,
+export const setRunTimeConfig = (config: Partial<IConfig>) => {
+  runTimeConfig = { ...runTimeConfig, ...config };
 };
 
-export default resultConfig;
+export const getRunTimeConfig = () => {
+  return runTimeConfig;
+};

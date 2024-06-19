@@ -10,7 +10,7 @@
     "lib:transform": "node ./lib/main.js --type=transform --target=./case",
     "lib:filter": "node ./lib/main.js --filter=/masterdata-service/autoPlan/autoInsertOrderCompute",
     "src": "ts-node ./src/main.ts",
-    "src:cli": "ts-node ./src/cli.ts -h",
+    "src:cli": "ts-node ./src/cli.ts --help",
     "src:cli1": "ts-node ./src/cli.ts --type=transform --target=./case --translate=true",
     "src:platform": "ts-node ./src/main.ts --platform=dev",
     "src:json": "ts-node ./src/main.ts --json=true",

@@ -3,6 +3,7 @@ import { version } from "../package.json";
 import { IConfig, defaultConfig } from "./config";
 import { main } from "./main";
 import path from "path";
+import fs from "fs";
 
 const cli = cac("api2ts");
 
@@ -11,6 +12,19 @@ const cli = cac("api2ts");
  */
 function cleanOptions(options: any): IConfig {
   const ret = { ...options };
+  const configPath = path.join(process.cwd(), ret.config || "api2ts.config.js");
+  let configFn = (config: IConfig, argv: any) => config;
+  if (fs.existsSync(configPath)) {
+    configFn = require(configPath);
+  }
+
+  let configData: Partial<IConfig> = {};
+
+  if (typeof configFn === "function") {
+    configData = configFn(defaultConfig, options) as Partial<IConfig>;
+  } else {
+    configData = configFn as Partial<IConfig>;
+  }
   delete ret["--"];
   ret.translate = ret.translate === "true";
   ret.createJsonFile = ret.json === "true";
@@ -36,13 +50,26 @@ function cleanOptions(options: any): IConfig {
     ret.output = path.join(process.cwd(), ret.target);
   }
   delete ret.target;
-  return {
+  const mergeConfig = {
     ...defaultConfig,
+    ...configData,
     ...ret,
   };
+  if (!mergeConfig.output) {
+    throw new Error("config file must have output field");
+  }
+
+  if (!mergeConfig.serviceMap) {
+    throw new Error("config file must have serviceMap field");
+  }
+  return mergeConfig;
 }
 
 cli
+  .option(
+    "--config <string>",
+    `[string] config file path (default: "api2ts.config.js")`
+  )
   .option(
     "--translate <boolean>",
     `[boolean] translate Chinese to English (default: false)`
@@ -78,7 +105,6 @@ cli
   .command("[root]", "transform swagger api to ts file")
   .action(async (root: string, options: IConfig) => {
     const cleanOpts = cleanOptions(options);
-    console.log("root: string, options: IConfig: ", root, cleanOpts);
     try {
       await main(cleanOpts);
     } catch (error) {

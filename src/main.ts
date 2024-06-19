@@ -2,7 +2,7 @@ import axios from "axios";
 import _ from "lodash";
 import path from "path";
 import { Project } from "ts-morph";
-import baseConfig, { IConfig } from "./config";
+import { IConfig, setRunTimeConfig } from "./config";
 import { createJsonFile, main as createProject, createTsFile } from "./project";
 import { transform } from "./transform";
 
@@ -92,7 +92,8 @@ const fetchData = async (
   }
 };
 
-export const main = async (config: IConfig = baseConfig) => {
+export const main = async (config: IConfig) => {
+  setRunTimeConfig(config);
   const project = await createProject(config);
   if (config.transform || config.clearJsonFile) {
     return transform(config, project, config.output);
@@ -107,5 +108,3 @@ export const main = async (config: IConfig = baseConfig) => {
     );
   }
 };
-
-// main();
