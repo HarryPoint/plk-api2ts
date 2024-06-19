@@ -36,7 +36,7 @@ export type IConfig = {
 
 const output = path.join(process.cwd(), "./api2ts");
 
-const defaultConfig: IConfig = {
+export const defaultConfig: IConfig = {
   translate: false,
   translateCacheFileName: "translateCache.json",
   translateApiUri: "https://openapi.youdao.com/v2/api",

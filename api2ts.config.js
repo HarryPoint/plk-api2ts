@@ -4,14 +4,15 @@ const argv = require("yargs").argv;
 const platformMap = {
   dev: "47.108.139.107",
   uat: "47.108.135.148",
+  demo: "localhost",
 };
 
 const serviceMap = {
-  "masterdata-service": 16700,
-  "plk-uaa-service": 18100,
+  // "masterdata-service": 16700,
+  // "plk-uaa-service": 18100,
   // "flow-service": 16500,
   // "todo-service": 16600,
-  // "app-enterprise-web": 16400,
+  "app-enterprise-web": 16400,
   // "message-notification-service": 17600,
 };
 
@@ -29,7 +30,7 @@ module.exports = () => {
   console.log("argv.platform: ", argv.platform);
   return {
     output: path.resolve(__dirname, "./openapi"),
-    serviceMap: argv.platform === "dev" ? apiMap.dev : apiMap.uat,
+    serviceMap: argv.platform === "dev" ? apiMap.dev : apiMap.demo,
     translate: true,
     sort: true,
   };

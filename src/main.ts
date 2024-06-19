@@ -16,7 +16,7 @@ const fetchData = async (
   if (!apiUri) {
     throw new Error("apiUri not found");
   }
-  const { data: originData } = await axios.get(`${apiUri}/v2/api-docs`);
+  let { data: originData } = await axios.get(`${apiUri}/v2/api-docs.json`);
   const sortData = (data: any): any => {
     if (Array.isArray(data)) {
       return data.map(sortData);
@@ -108,4 +108,4 @@ export const main = async (config: IConfig = baseConfig) => {
   }
 };
 
-main();
+// main();
