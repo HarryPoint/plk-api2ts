@@ -71,6 +71,10 @@ cli
     `[string] config file path (default: "api2ts.config.js")`
   )
   .option(
+    "--api-path <string>",
+    `[string] config file path (default: "${defaultConfig.apiPath}")`
+  )
+  .option(
     "--translate <boolean>",
     `[boolean] translate Chinese to English (default: false)`
   )

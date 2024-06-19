@@ -14,6 +14,7 @@ export type IConfig = {
   translateAppSecret: string;
   translateChunkSize: number;
   transform: boolean;
+  apiPath: string; // 原本是定制的地址，现在可以自行指定
   serviceMap: Record<string, string>;
   serviceNameToPath: boolean;
   output: string;
@@ -43,6 +44,7 @@ export const defaultConfig: IConfig = {
   translateAppSecret: "mRl99kIGJSPI1TgdCn53v8J8HX0HgN19",
   translateChunkSize: 100,
   transform: false,
+  apiPath: "/v2/api-docs",
   interfacePrefix: "I",
   enumPrefix: "E",
   serviceMap: {},

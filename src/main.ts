@@ -10,13 +10,14 @@ const fetchData = async (
   config: IConfig,
   project: Project,
   apiUri: string,
+  apiPath: string,
   prefix: string = "./"
 ) => {
   console.log("apiUri: ", apiUri);
   if (!apiUri) {
     throw new Error("apiUri not found");
   }
-  const { data: originData } = await axios.get(`${apiUri}/v2/api-docs`);
+  const { data: originData } = await axios.get(`${apiUri}${apiPath}`);
   const sortData = (data: any): any => {
     if (Array.isArray(data)) {
       return data.map(sortData);
@@ -100,10 +101,12 @@ export const main = async (config: IConfig) => {
   }
   for (const key in config.serviceMap) {
     const apiUri = config.serviceMap[key as keyof typeof config.serviceMap];
+    const apiPath = config.apiPath;
     await fetchData(
       config,
       project,
       apiUri,
+      apiPath,
       config.serviceNameToPath ? key : "./"
     );
   }
