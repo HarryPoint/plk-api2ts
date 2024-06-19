@@ -16,7 +16,7 @@ const fetchData = async (
   if (!apiUri) {
     throw new Error("apiUri not found");
   }
-  let { data: originData } = await axios.get(`${apiUri}/v2/api-docs.json`);
+  const { data: originData } = await axios.get(`${apiUri}/v2/api-docs`);
   const sortData = (data: any): any => {
     if (Array.isArray(data)) {
       return data.map(sortData);
