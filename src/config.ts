@@ -2,8 +2,6 @@ import path from "path";
 import { SourceFile } from "ts-morph";
 import { contentTemplate, customContent, transformOriginType } from "./plkTpl";
 
-// const argv = require("yargs").argv;
-
 export type IConfig = {
   interfacePrefix: string;
   enumPrefix: string;
