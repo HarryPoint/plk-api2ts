@@ -379,7 +379,10 @@ module.exports = () => {
 ```
 
 2. The automatically generated translation name does not meet the requirements.
-Modify the dictionary content in translateCache.json and re-execute the code generation logic. `npm run api2ts`
+Modify the dictionary content in translateCache.json and re-execute the code generation logic. 
+```bash
+npm run api2ts
+```
 
 3. Customize the Update of a Specific Interface
 ```bash
@@ -397,7 +400,6 @@ npx api2ts --type=clear
 ```
 
 6. Currently have a Swagger file and want to convert it to TS definitions.
-
 ```bash
 npx api2ts --type=transform
 ```
