@@ -379,7 +379,10 @@ module.exports = () => {
 ```
 
 2. 自动生成的翻译名称不符合要求
-修改 translateCache.json 中字典内容，重新执行代码生成逻辑 `npm run api2ts`
+修改 translateCache.json 中字典内容，重新执行代码生成逻辑 
+```bash
+npm run api2ts
+```
 
 3. 自定义更新某一个接口
 ```bash
@@ -397,7 +400,6 @@ npx api2ts --type=clear
 ```
 
 6. 当前已有swagger文件，想要转换为ts定义
-
 ```bash
 npx api2ts --type=transform
 ```
