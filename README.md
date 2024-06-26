@@ -1,4 +1,6 @@
-## plk-api2ts
+# plk-api2ts
+
+[![NPM][npm-version-image]][npm-version-url]
 
 plk-api2ts is an efficient engineering tool that can convert Swagger (version 2) documents into TypeScript files. The main goal of this tool is to automate the type definitions of backend interfaces, convert them into frontend code, thereby eliminating the need for manual type definition writing.
 
@@ -441,3 +443,6 @@ npx api2ts --type=clear --target=./your_path
 ### In Conclusion
 
 Everyone is welcome to raise issues, but I hope you can provide your configuration, or provide the swagger json data where the type conversion is abnormal, and clearly describe how to reproduce the problem. I will clean up issues irregularly. Finally, I hope everyone can enjoy coding, and no longer need to write ts code related to api ☺
+
+[npm-version-image]: https://img.shields.io/npm/v/plk-api2ts.svg?style=flat-square
+[npm-version-url]: https://www.npmjs.com/package/plk-api2ts
