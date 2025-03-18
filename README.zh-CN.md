@@ -1,5 +1,7 @@
 # plk-api2ts
 
+请替换为 [ts-gear][https://www.npmjs.com/package/api-gear]
+
 [![NPM][npm-version-image]][npm-version-url]
 
 plk-api2ts 是一个高效的工程化工具，它可以将 Swagger（v2版本） 文档转换为 TypeScript 文件。这个工具的主要目标是自动化后端接口的类型定义，将其转换为前端代码，从而消除了手动编写类型定义的需求。
