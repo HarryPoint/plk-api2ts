@@ -1,6 +1,6 @@
 # plk-api2ts
 
-请替换为 [ts-gear][https://www.npmjs.com/package/api-gear]
+请替换为 [ts-gear](https://www.npmjs.com/package/api-gear)
 
 [![NPM][npm-version-image]][npm-version-url]
 
